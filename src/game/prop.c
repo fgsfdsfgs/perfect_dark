@@ -2858,26 +2858,10 @@ void autoaimTick(void)
 			bmoveUpdateAutoAimXProp(bestprop, (aimpos[0] - camGetScreenLeft()) / (camGetScreenWidth() * 0.5f) - 1);
 		}
 
-		if (cangangsta) {
-			f32 xdist = g_Vars.currentplayer->bond2.unk10.x - bestprop->pos.x;
-			f32 ydist = g_Vars.currentplayer->bond2.unk10.y - bestprop->pos.y;
-			f32 zdist = g_Vars.currentplayer->bond2.unk10.z - bestprop->pos.z;
-			f32 dist = sqrtf(xdist * xdist + ydist * ydist + zdist * zdist);
-
-			if (dist < 200) {
-				g_Vars.currentplayer->gunctrl.gangsta = true;
-			} else {
-				g_Vars.currentplayer->gunctrl.gangsta = false;
-			}
-		} else {
-			g_Vars.currentplayer->gunctrl.gangsta = false;
-		}
 	} else {
 		u32 stack;
 		bmoveUpdateAutoAimYProp(NULL, 0);
 		bmoveUpdateAutoAimXProp(NULL, 0);
-
-		g_Vars.currentplayer->gunctrl.gangsta = false;
 	}
 }
 
