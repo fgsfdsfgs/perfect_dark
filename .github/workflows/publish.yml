@@ -1,0 +1,43 @@
+name: Publish
+
+# Only trigger, when the build workflow succeeded
+on:
+  workflow_run:
+    workflows: ["C/C++ CI"]
+    types: [completed]
+    branches: [port]
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - uses: dawidd6/action-download-artifact@v2
+      with:
+        workflow: c-cpp.yml
+        workflow_conclusion: success
+        path: upload/
+
+    - name: Package
+      id: create-7z-packages
+      run: |
+        sudo apt-get update
+        sudo apt-get install 7zip
+        git fetch --unshallow
+        revision="r$(git rev-list --count HEAD)"
+        echo "revision=$revision" >> $GITHUB_OUTPUT
+        cd upload/
+        ls -R
+        for i in */ ; do cd "$i" ; 7zz a -mx9 -ms=on -t7z -m0=lzma2 -mmt2 "../${i%/}_$(date +%Y%m%d)-$revision.7z" * ; cd .. ; done ;
+
+    - name: Publish
+      uses: "marvinpinto/action-automatic-releases@latest"
+      with:
+        repo_token: "${{ secrets.GITHUB_TOKEN }}"
+        automatic_release_tag: "${{ steps.create-7z-packages.outputs.revision }}"
+        prerelease: false
+        title: "${{ steps.create-7z-packages.outputs.revision }}"
+        files: |
+            upload/*.7z
