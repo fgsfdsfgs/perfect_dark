@@ -3,7 +3,7 @@ name: Publish
 # Only trigger, when the build workflow succeeded
 on:
   workflow_run:
-    workflows: ["C/C++ CI"]
+    workflows: [Build]
     types: [completed]
     branches: [port]
 
@@ -16,7 +16,7 @@ jobs:
 
     - uses: dawidd6/action-download-artifact@v2
       with:
-        workflow: c-cpp.yml
+        workflow: build.yml
         workflow_conclusion: success
         path: upload/
 
