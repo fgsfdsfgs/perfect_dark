@@ -75,10 +75,12 @@ void inputSetDefaultKeyBinds(void)
 	};
 
 	static const u32 joybinds[][2] = {
-		{ CK_A,      SDL_CONTROLLER_BUTTON_A             },
-		{ CK_B,      SDL_CONTROLLER_BUTTON_B             },
+		// { CK_A,      SDL_CONTROLLER_BUTTON_A             },
+		{ CK_B,      SDL_CONTROLLER_BUTTON_A             },
 		{ CK_X,      SDL_CONTROLLER_BUTTON_X             },
-		{ CK_Y,      SDL_CONTROLLER_BUTTON_Y             },
+		{ CK_Y,      SDL_CONTROLLER_BUTTON_BACK        },
+		{ CK_DPAD_L, SDL_CONTROLLER_BUTTON_Y,            },
+		{ CK_DPAD_R, SDL_CONTROLLER_BUTTON_B,            },
 		{ CK_DPAD_D, SDL_CONTROLLER_BUTTON_LEFTSHOULDER  },
 		{ CK_LTRIG,  SDL_CONTROLLER_BUTTON_RIGHTSHOULDER },
 		{ CK_RTRIG,  VK_JOY1_LTRIG - VK_JOY1_BEGIN       },
