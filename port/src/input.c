@@ -2,6 +2,7 @@
 #include <PR/ultratypes.h>
 #include <PR/os_thread.h>
 #include <PR/os_cont.h>
+#include "platform.h"
 #include "input.h"
 #include "video.h"
 #include "config.h"
@@ -37,7 +38,7 @@ static u32 axisMap[2][2] = {
 	{ SDL_CONTROLLER_AXIS_RIGHTX, SDL_CONTROLLER_AXIS_RIGHTY },
 };
 
-static f32 stickSens[42] = {
+static f32 stickSens[4] = {
 	// index == SDL_CONTROLLER_AXIS_*
 	1.f, 1.f, 1.f, 1.f
 };
@@ -47,6 +48,8 @@ static s32 deadzone[4] = {
 	DEFAULT_DEADZONE, DEFAULT_DEADZONE,
 	DEFAULT_DEADZONE, DEFAULT_DEADZONE_RY,
 };
+
+static s32 rumbleSupported[INPUT_MAX_CONTROLLERS];
 
 void inputSetDefaultKeyBinds(void)
 {
@@ -107,6 +110,38 @@ void inputSetDefaultKeyBinds(void)
 	}
 }
 
+static inline void inputInitController(const s32 cidx)
+{
+#if SDL_VERSION_ATLEAST(2, 0, 18)
+	// SDL_GameControllerHasRumble() appeared in 2.0.18 even though SDL_GameControllerRumble() is in 2.0.9
+	rumbleSupported[cidx] = SDL_GameControllerHasRumble(pads[cidx]);
+#else
+	// assume that all joysticks with haptic feedback support will support rumble
+	rumbleSupported[cidx] = SDL_JoystickIsHaptic(SDL_GameControllerGetJoystick(pads[cidx]));
+	if (!rumbleSupported[cidx]) {
+		// at least on Windows some controllers will report no haptics, but rumble will still function
+		// just assume it's supported if the controller is of known type
+		const SDL_GameControllerType ctype = SDL_GameControllerGetType(pads[cidx]);
+		rumbleSupported[cidx] = ctype && (ctype != SDL_CONTROLLER_TYPE_VIRTUAL);
+	}
+#endif
+
+	// make the LEDs on the controller indicate which player it's for
+	SDL_GameControllerSetPlayerIndex(pads[cidx], cidx);
+
+	connectedMask |= (1 << cidx);
+}
+
+static inline void inputCloseController(const s32 cidx)
+{
+	SDL_GameControllerClose(pads[cidx]);
+	pads[cidx] = NULL;
+	rumbleSupported[cidx] = 0;
+	if (cidx) {
+		connectedMask &= ~(1 << cidx);
+	}
+}
+
 static int inputEventFilter(void *data, SDL_Event *event)
 {
 	switch (event->type) {
@@ -115,7 +150,7 @@ static int inputEventFilter(void *data, SDL_Event *event)
 				if (!pads[i]) {
 					pads[i] = SDL_GameControllerOpen(event->cdevice.which);
 					if (pads[i]) {
-						connectedMask |= (1 << i);
+						inputInitController(i);
 					}
 					break;
 				}
@@ -127,11 +162,7 @@ static int inputEventFilter(void *data, SDL_Event *event)
 			if (ctrl) {
 				for (s32 i = 0; i < INPUT_MAX_CONTROLLERS; ++i) {
 					if (pads[i] == ctrl) {
-						SDL_GameControllerClose(pads[i]);
-						pads[i] = NULL;
-						if (i) {
-							connectedMask &= ~(1 << i);
-						}
+						inputCloseController(i);
 						break;
 					}
 				}
@@ -152,13 +183,15 @@ static int inputEventFilter(void *data, SDL_Event *event)
 
 s32 inputInit(void)
 {
-	if (!SDL_WasInit(SDL_INIT_GAMECONTROLLER)) {
-		SDL_InitSubSystem(SDL_INIT_GAMECONTROLLER);
+	if (!SDL_WasInit(SDL_INIT_GAMECONTROLLER | SDL_INIT_HAPTIC)) {
+		SDL_InitSubSystem(SDL_INIT_GAMECONTROLLER | SDL_INIT_HAPTIC);
 	}
+
+	SDL_GameControllerUpdate();
 
 	const s32 numJoys = SDL_NumJoysticks();
 
-	s32 ret = 1; // always report first controller as connected
+	connectedMask = 1; // always report first controller as connected
 
 	// if this is set to 1, keyboard will count as a separate controller on its own,
 	// so the first connected gamepad will go to player 2 instead of player 1
@@ -168,8 +201,7 @@ s32 inputInit(void)
 		if (SDL_IsGameController(jidx)) {
 			pads[cidx] = SDL_GameControllerOpen(jidx);
 			if (pads[cidx]) {
-				SDL_GameControllerSetPlayerIndex(pads[cidx], cidx);
-				ret |= 1 << cidx;
+				inputInitController(cidx);
 				++cidx;
 			}
 		}
@@ -206,12 +238,10 @@ s32 inputInit(void)
 
 	const s32 overrideMask = (1 << configGetInt("Input.FakeGamepads", 0)) - 1;
 	if (overrideMask) {
-		ret = overrideMask;
+		connectedMask = overrideMask;
 	}
 
-	connectedMask = ret;
-
-	return ret;
+	return connectedMask;
 }
 
 static inline s32 inputBindPressed(const s32 idx, const u32 ck)
@@ -346,7 +376,7 @@ s32 inputRumbleSupported(s32 idx)
 	if (idx < 0 || idx >= INPUT_MAX_CONTROLLERS) {
 		return 0;
 	}
-	return SDL_GameControllerHasRumble(pads[idx]);
+	return rumbleSupported[idx];
 }
 
 void inputRumble(s32 idx, f32 strength, f32 time)
@@ -354,7 +384,8 @@ void inputRumble(s32 idx, f32 strength, f32 time)
 	if (idx < 0 || idx >= INPUT_MAX_CONTROLLERS || !pads[idx]) {
 		return;
 	}
-	if (SDL_GameControllerHasRumble(pads[idx])) {
+
+	if (rumbleSupported[idx]) {
 		if (strength <= 0.f) {
 			strength = 0.f;
 			time = 0.f;

@@ -4,14 +4,13 @@
 // detect OS
 #if defined(_WIN32)
 	#define PLATFORM_WIN32 1
-#else
-	// assume POSIX compatible
+#elif defined(__linux__)
 	#define PLATFORM_POSIX 1
-	#if defined(__linux__)
-		#define PLATFORM_LINUX 1
-	#else // TODO
-		#error "Unknown platform."
-	#endif
+	#define PLATFORM_LINUX 1
+#else
+	// assume POSIX-compatible
+	#define PLATFORM_POSIX 1
+	#warning "Unknown OS. Please add it to platform.h."
 #endif
 
 // detect arch
@@ -20,8 +19,19 @@
 	#define PLATFORM_64BIT 1
 #elif defined(__i386__) || defined(_X86_) || defined(_M_IX86)
 	#define PLATFORM_X86 1
-#else // TODO
+#elif defined(__aarch64__) || defined(_M_ARM64)
+	#define PLATFORM_ARM 8
+	#define PLATFORM_64BIT 1
+#elif defined(__arm__) || defined(_M_ARM)
+	// assume armv7
+	#define PLATFORM_ARM 7
+#else
 	#error "Unknown CPU arch."
+#endif
+
+// TODO: remove this after 64-bit support is in place
+#ifdef PLATFORM_64BIT
+	#error "64-bit platforms are currently not supported."
 #endif
 
 // detect endianness

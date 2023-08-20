@@ -518,13 +518,14 @@ static void preprocessPropObj(struct defaultobj *obj)
 {
 	// TODO: help me jesus
 	switch (obj->type) {
-		case OBJTYPE_GRENADEPROB:
+		case OBJTYPE_GRENADEPROB: {
 			struct grenadeprobobj *grenadeprob = (struct grenadeprobobj *)obj;
 			preprocessDefaultPropObjHdr(obj);
 			PD_SWAP_VAL(grenadeprob->chrnum);
 			PD_SWAP_VAL(grenadeprob->probability);
 			break;
-		case OBJTYPE_CHR:
+		}
+		case OBJTYPE_CHR: {
 			struct packedchr *chr = (struct packedchr *)obj;
 			PD_SWAP_VAL(chr->chrindex);
 			PD_SWAP_VAL(chr->spawnflags);
@@ -540,7 +541,8 @@ static void preprocessPropObj(struct defaultobj *obj)
 			PD_SWAP_VAL(chr->chair);
 			PD_SWAP_VAL(chr->convtalk);
 			break;
-		case OBJTYPE_DOOR:
+		}
+		case OBJTYPE_DOOR: {
 			struct doorobj *door = (struct doorobj *)obj;
 			preprocessDefaultPropObj(obj);
 			PD_SWAP_PTR(door->sibling);
@@ -560,23 +562,27 @@ static void preprocessPropObj(struct defaultobj *obj)
 			PD_SWAP_VAL(door->xludist);
 			PD_SWAP_VAL(door->opadist);
 			break;
-		case OBJTYPE_DOORSCALE:
+		}
+		case OBJTYPE_DOORSCALE: {
 			struct doorscaleobj *doorsc = (struct doorscaleobj *)obj;
 			preprocessDefaultPropObjHdr(obj);
 			PD_SWAP_VAL(doorsc->scale);
 			break;
-		case OBJTYPE_WEAPON:
+		}
+		case OBJTYPE_WEAPON: {
 			struct weaponobj *wpn = (struct weaponobj *)obj;
 			preprocessDefaultPropObj(obj);
 			PD_SWAP_PTR(wpn->dualweapon);
 			PD_SWAP_VAL(wpn->team);
 			break;
-		case OBJTYPE_KEY:
+		}
+		case OBJTYPE_KEY: {
 			struct keyobj *key = (struct keyobj *)obj;
 			preprocessDefaultPropObj(obj);
 			PD_SWAP_VAL(key->keyflags);
 			break;
-		case OBJTYPE_CCTV:
+		}
+		case OBJTYPE_CCTV: {
 			struct cctvobj *cctv = (struct cctvobj *)obj;
 			preprocessDefaultPropObj(obj);
 			PD_SWAP_VAL(cctv->yzero);
@@ -591,7 +597,8 @@ static void preprocessPropObj(struct defaultobj *obj)
 			PD_SWAP_VAL(cctv->lookatpadnum);
 			PD_SWAP_VAL(cctv->toleft);
 			break;
-		case OBJTYPE_AUTOGUN:
+		}
+		case OBJTYPE_AUTOGUN: {
 			struct autogunobj *agun = (struct autogunobj *)obj;
 			preprocessDefaultPropObj(obj);
 			PD_SWAP_VAL(agun->targetpad);
@@ -610,13 +617,15 @@ static void preprocessPropObj(struct defaultobj *obj)
 			PD_SWAP_VAL(agun->allowsoundframe);
 			PD_SWAP_PTR(agun->target);
 			break;
-		case OBJTYPE_SINGLEMONITOR:
+		}
+		case OBJTYPE_SINGLEMONITOR: {
 			struct singlemonitorobj *mon = (struct singlemonitorobj *)obj;
 			preprocessDefaultPropObj(obj);
 			preprocessTvScreenPropObj((struct tvscreen *)&mon->screen);
 			PD_SWAP_VAL(mon->owneroffset);
 			break;
-		case OBJTYPE_MULTIMONITOR:
+		}
+		case OBJTYPE_MULTIMONITOR: {
 			struct multimonitorobj *mmon = (struct multimonitorobj *)obj;
 			preprocessDefaultPropObj(obj);
 			preprocessTvScreenPropObj((struct tvscreen *)&mmon->screens[0]);
@@ -624,13 +633,15 @@ static void preprocessPropObj(struct defaultobj *obj)
 			preprocessTvScreenPropObj((struct tvscreen *)&mmon->screens[2]);
 			preprocessTvScreenPropObj((struct tvscreen *)&mmon->screens[3]);
 			break;
-		case OBJTYPE_SHIELD:
+		}
+		case OBJTYPE_SHIELD: {
 			struct shieldobj *shld = (struct shieldobj *)obj;
 			preprocessDefaultPropObj(obj);
 			PD_SWAP_VAL(shld->initialamount);
 			PD_SWAP_VAL(shld->amount);
 			break;
-		case OBJTYPE_TINTEDGLASS:
+		}
+		case OBJTYPE_TINTEDGLASS: {
 			struct tintedglassobj *tgls = (struct tintedglassobj *)obj;
 			preprocessDefaultPropObj(obj);
 			PD_SWAP_VAL(tgls->xludist);
@@ -639,7 +650,8 @@ static void preprocessPropObj(struct defaultobj *obj)
 			PD_SWAP_VAL(tgls->portalnum);
 			PD_SWAP_VAL(tgls->unk64);
 			break;
-		case OBJTYPE_LIFT:
+		}
+		case OBJTYPE_LIFT: {
 			struct liftobj *lift = (struct liftobj *)obj;
 			preprocessDefaultPropObj(obj);
 			PD_SWAP_PTR(lift->doors[0]);
@@ -655,17 +667,20 @@ static void preprocessPropObj(struct defaultobj *obj)
 			PD_SWAP_VAL(lift->accel);
 			PD_SWAP_VAL(lift->maxspeed);
 			break;
-		case OBJTYPE_HOVERPROP:
+		}
+		case OBJTYPE_HOVERPROP: {
 			struct hoverpropobj *hprop = (struct hoverpropobj *)obj;
 			preprocessDefaultPropObj(obj);
 			preprocessHovPropObj(&hprop->hov);
 			break;
-		case OBJTYPE_HOVERBIKE:
+		}
+		case OBJTYPE_HOVERBIKE: {
 			struct hoverbikeobj *hbike = (struct hoverbikeobj *)obj;
 			preprocessDefaultPropObj(obj);
 			preprocessHovPropObj(&hbike->hov);
 			break;
-		case OBJTYPE_FAN:
+		}
+		case OBJTYPE_FAN: {
 			struct fanobj *fan = (struct fanobj *)obj;
 			preprocessDefaultPropObj(obj);
 			PD_SWAP_VAL(fan->yrot);
@@ -674,17 +689,20 @@ static void preprocessPropObj(struct defaultobj *obj)
 			PD_SWAP_VAL(fan->yspeed);
 			PD_SWAP_VAL(fan->yaccel);
 			break;
-		case OBJTYPE_GLASS:
+		}
+		case OBJTYPE_GLASS: {
 			struct glassobj *gls = (struct glassobj *)obj;
 			preprocessDefaultPropObj(obj);
 			PD_SWAP_VAL(gls->portalnum);
 			break;
-		case OBJTYPE_AMMOCRATE:
+		}
+		case OBJTYPE_AMMOCRATE: {
 			struct ammocrateobj *ammo = (struct ammocrateobj *)obj;
 			preprocessDefaultPropObj(obj);
 			PD_SWAP_VAL(ammo->ammotype);
 			break;
-		case OBJTYPE_MULTIAMMOCRATE:
+		}
+		case OBJTYPE_MULTIAMMOCRATE: {
 			struct multiammocrateobj *mammo = (struct multiammocrateobj *)obj;
 			preprocessDefaultPropObj(obj);
 			for (s32 i = 0; i < ARRAYCOUNT(mammo->slots); ++i) {
@@ -692,34 +710,40 @@ static void preprocessPropObj(struct defaultobj *obj)
 				PD_SWAP_VAL(mammo->slots[i].quantity);
 			}
 			break;
-		case OBJTYPE_TRUCK:
+		}
+		case OBJTYPE_TRUCK: {
 			struct truckobj *truck = (struct truckobj *)obj;
 			preprocessDefaultPropObj(obj);
 			PD_SWAP_PTR(truck->ailist);
 			break;
-		case OBJTYPE_HOVERCAR:
+		}
+		case OBJTYPE_HOVERCAR: {
 			struct hovercarobj *car = (struct hovercarobj *)obj;
 			preprocessDefaultPropObj(obj);
 			PD_SWAP_PTR(car->ailist);
 			break;
-		case OBJTYPE_CHOPPER:
+		}
+		case OBJTYPE_CHOPPER: {
 			struct chopperobj *chop = (struct chopperobj *)obj;
 			preprocessDefaultPropObj(obj);
 			PD_SWAP_PTR(chop->ailist);
 			break;
-		case OBJTYPE_HELI:
+		}
+		case OBJTYPE_HELI: {
 			struct heliobj *heli = (struct heliobj *)obj;
 			preprocessDefaultPropObj(obj);
 			PD_SWAP_PTR(heli->ailist);
 			break;
-		case OBJTYPE_TAG:
+		}
+		case OBJTYPE_TAG: {
 			struct tag *tag = (struct tag *)obj;
 			PD_SWAP_PTR(tag->next);
 			PD_SWAP_PTR(tag->obj);
 			PD_SWAP_VAL(tag->cmdoffset);
 			PD_SWAP_VAL(tag->tagnum);
 			break;
-		case OBJTYPE_RENAMEOBJ:
+		}
+		case OBJTYPE_RENAMEOBJ: {
 			struct textoverride *over = (struct textoverride *)obj;
 			preprocessDefaultPropObjHdr(obj);
 			PD_SWAP_PTR(over->next);
@@ -732,14 +756,16 @@ static void preprocessPropObj(struct defaultobj *obj)
 			PD_SWAP_VAL(over->inventory2text);
 			PD_SWAP_VAL(over->pickuptext);
 			break;
-		case OBJTYPE_BRIEFING:
+		}
+		case OBJTYPE_BRIEFING: {
 			struct briefingobj *brief = (struct briefingobj *)obj;
 			preprocessDefaultPropObjHdr(obj);
 			PD_SWAP_PTR(brief->next);
 			PD_SWAP_VAL(brief->type);
 			PD_SWAP_VAL(brief->text);
 			break;
-		case OBJTYPE_CAMERAPOS:
+		}
+		case OBJTYPE_CAMERAPOS: {
 			struct cameraposobj *campos = (struct cameraposobj *)obj;
 			preprocessDefaultPropObjHdr(obj);
 			PD_SWAP_VAL(campos->x);
@@ -749,28 +775,33 @@ static void preprocessPropObj(struct defaultobj *obj)
 			PD_SWAP_VAL(campos->verta);
 			PD_SWAP_VAL(campos->pad);
 			break;
-		case OBJTYPE_BEGINOBJECTIVE:
+		}
+		case OBJTYPE_BEGINOBJECTIVE: {
 			struct objective *objective = (struct objective *)obj;
 			preprocessDefaultPropObjHdr(obj);
 			PD_SWAP_VAL(objective->index);
 			PD_SWAP_VAL(objective->text);
 			PD_SWAP_VAL(objective->unk0c);
 			break;
-		case OBJTYPE_ENDOBJECTIVE:
+		}
+		case OBJTYPE_ENDOBJECTIVE: {
 			break;
-		case OBJTYPE_PADEFFECT:
+		}
+		case OBJTYPE_PADEFFECT: {
 			struct padeffectobj *padeff = (struct padeffectobj *)obj;
 			preprocessDefaultPropObjHdr(obj);
 			PD_SWAP_VAL(padeff->pad);
 			PD_SWAP_VAL(padeff->effect);
 			break;
-		case OBJTYPE_LINKGUNS:
+		}
+		case OBJTYPE_LINKGUNS: {
 			struct linkgunsobj *linkg = (struct linkgunsobj *)obj;
 			preprocessDefaultPropObjHdr(obj);
 			PD_SWAP_VAL(linkg->offset1);
 			PD_SWAP_VAL(linkg->offset2);
 			break;
-		case OBJTYPE_LINKLIFTDOOR:
+		}
+		case OBJTYPE_LINKLIFTDOOR: {
 			struct linkliftdoorobj *linkd = (struct linkliftdoorobj *)obj;
 			preprocessDefaultPropObjHdr(obj);
 			PD_SWAP_PTR(linkd->door);
@@ -778,7 +809,8 @@ static void preprocessPropObj(struct defaultobj *obj)
 			PD_SWAP_PTR(linkd->next);
 			PD_SWAP_VAL(linkd->stopnum);
 			break;
-		case OBJTYPE_SAFEITEM:
+		}
+		case OBJTYPE_SAFEITEM: {
 			struct safeitemobj *linki = (struct safeitemobj *)obj;
 			preprocessDefaultPropObjHdr(obj);
 			PD_SWAP_PTR(linki->item);
@@ -786,14 +818,16 @@ static void preprocessPropObj(struct defaultobj *obj)
 			PD_SWAP_PTR(linki->door);
 			PD_SWAP_PTR(linki->next);
 			break;
-		case OBJTYPE_PADLOCKEDDOOR:
+		}
+		case OBJTYPE_PADLOCKEDDOOR: {
 			struct padlockeddoorobj *linkp = (struct padlockeddoorobj *)obj;
 			preprocessDefaultPropObjHdr(obj);
 			PD_SWAP_PTR(linkp->door);
 			PD_SWAP_PTR(linkp->lock);
 			PD_SWAP_PTR(linkp->next);
 			break;
-		case OBJTYPE_CONDITIONALSCENERY:
+		}
+		case OBJTYPE_CONDITIONALSCENERY: {
 			struct linksceneryobj *links = (struct linksceneryobj *)obj;
 			preprocessDefaultPropObjHdr(obj);
 			PD_SWAP_PTR(links->trigger);
@@ -801,7 +835,8 @@ static void preprocessPropObj(struct defaultobj *obj)
 			PD_SWAP_PTR(links->exp);
 			PD_SWAP_PTR(links->next);
 			break;
-		case OBJTYPE_BLOCKEDPATH:
+		}
+		case OBJTYPE_BLOCKEDPATH: {
 			struct blockedpathobj *blkp = (struct blockedpathobj *)obj;
 			preprocessDefaultPropObjHdr(obj);
 			PD_SWAP_PTR(blkp->blocker);
@@ -809,6 +844,7 @@ static void preprocessPropObj(struct defaultobj *obj)
 			PD_SWAP_VAL(blkp->waypoint1);
 			PD_SWAP_VAL(blkp->waypoint2);
 			break;
+		}
 		case OBJTYPE_MINE:
 		case OBJTYPE_ESCASTEP:
 		case OBJTYPE_HANGINGMONITORS:
@@ -818,17 +854,19 @@ static void preprocessPropObj(struct defaultobj *obj)
 		case OBJTYPE_GASBOTTLE:
 		case OBJTYPE_29:
 		case OBJTYPE_SAFE:
-		case OBJTYPE_HAT:
+		case OBJTYPE_HAT: {
 			preprocessDefaultPropObj(obj);
 			break;
-		case OBJECTIVETYPE_ENTERROOM:
+		}
+		case OBJECTIVETYPE_ENTERROOM: {
 			struct criteria_roomentered *obte = (struct criteria_roomentered *)obj;
 			preprocessDefaultPropObjHdr(obj);
 			PD_SWAP_PTR(obte->next);
 			PD_SWAP_VAL(obte->pad);
 			PD_SWAP_VAL(obte->status);
 			break;
-		case OBJECTIVETYPE_THROWINROOM:
+		}
+		case OBJECTIVETYPE_THROWINROOM: {
 			struct criteria_throwinroom *obtt = (struct criteria_throwinroom *)obj;
 			preprocessDefaultPropObjHdr(obj);
 			PD_SWAP_PTR(obtt->next);
@@ -836,26 +874,30 @@ static void preprocessPropObj(struct defaultobj *obj)
 			PD_SWAP_VAL(obtt->pad);
 			PD_SWAP_VAL(obtt->status);
 			break;
-		case OBJECTIVETYPE_HOLOGRAPH:
+		}
+		case OBJECTIVETYPE_HOLOGRAPH: {
 			struct criteria_holograph *obth = (struct criteria_holograph *)obj;
 			preprocessDefaultPropObjHdr(obj);
 			PD_SWAP_PTR(obth->next);
 			PD_SWAP_VAL(obth->obj);
 			PD_SWAP_VAL(obth->status);
 			break;
+		}
 		case OBJECTIVETYPE_DESTROYOBJ:
 		case OBJECTIVETYPE_COMPFLAGS:
 		case OBJECTIVETYPE_FAILFLAGS:
 		case OBJECTIVETYPE_COLLECTOBJ:
-		case OBJECTIVETYPE_THROWOBJ:
+		case OBJECTIVETYPE_THROWOBJ: {
 			u32 *cmd = (u32 *)obj;
 			PD_SWAP_VAL(cmd[1]);
 			break;
-		default:
+		}
+		default: {
 			fprintf(stderr, "unknown objtype: %02x @ %p\n", obj->type, obj);
 			fflush(stderr);
 			assert(0 && "Unknown object type in prop list");
 			break;
+		}
 	}
 }
 
@@ -1410,10 +1452,13 @@ void preprocessBgRoom(u8 *data, u32 ofs) {
 
 	// numvertices is actually 0 in the data because fuck you
 	const s32 numverts = ((uintptr_t) rgfx->colours - (uintptr_t) rgfx->vertices) / sizeof(Vtx);
-	Vtx *vertices = PD_PTR_BASEOFS(rgfx->vertices, data, ofs);
-	Vtx *vtx = vertices;
-	for (s32 i = 0; i < numverts; ++i, ++vtx) {
-		preprocessVtx(vtx);
+	Vtx *vertices = NULL;
+	if (rgfx->vertices) {
+		vertices = PD_PTR_BASEOFS(rgfx->vertices, data, ofs);
+		Vtx *vtx = vertices;
+		for (s32 i = 0; i < numverts; ++i, ++vtx) {
+			preprocessVtx(vtx);
+		}
 	}
 
 	// here's hoping that xlublocks and opablocks aren't completely separate trees

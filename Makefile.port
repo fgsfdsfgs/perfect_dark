@@ -132,10 +132,16 @@ ifneq (,$(findstring windows,$(TARGET_PLATFORM)))
   TARGET_CFLAGS := $(shell pkg-config sdl2 --cflags-only-I)
   TARGET_LDFLAGS := $(shell pkg-config sdl2 --libs) -lz -lopengl32 -static-libstdc++
   # on windows/mingw we need this to be built with a 32-bit compiler so it finds the correct libs
-  TOOLCHAIN := i686-w64-mingw32-
-else # TODO
+  TOOLCHAIN ?= i686-w64-mingw32-
+else # assume *nix
   TARGET_CFLAGS := $(shell pkg-config sdl2 --cflags-only-I)
   TARGET_LDFLAGS := $(shell pkg-config sdl2 --libs) -lGL -lz
+  ifneq (,$(findstring arm,$(TARGET_PLATFORM))$(findstring aarch,$(TARGET_PLATFORM)))
+    # linux on arm or aarch64
+    # TODO: detect soft/hardfloat abi
+    TARGET_LDFLAGS += -ldl
+    TOOLCHAIN ?= arm-linux-gnueabihf-
+  endif
 endif
 
 # On x86_64 gcc add -m32 to CFLAGS if building a 32-bit executable.

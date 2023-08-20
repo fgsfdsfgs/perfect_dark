@@ -349,22 +349,22 @@ s32 osPfsReadWriteFile(OSPfs* pfs, s32 fileNo, u8 flag, int offset, int size, u8
 
 /* Gbpak */
 
-s32 osGbpakInit(OSMesgQueue *, OSPfs *, int)
+s32 osGbpakInit(OSMesgQueue *queue, OSPfs *pfs, s32 ch)
 {
 	return PFS_ERR_NOPACK;
 }
 
-s32 osGbpakPower(OSPfs *, s32)
+s32 osGbpakPower(OSPfs *pfs, s32 flag)
 {
 	return PFS_ERR_NOPACK;
 }
 
-s32 osGbpakReadWrite(OSPfs *, u16, u16, u8 *, u16)
+s32 osGbpakReadWrite(OSPfs *pfs, u16 flag, u16 addr, u8 *buf, u16 size)
 {
 	return PFS_ERR_NOPACK;
 }
 
-s32 osGbpakReadId(OSPfs *, OSGbpakId *, u8 *)
+s32 osGbpakReadId(OSPfs *pfs, OSGbpakId *id, u8 *status)
 {
 	return PFS_ERR_NOPACK;
 }
