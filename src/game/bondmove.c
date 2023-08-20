@@ -1413,7 +1413,7 @@ void bmoveProcessInput(bool allowc1x, bool allowc1y, bool allowc1buttons, bool i
 									}
 								}
 							}
-						} else {
+						} else if (g_Vars.currentplayer) {
 							g_Vars.currentplayer->amdowntime = 0;
 						}
 					}
