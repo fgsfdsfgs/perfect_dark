@@ -736,12 +736,12 @@ void eyespyProcessInput(bool allowbuttons)
 	if (controlmode == CONTROLMODE_13 || controlmode == CONTROLMODE_14) {
 		aimpressed = c1buttons & Z_TRIG;
 		shootpressed = c1buttons & A_BUTTON;
-		exitpressed = c1buttons & R_TRIG;
+		exitpressed = c1buttons & (R_TRIG | L_JPAD | R_JPAD);
 		activatepressed = c1buttons & B_BUTTON;
 	} else if (controlmode <= CONTROLMODE_14) {
 		aimpressed = c1buttons & (R_TRIG);
 		shootpressed = c1buttons & Z_TRIG;
-		exitpressed = c1buttons & A_BUTTON;
+		exitpressed = c1buttons & (A_BUTTON | L_JPAD | R_JPAD);
 		activatepressed = c1buttons & B_BUTTON;
 	} else {
 		if (controlmode >= CONTROLMODE_23) {
@@ -752,7 +752,7 @@ void eyespyProcessInput(bool allowbuttons)
 			shootpressed = c1buttons & Z_TRIG;
 		}
 
-		exitpressed = (c1buttons | c2buttons) & A_BUTTON;
+		exitpressed = (c1buttons | c2buttons) & (A_BUTTON | L_JPAD | R_JPAD);
 		activatepressed = (c1buttons | c2buttons) & B_BUTTON;
 	}
 
