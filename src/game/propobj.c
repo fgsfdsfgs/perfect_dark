@@ -20060,7 +20060,7 @@ bool doorCalcIntendedFrac(struct doorobj *door)
 		if (door->base.flags3 & OBJFLAG3_DOOR_STICKY) {
 			s32 value = (random() % 64) + 30;
 
-#ifndef PLATFORM_N64 // emulate low fps cal rate for stackage test
+#ifndef PLATFORM_N64 // emulate low fps cal rate for stuckage test
 			if (((g_Vars.lvframenum % value) == 0)
 				&& ((g_Vars.lvframe60 & 3) == 0)) {
 #else
