@@ -9,6 +9,9 @@
 #include "lib/main.h"
 #include "data.h"
 #include "types.h"
+#ifndef PLATFORM_N64
+#include "video.h"
+#endif
 
 struct marker {
 	f32 x1;
@@ -161,6 +164,7 @@ Gfx *healthbarDraw(Gfx *gdl, struct chrdata *chr, s32 offyarg, f32 heightfracarg
 	f32 traumafrac;
 	f32 healthfrac;
 	f32 heightfrac;
+	f32 fovoffset;
 	u32 colour;
 	s32 index;
 	s32 i;
@@ -233,6 +237,14 @@ Gfx *healthbarDraw(Gfx *gdl, struct chrdata *chr, s32 offyarg, f32 heightfracarg
 		armourfrac = (g_Vars.currentplayer->apparenthealth - 0.25f) / 0.75f;
 		traumafrac = (0.25f - g_Vars.currentplayer->apparenthealth) * 4.0f;
 		heightfrac = playerGetHealthBarHeightFrac();
+		fovoffset = 0;
+#ifndef PLATFORM_N64 // dynamically adjust health bar depending on fov
+		if (videoGetPlayerFovY() > 60.0f) {
+			fovoffset = (videoGetPlayerFovY() - 60.0f) * -2.4f;
+		} else if (videoGetPlayerFovY() < 60.0f) {
+			fovoffset = (60.0f - videoGetPlayerFovY()) * 1.8f;
+		}
+#endif
 	} else {
 		// Use the given chr's health
 		healthfrac = (chr->maxdamage - chr->damage) / chr->maxdamage;
@@ -240,6 +252,7 @@ Gfx *healthbarDraw(Gfx *gdl, struct chrdata *chr, s32 offyarg, f32 heightfracarg
 		armourfrac = (healthfrac - 0.25f) / 0.75f;
 		traumafrac = (0.25f - healthfrac) * 4.0f;
 		heightfrac = heightfracarg;
+		fovoffset = 0;
 		offy += offyarg;
 	}
 
@@ -267,63 +280,63 @@ Gfx *healthbarDraw(Gfx *gdl, struct chrdata *chr, s32 offyarg, f32 heightfracarg
 	 * len1 - is the X position of the right side.
 	 */
 	shieldmarkers[0].x1 = len1 + radmax * 1.08f;
-	shieldmarkers[0].y1 = 0;
+	shieldmarkers[0].y1 = 0 + fovoffset;
 	shieldmarkers[0].x2 = len1 + (f32)radmed;
-	shieldmarkers[0].y2 = 0;
+	shieldmarkers[0].y2 = 0 + fovoffset;
 	shieldmarkers[0].frac = 0;
 
 	shieldmarkers[1].x1 = len1 + radmax * 0.924f * 1.04f;
-	shieldmarkers[1].y1 = heightfrac * radmax * 0.383f;
+	shieldmarkers[1].y1 = heightfrac * radmax * 0.383f + fovoffset;
 	shieldmarkers[1].x2 = len1 + radmed * 0.924f;
-	shieldmarkers[1].y2 = heightfrac * radmed * 0.383f;
+	shieldmarkers[1].y2 = heightfrac * radmed * 0.383f + fovoffset;
 	shieldmarkers[1].frac = 0.05f;
 
 	shieldmarkers[2].x1 = len1 + radmax * 0.707f * 1.02f;
-	shieldmarkers[2].y1 = heightfrac * radmax * 0.707f;
+	shieldmarkers[2].y1 = heightfrac * radmax * 0.707f + fovoffset;
 	shieldmarkers[2].x2 = len1 + radmed * 0.707f;
-	shieldmarkers[2].y2 = heightfrac * radmed * 0.707f;
+	shieldmarkers[2].y2 = heightfrac * radmed * 0.707f + fovoffset;
 	shieldmarkers[2].frac = 0.1f;
 
 	shieldmarkers[3].x1 = len1 + radmax * 0.383f;
-	shieldmarkers[3].y1 = heightfrac * radmax * 0.924f;
+	shieldmarkers[3].y1 = heightfrac * radmax * 0.924f + fovoffset;
 	shieldmarkers[3].x2 = len1 + radmed * 0.383f;
-	shieldmarkers[3].y2 = heightfrac * radmed * 0.924f;
+	shieldmarkers[3].y2 = heightfrac * radmed * 0.924f + fovoffset;
 	shieldmarkers[3].frac = 0.15f;
 
 	shieldmarkers[4].x1 = len1;
-	shieldmarkers[4].y1 = heightfrac * radmax;
+	shieldmarkers[4].y1 = heightfrac * radmax + fovoffset;
 	shieldmarkers[4].x2 = len1;
-	shieldmarkers[4].y2 = heightfrac * radmed;
+	shieldmarkers[4].y2 = heightfrac * radmed + fovoffset;
 	shieldmarkers[4].frac = 0.2f;
 
 	shieldmarkers[5].x1 = len0;
-	shieldmarkers[5].y1 = heightfrac * radmax;
+	shieldmarkers[5].y1 = heightfrac * radmax + fovoffset;
 	shieldmarkers[5].x2 = len0;
-	shieldmarkers[5].y2 = heightfrac * radmed;
+	shieldmarkers[5].y2 = heightfrac * radmed + fovoffset;
 	shieldmarkers[5].frac = 0.8f;
 
 	shieldmarkers[6].x1 = len0 - radmax * 0.383f;
-	shieldmarkers[6].y1 = heightfrac * radmax * 0.924f;
+	shieldmarkers[6].y1 = heightfrac * radmax * 0.924f + fovoffset;
 	shieldmarkers[6].x2 = len0 - radmed * 0.383f;
-	shieldmarkers[6].y2 = heightfrac * radmed * 0.924f;
+	shieldmarkers[6].y2 = heightfrac * radmed * 0.924f + fovoffset;
 	shieldmarkers[6].frac = 0.85f;
 
 	shieldmarkers[7].x1 = 0.0f - radmax * 0.707f * 1.02f;
-	shieldmarkers[7].y1 = heightfrac * radmax * 0.707f;
+	shieldmarkers[7].y1 = heightfrac * radmax * 0.707f + fovoffset;
 	shieldmarkers[7].x2 = 0.0f - radmed * 0.707f;
-	shieldmarkers[7].y2 = heightfrac * radmed * 0.707f;
+	shieldmarkers[7].y2 = heightfrac * radmed * 0.707f + fovoffset;
 	shieldmarkers[7].frac = 0.9f;
 
 	shieldmarkers[8].x1 = len0 - radmax * 0.924f * 1.04f;
-	shieldmarkers[8].y1 = heightfrac * radmax * 0.383f;
+	shieldmarkers[8].y1 = heightfrac * radmax * 0.383f + fovoffset;
 	shieldmarkers[8].x2 = len0 - radmed * 0.924f;
-	shieldmarkers[8].y2 = heightfrac * radmed * 0.383f;
+	shieldmarkers[8].y2 = heightfrac * radmed * 0.383f + fovoffset;
 	shieldmarkers[8].frac = 0.95f;
 
 	shieldmarkers[9].x1 = len0 - radmax * 1.08f;
-	shieldmarkers[9].y1 = len0;
+	shieldmarkers[9].y1 = len0 + fovoffset;
 	shieldmarkers[9].x2 = len0 - radmed;
-	shieldmarkers[9].y2 = len0;
+	shieldmarkers[9].y2 = len0 + fovoffset;
 	shieldmarkers[9].frac = 1;
 
 	/**
@@ -335,39 +348,39 @@ Gfx *healthbarDraw(Gfx *gdl, struct chrdata *chr, s32 offyarg, f32 heightfracarg
 	 * len1 - is the X position of the right side.
 	 */
 	armourmarkers[0].x1 = len2;
-	armourmarkers[0].y1 = heightfrac * radmin;
+	armourmarkers[0].y1 = heightfrac * radmin + fovoffset;
 	armourmarkers[0].x2 = len2;
-	armourmarkers[0].y2 = -heightfrac * radmin;
+	armourmarkers[0].y2 = -heightfrac * radmin + fovoffset;
 	armourmarkers[0].frac = 0;
 
 	armourmarkers[1].x1 = len1;
-	armourmarkers[1].y1 = heightfrac * radmin;
+	armourmarkers[1].y1 = heightfrac * radmin + fovoffset;
 	armourmarkers[1].x2 = len1;
-	armourmarkers[1].y2 = -heightfrac * radmin;
+	armourmarkers[1].y2 = -heightfrac * radmin + fovoffset;
 	armourmarkers[1].frac = 0.9f;
 
 	armourmarkers[2].x1 = len1 + radmin * 0.342f;
-	armourmarkers[2].y1 = heightfrac * radmin * 0.94f;
+	armourmarkers[2].y1 = heightfrac * radmin * 0.94f + fovoffset;
 	armourmarkers[2].x2 = len1 + radmin * 0.342f;
-	armourmarkers[2].y2 = -heightfrac * radmin * 0.94f;
+	armourmarkers[2].y2 = -heightfrac * radmin * 0.94f + fovoffset;
 	armourmarkers[2].frac = 0.94f;
 
 	armourmarkers[3].x1 = len1 + radmin * 0.643f;
-	armourmarkers[3].y1 = heightfrac * radmin * 0.766f;
+	armourmarkers[3].y1 = heightfrac * radmin * 0.766f + fovoffset;
 	armourmarkers[3].x2 = len1 + radmin * 0.643f;
-	armourmarkers[3].y2 = -heightfrac * radmin * 0.766f;
+	armourmarkers[3].y2 = -heightfrac * radmin * 0.766f + fovoffset;
 	armourmarkers[3].frac = 0.97f;
 
 	armourmarkers[4].x1 = len1 + radmin * 0.866f;
-	armourmarkers[4].y1 = heightfrac * radmin * 0.5f;
+	armourmarkers[4].y1 = heightfrac * radmin * 0.5f + fovoffset;
 	armourmarkers[4].x2 = len1 + radmin * 0.866f;
-	armourmarkers[4].y2 = -heightfrac * radmin * 0.5f;
+	armourmarkers[4].y2 = -heightfrac * radmin * 0.5f + fovoffset;
 	armourmarkers[4].frac = 0.99f;
 
 	armourmarkers[5].x1 = len1 + radmin * 0.985f;
-	armourmarkers[5].y1 = heightfrac * radmin * 0.174f;
+	armourmarkers[5].y1 = heightfrac * radmin * 0.174f + fovoffset;
 	armourmarkers[5].x2 = len1 + radmin * 0.985f;
-	armourmarkers[5].y2 = -heightfrac * radmin * 0.174f;
+	armourmarkers[5].y2 = -heightfrac * radmin * 0.174f + fovoffset;
 	armourmarkers[5].frac = 1;
 
 	/**
@@ -385,39 +398,39 @@ Gfx *healthbarDraw(Gfx *gdl, struct chrdata *chr, s32 offyarg, f32 heightfracarg
 	 * code.
 	 */
 	traumamarkers[0].x1 = len3;
-	traumamarkers[0].y1 = heightfrac * radmin;
+	traumamarkers[0].y1 = heightfrac * radmin + fovoffset;
 	traumamarkers[0].x2 = len3;
-	traumamarkers[0].y2 = -heightfrac * radmin;
+	traumamarkers[0].y2 = -heightfrac * radmin + fovoffset;
 	traumamarkers[0].frac = 0;
 
 	traumamarkers[1].x1 = 0.0f;
-	traumamarkers[1].y1 = heightfrac * radmin;
+	traumamarkers[1].y1 = heightfrac * radmin + fovoffset;
 	traumamarkers[1].x2 = 0.0f;
-	traumamarkers[1].y2 = -heightfrac * radmin;
+	traumamarkers[1].y2 = -heightfrac * radmin + fovoffset;
 	traumamarkers[1].frac = 0.8f;
 
 	traumamarkers[2].x1 = 0.0f - radmin * 0.383f;
-	traumamarkers[2].y1 = heightfrac * radmin * 0.924f;
+	traumamarkers[2].y1 = heightfrac * radmin * 0.924f + fovoffset;
 	traumamarkers[2].x2 = 0.0f - radmin * 0.383f;
-	traumamarkers[2].y2 = -heightfrac * radmin * 0.924f;
+	traumamarkers[2].y2 = -heightfrac * radmin * 0.924f + fovoffset;
 	traumamarkers[2].frac = 0.85f;
 
 	traumamarkers[3].x1 = 0.0f - radmin * 0.707f;
-	traumamarkers[3].y1 = heightfrac * radmin * 0.7070f;
+	traumamarkers[3].y1 = heightfrac * radmin * 0.7070f + fovoffset;
 	traumamarkers[3].x2 = 0.0f - radmin * 0.707f;
-	traumamarkers[3].y2 = -heightfrac * radmin * 0.7070f;
+	traumamarkers[3].y2 = -heightfrac * radmin * 0.7070f + fovoffset;
 	traumamarkers[3].frac = 0.9f;
 
 	traumamarkers[4].x1 = len0 - radmin * 0.924f;
-	traumamarkers[4].y1 = heightfrac * radmin * 0.383f;
+	traumamarkers[4].y1 = heightfrac * radmin * 0.383f + fovoffset;
 	traumamarkers[4].x2 = len0 - radmin * 0.924f;
-	traumamarkers[4].y2 = -heightfrac * radmin * 0.383f;
+	traumamarkers[4].y2 = -heightfrac * radmin * 0.383f + fovoffset;
 	traumamarkers[4].frac = 0.95f;
 
 	traumamarkers[5].x1 = len0 - radmin;
-	traumamarkers[5].y1 = 0.0f;
+	traumamarkers[5].y1 = 0.0f + fovoffset;
 	traumamarkers[5].x2 = len0 - radmin;
-	traumamarkers[5].y2 = 0.0f;
+	traumamarkers[5].y2 = 0.0f + fovoffset;
 	traumamarkers[5].frac = 1;
 
 	// Build shield graphics data
@@ -445,7 +458,7 @@ Gfx *healthbarDraw(Gfx *gdl, struct chrdata *chr, s32 offyarg, f32 heightfracarg
 
 		shieldvertices->x = (s32)marker->x1 + offx;
 		shieldvertices->y = 0;
-		shieldvertices->z = (s32)marker->y1 + offy;
+		shieldvertices->z = (s32)marker->y1 + offy + fovoffset;
 		shieldvertices->colour = (i + i) << 2;
 		shieldvertices++;
 
@@ -454,7 +467,7 @@ Gfx *healthbarDraw(Gfx *gdl, struct chrdata *chr, s32 offyarg, f32 heightfracarg
 
 		shieldvertices->x = (s32)marker->x2 + offx;
 		shieldvertices->y = 0;
-		shieldvertices->z = (s32)marker->y2 + offy;
+		shieldvertices->z = (s32)marker->y2 + offy + fovoffset;
 		shieldvertices->colour = (i + i + 1) << 2;
 		shieldvertices++;
 
@@ -479,7 +492,7 @@ Gfx *healthbarDraw(Gfx *gdl, struct chrdata *chr, s32 offyarg, f32 heightfracarg
 
 		armourvertices->x = (s32)marker->x1 + offx;
 		armourvertices->y = 0;
-		armourvertices->z = (s32)marker->y1 + offy;
+		armourvertices->z = (s32)marker->y1 + offy + fovoffset;
 		armourvertices->colour = (i + i) << 2;
 		armourvertices++;
 
@@ -488,7 +501,7 @@ Gfx *healthbarDraw(Gfx *gdl, struct chrdata *chr, s32 offyarg, f32 heightfracarg
 
 		armourvertices->x = (s32)marker->x2 + offx;
 		armourvertices->y = 0;
-		armourvertices->z = (s32)marker->y2 + offy;
+		armourvertices->z = (s32)marker->y2 + offy + fovoffset;
 		armourvertices->colour = (i + i + 1) << 2;
 		armourvertices++;
 
@@ -513,7 +526,7 @@ Gfx *healthbarDraw(Gfx *gdl, struct chrdata *chr, s32 offyarg, f32 heightfracarg
 
 		traumavertices->x = (s32)marker->x1 + offx;
 		traumavertices->y = 0;
-		traumavertices->z = (s32)marker->y1 + offy;
+		traumavertices->z = (s32)marker->y1 + offy + fovoffset;
 		traumavertices->colour = (i + i) << 2;
 		traumavertices++;
 
@@ -522,7 +535,7 @@ Gfx *healthbarDraw(Gfx *gdl, struct chrdata *chr, s32 offyarg, f32 heightfracarg
 
 		traumavertices->x = (s32)marker->x2 + offx;
 		traumavertices->y = 0;
-		traumavertices->z = (s32)marker->y2 + offy;
+		traumavertices->z = (s32)marker->y2 + offy + fovoffset;
 		traumavertices->colour = (i + i + 1) << 2;
 		traumavertices++;
 
