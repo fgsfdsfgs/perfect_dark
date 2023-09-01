@@ -1461,7 +1461,7 @@ void bmoveProcessInput(bool allowc1x, bool allowc1y, bool allowc1buttons, bool i
 						// Handle ALT1 / MI Reload Hack
 						for (i = 0; i < numsamples; i++) {
 							if (joyGetButtonsOnSample(i, contpad1, c1allowedbuttons & BUTTON_RELOAD)) {
-								movedata.alt1tapcount++;
+								movedata.alt1tapcount = bgunConsiderReloadTap();
 							}
 						}
 
@@ -1644,7 +1644,7 @@ void bmoveProcessInput(bool allowc1x, bool allowc1y, bool allowc1buttons, bool i
 	g_Vars.currentplayer->bondactivateorreload = 0;
 
 	if (movedata.alt1tapcount) {
-		g_Vars.currentplayer->bondactivateorreload = g_Vars.currentplayer->bondactivateorreload | JO_ACTION_RELOAD;
+		g_Vars.currentplayer->bondactivateorreload = g_Vars.currentplayer->bondactivateorreload | movedata.alt1tapcount;
 	}
 	if (movedata.btapcount) {
 		g_Vars.currentplayer->activatetimelast = g_Vars.currentplayer->activatetimethis;

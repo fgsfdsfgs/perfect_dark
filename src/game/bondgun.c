@@ -6008,6 +6008,39 @@ char *bgunGetShortName(s32 weaponnum)
 
 const char var7f1ac170[] = "wantedfn %d tiggle %d\n";
 
+s32 bgunConsiderReloadTap() {
+	// there is a timing issue in pd
+	// where if you press reload immediately after reloading triggers
+	// followed by shooting where the hand of the player
+	// will trigger an unwanted reload
+	//
+	// so we'll need to check each hand for eligibility of the reload request
+	// and drop it if appropriate
+	//
+	// we'll returned the JO_ACTION_RELOAD_* constants OR'ed together
+	// This will make it easier to implement per-hand reloading buttons
+	// and gates the reload impulse behind the ammo check.
+
+	s8 i;
+	s8 righttap = 0;
+	s8 lefttap = 0;
+
+	s32 righthandwpn = bgunGetWeaponNum(HAND_RIGHT);
+	s32 lefthandwpn = bgunGetWeaponNum(HAND_LEFT);
+
+
+	struct player *player = g_Vars.currentplayer;
+	struct hand righthand = player->hands[HAND_RIGHT];
+	struct hand lefthand = player->hands[HAND_LEFT];
+	s32 righthandfun = righthand.activatesecondary;
+	s32 lefthandfun = lefthand.activatesecondary;
+
+	righttap = (righthand.loadedammo[righthandfun] > 0) ? JO_ACTION_RELOAD_RIGHT: 0;
+	lefttap = (lefthand.loadedammo[lefthandfun] > 0)    ? JO_ACTION_RELOAD_LEFT : 0;
+
+	return righttap | lefttap;
+}
+
 void bgunReloadIfPossible(s32 handnum)
 {
 	struct player *player = g_Vars.currentplayer;

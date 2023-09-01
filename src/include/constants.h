@@ -4649,7 +4649,8 @@ enum weaponnum {
 #define BODY_DARK_NEGOTIATOR  0x96
 
 #define JO_ACTION_ACTIVATE           0x0001
-#define JO_ACTION_RELOAD             0x0002
+#define JO_ACTION_RELOAD_RIGHT       0x0002
+#define JO_ACTION_RELOAD_LEFT        0x0004
 
 #ifdef PLATFORM_N64
 

@@ -1290,15 +1290,18 @@ Gfx *lvRender(Gfx *gdl)
 				}
 
 				// Handle opening doors and reloading
-				if (g_Vars.currentplayer->bondactivateorreload & JO_ACTION_RELOAD) {
-					if (g_Vars.currentplayer->hands[HAND_RIGHT].state != HANDSTATE_RELOAD){
+				if (g_Vars.currentplayer->bondactivateorreload & JO_ACTION_RELOAD_RIGHT) {
+					if (g_Vars.currentplayer->hands[HAND_RIGHT].modenext != HANDSTATE_RELOAD && g_Vars.currentplayer->hands[HAND_RIGHT].state != HANDSTATE_RELOAD){
 						bgunReloadIfPossible(HAND_RIGHT);
 
 					}
-					if (g_Vars.currentplayer->hands[HAND_LEFT].state != HANDSTATE_RELOAD) {
+					g_Vars.currentplayer->bondactivateorreload = (g_Vars.currentplayer->bondactivateorreload & ~JO_ACTION_RELOAD_RIGHT) | (g_Vars.currentplayer->bondactivateorreload & 0x0);
+				}
+				if (g_Vars.currentplayer->bondactivateorreload & JO_ACTION_RELOAD_LEFT) {
+					if (g_Vars.currentplayer->hands[HAND_LEFT].modenext != HANDSTATE_RELOAD && g_Vars.currentplayer->hands[HAND_LEFT].state != HANDSTATE_RELOAD) {
 						bgunReloadIfPossible(HAND_LEFT);
 					}
-					g_Vars.currentplayer->bondactivateorreload = (g_Vars.currentplayer->bondactivateorreload & ~JO_ACTION_RELOAD) | (g_Vars.currentplayer->bondactivateorreload & 0x0);
+					g_Vars.currentplayer->bondactivateorreload = (g_Vars.currentplayer->bondactivateorreload & ~JO_ACTION_RELOAD_LEFT) | (g_Vars.currentplayer->bondactivateorreload & 0x0);
 				}
 				if (g_Vars.currentplayer->bondactivateorreload & JO_ACTION_ACTIVATE) {
 					currentPlayerInteract(false);
