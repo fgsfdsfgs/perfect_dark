@@ -6035,8 +6035,8 @@ s32 bgunConsiderReloadTap() {
 	s32 righthandfun = righthand.activatesecondary;
 	s32 lefthandfun = lefthand.activatesecondary;
 
-	righttap = (righthand.loadedammo[righthandfun] > 0) ? JO_ACTION_RELOAD_RIGHT: 0;
-	lefttap = (lefthand.loadedammo[lefthandfun] > 0)    ? JO_ACTION_RELOAD_LEFT : 0;
+	righttap = (righthand.loadedammo[righthandfun] > 0 && righthand.loadedammo[righthandfun] < righthand.clipsizes[righthandfun]) ? JO_ACTION_RELOAD_RIGHT: 0;
+	lefttap = (lefthand.loadedammo[lefthandfun] > 0 && lefthand.loadedammo[lefthandfun] < lefthand.clipsizes[lefthandfun])    ? JO_ACTION_RELOAD_LEFT : 0;
 
 	return righttap | lefttap;
 }
