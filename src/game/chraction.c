@@ -6582,6 +6582,23 @@ bool chrHasLosToPosWasteful(struct chrdata *chr, struct coord *pos, RoomNum *roo
 	return chrHasLosToPos(chr, pos, rooms);
 }
 
+bool chrHasLosToPosInFov(struct chrdata *chr, struct coord *pos, RoomNum *rooms)
+{
+	f32 facingangle = chrGetInverseTheta(chr);
+	f32 posangle = atan2f(pos->x - chr->prop->pos.x, pos->z - chr->prop->pos.z);
+	f32 diffangle = posangle - facingangle;
+
+	if (posangle < facingangle) {
+		diffangle += M_BADTAU;
+	}
+
+	if (diffangle < 1.7450513839722f || diffangle > 4.5371336936951f) {
+		return chrHasLosToPos(chr, pos, rooms);
+	}
+
+	return false;
+}
+
 bool chrHasLosToProp(struct chrdata *chr, struct prop *prop)
 {
 	bool result;
@@ -8286,7 +8303,7 @@ void chrAlertOthersOfInjury(struct chrdata *chr, bool dying)
 			if (xdiff * xdiff + ydiff * ydiff + zdiff * zdiff < 4000000.0f) {
 				numinrange++;
 
-				if (chrHasLosToPosWasteful(loopchr, &chr->prop->pos, chr->prop->rooms)) {
+				if (chrHasLosToPosInFov(loopchr, &chr->prop->pos, chr->prop->rooms)) {
 					if (dying == false) {
 						loopchr->chrseeshot = chr->chrnum;
 					} else {
