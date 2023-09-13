@@ -21,3 +21,4 @@ src/assets/*/sequences/*.seq
 src/assets/*/textures/*.bin
 src/generated
 tools/mkrom/mkrom
+flatpak/.flatpak-builder

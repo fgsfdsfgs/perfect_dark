@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>local.d1sc0inferno.fgsfdsfgs.perfectdark</id>
+  
+  <name>PerfectDark</name>
+  <summary>PerfectDark ported to Linux</summary>
+  
+  <metadata_license>MIT</metadata_license>
+  <project_license>MIT</project_license>
+  
+  <supports>
+    <control>pointing</control>
+    <control>keyboard</control>
+    <control>gamepad</control>
+  </supports>
+  
+  <description>
+    <p>
+      PerfectDark ported to Linux by fgsfdsfgs based off the decompilation project
+    </p>
+  </description>
+  
+  <launchable type="desktop-id">local.d1sc0inferno.fgsfdsfgs.perfectdark.desktop</launchable>
+</component>

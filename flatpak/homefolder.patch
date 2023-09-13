@@ -1,0 +1,78 @@
+diff --git a/port/include/config.h b/port/include/config.h
+index c248b9c2b..0f7e3d520 100644
+--- a/port/include/config.h
++++ b/port/include/config.h
+@@ -2,7 +2,7 @@
+ 
+ #include <PR/ultratypes.h>
+ 
+-#define CONFIG_FNAME "./pd.ini"
++#define CONFIG_FNAME "pd.ini"
+ 
+ void configInit(void);
+ 
+diff --git a/port/src/fs.c b/port/src/fs.c
+index e5a582012..c3e1d3430 100644
+--- a/port/src/fs.c
++++ b/port/src/fs.c
+@@ -38,7 +38,10 @@ s32 fsInit(void)
+ 	sysGetExecutablePath(exeDir, FS_MAXPATH);
+ 
+ 	// get path to data dir and expand it if needed
+-	const char *path = configGetString("Game.BaseDir", "./data");
++	char dataDir[180];
++	strcpy(dataDir, getenv("HOME"));
++	strcat(dataDir, "/.perfectdark");
++	const char *path = configGetString("Game.BaseDir", dataDir);
+ 	if (path[0] == '!') {
+ 		strncpy(baseDir, fsFullPath(path), FS_MAXPATH);
+ 	} else {
+diff --git a/port/src/libultra.c b/port/src/libultra.c
+index bb642a5cf..c537df424 100644
+--- a/port/src/libultra.c
++++ b/port/src/libultra.c
+@@ -13,7 +13,7 @@
+ #include "fs.h"
+ 
+ #define EEPROM_SIZE (EEP16K_MAXBLOCKS * 8)
+-#define EEPROM_FNAME "./eeprom.bin"
++#define EEPROM_FNAME "eeprom.bin"
+ #define OS_COUNTER_RATE 46875000ULL
+ 
+ #define OS_COUNTER_NUM (OS_COUNTER_RATE / 1000ULL)
+@@ -255,24 +255,33 @@ static inline void osEeepromLoad(const char *fname)
+ {
+ 	if (!eepromLoaded) {
+ 		eepromLoaded = 1;
++		char path[180];
++		strcpy(path, getenv("HOME"));
++		strcat(path, "/.perfectdark/");
++		strcat(path, fname);
+ 		FILE *fp = fsFileOpenRead(fname);
+ 		if (fp) {
+ 			fread(eeprom, 1, EEPROM_SIZE, fp);
+ 			fsFileClose(fp);
+ 		} else {
+-			sysLogPrintf(LOG_NOTE, "could not read EEPROM from `%s`: %s", fname, strerror(errno));
++			sysLogPrintf(LOG_NOTE, "could not read EEPROM from `%s`: %s", path, strerror(errno));
+ 		}
+ 	}
+ }
+ 
+ static inline void osEeepromSave(const char *fname)
+ {
++	char path[180];
++	strcpy(path, getenv("HOME"));
++	strcat(path, "/.perfectdark/");
++	strcat(path, fname);
++
+ 	FILE* fp = fsFileOpenWrite(fname);
+ 	if (fp) {
+ 		fwrite(eeprom, 1, EEPROM_SIZE, fp);
+ 		fsFileClose(fp);
+ 	} else {
+-		sysLogPrintf(LOG_ERROR, "could not save EEPROM to `%s`: %s", fname, strerror(errno));
++		sysLogPrintf(LOG_ERROR, "could not save EEPROM to `%s`: %s", path, strerror(errno));
+ 	}
+ }
+ 

@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+
+Name=PerfectDark
+Comment=PerfectDark ported to Linux
+Categories=Game;Shooter;
+
+Icon=local.d1sc0inferno.fgsfdsfgs.perfectdark
+Exec=/app/pd.exe
+Terminal=false

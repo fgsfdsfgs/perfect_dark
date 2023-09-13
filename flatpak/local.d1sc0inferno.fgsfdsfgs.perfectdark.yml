@@ -1,0 +1,95 @@
+app-id: local.d1sc0inferno.fgsfdsfgs.perfectdark
+runtime: org.freedesktop.Platform
+runtime-version: '23.08'
+sdk: org.freedesktop.Sdk
+command: pd.exe
+
+x-compat-i386-build-options: &compat-i386-build-options
+  prepend-pkg-config-path: /app/lib32/pkgconfig:/usr/lib/i386-linux-gnu/pkgconfig
+  ldflags: -L/app/lib32
+  prepend-path: /usr/lib/sdk/toolchain-i386/bin
+  env:
+    CC: i686-unknown-linux-gnu-gcc
+    CXX: i686-unknown-linux-gnu-g++
+  libdir: /app/lib32
+
+modules:
+  - name: perfectdark
+    buildsystem: simple
+    build-options: *compat-i386-build-options
+    build-commands:
+      - git apply homefolder.patch
+      - make -f Makefile.port HOST_PLATFORM=i686-linux TARGET_64BIT=0 TOOLCHAIN=i686-unknown-linux-gnu-
+      - cp -r build/*-port/* /app/
+      - mkdir /app/data
+      - chmod +x /app/pd.exe
+      - mkdir -p /app/bin
+      - ln -s /app/pd.exe /app/bin/pd.exe
+    sources:
+      - type: archive
+        url: https://codeload.github.com/fgsfdsfgs/perfect_dark/zip/f8ef6939b0b9e11741719aebb0aeee3072cfec69
+        archive-type: zip
+        dest-filename: perfectdark.zip
+        sha256: 77fc0e48bce61ffe9c2abae651d364e66f9023ae2c30795aca9c8f06ffa07996
+      - type: file
+        path: homefolder.patch
+
+  - name: lib-setup
+    buildsystem: simple
+    build-commands:
+      - mkdir -p /app/lib/i386-linux-gnu
+      - mkdir -p /app/lib/debug/lib/i386-linux-gnu
+      - mkdir -p /app/lib/i386-linux-gnu/GL
+      - install -Dm644 ld.so.conf /app/etc/ld.so.conf
+    sources:
+      - type: file
+        path: ld.so.conf
+
+  - name: metadata
+    buildsystem: simple
+    build-commands:
+      - install -Dm644 local.d1sc0inferno.fgsfdsfgs.perfectdark.metainfo.xml /app/share/metainfo/local.d1sc0inferno.fgsfdsfgs.perfectdark.metainfo.xml
+      - install -Dm644 local.d1sc0inferno.fgsfdsfgs.perfectdark.desktop /app/share/applications/local.d1sc0inferno.fgsfdsfgs.perfectdark.desktop
+      - install -Dm644 16x16.png /app/share/icons/hicolor/16x16/apps/local.d1sc0inferno.fgsfdsfgs.perfectdark.png
+      - install -Dm644 24x24.png /app/share/icons/hicolor/24x24/apps/local.d1sc0inferno.fgsfdsfgs.perfectdark.png
+      - install -Dm644 32x32.png /app/share/icons/hicolor/32x32/apps/local.d1sc0inferno.fgsfdsfgs.perfectdark.png
+      - install -Dm644 48x48.png /app/share/icons/hicolor/48x48/apps/local.d1sc0inferno.fgsfdsfgs.perfectdark.png
+      - install -Dm644 64x64.png /app/share/icons/hicolor/64x64/apps/local.d1sc0inferno.fgsfdsfgs.perfectdark.png
+      - install -Dm644 256x256.png /app/share/icons/hicolor/256x256/apps/local.d1sc0inferno.fgsfdsfgs.perfectdark.png
+    sources:
+      - type: file
+        path: ./local.d1sc0inferno.fgsfdsfgs.perfectdark.metainfo.xml
+      - type: file
+        path: ./local.d1sc0inferno.fgsfdsfgs.perfectdark.desktop
+      - type: dir
+        path: ./icons
+
+add-extensions:
+  org.freedesktop.Platform.Compat.i386:
+    directory: lib/i386-linux-gnu
+    version: '23.08'
+  org.freedesktop.Platform.GL32:
+    directory: lib/i386-linux-gnu/GL
+    version: '1.4'
+    versions: 23.08;1.4
+    subdirectories: true
+    no-autodownload: true
+    autodelete: false
+    add-ld-path: lib
+    merge-dirs: vulkan/icd.d;glvnd/egl_vendor.d;OpenCL/vendors;lib/dri;lib/d3d;vulkan/explicit_layer.d;vulkan/implicit_layer.d
+    download-if: active-gl-driver
+    enable-if: active-gl-driver
+
+sdk-extensions:
+  - org.freedesktop.Sdk.Compat.i386
+  - org.freedesktop.Sdk.Extension.toolchain-i386
+
+finish-args:
+  - --device=all
+  - --share=ipc
+  - --allow=multiarch
+  - --device=dri
+  - --socket=wayland
+  - --socket=fallback-x11
+  - --socket=pulseaudio
+  - --filesystem=home
