@@ -36,6 +36,7 @@ u32 g_VmNumPageReplaces = 0;
 u8 g_VmShowStats = 0;
 
 s32 g_TickRateDiv = 1;
+s32 g_UnlockEverything = false;
 
 extern s32 g_StageNum;
 
