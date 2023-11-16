@@ -792,14 +792,6 @@ struct menuitem g_ExtendedGameMenuItems[] = {
 		menuhandlerClassicCrouch,
 	},
 	{
-		MENUITEMTYPE_CHECKBOX,
-		0,
-		MENUITEMFLAG_LITERAL_TEXT,
-		(uintptr_t)"Unlock Everything",
-		0,
-		menuhandlerUnlockEverything,
-	},
-	{
 		MENUITEMTYPE_SLIDER,
 		0,
 		MENUITEMFLAG_LITERAL_TEXT,
@@ -1121,6 +1113,14 @@ struct menuitem g_ExtendedMenuItems[] = {
 		(uintptr_t)"Key Bindings\n",
 		0,
 		menuhandlerOpenBindsMenu,
+	},
+	{
+		MENUITEMTYPE_CHECKBOX,
+		0,
+		MENUITEMFLAG_LITERAL_TEXT,
+		(uintptr_t)"Unlock Everything",
+		0,
+		menuhandlerUnlockEverything,
 	},
 	{
 		MENUITEMTYPE_SEPARATOR,
