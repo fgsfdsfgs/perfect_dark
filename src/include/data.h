@@ -546,6 +546,7 @@ extern s32 g_PrevFrameFb;
 extern s32 g_BlurFb;
 extern s32 g_BlurFbCapTimer;
 extern s32 g_TickRateDiv;
+extern s32 g_UnlockEverything;
 
 #define PLAYER_EXTCFG() g_PlayerExtCfg[g_Vars.currentplayerstats->mpindex & 3]
 #define PLAYER_DEFAULT_FOV (PLAYER_EXTCFG().fovy)
