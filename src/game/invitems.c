@@ -2270,7 +2270,7 @@ struct weaponfunc_shootauto invfunc_k7avenger_threatdetector = {
 	0, // ammoindex
 	&invnoisesettings_louder,
 	NULL, // fire animation
-	FUNCFLAG_BURST3 | FUNCFLAG_NOMUZZLEFLASH | FUNCFLAG_THREATDETECTOR,
+	FUNCFLAG_BURST3 | FUNCFLAG_THREATDETECTOR,
 	&invrecoilsettings_default,
 	0, // recoverytime60
 	1.5, // damage
