@@ -640,6 +640,19 @@ static MenuItemHandlerResult menuhandlerCenterHUD(s32 operation, struct menuitem
 	return 0;
 }
 
+static MenuItemHandlerResult menuhandlerUnlockEverything(s32 operation, struct menuitem *item, union handlerdata *data)
+{
+	switch (operation) {
+	case MENUOP_GET:
+		return g_UnlockEverything;
+	case MENUOP_SET:
+		g_UnlockEverything = data->checkbox.value;
+		break;
+	}
+	
+	return 0;
+}
+
 static MenuItemHandlerResult menuhandlerScreenShake(s32 operation, struct menuitem *item, union handlerdata *data)
 {
 	switch (operation) {
@@ -777,6 +790,14 @@ struct menuitem g_ExtendedGameMenuItems[] = {
 		(uintptr_t)"Allow Classic Crouch",
 		0,
 		menuhandlerClassicCrouch,
+	},
+	{
+		MENUITEMTYPE_CHECKBOX,
+		0,
+		MENUITEMFLAG_LITERAL_TEXT,
+		(uintptr_t)"Unlock Everything",
+		0,
+		menuhandlerUnlockEverything,
 	},
 	{
 		MENUITEMTYPE_SLIDER,
