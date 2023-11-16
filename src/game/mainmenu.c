@@ -1149,6 +1149,11 @@ MenuItemHandlerResult menuhandlerPdMode(s32 operation, struct menuitem *item, un
 		menuPushDialog(&g_PdModeSettingsMenuDialog);
 		break;
 	case MENUOP_CHECKHIDDEN:
+
+		if (g_UnlockEverything) {
+			return false;
+		}
+		
 		if (g_GameFile.besttimes[SOLOSTAGEINDEX_SKEDARRUINS][DIFF_PA] == 0) {
 			return true;
 		}
@@ -1775,7 +1780,7 @@ s32 getNumUnlockedSpecialStages(void)
 	s32 i;
 
 	for (i = 0; i < ARRAYCOUNT(g_GameFile.besttimes[0]); i++) {
-		if (g_GameFile.besttimes[SOLOSTAGEINDEX_SKEDARRUINS][i]) {
+		if (g_GameFile.besttimes[SOLOSTAGEINDEX_SKEDARRUINS][i] || g_UnlockEverything) {
 			count = i + 1;
 		}
 	}
@@ -1790,6 +1795,9 @@ s32 getNumUnlockedSpecialStages(void)
 		}
 	}
 
+	if (g_UnlockEverything)
+		offsetforduel = 1;
+	
 	return count + offsetforduel;
 }
 
@@ -1799,7 +1807,7 @@ s32 func0f104720(s32 value)
 	s32 d;
 
 	for (d = 0; d < ARRAYCOUNT(g_GameFile.besttimes[0]); d++) {
-		if (g_GameFile.besttimes[SOLOSTAGEINDEX_SKEDARRUINS][d]) {
+		if (g_GameFile.besttimes[SOLOSTAGEINDEX_SKEDARRUINS][d] || g_UnlockEverything) {
 			next = d + 1;
 		}
 	}
@@ -1868,6 +1876,10 @@ MenuItemHandlerResult menuhandlerMissionList(s32 operation, struct menuitem *ite
 
 			data->list.value++;
 
+			if (g_UnlockEverything){
+				stageiscomplete = true;
+			}
+			
 			if (!stageiscomplete) {
 				break;
 			}
