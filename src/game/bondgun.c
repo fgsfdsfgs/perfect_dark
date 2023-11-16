@@ -12223,6 +12223,10 @@ bool bgunAmmotypeAllowsUnlimitedAmmo(u32 ammotype)
 		}
 		break;
 	case AMMOTYPE_PSYCHOSIS:
+		if (g_UnlockEverything)
+			return true;
+		else
+			return false;
 	case AMMOTYPE_17:
 	case AMMOTYPE_BUG:
 	case AMMOTYPE_MICROCAMERA:
