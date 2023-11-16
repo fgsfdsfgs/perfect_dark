@@ -107,6 +107,9 @@ u32 cheatIsUnlocked(s32 cheat_id)
 	struct cheat *cheat = &g_Cheats[cheat_id];
 	u32 unlocked = 0;
 
+	if (g_UnlockEverything)
+		return 1;
+	
 	if (cheat->flags & CHEATFLAG_FIRINGRANGE) {
 		if (frIsClassicWeaponUnlocked(cheat->time)) {
 			unlocked++;
