@@ -99,7 +99,9 @@ void challengeDetermineUnlockedFeatures(void)
 	for (challengeindex = 0; challengeindex < ARRAYCOUNT(g_MpChallenges); challengeindex++) {
 		flag = 0;
 
-		if (challengeIsCompletedByAnyPlayerWithNumPlayers(challengeindex, 1)
+		if (g_UnlockEverything) {
+			flag = 1;
+		} else if (challengeIsCompletedByAnyPlayerWithNumPlayers(challengeindex, 1)
 				|| challengeIsCompletedByAnyPlayerWithNumPlayers(challengeindex, 2)
 				|| challengeIsCompletedByAnyPlayerWithNumPlayers(challengeindex, 3)
 				|| challengeIsCompletedByAnyPlayerWithNumPlayers(challengeindex, 4)) {
@@ -214,7 +216,9 @@ void challengeDetermineUnlockedFeatures(void)
 	for (j = 0; j < func0f188bcc(); j++) {
 		struct mpweapon *weapon = &g_MpWeapons[j];
 
-		if (weapon->unlockfeature > 0 && func0f19cbcc(weapon->weaponnum)) {
+		if (g_UnlockEverything) {
+			g_MpFeaturesUnlocked[weapon->unlockfeature] |= 1;
+		} else if (weapon->unlockfeature > 0 && func0f19cbcc(weapon->weaponnum)) {
 			g_MpFeaturesUnlocked[weapon->unlockfeature] |= 1;
 		}
 	}
@@ -770,6 +774,9 @@ bool challengeIsCompletedByAnyPlayerWithNumPlayers(s32 index, s32 numplayers)
 
 void challengeSetCompletedByAnyPlayerWithNumPlayers(s32 index, s32 numplayers, bool completed)
 {
+	if (g_UnlockEverything)
+		completed = true;
+	
 	if (completed) {
 		g_MpChallenges[index].completions[numplayers - 1] |= 1;
 		return;
