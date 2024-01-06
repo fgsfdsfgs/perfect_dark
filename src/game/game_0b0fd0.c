@@ -398,9 +398,11 @@ u16 weaponGetFileNum(s32 weaponnum)
 	}
 
 	if (weapon) {
+#ifdef PLATFORM_N64
 		if (PLAYERCOUNT() >= 2) {
 			return weapon->lo_model;
 		}
+#endif
 
 		return weapon->hi_model;
 	}
