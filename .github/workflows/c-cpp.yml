@@ -4,7 +4,7 @@ on:
   push:
     branches: [ "port", "port-net" ]
   pull_request:
-    branches: [ "port" ]
+    branches: [ "port", "port-net" ]
   workflow_dispatch:
 
 jobs:
