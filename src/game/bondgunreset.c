@@ -151,6 +151,7 @@ void bgunReset(void)
 	}
 
 	g_Vars.currentplayer->gunctrl.gunmem = mempAlloc(i, MEMPOOL_STAGE);
+	g_Vars.currentplayer->gunctrl.invmem = mempAlloc(i, MEMPOOL_STAGE);
 	g_Vars.currentplayer->gunctrl.handfilenum = 0;
 	g_Vars.currentplayer->gunctrl.handmemloadptr = 0;
 	g_Vars.currentplayer->gunctrl.handmemloadremaining = 0;

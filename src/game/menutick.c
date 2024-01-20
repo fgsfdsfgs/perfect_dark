@@ -71,10 +71,33 @@ void menuTick(void)
 
 	menuTickTimers();
 
-	if (g_MenuData.count) {
-		// empty
+	// this check and call to playerUnPause()
+	// transfers control to the player
+	// after the 'logging into Jo's desktop' sequence
+	if (!g_Menus[g_MpPlayerNum].curdialog) {
+		playerStartUnpause();
 	}
-
+	switch (menuGetRoot()) {
+	case MENUROOT_MAINMENU:
+	case MENUROOT_FILEMGR:
+	case MENUROOT_TRAINING:
+		if (!g_PausingEnabled) {
+			if (g_MenuData.bg == MENUBG_BLUR) {
+				menuSetBackground(0);
+				lvSetPaused(0);
+			}
+		} else {
+			if (g_MenuData.bg != MENUBG_BLUR) {
+				menuSetBackground(MENUBG_BLUR);
+				lvSetPaused(1);
+			}
+		}
+		break;
+	case MENUROOT_MPENDSCREEN:
+	case MENUROOT_COOPCONTINUE:
+		 menuSetBackground(MENUBG_BLUR);
+		break;
+	} 
 	menuCountDialogs();
 
 	for (i = 0; i < ARRAYCOUNT(g_Menus); i++) {
@@ -116,6 +139,13 @@ void menuTick(void)
 		} else {
 			g_MenuData.unk66f++;
 		}
+	}
+
+	// [pauseless]: this allows radial menu control and releases training PC control back to player
+	// when this is commented out, the CI training PCs will cause the player to lose control
+	// it prevents the mouse / joy stick working with the radial menu
+	if (g_Vars.currentplayer->activemenumode != AMMODE_VIEW) {
+		g_PlayersWithControl[g_Menus[g_MpPlayerNum].playernum] = !anyopen;
 	}
 
 	if (g_MenuData.nextbg != 255) {
@@ -191,9 +221,11 @@ void menuTick(void)
 					}
 				}
 
+				#ifndef PLATFORM_N64
 				if (g_MenuData.bg == 0) {
-					func0f0fa6ac();
+					handleMenuClose();
 				}
+				#endif
 			}
 
 			if (g_MenuData.nextbg == MENUBG_FAILURE) {
@@ -252,7 +284,7 @@ void menuTick(void)
 				if (g_MpSetup.chrslots & 0xf) {
 					sndStart(var80095200, SFX_EXPLOSION_8098, 0, -1, -1, -1, -1, -1);
 
-					playerPause(IS4MB() ? MENUROOT_4MBMAINMENU : MENUROOT_MPSETUP);
+					playerStartPause(IS4MB() ? MENUROOT_4MBMAINMENU : MENUROOT_MPSETUP);
 				}
 			}
 
@@ -273,8 +305,7 @@ void menuTick(void)
 			g_Menus[1].openinhibit = 0;
 			g_Menus[2].openinhibit = 0;
 			g_Menus[3].openinhibit = 0;
-			g_Vars.currentplayer->pausemode = PAUSEMODE_UNPAUSED;
-			playerPause(MENUROOT_FILEMGR);
+			playerStartPause(MENUROOT_FILEMGR);
 			g_FileState = FILESTATE_SELECTED;
 		}
 	}

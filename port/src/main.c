@@ -159,6 +159,7 @@ PD_CONSTRUCTOR static void gameConfigInit(void)
 	configRegisterInt("Game.MemorySize", &g_OsMemSizeMb, 4, 2048);
 	configRegisterInt("Game.CenterHUD", &g_HudCenter, 0, 2);
 	configRegisterFloat("Game.ScreenShakeIntensity", &g_ViShakeIntensityMult, 0.f, 10.f);
+	configRegisterInt("Game.PausingEnabled", &g_PausingEnabled, 0, 1);
 	configRegisterInt("Game.TickRateDivisor", &g_TickRateDiv, 0, 10);
 	configRegisterInt("Game.SkipIntro", &g_SkipIntro, 0, 1);
 	configRegisterInt("Game.DisableMpDeathMusic", &g_MusicDisableMpDeath, 0, 1);

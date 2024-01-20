@@ -738,6 +738,20 @@ static MenuItemHandlerResult menuhandlerCenterHUD(s32 operation, struct menuitem
 	return 0;
 }
 
+static MenuItemHandlerResult menuhandlerSetPausingEnabled(s32 operation, struct menuitem *item, union handlerdata *data)
+{
+	switch (operation) {
+	case MENUOP_GET:
+		return g_PausingEnabled;
+		break;
+	case MENUOP_SET:
+		g_PausingEnabled = data->checkbox.value;
+		break;
+	}
+
+	return 0;
+}
+
 static MenuItemHandlerResult menuhandlerScreenShake(s32 operation, struct menuitem *item, union handlerdata *data)
 {
 	switch (operation) {
@@ -808,6 +822,14 @@ struct menuitem g_ExtendedVideoMenuItems[] = {
 		(uintptr_t)"Explosion Shake",
 		20,
 		menuhandlerScreenShake,
+	},
+	{
+		MENUITEMTYPE_CHECKBOX,
+		0,
+		MENUITEMFLAG_LITERAL_TEXT | MENUITEMFLAG_SLIDER_WIDE,
+		(uintptr_t)"Enable Pausing in Solo",
+		20,
+		menuhandlerSetPausingEnabled,
 	},
 	{
 		MENUITEMTYPE_SEPARATOR,

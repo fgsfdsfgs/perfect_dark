@@ -2373,6 +2373,9 @@ struct gunctrl {
 	/*0x15f0*/ u8 guntypefader;
 	/*0x15f2*/ u16 curgunstr;
 	/*0x15f4*/ u8 paddingashdown;
+	#ifndef PLATFORM_N64
+	/*extended*/ u8 *invmem;
+	#endif // !PLATFORM_N64	
 };
 
 struct player {
