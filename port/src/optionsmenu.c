@@ -19,6 +19,45 @@ static struct menudialogdef *g_ExtNextDialog = NULL;
 static s32 g_BindIndex = 0;
 static u32 g_BindContKey = 0;
 
+static MenuItemHandlerResult menuhandlerNoAutoSwitch(s32 operation, struct menuitem *item, union handlerdata *data)
+{
+	switch (operation) {
+	case MENUOP_GET:
+		return g_BNoAutoSwitch;
+	case MENUOP_SET:
+		g_BNoAutoSwitch = data->checkbox.value;
+		break;
+	}
+
+	return 0;
+}
+
+static MenuItemHandlerResult menuhandlerNoAutoReload(s32 operation, struct menuitem *item, union handlerdata *data)
+{
+	switch (operation) {
+	case MENUOP_GET:
+		return g_BNoAutoReload;
+	case MENUOP_SET:
+		g_BNoAutoReload = data->checkbox.value;
+		break;
+	}
+
+	return 0;
+}
+
+static MenuItemHandlerResult menuhandlerNoBackpackReload(s32 operation, struct menuitem *item, union handlerdata *data)
+{
+	switch (operation) {
+	case MENUOP_GET:
+		return g_BNoBackpackReload;
+	case MENUOP_SET:
+		g_BNoBackpackReload = data->checkbox.value;
+		break;
+	}
+
+	return 0;
+}
+
 static MenuItemHandlerResult menuhandlerSelectPlayer(s32 operation, struct menuitem *item, union handlerdata *data);
 
 struct menuitem g_ExtendedSelectPlayerMenuItems[] = {
@@ -1125,6 +1164,30 @@ struct menuitem g_ExtendedGameMenuItems[] = {
 		(uintptr_t)"Crouch Mode",
 		0,
 		menuhandlerCrouchMode,
+	},
+	{
+		MENUITEMTYPE_CHECKBOX,
+		0,
+		MENUITEMFLAG_LITERAL_TEXT,
+		(uintptr_t)"No Auto Weapon Switch",
+		20,
+		menuhandlerNoAutoSwitch,
+	},
+	{
+		MENUITEMTYPE_CHECKBOX,
+		0,
+		MENUITEMFLAG_LITERAL_TEXT,
+		(uintptr_t)"No Auto Reloading",
+		20,
+		menuhandlerNoAutoReload,
+	},
+	{
+		MENUITEMTYPE_CHECKBOX,
+		0,
+		MENUITEMFLAG_LITERAL_TEXT,
+		(uintptr_t)"No Backpack Reloads",
+		20,
+		menuhandlerNoBackpackReload,
 	},
 	{
 		MENUITEMTYPE_SLIDER,

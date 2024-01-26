@@ -550,6 +550,9 @@ extern s32 g_TickRateDiv;
 extern s32 g_MusicDisableMpDeath;
 extern s32 g_BgunGeMuzzleFlashes;
 extern s32 g_FileAutoSelect;
+extern bool g_BNoAutoSwitch;
+extern bool g_BNoAutoReload;
+extern bool g_BNoBackpackReload;
 
 #define PLAYER_EXTCFG() g_PlayerExtCfg[g_Vars.currentplayerstats->mpindex & 3]
 #define PLAYER_DEFAULT_FOV (PLAYER_EXTCFG().fovy)

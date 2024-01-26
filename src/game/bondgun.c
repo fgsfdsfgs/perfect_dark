@@ -163,6 +163,12 @@ struct fireslot g_Fireslots[20];
 u32 fill2[1];
 #endif
 
+#ifndef PLATFORM_N64
+bool g_BNoAutoSwitch = false;
+bool g_BNoAutoReload = false;
+bool g_BNoBackpackReload = false;
+#endif
+
 Lights1 var80070090 = gdSPDefLights1(0x96, 0x96, 0x96, 0xff, 0xff, 0xff, 0xb2, 0x4d, 0x2e);
 
 u32 g_BgunGunMemBaseSizeDefault = 150 * 1024;
@@ -1117,6 +1123,7 @@ void bgun0f098df8(s32 weaponfunc, struct handweaponinfo *info, struct hand *hand
 	}
 }
 
+//TODO: Control this with a backpack reload setting
 void bgun0f098f8c(struct handweaponinfo *info, struct hand *hand)
 {
 	s32 i;
@@ -1315,7 +1322,7 @@ s32 bgunTickIncIdle(struct handweaponinfo *info, s32 handnum, struct hand *hand,
 				hand->count60 = 0;
 				hand->count = 0;
 
-				if (bgunSetState(handnum, HANDSTATE_RELOAD)) {
+				if (g_BNoAutoReload || bgunSetState(handnum, HANDSTATE_RELOAD)) {
 					hand->modenext = HANDMODE_NONE;
 					return lvupdate;
 				}
@@ -5869,7 +5876,7 @@ void bgunAutoSwitchWeapon(void)
 	s32 curweaponnum = g_Vars.currentplayer->gunctrl.weaponnum;
 	bool wantammo = false;
 
-	if (g_Vars.tickmode == TICKMODE_CUTSCENE) {
+	if (g_Vars.tickmode == TICKMODE_CUTSCENE || g_BNoAutoSwitch) {
 		return;
 	}
 
