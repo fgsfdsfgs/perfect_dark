@@ -1203,6 +1203,18 @@ bool bgun0f099188(struct hand *hand, s32 gunfunc)
 	return bgun0f0990b0(func, weapon);
 }
 
+//Play a click sound when we have no ammo
+bool dryfire(struct handweaponinfo *info, struct hand *hand, s32 handnum)
+{
+	if (info->weaponnum != WEAPON_NONE) {
+		hand->unk0cc8_01 = false;
+
+		if (bgunSetState(handnum, HANDSTATE_ATTACKEMPTY))
+			return true;
+	}
+	return false;
+}
+
 s32 bgunTickIncIdle(struct handweaponinfo *info, s32 handnum, struct hand *hand, s32 lvupdate)
 {
 	bool usesec;
@@ -1310,14 +1322,15 @@ s32 bgunTickIncIdle(struct handweaponinfo *info, s32 handnum, struct hand *hand,
 					}
 				}
 			}
+			
+			// Clip is empty and we have no reserve ammo
+			if (hand->triggeron && dryfire(info, hand, handnum)) {
+				return lvupdate;
+			}
 		} else if (sp34 == 0) {
 			// Clip is empty
-			if (hand->triggeron && info->weaponnum != WEAPON_NONE) {
-				hand->unk0cc8_01 = false;
-
-				if (bgunSetState(handnum, HANDSTATE_ATTACKEMPTY)) {
-					return lvupdate;
-				}
+			if (hand->triggeron && dryfire(info, hand, handnum)) {
+				return lvupdate;
 			} else if (g_BNoAutoReload && hand->modenext != HANDMODE_RELOAD) {
 				hand->modenext = HANDMODE_EMPTY;
 			} else {
