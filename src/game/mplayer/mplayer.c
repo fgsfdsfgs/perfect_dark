@@ -1217,7 +1217,8 @@ bool mpIsPaused(void)
 {
 	if (PLAYERCOUNT() == 1 
 			&& g_Vars.mplayerisrunning 
-			&& g_Menus[g_Vars.currentplayerstats->mpindex].curdialog) { 
+			&& g_Menus[g_Vars.currentplayerstats->mpindex].curdialog
+			&& g_PausingEnabled) { 
 		return true; 
 	} 
 

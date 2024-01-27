@@ -826,8 +826,8 @@ struct menuitem g_ExtendedVideoMenuItems[] = {
 	{
 		MENUITEMTYPE_CHECKBOX,
 		0,
-		MENUITEMFLAG_LITERAL_TEXT | MENUITEMFLAG_SLIDER_WIDE,
-		(uintptr_t)"Enable Pausing in Solo",
+		MENUITEMFLAG_LITERAL_TEXT,
+		(uintptr_t)"Enable Local Pausing",
 		20,
 		menuhandlerSetPausingEnabled,
 	},
