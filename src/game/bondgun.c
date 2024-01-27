@@ -1213,7 +1213,6 @@ s32 bgunTickIncIdle(struct handweaponinfo *info, s32 handnum, struct hand *hand,
 	s32 next;
 	struct hand *lhand;
 	struct weaponfunc *func;
-	bool reloadCheck = false;
 
 	hand->lastdirvalid = false;
 	hand->burstbullets = 0;
@@ -1319,8 +1318,8 @@ s32 bgunTickIncIdle(struct handweaponinfo *info, s32 handnum, struct hand *hand,
 				if (bgunSetState(handnum, HANDSTATE_ATTACKEMPTY)) {
 					return lvupdate;
 				}
-			} else if (g_BNoAutoReload && hand->modenext == HANDMODE_NONE) {
-				reloadCheck = true;
+			} else if (g_BNoAutoReload && hand->modenext != HANDMODE_RELOAD) {
+				hand->modenext = HANDMODE_EMPTY;
 			} else {
 				hand->count60 = 0;
 				hand->count = 0;
@@ -1350,7 +1349,7 @@ s32 bgunTickIncIdle(struct handweaponinfo *info, s32 handnum, struct hand *hand,
 
 			// Not attacking, but the player may have attempted
 			// to change guns or reload while firing
-			if (hand->modenext != HANDMODE_NONE || reloadCheck) {
+			if (hand->modenext != HANDMODE_NONE) {
 				next = hand->modenext;
 
 				hand->mode = hand->modenext;
@@ -6052,7 +6051,7 @@ void bgunReloadIfPossible(s32 handnum)
 	struct player *player = g_Vars.currentplayer;
 
 	if (bgunGetAmmoTypeForWeapon(bgunGetWeaponNum(handnum), FUNC_PRIMARY)
-			&& player->hands[handnum].modenext == HANDMODE_NONE) {
+			&& (player->hands[handnum].modenext == HANDMODE_NONE || player->hands[handnum].modenext == HANDMODE_EMPTY)) {
 		player->hands[handnum].modenext = HANDMODE_RELOAD;
 	}
 }

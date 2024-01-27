@@ -1278,6 +1278,7 @@
 #define HANDMODE_11     11
 #define HANDMODE_12     12
 #define HANDMODE_13     13
+#define HANDMODE_EMPTY 	14
 
 #define HANDSTATE_IDLE        0
 #define HANDSTATE_RELOAD      1
