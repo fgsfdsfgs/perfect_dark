@@ -23,8 +23,54 @@
 #include <math.h>
 #include "video.h"
 
-#define SIGHT_COLOUR PLAYER_EXTCFG().crosshaircolour
+#define SIGHT_COLOUR ((PLAYER_EXTCFG().crosshairhealth >= CROSSHAIR_HEALTH_ON_GREEN) ? sightGetCrosshairHealthColor(g_Vars.currentplayer->bondhealth, g_Vars.currentplayer->prop->chr->cshield * 0.125f) : PLAYER_EXTCFG().crosshaircolour)
 #define SIGHT_SCALE PLAYER_EXTCFG().crosshairsize
+
+static u32 sightGetCrosshairHealthColor(float health, float shield)
+{
+	const float ratio = MAX(0.0f, MIN(health + shield, 2.0f));
+
+	int red = 0;
+	int green = 0;
+	int blue = 0;
+	if (ratio < 0.2f) {
+		// Red (critical health level)
+		red = 255;
+		green = 0;
+		blue = 0;
+	} else if (ratio < 0.6f) {
+		// Red-yellow
+		red = 255;
+		green = 255 * ((ratio - 0.2f) / 0.4f);
+		blue = 0;
+	} else if (ratio < 1.0f) {
+		if (PLAYER_EXTCFG().crosshairhealth == CROSSHAIR_HEALTH_ON_GREEN) {
+			// Yellow-green
+			red = 255 * ((ratio - 0.6f) / 0.4f);
+			green = 255;
+			blue = 0;
+		} else {
+			// Yellow-white
+			red = 255;
+			green = 255;
+			blue = 255 * ((ratio - 0.6f) / 0.4f);
+		}
+	} else {
+		if (PLAYER_EXTCFG().crosshairhealth == CROSSHAIR_HEALTH_ON_GREEN) {
+			// Green-cyan (overheal via shield)
+			red = 0;
+			green = 255;
+			blue = 255 * (ratio - 1.0f);
+		} else {
+			// White-green (overheal via shield)
+			red = 255 * (2.0f - ratio);
+			green = 255;
+			blue = 255 * (2.0f - ratio);
+		}
+	}
+
+	return (red << 24) + (green << 16) + (blue << 8) + (PLAYER_EXTCFG().crosshaircolour & 0xff);
+}
 
 static inline f32 sightGetScaleX(void)
 {
@@ -1535,6 +1581,13 @@ Gfx *sightDraw(Gfx *gdl, bool sighton, s32 sight)
 	if (PLAYERCOUNT() >= 2 && g_Vars.coopplayernum < 0 && g_Vars.antiplayernum < 0) {
 		sight = SIGHT_DEFAULT;
 	}
+
+#ifndef PLATFORM_N64
+	if (g_Vars.currentplayer->bondhealth <= 0.0f) {
+		// Hide crosshair during death animation
+		sight = SIGHT_NONE;
+	}
+#endif
 
 	sightTick(sighton);
 

@@ -1062,6 +1062,30 @@ static MenuItemHandlerResult menuhandlerCrosshairSize(s32 operation, struct menu
 	return 0;
 }
 
+static MenuItemHandlerResult menuhandlerCrosshairHealth(s32 operation, struct menuitem *item, union handlerdata *data)
+{
+	static const char *opts[] = {
+		"Off",
+		"On (Green)",
+		"On (White)"
+	};
+
+	switch (operation) {
+	case MENUOP_GETOPTIONCOUNT:
+		data->dropdown.value = ARRAYCOUNT(opts);
+		break;
+	case MENUOP_GETOPTIONTEXT:
+		return (intptr_t)opts[data->dropdown.value];
+	case MENUOP_SET:
+		g_PlayerExtCfg[g_ExtMenuPlayer].crosshairhealth = data->dropdown.value;
+		break;
+	case MENUOP_GETSELECTEDINDEX:
+		data->dropdown.value = g_PlayerExtCfg[g_ExtMenuPlayer].crosshairhealth;
+	}
+
+	return 0;
+}
+
 struct menuitem g_ExtendedGameCrosshairColourMenuItems[] = {
 	{
 		MENUITEMTYPE_SLIDER,
@@ -1179,6 +1203,14 @@ struct menuitem g_ExtendedGameMenuItems[] = {
 		(uintptr_t)"Crosshair Colour\n",
 		0,
 		(void*)&g_ExtendedGameCrosshairColourMenuDialog,
+	},
+	{
+		MENUITEMTYPE_DROPDOWN,
+		0,
+		MENUITEMFLAG_LITERAL_TEXT,
+		(uintptr_t)"Crosshair Colour by Health",
+		0,
+		menuhandlerCrosshairHealth,
 	},
 	{
 		MENUITEMTYPE_SEPARATOR,
