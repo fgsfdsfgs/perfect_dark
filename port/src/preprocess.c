@@ -1045,8 +1045,16 @@ void preprocessMpConfigs(u8 *data, u32 size)
 		// TODO: are these required or are they always 0?
 		PD_SWAP_VAL(cfg->setup.fileguid.deviceserial);
 		PD_SWAP_VAL(cfg->setup.fileguid.fileid);
-		// convert MPWEAPON_ to take classic weapons into account
+		// convert MPWEAPON_ to take classic weapons into account, and combat knife in jpn-final
 		for (s32 j = 0; j < ARRAYCOUNT(cfg->setup.weapons); ++j) {
+#if VERSION == VERSION_JPN_FINAL
+			// old MPWEAPON_COMBATKNIFE (0x00) and above are affected in jpn-final
+			if (cfg->setup.weapons[j] == 0x00) {
+				cfg->setup.weapons[j] = cfg->setup.weapons[j + 1];
+			} else if (cfg->setup.weapons[j] >= MPWEAPON_COMBATKNIFE) {
+				cfg->setup.weapons[j] += 0x01;
+			}
+#endif
 			// old MPWEAPON_SHIELD (0x24/0x25) and above are affected
 			if (cfg->setup.weapons[j] >= MPWEAPON_PP9I) {
 				cfg->setup.weapons[j] += (MPWEAPON_SHIELD - MPWEAPON_PP9I);

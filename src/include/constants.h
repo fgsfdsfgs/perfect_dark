@@ -1,5 +1,6 @@
 #ifndef _IN_CONSTANTS_H
 #define _IN_CONSTANTS_H
+
 #include "versions.h"
 #include "math.h"
 #include "animations.h"
@@ -2969,7 +2970,11 @@
 #define MPWEAPON_DEVASTATOR       0x16
 #define MPWEAPON_ROCKETLAUNCHER   0x17
 #define MPWEAPON_SLAYER           0x18
-#define MPWEAPON_COMBATKNIFE      (VERSION == VERSION_JPN_FINAL && defined(PLATFORM_N64) ?    0 : 0x19)
+#if VERSION == VERSION_JPN_FINAL && defined(PLATFORM_N64)
+#define MPWEAPON_COMBATKNIFE      0
+#else
+#define MPWEAPON_COMBATKNIFE      0x19
+#endif
 #define MPWEAPON_CROSSBOW         (VERSION == VERSION_JPN_FINAL && defined(PLATFORM_N64) ? 0x19 : 0x1a)
 #define MPWEAPON_TRANQUILIZER     (VERSION == VERSION_JPN_FINAL && defined(PLATFORM_N64) ? 0x1a : 0x1b)
 #define MPWEAPON_GRENADE          (VERSION == VERSION_JPN_FINAL && defined(PLATFORM_N64) ? 0x1b : 0x1c)
