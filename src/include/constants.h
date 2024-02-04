@@ -1,6 +1,5 @@
 #ifndef _IN_CONSTANTS_H
 #define _IN_CONSTANTS_H
-
 #include "versions.h"
 #include "math.h"
 #include "animations.h"
