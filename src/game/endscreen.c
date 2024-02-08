@@ -1700,14 +1700,22 @@ void endscreenPushCoop(void)
 #endif
 	{
 		// Failed or aborted
-		if (optionsGetScreenSplit() == SCREENSPLIT_VERTICAL) {
+		if (optionsGetScreenSplit() == SCREENSPLIT_VERTICAL
+#ifndef PLATFORM_N64
+			|| PLAYERCOUNT() >= 3
+#endif
+		) {
 			menuPushRootDialog(&g_2PMissionEndscreenFailedVMenuDialog, MENUROOT_MPENDSCREEN);
 		} else {
 			menuPushRootDialog(&g_2PMissionEndscreenFailedHMenuDialog, MENUROOT_MPENDSCREEN);
 		}
 	} else {
 		// Completed
-		if (optionsGetScreenSplit() == SCREENSPLIT_VERTICAL) {
+		if (optionsGetScreenSplit() == SCREENSPLIT_VERTICAL
+#ifndef PLATFORM_N64
+			|| PLAYERCOUNT() >= 3
+#endif
+		) {
 			menuPushRootDialog(&g_2PMissionEndscreenCompletedVMenuDialog, MENUROOT_MPENDSCREEN);
 		} else {
 			menuPushRootDialog(&g_2PMissionEndscreenCompletedHMenuDialog, MENUROOT_MPENDSCREEN);
@@ -1793,14 +1801,22 @@ void endscreenPushAnti(void)
 #endif
 		{
 			// Bond - failed or aborted
-			if (optionsGetScreenSplit() == SCREENSPLIT_VERTICAL) {
+			if (optionsGetScreenSplit() == SCREENSPLIT_VERTICAL
+#ifndef PLATFORM_N64
+				|| PLAYERCOUNT() >= 3
+#endif
+			) {
 				menuPushRootDialog(&g_2PMissionEndscreenFailedVMenuDialog, MENUROOT_MPENDSCREEN);
 			} else {
 				menuPushRootDialog(&g_2PMissionEndscreenFailedHMenuDialog, MENUROOT_MPENDSCREEN);
 			}
 		} else {
 			// Bond - completed
-			if (optionsGetScreenSplit() == SCREENSPLIT_VERTICAL) {
+			if (optionsGetScreenSplit() == SCREENSPLIT_VERTICAL
+#ifndef PLATFORM_N64
+				|| PLAYERCOUNT() >= 3
+#endif
+			) {
 				menuPushRootDialog(&g_2PMissionEndscreenCompletedVMenuDialog, MENUROOT_MPENDSCREEN);
 			} else {
 				menuPushRootDialog(&g_2PMissionEndscreenCompletedHMenuDialog, MENUROOT_MPENDSCREEN);
@@ -1816,14 +1832,22 @@ void endscreenPushAnti(void)
 #endif
 		{
 			// Anti - completed
-			if (optionsGetScreenSplit() == SCREENSPLIT_VERTICAL) {
+			if (optionsGetScreenSplit() == SCREENSPLIT_VERTICAL
+#ifndef PLATFORM_N64
+				|| PLAYERCOUNT() >= 3
+#endif
+			) {
 				menuPushRootDialog(&g_2PMissionEndscreenCompletedVMenuDialog, MENUROOT_MPENDSCREEN);
 			} else {
 				menuPushRootDialog(&g_2PMissionEndscreenCompletedHMenuDialog, MENUROOT_MPENDSCREEN);
 			}
 		} else {
 			// Anti - failed or aborted
-			if (optionsGetScreenSplit() == SCREENSPLIT_VERTICAL) {
+			if (optionsGetScreenSplit() == SCREENSPLIT_VERTICAL
+#ifndef PLATFORM_N64
+				|| PLAYERCOUNT() >= 3
+#endif
+			) {
 				menuPushRootDialog(&g_2PMissionEndscreenFailedVMenuDialog, MENUROOT_MPENDSCREEN);
 			} else {
 				menuPushRootDialog(&g_2PMissionEndscreenFailedHMenuDialog, MENUROOT_MPENDSCREEN);

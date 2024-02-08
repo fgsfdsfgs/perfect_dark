@@ -787,7 +787,11 @@ void mpPushPauseDialog(void)
 					menuPushRootDialog(&g_MpPausePlayerRankingMenuDialog, MENUROOT_MPPAUSE);
 				}
 			} else {
-				if (optionsGetScreenSplit() == SCREENSPLIT_VERTICAL) {
+				if (optionsGetScreenSplit() == SCREENSPLIT_VERTICAL
+#ifndef PLATFORM_N64
+					|| PLAYERCOUNT() >= 3
+#endif
+				) {
 					menuPushRootDialog(&g_2PMissionPauseVMenuDialog, MENUROOT_MPPAUSE);
 				} else {
 					menuPushRootDialog(&g_2PMissionPauseHMenuDialog, MENUROOT_MPPAUSE);
