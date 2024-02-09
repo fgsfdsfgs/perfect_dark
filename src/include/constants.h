@@ -20,8 +20,9 @@
 #define MAX_CHRWAYPOINTS       6
 #define MAX_EXPLOSIONS         6
 #define MAX_EYESPYDARTS        8
+#define MAX_COOPCHRS		   MAX_PLAYERS
 #define MAX_MPCHRS             (MAX_PLAYERS + MAX_BOTS)
-#define MAX_MPPLAYERCONFIGS    (MAX_PLAYERS + 2)
+#define MAX_MPPLAYERCONFIGS    (MAX_PLAYERS + MAX_COOPCHRS)
 #define MAX_OBJECTIVES         10
 #define MAX_PLAYERS            4
 #define MAX_PROPSPERROOMCHUNK  7

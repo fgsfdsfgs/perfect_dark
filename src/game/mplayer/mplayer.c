@@ -243,7 +243,8 @@ void mpReset(void)
 		g_Vars.lvmpbotlevel = true;
 	}
 
-	if (g_Vars.coopplayernum >= 0 || g_Vars.antiplayernum >= 0) {
+	// if (g_Vars.coopplayernum >= 0 || g_Vars.antiplayernum >= 0) {
+	if (false) {
 		struct mpplayerconfig tmp;
 
 		tmp = g_PlayerConfigsArray[MAX_PLAYERS];

@@ -731,7 +731,7 @@ MenuItemHandlerResult menuhandlerAcceptMission(s32 operation, struct menuitem *i
 				g_Vars.bondplayernum = 0;
 				g_Vars.coopplayernum = 1;
 				g_Vars.antiplayernum = -1;
-				setNumPlayers(2);
+				setNumPlayers(4);
 			} else {
 				// Coop with AI buddies
 				g_Vars.bondplayernum = 0;
@@ -749,7 +749,7 @@ MenuItemHandlerResult menuhandlerAcceptMission(s32 operation, struct menuitem *i
 			}
 
 			g_Vars.coopplayernum = -1;
-			setNumPlayers(2);
+			setNumPlayers(4);
 		} else {
 			// Solo
 			g_Vars.bondplayernum = 0;

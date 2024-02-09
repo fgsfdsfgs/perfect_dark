@@ -460,7 +460,7 @@ void mainLoop(void)
 		}
 
 		if (g_Vars.coopplayernum >= 0 || g_Vars.antiplayernum >= 0) {
-			g_MpSetup.chrslots = 0x03;
+			g_MpSetup.chrslots = 0x0F;
 			mpReset();
 		} else if (g_Vars.perfectbuddynum) {
 			mpReset();
