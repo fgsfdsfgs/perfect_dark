@@ -42,8 +42,9 @@ void playermgrReset(void)
 	g_Vars.playerorder[3] = 3;
 
 	g_Vars.bond = NULL;
-	g_Vars.coop = NULL;
-	g_Vars.anti = NULL;
+	
+	clearCoopPlayers();
+	clearAntiPlayers();
 }
 
 void playermgrAllocatePlayers(s32 count)
@@ -52,6 +53,11 @@ void playermgrAllocatePlayers(s32 count)
 	g_Vars.players[1] = NULL;
 	g_Vars.players[2] = NULL;
 	g_Vars.players[3] = NULL;
+
+	// these hold references to coop / anti players
+	// NULL can mean either that slot is bond or no player is in that slot
+	clearCoopPlayers();
+	clearAntiPlayers();
 
 	if (count > 0) {
 		s32 i;
@@ -63,13 +69,30 @@ void playermgrAllocatePlayers(s32 count)
 		setCurrentPlayerNum(0);
 		g_Vars.bond = g_Vars.players[g_Vars.bondplayernum];
 
+#ifndef PLATFORM_N64
+		for (i = 0; i < count; i++) {
+			if (g_Vars.coopplayernum >= 0) {
+				if (i != g_Vars.bondplayernum && g_Vars.players[i]) {
+					g_Vars.coopplayers[i] = g_Vars.players[i];
+				}
+				clearAntiPlayers();
+			} else if (g_Vars.antiplayernum >= 0) {
+				clearCoopPlayers();
+				if (i != g_Vars.bondplayernum && g_Vars.players[i]) {
+					g_Vars.antiplayers[i] = g_Vars.players[i];
+				}
+			}
+		}
+
+#else
 		if (g_Vars.coopplayernum >= 0) {
 			g_Vars.coop = g_Vars.players[g_Vars.coopplayernum];
-			g_Vars.anti = NULL;
+			clearAntiPlayers();
 		} else if (g_Vars.antiplayernum >= 0) {
-			g_Vars.coop = NULL;
+			clearCoopPlayers();
 			g_Vars.anti = g_Vars.players[g_Vars.antiplayernum];
 		}
+#endif
 	} else {
 		playermgrAllocatePlayer(0);
 		setCurrentPlayerNum(0);
@@ -80,8 +103,8 @@ void playermgrAllocatePlayers(s32 count)
 			playermgrSetViewSize(playerGetFbWidth(), playerGetFbHeight());
 		}
 
-		g_Vars.coop = NULL;
-		g_Vars.anti = NULL;
+		clearCoopPlayers();
+		clearAntiPlayers();
 		g_Vars.bond = g_Vars.players[0];
 	}
 }
@@ -658,6 +681,36 @@ void playermgrCalculateAiBuddyNums(void)
 			g_Vars.players[playernum]->aibuddynums[g_Vars.players[playernum]->numaibuddies] = i;
 			g_Vars.players[playernum]->numaibuddies++;
 		}
+	}
+}
+
+void setCurrentAntiNum(s32 playernum)
+{
+	if (g_Vars.antiplayernum < 0) {
+		g_Vars.currentantiplayernum = -1;
+		g_Vars.anti = NULL;
+		return;
+	}
+
+	if (g_Vars.antiplayers[playernum]) {
+		g_Vars.currentantiplayernum = playernum;
+		g_Vars.anti = g_Vars.antiplayers[playernum];
+		return;
+	}
+}
+
+void setCurrentCoopNum(s32 playernum)
+{
+	if (g_Vars.coopplayernum < 0) {
+		g_Vars.currentcoopplayernum = -1;
+		return;
+	}
+
+	if (g_Vars.coopplayers[playernum]) {
+		g_Vars.currentcoopplayernum = playernum;
+		g_Vars.coopplayernum = playernum;
+		g_Vars.coop = g_Vars.coopplayers[playernum];
+		return;
 	}
 }
 

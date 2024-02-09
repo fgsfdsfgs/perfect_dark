@@ -10,6 +10,8 @@ void playermgrAllocatePlayers(s32 count);
 void playermgrAllocatePlayer(s32 index);
 void playermgrCalculateAiBuddyNums(void);
 void setCurrentPlayerNum(s32 playernum);
+void setCurrentCoopNum(s32 playernum);
+void setCurrentAntiNum(s32 playernum);
 s32 playermgrGetPlayerNumByProp(struct prop *prop);
 void playermgrSetViewSize(s32 viewx, s32 viewy);
 void playermgrSetViewPosition(s32 viewleft, s32 viewtop);

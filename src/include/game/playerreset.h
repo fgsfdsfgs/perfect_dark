@@ -11,4 +11,6 @@ bool modelmgrLoadProjectileModeldefs(s32 weaponnum);
 void playerInitEyespy(void);
 void playerReset(void);
 
+void clearAntiPlayers(void);
+void clearCoopPlayers(void);
 #endif

@@ -1,5 +1,6 @@
 #include <ultra64.h>
 #include "constants.h"
+#include "game/playerreset.h"
 #include "bss.h"
 #include "data.h"
 #include "types.h"
@@ -40,14 +41,15 @@ void varsInit(void)
 	g_Vars.coopplayernum = -1;
 	g_Vars.antiplayernum = -1;
 	g_Vars.bond = NULL;
-	g_Vars.coop = NULL;
-	g_Vars.anti = NULL;
+	clearCoopPlayers();
+	clearAntiPlayers();
 	g_Vars.coopradaron = true;
 	g_Vars.coopfriendlyfire = true;
 	g_Vars.antiradaron = true;
 	g_Vars.pendingantiplayernum = 1;
 	g_Vars.modifiedfiles = 0;
 	g_Vars.numaibuddies = 0;
+	g_Vars.numhumanbuddies = 0;
 	g_Vars.bondvisible = true;
 	g_Vars.bondcollisions = true;
 	g_Vars.tickmode = TICKMODE_GE_FADEIN;

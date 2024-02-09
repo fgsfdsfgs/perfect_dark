@@ -847,7 +847,7 @@ void explosionInflictDamage(struct prop *expprop)
 						minfrac = (minfrac * 0.7f + 0.3f) * type->damage;
 
 						if (g_Vars.antiplayernum >= 0
-								&& g_Vars.antiplayernum == exp->owner
+								&& g_Vars.antiplayernum == exp->owner // NOTE: this might cause issues
 								&& (obj->flags2 & OBJFLAG2_IMMUNETOANTI)) {
 							// anti cannot damage this obj
 						} else if (isfirstframe) {

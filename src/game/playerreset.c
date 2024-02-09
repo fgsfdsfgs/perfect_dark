@@ -107,6 +107,22 @@ struct cmd32 {
 	s32 param3;
 };
 
+void clearCoopPlayers(void) {
+	g_Vars.coopplayers[0] = NULL;
+	g_Vars.coopplayers[1] = NULL;
+	g_Vars.coopplayers[2] = NULL;
+	g_Vars.coopplayers[3] = NULL;
+	g_Vars.coop = NULL;
+}
+
+void clearAntiPlayers(void) {
+	g_Vars.antiplayers[0] = NULL;
+	g_Vars.antiplayers[1] = NULL;
+	g_Vars.antiplayers[2] = NULL;
+	g_Vars.antiplayers[3] = NULL;
+	g_Vars.anti = NULL;
+}
+
 void playerReset(void)
 {
 	struct coord pos = {0, 0, 0};

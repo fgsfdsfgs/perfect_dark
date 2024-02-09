@@ -543,6 +543,10 @@ void mainTick(void)
 			if (g_StageNum < STAGE_TITLE) {
 				for (i = 0; i < PLAYERCOUNT(); i++) {
 					setCurrentPlayerNum(playermgrGetPlayerAtOrder(i));
+					// so we know which anti / coop player to pick from 
+					// coop / anti player pools
+					setCurrentCoopNum(playermgrGetPlayerAtOrder(i));
+					setCurrentAntiNum(playermgrGetPlayerAtOrder(i));
 
 					if (g_StageNum != STAGE_TEST_OLD || !titleIsKeepingMode()) {
 						viSetViewPosition(g_Vars.currentplayer->viewleft, g_Vars.currentplayer->viewtop);

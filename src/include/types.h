@@ -161,11 +161,15 @@ struct g_vars {
 	/*0x28c*/ s32 currentplayernum; // 0-3 - controller numbers I think
 	/*0x290*/ s32 currentplayerindex; // 0-3 - but 2 or 3 probably only used in combat simulator
 	/*0x294*/ s32 bondplayernum;
-	/*0x298*/ s32 coopplayernum;
-	/*0x29c*/ s32 antiplayernum;
+	/*0x298*/ s32 coopplayernum; // 4-player coopanti: number of human coop players -1
+	/*0x29c*/ s32 antiplayernum; // 4-player coopanti: number of human anti players -1
 	/*0x2a0*/ struct player *bond; // Joanna
-	/*0x2a4*/ struct player *coop; // Co-op buddy when controlled by human
-	/*0x2a8*/ struct player *anti; // Counter-op
+	/*ext*/ s32 currentcoopplayernum; // 0-3 - controller numbers I think
+	/*0x2a4*/ struct player *coop; // Co-op buddy when controlled by human;  4-player coopanti: used like currentplayer, but for coop
+	/*ext*/ struct player *coopplayers[MAX_PLAYERS]; // Co-op buddies when controlled by humans
+	/*ext*/ s32 currentantiplayernum; // 0-3 - controller numbers I think
+	/*0x2a8*/ struct player *anti; // Counter-op; 4-player coopanti: used like currentplayer, but for anti
+	/*ext*/ struct player *antiplayers[MAX_PLAYERS]; // Counter-op
 	/*0x2ac*/ s32 tickmode;
 	/*0x2b0*/ s32 killcount;
 	/*0x2b4*/ u32 knockoutcount;
@@ -222,6 +226,7 @@ struct g_vars {
 	/*0x46c*/ s32 restartlevel;
 	/*0x470*/ s32 perfectbuddynum;
 	/*0x474*/ s32 numaibuddies;
+	/*ext*/ s32 numhumanbuddies;
 	/*0x478*/ bool aibuddiesspawned;
 	/*0x47c*/ s32 bossfileid;
 	/*0x480*/ u16 bossdeviceserial;
