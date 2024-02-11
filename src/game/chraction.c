@@ -14277,7 +14277,7 @@ s32 chrResolveId(struct chrdata *ref, s32 id)
 			break;
 		case CHR_P1P2_OPPOSITE:
 			if (g_Vars.coopplayernum >= 0) {
-				struct player *player = g_Vars.players[g_Vars.coopplayernum];
+				struct player *player = g_Vars.players[g_Vars.currentcoopplayernum];
 				if (player && player->prop && player->prop->chr) {
 					id = player->prop->chr->chrnum;
 				}
