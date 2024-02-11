@@ -14161,7 +14161,7 @@ void chrsClearRefsToPlayer(s32 playernum)
 
 	if (g_Vars.coopplayernum >= 0) {
 		if (playernum == g_Vars.bondplayernum) {
-			otherplayernum = g_Vars.coopplayernum;
+			otherplayernum = g_Vars.currentcoopplayernum;
 			playerpropnum = g_Vars.bond->prop - g_Vars.props;
 		} else {
 			otherplayernum = g_Vars.bondplayernum;
@@ -14235,7 +14235,7 @@ s32 chrResolveId(struct chrdata *ref, s32 id)
 			break;
 		case CHR_P1P2_OPPOSITE:
 			if (g_Vars.coopplayernum >= 0) {
-				struct player *player = g_Vars.players[1 - ref->p1p2];
+				struct player *player = g_Vars.players[(MAX_PLAYERS-1) - ref->p1p2];
 				if (player && player->prop && player->prop->chr) {
 					id = player->prop->chr->chrnum;
 				}
