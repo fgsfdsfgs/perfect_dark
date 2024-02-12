@@ -5,6 +5,9 @@
 
 ** TODO anti compatibility: look at ifChrHasObject to verify that it's only checking coop characters
 
+
+   This was implemented with coop but not anti support
+
 **  TEST src/include/commands.h|492 col 1| #define if_chr_dead(chr, label) \
 
    Used on =CHR_COOP= in multiple places.
@@ -64,6 +67,7 @@ src/setups/setupdepo.c|1429 col 3| if_chr_dead(CHR_P1P2, /*goto*/ 0x2c)
    - if non-player: default behavior
    - if p1p2: check all players.
    - if coop: check all coop (not bond, not anti) players
+   - if anti: check all anti (not bond, not coop) players
 
 **  TODO src/include/commands.h|500 col 1| #define if_chr_death_animation_finished(chr, label) \
 **  TODO src/include/commands.h|688 col 1| #define if_chr_in_onscreen_room(chr, label) \
