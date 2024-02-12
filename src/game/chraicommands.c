@@ -511,10 +511,56 @@ bool aiIfStopped(void)
  */
 bool aiIfChrDead(void)
 {
+	/*
+	 * 4player coop: if chr is a playertype, treat as true if 
+	 * at least one human coop player is dead
+	 *
+	 */
 	u8 *cmd = g_Vars.ailist + g_Vars.aioffset;
-	struct chrdata *chr = chrFindById(g_Vars.chrdata, cmd[2]);
+	struct chrdata *chr;
 
-	if ((!chr || !chr->prop || chr->prop->type != PROPTYPE_PLAYER) && (!chr || !chr->model || chrIsDead(chr))) {
+	s32 chrId = cmd[2];
+	bool isdead = false;
+
+	if (chrId == CHR_COOP || chrId == CHR_P1P2 || chrId == CHR_ANTI) {
+		chr = chrFindById(g_Vars.chrdata, cmd[2]);
+		if ((!chr || !chr->prop || chr->prop->type != PROPTYPE_PLAYER) && (!chr || !chr->model || chrIsDead(chr))) {
+			isdead = true;
+		} else if ((!chr || !chr->prop || chr->prop->type == PROPTYPE_PLAYER)) {
+			// resolve correct playerpool
+			struct player** playerpool;
+			switch (chrId){
+				case CHR_COOP:
+					playerpool = (struct player**)g_Vars.coopplayers;
+					break;
+				case CHR_P1P2:
+					playerpool = (struct player**)g_Vars.players;
+					break;
+				case CHR_ANTI:
+					playerpool = (struct player**)g_Vars.antiplayers;
+					break;
+				default:
+					playerpool = (struct player**)g_Vars.players;
+					break;
+			}
+			for (s32 i = 0; i < MAX_PLAYERS; i++) {
+				// also check bond if p1p2
+				if (isdead) break;
+				// here we can check everyone but bond
+				if (!g_Vars.players[i]) continue;
+				if ((chrId == CHR_ANTI || chrId == CHR_COOP) && !g_Vars.players[i] == g_Vars.bond) continue;
+
+				isdead = (struct player*)playerpool[i]->isdead;
+			}
+		} 
+	} else {
+		// BUG? this refers to P1P2 at a few points
+		chr = chrFindById(g_Vars.chrdata, cmd[2]);
+		if ((!chr || !chr->prop || chr->prop->type != PROPTYPE_PLAYER) && (!chr || !chr->model || chrIsDead(chr))) {
+			isdead = true;
+		} 
+	}
+	if (isdead) {
 		g_Vars.aioffset = chraiGoToLabel(g_Vars.ailist, g_Vars.aioffset, cmd[3]);
 	} else {
 		g_Vars.aioffset += 4;
