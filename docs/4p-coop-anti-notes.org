@@ -14,7 +14,7 @@ bool aiIfChrHasObject(void)
 
    This was implemented with coop but not anti support
 
-**  COOP src/include/commands.h|492 col 1| #define if_chr_dead(chr, label) \
+**  DONE src/include/commands.h|492 col 1| #define if_chr_dead(chr, label) \
 
    Used on =CHR_COOP= in multiple places.
    Also used on =CHR_P1P2=
@@ -78,7 +78,7 @@ src/setups/setupdepo.c|1429 col 3| if_chr_dead(CHR_P1P2, /*goto*/ 0x2c)
    - if coop: check all coop (not bond, not anti) players
    - if anti: check all anti (not bond, not coop) players
 
-**  COOP src/include/commands.h|500 col 1| #define if_chr_death_animation_finished(chr, label) \
+**  DONE src/include/commands.h|500 col 1| #define if_chr_death_animation_finished(chr, label) \
 
 
    Used on =CHR_ANTI=, =CHR_COOP=, =CHR_P1P2=
@@ -94,11 +94,15 @@ bool aiIfChrDeathAnimationFinished(void)
 
    4playercoop: if bond, check bond. if anti, check anti playerpool. if coop/p1p2, check coopplayer pool. otherwise check generic playerpool, 
 
+** TODO =void cctvTick(struct prop *camprop)=
+
+   vanilla: This cylces between coop and bond alternating frames.
+
 **  TODO src/include/commands.h|688 col 1| #define if_chr_in_onscreen_room(chr, label) \
 **  TODO src/include/commands.h|830 col 1| #define if_chr_distance_to_pad_lt(chr, distance, pad, label) \
 **  TODO src/include/commands.h|841 col 1| #define if_chr_distance_to_pad_gt(chr, distance, pad, label) \
 **  TODO src/include/commands.h|902 col 1| #define if_chr_in_room(chr, type, room_or_pad, label) \
-**  TODO src/include/commands.h|921 col 1| #define if_chr_has_object(chr, object, label) \
+**  COOP src/include/commands.h|921 col 1| #define if_chr_has_object(chr, object, label) \
 **  TODO src/include/commands.h|948 col 1| #define if_chr_weapon_equipped(chr, weapon, label) \
 **  TODO src/include/commands.h|980 col 1| #define if_chr_activated_object(chr, object, label) \
 **  TODO src/include/commands.h|1249 col 1| #define if_chr_health_gt(chr, health, label) \
