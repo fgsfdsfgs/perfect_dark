@@ -547,14 +547,13 @@ bool aiIfChrDead(void)
 				// also check bond if p1p2
 				if (isdead) break;
 				// here we can check everyone but bond
-				if (!g_Vars.players[i]) continue;
-				if ((chrId == CHR_ANTI || chrId == CHR_COOP) && !g_Vars.players[i] == g_Vars.bond) continue;
+				if (!g_Vars.players[g_Vars.playerorder[i]]) continue;
+				if ((chrId == CHR_ANTI || chrId == CHR_COOP) && !g_Vars.players[g_Vars.playerorder[i]] == g_Vars.bond) continue;
 
-				isdead = (struct player*)playerpool[i]->isdead;
+				isdead = (struct player*)playerpool[g_Vars.playerorder[i]]->isdead;
 			}
 		} 
 	} else {
-		// BUG? this refers to P1P2 at a few points
 		chr = chrFindById(g_Vars.chrdata, cmd[2]);
 		if ((!chr || !chr->prop || chr->prop->type != PROPTYPE_PLAYER) && (!chr || !chr->model || chrIsDead(chr))) {
 			isdead = true;
