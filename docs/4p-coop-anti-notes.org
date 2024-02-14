@@ -4,16 +4,25 @@
   These will need to be updated to refer to all valid coop players
 
 ** TODO anti compatibility: look at ifChrHasObject to verify that it's only checking coop characters
+   #+begin_src c
+/**
+ * @cmd 005d
+ */
+bool aiIfChrHasObject(void)
+   #+end_src
 
 
    This was implemented with coop but not anti support
 
-**  TEST src/include/commands.h|492 col 1| #define if_chr_dead(chr, label) \
+**  COOP src/include/commands.h|492 col 1| #define if_chr_dead(chr, label) \
 
    Used on =CHR_COOP= in multiple places.
    Also used on =CHR_P1P2=
+   Not used on =CHR_ANTI=
 
    vanilla: only checks non-player characters, but is called on p1p2 / coop in several places
+
+   4player-coopanti: Checks all coop players, anti players, P1P2
 
    coop calls: 
 
@@ -69,7 +78,22 @@ src/setups/setupdepo.c|1429 col 3| if_chr_dead(CHR_P1P2, /*goto*/ 0x2c)
    - if coop: check all coop (not bond, not anti) players
    - if anti: check all anti (not bond, not coop) players
 
-**  TODO src/include/commands.h|500 col 1| #define if_chr_death_animation_finished(chr, label) \
+**  COOP src/include/commands.h|500 col 1| #define if_chr_death_animation_finished(chr, label) \
+
+
+   Used on =CHR_ANTI=, =CHR_COOP=, =CHR_P1P2=
+
+   #+begin_src c
+/**
+ * @cmd 0034
+ */
+bool aiIfChrDeathAnimationFinished(void)
+#+end_src
+
+   vanilla: checks single player if prop of chr is =PROPTYPE_PLAYER=
+
+   4playercoop: if bond, check bond. if anti, check anti playerpool. if coop/p1p2, check coopplayer pool. otherwise check generic playerpool, 
+
 **  TODO src/include/commands.h|688 col 1| #define if_chr_in_onscreen_room(chr, label) \
 **  TODO src/include/commands.h|830 col 1| #define if_chr_distance_to_pad_lt(chr, distance, pad, label) \
 **  TODO src/include/commands.h|841 col 1| #define if_chr_distance_to_pad_gt(chr, distance, pad, label) \
