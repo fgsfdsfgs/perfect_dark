@@ -506,6 +506,24 @@ bool aiIfStopped(void)
 	return false;
 }
 
+static uintptr_t** getPlayerPool(u32 chrId) {
+	struct player** playerpool = 0;
+	switch (chrId){
+		case CHR_ANTI:
+			playerpool = (struct player**)g_Vars.antiplayers;
+		break;
+		case CHR_COOP:
+		case CHR_P1P2:
+			playerpool = (struct player**)g_Vars.coopplayers;
+		break;
+		default:
+			playerpool = (struct player**)g_Vars.players;
+		break;
+	}
+
+	return (uintptr_t**)playerpool;
+}
+
 /**
  * @cmd 0033
  */
@@ -528,21 +546,7 @@ bool aiIfChrDead(void)
 			isdead = true;
 		} else if ((!chr || !chr->prop || chr->prop->type == PROPTYPE_PLAYER)) {
 			// resolve correct playerpool
-			struct player** playerpool;
-			switch (chrId){
-				case CHR_COOP:
-					playerpool = (struct player**)g_Vars.coopplayers;
-					break;
-				case CHR_P1P2:
-					playerpool = (struct player**)g_Vars.players;
-					break;
-				case CHR_ANTI:
-					playerpool = (struct player**)g_Vars.antiplayers;
-					break;
-				default:
-					playerpool = (struct player**)g_Vars.players;
-					break;
-			}
+			struct player** playerpool = getPlayerPool(chrId);
 			for (s32 i = 0; i < MAX_PLAYERS; i++) {
 				// also check bond if p1p2
 				if (isdead) break;
@@ -568,6 +572,8 @@ bool aiIfChrDead(void)
 	return false;
 }
 
+
+
 /**
  * @cmd 0034
  */
@@ -577,19 +583,7 @@ bool aiIfChrDeathAnimationFinished(void)
 	struct chrdata *chr = chrFindById(g_Vars.chrdata, cmd[2]);
 	bool pass;
 
-	struct player** playerpool = 0;
-	switch (cmd[2]){
-		case CHR_ANTI:
-			playerpool = (struct player**)g_Vars.antiplayers;
-		break;
-		case CHR_COOP:
-			playerpool = (struct player**)g_Vars.coopplayers;
-		break;
-		case CHR_P1P2:
-		default:
-			playerpool = (struct player**)g_Vars.players;
-		break;
-	}
+	struct player** playerpool = getPlayerPool(cmd[2]);
 	if ((cmd[2]) == CHR_BOND) {
 		pass = g_Vars.bond->isdead;
 	} else if (!chr || !chr->prop || chr->prop->type == PROPTYPE_PLAYER) {
