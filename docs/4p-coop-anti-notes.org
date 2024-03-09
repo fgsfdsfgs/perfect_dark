@@ -188,3 +188,4 @@ if_chr_knockedout(CHR_P1P2, /*goto*/ 0x2c)
 **  TODO src/include/commands.h|3565 col 1| #define if_chr_soundtimer(value, operator, label) \
 **  TODO src/include/commands.h|3795 col 1| #define if_chr_not_talking(chr, label) \
 ** TODO src/include/commands.h|4337 col 1| #define if_chr_same_floor_distance_to_pad_lt(chr, distance, pad, label) \
+* AIlist
