@@ -16233,7 +16233,7 @@ bool propobjInteract(struct prop *prop)
 	if (g_Vars.normmplayerisrunning) {
 		scenarioHandleActivatedProp(g_Vars.currentplayer->prop->chr, prop);
 	} else {
-		if (g_Vars.currentplayernum == g_Vars.coopplayernum) {
+		if (g_Vars.coopplayers[g_Vars.currentplayernum]) {
 			obj->hidden |= OBJHFLAG_ACTIVATED_BY_COOP;
 		} else if (g_Vars.currentplayernum == g_Vars.bondplayernum) {
 			obj->hidden |= OBJHFLAG_ACTIVATED_BY_BOND;
