@@ -4,6 +4,9 @@
 #include "data.h"
 #include "types.h"
 
+bool isChrIdMpHumanHench(u32 chrId);
+bool isChrIdMpHumanCoop(u32 chrId);
+bool isChrIdMpHumanAnti(u32 chrId);
 void chrSetChrnum(struct chrdata *chr, s16 chrnum);
 void chrDeregister(s32 chrnum);
 void chrCalculatePushPos(struct chrdata *chr, struct coord *pos, RoomNum *rooms, bool arg3);

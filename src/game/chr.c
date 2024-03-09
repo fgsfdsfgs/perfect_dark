@@ -6670,3 +6670,29 @@ void chrSetDrCarollImages(struct chrdata *drcaroll, s32 imageleft, s32 imagerigh
 		}
 	}
 }
+
+// in a glorious future
+// when bond and every human hench can have their own
+// ai buddies (technicaly possible?)
+// we can swap these PLAYERCOUNT checks
+// for something smarter (like checking for buddies)
+bool isChrIdMpHumanHench(u32 chrId) {
+	if (PLAYERCOUNT() < 2) {
+		return false;
+	}
+	return (chrId == CHR_COOP || chrId == CHR_ANTI || chrId == CHR_ANTI || chrId == CHR_P1P2 || chrId == CHR_P1P2_OPPOSITE);
+}
+
+bool isChrIdMpHumanCoop(u32 chrId) {
+	if (PLAYERCOUNT() < 2) {
+		return false;
+	}
+	return chrId == CHR_COOP || chrId == CHR_P1P2_OPPOSITE || chrId == CHR_P1P2;
+}
+
+bool isChrIdMpHumanAnti(u32 chrId) {
+	if (PLAYERCOUNT() < 2) {
+		return false;
+	}
+	return chrId == CHR_ANTI;
+}

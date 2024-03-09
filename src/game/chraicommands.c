@@ -2367,7 +2367,7 @@ bool aiGiveObjectToChr(void)
 	u32 chrId = cmd[3];
 	struct chrdata *chr = chrFindById(g_Vars.chrdata, cmd[3]);
 
-	if (obj && obj->prop && (chrId == CHR_COOP || chrId == CHR_ANTI || chrId == CHR_ANTI || chrId == CHR_P1P2 || chrId == CHR_P1P2_OPPOSITE)) {
+	if (obj && obj->prop && isChrIdMpHumanHench(chrId)) {
 		struct player** playerpool = getPlayerPool(chrId);
 		for (s32 i = 0; i < MAX_PLAYERS; i++){
 			u32 playernum = g_Vars.playerorder[i];
@@ -3552,7 +3552,7 @@ bool aiChrSetChrflag(void)
 	u32 flags = (cmd[4] << 16) | (cmd[5] << 8) | cmd[6] | (cmd[3] << 24);
 	u32 chrId = cmd[2];
 	struct chrdata* chr;
-	if (chrId == CHR_ANTI || chrId == CHR_COOP || chrId == CHR_P1P2 || chrId == CHR_P1P2_OPPOSITE) {
+	if (isChrIdMpHumanHench(chrId)) {
 		struct player** playerpool = getPlayerPool(chrId);
 		for (s32 i = 0; i < MAX_PLAYERS; i++) {
 			if (!playerpool[g_Vars.playerorder[i]]) {
@@ -3585,7 +3585,9 @@ bool aiChrUnsetChrflag(void)
 {
 	u8 *cmd = g_Vars.ailist + g_Vars.aioffset;
 	u32 flags = (cmd[4] << 16) | (cmd[5] << 8) | cmd[6] | (cmd[3] << 24);
-	struct chrdata *chr = chrFindById(g_Vars.chrdata, cmd[2]);
+	u32 chrId = cmd[2];
+	struct chrdata *chr;
+	chr = chrFindById(g_Vars.chrdata, cmd[2]);
 
 	if (chr) {
 		chr->chrflags &= ~flags;
@@ -3623,7 +3625,7 @@ bool aiChrSetHiddenFlag(void)
 	u32 flags = (cmd[4] << 16) | (cmd[5] << 8) | cmd[6] | (cmd[3] << 24);
 	u32 chrId = cmd[2];
 	struct chrdata* chr;
-	if (chrId == CHR_ANTI || chrId == CHR_COOP || chrId == CHR_P1P2) {
+	if (isChrIdMpHumanHench(chrId)) {
 		struct player** playerpool = getPlayerPool(chrId);
 		for (s32 i = 0; i < MAX_PLAYERS; i++) {
 			if (!playerpool[g_Vars.playerorder[i]]) {
