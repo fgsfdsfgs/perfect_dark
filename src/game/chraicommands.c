@@ -2364,9 +2364,36 @@ bool aiGiveObjectToChr(void)
 {
 	u8 *cmd = g_Vars.ailist + g_Vars.aioffset;
 	struct defaultobj *obj = objFindByTagId(cmd[2]);
+	u32 chrId = cmd[3];
 	struct chrdata *chr = chrFindById(g_Vars.chrdata, cmd[3]);
 
-	if (obj && obj->prop && chr && chr->prop) {
+	if (obj && obj->prop && (chrId == CHR_COOP || chrId == CHR_ANTI || chrId == CHR_ANTI || chrId == CHR_P1P2 || chrId == CHR_P1P2_OPPOSITE)) {
+		struct player** playerpool = getPlayerPool(chrId);
+		for (s32 i = 0; i < MAX_PLAYERS; i++){
+			u32 playernum = g_Vars.playerorder[i];
+			if (!playerpool[g_Vars.playerorder[i]] || !playerpool[playernum]->prop || !playerpool[playernum]->prop->chr) continue;
+			struct defaultobj *obj2 = obj->prop->obj;
+			chr = playerpool[playernum]->prop->chr;
+			u32 prevplayernum = g_Vars.currentplayernum;
+
+			u32 something;
+
+			setCurrentPlayerNum(playernum);
+#if VERSION >= VERSION_NTSC_1_0
+			if (obj->prop->parent) {
+				objDetach(obj->prop);
+				objFreeEmbedmentOrProjectile(obj->prop);
+				propActivate(obj->prop);
+			}
+#endif
+			something = propPickupByPlayer(obj->prop, 0);
+			propExecuteTickOperation(obj->prop, something);
+			playernum = playermgrGetPlayerNumByProp(chr->prop);
+			obj2->hidden = (playernum << 28) | (obj2->hidden & 0x0fffffff);
+			setCurrentPlayerNum(prevplayernum);
+
+		}
+	} else if (obj && obj->prop && chr && chr->prop) {
 		if (chr->prop->type == PROPTYPE_PLAYER) {
 			u32 something;
 			u32 prevplayernum = g_Vars.currentplayernum;
@@ -3525,7 +3552,7 @@ bool aiChrSetChrflag(void)
 	u32 flags = (cmd[4] << 16) | (cmd[5] << 8) | cmd[6] | (cmd[3] << 24);
 	u32 chrId = cmd[2];
 	struct chrdata* chr;
-	if (chrId == CHR_ANTI || chrId == CHR_COOP || chrId == CHR_P1P2) {
+	if (chrId == CHR_ANTI || chrId == CHR_COOP || chrId == CHR_P1P2 || chrId == CHR_P1P2_OPPOSITE) {
 		struct player** playerpool = getPlayerPool(chrId);
 		for (s32 i = 0; i < MAX_PLAYERS; i++) {
 			if (!playerpool[g_Vars.playerorder[i]]) {
