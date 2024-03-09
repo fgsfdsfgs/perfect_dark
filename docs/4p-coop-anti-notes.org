@@ -103,7 +103,37 @@ bool aiIfChrDeathAnimationFinished(void)
 **  TODO src/include/commands.h|841 col 1| #define if_chr_distance_to_pad_gt(chr, distance, pad, label) \
 **  TODO src/include/commands.h|902 col 1| #define if_chr_in_room(chr, type, room_or_pad, label) \
 **  COOP src/include/commands.h|921 col 1| #define if_chr_has_object(chr, object, label) \
-**  TODO src/include/commands.h|948 col 1| #define if_chr_weapon_equipped(chr, weapon, label) \
+*  TODO src/include/commands.h|948 col 1| #define if_chr_weapon_equipped(chr, weapon, label) \
+  #+begin_src
+if_chr_weapon_equipped(CHR_BOND, WEAPON_DATAUPLINK, /*goto*/ 0x2f)
+if_chr_weapon_equipped(CHR_BOND, WEAPON_DOORDECODER, /*goto*/ 0x06)
+if_chr_weapon_equipped(CHR_BOND, WEAPON_DOORDECODER, /*goto*/ 0x2f)
+if_chr_weapon_equipped(CHR_BOND, WEAPON_ECMMINE, /*goto*/ 0x2f)
+if_chr_weapon_equipped(CHR_BOND, WEAPON_EYESPY, /*goto*/ 0x2f)
+if_chr_weapon_equipped(CHR_BOND, WEAPON_FARSIGHT, /*goto*/ 0x2e)
+if_chr_weapon_equipped(CHR_BOND, WEAPON_LAPTOPGUN, /*goto*/ 0x0b)
+if_chr_weapon_equipped(CHR_BOND, WEAPON_LASER, /*goto*/ 0x0f)
+if_chr_weapon_equipped(CHR_BOND, WEAPON_NIGHTVISION, /*goto*/ 0x2f)
+if_chr_weapon_equipped(CHR_BOND, WEAPON_XRAYSCANNER, /*goto*/ 0x2f)
+if_chr_weapon_equipped(CHR_COOP, WEAPON_FARSIGHT, /*goto*/ 0x2f)
+if_chr_weapon_equipped(CHR_COOP, WEAPON_LASER, /*goto*/ 0x0f)
+if_chr_weapon_equipped(CHR_P1P2, WEAPON_AUTOSURGEON, /*goto*/ 0x32)
+if_chr_weapon_equipped(CHR_P1P2, WEAPON_BACKUPDISK, /*goto*/ 0x2e)
+if_chr_weapon_equipped(CHR_P1P2, WEAPON_CALLISTO, /*goto*/ 0x93)
+if_chr_weapon_equipped(CHR_P1P2, WEAPON_DATAUPLINK, /*goto*/ 0x03)
+if_chr_weapon_equipped(CHR_P1P2, WEAPON_DATAUPLINK, /*goto*/ LABEL_2D)
+if_chr_weapon_equipped(CHR_P1P2, WEAPON_DEVASTATOR, /*goto*/ 0x92)
+if_chr_weapon_equipped(CHR_P1P2, WEAPON_DOORDECODER, /*goto*/ 0x2c)
+if_chr_weapon_equipped(CHR_P1P2, WEAPON_EXPLOSIVES, /*goto*/ 0x2e)
+if_chr_weapon_equipped(CHR_P1P2, WEAPON_FALCON2_SCOPE, /*goto*/ 0x94)
+if_chr_weapon_equipped(CHR_P1P2, WEAPON_MAULER, /*goto*/ 0x96)
+if_chr_weapon_equipped(CHR_P1P2, WEAPON_MAULER, /*goto*/ LABEL_65)
+if_chr_weapon_equipped(CHR_P1P2, WEAPON_NONE, /*goto*/ 0x03)
+if_chr_weapon_equipped(CHR_P1P2, WEAPON_SKEDARBOMB, /*goto*/ 0x2c)
+if_chr_weapon_equipped(CHR_P1P2, WEAPON_SLAYER, /*goto*/ 0x95)
+if_chr_weapon_equipped(CHR_P1P2, WEAPON_SUITCASE, /*goto*/ 0x02)
+if_chr_weapon_equipped(CHR_P1P2, WEAPON_UNARMED, /*goto*/ 0x03)
+  #+end_src
 **  TODO src/include/commands.h|980 col 1| #define if_chr_activated_object(chr, object, label) \
 **  TODO src/include/commands.h|1249 col 1| #define if_chr_health_gt(chr, health, label) \
 **  TODO src/include/commands.h|1258 col 1| #define if_chr_health_lt(chr, health, label) \
@@ -123,8 +153,38 @@ bool aiIfChrDeathAnimationFinished(void)
 **  TODO src/include/commands.h|3278 col 1| #define if_chr_idle_action_eq(action, label) \
 **  TODO src/include/commands.h|3289 col 1| #define if_chr_y(chr, value, operator, label) \
 **  TODO src/include/commands.h|3462 col 1| #define if_chr_knockedout(chr, label) \
+   #+begin_src
+if_chr_knockedout(CHR_BOND, /*goto*/ 0x03)
+if_chr_knockedout(CHR_BOND, /*goto*/ 0x07)
+if_chr_knockedout(CHR_BOND, /*goto*/ 0x08)
+if_chr_knockedout(CHR_BOND, /*goto*/ 0x20)
+if_chr_knockedout(CHR_BOND, /*goto*/ 0x26)
+if_chr_knockedout(CHR_BOND, /*goto*/ 0x27)
+if_chr_knockedout(CHR_BOND, /*goto*/ 0x2c)
+if_chr_knockedout(CHR_BOND, /*goto*/ 0x2d)
+if_chr_knockedout(CHR_BOND, /*goto*/ 0x2e)
+if_chr_knockedout(CHR_BOND, /*goto*/ 0x2f)
+if_chr_knockedout(CHR_BOND, /*goto*/ 0x31)
+if_chr_knockedout(CHR_BOND, /*goto*/ 0x32)
+if_chr_knockedout(CHR_BOND, /*goto*/ 0x33)
+if_chr_knockedout(CHR_BOND, /*goto*/ 0x61)
+if_chr_knockedout(CHR_BOND, /*goto*/ LABEL_2D)
+if_chr_knockedout(CHR_COOP, /*goto*/ 0x03)
+if_chr_knockedout(CHR_COOP, /*goto*/ 0x06)
+if_chr_knockedout(CHR_COOP, /*goto*/ 0x07)
+if_chr_knockedout(CHR_COOP, /*goto*/ 0x20)
+if_chr_knockedout(CHR_COOP, /*goto*/ 0x2c)
+if_chr_knockedout(CHR_COOP, /*goto*/ 0x2d)
+if_chr_knockedout(CHR_COOP, /*goto*/ 0x2e)
+if_chr_knockedout(CHR_COOP, /*goto*/ 0x2f)
+if_chr_knockedout(CHR_COOP, /*goto*/ 0x31)
+if_chr_knockedout(CHR_COOP, /*goto*/ 0x32)
+if_chr_knockedout(CHR_COOP, /*goto*/ 0x33)
+if_chr_knockedout(CHR_COOP, /*goto*/ 0x61)
+if_chr_knockedout(CHR_COOP, /*goto*/ LABEL_2D)
+if_chr_knockedout(CHR_P1P2, /*goto*/ 0x2c)
+#+end_src
 **  TODO src/include/commands.h|3514 col 1| #define if_chr_looking_at_object(chr, object, label) \
 **  TODO src/include/commands.h|3565 col 1| #define if_chr_soundtimer(value, operator, label) \
 **  TODO src/include/commands.h|3795 col 1| #define if_chr_not_talking(chr, label) \
 ** TODO src/include/commands.h|4337 col 1| #define if_chr_same_floor_distance_to_pad_lt(chr, distance, pad, label) \
-

@@ -8199,126 +8199,126 @@ void cctvTick(struct prop *camprop)
 	f32 zdist;
 	bool canseeplayer = true;
 
-	// If playing in coop mode, cycle between players in alternating frames
-	if (g_Vars.coopplayernum >= 0) {
-		if (g_Vars.lvframenum & 1) {
-			playerprop = g_Vars.bond->prop;
-		} else {
-			playerprop = g_Vars.coop->prop;
-		}
-	} else {
-		playerprop = g_Vars.bond->prop;
-	}
-
-	// Check distance
-	xdist = playerprop->pos.x - camprop->pos.x;
-	ydist = playerprop->pos.y - camprop->pos.y;
-	zdist = playerprop->pos.z - camprop->pos.z;
-
-	yaw = camera->toleft ? camera->yleft : camera->yright;
-
-	if (camera->maxdist > 0) {
-		if (xdist * xdist + ydist * ydist + zdist * zdist > camera->maxdist * camera->maxdist) {
-			canseeplayer = false;
-		}
-	}
-
-	if (g_Vars.bondvisible == false
-			|| (obj->flags & OBJFLAG_CAMERA_DISABLED)
-			|| (playerprop->chr->hidden & CHRHFLAG_CLOAKED)) {
-		canseeplayer = false;
-	}
-
-	// Check horizontal angle
-	if (canseeplayer) {
-		f32 angle = atan2f(xdist, zdist);
-		f32 yrot = camera->yrot;
-		f32 finalangle;
-
-		if (yrot < 0) {
-			yrot += M_BADTAU;
-		} else if (yrot >= M_BADTAU) {
-			yrot -= M_BADTAU;
-		}
-
-		yrot += camera->yzero;
-
-		if (yrot >= M_BADTAU) {
-			yrot -= M_BADTAU;
-		}
-
-		finalangle = angle - yrot;
-
-		if (angle < yrot) {
-			finalangle += M_BADTAU;
-		}
-
-		finalangle -= M_BADPI;
-
-		if (finalangle < 0) {
-			finalangle += M_BADTAU;
-		}
-
-		if (finalangle > M_BADPI) {
-			finalangle -= M_BADTAU;
-		}
-
-		if (finalangle > 0.7852731347084f || finalangle < -0.7852731347084f) {
-			canseeplayer = false;
-		}
-	}
-
-	// Check vertical angle
-	if (canseeplayer) {
-		f32 angle = atan2f(ydist, sqrtf(xdist * xdist + zdist * zdist));
-		f32 finalangle = angle - camera->xzero;
-
-		if (angle < camera->xzero) {
-			finalangle = angle - camera->xzero + M_BADTAU;
-		}
-
-		if (finalangle > M_BADTAU) {
-			finalangle -= M_BADTAU;
-		}
-
-		if (finalangle > M_BADPI) {
-			finalangle -= M_BADTAU;
-		}
-
-		if (finalangle);
-
-		if (finalangle > 0.7852731347084f || finalangle < -0.7852731347084f) {
-			canseeplayer = false;
-		}
-	}
-
-	// Check line of sight
-	if (canseeplayer) {
-		playerSetPerimEnabled(playerprop, false);
-
-		if (!cdTestLos05(&camprop->pos, camprop->rooms, &playerprop->pos, playerprop->rooms,
-					CDTYPE_OBJS | CDTYPE_DOORS | CDTYPE_CHRS | CDTYPE_PATHBLOCKER | CDTYPE_BG | CDTYPE_AIOPAQUE,
-					GEOFLAG_BLOCK_SIGHT)) {
-			canseeplayer = false;
-		}
-
-		playerSetPerimEnabled(playerprop, true);
-	}
-
-	if (canseeplayer) {
-		obj->flags |= OBJFLAG_CAMERA_BONDINVIEW;
-		camera->seebondtime60 += g_Vars.lvupdate60;
-
+	// if playing in coop mode, check for bond and coop players
+	for (s32 i = 0; i < MAX_PLAYERS; i++) {
 		if (g_Vars.coopplayernum >= 0) {
-			camera->seebondtime60 += g_Vars.lvupdate60;
+			if (g_Vars.antiplayers[g_Vars.playerorder[i]]) continue;
+			playerprop = g_Vars.players[g_Vars.playerorder[i]]->prop;
+		} else {
+			playerprop = g_Vars.bond->prop;
 		}
 
-		if (camera->seebondtime60 >= (s32)(TICKS(300) * g_CctvWaitScale)) {
-			alarmActivate();
-			camera->seebondtime60 = 0;
+		// Check distance
+		xdist = playerprop->pos.x - camprop->pos.x;
+		ydist = playerprop->pos.y - camprop->pos.y;
+		zdist = playerprop->pos.z - camprop->pos.z;
+
+		yaw = camera->toleft ? camera->yleft : camera->yright;
+
+		if (camera->maxdist > 0) {
+			if (xdist * xdist + ydist * ydist + zdist * zdist > camera->maxdist * camera->maxdist) {
+				canseeplayer = false;
+			}
 		}
-	} else {
-		obj->flags &= ~OBJFLAG_CAMERA_BONDINVIEW;
+
+		if (g_Vars.bondvisible == false
+				|| (obj->flags & OBJFLAG_CAMERA_DISABLED)
+				|| (playerprop->chr->hidden & CHRHFLAG_CLOAKED)) {
+			canseeplayer = false;
+		}
+
+		// Check horizontal angle
+		if (canseeplayer) {
+			f32 angle = atan2f(xdist, zdist);
+			f32 yrot = camera->yrot;
+			f32 finalangle;
+
+			if (yrot < 0) {
+				yrot += M_BADTAU;
+			} else if (yrot >= M_BADTAU) {
+				yrot -= M_BADTAU;
+			}
+
+			yrot += camera->yzero;
+
+			if (yrot >= M_BADTAU) {
+				yrot -= M_BADTAU;
+			}
+
+			finalangle = angle - yrot;
+
+			if (angle < yrot) {
+				finalangle += M_BADTAU;
+			}
+
+			finalangle -= M_BADPI;
+
+			if (finalangle < 0) {
+				finalangle += M_BADTAU;
+			}
+
+			if (finalangle > M_BADPI) {
+				finalangle -= M_BADTAU;
+			}
+
+			if (finalangle > 0.7852731347084f || finalangle < -0.7852731347084f) {
+				canseeplayer = false;
+			}
+		}
+
+		// Check vertical angle
+		if (canseeplayer) {
+			f32 angle = atan2f(ydist, sqrtf(xdist * xdist + zdist * zdist));
+			f32 finalangle = angle - camera->xzero;
+
+			if (angle < camera->xzero) {
+				finalangle = angle - camera->xzero + M_BADTAU;
+			}
+
+			if (finalangle > M_BADTAU) {
+				finalangle -= M_BADTAU;
+			}
+
+			if (finalangle > M_BADPI) {
+				finalangle -= M_BADTAU;
+			}
+
+			if (finalangle);
+
+			if (finalangle > 0.7852731347084f || finalangle < -0.7852731347084f) {
+				canseeplayer = false;
+			}
+		}
+
+		// Check line of sight
+		if (canseeplayer) {
+			playerSetPerimEnabled(playerprop, false);
+
+			if (!cdTestLos05(&camprop->pos, camprop->rooms, &playerprop->pos, playerprop->rooms,
+						CDTYPE_OBJS | CDTYPE_DOORS | CDTYPE_CHRS | CDTYPE_PATHBLOCKER | CDTYPE_BG | CDTYPE_AIOPAQUE,
+						GEOFLAG_BLOCK_SIGHT)) {
+				canseeplayer = false;
+			}
+
+			playerSetPerimEnabled(playerprop, true);
+		}
+
+		if (canseeplayer) {
+			obj->flags |= OBJFLAG_CAMERA_BONDINVIEW;
+			camera->seebondtime60 += g_Vars.lvupdate60;
+
+			if (g_Vars.coopplayernum >= 0) {
+				camera->seebondtime60 += g_Vars.lvupdate60;
+			}
+
+			if (camera->seebondtime60 >= (s32)(TICKS(300) * g_CctvWaitScale)) {
+				alarmActivate();
+				camera->seebondtime60 = 0;
+			}
+		} else {
+			obj->flags &= ~OBJFLAG_CAMERA_BONDINVIEW;
+		}
+		if (canseeplayer) break;
 	}
 
 	// Update yaw
