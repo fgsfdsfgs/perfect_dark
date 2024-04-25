@@ -521,7 +521,7 @@ void _musicStartMpDeath(f32 arg0)
 void musicStartMpDeath(void)
 {
 #ifndef PLATFORM_N64
-	if (g_MusicDisableMpDeath) {
+	if (g_MusicDisableMpDeath || (g_Vars.mplayerisrunning && (g_MpSetup.options & MPOPTION_INSTANTRESPAWN))) {
 		return;
 	}
 #endif

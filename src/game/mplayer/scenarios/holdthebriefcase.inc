@@ -75,6 +75,14 @@ struct menuitem g_HtbOptionsMenuItems[] = {
 		MPOPTION_NODRUGBLUR,
 		menuhandlerMpCheckboxOption,
 	},
+	{
+		MENUITEMTYPE_CHECKBOX,
+		0,
+		MENUITEMFLAG_LOCKABLEMINOR | MENUITEMFLAG_LITERAL_TEXT,
+		(uintptr_t)"Instant Respawn",
+		MPOPTION_INSTANTRESPAWN,
+		menuhandlerMpCheckboxOption,
+	},
 #endif
 	{
 		MENUITEMTYPE_CHECKBOX,
