@@ -1312,7 +1312,8 @@ Gfx *mpRenderModalText(Gfx *gdl)
 			&& g_Vars.currentplayer->deathanimfinished
 			&& !(g_Vars.coopplayernum >= 0 && ((g_Vars.bond->isdead && g_Vars.coop->isdead) || !g_Vars.currentplayer->coopcanrestart || g_InCutscene))
 			&& !(g_Vars.antiplayernum >= 0 && ((g_Vars.currentplayer != g_Vars.anti || g_InCutscene)))
-			&& g_NumReasonsToEndMpMatch == 0) {
+			&& g_NumReasonsToEndMpMatch == 0
+			&& playerIsFadeComplete()) { //make the game display the press start text only when the start button can actually be pressed. otherwise it will show during the fade to black despite the fact, that player cannot yet respawn
 		// Render "Press START" text
 		gdl = text0f153628(gdl);
 
@@ -2727,6 +2728,9 @@ struct mptrack g_MpTracks[] = {
 	/*0x29*/ { MUSIC_CREDITS,         120, L_MISC_165, SOLOSTAGEINDEX_SKEDARRUINS }, // "End Credits"
 #if VERSION < VERSION_PAL_BETA
 	/*0x2a*/ { MUSIC_SKEDARRUINS_KING,120, L_MISC_261, SOLOSTAGEINDEX_SKEDARRUINS }, // "Skedar Warrior" (Skedar Leader)
+	/*0x2b*/ { MUSIC_DEEPSEA_BETA,120, L_MISC_440, SOLOSTAGEINDEX_SKEDARRUINS }, // Cool deep sea beta music
+			 //{ MUSIC_MISSION_SUCCESS,120, L_MISC_086, SOLOSTAGEINDEX_SKEDARRUINS }, 
+			 //{ MUSIC_MAINMENU,120, L_MISC_087, SOLOSTAGEINDEX_SKEDARRUINS },
 #else
 	/*0x2a*/ { MUSIC_SKEDARRUINS_KING,120, L_MISC_041, SOLOSTAGEINDEX_SKEDARRUINS }, // "E R R O R" (can't find a good approximation for Skedar Leader)
 #endif

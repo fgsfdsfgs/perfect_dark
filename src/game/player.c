@@ -2355,12 +2355,12 @@ void playerSetFadeFrac(f32 maxfadetime, f32 frac)
 
 bool playerIsFadeComplete(void)
 {
-#ifndef PLATFORM_N64 //quick hack of the function to ignore waiting for fade complete
+/*#ifndef PLATFORM_N64 //quick hack of the function to ignore waiting for fade complete
 	if(g_Vars.mplayerisrunning && (g_MpSetup.options & MPOPTION_INSTANTRESPAWN))
 	{
 		return 1;
 	}
-#endif
+#endif*/
 	return g_Vars.currentplayer->colourfadetimemax60 < 0;
 }
 
@@ -4678,12 +4678,13 @@ Gfx *playerRenderHud(Gfx *gdl)
 			playerSetFadeColour(0x96, 0, 0, 0.70588237f);
 			//Setting these two variables will immediatelly display the "Press START" text. This is purely visual as instant respawn works even without it
 			g_Vars.currentplayer->redbloodfinished = true;
-			g_Vars.currentplayer->deathanimfinished = true;
+			modelSetAnimFrame(&g_Vars.currentplayer->model, modelGetAnimEndFrame(&g_Vars.currentplayer->model));
+			//g_Vars.currentplayer->deathanimfinished = true;
 		}
 
 		//modify the conditions to always trigger if player sets the "instant respawn" option
 		if (modelGetCurAnimFrame(&g_Vars.currentplayer->model) >= modelGetAnimEndFrame(&g_Vars.currentplayer->model)
-				&& g_Vars.currentplayer->redbloodfinished || (g_Vars.mplayerisrunning && (g_MpSetup.options & MPOPTION_INSTANTRESPAWN))) {
+				){//&& g_Vars.currentplayer->redbloodfinished || (g_Vars.mplayerisrunning && (g_MpSetup.options & MPOPTION_INSTANTRESPAWN))) {
 #else //preserve old conditions if compiled for n64
 		if (modelGetCurAnimFrame(&g_Vars.currentplayer->model) >= modelGetAnimEndFrame(&g_Vars.currentplayer->model)
 				&& g_Vars.currentplayer->redbloodfinished) {
