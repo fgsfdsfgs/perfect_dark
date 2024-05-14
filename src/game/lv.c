@@ -1127,6 +1127,13 @@ Gfx *lvRender(Gfx *gdl)
 						chr->blurdrugamount = 0;
 						chr->blurnumtimesdied = 0;
 					}
+#ifndef PLATFORM_N64 //set the drug blur to 0 if it's disabled in MP settings. There might be a better way to block it from occuring, but this one works just fine
+					
+					if(g_Vars.mplayerisrunning && (g_MpSetup.options & MPOPTION_NODRUGBLUR))
+					{
+						bluramount = 0;
+					}
+#endif
 				}
 			}
 
