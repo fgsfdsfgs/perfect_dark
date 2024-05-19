@@ -262,7 +262,7 @@ void botSpawn(struct chrdata *chr, u8 respawning)
 		func0f02e9a0(chr, 0);
 
 #ifndef PLATFORM_N64
-		if ((g_MpSetup.options & MPOPTION_SPAWNWITHWEAPON)
+		if (!(g_MpSetup.options & MPOPTION_STARTARMED)
 				&& g_MpSetup.weapons[0] != MPWEAPON_NONE
 				&& g_MpSetup.weapons[0] != MPWEAPON_DISABLED
 				&& g_MpSetup.weapons[0] != MPWEAPON_SHIELD) {

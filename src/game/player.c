@@ -1104,7 +1104,7 @@ void playerSpawn(void)
 				invGiveSingleWeapon(WEAPON_NIGHTVISION);
 			}
 
-			if ((g_MpSetup.options & MPOPTION_SPAWNWITHWEAPON)
+			if (!(g_MpSetup.options & MPOPTION_STARTARMED)
 					&& g_MpSetup.weapons[0] != MPWEAPON_NONE
 					&& g_MpSetup.weapons[0] != MPWEAPON_DISABLED
 					&& g_MpSetup.weapons[0] != MPWEAPON_SHIELD) {

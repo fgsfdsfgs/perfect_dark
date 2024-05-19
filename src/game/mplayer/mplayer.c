@@ -539,6 +539,7 @@ void mpInit(void)
 		| MPOPTION_PAC_SHOWONRADAR;
 
 #ifndef PLATFORM_N64
+	g_MpSetup.options |= MPOPTION_STARTARMED;
 	g_MpSetup.options |= MPOPTION_FRIENDLYFIRE;
 #endif
 

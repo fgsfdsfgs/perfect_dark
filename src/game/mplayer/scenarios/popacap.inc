@@ -62,7 +62,7 @@ struct menuitem g_PacOptionsMenuItems[] = {
 		0,
 		MENUITEMFLAG_LOCKABLEMINOR | MENUITEMFLAG_LITERAL_TEXT,
 		(uintptr_t)"Start Armed",
-		MPOPTION_SPAWNWITHWEAPON,
+		MPOPTION_STARTARMED,
 		menuhandlerMpCheckboxOption,
 	},
 	{
