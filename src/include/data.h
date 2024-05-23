@@ -497,7 +497,7 @@ extern struct menudialogdef g_MpQuickTeamScenarioMenuDialog;
 extern s32 var80087260;
 extern bool g_MpEnableMusicSwitching;
 extern struct mpweapon g_MpWeapons[NUM_MPWEAPONS];
-extern struct mphead g_MpHeads[VERSION == VERSION_JPN_FINAL ? 74 : 75];
+extern struct mphead g_MpHeads[VERSION == VERSION_JPN_FINAL ? 75 : 76]; // Custom: PD Plus
 extern struct botprofile g_BotProfiles[18];
 extern struct mpbody g_MpBodies[61];
 extern struct mppreset g_MpPresets[];

@@ -93,7 +93,7 @@ struct headorbody g_HeadsAndBodies[] = {
 	{ /*0x0012*/ 1, 1, 0, HEADBODYTYPE_DEFAULT,     13,  FILE_CHEADMARK2,       1,    1,                0, 0                          },
 	{ /*0x0013*/ 1, 1, 0, HEADBODYTYPE_DEFAULT,     13,  FILE_CHEADCHRIST,      1,    1,                0, 0                          },
 	{ /*0x0014*/ 1, 1, 0, HEADBODYTYPE_DEFAULT,     13,  FILE_CHEADRUSS,        1,    1,                0, 0                          },
-	{ /*0x0015*/ 1, 1, 0, HEADBODYTYPE_MAIAN,       13,  FILE_CHEADGREY,        1,    1,                0, 0                          },
+	{ /*0x0015*/ 0, 1, 0, HEADBODYTYPE_FEMALE,      13,  FILE_CHEADGREY,        1,    1,                0, 0                          }, // Custom: PD Plus Joannna (JP version)
 	{ /*0x0016*/ 1, 1, 0, HEADBODYTYPE_DEFAULT,     13,  FILE_CHEADDARLING,     1,    1,                0, 0                          },
 	{ /*0x0017*/ 1, 1, 0, HEADBODYTYPE_DEFAULT,     13,  FILE_CHEADROBERT,      1,    1,                0, 0                          },
 	{ /*0x0018*/ 1, 1, 0, HEADBODYTYPE_DEFAULT,     13,  FILE_CHEADBEAU,        1,    1,                0, 0                          },
@@ -192,7 +192,7 @@ struct headorbody g_HeadsAndBodies[] = {
 	{ /*0x006d*/ 0, 0, 0, HEADBODYTYPE_FEMALE,      159, FILE_CDARK_RIPPED,     1,    0.95305162668228, 0, FILE_GHAND_JOFROCK         },
 	{ /*0x006e*/ 1, 0, 1, HEADBODYTYPE_DEFAULT,     160, FILE_CDD_GUARD,        1,    0.93896716833115, 0, FILE_GHAND_DDSECURITY      },
 	{ /*0x006f*/ 1, 0, 1, HEADBODYTYPE_DEFAULT,     157, FILE_CDD_SHOCK_INF,    1,    0.93896716833115, 0, FILE_GHAND_DDSHOCK         },
-	{ /*0x0070*/ 1, 1, 0, HEADBODYTYPE_DEFAULT,     159, FILE_CTESTCHR,         1,    1,                0, 0                          },
+	{ /*0x0070*/ 1, 1, 0, HEADBODYTYPE_DEFAULT,     132, FILE_CTESTCHR,         1,    1,                0, FILE_PCHRFLASHBANG         }, // Custom: PD Plus Dr. Caroll
 	{ /*0x0071*/ 1, 0, 1, HEADBODYTYPE_DEFAULT,     155, FILE_CBIOTECH,         1,    0.93896716833115, 0, FILE_GHAND_DDBIO           },
 	{ /*0x0072*/ 1, 0, 1, HEADBODYTYPE_DEFAULT,     159, FILE_CFBIGUY,          1,    0.93896716833115, 0, FILE_GHAND_FBIARM          },
 	{ /*0x0073*/ 1, 0, 1, HEADBODYTYPE_DEFAULT,     159, FILE_CCIAGUY,          1,    0.93896716833115, 0, FILE_GHAND_CIA             },
@@ -212,7 +212,7 @@ struct headorbody g_HeadsAndBodies[] = {
 	{ /*0x0081*/ 1, 0, 1, HEADBODYTYPE_DEFAULT,     158, FILE_CG5_SWAT_GUARD,   1,    0.93896716833115, 0, FILE_GHAND_G5GUARD         },
 	{ /*0x0082*/ 1, 0, 1, HEADBODYTYPE_DEFAULT,     158, FILE_CALASKAN_GUARD,   1,    0.93896716833115, 0, FILE_GHAND_JOSNOW          },
 	{ /*0x0083*/ 1, 0, 1, HEADBODYTYPE_MAIAN,       106, FILE_CMAIAN_SOLDIER,   1,    0.57276993989944, 0, FILE_GHAND_ELVIS           },
-	{ /*0x0084*/ 1, 0, 0, HEADBODYTYPE_DEFAULT,     159, FILE_CPRESIDENT_CLONE, 1,    0.93896716833115, 0, FILE_GCOMBATHANDSLOD       },
+	{ /*0x0084*/ 1, 1, 0, HEADBODYTYPE_DEFAULT,     169, FILE_PTTB_BOX        , 1,    1               , 0, FILE_PDOORCONSOLE          }, // Custom: PD Plus Skedar
 	{ /*0x0085*/ 1, 0, 0, HEADBODYTYPE_DEFAULT,     159, FILE_CPRESIDENT_CLONE, 1,    0.93896716833115, 0, FILE_GHAND_PRESIDENT       },
 	{ /*0x0086*/ 0, 0, 0, HEADBODYTYPE_FEMALE,      159, FILE_CDARK_AF1,        1,    0.95305162668228, 0, FILE_GHAND_JOPILOT         },
 	{ /*0x0087*/ 0, 0, 0, HEADBODYTYPE_FEMALE,      159, FILE_CDARKWET,         1,    0.95305162668228, 0, FILE_GHAND_JOWETSUIT       },

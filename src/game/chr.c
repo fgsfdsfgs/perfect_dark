@@ -3307,6 +3307,7 @@ void chrGetBloodColour(s16 bodynum, u8 *colour1, u32 *colour2)
 	case BODY_DRCAROLL:
 	case BODY_EYESPY:
 	case BODY_CHICROB:
+	case BODY_TESTCHR: // Custom: PD Plus Dr. Caroll
 		if (colour1) {
 			colour1[0] = 10;
 			colour1[1] = 10;
@@ -3322,6 +3323,7 @@ void chrGetBloodColour(s16 bodynum, u8 *colour1, u32 *colour2)
 	case BODY_SKEDAR:
 	case BODY_MINISKEDAR:
 	case BODY_SKEDARKING:
+	case BODY_PRESIDENT_CLONE: // Custom: PD Plus Skedar
 		if (colour1) {
 			colour1[0] = 0x40;
 			colour1[1] = 0x19;
