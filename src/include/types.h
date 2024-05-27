@@ -161,8 +161,8 @@ struct g_vars {
 	/*0x28c*/ s32 currentplayernum; // 0-3 - controller numbers I think
 	/*0x290*/ s32 currentplayerindex; // 0-3 - but 2 or 3 probably only used in combat simulator
 	/*0x294*/ s32 bondplayernum;
-	/*0x298*/ s32 coopplayernum; // 4-player coopanti: number of human coop players -1
-	/*0x29c*/ s32 antiplayernum; // 4-player coopanti: number of human anti players -1
+	/*0x298*/ s32 coopplayernum;
+	/*0x29c*/ s32 antiplayernum;
 	/*0x2a0*/ struct player *bond; // Joanna
 	/*ext*/ s32 currentcoopplayernum; // 0-3 - controller numbers I think
 	/*0x2a4*/ struct player *coop; // Co-op buddy when controlled by human;  4-player coopanti: used like currentplayer, but for coop
