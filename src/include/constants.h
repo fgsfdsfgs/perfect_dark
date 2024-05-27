@@ -78,6 +78,12 @@
 #define PLAYERCOUNT()       1
 #endif
 
+#if MAX_PLAYERS > 4
+#define COOPPLAYERCOUNT() ((g_Vars.coopplayers[0] ? 1 : 0) + (g_Vars.coopplayers[1] ? 1 : 0) + (g_Vars.coopplayers[2] ? 1 : 0) + (g_Vars.coopplayers[3] ? 1 : 0) + (g_Vars.coopplayers[4] ? 1 : 0) + (g_Vars.coopplayers[5] ? 1 : 0) + (g_Vars.coopplayers[6] ? 1 : 0) + (g_Vars.coopplayers[7] ? 1 : 0))
+#else 
+#define COOPPLAYERCOUNT() ((g_Vars.coopplayers[0] ? 1 : 0) + (g_Vars.coopplayers[1] ? 1 : 0) + (g_Vars.coopplayers[2] ? 1 : 0) + (g_Vars.coopplayers[3] ? 1 : 0))
+#endif
+
 #define VALIDWEAPON()       (g_Vars.currentplayer->gunctrl.weaponnum >= WEAPON_UNARMED && g_Vars.currentplayer->gunctrl.weaponnum <= WEAPON_COMBATBOOST)
 #define FUNCISSEC()         (VALIDWEAPON() && (g_PlayerConfigsArray[g_Vars.currentplayerstats->mpindex].gunfuncs[(g_Vars.currentplayer->gunctrl.weaponnum - 1) >> 3] & (1 << ((g_Vars.currentplayer->gunctrl.weaponnum - 1) & 7))))
 
