@@ -1207,7 +1207,7 @@ void playerChooseBodyAndHead(s32 *bodynum, s32 *headnum, s32 *arg2)
 	}
 
 	outfit = g_Vars.currentplayer->bondtype;
-	solo = !(g_Vars.coopplayernum >= 0) || (g_Vars.currentplayer != g_Vars.coop);
+	solo = (!g_Vars.coopplayers[g_Vars.currentplayernum] || g_Vars.coopplayers[g_Vars.currentplayernum] == g_Vars.bond);
 
 	if (cheatIsActive(CHEAT_PLAYASELVIS)) {
 		*bodynum = BODY_THEKING;
