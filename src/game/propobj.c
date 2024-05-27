@@ -8311,7 +8311,7 @@ void cctvTick(struct prop *camprop)
 				camera->seebondtime60 += g_Vars.lvupdate60;
 			}
 
-			if (camera->seebondtime60 >= (s32)(TICKS(300) * g_CctvWaitScale)) {
+			if (camera->seebondtime60 >= (s32)(TICKS(300 / PLAYERCOUNT()) * g_CctvWaitScale)) {
 				alarmActivate();
 				camera->seebondtime60 = 0;
 			}
