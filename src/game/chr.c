@@ -6680,7 +6680,7 @@ bool isChrIdMpHumanHench(u32 chrId) {
 	if (PLAYERCOUNT() < 2) {
 		return false;
 	}
-	return (chrId == CHR_COOP || chrId == CHR_ANTI || chrId == CHR_ANTI || chrId == CHR_P1P2 || chrId == CHR_P1P2_OPPOSITE);
+	return (chrId == CHR_COOP  || chrId == CHR_ANTI || chrId == CHR_P1P2 || chrId == CHR_P1P2_OPPOSITE);
 }
 
 bool isChrIdMpHumanCoop(u32 chrId) {
