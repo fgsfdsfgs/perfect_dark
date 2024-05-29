@@ -975,7 +975,7 @@ void playerSpawn(void)
 	}
 
 	if (g_Vars.mplayerisrunning) {
-		if (g_Vars.antiplayernum >= 0 && g_Vars.currentplayer == g_Vars.anti) {
+		if (g_Vars.antiplayernum >= 0 && g_Vars.antiplayers[g_Vars.currentplayernum]) {
 			numsqdists = 0;
 			force = false;
 
