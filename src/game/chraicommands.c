@@ -3587,10 +3587,24 @@ bool aiChrUnsetChrflag(void)
 	u32 flags = (cmd[4] << 16) | (cmd[5] << 8) | cmd[6] | (cmd[3] << 24);
 	u32 chrId = cmd[2];
 	struct chrdata *chr;
-	chr = chrFindById(g_Vars.chrdata, cmd[2]);
 
-	if (chr) {
-		chr->chrflags &= ~flags;
+	if (isChrIdMpHumanHench(chrId)) {
+		struct player** playerpool = getPlayerPool(chrId);
+		for (s32 i = 0; i < MAX_PLAYERS; i++) {
+			if (!playerpool[g_Vars.playerorder[i]]) {
+				continue;
+			}
+			chr = playerpool[g_Vars.playerorder[i]]->prop->chr;
+			if (chr) {
+				chr->chrflags &= ~flags;
+			}
+		}
+	} else {
+		chr = chrFindById(g_Vars.chrdata, cmd[2]);
+
+		if (chr) {
+			chr->chrflags &= ~flags;
+		}
 	}
 
 	g_Vars.aioffset += 7;
