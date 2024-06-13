@@ -2133,31 +2133,29 @@ bool aiIfChrHasWeaponEquipped(void)
 	struct chrdata *chr = chrFindById(g_Vars.chrdata, cmd[2]);
 	bool passes = false;
 
-	if (isChrIdMpHumanHench(cmd[2])) {
-		struct player** playerpool = getPlayerPool(cmd[2]);
-
-		for (s32 i = 0; i < MAX_PLAYERS; i++) {
-			if (playerpool[i] && playerpool[i]->prop) {
-				u32 prevplayernum = g_Vars.currentplayernum;
-				setCurrentPlayerNum(i);
-
-				if (bgunGetWeaponNum(HAND_RIGHT) == cmd[3]) {
-					passes = true;
-				}
-
-				setCurrentPlayerNum(prevplayernum);
-			}
-		}
-	} else if (chr && chr->prop && chr->prop->type == PROPTYPE_PLAYER) {
+	if (chr && chr->prop && chr->prop->type == PROPTYPE_PLAYER) {
 		u32 prevplayernum = g_Vars.currentplayernum;
 		u32 playernum = playermgrGetPlayerNumByProp(chr->prop);
-		setCurrentPlayerNum(playernum);
+		if (g_Vars.coopplayers[playernum]) {
+			for (s32 i = 0;  i < MAX_PLAYERS; i++) {
+				if (passes) break;
+				if (g_Vars.coopplayers[i]) {
+					setCurrentPlayerNum(i);
+					if (bgunGetWeaponNum(HAND_RIGHT) == cmd[3]) {
+						passes = true;
+					}
+				}
+			}
+			setCurrentPlayerNum(prevplayernum);
+		} else {
+			setCurrentPlayerNum(playernum);
 
-		if (bgunGetWeaponNum(HAND_RIGHT) == cmd[3]) {
-			passes = true;
+			if (bgunGetWeaponNum(HAND_RIGHT) == cmd[3]) {
+				passes = true;
+			}
+
+			setCurrentPlayerNum(prevplayernum);
 		}
-
-		setCurrentPlayerNum(prevplayernum);
 	}
 
 	if (passes) {
