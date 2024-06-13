@@ -2216,7 +2216,7 @@ bool aiIfChrActivatedObject(void)
 				pass = true;
 				obj->hidden &= ~(OBJHFLAG_ACTIVATED_BY_BOND | OBJHFLAG_ACTIVATED_BY_COOP);
 			}
-		} else {
+		} else if (!isChrIdMpHumanHench(cmd[2])) {
 			struct chrdata *chr = chrFindById(g_Vars.chrdata, cmd[2]);
 
 			if (chr && chr->prop) {
@@ -2226,6 +2226,17 @@ bool aiIfChrActivatedObject(void)
 				} else if (g_Vars.coopplayernum >= 0 && chr->prop == g_Vars.coop->prop && (obj->hidden & OBJHFLAG_ACTIVATED_BY_COOP)) {
 					pass = true;
 					obj->hidden &= ~OBJHFLAG_ACTIVATED_BY_COOP;
+				}
+			}
+		} else {
+			struct player** playerpool = getPlayerPool(cmd[2]);
+
+			for (s32 i = 0; i < MAX_PLAYERS; i++) {
+				if (playerpool[i] && playerpool[i]->prop) {
+					if (g_Vars.coopplayernum >= 0 && playerpool[i]->prop == g_Vars.coop->prop && (obj->hidden & OBJHFLAG_ACTIVATED_BY_COOP)) {
+						pass = true;
+						obj->hidden &= ~OBJHFLAG_ACTIVATED_BY_COOP;
+					}
 				}
 			}
 		}
