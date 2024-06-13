@@ -6680,14 +6680,30 @@ bool isChrIdMpHumanHench(u32 chrId) {
 	if (PLAYERCOUNT() < 2) {
 		return false;
 	}
-	return (chrId == CHR_COOP  || chrId == CHR_ANTI || chrId == CHR_P1P2 || chrId == CHR_P1P2_OPPOSITE);
+	switch (chrId) {
+		case CHR_COOP:
+		case CHR_ANTI:
+		case CHR_P1P2:
+		case CHR_P1P2_OPPOSITE:
+		// TODO: isChrIdTargetCoop
+		// case CHR_TARGET:
+			return true;
+	}
+	return false;
 }
 
 bool isChrIdMpHumanCoop(u32 chrId) {
 	if (PLAYERCOUNT() < 2) {
 		return false;
 	}
-	return chrId == CHR_COOP || chrId == CHR_P1P2_OPPOSITE || chrId == CHR_P1P2;
+	switch (chrId) {
+		case CHR_COOP:
+		case CHR_P1P2:
+		case CHR_P1P2_OPPOSITE:
+		// case CHR_TARGET:
+			return true;
+	}
+	return false;
 }
 
 bool isChrIdMpHumanAnti(u32 chrId) {
