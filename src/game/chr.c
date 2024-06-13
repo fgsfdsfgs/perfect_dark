@@ -6712,3 +6712,15 @@ bool isChrIdMpHumanAnti(u32 chrId) {
 	}
 	return chrId == CHR_ANTI;
 }
+
+bool isChrPropCoop(struct prop *prop) {
+	if (g_Vars.coopplayernum < 0) {
+		return false;
+	}
+	for (s32 i = 0; i < PLAYERCOUNT(); i++) {
+		if (g_Vars.coopplayers[i] && g_Vars.coopplayers[i]->prop == prop) {
+			return true;
+		}
+	}
+	return false;
+}

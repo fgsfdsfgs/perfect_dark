@@ -7,6 +7,7 @@
 bool isChrIdMpHumanHench(u32 chrId);
 bool isChrIdMpHumanCoop(u32 chrId);
 bool isChrIdMpHumanAnti(u32 chrId);
+bool isChrPropCoop(struct prop *prop);
 void chrSetChrnum(struct chrdata *chr, s16 chrnum);
 void chrDeregister(s32 chrnum);
 void chrCalculatePushPos(struct chrdata *chr, struct coord *pos, RoomNum *rooms, bool arg3);
