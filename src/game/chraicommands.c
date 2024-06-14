@@ -1873,26 +1873,50 @@ bool aiIfChrSameFloorDistanceToPadLessThan(void)
  */
 bool aiIfChrDistanceToPadGreaterThan(void)
 {
+	u32 passes = false;
+	u32 fails = false;
+	bool iscoop = false;
 	u8 *cmd = g_Vars.ailist + g_Vars.aioffset;
-	struct chrdata *chr = chrFindById(g_Vars.chrdata, cmd[2]);
 	u16 padnum = cmd[6] | (cmd[5] << 8);
-	f32 distance = (cmd[4] | (cmd[3] << 8)) * 10.0f;
-
 	if (padnum == 9000) {
 		padnum = g_Vars.chrdata->padpreset1;
 	}
-
+	f32 distance = (cmd[4] | (cmd[3] << 8)) * 10.0f;
+	struct chrdata *chr = chrFindById(g_Vars.chrdata, cmd[2]);
+	if (chr && chr-> prop && chr->prop->type == PROPTYPE_PLAYER && isChrPropCoop(chr->prop)) {
+		iscoop = true;
+		for (s32 i = 0; i < MAX_PLAYERS; i++) {
+			if (!g_Vars.coopplayers[i]) continue;
+			chr = g_Vars.coopplayers[i]->prop->chr;
 #if VERSION >= VERSION_NTSC_1_0
-	if (chr && padnum < 9000 && chrGetDistanceToPad(chr, padnum) > distance)
+			if (chr && padnum < 9000 && chrGetDistanceToPad(chr, padnum) > distance)
 #else
-	if (chr && chrGetDistanceToPad(chr, padnum) > distance)
+			if (chr && chrGetDistanceToPad(chr, padnum) > distance)
 #endif
-	{
-		g_Vars.aioffset = chraiGoToLabel(g_Vars.ailist, g_Vars.aioffset, cmd[7]);
+				{
+					passes++;
+				} 
+				else {
+					fails++;
+				}
+		}
 	} else {
+#if VERSION >= VERSION_NTSC_1_0
+		if (chr && padnum < 9000 && chrGetDistanceToPad(chr, padnum) > distance)
+#else
+		if (chr && chrGetDistanceToPad(chr, padnum) > distance)
+#endif
+		{
+			passes = true;
+			fails = false;
+		} 
+	}
+	if ((iscoop && passes && !fails) || (!iscoop && passes)) {
+		g_Vars.aioffset = chraiGoToLabel(g_Vars.ailist, g_Vars.aioffset, cmd[7]);
+	} 
+	else {
 		g_Vars.aioffset += 8;
 	}
-
 	return false;
 }
 
