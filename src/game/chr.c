@@ -6685,6 +6685,23 @@ bool isChrNumCoop(u32 chrnum) {
 	return false;
 }
 
+
+bool isChrTargetCoop(struct chrdata *chr) {
+	if (g_Vars.coopplayernum < 0) {
+		return false;
+	}
+
+	struct prop *prop = chrGetTargetProp(chr);
+
+	for (s32 i = 0; i < PLAYERCOUNT(); i++) {
+		if (g_Vars.coopplayers[i] && g_Vars.coopplayers[i]->prop == prop) {
+			return true;
+		}
+	}
+
+	return false;
+}
+
 bool isChrHumanCoop(struct chrdata *chrdata, u32 chrid) {
 	// resolve it agaisnt the chrdata table
 	u32 chrnum = chrResolveId(chrdata, chrid);
