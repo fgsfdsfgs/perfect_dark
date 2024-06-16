@@ -6671,11 +6671,28 @@ void chrSetDrCarollImages(struct chrdata *drcaroll, s32 imageleft, s32 imagerigh
 	}
 }
 
-// in a glorious future
-// when bond and every human hench can have their own
-// ai buddies (technicaly possible?)
-// we can swap these PLAYERCOUNT checks
-// for something smarter (like checking for buddies)
+bool isChrNumCoop(u32 chrnum) {
+	if (g_Vars.coopplayernum < 0) {
+		return false;
+	}
+
+	for (s32 i = 0; i < PLAYERCOUNT(); i++) {
+		if (g_Vars.coopplayers[i] && g_Vars.coopplayers[i]->prop &&  g_Vars.coopplayers[i]->prop->chr->chrnum == chrnum) {
+			return true;
+		}
+	}
+
+	return false;
+}
+
+bool isChrHumanCoop(struct chrdata *chrdata, u32 chrid) {
+	// resolve it agaisnt the chrdata table
+	u32 chrnum = chrResolveId(chrdata, chrid);
+	// then check if the prop is a known coop player
+	return isChrNumCoop(chrnum);
+}
+
+// BUG: this should also attempt to figure out from chrnum
 bool isChrIdMpHumanHench(u32 chrId) {
 	if (PLAYERCOUNT() < 2) {
 		return false;
@@ -6692,6 +6709,7 @@ bool isChrIdMpHumanHench(u32 chrId) {
 	return false;
 }
 
+// BUG: this should also attempt to figure out from chrnum
 bool isChrIdMpHumanCoop(u32 chrId) {
 	if (PLAYERCOUNT() < 2) {
 		return false;
@@ -6706,6 +6724,7 @@ bool isChrIdMpHumanCoop(u32 chrId) {
 	return false;
 }
 
+// BUG: this should also attempt to figure out from chrnum
 bool isChrIdMpHumanAnti(u32 chrId) {
 	if (PLAYERCOUNT() < 2) {
 		return false;

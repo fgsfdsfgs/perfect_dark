@@ -4,6 +4,11 @@
 #include "data.h"
 #include "types.h"
 
+bool isChrNumCoop(u32 chrnum);
+bool isChrHumanCoop(struct chrdata *chr, u32 chrid);
+bool isChrHumanAnti(struct chrdata *chr, u32 chrid);
+// HACK: I want to make it easy to support anti objectives for mods
+bool isChrHumanHench(struct chrdata *chr, u32 chrid);
 bool isChrIdMpHumanHench(u32 chrId);
 bool isChrIdMpHumanCoop(u32 chrId);
 bool isChrIdMpHumanAnti(u32 chrId);
