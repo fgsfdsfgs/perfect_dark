@@ -8420,15 +8420,24 @@ bool aiIfPlayerLookingAtObject(void)
 	struct chrdata *chr = chrFindById(g_Vars.chrdata, cmd[2]);
 
 	if (chr && chr->prop && chr->prop->type == PROPTYPE_PLAYER) {
-		u32 prevplayernum = g_Vars.currentplayernum;
-		u32 playernum = playermgrGetPlayerNumByProp(chr->prop);
-		setCurrentPlayerNum(playernum);
+		if (isChrPropCoop(chr->prop)) {
+			for (s32 i = 0; i < PLAYERCOUNT(); i++) {
+				if (g_Vars.coopplayers[i] && g_Vars.coopplayers[i]->lookingatprop.prop  == obj->prop) {
+					pass = true;
+				}
+			}
+		} else {
+			u32 prevplayernum = g_Vars.currentplayernum;
+			u32 playernum = playermgrGetPlayerNumByProp(chr->prop);
+			setCurrentPlayerNum(playernum);
 
-		if (g_Vars.currentplayer->lookingatprop.prop == obj->prop) {
-			pass = true;
+			if (g_Vars.currentplayer->lookingatprop.prop == obj->prop) {
+				pass = true;
+			}
+
+			setCurrentPlayerNum(prevplayernum);
+
 		}
-
-		setCurrentPlayerNum(prevplayernum);
 	}
 
 	if (pass) {
