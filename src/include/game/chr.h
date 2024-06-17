@@ -12,6 +12,8 @@ bool isChrTargetCoop(struct chrdata *chr);
 bool isChrHumanHench(struct chrdata *chr, u32 chrid);
 bool isChrIdMpHumanHench(u32 chrId);
 bool isChrIdMpHumanCoop(u32 chrId);
+void chrSetTarget(struct chrdata *chr, u16 newtarget, bool isplayer);
+void chrSetTargetProp(struct chrdata *chr, struct prop *prop);
 bool isChrIdMpHumanAnti(u32 chrId);
 bool isChrPropCoop(struct prop *prop);
 void chrSetChrnum(struct chrdata *chr, s16 chrnum);

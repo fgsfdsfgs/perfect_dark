@@ -6760,3 +6760,28 @@ bool isChrPropCoop(struct prop *prop) {
 	}
 	return false;
 }
+
+void chrSetTarget(struct chrdata *chr, u16 newtarget, bool isplayer) {
+	if (newtarget != chr->target) {
+		chr->lastvisibletarget60 = 0;
+		chr->lastseetarget60 = 0;
+		chr->lastheartarget60 = 0;
+		if (!isplayer) {
+			chr->hidden &= ~CHRHFLAG_IS_HEARING_TARGET;
+			chr->chrflags &= ~CHRCFLAG_NEAR_MISS;
+		}
+		chr->target = newtarget;
+	}
+}
+
+void chrSetTargetProp(struct chrdata *chr, struct prop *target) {
+	s16 newtarget;
+	newtarget = propGetIndexByChrId(chr, target->chr->chrnum);
+
+	// @hack: Unsetting these flags here causes guards to become deaf in
+	// co-op mode. This is because their AI scripting toggles their
+	// target between the two players on each frame, so this flag is
+	// cleared before it is read. A suitable fix would be to only unset
+	// these flags if either the old or new target is not a player.
+	chrSetTarget(chr, newtarget, chr->prop->type == PROPTYPE_PLAYER || target->type == PROPTYPE_PLAYER);
+}

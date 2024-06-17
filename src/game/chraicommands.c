@@ -1683,19 +1683,50 @@ bool aiIfCheckFovWithTarget(void)
 	bool pass;
 	u8 *cmd = g_Vars.ailist + g_Vars.aioffset;
 
+	u16 temptarget = g_Vars.chrdata->target;
+
 	if (cmd[4] == 0) {
 		if (cmd[3]) {
-			pass = chrIsInTargetsFovX(g_Vars.chrdata, cmd[2]);
+			if (isChrTargetCoop(g_Vars.chrdata)) {
+				temptarget = g_Vars.chrdata->target;
+				for (s32 i = 0; i < PLAYERCOUNT(); i++) {
+					if (pass) break;
+					if (!g_Vars.coopplayers[i]) continue;
+					chrSetTargetProp(g_Vars.chrdata, g_Vars.coopplayers[i]->prop);
+					pass = chrIsInTargetsFovX(g_Vars.chrdata, cmd[2]);
+				}
+				chrSetTarget(g_Vars.chrdata, temptarget, 1);
+			} else pass = chrIsInTargetsFovX(g_Vars.chrdata, cmd[2]);
 		} else {
-			pass = chrIsVerticalAngleToTargetWithin(g_Vars.chrdata, cmd[2]);
+			if (isChrTargetCoop(g_Vars.chrdata)) {
+				temptarget = g_Vars.chrdata->target;
+				for (s32 i = 0; i < PLAYERCOUNT(); i++) {
+					if (pass) break;
+					if (!g_Vars.coopplayers[i]) continue;
+					chrSetTargetProp(g_Vars.chrdata, g_Vars.coopplayers[i]->prop);
+					pass = chrIsVerticalAngleToTargetWithin(g_Vars.chrdata, cmd[2]);
+				}
+				chrSetTarget(g_Vars.chrdata, temptarget, 1);
+			} else pass = chrIsVerticalAngleToTargetWithin(g_Vars.chrdata, cmd[2]);
 		}
 	} else {
-		pass = g_Vars.chrdata->yvisang && chrIsVerticalAngleToTargetWithin(g_Vars.chrdata, g_Vars.chrdata->yvisang) == 0;
+		if (isChrTargetCoop(g_Vars.chrdata)) { 
+			temptarget = g_Vars.chrdata->target;
+			for (s32 i = 0; i < PLAYERCOUNT(); i++) {
+				if (pass) break;
+				if (!g_Vars.coopplayers[i]) continue;
+				chrSetTargetProp(g_Vars.chrdata, g_Vars.coopplayers[i]->prop);
+				pass = g_Vars.chrdata->yvisang && chrIsVerticalAngleToTargetWithin(g_Vars.chrdata, g_Vars.chrdata->yvisang) == 0;
+			}
+			chrSetTarget(g_Vars.chrdata, temptarget, 1);
+		} else pass = g_Vars.chrdata->yvisang && chrIsVerticalAngleToTargetWithin(g_Vars.chrdata, g_Vars.chrdata->yvisang) == 0;
 	}
 
 	if (pass) {
+		if (g_Vars.chrdata->chrnum == 0x38) printf("aiIfCheckFovWithTarget: pass iscoop: %x\n", isChrTargetCoop(g_Vars.chrdata));
 		g_Vars.aioffset = chraiGoToLabel(g_Vars.ailist, g_Vars.aioffset, cmd[5]);
 	} else {
+		if (g_Vars.chrdata->chrnum == 0x38) printf("aiIfCheckFovWithTarget: fail iscoop: %x\n", isChrTargetCoop(g_Vars.chrdata));
 		g_Vars.aioffset += 6;
 	}
 
