@@ -13967,24 +13967,8 @@ bool chrIsLookingAtPos(struct chrdata *chr, struct coord *pos, u8 arg2)
 
 f32 chrGetDistanceToTarget(struct chrdata *chr)
 {
-	f32 distance = 0;
-	f32 tmpdistance = 0;
-	struct prop *prop = 0;
-	if (isChrPropCoop(chr)) {
-		for (s32 i = 0; i < PLAYERCOUNT(); i++) {
-			if (!g_Vars.coopplayers[i]) continue;
-			prop = g_Vars.coopplayers[i]->prop;
-			tmpdistance = propGetDistanceToProp(chr->prop, prop);
-			if (distance == 0 || tmpdistance < distance) {
-				distance = tmpdistance;
-			}
-		}
-	} else {
-		prop = chrGetTargetProp(chr);
-		distance = propGetDistanceToProp(chr->prop, prop);
-	}
-
-	return distance;
+	struct prop *prop = chrGetTargetProp(chr);
+	return propGetDistanceToProp(chr->prop, prop);
 }
 
 // Redundant function - it's the same as above
