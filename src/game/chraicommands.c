@@ -1806,8 +1806,10 @@ bool aiIfDistanceToTargetLessThan(void)
 	f32 distance = (cmd[3] | (cmd[2] << 8)) * (f32)10;
 
 	if (chrGetDistanceToTarget(g_Vars.chrdata) < distance) {
+		if (g_Vars.chrdata->chrnum == 0x38) printf("aiIfDistanceToTargetLessThan: pass iscoop: %x\n", isChrTargetCoop(g_Vars.chrdata));
 		g_Vars.aioffset = chraiGoToLabel(g_Vars.ailist, g_Vars.aioffset, cmd[4]);
 	} else {
+		if (g_Vars.chrdata->chrnum == 0x38) printf("aiIfDistanceToTargetLessThan: fail iscoop: %x\n", isChrTargetCoop(g_Vars.chrdata));
 		g_Vars.aioffset += 5;
 	}
 
