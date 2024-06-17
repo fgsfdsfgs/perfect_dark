@@ -1723,10 +1723,8 @@ bool aiIfCheckFovWithTarget(void)
 	}
 
 	if (pass) {
-		if (g_Vars.chrdata->chrnum == 0x38) printf("aiIfCheckFovWithTarget: pass iscoop: %x\n", isChrTargetCoop(g_Vars.chrdata));
 		g_Vars.aioffset = chraiGoToLabel(g_Vars.ailist, g_Vars.aioffset, cmd[5]);
 	} else {
-		if (g_Vars.chrdata->chrnum == 0x38) printf("aiIfCheckFovWithTarget: fail iscoop: %x\n", isChrTargetCoop(g_Vars.chrdata));
 		g_Vars.aioffset += 6;
 	}
 
