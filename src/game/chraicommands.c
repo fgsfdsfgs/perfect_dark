@@ -2131,8 +2131,18 @@ bool aiIfChrHasObject(void)
 
 	if (obj && obj->prop && chr && chr->prop && chr->prop->type == PROPTYPE_PLAYER) {
 		s32 prevplayernum = g_Vars.currentplayernum;
-		setCurrentPlayerNum(playermgrGetPlayerNumByProp(chr->prop));
-		hasprop = invHasProp(obj->prop);
+		if (isChrPropCoop(chr->prop)) {
+			for (s32 i = 0; i < MAX_PLAYERS; i++) {
+				if (hasprop) break;
+				if (g_Vars.coopplayers[i]) {
+					setCurrentPlayerNum(i);
+					hasprop = invHasProp(obj->prop);
+				}
+			}
+		} else {
+			setCurrentPlayerNum(playermgrGetPlayerNumByProp(chr->prop));
+			hasprop = invHasProp(obj->prop);
+		}
 		setCurrentPlayerNum(prevplayernum);
 	}
 
