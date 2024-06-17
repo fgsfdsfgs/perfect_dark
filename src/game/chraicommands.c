@@ -1804,8 +1804,22 @@ bool aiIfDistanceToTargetLessThan(void)
 {
 	u8 *cmd = g_Vars.ailist + g_Vars.aioffset;
 	f32 distance = (cmd[3] | (cmd[2] << 8)) * (f32)10;
+	bool pass = false;
 
-	if (chrGetDistanceToTarget(g_Vars.chrdata) < distance) {
+	if (isChrTargetCoop(g_Vars.chrdata)) {
+		u16 tmptarget;
+		tmptarget = g_Vars.chrdata->target;
+		for (s32 i = 0; i < PLAYERCOUNT(); i++) {
+			if (pass) break;
+			if (!g_Vars.coopplayers[i]) continue;
+			chrSetTargetProp(g_Vars.chrdata, g_Vars.coopplayers[i]->prop);
+			pass = chrGetDistanceToTarget(g_Vars.chrdata) < distance;
+		}
+		chrSetTarget(g_Vars.chrdata, tmptarget, 1);
+	} else if (chrGetDistanceToTarget(g_Vars.chrdata) < distance) {
+		pass = true;
+	}
+	if (pass) {
 		if (g_Vars.chrdata->chrnum == 0x38) printf("aiIfDistanceToTargetLessThan: pass iscoop: %x\n", isChrTargetCoop(g_Vars.chrdata));
 		g_Vars.aioffset = chraiGoToLabel(g_Vars.ailist, g_Vars.aioffset, cmd[4]);
 	} else {
