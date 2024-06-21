@@ -459,8 +459,12 @@ void mainLoop(void)
 			g_Vars.lvmpbotlevel = 1;
 		}
 
-		if (g_Vars.coopplayernum >= 0 || g_Vars.antiplayernum >= 0) {
-			g_MpSetup.chrslots = 0x0F;
+		if (g_MissionConfig.isteam) {
+			g_MpSetup.chrslots = 0x0f;
+			mpReset();
+		}
+		else if (g_Vars.coopplayernum >= 0 || g_Vars.antiplayernum >= 0) {
+			g_MpSetup.chrslots = 0x03;
 			mpReset();
 		} else if (g_Vars.perfectbuddynum) {
 			mpReset();

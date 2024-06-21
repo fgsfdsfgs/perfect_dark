@@ -625,12 +625,18 @@ void endscreenContinue(s32 context)
 
 						titleSetNextStage(g_MissionConfig.stagenum);
 
-						if (g_MissionConfig.iscoop) {
+						if (g_MissionConfig.isteam) {
+							g_Vars.bondplayernum = 0;
+							g_Vars.coopplayernum = -1;
+							g_Vars.antiplayernum = -1;
+							setNumPlayers(1);
+						}
+						else if (g_MissionConfig.iscoop) {
 							if (g_Vars.numaibuddies == 0) {
 								g_Vars.bondplayernum = 0;
 								g_Vars.coopplayernum = 1;
 								g_Vars.antiplayernum = -1;
-								setNumPlayers(4);
+								setNumPlayers(2);
 							} else {
 								g_Vars.bondplayernum = 0;
 								g_Vars.coopplayernum = -1;

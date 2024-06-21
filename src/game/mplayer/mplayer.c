@@ -231,7 +231,7 @@ void mpReset(void)
 	g_MpNumChrs = 0;
 	g_Vars.mplayerisrunning = true;
 
-	if (g_Vars.coopplayernum >= 0 || g_Vars.antiplayernum >= 0) {
+	if (g_MissionConfig.isteam || g_Vars.coopplayernum >= 0 || g_Vars.antiplayernum >= 0) {
 		g_Vars.normmplayerisrunning = false;
 	} else {
 		g_Vars.normmplayerisrunning = true;

@@ -725,13 +725,19 @@ MenuItemHandlerResult menuhandlerAcceptMission(s32 operation, struct menuitem *i
 
 		titleSetNextStage(g_MissionConfig.stagenum);
 
-		if (g_MissionConfig.iscoop) {
+		if (g_MissionConfig.isteam) {
+			g_Vars.bondplayernum = 0;
+			g_Vars.coopplayernum = -1;
+			g_Vars.antiplayernum = -1;
+			setNumPlayers(1);
+		}
+		else if (g_MissionConfig.iscoop) {
 			if (g_Vars.numaibuddies == 0) {
 				// Coop with human buddy
 				g_Vars.bondplayernum = 0;
 				g_Vars.coopplayernum = 1;
 				g_Vars.antiplayernum = -1;
-				setNumPlayers(4);
+				setNumPlayers(2);
 			} else {
 				// Coop with AI buddies
 				g_Vars.bondplayernum = 0;
@@ -1335,6 +1341,33 @@ MenuDialogHandlerResult menudialogCoopAntiOptions(s32 operation, struct menudial
 	return 0;
 }
 
+MenuDialogHandlerResult menudialogTeamCoopAntiOptions(s32 operation, struct menudialogdef *dialogdef, union handlerdata *data)
+{
+#if VERSION >= VERSION_NTSC_1_0
+	if (operation == MENUOP_OPEN) {
+		s32 max = getMaxAiBuddies();
+
+		if (g_Vars.numaibuddies > max) {
+			g_Vars.numaibuddies = max;
+		}
+	}
+#endif
+
+	if (operation == MENUOP_TICK) {
+		if (g_Menus[g_MpPlayerNum].curdialog && g_Menus[g_MpPlayerNum].curdialog->definition == dialogdef) {
+			struct menuinputs *inputs = data->dialog2.inputs;
+
+			if (inputs->start) {
+				menuhandlerBuddyOptionsContinue(MENUOP_SET, NULL, NULL);
+			}
+
+			inputs->start = false;
+		}
+	}
+
+	return 0;
+}
+
 MenuItemHandlerResult menuhandlerCoopRadar(s32 operation, struct menuitem *item, union handlerdata *data)
 {
 	switch (operation) {
@@ -1515,12 +1548,66 @@ struct menuitem g_CoopOptionsMenuItems[] = {
 	{ MENUITEMTYPE_END }, // ""
 };
 
+struct menuitem g_TeamOptionsMenuItems[] = {
+	{
+		MENUITEMTYPE_CHECKBOX,
+		0,
+		0,
+		L_OPTIONS_256, // "Radar On"
+		0,
+		menuhandlerCoopRadar,
+	},
+	{
+		MENUITEMTYPE_CHECKBOX,
+		0,
+		0,
+		L_OPTIONS_257, // "Friendly Fire"
+		0,
+		menuhandlerCoopFriendlyFire,
+	},
+	{
+		MENUITEMTYPE_SEPARATOR,
+		0,
+		0,
+		0,
+		0,
+		NULL,
+	}, // ""
+	{
+		MENUITEMTYPE_SELECTABLE,
+		0,
+		0,
+		L_OPTIONS_259, // "Continue"
+		0,
+		menuhandlerBuddyOptionsContinue,
+	},
+	{
+		MENUITEMTYPE_SELECTABLE,
+		0,
+		MENUITEMFLAG_SELECTABLE_CLOSESDIALOG,
+		L_OPTIONS_260, // "Cancel"
+		0,
+		NULL,
+	},
+	{ MENUITEMTYPE_END }, // ""
+};
+
+
 struct menudialogdef g_CoopOptionsMenuDialog = {
 	MENUDIALOGTYPE_DEFAULT,
 	L_OPTIONS_255, // "Co-Operative Options"
 	g_CoopOptionsMenuItems,
 	menudialogCoopAntiOptions,
 	MENUDIALOGFLAG_STARTSELECTS,
+	NULL,
+};
+
+struct menudialogdef g_TeamOptionsMenuDialog = {
+	MENUDIALOGTYPE_DEFAULT,
+	(void *)"Team Mission Options", // "Team-Operative Options"
+	g_TeamOptionsMenuItems,
+	menudialogTeamCoopAntiOptions,
+	MENUDIALOGFLAG_STARTSELECTS | MENUDIALOGFLAG_LITERAL_TEXT,
 	NULL,
 };
 
@@ -1631,6 +1718,25 @@ MenuItemHandlerResult menuhandlerCoopDifficulty(s32 operation, struct menuitem *
 	return 0;
 }
 
+MenuItemHandlerResult menuhandlerTeamDifficulty(s32 operation, struct menuitem *item, union handlerdata *data)
+{
+	switch (operation) {
+	case MENUOP_SET:
+		g_MissionConfig.pdmode = false;
+		g_MissionConfig.difficulty = item->param;
+		lvSetDifficulty(g_MissionConfig.difficulty);
+		menuPopDialog();
+		menuPushDialog(&g_TeamOptionsMenuDialog);
+		break;
+	case MENUOP_CHECKDISABLED:
+		if (!isStageDifficultyUnlocked(g_MissionConfig.stageindex, item->param)) {
+			return true;
+		}
+	}
+
+	return 0;
+}
+
 struct menuitem g_CoopMissionDifficultyMenuItems[] = {
 	{
 		MENUITEMTYPE_SELECTABLE,
@@ -1675,10 +1781,63 @@ struct menuitem g_CoopMissionDifficultyMenuItems[] = {
 	{ MENUITEMTYPE_END },
 };
 
+struct menuitem g_TeamMissionDifficultyMenuItems[] = {
+	{
+		MENUITEMTYPE_SELECTABLE,
+		0,
+		0,
+		L_OPTIONS_251, // "Agent"
+		0,
+		menuhandlerTeamDifficulty,
+	},
+	{
+		MENUITEMTYPE_SELECTABLE,
+		1,
+		0,
+		L_OPTIONS_252, // "Special Agent"
+		0,
+		menuhandlerTeamDifficulty,
+	},
+	{
+		MENUITEMTYPE_SELECTABLE,
+		2,
+		0,
+		L_OPTIONS_253, // "Perfect Agent"
+		0,
+		menuhandlerTeamDifficulty,
+	},
+	{
+		MENUITEMTYPE_SEPARATOR,
+		0,
+		0,
+		0,
+		0,
+		NULL,
+	},
+	{
+		MENUITEMTYPE_SELECTABLE,
+		0,
+		MENUITEMFLAG_SELECTABLE_CLOSESDIALOG,
+		L_OPTIONS_254, // "Cancel"
+		0,
+		NULL,
+	},
+	{ MENUITEMTYPE_END },
+};
+
 struct menudialogdef g_CoopMissionDifficultyMenuDialog = {
 	MENUDIALOGTYPE_DEFAULT,
 	L_OPTIONS_248, // "Select Difficulty"
 	g_CoopMissionDifficultyMenuItems,
+	NULL,
+	MENUDIALOGFLAG_STARTSELECTS,
+	NULL,
+};
+
+struct menudialogdef g_TeamMissionDifficultyMenuDialog = {
+	MENUDIALOGTYPE_DEFAULT,
+	L_OPTIONS_248, // "Select Difficulty"
+	g_TeamMissionDifficultyMenuItems,
 	NULL,
 	MENUDIALOGFLAG_STARTSELECTS,
 	NULL,
@@ -1911,7 +2070,11 @@ MenuItemHandlerResult menuhandlerMissionList(s32 operation, struct menuitem *ite
 		g_MissionConfig.stagenum = g_SoloStages[sp188].stagenum;
 		g_MissionConfig.stageindex = sp188;
 
-		if (g_MissionConfig.iscoop) {
+		if (g_MissionConfig.isteam) {
+			menuPushDialog(&g_TeamMissionDifficultyMenuDialog);
+			g_Vars.mplayerisrunning = true;
+	    }
+		else if (g_MissionConfig.iscoop) {
 			menuPushDialog(&g_CoopMissionDifficultyMenuDialog);
 		} else if (g_MissionConfig.isanti) {
 			menuPushDialog(&g_AntiMissionDifficultyMenuDialog);
@@ -4860,6 +5023,20 @@ MenuItemHandlerResult menuhandlerMainMenuCounterOperative(s32 operation, struct 
 	return 0;
 }
 
+MenuItemHandlerResult menuhandlerMainMenuTeamMissions(s32 operation, struct menuitem *item, union handlerdata *data)
+{
+	if (operation == MENUOP_SET) {
+		g_MissionConfig.isteam = true;
+	   // players must explicitly join
+		g_MissionConfig.iscoop = false;
+		g_MissionConfig.isanti = false;
+		g_Vars.mplayerisrunning = true;
+		menuPushDialog(&g_SelectMissionMenuDialog);
+	}
+
+	return 0;
+}
+
 MenuDialogHandlerResult menudialogMainMenu(s32 operation, struct menudialogdef *dialogdef, union handlerdata *data)
 {
 	switch (operation) {
@@ -4934,12 +5111,26 @@ struct menuitem g_MainMenuMenuItems[] = {
 		0x00000004,
 		menuhandlerMainMenuCooperative,
 	},
+#ifndef PLATFORM_N64
+	{
+		MENUITEMTYPE_SELECTABLE,
+		0,
+		MENUITEMFLAG_BIGFONT | MENUITEMFLAG_LITERAL_TEXT,
+		(uintptr_t)"Team Missions",
+		0x00000005,
+		menuhandlerMainMenuTeamMissions,
+	},
+#endif
 	{
 		MENUITEMTYPE_SELECTABLE,
 		3,
 		MENUITEMFLAG_BIGFONT,
 		(uintptr_t)&mainMenuTextLabel,
+#ifndef PLATFORM_N64
+		0x00000006,
+#else
 		0x00000005,
+#endif
 		menuhandlerMainMenuCounterOperative,
 	},
 	{
@@ -4947,7 +5138,11 @@ struct menuitem g_MainMenuMenuItems[] = {
 		0,
 		MENUITEMFLAG_SELECTABLE_OPENSDIALOG | MENUITEMFLAG_BIGFONT,
 		L_OPTIONS_187, // "Change Agent..."
+#ifndef PLATFORM_N64
+		0x00000007,
+#else
 		0x00000006,
+#endif
 		(void *)&g_ChangeAgentMenuDialog,
 	},
 #ifndef PLATFORM_N64
@@ -4956,7 +5151,7 @@ struct menuitem g_MainMenuMenuItems[] = {
 		0,
 		MENUITEMFLAG_SELECTABLE_OPENSDIALOG | MENUITEMFLAG_BIGFONT | MENUITEMFLAG_LITERAL_TEXT,
 		(uintptr_t)"Exit Game",
-		0x00000007,
+		0x00000008,
 		(void *)&g_ExitGameMenuDialog,
 	},
 #endif

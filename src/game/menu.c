@@ -5665,6 +5665,136 @@ Gfx *menuRender(Gfx *gdl)
 	return gdl;
 }
 
+Gfx *renderTeamMissionJoinText(Gfx *gdl) {
+	s32 i;
+	s32 j;
+	s32 viewleft = viGetViewLeft() / g_ScaleX + 20;
+	s32 viewtop = viGetViewTop() + 4;
+	s32 viewright = (viGetViewLeft() + viGetViewWidth()) / g_ScaleX - 20;
+	s32 viewbottom = viGetViewTop() + viGetViewHeight() - 4;
+	s32 textheight;
+	s32 textwidth;
+	bool renderit;
+	char text[32];
+	s32 tmp1;
+	s32 tmp2;
+	s32 x;
+	s32 y;
+	s32 colour;
+
+	gdl = text0f153628(gdl);
+
+	for (i = 0; i < MAX_PLAYERS; i++) {
+		renderit = true;
+		// Figure out what text will be displayed. The text calculated
+		// here is for measuring purposes only and isn't rendered.
+		// Amusingly, there's a %d placeholder in the text which isn't
+		// replaced prior to measuring, so the width is slightly wrong.
+		if (g_MissionConfig.isteam) {
+			renderit = true;
+		}
+		// else if (g_Vars.mpsetupmenu == MPSETUPMENU_GENERAL && g_Vars.waitingtojoin[i]) {
+		// 	// Player has pressed start but they can't open the player-specific
+		// 	// dialog yet because they're still on the Combat Simulator dialog
+		// 	// or similar. Show "Ready" in their corner.
+		// 	renderit = true;
+		// 	// "Player %d: " and "Ready!"
+		// 	sprintf(text, "%s%s", langGet(L_MPMENU_482), langGet(L_MISC_461));
+		// } else {
+		// 	if (g_MenuData.root == MENUROOT_4MBMAINMENU) {
+		// 		if (g_Vars.mpsetupmenu == MPSETUPMENU_GENERAL) {
+		// 			renderit = true;
+		//
+		// 			for (j = 0; j < ARRAYCOUNT(g_Vars.waitingtojoin); j++) {
+		// 				if (g_Vars.waitingtojoin[j]) {
+		// 					renderit = false;
+		// 				}
+		// 			}
+		// 		} else {
+		// 			renderit = g_MpNumJoined < 2;
+		// 		}
+		// 	} else {
+		// 		renderit = true;
+		// 	}
+		//
+		// 	// "Player %d: " and "Press START!"
+		// 	sprintf(text, "%s%s", langGet(L_MPMENU_482), langGet(L_MPMENU_483));
+		// }
+
+		if (renderit) {
+			textMeasure(&textheight, &textwidth, text, g_CharsHandelGothicSm, g_FontHandelGothicSm, 0);
+
+			// Check which controllers are connected
+			// and update the alpha of the label
+			if (((g_MpSetup.chrslots | ~joyGetConnectedControllers()) & (1 << i)) == 0) {
+#if VERSION >= VERSION_PAL_BETA
+				tmp1 = g_Vars.diffframe60freal * 3;
+#else
+				tmp1 = g_Vars.diffframe60 * 3;
+#endif
+
+				if (g_MenuData.playerjoinalpha[i] < 255) {
+					if (255 - g_MenuData.playerjoinalpha[i] > tmp1) {
+						g_MenuData.playerjoinalpha[i] += tmp1;
+					} else {
+						g_MenuData.playerjoinalpha[i] = 255;
+					}
+				}
+			} else {
+#if VERSION >= VERSION_PAL_BETA
+				tmp2 = g_Vars.diffframe60freal * 9;
+#else
+				tmp2 = g_Vars.diffframe60 * 9;
+#endif
+
+				if (g_MenuData.playerjoinalpha[i] > 0) {
+					if (g_MenuData.playerjoinalpha[i] > tmp2) {
+						g_MenuData.playerjoinalpha[i] -= tmp2;
+					} else {
+						g_MenuData.playerjoinalpha[i] = 0;
+					}
+				}
+			}
+
+			if (g_MenuData.playerjoinalpha[i] > 0) {
+				u32 weight = menuGetSinOscFrac(20) * 255.0f;
+
+				// "Player %d: "
+				sprintf(text, langGet(L_MPMENU_482), i + 1);
+
+
+				y = viewtop + 2 + (i * 9);
+				x = viewleft + 2;
+
+				gdl = textRenderProjected(gdl, &x, &y, text, g_CharsHandelGothicSm, g_FontHandelGothicSm, g_MenuData.playerjoinalpha[i] | 0x5070ff00, viGetWidth(), viGetHeight(), 0, 0);
+
+				if (g_MissionConfig.isteam) {
+					// "Ready!"
+#if VERSION >= VERSION_JPN_FINAL
+					colour = L_MISC_461;
+					strcpy(text, langGet(colour));
+					colour = 0xffffffff;
+#else
+					strcpy(text, langGet(L_MISC_461));
+					colour = g_MenuData.playerjoinalpha[i] | 0xd00020ff;
+#endif
+				} else {
+					// "Press START!"
+					strcpy(text, langGet(L_MPMENU_483));
+					colour = colourBlend(0x00ffff00, 0xffffff00, weight) | g_MenuData.playerjoinalpha[i];
+				}
+
+				gdl = textRenderProjected(gdl, &x, &y, text, g_CharsHandelGothicSm, g_FontHandelGothicSm, colour, viGetWidth(), viGetHeight(), 0, 0);
+			}
+		}
+	}
+
+	gdl = text0f153780(gdl);
+
+	return gdl;
+
+}
+
 const char var7f1b27a4[] = "Tune Selector - mode %d\n";
 
 u32 menuChooseMusic(void)

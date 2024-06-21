@@ -1352,6 +1352,9 @@ Gfx *lvRender(Gfx *gdl)
 					}
 				}
 
+				if (g_MissionConfig.isteam) {
+					gdl = renderTeamMissionJoinText(gdl);
+				}
 				if (g_DebugScreenshotRgb <= 0) {
 					static struct sndstate *g_CutsceneStaticAudioHandle = NULL;
 					static s32 g_CutsceneStaticTimer = 100;
