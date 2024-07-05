@@ -41,6 +41,7 @@
 #include "game/sparks.h"
 #include "game/stagetable.h"
 #include "game/tex.h"
+#include "game/title.h"
 #include "game/wallhit.h"
 #include "bss.h"
 #include "lib/joy.h"
