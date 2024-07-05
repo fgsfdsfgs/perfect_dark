@@ -24,6 +24,30 @@ void playermgrInit(void)
 	g_Vars.antiplayernum = -1;
 }
 
+/**
+ *  Resets bond player number to 0
+ *  Sets up coop / anti player numbers
+ *
+ *  Sets bond player in playerroles array to PLAYERROLE_BOND
+ *  Assumes that the playerroles array has been set up correctly for coop / anti players
+ */
+void playermgrResetTeamPlayers(void)
+{
+	g_Vars.bondplayernum = 0;
+	g_Vars.playerroles[g_Vars.bondplayernum] = PLAYERROLE_BOND;
+	// set the coop / anti player numbers
+	for (s32 i = 0; i < MAX_PLAYERS; i++) {
+		if (g_Vars.coopplayernum < 0 && g_Vars.playerroles[i] == PLAYERROLE_COOP) {
+			g_Vars.coopplayernum = i;
+			g_Vars.currentcoopplayernum = i;
+		}
+		if (g_Vars.antiplayernum < 0 && g_Vars.playerroles[i] == PLAYERROLE_ANTI) {
+			g_Vars.antiplayernum = i;
+			g_Vars.currentantiplayernum = i;
+		}
+	}
+}
+
 void playermgrReset(void)
 {
 	g_Vars.players[0] = NULL;

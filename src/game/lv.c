@@ -1721,6 +1721,7 @@ Gfx *lvRender(Gfx *gdl)
 #endif
 		{
 			g_MissionConfig.iscoop = false;
+			g_MissionConfig.isteam = false;
 			g_Vars.mplayerisrunning = false;
 			g_Vars.normmplayerisrunning = false;
 			g_Vars.bondplayernum = 0;

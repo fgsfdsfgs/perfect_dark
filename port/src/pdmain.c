@@ -454,19 +454,7 @@ void mainLoop(void)
 		}
 
 		if (g_MissionConfig.isteam) {
-			g_Vars.bondplayernum = 0;
-			g_Vars.playerroles[g_Vars.bondplayernum] = PLAYERROLE_BOND;
-			// set the coop / anti player numbers
-			for (s32 i = 0; i < MAX_PLAYERS; i++) {
-				if (g_Vars.coopplayernum < 0 && g_Vars.playerroles[i] == PLAYERROLE_COOP) {
-					g_Vars.coopplayernum = i;
-					g_Vars.currentcoopplayernum = i;
-				}
-				if (g_Vars.antiplayernum < 0 && g_Vars.playerroles[i] == PLAYERROLE_ANTI) {
-					g_Vars.antiplayernum = i;
-					g_Vars.currentantiplayernum = i;
-				}
-			}
+			playermgrResetTeamPlayers();
 		}
 
 		playermgrAllocatePlayers(numplayers);

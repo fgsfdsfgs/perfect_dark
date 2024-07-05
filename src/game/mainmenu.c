@@ -726,17 +726,7 @@ MenuItemHandlerResult menuhandlerAcceptMission(s32 operation, struct menuitem *i
 		titleSetNextStage(g_MissionConfig.stagenum);
 
 		if (g_MissionConfig.isteam) {
-			g_Vars.bondplayernum = 0;
-			g_Vars.playerroles[g_Vars.bondplayernum] = PLAYERROLE_BOND;
-			// set the coop / anti player numbers
-			for (s32 i = 0; i < MAX_PLAYERS; i++) {
-				if (g_Vars.coopplayernum < 0 && g_Vars.playerroles[i] == PLAYERROLE_COOP) {
-					g_Vars.coopplayernum = i;
-				}
-				if (g_Vars.antiplayernum < 0 && g_Vars.playerroles[i] == PLAYERROLE_ANTI) {
-					g_Vars.antiplayernum = i;
-				}
-			}
+			playermgrResetTeamPlayers();
 			setNumPlayers(getNumTeamModePlayers());
 		}
 		else if (g_MissionConfig.iscoop) {
@@ -5064,6 +5054,7 @@ MenuItemHandlerResult menuhandlerMainMenuSoloMissions(s32 operation, struct menu
 	if (operation == MENUOP_SET) {
 		g_MissionConfig.iscoop = false;
 		g_MissionConfig.isanti = false;
+		g_MissionConfig.isteam = false;
 		menuPushDialog(&g_SelectMissionMenuDialog);
 	}
 
@@ -5113,6 +5104,7 @@ MenuItemHandlerResult menuhandlerMainMenuCounterOperative(s32 operation, struct 
 	if (operation == MENUOP_SET) {
 		g_MissionConfig.iscoop = false;
 		g_MissionConfig.isanti = true;
+		g_MissionConfig.isteam = false;
 		menuPushDialog(&g_SelectMissionMenuDialog);
 	}
 
@@ -5143,6 +5135,7 @@ MenuDialogHandlerResult menudialogMainMenu(s32 operation, struct menudialogdef *
 		if (g_Menus[g_MpPlayerNum].curdialog &&
 				g_Menus[g_MpPlayerNum].curdialog->definition == dialogdef) {
 			g_MissionConfig.iscoop = false;
+			g_MissionConfig.isteam = false;
 			g_MissionConfig.isanti = false;
 		}
 		break;

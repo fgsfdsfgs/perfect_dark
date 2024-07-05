@@ -3875,6 +3875,7 @@ void menuReset(void)
 
 	if (g_Vars.stagenum == STAGE_CITRAINING) {
 		g_MissionConfig.iscoop = false;
+		g_MissionConfig.isteam = false;
 		g_MissionConfig.isanti = false;
 		g_MissionConfig.pdmode = false;
 	}

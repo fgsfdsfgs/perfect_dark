@@ -441,17 +441,22 @@ void menuTick(void)
 						}
 
 						if (playernum >= 0) {
-							if (g_Vars.coopplayernum >= 0) {
+							bool handled = false;
+							if (g_Vars.coopplayers[playernum]) {
 								s32 prevplayernum = g_Vars.currentplayernum;
 								setCurrentPlayerNum(playernum);
 								endscreenPushCoop();
 								setCurrentPlayerNum(prevplayernum);
-							} else if (g_Vars.antiplayernum >= 0) {
+								handled = true;
+							} 
+							if (g_Vars.antiplayers[playernum]) {
 								s32 prevplayernum = g_Vars.currentplayernum;
 								setCurrentPlayerNum(playernum);
 								endscreenPushAnti();
 								setCurrentPlayerNum(prevplayernum);
-							} else {
+								handled = true;
+							} 
+							if (!handled) {
 								mpPushEndscreenDialog(playernum, i);
 							}
 						}
@@ -666,6 +671,7 @@ void menuTick(void)
 					titleSetNextMode(TITLEMODE_SKIP);
 					mainChangeToStage(STAGE_CITRAINING);
 					g_MissionConfig.iscoop = false;
+					g_MissionConfig.isteam = false;
 				}
 				break;
 			}
