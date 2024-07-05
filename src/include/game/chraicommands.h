@@ -4,7 +4,7 @@
 #include "data.h"
 #include "types.h"
 
-uintptr_t** getPlayerPool(u32 chrId);
+struct player** getPlayerPool(u32 chrId);
 /*0x0000*/ bool aiGoToNext(void);
 /*0x0001*/ bool aiGoToFirst(void);
 /*0x0002*/ bool aiLabel(void);

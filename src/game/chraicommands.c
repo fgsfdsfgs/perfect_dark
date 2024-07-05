@@ -506,7 +506,7 @@ bool aiIfStopped(void)
 	return false;
 }
 
-uintptr_t** getPlayerPool(u32 chrId) {
+struct player** getPlayerPool(u32 chrId) {
 	struct player** playerpool = 0;
 	switch (chrId){
 		case CHR_ANTI:
@@ -521,7 +521,7 @@ uintptr_t** getPlayerPool(u32 chrId) {
 		break;
 	}
 
-	return (uintptr_t**)playerpool;
+	return (struct player**)playerpool;
 }
 
 /**
