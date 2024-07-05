@@ -1888,9 +1888,7 @@ Gfx *creditsDraw(Gfx *gdl)
 		setNumPlayers(1);
 		mainChangeToStage(g_TitleNextStage);
 
-		g_Vars.bondplayernum = 0;
-		g_Vars.coopplayernum = -1;
-		g_Vars.antiplayernum = -1;
+		playermgrDisableTeamPlayers();
 
 		lvSetDifficulty(DIFF_A);
 		viBlack(true);

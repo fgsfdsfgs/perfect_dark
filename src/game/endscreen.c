@@ -636,15 +636,11 @@ void endscreenContinue(s32 context)
 								g_Vars.antiplayernum = -1;
 								setNumPlayers(2);
 							} else {
-								g_Vars.bondplayernum = 0;
-								g_Vars.coopplayernum = -1;
-								g_Vars.antiplayernum = -1;
+								playermgrDisableTeamPlayers();
 								setNumPlayers(1);
 							}
 						} else {
-							g_Vars.bondplayernum = 0;
-							g_Vars.coopplayernum = -1;
-							g_Vars.antiplayernum = -1;
+							playermgrDisableTeamPlayers();
 							setNumPlayers(1);
 						}
 

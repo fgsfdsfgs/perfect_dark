@@ -8203,6 +8203,7 @@ void cctvTick(struct prop *camprop)
 	for (s32 i = 0; i < MAX_PLAYERS; i++) {
 		if (g_Vars.coopplayernum >= 0) {
 			if (g_Vars.antiplayers[g_Vars.playerorder[i]]) continue;
+			if (!g_Vars.players[g_Vars.playerorder[i]]) continue;
 			playerprop = g_Vars.players[g_Vars.playerorder[i]]->prop;
 		} else {
 			playerprop = g_Vars.bond->prop;

@@ -37,7 +37,7 @@ void varsInit(void)
 	g_Vars.roomportalrecursionlimit = 254;
 	g_Vars.diffframe240f = 4;
 	g_Vars.diffframe240freal = 4;
-	g_Vars.bondplayernum = 0;
+	playermgrDisableTeamPlayers();
 	g_Vars.coopplayernum = -1;
 	g_Vars.antiplayernum = -1;
 	g_Vars.bond = NULL;

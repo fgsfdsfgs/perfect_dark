@@ -95,7 +95,6 @@ void menuProcessInput(void);
 Gfx *menuRenderBackgroundLayer1(Gfx *gdl, u8 bg, f32 frac);
 Gfx *menuRenderBackgroundLayer2(Gfx *gdl, u8 bg, f32 frac);
 Gfx *menuRender(Gfx *gdl);
-Gfx *renderTeamMissionJoinText(Gfx *gdl);
 u32 menuChooseMusic(void);
 u32 menuGetRoot(void);
 void menuPushPakDialogForPlayer(struct menudialogdef *dialogdef, s32 playernum, s32 arg2);

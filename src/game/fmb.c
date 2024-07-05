@@ -76,9 +76,7 @@ void fmbReset(void)
 			mpPlayerSetDefaults(i, true);
 		}
 
-		g_Vars.bondplayernum = 0;
-		g_Vars.coopplayernum = -1;
-		g_Vars.antiplayernum = -1;
+		playermgrDisableTeamPlayers();
 
 		challengeDetermineUnlockedFeatures();
 

@@ -9269,10 +9269,10 @@ bool aiToggleP1P2(void)
 		struct chrdata *chr = chrFindById(g_Vars.chrdata, cmd[2]);
 
 		if (chr) {
-			if (chr->p1p2 == g_Vars.bondplayernum && !g_Vars.coop->isdead) {
-				chr->p1p2 = g_Vars.currentcoopplayernum;
+			if (chr->p1p2 == 0 && !g_Vars.coop->isdead) {
+				chr->p1p2 = g_Vars.currentallyplayernum;
 			} else if (!g_Vars.bond->isdead) {
-				chr->p1p2 = g_Vars.bondplayernum;
+				chr->p1p2 = 0;
 			}
 		}
 	}
@@ -9298,9 +9298,9 @@ bool aiChrSetP1P2(void)
 
 			if (!g_Vars.players[playernum]->isdead) {
 				if (chr2->prop == g_Vars.coop->prop) {
-					chr1->p1p2 = g_Vars.currentcoopplayernum;
+					chr1->p1p2 = g_Vars.currentallyplayernum;
 				} else {
-					chr1->p1p2 = g_Vars.bondplayernum;
+					chr1->p1p2 = 0;
 				}
 			}
 		}

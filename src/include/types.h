@@ -165,8 +165,10 @@ struct g_vars {
 	/*0x29c*/ s32 antiplayernum;
 	/*0x2a0*/ struct player *bond; // Joanna
 	/*ext*/ s32 currentcoopplayernum; // 0-3 - controller numbers I think
+	/*ext*/ s32 currentallyplayernum;
 	/*0x2a4*/ struct player *coop; // Co-op buddy when controlled by human;  4-player coopanti: used like currentplayer, but for coop
 	/*ext*/ struct player *coopplayers[MAX_PLAYERS]; // Co-op buddies when controlled by humans
+	/*ext*/ struct player *allyplayers[MAX_PLAYERS]; // Bond + Co-op. Bond is always 0.
 	/*ext*/ s32 currentantiplayernum; // 0-3 - controller numbers I think
 	/*0x2a8*/ struct player *anti; // Counter-op; 4-player coopanti: used like currentplayer, but for anti
 	/*ext*/ struct player *antiplayers[MAX_PLAYERS]; // Counter-op

@@ -1183,8 +1183,7 @@ void playerChooseBodyAndHead(s32 *bodynum, s32 *headnum, s32 *arg2)
 	s32 outfit;
 	bool solo;
 
-	if (g_Vars.antiplayernum >= 0
-			&& g_Vars.currentplayer == g_Vars.anti
+	if (g_Vars.antiplayers[g_Vars.currentplayernum]
 			&& g_Vars.antiheadnum >= 0
 			&& g_Vars.antibodynum >= 0) {
 		*headnum = g_Vars.antiheadnum;

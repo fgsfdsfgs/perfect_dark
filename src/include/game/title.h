@@ -62,6 +62,7 @@ Gfx *titleRender(Gfx *gdl);
 void titleExitLegal(void);
 s32 getNumPlayers(void);
 s32 getNumTeamModePlayers(void);
+s32 getNumAllyPlayers(void);
 void setNumPlayers(s32 numplayers);
 void titleExitNoController(void);
 

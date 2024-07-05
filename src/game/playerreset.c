@@ -112,6 +112,11 @@ void clearCoopPlayers(void) {
 	g_Vars.coopplayers[1] = NULL;
 	g_Vars.coopplayers[2] = NULL;
 	g_Vars.coopplayers[3] = NULL;
+
+	g_Vars.allyplayers[0] = NULL;
+	g_Vars.allyplayers[1] = NULL;
+	g_Vars.allyplayers[2] = NULL;
+	g_Vars.allyplayers[3] = NULL;
 	g_Vars.coop = NULL;
 }
 

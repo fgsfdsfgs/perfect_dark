@@ -1352,9 +1352,6 @@ Gfx *lvRender(Gfx *gdl)
 					}
 				}
 
-				if (g_MissionConfig.isteam) {
-					gdl = renderTeamMissionJoinText(gdl);
-				}
 				if (g_DebugScreenshotRgb <= 0) {
 					static struct sndstate *g_CutsceneStaticAudioHandle = NULL;
 					static s32 g_CutsceneStaticTimer = 100;
@@ -1724,9 +1721,7 @@ Gfx *lvRender(Gfx *gdl)
 			g_MissionConfig.isteam = false;
 			g_Vars.mplayerisrunning = false;
 			g_Vars.normmplayerisrunning = false;
-			g_Vars.bondplayernum = 0;
-			g_Vars.coopplayernum = -1;
-			g_Vars.antiplayernum = -1;
+			playermgrDisableTeamPlayers();
 			g_MissionConfig.isanti = false;
 			setNumPlayers(1);
 			titleSetNextMode(TITLEMODE_SKIP);
