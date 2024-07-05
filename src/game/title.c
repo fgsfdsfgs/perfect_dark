@@ -2225,6 +2225,16 @@ s32 getNumPlayers(void)
 	return g_NumPlayers;
 }
 
+s32 getNumTeamModePlayers(void)
+{
+	s32 count = 0;
+	for (s32 i = 0; i < MAX_PLAYERS; i++) {
+		if (g_Vars.playerroles[i]) count++;
+	}
+
+	return count;
+}
+
 void setNumPlayers(s32 numplayers)
 {
 	g_NumPlayers = numplayers;

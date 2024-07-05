@@ -61,6 +61,7 @@ void titleTickOld(void);
 Gfx *titleRender(Gfx *gdl);
 void titleExitLegal(void);
 s32 getNumPlayers(void);
+s32 getNumTeamModePlayers(void);
 void setNumPlayers(s32 numplayers);
 void titleExitNoController(void);
 

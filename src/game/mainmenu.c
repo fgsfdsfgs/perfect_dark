@@ -727,9 +727,17 @@ MenuItemHandlerResult menuhandlerAcceptMission(s32 operation, struct menuitem *i
 
 		if (g_MissionConfig.isteam) {
 			g_Vars.bondplayernum = 0;
-			g_Vars.coopplayernum = -1;
-			g_Vars.antiplayernum = -1;
-			setNumPlayers(1);
+			g_Vars.playerroles[g_Vars.bondplayernum] = PLAYERROLE_BOND;
+			// set the coop / anti player numbers
+			for (s32 i = 0; i < MAX_PLAYERS; i++) {
+				if (g_Vars.coopplayernum < 0 && g_Vars.playerroles[i] == PLAYERROLE_COOP) {
+					g_Vars.coopplayernum = i;
+				}
+				if (g_Vars.antiplayernum < 0 && g_Vars.playerroles[i] == PLAYERROLE_ANTI) {
+					g_Vars.antiplayernum = i;
+				}
+			}
+			setNumPlayers(getNumTeamModePlayers());
 		}
 		else if (g_MissionConfig.iscoop) {
 			if (g_Vars.numaibuddies == 0) {
@@ -1394,6 +1402,62 @@ MenuItemHandlerResult menuhandlerCoopFriendlyFire(s32 operation, struct menuitem
 	return 0;
 }
 
+MenuItemHandlerResult menuhandlerBuddyOptionsPlayerAssign(s32 operation, struct menuitem *item, union handlerdata *data, s32 playernum)
+{
+   // HACK: Eventually it'd be cool to be ablek to assign the bond role to any player
+	const uint32_t labels[] = {
+		(void*)"Disabled",          // PLAYERROLE_NONE
+		// (void*)"Operative",      // PLAYERROLE_BOND
+		(void*)"Co-Operative",      // PLAYERROLE_COOP
+		(void*)"Counter-Operative", // PLAYERROLE_ANTI
+	};
+	switch (operation) {
+	case MENUOP_GETOPTIONCOUNT:
+		{
+			s32 optioncount = 3;
+			if (playernum == 0) optioncount = 1;
+			if (!(joyGetConnectedControllers() & (1 << playernum))) optioncount = 1;
+
+			data->dropdown.value = optioncount;
+		}
+	   break;
+	case MENUOP_GETOPTIONTEXT:
+		{
+			return (s32)labels[data->dropdown.value];
+		}
+	   break;
+	case MENUOP_SET:
+		{
+			s32 playerrole = data->dropdown.value;
+			g_Vars.playerroles[playernum] = playerrole;
+		}
+	   break;
+	case MENUOP_GETSELECTEDINDEX:
+		{
+			s32 playerrole =  g_Vars.playerroles[playernum];
+			data->dropdown.value = playerrole;
+		}
+	   break;
+	}
+	return 0;
+}
+
+MenuItemHandlerResult menuhandlerBuddyOptionsPlayer2Assign(s32 operation, struct menuitem *item, union handlerdata *data)
+{
+   return menuhandlerBuddyOptionsPlayerAssign(operation, item, data, 1);
+}
+
+MenuItemHandlerResult menuhandlerBuddyOptionsPlayer3Assign(s32 operation, struct menuitem *item, union handlerdata *data)
+{
+   return menuhandlerBuddyOptionsPlayerAssign(operation, item, data, 2);
+}
+
+MenuItemHandlerResult menuhandlerBuddyOptionsPlayer4Assign(s32 operation, struct menuitem *item, union handlerdata *data)
+{
+   return menuhandlerBuddyOptionsPlayerAssign(operation, item, data, 3);
+}
+
+
 MenuItemHandlerResult menuhandlerCoopBuddy(s32 operation, struct menuitem *item, union handlerdata *data)
 {
 	const u16 labels[] = {
@@ -1574,6 +1638,38 @@ struct menuitem g_TeamOptionsMenuItems[] = {
 		NULL,
 	}, // ""
 	{
+		MENUITEMTYPE_DROPDOWN,
+		0,
+		MENUITEMFLAG_LITERAL_TEXT,
+		(void*)"Player 2", // "Continue"
+		0,
+		menuhandlerBuddyOptionsPlayer2Assign,
+	}, // ""
+	{
+		MENUITEMTYPE_DROPDOWN,
+		0,
+		MENUITEMFLAG_LITERAL_TEXT,
+		(void*)"Player 3", // "Continue"
+		0,
+		menuhandlerBuddyOptionsPlayer3Assign,
+	}, // ""
+	{
+		MENUITEMTYPE_DROPDOWN,
+		0,
+		MENUITEMFLAG_LITERAL_TEXT,
+		(void*)"Player 4", // "Continue"
+		0,
+		menuhandlerBuddyOptionsPlayer4Assign,
+	}, // ""
+	{
+		MENUITEMTYPE_SEPARATOR,
+		0,
+		0,
+		0,
+		0,
+		NULL,
+	}, // ""
+	{
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		0,
@@ -1604,7 +1700,7 @@ struct menudialogdef g_CoopOptionsMenuDialog = {
 
 struct menudialogdef g_TeamOptionsMenuDialog = {
 	MENUDIALOGTYPE_DEFAULT,
-	(void *)"Team Mission Options", // "Team-Operative Options"
+	(void *)"Build Your Perfect Team", // "Team-Operative Options"
 	g_TeamOptionsMenuItems,
 	menudialogTeamCoopAntiOptions,
 	MENUDIALOGFLAG_STARTSELECTS | MENUDIALOGFLAG_LITERAL_TEXT,

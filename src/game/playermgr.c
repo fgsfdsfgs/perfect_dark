@@ -72,13 +72,11 @@ void playermgrAllocatePlayers(s32 count)
 #ifndef PLATFORM_N64
 		for (i = 0; i < count; i++) {
 			if (g_Vars.coopplayernum >= 0) {
-				if (i != g_Vars.bondplayernum && g_Vars.players[i]) {
+				if (i != g_Vars.bondplayernum && g_Vars.players[i] && g_Vars.playerroles[i] == PLAYERROLE_COOP) {
 					g_Vars.coopplayers[i] = g_Vars.players[i];
 				}
-				clearAntiPlayers();
 			} else if (g_Vars.antiplayernum >= 0) {
-				clearCoopPlayers();
-				if (i != g_Vars.bondplayernum && g_Vars.players[i]) {
+				if (i != g_Vars.bondplayernum && g_Vars.players[i] && g_Vars.playerroles[i] == PLAYERROLE_ANTI) {
 					g_Vars.antiplayers[i] = g_Vars.players[i];
 				}
 			}

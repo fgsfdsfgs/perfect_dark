@@ -4758,6 +4758,11 @@ enum weaponnum {
 
 #define EXTRA_SLEEP_TIME 1000LL // 100us
 
+#define PLAYERROLE_NONE 0
+#define PLAYERROLE_COOP 1
+#define PLAYERROLE_ANTI 2
+#define PLAYERROLE_BOND 3
+
 #endif
 
 #endif

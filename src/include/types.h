@@ -170,6 +170,7 @@ struct g_vars {
 	/*ext*/ s32 currentantiplayernum; // 0-3 - controller numbers I think
 	/*0x2a8*/ struct player *anti; // Counter-op; 4-player coopanti: used like currentplayer, but for anti
 	/*ext*/ struct player *antiplayers[MAX_PLAYERS]; // Counter-op
+	/*ext*/ s32 *playerroles[MAX_PLAYERS];
 	/*0x2ac*/ s32 tickmode;
 	/*0x2b0*/ s32 killcount;
 	/*0x2b4*/ u32 knockoutcount;
