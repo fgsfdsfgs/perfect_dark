@@ -71,14 +71,13 @@ void playermgrAllocatePlayers(s32 count)
 
 #ifndef PLATFORM_N64
 		for (i = 0; i < count; i++) {
-			if (g_Vars.coopplayernum >= 0) {
-				if (i != g_Vars.bondplayernum && g_Vars.players[i] && g_Vars.playerroles[i] == PLAYERROLE_COOP) {
-					g_Vars.coopplayers[i] = g_Vars.players[i];
-				}
-			} else if (g_Vars.antiplayernum >= 0) {
-				if (i != g_Vars.bondplayernum && g_Vars.players[i] && g_Vars.playerroles[i] == PLAYERROLE_ANTI) {
-					g_Vars.antiplayers[i] = g_Vars.players[i];
-				}
+			if (i != g_Vars.bondplayernum && g_Vars.players[i] && g_Vars.playerroles[i] == PLAYERROLE_COOP) {
+				g_Vars.coopplayers[i] = g_Vars.players[i];
+				g_Vars.coop = g_Vars.players[i];
+			}
+			if (i != g_Vars.bondplayernum && g_Vars.players[i] && g_Vars.playerroles[i] == PLAYERROLE_ANTI) {
+				g_Vars.antiplayers[i] = g_Vars.players[i];
+				g_Vars.anti = g_Vars.players[i];
 			}
 		}
 
@@ -684,30 +683,21 @@ void playermgrCalculateAiBuddyNums(void)
 
 void setCurrentAntiNum(s32 playernum)
 {
-	if (g_Vars.antiplayernum < 0) {
-		g_Vars.currentantiplayernum = -1;
-		g_Vars.anti = NULL;
-		return;
-	}
-
-	if (g_Vars.antiplayers[playernum]) {
+	if (g_Vars.playerroles[playernum] == PLAYERROLE_ANTI) {
 		g_Vars.currentantiplayernum = playernum;
 		g_Vars.anti = g_Vars.antiplayers[playernum];
+		g_Vars.currentcoopplayernum = -1;
 		return;
 	}
 }
 
 void setCurrentCoopNum(s32 playernum)
 {
-	if (g_Vars.coopplayernum < 0) {
-		g_Vars.currentcoopplayernum = -1;
-		return;
-	}
-
-	if (g_Vars.coopplayers[playernum]) {
+	if (g_Vars.playerroles[playernum] == PLAYERROLE_COOP) {
 		g_Vars.currentcoopplayernum = playernum;
 		g_Vars.coopplayernum = playernum;
 		g_Vars.coop = g_Vars.coopplayers[playernum];
+		g_Vars.currentantiplayernum = -1;
 		return;
 	}
 }
