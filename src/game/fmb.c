@@ -5,6 +5,7 @@
 #include "game/fmb.h"
 #include "game/mainmenu.h"
 #include "game/challenge.h"
+#include "game/playermgr.h"
 #include "game/mplayer/mplayer.h"
 #include "game/mplayer/scenarios.h"
 #include "game/mplayer/setup.h"
