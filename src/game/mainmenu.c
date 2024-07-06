@@ -1397,9 +1397,9 @@ MenuItemHandlerResult menuhandlerBuddyOptionsPlayerAssign(s32 operation, struct 
 {
    // HACK: Eventually it'd be cool to be ablek to assign the bond role to any player
 	const uint32_t labels[] = {
-		(void*)"Disabled",          // PLAYERROLE_NONE
-		(void*)"Co-Operative",      // PLAYERROLE_COOP
-		(void*)"Counter-Operative", // PLAYERROLE_ANTI
+		(uintptr_t)"Disabled",          // PLAYERROLE_NONE
+		(uintptr_t)"Co-Operative",      // PLAYERROLE_COOP
+		(uintptr_t)"Counter-Operative", // PLAYERROLE_ANTI
 		// (void*)"Operative",      // PLAYERROLE_BOND
 	};
 	switch (operation) {
@@ -1691,7 +1691,7 @@ struct menudialogdef g_CoopOptionsMenuDialog = {
 
 struct menudialogdef g_TeamOptionsMenuDialog = {
 	MENUDIALOGTYPE_DEFAULT,
-	(void *)"Build Your Perfect Team", // "Team-Operative Options"
+	(uintptr_t)"Build Your Perfect Team", // "Team-Operative Options"
 	g_TeamOptionsMenuItems,
 	menudialogTeamCoopAntiOptions,
 	MENUDIALOGFLAG_STARTSELECTS | MENUDIALOGFLAG_LITERAL_TEXT,
