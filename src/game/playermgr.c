@@ -3,6 +3,7 @@
 #include "game/cheats.h"
 #include "game/bondgun.h"
 #include "game/player.h"
+#include "game/title.h"
 #include "game/playermgr.h"
 #include "game/propobj.h"
 #include "bss.h"
