@@ -1,6 +1,7 @@
 #include <ultra64.h>
 #include "constants.h"
 #include "game/playerreset.h"
+#include "game/playermgr.h"
 #include "bss.h"
 #include "data.h"
 #include "types.h"
