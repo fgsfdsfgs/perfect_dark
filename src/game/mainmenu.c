@@ -1632,7 +1632,7 @@ struct menuitem g_TeamOptionsMenuItems[] = {
 		MENUITEMTYPE_DROPDOWN,
 		0,
 		MENUITEMFLAG_LITERAL_TEXT,
-		(uintptr_t*)"Player 2",
+		(uintptr_t)"Player 2",
 		0,
 		menuhandlerBuddyOptionsPlayer2Assign,
 	}, // ""
@@ -1640,7 +1640,7 @@ struct menuitem g_TeamOptionsMenuItems[] = {
 		MENUITEMTYPE_DROPDOWN,
 		0,
 		MENUITEMFLAG_LITERAL_TEXT,
-		(uintptr_t*)"Player 3",
+		(uintptr_t)"Player 3",
 		0,
 		menuhandlerBuddyOptionsPlayer3Assign,
 	}, // ""
@@ -1648,7 +1648,7 @@ struct menuitem g_TeamOptionsMenuItems[] = {
 		MENUITEMTYPE_DROPDOWN,
 		0,
 		MENUITEMFLAG_LITERAL_TEXT,
-		(uintptr_t*)"Player 4",
+		(uintptr_t)"Player 4",
 		0,
 		menuhandlerBuddyOptionsPlayer4Assign,
 	}, // ""
