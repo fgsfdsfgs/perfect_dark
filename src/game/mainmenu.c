@@ -5199,16 +5199,6 @@ struct menuitem g_MainMenuMenuItems[] = {
 		0x00000004,
 		menuhandlerMainMenuCooperative,
 	},
-#ifndef PLATFORM_N64
-	{
-		MENUITEMTYPE_SELECTABLE,
-		0,
-		MENUITEMFLAG_BIGFONT | MENUITEMFLAG_LITERAL_TEXT,
-		(uintptr_t)"Team Missions",
-		0x00000005,
-		menuhandlerMainMenuTeamMissions,
-	},
-#endif
 	{
 		MENUITEMTYPE_SELECTABLE,
 		3,
@@ -5221,6 +5211,16 @@ struct menuitem g_MainMenuMenuItems[] = {
 #endif
 		menuhandlerMainMenuCounterOperative,
 	},
+#ifndef PLATFORM_N64
+	{
+		MENUITEMTYPE_SELECTABLE,
+		0,
+		MENUITEMFLAG_BIGFONT | MENUITEMFLAG_LITERAL_TEXT,
+		(uintptr_t)"Quad-Operative",
+		0x00000005,
+		menuhandlerMainMenuTeamMissions,
+	},
+#endif
 	{
 		MENUITEMTYPE_SELECTABLE,
 		0,
