@@ -21,6 +21,7 @@
 #include "game/options.h"
 #include "game/pdmode.h"
 #include "game/player.h"
+#include "game/playermgr.h"
 #include "game/setup.h"
 #include "game/tex.h"
 #include "game/title.h"
@@ -1631,7 +1632,7 @@ struct menuitem g_TeamOptionsMenuItems[] = {
 		MENUITEMTYPE_DROPDOWN,
 		0,
 		MENUITEMFLAG_LITERAL_TEXT,
-		(void*)"Player 2",
+		(uintptr_t*)"Player 2",
 		0,
 		menuhandlerBuddyOptionsPlayer2Assign,
 	}, // ""
@@ -1639,7 +1640,7 @@ struct menuitem g_TeamOptionsMenuItems[] = {
 		MENUITEMTYPE_DROPDOWN,
 		0,
 		MENUITEMFLAG_LITERAL_TEXT,
-		(void*)"Player 3",
+		(uintptr_t*)"Player 3",
 		0,
 		menuhandlerBuddyOptionsPlayer3Assign,
 	}, // ""
@@ -1647,7 +1648,7 @@ struct menuitem g_TeamOptionsMenuItems[] = {
 		MENUITEMTYPE_DROPDOWN,
 		0,
 		MENUITEMFLAG_LITERAL_TEXT,
-		(void*)"Player 4",
+		(uintptr_t*)"Player 4",
 		0,
 		menuhandlerBuddyOptionsPlayer4Assign,
 	}, // ""
