@@ -10,6 +10,7 @@
 #include "lib/rng.h"
 #include "data.h"
 #include "types.h"
+#include "game/playerreset.h"
 
 void playermgrInit(void)
 {
