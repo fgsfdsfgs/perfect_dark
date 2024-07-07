@@ -14227,7 +14227,7 @@ s32 chrResolveId(struct chrdata *ref, s32 id)
 			break;
 		case CHR_P1P2:
 			{
-				u32 index = g_Vars.coopplayernum >= 0 ? ref->p1p2 : g_Vars.bondplayernum;
+				u32 index = g_Vars.currentallyplayernum;
 				struct player *player = g_Vars.allyplayers[index];
 				if (player && player->prop && player->prop->chr) {
 					id = player->prop->chr->chrnum;
@@ -14235,12 +14235,13 @@ s32 chrResolveId(struct chrdata *ref, s32 id)
 			}
 			break;
 		case CHR_P1P2_OPPOSITE:
-			if (g_Vars.coopplayernum >= 0) {
-				// TODO: (max_players - 1 - numAntiPlayers) - coopPlayerNum
-				struct player *player = g_Vars.allyplayers[(u8)((getNumAllyPlayers() - 1) - ref->p1p2) % (getNumAllyPlayers() - 1)];
-				if (player && player->prop && player->prop->chr) {
-					id = player->prop->chr->chrnum;
-				}
+			u32 index = g_Vars.bondplayernum;
+			if (g_Vars.currentcoopplayernum != g_Vars.currentplayernum) {
+				index = g_Vars.currentcoopplayernum;
+			}
+			struct player *player = g_Vars.players[index];
+			if (player && player->prop && player->prop->chr) {
+				id = player->prop->chr->chrnum;
 			}
 			break;
 		case CHR_TARGET:
@@ -14271,18 +14272,21 @@ s32 chrResolveId(struct chrdata *ref, s32 id)
 			break;
 		case CHR_P1P2:
 			{
-				struct player *player = g_Vars.players[g_Vars.bondplayernum];
+				u32 index = g_Vars.currentallyplayernum;
+				struct player *player = g_Vars.allyplayers[index];
 				if (player && player->prop && player->prop->chr) {
 					id = player->prop->chr->chrnum;
 				}
 			}
 			break;
 		case CHR_P1P2_OPPOSITE:
-			if (g_Vars.coopplayernum >= 0) {
-				struct player *player = g_Vars.allyplayers[g_Vars.currentallyplayernum];
-				if (player && player->prop && player->prop->chr) {
-					id = player->prop->chr->chrnum;
-				}
+			u32 index = g_Vars.bondplayernum;
+			if (g_Vars.currentcoopplayernum != g_Vars.currentplayernum) {
+				index = g_Vars.currentcoopplayernum;
+			}
+			struct player *player = g_Vars.players[index];
+			if (player && player->prop && player->prop->chr) {
+				id = player->prop->chr->chrnum;
 			}
 			break;
 		}

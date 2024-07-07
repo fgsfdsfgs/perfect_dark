@@ -63,6 +63,7 @@ void titleExitLegal(void);
 s32 getNumPlayers(void);
 s32 getNumTeamModePlayers(void);
 s32 getNumAllyPlayers(void);
+s32 getNumAntiPlayers(void);
 void setNumPlayers(s32 numplayers);
 void titleExitNoController(void);
 

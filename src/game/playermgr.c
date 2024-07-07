@@ -793,7 +793,6 @@ void setCurrentCoopNum(s32 playernum)
 {
 	if (g_Vars.coopplayers[playernum]) {
 		g_Vars.currentcoopplayernum = playernum;
-		g_Vars.currentallyplayernum = playernum % (getNumAllyPlayers() - 1);
 		g_Vars.coopplayernum = playernum;
 		g_Vars.coop = g_Vars.coopplayers[playernum];
 		g_Vars.antiplayernum = -1;
@@ -806,15 +805,15 @@ void setCurrentPlayerNum(s32 playernum)
 	g_Vars.currentplayernum = playernum;
 	g_Vars.currentplayer = g_Vars.players[playernum];
 	g_Vars.currentplayerstats = &g_Vars.playerstats[playernum];
-	if (g_Vars.currentplayernum == g_Vars.bondplayernum) {
-		g_Vars.currentallyplayernum = g_Vars.bondplayernum;
-	}
-	else if (g_Vars.antiplayers[playernum]) {
+	if (g_Vars.antiplayers[playernum]) {
 		setCurrentAntiNum(playernum);
 	}
 	else if (g_Vars.coopplayers[playernum]) {
 		setCurrentCoopNum(playernum);
 	}
+
+	g_Vars.currentallyplayernum++;
+	if (!g_Vars.allyplayers[g_Vars.currentallyplayernum]) g_Vars.currentallyplayernum = 0;
 	g_Vars.currentplayerindex = playermgrGetOrderOfPlayer(playernum);
 }
 

@@ -513,8 +513,10 @@ struct player** getPlayerPool(u32 chrId) {
 			playerpool = (struct player**)g_Vars.antiplayers;
 		break;
 		case CHR_COOP:
-		case CHR_P1P2:
 			playerpool = (struct player**)g_Vars.coopplayers;
+		break;
+		case CHR_P1P2:
+			playerpool = (struct player**)g_Vars.allyplayers;
 		break;
 		default:
 			playerpool = (struct player**)g_Vars.players;
@@ -9269,10 +9271,10 @@ bool aiToggleP1P2(void)
 		struct chrdata *chr = chrFindById(g_Vars.chrdata, cmd[2]);
 
 		if (chr) {
-			if (chr->p1p2 == 0 && !g_Vars.coop->isdead) {
-				chr->p1p2 = g_Vars.currentallyplayernum;
-			} else if (!g_Vars.bond->isdead) {
+			if (g_Vars.allyplayers[g_Vars.currentallyplayernum]->isdead) {
 				chr->p1p2 = 0;
+			} else {
+				chr->p1p2 = g_Vars.currentallyplayernum;
 			}
 		}
 	}

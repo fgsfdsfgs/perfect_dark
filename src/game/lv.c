@@ -1338,6 +1338,14 @@ Gfx *lvRender(Gfx *gdl)
 					gdl = nbombsRender(gdl);
 				}
 
+				// printf("g_Vars.currentplayernum = %d\n", g_Vars.currentplayernum);
+				// printf("g_Vars.currentantiplayernum = %d\n", g_Vars.currentantiplayernum);
+				// printf("g_Vars.currentallyplayernum = %d\n", g_Vars.currentallyplayernum);
+				// printf("g_Vars.currentcoopplayernum = %d\n", g_Vars.currentcoopplayernum);
+				// printf("p1p2 playernum: %x\n", playermgrGetPlayerNumByProp(chrFindByLiteralId(chrResolveId(0, CHR_P1P2))->prop));
+				// printf("p1p2_opposite_prop: %x\n",(chrFindByLiteralId(chrResolveId(0, CHR_P1P2_OPPOSITE))));
+				// printf("bond_prop: %x\n", g_Vars.bond->prop);
+
 				if (var80075d60 == 2) {
 					gdl = playerRenderHud(gdl);
 
