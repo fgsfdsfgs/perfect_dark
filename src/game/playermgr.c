@@ -129,18 +129,6 @@ void playermgrAllocatePlayersFromRoles(void)
 
 	g_Vars.bond = g_Vars.players[g_Vars.bondplayernum];
 
-	// setup ally players here
-	// we'll need to update this 
-	// when the coop list changes
-	s32 allyindex = 0;
-	g_Vars.allyplayers[0] = g_Vars.bond;
-	for (s32 i = 0; i < MAX_PLAYERS; i++) {
-		if (g_Vars.coopplayers[i]) {
-			g_Vars.allyplayers[++allyindex] = g_Vars.coopplayers[i];
-		}
-	}
-	g_Vars.currentallyplayernum = allyindex;
-
 	setCurrentPlayerNum(0); // don't think this needed for player loading but probably is there to restart the playerloop
 
 }
@@ -793,6 +781,7 @@ void setCurrentCoopNum(s32 playernum)
 {
 	if (g_Vars.coopplayers[playernum]) {
 		g_Vars.currentcoopplayernum = playernum;
+		g_Vars.currentallyplayernum = playernum % (getNumAllyPlayers() - 1);
 		g_Vars.coopplayernum = playernum;
 		g_Vars.coop = g_Vars.coopplayers[playernum];
 		g_Vars.antiplayernum = -1;
@@ -805,15 +794,15 @@ void setCurrentPlayerNum(s32 playernum)
 	g_Vars.currentplayernum = playernum;
 	g_Vars.currentplayer = g_Vars.players[playernum];
 	g_Vars.currentplayerstats = &g_Vars.playerstats[playernum];
-	if (g_Vars.antiplayers[playernum]) {
+	if (g_Vars.currentplayernum == g_Vars.bondplayernum) {
+		g_Vars.currentallyplayernum = g_Vars.bondplayernum;
+	}
+	else if (g_Vars.antiplayers[playernum]) {
 		setCurrentAntiNum(playernum);
 	}
 	else if (g_Vars.coopplayers[playernum]) {
 		setCurrentCoopNum(playernum);
 	}
-
-	g_Vars.currentallyplayernum++;
-	if (!g_Vars.allyplayers[g_Vars.currentallyplayernum]) g_Vars.currentallyplayernum = 0;
 	g_Vars.currentplayerindex = playermgrGetOrderOfPlayer(playernum);
 }
 

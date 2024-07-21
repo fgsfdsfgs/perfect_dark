@@ -2238,21 +2238,6 @@ s32 getNumAllyPlayers(void)
 
 }
 
-s32 getNumAntiPlayers(void)
-{
-	s32 count = 0;
-	s32 i;
-
-	for (i = 0; i < MAX_PLAYERS; i++) {
-		if (g_Vars.playerroles[i] && g_Vars.playerroles[i] == PLAYERROLE_ANTI) {
-			count++;
-		}
-	}
-
-	return count;
-
-}
-
 s32 getNumTeamModePlayers(void)
 {
 	s32 count = 0;

@@ -4952,7 +4952,7 @@ struct prop *chrGetTargetProp(struct chrdata *chr)
 	struct prop *ret;
 
 	if (chr->target == -1) {
-		ret = g_Vars.allyplayers[chr->p1p2]->prop;
+		ret = g_Vars.players[chr->p1p2]->prop;
 	} else {
 		ret = g_Vars.props + chr->target;
 	}

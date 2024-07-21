@@ -516,8 +516,6 @@ struct player** getPlayerPool(u32 chrId) {
 			playerpool = (struct player**)g_Vars.coopplayers;
 		break;
 		case CHR_P1P2:
-			playerpool = (struct player**)g_Vars.allyplayers;
-		break;
 		default:
 			playerpool = (struct player**)g_Vars.players;
 		break;
@@ -1682,7 +1680,7 @@ bool aiIfSeesSuspiciousItem(void)
  */
 bool aiIfCheckFovWithTarget(void)
 {
-	bool pass;
+	bool pass = 0;
 	u8 *cmd = g_Vars.ailist + g_Vars.aioffset;
 
 	u16 temptarget = g_Vars.chrdata->target;
@@ -1691,7 +1689,7 @@ bool aiIfCheckFovWithTarget(void)
 		if (cmd[3]) {
 			if (isChrTargetCoop(g_Vars.chrdata)) {
 				temptarget = g_Vars.chrdata->target;
-				for (s32 i = 0; i < PLAYERCOUNT(); i++) {
+				for (s32 i = 0; i < MAX_PLAYERS; i++) {
 					if (pass) break;
 					if (!g_Vars.coopplayers[i]) continue;
 					chrSetTargetProp(g_Vars.chrdata, g_Vars.coopplayers[i]->prop);
@@ -1702,7 +1700,7 @@ bool aiIfCheckFovWithTarget(void)
 		} else {
 			if (isChrTargetCoop(g_Vars.chrdata)) {
 				temptarget = g_Vars.chrdata->target;
-				for (s32 i = 0; i < PLAYERCOUNT(); i++) {
+				for (s32 i = 0; i < MAX_PLAYERS; i++) {
 					if (pass) break;
 					if (!g_Vars.coopplayers[i]) continue;
 					chrSetTargetProp(g_Vars.chrdata, g_Vars.coopplayers[i]->prop);
@@ -1714,7 +1712,7 @@ bool aiIfCheckFovWithTarget(void)
 	} else {
 		if (isChrTargetCoop(g_Vars.chrdata)) { 
 			temptarget = g_Vars.chrdata->target;
-			for (s32 i = 0; i < PLAYERCOUNT(); i++) {
+			for (s32 i = 0; i < MAX_PLAYERS; i++) {
 				if (pass) break;
 				if (!g_Vars.coopplayers[i]) continue;
 				chrSetTargetProp(g_Vars.chrdata, g_Vars.coopplayers[i]->prop);
@@ -9271,10 +9269,10 @@ bool aiToggleP1P2(void)
 		struct chrdata *chr = chrFindById(g_Vars.chrdata, cmd[2]);
 
 		if (chr) {
-			if (g_Vars.allyplayers[g_Vars.currentallyplayernum]->isdead) {
-				chr->p1p2 = 0;
-			} else {
-				chr->p1p2 = g_Vars.currentallyplayernum;
+			if (chr->p1p2 == g_Vars.bondplayernum && !g_Vars.coop->isdead) {
+				chr->p1p2 = g_Vars.coopplayernum;
+			} else if (!g_Vars.bond->isdead) {
+				chr->p1p2 = g_Vars.bondplayernum;
 			}
 		}
 	}
@@ -9300,9 +9298,9 @@ bool aiChrSetP1P2(void)
 
 			if (!g_Vars.players[playernum]->isdead) {
 				if (chr2->prop == g_Vars.coop->prop) {
-					chr1->p1p2 = g_Vars.currentallyplayernum;
+					chr1->p1p2 = g_Vars.coopplayernum;
 				} else {
-					chr1->p1p2 = 0;
+					chr1->p1p2 = g_Vars.bondplayernum;
 				}
 			}
 		}
