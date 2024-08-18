@@ -108,15 +108,15 @@ void playermgrAllocatePlayersFromRoles(void)
 		if (g_Vars.playerroles[i]) {
 			playermgrAllocatePlayer(playercount);
 			if (g_Vars.playerroles[i] == PLAYERROLE_COOP) {
-				g_Vars.coopplayers[i] = g_Vars.players[playercount];
+				g_Vars.coopplayers[playercount] = g_Vars.players[playercount];
 				g_Vars.coop = g_Vars.players[playercount];
-				g_Vars.currentcoopplayernum = i;
+				g_Vars.currentcoopplayernum = playercount;
 				// HACK: So functions that are coop / anti exclusive can still work
 				// these will be synced when the playernum changes during the level
 				g_Vars.antiplayernum = -1;
 			}
 			else if (g_Vars.playerroles[i] == PLAYERROLE_ANTI) {
-				g_Vars.antiplayers[i] = g_Vars.players[playercount];
+				g_Vars.antiplayers[playercount] = g_Vars.players[playercount];
 				g_Vars.anti = g_Vars.players[playercount];
 				g_Vars.currentantiplayernum = i;
 				// HACK: So functions that are coop / anti exclusive can still work
