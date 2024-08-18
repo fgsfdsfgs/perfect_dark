@@ -2130,7 +2130,7 @@ bool aiIfChrHasObject(void)
 	if (obj && obj->prop && chr && chr->prop && chr->prop->type == PROPTYPE_PLAYER) {
 		s32 prevplayernum = g_Vars.currentplayernum;
 		if (isChrPropCoop(chr->prop)) {
-			for (s32 i = 0; i < MAX_PLAYERS; i++) {
+			for (s32 i = 0; i < PLAYERCOUNT(); i++) {
 				if (hasprop) break;
 				if (g_Vars.coopplayers[i]) {
 					setCurrentPlayerNum(i);
@@ -2216,7 +2216,7 @@ bool aiIfChrHasWeaponEquipped(void)
 		u32 prevplayernum = g_Vars.currentplayernum;
 		u32 playernum = playermgrGetPlayerNumByProp(chr->prop);
 		if (g_Vars.coopplayers[playernum]) {
-			for (s32 i = 0;  i < MAX_PLAYERS; i++) {
+			for (s32 i = 0;  i < PLAYERCOUNT(); i++) {
 				if (passes) break;
 				if (g_Vars.coopplayers[i]) {
 					setCurrentPlayerNum(i);
