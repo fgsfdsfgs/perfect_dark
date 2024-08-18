@@ -2159,7 +2159,6 @@ MenuItemHandlerResult menuhandlerMissionList(s32 operation, struct menuitem *ite
 
 		if (g_MissionConfig.isteam) {
 			menuPushDialog(&g_TeamMissionDifficultyMenuDialog);
-			g_Vars.mplayerisrunning = true;
 	    }
 		else if (g_MissionConfig.iscoop) {
 			menuPushDialog(&g_CoopMissionDifficultyMenuDialog);
@@ -5117,7 +5116,6 @@ MenuItemHandlerResult menuhandlerMainMenuTeamMissions(s32 operation, struct menu
 	   // players must explicitly join
 		g_MissionConfig.iscoop = false;
 		g_MissionConfig.isanti = false;
-		g_Vars.mplayerisrunning = true;
 		menuPushDialog(&g_SelectMissionMenuDialog);
 	}
 
