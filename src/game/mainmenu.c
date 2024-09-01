@@ -1270,6 +1270,20 @@ MenuItemHandlerResult menuhandlerBuddyOptionsContinue(s32 operation, struct menu
 		return true;
 	}
 
+	return 0;
+}
+
+MenuItemHandlerResult menuhandlerTeamOptionsContinue(s32 operation, struct menuitem *item, union handlerdata *data)
+{
+	if (operation == MENUOP_SET) {
+		menuPopDialog();
+		menuPushDialog(&g_AcceptMissionMenuDialog);
+	}
+
+	if (operation == MENUOP_CHECKPREFOCUSED) {
+		return true;
+	}
+
 	if (operation == MENUOP_CHECKDISABLED) {
 	   return getNumTeamModePlayers() <= 1;
 	}
@@ -1357,7 +1371,7 @@ MenuDialogHandlerResult menudialogTeamCoopAntiOptions(s32 operation, struct menu
 			struct menuinputs *inputs = data->dialog2.inputs;
 
 			if (inputs->start) {
-				menuhandlerBuddyOptionsContinue(MENUOP_SET, NULL, NULL);
+				menuhandlerTeamOptionsContinue(MENUOP_SET, NULL, NULL);
 			}
 
 			inputs->start = false;
@@ -1666,7 +1680,7 @@ struct menuitem g_TeamOptionsMenuItems[] = {
 		0,
 		L_OPTIONS_259, // "Continue"
 		0,
-		menuhandlerBuddyOptionsContinue,
+		menuhandlerTeamOptionsContinue,
 	},
 	{
 		MENUITEMTYPE_SELECTABLE,
