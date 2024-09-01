@@ -5355,22 +5355,45 @@ bool aiRevokeControl(void)
 	struct chrdata *chr = chrFindById(g_Vars.chrdata, cmd[2]);
 
 	if (chr && chr->prop && chr->prop->type == PROPTYPE_PLAYER) {
-		u32 prevplayernum = g_Vars.currentplayernum;
-		u32 playernum = playermgrGetPlayerNumByProp(chr->prop);
-		setCurrentPlayerNum(playernum);
-		bgunSetSightVisible(GUNSIGHTREASON_NOCONTROL, false);
-		bgunSetGunAmmoVisible(GUNAMMOREASON_NOCONTROL, false);
+		if (isChrPropCoop(chr->prop)) {
+			struct playerpool** playerpool = getPlayerPool(CHR_COOP);
+			u32 prevplayernum = g_Vars.currentplayernum;
+			for (s32 i = 0; i < PLAYERCOUNT(); i++) {
+				if (!playerpool[i]) continue;
+				u32 playernum = playermgrGetPlayerNumByProp(((struct player*)playerpool[i])->prop);
+				setCurrentPlayerNum(playernum);
+				bgunSetSightVisible(GUNSIGHTREASON_NOCONTROL, false);
+				bgunSetGunAmmoVisible(GUNAMMOREASON_NOCONTROL, false);
 
-		if ((cmd[3] & 2) == 0) {
-			hudmsgsSetOff(HUDMSGREASON_NOCONTROL);
+				if ((cmd[3] & 2) == 0) {
+					hudmsgsSetOff(HUDMSGREASON_NOCONTROL);
+				}
+
+				if ((cmd[3] & 4) == 0) {
+					countdownTimerSetVisible(COUNTDOWNTIMERREASON_NOCONTROL, false);
+				}
+
+				g_PlayersWithControl[playernum] = false;
+			}
+			setCurrentPlayerNum(prevplayernum);
+		} else {
+			u32 prevplayernum = g_Vars.currentplayernum;
+			u32 playernum = playermgrGetPlayerNumByProp(chr->prop);
+			setCurrentPlayerNum(playernum);
+			bgunSetSightVisible(GUNSIGHTREASON_NOCONTROL, false);
+			bgunSetGunAmmoVisible(GUNAMMOREASON_NOCONTROL, false);
+
+			if ((cmd[3] & 2) == 0) {
+				hudmsgsSetOff(HUDMSGREASON_NOCONTROL);
+			}
+
+			if ((cmd[3] & 4) == 0) {
+				countdownTimerSetVisible(COUNTDOWNTIMERREASON_NOCONTROL, false);
+			}
+
+			g_PlayersWithControl[g_Vars.currentplayernum] = false;
+			setCurrentPlayerNum(prevplayernum);
 		}
-
-		if ((cmd[3] & 4) == 0) {
-			countdownTimerSetVisible(COUNTDOWNTIMERREASON_NOCONTROL, false);
-		}
-
-		g_PlayersWithControl[g_Vars.currentplayernum] = false;
-		setCurrentPlayerNum(prevplayernum);
 	}
 
 	g_Vars.aioffset += 4;
