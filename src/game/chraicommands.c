@@ -590,8 +590,12 @@ bool aiIfChrDeathAnimationFinished(void)
 		struct player* thisplayer;
 		for (s32 i = 0; i < MAX_PLAYERS; i++) {
 			thisplayer = playerpool[g_Vars.playerorder[i]];
-			if (cmd[2] != CHR_P1P2 || !thisplayer || thisplayer == g_Vars.bond) continue;
-			pass = thisplayer->isdead;
+			if (cmd[2] == CHR_P1P2) {
+				if (!thisplayer) continue;
+				pass = thisplayer->isdead;
+				continue;
+			} else if (!thisplayer || thisplayer == g_Vars.bond) continue;
+			else pass = thisplayer->isdead;
 		}
 	} else if (!chr || !chr->prop) {
 		pass = true;
