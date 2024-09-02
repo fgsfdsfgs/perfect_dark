@@ -5358,7 +5358,7 @@ bool aiRevokeControl(void)
 		if (isChrPropCoop(chr->prop)) {
 			struct playerpool** playerpool = getPlayerPool(CHR_COOP);
 			u32 prevplayernum = g_Vars.currentplayernum;
-			for (s32 i = 0; i < PLAYERCOUNT(); i++) {
+			for (s32 i = 0; i < MAX_PLAYERS; i++) {
 				if (!playerpool[i]) continue;
 				u32 playernum = playermgrGetPlayerNumByProp(((struct player*)playerpool[i])->prop);
 				setCurrentPlayerNum(playernum);
@@ -5410,14 +5410,30 @@ bool aiGrantControl(void)
 	struct chrdata *chr = chrFindById(g_Vars.chrdata, cmd[2]);
 
 	if (chr && chr->prop && chr->prop->type == PROPTYPE_PLAYER) {
-		u32 prevplayernum = g_Vars.currentplayernum;
-		setCurrentPlayerNum(playermgrGetPlayerNumByProp(chr->prop));
-		bgunSetSightVisible(GUNSIGHTREASON_NOCONTROL, true);
-		bgunSetGunAmmoVisible(GUNAMMOREASON_NOCONTROL, true);
-		hudmsgsSetOn(HUDMSGREASON_NOCONTROL);
-		countdownTimerSetVisible(COUNTDOWNTIMERREASON_NOCONTROL, true);
-		g_PlayersWithControl[g_Vars.currentplayernum] = true;
-		setCurrentPlayerNum(prevplayernum);
+		if (!isChrPropCoop(chr->prop)) {
+			u32 prevplayernum = g_Vars.currentplayernum;
+			setCurrentPlayerNum(playermgrGetPlayerNumByProp(chr->prop));
+			bgunSetSightVisible(GUNSIGHTREASON_NOCONTROL, true);
+			bgunSetGunAmmoVisible(GUNAMMOREASON_NOCONTROL, true);
+			hudmsgsSetOn(HUDMSGREASON_NOCONTROL);
+			countdownTimerSetVisible(COUNTDOWNTIMERREASON_NOCONTROL, true);
+			g_PlayersWithControl[g_Vars.currentplayernum] = true;
+			setCurrentPlayerNum(prevplayernum);
+		} else {
+			struct player* player;
+			u32 prevplayernum = g_Vars.currentplayernum;
+			for (int i = 0; i < MAX_PLAYERS; i++) {
+				player =  g_Vars.coopplayers[i];
+				if (!player) continue;
+				setCurrentPlayerNum(playermgrGetPlayerNumByProp(player->prop));
+				bgunSetSightVisible(GUNSIGHTREASON_NOCONTROL, true);
+				bgunSetGunAmmoVisible(GUNAMMOREASON_NOCONTROL, true);
+				hudmsgsSetOn(HUDMSGREASON_NOCONTROL);
+				countdownTimerSetVisible(COUNTDOWNTIMERREASON_NOCONTROL, true);
+				g_PlayersWithControl[g_Vars.currentplayernum] = true;
+			}
+			setCurrentPlayerNum(prevplayernum);
+		}
 	}
 
 	g_Vars.aioffset += 3;
@@ -9518,14 +9534,41 @@ bool aiChrBeginOrEndTeleport(void)
 		setCurrentPlayerNum(playernum);
 	}
 
+	struct player* player = g_Vars.currentplayer;
+
 	if (pad_id == 0) {
-		g_Vars.currentplayer->teleportstate = TELEPORTSTATE_EXITING;
-		g_Vars.currentplayer->teleporttime = 0;
+		if (isChrPropCoop(player->prop)) {
+			for (int i = 0; i < MAX_PLAYERS; i++) {
+				if (!g_Vars.coopplayers[i]) continue;
+				player = g_Vars.coopplayers[i];
+				if (player->teleportstate == TELEPORTSTATE_WHITE) {
+					player->teleportstate = TELEPORTSTATE_EXITING;
+					player->teleporttime = 0;
+				}
+			}
+		} else {
+			player->teleportstate = TELEPORTSTATE_EXITING;
+			player->teleporttime = 0;
+		}
 	} else {
-		g_Vars.currentplayer->teleporttime = 0;
-		g_Vars.currentplayer->teleportstate = TELEPORTSTATE_PREENTER;
-		g_Vars.currentplayer->teleportpad = pad_id;
-		g_Vars.currentplayer->teleportcamerapad = 0;
+		if (isChrPropCoop(player->prop)) {
+			for (int i = 0; i < MAX_PLAYERS; i++) {
+				if (!g_Vars.coopplayers[i]) continue;
+				player = g_Vars.coopplayers[i];
+				if (player->teleportstate == 0) {
+					player->teleporttime = 0;
+					player->teleportstate = TELEPORTSTATE_PREENTER;
+					player->teleportpad = pad_id;
+					player->teleportcamerapad = 0;
+				}
+			}
+
+		} else {
+			player->teleporttime = 0;
+			player->teleportstate = TELEPORTSTATE_PREENTER;
+			player->teleportpad = pad_id;
+			player->teleportcamerapad = 0;
+		}
 
 #if VERSION >= VERSION_NTSC_1_0
 		mainpri = osGetThreadPri(0);
@@ -9573,11 +9616,18 @@ bool aiIfChrTeleportFullWhite(void)
 		setCurrentPlayerNum(playernum);
 	}
 
+	bool pass = 0;
 	if (g_Vars.currentplayer->teleportstate < TELEPORTSTATE_WHITE) {
-		g_Vars.aioffset += 4;
 	} else {
 		fvalue = 0.4;
 
+
+		g_Vars.currentplayer->teleportstate = TELEPORTSTATE_WHITE;
+		pass = 1;
+	}
+
+	if (pass) {
+		g_Vars.aioffset = chraiGoToLabel(g_Vars.ailist, g_Vars.aioffset, cmd[2]);
 #if VERSION >= VERSION_NTSC_1_0
 		mainpri = osGetThreadPri(0);
 		audiopri = osGetThreadPri(&g_AudioManager.thread);
@@ -9593,11 +9643,9 @@ bool aiIfChrTeleportFullWhite(void)
 #if VERSION >= VERSION_NTSC_1_0
 		osSetThreadPri(0, mainpri);
 #endif
-
-		g_Vars.currentplayer->teleportstate = TELEPORTSTATE_WHITE;
-		g_Vars.aioffset = chraiGoToLabel(g_Vars.ailist, g_Vars.aioffset, cmd[2]);
+	} else {
+		g_Vars.aioffset += 4;
 	}
-
 	setCurrentPlayerNum(prevplayernum);
 
 	return false;
