@@ -9552,15 +9552,12 @@ bool aiChrBeginOrEndTeleport(void)
 		}
 	} else {
 		if (isChrPropCoop(player->prop)) {
-			for (int i = 0; i < MAX_PLAYERS; i++) {
-				if (!g_Vars.coopplayers[i]) continue;
-				player = g_Vars.coopplayers[i];
-				if (player->teleportstate == 0) {
-					player->teleporttime = 0;
-					player->teleportstate = TELEPORTSTATE_PREENTER;
-					player->teleportpad = pad_id;
-					player->teleportcamerapad = 0;
-				}
+			player = g_Vars.currentplayer;
+			if (player->teleportstate == 0) {
+				player->teleporttime = 0;
+				player->teleportstate = TELEPORTSTATE_PREENTER;
+				player->teleportpad = pad_id;
+				player->teleportcamerapad = 0;
 			}
 
 		} else {
