@@ -499,13 +499,13 @@ void menuTick(void)
 				&& g_MenuData.prevmenuroot == -1) {
 			if (g_Vars.mpsetupmenu == MPSETUPMENU_GENERAL) {
 				g_MenuData.prevmenuroot = MENUROOT_MAINMENU;
-				g_MenuData.unk00c = IS4MB() ? &g_CiMenuViaPauseMenuDialog : &g_CiMenuViaPcMenuDialog;
+				g_MenuData.prevmenudialog = IS4MB() ? &g_CiMenuViaPauseMenuDialog : &g_CiMenuViaPcMenuDialog;
 			} else if (IS4MB()) {
 				g_MenuData.prevmenuroot = MENUROOT_4MBMAINMENU;
-				g_MenuData.unk00c = &g_MainMenu4MbMenuDialog;
+				g_MenuData.prevmenudialog = &g_MainMenu4MbMenuDialog;
 			} else {
 				g_MenuData.prevmenuroot = MENUROOT_MPSETUP;
-				g_MenuData.unk00c = &g_CombatSimulatorMenuDialog;
+				g_MenuData.prevmenudialog = &g_CombatSimulatorMenuDialog;
 			}
 		}
 
@@ -571,7 +571,7 @@ void menuTick(void)
 				musicQueueStopAllEvent();
 			} else {
 				bool startmusic = false;
-				menuPushRootDialog(g_MenuData.unk00c, g_MenuData.prevmenuroot);
+				menuPushRootDialog(g_MenuData.prevmenudialog, g_MenuData.prevmenuroot);
 				sp344 = true;
 
 				if (g_MenuData.root == MENUROOT_MPSETUP || g_MenuData.root == MENUROOT_4MBMAINMENU) {
@@ -598,7 +598,7 @@ void menuTick(void)
 				}
 			}
 
-			g_MenuData.unk00c = NULL;
+			g_MenuData.prevmenudialog = NULL;
 			g_MenuData.prevmenuroot = -1;
 		} else {
 			switch (g_MenuData.root) {
