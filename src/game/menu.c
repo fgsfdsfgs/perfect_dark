@@ -3554,7 +3554,7 @@ void func0f0f820c(struct menudialogdef *dialogdef, s32 root)
 
 	g_MpPlayerNum = prevplayernum;
 
-	g_MenuData.unk008 = root;
+	g_MenuData.prevmenuroot = root;
 	g_MenuData.unk00c = dialogdef;
 }
 
@@ -3629,7 +3629,7 @@ void menuPushRootDialog(struct menudialogdef *dialogdef, s32 root)
 	g_Menus[g_MpPlayerNum].unk820 = 1;
 
 	g_MenuData.root = root;
-	g_MenuData.unk008 = -1;
+	g_MenuData.prevmenuroot = -1;
 	g_MenuData.unk5d5_02 = false;
 
 	if (root == MENUROOT_MAINMENU
@@ -3944,7 +3944,7 @@ void menuReset(void)
 
 	g_MenuData.unk668 = -1;
 	g_MenuData.unk00c = 0;
-	g_MenuData.unk008 = -1;
+	g_MenuData.prevmenuroot = -1;
 	g_MenuData.count = 0;
 	g_MenuData.root = 0;
 	g_MenuData.unk010 = 0;
