@@ -29,11 +29,6 @@
 	#error "Unknown CPU arch."
 #endif
 
-// TODO: remove this after 64-bit support is in place
-#ifdef PLATFORM_64BIT
-	#error "64-bit platforms are currently not supported."
-#endif
-
 // detect endianness
 #if defined(__BYTE_ORDER__) && defined(__ORDER_BIG_ENDIAN__)
 	#if __BYTE_ORDER__ == __ORDER_BIG_ENDIAN__

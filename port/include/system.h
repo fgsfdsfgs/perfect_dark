@@ -32,6 +32,7 @@ void sysGetHomePath(char *outPath, const u32 outLen);
 
 void *sysMemAlloc(const u32 size);
 void *sysMemZeroAlloc(const u32 size);
+void *sysMemRealloc(void *ptr, const u32 newSize);
 void sysMemFree(void *ptr);
 
 // hns is specified in 100ns units

@@ -3853,10 +3853,10 @@ s32 modelTestForHit(struct model *model, struct coord *arg1, struct coord *arg2,
 	if (var) \
 		var = (void *)((uintptr_t)var + diff)
 
-void modelPromoteNodeOffsetsToPointers(struct modelnode *node, u32 vma, u32 fileramaddr)
+void modelPromoteNodeOffsetsToPointers(struct modelnode *node, u32 vma, uintptr_t fileramaddr)
 {
 	union modelrodata *rodata;
-	s32 diff = fileramaddr - vma;
+    uintptr_t diff = fileramaddr - vma;
 
 	while (node) {
 		u32 type = node->type & 0xff;
@@ -3949,7 +3949,7 @@ void modelPromoteNodeOffsetsToPointers(struct modelnode *node, u32 vma, u32 file
  */
 void modelPromoteOffsetsToPointers(struct modeldef *modeldef, u32 vma, uintptr_t fileramaddr)
 {
-	s32 diff = fileramaddr - vma;
+	uintptr_t diff = fileramaddr - vma;
 	s32 i;
 	s16 *partnums;
 

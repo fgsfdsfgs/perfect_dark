@@ -75,7 +75,7 @@ void rdpInit(void)
 	g_RdpOutBufferEnd = (u16 *) ((uintptr_t) g_RdpOutBufferStart + size);
 }
 
-void rdpCreateTask(Gfx *gdlstart, Gfx *gdlend, u32 arg2, s32 msg)
+void rdpCreateTask(Gfx *gdlstart, Gfx *gdlend, u32 arg2, uintptr_t msg)
 {
 	OSScTask *sctask;
 	OSTask *task;

@@ -576,7 +576,7 @@ Gfx *menuitemListRender(Gfx *gdl, struct menurendercontext *context)
 
 						spb8.type19.gdl = gdl;
 						spb8.type19.unk04 = optionindex;
-						spb8.type19.renderdata2 = (void *)((uintptr_t)&renderdata & 0xffffffff);
+						spb8.type19.renderdata2 = (void *)((uintptr_t)&renderdata);
 						spb8.type19.unk0c = sp15c.list.unk04;
 
 						gdl = (Gfx *) context->item->handler(MENUOP_RENDER, context->item, &spb8);
@@ -799,7 +799,7 @@ bool menuitemListTick(struct menuitem *item, struct menuinputs *inputs, u32 tick
 
 void menuitemDropdownInit(struct menuitem *item, union menuitemdata *data)
 {
-	s32 (*handler)(s32 operation, struct menuitem *item, union handlerdata *data);
+	uintptr_t (*handler)(s32 operation, struct menuitem *item, union handlerdata *data);
 	union handlerdata handlerdata;
 	union handlerdata handlerdata2;
 
@@ -1884,7 +1884,7 @@ Gfx *menuitemModelRender(Gfx *gdl, struct menurendercontext *context)
 		renderdata.unk10 = true;
 
 		data.type19.gdl = gdl;
-		data.type19.unk04 = (s32)&renderdata;
+		data.type19.unk04 = (intptr_t)&renderdata;
 		data.type19.renderdata2 = &renderdata;
 
 		gdl = (Gfx *)context->item->handler(MENUOP_RENDER, context->item, &data);

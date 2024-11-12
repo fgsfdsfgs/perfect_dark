@@ -302,7 +302,7 @@ void texSelect(Gfx **gdlptr, struct textureconfig *tconfig, u32 arg2, s32 arg3, 
 #ifdef __sgi
 			index = tconfig - g_TexWallhitConfigs;
 #else
-			index = ((s32) tconfig - (s32) g_TexWallhitConfigs) / sizeof(struct textureconfig);
+			index = ((uintptr_t) tconfig - (uintptr_t) g_TexWallhitConfigs) / sizeof(struct textureconfig);
 #endif
 
 			if (index >= 0 && index < g_TexNumConfigs) {

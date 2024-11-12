@@ -53,14 +53,14 @@ MenuItemHandlerResult mpStatsForPlayerDropdownHandler(s32 operation, struct menu
 				mpchr = MPCHR(a1);
 
 				if (v0 == data->list.value) {
-					return (s32) mpchr->name;
+					return (uintptr_t) mpchr->name;
 				}
 
 				v0++;
 			}
 		}
 
-		return (s32) "";
+		return (uintptr_t) "";
 	case MENUOP_SET:
 		v0 = 0;
 
@@ -698,7 +698,7 @@ MenuItemHandlerResult mpAwardsMenuHandler(s32 operation, struct menuitem *item, 
 			}
 		}
 
-		return (s32) gdl;
+		return (uintptr_t) gdl;
 	}
 
 	return 0;

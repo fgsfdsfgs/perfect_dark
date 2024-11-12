@@ -23,3 +23,5 @@ src/assets/*/textures/*.bin
 src/generated
 tools/mkrom/mkrom
 /.vs
+CppProperties.json
+.idea

@@ -8,6 +8,7 @@
 
 void psStop(void)
 {
+	if (g_SndDisabled) return;
 	s32 i;
 
 	for (i = 0; i < (IS4MB() ? 30 : 40); i++) {

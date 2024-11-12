@@ -11,7 +11,7 @@
 #include "data.h"
 #include "types.h"
 #ifndef PLATFORM_N64
-#include "romdata.h"
+#include "system.h"
 #endif
 
 /**
@@ -4114,7 +4114,7 @@ u32 g_FileTable[] = {
 	(uintptr_t) &_filenamesSegmentRomStart,
 };
 #else // PLATFORM_N64
-u32 g_FileTable[NUM_FILES + 1]; // TODO: this is only used to get the filenum, remove this
+uintptr_t g_FileTable[NUM_FILES + 1]; // TODO: this is only used to get the filenum, remove this
 #endif // PLATFORM_N64
 
 romptr_t fileGetRomAddress(s32 filenum)
@@ -4126,7 +4126,7 @@ romptr_t fileGetRomAddress(s32 filenum)
 #endif
 }
 
-u32 fileGetRomSizeByTableAddress(u32 *filetableaddr)
+u32 fileGetRomSizeByTableAddress(uintptr_t *filetableaddr)
 {
 #ifdef PLATFORM_N64
 	u32 size;
@@ -4146,10 +4146,10 @@ u32 fileGetRomSizeByTableAddress(u32 *filetableaddr)
 
 s32 fileGetRomSize(s32 filenum)
 {
-	return fileGetRomSizeByTableAddress((u32 *)&g_FileTable[filenum]);
+	return fileGetRomSizeByTableAddress((uintptr_t*)&g_FileTable[filenum]);
 }
 
-u32 file0f166ea8(u32 *filetableaddr)
+u32 file0f166ea8(uintptr_t *filetableaddr)
 {
 	return 0;
 }
@@ -4158,7 +4158,7 @@ void fileLoad(u8 *dst, u32 allocationlen, romptr_t *romaddrptr, struct fileinfo 
 {
 #ifndef PLATFORM_N64
 	// load the file first
-	const s32 filenum = (u32 *)romaddrptr - g_FileTable;
+	const s32 filenum = (uintptr_t *)romaddrptr - g_FileTable;
 	u32 romsize = 0;
 	u8 *filedata = romdataFileLoad(filenum, &romsize);
 	if (!filedata) {
@@ -4176,7 +4176,7 @@ void fileLoad(u8 *dst, u32 allocationlen, romptr_t *romaddrptr, struct fileinfo 
 		dmaExec(dst, *romaddrptr, romsize);
 	} else {
 		// DMA the compressed data to scratch space then inflate
-		u8 *scratch = (dst + allocationlen) - ((romsize + 7) & 0xfffffff8);
+		u8 *scratch = (dst + allocationlen) - ((romsize + 7) & (uintptr_t)~7);
 
 		if ((uintptr_t)scratch - (uintptr_t)dst < 8) {
 			info->loadedsize = 0;
@@ -4209,7 +4209,7 @@ void fileLoad(u8 *dst, u32 allocationlen, romptr_t *romaddrptr, struct fileinfo 
 #ifndef PLATFORM_N64
 	// byteswap/preprocess file according to g_LoadType right after inflating it
 	const u32 dstsize = allocationlen ? info->loadedsize : romsize; 
-	romdataFilePreprocess(filenum, g_LoadType, dst, dstsize);
+	romdataFilePreprocess(filenum, g_LoadType, dst, dstsize, &info->loadedsize);
 	g_LoadType = LOADTYPE_NONE;
 #endif
 }
@@ -4241,7 +4241,7 @@ void fileLoadPartToAddr(u16 filenum, void *memaddr, s32 offset, u32 len)
 {
 	u32 stack[2];
 
-	if (fileGetRomSizeByTableAddress((u32 *)&g_FileTable[filenum])) {
+	if (fileGetRomSizeByTableAddress((uintptr_t*)&g_FileTable[filenum])) {
 #ifdef PLATFORM_N64
 		dmaExec(memaddr, (romptr_t) g_FileTable[filenum] + offset, len);
 #else
@@ -4255,11 +4255,11 @@ void fileLoadPartToAddr(u16 filenum, void *memaddr, s32 offset, u32 len)
 	}
 }
 
-u32 fileGetInflatedSize(s32 filenum)
+u32 fileGetInflatedSize(s32 filenum, u32 loadtype)
 {
 	u8 *ptr;
 	u8 buffer[0x50];
-	u32 *romaddrptr;
+	uintptr_t *romaddrptr;
 #if VERSION < VERSION_NTSC_1_0
 	char message[128];
 #endif
@@ -4283,7 +4283,7 @@ u32 fileGetInflatedSize(s32 filenum)
 	}
 
 	if (rzipIs1173(ptr)) {
-		return (ptr[2] << 16) | (ptr[3] << 8) | ptr[4];
+		return romdataFileGetEstimatedSize((ptr[2] << 16) | (ptr[3] << 8) | ptr[4], loadtype);
 	}
 
 #if VERSION < VERSION_NTSC_1_0
@@ -4300,7 +4300,7 @@ u32 fileGetInflatedSize(s32 filenum)
 	return 0;
 }
 
-void *fileLoadToNew(s32 filenum, u32 method)
+void *fileLoadToNew(s32 filenum, u32 method, u32 loadtype)
 {
 	struct fileinfo *info = &g_FileInfo[filenum];
 	u32 stack;
@@ -4308,7 +4308,7 @@ void *fileLoadToNew(s32 filenum, u32 method)
 
 	if (method == FILELOADMETHOD_EXTRAMEM || method == FILELOADMETHOD_DEFAULT) {
 		if (info->loadedsize == 0) {
-			info->loadedsize = (fileGetInflatedSize(filenum) + 0x20) & 0xfffffff0;
+			info->loadedsize = (fileGetInflatedSize(filenum, loadtype) + 0x20) & 0xfffffff0;
 
 			if (method == FILELOADMETHOD_EXTRAMEM) {
 				info->loadedsize += 0x8000;
@@ -4317,7 +4317,7 @@ void *fileLoadToNew(s32 filenum, u32 method)
 
 		ptr = mempAlloc(info->loadedsize, MEMPOOL_STAGE);
 		info->allocsize = info->loadedsize;
-		fileLoad(ptr, info->loadedsize, (u32 *)&g_FileTable[filenum], info);
+		fileLoad(ptr, info->loadedsize, (uintptr_t*)&g_FileTable[filenum], info);
 
 		if (method != FILELOADMETHOD_EXTRAMEM) {
 			mempRealloc(ptr, info->loadedsize, MEMPOOL_STAGE);
@@ -4343,7 +4343,7 @@ void *fileLoadToAddr(s32 filenum, s32 method, u8 *ptr, u32 size)
 
 	if (method == FILELOADMETHOD_EXTRAMEM || method == FILELOADMETHOD_DEFAULT) {
 		info->allocsize = size;
-		fileLoad(ptr, size, (u32 *)&g_FileTable[filenum], info);
+		fileLoad(ptr, size, (uintptr_t*)&g_FileTable[filenum], info);
 	} else {
 		while (1);
 	}

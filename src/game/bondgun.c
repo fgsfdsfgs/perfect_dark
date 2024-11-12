@@ -56,6 +56,7 @@
 #ifndef PLATFORM_N64
 #include "game/stagetable.h"
 #include "video.h"
+#include "platform.h"
 #endif
 
 #define GUNLOADSTATE_FLUX     0
@@ -165,8 +166,13 @@ u32 fill2[1];
 
 Lights1 var80070090 = gdSPDefLights1(0x96, 0x96, 0x96, 0xff, 0xff, 0xff, 0xb2, 0x4d, 0x2e);
 
+#ifdef PLATFORM_64BIT
+u32 g_BgunGunMemBaseSizeDefault = 150 * 1024 * 2; // #TODO adjust these values properly
+u32 g_BgunGunMemBaseSize4Mb2P = 120 * 1024 * 2;
+#else
 u32 g_BgunGunMemBaseSizeDefault = 150 * 1024;
 u32 g_BgunGunMemBaseSize4Mb2P = 120 * 1024;
+#endif
 
 u16 g_CartFileNums[] = {
 	FILE_GCARTRIDGE,
@@ -3794,17 +3800,17 @@ void bgunTickGunLoad(void)
 {
 	s32 i;
 	s32 numthistick;
-	u32 remaining;
+	u64 remaining;
 	s32 padding;
-	u32 allocsize;
-	u32 loadsize;
-	u32 ptr;
+	u64 allocsize;
+	u64 loadsize;
+	uintptr_t ptr;
 	struct player *player = g_Vars.currentplayer;
 	struct modeldef *modeldef;
 	struct fileinfo *fileinfo;
 	struct fileinfo *gunfileinfo;
-	s32 newvalue;
-	u32 end;
+	uintptr_t newvalue;
+	uintptr_t end;
 	u32 stack;
 #if VERSION >= VERSION_NTSC_1_0
 	u32 stack2;
@@ -3826,7 +3832,7 @@ void bgunTickGunLoad(void)
 		*player->gunctrl.loadmemptr = ptr;
 		*player->gunctrl.loadmemremaining = remaining;
 
-		loadsize = ALIGN64(fileGetInflatedSize(player->gunctrl.loadfilenum)) + 0x8000;
+		loadsize = ALIGN64(fileGetInflatedSize(player->gunctrl.loadfilenum, LOADTYPE_MODEL)) + 0x8000;
 
 		osSyncPrintf("BriGun:  Loading - %s, pMem 0x%08x Size %d\n");
 
@@ -3844,6 +3850,9 @@ void bgunTickGunLoad(void)
 
 		// Reserve some space for textures
 		allocsize = fileGetLoadedSize(player->gunctrl.loadfilenum) + 0xe00;
+#ifdef PLATFORM_64BIT
+		allocsize += 0xe00;
+#endif
 
 		osSyncPrintf("BriGun:  Used size %d (Ob Size %d)\n");
 		osSyncPrintf("BriGun:  block len %d usedsize %d\n");
@@ -3854,7 +3863,7 @@ void bgunTickGunLoad(void)
 
 		fileinfo = &g_FileInfo[player->gunctrl.loadfilenum];
 		fileinfo->allocsize = allocsize;
-		end = ALIGN16((s32)ptr + allocsize);
+		end = ALIGN16((uintptr_t)ptr + allocsize);
 		allocsize = end - ptr;
 		if (1);
 		remaining -= allocsize;
@@ -3925,7 +3934,7 @@ void bgunTickGunLoad(void)
 
 		modeldef0f1a7560(modeldef, player->gunctrl.loadfilenum, 0x05000000, modeldef, &player->gunctrl.texpool, false);
 
-		fileGetInflatedSize(player->gunctrl.loadfilenum);
+		fileGetInflatedSize(player->gunctrl.loadfilenum, LOADTYPE_MODEL);
 		fileGetLoadedSize(player->gunctrl.loadfilenum);
 		fileGetLoadedSize(player->gunctrl.loadfilenum);
 		fileGetLoadedSize(player->gunctrl.loadfilenum);
@@ -3938,7 +3947,7 @@ void bgunTickGunLoad(void)
 
 		newvalue = ALIGN64(texGetPoolLeftPos(&player->gunctrl.texpool));
 		remaining = *player->gunctrl.loadmemremaining;
-		remaining -= (s32)(newvalue - *player->gunctrl.loadmemptr);
+		remaining -= (intptr_t)(newvalue - *player->gunctrl.loadmemptr);
 
 		*player->gunctrl.loadmemptr = newvalue;
 		*player->gunctrl.loadmemremaining = remaining;
@@ -4087,8 +4096,8 @@ void bgunTickMasterLoad(void)
 									player->gunctrl.gunloadstate = GUNLOADSTATE_MODEL;
 									player->gunctrl.loadfilenum = handfilenum;
 									player->gunctrl.loadtomodeldef = &player->gunctrl.handmodeldef;
-									player->gunctrl.loadmemptr = (u32 *) &player->gunctrl.handmemloadptr;
-									player->gunctrl.loadmemremaining = (u32 *) &player->gunctrl.handmemloadremaining;
+									player->gunctrl.loadmemptr = (uintptr_t *) &player->gunctrl.handmemloadptr;
+									player->gunctrl.loadmemremaining = (uintptr_t*) &player->gunctrl.handmemloadremaining;
 								}
 
 								bgunTickGunLoad();
@@ -4115,8 +4124,8 @@ void bgunTickMasterLoad(void)
 							player->gunctrl.gunloadstate = GUNLOADSTATE_MODEL;
 							player->gunctrl.loadfilenum = filenum;
 							player->gunctrl.loadtomodeldef = &player->gunctrl.gunmodeldef;
-							player->gunctrl.loadmemptr = (u32 *) &player->gunctrl.memloadptr;
-							player->gunctrl.loadmemremaining = (u32 *) &player->gunctrl.memloadremaining;
+							player->gunctrl.loadmemptr = (uintptr_t*) &player->gunctrl.memloadptr;
+							player->gunctrl.loadmemremaining = (uintptr_t*) &player->gunctrl.memloadremaining;
 						}
 
 						bgunTickGunLoad();
@@ -4157,8 +4166,8 @@ void bgunTickMasterLoad(void)
 											player->gunctrl.loadfilenum = filenum;
 											player->gunctrl.gunloadstate = GUNLOADSTATE_MODEL;
 											player->gunctrl.loadtomodeldef = &player->gunctrl.cartmodeldef;
-											player->gunctrl.loadmemptr = (u32 *) &player->gunctrl.memloadptr;
-											player->gunctrl.loadmemremaining = (u32 *) &player->gunctrl.memloadremaining;
+											player->gunctrl.loadmemptr = (uintptr_t *) &player->gunctrl.memloadptr;
+											player->gunctrl.loadmemremaining = (uintptr_t*) &player->gunctrl.memloadremaining;
 											break;
 										}
 
@@ -4184,18 +4193,18 @@ void bgunTickMasterLoad(void)
 								modelInit(&hand->handmodel, player->gunctrl.handmodeldef, hand->handsavedata, false);
 							}
 
-							hand->unk0dcc = (s32 *) player->gunctrl.memloadptr;
+							hand->unk0dcc = (uintptr_t *) player->gunctrl.memloadptr;
 
-							value = bgunCreateModelCmdList(&hand->gunmodel, player->gunctrl.gunmodeldef->rootnode, (s32 *) player->gunctrl.memloadptr);
+							value = bgunCreateModelCmdList(&hand->gunmodel, player->gunctrl.gunmodeldef->rootnode, (uintptr_t *) player->gunctrl.memloadptr);
 
 							sum += value;
 							player->gunctrl.memloadptr += value;
 							player->gunctrl.memloadremaining -= value;
 
 							if (player->gunctrl.handmodeldef != 0) {
-								hand->unk0dd0 = (s32 *) player->gunctrl.memloadptr;
+								hand->unk0dd0 = (uintptr_t*) player->gunctrl.memloadptr;
 
-								value = bgunCreateModelCmdList(&hand->handmodel, player->gunctrl.handmodeldef->rootnode, (s32 *) player->gunctrl.memloadptr);
+								value = bgunCreateModelCmdList(&hand->handmodel, player->gunctrl.handmodeldef->rootnode, (uintptr_t*) player->gunctrl.memloadptr);
 
 								sum += value;
 								player->gunctrl.memloadptr += value;
@@ -6415,7 +6424,7 @@ void bgunDisarm(struct prop *attackerprop)
  *
  * With this function stubbed, part of the CMP150 model does not render.
  */
-void bgunExecuteModelCmdList(s32 *ptr)
+void bgunExecuteModelCmdList(uintptr_t *ptr)
 {
 	union modelrwdata *rwdata;
 	struct modelnode *node;
@@ -6472,7 +6481,7 @@ void bgunExecuteModelCmdList(s32 *ptr)
  * iterate the command list to update part visibility rather than iterate the
  * full model tree.
  */
-s32 bgunCreateModelCmdList(struct model *model, struct modelnode *nodearg, s32 *ptr)
+s32 bgunCreateModelCmdList(struct model *model, struct modelnode *nodearg, uintptr_t *ptr)
 {
 	s32 len = 0;
 	struct modelnode *node = nodearg;
@@ -6489,11 +6498,11 @@ s32 bgunCreateModelCmdList(struct model *model, struct modelnode *nodearg, s32 *
 			rwdata->distance.visible = false;
 			node->child = rodata->distance.target;
 			ptr[0] = 0;
-			ptr[1] = (s32)rwdata;
-			ptr[2] = (s32)node;
-			ptr[3] = (s32)rodata->distance.target;
+			ptr[1] = (uintptr_t)rwdata;
+			ptr[2] = (uintptr_t)node;
+			ptr[3] = (uintptr_t)rodata->distance.target;
 			ptr += 4;
-			len += 16;
+			len += 4 * sizeof(uintptr_t);
 			break;
 		case MODELNODETYPE_TOGGLE:
 			rodata = node->rodata;
@@ -6501,36 +6510,36 @@ s32 bgunCreateModelCmdList(struct model *model, struct modelnode *nodearg, s32 *
 			rwdata->toggle.visible = true;
 			node->child = rodata->toggle.target;
 			ptr[0] = 1;
-			ptr[1] = (s32)rwdata;
-			ptr[2] = (s32)node;
-			ptr[3] = (s32)rodata->toggle.target;
+			ptr[1] = (uintptr_t)rwdata;
+			ptr[2] = (uintptr_t)node;
+			ptr[3] = (uintptr_t)rodata->toggle.target;
 			ptr += 4;
-			len += 16;
+			len += 4 * sizeof(uintptr_t);
 			break;
 		case MODELNODETYPE_HEADSPOT:
 			rwdata = modelGetNodeRwData(model, node);
 			rwdata->headspot.headmodeldef = NULL;
 			rwdata->headspot.rwdatas = NULL;
 			ptr[0] = 2;
-			ptr[1] = (s32)rwdata;
+			ptr[1] = (uintptr_t)rwdata;
 			ptr += 2;
-			len += 8;
+			len += 2 * sizeof(uintptr_t);
 			break;
 		case MODELNODETYPE_0B:
 			rwdata = modelGetNodeRwData(model, node);
 			rwdata->type0b.unk00 = 0;
 			ptr[0] = 3;
-			ptr[1] = (s32)rwdata;
+			ptr[1] = (uintptr_t)rwdata;
 			ptr += 2;
-			len += 8;
+			len += 2 * sizeof(uintptr_t);
 			break;
 		case MODELNODETYPE_CHRGUNFIRE:
 			rwdata = modelGetNodeRwData(model, node);
 			rwdata->chrgunfire.visible = false;
 			ptr[0] = 4;
-			ptr[1] = (s32)rwdata;
+			ptr[1] = (uintptr_t)rwdata;
 			ptr += 2;
-			len += 8;
+			len += 2 * sizeof(uintptr_t);
 			break;
 		case MODELNODETYPE_DL:
 			rodata = node->rodata;
@@ -6539,12 +6548,12 @@ s32 bgunCreateModelCmdList(struct model *model, struct modelnode *nodearg, s32 *
 			rwdata->dl.gdl = rodata->dl.opagdl;
 			rwdata->dl.colours = (void *)ALIGN8((uintptr_t)&rodata->dl.vertices[rodata->dl.numvertices]);
 			ptr[0] = 5;
-			ptr[1] = (s32)rwdata;
-			ptr[2] = (s32)rwdata->dl.vertices;
-			ptr[3] = (s32)rwdata->dl.gdl;
-			ptr[4] = (s32)rwdata->dl.colours;
+			ptr[1] = (uintptr_t)rwdata;
+			ptr[2] = (uintptr_t)rwdata->dl.vertices;
+			ptr[3] = (uintptr_t)rwdata->dl.gdl;
+			ptr[4] = (uintptr_t)rwdata->dl.colours;
 			ptr += 5;
-			len += 20;
+			len += 5 * sizeof(uintptr_t);
 			break;
 		}
 
@@ -6568,7 +6577,7 @@ s32 bgunCreateModelCmdList(struct model *model, struct modelnode *nodearg, s32 *
 	}
 
 	*ptr = 6;
-	len += 4;
+	len += sizeof(uintptr_t);
 
 	return len;
 }

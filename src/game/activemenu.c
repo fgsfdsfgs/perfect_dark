@@ -177,7 +177,7 @@ MenuItemHandlerResult amPickTargetMenuList(s32 operation, struct menuitem *item,
 			gdl = text0f153628(gdl);
 			gdl = textRenderProjected(gdl, &x, &y, g_MpAllChrConfigPtrs[chrindex]->name, g_CharsHandelGothicSm, g_FontHandelGothicSm, colour, viGetWidth(), viGetHeight(), 0, 0);
 			gdl = text0f153780(gdl);
-			return (s32)gdl;
+			return (uintptr_t)gdl;
 		}
 	case MENUOP_GETOPTIONHEIGHT:
 		data->list.value = LINEHEIGHT;

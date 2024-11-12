@@ -142,7 +142,7 @@ void starsReset(void)
 			}
 
 			count = 6 * g_StarGridSize * g_StarGridSize + 1;
-			g_StarData3 = (f32 *)(count * sizeof(f32) + (s32)g_StarPosIndexes);
+			g_StarData3 = (f32 *)(count * sizeof(f32) + (uintptr_t)g_StarPosIndexes);
 
 			stars0f135c70();
 

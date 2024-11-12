@@ -12,6 +12,7 @@
 #include "types.h"
 #ifndef PLATFORM_N64
 #include "mod.h"
+#include "platform.h"
 #endif
 
 struct texture *g_Textures;
@@ -2097,7 +2098,7 @@ void texInitPool(struct texpool *pool, u8 *start, s32 len)
 	pool->start = start;
 	pool->end = (struct tex *)(start + len);
 	pool->leftpos = start;
-	pool->rightpos = (struct tex *)((s32)start + len);
+	pool->rightpos = (struct tex *)((uintptr_t)start + len);
 }
 
 struct tex *texFindInPool(s32 texturenum, struct texpool *pool)
@@ -2144,7 +2145,7 @@ struct tex *texFindInPool(s32 texturenum, struct texpool *pool)
 
 s32 texGetPoolFreeBytes(struct texpool *pool)
 {
-	return (s32) pool->rightpos - (s32) pool->leftpos;
+	return (uintptr_t) pool->rightpos - (uintptr_t) pool->leftpos;
 }
 
 u8 *texGetPoolLeftPos(struct texpool *pool)
@@ -2155,11 +2156,16 @@ u8 *texGetPoolLeftPos(struct texpool *pool)
 void texLoadFromDisplayList(Gfx *gdl, struct texpool *pool, s32 arg2)
 {
 	u8 *bytes = (u8 *)gdl;
+	u8 ofs = 4;
+#ifdef PLATFORM_64BIT
+	ofs = 8;
+#endif
+
 
 	while (bytes[GFX_W0_BYTE(0)] != (u8)G_ENDDL) {
 		// Look for GBI sequence: fd...... abcd....
 		if (bytes[GFX_W0_BYTE(0)] == G_SETTIMG && bytes[GFX_W1_BYTE(0)] == 0xab && bytes[GFX_W1_BYTE(1)] == 0xcd) {
-			texLoad((texnum_t *)((uintptr_t)bytes + 4), pool, arg2);
+			texLoad((texnum_t *)((uintptr_t)bytes + ofs), pool, arg2);
 		}
 
 		bytes += sizeof(Gfx);
@@ -2269,7 +2275,7 @@ void texLoad(texnum_t *updateword, struct texpool *pool, bool unusedarg)
 				// Copy the compressed texture to RAM
 				dmaExec(alignedcompbuffer,
 						(romptr_t) REF_SEG _texturesdataSegmentRomStart + (thisoffset & 0xfffffff8),
-						((u32) (nextoffset - thisoffset) + 0x1f) >> 4 << 4);
+						((uintptr_t) (nextoffset - thisoffset) + 0x1f) >> 4 << 4);
 				compptr = (u8 *) alignedcompbuffer + (thisoffset & 7);
 			}
 			thisoffset = 0;
@@ -2376,12 +2382,12 @@ void texLoad(texnum_t *updateword, struct texpool *pool, bool unusedarg)
 	}
 }
 
-void texLoadFromConfigs(struct textureconfig *configs, s32 numconfigs, struct texpool *pool, s32 arg3)
+void texLoadFromConfigs(struct textureconfig *configs, s32 numconfigs, struct texpool *pool, uintptr_t arg3)
 {
 	s32 i;
 
 	for (i = 0; i < numconfigs; i++) {
-		if ((s32)configs[i].texturenum < NUM_TEXTURES) {
+		if ((uintptr_t)configs[i].texturenum < NUM_TEXTURES) {
 			texLoad(&configs[i].texturenum, pool, true);
 			configs[i].unk0b = 1;
 		} else {

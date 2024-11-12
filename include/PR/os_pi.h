@@ -37,7 +37,7 @@ extern "C" {
 #include <PR/ultratypes.h>
 #include "os_thread.h"
 #include "os_message.h"
-
+#include <stdint.h>
 
 #if defined(_LANGUAGE_C) || defined(_LANGUAGE_C_PLUS_PLUS)
 
@@ -198,7 +198,7 @@ extern u32 		osPiGetStatus(void);
 extern s32		osPiGetDeviceType(void);
 extern s32		osPiWriteIo(u32, u32);
 extern s32		osPiReadIo(u32, u32 *);
-extern s32		osPiStartDma(OSIoMesg *, s32, s32, u32, void *, u32,
+extern s32		osPiStartDma(OSIoMesg *, s32, s32, uintptr_t, void *, u32,
 				     OSMesgQueue *);
 extern void		osCreatePiManager(OSPri, OSMesgQueue *, OSMesg *, s32);
 

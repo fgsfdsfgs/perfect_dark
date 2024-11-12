@@ -22,6 +22,7 @@
 #define __R4300_H__
 
 #include <PR/ultratypes.h>
+#include "platform.h"
 
 /*
  * Segment base addresses and sizes

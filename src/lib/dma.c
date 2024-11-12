@@ -181,8 +181,8 @@ void dmaExecHighPriority(void *memaddr, romptr_t romaddr, u32 len)
  */
 void *dmaExecWithAutoAlign(void *memaddr, romptr_t romaddr, u32 len)
 {
-	u32 alignedrom = ALIGN2(romaddr);
-	u32 alignedmem = ALIGN16((uintptr_t) memaddr);
+	uintptr_t alignedrom = ALIGN2(romaddr);
+	uintptr_t alignedmem = ALIGN16((uintptr_t) memaddr);
 	u32 offset = romaddr - alignedrom; // 0 or 1
 	u32 alignedlen = ALIGN16(offset + len);
 

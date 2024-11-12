@@ -99,15 +99,15 @@ MenuItemHandlerResult menuhandlerControlStyleImpl(s32 operation, struct menuitem
 		break;
 	case MENUOP_GETOPTIONTEXT:
 		if (data->list.value > 7) {
-			return (intptr_t) "Ext";
+			return (uintptr_t) "Ext";
 		} else {
-			return (intptr_t) langGet(g_ControlStyleOptions[data->list.value]);
+			return (uintptr_t) langGet(g_ControlStyleOptions[data->list.value]);
 		}
 	case MENUOP_GETOPTGROUPTEXT:
 		if (data->list.value > 1) {
-			return (intptr_t) "Port";
+			return (uintptr_t) "Port";
 		} else {
-			return (intptr_t) langGet(categories[data->list.value]);
+			return (uintptr_t) langGet(categories[data->list.value]);
 		}
 	case MENUOP_GETGROUPSTARTINDEX:
 		data->list.groupstartindex = data->list.value * 4;
@@ -193,9 +193,9 @@ MenuItemHandlerResult menuhandlerAimControl(s32 operation, struct menuitem *item
 		break;
 	case MENUOP_GETOPTIONTEXT:
 #if VERSION >= VERSION_PAL_FINAL
-		return (s32) langGet(options[index][data->dropdown.value]);
+		return (uintptr_t) langGet(options[index][data->dropdown.value]);
 #else
-		return (s32) langGet(options[data->dropdown.value]);
+		return (uintptr_t) langGet(options[data->dropdown.value]);
 #endif
 	case MENUOP_SET:
 		optionsSetAimControl(playernum, data->dropdown.value);
@@ -222,7 +222,7 @@ MenuItemHandlerResult menuhandlerSoundMode(s32 operation, struct menuitem *item,
 		data->dropdown.value = 4;
 		break;
 	case MENUOP_GETOPTIONTEXT:
-		return (s32) langGet(options[data->dropdown.value]);
+		return (uintptr_t) langGet(options[data->dropdown.value]);
 	case MENUOP_SET:
 		sndSetSoundMode(data->dropdown.value);
 		g_Vars.modifiedfiles |= MODFILE_GAME;
@@ -247,7 +247,7 @@ MenuItemHandlerResult menuhandlerScreenSize(s32 operation, struct menuitem *item
 		data->dropdown.value = 3;
 		break;
 	case MENUOP_GETOPTIONTEXT:
-		return (s32) langGet(options[data->dropdown.value]);
+		return (uintptr_t) langGet(options[data->dropdown.value]);
 	case MENUOP_SET:
 		optionsSetScreenSize(data->dropdown.value);
 		g_Vars.modifiedfiles |= MODFILE_GAME;
@@ -271,7 +271,7 @@ MenuItemHandlerResult menuhandlerScreenRatio(s32 operation, struct menuitem *ite
 		data->dropdown.value = 2;
 		break;
 	case MENUOP_GETOPTIONTEXT:
-		return (s32) langGet(options[data->dropdown.value]);
+		return (uintptr_t) langGet(options[data->dropdown.value]);
 	case MENUOP_SET:
 		optionsSetScreenRatio(data->dropdown.value);
 		g_Vars.modifiedfiles |= MODFILE_GAME;
@@ -299,7 +299,7 @@ MenuItemHandlerResult menuhandlerLanguage(s32 operation, struct menuitem *item, 
 		data->dropdown.value = 5;
 		break;
 	case MENUOP_GETOPTIONTEXT:
-		return (s32)langGet(labels[data->dropdown.value]);
+		return (uintptr_t)langGet(labels[data->dropdown.value]);
 	case MENUOP_SET:
 		g_Vars.language = data->dropdown.value;
 		langSetEuropean(g_Vars.language);
@@ -330,7 +330,7 @@ MenuItemHandlerResult menuhandlerScreenSplit(s32 operation, struct menuitem *ite
 		data->dropdown.value = 2;
 		break;
 	case MENUOP_GETOPTIONTEXT:
-		return (s32) langGet(options[data->dropdown.value]);
+		return (uintptr_t) langGet(options[data->dropdown.value]);
 	case MENUOP_SET:
 		if (data->dropdown.value != (u32)optionsGetScreenSplit()) {
 			optionsSetScreenSplit(data->dropdown.value);
@@ -1429,7 +1429,7 @@ MenuItemHandlerResult menuhandlerCoopBuddy(s32 operation, struct menuitem *item,
 				extra = 0;
 			}
 
-			return (s32)langGet(labels[data->dropdown.value + extra]);
+			return (uintptr_t)langGet(labels[data->dropdown.value + extra]);
 		}
 	case MENUOP_SET:
 		{
@@ -1546,7 +1546,7 @@ MenuItemHandlerResult menuhandlerAntiPlayer(s32 operation, struct menuitem *item
 		data->dropdown.value = 2;
 		break;
 	case MENUOP_GETOPTIONTEXT:
-		return (s32) langGet(labels[data->dropdown.value]);
+		return (uintptr_t) langGet(labels[data->dropdown.value]);
 	case MENUOP_SET:
 		g_Vars.pendingantiplayernum = data->dropdown.value;
 		g_Vars.modifiedfiles |= MODFILE_GAME;
@@ -1892,11 +1892,11 @@ MenuItemHandlerResult menuhandlerMissionList(s32 operation, struct menuitem *ite
 		if (data->list.value < data->list.unk04u32) {
 			// Regular stage such as "dataDyne Central - Defection"
 			// Return the name before the dash, such as "dataDyne Central"
-			return (s32) langGet(g_SoloStages[data->list.value].name1);
+			return (uintptr_t) langGet(g_SoloStages[data->list.value].name1);
 		}
 
 		// Special stages have no dash and suffix, so just return the name
-		return (s32) langGet(g_SoloStages[func0f104720(data->list.value - data->list.unk04u32)].name1);
+		return (uintptr_t) langGet(g_SoloStages[func0f104720(data->list.value - data->list.unk04u32)].name1);
 	case MENUOP_SET:
 		sp188 = data->list.value;
 		menuhandlerMissionList(MENUOP_GETOPTIONCOUNT, item, &sp178);
@@ -1959,9 +1959,9 @@ MenuItemHandlerResult menuhandlerMissionList(s32 operation, struct menuitem *ite
 		break;
 	case MENUOP_GETOPTGROUPTEXT:
 		if (data->list.unk0c == data->list.value) {
-			return (s32) langGet(groups[9].name); // "Special Assignments"
+			return (uintptr_t) langGet(groups[9].name); // "Special Assignments"
 		}
-		return (s32) langGet(groups[data->list.value].name);
+		return (uintptr_t) langGet(groups[data->list.value].name);
 	case MENUOP_GETGROUPSTARTINDEX:
 		if (data->list.unk0c == data->list.value) {
 			menuhandlerMissionList(MENUOP_GETOPTIONCOUNT, item, &sp13c);
@@ -2105,7 +2105,7 @@ MenuItemHandlerResult menuhandlerMissionList(s32 operation, struct menuitem *ite
 
 		gdl = text0f153780(gdl);
 
-		return (s32) gdl;
+		return (uintptr_t) gdl;
 	case MENUOP_GETOPTIONHEIGHT:
 		data->list.value = 42;
 		break;
@@ -4255,7 +4255,7 @@ MenuItemHandlerResult menuhandlerFrInventoryList(s32 operation, struct menuitem 
 		break;
 	case MENUOP_GETOPTIONTEXT:
 		g_FrFocusedSlotIndex = data->list.value;
-		return (s32)bgunGetName(frGetWeaponBySlot(data->list.value));
+		return (uintptr_t)bgunGetName(frGetWeaponBySlot(data->list.value));
 	case MENUOP_SET:
 		g_FrFocusedSlotIndex = data->list.value;
 		return 0;
@@ -4285,7 +4285,7 @@ MenuItemHandlerResult menuhandlerInventoryList(s32 operation, struct menuitem *i
 		data->list.value = invGetCount();
 		break;
 	case MENUOP_GETOPTIONTEXT:
-		return (s32)invGetNameByIndex(data->list.value);
+		return (uintptr_t)invGetNameByIndex(data->list.value);
 	case MENUOP_SET:
 		{
 			s32 weaponnum = invGetWeaponNumByIndex(data->list.value);
@@ -4723,9 +4723,9 @@ MenuItemHandlerResult menuhandlerCinema(s32 operation, struct menuitem *item, un
 	case MENUOP_GETOPTIONTEXT:
 		if (data->list.value == 0) {
 			sprintf(g_StringPointer, langGet(L_OPTIONS_448)); // "Play All"
-			return (s32) g_StringPointer;
+			return (uintptr_t) g_StringPointer;
 		}
-		return (s32) langGet(g_Cutscenes[data->list.value - 1].name);
+		return (uintptr_t) langGet(g_Cutscenes[data->list.value - 1].name);
 	case MENUOP_SET:
 		if (data->list.value == 0) {
 			// Play all
@@ -4749,7 +4749,7 @@ MenuItemHandlerResult menuhandlerCinema(s32 operation, struct menuitem *item, un
 		data->list.value = ARRAYCOUNT(groups);
 		break;
 	case MENUOP_GETOPTGROUPTEXT:
-		return (s32) langGet(groups[data->list.value].name);
+		return (uintptr_t) langGet(groups[data->list.value].name);
 	case MENUOP_GETGROUPSTARTINDEX:
 		data->list.groupstartindex = groups[data->list.value].first_cutscene_index;
 		break;

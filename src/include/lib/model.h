@@ -97,7 +97,7 @@ void modelRenderNodeChrGunfire(struct modelrenderdata *renderdata, struct model 
 void modelRender(struct modelrenderdata *renderdata, struct model *model);
 bool modelTestBboxNodeForHit(struct modelrodata_bbox *bbox, Mtxf *mtx, struct coord *arg2, struct coord *arg3);
 s32 modelTestForHit(struct model *model, struct coord *arg1, struct coord *arg2, struct modelnode **startnode);
-void modelPromoteNodeOffsetsToPointers(struct modelnode *node, u32 vma, u32 fileramaddr);
+void modelPromoteNodeOffsetsToPointers(struct modelnode *node, u32 vma, uintptr_t fileramaddr);
 void modelPromoteOffsetsToPointers(struct modeldef *modeldef, u32 arg1, uintptr_t arg2);
 s32 modelCalculateRwDataIndexes(struct modelnode *node);
 void modelAllocateRwData(struct modeldef *modeldef);

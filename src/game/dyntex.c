@@ -79,7 +79,7 @@ void dyntexUpdateLinear(Vtx *vertices, struct dyntextype *type)
 	s32 i;
 
 	for (i = 0; i < type->numvertices; i++) {
-		Vtx *vertex = (Vtx *)((s32)vertices + g_DyntexVertices[type->vertexlistoffset + i].offset);
+		Vtx *vertex = (Vtx *)((uintptr_t)vertices + g_DyntexVertices[type->vertexlistoffset + i].offset);
 
 		vertex->t = g_DyntexVertices[type->vertexlistoffset + i].t + tmp;
 		vertex->s = g_DyntexVertices[type->vertexlistoffset + i].s;
@@ -91,7 +91,7 @@ void dyntexUpdateReset(Vtx *vertices, struct dyntextype *type)
 	s32 i;
 
 	for (i = 0; i < type->numvertices; i++) {
-		Vtx *vertex = (Vtx *)((s32)vertices + g_DyntexVertices[type->vertexlistoffset + i].offset);
+		Vtx *vertex = (Vtx *)((uintptr_t)vertices + g_DyntexVertices[type->vertexlistoffset + i].offset);
 
 		vertex->s = 0;
 		vertex->t = 0;
@@ -104,7 +104,7 @@ void dyntexUpdateMonitor(Vtx *vertices, struct dyntextype *type)
 	s32 i;
 
 	for (i = 0; i < type->numvertices; i++) {
-		Vtx *vertex = (Vtx *)((s32)vertices + g_DyntexVertices[type->vertexlistoffset + i].offset);
+		Vtx *vertex = (Vtx *)((uintptr_t)vertices + g_DyntexVertices[type->vertexlistoffset + i].offset);
 
 		vertex->t = g_DyntexVertices[type->vertexlistoffset + i].t - tmp;
 		vertex->s = g_DyntexVertices[type->vertexlistoffset + i].s;
@@ -124,7 +124,7 @@ void dyntexUpdateOcean(Vtx *vertices, struct dyntextype *type)
 	mainOverrideVariable("ripsize", &ripsize);
 
 	for (i = 0; i < type->numvertices; i++) {
-		Vtx *vertex = (Vtx *)((s32)vertices + g_DyntexVertices[type->vertexlistoffset + i].offset);
+		Vtx *vertex = (Vtx *)((uintptr_t)vertices + g_DyntexVertices[type->vertexlistoffset + i].offset);
 
 		angle = ((g_DyntexVertices[type->vertexlistoffset + i].t % modula) / (f32) modula + f24) * M_BADTAU;
 		vertex->t = g_DyntexVertices[type->vertexlistoffset + i].t + (s16) (sinf(angle) * ripsize);
@@ -140,7 +140,7 @@ void dyntexUpdateArrows(Vtx *vertices, struct dyntextype *type)
 	s32 i;
 
 	for (i = 0; i < type->numvertices; i++) {
-		Vtx *vertex = (Vtx *)((s32)vertices + g_DyntexVertices[type->vertexlistoffset + i].offset);
+		Vtx *vertex = (Vtx *)((uintptr_t)vertices + g_DyntexVertices[type->vertexlistoffset + i].offset);
 
 		vertex->s = g_DyntexVertices[type->vertexlistoffset + i].s + tmp;
 		vertex->t = g_DyntexVertices[type->vertexlistoffset + i].t;
@@ -182,7 +182,7 @@ void dyntexTickRoom(s32 roomnum, Vtx *vertices)
 
 			// @bug: Using i for both outer and inner loops
 			for (i = 0; i < type->numvertices; i++) {
-				Vtx *vertex = (Vtx *)((s32)vertices + g_DyntexVertices[type->vertexlistoffset + i].offset);
+				Vtx *vertex = (Vtx *)((uintptr_t)vertices + g_DyntexVertices[type->vertexlistoffset + i].offset);
 
 				g_DyntexVertices[type->vertexlistoffset + i].s = vertex->s;
 				g_DyntexVertices[type->vertexlistoffset + i].t = vertex->t;

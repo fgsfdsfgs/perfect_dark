@@ -288,6 +288,11 @@ void *sysMemZeroAlloc(const u32 size)
 	return calloc(1, size);
 }
 
+void *sysMemRealloc(void *ptr, const u32 newSize)
+{
+	return realloc(ptr, newSize);
+}
+
 void sysMemFree(void *ptr)
 {
 	free(ptr);

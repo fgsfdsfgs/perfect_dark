@@ -838,8 +838,8 @@ Gfx *titleRenderPdLogoModel(Gfx *gdl, struct model *model, bool arg2, f32 arg3, 
 				rwdata = modelGetNodeRwData(model, node2);
 			}
 
-			s1 = (Col *)ALIGN8(s5rodata->numvertices * sizeof(Vtx) + (s32)s5rodata->vertices);
-			s2 = (Col *)ALIGN8(s1rodata->numvertices * (s32) sizeof(Vtx) + (s32)s1rodata->vertices);
+			s1 = (Col *)ALIGN8(s5rodata->numvertices * sizeof(Vtx) + (uintptr_t)s5rodata->vertices);
+			s2 = (Col *)ALIGN8(s1rodata->numvertices * sizeof(Vtx) + (uintptr_t)s1rodata->vertices);
 
 			a3 = s5rodata->vertices;
 			t0 = s1rodata->vertices;
@@ -882,8 +882,8 @@ Gfx *titleRenderPdLogoModel(Gfx *gdl, struct model *model, bool arg2, f32 arg3, 
 				spfc[j].a = alpha2;
 			}
 
-			sp100 = (void *)ALIGN8(s5rodata->numvertices * sizeof(Vtx) + (s32)sp100);
-			spfc = (void *)ALIGN8(s5rodata->numcolours * sizeof(u32) + (s32)spfc);
+			sp100 = (void *)ALIGN8(s5rodata->numvertices * sizeof(Vtx) + (uintptr_t)sp100);
+			spfc = (void *)ALIGN8(s5rodata->numcolours * sizeof(u32) + (uintptr_t)spfc);
 		}
 	}
 

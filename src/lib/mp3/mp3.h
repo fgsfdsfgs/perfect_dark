@@ -2,11 +2,15 @@
 #define _IN_LIB_MP3_MP3_H
 #include <ultra64.h>
 #include "types.h"
+#include "platform.h"
 
 struct mp3decfourbytes {
 	u8 bytes[2];
 	s8 unk02;
 	s8 unk03;
+#ifdef PLATFORM_64BIT
+	u32 _pad_;
+#endif
 };
 
 struct asistream_scalefac {

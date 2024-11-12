@@ -209,7 +209,7 @@ MenuItemHandlerResult frWeaponListMenuHandler(s32 operation, struct menuitem *it
 					G_TX_RENDERTILE, 0, 0x0160, 1024 / g_ScaleX, -1024);
 		}
 
-		return (s32)gdl;
+		return (uintptr_t)gdl;
 	}
 
 	return 0;
@@ -279,7 +279,7 @@ MenuItemHandlerResult frDifficultyDropdownMenuHandler(s32 operation, struct menu
 		}
 		break;
 	case MENUOP_GETOPTIONTEXT:
-		return (s32) langGet(names[data->dropdown.value]);
+		return (uintptr_t) langGet(names[data->dropdown.value]);
 	case MENUOP_SET:
 		frSetDifficulty(data->dropdown.value);
 		menuPushDialog(&g_FrTrainingInfoPreGameMenuDialog);
@@ -876,7 +876,7 @@ MenuItemHandlerResult frScoringMenuHandler(s32 operation, struct menuitem *item,
 		gdl = menugfxDrawDialogBorderLine(gdl, renderdata->x + 90, renderdata->y + 50, renderdata->x + 96, renderdata->y + 51, linecolourmid, linecolourfig);
 #endif
 
-		return (s32)gdl;
+		return (uintptr_t)gdl;
 	}
 
 	return 0;
@@ -1438,10 +1438,10 @@ MenuItemHandlerResult ciOfficeInformationMenuHandler(s32 operation, struct menui
 	case MENUOP_GETOPTIONTEXT:
 		if (data->list.value < numunlockedchrbios) {
 			chrbio = ciGetChrBioByBodynum(ciGetChrBioBodynumBySlot(data->list.value));
-			return (s32) langGet(chrbio->name);
+			return (uintptr_t) langGet(chrbio->name);
 		} else {
 			miscbio = ciGetMiscBio(ciGetMiscBioIndexBySlot(data->list.value - numunlockedchrbios));
-			return (s32) langGet(miscbio->name);
+			return (uintptr_t) langGet(miscbio->name);
 		}
 		break;
 	case MENUOP_SET:
@@ -1459,7 +1459,7 @@ MenuItemHandlerResult ciOfficeInformationMenuHandler(s32 operation, struct menui
 		data->list.value = 2;
 		break;
 	case MENUOP_GETOPTGROUPTEXT:
-		return (s32) langGet(groups[data->list.value].name);
+		return (uintptr_t) langGet(groups[data->list.value].name);
 	case MENUOP_GETGROUPSTARTINDEX:
 		data->list.groupstartindex = data->list.value == 0 ? 0 : numunlockedchrbios;
 		break;
@@ -1730,7 +1730,7 @@ MenuItemHandlerResult dtDeviceListMenuHandler(s32 operation, struct menuitem *it
 		data->list.value = dtGetNumAvailable();
 		break;
 	case MENUOP_GETOPTIONTEXT:
-		return (s32) bgunGetName(dtGetWeaponByDeviceIndex(dtGetIndexBySlot(data->list.value)));
+		return (uintptr_t) bgunGetName(dtGetWeaponByDeviceIndex(dtGetIndexBySlot(data->list.value)));
 	case MENUOP_SET:
 		g_DtSlot = data->list.value;
 		menuPushDialog(&g_DtDetailsMenuDialog);
@@ -2086,7 +2086,7 @@ MenuItemHandlerResult htHoloListMenuHandler(s32 operation, struct menuitem *item
 		data->list.value = htGetNumUnlocked();
 		break;
 	case MENUOP_GETOPTIONTEXT:
-		return (s32) htGetName(htGetIndexBySlot(data->list.value));
+		return (uintptr_t) htGetName(htGetIndexBySlot(data->list.value));
 	case MENUOP_SET:
 		var80088bb4 = data->list.value;
 		menuPushDialog(&g_HtDetailsMenuDialog);
@@ -2592,7 +2592,7 @@ MenuItemHandlerResult ciHangarInformationMenuHandler(s32 operation, struct menui
 		break;
 	case MENUOP_GETOPTIONTEXT:
 		bio = ciGetHangarBio(ciGetHangarBioIndexBySlot(data->list.value));
-		return (s32) langGet(bio->name);
+		return (uintptr_t) langGet(bio->name);
 	case MENUOP_SET:
 		g_HangarBioSlot = data->list.value;
 		bioindex = ciGetHangarBioIndexBySlot(g_HangarBioSlot);
@@ -2610,7 +2610,7 @@ MenuItemHandlerResult ciHangarInformationMenuHandler(s32 operation, struct menui
 		data->list.value = 2;
 		break;
 	case MENUOP_GETOPTGROUPTEXT:
-		return (s32) langGet(groups[data->list.value].name);
+		return (uintptr_t) langGet(groups[data->list.value].name);
 	case MENUOP_GETGROUPSTARTINDEX:
 		data->list.groupstartindex = data->list.value == 0 ? 0 : groups[1].offset;
 		break;
@@ -2692,7 +2692,7 @@ MenuItemHandlerResult ciHangarTitleMenuHandler(s32 operation, struct menuitem *i
 
 		gdl = text0f153780(gdl);
 
-		return (s32)gdl;
+		return (uintptr_t)gdl;
 	}
 
 	return 0;

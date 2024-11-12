@@ -69,10 +69,10 @@ u32 align16(u32 arg0)
 	return arg0;
 }
 
-u32 align32(u32 arg0)
+uintptr_t align32(uintptr_t arg0)
 {
 	if (arg0 & 0x1f) {
-		arg0 = (arg0 & 0xffffffe0) + 0x20;
+		arg0 = (arg0 & ((intptr_t)~0x1f)) + 0x20;
 	}
 
 	return arg0;

@@ -3,14 +3,14 @@
 #include <ultraerror.h>
 #include "types.h"
 
-void _bnkfPatchBank(ALBank *bank, s32 offset, s32 table);
-void _bnkfPatchInst(ALInstrument *inst, s32 offset, s32 table);
-void _bnkfPatchSound(ALSound *s, s32 offset, s32 table);
-void _bnkfPatchWaveTable(ALWaveTable *w, s32 offset, s32 table);
+void _bnkfPatchBank(ALBank *bank, uintptr_t offset, uintptr_t table);
+void _bnkfPatchInst(ALInstrument* inst, uintptr_t offset, uintptr_t table);
+void _bnkfPatchSound(ALSound* s, uintptr_t offset, uintptr_t table);
+void _bnkfPatchWaveTable(ALWaveTable* w, uintptr_t offset, uintptr_t table);
 
 void alSeqFileNew(ALSeqFile *file, u8 *base)
 {
-	intptr_t offset = (intptr_t) base;
+	uintptr_t offset = (uintptr_t) base;
 	s32 i;
 
 	/*
@@ -23,8 +23,8 @@ void alSeqFileNew(ALSeqFile *file, u8 *base)
 
 void alBnkfNew(ALBankFile *file, u8 *table)
 {
-	intptr_t offset = (intptr_t) file;
-	intptr_t woffset = (intptr_t) table;
+	uintptr_t offset = (uintptr_t) file;
+	uintptr_t woffset = (uintptr_t) table;
 
 	s32 i;
 
@@ -45,7 +45,7 @@ void alBnkfNew(ALBankFile *file, u8 *table)
 	}
 }
 
-void _bnkfPatchBank(ALBank *bank, s32 offset, s32 table)
+void _bnkfPatchBank(ALBank *bank, uintptr_t offset, uintptr_t table)
 {
 	s32 i;
 
@@ -69,7 +69,7 @@ void _bnkfPatchBank(ALBank *bank, s32 offset, s32 table)
 	}
 }
 
-void _bnkfPatchInst(ALInstrument *inst, s32 offset, s32 table)
+void _bnkfPatchInst(ALInstrument *inst, uintptr_t offset, uintptr_t table)
 {
 	s32 i;
 
@@ -85,7 +85,7 @@ void _bnkfPatchInst(ALInstrument *inst, s32 offset, s32 table)
 	}
 }
 
-void _bnkfPatchSound(ALSound *s, s32 offset, s32 table)
+void _bnkfPatchSound(ALSound *s, uintptr_t offset, uintptr_t table)
 {
 	if (s->flags) {
 		return;
@@ -100,7 +100,7 @@ void _bnkfPatchSound(ALSound *s, s32 offset, s32 table)
 	_bnkfPatchWaveTable(s->wavetable, offset, table);
 }
 
-void _bnkfPatchWaveTable(ALWaveTable *w, s32 offset, s32 table)
+void _bnkfPatchWaveTable(ALWaveTable *w, uintptr_t offset, uintptr_t table)
 {
 	if (w->flags) {
 		return;

@@ -144,7 +144,7 @@ void texReset(void)
 	g_BlurFbDirty = true;
 #endif
 
-	g_TexWords = mempAlloc(ALIGN16(g_TexNumConfigs * 4), MEMPOOL_STAGE);
+	g_TexWords = mempAlloc(ALIGN16(g_TexNumConfigs * sizeof(uintptr_t)), MEMPOOL_STAGE);
 
 	for (i = 0; i < g_TexNumConfigs; i++) {
 		g_TexWords[i] = NULL;

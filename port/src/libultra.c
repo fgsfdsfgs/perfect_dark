@@ -433,7 +433,7 @@ void osInvalDCache(void *a, s32 b)
 
 }
 
-s32 osPiStartDma(OSIoMesg *mb, s32 priority, s32 direction, uintptr_t devAddr, void *vAddr, size_t nbytes, OSMesgQueue *mq)
+s32 osPiStartDma(OSIoMesg *mb, s32 priority, s32 direction, uintptr_t devAddr, void *vAddr, u32 nbytes, OSMesgQueue *mq)
 {
 	memcpy(vAddr, (const void *)devAddr, nbytes);
 	return 0;

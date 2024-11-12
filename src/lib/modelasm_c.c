@@ -5,6 +5,7 @@
 #include "lib/model.h"
 #include "lib/mtx.h"
 #include "types.h"
+#include "platform.h"
 
 struct t0slot {
 	u16 unk00;
@@ -1158,6 +1159,18 @@ static u32 modelasmReadFrameData(void)
  * Each value is the byte offset into the rodata struct where that node type's
  * rwdataindex property can be found, or 0xff is there is none.
  */
+
+#ifdef PLATFORM_64BIT
+u8 var8005ef90[] = {
+		 0xff, 0x08, 0xff, 0xff,
+		 0xff, 0xff, 0xff, 0xff,
+		 0x10, 0x2a, 0xff, 0x48,
+		 0x24, 0xff, 0xff, 0xff,
+		 0xff, 0xff, 0x08, 0xff,
+		 0xff, 0xff, 0xff, 0x00,
+		 0x24, 0x00,
+};
+#else
 u8 var8005ef90[] = {
 	0xff, 0x08, 0xff, 0xff,
 	0xff, 0xff, 0xff, 0xff,
@@ -1167,6 +1180,7 @@ u8 var8005ef90[] = {
 	0xff, 0xff, 0xff, 0x00,
 	0x14, 0x00,
 };
+#endif
 
 static union modelrwdata *modelasmGetNodeRwData(struct model *model, struct modelnode *node, bool is_head)
 {

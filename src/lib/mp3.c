@@ -6,6 +6,7 @@
 #include "lib/mp3.h"
 #include "mp3/mp3.h"
 #include "types.h"
+#include "platform.h"
 
 /**
  * These two ABI commands are used in this file, but the format of the data
@@ -60,7 +61,11 @@ void mp3Init(ALHeap *heap)
 
 	var8009c6d8 = alHeapAlloc(heap, 256 * sizeof(var8009c6d8[0]), 1);
 	var8009c6dc = alHeapAlloc(heap, 256 * sizeof(var8009c6dc[0]), 1);
+#ifdef PLATFORM_64BIT
+	var8009c640 = alHeapAlloc(heap, 2*10500 * sizeof(struct mp3decfourbytes), 1);
+#else
 	var8009c640 = alHeapAlloc(heap, 10500 * sizeof(struct mp3decfourbytes), 1);
+#endif
 	var8009c644 = alHeapAlloc(heap, 8192 * sizeof(var8009c644[0]), 1);
 
 	mp3mainInit();
@@ -88,7 +93,7 @@ void mp3Init(ALHeap *heap)
 	func00038b90(func00038ba8);
 }
 
-void mp3PlayFile(s32 romaddr, s32 filesize)
+void mp3PlayFile(uintptr_t romaddr, s32 filesize)
 {
 	if (g_Mp3Vars.var8009c3dc == NULL) {
 		return;
@@ -389,7 +394,7 @@ void func00038b90(void *fn)
 
 s32 func00038ba8(s32 arg0, u8 *arg1, s32 arg2, s32 arg3)
 {
-	u32 sp1c;
+	uintptr_t sp1c;
 	ALDMAproc proc;
 
 	if (arg3 != -1) {
@@ -412,7 +417,7 @@ s32 func00038ba8(s32 arg0, u8 *arg1, s32 arg2, s32 arg3)
 
 void mp3Dma(void)
 {
-	u32 state;
+	uintptr_t state;
 	ALDMAproc proc;
 
 	proc = n_syn->dma(&state);

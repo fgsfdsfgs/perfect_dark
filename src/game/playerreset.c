@@ -236,7 +236,7 @@ void playerReset(void)
 				cmd = (struct cmd32 *)((uintptr_t)cmd + 12);
 				break;
 			case INTROCMD_CREDITOFFSET:
-				thing = (struct gecreditsdata *)((s32)g_GeCreditsData + cmd->param1);
+				thing = (struct gecreditsdata *)((uintptr_t)g_GeCreditsData + cmd->param1);
 				g_CurrentGeCreditsData = thing;
 				while (thing->text1 || thing->text2) {
 					thing++;
@@ -430,6 +430,7 @@ void playerReset(void)
 	g_Vars.currentplayer->bond2.unk00.x = -sinf(turnanglerad);
 	g_Vars.currentplayer->bond2.unk00.y = 0;
 	g_Vars.currentplayer->bond2.unk00.z = cosf(turnanglerad);
+
 
 	g_Vars.currentplayer->prop->pos.f[0] = g_Vars.currentplayer->bondprevpos.f[0] = pos.f[0];
 	g_Vars.currentplayer->prop->pos.f[1] = g_Vars.currentplayer->bondprevpos.f[1] = pos.f[1];

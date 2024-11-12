@@ -7,7 +7,7 @@
 void func0f176d70(s32 arg0);
 u32 align4(u32 arg0);
 u32 align16(u32 arg0);
-u32 align32(u32 arg0);
+uintptr_t align32(uintptr_t arg0);
 void utilsInit(void);
 void func0f1770ac(struct coord *a, struct coord *b, struct coord *out);
 bool func0f177164(struct coord *arg0, struct coord *arg1, u32 line, char *file);

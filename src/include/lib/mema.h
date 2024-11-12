@@ -6,13 +6,13 @@
 
 void memaDefrag(void);
 void memaInit(void);
-void memaReset(void *ptr, u32 size);
+void memaReset(void *ptr, u64 size);
 void memaPrint(void);
-void *memaAlloc(u32 size);
-s32 memaGrow(s32 addr, u32 amount);
-void _memaFree(s32 addr, s32 size);
-void memaFree(void *addr, s32 size);
-s32 memaGetLongestFree(void);
-bool memaRealloc(s32 addr, u32 oldsize, u32 newsize);
+void *memaAlloc(u64 size);
+uintptr_t memaGrow(uintptr_t addr, u64 amount);
+void _memaFree(uintptr_t addr, u64 size);
+void memaFree(void *addr, u64 size);
+u64 memaGetLongestFree(void);
+bool memaRealloc(uintptr_t addr, u64 oldsize, u64 newsize);
 
 #endif

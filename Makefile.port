@@ -79,36 +79,42 @@ ifeq ($(TARGET_PLATFORM),)
   TARGET_PLATFORM := $(HOST_PLATFORM)
 endif
 
-ifeq (,$(findstring clean,$(MAKECMDGOALS)))
-  $(info Host platform: $(HOST_PLATFORM))
-  $(info Target platform: $(TARGET_PLATFORM))
-endif
+# Get the arch part from the platform designator.
+HOST_ARCH := $(word 1,$(subst -, ,$(HOST_PLATFORM)))
+TARGET_ARCH := $(word 1,$(subst -, ,$(TARGET_PLATFORM)))
 
-# Set whether the target arch is 64- or 32-bit.
+# Gather platform parameters.
+# Whether the platform is 64 bit.
 ifneq (,$(findstring 64,$(TARGET_PLATFORM))$(findstring armv8,$(TARGET_PLATFORM)))
-  # TODO: we're not 64-bit compatible yet, error out if building the actual game
-  ifeq (,$(findstring clean,$(MAKECMDGOALS)))
-    $(error 64-bit target platforms are not supported yet)
-  endif
-  TARGET_64BIT = 1
-else # TODO
-  TARGET_64BIT = 0
+  TARGET_64BIT := 1
+else
+  TARGET_64BIT := 0
+endif
+# Whether the target is big-endian or little-endian.
+TARGET_BIG_ENDIAN = 0 # TODO
+# Executable extension.
+ifneq (,$(findstring windows,$(TARGET_PLATFORM)))
+  BIN_EXTENSION := .exe
+else
+  BIN_EXTENSION :=
 endif
 
-# Set whether the target is big-endian or little-endian.
-TARGET_BIG_ENDIAN = 0 # TODO
+ifeq (,$(findstring clean,$(MAKECMDGOALS)))
+  $(info Host platform: $(HOST_PLATFORM) (arch $(HOST_ARCH)))
+  $(info Target platform: $(TARGET_PLATFORM) (arch $(TARGET_ARCH)))
+endif
 
 # The VERSION constant is used in the source to handle version-specific code.
 ifeq ($(ROMID),ntsc-final)
-  BIN_NAME = pd.exe
+  BIN_NAME = pd.$(TARGET_ARCH)$(BIN_EXTENSION)
   VERSION = 2
   IS_PAL = 0
 else ifeq ($(ROMID),pal-final)
-  BIN_NAME = pd.pal.exe
+  BIN_NAME = pd.pal.$(TARGET_ARCH)$(BIN_EXTENSION)
   VERSION = 4
   IS_PAL = 1
 else ifeq ($(ROMID),jpn-final)
-  BIN_NAME = pd.jpn.exe
+  BIN_NAME = pd.jpn.$(TARGET_ARCH)$(BIN_EXTENSION)
   VERSION = 5
   IS_PAL = 0
 else
@@ -118,6 +124,7 @@ endif
 VERSION_HASH := $(shell git rev-parse --short HEAD)
 VERSION_BRANCH := $(shell git rev-parse --abbrev-ref HEAD)
 VERSION_TARGET := $(TARGET_PLATFORM)
+VERSION_ARCH := $(TARGET_ARCH)
 VERSION_ROMID := $(ROMID)
 
 ifeq ($(VERSION_BRANCH),)
@@ -127,10 +134,13 @@ ifeq ($(VERSION_BRANCH),HEAD)
   VERSION_BRANCH := port-custom
 endif
 
+BUILDID := $(ROMID)-$(TARGET_PLATFORM)
+
 DEFINES := \
   VERSION=$(VERSION) \
   VERSION_HASH=\"$(VERSION_HASH)\" \
   VERSION_TARGET=\"$(VERSION_TARGET)\" \
+  VERSION_ARCH=\"$(VERSION_ARCH)\" \
   VERSION_ROMID=\"$(VERSION_ROMID)\" \
   VERSION_BRANCH=\"$(VERSION_BRANCH)\" \
   MATCHING=0 \
@@ -143,15 +153,19 @@ ifeq ($(DEBUG),1)
   DEFINES := $(DEFINES) DEBUG=1
 endif
 
+ifeq (1,$(TARGET_64BIT))
+  DEFINES += PLATFORM_64BIT=1
+endif
+
 C_DEFINES := $(foreach d,$(DEFINES),-D$(d))
 
 A_DIR := src/assets/$(ROMID)
-B_DIR := build/$(ROMID)-port
+B_DIR := build/$(BUILDID)
 G_DIR := src/generated/$(ROMID)
 
 ifneq (,$(findstring windows,$(TARGET_PLATFORM)))
   TARGET_CFLAGS := $(shell pkg-config sdl2 --cflags-only-I)
-  TARGET_LDFLAGS := $(shell pkg-config sdl2 --libs) -lz -lopengl32 -ldbghelp
+  TARGET_LDFLAGS := $(shell pkg-config sdl2 --libs) -lz -lopengl32 -ldbghelp -lws2_32
   # on windows/mingw we need this to be built with a 32-bit compiler so it finds the correct libs
   TOOLCHAIN ?= i686-w64-mingw32-
   # on GCC link libstdc++ statically
@@ -278,6 +292,7 @@ LDFLAGS := $(TARGET_LDFLAGS)
 # Make ROMID available as an environment variable to all tooling.
 # (We use this a lot)
 export ROMID
+export BUILDID
 
 BIN := $(B_DIR)/$(BIN_NAME)
 
@@ -334,7 +349,7 @@ $(B_DIR)/%.res: dist/windows/%.rc
 # Clean rules
 
 clean:
-	rm -rf build/$(ROMID)-port
+	rm -rf build/$(BUILDID)
 
 allclean:
 	rm -rf build/*

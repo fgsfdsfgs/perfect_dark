@@ -47,6 +47,7 @@
 #include "preprocess.h"
 #include "system.h"
 #include "video.h"
+#include "platform.h"
 #endif
 
 #define BGCMD_END                               0x00
@@ -97,7 +98,7 @@ u16 g_BgUnloadDelay240;
 u16 g_BgUnloadDelay240_2;
 u32 var800a4bf4;
 RoomNum g_GlareRooms[100];
-u32 *g_BgPrimaryData2;
+uintptr_t *g_BgPrimaryData2;
 struct bgroom *g_BgRooms;
 struct bgportal *g_BgPortals;
 struct portalmetric *g_PortalMetrics;
@@ -113,7 +114,7 @@ struct portalcamcacheitem *g_PortalCameraCache;
 struct bgsnake g_BgSnake;
 
 s32 g_StageIndex = 1;
-u32 var8007fc04 = 0;
+uintptr_t var8007fc04 = 0;
 u8 *var8007fc08 = NULL;
 
 #if VERSION < VERSION_NTSC_1_0
@@ -763,7 +764,7 @@ Gfx *bgRenderGdlInXray(Gfx *gdl, s8 *readgdl, Vtx *vertices, s16 arg3[3])
 			gdl = bgProcessXrayTri(gdl, &xraydata, dmemvertices[x], dmemvertices[y], dmemvertices[z], dmemcolours[x], dmemcolours[y], dmemcolours[z], inrange[x], inrange[y], inrange[z]);
 		}
 
-		readgdl += 8;
+		readgdl += sizeof(Gfx);
 	}
 
 	gdl = bgRenderXrayData(gdl, &xraydata);
@@ -1468,7 +1469,7 @@ void bgReset(s32 stagenum)
 	u32 section2compsize;
 	u32 section2start;
 	u32 section1compsize;
-	u32 scratch;
+	uintptr_t scratch;
 
 	var8007fc0c = 8;
 
@@ -1509,6 +1510,11 @@ void bgReset(s32 stagenum)
 	primcompsize = *(u32 *)&header[8];
 	var8007fc54 = inflatedsize - primcompsize;
 	var8007fc54 -= 0xc;
+
+#ifdef PLATFORM_64BIT
+	inflatedsize = romdataFileGetEstimatedSize(inflatedsize, LOADTYPE_BG);
+#endif
+
 	inflatedsize = ALIGN16(inflatedsize);
 
 	// Allocate space for the primary bg data
@@ -1529,7 +1535,7 @@ void bgReset(s32 stagenum)
 	bgInflate((u8 *) scratch, g_BgPrimaryData, primcompsize);
 
 #ifndef PLATFORM_N64
-	preprocessBgSection1(g_BgPrimaryData, 0x0f000000);
+	preprocessBgSection1(g_BgPrimaryData, inflatedsize, 0x0f000000);
 #endif
 
 	// Shrink the allocation (ie. free the scratch space)
@@ -1606,7 +1612,7 @@ void bgReset(s32 stagenum)
 	var800a4920 = *(u32 *)g_BgPrimaryData;
 
 	if (var800a4920 == 0) {
-		g_BgPrimaryData2 = (u32 *)g_BgPrimaryData;
+		g_BgPrimaryData2 = (uintptr_t*)g_BgPrimaryData;
 		g_BgRooms = (struct bgroom *)(g_BgPrimaryData2[1] + g_BgPrimaryData - 0x0f000000);
 		goto foo; foo:;
 		g_Vars.roomcount = 0;
@@ -1997,10 +2003,6 @@ void bgBuildTables(s32 stagenum)
 
 			numlightsptr++;
 		}
-
-#ifndef PLATFORM_N64
-		preprocessBgLights(g_BgLightsFileData, 0);
-#endif
 
 		// Free the section 3 allocation
 		mempRealloc(section3, 0, MEMPOOL_STAGE);
@@ -2820,6 +2822,11 @@ void bgLoadRoom(s32 roomnum)
 #endif
 	}
 
+#ifdef PLATFORM_64BIT
+	alloclen = alloclen * 4; // just to be safe for now, adjust properly later #TODO
+#endif
+
+
 #ifdef PLATFORM_N64
 	bgGarbageCollectRooms(alloclen, false);
 
@@ -2856,7 +2863,7 @@ void bgLoadRoom(s32 roomnum)
 		// Inflate the data to the left side of the allocation
 		inflatedlen = bgInflate(memaddr, allocation, g_BgRooms[roomnum + 1].unk00 - g_BgRooms[roomnum].unk00);
 #ifndef PLATFORM_N64
-		preprocessBgRoom(allocation, g_BgRooms[roomnum].unk00);
+		inflatedlen = preprocessBgRoom(allocation, inflatedlen, g_BgRooms[roomnum].unk00);
 #endif
 
 		g_Rooms[roomnum].gfxdata = (struct roomgfxdata *)allocation;
@@ -2937,7 +2944,7 @@ void bgLoadRoom(s32 roomnum)
 
 		// Copy gdls to the right-side of the allocation
 		// and build a pointer array to them
-		texCopyGdls((void *) gfxblocks[0], (void *) (allocation + alloclen - (gfxblocks[numgdls] - gfxblocks[0])), (u32) (gfxblocks[numgdls] - gfxblocks[0]));
+		texCopyGdls((void *) gfxblocks[0], (void *) (allocation + alloclen - (gfxblocks[numgdls] - gfxblocks[0])), (uintptr_t) (gfxblocks[numgdls] - gfxblocks[0]));
 
 		for (i = 0; i < numgdls + 1; i++) {
 			gdlpointers[i] = gfxblocks[i] + (allocation + alloclen - gfxblocks[numgdls]);
@@ -3640,7 +3647,7 @@ bool bgTestHitOnObj(struct coord *arg0, struct coord *arg1, struct coord *arg2, 
 	Gfx *imggdl = NULL;
 	s32 texturenum;
 	f32 lowestsqdist = MAXFLOAT;
-	s32 offset;
+	uintptr_t offset;
 	s32 numvertices;
 	Gfx *tri4gdl;
 	s32 count;
@@ -4243,7 +4250,7 @@ bool bgTestHitInVtxBatch(struct coord *arg0, struct coord *arg1, struct coord *a
 
 	vtx = bgFindVerticesForGdl(roomnum, gdl);
 	iter = &gdl[batch->gbicmdindex];
-	vtx = (Vtx *)((UNSEGADDR(iter->words.w1) & 0xffffff) + (s32)vtx);
+	vtx = (Vtx *)((UNSEGADDR(iter->words.w1) & 0xffffff) + (uintptr_t)vtx);
 	numvertices = (((u32) iter->bytes[GFX_W0_BYTE(1)] >> 4) & 0xf) + 1;
 	ptr = var800a6470;
 

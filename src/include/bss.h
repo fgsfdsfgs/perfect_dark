@@ -250,7 +250,7 @@ extern struct seqchannel g_SeqChannels[3];
 extern u32 g_AudioXReasonsActive[4];
 extern s32 g_MusicXReasonMinDurations[4];
 extern s32 g_MusicXReasonMaxDurations[4];
-extern u32 *g_LangBanks[69];
+extern uintptr_t *g_LangBanks[69];
 extern struct jpncharpixels *g_JpnCharCachePixels;
 extern struct jpncacheitem *g_JpnCacheCacheItems;
 extern struct texture *g_Textures;

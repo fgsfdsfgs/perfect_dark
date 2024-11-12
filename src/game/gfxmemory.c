@@ -11,6 +11,7 @@
 #include "lib/str.h"
 #include "data.h"
 #include "types.h"
+#include "platform.h"
 
 /**
  * This file handles memory usage for graphics related tasks.
@@ -148,7 +149,11 @@ void *gfxAllocateMatrix(void)
 LookAt *gfxAllocateLookAt(s32 count)
 {
 	void *ptr = g_GfxMemPos;
+#ifdef PLATFORM_64BIT
+	g_GfxMemPos += count * (sizeof(LookAt) * 2);
+#else
 	g_GfxMemPos += count * (sizeof(LookAt) / 2);
+#endif
 
 	return ptr;
 }

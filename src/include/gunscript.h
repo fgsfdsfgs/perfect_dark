@@ -17,10 +17,10 @@
 	{ GUNCMD_PLAYSOUND, 0, keyframe, sound },
 
 #define gunscript_include(unk1, address) \
-	{ GUNCMD_INCLUDE, unk1, 0, (u32)address },
+	{ GUNCMD_INCLUDE, unk1, 0, (uintptr_t)address },
 
 #define gunscript_random(probability, address) \
-	{ GUNCMD_RANDOM, 0, probability, (u32)address },
+	{ GUNCMD_RANDOM, 0, probability, (uintptr_t)address },
 
 #define gunscript_repeatuntilfull(triggerkey, dontloop, gototrigger) \
 	{ GUNCMD_REPEATUNTILFULL, 0, triggerkey, (dontloop << 16) | gototrigger },

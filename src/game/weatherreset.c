@@ -82,7 +82,9 @@ void weatherReset(void)
 #else
 		g_WeatherData->windspeed = g_CurWeatherConfig->windspeed;
 		// set up the weatherproof flags in all rooms
-		weatherResetRooms();
+		if (g_Vars.stagenum != STAGE_TITLE) {
+			weatherResetRooms();
+		}
 #endif
 
 		g_WeatherData->audiohandles[0] = 0;

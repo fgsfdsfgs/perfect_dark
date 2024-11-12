@@ -64,8 +64,8 @@ void vtxstoreFixRefs(void *find, void *replacement)
 				case MODELNODETYPE_DL:
 					rodata = &node->rodata->dl;
 
-					if (model->rwdatas[rodata->rwdataindex] == (u32) find) {
-						model->rwdatas[rodata->rwdataindex] = (u32) replacement;
+					if (model->rwdatas[rodata->rwdataindex] == (uintptr_t) find) {
+						model->rwdatas[rodata->rwdataindex] = (uintptr_t) replacement;
 					}
 					break;
 				case MODELNODETYPE_DISTANCE:

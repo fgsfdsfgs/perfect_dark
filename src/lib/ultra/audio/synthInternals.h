@@ -107,6 +107,9 @@ typedef struct ALParam_s {
 	} yetstillmoredata;
 	s32 unk1c;
 	s32 unk20;
+#ifdef PLATFORM_64BIT
+	u8 _pad_[8];
+#endif
 } ALParam;
 
 typedef struct {

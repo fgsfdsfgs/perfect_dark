@@ -27,18 +27,18 @@ jobs:
             mingw-w64-i686-zlib
       - name: Checkout repository
         uses: actions/checkout@v4
-      - name: Build pd.exe
+      - name: Build pd.i686.exe
         run: make -f Makefile.port -j
-      - name: Build pd.pal.exe
+      - name: Build pd.pal.i686.exe
         run: make -f Makefile.port -j ROMID=pal-final
-      - name: Build pd.jpn.exe
+      - name: Build pd.jpn.i686.exe
         run: make -f Makefile.port -j ROMID=jpn-final
       - name: Prepare artifact for packaging
         run: |
           mkdir -p bin/data
-          cp build/ntsc-final-port/pd.exe bin/
-          cp build/pal-final-port/pd.pal.exe bin/
-          cp build/jpn-final-port/pd.jpn.exe bin/
+          cp build/ntsc-final-i686-windows/pd.i686.exe bin/
+          cp build/pal-final-i686-windows/pd.pal.i686.exe bin/
+          cp build/jpn-final-i686-windows/pd.jpn.i686.exe bin/
           cp /mingw32/bin/{SDL2.dll,zlib1.dll,libgcc_s_dw2-1.dll,libwinpthread-1.dll} bin/
           touch bin/data/put_your_rom_here.txt
       - name: Upload artifact
@@ -58,18 +58,18 @@ jobs:
           sudo apt-get install git gcc g++ gcc-multilib g++-multilib make libsdl2-dev zlib1g-dev libsdl2-dev:i386 zlib1g-dev:i386
       - name: Checkout repository
         uses: actions/checkout@v4
-      - name: Build pd.exe
+      - name: Build pd.i686
         run: make -f Makefile.port TARGET_PLATFORM=i686-linux -j2
-      - name: Build pd.pal.exe
+      - name: Build pd.pal.i686
         run: make -f Makefile.port TARGET_PLATFORM=i686-linux -j2 ROMID=pal-final
-      - name: Build pd.jpn.exe
+      - name: Build pd.jpn.i686
         run: make -f Makefile.port TARGET_PLATFORM=i686-linux -j2 ROMID=jpn-final
       - name: Prepare artifact for packaging
         run: |
           mkdir -p bin/data
-          cp build/ntsc-final-port/pd.exe bin/pd
-          cp build/pal-final-port/pd.pal.exe bin/pd.pal
-          cp build/jpn-final-port/pd.jpn.exe bin/pd.jpn
+          cp build/ntsc-final-i686-linux/pd.i686 bin/pd
+          cp build/pal-final-i686-linux/pd.pal.i686 bin/pd.pal
+          cp build/jpn-final-i686-linux/pd.jpn.i686 bin/pd.jpn
           touch bin/data/put_your_rom_here.txt
       - name: Upload artifact
         uses: actions/upload-artifact@v4
@@ -78,10 +78,81 @@ jobs:
           path: bin/
           retention-days: 0
 
+  build-x86_64-windows:
+    runs-on: windows-latest
+    defaults:
+      run:
+        shell: msys2 {0}
+    steps:
+      - name: Install MSYS2
+        uses: msys2/setup-msys2@v2
+        with:
+          msystem: MINGW64
+          update: true
+          install: >-
+            git
+            make
+            mingw-w64-x86_64-toolchain
+            mingw-w64-x86_64-python
+            mingw-w64-x86_64-SDL2
+            mingw-w64-x86_64-zlib
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Build pd.x86_64.exe
+        run: make -f Makefile.port -j
+      - name: Build pd.pal.x86_64.exe
+        run: make -f Makefile.port -j ROMID=pal-final
+      - name: Build pd.jpn.x86_64.exe
+        run: make -f Makefile.port -j ROMID=jpn-final
+      - name: Prepare artifact for packaging
+        run: |
+          mkdir -p bin/data
+          cp build/ntsc-final-x86_64-windows/pd.x86_64.exe bin/
+          cp build/pal-final-x86_64-windows/pd.pal.x86_64.exe bin/
+          cp build/jpn-final-x86_64-windows/pd.jpn.x86_64.exe bin/
+          cp /mingw64/bin/{SDL2.dll,zlib1.dll,libwinpthread-1.dll,libgcc_s_seh-1.dll} bin/
+          touch bin/data/put_your_rom_here.txt
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: pd-x86_64-windows
+          path: bin/
+          retention-days: 0
+
+  build-x86_64-linux:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install dependencies
+        run: |
+          sudo dpkg --add-architecture amd64
+          sudo apt-get update
+          sudo apt-get install git gcc g++ gcc-multilib g++-multilib make libsdl2-dev zlib1g-dev libsdl2-2.0-0
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Build pd.x86_64
+        run: make -f Makefile.port TARGET_PLATFORM=x86_64-linux -j2
+      - name: Build pd.pal.x86_64
+        run: make -f Makefile.port TARGET_PLATFORM=x86_64-linux -j2 ROMID=pal-final
+      - name: Build pd.jpn.x86_64
+        run: make -f Makefile.port TARGET_PLATFORM=x86_64-linux -j2 ROMID=jpn-final
+      - name: Prepare artifact for packaging
+        run: |
+          mkdir -p bin/data
+          cp build/ntsc-final-x86_64-linux/pd.x86_64 bin/pd
+          cp build/pal-final-x86_64-linux/pd.pal.x86_64 bin/pd.pal
+          cp build/jpn-final-x86_64-linux/pd.jpn.x86_64 bin/pd.jpn
+          touch bin/data/put_your_rom_here.txt
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: pd-x86_64-linux
+          path: bin/
+          retention-days: 0
+
   build-flatpak-bundle:
     name: "Build flatpak bundle"
     runs-on: ubuntu-latest
-    needs: [build-i686-linux]
+    needs: [build-i686-linux, build-x86_64-linux]
     container:
       image: bilelmoussaoui/flatpak-github-actions:freedesktop-23.08
       options: --privileged
@@ -89,7 +160,7 @@ jobs:
     - uses: actions/checkout@v4
     - uses: actions/download-artifact@v4
       with:
-        name: pd-i686-linux
+        name: pd-x86_64-linux
         path: dist/linux/bin/
 
     - uses: flatpak/flatpak-github-actions/flatpak-builder@v6
@@ -117,7 +188,7 @@ jobs:
   publish-latest-build:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/port'
-    needs: [build-i686-windows, build-i686-linux, build-flatpak-bundle]
+    needs: [build-i686-windows, build-i686-linux, build-x86_64-windows, build-x86_64-linux, build-flatpak-bundle]
     permissions:
       contents: write
     steps:
@@ -132,7 +203,9 @@ jobs:
           mkdir ci-release
           pushd ci-artifacts
           tar czf ../ci-release/pd-i686-linux.tar.gz pd-i686-linux
+          tar czf ../ci-release/pd-x86_64-linux.tar.gz pd-x86_64-linux
           zip -r ../ci-release/pd-i686-windows.zip pd-i686-windows
+          zip -r ../ci-release/pd-x86_64-windows.zip pd-x86_64-windows
           mv io.github.fgsfdsfgs.perfect_dark.flatpak/io.github.fgsfdsfgs.perfect_dark.flatpak ../ci-release/
           popd
           git tag --force ci-dev-build port

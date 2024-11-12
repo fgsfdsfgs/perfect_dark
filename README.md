@@ -35,14 +35,16 @@ There are minor graphics- and gameplay-related issues, and possibly occasional c
   * in practice the game will have issues running faster than ~165 FPS, so use VSync or `Video.FramerateLimit` to cap it.
 * emulate the Transfer Pak functionality the game has on the Nintendo 64 to unlock some cheats automatically.
 
-Currently only 32-bit platforms are supported, namely x86 Windows and Linux.  
-Note that 32-bit binaries will still work on 64-bit versions of those platforms,
-though you might have to install some additional libraries.
+Currently both 32-bit and 64-bit platforms should be supported.  
+The port is tested on i686 and x86_64, both on Windows and on Linux.  
+ARM platforms might be supported, but are mostly untested.
 
 ## Download
 
 Latest [automatic builds](https://github.com/fgsfdsfgs/perfect_dark/releases/tag/ci-dev-build) for supported platforms:
+* [x86_64-windows](https://github.com/fgsfdsfgs/perfect_dark/releases/download/ci-dev-build/pd-x86_64-windows.zip)
 * [i686-windows](https://github.com/fgsfdsfgs/perfect_dark/releases/download/ci-dev-build/pd-i686-windows.zip)
+* [x86_64-linux](https://github.com/fgsfdsfgs/perfect_dark/releases/download/ci-dev-build/pd-x86_64-linux.tar.gz)
 * [i686-linux](https://github.com/fgsfdsfgs/perfect_dark/releases/download/ci-dev-build/pd-i686-linux.tar.gz)
 
 If you are looking for netplay builds (the `port-net` branch), see [this link](https://github.com/fgsfdsfgs/perfect_dark/blob/port-net/README.md#download).
@@ -51,13 +53,15 @@ If you are looking for netplay builds (the `port-net` branch), see [this link](h
 
 You must already have a Perfect Dark ROM to run the game, as specified above.  
 
-1. Create a directory named `data` next to `pd.exe` if it's not there.
+This assumes that you're using an x86_64 build. If you aren't, replace `x86_64` below with your arch (e.g. `i686`).
+
+1. Create a directory named `data` next to `pd.x86_64` if it's not there.
 2. Put your Perfect Dark NTSC ROM named `pd.ntsc-final.z64` into it.
-3. Run `pd.exe`.
+3. Run the `pd.x86_64` executable.
 
 If you want to use a PAL or JPN ROM instead, put them into the `data` directory and run the appropriate executable:
-* PAL: ROM name `pd.pal-final.z64`, EXE name `pd.pal.exe`.
-* JPN: ROM name `pd.jpn-final.z64`, EXE name `pd.jpn.exe`.
+* PAL: ROM name `pd.pal-final.z64`, executable name `pd.pal.x86_64`.
+* JPN: ROM name `pd.jpn-final.z64`, executable name `pd.jpn.x86_64`.
 
 Optionally, you can also put your Perfect Dark for GameBoy Color ROM named `pd.gbc` in the `data` directory if you want to emulate having the Nintendo 64's Transfer Pak and unlock some cheats automatically.
 
@@ -99,44 +103,46 @@ Controls can be rebound in `pd.ini`. Default control scheme is as follows:
 ### Windows
 
 1. Install [MSYS2](https://www.msys2.org).
-2. Open the `MINGW32` prompt. (**NOTE:** _not_ the `MSYS` prompt or the `MINGW64` prompt)
+2. Open the `MINGW64` prompt if building for x86_64, or the `MINGW32` prompt if building for i686. (**NOTE:** _do not_ use the `MSYS` prompt)
 3. Install dependencies:  
-   `pacman -S mingw-w64-i686-toolchain mingw-w64-i686-SDL2 mingw-w64-i686-zlib make git`
+   `pacman -S mingw-w64-x86_64-toolchain mingw-w64-x86_64-SDL2 mingw-w64-x86_64-zlib mingw-w64-i686-toolchain mingw-w64-i686-SDL2 mingw-w64-i686-zlib make git`
 4. Get the source code:  
    `git clone --recursive https://github.com/fgsfdsfgs/perfect_dark.git && cd perfect_dark`
 5. Run `make -f Makefile.port`.
    * Add ` ROMID=pal-final` or ` ROMID=jpn-final` at the end of the command if you want to build a PAL or JPN executable respectively.
-6. The resulting executable will be at `build/ntsc-final-port/pd.exe`.
+6. The resulting executable will be at `build/ntsc-final-x86_64-windows/pd.x86_64.exe` (or at `build/ntsc-final-i686-windows/pd.i686.exe` if building for i686).
 7. If you don't know where you downloaded the source to, you can run `explorer .` to open the current directory.
 
 ### Linux
 
-1. Ensure you have gcc, g++ (version 10.0+) and 32-bit versions of SDL2 (version 2.0.12+), libGL and ZLib installed on your system.
-   * On a 64-bit system you also need to have `gcc-multilib` and `g++-multilib` (or your distro's analogues) installed.
+1. Ensure you have gcc, g++ (version 10.0+) and SDL2 (version 2.0.12+), libGL and ZLib installed on your system.
+   * If you wish to crosscompile, you will also need to have libraries and compilers for the target platform installed, e.g. `gcc-multilib` and `g++-multilib` for x86_64 -> i686 crosscompilation.
 2. Get the source code:  
    `git clone --recursive https://github.com/fgsfdsfgs/perfect_dark.git && cd perfect_dark`
 3. Run the following command:
-   * On a 64-bit system: ```make -f Makefile.port TARGET_PLATFORM=i686-linux```
-   * On a 32-bit system: ```make -f Makefile.port```
+   * ```make -f Makefile.port```
    * Add ` ROMID=pal-final` or ` ROMID=jpn-final` at the end of the command if you want to build a PAL or JPN executable respectively.
-4. The resulting executable will be at `build/ntsc-final-port/pd.exe`.  
+   * Add ` TARGET_PLATFORM=your-target` at the end of the command if you want to crosscompile.
+4. The resulting executable will be at `build/ntsc-final-<platform>/pd.<arch>` (for example `build/ntsc-final-x86_64-linux/pd.x86_64`).
 
-Currently only `i686-linux` and `i686-windows` are supported, using `gcc -m32` and `i686-w64-mingw32-gcc` as compilers, respectively.  
-Alternate compilers can be specified by passing `TOOLCHAIN=i686-whatever-` as a command line argument.
+### Notes
 
-You can build an executable with PAL or JPN ROM support by adding `ROMID=pal-final` or `ROMID=jpn-final` to the `make` command.  
-You will need to provide a `jpn-final` or `pal-final` ROM to run those, named `pd.jpn-final.z64` or `pd.pal-final.z64`.
+Alternate compilers can be specified by passing `TOOLCHAIN=arch-whatever-` as a command line argument.
 
-It might be possible to build a 32-bit ARM executable, but this has not been tested.
+You will need to provide a `jpn-final` or `pal-final` ROM to run executables built for those regions, named `pd.jpn-final.z64` or `pd.pal-final.z64`.
+
+It might be possible to build and run the game on an ARM/AArch64 platform, but this has not been tested.
 
 ## Credits
 
 * the original [decompilation project](https://github.com/n64decomp/perfect_dark) authors;
+* Ryan Dwyer for the above, additional help, and `pd-extract`;
 * doomhack for the only other publicly available [PD porting effort](https://github.com/doomhack/perfect_dark) I could find;
 * [sm64-port](https://github.com/sm64-port/sm64-port) authors for the audio mixer and some other changes;
 * [Ship of Harkinian team](https://github.com/Kenix3/libultraship/tree/main/src/graphic/Fast3D), Emill and MaikelChan for the libultraship version of fast3d that this port uses;
 * lieff for [minimp3](https://github.com/lieff/minimp3);
 * Mouse Injector and 1964GEPD authors for some of the 60FPS- and mouselook-related fixes;
+* Raf for the 64-bit port;
 * NicNamSam for the icon;
 * everyone who has submitted pull requests and issues to this repository and tested the port;
 * probably more I'm forgetting.

@@ -33,7 +33,7 @@ s32 texGetPoolFreeBytes(struct texpool *pool);
 u8 *texGetPoolLeftPos(struct texpool *pool);
 void texLoadFromDisplayList(Gfx *gdl, struct texpool *pool, s32 arg2);
 void texLoad(texnum_t *updateword, struct texpool *pool, bool unusedarg);
-void texLoadFromConfigs(struct textureconfig *configs, s32 numconfigs, struct texpool *pool, s32 arg3);
+void texLoadFromConfigs(struct textureconfig *configs, s32 numconfigs, struct texpool *pool, uintptr_t arg3);
 void texLoadFromTextureNum(u32 arg0, struct texpool *pool);
 #ifndef PLATFORM_N64
 void texSwizzleInternal(u8 *dst, s32 width, s32 height, s32 format, u32 dstlen);

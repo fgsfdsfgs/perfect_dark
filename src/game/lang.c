@@ -59,12 +59,12 @@ bool g_Jpn = VERSION == VERSION_JPN_FINAL ? true : false;
 u8 *g_LangBuffer = NULL;
 u8 *g_LangBufferPos = NULL;
 s32 g_LangBufferSize = 0;
-u32 *g_LangBanks[69];
+uintptr_t *g_LangBanks[69];
 struct jpncharpixels *g_JpnCharCachePixels;
 struct jpncacheitem *g_JpnCacheCacheItems;
 s32 g_LanguageId = LANGUAGE_NTSC_EN;
 #else
-u32 *g_LangBanks[69];
+uintptr_t *g_LangBanks[69];
 struct jpncharpixels *g_JpnCharCachePixels;
 struct jpncacheitem *g_JpnCacheCacheItems;
 bool g_Jpn = false;
@@ -377,25 +377,28 @@ s32 langGetFileId(s32 bank)
 void langLoad(s32 bank)
 {
 #if VERSION >= VERSION_PAL_BETA
-	s32 len = fileGetInflatedSize(langGetFileId(bank));
+	s32 len = fileGetInflatedSize(langGetFileId(bank), LOADTYPE_LANG);
 
-	if ((s32)g_LangBuffer + len + g_LangBufferSize - (s32)g_LangBufferPos >= 0) {
-		s32 len2 = (s32)g_LangBuffer + g_LangBufferSize - (s32)g_LangBufferPos;
+	if ((uintptr_t)g_LangBuffer + len + g_LangBufferSize - (uintptr_t)g_LangBufferPos >= 0) {
+		s32 len2 = (uintptr_t)g_LangBuffer + g_LangBufferSize - (uintptr_t)g_LangBufferPos;
 		len2 = len2 / 32 * 32;
+		g_LoadType = LOADTYPE_LANG;
 		g_LangBanks[bank] = fileLoadToAddr(langGetFileId(bank), FILELOADMETHOD_DEFAULT, (u8 *)g_LangBufferPos, len2);
-		g_LangBufferPos = (u8 *)(align32((s32)g_LangBufferPos + len));
+		g_LangBufferPos = (u8 *)(align32((uintptr_t)g_LangBufferPos + len));
 	} else {
 		CRASH();
 	}
 #else
 	s32 file_id = langGetFileId(bank);
-	g_LangBanks[bank] = fileLoadToNew(file_id, FILELOADMETHOD_DEFAULT);
+	g_LoadType = LOADTYPE_LANG;
+	g_LangBanks[bank] = fileLoadToNew(file_id, FILELOADMETHOD_DEFAULT, LOADTYPE_LANG);
 #endif
 }
 
 void langLoadToAddr(s32 bank, u8 *dst, s32 size)
 {
 	s32 file_id = langGetFileId(bank);
+	g_LoadType = LOADTYPE_LANG;
 	g_LangBanks[bank] = fileLoadToAddr(file_id, FILELOADMETHOD_DEFAULT, dst, size);
 }
 
@@ -418,11 +421,11 @@ char *langGet(s32 textid)
 {
 	s32 bankindex = textid >> 9;
 	s32 textindex = textid & 0x1ff;
-	u32 *bank = g_LangBanks[bankindex];
-	u32 addr;
+	uintptr_t *bank = (uintptr_t*)g_LangBanks[bankindex];
+	uintptr_t addr;
 
 	if (bank && bank[textindex]) {
-		addr = (uintptr_t)bank + PD_BE32(bank[textindex]);
+		addr = (uintptr_t)bank + bank[textindex];
 	} else {
 		addr = 0;
 	}

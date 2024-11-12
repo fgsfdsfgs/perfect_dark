@@ -489,7 +489,7 @@ void mainInit(void)
 
 			if (*(s16 *) receivedmsg == OS_SC_RETRACE_MSG) {
 				viUpdateMode();
-				rdpCreateTask(var8005dcc8, var8005dcc8 + ARRAYCOUNT(var8005dcc8), 0, (s32) &scdonemsg);
+				rdpCreateTask(var8005dcc8, var8005dcc8 + ARRAYCOUNT(var8005dcc8), 0, (uintptr_t) &scdonemsg);
 				j++;
 			}
 		}
@@ -611,7 +611,7 @@ void mainInit(void)
 
 			if (*(s16 *) receivedmsg == OS_SC_RETRACE_MSG) {
 				viUpdateMode();
-				rdpCreateTask(var8005dcc8, var8005dcc8 + ARRAYCOUNT(var8005dcc8), 0, (s32) &scdonemsg);
+				rdpCreateTask(var8005dcc8, var8005dcc8 + ARRAYCOUNT(var8005dcc8), 0, (uintptr_t) &scdonemsg);
 				i++;
 			}
 		}
@@ -978,7 +978,7 @@ void mainLoop(void)
 				{
 					char message[80];
 					u32 stack2;
-					sprintf(message, "boss.c default: %08x type %d\n", (s32) msg, *(s16 *) msg);
+					sprintf(message, "boss.c default: %08x type %d\n", (uintptr_t) msg, *(s16 *) msg);
 					crashSetMessage(message);
 					CRASH();
 				}
@@ -1092,7 +1092,7 @@ void mainTick(void)
 			viUpdateMode();
 		}
 
-		rdpCreateTask(gdlstart, gdl, 0, (s32) &msg);
+		rdpCreateTask(gdlstart, gdl, 0, (uintptr_t) &msg);
 		g_MainNumGfxTasks++;
 		memaPrint();
 		func0f16cf94();

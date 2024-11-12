@@ -141,7 +141,7 @@ MenuItemHandlerResult menuhandlerMpSlowMotion(s32 operation, struct menuitem *it
 		data->dropdown.value = 3;
 		break;
 	case MENUOP_GETOPTIONTEXT:
-		return (s32)langGet(labels[data->dropdown.value]);
+		return (uintptr_t)langGet(labels[data->dropdown.value]);
 	case MENUOP_SET:
 		g_MpSetup.options &= ~(MPOPTION_SLOWMOTION_ON | MPOPTION_SLOWMOTION_SMART);
 
@@ -338,7 +338,7 @@ MenuItemHandlerResult scenarioScenarioMenuHandler(s32 operation, struct menuitem
 			if (challengeIsFeatureUnlocked(g_MpScenarioOverviews[i].requirefeature)
 					&& (teamgame || g_MpScenarioOverviews[i].teamonly == false)) {
 				if (count == data->list.value) {
-					return (s32)langGet(g_MpScenarioOverviews[i].name);
+					return (uintptr_t)langGet(g_MpScenarioOverviews[i].name);
 				}
 
 				count++;
@@ -383,7 +383,7 @@ MenuItemHandlerResult scenarioScenarioMenuHandler(s32 operation, struct menuitem
 		}
 		break;
 	case MENUOP_GETOPTGROUPTEXT:
-		return (s32)langGet(groups[data->list.value].textid);
+		return (uintptr_t)langGet(groups[data->list.value].textid);
 	case MENUOP_GETGROUPSTARTINDEX:
 		for (i = 0; i < groups[data->list.value].startindex; i++) {
 			if (challengeIsFeatureUnlocked(g_MpScenarioOverviews[i].requirefeature)

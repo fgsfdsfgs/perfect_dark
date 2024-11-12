@@ -258,7 +258,7 @@ s32 n_alLoadParam(N_PVoice *filter, s32 paramID, void *param)
 
 Acmd *_decodeChunk(Acmd *ptr, N_PVoice *f, s32 tsam, s32 nbytes, s16 outp, s16 inp, u32 flags)
 {
-	s32 dramAlign, dramLoc;
+	intptr_t dramAlign, dramLoc;
 
 	if (nbytes > 0) {
 		dramLoc = (f->dc_dma)(f->dc_memin, nbytes, f->dc_dmaState);

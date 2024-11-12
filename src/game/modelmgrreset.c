@@ -101,17 +101,17 @@ void modelmgrAllocateSlots(s32 numobjs, s32 numchrs)
 
 	if (NUMTYPE1()) {
 		g_ModelRwdataBindings[0] = (struct modelrwdatabinding *) ptr;
-		ptr += NUMTYPE1() * 8;
+		ptr += NUMTYPE1() * sizeof(struct modelrwdatabinding);
 	}
 
 	if (NUMTYPE2()) {
 		g_ModelRwdataBindings[1] = (struct modelrwdatabinding *) ptr;
-		ptr += NUMTYPE2() * 8;
+		ptr += NUMTYPE2() * sizeof(struct modelrwdatabinding);
 	}
 
 	if (NUMTYPE3()) {
 		g_ModelRwdataBindings[2] = (struct modelrwdatabinding *) ptr;
-		ptr += NUMTYPE3() * 8;
+		ptr += NUMTYPE3() * sizeof(struct modelrwdatabinding);
 	}
 
 	g_ModelSlots = (struct model *) ptr;

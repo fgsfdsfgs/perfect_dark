@@ -1237,7 +1237,7 @@ void setupLoadBriefing(s32 stagenum, u8 *buffer, s32 bufferlen, struct briefing 
 
 		langLoadToAddr(briefing->langbank, langbuffer, langbufferlen);
 
-		start = (struct defaultobj *)((uintptr_t)setup + (u32)setup->props);
+		start = (struct defaultobj *)((uintptr_t)setup + (uintptr_t)setup->props);
 
 		if (start != NULL) {
 			struct defaultobj *obj;
@@ -1319,18 +1319,18 @@ void setupLoadFiles(s32 stagenum)
 
 		g_LoadType = LOADTYPE_SETUP;
 
-		g_GeCreditsData = (u8 *)fileLoadToNew(filenum, FILELOADMETHOD_DEFAULT);
+		g_GeCreditsData = (u8 *)fileLoadToNew(filenum, FILELOADMETHOD_DEFAULT, LOADTYPE_SETUP);
 		setup = (struct stagesetup *)g_GeCreditsData;
 		langLoad(langGetLangBankIndexFromStagenum(stagenum));
 
-		g_StageSetup.intro = (s32 *)((uintptr_t)setup + (u32)setup->intro);
-		g_StageSetup.props = (u32 *)((uintptr_t)setup + (u32)setup->props);
-		g_StageSetup.paths = (struct path *)((uintptr_t)setup + (u32)setup->paths);
-		g_StageSetup.ailists = (struct ailist *)((uintptr_t)setup + (u32)setup->ailists);
+		g_StageSetup.intro = (s32 *)((uintptr_t)setup + (uintptr_t)setup->intro);
+		g_StageSetup.props = (u32 *)((uintptr_t)setup + (uintptr_t)setup->props);
+		g_StageSetup.paths = (struct path *)((uintptr_t)setup + (uintptr_t)setup->paths);
+		g_StageSetup.ailists = (struct ailist *)((uintptr_t)setup + (uintptr_t)setup->ailists);
 
 		g_LoadType = LOADTYPE_PADS;
 
-		g_StageSetup.padfiledata = fileLoadToNew(g_Stages[g_StageIndex].padsfileid, FILELOADMETHOD_DEFAULT);
+		g_StageSetup.padfiledata = fileLoadToNew(g_Stages[g_StageIndex].padsfileid, FILELOADMETHOD_DEFAULT, LOADTYPE_PADS);
 
 		g_StageSetup.waypoints = NULL;
 		g_StageSetup.waygroups = NULL;
@@ -1339,7 +1339,7 @@ void setupLoadFiles(s32 stagenum)
 		// Convert ailist pointers from file-local to proper pointers
 		if (g_StageSetup.ailists) {
 			for (i = 0; g_StageSetup.ailists[i].list != NULL; i++) {
-				g_StageSetup.ailists[i].list = (u8 *)((uintptr_t)setup + (u32)g_StageSetup.ailists[i].list);
+				g_StageSetup.ailists[i].list = (u8 *)((uintptr_t)setup + (uintptr_t)g_StageSetup.ailists[i].list);
 			}
 		}
 
@@ -1383,7 +1383,7 @@ void setupLoadFiles(s32 stagenum)
 		// and calculate the path lengths
 		if (g_StageSetup.paths) {
 			for (i = 0; g_StageSetup.paths[i].pads != NULL; i++) {
-				g_StageSetup.paths[i].pads = (s32 *)((uintptr_t)g_StageSetup.paths[i].pads + (u32)setup);
+				g_StageSetup.paths[i].pads = (s32 *)((uintptr_t)g_StageSetup.paths[i].pads + (uintptr_t)setup);
 
 				for (j = 0; g_StageSetup.paths[i].pads[j] >= 0; j++);
 
@@ -1844,7 +1844,7 @@ void setupCreateProps(s32 stagenum)
 						truck->speedtime60 = -1;
 						truck->turnrot60 = 0;
 						truck->roty = 0;
-						truck->ailist = ailistFindById((u32)truck->ailist);
+						truck->ailist = ailistFindById((uintptr_t)truck->ailist);
 						truck->aioffset = 0;
 						truck->aireturnlist = -1;
 						truck->path = NULL;
@@ -1866,7 +1866,7 @@ void setupCreateProps(s32 stagenum)
 						car->roty = 0;
 						car->rotx = 0;
 						car->speedtime60 = -1;
-						car->ailist = ailistFindById((s32)car->ailist);
+						car->ailist = ailistFindById((uintptr_t)car->ailist);
 						car->aioffset = 0;
 						car->aireturnlist = -1;
 						car->path = NULL;
@@ -1895,7 +1895,7 @@ void setupCreateProps(s32 stagenum)
 						chopper->gunrotx = 0;
 						chopper->barrelrot = 0;
 						chopper->barrelrotspeed = 0;
-						chopper->ailist = ailistFindById((u32)chopper->ailist);
+						chopper->ailist = ailistFindById((uintptr_t)chopper->ailist);
 						chopper->aioffset = 0;
 						chopper->aireturnlist = -1;
 						chopper->path = NULL;
@@ -1942,7 +1942,7 @@ void setupCreateProps(s32 stagenum)
 						heli->yrot = 0;
 						heli->speedtime60 = -1;
 						heli->rotoryspeedtime = -1;
-						heli->ailist = ailistFindById((u32)heli->ailist);
+						heli->ailist = ailistFindById((uintptr_t)heli->ailist);
 						heli->aioffset = 0;
 						heli->aireturnlist = -1;
 						heli->path = NULL;
@@ -2131,8 +2131,8 @@ void setupCreateProps(s32 stagenum)
 				case OBJTYPE_LINKLIFTDOOR:
 					{
 						struct linkliftdoorobj *link = (struct linkliftdoorobj *)obj;
-						s32 dooroffset = (s32)link->door;
-						s32 liftoffset = (s32)link->lift;
+						uintptr_t dooroffset = (uintptr_t)link->door;
+						uintptr_t liftoffset = (uintptr_t)link->lift;
 						struct defaultobj *door = setupGetObjByCmdIndex(index + dooroffset);
 						struct defaultobj *lift = setupGetObjByCmdIndex(index + liftoffset);
 
@@ -2149,9 +2149,9 @@ void setupCreateProps(s32 stagenum)
 				case OBJTYPE_SAFEITEM:
 					{
 						struct safeitemobj *link = (struct safeitemobj *)obj;
-						s32 itemoffset = (s32)link->item;
-						s32 safeoffset = (s32)link->safe;
-						s32 dooroffset = (s32)link->door;
+						uintptr_t itemoffset = (uintptr_t)link->item;
+						uintptr_t safeoffset = (uintptr_t)link->safe;
+						uintptr_t dooroffset = (uintptr_t)link->door;
 						struct defaultobj *item = setupGetObjByCmdIndex(index + itemoffset);
 						struct defaultobj *safe = setupGetObjByCmdIndex(index + safeoffset);
 						struct defaultobj *door = setupGetObjByCmdIndex(index + dooroffset);
@@ -2173,8 +2173,8 @@ void setupCreateProps(s32 stagenum)
 				case OBJTYPE_PADLOCKEDDOOR:
 					{
 						struct padlockeddoorobj *link = (struct padlockeddoorobj *)obj;
-						s32 dooroffset = (s32)link->door;
-						s32 lockoffset = (s32)link->lock;
+						uintptr_t dooroffset = (uintptr_t)link->door;
+						uintptr_t lockoffset = (uintptr_t)link->lock;
 						struct defaultobj *door = setupGetObjByCmdIndex(index + dooroffset);
 						struct defaultobj *lock = setupGetObjByCmdIndex(index + lockoffset);
 
@@ -2192,9 +2192,9 @@ void setupCreateProps(s32 stagenum)
 				case OBJTYPE_CONDITIONALSCENERY:
 					{
 						struct linksceneryobj *link = (struct linksceneryobj *)obj;
-						s32 triggeroffset = (s32)link->trigger;
-						s32 unexpoffset = (s32)link->unexp;
-						s32 expoffset = (s32)link->exp;
+						uintptr_t triggeroffset = (uintptr_t)link->trigger;
+						uintptr_t unexpoffset = (uintptr_t)link->unexp;
+						uintptr_t expoffset = (uintptr_t)link->exp;
 						struct defaultobj *trigger = setupGetObjByCmdIndex(index + triggeroffset);
 						struct defaultobj *unexp = NULL;
 						struct defaultobj *exp = NULL;
@@ -2244,7 +2244,7 @@ void setupCreateProps(s32 stagenum)
 				case OBJTYPE_BLOCKEDPATH:
 					{
 						struct blockedpathobj *blockedpath = (struct blockedpathobj *)obj;
-						s32 objoffset = (s32)blockedpath->blocker;
+						uintptr_t objoffset = (uintptr_t)blockedpath->blocker;
 						struct defaultobj *blocker = setupGetObjByCmdIndex(index + objoffset);
 
 						if (blocker && blocker->prop) {

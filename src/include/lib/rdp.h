@@ -5,6 +5,6 @@
 #include "types.h"
 
 void rdpInit(void);
-void rdpCreateTask(Gfx *gdlstart, Gfx *gdlend, u32 arg2, s32 msg);
+void rdpCreateTask(Gfx *gdlstart, Gfx *gdlend, u32 arg2, uintptr_t msg);
 
 #endif

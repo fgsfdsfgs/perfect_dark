@@ -5,7 +5,7 @@
 #include "types.h"
 
 void mp3Init(ALHeap *heap);
-void mp3PlayFile(s32 romaddr, s32 filesize);
+void mp3PlayFile(uintptr_t romaddr, s32 filesize);
 void func00037e1c(void);
 void func00037e38(void);
 void func00037e68(void);

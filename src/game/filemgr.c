@@ -411,7 +411,7 @@ struct menudialogdef g_FilemgrErrorMenuDialog = {
  * For a file listing, iterate the devices until the one at optionindex is found.
  * Depending on operation, return the device name or index of the first file.
  */
-s32 filemgrGetDeviceNameOrStartIndex(s32 listnum, s32 operation, s32 optionindex)
+uintptr_t filemgrGetDeviceNameOrStartIndex(s32 listnum, s32 operation, s32 optionindex)
 {
 	u16 names[] = {
 		L_OPTIONS_111, // "Game Pak"
@@ -428,7 +428,7 @@ s32 filemgrGetDeviceNameOrStartIndex(s32 listnum, s32 operation, s32 optionindex
 		if (g_FileLists[listnum]->devicestartindexes[i] != -1) {
 			if (remaining == 0) {
 				if (operation == MENUOP_GETOPTGROUPTEXT) {
-					return (s32)langGet(names[i]);
+					return (uintptr_t)langGet(names[i]);
 				}
 
 				return g_FileLists[listnum]->devicestartindexes[i];
@@ -1252,7 +1252,7 @@ void func0f1097d0(s32 device)
 		thing = memaAlloc(align16(g_FileTypeSizes[g_Menus[g_MpPlayerNum].fm.filetypeplusone - 1]));
 
 		if (thing) {
-			filemgrSaveOrLoad(&g_FilemgrFileToCopy, g_Menus[g_MpPlayerNum].fm.filetypeplusone + 103, (s32) thing);
+			filemgrSaveOrLoad(&g_FilemgrFileToCopy, g_Menus[g_MpPlayerNum].fm.filetypeplusone + 103, (uintptr_t) thing);
 		} else {
 			filemgrPushErrorDialog(FILEERROR_OUTOFMEMORY);
 		}

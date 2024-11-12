@@ -6,6 +6,7 @@
 #include "lib/memp.h"
 #include "data.h"
 #include "types.h"
+#include "system.h"
 
 /**
  * memp - memory pool allocation system.
@@ -178,10 +179,12 @@ void *mempAllocFromBank(struct memorypool *pool, u32 size, u8 poolnum)
 	}
 
 	if (pool->leftpos > pool->rightpos) {
+		sysLogPrintf(LOG_NOTE, "#warning: memory pool %x is full. Req: %d\n", pool, size);
 		return 0;
 	}
 
 	if (pool->leftpos + size > pool->rightpos) {
+		sysLogPrintf(LOG_NOTE, "#warning: memory pool %x is full. Req: %d\n", pool, size);
 		return 0;
 	}
 

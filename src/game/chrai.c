@@ -814,3 +814,19 @@ u32 chraiGetCommandLength(u8 *ailist, u32 aioffset)
 
 	return 1;
 }
+
+// used by ext_setup
+u32 chraiGetAilistLength(u8* list)
+{
+	if (!list) return 0;
+
+	u8* cmd = list;
+
+	while (true) {
+		u8 type = cmd[1];
+		cmd += chraiGetCommandLength(cmd, 0);
+		if (type == AICMD_END) break;
+	}
+
+	return (u32)(cmd - list);
+}
