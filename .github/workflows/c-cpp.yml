@@ -25,20 +25,21 @@ jobs:
             mingw-w64-i686-toolchain
             mingw-w64-i686-SDL2
             mingw-w64-i686-zlib
+            mingw-w64-i686-cmake
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Build pd.i686.exe
-        run: make -f Makefile.port -j
+        run: cmake -G"Unix Makefiles" -Bbuild . && cmake --build build -j
       - name: Build pd.pal.i686.exe
-        run: make -f Makefile.port -j ROMID=pal-final
+        run: cmake -G"Unix Makefiles" -Bbuild_pal -DROMID=pal-final . && cmake --build build_pal -j
       - name: Build pd.jpn.i686.exe
-        run: make -f Makefile.port -j ROMID=jpn-final
+        run: cmake -G"Unix Makefiles" -Bbuild_jpn -DROMID=jpn-final . && cmake --build build_jpn -j
       - name: Prepare artifact for packaging
         run: |
           mkdir -p bin/data
-          cp build/ntsc-final-i686-windows/pd.i686.exe bin/
-          cp build/pal-final-i686-windows/pd.pal.i686.exe bin/
-          cp build/jpn-final-i686-windows/pd.jpn.i686.exe bin/
+          cp build/pd.i686.exe bin/
+          cp build_pal/pd.pal.i686.exe bin/
+          cp build_jpn/pd.jpn.i686.exe bin/
           cp /mingw32/bin/{SDL2.dll,zlib1.dll,libgcc_s_dw2-1.dll,libwinpthread-1.dll} bin/
           touch bin/data/put_your_rom_here.txt
       - name: Upload artifact
@@ -55,21 +56,21 @@ jobs:
         run: |
           sudo dpkg --add-architecture i386
           sudo apt-get update
-          sudo apt-get install git gcc g++ gcc-multilib g++-multilib make libsdl2-dev zlib1g-dev libsdl2-dev:i386 zlib1g-dev:i386
+          sudo apt-get install git gcc g++ gcc-multilib g++-multilib make libsdl2-dev zlib1g-dev libsdl2-dev:i386 zlib1g-dev:i386 cmake
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Build pd.i686
-        run: make -f Makefile.port TARGET_PLATFORM=i686-linux -j2
+        run: cmake -G"Unix Makefiles" -Bbuild -DCMAKE_C_FLAGS=-m32 -DCMAKE_CXX_FLAGS=-m32 . && cmake --build build -j
       - name: Build pd.pal.i686
-        run: make -f Makefile.port TARGET_PLATFORM=i686-linux -j2 ROMID=pal-final
+        run: cmake -G"Unix Makefiles" -Bbuild_pal -DCMAKE_C_FLAGS=-m32 -DCMAKE_CXX_FLAGS=-m32 -DROMID=pal-final . && cmake --build build_pal -j
       - name: Build pd.jpn.i686
-        run: make -f Makefile.port TARGET_PLATFORM=i686-linux -j2 ROMID=jpn-final
+        run: cmake -G"Unix Makefiles" -Bbuild_jpn -DCMAKE_C_FLAGS=-m32 -DCMAKE_CXX_FLAGS=-m32 -DROMID=jpn-final . && cmake --build build_jpn -j
       - name: Prepare artifact for packaging
         run: |
           mkdir -p bin/data
-          cp build/ntsc-final-i686-linux/pd.i686 bin/pd
-          cp build/pal-final-i686-linux/pd.pal.i686 bin/pd.pal
-          cp build/jpn-final-i686-linux/pd.jpn.i686 bin/pd.jpn
+          cp build/pd.i686 bin/
+          cp build_pal/pd.pal.i686 bin/
+          cp build_jpn/pd.jpn.i686 bin/
           touch bin/data/put_your_rom_here.txt
       - name: Upload artifact
         uses: actions/upload-artifact@v4
@@ -96,20 +97,21 @@ jobs:
             mingw-w64-x86_64-python
             mingw-w64-x86_64-SDL2
             mingw-w64-x86_64-zlib
+            mingw-w64-x86_64-cmake
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Build pd.x86_64.exe
-        run: make -f Makefile.port -j
+        run: cmake -G"Unix Makefiles" -Bbuild . && cmake --build build -j
       - name: Build pd.pal.x86_64.exe
-        run: make -f Makefile.port -j ROMID=pal-final
+        run: cmake -G"Unix Makefiles" -Bbuild_pal -DROMID=pal-final . && cmake --build build_pal -j
       - name: Build pd.jpn.x86_64.exe
-        run: make -f Makefile.port -j ROMID=jpn-final
+        run: cmake -G"Unix Makefiles" -Bbuild_jpn -DROMID=jpn-final . && cmake --build build_jpn -j
       - name: Prepare artifact for packaging
         run: |
           mkdir -p bin/data
-          cp build/ntsc-final-x86_64-windows/pd.x86_64.exe bin/
-          cp build/pal-final-x86_64-windows/pd.pal.x86_64.exe bin/
-          cp build/jpn-final-x86_64-windows/pd.jpn.x86_64.exe bin/
+          cp build/pd.x86_64.exe bin/
+          cp build_pal/pd.pal.x86_64.exe bin/
+          cp build_jpn/pd.jpn.x86_64.exe bin/
           cp /mingw64/bin/{SDL2.dll,zlib1.dll,libwinpthread-1.dll,libgcc_s_seh-1.dll} bin/
           touch bin/data/put_your_rom_here.txt
       - name: Upload artifact
@@ -126,21 +128,21 @@ jobs:
         run: |
           sudo dpkg --add-architecture amd64
           sudo apt-get update
-          sudo apt-get install git gcc g++ gcc-multilib g++-multilib make libsdl2-dev zlib1g-dev libsdl2-2.0-0
+          sudo apt-get install git gcc g++ gcc-multilib g++-multilib make libsdl2-dev zlib1g-dev libsdl2-2.0-0 cmake
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Build pd.x86_64
-        run: make -f Makefile.port TARGET_PLATFORM=x86_64-linux -j2
+        run: cmake -G"Unix Makefiles" -Bbuild . && cmake --build build -j
       - name: Build pd.pal.x86_64
-        run: make -f Makefile.port TARGET_PLATFORM=x86_64-linux -j2 ROMID=pal-final
+        run: cmake -G"Unix Makefiles" -Bbuild_pal -DROMID=pal-final . && cmake --build build_pal -j
       - name: Build pd.jpn.x86_64
-        run: make -f Makefile.port TARGET_PLATFORM=x86_64-linux -j2 ROMID=jpn-final
+        run: cmake -G"Unix Makefiles" -Bbuild_jpn -DROMID=jpn-final . && cmake --build build_jpn -j
       - name: Prepare artifact for packaging
         run: |
           mkdir -p bin/data
-          cp build/ntsc-final-x86_64-linux/pd.x86_64 bin/pd
-          cp build/pal-final-x86_64-linux/pd.pal.x86_64 bin/pd.pal
-          cp build/jpn-final-x86_64-linux/pd.jpn.x86_64 bin/pd.jpn
+          cp build/pd.x86_64 bin/
+          cp build_pal/pd.pal.x86_64 bin/
+          cp build_jpn/pd.jpn.x86_64 bin/
           touch bin/data/put_your_rom_here.txt
       - name: Upload artifact
         uses: actions/upload-artifact@v4
@@ -160,7 +162,7 @@ jobs:
     - uses: actions/checkout@v4
     - uses: actions/download-artifact@v4
       with:
-        name: pd-x86_64-linux
+        name: pd-i686-linux
         path: dist/linux/bin/
 
     - uses: flatpak/flatpak-github-actions/flatpak-builder@v6

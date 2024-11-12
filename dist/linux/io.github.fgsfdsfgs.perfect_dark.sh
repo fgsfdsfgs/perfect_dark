@@ -11,14 +11,14 @@ done
 # Default to pd as executable but switch to jpn/pal if the NTSC rom
 # is missing but JPN/PAL are present.
 # TODO: Other arch
-executable="pd.x86_64"
+executable="pd.i686"
 if [ -f ${XDG_DATA_HOME}/roms/pd.ntsc-final.z64 ] | \
    [ -f ${XDG_DATA_HOME}/roms/pd.ntsc-1.0.z64 ]; then
-    executable="pd.x86_64"
+    executable="pd.i686"
 elif [ -f ${XDG_DATA_HOME}/roms/pd.jpn-final.z64 ]; then
-    executable="pd.jpn.x86_64"
+    executable="pd.jpn.i686"
 elif [ -f ${XDG_DATA_HOME}/roms/pd.pal-final.z64 ]; then
-    executable="pd.pal.x86_64"
+    executable="pd.pal.i686"
 fi
 
 # If first parameter passed to this script is one of the pd executables,

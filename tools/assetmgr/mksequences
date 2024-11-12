@@ -6,7 +6,12 @@ import os
 import sys
 
 def main():
-    fd = open('src/assets/%s/sequences.json' % os.environ['ROMID'], 'r')
+    if (len(sys.argv) < 2) or (sys.argv[1].startswith('--')):
+        filename = 'src/assets/%s/sequences.json' % os.environ['ROMID']
+    else:
+        filename = sys.argv[1]
+
+    fd = open(filename, 'r')
     data = fd.read()
     fd.close()
 

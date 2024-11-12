@@ -157,5 +157,11 @@ def writefile(filename, contents):
     fd.close()
 
 if 'ROMID' not in os.environ:
-    # default to ntsc-final
-    os.environ['ROMID'] = 'ntsc-final'
+    # check if it's in args
+    for arg in sys.argv:
+        if arg.startswith('--romid='):
+            os.environ['ROMID'] = arg.removeprefix('--romid=')
+            break
+    else:
+        # default to ntsc-final
+        os.environ['ROMID'] = 'ntsc-final'

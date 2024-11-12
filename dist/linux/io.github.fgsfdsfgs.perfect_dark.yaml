@@ -5,8 +5,6 @@ sdk: org.freedesktop.Sdk
 command: io.github.fgsfdsfgs.perfect_dark.sh
 
 finish-args:
-  # multiarch is required for 32bit binaries
-  - --allow=multiarch
   # hardware 3D and controller access
   - --device=all
   # X11 + XShm access
@@ -65,11 +63,11 @@ modules:
     buildsystem: simple
     sources:
       - type: file
-        path: bin/pd
+        path: bin/pd.i686
       - type: file
-        path: bin/pd.jpn
+        path: bin/pd.jpn.i686
       - type: file
-        path: bin/pd.pal
+        path: bin/pd.pal.i686
       - type: file
         path: io.github.fgsfdsfgs.perfect_dark.sh
       - type: file

@@ -105,29 +105,31 @@ Controls can be rebound in `pd.ini`. Default control scheme is as follows:
 1. Install [MSYS2](https://www.msys2.org).
 2. Open the `MINGW64` prompt if building for x86_64, or the `MINGW32` prompt if building for i686. (**NOTE:** _do not_ use the `MSYS` prompt)
 3. Install dependencies:  
-   `pacman -S mingw-w64-x86_64-toolchain mingw-w64-x86_64-SDL2 mingw-w64-x86_64-zlib mingw-w64-i686-toolchain mingw-w64-i686-SDL2 mingw-w64-i686-zlib make git`
+   `pacman -S mingw-w64-x86_64-toolchain mingw-w64-x86_64-SDL2 mingw-w64-x86_64-zlib mingw-w64-x86_64-cmake mingw-w64-i686-toolchain mingw-w64-i686-SDL2 mingw-w64-i686-zlib mingw-w64-i686-cmake make git`
 4. Get the source code:  
    `git clone --recursive https://github.com/fgsfdsfgs/perfect_dark.git && cd perfect_dark`
-5. Run `make -f Makefile.port`.
-   * Add ` ROMID=pal-final` or ` ROMID=jpn-final` at the end of the command if you want to build a PAL or JPN executable respectively.
-6. The resulting executable will be at `build/ntsc-final-x86_64-windows/pd.x86_64.exe` (or at `build/ntsc-final-i686-windows/pd.i686.exe` if building for i686).
+5. Run `cmake -G"Unix Makefiles" -Bbuild .`.
+   * Add ` -DROMID=pal-final` or ` -DROMID=jpn-final` at the end of the command if you want to build a PAL or JPN executable respectively.\
+6. Run `cmake --build build -j4 -- -O`.
+6. The resulting executable will be at `build/pd.x86_64.exe` (or at `build/pd.i686.exe` if building for i686).
 7. If you don't know where you downloaded the source to, you can run `explorer .` to open the current directory.
 
 ### Linux
 
-1. Ensure you have gcc, g++ (version 10.0+) and SDL2 (version 2.0.12+), libGL and ZLib installed on your system.
+1. Ensure you have gcc, g++ (version 10.0+), make, cmake, git and SDL2 (version 2.0.12+), libGL and ZLib installed on your system.
    * If you wish to crosscompile, you will also need to have libraries and compilers for the target platform installed, e.g. `gcc-multilib` and `g++-multilib` for x86_64 -> i686 crosscompilation.
 2. Get the source code:  
    `git clone --recursive https://github.com/fgsfdsfgs/perfect_dark.git && cd perfect_dark`
 3. Run the following command:
-   * ```make -f Makefile.port```
-   * Add ` ROMID=pal-final` or ` ROMID=jpn-final` at the end of the command if you want to build a PAL or JPN executable respectively.
-   * Add ` TARGET_PLATFORM=your-target` at the end of the command if you want to crosscompile.
-4. The resulting executable will be at `build/ntsc-final-<platform>/pd.<arch>` (for example `build/ntsc-final-x86_64-linux/pd.x86_64`).
+   * ```cmake -G"Unix Makefiles" -Bbuild .```
+   * Add ` -DROMID=pal-final` or ` -DROMID=jpn-final` at the end of the command if you want to build a PAL or JPN executable respectively.
+   * Add ` -DCMAKE_C_FLAGS=-m32 -DCMAKE_CXX_FLAGS=-m32` at the end of the command if you want to crosscompile from x86_64 to x86.
+4. Run `cmake --build build -j4`.
+4. The resulting executable will be at `build/pd.<arch>` (for example `build/pd.x86_64`).
 
 ### Notes
 
-Alternate compilers can be specified by passing `TOOLCHAIN=arch-whatever-` as a command line argument.
+Alternate compilers or toolchains can be specified by passing `-DCMAKE_TOOLCHAIN_FILE=whatever` as normal. The port does not build with Visual Studio.
 
 You will need to provide a `jpn-final` or `pal-final` ROM to run executables built for those regions, named `pd.jpn-final.z64` or `pd.pal-final.z64`.
 
