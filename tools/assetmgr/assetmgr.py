@@ -160,7 +160,7 @@ if 'ROMID' not in os.environ:
     # check if it's in args
     for arg in sys.argv:
         if arg.startswith('--romid='):
-            os.environ['ROMID'] = arg.removeprefix('--romid=')
+            os.environ['ROMID'] = arg[len('--romid='):]
             break
     else:
         # default to ntsc-final
