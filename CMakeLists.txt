@@ -205,9 +205,9 @@ list(APPEND LIBS "${GL_LIBRARY}")
 # Platform-specific extra libs
 if(NOT EXTRA_LIBRARIES)
   if(WIN32)
-    set(EXTRA_LIBRARIES dbghelp)
+    set(EXTRA_LIBRARIES dbghelp -static-libstdc++)
   else()
-    set(EXTRA_LIBRARIES m dl)
+    set(EXTRA_LIBRARIES stdc++ m dl)
   endif()
 endif()
 list(APPEND LIBS "${EXTRA_LIBRARIES}")
@@ -279,6 +279,10 @@ set(SRC
   ${SRC_LIB_GU}
   ${SRC_LIB}
 )
+
+if(WIN32)
+  list(APPEND SRC "${CMAKE_SOURCE_DIR}/dist/windows/icon.rc")
+endif()
 
 # Asset files
 
