@@ -773,7 +773,13 @@ void bmoveProcessInput(bool allowc1x, bool allowc1y, bool allowc1buttons, bool i
 
 #ifndef PLATFORM_N64
 	if (allowmlook) {
-		inputMouseGetScaledDelta(&movedata.freelookdx, &movedata.freelookdy);
+		if (!g_PlayerResetIssued) {
+			inputMouseGetScaledDelta(&movedata.freelookdx, &movedata.freelookdy);
+		} else {
+			movedata.freelookdx = 0.0f;
+			movedata.freelookdy = 0.0f;
+			g_PlayerResetIssued = false;
+		}
 		allowmcross = (PLAYER_EXTCFG().mouseaimmode == MOUSEAIM_CLASSIC) &&
 			(movedata.freelookdx || movedata.freelookdy || g_Vars.currentplayer->swivelpos[0] || g_Vars.currentplayer->swivelpos[1]);
 		if (movedata.invertpitch) {

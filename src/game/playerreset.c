@@ -24,6 +24,10 @@
 #include "data.h"
 #include "types.h"
 
+#ifndef PLATFORM_N64
+bool g_PlayerResetIssued = false;
+#endif
+
 void playerInitEyespy(void)
 {
 	struct prop *prop;
@@ -109,6 +113,9 @@ struct cmd32 {
 
 void playerReset(void)
 {
+#ifndef PLATFORM_N64
+	g_PlayerResetIssued = true;
+#endif
 	struct coord pos = {0, 0, 0};
 	RoomNum rooms[8];
 	f32 turnanglerad = 0;
