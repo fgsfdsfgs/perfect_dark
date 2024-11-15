@@ -3504,6 +3504,9 @@ void menuClose(void)
 #endif
 
 	if (g_MenuData.root == MENUROOT_MPPAUSE) {
+#ifndef PLATFORM_N64
+		inputResetRelativeMouseState();
+#endif
 		g_PlayersWithControl[g_Menus[g_MpPlayerNum].playernum] = true;
 	}
 

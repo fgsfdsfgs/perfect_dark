@@ -1305,6 +1305,11 @@ s32 inputGetLastKey(void)
 	return lastKey;
 }
 
+void inputResetRelativeMouseState(void)
+{
+	SDL_GetRelativeMouseState(NULL, NULL);
+}
+
 PD_CONSTRUCTOR static void inputConfigInit(void)
 {
 	configRegisterInt("Input.MouseEnabled", &mouseEnabled, 0, 1);

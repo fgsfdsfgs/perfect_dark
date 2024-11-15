@@ -217,4 +217,7 @@ s32 inputAutoLockMouse(s32 wantlock);
 // show/hide mouse cursor; if mouse lock is on the cursor is always hidden
 void inputMouseShowCursor(s32 show);
 
+// resets the relative mouse state so that the next delta will be zero
+void inputResetRelativeMouseState(void);
+
 #endif
