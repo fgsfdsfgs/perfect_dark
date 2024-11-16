@@ -151,6 +151,41 @@ jobs:
           path: bin/
           retention-days: 0
 
+  build-arm64-nswitch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install host dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install git make cmake curl
+      - name: Install devkitA64 docker image
+        run: sudo docker pull devkitpro/devkita64:latest
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Build pd.arm64.nro
+        run: sudo docker run --name pd --rm -v `pwd`:`pwd` -w `pwd` devkitpro/devkita64:latest bash ./tools/buildscripts/nswitch_docker.sh build
+      - name: Build pd.pal.arm64.nro
+        run: sudo docker run --name pd --rm -v `pwd`:`pwd` -w `pwd` devkitpro/devkita64:latest bash ./tools/buildscripts/nswitch_docker.sh build_pal -DROMID=pal-final
+      - name: Build pd.jpn.arm64.nro
+        run: sudo docker run --name pd --rm -v `pwd`:`pwd` -w `pwd` devkitpro/devkita64:latest bash ./tools/buildscripts/nswitch_docker.sh build_jpn -DROMID=jpn-final
+      - name: Prepare artifact for packaging
+        run: |
+          mkdir -p bin/perfectdark/data
+          mkdir -p bin/perfectdark_pal/data
+          mkdir -p bin/perfectdark_jpn/data
+          cp build/pd.arm64.nro bin/perfectdark/
+          cp build_pal/pd.pal.arm64.nro bin/perfectdark_pal/
+          cp build_jpn/pd.jpn.arm64.nro bin/perfectdark_jpn/
+          touch bin/perfectdark/data/put_your_rom_here.txt
+          touch bin/perfectdark_pal/data/put_your_rom_here.txt
+          touch bin/perfectdark_jpn/data/put_your_rom_here.txt
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: pd-arm64-nswitch
+          path: bin/
+          retention-days: 0
+
   build-flatpak-bundle:
     name: "Build flatpak bundle"
     runs-on: ubuntu-latest
@@ -190,7 +225,7 @@ jobs:
   publish-latest-build:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/port'
-    needs: [build-i686-windows, build-i686-linux, build-x86_64-windows, build-x86_64-linux, build-flatpak-bundle]
+    needs: [build-i686-windows, build-i686-linux, build-x86_64-windows, build-x86_64-linux, build-arm64-nswitch, build-flatpak-bundle]
     permissions:
       contents: write
     steps:
@@ -208,6 +243,7 @@ jobs:
           tar czf ../ci-release/pd-x86_64-linux.tar.gz pd-x86_64-linux
           zip -r ../ci-release/pd-i686-windows.zip pd-i686-windows
           zip -r ../ci-release/pd-x86_64-windows.zip pd-x86_64-windows
+          zip -r ../ci-release/pd-arm64-nswitch.zip pd-arm64-nswitch
           mv io.github.fgsfdsfgs.perfect_dark.flatpak/io.github.fgsfdsfgs.perfect_dark.flatpak ../ci-release/
           popd
           git tag --force ci-dev-build port
