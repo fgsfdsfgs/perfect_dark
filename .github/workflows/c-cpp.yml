@@ -153,6 +153,7 @@ jobs:
 
   build-arm64-nswitch:
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/port'
     steps:
       - name: Install host dependencies
         run: |
