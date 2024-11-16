@@ -235,7 +235,6 @@ static u32 convertCover(u8 *dst, u32 dstpos, u8 *src, u32 srcpos, int num_covers
 		host_covers[i].pos = PD_SWAPPED_VAL(n64_covers[i].pos);
 		host_covers[i].look = PD_SWAPPED_VAL(n64_covers[i].look);
 		host_covers[i].flags = PD_BE16(n64_covers[i].flags);
-		host_covers[i].unk1a = PD_BE16(n64_covers[i].unk1a);
 	}
 
 	dstpos += num_covers * sizeof(struct coverdefinition);

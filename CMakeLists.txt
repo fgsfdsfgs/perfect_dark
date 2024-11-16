@@ -53,6 +53,9 @@ if(WIN32)
 elseif(APPLE)
   # OSX
   set(TARGET_OS "osx")
+elseif(NINTENDO_SWITCH)
+  # Switch
+  set(TARGET_OS "nswitch")
 elseif(UNIX)
   # Generic *nix; assume Linux
   set(TARGET_OS "linux")
@@ -149,6 +152,11 @@ include_directories("${CMAKE_SOURCE_DIR}/port/include")
 include_directories("${CMAKE_BINARY_DIR}/port/include")
 include_directories("${CMAKE_SOURCE_DIR}/port/src/imgui")
 
+# Set Release optimization to -Og until I fix the -O2 issues
+if(NOT (CMAKE_BUILD_TYPE STREQUAL "Debug"))
+  add_compile_options(-Og)
+endif()
+
 # Common CFLAGS
 add_compile_options(
   -fno-inline-functions
@@ -185,19 +193,31 @@ set(LIBS )
 
 # SDL2
 find_package(SDL2 REQUIRED)
+if(NINTENDO_SWITCH)
+  if(NOT SDL2_LIBRARY OR NOT SDL2_INCLUDE_DIR)
+    # sometimes FindSDL2 just wants us to suffer and does not set these
+    set(SDL2_LIBRARY "SDL2")
+    set(SDL2_INCLUDE_DIR "${DEVKITPRO}/portlibs/switch/include/SDL2")
+  endif()
+endif()
 include_directories(SYSTEM "${SDL2_INCLUDE_DIR}")
 list(APPEND LIBS "${SDL2_LIBRARY}")
 
 # ZLib
 find_package(ZLIB REQUIRED)
+if(ZLIB_INCLUDE_DIR)
+  include_directories(SYSTEM "${ZLIB_INCLUDE_DIR}")
+endif()
 list(APPEND LIBS "${ZLIB_LIBRARY}")
 
 # GL
 if(NOT GL_LIBRARY)
   if(WIN32)
-    set(GL_LIBRARY "opengl32")
+    set(GL_LIBRARY opengl32)
+  elseif(NINTENDO_SWITCH)
+    set(GL_LIBRARY EGL glapi drm_nouveau)
   else()
-    set(GL_LIBRARY "GL")
+    set(GL_LIBRARY GL)
   endif()
 endif()
 list(APPEND LIBS "${GL_LIBRARY}")
@@ -206,6 +226,8 @@ list(APPEND LIBS "${GL_LIBRARY}")
 if(NOT EXTRA_LIBRARIES)
   if(WIN32)
     set(EXTRA_LIBRARIES dbghelp -static-libstdc++)
+  elseif(NINTENDO_SWITCH)
+    set(EXTRA_LIBRARIES stdc++ pthread)
   else()
     set(EXTRA_LIBRARIES stdc++ m dl)
   endif()
@@ -297,10 +319,21 @@ add_custom_target(pd_headers ALL DEPENDS ${JSON_HEADERS})
 
 # Game target
 
+set(BIN_NAME "pd${BIN_REGION}.${TARGET_ARCH}")
 add_executable(pd ${SRC})
 add_dependencies(pd pd_headers)
 target_link_libraries(pd ${LIBS})
-set_target_properties(pd PROPERTIES OUTPUT_NAME "pd${BIN_REGION}.${TARGET_ARCH}")
+set_target_properties(pd PROPERTIES OUTPUT_NAME "${BIN_NAME}")
 if(WIN32)
   set_target_properties(pd PROPERTIES WIN32_EXECUTABLE TRUE)
+endif()
+
+# Additional commands for specific platforms.
+
+if(NINTENDO_SWITCH)
+  add_custom_command(TARGET pd POST_BUILD
+    COMMAND nacptool --create "Perfect Dark" "fgsfds and contributors" "${VERSION_ROMID}/${VERSION_BRANCH}/${VERSION_HASH}" "${BIN_NAME}.nacp"
+    COMMAND aarch64-none-elf-strip -o ${CMAKE_BINARY_DIR}/${BIN_NAME}.stripped.elf ${CMAKE_BINARY_DIR}/${BIN_NAME}.elf
+    COMMAND elf2nro ${CMAKE_BINARY_DIR}/${BIN_NAME}.stripped.elf ${CMAKE_BINARY_DIR}/${BIN_NAME}.nro --icon=${CMAKE_SOURCE_DIR}/dist/nswitch/icon.jpg --nacp=${BIN_NAME}.nacp
+  )
 endif()

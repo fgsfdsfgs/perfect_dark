@@ -1003,7 +1003,7 @@ static u32 convertProps(u8* dst, u8* src)
 
 static uintptr_t convertIntro(u8 *dst, u8 *src)
 {
-	u8 cmd_size[] = {
+	static const u8 cmd_size[] = {
 		3, // INTROCMD_SPAWN
 		4, // INTROCMD_WEAPON
 		4, // INTROCMD_AMMO

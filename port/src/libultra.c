@@ -277,7 +277,7 @@ static inline void osEeepromLoad(const char *fname)
 		FILE *fp = fsFileOpenRead(fname);
 		if (fp) {
 			fread(eeprom, 1, EEPROM_SIZE, fp);
-			fsFileClose(fp);
+			fsFileFree(fp);
 		} else {
 			sysLogPrintf(LOG_NOTE, "could not read EEPROM from `%s`: %s", fsFullPath(fname), strerror(errno));
 		}
@@ -289,7 +289,7 @@ static inline void osEeepromSave(const char *fname)
 	FILE* fp = fsFileOpenWrite(fname);
 	if (fp) {
 		fwrite(eeprom, 1, EEPROM_SIZE, fp);
-		fsFileClose(fp);
+		fsFileFree(fp);
 	} else {
 		sysLogPrintf(LOG_ERROR, "could not save EEPROM to `%s`: %s", fsFullPath(fname), strerror(errno));
 	}

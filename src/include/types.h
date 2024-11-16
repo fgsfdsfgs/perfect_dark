@@ -538,8 +538,6 @@ struct modelrodata_type11 { // type 0x11
 	u32 unk0c;
 	u32 unk10;
 	void *unk14;
-	u32 unk18;
-	u32 unk1c;
 };
 
 struct modelrodata_toggle { // type 0x12
@@ -550,7 +548,6 @@ struct modelrodata_toggle { // type 0x12
 struct modelrodata_positionheld { // type 0x15
 	struct coord pos;
 	s16 mtxindex;
-	s32 unk10;
 };
 
 struct modelrodata_stargunfire { // type 0x16
@@ -2847,7 +2844,6 @@ struct coverdefinition {
 	struct coord pos;
 	struct coord look;
 	u16 flags;
-	u16 unk1a;
 };
 
 struct cover {

@@ -228,7 +228,7 @@ s32 configSave(const char *fname)
 		configSaveEntry(cfg, f);
 	}
 
-	fsFileClose(f);
+	fsFileFree(f);
 	return 1;
 }
 
@@ -282,7 +282,7 @@ s32 configLoad(const char *fname)
 		}
 	}
 
-	fsFileClose(f);
+	fsFileFree(f);
 
 	return 1;
 }

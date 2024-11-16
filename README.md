@@ -111,8 +111,8 @@ Controls can be rebound in `pd.ini`. Default control scheme is as follows:
 5. Run `cmake -G"Unix Makefiles" -Bbuild .`.
    * Add ` -DROMID=pal-final` or ` -DROMID=jpn-final` at the end of the command if you want to build a PAL or JPN executable respectively.\
 6. Run `cmake --build build -j4 -- -O`.
-6. The resulting executable will be at `build/pd.x86_64.exe` (or at `build/pd.i686.exe` if building for i686).
-7. If you don't know where you downloaded the source to, you can run `explorer .` to open the current directory.
+7. The resulting executable will be at `build/pd.x86_64.exe` (or at `build/pd.i686.exe` if building for i686).
+8. If you don't know where you downloaded the source to, you can run `explorer .` to open the current directory.
 
 ### Linux
 
@@ -125,7 +125,32 @@ Controls can be rebound in `pd.ini`. Default control scheme is as follows:
    * Add ` -DROMID=pal-final` or ` -DROMID=jpn-final` at the end of the command if you want to build a PAL or JPN executable respectively.
    * Add ` -DCMAKE_C_FLAGS=-m32 -DCMAKE_CXX_FLAGS=-m32` at the end of the command if you want to crosscompile from x86_64 to x86.
 4. Run `cmake --build build -j4`.
-4. The resulting executable will be at `build/pd.<arch>` (for example `build/pd.x86_64`).
+5. The resulting executable will be at `build/pd.<arch>` (for example `build/pd.x86_64`).
+
+### Nintendo Switch
+
+1. Set up the [devkitA64 environment](https://devkitpro.org/wiki/Getting_Started).
+   * On Windows you can do it under MSYS2 or WSL, usually MSYS2 is recommended.
+   * If using MSYS2, make sure to use the **MSYS2** shell, **not** MINGW32 or MINGW64.
+2. Install host dependencies:
+   * On MSYS2: execute command `pacman -Syuu && pacman -S git make cmake python3`
+   * On Linux: use your package manager as normal to install the above dependencies.
+3. Install Switch toolchain and dependencies:
+   * Execute commands:
+     ```
+     dkp-pacman -Syuu
+     dkp-pacman -S devkitA64 libnx switch-zlib switch-sdl2 switch-cmake dkp-toolchain-vars
+     ```
+   * If in MSYS2 or `dkp-pacman` doesn't work, replace it with just `pacman`.
+4. Ensure devkitA64 environment variables are set:
+   * Execute command: `source /opt/devkitpro/switchvars.sh`
+   * If your `$DEVKITPRO` path is different, substitute that instead or set the variables manually.
+5. Configure:
+   * Execute command: `aarch64-none-elf-cmake -G"Unix Makefiles" -Bbuild .`
+   * Add ` -DROMID=pal-final` or ` -DROMID=jpn-final` at the end of the command if you want to build a PAL or JPN executable respectively.
+6. Build:
+   * Execute command: `make -C build -j4`
+7. The resulting executable will be at `build/pd.arm64.nro`.
 
 ### Notes
 

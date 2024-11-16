@@ -312,7 +312,7 @@ void sightTick(bool sighton)
 				if (g_Vars.currentplayer->lookingatprop.prop != g_Vars.currentplayer->trackedprops[0].prop) {
 					struct sndstate *handle;
 
-					handle = snd00010718(&handle, 0, AL_VOL_FULL, AL_PAN_CENTER, SFX_0007, 1, 1, -1, true);
+					handle = snd00010718(NULL, 0, AL_VOL_FULL, AL_PAN_CENTER, SFX_0007, 1, 1, -1, true);
 
 					trackedprop = &g_Vars.currentplayer->trackedprops[0];
 
@@ -338,7 +338,7 @@ void sightTick(bool sighton)
 			if (index >= 0) {
 				struct sndstate *handle;
 
-				handle = snd00010718(&handle, 0, AL_VOL_FULL, AL_PAN_CENTER, SFX_0007, 1, 1, -1, 1);
+				handle = snd00010718(NULL, 0, AL_VOL_FULL, AL_PAN_CENTER, SFX_0007, 1, 1, -1, 1);
 
 				trackedprop = &g_Vars.currentplayer->trackedprops[index];
 
@@ -361,7 +361,7 @@ void sightTick(bool sighton)
 			if (index >= 0) {
 				struct sndstate *handle;
 
-				handle = snd00010718(&handle, 0, AL_VOL_FULL, AL_PAN_CENTER, SFX_0007, 1, 1, -1, 1);
+				handle = snd00010718(NULL, 0, AL_VOL_FULL, AL_PAN_CENTER, SFX_0007, 1, 1, -1, 1);
 
 				trackedprop = &g_Vars.currentplayer->trackedprops[index];
 

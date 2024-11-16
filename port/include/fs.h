@@ -19,7 +19,7 @@ s32 fsFileSize(const char *name);
 
 FILE *fsFileOpenWrite(const char *name);
 FILE *fsFileOpenRead(const char *name);
-void fsFileClose(FILE *f);
+void fsFileFree(FILE *f);
 
 const char *fsGetModDir(void);
 

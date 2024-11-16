@@ -12,16 +12,28 @@
 #include "../fast3d/gfx_sdl.h"
 #include "../fast3d/gfx_opengl.h"
 
+#ifdef PLATFORM_NSWITCH
+#define DEFAULT_VID_WIDTH 1280
+#define DEFAULT_VID_HEIGHT 720
+#define DEFAULT_VID_FULLSCREEN true
+#define DEFAULT_VID_FULLSCREEN_EXCLUSIVE true
+#else
+#define DEFAULT_VID_WIDTH 640
+#define DEFAULT_VID_HEIGHT 480
+#define DEFAULT_VID_FULLSCREEN false
+#define DEFAULT_VID_FULLSCREEN_EXCLUSIVE false
+#endif
+
 static struct GfxWindowManagerAPI *wmAPI;
 static struct GfxRenderingAPI *renderingAPI;
 
 static bool initDone = false;
 
-static s32 vidWidth = 640;
-static s32 vidHeight = 480;
+static s32 vidWidth = DEFAULT_VID_WIDTH;
+static s32 vidHeight = DEFAULT_VID_HEIGHT;
 static s32 vidFramebuffers = true;
-static s32 vidFullscreen = false;
-static s32 vidFullscreenExclusive = false;
+static s32 vidFullscreen = DEFAULT_VID_FULLSCREEN;
+static s32 vidFullscreenExclusive = DEFAULT_VID_FULLSCREEN_EXCLUSIVE;
 static s32 vidMaximize = false;
 static s32 vidAllowHiDpi = false;
 static s32 vidVsync = 1;

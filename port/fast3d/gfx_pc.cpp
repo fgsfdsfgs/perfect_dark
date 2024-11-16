@@ -1637,34 +1637,27 @@ static void gfx_sp_extra_geometry_mode(uint32_t clear, uint32_t set) {
 }
 
 static void gfx_adjust_viewport_or_scissor(XYWidthHeight* area, bool preserve_aspect = false) {
-    if (!fbActive) {
-        area->width *= RATIO_X;
-        area->x *= RATIO_X;
-        area->height *= RATIO_Y;
-        area->y = SCREEN_HEIGHT - area->y;
-        area->y *= RATIO_Y;
-        if (preserve_aspect) {
-            // preserve native aspect ratio
-            const float ratio = gfx_current_native_aspect / gfx_current_dimensions.aspect_ratio;
-            const float midx = gfx_current_dimensions.width * 0.5f;
-            area->x = midx + (area->x - midx) * ratio;
-            area->x += rsp.aspect_ofs * gfx_current_dimensions.width * 0.5f;
-            area->width *= ratio;
-        }
+    // HACK: assume all target framebuffers have the same aspect
+    area->width *= RATIO_X;
+    area->x *= RATIO_X;
+    area->height *= RATIO_Y;
+    area->y = SCREEN_HEIGHT - area->y;
+    area->y *= RATIO_Y;
+    if (preserve_aspect) {
+        // preserve native aspect ratio
+        const float ratio = gfx_current_native_aspect / gfx_current_dimensions.aspect_ratio;
+        const float midx = gfx_current_dimensions.width * 0.5f;
+        area->x = midx + (area->x - midx) * ratio;
+        area->x += rsp.aspect_ofs * gfx_current_dimensions.width * 0.5f;
+        area->width *= ratio;
+    }
 
-        if (!game_renders_to_framebuffer ||
-            (gfx_msaa_level > 1 && gfx_current_dimensions.width == gfx_current_game_window_viewport.width &&
-             gfx_current_dimensions.height == gfx_current_game_window_viewport.height)) {
-            area->x += gfx_current_game_window_viewport.x;
-            area->y += gfx_current_window_dimensions.height -
-                       (gfx_current_game_window_viewport.y + gfx_current_game_window_viewport.height);
-        }
-    } else {
-        area->width *= RATIO_Y;
-        area->height *= RATIO_Y;
-        area->x *= RATIO_Y;
-        area->y = active_fb->second.orig_height - area->y;
-        area->y *= RATIO_Y;
+    if (!game_renders_to_framebuffer ||
+        (gfx_msaa_level > 1 && gfx_current_dimensions.width == gfx_current_game_window_viewport.width &&
+            gfx_current_dimensions.height == gfx_current_game_window_viewport.height)) {
+        area->x += gfx_current_game_window_viewport.x;
+        area->y += gfx_current_window_dimensions.height -
+                    (gfx_current_game_window_viewport.y + gfx_current_game_window_viewport.height);
     }
 }
 
@@ -2726,6 +2719,7 @@ extern "C" void gfx_resize_framebuffer(int fb, uint32_t width, uint32_t height, 
 extern "C" void gfx_set_framebuffer(int fb, float noise_scale) {
     gfx_rapi->start_draw_to_framebuffer(fb, noise_scale);
     gfx_rapi->clear_framebuffer(true, true);
+    active_fb = framebuffers.find(fb);
 }
 
 extern "C" void gfx_copy_framebuffer(int fb_dst, int fb_src, int left, int top, int use_back) {
@@ -2750,4 +2744,5 @@ extern "C" void gfx_copy_framebuffer(int fb_dst, int fb_src, int left, int top, 
 
 extern "C" void gfx_reset_framebuffer(void) {
     gfx_rapi->start_draw_to_framebuffer(0, (float)gfx_current_dimensions.height / SCREEN_HEIGHT);
+    active_fb = framebuffers.end();
 }

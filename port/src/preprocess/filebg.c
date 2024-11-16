@@ -266,7 +266,7 @@ static u32 convertRoomGfxData(u8 *dst, u8 *src, u32 infsize, u32 src_ofs)
 
 	intptr_t endpos = (uintptr_t)dst_header->vertices - src_ofs;
 	uintptr_t curpos_src = sizeof(struct n64_roomgfxdata);
-	uintptr_t curpos_dst = sizeof(struct roomgfxdata);
+	uintptr_t curpos_dst = sizeof(struct roomgfxdata) - sizeof(struct roomblock); // compensate for the [1]
 
 	// roomblocks
 	int ncoords = 0;
