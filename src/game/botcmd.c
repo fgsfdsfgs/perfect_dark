@@ -149,7 +149,7 @@ void botcmdTickDistMode(struct chrdata *chr)
 		if (!insight) {
 			newmode = BOTDISTMODE_ADVANCE;
 			aibot->distoverrideprop = targetprop;
-			aibot->distoverridetimer60 = TICKS(20) + (random() % TICKS(120));
+			aibot->distoverridetimer60 = TICKS(20) + (rngRandom() % TICKS(120));
 		} else if (aibot->distoverrideprop) {
 			if (g_Vars.lvupdate60 < aibot->distoverridetimer60) {
 				aibot->distoverridetimer60 -= g_Vars.lvupdate60;

@@ -117,7 +117,7 @@ void tagsReset(void)
 			// Read 4KB from a random ROM location within 128KB from the start of
 			// the ROM, and write it to a random memory location between 0x80010000
 			// and 0x80030ff8. This will corrupt instructions in the lib segment.
-			dmaExec((u8 *)((random() & 0x1fff8) + 0x80010000), random() & 0x1fffe, 0x1000);
+			dmaExec((u8 *)((rngRandom() & 0x1fff8) + 0x80010000), rngRandom() & 0x1fffe, 0x1000);
 		}
 	}
 #endif

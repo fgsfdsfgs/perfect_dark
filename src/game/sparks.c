@@ -107,9 +107,9 @@ void sparkCreate(struct coord *pos, struct sparktype *type)
 	spark->pos.y = 0.0f;
 	spark->pos.z = 0.0f;
 
-	spark->speed.x = (s32)(random() % (type->unk00 * 2 + 1)) - type->unk00;
-	spark->speed.y = (s32)(random() % (type->unk00 * 2 + 1)) - type->unk00;
-	spark->speed.z = (s32)(random() % (type->unk00 * 2 + 1)) - type->unk00;
+	spark->speed.x = (s32)(rngRandom() % (type->unk00 * 2 + 1)) - type->unk00;
+	spark->speed.y = (s32)(rngRandom() % (type->unk00 * 2 + 1)) - type->unk00;
+	spark->speed.z = (s32)(rngRandom() % (type->unk00 * 2 + 1)) - type->unk00;
 
 	if (spark->speed.y == 0.0f) {
 		spark->speed.y = -0.0001f;
@@ -148,7 +148,7 @@ void sparkCreate(struct coord *pos, struct sparktype *type)
 	}
 
 	if (type->unk18 % 2) {
-		spark->ttl = random() % type->maxage;
+		spark->ttl = rngRandom() % type->maxage;
 	} else {
 		spark->ttl = type->maxage;
 	}
@@ -195,16 +195,16 @@ void sparksCreate(s32 room, struct prop *prop, struct coord *pos, struct coord *
 			type->unk20 = colours[2];
 		}
 	} else if (typenum == SPARKTYPE_PAINT) {
-		type->unk1c = (random() % 2 ? 0xff000000 : 0) | (random() % 2 ? 0x00ff0000 : 0) | (random() % 2 ? 0x0000ff00 : 0) | 0xff;
+		type->unk1c = (rngRandom() % 2 ? 0xff000000 : 0) | (rngRandom() % 2 ? 0x00ff0000 : 0) | (rngRandom() % 2 ? 0x0000ff00 : 0) | 0xff;
 
 		if (type->unk1c == 0x000000ff) {
-			type->unk1c |= 0x0000ff00 << ((random() % 3) * 8);
+			type->unk1c |= 0x0000ff00 << ((rngRandom() % 3) * 8);
 		}
 
-		type->unk20 = (random() % 2 ? 0xff000000 : 0) | (random() % 2 ? 0x00ff0000 : 0) | (random() % 2 ? 0x0000ff00 : 0) | 0xff;
+		type->unk20 = (rngRandom() % 2 ? 0xff000000 : 0) | (rngRandom() % 2 ? 0x00ff0000 : 0) | (rngRandom() % 2 ? 0x0000ff00 : 0) | 0xff;
 
 		if (type->unk20 == 0xff) {
-			type->unk20 |= 0x0000ff00 << ((random() % 3) * 8);
+			type->unk20 |= 0x0000ff00 << ((rngRandom() % 3) * 8);
 		}
 	}
 

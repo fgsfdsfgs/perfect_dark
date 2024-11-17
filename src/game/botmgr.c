@@ -85,7 +85,7 @@ void botmgrAllocateBot(s32 chrnum, s32 aibotnum)
 
 				if (aibot != NULL) {
 					chr->tude = 0;
-					chr->voicebox = random() % 3;
+					chr->voicebox = rngRandom() % 3;
 
 					if (g_HeadsAndBodies[chr->bodynum].ismale == false) {
 						chr->voicebox = VOICEBOX_FEMALE;
@@ -235,7 +235,7 @@ void botmgrAllocateBot(s32 chrnum, s32 aibotnum)
 					aibot->realignangleframe = -1;
 					aibot->waypoints[0] = NULL;
 					aibot->numwaystepstotarget = 0;
-					aibot->random1 = random();
+					aibot->random1 = rngRandom();
 					aibot->random1ttl60 = 0;
 
 					for (i = 0; i < ARRAYCOUNT(aibot->killsbygunfunc); i++) {
@@ -258,7 +258,7 @@ void botmgrAllocateBot(s32 chrnum, s32 aibotnum)
 					aibot->canseecloaked = false;
 
 					aibot->random2ttl60 = 0;
-					aibot->random2 = random();
+					aibot->random2 = rngRandom();
 					aibot->randomfrac = RANDOMFRAC();
 					aibot->cheap = false;
 #if VERSION >= VERSION_NTSC_1_0

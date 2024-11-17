@@ -1820,7 +1820,7 @@ u8 func0007_alerted[] = {
 	/**
 	 * Pseudocode for the below logic:
 	 *
-	 * rand = random()
+	 * rand = rngRandom()
 	 * if rand < 10
 	 *     gun jammed
 	 * else if rand <= 64
@@ -1832,7 +1832,7 @@ u8 func0007_alerted[] = {
 	 *         goto regular_attack
 	 * else
 	 *     regular_attack:
-	 *     if random() > 50
+	 *     if rngRandom() > 50
 	 *         stand or kneel attack (50% chance each)
 	 *     else
 	 *         walk or roll attack (50% chance each)

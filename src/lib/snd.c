@@ -1888,7 +1888,7 @@ void sndTick(void)
 			if (g_SndCurMp3.responsetimer240 <= 0) {
 				if (g_SndCurMp3.responsetype == MP3RESPONSETYPE_WHISPER) {
 					do {
-						index = random() % 4;
+						index = rngRandom() % 4;
 					} while (index == g_SndCurMp3.prevwhisper);
 
 					g_SndCurMp3.prevwhisper = index;
@@ -1901,7 +1901,7 @@ void sndTick(void)
 					}
 				} else if (g_SndCurMp3.responsetype == MP3RESPONSETYPE_ACKNOWLEDGE) {
 					do {
-						index = random() % 4;
+						index = rngRandom() % 4;
 					} while (index == g_SndCurMp3.prevacknowledge);
 
 					g_SndCurMp3.prevacknowledge = index;
@@ -1914,7 +1914,7 @@ void sndTick(void)
 					}
 				} else if (g_SndCurMp3.responsetype == MP3RESPONSETYPE_GREETING) {
 					do {
-						index = random() % 4;
+						index = rngRandom() % 4;
 					} while (index == g_SndCurMp3.prevgreeting);
 
 					g_SndCurMp3.prevgreeting = index;

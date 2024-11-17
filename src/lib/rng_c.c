@@ -10,7 +10,7 @@ u64 g_RngSeed = 0xab8d9f7781280783;
 /**
  * Generate a random number between 0 and 4294967295.
  */
-u32 random(void)
+u32 rngRandom(void)
 {
 	g_RngSeed = ((g_RngSeed << 63) >> 31 | (g_RngSeed << 31) >> 32) ^ (g_RngSeed << 44) >> 32;
 	g_RngSeed = ((g_RngSeed >> 20) & 0xfff) ^ g_RngSeed;
@@ -27,7 +27,7 @@ void rngSetSeed(u64 seed)
 }
 
 /**
- * Rotate the given seed using the same algorithm as random().
+ * Rotate the given seed using the same algorithm as rngRandom().
  *
  * Store the new 64-bit seed at the pointed address and return the same seed
  * cast as a u32.

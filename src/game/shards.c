@@ -88,7 +88,7 @@ void shardsCreate(struct coord *pos, f32 *rotx, f32 *roty, f32 *rotz, f32 relxmi
 		 * when you shoot the bottles, half of them don't play any breaking
 		 * sound effect.
 		 */
-		psCreate(NULL, NULL, SFX_BOTTLE_BREAK + (random() % 2) * 2, -1,
+		psCreate(NULL, NULL, SFX_BOTTLE_BREAK + (rngRandom() % 2) * 2, -1,
 				-1, 0, 0, PSTYPE_NONE, &prop->pos, -1.0f, prop->rooms, -1, -1.0f, -1.0f, -1.0f);
 	} else if (type == SHARDTYPE_WOOD) {
 		psCreate(NULL, NULL, SFX_WOOD_BREAK, -1,
@@ -145,7 +145,7 @@ void shardCreate(RoomNum room, struct coord *pos, f32 rotx, f32 size, s32 type)
 	}
 
 	if (type == SHARDTYPE_WOOD) {
-		s32 rand = random() % 100;
+		s32 rand = rngRandom() % 100;
 
 		if (rand < 20) {
 			g_Shards[g_NextShardNum].colours[0].word = PD_BE32(0xbbbbbbf0);
@@ -182,7 +182,7 @@ void shardCreate(RoomNum room, struct coord *pos, f32 rotx, f32 size, s32 type)
 
 		for (i = 0; i < 3; i++) {
 			for (j = 0; j < 3; j++) {
-				g_Shards[g_NextShardNum].colours[i].bytes[j] = random() % 0xff;
+				g_Shards[g_NextShardNum].colours[i].bytes[j] = rngRandom() % 0xff;
 			}
 		}
 

@@ -361,10 +361,10 @@ Gfx *beamRender(Gfx *gdl, struct beam *beam, bool arg2, u8 arg3)
 			sp130 = 10.0f;
 			texconfig = &g_TexLaserConfigs[0];
 
-			colours[0].a = 150 + (random() % 50);
+			colours[0].a = 150 + (rngRandom() % 50);
 
-			if ((random() % 5) == 0) {
-				colours[0].r = colours[0].g = 255 - (random() % 100);
+			if ((rngRandom() % 5) == 0) {
+				colours[0].r = colours[0].g = 255 - (rngRandom() % 100);
 			}
 		} else {
 			sp130 = 30.0f;
@@ -738,8 +738,8 @@ void casingCreateForHand(s32 handnum, f32 ground, Mtxf *mtx)
 				}
 			}
 
-			sp5c = ((s32)((random() >> 24) * magic) >> 10) + magic;
-			f0 = (random() % sp5c) / PALUP((f32) (OS_CPU_COUNTER / 60));
+			sp5c = ((s32)((rngRandom() >> 24) * magic) >> 10) + magic;
+			f0 = (rngRandom() % sp5c) / PALUP((f32) (OS_CPU_COUNTER / 60));
 
 			newyspeed = casing->speed.y - f0 * 0.2777778f;
 
@@ -795,8 +795,8 @@ void casingCreateForHand(s32 handnum, f32 ground, Mtxf *mtx)
 				}
 			}
 
-			sp4c = ((s32) ((random() >> 24) * magic) >> 10) + magic;
-			f0 = (random() % sp4c) / PALUP((f32) (OS_CPU_COUNTER / 60));
+			sp4c = ((s32) ((rngRandom() >> 24) * magic) >> 10) + magic;
+			f0 = (rngRandom() % sp4c) / PALUP((f32) (OS_CPU_COUNTER / 60));
 
 			newyspeed = casing->speed.y - f0 * 0.2777778f;
 

@@ -223,7 +223,7 @@ bool botactShootFarsight(struct chrdata *chr, s32 arg1, struct coord *vector, st
 	aibot = chr->aibot;
 
 	if (aibot->weaponnum == WEAPON_FARSIGHT) {
-		rand = random() % 100;
+		rand = rngRandom() % 100;
 
 		// 3 in 10 chance of this passing
 		if (rand < 30) {

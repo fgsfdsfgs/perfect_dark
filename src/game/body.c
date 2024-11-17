@@ -299,7 +299,7 @@ struct model *bodyAllocateModel(s32 bodynum, s32 headnum, u32 spawnflags)
 	if (spawnflags & SPAWNFLAG_FORCESUNGLASSES) {
 		sunglasses = true;
 	} else if (spawnflags & SPAWNFLAG_MAYBESUNGLASSES) {
-		sunglasses = random() % 2 == 0;
+		sunglasses = rngRandom() % 2 == 0;
 	}
 
 	if (spawnflags & SPAWNFLAG_FIXEDHEIGHT) {
@@ -325,7 +325,7 @@ s32 bodyChooseHead(s32 bodynum)
 			g_ActiveMaleHeadsIndex = 0;
 		}
 	} else if (bodynum == BODY_FEM_GUARD) {
-		head = g_FemGuardHeads[random() % 3];
+		head = g_FemGuardHeads[rngRandom() % 3];
 	} else {
 		head = g_ActiveFemaleHeads[g_ActiveFemaleHeadsIndex++];
 
@@ -493,10 +493,10 @@ void bodyAllocateChr(s32 stagenum, struct packedchr *packed, s32 cmdindex)
 			if (packed->tude != 4) {
 				chr->tude = packed->tude;
 			} else {
-				chr->tude = random() % 4;
+				chr->tude = rngRandom() % 4;
 			}
 
-			chr->voicebox = random() % 3;
+			chr->voicebox = rngRandom() % 3;
 
 			if (!g_HeadsAndBodies[chr->bodynum].ismale) {
 				chr->voicebox = VOICEBOX_FEMALE;
@@ -519,7 +519,7 @@ void bodyAllocateChr(s32 stagenum, struct packedchr *packed, s32 cmdindex)
 				chr->flags |= CHRFLAG0_AIVSAI;
 			}
 
-			if (random() % 5 == 0) {
+			if (rngRandom() % 5 == 0) {
 				// Make chr punch slower
 				chr->flags2 |= CHRFLAG1_ADJUSTPUNCHSPEED;
 			}
@@ -596,8 +596,8 @@ struct prop *bodyAllocateEyespy(struct pad *pad, RoomNum room)
 			chr->team = 0;
 			chr->squadron = 0;
 			chr->maxdamage = 2;
-			chr->tude = random() & 3;
-			chr->voicebox = random() % 3;
+			chr->tude = rngRandom() & 3;
+			chr->voicebox = rngRandom() % 3;
 			chr->naturalanim = 0;
 			chr->myspecial = 0;
 			chr->yvisang = 0;

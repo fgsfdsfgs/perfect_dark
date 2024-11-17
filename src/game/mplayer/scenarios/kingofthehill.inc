@@ -221,7 +221,7 @@ void kohInitProps(void)
 	struct pad pad;
 
 	if (g_ScenarioData.koh.hillcount > 1) {
-		g_ScenarioData.koh.hillindex = random() % g_ScenarioData.koh.hillcount;
+		g_ScenarioData.koh.hillindex = rngRandom() % g_ScenarioData.koh.hillcount;
 		pad_id = g_ScenarioData.koh.hillpads[g_ScenarioData.koh.hillindex];
 	} else {
 		// @bug: If a stage setup file only has one hill, pad_id is not assigned
@@ -311,7 +311,7 @@ void kohTick(void)
 				previndex = g_ScenarioData.koh.hillindex;
 
 				do {
-					g_ScenarioData.koh.hillindex = random() % g_ScenarioData.koh.hillcount;
+					g_ScenarioData.koh.hillindex = rngRandom() % g_ScenarioData.koh.hillcount;
 				} while (g_ScenarioData.koh.hillindex == previndex);
 
 				padnum = g_ScenarioData.koh.hillpads[g_ScenarioData.koh.hillindex];

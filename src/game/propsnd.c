@@ -1481,7 +1481,7 @@ void psApplyVolPan(struct sndstate *handle, struct coord *pos, f32 dist1, f32 di
 
 s32 psGetRandomSparkSound(void)
 {
-	s32 index = random() % 6;
+	s32 index = rngRandom() % 6;
 
 	s16 sounds[] = {
 		SFX_80B0,

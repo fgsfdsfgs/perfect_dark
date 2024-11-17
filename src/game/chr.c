@@ -1214,7 +1214,7 @@ void chrInit(struct prop *prop, u8 *ailist)
 	chr->cmnum2 = 0;
 	chr->cmnum3 = 0;
 	chr->cmnum4 = 0;
-	chr->cmcount = random() % 300;
+	chr->cmcount = rngRandom() % 300;
 	chr->footstep = 0;
 	chr->magicanim = -1;
 	chr->cover = -1;
@@ -1281,7 +1281,7 @@ void chrInit(struct prop *prop, u8 *ailist)
 	chr->p1p2 = g_Vars.bondplayernum;
 	chr->lastattacker = NULL;
 	chr->race = RACE_HUMAN;
-	chr->aimtesttimer60 = random() % TICKS(30);
+	chr->aimtesttimer60 = rngRandom() % TICKS(30);
 	chr->lastfootsample = 0;
 	chr->poisoncounter = 0;
 	chr->poisonprop = NULL;
@@ -1520,7 +1520,7 @@ void chrFlinchBody(struct chrdata *chr)
 	if (chr->actiontype != ACT_DEAD && chr->flinchcnt < 0) {
 		chr->flinchcnt = 1;
 		chr->hidden2 &= 0x0fff;
-		chr->hidden2 |= (u16)(random() << 13);
+		chr->hidden2 |= (u16)(rngRandom() << 13);
 	}
 }
 
@@ -3681,7 +3681,7 @@ void chrEmitSparks(struct chrdata *chr, struct prop *prop, s32 hitpart, struct c
 		return;
 	}
 
-	if ((random() & 4) == 0) {
+	if ((rngRandom() & 4) == 0) {
 		struct coord coord3;
 		coord3.x = coord2->x * 42.0f + coord->x;
 		coord3.y = coord2->y * 42.0f + coord->y;
@@ -3710,7 +3710,7 @@ void chr0f0260c4(struct model *model, s32 hitpart, struct modelnode *node, struc
 	struct coord spd4;
 	struct coord spc8;
 	s32 spbc[3];
-	s32 alpha = 20 + (random() % 50);
+	s32 alpha = 20 + (rngRandom() % 50);
 	struct modelrodata_dl *rodata;
 	struct modelrwdata_dl *rwdata;
 	s32 spac = 0;
@@ -3995,7 +3995,7 @@ void chrBruise(struct model *model, s32 hitpart, struct modelnode *node, struct 
 	struct coord spd4;
 	struct coord spc8;
 	s32 spbc[3];
-	s32 alpha = 20 + (random() % 50);
+	s32 alpha = 20 + (rngRandom() % 50);
 	struct modelrodata_dl *rodata;
 	struct modelrwdata_dl *rwdata;
 	s32 spac = 0;
@@ -4310,7 +4310,7 @@ void chrDisfigure(struct chrdata *chr, struct coord *exppos, f32 damageradius)
 	s32 i;
 	s32 j;
 
-	u32 rand = random();
+	u32 rand = rngRandom();
 
 	if (g_Vars.mplayerisrunning || !chrIsDead(chr)) {
 		return;
@@ -4708,7 +4708,7 @@ void chrHit(struct shotdata *shotdata, struct hit *hit)
 					type = g_SurfaceTypes[surfacetype];
 
 					if (type->numwallhittexes > 0) {
-						index = random() % type->numwallhittexes;
+						index = rngRandom() % type->numwallhittexes;
 
 						wallhitCreate(
 								&hit->hitthing.pos,
@@ -4744,7 +4744,7 @@ void chrHit(struct shotdata *shotdata, struct hit *hit)
 					type = g_SurfaceTypes[g_Textures[hit->hitthing.texturenum].surfacetype];
 				}
 
-				index = random() % type->numwallhittexes;
+				index = rngRandom() % type->numwallhittexes;
 
 				wallhitCreate(
 						&hit->hitthing.pos,
@@ -5191,7 +5191,7 @@ void shieldhitCreate(struct prop *prop, f32 shield, struct prop *arg2, struct mo
 			shieldhit->unk018[i] = -1;
 		}
 
-		shieldhit->unk011 = 2 + (random() % 6);
+		shieldhit->unk011 = 2 + (rngRandom() % 6);
 		shieldhit->shield = shield;
 
 		if (arg6) {
@@ -6495,7 +6495,7 @@ Gfx *chrRenderShield(Gfx *gdl, struct chrdata *chr, u32 alpha)
 			|| (chrGetShield(chr) > 0 && chr->cmcount < 10)
 			|| (chr->cloakfadefrac > 0 && !chr->cloakfadefinished)) {
 		if (chrGetShield(chr) > 0 && g_Vars.lvupdate240 > 0) {
-			s32 numiterations = (random() % 4) + 1;
+			s32 numiterations = (rngRandom() % 4) + 1;
 			s32 newcmnum = chr->cmnum2;
 			s32 candidate;
 			s8 operation = 0;

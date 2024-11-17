@@ -729,7 +729,7 @@ void chraiExecute(void *entity, s32 proptype)
 
 			if (g_Vars.chrdata->aishootingatmelist >= 0
 					&& ailistFindById(g_Vars.chrdata->aishootingatmelist) != g_Vars.chrdata->ailist
-					&& g_Vars.chrdata->dodgerating > random() % 100
+					&& g_Vars.chrdata->dodgerating > rngRandom() % 100
 					&& chrHasFlag(g_Vars.chrdata, CHRFLAG1_INDARKROOM, BANK_1) == 0
 					&& chrHasFlag(g_Vars.chrdata, CHRFLAG0_AIVSAI, BANK_0) == 0
 					&& ailistFindById(g_Vars.chrdata->aishootingatmelist) != g_Vars.chrdata->ailist

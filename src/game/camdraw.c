@@ -317,7 +317,7 @@ void func0f149f18(void)
 
 	if (var800a45a0->unk470) {
 		for (i = 0; i < 0x4000; i++) {
-			var800a45a0->unk470[i] = random() % 255;
+			var800a45a0->unk470[i] = rngRandom() % 255;
 		}
 	}
 }
@@ -1066,13 +1066,13 @@ void func0f14b394(struct var8007f8e0 *arg0)
 	size = align32(func0f14c814(&arg0->unk004));
 
 	for (i = 0; i < size; i++) {
-		arg0->unk004.textureptr[i] = random() % 0xff;
+		arg0->unk004.textureptr[i] = rngRandom() % 0xff;
 	}
 
 	size = align32(func0f14c814(&arg0->unk010));
 
 	for (i = 0; i < size; i++) {
-		arg0->unk010.textureptr[i] = random() % 0xff;
+		arg0->unk010.textureptr[i] = rngRandom() % 0xff;
 	}
 
 	func0f14b228(arg0);
@@ -2358,7 +2358,7 @@ void func0f14e7e0(u8 *arg0)
 
 	for (i = 0; i < 128; i++) {
 		for (j = 0; j < 128; j++) {
-			arg0[i * 128 + j] = random() % 255;
+			arg0[i * 128 + j] = rngRandom() % 255;
 		}
 	}
 }
@@ -3151,7 +3151,7 @@ bool func0f15015c(s8 device, s32 filenum, u8 *arg2)
 		s32 size = 128;
 
 		for (i = 0; i < size; i++) {
-			arg2[i] = random();
+			arg2[i] = rngRandom();
 		}
 
 		return true;

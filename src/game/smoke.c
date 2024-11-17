@@ -499,7 +499,7 @@ u32 smokeTick(struct prop *prop)
 							part->size = g_SmokeTypes[smoke->type].size * (RANDOMFRAC() * 0.5f + 1.0f);
 						}
 
-						part->alpha = (random() % 70) + 110.0f;
+						part->alpha = (rngRandom() % 70) + 110.0f;
 						part->count = 0;
 						part->rot = RANDOMFRAC() * M_BADTAU;
 						part->deltarot = (0.5f - RANDOMFRAC()) * g_SmokeTypes[smoke->type].bgrotatespeed;

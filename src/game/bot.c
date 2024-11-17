@@ -185,13 +185,13 @@ void botReset(struct chrdata *chr, u8 respawning)
 
 			aibot->waypoints[0] = NULL;
 			aibot->numwaystepstotarget = 0;
-			aibot->random1 = random();
+			aibot->random1 = rngRandom();
 			aibot->random1ttl60 = 0;
 			aibot->targetcloaktimer60 = 0;
 			aibot->canseecloaked = 0;
 			aibot->rcpcloaktimer60 = 0;
 			aibot->random2ttl60 = 0;
-			aibot->random2 = random();
+			aibot->random2 = rngRandom();
 			aibot->randomfrac = RANDOMFRAC();
 			aibot->cheap = 0;
 
@@ -1417,8 +1417,8 @@ void bot0f192a74(struct chrdata *chr)
 	aibot->random3ttl60 -= g_Vars.lvupdate60;
 
 	if (aibot->random3ttl60 <= 0) {
-		aibot->random3 = random();
-		aibot->random3ttl60 = TICKS(20) + random() % TICKS(20);
+		aibot->random3 = rngRandom();
+		aibot->random3ttl60 = TICKS(20) + rngRandom() % TICKS(20);
 	}
 
 	if (g_Vars.lvupdate240 > 0) {
@@ -1559,7 +1559,7 @@ void botChooseGeneralTarget(struct chrdata *botchr)
 		// However, the usage of canseecloaked appears to be botched.
 		// It is implemented in botIsTargetInvisible, but that function is not
 		// called here while canseecloaked is true.
-		if (random() % TICKS(4 * 60 * 60) < g_MpNumChrs * g_Vars.lvupdate60) {
+		if (rngRandom() % TICKS(4 * 60 * 60) < g_MpNumChrs * g_Vars.lvupdate60) {
 			aibot->canseecloaked = true;
 		}
 
@@ -1754,7 +1754,7 @@ s32 botFindTeammateToFollow(struct chrdata *chr, f32 range)
 
 	if ((g_MpSetup.options & MPOPTION_TEAMSENABLED)
 			&& chr->myaction != MA_AIBOTFOLLOW
-			&& (random() % 100) < chr->aibot->followchance) {
+			&& (rngRandom() % 100) < chr->aibot->followchance) {
 		f32 closestdistance = 0;
 		s32 closestplayernum = -1;
 		s32 i;
@@ -1892,8 +1892,8 @@ struct prop *botFindPickup(struct chrdata *chr, s32 criteria)
 
 					for (i = 0; i < ARRAYCOUNT(weaponnums); i++) {
 						if (weaponnums[i] > WEAPON_UNARMED && weaponnums[i] == weapon->weaponnum) {
-							if (random() % 16) {
-								if (weapproplist[i] == NULL || sqdist1 < weapdistlist[i] || random() % 16 == 0) {
+							if (rngRandom() % 16) {
+								if (weapproplist[i] == NULL || sqdist1 < weapdistlist[i] || rngRandom() % 16 == 0) {
 									weapproplist[i] = prop;
 									weapdistlist[i] = sqdist1;
 								}
@@ -1904,8 +1904,8 @@ struct prop *botFindPickup(struct chrdata *chr, s32 criteria)
 
 					ammotype = botactGetAmmoTypeByFunction(weapon->weaponnum, FUNC_PRIMARY);
 
-					if (ammotype > 0 && random() % 16) {
-						if (ammoproplist[ammotype] == NULL || sqdist1 < ammodistlist[ammotype] || random() % 16 == 0) {
+					if (ammotype > 0 && rngRandom() % 16) {
+						if (ammoproplist[ammotype] == NULL || sqdist1 < ammodistlist[ammotype] || rngRandom() % 16 == 0) {
 							ammoproplist[ammotype] = prop;
 							ammodistlist[ammotype] = sqdist1;
 						}
@@ -1928,8 +1928,8 @@ struct prop *botFindPickup(struct chrdata *chr, s32 criteria)
 								if (weaponnum > 0) {
 									for (j = 0; j < ARRAYCOUNT(weaponnums); j++) {
 										if (weaponnums[j] > WEAPON_UNARMED && weaponnum == weaponnums[j]) {
-											if (random() % 16) {
-												if (weapproplist[j] == NULL || sqdist2 < weapdistlist[j] || random() % 16 == 0) {
+											if (rngRandom() % 16) {
+												if (weapproplist[j] == NULL || sqdist2 < weapdistlist[j] || rngRandom() % 16 == 0) {
 													weapproplist[j] = prop;
 													weapdistlist[j] = sqdist2;
 												}
@@ -1939,8 +1939,8 @@ struct prop *botFindPickup(struct chrdata *chr, s32 criteria)
 									}
 								}
 
-								if (random() % 16) {
-									if (ammoproplist[ammotype] == NULL || sqdist2 < ammodistlist[ammotype] || random() % 16 == 0) {
+								if (rngRandom() % 16) {
+									if (ammoproplist[ammotype] == NULL || sqdist2 < ammodistlist[ammotype] || rngRandom() % 16 == 0) {
 										ammoproplist[ammotype] = prop;
 										ammodistlist[ammotype] = sqdist2;
 									}
@@ -1952,11 +1952,11 @@ struct prop *botFindPickup(struct chrdata *chr, s32 criteria)
 							if (weaponnums[i] == WEAPON_MPSHIELD) {
 								sqdist2 = chrGetSquaredDistanceToCoord(chr, &prop->pos);
 
-								if (random() % 16 == 0) {
+								if (rngRandom() % 16 == 0) {
 									break;
 								}
 
-								if (weapproplist[i] == NULL || sqdist2 < weapdistlist[i] || random() % 16 == 0) {
+								if (weapproplist[i] == NULL || sqdist2 < weapdistlist[i] || rngRandom() % 16 == 0) {
 									weapproplist[i] = prop;
 									weapdistlist[i] = sqdist2;
 								}
@@ -2407,8 +2407,8 @@ void botTickUnpaused(struct chrdata *chr)
 		aibot->random2ttl60 -= g_Vars.lvupdate60;
 
 		if (aibot->random2ttl60 < 0) {
-			aibot->random2ttl60 = TICKS(1800) + random() % TICKS(60 * 240);
-			aibot->random2 = random();
+			aibot->random2ttl60 = TICKS(1800) + rngRandom() % TICKS(60 * 240);
+			aibot->random2 = rngRandom();
 			aibot->randomfrac = RANDOMFRAC();
 		}
 
@@ -2539,7 +2539,7 @@ void botTickUnpaused(struct chrdata *chr)
 				if (g_MpSetup.scenario == MPSCENARIO_HOLDTHEBRIEFCASE) {
 					s32 numgetting = botGetCountInTeamDoingCommand(chr, AIBOTCMD_GETCASE2, false);
 
-					if (numgetting <= 0 || (numgetting < (teamsize + 1) / 2 || random() % 100 < 66)) {
+					if (numgetting <= 0 || (numgetting < (teamsize + 1) / 2 || rngRandom() % 100 < 66)) {
 						botApplyScenarioCommand(chr, AIBOTCMD_GETCASE2);
 					} else {
 						botApplyScenarioCommand(chr, AIBOTCMD_NORMAL);
@@ -2547,7 +2547,7 @@ void botTickUnpaused(struct chrdata *chr)
 				} else if (g_MpSetup.scenario == MPSCENARIO_HACKERCENTRAL) {
 					s32 numbots = botGetCountInTeamDoingCommand(chr, AIBOTCMD_DOWNLOAD, false);
 
-					if (aibot->hasuplink || numbots <= 0 || (numbots < (teamsize + 1) / 2 || random() % 100 < 50)) {
+					if (aibot->hasuplink || numbots <= 0 || (numbots < (teamsize + 1) / 2 || rngRandom() % 100 < 50)) {
 						botApplyScenarioCommand(chr, AIBOTCMD_DOWNLOAD);
 					} else {
 						botApplyScenarioCommand(chr, AIBOTCMD_NORMAL);
@@ -2555,7 +2555,7 @@ void botTickUnpaused(struct chrdata *chr)
 				} else if (g_MpSetup.scenario == MPSCENARIO_POPACAP) {
 					s32 numchasing = botGetCountInTeamDoingCommand(chr, AIBOTCMD_POPCAP, false);
 
-					if (numchasing <= 0 || numchasing < (teamsize + 1) / 2 || random() % 100 < 50) {
+					if (numchasing <= 0 || numchasing < (teamsize + 1) / 2 || rngRandom() % 100 < 50) {
 						botApplyScenarioCommand(chr, AIBOTCMD_POPCAP);
 					} else {
 						botApplyScenarioCommand(chr, AIBOTCMD_NORMAL);
@@ -2571,7 +2571,7 @@ void botTickUnpaused(struct chrdata *chr)
 					if (numinhill <= 0 || numinhill < teamsize / 2) {
 						botApplyScenarioCommand(chr, AIBOTCMD_HOLDHILL);
 					} else if (numinhill > botGetNumOpponentsInHill(chr)) {
-						if (random() % 100 < 50) {
+						if (rngRandom() % 100 < 50) {
 							botApplyScenarioCommand(chr, AIBOTCMD_DEFHILL);
 						} else {
 							botApplyScenarioCommand(chr, AIBOTCMD_NORMAL);
@@ -2587,13 +2587,13 @@ void botTickUnpaused(struct chrdata *chr)
 						if (botShouldReturnCtcToken(chr)) {
 							botApplyScenarioCommand(chr, AIBOTCMD_GETCASE);
 						} else if (botIsChrsCtcTokenHeld(chr)) {
-							if (random() % 100 < 30) {
+							if (rngRandom() % 100 < 30) {
 								botApplyScenarioCommand(chr, AIBOTCMD_GETCASE);
 							} else {
 								botApplyScenarioCommand(chr, AIBOTCMD_SAVECASE);
 							}
 						} else {
-							if (random() % 100 < 70 || numgetting <= 0) {
+							if (rngRandom() % 100 < 70 || numgetting <= 0) {
 								botApplyScenarioCommand(chr, AIBOTCMD_GETCASE);
 							} else {
 								botApplyScenarioCommand(chr, AIBOTCMD_SAVECASE);
@@ -2607,7 +2607,7 @@ void botTickUnpaused(struct chrdata *chr)
 						if (botShouldReturnCtcToken(chr)) {
 							botApplyScenarioCommand(chr, AIBOTCMD_GETCASE);
 						} else if (botIsChrsCtcTokenHeld(chr)) {
-							if (numsaving <= 0 || random() % 100 < 70) {
+							if (numsaving <= 0 || rngRandom() % 100 < 70) {
 								botApplyScenarioCommand(chr, AIBOTCMD_SAVECASE);
 							} else {
 								botApplyScenarioCommand(chr, AIBOTCMD_GETCASE);
@@ -2616,9 +2616,9 @@ void botTickUnpaused(struct chrdata *chr)
 							botApplyScenarioCommand(chr, AIBOTCMD_GETCASE);
 						} else if (numsaving <= 0 || numsaving < teamsize / 4) {
 							botApplyScenarioCommand(chr, AIBOTCMD_SAVECASE);
-						} else if (random() % 100 < 30) {
+						} else if (rngRandom() % 100 < 30) {
 							botApplyScenarioCommand(chr, AIBOTCMD_GETCASE);
-						} else if (random() % 100 < 30) {
+						} else if (rngRandom() % 100 < 30) {
 							botApplyScenarioCommand(chr, AIBOTCMD_SAVECASE);
 						} else {
 							botApplyScenarioCommand(chr, AIBOTCMD_NORMAL);
@@ -2627,7 +2627,7 @@ void botTickUnpaused(struct chrdata *chr)
 				}
 
 				// Consider changing command in 20 to 60 seconds
-				aibot->commandtimer60 = TICKS(1200) + random() % TICKS(2400);
+				aibot->commandtimer60 = TICKS(1200) + rngRandom() % TICKS(2400);
 			}
 		}
 
@@ -2724,7 +2724,7 @@ void botTickUnpaused(struct chrdata *chr)
 							s32 index;
 							s32 i;
 
-							index = random() % numtokens;
+							index = rngRandom() % numtokens;
 
 							i = (index + 1) % numtokens;
 
@@ -2752,7 +2752,7 @@ void botTickUnpaused(struct chrdata *chr)
 								aibot->gotoprop = tokens[index];
 							} else if (botCanFollow(chr, tokens[index]->chr)) {
 								newaction = MA_AIBOTFOLLOW;
-								aibot->canbreakfollow = random() % 4 == 0;
+								aibot->canbreakfollow = rngRandom() % 4 == 0;
 								aibot->followingplayernum = mpPlayerGetIndex(tokens[index]->chr);
 							}
 						}
@@ -2770,7 +2770,7 @@ void botTickUnpaused(struct chrdata *chr)
 								// Held by a teammate - follow/protect them
 								if (botCanFollow(chr, tokenchr)) {
 									newaction = MA_AIBOTFOLLOW;
-									aibot->canbreakfollow = random() % 4 == 0;
+									aibot->canbreakfollow = rngRandom() % 4 == 0;
 									aibot->followingplayernum = mpPlayerGetIndex(tokenchr);
 								}
 							} else {
@@ -2860,7 +2860,7 @@ void botTickUnpaused(struct chrdata *chr)
 								// Uplink is held by teammate - protect them
 								if (botCanFollow(chr, uplinkchr)) {
 									newaction = MA_AIBOTFOLLOW;
-									aibot->canbreakfollow = random() % 4 == 0;
+									aibot->canbreakfollow = rngRandom() % 4 == 0;
 									aibot->followingplayernum = mpPlayerGetIndex(uplinkchr);
 								}
 							} else {
@@ -2891,7 +2891,7 @@ void botTickUnpaused(struct chrdata *chr)
 								// Briefcase is held by teammate - protect them
 								if (botCanFollow(chr, tokenchr)) {
 									newaction = MA_AIBOTFOLLOW;
-									aibot->canbreakfollow = random() % 4 == 0;
+									aibot->canbreakfollow = rngRandom() % 4 == 0;
 									aibot->followingplayernum = mpPlayerGetIndex(tokenchr);
 								}
 							} else if (!botIsTargetInvisible(chr, tokenchr) && botPassesCowardCheck(chr, tokenchr)) {
@@ -2919,7 +2919,7 @@ void botTickUnpaused(struct chrdata *chr)
 								// Victim is a teammate - protect them
 								if (botCanFollow(chr, victimchr)) {
 									newaction = MA_AIBOTFOLLOW;
-									aibot->canbreakfollow = random() % 4 == 0;
+									aibot->canbreakfollow = rngRandom() % 4 == 0;
 									aibot->followingplayernum = mpPlayerGetIndex(victimchr);
 								}
 							} else {
@@ -2944,13 +2944,13 @@ void botTickUnpaused(struct chrdata *chr)
 						// Current bot has the briefcase - follow a teammate for protection
 						s32 playernum = -1;
 
-						if (random() % 100 < 66) {
+						if (rngRandom() % 100 < 66) {
 							playernum = botFindTeammateToFollow(chr, 100000);
 						}
 
 						if (playernum >= 0) {
 							newaction = MA_AIBOTFOLLOW;
-							aibot->canbreakfollow = random() % 4 == 0;
+							aibot->canbreakfollow = rngRandom() % 4 == 0;
 							aibot->followingplayernum = playernum;
 						}
 					}
@@ -2962,13 +2962,13 @@ void botTickUnpaused(struct chrdata *chr)
 							// Current bot is the victim - follow a teammate for protection
 							s32 playernum = -1;
 
-							if (random() % 100 < 66) {
+							if (rngRandom() % 100 < 66) {
 								playernum = botFindTeammateToFollow(chr, 100000);
 							}
 
 							if (playernum >= 0) {
 								newaction = MA_AIBOTFOLLOW;
-								aibot->canbreakfollow = random() % 4 == 0;
+								aibot->canbreakfollow = rngRandom() % 4 == 0;
 								aibot->followingplayernum = playernum;
 							}
 						}
@@ -3095,7 +3095,7 @@ void botTickUnpaused(struct chrdata *chr)
 
 				if (playernum >= 0) {
 					newaction = MA_AIBOTFOLLOW;
-					aibot->canbreakfollow = random() % 4 == 0;
+					aibot->canbreakfollow = rngRandom() % 4 == 0;
 					aibot->followingplayernum = playernum;
 				}
 			}
@@ -3435,7 +3435,7 @@ void botTickUnpaused(struct chrdata *chr)
 												aibot->punchtimer60[0] = TICKS(30);
 											}
 
-											if (random() % 3 == 0) {
+											if (rngRandom() % 3 == 0) {
 												aibot->punchtimer60[1] = aibot->punchtimer60[0] - TICKS(20);
 											}
 											break;

@@ -588,10 +588,10 @@ struct frdata *frGetData(void)
 u32 frResolveFrPad(u32 arg0)
 {
 	switch (arg0) {
-	case 31: return random() % 9 + 4;  // 4 - 12
-	case 32: return random() % 9 + 13; // 13 - 21
-	case 33: return random() % 9 + 22; // 22 - 30
-	case 34: return random() % 27 + 4; // 4 - 30
+	case 31: return rngRandom() % 9 + 4;  // 4 - 12
+	case 32: return rngRandom() % 9 + 13; // 13 - 21
+	case 33: return rngRandom() % 9 + 22; // 22 - 30
+	case 34: return rngRandom() % 27 + 4; // 4 - 30
 	}
 
 	return g_FrData.padindexoffset + arg0;

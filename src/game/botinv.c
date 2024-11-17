@@ -904,7 +904,7 @@ void botinvTick(struct chrdata *chr)
 	aibot->dampensuicidesttl60 -= g_Vars.lvupdate60;
 
 	if (aibot->dampensuicidesttl60 < 0) {
-		aibot->dampensuicidesttl60 = TICKS(3600) + random() % TICKS(60);
+		aibot->dampensuicidesttl60 = TICKS(3600) + rngRandom() % TICKS(60);
 
 		for (i = 0; i < ARRAYCOUNT(aibot->suicidesbygunfunc); i++) {
 			aibot->suicidesbygunfunc[i][0] *= 0.9f;
@@ -916,15 +916,15 @@ void botinvTick(struct chrdata *chr)
 	aibot->equipextrascorestimer60 -= g_Vars.lvupdate60;
 
 	if (aibot->equipextrascorestimer60 < 0) {
-		aibot->equipextrascorestimer60 = TICKS(600) + random() % TICKS(3000);
+		aibot->equipextrascorestimer60 = TICKS(600) + rngRandom() % TICKS(3000);
 
 		for (i = 0; i < ARRAYCOUNT(aibot->equipextrascores); i++) {
 			if (aibot->config->difficulty == BOTDIFF_MEAT) {
-				aibot->equipextrascores[i] = random() % 200 - 100; // -100 to +100
+				aibot->equipextrascores[i] = rngRandom() % 200 - 100; // -100 to +100
 			} else if (aibot->config->difficulty == BOTDIFF_EASY) {
-				aibot->equipextrascores[i] = random() % 100 - 50; // -50 to +50
+				aibot->equipextrascores[i] = rngRandom() % 100 - 50; // -50 to +50
 			} else {
-				aibot->equipextrascores[i] = random() % 30 - 15; // -15 to +15
+				aibot->equipextrascores[i] = rngRandom() % 30 - 15; // -15 to +15
 			}
 		}
 	}
@@ -934,8 +934,8 @@ void botinvTick(struct chrdata *chr)
 	aibot->random1ttl60 -= g_Vars.lvupdate60;
 
 	if (aibot->random1ttl60 < 0) {
-		aibot->random1ttl60 = TICKS(120) + random() % TICKS(600);
-		aibot->random1 = random();
+		aibot->random1ttl60 = TICKS(120) + rngRandom() % TICKS(600);
+		aibot->random1 = rngRandom();
 	}
 
 	if (aibot->cyclonedischarging[HAND_LEFT] == 0

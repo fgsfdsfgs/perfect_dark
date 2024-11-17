@@ -89,7 +89,7 @@ void splatTickChr(struct prop *prop)
 			if (thudframe != -1.0f && modelGetCurAnimFrame(chr->model) < thudframe) {
 				osSyncPrintf("SPLAT : Not Dead Enough %s%s%f", "", "", modelGetCurAnimFrame(chr->model));
 			} else if (chr->tickssincesplat > TICKS(30) && chr->deaddropsplatsadded < 6) {
-				chr->deaddropsplatsadded += splatsCreate(1, 1.1f, prop, NULL, 0, 0, isskedar, SPLATTYPE_PUDDLE, TICKS(150), attacker, random() & 8);
+				chr->deaddropsplatsadded += splatsCreate(1, 1.1f, prop, NULL, 0, 0, isskedar, SPLATTYPE_PUDDLE, TICKS(150), attacker, rngRandom() & 8);
 			}
 		} else {
 			// Consider creating a wounded drop
@@ -134,7 +134,7 @@ void splatsCreateForChrHit(struct prop *prop, struct shotdata *shotdata, struct 
 	}
 
 	if (splattype == 0) {
-		u32 qty = random() % 3;
+		u32 qty = rngRandom() % 3;
 
 		if (qty) {
 			chr->stdsplatsadded += splatsCreate(qty, 0.8f, prop, shotdata, arg2, arg3, isskedar, splattype, TICKS(50), chr2, 0);
@@ -424,7 +424,7 @@ void splat0f14986c(struct splatdata *splat)
 	f32 distance;
 	RoomNum smokerooms[2];
 
-	texnum = WALLHITTEX_BLOOD1 + (random() % 3);
+	texnum = WALLHITTEX_BLOOD1 + (rngRandom() % 3);
 
 	if (splat->objprop != NULL && splat->objprop->type == PROPTYPE_OBJ) {
 		obj = splat->objprop->obj;
@@ -437,14 +437,14 @@ void splat0f14986c(struct splatdata *splat)
 
 	switch (splat->splattype) {
 	case SPLATTYPE_PUDDLE:
-		texnum = WALLHITTEX_BLOOD1 + (random() % 3);
+		texnum = WALLHITTEX_BLOOD1 + (rngRandom() % 3);
 		break;
 	case SPLATTYPE_DROP:
-		texnum = WALLHITTEX_BLOOD4 + (random() % 1);
+		texnum = WALLHITTEX_BLOOD4 + (rngRandom() % 1);
 		break;
 	}
 
-	switch (random() % 6) {
+	switch (rngRandom() % 6) {
 	case 0:
 	case 1:
 	case 2:
@@ -501,7 +501,7 @@ void splat0f14986c(struct splatdata *splat)
 			NULL, texnum, splat->room, splat->objprop,
 			splat->chrprop, splat->mtxindex, 0, splat->chr,
 			width, height, minalpha, maxalpha,
-			random() % 360, (u16)splat->timermax, splat->timerspeed, translucent);
+			rngRandom() % 360, (u16)splat->timermax, splat->timerspeed, translucent);
 
 	if (sp88 || sp84) {
 		smokerooms[0] = splat->room;

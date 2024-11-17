@@ -1433,7 +1433,7 @@ Gfx *lvRender(Gfx *gdl)
 								g_CutsceneStaticTimer -= g_Vars.diffframe60;
 
 								if (g_CutsceneStaticTimer < 0) {
-									g_CutsceneStaticTimer = random() % TICKS(200) + TICKS(40);
+									g_CutsceneStaticTimer = rngRandom() % TICKS(200) + TICKS(40);
 									g_CutsceneStaticActive = false;
 								}
 
@@ -1450,7 +1450,7 @@ Gfx *lvRender(Gfx *gdl)
 
 								// Consider a single frame of static, separate
 								// to the main static above
-								if (random() % 60 == 1) {
+								if (rngRandom() % 60 == 1) {
 									cutscenestatic = 255;
 									sndStart(var80095200, SFX_INFIL_STATIC_SHORT, NULL, -1, -1, -1, -1, -1);
 								}

@@ -335,7 +335,7 @@ Gfx *bviewDrawStatic(Gfx *gdl, u32 arg1, s32 arg2)
 	s32 viewheight = viGetViewHeight();
 	s32 viewwidth = viGetViewWidth();
 	s32 viewleft = viGetViewLeft();
-	u16 *fb2 = (u16 *) PHYS_TO_K0(random() & 0xfff00);
+	u16 *fb2 = (u16 *) PHYS_TO_K0(rngRandom() & 0xfff00);
 	s32 y;
 
 	gDPPipeSync(gdl++);
@@ -344,7 +344,7 @@ Gfx *bviewDrawStatic(Gfx *gdl, u32 arg1, s32 arg2)
 
 #ifdef PLATFORM_N64
 	for (y = viewtop; y < viewtop + viewheight; y++) {
-		gdl = bviewCopyPixels(gdl, fb2, random() % 240, 5, y, 1.0f, viewleft, viewwidth);
+		gdl = bviewCopyPixels(gdl, fb2, rngRandom() % 240, 5, y, 1.0f, viewleft, viewwidth);
 	}
 #else
 	gDPSetCombineLERP(gdl++,
@@ -468,8 +468,8 @@ Gfx *bviewDrawFilmInterlace(Gfx *gdl, u32 colour, u32 alpha)
 			}
 		}
 
-		if (random() % 20 == 1) {
-			tmpy = random() % 200;
+		if (rngRandom() % 20 == 1) {
+			tmpy = rngRandom() % 200;
 		}
 
 		gdl = bviewCopyPixels(gdl, fb, tmpy, 5, y, 1, viewleft, viewwidth);
@@ -490,8 +490,8 @@ Gfx *bviewDrawFilmInterlace(Gfx *gdl, u32 colour, u32 alpha)
 			}
 		}
 
-		if (random() % 20 == 1) {
-			tmpy += random() % 200;
+		if (rngRandom() % 20 == 1) {
+			tmpy += rngRandom() % 200;
 		}
 
 		gDPFillRectangle(gdl++, viewleft, tmpy, viewleft + viewwidth, tmpy + 1);
@@ -762,9 +762,9 @@ Gfx *bviewDrawFisheye(Gfx *gdl, u32 colour, u32 alpha, s32 shuttertime60, s8 sta
 
 		for (i = viewtop; i < viewtop + viewheight; i++) {
 			if (hit == EYESPYHIT_DAMAGE) {
-				alpha2 = (random() % 120) + 120;
+				alpha2 = (rngRandom() % 120) + 120;
 				colour = 0xff333300 | (alpha2 & 0xff);
-				f22 = ((random() % 32) + (f32) FBALLOC_HEIGHT) * (1.0f / 256.0f);
+				f22 = ((rngRandom() % 32) + (f32) FBALLOC_HEIGHT) * (1.0f / 256.0f);
 
 				gDPSetEnvColorViaWord(gdl++, colour);
 			} else {
@@ -2163,7 +2163,7 @@ Gfx *bviewDrawNvLens(Gfx *gdl)
 		u8 green;
 
 		if (((var8007f878 & 1) != (y & 1)) != 0) {
-			u8 tmp = random() % 12;
+			u8 tmp = rngRandom() % 12;
 			green = 0xff - tmp;
 		} else {
 			green = 0x94;
@@ -2181,7 +2181,7 @@ Gfx *bviewDrawNvLens(Gfx *gdl)
 		u8 green;
 
 		if (((var8007f878 & 1) != (y & 1)) != 0) {
-			u8 tmp = random() % 12;
+			u8 tmp = rngRandom() % 12;
 			green = 0xff - tmp;
 		} else {
 			green = 0x94;
@@ -2363,7 +2363,7 @@ Gfx *bviewDrawIrLens(Gfx *gdl)
 		}
 #endif
 
-		red += random() % 8;
+		red += rngRandom() % 8;
 
 		if (red > 255) {
 			red = 255;

@@ -272,7 +272,7 @@ struct waygroup *waygroupChooseNeighbour(s32 *groupnums, s32 step, u32 ignoremas
 				}
 
 				if (!g_NavSeed[0] && !g_NavSeed[1]) {
-					if (random() % 2 == 0) {
+					if (rngRandom() % 2 == 0) {
 						break;
 					}
 				} else {
@@ -416,7 +416,7 @@ struct waypoint *waypointChooseNeighbour(s32 *pointnums, s32 step, s32 groupnum,
 				}
 
 				if (!g_NavSeed[0] && !g_NavSeed[1]) {
-					if (random() % 2 == 0) {
+					if (rngRandom() % 2 == 0) {
 						break;
 					}
 				} else {
@@ -610,7 +610,7 @@ void waypointFindSegmentIntoGroup(struct waygroup *fromgroup, struct waygroup *t
 					}
 
 					if (!g_NavSeed[0] && !g_NavSeed[1]) {
-						if (random() % 2 == 0) {
+						if (rngRandom() % 2 == 0) {
 							break;
 						}
 					} else {
@@ -697,7 +697,7 @@ struct waypoint *waypointFindRandomAtStep(s32 *pointnums, s32 step)
 		len++;
 	}
 
-	randomindex = random() % len;
+	randomindex = rngRandom() % len;
 
 	for (i = randomindex; i < len; i++) {
 		struct waypoint *point = &g_StageSetup.waypoints[WPSEG_GET_ID(pointnums[i])];
@@ -728,7 +728,7 @@ struct waygroup *waygroupFindRandomAtStep(s32 *groupnums, s32 step)
 		len++;
 	}
 
-	randomindex = random() % len;
+	randomindex = rngRandom() % len;
 
 	for (i = randomindex; i < len; i++) {
 		struct waygroup *group = &g_StageSetup.waygroups[WPSEG_GET_ID(groupnums[i])];

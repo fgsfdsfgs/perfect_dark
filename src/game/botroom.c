@@ -135,7 +135,7 @@ bool botroomFindPos(RoomNum room, struct coord *pos, f32 *angleptr, s32 *padnump
 		return false;
 	}
 
-	i = random() % totalcount;
+	i = rngRandom() % totalcount;
 
 	if (i < covercount) {
 		coverUnpack(covernums[i], &cover);

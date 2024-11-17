@@ -72,7 +72,7 @@ void menuTickTimers(void)
 
 		if (checksum != CHECKSUM_PLACEHOLDER) {
 			u32 *ptr = (u32 *)&bgReset;
-			ptr += random() % 0x40;
+			ptr += rngRandom() % 0x40;
 			end = &ptr[4];
 
 			while (ptr < end) {

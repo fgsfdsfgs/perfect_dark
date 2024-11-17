@@ -274,13 +274,13 @@ void htbCreateToken(void)
 
 	// Choose the candidate and remove it
 	if (count > 0) {
-		count = random() % count;
+		count = rngRandom() % count;
 		var800869ec = candidates[count];
 		g_ScenarioData.htb.tokenpad = var800869ec->pad;
 		var800869ec->hidden |= OBJHFLAG_DELETING;
 		var800869ec->hidden2 |= OBJH2FLAG_CANREGEN;
 	} else if (g_ScenarioData.htb.nextindex > 0) {
-		g_ScenarioData.htb.tokenpad = g_ScenarioData.htb.padnums[random() % g_ScenarioData.htb.nextindex];
+		g_ScenarioData.htb.tokenpad = g_ScenarioData.htb.padnums[rngRandom() % g_ScenarioData.htb.nextindex];
 	} else {
 		g_ScenarioData.htb.tokenpad = 0;
 	}

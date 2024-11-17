@@ -458,7 +458,7 @@ void weaponPlayWhooshSound(s32 weaponnum, struct prop *prop)
 	} else if (weaponnum == WEAPON_REAPER) {
 		// empty
 	} else if (weaponnum == WEAPON_COMBATKNIFE) {
-		soundnum = random() % 2 == 1 ? SFX_8060 : SFX_8061;
+		soundnum = rngRandom() % 2 == 1 ? SFX_8060 : SFX_8061;
 		speed = 1.05f - RANDOMFRAC() * 0.2f;
 	} else {
 		soundnum = SFX_0069;
@@ -507,7 +507,7 @@ void func0f060bac(s32 weaponnum, struct prop *prop)
 	if (weaponnum == WEAPON_UNARMED) {
 		soundnum = SFX_THUD_808F;
 
-		if ((random() % 2) == 1) {
+		if ((rngRandom() % 2) == 1) {
 			soundnum = SFX_THUD_8094;
 		}
 
@@ -522,7 +522,7 @@ void func0f060bac(s32 weaponnum, struct prop *prop)
 #else
 		soundnum = SFX_HIT_METAL_8079;
 
-		if (weaponnum != WEAPON_COMBATKNIFE && (random() % 2) == 1) {
+		if (weaponnum != WEAPON_COMBATKNIFE && (rngRandom() % 2) == 1) {
 			soundnum = SFX_HATHIT_807C;
 		}
 
@@ -836,7 +836,7 @@ struct prop *shotCalculateHits(s32 handnum, bool isshooting, struct coord *gunpo
 						&& shotdata.gset.weaponnum != WEAPON_LASER
 						&& shotdata.gset.weaponnum != WEAPON_TRANQUILIZER
 						&& shotdata.gset.weaponnum != WEAPON_FARSIGHT) {
-					texnum = random() % surfacetype->numwallhittexes;
+					texnum = rngRandom() % surfacetype->numwallhittexes;
 					texnum = surfacetype->wallhittexes[texnum];
 
 					if (texnum >= WALLHITTEX_GLASS1 && texnum <= WALLHITTEX_GLASS3) {
@@ -856,7 +856,7 @@ struct prop *shotCalculateHits(s32 handnum, bool isshooting, struct coord *gunpo
 				} else {
 					if (!chrIsUsingPaintball(g_Vars.currentplayer->prop->chr)) {
 						if (PLAYERCOUNT() >= 2) {
-							if ((random() % 8) == 0) {
+							if ((rngRandom() % 8) == 0) {
 								smokeCreateSimple(&sp694.pos, rooms2, SMOKETYPE_BULLETIMPACT);
 							}
 						} else {
@@ -866,7 +866,7 @@ struct prop *shotCalculateHits(s32 handnum, bool isshooting, struct coord *gunpo
 						}
 					}
 
-					if (PLAYERCOUNT() <= 2 || g_Vars.lvupdate240 <= 8 || (random() % 4) == 0) {
+					if (PLAYERCOUNT() <= 2 || g_Vars.lvupdate240 <= 8 || (rngRandom() % 4) == 0) {
 						if (sp694.pos.x > -32000 && sp694.pos.x < 32000
 								&& sp694.pos.y > -32000 && sp694.pos.y < 32000
 								&& sp694.pos.z > -32000 && sp694.pos.z < 32000) {
@@ -2376,18 +2376,18 @@ void propsTickPadEffects(void)
 					up.y = -pad.up.y;
 					up.z = -pad.up.z;
 
-					if ((random() % 2048) <= 50) {
+					if ((rngRandom() % 2048) <= 50) {
 						sparksCreate(rooms[0], NULL, &pad.pos, &up, &pad.up, SPARKTYPE_ENVIRONMENTAL1);
 						psCreate(NULL, NULL, psGetRandomSparkSound(), -1, -1, 0, 0, PSTYPE_NONE, &pad.pos, -1, rooms, -1, -1, -1, -1);
 					}
 
-					if ((random() % 2048) <= 15) {
+					if ((rngRandom() % 2048) <= 15) {
 						sparksCreate(rooms[0], NULL, &pad.pos, &up, &pad.up, SPARKTYPE_ENVIRONMENTAL1);
 						sparksCreate(rooms[0], NULL, &pad.pos, &up, &pad.up, SPARKTYPE_ENVIRONMENTAL2);
 						psCreate(NULL, NULL, psGetRandomSparkSound(), -1, -1, 0, 0, PSTYPE_NONE, &pad.pos, -1, rooms, -1, -1, -1, -1);
 					}
 
-					if ((random() % 2048) <= 5) {
+					if ((rngRandom() % 2048) <= 5) {
 						sparksCreate(rooms[0], NULL, &pad.pos, &up, &pad.up, SPARKTYPE_ENVIRONMENTAL1);
 						sparksCreate(rooms[0], NULL, &pad.pos, &up, &pad.up, SPARKTYPE_ENVIRONMENTAL3);
 						psCreate(NULL, NULL, psGetRandomSparkSound(), -1, -1, 0, 0, PSTYPE_NONE, &pad.pos, -1, rooms, -1, -1, -1, -1);

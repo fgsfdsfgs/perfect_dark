@@ -26,7 +26,7 @@ void bodiesReset(s32 stagenum)
 		g_HeadsAndBodies[i].modeldef = NULL;
 	}
 
-	var80062c80 = random() % g_NumBondBodies;
+	var80062c80 = rngRandom() % g_NumBondBodies;
 	var80062b14 = 0;
 	var80062b18 = 0;
 
@@ -67,7 +67,7 @@ void bodiesReset(s32 stagenum)
 	for (i = 0; i < g_NumActiveHeadsPerGender; i++) {
 		do {
 			done = true;
-			g_ActiveMaleHeads[i] = headsavailablelist[random() % headsavailablelen];
+			g_ActiveMaleHeads[i] = headsavailablelist[rngRandom() % headsavailablelen];
 
 			if (headsavailablelen > g_NumActiveHeadsPerGender) {
 				for (j = 0; j < i; j++) {
@@ -97,7 +97,7 @@ void bodiesReset(s32 stagenum)
 	for (i = 0; i < g_NumActiveHeadsPerGender; i++) {
 		do {
 			done = true;
-			g_ActiveFemaleHeads[i] = headsavailablelist[random() % headsavailablelen];
+			g_ActiveFemaleHeads[i] = headsavailablelist[rngRandom() % headsavailablelen];
 
 			if (headsavailablelen > g_NumActiveHeadsPerGender) {
 				for (j = 0; j < i; j++) {

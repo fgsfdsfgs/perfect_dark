@@ -189,7 +189,7 @@ void *vtxstoreAllocate(s32 count, s32 index, struct modelnode *node, s32 level)
 				chrs[tally] = chr;
 				tally++;
 			} else {
-				rand = random() % tally;
+				rand = rngRandom() % tally;
 				chrFadeCorpseWhenOffScreen(chrs[rand]);
 				chrs[rand] = chr;
 			}
@@ -202,7 +202,7 @@ void *vtxstoreAllocate(s32 count, s32 index, struct modelnode *node, s32 level)
 	rand = tally >> 1;
 
 	while (rand) {
-		i = random() % tally;
+		i = rngRandom() % tally;
 
 		if (chrs[i]) {
 			chrFadeCorpseWhenOffScreen(chrs[i]);

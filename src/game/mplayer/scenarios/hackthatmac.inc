@@ -272,13 +272,13 @@ void htbCreateUplink(void)
 	}
 
 	if (count > 0) {
-		count = random() % count;
+		count = rngRandom() % count;
 		var800869ec = candidates[count];
 		var800869ec->hidden |= OBJHFLAG_DELETING;
 		var800869ec->hidden2 |= OBJH2FLAG_CANREGEN;
 		padnum = var800869ec->pad;
 	} else if (g_ScenarioData.htm.numpads > 0) {
-		padnum = g_ScenarioData.htm.padnums[random() % g_ScenarioData.htm.numpads];
+		padnum = g_ScenarioData.htm.padnums[rngRandom() % g_ScenarioData.htm.numpads];
 	} else {
 		padnum = 0;
 	}
@@ -334,7 +334,7 @@ void htmInitProps(void)
 		s32 padnum;
 
 		do {
-			rand = random() % data->numpads;
+			rand = rngRandom() % data->numpads;
 			padnum = data->padnums[rand];
 		} while (padnum <= 0);
 

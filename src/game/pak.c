@@ -370,7 +370,7 @@ u32 pakGenerateSerial(s8 device)
 	}
 
 	value = g_Paks[device].unk2c8;
-	rand = (random() % 496) + 16; // range 16-511
+	rand = (rngRandom() % 496) + 16; // range 16-511
 	count = osGetCount();
 
 	return value ^ rand ^ count;
@@ -2546,7 +2546,7 @@ s32 pakRepairFilesystem(s8 device)
 	}
 #else
 	if (device != SAVEDEVICE_GAMEPAK && g_Paks[device].serial == 0) {
-		g_Paks[device].serial = 0x10 + random() % 0x1ff0;
+		g_Paks[device].serial = 0x10 + rngRandom() % 0x1ff0;
 		return 0;
 	}
 #endif
@@ -2572,7 +2572,7 @@ void pakCorrupt(void)
 
 	for (i = 0; fileids[i] != 0; i++) {
 		for (j = 0; j < 8; j++) {
-			payload[j] = random() & 0xff;
+			payload[j] = rngRandom() & 0xff;
 		}
 
 		address = pakFindFile(SAVEDEVICE_GAMEPAK, fileids[i], &header);
@@ -3427,7 +3427,7 @@ s32 pakCreateFilesystem(s8 device)
 	s32 i;
 
 	for (i = 0; i < 32; i++) {
-		data[i] = random() & 0xff;
+		data[i] = rngRandom() & 0xff;
 	}
 
 	address = pakGetAlignedFileLenByBodyLen(device, pakGetBodyLenByType(device, PAKFILETYPE_TERMINATOR));
@@ -3436,7 +3436,7 @@ s32 pakCreateFilesystem(s8 device)
 #if VERSION >= VERSION_NTSC_1_0
 	g_Paks[device].serial = pakGenerateSerial(device);
 #else
-	g_Paks[device].serial = 0x10 + random() % 0x1ff0;
+	g_Paks[device].serial = 0x10 + rngRandom() % 0x1ff0;
 #endif
 	g_Paks[device].headercachecount = 0;
 

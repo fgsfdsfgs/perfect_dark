@@ -170,7 +170,7 @@ void pacReset(void)
 
 	while (i < g_MpNumChrs) {
 		bool isnew;
-		s32 victimplayernum = random() % g_MpNumChrs;
+		s32 victimplayernum = rngRandom() % g_MpNumChrs;
 
 		for (j = 0, isnew = true; j < i; j++) {
 			if (data->victims[j] == victimplayernum) {

@@ -1096,7 +1096,7 @@ bool aiTryRunToChr(void)
  */
 bool aiRandom(void)
 {
-	g_Vars.chrdata->random = random() & 0xff;
+	g_Vars.chrdata->random = rngRandom() & 0xff;
 	g_Vars.aioffset += 2;
 
 	return false;
@@ -1110,7 +1110,7 @@ bool aiIfRandomLessThan(void)
 	u8 *cmd = g_Vars.ailist + g_Vars.aioffset;
 
 	if ((g_Vars.chrdata && g_Vars.chrdata->random < cmd[2]) ||
-			(g_Vars.hovercar && ((u8)random()) < cmd[2])) {
+			(g_Vars.hovercar && ((u8)rngRandom()) < cmd[2])) {
 		g_Vars.aioffset = chraiGoToLabel(g_Vars.ailist, g_Vars.aioffset, cmd[3]);
 	} else {
 		g_Vars.aioffset += 4;
@@ -1127,7 +1127,7 @@ bool aiIfRandomGreaterThan(void)
 	u8 *cmd = g_Vars.ailist + g_Vars.aioffset;
 
 	if ((g_Vars.chrdata && g_Vars.chrdata->random > cmd[2]) ||
-			(g_Vars.hovercar && ((u8)random()) > cmd[2])) {
+			(g_Vars.hovercar && ((u8)rngRandom()) > cmd[2])) {
 		g_Vars.aioffset = chraiGoToLabel(g_Vars.ailist, g_Vars.aioffset, cmd[3]);
 	} else {
 		g_Vars.aioffset += 4;
@@ -6897,7 +6897,7 @@ bool aiSayQuip(void)
 		bank = (s16 *) g_MaianQuipBank;
 
 		if (row > 2) {
-			row = random() % 2;
+			row = rngRandom() % 2;
 		}
 	} else if (cmd[7] == 0) {
 		if (g_Vars.chrdata->voicebox > 3) {
@@ -6947,7 +6947,7 @@ bool aiSayQuip(void)
 
 	// If soundgap permits talking at this time and probability passes
 	if (g_Vars.chrdata->soundgap == 0 || g_Vars.chrdata->soundgap * TICKS(60) < g_Vars.chrdata->soundtimer) {
-		if (probability > (s32) (random() % 256)) {
+		if (probability > (s32) (rngRandom() % 256)) {
 			// Try and find a chr in the same squadron who is currently talking
 			while (*chrnums != -2) {
 				loopchr = chrFindByLiteralId(*chrnums);
@@ -6972,7 +6972,7 @@ bool aiSayQuip(void)
 			if (!issomeonetalking
 					&& ((numnearbychrs == 0 && (!cmd[6] || cmd[6] == 255)) || (numnearbychrs > 0 && cmd[6] > 0))) {
 				rowptr = (s16 *) bank + row * 4;
-				column = random() % 3;
+				column = rngRandom() % 3;
 
 				if ((cmd[7] & 0x80) == 0) {
 					audioid = rowptr[1 + column];
@@ -7599,8 +7599,8 @@ bool aiShuffleInvestigationTerminals(void)
 	 * else conditions are unreachable so only 3 of the 4 terminals can be
 	 * selected as the destination.
 	 */
-	rand1 = random() % 3;
-	rand2 = random() % 3;
+	rand1 = rngRandom() % 3;
+	rand2 = rngRandom() % 3;
 
 	if (cmd[8] == 0) {
 		// Place the good terminal
@@ -8740,17 +8740,17 @@ bool aiSayCiStaffQuip(void)
 	s16 quip;
 
 	if (cmd[2] == CIQUIP_GREETING) {
-		quip = g_CiGreetingQuips[g_Vars.chrdata->morale][random() % 3];
+		quip = g_CiGreetingQuips[g_Vars.chrdata->morale][rngRandom() % 3];
 		psPlayFromProp((s8)cmd[3], quip, 0, g_Vars.chrdata->prop, PSTYPE_CHRTALK, 0);
 	}
 
 	if (cmd[2] == CIQUIP_MAIN) {
-		quip = g_CiMainQuips[g_Vars.chrdata->morale][random() % 3];
+		quip = g_CiMainQuips[g_Vars.chrdata->morale][rngRandom() % 3];
 		psPlayFromProp((s8)cmd[3], quip, 0, g_Vars.chrdata->prop, PSTYPE_CHRTALK, 0);
 	}
 
 	if (cmd[2] == CIQUIP_ANNOYED) {
-		quip = g_CiAnnoyedQuips[g_Vars.chrdata->morale][random() % 3];
+		quip = g_CiAnnoyedQuips[g_Vars.chrdata->morale][rngRandom() % 3];
 		psPlayFromProp((s8)cmd[3], quip, 0, g_Vars.chrdata->prop, PSTYPE_CHRTALK, 0);
 	}
 
@@ -8791,7 +8791,7 @@ bool aiDoPresetAnimation(void)
 	};
 
 	if (cmd[2] == 255) {
-		chrTryStartAnim(g_Vars.chrdata, anims[7 + (random() % 8)], 0, -1, 0, 15, 0.5);
+		chrTryStartAnim(g_Vars.chrdata, anims[7 + (rngRandom() % 8)], 0, -1, 0, 15, 0.5);
 	} else if (cmd[2] == 254) {
 		struct prop *prop0 = chrGetHeldProp(g_Vars.chrdata, 1);
 		struct prop *prop1 = chrGetHeldProp(g_Vars.chrdata, 0);
@@ -8802,7 +8802,7 @@ bool aiDoPresetAnimation(void)
 			chrTryStartAnim(g_Vars.chrdata, ANIM_FIX_GUN_JAM_HARD, 0, -1, 0, 5, 0.5);
 		}
 	} else if (cmd[2] == 3) {
-		chrTryStartAnim(g_Vars.chrdata, anims[3 + (random() & 1)], 0, -1, 0, 15, 0.5);
+		chrTryStartAnim(g_Vars.chrdata, anims[3 + (rngRandom() & 1)], 0, -1, 0, 15, 0.5);
 	} else {
 		chrTryStartAnim(g_Vars.chrdata, anims[cmd[2]], 0, -1, 0, 15, 0.5);
 	}
@@ -8951,9 +8951,9 @@ bool aiShuffleRuinsPillars(void)
 	struct tag *ptr2 = tagFindById(cmd[3]);
 	struct tag *ptr3 = tagFindById(cmd[4]);
 	struct tag *src;
-	u8 marked1index = random() % 5;
-	u8 marked2index = random() % 5;
-	u8 marked3index = random() % 5;
+	u8 marked1index = rngRandom() % 5;
+	u8 marked2index = rngRandom() % 5;
+	u8 marked3index = rngRandom() % 5;
 	u8 pillars[5];
 	u8 mines[5];
 	pillars[0] = cmd[5];
@@ -8968,11 +8968,11 @@ bool aiShuffleRuinsPillars(void)
 	mines[4] = cmd[17];
 
 	while (marked2index == marked1index) {
-		marked2index = random() % 5;
+		marked2index = rngRandom() % 5;
 	}
 
 	while (marked3index == marked2index || marked3index == marked1index) {
-		marked3index = random() % 5;
+		marked3index = rngRandom() % 5;
 	}
 
 	// Pillar/mine 1
@@ -9132,7 +9132,7 @@ bool aiShufflePelagicSwitches(void)
 
 	for (i = 8; i < 16; i++) {
 		tag = tagFindById(i);
-		index = random() & 7;
+		index = rngRandom() & 7;
 
 		if (buttonsdone[index] == 0) {
 			// Switch has not yet been mapped
@@ -9582,20 +9582,20 @@ bool aiSetDrCarollImages(void)
 	if (drcaroll) {
 		if (cmd[4] == 7) {
 			if ((g_Vars.lvframenum % 4) == 2) {
-				drcaroll->drcarollimage_left = random() % 6;
+				drcaroll->drcarollimage_left = rngRandom() % 6;
 			}
 		} else if (cmd[4] == 8) {
-			drcaroll->drcarollimage_left = random() % 6;
+			drcaroll->drcarollimage_left = rngRandom() % 6;
 		} else {
 			drcaroll->drcarollimage_left = cmd[4];
 		}
 
 		if (cmd[3] == 7) {
 			if ((g_Vars.lvframenum % 4) == 2) {
-				drcaroll->drcarollimage_right = random() % 6;
+				drcaroll->drcarollimage_right = rngRandom() % 6;
 			}
 		} else if (cmd[3] == 8) {
-			drcaroll->drcarollimage_right = random() % 6;
+			drcaroll->drcarollimage_right = rngRandom() % 6;
 		} else {
 			drcaroll->drcarollimage_right = cmd[3];
 		}

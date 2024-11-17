@@ -1070,7 +1070,7 @@ void bwalkUpdateVertical(void)
 					SFX_JO_LANDING_05B7
 				};
 
-				psCreate(NULL, g_Vars.currentplayer->prop, sounds[random() % 3],
+				psCreate(NULL, g_Vars.currentplayer->prop, sounds[rngRandom() % 3],
 						-1, -1, PSFLAG_0400 | PSFLAG_IGNOREROOMS, 0, PSTYPE_NONE, 0, -1, NULL, -1, -1, -1, -1);
 			}
 		}

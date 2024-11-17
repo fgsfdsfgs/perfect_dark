@@ -259,7 +259,7 @@ bool explosionCreate(struct prop *sourceprop, struct coord *exppos, RoomNum *exp
 		f32 sum = xdist * xdist + ydist * ydist + zdist * zdist;
 
 		if (sum * lodscale * lodscale > 400 * 400) {
-			if (random() % 2 == 0) {
+			if (rngRandom() % 2 == 0) {
 				if (sourceprop) {
 					smokeCreateSimple(&sourceprop->pos, sourceprop->rooms, g_ExplosionTypes[type].smoketype);
 				} else {
@@ -711,7 +711,7 @@ void explosionInflictDamage(struct prop *expprop)
 
 	// Flicker room lighting
 	for (i = 0; expprop->rooms[i] != -1; i++) {
-		if (random() % 2048 <= 240) {
+		if (rngRandom() % 2048 <= 240) {
 			roomFlashLighting(expprop->rooms[i], type->rangeh, 255);
 		}
 	}
@@ -1191,7 +1191,7 @@ u32 explosionTick(struct prop *prop)
 		// Create smoke
 		if (((exp->age == TICKS(15) && exp->type == EXPLOSIONTYPE_GASBARREL)
 					|| (exp->age == maxage - TICKS(20) && exp->type != EXPLOSIONTYPE_GASBARREL))
-				&& (exp->type != EXPLOSIONTYPE_BULLETHOLE || (random() % 2) == 0)) {
+				&& (exp->type != EXPLOSIONTYPE_BULLETHOLE || (rngRandom() % 2) == 0)) {
 			if (exp->source) {
 				smokeCreateSimple(&exp->source->pos, exp->source->rooms, type->smoketype);
 			} else {

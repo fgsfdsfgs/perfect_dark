@@ -554,12 +554,12 @@ void creditsCreatePendingBgLayers(u32 mask)
 		s32 shift = i * 8;
 
 		if (g_CreditsData->unk41b0[i] == 0) {
-			g_CreditsData->bglayers[i + 2].type = random() % 12;
+			g_CreditsData->bglayers[i + 2].type = rngRandom() % 12;
 			g_CreditsData->bglayers[i + 2].rotspeed = creditsRandInRange(0.00223f);
 			g_CreditsData->bglayers[i + 2].panspeed = creditsRandInRange(0.00223f);
 
 			if (((u8)(mask >> shift) & 2)) {
-				g_CreditsData->bglayers[i + 2].confignum = random() % 6;
+				g_CreditsData->bglayers[i + 2].confignum = rngRandom() % 6;
 			}
 		}
 	}
@@ -642,20 +642,20 @@ void creditsResetParticles(void)
 		tmp = RANDOMFRAC();
 		g_CreditsData->particles[i].y = (tmp + tmp) * 3000.0f - 3000.0f;
 
-		g_CreditsData->particles[i].unk12 = random() % 4;
-		g_CreditsData->particles[i].colourindex = random() % 4;
+		g_CreditsData->particles[i].unk12 = rngRandom() % 4;
+		g_CreditsData->particles[i].colourindex = rngRandom() % 4;
 		g_CreditsData->particles[i].rotation = RANDOMFRAC() * M_BADTAU;
 
 		if (g_CreditsData->particleminsize < g_CreditsData->particlemaxsize) {
 			g_CreditsData->particles[i].size = g_CreditsData->particleminsize
-				+ (random() % (g_CreditsData->particlemaxsize - g_CreditsData->particleminsize));
+				+ (rngRandom() % (g_CreditsData->particlemaxsize - g_CreditsData->particleminsize));
 		} else {
 			g_CreditsData->particles[i].size = g_CreditsData->particleminsize;
 		}
 
 		g_CreditsData->particles[i].movetype = g_CreditsData->particlemovetype;
 
-		if (random() % 2 == 1) {
+		if (rngRandom() % 2 == 1) {
 			g_CreditsData->particles[i].confignum = g_CreditsData->particleconfignum1;
 		} else {
 			g_CreditsData->particles[i].confignum = g_CreditsData->particleconfignum2;
@@ -685,12 +685,12 @@ void creditsTickParticles(void)
 	} else {
 #if VERSION >= VERSION_NTSC_1_0
 		if (RANDOMFRAC() < 0.007f && joyGetButtons(0, R_TRIG) == 0) {
-			g_CreditsData->particlecolourindex1 = random() % 4;
+			g_CreditsData->particlecolourindex1 = rngRandom() % 4;
 			g_CreditsData->particlecolourweight = 0;
 		}
 #else
 		if (RANDOMFRAC() < 0.007f) {
-			g_CreditsData->particlecolourindex1 = random() % 4;
+			g_CreditsData->particlecolourindex1 = rngRandom() % 4;
 			g_CreditsData->particlecolourweight = 0;
 		}
 #endif
@@ -698,28 +698,28 @@ void creditsTickParticles(void)
 
 #if VERSION >= VERSION_NTSC_1_0
 	if (RANDOMFRAC() < 0.002f && joyGetButtons(0, R_TRIG) == 0) {
-		g_CreditsData->particlemovetype = random() % 5;
+		g_CreditsData->particlemovetype = rngRandom() % 5;
 	}
 #else
 	if (RANDOMFRAC() < 0.002f) {
-		g_CreditsData->particlemovetype = random() % 5;
+		g_CreditsData->particlemovetype = rngRandom() % 5;
 	}
 #endif
 
 #if VERSION >= VERSION_NTSC_1_0
 	if (joyGetButtonsPressedThisFrame(0, R_TRIG)) {
-		g_CreditsData->particlemovetype = random() % 5;
+		g_CreditsData->particlemovetype = rngRandom() % 5;
 
 		if (g_CreditsData->particlecolourindex1 < 0) {
-			g_CreditsData->particlecolourindex1 = random() % 4;
+			g_CreditsData->particlecolourindex1 = rngRandom() % 4;
 			g_CreditsData->particlecolourweight = 0;
 		}
 	}
 #endif
 
 	if (RANDOMFRAC() < 0.007f) {
-		g_CreditsData->particleconfignum1 = random() % 2;
-		g_CreditsData->particleconfignum2 = random() % 2;
+		g_CreditsData->particleconfignum1 = rngRandom() % 2;
+		g_CreditsData->particleconfignum2 = rngRandom() % 2;
 	}
 
 	for (i = 0; i < ARRAYCOUNT(g_CreditsData->particles); i++) {
@@ -744,20 +744,20 @@ void creditsTickParticles(void)
 		if (g_CreditsData->particles[i].z > 0.0f) {
 			g_CreditsData->particles[i].x = RANDOMFRAC() * 2.0f * 3000.0f - 3000.0f;
 			g_CreditsData->particles[i].y = RANDOMFRAC() * 2.0f * 3000.0f - 3000.0f;
-			g_CreditsData->particles[i].unk12 = random() % 4;
-			g_CreditsData->particles[i].colourindex = random() % 4;
+			g_CreditsData->particles[i].unk12 = rngRandom() % 4;
+			g_CreditsData->particles[i].colourindex = rngRandom() % 4;
 			g_CreditsData->particles[i].rotation = RANDOMFRAC() * M_BADTAU;
 
 			if (g_CreditsData->particleminsize < g_CreditsData->particlemaxsize) {
 				g_CreditsData->particles[i].size = g_CreditsData->particleminsize
-					+ random() % (g_CreditsData->particlemaxsize - g_CreditsData->particleminsize);
+					+ rngRandom() % (g_CreditsData->particlemaxsize - g_CreditsData->particleminsize);
 			} else {
 				g_CreditsData->particles[i].size = g_CreditsData->particleminsize;
 			}
 
 			g_CreditsData->particles[i].movetype = g_CreditsData->particlemovetype;
 
-			if (random() % 2 == 1) {
+			if (rngRandom() % 2 == 1) {
 				g_CreditsData->particles[i].confignum = g_CreditsData->particleconfignum1;
 			} else {
 				g_CreditsData->particles[i].confignum = g_CreditsData->particleconfignum2;
@@ -998,7 +998,7 @@ Gfx *creditsDrawBackgroundText(Gfx *gdl, s32 x, s32 y, char *text, struct fontch
 		f32 f24 = i * 0.2f + g_CreditsParticleRotationFrac * 10.0f * M_BADTAU + sp98;
 		f32 f26 = i * 0.1f * (spread + 0.5f) + 1.0f;
 
-		if ((random() % 256) == 1) {
+		if ((rngRandom() % 256) == 1) {
 			f26 *= 10.0f;
 		}
 
@@ -1075,7 +1075,7 @@ void creditsResetSlides(void)
 	}
 
 	for (i = 0; i < NUM_CORE_TEAM; i++) {
-		s32 index = random() % (NUM_CORE_TEAM - i);
+		s32 index = rngRandom() % (NUM_CORE_TEAM - i);
 
 		g_CreditsData->coreteammap[i + 1] = pool[index];
 
@@ -1348,7 +1348,7 @@ void creditsTickSlide(void)
 		} while (credit && credit->more && g_CreditsData->numthisslide < 4);
 
 		for (i = 0; i < ARRAYCOUNT(g_CreditsData->unk41a8); i++) {
-			g_CreditsData->unk41a8[i] = random() % 3 | random() % 3 << 2 | random() % 16 << 4;
+			g_CreditsData->unk41a8[i] = rngRandom() % 3 | rngRandom() % 3 << 2 | rngRandom() % 16 << 4;
 		}
 
 		creditsCreatePendingBgLayers(0xffffffff);
@@ -1656,10 +1656,10 @@ Gfx *creditsDrawSlide(Gfx *gdl)
 				}
 
 				// Apply random flicker
-				if (settled && random() % (g_CreditsData->numthisslide * 16) == 1) {
+				if (settled && rngRandom() % (g_CreditsData->numthisslide * 16) == 1) {
 					transfrac = RANDOMFRAC() * 0.05f;
-					hdir = random() % 3;
-					vdir = random() % 3;
+					hdir = rngRandom() % 3;
+					vdir = rngRandom() % 3;
 				}
 
 				extray = 120 - cury / 2;

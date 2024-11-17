@@ -311,10 +311,10 @@ struct weatherparticledata *weatherAllocateParticles(void)
 void func0f131610(struct weatherdata *weather)
 {
 	weather->unk94 = 0;
-	weather->unk98 = (random() & 7) + 1;
-	weather->unk9c = (random() & 7) + 1;
-	weather->unka0 = (random() & 7) + 1;
-	weather->unka4 = (random() & 0xf) + 10;
+	weather->unk98 = (rngRandom() & 7) + 1;
+	weather->unk9c = (rngRandom() & 7) + 1;
+	weather->unka0 = (rngRandom() & 7) + 1;
+	weather->unka4 = (rngRandom() & 0xf) + 10;
 }
 
 void func0f131678(s32 arg0)

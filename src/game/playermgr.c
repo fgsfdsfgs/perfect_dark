@@ -808,7 +808,7 @@ void playermgrShuffle(void)
 
 	// Randomly swap numbers with later elements
 	for (i = 0; i < MAX_PLAYERS - 1; i++) {
-		s32 otherindex = random() % (MAX_PLAYERS - i);
+		s32 otherindex = rngRandom() % (MAX_PLAYERS - i);
 		s32 tmp = g_Vars.playerorder[i];
 
 		g_Vars.playerorder[i] = g_Vars.playerorder[i + otherindex];

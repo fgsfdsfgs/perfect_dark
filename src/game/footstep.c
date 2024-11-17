@@ -139,7 +139,7 @@ s32 footstepChooseSound(struct chrdata *chr, s32 footstepindex)
 	running = footstepIsRunning(g_FootstepAnims[footstepindex].animnum);
 
 	do {
-		rand = random() % 8;
+		rand = rngRandom() % 8;
 		index = (running ? 2 : 0) + (rand & 5) + floortype * 8;
 	} while (index == chr->lastfootsample);
 

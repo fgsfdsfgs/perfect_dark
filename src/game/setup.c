@@ -2067,7 +2067,7 @@ void setupCreateProps(s32 stagenum)
 				}
 
 				for (i = 0; i < maxsimulants; i++) {
-					slotnum = random() % maxsimulants;
+					slotnum = rngRandom() % maxsimulants;
 
 					while (slotsdone[slotnum]) {
 						slotnum = (slotnum + 1) % maxsimulants;
@@ -2227,7 +2227,7 @@ void setupCreateProps(s32 stagenum)
 							// for storing OBJHFLAG_CONDITIONALSCENERY, which is required
 							// for a match. Any function call would work.
 							if (alwayszero) {
-								random();
+								rngRandom();
 							}
 
 							if (expoffset) {

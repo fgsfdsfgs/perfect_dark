@@ -217,7 +217,7 @@ bool chrIsUsingPaintball(struct chrdata *chr)
 	if (chr && chr->prop && chr->prop->type == PROPTYPE_PLAYER) {
 		setCurrentPlayerNum(playermgrGetPlayerNumByProp(chr->prop));
 	} else {
-		setCurrentPlayerNum(random() % PLAYERCOUNT());
+		setCurrentPlayerNum(rngRandom() % PLAYERCOUNT());
 	}
 
 	paintball = optionsGetPaintball(g_Vars.currentplayerstats->mpindex);
@@ -720,7 +720,7 @@ void wallhitCreateWith20Args(struct coord *relpos, struct coord *arg1, struct co
 	case WALLHITTEX_SCORCH:
 	case WALLHITTEX_PAINT:
 	case WALLHITTEX_WOOD:
-		rotdeg = random() % 360;
+		rotdeg = rngRandom() % 360;
 		break;
 	}
 
@@ -741,7 +741,7 @@ void wallhitCreateWith20Args(struct coord *relpos, struct coord *arg1, struct co
 	default:
 	case WALLHITTEX_SCORCH:
 	case WALLHITTEX_WOOD:
-		rotdeg = random() % 360;
+		rotdeg = rngRandom() % 360;
 		break;
 	}
 
@@ -751,7 +751,7 @@ void wallhitCreateWith20Args(struct coord *relpos, struct coord *arg1, struct co
 			height = 15.0f;
 		}
 
-		rotdeg = random() % 360;
+		rotdeg = rngRandom() % 360;
 		type = WALLHITTYPE_PAINT;
 		timermax = TICKS(10);
 	} else {
@@ -1083,7 +1083,7 @@ void wallhitCreateWith20Args(struct coord *relpos, struct coord *arg1, struct co
 			range = maxalpha - (u32)minalpha;
 
 			if (range) {
-				alpha = minalpha + (random() % range);
+				alpha = minalpha + (rngRandom() % range);
 			} else {
 				alpha = 0;
 			}
@@ -1091,16 +1091,16 @@ void wallhitCreateWith20Args(struct coord *relpos, struct coord *arg1, struct co
 			for (i = 0; i < ARRAYCOUNT(wallhit->basecolours); i++) {
 				switch (type) {
 				case WALLHITTYPE_BULLET:
-					r = g = b = 255 - (random() % 40);
+					r = g = b = 255 - (rngRandom() % 40);
 					a = alpha ? alpha : 255;
 					break;
 				case WALLHITTYPE_SOFT:
-					r = g = b = random() % 70;
-					a = alpha ? alpha : 255 - (random() % 50);
+					r = g = b = rngRandom() % 70;
+					a = alpha ? alpha : 255 - (rngRandom() % 50);
 					break;
 				case WALLHITTYPE_SCORCH:
-					r = g = b = random() % 50;
-					a = alpha ? alpha : 255 - (random() % 80);
+					r = g = b = rngRandom() % 50;
+					a = alpha ? alpha : 255 - (rngRandom() % 80);
 					break;
 				case WALLHITTYPE_BLOOD:
 					r = g_WallhitBloodColour[0];
@@ -1109,9 +1109,9 @@ void wallhitCreateWith20Args(struct coord *relpos, struct coord *arg1, struct co
 					a = alpha ? alpha : 255;
 					break;
 				case WALLHITTYPE_PAINT:
-					r = (random() % 2) ? 0xff : 0;
-					g = (random() % 2) ? 0xff : 0;
-					b = (random() % 2) ? 0xff : 0;
+					r = (rngRandom() % 2) ? 0xff : 0;
+					g = (rngRandom() % 2) ? 0xff : 0;
+					b = (rngRandom() % 2) ? 0xff : 0;
 					a = alpha ? alpha : 255;
 					break;
 				default:
@@ -1486,7 +1486,7 @@ void wallhitFadeSplatsForRemovedChr(struct prop *chrprop)
 				&& wallhit->roomnum > 0
 				&& wallhit->chrprop == chrprop
 				&& g_WallhitTexes[wallhit->texturenum].type == WALLHITTYPE_BLOOD) {
-			if (IS_BLOOD_DROP(wallhit->texturenum) || (random() % 100) < 35) {
+			if (IS_BLOOD_DROP(wallhit->texturenum) || (rngRandom() % 100) < 35) {
 				wallhitFade(wallhit, TICKS(120));
 			} else {
 				wallhit->createdframe = g_Vars.lvframenum;

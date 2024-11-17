@@ -3296,11 +3296,11 @@ void modelRenderNodeStarGunfire(struct modelrenderdata *renderdata, struct model
 			gSPDisplayList(renderdata->gdl++, rodata->gdl);
 
 			for (i = 0; i < rodata->unk00; i++) {
-				u16 rand1 = (random() << 10) & 0xffff;
+				u16 rand1 = (rngRandom() << 10) & 0xffff;
 				s32 s4 = ((coss(rand1) << 5) * 181) >> 18;
 				s32 s3 = ((sins(rand1) << 5) * 181) >> 18;
-				s32 s1 = random() >> 31;
-				s32 mult = 0x10000 - (random() & 0x3fff);
+				s32 s1 = rngRandom() >> 31;
+				s32 mult = 0x10000 - (rngRandom() & 0x3fff);
 				s32 corner1 = 0x200 + s3;
 				s32 corner2 = 0x200 - s3;
 				s32 corner3 = 0x200 - s4;
@@ -3414,7 +3414,7 @@ void modelRenderNodeChrGunfire(struct modelrenderdata *renderdata, struct model 
 		rot2 = cosf(spec);
 		spd0 = sinf(spec);
 
-		scale = 0.75f + (random() % 128) * (1.0f / 256.0f); // 0.75 to 1.25
+		scale = 0.75f + (rngRandom() % 128) * (1.0f / 256.0f); // 0.75 to 1.25
 
 		sp9c.f[0] = rodata->dim.f[0] * scale;
 		sp9c.f[1] = rodata->dim.f[1] * scale;
@@ -3469,7 +3469,7 @@ void modelRenderNodeChrGunfire(struct modelrenderdata *renderdata, struct model 
 
 			tconfig = rodata->texture;
 
-			sp62 = (random() * 1024) & 0xffff;
+			sp62 = (rngRandom() * 1024) & 0xffff;
 			sp5c = (coss(sp62) * tconfig->width * 0xb5) >> 18;
 			sp58 = (sins(sp62) * tconfig->width * 0xb5) >> 18;
 
