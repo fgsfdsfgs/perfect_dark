@@ -31,9 +31,13 @@
 #define	_OS_LIBC_H_
 
 #include "os_pfs.h"
+#include "platform.h"
 
 #ifndef PLATFORM_N64
 #include <stdio.h>
+#endif
+#ifdef PLATFORM_OSX
+#include <strings.h>
 #endif
 
 #ifdef _LANGUAGE_C_PLUS_PLUS
@@ -84,9 +88,11 @@ extern "C" {
 
 /* byte string operations */
 
+#ifndef PLATFORM_OSX
 extern void     bcopy(const void *, void *, size_t);
 extern int      bcmp(const void *, const void *, size_t);
 extern void     bzero(void *, size_t);
+#endif
 
 /* Printf */
 

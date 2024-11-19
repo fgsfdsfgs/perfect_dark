@@ -89,7 +89,7 @@ The input string is UTF-8, and it needs to be re-encoded to a custom encoding.
 A lookup array is used for this.
 
 However, some UTF-8 characters appear multiple types with a different encoding.
-For duplicates, we store the character in JSON as something like \habcd where
+For duplicates, we store the character in JSON as something like \\habcd where
 abcd is the target value in hex.
 """
 def encode_jp(string):

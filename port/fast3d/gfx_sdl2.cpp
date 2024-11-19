@@ -130,7 +130,8 @@ static void gfx_sdl_init(const struct GfxWindowInitSettings *set) {
         { 0, 0, 0                                    }, // for command line override
         { 3, 0, SDL_GL_CONTEXT_PROFILE_COMPATIBILITY },
         { 3, 2, SDL_GL_CONTEXT_PROFILE_CORE },
-        { 2, 1, SDL_GL_CONTEXT_PROFILE_COMPATIBILITY },
+        { 4, 1, SDL_GL_CONTEXT_PROFILE_CORE },
+        { 2, 1, SDL_GL_CONTEXT_PROFILE_COMPATIBILITY }, // will still require GLSL130
     };
 
     u32 glcore = false;
