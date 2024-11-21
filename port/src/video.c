@@ -36,6 +36,7 @@ static s32 vidFramebuffers = true;
 static s32 vidFullscreen = DEFAULT_VID_FULLSCREEN;
 static s32 vidFullscreenExclusive = DEFAULT_VID_FULLSCREEN_EXCLUSIVE;
 static s32 vidMaximize = false;
+static s32 vidCenter = false;
 static s32 vidAllowHiDpi = false;
 static s32 vidVsync = 1;
 static s32 vidMSAA = 1;
@@ -76,6 +77,7 @@ s32 videoInit(void)
 			.fullscreen = vidFullscreen,
 			.fullscreen_is_exclusive = vidFullscreenExclusive,
 			.maximized = vidMaximize,
+			.centered = vidCenter,
 			.allow_hidpi = vidAllowHiDpi
 		}
 	};
@@ -197,6 +199,11 @@ s32 videoGetMaximizeWindow(void)
 	return vidMaximize;
 }
 
+s32 videoGetCenterWindow(void)
+{
+	return vidCenter;
+}
+
 f32 videoGetAspect(void)
 {
 	return gfx_current_dimensions.aspect_ratio;
@@ -245,13 +252,20 @@ void videoSetDisplayMode(const s32 mode_idx)
 	cur_mode = x_pos + 1;
 	vidHeight = strtol(cur_mode, NULL, 10);
 
+	s32 posX = 100;
+	s32 posY = 100;
+	if (vidCenter) {
+		wmAPI->get_centered_positions(vidWidth, vidHeight, &posX, &posY);
+	}
+
 	if (vidFullscreen) {
-		wmAPI->set_closest_resolution(vidWidth, vidHeight);
+		wmAPI->set_closest_resolution(vidWidth, vidHeight, vidCenter);
 	} else {
 		if (vidMaximize) {
 			videoSetMaximizeWindow(false);
+		} else {
+			wmAPI->set_dimensions(vidWidth, vidHeight, posX, posY);
 		}
-		wmAPI->set_dimensions(vidWidth, vidHeight, 100, 100);
 	}
 }
 
@@ -280,7 +294,7 @@ void videoSetFullscreen(s32 fs)
 {
 	if (fs != vidFullscreen) {
 		vidFullscreen = !!fs;
-		wmAPI->set_closest_resolution(vidWidth, vidHeight);
+		wmAPI->set_closest_resolution(vidWidth, vidHeight, vidCenter);
 		wmAPI->set_fullscreen(vidFullscreen);
 		if (!vidFullscreen && vidMaximize) {
 			wmAPI->set_maximize(false);
@@ -304,6 +318,23 @@ void videoSetMaximizeWindow(s32 fs)
 	if (fs != vidMaximize) {
 		vidMaximize = !!fs;
 		wmAPI->set_maximize(vidMaximize);
+		if (vidCenter && !vidMaximize) {
+			s32 posX = 0;
+			s32 posY = 0;
+			wmAPI->get_centered_positions(vidWidth, vidHeight, &posX, &posY);
+			wmAPI->set_dimensions(vidWidth, vidHeight, posX, posY);
+		}
+	}
+}
+
+void videoSetCenterWindow(s32 center)
+{
+	vidCenter = center;
+	if (vidCenter && !vidMaximize) {
+		s32 posX = 0;
+		s32 posY = 0;
+		wmAPI->get_centered_positions(vidWidth, vidHeight, &posX, &posY);
+		wmAPI->set_dimensions(vidWidth, vidHeight, posX, posY);
 	}
 }
 
@@ -379,6 +410,7 @@ PD_CONSTRUCTOR static void videoConfigInit(void)
 	configRegisterInt("Video.DefaultWidth", &vidWidth, 0, 32767);
 	configRegisterInt("Video.DefaultHeight", &vidHeight, 0, 32767);
 	configRegisterInt("Video.ExclusiveFullscreen", &vidFullscreenExclusive, 0, 1);
+	configRegisterInt("Video.CenterWindow", &vidCenter, 0, 1);
 	configRegisterInt("Video.AllowHiDpi", &vidAllowHiDpi, 0, 1);
 	configRegisterInt("Video.VSync", &vidVsync, -1, 10);
 	configRegisterInt("Video.FramebufferEffects", &vidFramebuffers, 0, 1);

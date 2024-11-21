@@ -30,6 +30,8 @@ s32 videoGetFullscreen(void);
 s32 videoGetFullscreenMode(void);
 s32 videoGetMaximizeWindow(void);
 void videoSetMaximizeWindow(s32 fs);
+s32 videoGetCenterWindow(void);
+void videoSetCenterWindow(s32 center);
 u32 videoGetTextureFilter(void);
 s32 videoGetTextureFilter2D(void);
 s32 videoGetDetailTextures(void);

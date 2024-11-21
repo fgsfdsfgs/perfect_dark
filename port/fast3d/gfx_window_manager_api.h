@@ -13,6 +13,7 @@ struct GfxWindowInitSettings {
     bool fullscreen;
     bool fullscreen_is_exclusive;
     bool maximized;
+    bool centered;
     bool allow_hidpi;
 };
 
@@ -29,9 +30,10 @@ struct GfxWindowManagerAPI {
     void (*set_maximize)(bool enable);
     void (*get_active_window_refresh_rate)(uint32_t* refresh_rate);
     void (*set_cursor_visibility)(bool visible);
-    void (*set_closest_resolution)(int32_t width, int32_t height);
+    void (*set_closest_resolution)(int32_t width, int32_t height, bool should_center);
     void (*set_dimensions)(uint32_t width, uint32_t height, int32_t posX, int32_t posY);
     void (*get_dimensions)(uint32_t* width, uint32_t* height, int32_t* posX, int32_t* posY);
+    void (*get_centered_positions)(int32_t width, int32_t height, int32_t *posX, int32_t *posY);
     void (*handle_events)(void);
     bool (*start_frame)(void);
     void (*swap_buffers_begin)(void);

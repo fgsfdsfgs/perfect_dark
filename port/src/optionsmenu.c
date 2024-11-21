@@ -724,14 +724,27 @@ static MenuItemHandlerResult menuhandlerMaximizeWindow(s32 operation, struct men
 	return 0;
 }
 
+static MenuItemHandlerResult menuhandlerCenterWindow(s32 operation, struct menuitem *item, union handlerdata *data)
+{
+	switch (operation) {
+	case MENUOP_GET:
+		return videoGetCenterWindow();
+	case MENUOP_SET:
+		videoSetCenterWindow(data->checkbox.value);
+		break;
+	}
+
+	return 0;
+}
+
 static MenuItemHandlerResult menuhandlerResolution(s32 operation, struct menuitem *item, union handlerdata *data)
 {
 	switch (operation) {
 	case MENUOP_CHECKDISABLED:
-        if (videoGetFullscreen() && videoGetFullscreenMode() == 0) {
-            return true;
-        }
-        break;
+		if (videoGetFullscreen() && videoGetFullscreenMode() == 0) {
+			return true;
+		}
+		break;
 	case MENUOP_GETOPTIONCOUNT:
 		data->dropdown.value = videoGetNumDisplayModes();
 		break;
@@ -898,6 +911,14 @@ struct menuitem g_ExtendedVideoMenuItems[] = {
 		(uintptr_t)"Maximize Window",
 		0,
 		menuhandlerMaximizeWindow,
+	},
+	{
+		MENUITEMTYPE_CHECKBOX,
+		0,
+		MENUITEMFLAG_LITERAL_TEXT,
+		(uintptr_t)"Center Window",
+		0,
+		menuhandlerCenterWindow,
 	},
 	{
 		MENUITEMTYPE_CHECKBOX,

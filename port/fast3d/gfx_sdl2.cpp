@@ -114,6 +114,13 @@ static void gfx_sdl_init(const struct GfxWindowInitSettings *set) {
         posY = 100;
     }
 
+    if (set->centered) {
+        SDL_DisplayMode mode = {};
+        SDL_GetCurrentDisplayMode(0, &mode);
+        posX = mode.w / 2 - window_width / 2;
+        posY = mode.h / 2 - window_height / 2;
+    }
+
     if (set->fullscreen_is_exclusive) {
         fullscreen_flag = SDL_WINDOW_FULLSCREEN;
     }
@@ -235,12 +242,35 @@ static void gfx_sdl_set_cursor_visibility(bool visible) {
     }
 }
 
-static void gfx_sdl_set_closest_resolution(int32_t width, int32_t height) {
+static void get_centered_positions_native(int32_t width, int32_t height, int32_t *posX, int32_t *posY) {
+    const int disp_idx = SDL_GetWindowDisplayIndex(wnd);
+    SDL_DisplayMode mode = {};
+    SDL_GetDesktopDisplayMode(disp_idx, &mode);
+    *posX = mode.w / 2 - width / 2;
+    *posY = mode.h / 2 - height / 2;
+}
+
+static void gfx_sdl_get_centered_positions(int32_t width, int32_t height, int32_t *posX, int32_t *posY) {
+    const int disp_idx = SDL_GetWindowDisplayIndex(wnd);
+    SDL_DisplayMode mode = {};
+    SDL_GetCurrentDisplayMode(disp_idx, &mode);
+    *posX = mode.w / 2 - width / 2;
+    *posY = mode.h / 2 - height / 2;
+}
+
+static void gfx_sdl_set_closest_resolution(int32_t width, int32_t height, bool should_center) {
     const SDL_DisplayMode mode = {.w = width, .h = height};
+    const int disp_idx = SDL_GetWindowDisplayIndex(wnd);
     SDL_DisplayMode closest = {};
-    if (SDL_GetClosestDisplayMode(0, &mode, &closest)) {
+    if (SDL_GetClosestDisplayMode(disp_idx, &mode, &closest)) {
         SDL_SetWindowDisplayMode(wnd, &closest);
         SDL_SetWindowSize(wnd, closest.w, closest.h);
+        if (should_center) {
+            int32_t posX = 0;
+            int32_t posY = 0;
+            get_centered_positions_native(closest.w, closest.h, &posX, &posY);
+            SDL_SetWindowPosition(wnd, posX, posY);
+        }
     }
 }
 
@@ -417,6 +447,7 @@ struct GfxWindowManagerAPI gfx_sdl = {
     gfx_sdl_set_closest_resolution,
     gfx_sdl_set_dimensions,
     gfx_sdl_get_dimensions,
+    gfx_sdl_get_centered_positions,
     gfx_sdl_handle_events,
     gfx_sdl_start_frame,
     gfx_sdl_swap_buffers_begin,
