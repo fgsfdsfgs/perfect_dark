@@ -9,6 +9,7 @@
 #include "game/mainmenu.h"
 #include "game/menu.h"
 #include "game/gamefile.h"
+#include "../fast3d/gfx_modes.h"
 #include "video.h"
 #include "input.h"
 #include "config.h"
@@ -687,6 +688,29 @@ static MenuItemHandlerResult menuhandlerFullScreen(s32 operation, struct menuite
 	return 0;
 }
 
+static MenuItemHandlerResult menuhandlerFullScreenMode(s32 operation, struct menuitem *item, union handlerdata *data)
+{
+	static const char *opts[] = {
+		"Borderless",
+		"Exclusive"
+	};
+
+	switch (operation) {
+	case MENUOP_GETOPTIONCOUNT:
+		data->dropdown.value = ARRAYCOUNT(opts);
+		break;
+	case MENUOP_GETOPTIONTEXT:
+		return (intptr_t)opts[data->dropdown.value];
+	case MENUOP_SET:
+		videoSetFullscreenMode(data->dropdown.value);
+		break;
+	case MENUOP_GETSELECTEDINDEX:
+		data->dropdown.value = videoGetFullscreenMode();
+	}
+
+	return 0;
+}
+
 static MenuItemHandlerResult menuhandlerMaximizeWindow(s32 operation, struct menuitem *item, union handlerdata *data)
 {
 	switch (operation) {
@@ -695,6 +719,29 @@ static MenuItemHandlerResult menuhandlerMaximizeWindow(s32 operation, struct men
 	case MENUOP_SET:
 		videoSetMaximizeWindow(data->checkbox.value);
 		break;
+	}
+
+	return 0;
+}
+
+static MenuItemHandlerResult menuhandlerResolution(s32 operation, struct menuitem *item, union handlerdata *data)
+{
+	switch (operation) {
+	case MENUOP_CHECKDISABLED:
+        if (videoGetFullscreen() && videoGetFullscreenMode() == 0) {
+            return true;
+        }
+        break;
+	case MENUOP_GETOPTIONCOUNT:
+		data->dropdown.value = videoGetNumDisplayModes();
+		break;
+	case MENUOP_GETOPTIONTEXT:
+		return (intptr_t)videoGetDisplayModes()[data->dropdown.value].mode;
+	case MENUOP_SET:
+		videoSetDisplayMode(data->dropdown.value);
+		break;
+	case MENUOP_GETSELECTEDINDEX:
+		data->dropdown.value = videoGetDisplayModeIndex();
 	}
 
 	return 0;
@@ -821,6 +868,30 @@ struct menuitem g_ExtendedVideoMenuItems[] = {
 		menuhandlerFullScreen,
 	},
 	{
+		MENUITEMTYPE_DROPDOWN,
+		0,
+		MENUITEMFLAG_LITERAL_TEXT,
+		(uintptr_t)"Full Screen Mode",
+		0,
+		menuhandlerFullScreenMode,
+	},
+	{
+		MENUITEMTYPE_DROPDOWN,
+		0,
+		MENUITEMFLAG_LITERAL_TEXT,
+		(uintptr_t)"Resolution",
+		0,
+		menuhandlerResolution,
+	},
+	{
+		MENUITEMTYPE_DROPDOWN,
+		0,
+		MENUITEMFLAG_LITERAL_TEXT,
+		(uintptr_t)"Texture Filtering",
+		0,
+		menuhandlerTexFilter,
+	},
+	{
 		MENUITEMTYPE_CHECKBOX,
 		0,
 		MENUITEMFLAG_LITERAL_TEXT,
@@ -835,14 +906,6 @@ struct menuitem g_ExtendedVideoMenuItems[] = {
 		(uintptr_t)"Detail Textures",
 		0,
 		menuhandlerTexDetail,
-	},
-	{
-		MENUITEMTYPE_DROPDOWN,
-		0,
-		MENUITEMFLAG_LITERAL_TEXT,
-		(uintptr_t)"Texture Filtering",
-		0,
-		menuhandlerTexFilter,
 	},
 	{
 		MENUITEMTYPE_CHECKBOX,

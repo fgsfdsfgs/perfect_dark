@@ -6,6 +6,7 @@
 #include <PR/gbi.h>
 #include "platform.h"
 #include "config.h"
+#include "../fast3d/gfx_modes.h"
 #include "video.h"
 
 #include "../fast3d/gfx_api.h"
@@ -39,6 +40,8 @@ static s32 vidAllowHiDpi = false;
 static s32 vidVsync = 1;
 static s32 vidMSAA = 1;
 static s32 vidFramerateLimit = 0;
+static struct GfxModes *vidModes = NULL; // Allocated in videoAllocDisplayModes(). Freed in videoShutdown().
+static s32 vidNumModes = 0;
 
 static s32 texFilter = FILTER_LINEAR;
 static s32 texFilter2D = true;
@@ -78,6 +81,7 @@ s32 videoInit(void)
 	};
 
 	gfx_init(&set);
+	videoAllocDisplayModes();
 
 	if (!wmAPI->set_swap_interval(vidVsync)) {
 		vidVsync = 0;
@@ -177,17 +181,78 @@ s32 videoGetHeight(void)
 
 s32 videoGetFullscreen(void)
 {
+	vidFullscreen = wmAPI->get_fullscreen_state();
 	return vidFullscreen;
+}
+
+s32 videoGetFullscreenMode(void)
+{
+	vidFullscreenExclusive = wmAPI->get_fullscreen_flag_mode();
+	return vidFullscreenExclusive;
 }
 
 s32 videoGetMaximizeWindow(void)
 {
+	vidMaximize = wmAPI->get_maximized_state();
 	return vidMaximize;
 }
 
 f32 videoGetAspect(void)
 {
 	return gfx_current_dimensions.aspect_ratio;
+}
+
+s32 videoGetDisplayModeIndex(void)
+{
+	for (int i = 1; i < vidNumModes; ++i) {
+		char tmp[10] = {0};
+		snprintf(tmp, sizeof tmp, "%dx%d", gfx_current_dimensions.width, gfx_current_dimensions.height);
+		if (strcmp(tmp, vidModes[i].mode) == 0) {
+			return i;
+		}
+	}
+
+	// Current dimensions don't match any known mode, so return index 0, "Custom".
+	return 0;
+}
+
+void videoAllocDisplayModes(void)
+{
+	vidModes = wmAPI->alloc_display_modes(vidModes, &vidNumModes);
+}
+
+struct GfxModes *videoGetDisplayModes(void)
+{
+	return vidModes;
+}
+
+s32 videoGetNumDisplayModes(void)
+{
+	return vidNumModes;
+}
+
+void videoSetDisplayMode(const s32 mode_idx)
+{
+	const char *cur_mode = vidModes[mode_idx].mode;
+	char *x_pos = NULL;
+
+	if (mode_idx == 0) {
+		// "Custom" video mode.
+		return;
+	}
+
+	vidWidth = strtol(cur_mode, &x_pos, 10);
+	cur_mode = x_pos + 1;
+	vidHeight = strtol(cur_mode, NULL, 10);
+
+	if (vidFullscreen) {
+		wmAPI->set_closest_resolution(vidWidth, vidHeight);
+	} else {
+		if (vidMaximize) {
+			videoSetMaximizeWindow(false);
+		}
+		wmAPI->set_dimensions(vidWidth, vidHeight, 100, 100);
+	}
 }
 
 s32 videoGetTextureFilter2D(void)
@@ -215,7 +280,22 @@ void videoSetFullscreen(s32 fs)
 {
 	if (fs != vidFullscreen) {
 		vidFullscreen = !!fs;
+		wmAPI->set_closest_resolution(vidWidth, vidHeight);
 		wmAPI->set_fullscreen(vidFullscreen);
+		if (!vidFullscreen && vidMaximize) {
+			wmAPI->set_maximize(false);
+			wmAPI->set_maximize(true);
+		}
+	}
+}
+
+void videoSetFullscreenMode(s32 mode)
+{
+	vidFullscreenExclusive = mode;
+	wmAPI->set_fullscreen_flag(mode);
+	if (vidFullscreen) {
+		wmAPI->set_fullscreen(false);
+		wmAPI->set_fullscreen(true);
 	}
 }
 
@@ -285,6 +365,11 @@ void videoResetTextureCache(void)
 void videoFreeCachedTexture(const void *texptr)
 {
 	gfx_texture_cache_delete(texptr);
+}
+
+void videoShutdown(void)
+{
+	free(vidModes);
 }
 
 PD_CONSTRUCTOR static void videoConfigInit(void)

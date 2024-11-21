@@ -88,6 +88,7 @@ static void cleanup(void)
 	sysLogPrintf(LOG_NOTE, "shutdown");
 	inputSaveBinds();
 	configSave(CONFIG_PATH);
+	videoShutdown();
 	crashShutdown();
 	// TODO: actually shut down all subsystems
 }

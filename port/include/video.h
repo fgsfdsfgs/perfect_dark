@@ -27,17 +27,25 @@ s32 videoGetWidth(void);
 s32 videoGetHeight(void);
 f32 videoGetAspect(void);
 s32 videoGetFullscreen(void);
+s32 videoGetFullscreenMode(void);
 s32 videoGetMaximizeWindow(void);
 void videoSetMaximizeWindow(s32 fs);
 u32 videoGetTextureFilter(void);
 s32 videoGetTextureFilter2D(void);
 s32 videoGetDetailTextures(void);
+s32 videoGetDisplayModeIndex(void);
+struct GfxModes *videoGetDisplayModes(void);
+s32 videoGetNumDisplayModes(void);
+
+void videoAllocDisplayModes(void);
 
 void videoSetWindowOffset(s32 x, s32 y);
 void videoSetFullscreen(s32 fs);
+void videoSetFullscreenMode(s32 mode);
 void videoSetTextureFilter(u32 filter);
 void videoSetTextureFilter2D(s32 filter);
 void videoSetDetailTextures(s32 detail);
+void videoSetDisplayMode(const s32 mode_idx);
 
 s32 videoCreateFramebuffer(u32 w, u32 h, s32 upscale, s32 autoresize);
 void videoSetFramebuffer(s32 target);
@@ -48,5 +56,7 @@ s32 videoFramebuffersSupported(void);
 
 void videoResetTextureCache(void);
 void videoFreeCachedTexture(const void *texptr);
+
+void videoShutdown(void);
 
 #endif

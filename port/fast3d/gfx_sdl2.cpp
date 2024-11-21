@@ -6,6 +6,7 @@
 #include "platform.h"
 #include "system.h"
 
+#include "gfx_modes.h"
 #include "gfx_window_manager_api.h"
 #include "gfx_screen_config.h"
 
@@ -30,10 +31,30 @@ static uint64_t qpc_freq;
 #define FRAME_INTERVAL_US_NUMERATOR 1000000
 #define FRAME_INTERVAL_US_DENOMINATOR (target_fps)
 
-static void set_fullscreen(bool on, bool call_callback) {
-    if (fullscreen_state == on) {
-        return;
+static int32_t gfx_sdl_get_maximized_state(void) {
+    return (int32_t)maximized_state;
+}
+
+static int32_t gfx_sdl_get_fullscreen_state(void) {
+    return (int32_t)fullscreen_state;
+}
+
+static int32_t gfx_sdl_get_fullscreen_flag_mode(void) {
+    return fullscreen_flag == SDL_WINDOW_FULLSCREEN_DESKTOP ? 0 : 1;
+}
+
+static void gfx_sdl_set_fullscreen_flag(int32_t mode) {
+    switch (mode) {
+        case 0: {
+            fullscreen_flag = SDL_WINDOW_FULLSCREEN_DESKTOP;
+        } break;
+        case 1: {
+            fullscreen_flag = SDL_WINDOW_FULLSCREEN;
+        } break;
     }
+}
+
+static void set_fullscreen(bool on, bool call_callback) {
     fullscreen_state = on;
     SDL_SetWindowFullscreen(wnd, on ? fullscreen_flag : 0);
     if (call_callback && on_fullscreen_changed_callback) {
@@ -42,9 +63,6 @@ static void set_fullscreen(bool on, bool call_callback) {
 }
 
 static void set_maximize_window(bool on) {
-	if (maximized_state == on) {
-		return;
-	}
 	maximized_state = on;
 	if (on) {
 		SDL_MaximizeWindow(wnd);
@@ -217,6 +235,20 @@ static void gfx_sdl_set_cursor_visibility(bool visible) {
     }
 }
 
+static void gfx_sdl_set_closest_resolution(int32_t width, int32_t height) {
+    const SDL_DisplayMode mode = {.w = width, .h = height};
+    SDL_DisplayMode closest = {};
+    if (SDL_GetClosestDisplayMode(0, &mode, &closest)) {
+        SDL_SetWindowDisplayMode(wnd, &closest);
+        SDL_SetWindowSize(wnd, closest.w, closest.h);
+    }
+}
+
+static void gfx_sdl_set_dimensions(uint32_t width, uint32_t height, int32_t posX, int32_t posY) {
+    SDL_SetWindowSize(wnd, width, height);
+    SDL_SetWindowPosition(wnd, posX, posY);
+}
+
 static void gfx_sdl_get_dimensions(uint32_t* width, uint32_t* height, int32_t* posX, int32_t* posY) {
     SDL_GL_GetDrawableSize(wnd, static_cast<int*>((void*)width), static_cast<int*>((void*)height));
     SDL_GetWindowPosition(wnd, static_cast<int*>(posX), static_cast<int*>(posY));
@@ -235,6 +267,9 @@ static void gfx_sdl_handle_events(void) {
             case SDL_WINDOWEVENT:
                 if (event.window.event == SDL_WINDOWEVENT_SIZE_CHANGED) {
                     SDL_GL_GetDrawableSize(wnd, &window_width, &window_height);
+                    if (!fullscreen_state) {
+                        maximized_state = SDL_GetWindowFlags(wnd) & SDL_WINDOW_MAXIMIZED ? true : false;
+                    }
                 } else if (event.window.event == SDL_WINDOWEVENT_CLOSE &&
                            event.window.windowID == SDL_GetWindowID(wnd)) {
                     // We listen specifically for main window close because closing main window
@@ -324,15 +359,63 @@ static bool gfx_sdl_set_swap_interval(int interval) {
     return success;
 }
 
-struct GfxWindowManagerAPI gfx_sdl = { 
+static GfxModes *gfx_sdl_alloc_display_modes(GfxModes *modes, int *num_modes) {
+    static const char *alloc_failed_msg = "failed to allocate video display modes";
+    const int disp_idx = SDL_GetWindowDisplayIndex(wnd);
+    const int display_modes = SDL_GetNumDisplayModes(disp_idx);
+    int modes_sz = sizeof *modes * 16;
+
+    modes = (GfxModes *)malloc(modes_sz);
+    if (!modes) {
+        sysLogPrintf(LOG_ERROR, "malloc: %s", alloc_failed_msg);
+    }
+
+    strncpy(modes[0].mode, "Custom", sizeof modes[0].mode);
+    modes[0].mode[sizeof modes[0].mode - 1] = '\0';
+
+    int j = 1;
+    for (int i = 0; i < display_modes; ++i) {
+        SDL_DisplayMode mode = {};
+        if (SDL_GetDisplayMode(disp_idx, i, &mode) == 0) {
+            if (j == (int)(modes_sz / sizeof *modes)) {
+                modes = (GfxModes *)realloc(modes, modes_sz <<= 1);
+                if (!modes) {
+                    sysLogPrintf(LOG_ERROR, "realloc: %s", alloc_failed_msg);
+                }
+            }
+
+            snprintf(modes[j].mode, sizeof modes[0].mode, "%dx%d", mode.w, mode.h);
+
+            if (j && strcmp(modes[j].mode, modes[j - 1].mode) != 0) {
+                ++j;
+            }
+        }
+    }
+
+    *num_modes = j;
+    modes_sz = *num_modes * sizeof *modes;
+    modes = (GfxModes *)realloc(modes, modes_sz);
+    if (!modes) {
+        sysLogPrintf(LOG_ERROR, "realloc: %s", alloc_failed_msg);
+    }
+    return modes;
+}
+
+struct GfxWindowManagerAPI gfx_sdl = {
     gfx_sdl_init,
     gfx_sdl_close,
+    gfx_sdl_get_fullscreen_state,
     gfx_sdl_set_fullscreen_changed_callback,
     gfx_sdl_set_fullscreen,
     gfx_sdl_set_fullscreen_exclusive,
+    gfx_sdl_set_fullscreen_flag,
+    gfx_sdl_get_fullscreen_flag_mode,
+    gfx_sdl_get_maximized_state,
     gfx_sdl_set_maximize_window,
     gfx_sdl_get_active_window_refresh_rate,
     gfx_sdl_set_cursor_visibility,
+    gfx_sdl_set_closest_resolution,
+    gfx_sdl_set_dimensions,
     gfx_sdl_get_dimensions,
     gfx_sdl_handle_events,
     gfx_sdl_start_frame,
@@ -344,4 +427,5 @@ struct GfxWindowManagerAPI gfx_sdl = {
     gfx_sdl_get_window_handle,
     gfx_sdl_set_window_title,
     gfx_sdl_set_swap_interval,
+    gfx_sdl_alloc_display_modes,
 };
