@@ -9,7 +9,6 @@
 #include "game/mainmenu.h"
 #include "game/menu.h"
 #include "game/gamefile.h"
-#include "../fast3d/gfx_modes.h"
 #include "video.h"
 #include "input.h"
 #include "config.h"
@@ -739,6 +738,10 @@ static MenuItemHandlerResult menuhandlerCenterWindow(s32 operation, struct menui
 
 static MenuItemHandlerResult menuhandlerResolution(s32 operation, struct menuitem *item, union handlerdata *data)
 {
+	static char resstring[32];
+	static const char *rescustom = "Custom";
+	displaymode mode;
+
 	switch (operation) {
 	case MENUOP_CHECKDISABLED:
 		if (videoGetFullscreen() && videoGetFullscreenMode() == 0) {
@@ -749,7 +752,13 @@ static MenuItemHandlerResult menuhandlerResolution(s32 operation, struct menuite
 		data->dropdown.value = videoGetNumDisplayModes();
 		break;
 	case MENUOP_GETOPTIONTEXT:
-		return (intptr_t)videoGetDisplayModes()[data->dropdown.value].mode;
+		videoGetDisplayMode(&mode, data->dropdown.value);
+		if (mode.width == 0 && mode.height == 0) {
+			return (intptr_t)rescustom;
+		} else {
+			snprintf(resstring, sizeof(resstring), "%dx%d", mode.width, mode.height);
+		}
+		return (intptr_t)resstring;
 	case MENUOP_SET:
 		videoSetDisplayMode(data->dropdown.value);
 		break;

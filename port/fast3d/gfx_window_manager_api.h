@@ -20,6 +20,9 @@ struct GfxWindowInitSettings {
 struct GfxWindowManagerAPI {
     void (*init)(const struct GfxWindowInitSettings *settings);
     void (*close)(void);
+    int (*get_display_mode)(int modenum, int *out_w, int *out_h);
+    int (*get_current_display_mode)(int *out_w, int *out_h);
+    int (*get_num_display_modes)(void);
     int32_t (*get_fullscreen_state)(void);
     void (*set_fullscreen_changed_callback)(void (*on_fullscreen_changed)(bool is_now_fullscreen));
     void (*set_fullscreen)(bool enable);
@@ -44,7 +47,6 @@ struct GfxWindowManagerAPI {
     void *(*get_window_handle)(void);
     void (*set_window_title)(const char *);
     bool (*set_swap_interval)(int);
-    struct GfxModes *(*alloc_display_modes)(struct GfxModes *, int *);
 };
 
 #endif

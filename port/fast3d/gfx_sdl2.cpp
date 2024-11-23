@@ -6,7 +6,6 @@
 #include "platform.h"
 #include "system.h"
 
-#include "gfx_modes.h"
 #include "gfx_window_manager_api.h"
 #include "gfx_screen_config.h"
 
@@ -389,51 +388,39 @@ static bool gfx_sdl_set_swap_interval(int interval) {
     return success;
 }
 
-static GfxModes *gfx_sdl_alloc_display_modes(GfxModes *modes, int *num_modes) {
-    static const char *alloc_failed_msg = "failed to allocate video display modes";
-    const int disp_idx = SDL_GetWindowDisplayIndex(wnd);
-    const int display_modes = SDL_GetNumDisplayModes(disp_idx);
-    int modes_sz = sizeof *modes * 16;
-
-    modes = (GfxModes *)malloc(modes_sz);
-    if (!modes) {
-        sysLogPrintf(LOG_ERROR, "malloc: %s", alloc_failed_msg);
+int gfx_sdl_get_display_mode(int modenum, int *out_w, int *out_h) {
+    const int display_in_use = SDL_GetWindowDisplayIndex(wnd);
+    SDL_DisplayMode sdlmode;
+    if (SDL_GetDisplayMode(display_in_use, modenum, &sdlmode) == 0) {
+        *out_w = sdlmode.w;
+        *out_h = sdlmode.h;
+        return 1;
     }
+    return 0;
+}
 
-    strncpy(modes[0].mode, "Custom", sizeof modes[0].mode);
-    modes[0].mode[sizeof modes[0].mode - 1] = '\0';
-
-    int j = 1;
-    for (int i = 0; i < display_modes; ++i) {
-        SDL_DisplayMode mode = {};
-        if (SDL_GetDisplayMode(disp_idx, i, &mode) == 0) {
-            if (j == (int)(modes_sz / sizeof *modes)) {
-                modes = (GfxModes *)realloc(modes, modes_sz <<= 1);
-                if (!modes) {
-                    sysLogPrintf(LOG_ERROR, "realloc: %s", alloc_failed_msg);
-                }
-            }
-
-            snprintf(modes[j].mode, sizeof modes[0].mode, "%dx%d", mode.w, mode.h);
-
-            if (j && strcmp(modes[j].mode, modes[j - 1].mode) != 0) {
-                ++j;
-            }
-        }
+int gfx_sdl_get_current_display_mode(int *out_w, int *out_h) {
+    const int display_in_use = SDL_GetWindowDisplayIndex(wnd);
+    SDL_DisplayMode sdlmode;
+    if (SDL_GetCurrentDisplayMode(display_in_use, &sdlmode) == 0) {
+        *out_w = sdlmode.w;
+        *out_h = sdlmode.h;
+        return 1;
     }
+    return 0;
+}
 
-    *num_modes = j;
-    modes_sz = *num_modes * sizeof *modes;
-    modes = (GfxModes *)realloc(modes, modes_sz);
-    if (!modes) {
-        sysLogPrintf(LOG_ERROR, "realloc: %s", alloc_failed_msg);
-    }
-    return modes;
+int gfx_sdl_get_num_display_modes(void) {
+    const int display_in_use = SDL_GetWindowDisplayIndex(wnd);
+    return SDL_GetNumDisplayModes(display_in_use);
 }
 
 struct GfxWindowManagerAPI gfx_sdl = {
     gfx_sdl_init,
     gfx_sdl_close,
+    gfx_sdl_get_display_mode,
+    gfx_sdl_get_current_display_mode,
+    gfx_sdl_get_num_display_modes,
     gfx_sdl_get_fullscreen_state,
     gfx_sdl_set_fullscreen_changed_callback,
     gfx_sdl_set_fullscreen,
@@ -458,5 +445,4 @@ struct GfxWindowManagerAPI gfx_sdl = {
     gfx_sdl_get_window_handle,
     gfx_sdl_set_window_title,
     gfx_sdl_set_swap_interval,
-    gfx_sdl_alloc_display_modes,
 };

@@ -6,7 +6,7 @@
 #include <PR/gbi.h>
 #include "platform.h"
 #include "config.h"
-#include "../fast3d/gfx_modes.h"
+#include "system.h"
 #include "video.h"
 
 #include "../fast3d/gfx_api.h"
@@ -41,8 +41,9 @@ static s32 vidAllowHiDpi = false;
 static s32 vidVsync = 1;
 static s32 vidMSAA = 1;
 static s32 vidFramerateLimit = 0;
-static struct GfxModes *vidModes = NULL; // Allocated in videoAllocDisplayModes(). Freed in videoShutdown().
-static s32 vidNumModes = 0;
+static displaymode vidModeDefault;
+static s32 vidNumModes = 1;
+static displaymode *vidModes = &vidModeDefault;
 
 static s32 texFilter = FILTER_LINEAR;
 static s32 texFilter2D = true;
@@ -52,6 +53,8 @@ static u32 dlcount = 0;
 static u32 frames = 0;
 static u32 framesPerSec = 0;
 static f64 startTime, endTime, fpsTime;
+
+static s32 videoInitDisplayModes(void);
 
 s32 videoInit(void)
 {
@@ -83,7 +86,7 @@ s32 videoInit(void)
 	};
 
 	gfx_init(&set);
-	videoAllocDisplayModes();
+	videoInitDisplayModes();
 
 	if (!wmAPI->set_swap_interval(vidVsync)) {
 		vidVsync = 0;
@@ -211,26 +214,72 @@ f32 videoGetAspect(void)
 
 s32 videoGetDisplayModeIndex(void)
 {
-	for (int i = 1; i < vidNumModes; ++i) {
-		char tmp[10] = {0};
-		snprintf(tmp, sizeof tmp, "%dx%d", gfx_current_dimensions.width, gfx_current_dimensions.height);
-		if (strcmp(tmp, vidModes[i].mode) == 0) {
+	for (s32 i = 1; i < vidNumModes; ++i) {
+		if (vidModes[i].width == gfx_current_dimensions.width &&
+		    vidModes[i].height == gfx_current_dimensions.height) {
 			return i;
 		}
 	}
-
 	// Current dimensions don't match any known mode, so return index 0, "Custom".
 	return 0;
 }
 
-void videoAllocDisplayModes(void)
+static s32 videoInitDisplayModes(void)
 {
-	vidModes = wmAPI->alloc_display_modes(vidModes, &vidNumModes);
+	if (!wmAPI->get_current_display_mode(&vidModeDefault.width, &vidModeDefault.height)) {
+		vidModeDefault.width = 640;
+		vidModeDefault.height = 480;
+		return false;
+	}
+
+	const s32 numBaseModes = wmAPI->get_num_display_modes();
+	if (!numBaseModes) {
+		return false;
+	}
+
+	const s32 numCustomModes = 1;
+	displaymode *modeList = sysMemZeroAlloc((numBaseModes + numCustomModes) * sizeof(displaymode));
+	if (!modeList) {
+		return false;
+	}
+
+	modeList[0].width = 0;
+	modeList[0].height = 0;
+
+	s32 numModes = 1;
+	s32 w = -1, h = w, neww = w, newh = w;
+
+	// SDL modes are guaranteed to be sorted high to low
+	for (s32 i = 0; i < numBaseModes; ++i) {
+		wmAPI->get_display_mode(i, &neww, &newh);
+
+		if (neww != w || newh != h) {
+			w = neww;
+			h = newh;
+			modeList[numModes].width = w;
+			modeList[numModes].height = h;
+			++numModes;
+		}
+	}
+
+	modeList = sysMemRealloc(modeList, numModes * sizeof(displaymode));
+	if (!modeList) {
+		return false;
+	}
+
+	vidModes = modeList;
+	vidNumModes = numModes;
+
+	return true;
 }
 
-struct GfxModes *videoGetDisplayModes(void)
+s32 videoGetDisplayMode(displaymode *out, const s32 index)
 {
-	return vidModes;
+	if (index >= 0 && index < vidNumModes) {
+		*out = vidModes[index];
+		return true;
+	}
+	return false;
 }
 
 s32 videoGetNumDisplayModes(void)
@@ -238,19 +287,17 @@ s32 videoGetNumDisplayModes(void)
 	return vidNumModes;
 }
 
-void videoSetDisplayMode(const s32 mode_idx)
+void videoSetDisplayMode(const s32 index)
 {
-	const char *cur_mode = vidModes[mode_idx].mode;
-	char *x_pos = NULL;
+	const displaymode dm = vidModes[index];
 
-	if (mode_idx == 0) {
+	if (index == 0) {
 		// "Custom" video mode.
 		return;
 	}
 
-	vidWidth = strtol(cur_mode, &x_pos, 10);
-	cur_mode = x_pos + 1;
-	vidHeight = strtol(cur_mode, NULL, 10);
+	vidWidth = dm.width;
+	vidHeight = dm.height;
 
 	s32 posX = 100;
 	s32 posY = 100;

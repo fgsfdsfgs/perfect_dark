@@ -11,6 +11,11 @@
 #define VIDEO_MAX_FPS 240
 #endif
 
+typedef struct {
+	s32 width;
+	s32 height;
+} displaymode;
+
 s32 videoInit(void);
 void videoStartFrame(void);
 void videoSubmitCommands(Gfx *cmds);
@@ -36,10 +41,8 @@ u32 videoGetTextureFilter(void);
 s32 videoGetTextureFilter2D(void);
 s32 videoGetDetailTextures(void);
 s32 videoGetDisplayModeIndex(void);
-struct GfxModes *videoGetDisplayModes(void);
+s32 videoGetDisplayMode(displaymode *out, const s32 index);
 s32 videoGetNumDisplayModes(void);
-
-void videoAllocDisplayModes(void);
 
 void videoSetWindowOffset(s32 x, s32 y);
 void videoSetFullscreen(s32 fs);
@@ -47,7 +50,7 @@ void videoSetFullscreenMode(s32 mode);
 void videoSetTextureFilter(u32 filter);
 void videoSetTextureFilter2D(s32 filter);
 void videoSetDetailTextures(s32 detail);
-void videoSetDisplayMode(const s32 mode_idx);
+void videoSetDisplayMode(const s32 index);
 
 s32 videoCreateFramebuffer(u32 w, u32 h, s32 upscale, s32 autoresize);
 void videoSetFramebuffer(s32 target);
