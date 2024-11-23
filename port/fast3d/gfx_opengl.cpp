@@ -57,8 +57,10 @@ static float current_noise_scale;
 static FilteringMode current_filter_mode = FILTER_LINEAR;
 static bool current_textures_linear_filter[2] = {false, false};
 
+static int gl_glsl_version = 130;
+static char gl_glsl_version_str[16] = "130";
 static GLenum gl_mirror_clamp = GL_MIRROR_CLAMP_TO_EDGE;
-
+static bool gl_es = false;
 static bool gl_core_profile = false;
 
 static int gfx_opengl_get_max_texture_size() {
@@ -243,15 +245,19 @@ static struct ShaderProgram* gfx_opengl_create_and_load_new_shader(uint64_t shad
 
     // Vertex shader
 
-#ifdef __APPLE__
-    append_line(vs_buf, &vs_len, "#version 410 core");
-    append_line(vs_buf, &vs_len, "#define INPUT in");
-    append_line(vs_buf, &vs_len, "#define OUTPUT out");
-#else
-    append_line(vs_buf, &vs_len, "#version 110");
-    append_line(vs_buf, &vs_len, "#define INPUT attribute");
-    append_line(vs_buf, &vs_len, "#define OUTPUT varying");
-#endif
+    vs_len += sprintf(vs_buf + vs_len, "#version %s\n", gl_glsl_version_str);
+
+    if (gl_es) {
+        append_line(vs_buf, &vs_len, "precision mediump float;");
+    }
+
+    if (gl_glsl_version >= 130) {
+        append_line(vs_buf, &vs_len, "#define INPUT in");
+        append_line(vs_buf, &vs_len, "#define OUTPUT out");
+    } else {
+        append_line(vs_buf, &vs_len, "#define INPUT attribute");
+        append_line(vs_buf, &vs_len, "#define OUTPUT varying");
+    }
 
     append_line(vs_buf, &vs_len, "INPUT vec4 aVtxPos;");
 
@@ -308,22 +314,31 @@ static struct ShaderProgram* gfx_opengl_create_and_load_new_shader(uint64_t shad
     for (int i = 0; i < cc_features.num_inputs; i++) {
         vs_len += sprintf(vs_buf + vs_len, "    vInput%d = aInput%d;\n", i + 1, i + 1);
     }
+
     append_line(vs_buf, &vs_len, "    gl_Position = aVtxPos;");
+    if (!GLAD_GL_ARB_depth_clamp) {
+        // HACK: workaround for no GL_DEPTH_CLAMP
+        append_line(vs_buf, &vs_len, "    gl_Position.z *= 0.3f;");
+    }
     append_line(vs_buf, &vs_len, "}");
 
     // Fragment shader
 
-#ifdef __APPLE__
-    append_line(fs_buf, &fs_len, "#version 410 core");
-    append_line(fs_buf, &fs_len, "#define INPUT in");
-    append_line(fs_buf, &fs_len, "#define OUTPUT_COLOR outColor");
-    append_line(fs_buf, &fs_len, "#define SAMPLE_TEX(tex, uv) texture(tex, uv)");
-#else
-    append_line(fs_buf, &fs_len, "#version 130");
-    append_line(fs_buf, &fs_len, "#define INPUT varying");
-    append_line(fs_buf, &fs_len, "#define OUTPUT_COLOR gl_FragColor");
-    append_line(fs_buf, &fs_len, "#define SAMPLE_TEX(tex, uv) texture2D(tex, uv)");
-#endif
+    fs_len += sprintf(fs_buf + fs_len, "#version %s\n", gl_glsl_version_str);
+
+    if (gl_es) {
+        append_line(fs_buf, &fs_len, "precision mediump float;");
+    }
+
+    if (gl_glsl_version >= 130) {
+        append_line(fs_buf, &fs_len, "#define INPUT in");
+        append_line(fs_buf, &fs_len, "#define OUTPUT_COLOR outColor");
+        append_line(fs_buf, &fs_len, "#define SAMPLE_TEX(tex, uv) texture(tex, uv)");
+    } else {
+        append_line(fs_buf, &fs_len, "#define INPUT varying");
+        append_line(fs_buf, &fs_len, "#define OUTPUT_COLOR gl_FragColor");
+        append_line(fs_buf, &fs_len, "#define SAMPLE_TEX(tex, uv) texture2D(tex, uv)");
+    }
 
     // Reference approach to color wrapping as per GLideN64
     // Return wrapped value of x in interval [low, high)
@@ -351,6 +366,7 @@ static struct ShaderProgram* gfx_opengl_create_and_load_new_shader(uint64_t shad
     for (int i = 0; i < cc_features.num_inputs; i++) {
         fs_len += sprintf(fs_buf + fs_len, "INPUT vec%d vInput%d;\n", cc_features.opt_alpha ? 4 : 3, i + 1);
     }
+
     if (cc_features.used_textures[0]) {
         append_line(fs_buf, &fs_len, "uniform sampler2D uTex0;");
         if (current_filter_mode == FILTER_THREE_POINT)
@@ -418,9 +434,9 @@ static struct ShaderProgram* gfx_opengl_create_and_load_new_shader(uint64_t shad
         }
     }
 
-#if __APPLE__
-    append_line(fs_buf, &fs_len, "out vec4 outColor;");
-#endif
+    if (gl_glsl_version >= 130) {
+        append_line(fs_buf, &fs_len, "out vec4 outColor;");
+    }
 
     append_line(fs_buf, &fs_len, "void main() {");
 
@@ -428,7 +444,7 @@ static struct ShaderProgram* gfx_opengl_create_and_load_new_shader(uint64_t shad
         if (cc_features.used_textures[i]) {
             bool s = cc_features.clamp[i][0], t = cc_features.clamp[i][1];
 
-            fs_len += sprintf(fs_buf + fs_len, "    vec2 texSize%d = textureSize(uTex%d, 0);\n", i, i);
+            fs_len += sprintf(fs_buf + fs_len, "    vec2 texSize%d = vec2(textureSize(uTex%d, 0));\n", i, i);
 
             if (!s && !t) {
                 fs_len += sprintf(fs_buf + fs_len, "    vec2 vTexCoordAdj%d = vTexCoord%d;\n", i, i);
@@ -520,6 +536,7 @@ static struct ShaderProgram* gfx_opengl_create_and_load_new_shader(uint64_t shad
     } else {
         append_line(fs_buf, &fs_len, "    OUTPUT_COLOR = vec4(texel, 1.0);");
     }
+
     append_line(fs_buf, &fs_len, "}");
 
     vs_buf[vs_len] = '\0';
@@ -744,7 +761,11 @@ static void gfx_opengl_set_depth_mode(bool depth_test, bool depth_update, bool d
 }
 
 static void gfx_opengl_set_depth_range(float znear, float zfar) {
-    glDepthRange(znear, zfar);
+    if (glDepthRangef) {
+        glDepthRangef(znear, zfar);
+    } else {
+        glDepthRange(znear, zfar);
+    }
 }
 
 static void gfx_opengl_set_viewport(int x, int y, int width, int height) {
@@ -814,18 +835,6 @@ static bool gfx_opengl_supports_framebuffers(void) {
         return (glad_glBlitFramebuffer && glad_glRenderbufferStorageMultisample);
     }
     if (GLAD_GL_EXT_framebuffer_object && GLAD_GL_EXT_framebuffer_blit && GLAD_GL_EXT_framebuffer_multisample) {
-        // because of the way glad works we'll have to copy the pointers over
-        glad_glGenFramebuffers = glad_glGenFramebuffersEXT;
-        glad_glGenRenderbuffers = glad_glGenRenderbuffersEXT;
-        glad_glDeleteFramebuffers = glad_glDeleteFramebuffersEXT;
-        glad_glDeleteRenderbuffers = glad_glDeleteRenderbuffersEXT;
-        glad_glBindFramebuffer = glad_glBindFramebufferEXT;
-        glad_glBindRenderbuffer = glad_glBindRenderbufferEXT;
-        glad_glFramebufferRenderbuffer = glad_glFramebufferRenderbufferEXT;
-        glad_glFramebufferTexture2D = glad_glFramebufferTexture2DEXT;
-        glad_glRenderbufferStorage = glad_glRenderbufferStorageEXT;
-        glad_glRenderbufferStorageMultisample = glad_glRenderbufferStorageMultisampleEXT;
-        glad_glBlitFramebuffer = glad_glBlitFramebufferEXT;
         // sanity check
         return (glad_glFramebufferRenderbuffer && glad_glBlitFramebuffer && glad_glRenderbufferStorageMultisample);
     }
@@ -890,10 +899,51 @@ static void *gl_load_proc(const char *name) {
     return NULL;
 }
 
+static void gfx_opengl_init_extensions(void) {
+    // patch up some extension values and pointers
+    if (!GLAD_GL_ARB_depth_clamp) {
+        if (GLAD_GL_EXT_depth_clamp || GLAD_GL_NV_depth_clamp) {
+            GLAD_GL_ARB_depth_clamp = 1;
+        } else if (!gl_es && GLVersion.major >= 3) {
+            // GL3.2+ should have depth_clamp as part of the spec, but some devices don't report it for some reason
+            GLAD_GL_ARB_depth_clamp = (GLVersion.major > 3 || (GLVersion.major == 3 && GLVersion.minor >= 2));
+        }
+    }
+
+    if (!GLAD_GL_ARB_texture_mirror_clamp_to_edge) {
+        GLAD_GL_ARB_texture_mirror_clamp_to_edge = GLAD_GL_EXT_texture_mirror_clamp_to_edge;
+    }
+
+    if (GLVersion.major < 3 && !GLAD_GL_ARB_framebuffer_object) {
+        if (GLAD_GL_EXT_framebuffer_object && GLAD_GL_EXT_framebuffer_blit && GLAD_GL_EXT_framebuffer_multisample) {
+            // because of the way glad works we'll have to copy the pointers over
+            glad_glGenFramebuffers = glad_glGenFramebuffersEXT;
+            glad_glGenRenderbuffers = glad_glGenRenderbuffersEXT;
+            glad_glDeleteFramebuffers = glad_glDeleteFramebuffersEXT;
+            glad_glDeleteRenderbuffers = glad_glDeleteRenderbuffersEXT;
+            glad_glBindFramebuffer = glad_glBindFramebufferEXT;
+            glad_glBindRenderbuffer = glad_glBindRenderbufferEXT;
+            glad_glFramebufferRenderbuffer = glad_glFramebufferRenderbufferEXT;
+            glad_glFramebufferTexture2D = glad_glFramebufferTexture2DEXT;
+            glad_glRenderbufferStorage = glad_glRenderbufferStorageEXT;
+            glad_glRenderbufferStorageMultisample = glad_glRenderbufferStorageMultisampleEXT;
+            glad_glBlitFramebuffer = glad_glBlitFramebufferEXT;
+        }
+    }
+}
+
 static void gfx_opengl_init(void) {
     if (!gladLoadGLLoader(gl_load_proc) || glGetString == NULL || glEnable == NULL) {
         sysFatalError("Could not load OpenGL.\nReported SDL error: %s", SDL_GetError());
     }
+
+    // check if we're using ES or core, which have more limited feature sets
+    int val = 0;
+    SDL_GL_GetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, &val);
+    gl_core_profile = (val == SDL_GL_CONTEXT_PROFILE_CORE);
+    gl_es = (val == SDL_GL_CONTEXT_PROFILE_ES);
+
+    gfx_opengl_init_extensions();
 
     if (sysArgCheck("--debug-gl")) {
         gfx_opengl_enable_debug();
@@ -908,7 +958,7 @@ static void gfx_opengl_init(void) {
     }
 
     if (!gfx_opengl_supports_shaders()) {
-        sysLogPrintf(LOG_WARNING, "GL: GLSL 1.30 unsupported");
+        sysLogPrintf(LOG_WARNING, "GL: GLSL 1.30 may be unsupported");
         // maybe replace this with sysFatalError, though the GLSL compiler will cause that later anyway
     }
 
@@ -924,20 +974,35 @@ static void gfx_opengl_init(void) {
         gl_mirror_clamp = GL_MIRRORED_REPEAT;
     }
 
-    if ((GLVersion.major == 3 && GLVersion.minor >= 2) || GLVersion.major > 3) {
-        // check if we're using core profile, which is more strict
-        int val = 0;
-        SDL_GL_GetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, &val);
-        gl_core_profile = (val == SDL_GL_CONTEXT_PROFILE_CORE);
+    // determine GLSL version
+    if (gl_es) {
+        // ES has its own numbering scheme, but it should support 300 even on 3.1 and 3.2
+        gl_glsl_version = 300;
+        snprintf(gl_glsl_version_str, sizeof(gl_glsl_version_str), "%d es", gl_glsl_version);
+    } else if (!gl_core_profile) {
+        // in compat profile we can just request the lowest possible
+        gl_glsl_version = 130;
+        snprintf(gl_glsl_version_str, sizeof(gl_glsl_version_str), "%d", gl_glsl_version);
+    } else {
+        // otherwise we have to pick a specific version
+        if (GLVersion.major == 3 && GLVersion.minor == 2) {
+            // 3.2core is the earliest core version and it follows the old numbering scheme
+            gl_glsl_version = 150;
+        } else {
+            // 3.3+ follow the new numbering scheme
+            gl_glsl_version = GLVersion.major * 100 + GLVersion.minor * 10;
+        }
+        snprintf(gl_glsl_version_str, sizeof(gl_glsl_version_str), "%d core", gl_glsl_version);
     }
+    sysLogPrintf(LOG_NOTE, "GL: using GLSL version %s", gl_glsl_version_str);
 
     glGenBuffers(1, &opengl_vbo);
     glBindBuffer(GL_ARRAY_BUFFER, opengl_vbo);
 
-    if (gl_core_profile) {
+    if (gl_core_profile || gl_es) {
         // warn user that funny things can happen
-        sysLogPrintf(LOG_WARNING, "GL: using core profile, watch out for errors");
-        // core will explode if we don't use a VAO for our VBO
+        sysLogPrintf(LOG_WARNING, "GL: using core profile or ES, watch out for errors");
+        // core/es will explode if we don't use a VAO for our VBO
         glGenVertexArrays(1, &opengl_vao);
         glBindVertexArray(opengl_vao);
     }
@@ -1156,7 +1221,8 @@ void gfx_opengl_copy_framebuffer(int fb_dst, int fb_src, int left, int top, bool
     }
 
     if (fb_src == 0) {
-        glReadBuffer(use_back ? GL_BACK : GL_FRONT);
+        // GLES does not support GL_FRONT here
+        glReadBuffer((use_back || gl_es) ? GL_BACK : GL_FRONT);
     } else {
         glReadBuffer(GL_COLOR_ATTACHMENT0);
     }

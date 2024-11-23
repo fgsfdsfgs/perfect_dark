@@ -1620,6 +1620,15 @@ void propCalculateShadeColour(struct prop *prop, u8 *nextcol, u16 floorcol)
 	{
 		s32 shade = func0f068fc8(prop, 0);
 
+		// fix props flickering in split screen when one of the players has night vision on
+		if (prop->type != PROPTYPE_PLAYER || g_Vars.currentplayer->prop != prop) {
+			if (USINGDEVICE(DEVICE_NIGHTVISION)) {
+				if (prop->rooms[0] >= 0) {
+					shade = g_Rooms[prop->rooms[0]].br_settled_regional;
+				}
+			}
+		}
+
 		roomr = shade;
 		roomg = shade;
 		roomb = shade;

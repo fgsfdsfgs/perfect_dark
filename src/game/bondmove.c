@@ -1583,6 +1583,7 @@ void bmoveProcessInput(bool allowc1x, bool allowc1y, bool allowc1buttons, bool i
 						}
 
 						// Handle xbla-style crouch cycling
+						const s32 oldcrouchpos = g_Vars.currentplayer->crouchpos;
 						for (i = 0; i < numsamples; i++) {
 							// handle 1964GEPD style crouch setting
 							s32 crouchsample;
@@ -1623,6 +1624,10 @@ void bmoveProcessInput(bool allowc1x, bool allowc1y, bool allowc1buttons, bool i
 									g_Vars.currentplayer->crouchpos = CROUCHPOS_DUCK;
 								}
 							}
+						}
+						// prevent uncrouching if we don't fit
+						while (g_Vars.currentplayer->crouchpos > oldcrouchpos && !bwalkCanUncrouch()) {
+							g_Vars.currentplayer->crouchpos--;
 						}
 					}
 #endif

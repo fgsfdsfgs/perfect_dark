@@ -237,6 +237,47 @@ s32 bwalkTryMoveUpwards(f32 amount)
 	return result;
 }
 
+bool bwalkCanMoveUpwards(f32 amount)
+{
+	bool result;
+	struct coord newpos;
+	RoomNum rooms[8];
+	u32 stack;
+	u32 types;
+	f32 ymax;
+	f32 ymin;
+	f32 radius;
+
+	if (g_Vars.currentplayer->floorflags & GEOFLAG_SLOPE) {
+		g_Vars.enableslopes = false;
+	} else {
+		g_Vars.enableslopes = true;
+	}
+
+	newpos.x = g_Vars.currentplayer->prop->pos.x;
+	newpos.y = g_Vars.currentplayer->prop->pos.y + amount;
+	newpos.z = g_Vars.currentplayer->prop->pos.z;
+
+	types = g_Vars.bondcollisions ? CDTYPE_ALL : CDTYPE_BG;
+
+	playerGetBbox(g_Vars.currentplayer->prop, &radius, &ymax, &ymin);
+	func0f065e74(&g_Vars.currentplayer->prop->pos, g_Vars.currentplayer->prop->rooms, &newpos, rooms);
+	bmoveFindEnteredRoomsByPos(g_Vars.currentplayer, &newpos, rooms);
+	propSetPerimEnabled(g_Vars.currentplayer->prop, false);
+
+	ymin -= 0.1f;
+
+	result = cdTestVolume(&newpos, radius, rooms, types, CHECKVERTICAL_YES,
+			ymax - g_Vars.currentplayer->prop->pos.y,
+			ymin - g_Vars.currentplayer->prop->pos.y);
+
+	propSetPerimEnabled(g_Vars.currentplayer->prop, true);
+
+	g_Vars.enableslopes = true;
+
+	return (result == CDRESULT_NOCOLLISION);
+}
+
 bool bwalkCalculateNewPosition(struct coord *vel, f32 rotateamount, bool apply, f32 extrawidth, s32 checktypes)
 {
 	s32 result = CDRESULT_NOCOLLISION;
@@ -1166,6 +1207,41 @@ void bwalkUpdateCrouchOffsetReal(void)
 		g_Vars.currentplayer->crouchoffsetsmall = g_Vars.currentplayer->crouchoffset;
 		g_Vars.currentplayer->crouchoffsetrealsmall = g_Vars.currentplayer->crouchoffsetreal;
 	}
+}
+
+bool bwalkCanUncrouch(void)
+{
+	f32 targetoffset = 0;
+
+	if (g_Vars.currentplayer->crouchpos == CROUCHPOS_SQUAT) {
+		targetoffset = -90;
+	} else if (g_Vars.currentplayer->crouchpos == CROUCHPOS_DUCK) {
+		targetoffset = -45;
+	}
+
+	if (targetoffset != g_Vars.currentplayer->crouchoffset) {
+		f32 prevcrouchoffset = g_Vars.currentplayer->crouchoffset;
+		f32 prevcrouchoffsetreal = g_Vars.currentplayer->crouchoffsetreal;
+		f32 prevcrouchoffsetsmall = g_Vars.currentplayer->crouchoffsetsmall;
+		f32 prevcrouchoffsetrealsmall = g_Vars.currentplayer->crouchoffsetrealsmall;
+		f32 prevcrouchspeed = g_Vars.currentplayer->crouchspeed;
+
+		g_Vars.currentplayer->crouchoffset = targetoffset;
+
+		bwalkUpdateCrouchOffsetReal();
+
+		const bool result = bwalkCanMoveUpwards(0);
+
+		g_Vars.currentplayer->crouchoffset = prevcrouchoffset;
+		g_Vars.currentplayer->crouchoffsetreal = prevcrouchoffsetreal;
+		g_Vars.currentplayer->crouchoffsetsmall = prevcrouchoffsetsmall;
+		g_Vars.currentplayer->crouchoffsetrealsmall = prevcrouchoffsetrealsmall;
+		g_Vars.currentplayer->crouchspeed = prevcrouchspeed;
+
+		return result;
+	}
+
+	return true;
 }
 
 void bwalkUpdateCrouchOffset(void)

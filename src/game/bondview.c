@@ -1109,6 +1109,10 @@ Gfx *bviewDrawEyespyMetrics(Gfx *gdl)
 		s32 x = viewleft + (viewwidth >> 1);
 		s32 y = viewtop + (viewheight >> 1);
 
+#ifndef PLATFORM_N64
+		gDPSetSubpixelOffsetEXT(gdl++, -2, -2);
+#endif
+
 		gDPFillRectangle(gdl++, x + 2, y + 0, x + 7, y + 1);
 		gDPFillRectangle(gdl++, x + 2, y + 0, x + 5, y + 1);
 		gDPFillRectangle(gdl++, x - 6, y + 0, x - 1, y + 1);
@@ -1117,6 +1121,10 @@ Gfx *bviewDrawEyespyMetrics(Gfx *gdl)
 		gDPFillRectangle(gdl++, x + 0, y + 2, x + 1, y + 5);
 		gDPFillRectangle(gdl++, x + 0, y - 6, x + 1, y - 1);
 		gDPFillRectangle(gdl++, x + 0, y - 4, x + 1, y - 1);
+
+#ifndef PLATFORM_N64
+		gDPSetSubpixelOffsetEXT(gdl++, 0, 0);
+#endif
 	}
 
 	if (g_Vars.currentplayer->eyespy->mode == EYESPYMODE_CAMSPY) {

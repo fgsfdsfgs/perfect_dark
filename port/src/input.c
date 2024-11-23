@@ -1004,6 +1004,13 @@ const char *inputGetConnectedControllerName(s32 id)
 
 	snprintf(fullName, sizeof(fullName), "%d: %s", jidx, name);
 
+	// replace non-ascii chars with spaces
+	for (char *p = fullName; *p; ++p) {
+		if ((u32)*p >= 0x7f) {
+			*p = ' ';
+		}
+	}
+
 	return fullName;
 }
 

@@ -128,20 +128,21 @@ static void gfx_sdl_init(const struct GfxWindowInitSettings *set) {
     // if that doesn't work, try 3.2 core in case we're on mac, 2.1 compat as a last resort
     static u32 glver[][3] = {
         { 0, 0, 0                                    }, // for command line override
-        { 3, 0, SDL_GL_CONTEXT_PROFILE_COMPATIBILITY },
-        { 3, 2, SDL_GL_CONTEXT_PROFILE_CORE },
-        { 4, 1, SDL_GL_CONTEXT_PROFILE_CORE },
-        { 2, 1, SDL_GL_CONTEXT_PROFILE_COMPATIBILITY }, // will still require GLSL130
+        { 3, 0, SDL_GL_CONTEXT_PROFILE_COMPATIBILITY }, // 3.0: default, has all the features required
+        { 4, 1, SDL_GL_CONTEXT_PROFILE_CORE          }, // 4.1core: macs only have core profile and this is the latest
+        { 3, 2, SDL_GL_CONTEXT_PROFILE_CORE          }, // 3.2core: older macs will only have this at best
+        { 3, 0, SDL_GL_CONTEXT_PROFILE_ES            }, // es3: don't really support ES properly, but we can try
+        { 2, 1, SDL_GL_CONTEXT_PROFILE_COMPATIBILITY }, // 2.1: absolute last resort, will still require GLSL130 as an extension
     };
 
-    u32 glcore = false;
     u32 verstart = 1;
     const u32 verend = sizeof(glver) / sizeof(*glver);
     const char *verstr = sysArgGetString("--gl-version");
     if (verstr && *verstr) {
         // user override
         glver[0][2] = strstr(verstr, "core") ? SDL_GL_CONTEXT_PROFILE_CORE :
-            SDL_GL_CONTEXT_PROFILE_COMPATIBILITY;
+            (strstr(verstr, "es") ? SDL_GL_CONTEXT_PROFILE_ES :
+            SDL_GL_CONTEXT_PROFILE_COMPATIBILITY);
         sscanf(verstr, "%d.%d", &glver[0][0], &glver[0][1]);
         if (glver[0][0] >= 1 && glver[0][0] <= 4 && glver[0][1] < 9) {
             verstart = 0;
@@ -149,18 +150,21 @@ static void gfx_sdl_init(const struct GfxWindowInitSettings *set) {
     }
 
     ctx = NULL;
-    u32 vmin = 0, vmaj = 0;
+    u32 vmin = 0, vmaj = 0, vprof = SDL_GL_CONTEXT_PROFILE_COMPATIBILITY;
+    const char *vprofstr = "";
     for (u32 i = verstart; i < verend; ++i) {
         vmaj = glver[i][0];
         vmin = glver[i][1];
+        vprof = glver[i][2];
+        vprofstr = (glver[i][2] == SDL_GL_CONTEXT_PROFILE_CORE ? "core" :
+            (glver[i][2] == SDL_GL_CONTEXT_PROFILE_ES ? "es" : ""));
         SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, vmaj);
         SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, vmin);
         SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, glver[i][2]);
         ctx = SDL_GL_CreateContext(wnd);
         if (!ctx) {
-            sysLogPrintf(LOG_WARNING, "GL: could not create GL%d.%d context: %s", vmaj, vmin, SDL_GetError());
+            sysLogPrintf(LOG_WARNING, "GL: could not create GL%d.%d%s context: %s", vmaj, vmin, vprofstr, SDL_GetError());
         } else {
-            glcore = (glver[i][2] == SDL_GL_CONTEXT_PROFILE_CORE);
             break;
         }
     }
@@ -168,7 +172,7 @@ static void gfx_sdl_init(const struct GfxWindowInitSettings *set) {
     if (!ctx) {
         sysFatalError("Could not create an OpenGL context of any supported version.\nSDL error: %s", SDL_GetError());
     } else {
-        sysLogPrintf(LOG_NOTE, "GL: created GL%d.%d%s context", vmaj, vmin, glcore ? "core" : "");
+        sysLogPrintf(LOG_NOTE, "GL: created GL%d.%d%s context", vmaj, vmin, vprofstr);
     }
 
     SDL_GL_MakeCurrent(wnd, ctx);

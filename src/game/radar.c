@@ -80,7 +80,7 @@ Gfx *radarRenderBackground(Gfx *gdl, struct textureconfig *tconfig, s32 arg2, s3
 
 	texSelect(&gdl, tconfig, 2, 0, 0, 1, NULL);
 	func0f0b278c(&gdl, spb0, spa8, tconfig->width, tconfig->height,
-			0, 0, 1, 0, 0xff, 0, 40, tconfig->level > 0, 0);
+			0, 0, 0, 0, 0xff, 0, 40, tconfig->level > 0, 0);
 
 	gDPPipeSync(gdl++);
 	gDPSetColorDither(gdl++, G_CD_BAYER);
@@ -329,6 +329,7 @@ Gfx *radarRender(Gfx *gdl)
 		}
 #ifndef PLATFORM_N64
 		gSPExtraGeometryModeEXT(gdl++, G_ASPECT_MODE_EXT, g_HudAlignModeR);
+		gDPSetSubpixelOffsetEXT(gdl++, -2, 2);
 #endif
 	}
 
@@ -337,6 +338,7 @@ Gfx *radarRender(Gfx *gdl)
 
 	// Draw dots for human players
 #ifndef PLATFORM_N64
+	gDPSetSubpixelOffsetEXT(gdl++, 0, 0);
 	if (!(g_MpSetup.options & MPOPTION_NOPLAYERONRADAR)) {
 #endif
 	for (i = 0; i < playercount; i++) {

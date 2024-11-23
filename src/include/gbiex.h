@@ -184,18 +184,19 @@
 
 /* Extended commands */
 
-#define G_SETFB_EXT             0x21
-#define G_SETTIMG_FB_EXT        0x23
-#define G_INVALTEXCACHE_EXT     0x34
-#define G_TEXRECT_WIDE_EXT      0x37
-#define G_FILLRECT_WIDE_EXT     0x38
-#define G_SETGRAYSCALE_EXT      0x39
-#define G_EXTRAGEOMETRYMODE_EXT 0x3a
-#define G_SETINTENSITY_EXT      0x40
-#define G_COPYFB_EXT            0x41
-#define G_IMAGERECT_EXT         0x42
-#define G_RDPFLUSH_EXT          0x43
-#define G_CLEAR_DEPTH_EXT       0x44
+#define G_SETFB_EXT                  0x21
+#define G_SETTIMG_FB_EXT             0x23
+#define G_INVALTEXCACHE_EXT          0x34
+#define G_TEXRECT_WIDE_EXT           0x37
+#define G_FILLRECT_WIDE_EXT          0x38
+#define G_SETGRAYSCALE_EXT           0x39
+#define G_EXTRAGEOMETRYMODE_EXT      0x3a
+#define G_SETINTENSITY_EXT           0x40
+#define G_COPYFB_EXT                 0x41
+#define G_IMAGERECT_EXT              0x42
+#define G_RDPFLUSH_EXT               0x43
+#define G_CLEAR_DEPTH_EXT            0x44
+#define G_SETSUBPIXELOFFSET_EXT      0x45
 
 /* G_EXTRAGEOMETRYMODE flags */
 
@@ -290,6 +291,14 @@
                                                                                         \
     _g->words.w0 = _SHIFTL(G_EXTRAGEOMETRYMODE_EXT, 24, 8) | _SHIFTL(~(u32)(c), 0, 24); \
     _g->words.w1 = (u32)(s);                                                            \
+}
+
+#define gDPSetSubpixelOffsetEXT(pkt, x, y)                                             \
+{                                                                                      \
+    Gfx *_g = (Gfx*)(pkt);                                                             \
+                                                                                       \
+    _g->words.w0 = _SHIFTL(G_SETSUBPIXELOFFSET_EXT, 24, 8) | _SHIFTL((s16)(x), 0, 16); \
+    _g->words.w1 = _SHIFTL((s16)(y), 0, 16);                                           \
 }
 
 #define gSPSetExtraGeometryModeEXT(pkt, word) gSPExtraGeometryModeEXT((pkt), 0, word)

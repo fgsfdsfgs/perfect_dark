@@ -187,6 +187,12 @@ add_compile_options($<$<COMPILE_LANGUAGE:C>:-Wno-pointer-sign>)
 # C++ specific flags
 add_compile_options($<$<COMPILE_LANGUAGE:CXX>:-Wno-unused-function>)
 
+# Platform-specific flags
+if (APPLE)
+  # Make it look for libs in the executable folder manually since CMake's rpath system is wack
+  set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -rpath @executable_path")
+endif()
+
 # Dependencies
 
 set(LIBS )
