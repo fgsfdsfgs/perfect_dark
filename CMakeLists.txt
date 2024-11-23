@@ -1,6 +1,16 @@
 cmake_minimum_required(VERSION 3.16)
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
 
+if(APPLE)
+  if(CMAKE_OSX_ARCHITECTURES MATCHES "arm64")
+    # ARM Macs start at OS 11.
+    set(CMAKE_OSX_DEPLOYMENT_TARGET "11.0" CACHE STRING "Minimum OS X deployment version")
+  else()
+    # SDL2 requires at least this version for everything to work properly.
+    set(CMAKE_OSX_DEPLOYMENT_TARGET "10.9" CACHE STRING "Minimum OS X deployment version")
+  endif()
+endif()
+
 project(pd C CXX)
 
 include(TargetArch)
@@ -178,7 +188,6 @@ add_compile_options(
   -Wno-unused-but-set-variable
   -Wno-unused-value
   -Wno-unused-variable
-  -Wno-format-truncation
 )
 
 # C specific flags
@@ -191,6 +200,9 @@ add_compile_options($<$<COMPILE_LANGUAGE:CXX>:-Wno-unused-function>)
 if (APPLE)
   # Make it look for libs in the executable folder manually since CMake's rpath system is wack
   set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -rpath @executable_path")
+else()
+  # This warning is not recognized by XCode/Clang for some reason.
+  add_compile_options(-Wno-format-truncation)
 endif()
 
 # Dependencies
