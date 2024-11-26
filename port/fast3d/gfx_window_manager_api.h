@@ -42,10 +42,12 @@ struct GfxWindowManagerAPI {
     void (*swap_buffers_begin)(void);
     void (*swap_buffers_end)(void);
     double (*get_time)(void); // For debug
+    int32_t (*get_target_fps)(void);
     void (*set_target_fps)(int fps);
     bool (*can_disable_vsync)(void);
     void *(*get_window_handle)(void);
     void (*set_window_title)(const char *);
+    int (*get_swap_interval)(void);
     bool (*set_swap_interval)(int);
 };
 

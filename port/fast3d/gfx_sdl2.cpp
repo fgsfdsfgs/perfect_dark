@@ -363,6 +363,10 @@ static double gfx_sdl_get_time(void) {
     return SDL_GetPerformanceCounter() / (double)qpc_freq;
 }
 
+static int32_t gfx_sdl_get_target_fps(void) {
+    return target_fps;
+}
+
 static void gfx_sdl_set_target_fps(int fps) {
     target_fps = fps;
 }
@@ -377,6 +381,10 @@ static void *gfx_sdl_get_window_handle(void) {
 
 static void gfx_sdl_set_window_title(const char *title) {
     SDL_SetWindowTitle(wnd, title);
+}
+
+static int gfx_sdl_get_swap_interval(void) {
+    return SDL_GL_GetSwapInterval();
 }
 
 static bool gfx_sdl_set_swap_interval(int interval) {
@@ -440,9 +448,11 @@ struct GfxWindowManagerAPI gfx_sdl = {
     gfx_sdl_swap_buffers_begin,
     gfx_sdl_swap_buffers_end,
     gfx_sdl_get_time,
+    gfx_sdl_get_target_fps,
     gfx_sdl_set_target_fps,
     gfx_sdl_can_disable_vsync,
     gfx_sdl_get_window_handle,
     gfx_sdl_set_window_title,
+    gfx_sdl_get_swap_interval,
     gfx_sdl_set_swap_interval,
 };

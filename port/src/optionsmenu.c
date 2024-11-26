@@ -736,6 +736,60 @@ static MenuItemHandlerResult menuhandlerCenterWindow(s32 operation, struct menui
 	return 0;
 }
 
+static MenuItemHandlerResult menuhandlerVsync(s32 operation, struct menuitem *item, union handlerdata *data)
+{
+	static const char *opts[] = {
+		"Adaptive",
+		"Off",
+		"On (Sync Every Frame)",
+		"On (Sync Every 2 Frames)",
+		"On (Sync Every 3 Frames)",
+		"On (Sync Every 4 Frames)",
+		"On (Sync Every 5 Frames)",
+		"On (Sync Every 6 Frames)",
+		"On (Sync Every 7 Frames)",
+		"On (Sync Every 8 Frames)",
+		"On (Sync Every 9 Frames)",
+		"On (Sync Every 10 Frames)"
+	};
+
+	switch (operation) {
+	case MENUOP_GETOPTIONCOUNT:
+		data->dropdown.value = ARRAYCOUNT(opts);
+		break;
+	case MENUOP_GETOPTIONTEXT:
+		return (intptr_t)opts[data->dropdown.value];
+	case MENUOP_SET:
+		videoSetVsync(data->dropdown.value - 1);
+	case MENUOP_GETSELECTEDINDEX:
+		data->dropdown.value = videoGetVsync() + 1;
+	}
+
+	return 0;
+}
+
+static MenuItemHandlerResult menuhandlerFramerateLimit(s32 operation, struct menuitem *item, union handlerdata *data)
+{
+	switch (operation) {
+	case MENUOP_GETSLIDER:
+		data->slider.value = videoGetFramerateLimit();
+		break;
+	case MENUOP_SET:
+		if (g_TickRateDiv < 2) {
+			g_TickRateDiv = (data->slider.value == 0 || data->slider.value > 60) ? 0 : 1;
+		}
+		videoSetFramerateLimit(data->slider.value);
+		break;
+	case MENUOP_GETSLIDERLABEL:
+		if (data->slider.value == 0) {
+			sprintf(data->slider.label, "Off");
+		}
+		break;
+	}
+
+	return 0;
+}
+
 static MenuItemHandlerResult menuhandlerResolution(s32 operation, struct menuitem *item, union handlerdata *data)
 {
 	static char resstring[32];
@@ -928,6 +982,22 @@ struct menuitem g_ExtendedVideoMenuItems[] = {
 		(uintptr_t)"Center Window",
 		0,
 		menuhandlerCenterWindow,
+	},
+	{
+		MENUITEMTYPE_DROPDOWN,
+		0,
+		MENUITEMFLAG_LITERAL_TEXT,
+		(uintptr_t)"Vsync",
+		0,
+		menuhandlerVsync,
+	},
+	{
+		MENUITEMTYPE_SLIDER,
+		0,
+		MENUITEMFLAG_LITERAL_TEXT | MENUITEMFLAG_SLIDER_WIDE | MENUITEMFLAG_SLIDER_DEFERRED,
+		(uintptr_t)"Framerate Limit",
+		VIDEO_MAX_FPS,
+		menuhandlerFramerateLimit,
 	},
 	{
 		MENUITEMTYPE_CHECKBOX,

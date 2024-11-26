@@ -86,18 +86,11 @@ s32 videoInit(void)
 	};
 
 	gfx_init(&set);
+
 	videoInitDisplayModes();
+	videoSetVsync(vidVsync);
+	videoSetFramerateLimit(vidFramerateLimit);
 
-	if (!wmAPI->set_swap_interval(vidVsync)) {
-		vidVsync = 0;
-	}
-
-	if (vidVsync == 0 && vidFramerateLimit == 0) {
-		// cap FPS if there's no vsync to prevent the game from exploding
-		vidFramerateLimit = VIDEO_MAX_FPS;
-	}
-
-	wmAPI->set_target_fps(vidFramerateLimit); // disabled because vsync is on
 	gfx_set_texture_filter((enum FilteringMode)texFilter);
 
 	initDone = true;
@@ -222,6 +215,18 @@ s32 videoGetDisplayModeIndex(void)
 	}
 	// Current dimensions don't match any known mode, so return index 0, "Custom".
 	return 0;
+}
+
+s32 videoGetVsync(void)
+{
+	vidVsync = wmAPI->get_swap_interval();
+	return vidVsync;
+}
+
+s32 videoGetFramerateLimit(void)
+{
+	vidFramerateLimit = wmAPI->get_target_fps();
+	return vidFramerateLimit;
 }
 
 static s32 videoInitDisplayModes(void)
@@ -407,6 +412,22 @@ void videoSetDetailTextures(s32 detail)
 s32 videoCreateFramebuffer(u32 w, u32 h, s32 upscale, s32 autoresize)
 {
 	return gfx_create_framebuffer(w, h, upscale, autoresize);
+}
+
+void videoSetVsync(const s32 vsync)
+{
+	vidVsync = wmAPI->set_swap_interval(vsync) ? vsync : 0;
+
+	if (vidVsync == 0 && vidFramerateLimit == 0) {
+		// cap FPS if there's no vsync to prevent the game from exploding
+		videoSetFramerateLimit(VIDEO_MAX_FPS);
+	}
+}
+
+void videoSetFramerateLimit(const s32 limit)
+{
+	vidFramerateLimit = (vidVsync == 0 && limit == 0) ? VIDEO_MAX_FPS : limit;
+	wmAPI->set_target_fps(vidFramerateLimit);
 }
 
 void videoSetFramebuffer(s32 target)
