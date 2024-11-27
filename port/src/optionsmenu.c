@@ -905,6 +905,7 @@ static MenuItemHandlerResult menuhandlerTexFilter2D(s32 operation, struct menuit
 		return videoGetTextureFilter2D();
 	case MENUOP_SET:
 		videoSetTextureFilter2D(data->checkbox.value);
+		g_TexFilter2D = videoGetTextureFilter2D() ? G_TF_BILERP : G_TF_POINT;
 		break;
 	}
 
