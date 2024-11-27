@@ -217,6 +217,12 @@ s32 videoGetDisplayModeIndex(void)
 	return 0;
 }
 
+s32 videoGetMSAA(void)
+{
+	vidMSAA = (s32)gfx_msaa_level;
+	return vidMSAA;
+}
+
 s32 videoGetVsync(void)
 {
 	vidVsync = wmAPI->get_swap_interval();
@@ -412,6 +418,12 @@ void videoSetDetailTextures(s32 detail)
 s32 videoCreateFramebuffer(u32 w, u32 h, s32 upscale, s32 autoresize)
 {
 	return gfx_create_framebuffer(w, h, upscale, autoresize);
+}
+
+void videoSetMSAA(const s32 msaa)
+{
+	vidMSAA = msaa;
+	gfx_msaa_level = (u32)vidMSAA;
 }
 
 void videoSetVsync(const s32 vsync)

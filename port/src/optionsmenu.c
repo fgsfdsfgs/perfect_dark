@@ -790,6 +790,44 @@ static MenuItemHandlerResult menuhandlerFramerateLimit(s32 operation, struct men
 	return 0;
 }
 
+static MenuItemHandlerResult menuhandlerMSAA(s32 operation, struct menuitem *item, union handlerdata *data)
+{
+	s32 msaa;
+	static const char *opts[] = {
+		"Off",
+		"2x",
+		"4x",
+		"8x",
+		"16x"
+	};
+
+	switch (operation) {
+	case MENUOP_GETOPTIONCOUNT:
+		data->dropdown.value = ARRAYCOUNT(opts);
+		break;
+	case MENUOP_GETOPTIONTEXT:
+		return (intptr_t)opts[data->dropdown.value];
+	case MENUOP_SET:
+		videoSetMSAA(1 << data->dropdown.value);
+		break;
+	case MENUOP_GETSELECTEDINDEX:
+		msaa = videoGetMSAA();
+		if (msaa < 2) {
+			data->dropdown.value = 0;
+		} else if (msaa < 4) {
+			data->dropdown.value = 1;
+		} else if (msaa < 8) {
+			data->dropdown.value = 2;
+		} else if (msaa < 16) {
+			data->dropdown.value = 3;
+		} else {
+			data->dropdown.value = 4;
+		}
+	}
+
+	return 0;
+}
+
 static MenuItemHandlerResult menuhandlerResolution(s32 operation, struct menuitem *item, union handlerdata *data)
 {
 	static char resstring[32];
@@ -998,6 +1036,14 @@ struct menuitem g_ExtendedVideoMenuItems[] = {
 		(uintptr_t)"Framerate Limit",
 		VIDEO_MAX_FPS,
 		menuhandlerFramerateLimit,
+	},
+	{
+		MENUITEMTYPE_DROPDOWN,
+		0,
+		MENUITEMFLAG_LITERAL_TEXT,
+		(uintptr_t)"Anti-aliasing (MSAA)",
+		0,
+		menuhandlerMSAA,
 	},
 	{
 		MENUITEMTYPE_CHECKBOX,
