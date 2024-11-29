@@ -149,7 +149,7 @@ s32 fsInit(void)
 		if (portable) {
 			path = "$E";
 		} else {
-#ifdef PLATFORM_LINUX
+#if defined(PLATFORM_LINUX) || defined(PLATFORM_OSX)
 			// check if there's a config in the working directory, otherwise default to homeDir
 			if (fsFileSize("./" CONFIG_FNAME) >= 0) {
 				path = ".";
