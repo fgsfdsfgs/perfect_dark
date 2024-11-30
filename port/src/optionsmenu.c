@@ -912,6 +912,57 @@ static MenuItemHandlerResult menuhandlerTexFilter2D(s32 operation, struct menuit
 	return 0;
 }
 
+static MenuItemHandlerResult menuhandlerDisplayFPS(s32 operation, struct menuitem *item, union handlerdata *data)
+{
+	switch (operation) {
+	case MENUOP_GET:
+		return videoGetDisplayFPS();
+	case MENUOP_SET:
+		videoSetDisplayFPS(data->checkbox.value);
+		break;
+	}
+
+	return 0;
+}
+
+static MenuItemHandlerResult menuhandlerDisplayFPSInterval(s32 operation, struct menuitem *item, union handlerdata *data)
+{
+	s32 divisor;
+	static const char *opts[] = {
+		"1 Sec",
+		"1/2 Secs",
+		"1/4 Secs",
+		"1/8 Secs",
+		"1/16 Secs",
+	};
+
+	switch (operation) {
+	case MENUOP_GETOPTIONCOUNT:
+		data->dropdown.value = ARRAYCOUNT(opts);
+		break;
+	case MENUOP_GETOPTIONTEXT:
+		return (intptr_t)opts[data->dropdown.value];
+	case MENUOP_SET:
+		videoSetDisplayFPSDivisor(1 << data->dropdown.value);
+		break;
+	case MENUOP_GETSELECTEDINDEX:
+		divisor = videoGetDisplayFPSDivisor();
+		if (divisor < 2) {
+			data->dropdown.value = 0;
+		} else if (divisor < 4) {
+			data->dropdown.value = 1;
+		} else if (divisor < 8) {
+			data->dropdown.value = 2;
+		} else if (divisor < 16) {
+			data->dropdown.value = 3;
+		} else {
+			data->dropdown.value = 4;
+		}
+	}
+
+	return 0;
+}
+
 static MenuItemHandlerResult menuhandlerGeMuzzleFlashes(s32 operation, struct menuitem *item, union handlerdata *data)
 {
 	switch (operation) {
@@ -1037,6 +1088,22 @@ struct menuitem g_ExtendedVideoMenuItems[] = {
 		(uintptr_t)"Framerate Limit",
 		VIDEO_MAX_FPS,
 		menuhandlerFramerateLimit,
+	},
+	{
+		MENUITEMTYPE_CHECKBOX,
+		0,
+		MENUITEMFLAG_LITERAL_TEXT,
+		(uintptr_t)"Display FPS",
+		0,
+		menuhandlerDisplayFPS,
+	},
+	{
+		MENUITEMTYPE_DROPDOWN,
+		0,
+		MENUITEMFLAG_LITERAL_TEXT,
+		(uintptr_t)"Display FPS Interval",
+		0,
+		menuhandlerDisplayFPSInterval,
 	},
 	{
 		MENUITEMTYPE_DROPDOWN,
