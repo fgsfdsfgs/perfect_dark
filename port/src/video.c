@@ -105,6 +105,10 @@ void videoStartFrame(void)
 		startTime = wmAPI->get_time();
 		gfx_start_frame();
 	}
+
+	// Synchronize with their backend counterparts.
+	vidFullscreen = videoGetFullscreen();
+	vidMaximize = videoGetMaximizeWindow();
 }
 
 void videoSubmitCommands(Gfx *cmds)
