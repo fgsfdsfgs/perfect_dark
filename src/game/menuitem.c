@@ -2481,9 +2481,14 @@ bool menuitemSliderTick(struct menuitem *item, struct menudialog *dialog, struct
 						index = item->param3;
 					}
 					if (item->handler) {
-						item->handler(MENUOP_GET, item, &handlerdata);
-						handlerdata.slider.value = index;
-						item->handler(MENUOP_SET, item, &handlerdata);
+						if ((item->flags & MENUITEMFLAG_SLIDER_DEFERRED) &&
+							(tickflags & MENUTICKFLAG_DIALOGISDIMMED)) {
+							deferredindex = index;
+						} else {
+							item->handler(MENUOP_GET, item, &handlerdata);
+							handlerdata.slider.value = index;
+							item->handler(MENUOP_SET, item, &handlerdata);
+						}
 					}
 					return true;
 				}
