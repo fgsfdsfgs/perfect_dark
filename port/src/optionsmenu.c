@@ -741,16 +741,16 @@ static MenuItemHandlerResult menuhandlerVsync(s32 operation, struct menuitem *it
 	static const char *opts[] = {
 		"Adaptive",
 		"Off",
-		"On (Sync Every Frame)",
-		"On (Sync Every 2 Frames)",
-		"On (Sync Every 3 Frames)",
-		"On (Sync Every 4 Frames)",
-		"On (Sync Every 5 Frames)",
-		"On (Sync Every 6 Frames)",
-		"On (Sync Every 7 Frames)",
-		"On (Sync Every 8 Frames)",
-		"On (Sync Every 9 Frames)",
-		"On (Sync Every 10 Frames)"
+		"On (Every Frame)",
+		"On (Every 2 Frames)",
+		"On (Every 3 Frames)",
+		"On (Every 4 Frames)",
+		"On (Every 5 Frames)",
+		"On (Every 6 Frames)",
+		"On (Every 7 Frames)",
+		"On (Every 8 Frames)",
+		"On (Every 9 Frames)",
+		"On (Every 10 Frames)"
 	};
 
 	switch (operation) {
@@ -781,10 +781,12 @@ static MenuItemHandlerResult menuhandlerFramerateLimit(s32 operation, struct men
 		videoSetFramerateLimit(data->slider.value);
 		break;
 	case MENUOP_GETSLIDERLABEL:
+		// NOTE: data->slider.label length must not exceed 15.
 		if (data->slider.value == 0) {
-			sprintf(data->slider.label, "Off");
+			strcpy(data->slider.label, "Off");
+		} else {
+			sprintf(data->slider.label, "%d FPS", data->slider.value);
 		}
-		break;
 	}
 
 	return 0;
@@ -795,10 +797,10 @@ static MenuItemHandlerResult menuhandlerMSAA(s32 operation, struct menuitem *ite
 	s32 msaa;
 	static const char *opts[] = {
 		"Off",
-		"2x",
-		"4x",
-		"8x",
-		"16x"
+		"2x (MSAA)",
+		"4x (MSAA)",
+		"8x (MSAA)",
+		"16x (MSAA)"
 	};
 
 	switch (operation) {
@@ -919,7 +921,6 @@ static MenuItemHandlerResult menuhandlerDisplayFPS(s32 operation, struct menuite
 		return videoGetDisplayFPS();
 	case MENUOP_SET:
 		videoSetDisplayFPS(data->checkbox.value);
-		break;
 	}
 
 	return 0;
@@ -927,36 +928,19 @@ static MenuItemHandlerResult menuhandlerDisplayFPS(s32 operation, struct menuite
 
 static MenuItemHandlerResult menuhandlerDisplayFPSInterval(s32 operation, struct menuitem *item, union handlerdata *data)
 {
-	s32 divisor;
-	static const char *opts[] = {
-		"1 Sec",
-		"1/2 Secs",
-		"1/4 Secs",
-		"1/8 Secs",
-		"1/16 Secs",
-	};
-
 	switch (operation) {
-	case MENUOP_GETOPTIONCOUNT:
-		data->dropdown.value = ARRAYCOUNT(opts);
+	case MENUOP_GETSLIDER:
+		data->slider.value = videoGetDisplayFPSDivisor() - 1;
 		break;
-	case MENUOP_GETOPTIONTEXT:
-		return (intptr_t)opts[data->dropdown.value];
 	case MENUOP_SET:
-		videoSetDisplayFPSDivisor(1 << data->dropdown.value);
+		videoSetDisplayFPSDivisor(data->dropdown.value + 1);
 		break;
-	case MENUOP_GETSELECTEDINDEX:
-		divisor = videoGetDisplayFPSDivisor();
-		if (divisor < 2) {
-			data->dropdown.value = 0;
-		} else if (divisor < 4) {
-			data->dropdown.value = 1;
-		} else if (divisor < 8) {
-			data->dropdown.value = 2;
-		} else if (divisor < 16) {
-			data->dropdown.value = 3;
+	case MENUOP_GETSLIDERLABEL:
+		// NOTE: data->slider.label length must not exceed 15.
+		if (data->slider.value == 0) {
+			strcpy(data->slider.label, "1 Sec");
 		} else {
-			data->dropdown.value = 4;
+			sprintf(data->slider.label, "1/%d Secs", data->slider.value + 1);
 		}
 	}
 
@@ -1050,14 +1034,6 @@ struct menuitem g_ExtendedVideoMenuItems[] = {
 		menuhandlerResolution,
 	},
 	{
-		MENUITEMTYPE_DROPDOWN,
-		0,
-		MENUITEMFLAG_LITERAL_TEXT,
-		(uintptr_t)"Texture Filtering",
-		0,
-		menuhandlerTexFilter,
-	},
-	{
 		MENUITEMTYPE_CHECKBOX,
 		0,
 		MENUITEMFLAG_LITERAL_TEXT,
@@ -1072,6 +1048,22 @@ struct menuitem g_ExtendedVideoMenuItems[] = {
 		(uintptr_t)"Center Window",
 		0,
 		menuhandlerCenterWindow,
+	},
+	{
+		MENUITEMTYPE_DROPDOWN,
+		0,
+		MENUITEMFLAG_LITERAL_TEXT,
+		(uintptr_t)"HUD Centering",
+		0,
+		menuhandlerCenterHUD,
+	},
+	{
+		MENUITEMTYPE_SEPARATOR,
+		0,
+		0,
+		0,
+		0,
+		NULL,
 	},
 	{
 		MENUITEMTYPE_DROPDOWN,
@@ -1098,20 +1090,52 @@ struct menuitem g_ExtendedVideoMenuItems[] = {
 		menuhandlerDisplayFPS,
 	},
 	{
-		MENUITEMTYPE_DROPDOWN,
+		MENUITEMTYPE_SLIDER,
 		0,
-		MENUITEMFLAG_LITERAL_TEXT,
+		MENUITEMFLAG_LITERAL_TEXT | MENUITEMFLAG_SLIDER_WIDE,
 		(uintptr_t)"Display FPS Interval",
-		0,
+		31,
 		menuhandlerDisplayFPSInterval,
+	},
+	{
+		MENUITEMTYPE_SEPARATOR,
+		0,
+		0,
+		0,
+		0,
+		NULL,
 	},
 	{
 		MENUITEMTYPE_DROPDOWN,
 		0,
 		MENUITEMFLAG_LITERAL_TEXT,
-		(uintptr_t)"Anti-aliasing (MSAA)",
+		(uintptr_t)"Anti-aliasing",
 		0,
 		menuhandlerMSAA,
+	},
+	{
+		MENUITEMTYPE_DROPDOWN,
+		0,
+		MENUITEMFLAG_LITERAL_TEXT,
+		(uintptr_t)"Texture Filtering",
+		0,
+		menuhandlerTexFilter,
+	},
+	{
+		MENUITEMTYPE_CHECKBOX,
+		0,
+		MENUITEMFLAG_LITERAL_TEXT,
+		(uintptr_t)"GUI Texture Filtering",
+		0,
+		menuhandlerTexFilter2D,
+	},
+	{
+		MENUITEMTYPE_SEPARATOR,
+		0,
+		0,
+		0,
+		0,
+		NULL,
 	},
 	{
 		MENUITEMTYPE_CHECKBOX,
@@ -1125,25 +1149,9 @@ struct menuitem g_ExtendedVideoMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		0,
 		MENUITEMFLAG_LITERAL_TEXT,
-		(uintptr_t)"GUI Texture Filtering",
-		0,
-		menuhandlerTexFilter2D,
-	},
-	{
-		MENUITEMTYPE_CHECKBOX,
-		0,
-		MENUITEMFLAG_LITERAL_TEXT,
 		(uintptr_t)"GE64-style Muzzle Flashes",
 		0,
 		menuhandlerGeMuzzleFlashes,
-	},
-	{
-		MENUITEMTYPE_DROPDOWN,
-		0,
-		MENUITEMFLAG_LITERAL_TEXT,
-		(uintptr_t)"HUD Centering",
-		0,
-		menuhandlerCenterHUD,
 	},
 	{
 		MENUITEMTYPE_SLIDER,

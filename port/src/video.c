@@ -42,7 +42,7 @@ static s32 vidVsync = 1;
 static s32 vidMSAA = 1;
 static s32 vidFramerateLimit = 0;
 static s32 vidDisplayFPS = 0;
-static s32 vidDisplayFPSDivisor = 8;
+static s32 vidDisplayFPSDivisor = 16;
 static displaymode vidModeDefault;
 static s32 vidNumModes = 1;
 static displaymode *vidModes = &vidModeDefault;
@@ -529,7 +529,7 @@ PD_CONSTRUCTOR static void videoConfigInit(void)
 	configRegisterInt("Video.FramebufferEffects", &vidFramebuffers, 0, 1);
 	configRegisterInt("Video.FramerateLimit", &vidFramerateLimit, 0, VIDEO_MAX_FPS);
 	configRegisterInt("Video.DisplayFPS", &vidDisplayFPS, 0, 1);
-	configRegisterInt("Video.DisplayFPSDivisor", &vidDisplayFPSDivisor, 1, 16);
+	configRegisterInt("Video.DisplayFPSDivisor", &vidDisplayFPSDivisor, 1, 32);
 	configRegisterInt("Video.MSAA", &vidMSAA, 1, 16);
 	configRegisterInt("Video.TextureFilter", &texFilter, 0, 2);
 	configRegisterInt("Video.TextureFilter2D", &texFilter2D, 0, 1);
