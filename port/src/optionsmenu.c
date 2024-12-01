@@ -775,7 +775,7 @@ static MenuItemHandlerResult menuhandlerFramerateLimit(s32 operation, struct men
 		data->slider.value = videoGetFramerateLimit();
 		break;
 	case MENUOP_SET:
-		if (g_TickRateDiv < 2) {
+		if (!g_TickRateDivOverride) {
 			g_TickRateDiv = (data->slider.value == 0 || data->slider.value > 60) ? 0 : 1;
 		}
 		videoSetFramerateLimit(data->slider.value);
@@ -955,6 +955,49 @@ static MenuItemHandlerResult menuhandlerGeMuzzleFlashes(s32 operation, struct me
 	case MENUOP_SET:
 		g_BgunGeMuzzleFlashes = data->checkbox.value;
 		break;
+	}
+
+	return 0;
+}
+
+static MenuItemHandlerResult menuhandlerTickrateDivisorOverride(s32 operation, struct menuitem *item, union handlerdata *data)
+{
+	s32 framerateLimit;
+
+	switch (operation) {
+	case MENUOP_GET:
+		return g_TickRateDivOverride;
+	case MENUOP_SET:
+		g_TickRateDivOverride = data->checkbox.value;
+		if (!g_TickRateDivOverride) {
+			framerateLimit = videoGetFramerateLimit();
+			g_TickRateDiv = (framerateLimit == 0 || framerateLimit > 60) ? 0 : 1;
+		}
+	}
+
+	return 0;
+}
+
+static MenuItemHandlerResult menuhandlerTickrateDivisor(s32 operation, struct menuitem *item, union handlerdata *data)
+{
+	s32 framerateLimit;
+
+	switch (operation) {
+	case MENUOP_CHECKHIDDEN:
+		if (!g_TickRateDivOverride) {
+			return true;
+		}
+		break;
+	case MENUOP_GETSLIDER:
+		data->slider.value = g_TickRateDiv;
+		break;
+	case MENUOP_SET:
+		if (g_TickRateDivOverride) {
+			g_TickRateDiv = data->slider.value;
+		} else {
+			framerateLimit = videoGetFramerateLimit();
+			g_TickRateDiv = (framerateLimit == 0 || framerateLimit > 60) ? 0 : 1;
+		}
 	}
 
 	return 0;
@@ -1160,6 +1203,30 @@ struct menuitem g_ExtendedVideoMenuItems[] = {
 		(uintptr_t)"Explosion Shake",
 		20,
 		menuhandlerScreenShake,
+	},
+	{
+		MENUITEMTYPE_SEPARATOR,
+		0,
+		0,
+		0,
+		0,
+		NULL,
+	},
+	{
+		MENUITEMTYPE_CHECKBOX,
+		0,
+		MENUITEMFLAG_LITERAL_TEXT,
+		(uintptr_t)"Override Tickrate Divisor",
+		0,
+		menuhandlerTickrateDivisorOverride,
+	},
+	{
+		MENUITEMTYPE_SLIDER,
+		0,
+		MENUITEMFLAG_LITERAL_TEXT | MENUITEMFLAG_SLIDER_WIDE,
+		(uintptr_t)"Tickrate Divisor",
+		10,
+		menuhandlerTickrateDivisor,
 	},
 	{
 		MENUITEMTYPE_SEPARATOR,
