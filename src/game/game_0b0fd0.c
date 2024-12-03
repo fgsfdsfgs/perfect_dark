@@ -208,6 +208,14 @@ f32 currentPlayerGetGunZoomFov(void)
 	}
 
 	if (index >= 0) {
+#ifndef PLATFORM_N64
+		// Make sure gunzoomfovs are clamped when the player changes their FOV.
+		if (g_Vars.currentplayer->gunzoomfovs[index] > ADJUST_ZOOM_FOV(60)) {
+			g_Vars.currentplayer->gunzoomfovs[index] = ADJUST_ZOOM_FOV(60);
+		} else if (g_Vars.currentplayer->gunzoomfovs[index] < ADJUST_ZOOM_FOV(2)) {
+			g_Vars.currentplayer->gunzoomfovs[index] = ADJUST_ZOOM_FOV(2);
+		}
+#endif
 		return g_Vars.currentplayer->gunzoomfovs[index];
 	}
 
