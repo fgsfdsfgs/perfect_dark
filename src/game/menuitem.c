@@ -2490,6 +2490,12 @@ bool menuitemSliderTick(struct menuitem *item, struct menudialog *dialog, struct
 				index = 0;
 			}
 
+#ifndef PLATFORM_N64
+			if (g_MenuUsingMouse && inputs->mousescroll) {
+				index += -inputs->mousescroll;
+			}
+#endif
+
 			if ((item->flags & MENUITEMFLAG_SLIDER_FAST) == 0
 					&& g_Menus[g_MpPlayerNum].xrepeatmode == MENUREPEATMODE_SLOW) {
 				index = index + inputs->leftright;
