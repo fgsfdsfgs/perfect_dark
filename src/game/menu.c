@@ -4704,8 +4704,8 @@ void menuProcessInput(void)
 		// ESC always acts as back
 		inputs.back = inputKeyJustPressed(VK_ESCAPE);
 		if (inputMouseIsEnabled() && !inputMouseIsLocked() && g_MenuMouseControl) {
-			inputs.mousemoved = inputMouseGetPosition(&inputs.mousex, &inputs.mousey);
 			inputs.mousescroll = inputKeyPressed(VK_MOUSE_WHEEL_DN) - inputKeyPressed(VK_MOUSE_WHEEL_UP);
+			inputs.mousemoved = inputMouseGetPosition(&inputs.mousex, &inputs.mousey) || inputs.mousescroll;
 			// aspect correct the X
 			const f32 cx = ((f32)inputs.mousex - (f32)(SCREEN_WIDTH_LO / 2)) * (videoGetAspect() / SCREEN_ASPECT);
 			inputs.mousex = (f32)(SCREEN_WIDTH_LO / 2) + cx;
