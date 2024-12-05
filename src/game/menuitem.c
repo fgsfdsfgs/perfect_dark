@@ -2492,7 +2492,12 @@ bool menuitemSliderTick(struct menuitem *item, struct menudialog *dialog, struct
 
 #ifndef PLATFORM_N64
 			if (g_MenuUsingMouse && inputs->mousescroll) {
-				index += -inputs->mousescroll;
+				if ((item->flags & MENUITEMFLAG_SLIDER_FAST) == 0) {
+					index += -inputs->mousescroll;
+				} else {
+					s32 mult = item->param3 / 40;
+					index += -inputs->mousescroll * (mult ? mult : 1);
+				}
 			}
 #endif
 
