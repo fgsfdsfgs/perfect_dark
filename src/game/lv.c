@@ -974,6 +974,7 @@ Gfx *lvRenderFPS(Gfx *gdl)
 
 		gdl = text0f153628(gdl);
 		gdl = textRender(gdl, &x, &y, buffer, g_CharsNumeric, g_FontNumeric, color, 0x000000a0, viGetWidth(), viGetHeight(), 0, 0);
+		gdl = text0f153780(gdl);
 
 		gSPClearExtraGeometryModeEXT(gdl++, g_HudAlignModeL);
 	}
