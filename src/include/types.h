@@ -4,6 +4,7 @@
 #include <PR/ultrasched.h>
 #include "n_libaudio.h"
 #include "constants.h"
+#include "config.h"
 #include "lang.h"
 #include "pads.h"
 #include "tiles.h"
@@ -4050,6 +4051,7 @@ struct mpplayerconfig {
 	/*0x96*/ u8 newtitle;
 	/*0x97*/ u8 gunfuncs[6];
 	/*0x9d*/ u8 handicap;
+	s32 configindex;
 };
 
 struct mpbotconfig {
@@ -6153,6 +6155,26 @@ struct extplayerconfig {
 	u32 crosshairsize;
 	s32 crosshairhealth;
 };
+
+typedef union {
+	struct fileguid fileguid;
+	u8 u8;
+	s32 s32;
+	f32 f32;
+	u32 u32;
+	char *string;
+} extplayerprop;
+
+struct extplayerprofile {
+	union {
+		struct {
+			struct fileguid fileguid;
+			u8 handicap;
+		};
+		extplayerprop ptr[2];
+	};
+};
+
 
 #endif
 

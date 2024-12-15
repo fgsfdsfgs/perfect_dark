@@ -1696,7 +1696,7 @@
 
 #ifndef PLATFORM_N64
 #define MENUITEMTYPE_COLORBOX    0x1b
-#endif 
+#endif
 
 #define MENUMODELFLAG_HASSCALE    0x01
 #define MENUMODELFLAG_HASPOSITION 0x02
@@ -4752,6 +4752,9 @@ enum weaponnum {
 #define CROSSHAIR_HEALTH_ON_WHITE 2
 
 #define EXTRA_SLEEP_TIME 1000LL // 100us
+
+// if controller pak-like support was added and everyone had 4 profiles, this is twice the max
+#define CONFIG_MAX_PROFILES ((MAX_PLAYERS * 4) * 2)
 
 #endif
 
