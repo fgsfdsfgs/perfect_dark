@@ -183,7 +183,13 @@ struct extprofileproperty {
 	void (*initfunc)(s32, s32);
 };
 
+static void mpExtendedProfileInitHandicap(s32 profileindex,  s32 playernum)
+{
+	g_PlayerConfigsArray[playernum].handicap = &g_ExtendedProfiles[profileindex].handicap;
+}
+
 struct extprofileproperty g_ExtendedProfileProperties[] = {
+	{ CFG_U8, "Handicap", 0x80, 0, 255, &mpExtendedProfileInitHandicap},
 }; // these must be in the same order as the extendedprofile struct, ignoring the fileguid
 
 static inline s32 getExtendedProfileIndexFromFileGuid(const struct fileguid* fileguid)
@@ -632,7 +638,6 @@ void mpPlayerSetDefaults(s32 playernum, bool autonames)
 		| OPTION_SHOWZOOMRANGE;
 
 	updateNewGuids(autonames);
-	g_PlayerConfigsArray[playernum].handicap = 128;
 
 	switch (playernum) {
 	case 0:
@@ -3877,7 +3882,6 @@ s32 mpplayerfileLoad(s32 playernum, s32 device, s32 fileid, u16 deviceserial)
 
 			updateExtendedMpProfileOnFileOperation(playernum);
 
-			g_PlayerConfigsArray[playernum].handicap = 0x80;
 			return 0;
 		}
 

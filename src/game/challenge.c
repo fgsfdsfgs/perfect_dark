@@ -244,7 +244,7 @@ void challengePerformSanityChecks(void)
 		// Reset player handicaps
 		for (i = 0; i < MAX_PLAYERS; i++) {
 			if (g_MpSetup.chrslots & (1 << i)) {
-				g_PlayerConfigsArray[i].handicap = 0x80;
+				*g_PlayerConfigsArray[i].handicap = 0x80;
 				numplayers++;
 			}
 		}

@@ -2341,13 +2341,13 @@ MenuItemHandlerResult menuhandlerMpHandicapPlayer(s32 operation, struct menuitem
 		}
 		break;
 	case MENUOP_GETSLIDER:
-		data->slider.value = g_PlayerConfigsArray[item->param].handicap;
+		data->slider.value = *g_PlayerConfigsArray[item->param].handicap;
 		break;
 	case MENUOP_SET:
-		g_PlayerConfigsArray[item->param].handicap = (u16)data->slider.value;
+		*g_PlayerConfigsArray[item->param].handicap = (u16)data->slider.value;
 		break;
 	case MENUOP_GETSLIDERLABEL:
-		sprintf(data->slider.label, "%s%s%.00f%%\n", "", "", mpHandicapToDamageScale(g_PlayerConfigsArray[item->param].handicap) * 100);
+		sprintf(data->slider.label, "%s%s%.00f%%\n", "", "", mpHandicapToDamageScale(*g_PlayerConfigsArray[item->param].handicap) * 100);
 		break;
 	}
 
@@ -2369,7 +2369,7 @@ MenuItemHandlerResult menuhandlerMpRestoreHandicapDefaults(s32 operation, struct
 		s32 i;
 
 		for (i = 0; i < MAX_PLAYERS; i++) {
-			g_PlayerConfigsArray[i].handicap = 0x80;
+			if (g_PlayerConfigsArray[i].handicap) *g_PlayerConfigsArray[i].handicap = 0x80;
 		}
 	}
 
