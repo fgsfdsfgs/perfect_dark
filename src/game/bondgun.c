@@ -164,6 +164,12 @@ struct fireslot g_Fireslots[20];
 u32 fill2[1];
 #endif
 
+#ifndef PLATFORM_N64
+bool g_BNoAutoSwitch = false;
+bool g_BNoAutoReload = false;
+bool g_BNoBackpackReload = false;
+#endif
+
 Lights1 var80070090 = gdSPDefLights1(0x96, 0x96, 0x96, 0xff, 0xff, 0xff, 0xb2, 0x4d, 0x2e);
 
 #ifdef PLATFORM_64BIT
@@ -1123,6 +1129,7 @@ void bgun0f098df8(s32 weaponfunc, struct handweaponinfo *info, struct hand *hand
 	}
 }
 
+//TODO: Control this with a backpack reload setting
 void bgun0f098f8c(struct handweaponinfo *info, struct hand *hand)
 {
 	s32 i;
@@ -1200,6 +1207,18 @@ bool bgun0f099188(struct hand *hand, s32 gunfunc)
 	}
 
 	return bgun0f0990b0(func, weapon);
+}
+
+//Play a click sound when we have no ammo
+bool dryfire(struct handweaponinfo *info, struct hand *hand, s32 handnum)
+{
+	if (info->weaponnum != WEAPON_NONE) {
+		hand->unk0cc8_01 = false;
+
+		if (bgunSetState(handnum, HANDSTATE_ATTACKEMPTY))
+			return true;
+	}
+	return false;
 }
 
 s32 bgunTickIncIdle(struct handweaponinfo *info, s32 handnum, struct hand *hand, s32 lvupdate)
@@ -1309,14 +1328,17 @@ s32 bgunTickIncIdle(struct handweaponinfo *info, s32 handnum, struct hand *hand,
 					}
 				}
 			}
+			
+			// Clip is empty and we have no reserve ammo
+			if (hand->triggeron && dryfire(info, hand, handnum)) {
+				return lvupdate;
+			}
 		} else if (sp34 == 0) {
 			// Clip is empty
-			if (hand->triggeron && info->weaponnum != WEAPON_NONE) {
-				hand->unk0cc8_01 = false;
-
-				if (bgunSetState(handnum, HANDSTATE_ATTACKEMPTY)) {
-					return lvupdate;
-				}
+			if (hand->triggeron && dryfire(info, hand, handnum)) {
+				return lvupdate;
+			} else if (g_BNoAutoReload && hand->modenext != HANDMODE_RELOAD) {
+				hand->modenext = HANDMODE_EMPTY;
 			} else {
 				hand->count60 = 0;
 				hand->count = 0;
@@ -5878,7 +5900,7 @@ void bgunAutoSwitchWeapon(void)
 	s32 curweaponnum = g_Vars.currentplayer->gunctrl.weaponnum;
 	bool wantammo = false;
 
-	if (g_Vars.tickmode == TICKMODE_CUTSCENE) {
+	if (g_Vars.tickmode == TICKMODE_CUTSCENE || g_BNoAutoSwitch) {
 		return;
 	}
 
@@ -6051,7 +6073,7 @@ void bgunReloadIfPossible(s32 handnum)
 	struct player *player = g_Vars.currentplayer;
 
 	if (bgunGetAmmoTypeForWeapon(bgunGetWeaponNum(handnum), FUNC_PRIMARY)
-			&& player->hands[handnum].modenext == HANDMODE_NONE) {
+			&& (player->hands[handnum].modenext == HANDMODE_NONE || player->hands[handnum].modenext == HANDMODE_EMPTY)) {
 		player->hands[handnum].modenext = HANDMODE_RELOAD;
 	}
 }
