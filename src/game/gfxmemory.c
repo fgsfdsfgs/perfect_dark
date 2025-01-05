@@ -115,16 +115,12 @@ void gfxReset(void)
 		// ******** Original Amount required = %dK ber buffer\n
 		// ******** Extra Amount required = %dK ber buffer\n
 		// ******** Total of %dK (Double Buffered)\n
-<<<<<<< HEAD
-		g_GfxSizesByPlayerCount[PLAYERCOUNT() - 1] = gfx + gfxtra;
+		g_GfxSizesByPlayerCount[PLAYERCOUNT() - 1] = (gfx + gfxtra) * GFX_SIZE_MULTIPLIER;
 #ifndef PLATFORM_N64
 		if (PLAYERCOUNT() > MAX_LOCAL_PLAYERS) {
 			g_GfxSizesByPlayerCount[PLAYERCOUNT() - 1] *= MAX_PLAYERS / MAX_LOCAL_PLAYERS;
 		}
 #endif
-=======
-		g_GfxSizesByPlayerCount[PLAYERCOUNT() - 1] = (gfx + gfxtra) * GFX_SIZE_MULTIPLIER;
->>>>>>> 49cd478622e3fefdd5c60fbd314ef8185d0cbf9d
 	}
 
 	if (argFindByPrefix(1, "-mvtx")) {
