@@ -1465,7 +1465,7 @@ bool menuitemKeyboardTick(struct menuitem *item, struct menuinputs *inputs, u32 
 			kb->row += inputs->updown;
 
 			if (kb->row < 0) {
-				kb->row = 5;
+				kb->row = MENU_KEYBOARD_ROWS - 1;
 			}
 
 			if (kb->row > MENU_KEYBOARD_ROWS - 1) {
