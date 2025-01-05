@@ -224,7 +224,7 @@ static void convertPrimaryLights(u8 *dst, u32 *dstpos, u8 *src, u32 *srcpos, u32
 	}
 
 	*srcpos += sizeof(*n64_lights) * num_lights;
-	*dstpos += sizeof(*host_lights) * num_lights;
+	*dstpos += ALIGN(sizeof(*host_lights) * num_lights, 4);
 }
 
 #define BLOCK_LEAF 0

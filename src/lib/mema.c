@@ -39,7 +39,7 @@
 
 struct memaspace {
 	uintptr_t addr;
-	u64 size;
+	uintptr_t size;
 };
 
 /**
@@ -56,7 +56,7 @@ struct memaheap {
 };
 
 uintptr_t g_MemaHeapStart;
-u64 g_MemaHeapSize;
+uintptr_t g_MemaHeapSize;
 struct memaheap g_MemaHeap;
 
 #if VERSION == VERSION_PAL_BETA
@@ -125,7 +125,7 @@ struct memaspace *memaMakeSlot(struct memaheap *heap)
 {
 	struct memaspace *curr = &heap->spaces[0];
 	struct memaspace *best;
-	u32 min;
+	uintptr_t min;
 	s32 i;
 
 	// Do 124 passes over the list. This ensures the list is in order by the
@@ -162,7 +162,7 @@ struct memaspace *memaMakeSlot(struct memaheap *heap)
 	// Find the smallest run of free space and use that instead.
 	// The caller will overwrite it with its own free allocation, causing the
 	// original run of free space to be unusable until the mema heap is reset.
-	min = 0xffffffff;
+	min = (uintptr_t)-1;
 	best = curr;
 
 	while (curr <= &heap->spaces[MAX_SPACES - 1]) {
@@ -193,7 +193,7 @@ void _memaFree(uintptr_t addr, u64 size)
 	}
 
 	// If we reached the end of the spaces list, go backwards instead
-	if (curr->addr == -1) {
+	if (curr->addr == (uintptr_t)-1) {
 		curr = &g_MemaHeap.spaces[index];
 
 		while (curr->size != 0) {
@@ -235,10 +235,10 @@ void memaReset(void *heapaddr, u64 heapsize)
 	g_MemaHeap.start.addr = 0;
 	g_MemaHeap.start.size = 0;
 
-	g_MemaHeap.end1.addr = 0xffffffff;
+	g_MemaHeap.end1.addr = (uintptr_t)-1;
 	g_MemaHeap.end1.size = 0;
-	g_MemaHeap.end2.addr = 0xffffffff;
-	g_MemaHeap.end2.size = 0xffffffff;
+	g_MemaHeap.end2.addr = (uintptr_t)-1;
+	g_MemaHeap.end2.size = (uintptr_t)-1;
 
 	for (space = &g_MemaHeap.spaces[0]; space <= &g_MemaHeap.spaces[MAX_SPACES - 1]; space++) {
 		space->addr = 0;
@@ -411,7 +411,7 @@ void *memaAlloc(u64 size)
 	if (1);
 
 	curr = &g_MemaHeap.spaces[0];
-	bestdiff = 0xffffffff;
+	bestdiff = (uintptr_t)-1;
 	best = NULL;
 
 	// Iterate up to the first 16 spaces, looking for the
@@ -421,7 +421,7 @@ void *memaAlloc(u64 size)
 			continue;
 		}
 
-		if (curr->addr == 0xffffffff) {
+		if (curr->addr == (uintptr_t)-1) {
 			// Reached the end
 			break;
 		}
@@ -446,13 +446,13 @@ void *memaAlloc(u64 size)
 
 	if (best == NULL) {
 		// Keep iterating until we find a space that is big enough to fit.
-		// The last space is marked as size 0xffffffff which prevents this loop
+		// The last space is marked as size -1 which prevents this loop
 		// from iterating past the end of the spaces array.
 		while (curr->size < size) {
 			curr++;
 		}
 
-		if (curr->addr == 0xffffffff) {
+		if (curr->addr == (uintptr_t)-1) {
 			// There was no space, so attempt to free up some space
 			// by doing several defrag passes
 			for (i = 0; i < 8; i++) {
@@ -465,7 +465,7 @@ void *memaAlloc(u64 size)
 				curr++;
 			}
 
-			if (curr->addr == 0xffffffff) {
+			if (curr->addr == (uintptr_t)-1) {
 				return NULL;
 			}
 		}
@@ -491,7 +491,7 @@ uintptr_t memaGrow(uintptr_t addr, u64 amount)
 {
 	struct memaspace *curr = &g_MemaHeap.spaces[0];
 
-	while (curr->addr != -1) {
+	while (curr->addr != (uintptr_t)-1) {
 		if (curr->addr == addr && curr->size >= amount) {
 			goto found;
 		}
@@ -535,7 +535,7 @@ u64 memaGetLongestFree(void)
 
 	curr = &g_MemaHeap.spaces[0];
 
-	while (curr->addr != -1) {
+	while (curr->addr != (uintptr_t)-1) {
 		if (curr->size > biggest) {
 			biggest = curr->size;
 		}

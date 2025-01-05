@@ -3650,7 +3650,7 @@ void mpplayerfileGetOverview(char *arg0, char *name, u32 *playtime)
 {
 	struct savebuffer buffer;
 
-	func0f0d5484(&buffer, arg0, 15);
+	savebufferWriteData(&buffer, arg0, 15);
 
 	savebufferReadString(&buffer, name, 0);
 	*playtime = savebufferReadBits(&buffer, 28);
@@ -4018,7 +4018,7 @@ void mpsetupfileGetOverview(char *arg0, char *filename, u16 *numsims, u16 *stage
 {
 	struct savebuffer buffer;
 
-	func0f0d5484(&buffer, arg0, 15);
+	savebufferWriteData(&buffer, arg0, 15);
 
 	savebufferReadString(&buffer, filename, 0);
 

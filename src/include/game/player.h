@@ -21,6 +21,7 @@ void playerStartCutscene(s16 anim_id);
 void playerReorientForCutsceneStop(s32 tweenduration60);
 void playerTickCutscene(bool arg0);
 f32 playerGetCutsceneBlurFrac(void);
+void playerClampGunZoomFovY(s32 playernum);
 void playerSetZoomFovY(f32 fovy, f32 timemax);
 f32 playerGetZoomFovY(void);
 void playerTweenFovY(f32 targetfovy);

@@ -24,6 +24,9 @@
 #include "lib/vi.h"
 #include "data.h"
 #include "types.h"
+#ifndef PLATFORM_N64
+#include "input.h"
+#endif
 
 /**
  * Credits
@@ -1876,11 +1879,22 @@ Gfx *creditsDraw(Gfx *gdl)
 		}
 	}
 
-	// Exit the alternative title if a button is pressed (other than L or R)
+#ifdef PLATFORM_N64
 #if VERSION >= VERSION_NTSC_1_0
+	// Exit the alternative title if a button is pressed (other than L or R)
 	if (g_CreditsUsingAltTitle && joyGetButtonsPressedThisFrame(0, 0xffcf))
 #else
 	if (g_CreditsUsingAltTitle && joyGetButtons(0, 0xffff))
+#endif
+#else
+#if VERSION >= VERSION_NTSC_1_0
+	// Exit to CI if a button is pressed (other than L or R), for the port
+	if (joyGetButtonsPressedThisFrame(0, 0xffcf) ||
+		inputKeyJustPressed(VK_ESCAPE))
+#else
+	if (joyGetButtons(0, 0xffff) ||
+		inputKeyJustPressed(VK_ESCAPE))
+#endif
 #endif
 	{
 		g_TitleNextStage = STAGE_CITRAINING;

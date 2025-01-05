@@ -820,8 +820,12 @@ static inline void inputUpdateMouse(void)
 
 	mouseWheel = 0;
 
+	s32 mdx = 0;
+	s32 mdy = 0;
+	SDL_GetRelativeMouseState(&mdx, &mdy);
 	if (mouseLocked) {
-		SDL_GetRelativeMouseState(&mouseDX, &mouseDY);
+		mouseDX = mdx;
+		mouseDY = mdy;
 	} else {
 		mouseDX = mx - mouseX;
 		mouseDY = my - mouseY;

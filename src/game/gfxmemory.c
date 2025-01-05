@@ -36,6 +36,15 @@
  * marker for the end of the second element's allocation.
  */
 
+/**
+ * On 64-bit platforms the Gfx struct is twice as large.
+*/
+#ifdef PLATFORM_64BIT
+#define GFX_SIZE_MULTIPLIER 2
+#else
+#define GFX_SIZE_MULTIPLIER 1
+#endif
+
 u8 *g_GfxBuffers[NUM_GFXTASKS + 1];
 u32 var800aa58c;
 u8 *g_VtxBuffers[NUM_GFXTASKS + 1];
@@ -44,15 +53,15 @@ u8 g_GfxActiveBufferIndex;
 u32 g_GfxRequestedDisplayList;
 
 u32 g_GfxSizesByPlayerCount[] = {
-	0x00010000,
-	0x00018000,
-	0x00020000,
-	0x00028000,
+	0x00010000 * GFX_SIZE_MULTIPLIER,
+	0x00018000 * GFX_SIZE_MULTIPLIER,
+	0x00020000 * GFX_SIZE_MULTIPLIER,
+	0x00028000 * GFX_SIZE_MULTIPLIER,
 #ifndef PLATFORM_N64
-	0x00030000,
-	0x00038000,
-	0x00040000,
-	0x00048000,
+	0x00030000 * GFX_SIZE_MULTIPLIER,
+	0x00038000 * GFX_SIZE_MULTIPLIER,
+	0x00040000 * GFX_SIZE_MULTIPLIER,
+	0x00048000 * GFX_SIZE_MULTIPLIER,
 #endif
 };
 
@@ -106,12 +115,16 @@ void gfxReset(void)
 		// ******** Original Amount required = %dK ber buffer\n
 		// ******** Extra Amount required = %dK ber buffer\n
 		// ******** Total of %dK (Double Buffered)\n
+<<<<<<< HEAD
 		g_GfxSizesByPlayerCount[PLAYERCOUNT() - 1] = gfx + gfxtra;
 #ifndef PLATFORM_N64
 		if (PLAYERCOUNT() > MAX_LOCAL_PLAYERS) {
 			g_GfxSizesByPlayerCount[PLAYERCOUNT() - 1] *= MAX_PLAYERS / MAX_LOCAL_PLAYERS;
 		}
 #endif
+=======
+		g_GfxSizesByPlayerCount[PLAYERCOUNT() - 1] = (gfx + gfxtra) * GFX_SIZE_MULTIPLIER;
+>>>>>>> 49cd478622e3fefdd5c60fbd314ef8185d0cbf9d
 	}
 
 	if (argFindByPrefix(1, "-mvtx")) {

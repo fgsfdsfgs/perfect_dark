@@ -5952,7 +5952,7 @@ bool aiSetTarget(void)
  */
 bool aiIfPresetsTargetIsNotMyTarget(void)
 {
-	s32 mypresetchrstarget;
+	s32 mypresetchrstarget = -1;
 	u8 *cmd = g_Vars.ailist + g_Vars.aioffset;
 
 	if (g_Vars.chrdata->chrpreset1 != -1) {

@@ -578,7 +578,7 @@ void gamefileGetOverview(char *arg0, char *name, u8 *stage, u8 *difficulty, u32 
 {
 	struct savebuffer buffer;
 
-	func0f0d5484(&buffer, arg0, 15);
+	savebufferWriteData(&buffer, arg0, 15);
 	savebufferReadString(&buffer, name, false);
 
 	*stage = savebufferReadBits(&buffer, 5);

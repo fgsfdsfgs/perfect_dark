@@ -41,7 +41,7 @@ __attribute__((dllexport)) u32 AmdPowerXpressRequestHighPerformance = 1;
 // but if it doesn't we'll have to use  __builtin_ia32_pause() or something
 #include <immintrin.h>
 #define DO_YIELD() _mm_pause()
-#elif defined(PLATFORM_ARM)
+#elif defined(PLATFORM_ARM) && (defined(PLATFORM_64BIT) || PLATFORM_ARM == 7 || PLATFORM_ARM == 8)
 // same as YieldProcessor() on ARM Windows
 #define DO_YIELD() __asm__ volatile("dmb ishst\n\tyield":::"memory")
 #else

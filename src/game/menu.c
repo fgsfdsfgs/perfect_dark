@@ -4537,7 +4537,7 @@ void dialogTick(struct menudialog *dialog, struct menuinputs *inputs, u32 tickfl
 
 		if ((dialog->focuseditem->flags & MENUITEMFLAG_00010000) == 0) {
 #ifndef PLATFORM_N64
-			if (g_MenuUsingMouse) {
+			if (g_MenuUsingMouse && !dialog->dimmed) {
 				dstscroll = dialog->dstscroll - inputs->mousescroll * LINEHEIGHT;
 			} else
 #endif
