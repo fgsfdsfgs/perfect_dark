@@ -141,6 +141,7 @@ s32 g_MpPlayerNum = 0;
 #ifndef PLATFORM_N64
 s32 g_MenuMouseControl = true;
 s32 g_MenuUsingMouse = false;
+s32 g_MenuKeyboardPlayer = -1;
 #endif
 
 void menuPlaySound(s32 menusound)
@@ -602,7 +603,11 @@ void menuCalculateItemSize(struct menuitem *item, s16 *width, s16 *height, struc
 		break;
 	case MENUITEMTYPE_KEYBOARD:
 		*width = 130;
+#ifndef PLATFORM_N64
+		*height = 84;
+#else
 		*height = 73;
+#endif
 		break;
 	case MENUITEMTYPE_LIST:
 		if (item->param2 > 0) {
@@ -4712,6 +4717,14 @@ void menuProcessInput(void)
 		}
 		if (dialog && inputs.mousemoved) {
 			g_MenuUsingMouse = true;
+		}
+		if (inputs.back && g_MenuKeyboardPlayer != -1) {
+			// eat the back input so that other menus don't quit when we hit ESC
+			inputs.back = false;
+			if (g_MenuKeyboardPlayer == menu->playernum) {
+				g_MenuKeyboardPlayer = -1;
+				inputStopTextInput();
+			}
 		}
 	}
 #endif
