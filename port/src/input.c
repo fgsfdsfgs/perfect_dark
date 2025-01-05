@@ -1352,14 +1352,20 @@ char inputGetLastTextChar(void)
 	return lastChar;
 }
 
-s32 inputTextHandler(char *out, const u32 outSize, s32 *curCol)
+static inline s32 filterChar(const char ch)
 {
-	const s32 ctrlHeld = inputKeyPressed(VK_LCTRL) || inputKeyPressed(VK_RCTRL);
+	return isalnum(ch) || ch == ' ' || ch == '?' || ch == '!' || ch == '.';
+}
+
+s32 inputTextHandler(char *out, const u32 outSize, s32 *curCol, s32 oskCharsOnly)
+{
+	const s32 ctrlHeld = inputGetKeyModState() & KM_CTRL;
 
 	if (!ctrlHeld) {
 		const char chr = inputGetLastTextChar();
 		inputClearLastTextChar();
-		if (chr && isprint(chr)) {
+		const s32 valid = chr && (oskCharsOnly ? filterChar(chr) : isprint(chr));
+		if (valid) {
 			if (*curCol < outSize - 1) {
 				out[(*curCol)++] = chr;
 				out[*curCol] = '\0';
@@ -1426,6 +1432,16 @@ void inputStopTextInput(void)
 {
 	SDL_StopTextInput();
 	textInput = 0;
+}
+
+s32 inputIsTextInputActive(void)
+{
+	return textInput;
+}
+
+u32 inputGetKeyModState(void)
+{
+	return SDL_GetModState();
 }
 
 PD_CONSTRUCTOR static void inputConfigInit(void)

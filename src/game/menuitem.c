@@ -22,6 +22,12 @@
 #include "lib/str.h"
 #include "data.h"
 #include "types.h"
+#ifndef PLATFORM_N64
+#include "input.h"
+#define MENU_KEYBOARD_ROWS 6
+#else
+#define MENU_KEYBOARD_ROWS 5
+#endif
 
 u8 g_MpSelectedPlayersForStats[MAX_PLAYERS];
 
@@ -1164,7 +1170,7 @@ Gfx *menuitemKeyboardRender(Gfx *gdl, struct menurendercontext *context)
 	gdl = text0f153838(gdl);
 
 	// Render horizontal grid lines
-	for (row = 0; row < 6; row++) {
+	for (row = 0; row < MENU_KEYBOARD_ROWS + 1; row++) {
 		gdl = menugfxDrawFilledRect(gdl, context->x + 4, context->y + row * 11 + 13,
 				context->x + 124, context->y + row * 11 + 14, 0x00ffff7f, 0x00ffff7f);
 	}
@@ -1181,13 +1187,20 @@ Gfx *menuitemKeyboardRender(Gfx *gdl, struct menurendercontext *context)
 				context->x + col * 12 + 5, context->y + rowspan * 11 + 14, 0x00ffff7f, 0x00ffff7f);
 	}
 
+#if MENU_KEYBOARD_ROWS > 5
+	gdl = menugfxDrawFilledRect(gdl, context->x + 4, context->y + 5 * 11 + 13,
+			context->x + 5, context->y + 6 * 11 + 14, 0x00ffff7f, 0x00ffff7f);
+	gdl = menugfxDrawFilledRect(gdl, context->x + 10 * 12 + 4, context->y + 5 * 11 + 13,
+			context->x + 10 * 12 + 5, context->y + 6 * 11 + 14, 0x00ffff7f, 0x00ffff7f);
+#endif
+
 	gdl = text0f153628(gdl);
 
 	x = context->x + 10;
 	y = context->y + 2;
 
 	for (col = 0; col < 10; col++) {
-		for (row = 0; row < 5; row++) {
+		for (row = 0; row < MENU_KEYBOARD_ROWS; row++) {
 			if (context->dialog->transitionfrac < 0) {
 				textcolour = g_MenuColours[context->dialog->type].item_unfocused;
 			} else {
@@ -1282,6 +1295,19 @@ Gfx *menuitemKeyboardRender(Gfx *gdl, struct menurendercontext *context)
 								g_MenuWave1Colours[context->dialog->type].item_disabled);
 					}
 
+#ifndef PLATFORM_N64
+					// Dim the Caps button if keyboard typing is enabled
+					if (index == 1 && g_MenuKeyboardPlayer == g_MpPlayerNum) {
+						textcolour = colourBlend(
+								g_MenuColours[context->dialog->type2].item_disabled,
+								g_MenuColours[context->dialog->type].item_disabled,
+								context->dialog->colourweight);
+						textSetWaveColours(
+								g_MenuWave2Colours[context->dialog->type].item_disabled,
+								g_MenuWave1Colours[context->dialog->type].item_disabled);
+					}
+#endif
+
 					gdl = textRenderProjected(gdl, &x, &y, langGet(labels[index]), g_CharsHandelGothicXs, g_FontHandelGothicXs, textcolour, context->width, context->height, 0, 0);
 
 					if (index == 3 && menuitemKeyboardIsStringEmptyOrSpaces(data->string)) {
@@ -1290,6 +1316,23 @@ Gfx *menuitemKeyboardRender(Gfx *gdl, struct menurendercontext *context)
 								g_MenuWave1Colours[context->dialog->type].item_unfocused);
 					}
 				}
+			} else if (row == 5) {
+#ifndef PLATFORM_N64
+				if (col == 0) {
+					char *kbtext;
+					// make the button yellow if it's active
+					if (g_MenuKeyboardPlayer == g_MpPlayerNum) {
+						textcolour = (textcolour & 0xff) | 0xffff0000;
+						kbtext = (char *)"ESC: CANCEL  ENTER: OK";
+					} else {
+						kbtext = (char *)"TYPE WITH KEYBOARD";
+					}
+					++y;
+					textMeasure(&textheight, &textwidth, kbtext, g_CharsHandelGothicXs, g_FontHandelGothicXs, 0);
+					x = context->x + (context->width - textwidth) / 2;
+					gdl = textRenderProjected(gdl, &x, &y, kbtext, g_CharsHandelGothicXs, g_FontHandelGothicXs, textcolour, context->width, context->height, 0, 0);
+				}
+#endif
 			} else {
 				// Alpha-numeric cell
 				label[0] = g_KeyboardKeys[row][col];
@@ -1331,6 +1374,8 @@ Gfx *menuitemKeyboardRender(Gfx *gdl, struct menurendercontext *context)
 			if (data->col == 0) {
 				x2 += 12;
 			}
+		} else if (data->row == 5) {
+			x2 = context->x + 9 * 12 + 16;
 		}
 
 		gdl = menugfxDrawLine(gdl, x1, y1, x2, y1 + 1, -1, -1); // top
@@ -1373,7 +1418,7 @@ bool menuitemKeyboardTick(struct menuitem *item, struct menuinputs *inputs, u32 
 			const s32 dleft = dialog->x + 4;
 			const s32 dright = dleft + 12 * 10;
 			const s32 dtop = menuitemGetTop(item, dialog) + 12;
-			const s32 dbottom = dtop + 11 * 5;
+			const s32 dbottom = dtop + 11 * 6;
 			const s32 mx = inputs->mousex;
 			const s32 my = inputs->mousey;
 			if (mx > dleft && mx < dright && my > dtop && my < dbottom) {
@@ -1389,6 +1434,8 @@ bool menuitemKeyboardTick(struct menuitem *item, struct menuinputs *inputs, u32 
 					} else {
 						kb->col = 8;
 					}
+				} else if (kb->row == 5) {
+					kb->col = 0;
 				}
 			}
 		}
@@ -1417,10 +1464,10 @@ bool menuitemKeyboardTick(struct menuitem *item, struct menuinputs *inputs, u32 
 			kb->row += inputs->updown;
 
 			if (kb->row < 0) {
-				kb->row = 4;
+				kb->row = 5;
 			}
 
-			if (kb->row > 4) {
+			if (kb->row > MENU_KEYBOARD_ROWS - 1) {
 				kb->row = 0;
 			}
 
@@ -1442,6 +1489,10 @@ bool menuitemKeyboardTick(struct menuitem *item, struct menuinputs *inputs, u32 
 					kb->col = 0;
 				}
 			}
+		}
+
+		if (kb->row == 5) {
+			kb->col = 0;
 		}
 
 		if (prevcol != kb->col || prevrow != kb->row) {
@@ -1466,6 +1517,37 @@ bool menuitemKeyboardTick(struct menuitem *item, struct menuinputs *inputs, u32 
 
 			inputs->start = false;
 		}
+
+#ifndef PLATFORM_N64
+		if (g_MenuKeyboardPlayer == g_MpPlayerNum) {
+			// match caps state to keyboard shift/caps if typing with keyboard
+			const u32 kmod = inputGetKeyModState();
+			kb->capslock = (kmod & KM_CAPS) != 0;
+			if (kmod & KM_SHIFT) {
+				kb->capslock = !kb->capslock;
+			}
+			// handle text input
+			s32 prevpos = strlen(kb->string);
+			s32 pos = prevpos;
+			s32 result = inputTextHandler(kb->string, sizeof(kb->string), &pos, true);
+			if (result == -1) {
+				// cancel
+				kb->row = 5;
+				kb->col = 0;
+				inputs->select = true;
+			} else if (result == 1) {
+				// accept
+				kb->row = 4;
+				kb->col = 8;
+				inputs->select = true;
+				g_MenuKeyboardPlayer = -1;
+				inputStopTextInput();
+			} else if (prevpos < pos) {
+				// added char
+				menuPlaySound(MENUSOUND_FOCUS);
+			}
+		}
+#endif
 
 		if (inputs->select) {
 			if (kb->row == 4) {
@@ -1504,6 +1586,19 @@ bool menuitemKeyboardTick(struct menuitem *item, struct menuinputs *inputs, u32 
 						inputs->select = false;
 					}
 				}
+			} else if (kb->row == 5) {
+#ifndef PLATFORM_N64
+				if (g_MenuKeyboardPlayer == -1) {
+					g_MenuKeyboardPlayer = g_MpPlayerNum;
+					inputClearLastTextChar();
+					inputStartTextInput();
+					menuPlaySound(MENUSOUND_SELECT);
+				} else {
+					g_MenuKeyboardPlayer = -1;
+					inputStopTextInput();
+					menuPlaySound(MENUSOUND_KEYBOARDCANCEL);
+				}
+#endif
 			} else {
 				// Pressed A on number or letter
 				s32 appended = false;

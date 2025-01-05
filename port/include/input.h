@@ -65,6 +65,17 @@ enum virtkey {
 	VK_TOTAL_COUNT = VK_JOY_BEGIN + INPUT_MAX_CONTROLLERS * INPUT_MAX_CONTROLLER_BUTTONS,
 };
 
+enum keymod {
+	/* same order as SDL keymods */
+	KM_LSHIFT = 0x0001,
+	KM_RSHIFT = 0x0002,
+	KM_LCTRL = 0x0040,
+	KM_RCTRL = 0x0080,
+	KM_CAPS = 0x2000,
+	KM_CTRL = KM_LCTRL | KM_RCTRL,
+	KM_SHIFT = KM_LSHIFT | KM_RSHIFT
+};
+
 enum contkey {
 	CK_C_R,
 	CK_C_L,
@@ -239,13 +250,17 @@ void inputMouseShowCursor(s32 show);
 
 void inputStartTextInput(void);
 void inputStopTextInput(void);
+s32 inputIsTextInputActive(void);
 
 void inputClearLastTextChar(void);
 char inputGetLastTextChar(void);
 
-s32 inputTextHandler(char *out, const u32 outSize, s32 *curCol);
+s32 inputTextHandler(char *out, const u32 outSize, s32 *curCol, s32 oskCharsOnly);
 
 void inputClearClipboard(void);
 const char *inputGetClipboard(void);
+
+// returns keymod values
+u32 inputGetKeyModState(void);
 
 #endif
