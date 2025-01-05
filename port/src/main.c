@@ -36,6 +36,7 @@ u32 g_VmNumPageReplaces = 0;
 u8 g_VmShowStats = 0;
 
 s32 g_TickRateDiv = 1;
+s32 g_TickRateDivOverride = 0;
 s32 g_TickExtraSleep = true;
 
 s32 g_SkipIntro = false;
@@ -88,6 +89,7 @@ static void cleanup(void)
 	sysLogPrintf(LOG_NOTE, "shutdown");
 	inputSaveBinds();
 	configSave(CONFIG_PATH);
+	videoShutdown();
 	crashShutdown();
 	// TODO: actually shut down all subsystems
 }
@@ -164,6 +166,7 @@ PD_CONSTRUCTOR static void gameConfigInit(void)
 	configRegisterInt("Game.MenuMouseControl", &g_MenuMouseControl, 0, 1);
 	configRegisterFloat("Game.ScreenShakeIntensity", &g_ViShakeIntensityMult, 0.f, 10.f);
 	configRegisterInt("Game.TickRateDivisor", &g_TickRateDiv, 0, 10);
+	configRegisterInt("Game.TickRateDivisorOverride", &g_TickRateDivOverride, 0, 1);
 	configRegisterInt("Game.ExtraSleep", &g_TickExtraSleep, 0, 1);
 	configRegisterInt("Game.SkipIntro", &g_SkipIntro, 0, 1);
 	configRegisterInt("Game.DisableMpDeathMusic", &g_MusicDisableMpDeath, 0, 1);
