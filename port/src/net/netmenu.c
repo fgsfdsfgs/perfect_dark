@@ -236,7 +236,7 @@ static MenuItemHandlerResult menuhandlerEnterJoinAddress(s32 operation, struct m
 		return 0;
 	}
 
-	if (inputTextHandler(g_NetJoinAddr, NET_MAX_ADDR, &g_NetJoinAddrPtr) < 0) {
+	if (inputTextHandler(g_NetJoinAddr, NET_MAX_ADDR, &g_NetJoinAddrPtr, false) < 0) {
 		// escape has been pressed, stop editing
 		inputStopTextInput();
 		menuPopDialog();

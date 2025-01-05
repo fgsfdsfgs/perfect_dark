@@ -192,7 +192,9 @@ void conTick(void)
 	const s32 button = inputKeyPressed(VK_GRAVE);
 	if (button && !conButton) {
 		conOpen = !conOpen;
+		g_MenuKeyboardPlayer = -1;
 		if (conOpen) {
+			inputClearLastTextChar();
 			inputStartTextInput();
 		} else {
 			inputStopTextInput();
@@ -202,7 +204,7 @@ void conTick(void)
 	conButton = button;
 
 	if (conOpen) {
-		if (inputTextHandler(conInput, CON_COLS, &conInputCol)) {
+		if (inputTextHandler(conInput, CON_COLS, &conInputCol, false)) {
 			if (g_NetMode) {
 				netChat(NULL, conInput);
 			}
@@ -210,4 +212,9 @@ void conTick(void)
 			conInputCol = 0;
 		}
 	}
+}
+
+s32 conIsOpen(void)
+{
+	return conOpen;
 }

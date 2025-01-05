@@ -24,6 +24,7 @@
 #include "types.h"
 #ifndef PLATFORM_N64
 #include "input.h"
+#include "console.h"
 #define MENU_KEYBOARD_ROWS 6
 #else
 #define MENU_KEYBOARD_ROWS 5
@@ -1588,15 +1589,17 @@ bool menuitemKeyboardTick(struct menuitem *item, struct menuinputs *inputs, u32 
 				}
 			} else if (kb->row == 5) {
 #ifndef PLATFORM_N64
-				if (g_MenuKeyboardPlayer == -1) {
-					g_MenuKeyboardPlayer = g_MpPlayerNum;
-					inputClearLastTextChar();
-					inputStartTextInput();
-					menuPlaySound(MENUSOUND_SELECT);
-				} else {
-					g_MenuKeyboardPlayer = -1;
-					inputStopTextInput();
-					menuPlaySound(MENUSOUND_KEYBOARDCANCEL);
+				if (!conIsOpen()) {
+					if (g_MenuKeyboardPlayer == -1) {
+						g_MenuKeyboardPlayer = g_MpPlayerNum;
+						inputClearLastTextChar();
+						inputStartTextInput();
+						menuPlaySound(MENUSOUND_SELECT);
+					} else {
+						g_MenuKeyboardPlayer = -1;
+						inputStopTextInput();
+						menuPlaySound(MENUSOUND_KEYBOARDCANCEL);
+					}
 				}
 #endif
 			} else {
