@@ -459,7 +459,7 @@ void savebufferClear(struct savebuffer *buffer)
 	}
 }
 
-void func0f0d5484(struct savebuffer *buffer, u8 *data, u8 len)
+void savebufferWriteData(struct savebuffer *buffer, u8 *data, u8 len)
 {
 	s32 i;
 
@@ -536,7 +536,7 @@ void func0f0d564c(u8 *data, char *dst, bool addlinebreak)
 {
 	struct savebuffer buffer;
 
-	func0f0d5484(&buffer, data, 10);
+	savebufferWriteData(&buffer, data, 10);
 	savebufferReadString(&buffer, dst, addlinebreak);
 }
 
@@ -547,7 +547,7 @@ void func0f0d5690(u8 *dst, char *src)
 	bool done = false;
 	s32 i;
 
-	func0f0d5484(&buffer, dst, 10);
+	savebufferWriteData(&buffer, dst, 10);
 
 	for (i = 0; i < 10; i++) {
 		if (!done) {

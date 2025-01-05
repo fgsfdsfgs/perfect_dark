@@ -36,6 +36,15 @@
  * marker for the end of the second element's allocation.
  */
 
+/**
+ * On 64-bit platforms the Gfx struct is twice as large.
+*/
+#ifdef PLATFORM_64BIT
+#define GFX_SIZE_MULTIPLIER 2
+#else
+#define GFX_SIZE_MULTIPLIER 1
+#endif
+
 u8 *g_GfxBuffers[NUM_GFXTASKS + 1];
 u32 var800aa58c;
 u8 *g_VtxBuffers[NUM_GFXTASKS + 1];
@@ -44,10 +53,10 @@ u8 g_GfxActiveBufferIndex;
 u32 g_GfxRequestedDisplayList;
 
 u32 g_GfxSizesByPlayerCount[] = {
-	0x00010000,
-	0x00018000,
-	0x00020000,
-	0x00028000,
+	0x00010000 * GFX_SIZE_MULTIPLIER,
+	0x00018000 * GFX_SIZE_MULTIPLIER,
+	0x00020000 * GFX_SIZE_MULTIPLIER,
+	0x00028000 * GFX_SIZE_MULTIPLIER,
 };
 
 u32 g_VtxSizesByPlayerCount[] = {
@@ -94,7 +103,7 @@ void gfxReset(void)
 		// ******** Original Amount required = %dK ber buffer\n
 		// ******** Extra Amount required = %dK ber buffer\n
 		// ******** Total of %dK (Double Buffered)\n
-		g_GfxSizesByPlayerCount[PLAYERCOUNT() - 1] = gfx + gfxtra;
+		g_GfxSizesByPlayerCount[PLAYERCOUNT() - 1] = (gfx + gfxtra) * GFX_SIZE_MULTIPLIER;
 	}
 
 	if (argFindByPrefix(1, "-mvtx")) {

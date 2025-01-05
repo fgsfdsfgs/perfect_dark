@@ -913,7 +913,7 @@ const char var7f1b31ec[] = "Multiplayer %d was using that file...\n";
  *
  * Return true if it worked, otherwise false.
  */
-bool filemgrSaveOrLoad(struct fileguid *guid, s32 fileop, u32 playernum)
+bool filemgrSaveOrLoad(struct fileguid *guid, s32 fileop, uintptr_t playernum)
 {
 	s32 device;
 

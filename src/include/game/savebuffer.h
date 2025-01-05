@@ -15,7 +15,7 @@ void savebufferOr(struct savebuffer *buffer, u32 arg1, s32 arg2);
 void savebufferWriteBits(struct savebuffer *buffer, u32 value, s32 numbits, u8 *dst);
 u32 savebufferReadBits(struct savebuffer *buffer, s32 offset);
 void savebufferClear(struct savebuffer *buffer);
-void func0f0d5484(struct savebuffer *buffer, u8 *data, u8 len);
+void savebufferWriteData(struct savebuffer *buffer, u8 *data, u8 len);
 void func0f0d54c4(struct savebuffer *buffer);
 void savebufferReadString(struct savebuffer *buffer, char *dst, bool addlinebreak);
 void func0f0d55a4(struct savebuffer *buffer, char *src);

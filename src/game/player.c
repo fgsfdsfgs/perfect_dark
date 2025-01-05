@@ -2104,6 +2104,22 @@ f32 playerGetCutsceneBlurFrac(void)
 	return g_CutsceneBlurFrac;
 }
 
+void playerClampGunZoomFovY(s32 playernum)
+{
+	struct player *player = g_Vars.players[playernum];
+	if (!player) {
+		return;
+	}
+
+	for (s32 index = 0; index < ARRAYCOUNT(player->gunzoomfovs); ++index) {
+		if (player->gunzoomfovs[index] < ADJUST_ZOOM_FOV(2)) {
+			player->gunzoomfovs[index] = ADJUST_ZOOM_FOV(2);
+		} else if (player->gunzoomfovs[index] > ADJUST_ZOOM_FOV(60)) {
+			player->gunzoomfovs[index] = ADJUST_ZOOM_FOV(60);
+		}
+	}
+}
+
 void playerSetZoomFovY(f32 fovy, f32 timemax)
 {
 	g_Vars.currentplayer->zoomintime = 0;
@@ -3107,6 +3123,9 @@ void playerUpdateShake(void)
 void playerAutoWalk(s16 aimpad, u8 walkspeed, u8 turnspeed, u8 lookup, u8 dist)
 {
 	playerSetTickMode(TICKMODE_AUTOWALK);
+
+	// Prevents momentum from being preserved. Fixes potential softlock during The Duel.
+	g_Vars.currentplayer->resetheadpos = true;
 
 	g_Vars.currentplayer->autocontrol_aimpad = aimpad;
 	g_Vars.currentplayer->autocontrol_walkspeed = walkspeed;

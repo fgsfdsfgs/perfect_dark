@@ -83,7 +83,6 @@ static void gfx_sdl_init(const struct GfxWindowInitSettings *set) {
     SDL_GL_SetAttribute(SDL_GL_DEPTH_SIZE, 24);
     SDL_GL_SetAttribute(SDL_GL_STENCIL_SIZE, 8);
     SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1);
-    SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_COMPATIBILITY);
     if (sysArgCheck("--debug-gl")) {
         SDL_GL_SetAttribute(SDL_GL_CONTEXT_FLAGS, SDL_GL_CONTEXT_DEBUG_FLAG);
     }
@@ -100,7 +99,8 @@ static void gfx_sdl_init(const struct GfxWindowInitSettings *set) {
         fullscreen_flag = SDL_WINDOW_FULLSCREEN;
     }
 
-    Uint32 flags = SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE | SDL_WINDOW_OPENGL;
+    // we will unhide the window once the GL context is successfully created
+    Uint32 flags = SDL_WINDOW_HIDDEN | SDL_WINDOW_RESIZABLE | SDL_WINDOW_OPENGL;
 
     // if fullscreen was requested, start the window in fullscreen right away
     if (set->fullscreen) {
@@ -118,11 +118,6 @@ static void gfx_sdl_init(const struct GfxWindowInitSettings *set) {
         flags |= SDL_WINDOW_ALLOW_HIGHDPI;
     }
 #endif
-
-    wnd = SDL_CreateWindow(set->title, posX, posY, window_width, window_height, flags);
-    if (!wnd) {
-        sysFatalError("Could not open SDL window:\n%s", SDL_GetError());
-    }
 
     // ideally we need 3.0 compat
     // if that doesn't work, try 3.2 core in case we're on mac, 2.1 compat as a last resort
@@ -152,31 +147,41 @@ static void gfx_sdl_init(const struct GfxWindowInitSettings *set) {
     ctx = NULL;
     u32 vmin = 0, vmaj = 0, vprof = SDL_GL_CONTEXT_PROFILE_COMPATIBILITY;
     const char *vprofstr = "";
-    for (u32 i = verstart; i < verend; ++i) {
+    for (u32 i = verstart; i < verend && !ctx; ++i) {
         vmaj = glver[i][0];
         vmin = glver[i][1];
         vprof = glver[i][2];
-        vprofstr = (glver[i][2] == SDL_GL_CONTEXT_PROFILE_CORE ? "core" :
-            (glver[i][2] == SDL_GL_CONTEXT_PROFILE_ES ? "es" : ""));
+        vprofstr = (vprof == SDL_GL_CONTEXT_PROFILE_CORE ? "core" :
+            (vprof == SDL_GL_CONTEXT_PROFILE_ES ? "es" : ""));
+
         SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, vmaj);
         SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, vmin);
-        SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, glver[i][2]);
+        SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, vprof);
+
+        wnd = SDL_CreateWindow(set->title, posX, posY, window_width, window_height, flags);
+        if (!wnd) {
+            sysLogPrintf(LOG_WARNING, "SDL: could not open SDL window for GL%d.%d%s:\n%s", vmaj, vmin, vprofstr, SDL_GetError());
+            continue;
+        }
+
         ctx = SDL_GL_CreateContext(wnd);
         if (!ctx) {
-            sysLogPrintf(LOG_WARNING, "GL: could not create GL%d.%d%s context: %s", vmaj, vmin, vprofstr, SDL_GetError());
-        } else {
-            break;
+            sysLogPrintf(LOG_WARNING, "SDL: could not create GL%d.%d%s context: %s", vmaj, vmin, vprofstr, SDL_GetError());
+            SDL_DestroyWindow(wnd);
+            wnd = nullptr;
         }
     }
 
-    if (!ctx) {
-        sysFatalError("Could not create an OpenGL context of any supported version.\nSDL error: %s", SDL_GetError());
+    if (!wnd || !ctx) {
+        sysFatalError("Could not open SDL window with an OpenGL context of any supported version:\n%s", SDL_GetError());
     } else {
-        sysLogPrintf(LOG_NOTE, "GL: created GL%d.%d%s context", vmaj, vmin, vprofstr);
+        sysLogPrintf(LOG_NOTE, "SDL: created GL%d.%d%s context", vmaj, vmin, vprofstr);
     }
 
     SDL_GL_MakeCurrent(wnd, ctx);
     SDL_GL_SetSwapInterval(1);
+
+    SDL_ShowWindow(wnd);
 
     qpc_freq = SDL_GetPerformanceFrequency();
 }

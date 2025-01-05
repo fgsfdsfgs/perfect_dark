@@ -25,7 +25,7 @@ void filemgrEraseCorruptFile(void);
 char *filemgrMenuTextInsertOriginalPak(struct menuitem *item);
 void filemgrRetrySave(s32 arg0);
 bool filemgrAttemptOperation(s32 device, bool closeonsuccess);
-bool filemgrSaveOrLoad(struct fileguid *guid, s32 fileop, u32 playernum);
+bool filemgrSaveOrLoad(struct fileguid *guid, s32 fileop, uintptr_t playernum);
 void filemgrDeleteCurrentFile(void);
 void func0f1097d0(s32 device);
 void filemgrSaveGameToDevice(s32 device);

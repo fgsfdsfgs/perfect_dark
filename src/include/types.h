@@ -3816,7 +3816,7 @@ struct menudata_filemgr {
 	/*0xe42*/ u8 fileop;
 	union {
 		void *unke44;
-		s32 mpplayernum;
+		intptr_t mpplayernum;
 	};
 	/*0xe48*/ u32 fileid;
 	/*0xe4c*/ u32 deviceserial;
