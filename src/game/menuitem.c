@@ -2455,7 +2455,7 @@ bool menuitemSliderTick(struct menuitem *item, struct menudialog *dialog, struct
 
 	if ((tickflags & MENUTICKFLAG_ITEMISFOCUSED)) {
 #ifndef PLATFORM_N64
-		if (g_MenuUsingMouse && inputs->select) {
+		if (g_AllowMouseHeld && g_MenuUsingMouse && (inputs->select || inputs->mouseheld)) {
 			// handle mouse
 			struct menudialog *dialog = g_Menus[g_MpPlayerNum].curdialog;
 			if (dialog) {
@@ -2464,19 +2464,23 @@ bool menuitemSliderTick(struct menuitem *item, struct menudialog *dialog, struct
 				const s32 size = right - left;
 				const s32 delta = inputs->mousex - left;
 				if (delta >= -8 && delta <= size + 8) {
-					index = (delta / (f32)size) * item->param3;
-					if (index < 0) {
-						index = 0;
+					if ((tickflags & MENUTICKFLAG_DIALOGISDIMMED) == 0) {
+						g_MouseDimmedMode = true;
+					} else {
+						index = (delta / (f32)size) * item->param3;
+						if (index < 0) {
+							index = 0;
+						}
+						if (index > item->param3) {
+							index = item->param3;
+						}
+						if (item->handler) {
+							item->handler(MENUOP_GET, item, &handlerdata);
+							handlerdata.slider.value = index;
+							item->handler(MENUOP_SET, item, &handlerdata);
+						}
+						return true;
 					}
-					if (index > item->param3) {
-						index = item->param3;
-					}
-					if (item->handler) {
-						item->handler(MENUOP_GET, item, &handlerdata);
-						handlerdata.slider.value = index;
-						item->handler(MENUOP_SET, item, &handlerdata);
-					}
-					return true;
 				}
 			}
 		}
@@ -2489,6 +2493,17 @@ bool menuitemSliderTick(struct menuitem *item, struct menudialog *dialog, struct
 			} else {
 				index = 0;
 			}
+
+#ifndef PLATFORM_N64
+			if (g_MenuUsingMouse && inputs->mousescroll) {
+				if ((item->flags & MENUITEMFLAG_SLIDER_FAST) == 0) {
+					index += -inputs->mousescroll;
+				} else {
+					s32 mult = item->param3 / 40;
+					index += -inputs->mousescroll * (mult ? mult : 1);
+				}
+			}
+#endif
 
 			if ((item->flags & MENUITEMFLAG_SLIDER_FAST) == 0
 					&& g_Menus[g_MpPlayerNum].xrepeatmode == MENUREPEATMODE_SLOW) {

@@ -141,6 +141,8 @@ s32 g_MpPlayerNum = 0;
 #ifndef PLATFORM_N64
 s32 g_MenuMouseControl = true;
 s32 g_MenuUsingMouse = false;
+s32 g_AllowMouseHeld = true;
+s32 g_MouseDimmedMode = false;
 #endif
 
 void menuPlaySound(s32 menusound)
@@ -1507,6 +1509,12 @@ void menuOpenDialog(struct menudialogdef *dialogdef, struct menudialog *dialog, 
 
 void menuPushDialog(struct menudialogdef *dialogdef)
 {
+#ifndef PLATFORM_N64
+	// Prevent the mouse from immediately changing a slider's value, as was
+	// happening while entering the Audio menu.
+	g_AllowMouseHeld = false;
+#endif
+
 	if (dialogdef) {
 		menuUnsetModel(&g_Menus[g_MpPlayerNum].menumodel);
 
@@ -4695,6 +4703,7 @@ void menuProcessInput(void)
 	inputs.back2 = 0;
 
 #ifndef PLATFORM_N64
+	inputs.mouseheld = false;
 	inputs.mousemoved = false;
 	inputs.mousescroll = 0;
 	inputs.mousex = 0;
@@ -4704,8 +4713,16 @@ void menuProcessInput(void)
 		// ESC always acts as back
 		inputs.back = inputKeyJustPressed(VK_ESCAPE);
 		if (inputMouseIsEnabled() && !inputMouseIsLocked() && g_MenuMouseControl) {
-			inputs.mousemoved = inputMouseGetPosition(&inputs.mousex, &inputs.mousey);
+			inputs.mouseheld = inputKeyPressed(VK_MOUSE_LEFT);
+			if (!inputs.mouseheld) {
+				g_AllowMouseHeld = true;
+				if (g_MouseDimmedMode) {
+					g_MouseDimmedMode = false;
+					dialog->dimmed = false;
+				}
+			}
 			inputs.mousescroll = inputKeyPressed(VK_MOUSE_WHEEL_DN) - inputKeyPressed(VK_MOUSE_WHEEL_UP);
+			inputs.mousemoved = inputMouseGetPosition(&inputs.mousex, &inputs.mousey) || inputs.mousescroll;
 			// aspect correct the X
 			const f32 cx = ((f32)inputs.mousex - (f32)(SCREEN_WIDTH_LO / 2)) * (videoGetAspect() / SCREEN_ASPECT);
 			inputs.mousex = (f32)(SCREEN_WIDTH_LO / 2) + cx;

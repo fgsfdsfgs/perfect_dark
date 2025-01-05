@@ -4996,8 +4996,9 @@ struct menuinputs {
 	/*0x10*/ s32 unk10;
 	/*0x14*/ u8 unk14;
 #ifndef PLATFORM_N64
-	/*0x15*/ u8 mousemoved;
-	/*0x16*/ s8 mousescroll;
+	/*0x15*/ u8 mouseheld;
+	/*0x16*/ u8 mousemoved;
+	/*0x17*/ s8 mousescroll;
 	/*0x18*/ s32 mousex;
 	/*0x1c*/ s32 mousey;
 #endif

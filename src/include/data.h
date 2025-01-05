@@ -538,6 +538,8 @@ extern const struct weathercfg g_DefaultWeatherConfig;
 extern const struct weathercfg *g_CurWeatherConfig;
 
 extern s32 g_MenuUsingMouse;
+extern s32 g_AllowMouseHeld;
+extern s32 g_MouseDimmedMode;
 
 extern f32 g_ViShakeIntensityMult;
 extern u32 g_TexFilter2D;
