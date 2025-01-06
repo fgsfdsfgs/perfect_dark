@@ -225,6 +225,7 @@ extern s32 g_LastPadEffectIndex;
 extern struct autogunobj *g_ThrownLaptops;
 extern struct beam *g_ThrownLaptopBeams;
 extern s32 g_MaxThrownLaptops;
+extern s32 g_MaxThrownLaptopsPerPlayer;
 extern struct prop *g_Lifts[10];
 extern u32 g_TvCmdlist00[];
 extern u32 var8006aaa0[];

@@ -134,6 +134,7 @@ s32 g_LastPadEffectIndex = -1;
 struct autogunobj *g_ThrownLaptops = NULL;
 struct beam *g_ThrownLaptopBeams = NULL;
 s32 g_MaxThrownLaptops = 0;
+s32 g_MaxThrownLaptopsPerPlayer = 1000;
 
 /**
  * Attempt to call a lift from the given door.
@@ -18480,7 +18481,12 @@ struct autogunobj *laptopDeploy(s32 modelnum, struct gset *gset, struct chrdata 
 	if (index >= 0 && index < g_MaxThrownLaptops) {
 		setupLoadModeldef(modelnum);
 		modeldef = g_ModelStates[modelnum].modeldef;
-		laptop = &g_ThrownLaptops[index];
+		s32 laptopIndex = index * g_MaxThrownLaptopsPerPlayer;
+
+		do {
+			laptop = &g_ThrownLaptops[laptopIndex];
+			laptopIndex++;
+		} while (laptop->base.prop);
 
 		if (laptop->base.prop) {
 #if VERSION >= VERSION_NTSC_1_0
