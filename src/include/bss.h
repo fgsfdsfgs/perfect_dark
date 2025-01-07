@@ -295,6 +295,8 @@ extern s32 g_JpnMaxCacheItems;
 extern s32 var8009d370jf;
 #ifndef PLATFORM_N64
 extern bool g_ValidGbcRomFound;
+extern struct fileguid g_GuidsToProcess[CONFIG_MAX_PROFILES];
+extern u32 g_NumGuidsToProcess;
 #endif
 
 #endif

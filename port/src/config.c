@@ -7,32 +7,10 @@
 #include "config.h"
 #include "system.h"
 #include "utils.h"
+#include "types.h"
+#include "bss.h"
 
-#define CONFIG_MAX_SECNAME 128
-#define CONFIG_MAX_KEYNAME 256
-#define CONFIG_MAX_SETTINGS 256
-
-typedef enum {
-	CFG_NONE,
-	CFG_S32,
-	CFG_F32,
-	CFG_U32,
-	CFG_STR
-} configtype;
-
-struct configentry {
-	char key[CONFIG_MAX_KEYNAME + 1];
-	s32 seclen;
-	configtype type;
-	void *ptr;
-	union {
-		struct { f32 min_f32, max_f32; };
-		struct { s32 min_s32, max_s32; };
-		struct { u32 min_u32, max_u32; };
-		u32 max_str;
-	};
-} settings[CONFIG_MAX_SETTINGS];
-
+struct configentry settings[CONFIG_MAX_SETTINGS];
 static s32 numSettings = 0;
 
 static inline s32 configClampInt(s32 val, s32 min, s32 max)
@@ -69,6 +47,7 @@ static inline struct configentry *configAddEntry(const char *key)
 		cfg->seclen = delim ? (delim - cfg->key) : 0;
 		return cfg;
 	}
+	printf("configAddEntry: too many settings: %s\n", key);
 	return NULL;
 }
 
@@ -118,6 +97,17 @@ void configRegisterUInt(const char* key, u32* var, u32 min, u32 max)
 	}
 }
 
+void configRegisterU8Int(const char* key, u8* var, u32 min, u32 max)
+{
+	struct configentry* cfg = configFindOrAddEntry(key);
+	if (cfg) {
+		cfg->type = CFG_U8;
+		cfg->ptr = var;
+		cfg->min_u32 = min;
+		cfg->max_u32 = max;
+	}
+}
+
 void configRegisterFloat(const char *key, f32 *var, f32 min, f32 max)
 {
 	struct configentry *cfg = configFindOrAddEntry(key);
@@ -139,14 +129,14 @@ void configRegisterString(const char *key, char *var, u32 maxstr)
 	}
 }
 
-static void configSetFromString(const char *key, const char *val)
-{
-	struct configentry *cfg = configFindEntry(key);
-	if (!cfg) return;
-
+void configSet(struct configentry *cfg, const char *val) {
 	s32 tmp_s32;
 	f32 tmp_f32;
 	u32 tmp_u32;
+	u8  tmp_u8;
+	if (!cfg->ptr) {
+		return;
+	}
 	switch (cfg->type) {
 		case CFG_S32:
 			tmp_s32 = strtol(val, NULL, 0);
@@ -169,6 +159,13 @@ static void configSetFromString(const char *key, const char *val)
 			}
 			*(u32*)cfg->ptr = tmp_u32;
 			break;
+		case CFG_U8:
+			tmp_u8 = strtoul(val, NULL, 0);
+			if (cfg->min_u8 < cfg->max_u8) {
+				tmp_u8 = configClampUInt(tmp_u8, cfg->min_u8, cfg->max_u8);
+			}
+			*(u8*)cfg->ptr = tmp_u8;
+			break;
 		case CFG_STR:
 			strncpy(cfg->ptr, val, cfg->max_str ? cfg->max_str - 1 : 4096);
 			break;
@@ -177,8 +174,21 @@ static void configSetFromString(const char *key, const char *val)
 	}
 }
 
+static inline void configSetFromString(const char *key, const char *val)
+{
+	struct configentry *cfg = configFindOrAddEntry(key);
+	if (!cfg) {
+		return;
+	}
+
+	configSet(cfg, val);
+}
+
 static void configSaveEntry(struct configentry *cfg, FILE *f)
 {
+	if (!cfg->ptr) {
+		return;
+	}
 	switch (cfg->type) {
 		case CFG_S32:
 			if (cfg->min_s32 < cfg->max_s32) {
@@ -198,12 +208,28 @@ static void configSaveEntry(struct configentry *cfg, FILE *f)
 			}
 			fprintf(f, "%s=%u\n", cfg->key + cfg->seclen + 1, *(u32 *)cfg->ptr);
 			break;
+		case CFG_U8:
+			if (cfg->min_u8 < cfg->max_u8) {
+				*(u8*)cfg->ptr = configClampUInt(*(u8*)cfg->ptr, cfg->min_u8, cfg->max_u8);
+			}
+			fprintf(f, "%s=%u\n", cfg->key + cfg->seclen + 1, *(u8 *)cfg->ptr);
+			break;
 		case CFG_STR:
 			fprintf(f, "%s=%s\n", cfg->key + cfg->seclen + 1, (char *)cfg->ptr);
 			break;
 		default:
 			break;
 	}
+}
+
+struct configentry *configFindEntryByPtr(void *ptr)
+{
+	for (s32 i = 0; i < numSettings; ++i) {
+		if (settings[i].ptr == ptr) {
+			return &settings[i];
+		}
+	}
+	return NULL;
 }
 
 s32 configSave(const char *fname)
@@ -232,7 +258,23 @@ s32 configSave(const char *fname)
 	return 1;
 }
 
-s32 configLoad(const char *fname)
+static inline s32 configLoadFileIdFromSection(const char *sec, u16 *deviceserial, s32 *fileid)
+{
+    u32 tmp_deviceserial = 0;
+    s32 tmp_fileid = 0;
+
+    // Ensure sscanf matches both fields
+    if (sscanf(sec, "MpPlayer.%x-%x", &tmp_deviceserial, &tmp_fileid) == 2) {
+        *deviceserial = tmp_deviceserial;
+        *fileid = tmp_fileid;
+        return 1;
+    }
+
+    // If sscanf did not match both fields, return 0
+    return 0;
+}
+
+s32 configLoadKey(const char *fname, char *key)
 {
 	FILE *f = fsFileOpenRead(fname);
 	if (!f) {
@@ -259,6 +301,13 @@ s32 configLoad(const char *fname)
 				continue;
 			}
 			strncpy(curSec, token, CONFIG_MAX_SECNAME);
+			// detect if curSec has a fileguid in it
+			u16 deviceserial = 0;
+			s32 fileid = 0;
+			s32 configindex = -1;
+			if (!key && configLoadFileIdFromSection(curSec, &deviceserial, &fileid)) {
+				g_GuidsToProcess[g_NumGuidsToProcess++] = (struct fileguid) { fileid, deviceserial };
+			}
 			// eat ]
 			line = strParseToken(line, token, NULL);
 			if (token[0] != ']' || token[1] != '\0') {
@@ -278,13 +327,20 @@ s32 configLoad(const char *fname)
 			if (line[0] == '"') {
 				line = strUnquote(line);
 			}
-			configSetFromString(keyBuf, line);
+			if (!key || (key && strcmp(keyBuf, key) == 0)) {
+				configSetFromString(keyBuf, line);
+			}
 		}
 	}
 
 	fsFileFree(f);
 
 	return 1;
+
+}
+s32 configLoad(const char *fname)
+{
+	return configLoadKey(fname, 0);
 }
 
 void configInit(void)
@@ -292,4 +348,27 @@ void configInit(void)
 	if (fsFileSize(CONFIG_PATH) > 0) {
 		configLoad(CONFIG_PATH);
 	}
+}
+
+s32 getPlayerConfigSlug(s32 playernum, char *out, char *key)
+{
+	struct fileguid *guid = &(g_PlayerConfigsArray[playernum].fileguid);
+	if (guid && key) {
+		sprintf(out, "MpPlayer.%x-%x.%s\0",  guid->deviceserial, guid->fileid, key);
+		return 1;
+	} else if (guid) {
+		sprintf(out, "MpPlayer.%x-%x\0",  guid->deviceserial, guid->fileid);
+		return 1;
+	}
+	return 0;
+}
+
+s32 getConfigIndexFromDB(u16 deviceserial, s32 fileid) {
+	s32 retval = -1;
+	for (s32 i = 0; i < numSettings; ++i) {
+		if (strncmp(settings[i].key, "MpPlayer.", 9) != 0) {
+			continue;
+		}
+	}
+	return retval;
 }
