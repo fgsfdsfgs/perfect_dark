@@ -12273,7 +12273,9 @@ bool bgunAmmotypeAllowsUnlimitedAmmo(u32 ammotype)
 			return false;
 		}
 		break;
+#ifdef PLATFORM_N64
 	case AMMOTYPE_PSYCHOSIS:
+#endif
 	case AMMOTYPE_17:
 	case AMMOTYPE_BUG:
 	case AMMOTYPE_MICROCAMERA:
