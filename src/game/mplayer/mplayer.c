@@ -1171,15 +1171,27 @@ void func0f18913c(void)
 #ifndef PLATFORM_N64
 void mpSetRandomWeapons(u8 weapons[])
 {
-	s32 i;
+	s32 lockcount = 0;
 	s32 index = 0;
+	s32 i;
+
 	for (i = 0; i < NUM_MPWEAPONS; i++) {
-		if (g_MpWeaponSetRandomFilters[i] == 1) {
-			weapons[index] = i;
-			index++;
+		if (challengeIsFeatureUnlocked(g_MpWeapons[i].unlockfeature)) {
+			if (g_MpWeaponSetRandomFilters[i] == 1) {
+				weapons[index] = i - lockcount;
+				index++;
+			}
+		} else {
+			lockcount++;
 		}
 	}
-	g_MpWeaponRandomFilterNum = index;
+
+	if (index == 0) {
+		weapons[0] = MPWEAPON_NONE;
+		g_MpWeaponRandomFilterNum = 1;
+	} else {
+		g_MpWeaponRandomFilterNum = index;
+	}
 }
 #endif
 
@@ -1246,17 +1258,14 @@ void mpApplyWeaponSet(void)
 		for (i = 0; i < 5; i++) {
 			mpSetWeaponSlot(i, rngRandom() % numoptions + 1);
 		}
-
-		mpSetWeaponSlot(i, mpGetNumWeaponOptions() - 1);
 #else
 		mpSetRandomWeapons(randomweapons);
 		for (i = 0; i < 5; i++) {
 			mpSetWeaponSlot(i, randomweapons[rngRandom() % g_MpWeaponRandomFilterNum]);
 		}
-
-		// Disabled
-		mpSetWeaponSlot(i, MPWEAPON_DISABLED);
 #endif
+
+		mpSetWeaponSlot(i, mpGetNumWeaponOptions() - 1);
 	}
 }
 
