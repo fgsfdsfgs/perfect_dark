@@ -1196,18 +1196,16 @@ MenuItemHandlerResult mpSelectRandomWeaponListHandler(s32 operation, struct menu
 			s32 i;
 
 			if (data->list.value < numweapons) {
-				for (i = 0; i <= mpweaponnum; i++) {
-					if (challengeIsFeatureUnlocked(g_MpWeapons[i].unlockfeature) == 0) {
-						mpweaponnum++;
+				if (data->list.unk04 == 0) {
+					for (i = 0; i <= mpweaponnum; i++) {
+						if (challengeIsFeatureUnlocked(g_MpWeapons[i].unlockfeature) == 0) {
+							mpweaponnum++;
+						}
+
+						optionindex = mpweaponnum;
 					}
 
-					optionindex = mpweaponnum;
-				}
-
-				if (g_MpWeaponSetRandomFilters[optionindex] == 0)  {
-					g_MpWeaponSetRandomFilters[optionindex] = 1;
-				} else {
-					g_MpWeaponSetRandomFilters[optionindex] = 0;
+					g_MpWeaponSetRandomFilters[optionindex] = 1 - g_MpWeaponSetRandomFilters[optionindex];
 				}
 			} else {
 				s32 index = data->list.value - numweapons;
