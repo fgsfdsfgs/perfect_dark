@@ -1187,7 +1187,7 @@ void mpSetRandomWeapons(u8 weapons[])
 	}
 
 	if (index == 0) {
-		weapons[0] = MPWEAPON_NONE;
+		weapons[0] = 0; // optionindex (shifted by unlocked weapons, but usually 0 is "Nothing")
 		g_MpWeaponRandomFilterNum = 1;
 	} else {
 		g_MpWeaponRandomFilterNum = index;
