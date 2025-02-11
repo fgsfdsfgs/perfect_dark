@@ -282,7 +282,7 @@ jobs:
         bundle: io.github.fgsfdsfgs.perfect_dark.flatpak
         manifest-path: dist/linux/io.github.fgsfdsfgs.perfect_dark.yaml
         cache-key: flatpak-builder-${{ github.sha }}
-        upload-artifact: true
+        upload-artifact: false
 
     # - name: Build Flatpak bundle
     #   run: |
