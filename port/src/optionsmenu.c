@@ -965,6 +965,21 @@ struct menudialogdef g_ExtendedAudioMenuDialog = {
 	NULL,
 };
 
+static MenuItemHandlerResult menuhandlerUseKeyReloads(s32 operation, struct menuitem *item, union handlerdata *data)
+{
+	switch (operation) {
+	case MENUOP_CHECKDISABLED:
+		return !g_PlayerExtCfg[g_ExtMenuPlayer].extcontrols;
+	case MENUOP_GET:
+		return g_PlayerExtCfg[g_ExtMenuPlayer].usereloads;
+	case MENUOP_SET:
+		g_PlayerExtCfg[g_ExtMenuPlayer].usereloads = data->checkbox.value;
+		break;
+	}
+
+	return 0;
+}
+
 static MenuItemHandlerResult menuhandlerCrouchMode(s32 operation, struct menuitem *item, union handlerdata *data)
 {
 	static const char *opts[] = {
@@ -1268,6 +1283,14 @@ struct menuitem g_ExtendedGameMenuItems[] = {
 		(uintptr_t)"Crosshair Colour by Health",
 		0,
 		menuhandlerCrosshairHealth,
+	},
+	{
+		MENUITEMTYPE_CHECKBOX,
+		0,
+		MENUITEMFLAG_LITERAL_TEXT,
+		(uintptr_t)"Use Key Reloads",
+		0,
+		menuhandlerUseKeyReloads,
 	},
 	{
 		MENUITEMTYPE_SEPARATOR,

@@ -333,6 +333,14 @@ static inline void inputInitController(const s32 cidx, const s32 jidx)
 
 	sysLogPrintf(LOG_NOTE, "input: assigned controller '%d: (%s)' (id %d) to player %d",
 		jidx, SDL_GameControllerName(pads[cidx]), inputControllerGetId(pads[cidx]), cidx);
+
+	SDL_Joystick* joy = SDL_GameControllerGetJoystick(pads[cidx]);
+	if (joy) {
+		char guidStr[1024] = "";
+		SDL_JoystickGUID guid = SDL_JoystickGetGUID(joy);
+		SDL_JoystickGetGUIDString(guid, guidStr, sizeof(guidStr));
+		sysLogPrintf(LOG_NOTE, "input: GUID for controller %d: %s", jidx, guidStr);
+	}
 }
 
 static inline void inputCloseController(const s32 cidx)
