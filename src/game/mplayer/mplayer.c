@@ -130,6 +130,7 @@ struct mpweapon g_MpWeapons[NUM_MPWEAPONS] = {
 	.crosshaircolour = 0x00ff0028, \
 	.crosshairsize = 2, \
 	.crosshairhealth = CROSSHAIR_HEALTH_OFF, \
+	.usereloads = false, \
 }
 
 struct extplayerconfig g_PlayerExtCfg[MAX_PLAYERS] = { 

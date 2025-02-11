@@ -1810,7 +1810,9 @@ void bmoveProcessInput(bool allowc1x, bool allowc1y, bool allowc1buttons, bool i
 
 	g_Vars.currentplayer->bondactivateorreload = 0;
 
+	s32 usereloads = (controlmode != CONTROLMODE_PC);
 #ifndef PLATFORM_N64
+	usereloads = usereloads || PLAYER_EXTCFG().usereloads;
 	if (controlmode == CONTROLMODE_PC && movedata.alt1tapcount) {
 		g_Vars.currentplayer->bondactivateorreload = g_Vars.currentplayer->bondactivateorreload | JO_ACTION_RELOAD;
 	}
@@ -1818,7 +1820,7 @@ void bmoveProcessInput(bool allowc1x, bool allowc1y, bool allowc1buttons, bool i
 	if (movedata.btapcount) {
 		g_Vars.currentplayer->activatetimelast = g_Vars.currentplayer->activatetimethis;
 		g_Vars.currentplayer->activatetimethis = g_Vars.lvframe60;
-		if (controlmode == CONTROLMODE_PC) {
+		if (!usereloads) {
 			g_Vars.currentplayer->bondactivateorreload = g_Vars.currentplayer->bondactivateorreload | JO_ACTION_ACTIVATE;
 		} else {
 			g_Vars.currentplayer->bondactivateorreload = movedata.btapcount ?
