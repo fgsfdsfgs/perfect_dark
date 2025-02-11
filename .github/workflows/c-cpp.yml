@@ -282,7 +282,7 @@ jobs:
         bundle: io.github.fgsfdsfgs.perfect_dark.flatpak
         manifest-path: dist/linux/io.github.fgsfdsfgs.perfect_dark.yaml
         cache-key: flatpak-builder-${{ github.sha }}
-        upload-artifact: false
+        upload-artifact: true
 
     # - name: Build Flatpak bundle
     #   run: |
@@ -302,7 +302,7 @@ jobs:
   publish-latest-build:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/port'
-    needs: [build-i686-windows, build-i686-linux, build-x86_64-windows, build-x86_64-linux, build-arm64-nswitch, build-x86_64-osx, build-arm64-osx, build-flatpak-bundle]
+    needs: [build-i686-windows, build-i686-linux, build-x86_64-windows, build-x86_64-linux, build-arm64-nswitch, build-x86_64-osx, build-arm64-osx]
     permissions:
       contents: write
     steps:
@@ -323,7 +323,6 @@ jobs:
           zip -r ../ci-release/pd-i686-windows.zip pd-i686-windows
           zip -r ../ci-release/pd-x86_64-windows.zip pd-x86_64-windows
           zip -r ../ci-release/pd-arm64-nswitch.zip pd-arm64-nswitch
-          mv io.github.fgsfdsfgs.perfect_dark.flatpak/io.github.fgsfdsfgs.perfect_dark.flatpak ../ci-release/
           popd
           git tag --force ci-dev-build port
           git push --force origin ci-dev-build
