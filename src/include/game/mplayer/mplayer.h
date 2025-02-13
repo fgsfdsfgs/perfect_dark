@@ -34,6 +34,9 @@ s32 func0f189058(bool full);
 s32 func0f189088(void);
 char *mpGetWeaponSetName(s32 arg0);
 void func0f18913c(void);
+#ifndef PLATFORM_N64
+void mpSetRandomWeapons(u8 weapons[]);
+#endif
 void mpApplyWeaponSet(void);
 void mpSetWeaponSet(s32 weaponsetnum);
 void func0f1895e8(void);

@@ -48,6 +48,11 @@ struct modeldef *var800acc28[18];
 struct mpweaponset g_MpWeaponSets[12];
 s32 g_MpWeaponSetNum;
 
+#ifndef PLATFORM_N64
+u8 g_MpWeaponSetRandomFilters[NUM_MPWEAPONS];
+s32 g_MpWeaponRandomFilterNum;
+#endif
+
 #if VERSION >= VERSION_NTSC_1_0
 const char var7f1b8a00[] = "||||||||||||| Starting game... players %d\n";
 #endif
@@ -508,6 +513,12 @@ void mpPlayerSetDefaults(s32 playernum, bool autonames)
 	for (i = 0; i < ARRAYCOUNT(g_PlayerConfigsArray); i++) {
 		g_PlayerConfigsArray[playernum].gunfuncs[i] = 0;
 	}
+
+#ifndef PLATFORM_N64
+	for (i = 0; i < ARRAYCOUNT(g_MpWeapons); i++) {
+		g_MpWeaponSetRandomFilters[i] = 1;
+	}
+#endif
 }
 
 void func0f1881d4(s32 index)
@@ -1158,10 +1169,40 @@ void func0f18913c(void)
 	}
 }
 
+#ifndef PLATFORM_N64
+void mpSetRandomWeapons(u8 weapons[])
+{
+	s32 lockcount = 0;
+	s32 index = 0;
+	s32 i;
+
+	for (i = 0; i < NUM_MPWEAPONS; i++) {
+		if (challengeIsFeatureUnlocked(g_MpWeapons[i].unlockfeature)) {
+			if (g_MpWeaponSetRandomFilters[i] == 1) {
+				weapons[index] = i - lockcount;
+				index++;
+			}
+		} else {
+			lockcount++;
+		}
+	}
+
+	if (index == 0) {
+		weapons[0] = 0; // optionindex (shifted by unlocked weapons, but usually 0 is "Nothing")
+		g_MpWeaponRandomFilterNum = 1;
+	} else {
+		g_MpWeaponRandomFilterNum = index;
+	}
+}
+#endif
+
 void mpApplyWeaponSet(void)
 {
 	s32 i;
 	u8 *ptr;
+#ifndef PLATFORM_N64
+	u8 randomweapons[NUM_MPWEAPONS];
+#endif
 
 	if (g_MpWeaponSetNum >= 0 && g_MpWeaponSetNum < ARRAYCOUNT(g_MpWeaponSets)) {
 		if (challengeIsFeatureUnlocked(g_MpWeaponSets[g_MpWeaponSetNum].requirefeatures[0])
@@ -1199,17 +1240,31 @@ void mpApplyWeaponSet(void)
 			}
 		}
 	} else if (g_MpWeaponSetNum == WEAPONSET_RANDOM) {
+#ifdef PLATFORM_N64
 		s32 numoptions = mpGetNumWeaponOptions();
 
 		for (i = 0; i < ARRAYCOUNT(g_MpSetup.weapons); i++) {
 			mpSetWeaponSlot(i, rngRandom() % numoptions);
 		}
+#else
+		mpSetRandomWeapons(randomweapons);
+		for (i = 0; i < ARRAYCOUNT(g_MpSetup.weapons); i++) {
+			mpSetWeaponSlot(i, randomweapons[rngRandom() % g_MpWeaponRandomFilterNum]);
+		}
+#endif
 	} else if (g_MpWeaponSetNum == WEAPONSET_RANDOMFIVE) {
+#ifdef PLATFORM_N64
 		s32 numoptions = mpGetNumWeaponOptions() - 2;
 
 		for (i = 0; i < 5; i++) {
 			mpSetWeaponSlot(i, rngRandom() % numoptions + 1);
 		}
+#else
+		mpSetRandomWeapons(randomweapons);
+		for (i = 0; i < 5; i++) {
+			mpSetWeaponSlot(i, randomweapons[rngRandom() % g_MpWeaponRandomFilterNum]);
+		}
+#endif
 
 		mpSetWeaponSlot(i, mpGetNumWeaponOptions() - 1);
 	}
