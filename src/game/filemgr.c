@@ -871,10 +871,12 @@ bool filemgrAttemptOperation(s32 device, bool closeonsuccess)
 			filemgrHandleSuccess();
 		}
 
+		// Success dialog: Cool!
 		if (showfilesaved && errnum == 0) {
 			menuPushDialog(&g_FilemgrFileSavedMenuDialog);
 		}
 	} else {
+		// file load
 		if (errnum == 0) {
 			filemgrHandleSuccess();
 		}
