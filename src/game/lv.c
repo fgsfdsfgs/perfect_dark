@@ -2443,6 +2443,8 @@ void lvStop(void)
 #if VERSION >= VERSION_NTSC_1_0
 	menuStop();
 #endif
+	updateGuids();
+	mpExtendedProfileRegisterBlank();
 }
 
 void lvCheckPauseStateChanged(void)

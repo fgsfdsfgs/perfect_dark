@@ -10,6 +10,9 @@ u32 var8009e6b0[4];
 
 struct g_vars g_Vars;
 
+struct fileguid g_GuidsToProcess[CONFIG_MAX_PROFILES] = {};
+u32 g_NumGuidsToProcess = 0;
+
 void varsInit(void)
 {
 	g_Vars.diffframe60f = 1;
