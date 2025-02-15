@@ -280,11 +280,13 @@ s32 invAddOneIfCantHaveSlayer(s32 index)
 {
 	if (mainGetStageNum());
 
+#ifdef PLATFORM_N64
 	if (mainGetStageNum() != STAGE_ATTACKSHIP
 			&& mainGetStageNum() != STAGE_SKEDARRUINS
 			&& index >= WEAPON_SLAYER) {
 		index++;
 	}
+#endif
 
 #if (VERSION >= VERSION_JPN_FINAL) && defined(PLATFORM_N64)
 	if (index >= 26) {
@@ -299,9 +301,11 @@ s32 currentStageForbidsSlayer(void)
 {
 	bool value = VERSION >= VERSION_JPN_FINAL ? 1 : 0;
 
+#ifdef PLATFORM_N64
 	if (mainGetStageNum() != STAGE_ATTACKSHIP && mainGetStageNum() != STAGE_SKEDARRUINS) {
 		value++;
 	}
+#endif
 
 	return value;
 }
@@ -316,9 +320,11 @@ bool invCanHaveAllGunsWeapon(s32 weaponnum)
 	}
 #endif
 
+#ifdef PLATFORM_N64
 	if (weaponnum == WEAPON_SLAYER) {
 		canhave = false;
 	}
+#endif
 
 	// @bug: The stage conditions need an OR. This condition can never pass.
 	if ((mainGetStageNum() == STAGE_ATTACKSHIP && mainGetStageNum() == STAGE_SKEDARRUINS)
