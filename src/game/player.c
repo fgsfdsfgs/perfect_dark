@@ -3509,6 +3509,7 @@ void playerTick(bool arg0)
 
 			bgFindRoomsByPos(&rocketpos, inrooms, aboverooms, 20, &bestroom);
 
+#ifdef PLATFORM_N64
 			if (inrooms[0] == -1) {
 				outofbounds = true;
 			}
@@ -3533,6 +3534,7 @@ void playerTick(bool arg0)
 					g_Vars.currentplayer->badrockettime = 0;
 				}
 			}
+#endif
 
 			mtx00016208(sp2b8, &sp2f0);
 			mtx00016208(sp2b8, &sp2e4);
