@@ -34,6 +34,7 @@ extern ALHeap g_SndHeap;
 extern u32 var80095200;
 extern OSMesgQueue g_PiMesgQueue;
 extern struct g_vars g_Vars;
+extern bool g_NoFall[MAX_PLAYERS];
 extern u8 **g_AnimFrameBytes;
 extern u8 **g_AnimHeaderBytes;
 extern union filedataptr g_TileFileData;

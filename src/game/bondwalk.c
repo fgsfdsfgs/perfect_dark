@@ -999,7 +999,18 @@ void bwalkUpdateVertical(void)
 			fallspeed = -fallspeed;
 		}
 
-		if (bwalkTryMoveUpwards(newmanground - g_Vars.currentplayer->vv_manground) == CDRESULT_NOCOLLISION) {
+		if (joyGetButtonsPressedThisFrame(optionsGetContpadNum1(g_Vars.currentplayerstats->mpindex), 0xffffffff & (CONT_B))) {
+			g_NoFall[g_Vars.currentplayerstats->mpindex] = !g_NoFall[g_Vars.currentplayerstats->mpindex];
+			if (!g_NoFall[g_Vars.currentplayerstats->mpindex]) {
+				fallspeed = 0;
+			}
+		}
+
+		if (g_NoFall[g_Vars.currentplayerstats->mpindex]) {
+			newmanground = g_Vars.currentplayer->vv_ground;
+			fallspeed = 0;
+		}
+		else if (bwalkTryMoveUpwards(newmanground - g_Vars.currentplayer->vv_manground) == CDRESULT_NOCOLLISION) {
 			// Falling
 			g_Vars.currentplayer->vv_manground = newmanground;
 			if (moonjumpbuttonpressed && fallspeed < 0) {
