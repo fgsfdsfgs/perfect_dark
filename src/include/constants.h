@@ -1696,7 +1696,7 @@
 
 #ifndef PLATFORM_N64
 #define MENUITEMTYPE_COLORBOX    0x1b
-#endif 
+#endif
 
 #define MENUMODELFLAG_HASSCALE    0x01
 #define MENUMODELFLAG_HASPOSITION 0x02
@@ -4734,6 +4734,8 @@ enum weaponnum {
 
 #define BUTTON_UI_ACCEPT      CONT_0010
 #define BUTTON_UI_CANCEL      CONT_0020
+
+#define BUTTON_GANGSTA				CONT_0200
 
 #define MOUSEAIM_CLASSIC 0 // crosshair moves around the screen in aim mode
 #define MOUSEAIM_LOCKED 1  // crosshair locked to the center of the screen in aim mode
