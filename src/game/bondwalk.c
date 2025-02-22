@@ -999,7 +999,7 @@ void bwalkUpdateVertical(void)
 			fallspeed = -fallspeed;
 		}
 
-		if (joyGetButtonsPressedThisFrame(optionsGetContpadNum1(g_Vars.currentplayerstats->mpindex), 0xffffffff & (CONT_B))) {
+		if (joyGetButtonsPressedThisFrame(optionsGetContpadNum1(g_Vars.currentplayerstats->mpindex), 0xffffffff & (BUTTON_TOGGLEGRAVITY))) {
 			g_NoFall[g_Vars.currentplayerstats->mpindex] = !g_NoFall[g_Vars.currentplayerstats->mpindex];
 			if (!g_NoFall[g_Vars.currentplayerstats->mpindex]) {
 				fallspeed = 0;

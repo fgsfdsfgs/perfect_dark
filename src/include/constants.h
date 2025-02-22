@@ -4735,7 +4735,8 @@ enum weaponnum {
 #define BUTTON_UI_ACCEPT      CONT_0010
 #define BUTTON_UI_CANCEL      CONT_0020
 
-#define BUTTON_MOONJUMP		  CONT_0080
+#define BUTTON_MOONJUMP		    CONT_0080
+#define BUTTON_TOGGLEGRAVITY  CONT_0100
 #define MOUSEAIM_CLASSIC 0 // crosshair moves around the screen in aim mode
 #define MOUSEAIM_LOCKED 1  // crosshair locked to the center of the screen in aim mode
 
