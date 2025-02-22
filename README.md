@@ -1,3 +1,12 @@
+# Mod: Toggle Gangsta
+
+Adds a bindable button for toggling gangsta mode.
+
+![Screenshot 2025-02-21 at 19 23 56](https://github.com/user-attachments/assets/8de027b9-f40b-40da-913a-d15c9c41dcf5)
+![Screenshot 2025-02-21 at 19 24 38](https://github.com/user-attachments/assets/dc6b5a8f-5601-41d0-a273-f8f65c043c78)
+
+
+
 # Perfect Dark port
 
 This repository contains a work-in-progress port of the [Perfect Dark decompilation](https://github.com/n64decomp/perfect_dark) to modern platforms.
