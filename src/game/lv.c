@@ -96,6 +96,9 @@
 #include "lib/vars.h"
 #include "lib/vi.h"
 #include "types.h"
+#ifndef PLATFORM_N64
+#include "video.h"
+#endif
 
 struct sndstate *g_MiscSfxAudioHandles[3];
 u32 var800aa5bc;
@@ -951,6 +954,45 @@ void lvFindThreats(void)
 	}
 }
 
+#ifndef PLATFORM_N64
+Gfx *lvRenderFPS(Gfx *gdl)
+{
+	const f32 fps = videoGetAverageFPS();
+	const u8 a = 160;
+	s32 x = 27, y = 13;
+	u32 color;
+	char buffer[16];
+
+	if (fps <= 30.f) {
+		// red -> yellow
+		color = 0xff000000 | a | ((u32)((fps / 30.f) * 255.f) << 16);
+	} else if (fps <= 60.f) {
+		// yellow -> green
+		color = 0x00ff0000 | a | ((u32)((1.f - (fps - 30.f) / 30.f) * 255.f) << 24);
+	} else if (fps <= 90.f) {
+		// green -> cyan
+		color = 0x00ff0000 | a | ((u32)(((fps - 60.f) / 30.f) * 255.f) << 8);
+	} else {
+		// cyan
+		color = 0x00ffff00 | a;
+	}
+
+	if (g_CharsNumeric && g_FontNumeric) {
+		snprintf(buffer, sizeof buffer, "%.2f", fps);
+
+		gSPSetExtraGeometryModeEXT(gdl++, g_HudAlignModeL);
+
+		gdl = text0f153628(gdl);
+		gdl = textRender(gdl, &x, &y, buffer, g_CharsNumeric, g_FontNumeric, color, 0x000000a0, viGetWidth(), viGetHeight(), 0, 0);
+		gdl = text0f153780(gdl);
+
+		gSPClearExtraGeometryModeEXT(gdl++, g_HudAlignModeL);
+	}
+
+	return gdl;
+}
+#endif
+
 /**
  * Renders a complete frame for all players, and also does some other game logic
  * that really doesn't belong here.
@@ -1744,6 +1786,12 @@ Gfx *lvRender(Gfx *gdl)
 	}
 
 	gDPSetScissor(gdl++, G_SC_NON_INTERLACE, 0, 0, viGetWidth(), viGetHeight());
+
+#ifndef PLATFORM_N64
+	if (videoGetDisplayFPS()) {
+		gdl = lvRenderFPS(gdl);
+	}
+#endif
 
 #if VERSION < VERSION_NTSC_1_0
 	if ((uintptr_t)gdl < (uintptr_t)g_GfxBuffers[g_GfxActiveBufferIndex]

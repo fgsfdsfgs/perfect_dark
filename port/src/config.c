@@ -10,7 +10,7 @@
 
 #define CONFIG_MAX_SECNAME 128
 #define CONFIG_MAX_KEYNAME 256
-#define CONFIG_MAX_SETTINGS 256
+#define CONFIG_MAX_SETTINGS 300
 
 typedef enum {
 	CFG_NONE,
@@ -34,6 +34,7 @@ struct configentry {
 } settings[CONFIG_MAX_SETTINGS];
 
 static s32 numSettings = 0;
+static u8 configMaxWarningLogged = 0;
 
 static inline s32 configClampInt(s32 val, s32 min, s32 max)
 {
@@ -64,10 +65,14 @@ static inline struct configentry *configAddEntry(const char *key)
 {
 	if (numSettings < CONFIG_MAX_SETTINGS) {
 		struct configentry *cfg = &settings[numSettings++];
-		strncpy(cfg->key, key, CONFIG_MAX_KEYNAME);
+		snprintf(cfg->key, CONFIG_MAX_KEYNAME, "%s", key);
 		const char *delim = strrchr(cfg->key, '.');
 		cfg->seclen = delim ? (delim - cfg->key) : 0;
 		return cfg;
+	}
+	if (!configMaxWarningLogged) {
+		sysLogPrintf(LOG_WARNING, "Maximum number of configuration entries exceeded: %d", CONFIG_MAX_SETTINGS);
+		configMaxWarningLogged = 1;
 	}
 	return NULL;
 }

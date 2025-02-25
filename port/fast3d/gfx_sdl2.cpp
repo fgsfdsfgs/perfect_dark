@@ -30,10 +30,30 @@ static uint64_t qpc_freq;
 #define FRAME_INTERVAL_US_NUMERATOR 1000000
 #define FRAME_INTERVAL_US_DENOMINATOR (target_fps)
 
-static void set_fullscreen(bool on, bool call_callback) {
-    if (fullscreen_state == on) {
-        return;
+static int32_t gfx_sdl_get_maximized_state(void) {
+    return (int32_t)maximized_state;
+}
+
+static int32_t gfx_sdl_get_fullscreen_state(void) {
+    return (int32_t)fullscreen_state;
+}
+
+static int32_t gfx_sdl_get_fullscreen_flag_mode(void) {
+    return fullscreen_flag == SDL_WINDOW_FULLSCREEN_DESKTOP ? 0 : 1;
+}
+
+static void gfx_sdl_set_fullscreen_flag(int32_t mode) {
+    switch (mode) {
+        case 0: {
+            fullscreen_flag = SDL_WINDOW_FULLSCREEN_DESKTOP;
+        } break;
+        case 1: {
+            fullscreen_flag = SDL_WINDOW_FULLSCREEN;
+        } break;
     }
+}
+
+static void set_fullscreen(bool on, bool call_callback) {
     fullscreen_state = on;
     SDL_SetWindowFullscreen(wnd, on ? fullscreen_flag : 0);
     if (call_callback && on_fullscreen_changed_callback) {
@@ -42,9 +62,6 @@ static void set_fullscreen(bool on, bool call_callback) {
 }
 
 static void set_maximize_window(bool on) {
-	if (maximized_state == on) {
-		return;
-	}
 	maximized_state = on;
 	if (on) {
 		SDL_MaximizeWindow(wnd);
@@ -93,6 +110,13 @@ static void gfx_sdl_init(const struct GfxWindowInitSettings *set) {
     if (display_in_use < 0) { // Fallback to default if out of bounds
         posX = 100;
         posY = 100;
+    }
+
+    if (set->centered) {
+        SDL_DisplayMode mode = {};
+        SDL_GetCurrentDisplayMode(0, &mode);
+        posX = mode.w / 2 - window_width / 2;
+        posY = mode.h / 2 - window_height / 2;
     }
 
     if (set->fullscreen_is_exclusive) {
@@ -222,6 +246,43 @@ static void gfx_sdl_set_cursor_visibility(bool visible) {
     }
 }
 
+static void get_centered_positions_native(int32_t width, int32_t height, int32_t *posX, int32_t *posY) {
+    const int disp_idx = SDL_GetWindowDisplayIndex(wnd);
+    SDL_DisplayMode mode = {};
+    SDL_GetDesktopDisplayMode(disp_idx, &mode);
+    *posX = mode.w / 2 - width / 2;
+    *posY = mode.h / 2 - height / 2;
+}
+
+static void gfx_sdl_get_centered_positions(int32_t width, int32_t height, int32_t *posX, int32_t *posY) {
+    const int disp_idx = SDL_GetWindowDisplayIndex(wnd);
+    SDL_DisplayMode mode = {};
+    SDL_GetCurrentDisplayMode(disp_idx, &mode);
+    *posX = mode.w / 2 - width / 2;
+    *posY = mode.h / 2 - height / 2;
+}
+
+static void gfx_sdl_set_closest_resolution(int32_t width, int32_t height, bool should_center) {
+    const SDL_DisplayMode mode = {.w = width, .h = height};
+    const int disp_idx = SDL_GetWindowDisplayIndex(wnd);
+    SDL_DisplayMode closest = {};
+    if (SDL_GetClosestDisplayMode(disp_idx, &mode, &closest)) {
+        SDL_SetWindowDisplayMode(wnd, &closest);
+        SDL_SetWindowSize(wnd, closest.w, closest.h);
+        if (should_center) {
+            int32_t posX = 0;
+            int32_t posY = 0;
+            get_centered_positions_native(closest.w, closest.h, &posX, &posY);
+            SDL_SetWindowPosition(wnd, posX, posY);
+        }
+    }
+}
+
+static void gfx_sdl_set_dimensions(uint32_t width, uint32_t height, int32_t posX, int32_t posY) {
+    SDL_SetWindowSize(wnd, width, height);
+    SDL_SetWindowPosition(wnd, posX, posY);
+}
+
 static void gfx_sdl_get_dimensions(uint32_t* width, uint32_t* height, int32_t* posX, int32_t* posY) {
     SDL_GL_GetDrawableSize(wnd, static_cast<int*>((void*)width), static_cast<int*>((void*)height));
     SDL_GetWindowPosition(wnd, static_cast<int*>(posX), static_cast<int*>(posY));
@@ -240,6 +301,9 @@ static void gfx_sdl_handle_events(void) {
             case SDL_WINDOWEVENT:
                 if (event.window.event == SDL_WINDOWEVENT_SIZE_CHANGED) {
                     SDL_GL_GetDrawableSize(wnd, &window_width, &window_height);
+                    if (!fullscreen_state) {
+                        maximized_state = SDL_GetWindowFlags(wnd) & SDL_WINDOW_MAXIMIZED ? true : false;
+                    }
                 } else if (event.window.event == SDL_WINDOWEVENT_CLOSE &&
                            event.window.windowID == SDL_GetWindowID(wnd)) {
                     // We listen specifically for main window close because closing main window
@@ -304,6 +368,10 @@ static double gfx_sdl_get_time(void) {
     return SDL_GetPerformanceCounter() / (double)qpc_freq;
 }
 
+static int32_t gfx_sdl_get_target_fps(void) {
+    return target_fps;
+}
+
 static void gfx_sdl_set_target_fps(int fps) {
     target_fps = fps;
 }
@@ -320,6 +388,10 @@ static void gfx_sdl_set_window_title(const char *title) {
     SDL_SetWindowTitle(wnd, title);
 }
 
+static int gfx_sdl_get_swap_interval(void) {
+    return SDL_GL_GetSwapInterval();
+}
+
 static bool gfx_sdl_set_swap_interval(int interval) {
     const bool success = SDL_GL_SetSwapInterval(interval) >= 0;
     vsync_enabled = success && (interval != 0);
@@ -329,24 +401,63 @@ static bool gfx_sdl_set_swap_interval(int interval) {
     return success;
 }
 
-struct GfxWindowManagerAPI gfx_sdl = { 
+int gfx_sdl_get_display_mode(int modenum, int *out_w, int *out_h) {
+    const int display_in_use = SDL_GetWindowDisplayIndex(wnd);
+    SDL_DisplayMode sdlmode;
+    if (SDL_GetDisplayMode(display_in_use, modenum, &sdlmode) == 0) {
+        *out_w = sdlmode.w;
+        *out_h = sdlmode.h;
+        return 1;
+    }
+    return 0;
+}
+
+int gfx_sdl_get_current_display_mode(int *out_w, int *out_h) {
+    const int display_in_use = SDL_GetWindowDisplayIndex(wnd);
+    SDL_DisplayMode sdlmode;
+    if (SDL_GetCurrentDisplayMode(display_in_use, &sdlmode) == 0) {
+        *out_w = sdlmode.w;
+        *out_h = sdlmode.h;
+        return 1;
+    }
+    return 0;
+}
+
+int gfx_sdl_get_num_display_modes(void) {
+    const int display_in_use = SDL_GetWindowDisplayIndex(wnd);
+    return SDL_GetNumDisplayModes(display_in_use);
+}
+
+struct GfxWindowManagerAPI gfx_sdl = {
     gfx_sdl_init,
     gfx_sdl_close,
+    gfx_sdl_get_display_mode,
+    gfx_sdl_get_current_display_mode,
+    gfx_sdl_get_num_display_modes,
+    gfx_sdl_get_fullscreen_state,
     gfx_sdl_set_fullscreen_changed_callback,
     gfx_sdl_set_fullscreen,
     gfx_sdl_set_fullscreen_exclusive,
+    gfx_sdl_set_fullscreen_flag,
+    gfx_sdl_get_fullscreen_flag_mode,
+    gfx_sdl_get_maximized_state,
     gfx_sdl_set_maximize_window,
     gfx_sdl_get_active_window_refresh_rate,
     gfx_sdl_set_cursor_visibility,
+    gfx_sdl_set_closest_resolution,
+    gfx_sdl_set_dimensions,
     gfx_sdl_get_dimensions,
+    gfx_sdl_get_centered_positions,
     gfx_sdl_handle_events,
     gfx_sdl_start_frame,
     gfx_sdl_swap_buffers_begin,
     gfx_sdl_swap_buffers_end,
     gfx_sdl_get_time,
+    gfx_sdl_get_target_fps,
     gfx_sdl_set_target_fps,
     gfx_sdl_can_disable_vsync,
     gfx_sdl_get_window_handle,
     gfx_sdl_set_window_title,
+    gfx_sdl_get_swap_interval,
     gfx_sdl_set_swap_interval,
 };

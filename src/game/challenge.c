@@ -687,6 +687,12 @@ void challengeApply(void)
 	for (i = 0; i < MAX_PLAYERS; i++) {
 		g_PlayerConfigsArray[i].base.team = 0;
 	}
+
+#ifndef PLATFORM_N64
+	// Enable Friendly Fire option
+	g_MpSetup.options |= MPOPTION_FRIENDLYFIRE;
+#endif
+
 }
 
 s32 challengeRemovePlayerLock(void)

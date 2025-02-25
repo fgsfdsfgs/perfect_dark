@@ -1165,6 +1165,155 @@ struct menudialogdef g_MpSaveSetupExistsMenuDialog = {
 };
 
 #ifndef PLATFORM_N64
+MenuItemHandlerResult mpSelectRandomWeaponListHandler(s32 operation, struct menuitem *item, union handlerdata *data)
+{
+	static const char *labels[] = {
+		"Select Dark",
+		"Select Classic",
+		"Select All",
+		"Select None",
+	};
+
+	switch (operation) {
+	case MENUOP_GETOPTIONCOUNT:
+		data->list.value = mpGetNumWeaponOptions() + 4;
+		break;
+	case MENUOP_GETOPTIONTEXT:
+		{
+			s32 numweapons = mpGetNumWeaponOptions();
+
+			if (data->list.value < numweapons) {
+				return (uintptr_t) mpGetWeaponLabel(data->list.value);
+			} else {
+				return (intptr_t)labels[data->list.value - numweapons];
+			}
+		}
+	case MENUOP_SET:
+		{
+			s32 numweapons = mpGetNumWeaponOptions();
+			s32 mpweaponnum = data->list.value;
+			s32 optionindex = mpweaponnum;
+			s32 i;
+
+			if (data->list.value < numweapons) {
+				if (data->list.unk04 == 0) {
+					for (i = 0; i <= mpweaponnum; i++) {
+						if (challengeIsFeatureUnlocked(g_MpWeapons[i].unlockfeature) == 0) {
+							mpweaponnum++;
+						}
+
+						optionindex = mpweaponnum;
+					}
+
+					g_MpWeaponSetRandomFilters[optionindex] = 1 - g_MpWeaponSetRandomFilters[optionindex];
+				}
+			} else {
+				s32 index = data->list.value - numweapons;
+
+				switch (index) {
+				case 0:
+					// Select Dark
+					for (i = 0; i < ARRAYCOUNT(g_MpWeapons); i++) {
+						if ((i >= MPWEAPON_NONE && i <= MPWEAPON_COMBATBOOST) || i >= MPWEAPON_SHIELD) {
+							g_MpWeaponSetRandomFilters[i] = 1;
+						} else {
+							g_MpWeaponSetRandomFilters[i] = 0;
+						}
+					}
+					break;
+				case 1:
+					// Select Classic
+					for (i = 0; i < ARRAYCOUNT(g_MpWeapons); i++) {
+						if (i >= MPWEAPON_PP9I && i <= MPWEAPON_RCP45) {
+							g_MpWeaponSetRandomFilters[i] = 1;
+						} else {
+							g_MpWeaponSetRandomFilters[i] = 0;
+						}
+					}
+					break;
+				case 2:
+					// Select All
+					for (i = 0; i < ARRAYCOUNT(g_MpWeapons); i++) {
+						g_MpWeaponSetRandomFilters[i] = 1;
+					}
+					break;
+				case 3:
+					// Select None
+					for (i = 0; i < ARRAYCOUNT(g_MpWeapons); i++) {
+						g_MpWeaponSetRandomFilters[i] = 0;
+					}
+					break;
+				}
+			}
+		}
+		break;
+	case MENUOP_GETSELECTEDINDEX:
+		data->list.value = 0x000fffff;
+		break;
+	case MENUOP_GETLISTITEMCHECKBOX:
+		{
+			s32 numweapons = mpGetNumWeaponOptions();
+			s32 mpweaponnum = data->list.value;
+			s32 optionindex = mpweaponnum;
+			s32 i;
+
+			if (data->list.value < numweapons) {
+
+				for (i = 0; i <= mpweaponnum; i++) {
+					if (challengeIsFeatureUnlocked(g_MpWeapons[i].unlockfeature) == 0) {
+						mpweaponnum++;
+					}
+
+					optionindex = mpweaponnum;
+				}
+
+				data->list.unk04 = g_MpWeaponSetRandomFilters[optionindex];
+			}
+		}
+		break;
+	}
+
+	return 0;
+}
+
+struct menuitem g_MpSelectRandomWeaponsMenuItems[] = {
+	{
+		MENUITEMTYPE_LIST,
+		0,
+		MENUITEMFLAG_LOCKABLEMINOR,
+		0x00000078,
+		0x0000004d,
+		mpSelectRandomWeaponListHandler,
+	},
+	{ MENUITEMTYPE_END },
+};
+
+struct menudialogdef g_MpSelectRandomWeaponsMenuDialog = {
+	MENUDIALOGTYPE_DEFAULT,
+	(uintptr_t)"Select Weapons",
+	g_MpSelectRandomWeaponsMenuItems,
+	NULL,
+	MENUDIALOGFLAG_LITERAL_TEXT,
+	NULL,
+};
+
+MenuItemHandlerResult menuhandlerMpSelectRandomWeapons(s32 operation, struct menuitem *item, union handlerdata *data)
+{
+	switch (operation) {
+	case MENUOP_CHECKDISABLED:
+	case MENUOP_CHECKHIDDEN:
+		if (g_MpWeaponSetNum == WEAPONSET_RANDOM
+				|| g_MpWeaponSetNum == WEAPONSET_RANDOMFIVE) {
+			return false;
+		}
+		return true;
+	case MENUOP_SET:
+		menuPushDialog(&g_MpSelectRandomWeaponsMenuDialog);
+	}
+
+	return 0;
+}
+
 MenuItemHandlerResult menuhandlerMpAutoRandomWeapon(s32 operation, struct menuitem *item, union handlerdata *data)
 {
 	static const char *labels[] = {
@@ -1220,6 +1369,14 @@ struct menuitem g_MpWeaponsMenuItems[] = {
 		menuhandlerMpWeaponSetDropdown,
 	},
 #ifndef PLATFORM_N64
+	{
+		MENUITEMTYPE_SELECTABLE,
+		0,
+		MENUITEMFLAG_LITERAL_TEXT,
+		(uintptr_t)"Select Weapons\n",
+		0,
+		menuhandlerMpSelectRandomWeapons,
+	},
 	{
 		MENUITEMTYPE_DROPDOWN,
 		0,

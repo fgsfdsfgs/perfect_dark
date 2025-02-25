@@ -31,7 +31,7 @@ There are minor graphics- and gameplay-related issues, and possibly occasional c
 * basic mod support, currently enough to load a few custom levels;
 * slightly expanded memory heap size;
 * experimental high framerate support (up to 240 FPS):
-  * set `Game.TickRateDivisor` to `0` in `pd.ini` to activate;
+  * enable `Uncap Tickrate` in `Extended Video Options` to activate;
   * in practice the game will have issues running faster than ~165 FPS, so use VSync or `Video.FramerateLimit` to cap it.
 * emulate the Transfer Pak functionality the game has on the Nintendo 64 to unlock some cheats automatically.
 

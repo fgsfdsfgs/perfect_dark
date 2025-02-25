@@ -44,7 +44,8 @@ static SDL_GameController *pads[INPUT_MAX_CONTROLLERS];
 	.deadzone = { DEFAULT_DEADZONE, DEFAULT_DEADZONE, DEFAULT_DEADZONE, DEFAULT_DEADZONE_RY }, \
 	.stickCButtons = 0, \
 	.swapSticks = 1, \
-	.deviceIndex = -1 \
+	.deviceIndex = -1, \
+	.cancelCButtons = 0, \
 }
 
 static struct controllercfg {
@@ -56,6 +57,7 @@ static struct controllercfg {
 	s32 stickCButtons;
 	s32 swapSticks;
 	s32 deviceIndex;
+	s32 cancelCButtons;
 } padsCfg[INPUT_MAX_CONTROLLERS] = {
 	CONTROLLERCFG_DEFAULT,
 	CONTROLLERCFG_DEFAULT,
@@ -768,11 +770,21 @@ s32 inputReadController(s32 idx, OSContPad *npad)
 	npad->stick_x = xdiff < 0 ? -0x80 : (xdiff > 0 ? 0x7F : 0);
 	npad->stick_y = ydiff < 0 ? -0x80 : (ydiff > 0 ? 0x7F : 0);
 
+	const struct controllercfg *cfg = &padsCfg[idx];
+
+	if (cfg->cancelCButtons) {
+		// opposite C buttons cancel each other out
+		if ((npad->button & (L_CBUTTONS | R_CBUTTONS)) == (L_CBUTTONS | R_CBUTTONS)) {
+			npad->button &= ~(L_CBUTTONS | R_CBUTTONS);
+		}
+		if ((npad->button & (U_CBUTTONS | D_CBUTTONS)) == (U_CBUTTONS | D_CBUTTONS)) {
+			npad->button &= ~(U_CBUTTONS | D_CBUTTONS);
+		}
+	}
+
 	if (!pads[idx]) {
 		return 0;
 	}
-
-	const struct controllercfg *cfg = &padsCfg[idx];
 
 	s32 leftX = SDL_GameControllerGetAxis(pads[idx], cfg->axisMap[0][0]);
 	s32 leftY = SDL_GameControllerGetAxis(pads[idx], cfg->axisMap[0][1]);
@@ -949,6 +961,16 @@ s32 inputControllerGetDualAnalog(s32 cidx)
 void inputControllerSetDualAnalog(s32 cidx, s32 enable)
 {
 	padsCfg[cidx].stickCButtons = !enable;
+}
+
+s32 inputControllerGetCancelCButtons(s32 cidx)
+{
+	return padsCfg[cidx].cancelCButtons;
+}
+
+void inputControllerSetCancelCButtons(s32 cidx, s32 cancel)
+{
+	padsCfg[cidx].cancelCButtons = cancel;
 }
 
 f32 inputControllerGetAxisScale(s32 cidx, s32 stick, s32 axis)
@@ -1476,6 +1498,7 @@ PD_CONSTRUCTOR static void inputConfigInit(void)
 		configRegisterFloat(strFmt("%s.RStickScaleX", secname), &padsCfg[c].sens[2], -10.f, 10.f);
 		configRegisterFloat(strFmt("%s.RStickScaleY", secname), &padsCfg[c].sens[3], -10.f, 10.f);
 		configRegisterInt(strFmt("%s.StickCButtons", secname), &padsCfg[c].stickCButtons, 0, 1);
+		configRegisterInt(strFmt("%s.CancelCButtons", secname), &padsCfg[c].cancelCButtons, 0, 1);
 		configRegisterInt(strFmt("%s.SwapSticks", secname), &padsCfg[c].swapSticks, 0, 1);
 		configRegisterInt(strFmt("%s.ControllerIndex", secname), &padsCfg[c].deviceIndex, -1, 0x7FFFFFFF);
 		secname[13] = '.';

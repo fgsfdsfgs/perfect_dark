@@ -698,14 +698,159 @@ static MenuItemHandlerResult menuhandlerFullScreen(s32 operation, struct menuite
 	return 0;
 }
 
-static MenuItemHandlerResult menuhandlerMaximizeWindow(s32 operation, struct menuitem *item, union handlerdata *data)
+static MenuItemHandlerResult menuhandlerFullScreenMode(s32 operation, struct menuitem *item, union handlerdata *data)
+{
+	static const char *opts[] = {
+		"Borderless",
+		"Exclusive"
+	};
+
+	switch (operation) {
+	case MENUOP_GETOPTIONCOUNT:
+		data->dropdown.value = ARRAYCOUNT(opts);
+		break;
+	case MENUOP_GETOPTIONTEXT:
+		return (intptr_t)opts[data->dropdown.value];
+	case MENUOP_SET:
+		videoSetFullscreenMode(data->dropdown.value);
+		break;
+	case MENUOP_GETSELECTEDINDEX:
+		data->dropdown.value = videoGetFullscreenMode();
+	}
+
+	return 0;
+}
+
+static MenuItemHandlerResult menuhandlerCenterWindow(s32 operation, struct menuitem *item, union handlerdata *data)
 {
 	switch (operation) {
 	case MENUOP_GET:
-		return videoGetMaximizeWindow();
+		return videoGetCenterWindow();
 	case MENUOP_SET:
-		videoSetMaximizeWindow(data->checkbox.value);
+		videoSetCenterWindow(data->checkbox.value);
 		break;
+	}
+
+	return 0;
+}
+
+static MenuItemHandlerResult menuhandlerVsync(s32 operation, struct menuitem *item, union handlerdata *data)
+{
+	static const s32 numOpts = 10;
+	static const char *constOpts[] = {
+		"Adaptive",
+		"Off",
+		"On"
+	};
+	static char dynOpt[20];
+	s32 vblanks;
+
+	switch (operation) {
+	case MENUOP_GETOPTIONCOUNT:
+		data->dropdown.value = numOpts;
+		break;
+	case MENUOP_GETOPTIONTEXT:
+		if (data->dropdown.value < ARRAYCOUNT(constOpts))
+			return (intptr_t)constOpts[data->dropdown.value];
+		vblanks = (s32)data->dropdown.value - 1;
+		snprintf(dynOpt, sizeof(dynOpt), "On (%d frames)", vblanks);
+		return (intptr_t)dynOpt;
+	case MENUOP_SET:
+		videoSetVsync(data->dropdown.value - 1);
+	case MENUOP_GETSELECTEDINDEX:
+		data->dropdown.value = videoGetVsync() + 1;
+	}
+
+	return 0;
+}
+
+static MenuItemHandlerResult menuhandlerFramerateLimit(s32 operation, struct menuitem *item, union handlerdata *data)
+{
+	switch (operation) {
+	case MENUOP_GETSLIDER:
+		data->slider.value = videoGetFramerateLimit();
+		break;
+	case MENUOP_SET:
+		videoSetFramerateLimit(data->slider.value);
+		break;
+	case MENUOP_GETSLIDERLABEL:
+		// NOTE: data->slider.label length must not exceed 15.
+		if (data->slider.value == 0) {
+			strcpy(data->slider.label, "Off");
+		} else {
+			sprintf(data->slider.label, "%d FPS", data->slider.value);
+		}
+	}
+
+	return 0;
+}
+
+static MenuItemHandlerResult menuhandlerMSAA(s32 operation, struct menuitem *item, union handlerdata *data)
+{
+	s32 msaa;
+	static const char *opts[] = {
+		"Off",
+		"2x (MSAA)",
+		"4x (MSAA)",
+		"8x (MSAA)",
+		"16x (MSAA)"
+	};
+
+	switch (operation) {
+	case MENUOP_GETOPTIONCOUNT:
+		data->dropdown.value = ARRAYCOUNT(opts);
+		break;
+	case MENUOP_GETOPTIONTEXT:
+		return (intptr_t)opts[data->dropdown.value];
+	case MENUOP_SET:
+		videoSetMSAA(1 << data->dropdown.value);
+		break;
+	case MENUOP_GETSELECTEDINDEX:
+		msaa = videoGetMSAA();
+		if (msaa < 2) {
+			data->dropdown.value = 0;
+		} else if (msaa < 4) {
+			data->dropdown.value = 1;
+		} else if (msaa < 8) {
+			data->dropdown.value = 2;
+		} else if (msaa < 16) {
+			data->dropdown.value = 3;
+		} else {
+			data->dropdown.value = 4;
+		}
+	}
+
+	return 0;
+}
+
+static MenuItemHandlerResult menuhandlerResolution(s32 operation, struct menuitem *item, union handlerdata *data)
+{
+	static char resstring[32];
+	static const char *rescustom = "Custom";
+	displaymode mode;
+
+	switch (operation) {
+	case MENUOP_CHECKDISABLED:
+		if (videoGetFullscreen() && videoGetFullscreenMode() == 0) {
+			return true;
+		}
+		break;
+	case MENUOP_GETOPTIONCOUNT:
+		data->dropdown.value = videoGetNumDisplayModes();
+		break;
+	case MENUOP_GETOPTIONTEXT:
+		videoGetDisplayMode(&mode, data->dropdown.value);
+		if (mode.width == 0 && mode.height == 0) {
+			return (intptr_t)rescustom;
+		} else {
+			snprintf(resstring, sizeof(resstring), "%dx%d", mode.width, mode.height);
+		}
+		return (intptr_t)resstring;
+	case MENUOP_SET:
+		videoSetDisplayMode(data->dropdown.value);
+		break;
+	case MENUOP_GETSELECTEDINDEX:
+		data->dropdown.value = videoGetDisplayModeIndex();
 	}
 
 	return 0;
@@ -755,7 +900,20 @@ static MenuItemHandlerResult menuhandlerTexFilter2D(s32 operation, struct menuit
 		return videoGetTextureFilter2D();
 	case MENUOP_SET:
 		videoSetTextureFilter2D(data->checkbox.value);
+		g_TexFilter2D = videoGetTextureFilter2D() ? G_TF_BILERP : G_TF_POINT;
 		break;
+	}
+
+	return 0;
+}
+
+static MenuItemHandlerResult menuhandlerDisplayFPS(s32 operation, struct menuitem *item, union handlerdata *data)
+{
+	switch (operation) {
+	case MENUOP_GET:
+		return videoGetDisplayFPS();
+	case MENUOP_SET:
+		videoSetDisplayFPS(data->checkbox.value);
 	}
 
 	return 0;
@@ -768,6 +926,19 @@ static MenuItemHandlerResult menuhandlerGeMuzzleFlashes(s32 operation, struct me
 		return g_BgunGeMuzzleFlashes;
 	case MENUOP_SET:
 		g_BgunGeMuzzleFlashes = data->checkbox.value;
+		break;
+	}
+
+	return 0;
+}
+
+static MenuItemHandlerResult menuhandlerUncapTickrate(s32 operation, struct menuitem *item, union handlerdata *data)
+{
+	switch (operation) {
+	case MENUOP_GET:
+		return (g_TickRateDiv == 0);
+	case MENUOP_SET:
+		g_TickRateDiv = !data->checkbox.value;
 		break;
 	}
 
@@ -832,20 +1003,84 @@ struct menuitem g_ExtendedVideoMenuItems[] = {
 		menuhandlerFullScreen,
 	},
 	{
-		MENUITEMTYPE_CHECKBOX,
+		MENUITEMTYPE_DROPDOWN,
 		0,
 		MENUITEMFLAG_LITERAL_TEXT,
-		(uintptr_t)"Maximize Window",
+		(uintptr_t)"Full Screen Mode",
 		0,
-		menuhandlerMaximizeWindow,
+		menuhandlerFullScreenMode,
+	},
+	{
+		MENUITEMTYPE_DROPDOWN,
+		0,
+		MENUITEMFLAG_LITERAL_TEXT,
+		(uintptr_t)"Resolution",
+		0,
+		menuhandlerResolution,
 	},
 	{
 		MENUITEMTYPE_CHECKBOX,
 		0,
 		MENUITEMFLAG_LITERAL_TEXT,
-		(uintptr_t)"Detail Textures",
+		(uintptr_t)"Center Window",
 		0,
-		menuhandlerTexDetail,
+		menuhandlerCenterWindow,
+	},
+	{
+		MENUITEMTYPE_DROPDOWN,
+		0,
+		MENUITEMFLAG_LITERAL_TEXT,
+		(uintptr_t)"Anti-aliasing",
+		0,
+		menuhandlerMSAA,
+	},
+	{
+		MENUITEMTYPE_SEPARATOR,
+		0,
+		0,
+		0,
+		0,
+		NULL,
+	},
+	{
+		MENUITEMTYPE_DROPDOWN,
+		0,
+		MENUITEMFLAG_LITERAL_TEXT,
+		(uintptr_t)"Vsync",
+		0,
+		menuhandlerVsync,
+	},
+	{
+		MENUITEMTYPE_SLIDER,
+		0,
+		MENUITEMFLAG_LITERAL_TEXT | MENUITEMFLAG_SLIDER_WIDE | MENUITEMFLAG_SLIDER_DEFERRED,
+		(uintptr_t)"Framerate Limit",
+		VIDEO_MAX_FPS,
+		menuhandlerFramerateLimit,
+	},
+	{
+		MENUITEMTYPE_CHECKBOX,
+		0,
+		MENUITEMFLAG_LITERAL_TEXT,
+		(uintptr_t)"Uncap Tickrate",
+		0,
+		menuhandlerUncapTickrate,
+	},
+	{
+		MENUITEMTYPE_CHECKBOX,
+		0,
+		MENUITEMFLAG_LITERAL_TEXT,
+		(uintptr_t)"Display FPS",
+		0,
+		menuhandlerDisplayFPS,
+	},
+	{
+		MENUITEMTYPE_SEPARATOR,
+		0,
+		0,
+		0,
+		0,
+		NULL,
 	},
 	{
 		MENUITEMTYPE_DROPDOWN,
@@ -867,9 +1102,17 @@ struct menuitem g_ExtendedVideoMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		0,
 		MENUITEMFLAG_LITERAL_TEXT,
-		(uintptr_t)"GE64-style Muzzle Flashes",
+		(uintptr_t)"Detail Textures",
 		0,
-		menuhandlerGeMuzzleFlashes,
+		menuhandlerTexDetail,
+	},
+	{
+		MENUITEMTYPE_SEPARATOR,
+		0,
+		0,
+		0,
+		0,
+		NULL,
 	},
 	{
 		MENUITEMTYPE_DROPDOWN,
@@ -878,6 +1121,14 @@ struct menuitem g_ExtendedVideoMenuItems[] = {
 		(uintptr_t)"HUD Centering",
 		0,
 		menuhandlerCenterHUD,
+	},
+	{
+		MENUITEMTYPE_CHECKBOX,
+		0,
+		MENUITEMFLAG_LITERAL_TEXT,
+		(uintptr_t)"GE64-style Muzzle Flashes",
+		0,
+		menuhandlerGeMuzzleFlashes,
 	},
 	{
 		MENUITEMTYPE_SLIDER,
