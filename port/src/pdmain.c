@@ -59,6 +59,7 @@
 #include "lib/snd.h"
 #include "lib/memp.h"
 #include "lib/mema.h"
+#include "lib/memshared.h"
 #include "lib/model.h"
 #include "lib/profile.h"
 #include "lib/videbug.h"
@@ -73,9 +74,6 @@
 #include "data.h"
 #include "types.h"
 #include "system.h"
-
-extern u8 *g_MempHeap;
-extern u32 g_MempHeapSize;
 
 void rngSetSeed(u32 seed);
 
@@ -242,10 +240,6 @@ void mainInit(void)
 		argSetString("          -ml0 -me0 -mgfx100 -mvtx50 -mt700 -ma400");
 	}
 
-	mempSetHeap(g_MempHeap, g_MempHeapSize);
-
-	mempResetPool(MEMPOOL_8);
-	mempResetPool(MEMPOOL_PERMANENT);
 	crashReset();
 	challengesInit();
 	utilsInit();
@@ -415,7 +409,6 @@ void mainLoop(void)
 
 		var8005d9c4 = 0;
 
-		mempResetPool(MEMPOOL_7);
 		mempResetPool(MEMPOOL_STAGE);
 		filesStop(4);
 
@@ -423,7 +416,7 @@ void mainLoop(void)
 			g_MainMemaHeapSize = strtol(argFindByPrefix(1, "-ma"), NULL, 0) * 1024;
 		}
 
-		memaReset(mempAlloc(g_MainMemaHeapSize, MEMPOOL_STAGE), g_MainMemaHeapSize);
+		memaReset();
 		langReset(g_StageNum);
 		playermgrReset();
 
@@ -508,8 +501,6 @@ void mainLoop(void)
 		}
 
 		lvStop();
-		mempDisablePool(MEMPOOL_STAGE);
-		mempDisablePool(MEMPOOL_7);
 		filesStop(4);
 		viBlack(true);
 		pak0f116994();
@@ -573,7 +564,6 @@ void mainTick(void)
 		}
 
 		rdpCreateTask(gdlstart, gdl, 0, (uintptr_t) &msg);
-		memaPrint();
 		profileSetMarker(PROFILE_MAINTICK_END);
 	}
 }

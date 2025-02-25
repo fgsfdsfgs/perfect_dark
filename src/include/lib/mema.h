@@ -3,16 +3,18 @@
 #include <ultra64.h>
 #include "data.h"
 #include "types.h"
+#include "lib/memshared.h"
 
 void memaDefrag(void);
 void memaInit(void);
-void memaReset(void *ptr, u64 size);
-void memaPrint(void);
-void *memaAlloc(u64 size);
-uintptr_t memaGrow(uintptr_t addr, u64 amount);
-void _memaFree(uintptr_t addr, u64 size);
-void memaFree(void *addr, u64 size);
-u64 memaGetLongestFree(void);
-bool memaRealloc(uintptr_t addr, u64 oldsize, u64 newsize);
+void memaReset(void);
+void memaFree(void *addr, size_t size);
+
+#ifdef MEMORY_DEBUG
+void *_memaAlloc(size_t size, char* label);
+#define memaAlloc(size) _memaAlloc(size, MEM_GET_LABEL())
+#else
+void *memaAlloc(size_t size);
+#endif
 
 #endif

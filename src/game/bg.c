@@ -1519,7 +1519,7 @@ void bgReset(s32 stagenum)
 
 	// Allocate space for the primary bg data
 	// An extra 0x8000 or so is given as temporary scratch space
-	g_BgPrimaryData = mempAlloc(ALIGN16(inflatedsize + 0x8010), MEMPOOL_STAGE);
+	g_BgPrimaryData = mempAlloc(ALIGN16(inflatedsize + 0x8010) * 2, MEMPOOL_STAGE);
 
 	// Set up pointer to scratch space
 	scratch = (uintptr_t) g_BgPrimaryData + inflatedsize - primcompsize;
@@ -1558,7 +1558,7 @@ void bgReset(s32 stagenum)
 	// NTSC 1.0. A full writeup about the bug and how the fix works can be found
 	// in the docs folder of this project.
 #ifdef AVOID_UB
-	section2 = mempAlloc(inflatedsize + section2compsize, MEMPOOL_STAGE);
+	section2 = mempAlloc((inflatedsize + section2compsize) * 2, MEMPOOL_STAGE);
 	scratch = (uintptr_t) section2 + inflatedsize;
 #elif VERSION >= VERSION_NTSC_FINAL
 	section2 = mempAlloc(inflatedsize + 0x8000, MEMPOOL_STAGE);
@@ -1932,7 +1932,7 @@ void bgBuildTables(s32 stagenum)
 
 		// Load and inflate section 3
 #ifdef AVOID_UB
-		section3 = mempAlloc(inflatedsize + section3compsize, MEMPOOL_STAGE);
+		section3 = mempAlloc((inflatedsize + section3compsize) * 2, MEMPOOL_STAGE);
 		scratch = section3 + inflatedsize;
 #elif VERSION >= VERSION_NTSC_FINAL
 		section3 = mempAlloc(inflatedsize + 0x8000, MEMPOOL_STAGE);
