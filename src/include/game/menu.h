@@ -90,7 +90,7 @@ void menuReset(void);
 void menuSwipe(s32 direction);
 void dialogTick(struct menudialog *dialog, struct menuinputs *inputs, u32 tickflags);
 void dialogInitItems(struct menudialog *dialog);
-void func0f0fa6ac(void);
+void handleMenuClose(void);
 void menuProcessInput(void);
 Gfx *menuRenderBackgroundLayer1(Gfx *gdl, u8 bg, f32 frac);
 Gfx *menuRenderBackgroundLayer2(Gfx *gdl, u8 bg, f32 frac);

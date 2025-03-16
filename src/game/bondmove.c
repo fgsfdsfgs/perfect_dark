@@ -790,10 +790,10 @@ void bmoveProcessInput(bool allowc1x, bool allowc1y, bool allowc1buttons, bool i
 
 	// Pausing
 	if (g_Vars.currentplayer->isdead == false) {
-		if (g_Vars.currentplayer->pausemode == PAUSEMODE_UNPAUSED && (c1buttonsthisframe & START_BUTTON)) {
+		if (g_Vars.currentplayer->pausemode == PAUSEMODE_UNPAUSED && (c1buttonsthisframe & (START_BUTTON))) {
 			if (g_Vars.mplayerisrunning == false) {
 				if (g_Vars.lvframenum > 15) {
-					playerPause(MENUROOT_MAINMENU);
+					playerStartPause(MENUROOT_MAINMENU);
 				}
 			} else {
 				mpPushPauseDialog();
@@ -912,7 +912,7 @@ void bmoveProcessInput(bool allowc1x, bool allowc1y, bool allowc1buttons, bool i
 					}
 				}
 
-				if (!lvIsPaused()) {
+				if (!g_Vars.currentplayer->pausemode) {
 					// Handle aiming
 					if (optionsGetAimControl(g_Vars.currentplayerstats->mpindex) != AIMCONTROL_HOLD) {
 						for (i = 0; i < numsamples; i++) {
@@ -1245,7 +1245,7 @@ void bmoveProcessInput(bool allowc1x, bool allowc1y, bool allowc1buttons, bool i
 					}
 				}
 
-				if (!lvIsPaused()) {
+				if (!g_Vars.currentplayer->pausemode) {
 					// Handle aiming
 					for (i = 0; i < numsamples; i++) {
 						if (allowc1buttons && joyGetButtonsPressedOnSample(i, contpad1, BUTTON_GANGSTA & c1allowedbuttons)){
@@ -2077,6 +2077,8 @@ void bmoveProcessInput(bool allowc1x, bool allowc1y, bool allowc1buttons, bool i
 
 			g_Vars.currentplayer->vv_verta += g_Vars.currentplayer->speedverta * g_Vars.lvupdate60freal * 3.5f;
 		}
+	} else {
+		g_Vars.currentplayer->speedthetacontrol = 0;
 	}
 
 	if (movedata.cannaturalturn) {

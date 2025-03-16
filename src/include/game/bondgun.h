@@ -63,6 +63,9 @@ void bgun0f09d8dc(f32 breathing, f32 arg1, f32 arg2, f32 arg3, f32 arg4);
 bool bgunIsLoaded(void);
 u32 bgunGetGunMemType(void);
 u8 *bgunGetGunMem(void);
+#ifndef PLATFORM_N64
+u8 *bgunGetInvMem(void);
+#endif
 u32 bgunCalculateGunMemCapacity(void);
 void bgunFreeGunMem(void);
 void bgunSetGunMemWeapon(s32 weaponnum);

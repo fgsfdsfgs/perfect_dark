@@ -16,6 +16,7 @@ void musicQueueStopAllEvent(void);
 void musicSaveInterval(void);
 void musicRestoreInterval(void);
 void musicStartPrimary(f32 arg0);
+void musicStartPrimaryWithReason(f32 arg0, s8 reason);
 void musicStartAmbient(f32 arg0);
 bool musicIsAnyPlayerInAmbientRoom(void);
 void musicStartNrg(f32 arg0);

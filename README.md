@@ -13,6 +13,16 @@ Adds a bindable button for toggling gangsta mode.
 ![Screenshot 2025-02-21 at 19 23 56](https://github.com/user-attachments/assets/8de027b9-f40b-40da-913a-d15c9c41dcf5)
 ![Screenshot 2025-02-21 at 19 24 38](https://github.com/user-attachments/assets/dc6b5a8f-5601-41d0-a273-f8f65c043c78)
 
+# Mod: Perfect Dark without Pausing
+
+[![](http://img.youtube.com/vi/MHwGS0cP-3g/0.jpg)](https://www.youtube.com/watch?v=MHwGS0cP-3g)
+
+
+The pausing-blur effect can now be disabled via an in-game option. Leave it off for an extra challenge. 
+
+To toggle: `Options -> Extended -> Video -> Enable Local Pausing`
+
+This branch closely follows `fgsfdsfgs/perfect_dark`@`port`
 
 
 # Perfect Dark port

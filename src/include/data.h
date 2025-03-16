@@ -283,6 +283,8 @@ extern u16 g_ControlStyleOptions[];
 extern struct menudialogdef g_PreAndPostMissionBriefingMenuDialog;
 extern struct solostage g_SoloStages[];
 extern struct menudialogdef g_SoloMissionControlStyleMenuDialog;
+extern struct menudialogdef g_SoloMissionInventoryMenuDialog;
+extern struct menudialogdef g_MpPauseInventoryMenuDialog;
 extern struct menudialogdef g_CiControlStyleMenuDialog;
 extern struct menudialogdef g_CiControlStylePlayer2MenuDialog;
 extern struct menudialogdef g_ChangeAgentMenuDialog;
@@ -558,6 +560,8 @@ extern s32 g_TickExtraSleep;
 extern s32 g_MusicDisableMpDeath;
 extern s32 g_BgunGeMuzzleFlashes;
 extern s32 g_FileAutoSelect;
+extern bool g_PausingEnabled;
+extern u32 g_BgunGunMemBaseSize4Mb2P;
 
 extern u8 g_MpWeaponSetRandomFilters[NUM_MPWEAPONS];
 extern s32 g_MpWeaponRandomFilterNum;

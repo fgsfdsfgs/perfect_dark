@@ -1290,11 +1290,12 @@ s32 mpGetWeaponSet(void)
 
 bool mpIsPaused(void)
 {
-	if (PLAYERCOUNT() == 1
-			&& g_Vars.mplayerisrunning
-			&& g_Menus[g_Vars.currentplayerstats->mpindex].curdialog) {
-		return true;
-	}
+	if (PLAYERCOUNT() == 1 
+			&& g_Vars.mplayerisrunning 
+			&& g_Menus[g_Vars.currentplayerstats->mpindex].curdialog
+			&& g_PausingEnabled) { 
+		return true; 
+	} 
 
 	if (g_MpSetup.paused == PAUSEMODE_UNPAUSED) {
 		return false;
