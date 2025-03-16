@@ -108,5 +108,6 @@ void playerSetCamPropertiesWithRoom(struct coord *pos, struct coord *up, struct 
 void playerSetCamPropertiesWithoutRoom(struct coord *pos, struct coord *up, struct coord *look, s32 room);
 void playerSetCamProperties(struct coord *pos, struct coord *up, struct coord *look, s32 room);
 void playerClearMemCamRoom(void);
+void playerStartUnpause(void);
 
 #endif
