@@ -1247,6 +1247,13 @@ void bmoveProcessInput(bool allowc1x, bool allowc1y, bool allowc1buttons, bool i
 
 				if (!lvIsPaused()) {
 					// Handle aiming
+					for (i = 0; i < numsamples; i++) {
+						if (allowc1buttons && joyGetButtonsPressedOnSample(i, contpad1, BUTTON_GANGSTA & c1allowedbuttons)){
+							g_Vars.currentplayer->gunctrl.wantsgangsta = weaponHasFlag(bgunGetWeaponNum(HAND_RIGHT), WEAPONFLAG_GANGSTA) && !g_Vars.currentplayer->gunctrl.wantsgangsta;
+							break;
+						}
+					}
+					g_Vars.currentplayer->gunctrl.gangsta = g_Vars.currentplayer->gunctrl.wantsgangsta;
 					if (optionsGetAimControl(g_Vars.currentplayerstats->mpindex) != AIMCONTROL_HOLD) {
 						for (i = 0; i < numsamples; i++) {
 							if (allowc1buttons && joyGetButtonsPressedOnSample(i, contpad1, aimbuttons & c1allowedbuttons)) {

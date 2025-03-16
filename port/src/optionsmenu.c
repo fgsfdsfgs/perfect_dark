@@ -1649,6 +1649,7 @@ static const struct menubind menuBinds[] = {
 	{ CK_0100,   "Toggle Gravity [+]\n","N64 Ext 0100\n" },
 	{ CK_ACCEPT, "UI Accept [+]\n",     "EXT UI Accept\n" },
 	{ CK_CANCEL, "UI Cancel [+]\n",     "EXT UI Cancel\n" },
+	{ CK_0200,   "Toggle Gangsta [+]\n","N64 Ext 0200\n" },
 };
 
 static const char *menutextBind(struct menuitem *item);
@@ -1667,6 +1668,7 @@ static MenuItemHandlerResult menuhandlerResetBindsN64(s32 operation, struct menu
 	}
 
 struct menuitem g_ExtendedBindsMenuItems[] = {
+	DEFINE_MENU_BIND(),
 	DEFINE_MENU_BIND(),
 	DEFINE_MENU_BIND(),
 	DEFINE_MENU_BIND(),

@@ -6,6 +6,14 @@ Reimplements the classic Moon Jump Gameshark code, with some differences: changi
 
 [Perfect Dark PC Port - Moon Jump [nRP5k1Zn1mc].webm](https://github.com/user-attachments/assets/52401da4-d36b-4e70-a66b-eff8815e889e)
 
+# Mod: Toggle Gangsta
+
+Adds a bindable button for toggling gangsta mode.
+
+![Screenshot 2025-02-21 at 19 23 56](https://github.com/user-attachments/assets/8de027b9-f40b-40da-913a-d15c9c41dcf5)
+![Screenshot 2025-02-21 at 19 24 38](https://github.com/user-attachments/assets/dc6b5a8f-5601-41d0-a273-f8f65c043c78)
+
+
 
 # Perfect Dark port
 
