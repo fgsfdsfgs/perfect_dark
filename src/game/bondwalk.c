@@ -18,6 +18,8 @@
 #include "game/playermgr.h"
 #include "game/propobj.h"
 #include "bss.h"
+#include "lib/joy.h"
+#include "game/options.h"
 #include "lib/model.h"
 #include "lib/snd.h"
 #include "lib/rng.h"
@@ -797,6 +799,11 @@ void bwalkUpdateVertical(void)
 	}
 #endif
 
+	u32 moonjumpbuttonpressed = joyGetButtons(optionsGetContpadNum1(g_Vars.currentplayerstats->mpindex), 0xffffffff & BUTTON_MOONJUMP);
+	if (moonjumpbuttonpressed) {
+		g_Vars.currentplayer->vv_manground += 15;
+	}
+
 	// Determine if player is on a ladder
 	// If this comes up false, a second check is done... maybe checking if the
 	// player is touching a ladder from a room which shares the same coordinate
@@ -992,9 +999,23 @@ void bwalkUpdateVertical(void)
 			fallspeed = -fallspeed;
 		}
 
-		if (bwalkTryMoveUpwards(newmanground - g_Vars.currentplayer->vv_manground) == CDRESULT_NOCOLLISION) {
+		if (joyGetButtonsPressedThisFrame(optionsGetContpadNum1(g_Vars.currentplayerstats->mpindex), 0xffffffff & (BUTTON_TOGGLEGRAVITY))) {
+			g_NoFall[g_Vars.currentplayerstats->mpindex] = !g_NoFall[g_Vars.currentplayerstats->mpindex];
+			if (!g_NoFall[g_Vars.currentplayerstats->mpindex]) {
+				fallspeed = 0;
+			}
+		}
+
+		if (g_NoFall[g_Vars.currentplayerstats->mpindex]) {
+			newmanground = g_Vars.currentplayer->vv_ground;
+			fallspeed = 0;
+		}
+		else if (bwalkTryMoveUpwards(newmanground - g_Vars.currentplayer->vv_manground) == CDRESULT_NOCOLLISION) {
 			// Falling
 			g_Vars.currentplayer->vv_manground = newmanground;
+			if (moonjumpbuttonpressed && fallspeed < 0) {
+				fallspeed *= -1;
+			}
 			g_Vars.currentplayer->bdeltapos.y = fallspeed;
 
 			if (g_Vars.currentplayer->isfalling == false) {
@@ -1004,7 +1025,7 @@ void bwalkUpdateVertical(void)
 			} else {
 				if (g_Vars.lvframe60 - g_Vars.currentplayer->fallstart > TICKS(240)) {
 					// Have been falling for 4 seconds
-					playerDie(true);
+					// playerDie(true);
 				}
 			}
 		} else {
