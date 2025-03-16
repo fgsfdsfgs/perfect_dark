@@ -1750,6 +1750,15 @@ void bmoveProcessInput(bool allowc1x, bool allowc1y, bool allowc1buttons, bool i
 							&& !canmanualzoom
 							&& joyGetButtons(contpad1, c1allowedbuttons & sdmask);
 					}
+					u32 eyelidbuttonpressed = joyGetButtonsPressedThisFrame(contpad1, c1allowedbuttons & BUTTON_EYELIDS);
+					if (g_Vars.currentplayer->eyesshut) {
+						movedata.eyesshut = 1;
+
+						if (eyelidbuttonpressed) movedata.eyesshut = 0;
+					} else {
+						movedata.eyesshut = 0;
+						if (eyelidbuttonpressed) movedata.eyesshut = 1;
+					}
 
 					if (bgunGetWeaponNum(HAND_RIGHT) == WEAPON_FARSIGHT) {
 						movedata.farsighttempautoseek = g_Vars.currentplayer->insightaimmode && (c1buttons & (srmask | slmask));

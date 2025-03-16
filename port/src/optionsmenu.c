@@ -1669,6 +1669,7 @@ static const struct menubind menuBinds[] = {
 	{ CK_2000,   "Full Crouch [+]\n",   "N64 Ext 2000\n" },
 	{ CK_0080,   "Moon Jump [+]\n",     "N64 Ext 0080\n" },
 	{ CK_0100,   "Toggle Gravity [+]\n","N64 Ext 0100\n" },
+	{ CK_0040,   "Toggle Eyelids [+]\n","N64 Ext 0040\n" },
 	{ CK_ACCEPT, "UI Accept [+]\n",     "EXT UI Accept\n" },
 	{ CK_CANCEL, "UI Cancel [+]\n",     "EXT UI Cancel\n" },
 	{ CK_0200,   "Toggle Gangsta [+]\n","N64 Ext 0200\n" },
