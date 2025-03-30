@@ -1,13 +1,11 @@
 app-id: io.github.fgsfdsfgs.perfect_dark
 runtime: org.freedesktop.Platform
-runtime-version: &runtime-version '23.08'
+runtime-version: "23.08"
 sdk: org.freedesktop.Sdk
 command: io.github.fgsfdsfgs.perfect_dark.sh
 
 finish-args:
-  # hardware 3D and controller access
   - --device=all
-  # X11 + XShm access
   - --share=ipc
   - --socket=x11
   # Audio
@@ -15,59 +13,16 @@ finish-args:
   # Enable network for multiplayer
   - --share=network
 
-# Parameters for 32-bit extensions
-x-gl-version: &gl-version '1.4'
-x-gl-versions: &gl-versions 23.08;1.4
-x-gl-merge-dirs: &gl-merge-dirs vulkan/icd.d;glvnd/egl_vendor.d;egl/egl_external_platform.d;OpenCL/vendors;lib/dri;lib/d3d;lib/gbm;vulkan/explicit_layer.d;vulkan/implicit_layer.d
-
-add-extensions:
-  org.freedesktop.Platform.Compat.i386:
-    directory: lib/i386-linux-gnu
-    version: '23.08'
-
-  org.freedesktop.Platform.GL32:
-    directory: lib/i386-linux-gnu/GL
-    version: *gl-version
-    versions: *gl-versions
-    subdirectories: true
-    no-autodownload: true
-    autodelete: false
-    add-ld-path: lib
-    merge-dirs: *gl-merge-dirs
-    download-if: active-gl-driver
-    enable-if: active-gl-driver
-    autoprune-unless: active-gl-driver
-
-  org.freedesktop.Platform.GL32.Debug:
-    directory: lib/debug/lib/i386-linux-gnu/GL
-    version: *gl-version
-    versions: *gl-versions
-    subdirectories: true
-    no-autodownload: true
-    merge-dirs: *gl-merge-dirs
-    enable-if: active-gl-driver
-    autoprune-unless: active-gl-driver
-
-  org.freedesktop.Platform.VAAPI.Intel.i386:
-    directory: lib/i386-linux-gnu/dri/intel-vaapi-driver
-    version: *runtime-version
-    versions: *runtime-version
-    autodelete: false
-    no-autodownload: true
-    add-ld-path: lib
-    download-if: have-intel-gpu
-    autoprune-unless: have-intel-gpu
-
 modules:
   - name: perfect_dark
     buildsystem: simple
     sources:
       - type: file
-        path: bin/pd.i686
+        path: bin/pd.x86_64
       - type: file
-        path: bin/pd.jpn.i686
+        path: bin/pd.jpn.x86_64
       - type: file
-        path: bin/pd.pal.i686
+        path: bin/pd.pal.x86_64
       - type: file
         path: io.github.fgsfdsfgs.perfect_dark.sh
       - type: file
@@ -78,13 +33,8 @@ modules:
         path: io.github.fgsfdsfgs.perfect_dark.desktop
     build-commands: []
     post-install:
-      # create extension mountpoints
-      - mkdir -p /app/lib/i386-linux-gnu
-      - mkdir -p /app/lib/i386-linux-gnu/GL
-      - mkdir -p /app/lib/debug/lib/i386-linux-gnu/GL
-      - mkdir -p /app/lib/i386-linux-gnu/dri/intel-vaapi-driver
-      # port
-      - install -Dm 755 -t /app/bin/ pd*
+      # Install the binaries
+      - install -Dm 755 -t /app/bin/ pd.*
       - install -Dm 755 ${FLATPAK_ID}.sh /app/bin/${FLATPAK_ID}.sh
       - install -Dm 644 ${FLATPAK_ID}.desktop /app/share/applications/${FLATPAK_ID}.desktop
       - install -Dm 644 ${FLATPAK_ID}.metainfo.xml /app/share/metainfo/${FLATPAK_ID}.metainfo.xml

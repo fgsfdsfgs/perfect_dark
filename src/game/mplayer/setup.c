@@ -1214,7 +1214,10 @@ MenuItemHandlerResult mpSelectRandomWeaponListHandler(s32 operation, struct menu
 				case 0:
 					// Select Dark
 					for (i = 0; i < ARRAYCOUNT(g_MpWeapons); i++) {
-						if ((i >= MPWEAPON_NONE && i <= MPWEAPON_COMBATBOOST) || i >= MPWEAPON_SHIELD) {
+						if ((i >= MPWEAPON_NONE && i <= MPWEAPON_XRAYSCANNER)
+								|| i == MPWEAPON_CLOAKINGDEVICE
+								|| i == MPWEAPON_COMBATBOOST
+								|| i >= MPWEAPON_SHIELD) {
 							g_MpWeaponSetRandomFilters[i] = 1;
 						} else {
 							g_MpWeaponSetRandomFilters[i] = 0;

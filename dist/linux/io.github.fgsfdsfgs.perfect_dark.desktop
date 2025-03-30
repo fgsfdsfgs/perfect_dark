@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Perfect Dark
 Comment=Modern source port of Perfect Dark
-Exec=pd
+Exec=io.github.fgsfdsfgs.perfect_dark.sh
 Icon=io.github.fgsfdsfgs.perfect_dark
 Terminal=false
 Type=Application

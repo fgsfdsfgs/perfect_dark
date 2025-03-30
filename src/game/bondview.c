@@ -31,7 +31,7 @@ char var800a41c0[26];
 char var800a41c0[24];
 #endif
 
-u8 g_IrScanlines[2][480];
+u8 g_IrScanlines[4][480];
 
 #if VERSION < VERSION_NTSC_1_0
 u8 var800a8b58nb[0x1c0];
@@ -2356,6 +2356,10 @@ Gfx *bviewDrawIrLens(Gfx *gdl)
 	gSPSetExtraGeometryModeEXT(gdl++, G_MODULATE_EXT);
 #endif
 
+	// fixes off by one error w/ two top players
+	if (g_Vars.currentplayernum == 0 || g_Vars.currentplayernum == 1) {
+		scanbottom++;
+	}
 	for (i = scantop; i < scanbottom; i++) {
 #if VERSION >= VERSION_NTSC_1_0
 		if (i & 1) {
@@ -2392,6 +2396,10 @@ Gfx *bviewDrawIrLens(Gfx *gdl)
 			s32 semicirclewidth = sqrtf(sqinnerradius - (s32) (f0 * f0)) * (viewwidth / (f32) SCREEN_WIDTH_LO);
 			s32 semicircleright = viewcentrex + semicirclewidth;
 			s32 rightsidewidth = viewwidth - semicircleright;
+			// if playernum is 1 or 3, shift to the right by viewwidth
+			if (g_Vars.currentplayernum == 1 || g_Vars.currentplayernum == 3) {
+				rightsidewidth += viewwidth;
+			}
 
 #ifdef PLATFORM_N64
 			// Left and right of semicircle
@@ -2405,14 +2413,22 @@ Gfx *bviewDrawIrLens(Gfx *gdl)
 			gdl = bviewCopyPixels(gdl, fb, i, 5, i, 1.0f, viewleft, viewwidth);
 		}
 #else
-			// Left and right of semicircle
+
+			// Scanlines to the left and right of the semicircle
 			gDPFillRectangle(gdl++, viewleft, i, viewcentrex, i + 1);
+			if (PLAYERCOUNT() <= 2 && g_Vars.currentplayernum == 0 && i == viewcentrey) {
+				semicircleright -= 1;
+			}
+			else if (PLAYERCOUNT() > 2 && (g_Vars.currentplayernum == 1 || g_Vars.currentplayernum == 3 ) && i == viewcentrey) {
+				semicircleright -= 1;
+			}
 			gDPFillRectangle(gdl++, semicircleright, i, semicircleright + rightsidewidth, i + 1);
 
 			// The semicircle itself has a static colour
 			gDPSetPrimColorViaWord(gdl++, 0, 0, 0xee0000ff);
 			gDPFillRectangle(gdl++, viewcentrex, i, viewcentrex + semicirclewidth, i + 1);
 		} else {
+			// scanlines above and below the semicircle
 			gDPFillRectangle(gdl++, viewleft, i, viewleft + viewwidth, i + 1);
 		}
 #endif
@@ -2781,6 +2797,10 @@ Gfx *bviewDrawIrBinoculars(Gfx *gdl)
 	s32 viewleft = viGetViewLeft();
 	s32 viewright = viewleft + viewwidth;
 	s32 viewbottom = viewtop + viewheight;
+	// fixes off by one error w/ two top players
+	if (g_Vars.currentplayernum == 0 || g_Vars.currentplayernum == 1) {
+		viewbottom++;
+	}
 	s32 leftx = viewleft + viewwidth / 3;
 	s32 rightx = viewleft + (viewwidth * 2) / 3;
 	s32 centrey = (viewtop + viewbottom) / 2;
@@ -2798,6 +2818,13 @@ Gfx *bviewDrawIrBinoculars(Gfx *gdl)
 	for (y = viewtop; y < viewbottom; y++) {
 		s32 ytocentre = centrey - y;
 		s32 sqytocentre = ytocentre * ytocentre;
+		if (PLAYERCOUNT() <= 2) {
+			sqytocentre += 1;
+		} else if (PLAYERCOUNT() > 2) {
+			if (g_Vars.currentplayernum == 1 || g_Vars.currentplayernum == 3) {
+				sqytocentre += 1;
+			}
+		}
 
 		if (sqytocentre < sqradius) {
 			s32 xoffset = (viewwidth / (f32) SCREEN_WIDTH_LO) * sqrtf(sqradius - sqytocentre);
