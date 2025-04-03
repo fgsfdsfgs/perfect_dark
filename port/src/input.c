@@ -110,6 +110,7 @@ static f32 mouseSensX = 1.5f;
 static f32 mouseSensY = 1.5f;
 
 // Gyro aiming variables
+static SDL_GameController* gyroController = NULL;
 static s32 gyroEnabled = 1;
 static f32 gyroYaw, gyroPitch, gyroRoll;
 static f32 gyroDeltaYaw, gyroDeltaPitch, gyroDeltaRoll;
@@ -346,69 +347,59 @@ static inline SDL_JoystickID inputControllerGetId(SDL_GameController *ctrl)
 static inline void inputInitController(const s32 cidx, const s32 jidx)
 {
 #if SDL_VERSION_ATLEAST(2, 0, 18)
-	// SDL_GameControllerHasRumble() appeared in 2.0.18 even though SDL_GameControllerRumble() is in 2.0.9
-	padsCfg[cidx].rumbleOn = SDL_GameControllerHasRumble(pads[cidx]);
+		padsCfg[cidx].rumbleOn = SDL_GameControllerHasRumble(pads[cidx]);
 #else
-	// assume that all joysticks with haptic feedback support will support rumble
-	padsCfg[cidx].rumbleOn = SDL_JoystickIsHaptic(SDL_GameControllerGetJoystick(pads[cidx]));
-	if (!padsCfg[cidx].rumbleOn) {
-		// at least on Windows some controllers will report no haptics, but rumble will still function
-		// just assume it's supported if the controller is of known type
-		const SDL_GameControllerType ctype = SDL_GameControllerGetType(pads[cidx]);
-		padsCfg[cidx].rumbleOn = ctype && (ctype != SDL_CONTROLLER_TYPE_VIRTUAL);
-	}
+		padsCfg[cidx].rumbleOn = SDL_JoystickIsHaptic(SDL_GameControllerGetJoystick(pads[cidx]));
+		if (!padsCfg[cidx].rumbleOn) {
+				const SDL_GameControllerType ctype = SDL_GameControllerGetType(pads[cidx]);
+				padsCfg[cidx].rumbleOn = ctype && (ctype != SDL_CONTROLLER_TYPE_VIRTUAL);
+		}
 #endif
 
-	// make the LEDs on the controller indicate which player it's for
-	SDL_GameControllerSetPlayerIndex(pads[cidx], cidx);
+		// Set player index and store device index
+		SDL_GameControllerSetPlayerIndex(pads[cidx], cidx);
+		padsCfg[cidx].deviceIndex = jidx;
+		connectedMask |= (1 << cidx);
 
-	// remember the joystick index
-	padsCfg[cidx].deviceIndex = jidx;
+		sysLogPrintf(LOG_NOTE, "input: assigned controller '%d: (%s)' (id %d) to player %d",
+				jidx, SDL_GameControllerName(pads[cidx]), inputControllerGetId(pads[cidx]), cidx);
 
-	connectedMask |= (1 << cidx);
+		SDL_Joystick* joy = SDL_GameControllerGetJoystick(pads[cidx]);
+		if (joy) {
+				char guidStr[1024] = "";
+				SDL_JoystickGUID guid = SDL_JoystickGetGUID(joy);
+				SDL_JoystickGetGUIDString(guid, guidStr, sizeof(guidStr));
+				sysLogPrintf(LOG_NOTE, "input: GUID for controller %d: %s", jidx, guidStr);
+		}
 
-	sysLogPrintf(LOG_NOTE, "input: assigned controller '%d: (%s)' (id %d) to player %d",
-		jidx, SDL_GameControllerName(pads[cidx]), inputControllerGetId(pads[cidx]), cidx);
+		// Re-enable gyro and accelerometer sensors properly
+		if (SDL_GameControllerHasSensor(pads[cidx], SDL_SENSOR_GYRO)) {
+				SDL_GameControllerSetSensorEnabled(pads[cidx], SDL_SENSOR_GYRO, SDL_TRUE);
+				gyroController = pads[cidx]; // Ensure gyroController is reassigned properly
+				sysLogPrintf(LOG_NOTE, "input: Gyroscope sensor enabled for controller %d", jidx);
+		}
 
-	SDL_Joystick* joy = SDL_GameControllerGetJoystick(pads[cidx]);
-	if (joy) {
-		char guidStr[1024] = "";
-		SDL_JoystickGUID guid = SDL_JoystickGetGUID(joy);
-		SDL_JoystickGetGUIDString(guid, guidStr, sizeof(guidStr));
-		sysLogPrintf(LOG_NOTE, "input: GUID for controller %d: %s", jidx, guidStr);
-	}
+		if (SDL_GameControllerHasSensor(pads[cidx], SDL_SENSOR_ACCEL)) {
+				SDL_GameControllerSetSensorEnabled(pads[cidx], SDL_SENSOR_ACCEL, SDL_TRUE);
+				sysLogPrintf(LOG_NOTE, "input: Accelerometer sensor enabled for controller %d", jidx);
+		}
 
-	// Enable the gyroscope and accelerometer sensors if available
-	if (SDL_GameControllerHasSensor(pads[cidx], SDL_SENSOR_GYRO)) {
-			SDL_GameControllerSetSensorEnabled(pads[cidx], SDL_SENSOR_GYRO, SDL_TRUE);
-			float gyroRate = SDL_GameControllerGetSensorDataRate(pads[cidx], SDL_SENSOR_GYRO);
-			sysLogPrintf(LOG_NOTE, "input: Gyroscope sensor data rate for controller %d: %f", jidx, gyroRate);
-	}
-
-	if (SDL_GameControllerHasSensor(pads[cidx], SDL_SENSOR_ACCEL)) {
-			SDL_GameControllerSetSensorEnabled(pads[cidx], SDL_SENSOR_ACCEL, SDL_TRUE);
-			float accelRate = SDL_GameControllerGetSensorDataRate(pads[cidx], SDL_SENSOR_ACCEL);
-			sysLogPrintf(LOG_NOTE, "input: Accelerometer sensor data rate for controller %d: %f", jidx, accelRate);
-	}
-
+		// Explicitly update the controller state to ensure sensors start working again
+		SDL_GameControllerUpdate();
 }
 
 static inline void inputCloseController(const s32 cidx)
 {
-	sysLogPrintf(LOG_NOTE, "input: removed controller '%d: (%s)' (id %d) from player %d",
-		padsCfg[cidx].deviceIndex, SDL_GameControllerName(pads[cidx]), inputControllerGetId(pads[cidx]), cidx);
+		sysLogPrintf(LOG_NOTE, "input: removed controller '%d: (%s)' (id %d) from player %d",
+				padsCfg[cidx].deviceIndex, SDL_GameControllerName(pads[cidx]), inputControllerGetId(pads[cidx]), cidx);
 
-	// reset player LEDs
-	SDL_GameControllerSetPlayerIndex(pads[cidx], -1);
+		// Reset gyro controller reference if this was the gyro-enabled controller
+		if (pads[cidx] == gyroController) {
+				gyroController = NULL;
+		}
 
-	SDL_GameControllerClose(pads[cidx]);
-
-	pads[cidx] = NULL;
-	padsCfg[cidx].rumbleOn = 0;
-
-	if (cidx) {
-		connectedMask &= ~(1 << cidx);
-	}
+		SDL_GameControllerClose(pads[cidx]);
+		pads[cidx] = NULL;
 }
 
 static inline s32 inputControllerGetIndex(SDL_GameController *ctrl)
@@ -623,7 +614,6 @@ static int inputEventFilter(void *data, SDL_Event *event)
 	return 0;
 }
 
-static SDL_GameController* gyroController = NULL;
 
 static inline void inputGetScancodeName(const SDL_Scancode sc, char *out, size_t len)
 {
