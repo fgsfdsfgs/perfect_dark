@@ -2011,6 +2011,7 @@ PD_CONSTRUCTOR static void inputConfigInit(void)
 		configRegisterFloat("Input.MouseSpeedX", &mouseSensX, -10.f, 10.f);
 		configRegisterFloat("Input.MouseSpeedY", &mouseSensY, -10.f, 10.f);
 		configRegisterInt("Input.GyroEnabled", &gyroEnabled, 0, 1);
+		configRegisterInt("Input.GyroAxisMode", &g_GyroAxisMode, GYRO_AIM_MODE_CAMERA, GYRO_AXIS_WORLD_SPACE);
 		configRegisterInt("Input.GyroAimMode", &g_GyroAimMode, GYRO_AIM_MODE_CAMERA, GYRO_AIM_MODE_BOTH);
 		configRegisterFloat("Input.gyroSpeedX", &gyroSensX, -10.f, 10.f);
 		configRegisterFloat("Input.gyroSpeedY", &gyroSensY, -10.f, 10.f);
