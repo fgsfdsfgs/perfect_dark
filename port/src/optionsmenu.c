@@ -833,7 +833,7 @@ struct menuitem g_ExtendedGyroMenuItems[] = {
 				MENUITEMTYPE_SLIDER,
 				0,
 				MENUITEMFLAG_LITERAL_TEXT | MENUITEMFLAG_SLIDER_WIDE,
-				(uintptr_t)"Gyro Movement Threshold",
+				(uintptr_t)"Movement Threshold",
 				100,
 				menuhandlerGyroMinThreshold,
 		},

@@ -119,7 +119,7 @@ static f32 gyroAimSensX = 1.0f;
 static f32 gyroAimSensY = 1.0f;
 static s32 g_GyroAxisMode = GYRO_YAW; 
 static s32 g_GyroAimMode = GYRO_AIM_MODE_BOTH;
-static f32 gyroMinThreshold = 0.08f;
+static f32 gyroMinThreshold = 0.05f;
 static s32 g_GyroActivationMode = GYRO_ALWAYS_ON;
 
 static s32 lastKey = 0;
@@ -2006,43 +2006,44 @@ u32 inputGetKeyModState(void)
 
 PD_CONSTRUCTOR static void inputConfigInit(void)
 {
-	configRegisterInt("Input.MouseEnabled", &mouseEnabled, 0, 1);
-	configRegisterInt("Input.MouseLockMode", &mouseLockMode, MLOCK_OFF, MLOCK_AUTO);
-	configRegisterFloat("Input.MouseSpeedX", &mouseSensX, -10.f, 10.f);
-	configRegisterFloat("Input.MouseSpeedY", &mouseSensY, -10.f, 10.f);
-	configRegisterInt("Input.GyroEnabled", &gyroEnabled, 0, 1);
-	configRegisterInt("Input.GyroAimMode", &g_GyroAimMode, GYRO_AIM_MODE_CAMERA, GYRO_AIM_MODE_BOTH);
-	configRegisterFloat("Input.gyroSpeedX", &gyroSensX, -10.f, 10.f);
-	configRegisterFloat("Input.gyroSpeedY", &gyroSensY, -10.f, 10.f);
-	configRegisterFloat("Input.gyroAimSensX", &gyroAimSensX, -10.f, 10.f);
-	configRegisterFloat("Input.gyroAimSensY", &gyroAimSensY, -10.f, 10.f);
-	configRegisterInt("Input.FakeGamepads", &fakeControllers, 0, 4);
-	configRegisterInt("Input.FirstGamepadNum", &firstController, 0, 3);
-	configRegisterInt("Input.UseHIDAPI", &useHIDAPI, 0, 1);
-	configRegisterInt("Input.UseRawInput", &useRawInput, 0, 1);
+		configRegisterInt("Input.MouseEnabled", &mouseEnabled, 0, 1);
+		configRegisterInt("Input.MouseLockMode", &mouseLockMode, MLOCK_OFF, MLOCK_AUTO);
+		configRegisterFloat("Input.MouseSpeedX", &mouseSensX, -10.f, 10.f);
+		configRegisterFloat("Input.MouseSpeedY", &mouseSensY, -10.f, 10.f);
+		configRegisterInt("Input.GyroEnabled", &gyroEnabled, 0, 1);
+		configRegisterInt("Input.GyroAimMode", &g_GyroAimMode, GYRO_AIM_MODE_CAMERA, GYRO_AIM_MODE_BOTH);
+		configRegisterFloat("Input.gyroSpeedX", &gyroSensX, -10.f, 10.f);
+		configRegisterFloat("Input.gyroSpeedY", &gyroSensY, -10.f, 10.f);
+		configRegisterFloat("Input.gyroAimSensX", &gyroAimSensX, -10.f, 10.f);
+		configRegisterFloat("Input.gyroAimSensY", &gyroAimSensY, -10.f, 10.f);
+		configRegisterFloat("Input.gyroMinThreshold", &gyroMinThreshold, 0.f, 1.f);
+		configRegisterInt("Input.FakeGamepads", &fakeControllers, 0, 4);
+		configRegisterInt("Input.FirstGamepadNum", &firstController, 0, 3);
+		configRegisterInt("Input.UseHIDAPI", &useHIDAPI, 0, 1);
+		configRegisterInt("Input.UseRawInput", &useRawInput, 0, 1);
 
-	char secname[] = "Input.Player1.Binds";
-	char keyname[256] = { 0 };
-	for (s32 c = 0; c < MAXCONTROLLERS; ++c) {
-		secname[12] = '1' + c;
-		secname[13] = '\0';
-		configRegisterFloat(strFmt("%s.RumbleScale", secname), &padsCfg[c].rumbleScale, 0.f, 1.f);
-		configRegisterInt(strFmt("%s.LStickDeadzoneX", secname), &padsCfg[c].deadzone[0], 0, 32767);
-		configRegisterInt(strFmt("%s.LStickDeadzoneY", secname), &padsCfg[c].deadzone[1], 0, 32767);
-		configRegisterInt(strFmt("%s.RStickDeadzoneX", secname), &padsCfg[c].deadzone[2], 0, 32767);
-		configRegisterInt(strFmt("%s.RStickDeadzoneY", secname), &padsCfg[c].deadzone[3], 0, 32767);
-		configRegisterFloat(strFmt("%s.LStickScaleX", secname), &padsCfg[c].sens[0], -10.f, 10.f);
-		configRegisterFloat(strFmt("%s.LStickScaleY", secname), &padsCfg[c].sens[1], -10.f, 10.f);
-		configRegisterFloat(strFmt("%s.RStickScaleX", secname), &padsCfg[c].sens[2], -10.f, 10.f);
-		configRegisterFloat(strFmt("%s.RStickScaleY", secname), &padsCfg[c].sens[3], -10.f, 10.f);
-		configRegisterInt(strFmt("%s.StickCButtons", secname), &padsCfg[c].stickCButtons, 0, 1);
-		configRegisterInt(strFmt("%s.CancelCButtons", secname), &padsCfg[c].cancelCButtons, 0, 1);
-		configRegisterInt(strFmt("%s.SwapSticks", secname), &padsCfg[c].swapSticks, 0, 1);
-		configRegisterInt(strFmt("%s.ControllerIndex", secname), &padsCfg[c].deviceIndex, -1, 0x7FFFFFFF);
-		secname[13] = '.';
-		for (u32 ck = 0; ck < CK_TOTAL_COUNT; ++ck) {
-			snprintf(keyname, sizeof(keyname), "%s.%s", secname, inputGetContKeyName(ck));
-			configRegisterString(keyname, bindStrs[c][ck], MAX_BIND_STR);
+		char secname[] = "Input.Player1.Binds";
+		char keyname[256] = { 0 };
+		for (s32 c = 0; c < MAXCONTROLLERS; ++c) {
+				secname[12] = '1' + c;
+				secname[13] = '\0';
+				configRegisterFloat(strFmt("%s.RumbleScale", secname), &padsCfg[c].rumbleScale, 0.f, 1.f);
+				configRegisterInt(strFmt("%s.LStickDeadzoneX", secname), &padsCfg[c].deadzone[0], 0, 32767);
+				configRegisterInt(strFmt("%s.LStickDeadzoneY", secname), &padsCfg[c].deadzone[1], 0, 32767);
+				configRegisterInt(strFmt("%s.RStickDeadzoneX", secname), &padsCfg[c].deadzone[2], 0, 32767);
+				configRegisterInt(strFmt("%s.RStickDeadzoneY", secname), &padsCfg[c].deadzone[3], 0, 32767);
+				configRegisterFloat(strFmt("%s.LStickScaleX", secname), &padsCfg[c].sens[0], -10.f, 10.f);
+				configRegisterFloat(strFmt("%s.LStickScaleY", secname), &padsCfg[c].sens[1], -10.f, 10.f);
+				configRegisterFloat(strFmt("%s.RStickScaleX", secname), &padsCfg[c].sens[2], -10.f, 10.f);
+				configRegisterFloat(strFmt("%s.RStickScaleY", secname), &padsCfg[c].sens[3], -10.f, 10.f);
+				configRegisterInt(strFmt("%s.StickCButtons", secname), &padsCfg[c].stickCButtons, 0, 1);
+				configRegisterInt(strFmt("%s.CancelCButtons", secname), &padsCfg[c].cancelCButtons, 0, 1);
+				configRegisterInt(strFmt("%s.SwapSticks", secname), &padsCfg[c].swapSticks, 0, 1);
+				configRegisterInt(strFmt("%s.ControllerIndex", secname), &padsCfg[c].deviceIndex, -1, 0x7FFFFFFF);
+				secname[13] = '.';
+				for (u32 ck = 0; ck < CK_TOTAL_COUNT; ++ck) {
+						snprintf(keyname, sizeof(keyname), "%s.%s", secname, inputGetContKeyName(ck));
+						configRegisterString(keyname, bindStrs[c][ck], MAX_BIND_STR);
+				}
 		}
-	}
 }
