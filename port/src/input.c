@@ -119,7 +119,7 @@ static f32 gyroAimSensX = 1.0f;
 static f32 gyroAimSensY = 1.0f;
 static s32 g_GyroAxisMode = GYRO_YAW; 
 static s32 g_GyroAimMode = GYRO_AIM_MODE_BOTH;
-static f32 gyroMinThreshold = 0.0f;
+static f32 gyroMinThreshold = 0.08f;
 static s32 g_GyroActivationMode = GYRO_ALWAYS_ON;
 
 static s32 lastKey = 0;
@@ -1604,8 +1604,8 @@ void inputGyroGetAbsScaledDelta(f32* dx, f32* dy)
         const f32 frameScale = targetFPS * frameTime;
 
         // Apply absolute scaling with refined sensitivity handling
-        const f32 minSensX = fmaxf(fabsf(gyroSensX), 0.022f); // Lowered to 0.05f for finer control
-        const f32 minSensY = fmaxf(fabsf(gyroSensY), 0.022f);
+        const f32 minSensX = fmaxf(fabsf(gyroSensX), 0.030f);
+        const f32 minSensY = fmaxf(fabsf(gyroSensY), 0.030f);
 
         gdx = (gdx / minSensX) * frameScale;
         gdy = (gdy / minSensY) * frameScale;
@@ -1615,7 +1615,6 @@ void inputGyroGetAbsScaledDelta(f32* dx, f32* dy)
     if (dx) *dx = gdx;
     if (dy) *dy = gdy;
 }
-
 
 void inputGyroGetSpeed(f32* x, f32* y)
 {
@@ -1778,46 +1777,47 @@ void inputSetGyroMinThreshold(f32 threshold)
 
 void applyGyroThreshold(f32* deltaX, f32* deltaY, f32 threshold)
 {
-		// Deadzone and smoothing parameters
-		const f32 deadzone = threshold; // Central deadzone for subtle movements
-		const f32 smoothingFactor = 0.85f; // Soft-tiered smoothing factor (closer to 1.0 means smoother)
-		const f32 maxDelta = 20.f; // Maximum allowable delta for gyro input
-		const f32 minDelta = -20.f; // Minimum allowable delta for gyro input
+		if (!deltaX || !deltaY) return; // Safety check
 
-		// Dynamic scaling based on motion intensity (soft-tiered smoothing)
-		const f32 dynamicThreshold = threshold * smoothingFactor; // Reduce threshold dynamically
-
-		// Apply threshold and smoothing to horizontal movement
-		if (deltaX) {
-				if (fabsf(*deltaX) < deadzone) {
-						*deltaX = 0.f; // Zero out movement within deadzone
-				}
-				else {
-						// Apply soft-tiered smoothing for smaller movements
-						f32 adjustedX = (*deltaX > 0) ? (*deltaX - dynamicThreshold) : (*deltaX + dynamicThreshold);
-
-						// Clamp horizontal movement to allowable range
-						*deltaX = (adjustedX > maxDelta) ? maxDelta : ((adjustedX < minDelta) ? minDelta : adjustedX);
-				}
+		// Allow raw movement if slider is at zero
+		if (threshold <= 0.00f) {
+				return; // Prevent unwanted drift while keeping gyro active
 		}
 
-		// Apply threshold and smoothing to vertical movement
-		if (deltaY) {
-				if (fabsf(*deltaY) < deadzone) {
-						*deltaY = 0.f; // Zero out movement within deadzone
-				}
-				else {
-						// Apply soft-tiered smoothing for smaller movements
-						f32 adjustedY = (*deltaY > 0) ? (*deltaY - dynamicThreshold) : (*deltaY + dynamicThreshold);
+		// Define parameters
+		const f32 rawDeadzone = 0.015f; // Tiny deadzone to eliminate small automatic movement
+		const f32 deadzone = fmaxf(0.1f * threshold, 0.03f); // Smaller deadzone for smoother fine movements
+		const f32 maxDelta = 10.f;
+		const f32 minDelta = -10.f;
+		const f32 smoothingFactor = 1.0f;
+		const f32 sensitivityBoost = (threshold > 0.01f) ? fmaxf(1.02f, 1.0f + (0.015f * threshold)) : 1.0f;
 
-						// Clamp vertical movement to allowable range
-						*deltaY = (adjustedY > maxDelta) ? maxDelta : ((adjustedY < minDelta) ? minDelta : adjustedY);
-				}
+		// Debugging: Print raw input before processing
+		printf("Raw Gyro Input - X: %.2f, Y: %.2f\n", *deltaX, *deltaY);
+
+		// Apply raw movement deadzone before any processing
+		if (fabsf(*deltaX) < rawDeadzone) *deltaX = 0.f;
+		if (fabsf(*deltaY) < rawDeadzone) *deltaY = 0.f;
+
+		// Process horizontal movement
+		if (fabsf(*deltaX) < deadzone) {
+				*deltaX = 0.f;
+		}
+		else {
+				f32 adjustedX = *deltaX;
+				adjustedX = fmaxf(fminf(adjustedX, maxDelta), minDelta);
+				*deltaX = adjustedX * smoothingFactor * sensitivityBoost;
 		}
 
-		// Debugging: Log adjustments and clamped values for validation
-		printf("Gyro Threshold Applied - X: %.2f, Y: %.2f (Deadzone: %.2f, Threshold: %.2f, ClampRange: [%.2f, %.2f])\n",
-				deltaX ? *deltaX : 0.f, deltaY ? *deltaY : 0.f, deadzone, threshold, minDelta, maxDelta);
+		// Process vertical movement
+		if (fabsf(*deltaY) < deadzone) {
+				*deltaY = 0.f;
+		}
+		else {
+				f32 adjustedY = *deltaY;
+				adjustedY = fmaxf(fminf(adjustedY, maxDelta), minDelta);
+				*deltaY = adjustedY * smoothingFactor * sensitivityBoost;
+		}
 }
 
 const char *inputGetContKeyName(u32 ck)
