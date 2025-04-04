@@ -814,6 +814,9 @@ void bmoveProcessInput(bool allowc1x, bool allowc1y, bool allowc1buttons, bool i
 					inputGyroGetScaledDeltaCrosshair(&gyroCrossDx, &gyroCrossDy);
 					g_Vars.currentplayer->swivelpos[0] += gyroCrossDx;
 					g_Vars.currentplayer->swivelpos[1] += gyroCrossDy;
+
+					// Ensure activation logic considers gyro input
+					allowmcross = allowmcross || (gyroCrossDx || gyroCrossDy);
 			}
 
 			// Apply pitch inversion correctly
@@ -827,6 +830,7 @@ void bmoveProcessInput(bool allowc1x, bool allowc1y, bool allowc1buttons, bool i
 			fVar25 += movedata.gyrolookdx * gyroscale;
 			fVar25 += movedata.gyrolookdy * gyroscale;
 	}
+
 
 	// Always pause with ESC key
 	if (allowc1buttons && g_Vars.currentplayer->isdead == false && g_Vars.currentplayer->pausemode == PAUSEMODE_UNPAUSED) {
