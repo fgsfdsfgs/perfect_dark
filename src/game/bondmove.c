@@ -43,6 +43,11 @@
 #include "input.h"
 #include "video.h"
 
+// Provide a fallback implementation if needed
+#ifndef fmax
+#define fmax(a, b) ((a) > (b) ? (a) : (b))
+#endif
+
 static void bgunProcessQuickDetonate(struct movedata *data, u32 c1buttons, u32 c1buttonsthisframe, u32 buttons1, u32 buttons2) {
 	if ((((c1buttons & (buttons1)) && (c1buttonsthisframe & (buttons2)))
 			|| ((c1buttons & (buttons2)) && (c1buttonsthisframe & (buttons1))))
@@ -712,18 +717,21 @@ void bmoveProcessInput(bool allowc1x, bool allowc1y, bool allowc1buttons, bool i
 	f32 increment2;
 	f32 newverta;
 #ifndef PLATFORM_N64
-	const f32 mlookscale = g_Vars.lvupdate240 ? (4.f / (f32)g_Vars.lvupdate240) : 4.f;
+	const f32 targetFPS = 60.f;
+	const f32 frameScale = fmax(g_Vars.lvupdate240 / targetFPS, 0.5f); // Prevent instability
+
+	// Keep standard multipliers (avoid breaking joystick input)
+	const f32 mlookscale = 4.f;
 	const bool allowmlook = (g_Vars.currentplayernum == 0) && (allowc1x || allowc1y);
-	const f32 gyroscale = g_Vars.lvupdate240 ? (4.f / (f32)g_Vars.lvupdate240) : 4.f;
+
+	const f32 gyroscale = 4.f;
 	const bool allowgyro = (g_Vars.currentplayernum == 0) && (allowc1x || allowc1y);
+
 	bool allowmcross = false;
 	bool allowgcross = (g_Vars.currentplayernum == 0) &&
 			(allowc1x || allowc1y) &&
 			(PLAYER_EXTCFG().gyroaimmode == GYRO_AIM_MODE_CROSSHAIR ||
 					PLAYER_EXTCFG().gyroaimmode == GYRO_AIM_MODE_BOTH);
-		const f32 targetFPS = 60.f;
-	const f32 frameScale = targetFPS / (f32)g_Vars.lvupdate240;
-
 #endif
 
 	controlmode = optionsGetControlMode(g_Vars.currentplayerstats->mpindex);
