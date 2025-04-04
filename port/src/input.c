@@ -1537,40 +1537,42 @@ void inputGyroGetRawDelta(s32* dx, s32* dy, s32* dz)
 
 void inputGyroGetScaledDelta(f32* dx, f32* dy)
 {
-    f32 gdx = 0.f, gdy = 0.f;
+		// Default deltas to zero
+		f32 gdx = 0.f, gdy = 0.f;
 
-    if (gyroEnabled) {
-        // Retrieve raw gyro deltas (yaw and pitch)
-        gdx = gyroDeltaYaw;
-        gdy = gyroDeltaPitch;
+		if (gyroEnabled) {
+				// Retrieve raw gyro deltas (yaw and pitch)
+				gdx = (f32)gyroDeltaYaw;
+				gdy = (f32)gyroDeltaPitch;
 
-        // Match mouse sensitivity calculations
-        gdx = gyroSensX * gdx / 100.0f;
-        gdy = gyroSensY * gdy / 100.0f;
-    }
+				// Apply sensitivity scaling using natural scale
+				gdx *= gyroSensX; // Horizontal sensitivity scaling
+				gdy *= gyroSensY; // Vertical sensitivity scaling
+		}
 
-    // Assign scaled deltas to output variables
-    if (dx) *dx = gdx;
-    if (dy) *dy = gdy;
+		// Assign scaled deltas to output variables
+		if (dx) *dx = gdx;
+		if (dy) *dy = gdy;
 }
 
 void inputGyroGetAbsScaledDelta(f32* dx, f32* dy)
 {
-    f32 gdx = 0.f, gdy = 0.f;
+		// Default deltas to zero
+		f32 gdx = 0.f, gdy = 0.f;
 
-    if (gyroEnabled) {
-        // Retrieve raw gyro deltas
-        gdx = gyroDeltaYaw;
-        gdy = gyroDeltaPitch;
+		if (gyroEnabled) {
+				// Retrieve raw gyro deltas (yaw and pitch)
+				gdx = (f32)gyroDeltaYaw;
+				gdy = (f32)gyroDeltaPitch;
 
-        // Use absolute values like the mouse function
-        gdx = fabsf(gyroSensX) * gdx / 100.0f;
-        gdy = fabsf(gyroSensY) * gdy / 100.0f;
-    }
+				// Apply absolute sensitivity scaling
+				gdx *= fabsf(gyroSensX); // Horizontal scaling with absolute sensitivity
+				gdy *= fabsf(gyroSensY); // Vertical scaling with absolute sensitivity
+		}
 
-    // Assign scaled deltas to output variables
-    if (dx) *dx = gdx;
-    if (dy) *dy = gdy;
+		// Assign scaled deltas to output variables
+		if (dx) *dx = gdx;
+		if (dy) *dy = gdy;
 }
 
 void inputGyroSetSpeed(f32 x, f32 y)
