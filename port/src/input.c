@@ -110,7 +110,6 @@ static f32 mouseSensX = 1.5f;
 static f32 mouseSensY = 1.5f;
 
 // Gyro aiming variables
-static SDL_GameController* gyroController = NULL;
 static s32 gyroEnabled = 1;
 static f32 gyroYaw, gyroPitch, gyroRoll;
 static f32 gyroDeltaYaw, gyroDeltaPitch, gyroDeltaRoll;
@@ -347,184 +346,194 @@ static inline SDL_JoystickID inputControllerGetId(SDL_GameController *ctrl)
 static inline void inputInitController(const s32 cidx, const s32 jidx)
 {
 #if SDL_VERSION_ATLEAST(2, 0, 18)
-		padsCfg[cidx].rumbleOn = SDL_GameControllerHasRumble(pads[cidx]);
+	// SDL_GameControllerHasRumble() appeared in 2.0.18 even though SDL_GameControllerRumble() is in 2.0.9
+	padsCfg[cidx].rumbleOn = SDL_GameControllerHasRumble(pads[cidx]);
 #else
-		padsCfg[cidx].rumbleOn = SDL_JoystickIsHaptic(SDL_GameControllerGetJoystick(pads[cidx]));
-		if (!padsCfg[cidx].rumbleOn) {
-				const SDL_GameControllerType ctype = SDL_GameControllerGetType(pads[cidx]);
-				padsCfg[cidx].rumbleOn = ctype && (ctype != SDL_CONTROLLER_TYPE_VIRTUAL);
-		}
+	// assume that all joysticks with haptic feedback support will support rumble
+	padsCfg[cidx].rumbleOn = SDL_JoystickIsHaptic(SDL_GameControllerGetJoystick(pads[cidx]));
+	if (!padsCfg[cidx].rumbleOn) {
+		// at least on Windows some controllers will report no haptics, but rumble will still function
+		// just assume it's supported if the controller is of known type
+		const SDL_GameControllerType ctype = SDL_GameControllerGetType(pads[cidx]);
+		padsCfg[cidx].rumbleOn = ctype && (ctype != SDL_CONTROLLER_TYPE_VIRTUAL);
+	}
 #endif
 
-		// Set player index and store device index
-		SDL_GameControllerSetPlayerIndex(pads[cidx], cidx);
-		padsCfg[cidx].deviceIndex = jidx;
-		connectedMask |= (1 << cidx);
+	// make the LEDs on the controller indicate which player it's for
+	SDL_GameControllerSetPlayerIndex(pads[cidx], cidx);
 
-		sysLogPrintf(LOG_NOTE, "input: assigned controller '%d: (%s)' (id %d) to player %d",
-				jidx, SDL_GameControllerName(pads[cidx]), inputControllerGetId(pads[cidx]), cidx);
+	// remember the joystick index
+	padsCfg[cidx].deviceIndex = jidx;
 
-		SDL_Joystick* joy = SDL_GameControllerGetJoystick(pads[cidx]);
-		if (joy) {
-				char guidStr[1024] = "";
-				SDL_JoystickGUID guid = SDL_JoystickGetGUID(joy);
-				SDL_JoystickGetGUIDString(guid, guidStr, sizeof(guidStr));
-				sysLogPrintf(LOG_NOTE, "input: GUID for controller %d: %s", jidx, guidStr);
-		}
+	connectedMask |= (1 << cidx);
 
-		// Re-enable gyro and accelerometer sensors properly
-		if (SDL_GameControllerHasSensor(pads[cidx], SDL_SENSOR_GYRO)) {
-				SDL_GameControllerSetSensorEnabled(pads[cidx], SDL_SENSOR_GYRO, SDL_TRUE);
-				gyroController = pads[cidx]; // Ensure gyroController is reassigned properly
-				sysLogPrintf(LOG_NOTE, "input: Gyroscope sensor enabled for controller %d", jidx);
-		}
+	sysLogPrintf(LOG_NOTE, "input: assigned controller '%d: (%s)' (id %d) to player %d",
+		jidx, SDL_GameControllerName(pads[cidx]), inputControllerGetId(pads[cidx]), cidx);
 
-		if (SDL_GameControllerHasSensor(pads[cidx], SDL_SENSOR_ACCEL)) {
-				SDL_GameControllerSetSensorEnabled(pads[cidx], SDL_SENSOR_ACCEL, SDL_TRUE);
-				sysLogPrintf(LOG_NOTE, "input: Accelerometer sensor enabled for controller %d", jidx);
-		}
+	SDL_Joystick* joy = SDL_GameControllerGetJoystick(pads[cidx]);
+	if (joy) {
+		char guidStr[1024] = "";
+		SDL_JoystickGUID guid = SDL_JoystickGetGUID(joy);
+		SDL_JoystickGetGUIDString(guid, guidStr, sizeof(guidStr));
+		sysLogPrintf(LOG_NOTE, "input: GUID for controller %d: %s", jidx, guidStr);
+	}
 
-		// Explicitly update the controller state to ensure sensors start working again
-		SDL_GameControllerUpdate();
+	// Enable the gyroscope and accelerometer sensors if available
+	if (SDL_GameControllerHasSensor(pads[cidx], SDL_SENSOR_GYRO)) {
+			SDL_GameControllerSetSensorEnabled(pads[cidx], SDL_SENSOR_GYRO, SDL_TRUE);
+			float gyroRate = SDL_GameControllerGetSensorDataRate(pads[cidx], SDL_SENSOR_GYRO);
+			sysLogPrintf(LOG_NOTE, "input: Gyroscope sensor data rate for controller %d: %f", jidx, gyroRate);
+	}
+
+	if (SDL_GameControllerHasSensor(pads[cidx], SDL_SENSOR_ACCEL)) {
+			SDL_GameControllerSetSensorEnabled(pads[cidx], SDL_SENSOR_ACCEL, SDL_TRUE);
+			float accelRate = SDL_GameControllerGetSensorDataRate(pads[cidx], SDL_SENSOR_ACCEL);
+			sysLogPrintf(LOG_NOTE, "input: Accelerometer sensor data rate for controller %d: %f", jidx, accelRate);
+	}
+
 }
 
 static inline void inputCloseController(const s32 cidx)
 {
-		sysLogPrintf(LOG_NOTE, "input: removed controller '%d: (%s)' (id %d) from player %d",
-				padsCfg[cidx].deviceIndex, SDL_GameControllerName(pads[cidx]), inputControllerGetId(pads[cidx]), cidx);
+	sysLogPrintf(LOG_NOTE, "input: removed controller '%d: (%s)' (id %d) from player %d",
+		padsCfg[cidx].deviceIndex, SDL_GameControllerName(pads[cidx]), inputControllerGetId(pads[cidx]), cidx);
 
-		// Reset gyro controller reference if this was the gyro-enabled controller
-		if (pads[cidx] == gyroController) {
-				gyroController = NULL;
-		}
+	// reset player LEDs
+	SDL_GameControllerSetPlayerIndex(pads[cidx], -1);
 
-		SDL_GameControllerClose(pads[cidx]);
-		pads[cidx] = NULL;
+	SDL_GameControllerClose(pads[cidx]);
+
+	pads[cidx] = NULL;
+	padsCfg[cidx].rumbleOn = 0;
+
+	if (cidx) {
+		connectedMask &= ~(1 << cidx);
+	}
 }
 
-static inline s32 inputControllerGetIndex(SDL_GameController* ctrl)
+static inline s32 inputControllerGetIndex(SDL_GameController *ctrl)
 {
-		if (ctrl) {
-				for (s32 i = 0; i < INPUT_MAX_CONTROLLERS; ++i) {
-						if (pads[i] == ctrl) {
-								return i;
-						}
-				}
+	if (ctrl) {
+		for (s32 i = 0; i < INPUT_MAX_CONTROLLERS; ++i) {
+			if (pads[i] == ctrl) {
+				return i;
+			}
 		}
-		return -1;
+	}
+	return -1;
 }
 
 static inline s32 inputControllerGetIndexByDeviceIndex(const s32 jidx)
 {
-		for (s32 cidx = 0; cidx < INPUT_MAX_CONTROLLERS; ++cidx) {
-				if (pads[cidx] && padsCfg[cidx].deviceIndex == jidx) {
-						return cidx;
-				}
+	for (s32 cidx = 0; cidx < INPUT_MAX_CONTROLLERS; ++cidx) {
+		if (pads[cidx] && padsCfg[cidx].deviceIndex == jidx) {
+			return cidx;
 		}
-		return -1;
+	}
+	return -1;
 }
 
 static inline s32 inputControllerGetIndexById(const SDL_JoystickID jid)
 {
-		for (s32 cidx = 0; cidx < INPUT_MAX_CONTROLLERS; ++cidx) {
-				if (pads[cidx]) {
-						if (inputControllerGetId(pads[cidx]) == jid) {
-								return cidx;
-						}
-				}
+	for (s32 cidx = 0; cidx < INPUT_MAX_CONTROLLERS; ++cidx) {
+		if (pads[cidx]) {
+			if (inputControllerGetId(pads[cidx]) == jid) {
+				return cidx;
+			}
 		}
-		return -1;
+	}
+	return -1;
 }
 
 static inline void inputCloseAllControllers(void)
 {
-		for (s32 cidx = 0; cidx < INPUT_MAX_CONTROLLERS; ++cidx) {
-				if (pads[cidx]) {
-						inputCloseController(cidx);
-						pads[cidx] = NULL;
-				}
+	for (s32 cidx = 0; cidx < INPUT_MAX_CONTROLLERS; ++cidx) {
+		if (pads[cidx]) {
+			inputCloseController(cidx);
+			pads[cidx] = NULL;
 		}
+	}
 
-		connectedMask = 1; // always report first controller as connected
+	connectedMask = 1; // always report first controller as connected
 }
 
 static inline s32 inputTryController(const s32 cidx, const s32 jidx)
 {
-		if (!pads[cidx]) {
-				pads[cidx] = SDL_GameControllerOpen(jidx);
-				if (pads[cidx]) {
-						inputInitController(cidx, jidx);
-						return 1;
-				}
+	if (!pads[cidx]) {
+		pads[cidx] = SDL_GameControllerOpen(jidx);
+		if (pads[cidx]) {
+			inputInitController(cidx, jidx);
+			return 1;
 		}
-		return 0;
+	}
+	return 0;
 }
 
 static inline void inputInitAllControllers(void)
 {
-		SDL_GameControllerUpdate();
+	SDL_GameControllerUpdate();
 
-		numJoysticks = SDL_NumJoysticks();
+	numJoysticks = SDL_NumJoysticks();
 
-		connectedMask = 1; // always report first controller as connected
+	connectedMask = 1; // always report first controller as connected
 
-		// first try to assign the controllers that we had last time
-		// we're still free to check by device index before any controller device events fire
-		for (s32 cidx = 0; cidx < INPUT_MAX_CONTROLLERS; ++cidx) {
-				const s32 jidx = padsCfg[cidx].deviceIndex;
-				if (jidx >= 0 && jidx < numJoysticks) {
-						if (SDL_IsGameController(jidx) && inputControllerGetIndexByDeviceIndex(jidx) < 0) {
-								// using the full assign function in case user sets same index for several players
-								if (inputTryController(cidx, jidx)) {
-										// success
-										continue;
-								}
-						}
-						// nothing was there, forget it
-						padsCfg[cidx].deviceIndex = -1;
+	// first try to assign the controllers that we had last time
+	// we're still free to check by device index before any controller device events fire
+	for (s32 cidx = 0; cidx < INPUT_MAX_CONTROLLERS; ++cidx) {
+		const s32 jidx = padsCfg[cidx].deviceIndex;
+		if (jidx >= 0 && jidx < numJoysticks) {
+			if (SDL_IsGameController(jidx) && inputControllerGetIndexByDeviceIndex(jidx) < 0) {
+				// using the full assign function in case user sets same index for several players
+				if (inputTryController(cidx, jidx)) {
+					// success
+					continue;
 				}
+			}
+			// nothing was there, forget it
+			padsCfg[cidx].deviceIndex = -1;
 		}
+	}
 
-		// now try autofilling the rest, starting with firstController
-		for (s32 jidx = 0; jidx < numJoysticks; ++jidx) {
-				if (SDL_IsGameController(jidx) && inputControllerGetIndexByDeviceIndex(jidx) < 0) {
-						for (s32 cidx = firstController; cidx < INPUT_MAX_CONTROLLERS; ++cidx) {
-								if (inputTryController(cidx, jidx)) {
-										break;
-								}
-						}
+	// now try autofilling the rest, starting with firstController
+	for (s32 jidx = 0; jidx < numJoysticks; ++jidx) {
+		if (SDL_IsGameController(jidx) && inputControllerGetIndexByDeviceIndex(jidx) < 0) {
+			for (s32 cidx = firstController; cidx < INPUT_MAX_CONTROLLERS; ++cidx) {
+				if (inputTryController(cidx, jidx)) {
+					break;
 				}
+			}
 		}
+	}
 
-		const s32 overrideMask = (1 << fakeControllers) - 1;
-		if (overrideMask) {
-				connectedMask = overrideMask;
-		}
+	const s32 overrideMask = (1 << fakeControllers) - 1;
+	if (overrideMask) {
+		connectedMask = overrideMask;
+	}
 }
 
-static int inputEventFilter(void* data, SDL_Event* event)
+static int inputEventFilter(void *data, SDL_Event *event)
 {
-		switch (event->type) {
+	switch (event->type) {
 		case SDL_CONTROLLERDEVICEADDED:
-				for (s32 i = firstController; i < INPUT_MAX_CONTROLLERS; ++i) {
-						if (!pads[i]) {
-								pads[i] = SDL_GameControllerOpen(event->cdevice.which);
-								if (pads[i]) {
-										inputInitController(i, event->cdevice.which);
-								}
-								break;
-						}
+			for (s32 i = firstController; i < INPUT_MAX_CONTROLLERS; ++i) {
+				if (!pads[i]) {
+					pads[i] = SDL_GameControllerOpen(event->cdevice.which);
+					if (pads[i]) {
+						inputInitController(i, event->cdevice.which);
+					}
+					break;
 				}
-				break;
+			}
+			break;
 
 		case SDL_CONTROLLERDEVICEREMOVED: {
-				SDL_GameController* ctrl = SDL_GameControllerFromInstanceID(event->cdevice.which);
-				const s32 idx = inputControllerGetIndex(ctrl);
-				if (idx >= 0) {
-						inputCloseController(idx);
-						padsCfg[idx].deviceIndex = -1;
-				}
-				break;
+			SDL_GameController *ctrl = SDL_GameControllerFromInstanceID(event->cdevice.which);
+			const s32 idx = inputControllerGetIndex(ctrl);
+			if (idx >= 0) {
+				inputCloseController(idx);
+				padsCfg[idx].deviceIndex = -1;
+			}
+			break;
 		}
 
 		case SDL_JOYDEVICEADDED:
@@ -559,61 +568,62 @@ static int inputEventFilter(void* data, SDL_Event* event)
 				break;
 
 		case SDL_MOUSEWHEEL:
-				mouseWheel = event->wheel.y;
-				if (!lastKey && mouseWheel) {
-						lastKey = (mouseWheel < 0) + VK_MOUSE_WHEEL_UP;
-				}
-				break;
+			mouseWheel = event->wheel.y;
+			if (!lastKey && mouseWheel) {
+				lastKey = (mouseWheel < 0) + VK_MOUSE_WHEEL_UP;
+			}
+			break;
 
 		case SDL_MOUSEBUTTONDOWN:
-				if (!lastKey) {
-						lastKey = VK_MOUSE_BEGIN - 1 + event->button.button;
-				}
-				break;
+			if (!lastKey) {
+				lastKey = VK_MOUSE_BEGIN - 1 + event->button.button;
+			}
+			break;
 
 		case SDL_KEYDOWN:
-				if (!lastKey) {
-						lastKey = VK_KEYBOARD_BEGIN + event->key.keysym.scancode;
-				}
-				break;
+			if (!lastKey) {
+				lastKey = VK_KEYBOARD_BEGIN + event->key.keysym.scancode;
+			}
+			break;
 
 		case SDL_CONTROLLERBUTTONDOWN:
-				if (!lastKey) {
-						lastKey = VK_JOY1_BEGIN + event->cbutton.button;
-						SDL_GameController* ctrl = SDL_GameControllerFromInstanceID(event->cdevice.which);
-						const s32 idx = inputControllerGetIndex(ctrl);
-						if (idx >= 0) {
-								lastKey += idx * INPUT_MAX_CONTROLLER_BUTTONS;
-						}
+			if (!lastKey) {
+				lastKey = VK_JOY1_BEGIN + event->cbutton.button;
+				SDL_GameController *ctrl = SDL_GameControllerFromInstanceID(event->cdevice.which);
+				const s32 idx = inputControllerGetIndex(ctrl);
+				if (idx >= 0) {
+					lastKey += idx * INPUT_MAX_CONTROLLER_BUTTONS;
 				}
-				break;
+			}
+			break;
 
 		case SDL_CONTROLLERAXISMOTION:
-				if (!lastKey) {
-						if (event->caxis.axis >= SDL_CONTROLLER_AXIS_TRIGGERLEFT && event->caxis.value > TRIG_THRESHOLD) {
-								lastKey = VK_JOY1_LTRIG + (event->caxis.axis - SDL_CONTROLLER_AXIS_TRIGGERLEFT);
-								SDL_GameController* ctrl = SDL_GameControllerFromInstanceID(event->cdevice.which);
-								const s32 idx = inputControllerGetIndex(ctrl);
-								if (idx >= 0) {
-										lastKey += idx * INPUT_MAX_CONTROLLER_BUTTONS;
-								}
-						}
+			if (!lastKey) {
+				if (event->caxis.axis >= SDL_CONTROLLER_AXIS_TRIGGERLEFT && event->caxis.value > TRIG_THRESHOLD) {
+					lastKey = VK_JOY1_LTRIG + (event->caxis.axis - SDL_CONTROLLER_AXIS_TRIGGERLEFT);
+					SDL_GameController *ctrl = SDL_GameControllerFromInstanceID(event->cdevice.which);
+					const s32 idx = inputControllerGetIndex(ctrl);
+					if (idx >= 0) {
+						lastKey += idx * INPUT_MAX_CONTROLLER_BUTTONS;
+					}
 				}
-				break;
+			}
+			break;
 
 		case SDL_TEXTINPUT:
-				if (!lastChar && event->text.text[0] && (u8)event->text.text[0] < 0x80) {
-						lastChar = event->text.text[0];
-				}
-				break;
+			if (!lastChar && event->text.text[0] && (u8)event->text.text[0] < 0x80) {
+				lastChar = event->text.text[0];
+			}
+			break;
 
 		default:
-				break;
-		}
+			break;
+	}
 
-		return 0;
+	return 0;
 }
 
+static SDL_GameController* gyroController = NULL;
 
 static inline void inputGetScancodeName(const SDL_Scancode sc, char *out, size_t len)
 {
@@ -1545,9 +1555,24 @@ void inputGyroGetScaledDelta(f32* dx, f32* dy)
 				gdx = (f32)gyroDeltaYaw;
 				gdy = (f32)gyroDeltaPitch;
 
-				// Apply sensitivity scaling using natural scale
-				gdx *= gyroSensX; // Horizontal sensitivity scaling
-				gdy *= gyroSensY; // Vertical sensitivity scaling
+				// Normalize Scaling Based on Frame Rate
+				static Uint64 lastTick = 0;
+				Uint64 currentTick = SDL_GetTicks();
+				f32 frameTime = (lastTick > 0) ? ((f32)(currentTick - lastTick) / 1000.0f) : (1.0f / 60.0f);
+				lastTick = currentTick;
+
+				// Adjust frame time dynamically based on detected FPS values
+				frameTime = fmaxf(frameTime, 1.0f / 240.0f); // Prevent extreme scaling at high FPS
+
+				// Apply normalized sensitivity scaling
+				const f32 targetFPS = 60.f;
+				const f32 frameScale = targetFPS * frameTime;
+
+				// Reduce baseline sensitivity slightly for smoother input
+				const f32 baselineSensitivityFactor = 0.26f; // Lowered from 0.30f
+
+				gdx *= (gyroSensX * baselineSensitivityFactor) * frameScale;
+				gdy *= (gyroSensY * baselineSensitivityFactor) * frameScale;
 		}
 
 		// Assign scaled deltas to output variables
@@ -1557,22 +1582,45 @@ void inputGyroGetScaledDelta(f32* dx, f32* dy)
 
 void inputGyroGetAbsScaledDelta(f32* dx, f32* dy)
 {
-		// Default deltas to zero
-		f32 gdx = 0.f, gdy = 0.f;
+    // Default deltas to zero
+    f32 gdx = 0.f, gdy = 0.f;
 
-		if (gyroEnabled) {
-				// Retrieve raw gyro deltas (yaw and pitch)
-				gdx = (f32)gyroDeltaYaw;
-				gdy = (f32)gyroDeltaPitch;
+    if (gyroEnabled) {
+        // Retrieve raw gyro deltas (yaw and pitch)
+        gdx = (f32)gyroDeltaYaw;
+        gdy = (f32)gyroDeltaPitch;
 
-				// Apply absolute sensitivity scaling
-				gdx *= fabsf(gyroSensX); // Horizontal scaling with absolute sensitivity
-				gdy *= fabsf(gyroSensY); // Vertical scaling with absolute sensitivity
-		}
+        // Normalize Scaling Based on Frame Rate
+        static Uint64 lastTick = 0;
+        Uint64 currentTick = SDL_GetTicks();
+        f32 frameTime = (lastTick > 0) ? ((f32)(currentTick - lastTick) / 1000.0f) : (1.0f / 60.0f);
+        lastTick = currentTick;
 
-		// Assign scaled deltas to output variables
-		if (dx) *dx = gdx;
-		if (dy) *dy = gdy;
+        // Ensure frameTime is within a stable range
+        frameTime = fmaxf(frameTime, 1.0f / 240.0f);
+
+        // Apply frame-rate normalization scaling
+        const f32 targetFPS = 60.f;
+        const f32 frameScale = targetFPS * frameTime;
+
+        // Apply absolute scaling with refined sensitivity handling
+        const f32 minSensX = fmaxf(fabsf(gyroSensX), 0.030f);
+        const f32 minSensY = fmaxf(fabsf(gyroSensY), 0.030f);
+
+        gdx = (gdx / minSensX) * frameScale;
+        gdy = (gdy / minSensY) * frameScale;
+    }
+
+    // Assign deltas to output variables
+    if (dx) *dx = gdx;
+    if (dy) *dy = gdy;
+}
+
+void inputGyroGetSpeed(f32* x, f32* y)
+{
+		// Return current sensitivity values
+		if (x) *x = gyroSensX;
+		if (y) *y = gyroSensY;
 }
 
 void inputGyroSetSpeed(f32 x, f32 y)
@@ -1729,46 +1777,47 @@ void inputSetGyroMinThreshold(f32 threshold)
 
 void applyGyroThreshold(f32* deltaX, f32* deltaY, f32 threshold)
 {
-		// Deadzone and smoothing parameters
-		const f32 deadzone = threshold; // Central deadzone for subtle movements
-		const f32 smoothingFactor = 0.85f; // Soft-tiered smoothing factor (closer to 1.0 means smoother)
-		const f32 maxDelta = 20.f; // Maximum allowable delta for gyro input
-		const f32 minDelta = -20.f; // Minimum allowable delta for gyro input
+		if (!deltaX || !deltaY) return; // Safety check
 
-		// Dynamic scaling based on motion intensity (soft-tiered smoothing)
-		const f32 dynamicThreshold = threshold * smoothingFactor; // Reduce threshold dynamically
-
-		// Apply threshold and smoothing to horizontal movement
-		if (deltaX) {
-				if (fabsf(*deltaX) < deadzone) {
-						*deltaX = 0.f; // Zero out movement within deadzone
-				}
-				else {
-						// Apply soft-tiered smoothing for smaller movements
-						f32 adjustedX = (*deltaX > 0) ? (*deltaX - dynamicThreshold) : (*deltaX + dynamicThreshold);
-
-						// Clamp horizontal movement to allowable range
-						*deltaX = (adjustedX > maxDelta) ? maxDelta : ((adjustedX < minDelta) ? minDelta : adjustedX);
-				}
+		// Allow raw movement if slider is at zero
+		if (threshold <= 0.00f) {
+				return; // Prevent unwanted drift while keeping gyro active
 		}
 
-		// Apply threshold and smoothing to vertical movement
-		if (deltaY) {
-				if (fabsf(*deltaY) < deadzone) {
-						*deltaY = 0.f; // Zero out movement within deadzone
-				}
-				else {
-						// Apply soft-tiered smoothing for smaller movements
-						f32 adjustedY = (*deltaY > 0) ? (*deltaY - dynamicThreshold) : (*deltaY + dynamicThreshold);
+		// Define parameters
+		const f32 rawDeadzone = 0.015f; // Tiny deadzone to eliminate small automatic movement
+		const f32 deadzone = fmaxf(0.1f * threshold, 0.03f); // Smaller deadzone for smoother fine movements
+		const f32 maxDelta = 10.f;
+		const f32 minDelta = -10.f;
+		const f32 smoothingFactor = 1.0f;
+		const f32 sensitivityBoost = (threshold > 0.01f) ? fmaxf(1.02f, 1.0f + (0.015f * threshold)) : 1.0f;
 
-						// Clamp vertical movement to allowable range
-						*deltaY = (adjustedY > maxDelta) ? maxDelta : ((adjustedY < minDelta) ? minDelta : adjustedY);
-				}
+		// Debugging: Print raw input before processing
+		printf("Raw Gyro Input - X: %.2f, Y: %.2f\n", *deltaX, *deltaY);
+
+		// Apply raw movement deadzone before any processing
+		if (fabsf(*deltaX) < rawDeadzone) *deltaX = 0.f;
+		if (fabsf(*deltaY) < rawDeadzone) *deltaY = 0.f;
+
+		// Process horizontal movement
+		if (fabsf(*deltaX) < deadzone) {
+				*deltaX = 0.f;
+		}
+		else {
+				f32 adjustedX = *deltaX;
+				adjustedX = fmaxf(fminf(adjustedX, maxDelta), minDelta);
+				*deltaX = adjustedX * smoothingFactor * sensitivityBoost;
 		}
 
-		// Debugging: Log adjustments and clamped values for validation
-		printf("Gyro Threshold Applied - X: %.2f, Y: %.2f (Deadzone: %.2f, Threshold: %.2f, ClampRange: [%.2f, %.2f])\n",
-				deltaX ? *deltaX : 0.f, deltaY ? *deltaY : 0.f, deadzone, threshold, minDelta, maxDelta);
+		// Process vertical movement
+		if (fabsf(*deltaY) < deadzone) {
+				*deltaY = 0.f;
+		}
+		else {
+				f32 adjustedY = *deltaY;
+				adjustedY = fmaxf(fminf(adjustedY, maxDelta), minDelta);
+				*deltaY = adjustedY * smoothingFactor * sensitivityBoost;
+		}
 }
 
 const char *inputGetContKeyName(u32 ck)
