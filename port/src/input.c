@@ -41,9 +41,9 @@
 
 #define GYRO_AXIS_YAW 0
 #define GYRO_AXIS_ROLL 1
-#define GYRO_AXIS_LOCAL_SPACE 2
-#define GYRO_AXIS_PLAYER_SPACE 3
-#define GYRO_AXIS_WORLD_SPACE 4
+#define GYRO_AXIS_LOCAL 2
+#define GYRO_AXIS_PLAYER 3
+#define GYRO_AXIS_WORLD 4
 
 #define GYRO_AIM_MODE_CAMERA 0
 #define GYRO_AIM_MODE_CROSSHAIR 1
@@ -1510,11 +1510,17 @@ void applyGyroAxisMapping(float gyroData[3], f32* deltaX, f32* deltaY)
 				break;
 
 		case GYRO_ROLL:
-				*deltaX = -gyroData[2]; // Roll for horizontal movement
+				*deltaX = gyroData[2]; // Roll for horizontal movement
 				*deltaY = -gyroData[0]; // Pitch for vertical movement
 				break;
 
-				// Add other modes (GYRO_LOCAL, GYRO_PLAYER, GYRO_SPACE)
+		case GYRO_LOCAL:
+				*deltaX = -gyroData[1]; // Yaw for horizontal movement
+				*deltaY = -gyroData[0]; // Pitch for vertical movement
+				*deltaX += gyroData[2]; // Add Roll for horizontal movement
+				break;
+
+				// Add other modes (GYRO_LOCAL, GYRO_PLAYER, GYRO_SPACE))
 		default:
 				*deltaX = 0.f; // Default to zero if mode is unrecognized
 				*deltaY = 0.f;
@@ -2002,7 +2008,7 @@ PD_CONSTRUCTOR static void inputConfigInit(void)
 		configRegisterFloat("Input.MouseSpeedX", &mouseSensX, -10.f, 10.f);
 		configRegisterFloat("Input.MouseSpeedY", &mouseSensY, -10.f, 10.f);
 		configRegisterInt("Input.GyroEnabled", &gyroEnabled, 0, 1);
-		configRegisterInt("Input.GyroAxisMode", &g_GyroAxisMode, GYRO_AXIS_YAW, GYRO_AXIS_WORLD_SPACE);
+		configRegisterInt("Input.GyroAxisMode", &g_GyroAxisMode, GYRO_AXIS_YAW, GYRO_AXIS_WORLD);
 		configRegisterInt("Input.GyroAimMode", &g_GyroAimMode, GYRO_AIM_MODE_CAMERA, GYRO_AIM_MODE_BOTH);
 		configRegisterFloat("Input.gyroSpeedX", &gyroSensX, -10.f, 10.f);
 		configRegisterFloat("Input.gyroSpeedY", &gyroSensY, -10.f, 10.f);
