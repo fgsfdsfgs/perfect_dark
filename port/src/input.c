@@ -1777,48 +1777,39 @@ void inputSetGyroMinThreshold(f32 threshold)
 
 void applyGyroThreshold(f32* deltaX, f32* deltaY, f32 threshold)
 {
-		if (!deltaX || !deltaY) return; // Safety check
+		// Define smoothing and deadzone parameters
+		const f32 smoothingFactor = 0.85f;
+		const f32 deadzone = fmaxf(threshold, 0.03f); // Ensure minimum stability
+		const f32 maxDelta = fmaxf(15.f, threshold * 3.f);
+		const f32 minDelta = -maxDelta;
 
-		// Allow raw movement if slider is at zero
-		if (threshold <= 0.00f) {
-				return; // Prevent unwanted drift while keeping gyro active
+		// Dynamic threshold scaling only for larger movements
+		const f32 dynamicThreshold = (fabsf(*deltaX) > 5.f || fabsf(*deltaY) > 5.f) ? threshold * smoothingFactor : threshold;
+
+		if (deltaX) {
+				if (fabsf(*deltaX) < deadzone) {
+						*deltaX = 0.f;
+				}
+				else {
+						f32 adjustedX = (*deltaX > 0) ? (*deltaX - dynamicThreshold) : (*deltaX + dynamicThreshold);
+						*deltaX = fmaxf(fminf(adjustedX, maxDelta), minDelta);
+				}
 		}
 
-		// Define parameters
-		const f32 rawDeadzone = 0.015f; // Tiny deadzone to eliminate small automatic movement
-		const f32 deadzone = fmaxf(0.1f * threshold, 0.03f); // Smaller deadzone for smoother fine movements
-		const f32 maxDelta = 10.f;
-		const f32 minDelta = -10.f;
-		const f32 smoothingFactor = 1.0f;
-		const f32 sensitivityBoost = (threshold > 0.01f) ? fmaxf(1.02f, 1.0f + (0.015f * threshold)) : 1.0f;
-
-		// Debugging: Print raw input before processing
-		printf("Raw Gyro Input - X: %.2f, Y: %.2f\n", *deltaX, *deltaY);
-
-		// Apply raw movement deadzone before any processing
-		if (fabsf(*deltaX) < rawDeadzone) *deltaX = 0.f;
-		if (fabsf(*deltaY) < rawDeadzone) *deltaY = 0.f;
-
-		// Process horizontal movement
-		if (fabsf(*deltaX) < deadzone) {
-				*deltaX = 0.f;
-		}
-		else {
-				f32 adjustedX = *deltaX;
-				adjustedX = fmaxf(fminf(adjustedX, maxDelta), minDelta);
-				*deltaX = adjustedX * smoothingFactor * sensitivityBoost;
+		if (deltaY) {
+				if (fabsf(*deltaY) < deadzone) {
+						*deltaY = 0.f;
+				}
+				else {
+						f32 adjustedY = (*deltaY > 0) ? (*deltaY - dynamicThreshold) : (*deltaY + dynamicThreshold);
+						*deltaY = fmaxf(fminf(adjustedY, maxDelta), minDelta);
+				}
 		}
 
-		// Process vertical movement
-		if (fabsf(*deltaY) < deadzone) {
-				*deltaY = 0.f;
-		}
-		else {
-				f32 adjustedY = *deltaY;
-				adjustedY = fmaxf(fminf(adjustedY, maxDelta), minDelta);
-				*deltaY = adjustedY * smoothingFactor * sensitivityBoost;
-		}
+		printf("Gyro Threshold Applied - X: %.2f, Y: %.2f (Deadzone: %.2f, ClampRange: [%.2f, %.2f])\n",
+				deltaX ? *deltaX : 0.f, deltaY ? *deltaY : 0.f, deadzone, minDelta, maxDelta);
 }
+
 
 const char *inputGetContKeyName(u32 ck)
 {
