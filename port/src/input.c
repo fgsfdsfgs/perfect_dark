@@ -402,129 +402,129 @@ static inline void inputCloseController(const s32 cidx)
 		pads[cidx] = NULL;
 }
 
-static inline s32 inputControllerGetIndex(SDL_GameController *ctrl)
+static inline s32 inputControllerGetIndex(SDL_GameController* ctrl)
 {
-	if (ctrl) {
-		for (s32 i = 0; i < INPUT_MAX_CONTROLLERS; ++i) {
-			if (pads[i] == ctrl) {
-				return i;
-			}
+		if (ctrl) {
+				for (s32 i = 0; i < INPUT_MAX_CONTROLLERS; ++i) {
+						if (pads[i] == ctrl) {
+								return i;
+						}
+				}
 		}
-	}
-	return -1;
+		return -1;
 }
 
 static inline s32 inputControllerGetIndexByDeviceIndex(const s32 jidx)
 {
-	for (s32 cidx = 0; cidx < INPUT_MAX_CONTROLLERS; ++cidx) {
-		if (pads[cidx] && padsCfg[cidx].deviceIndex == jidx) {
-			return cidx;
+		for (s32 cidx = 0; cidx < INPUT_MAX_CONTROLLERS; ++cidx) {
+				if (pads[cidx] && padsCfg[cidx].deviceIndex == jidx) {
+						return cidx;
+				}
 		}
-	}
-	return -1;
+		return -1;
 }
 
 static inline s32 inputControllerGetIndexById(const SDL_JoystickID jid)
 {
-	for (s32 cidx = 0; cidx < INPUT_MAX_CONTROLLERS; ++cidx) {
-		if (pads[cidx]) {
-			if (inputControllerGetId(pads[cidx]) == jid) {
-				return cidx;
-			}
+		for (s32 cidx = 0; cidx < INPUT_MAX_CONTROLLERS; ++cidx) {
+				if (pads[cidx]) {
+						if (inputControllerGetId(pads[cidx]) == jid) {
+								return cidx;
+						}
+				}
 		}
-	}
-	return -1;
+		return -1;
 }
 
 static inline void inputCloseAllControllers(void)
 {
-	for (s32 cidx = 0; cidx < INPUT_MAX_CONTROLLERS; ++cidx) {
-		if (pads[cidx]) {
-			inputCloseController(cidx);
-			pads[cidx] = NULL;
+		for (s32 cidx = 0; cidx < INPUT_MAX_CONTROLLERS; ++cidx) {
+				if (pads[cidx]) {
+						inputCloseController(cidx);
+						pads[cidx] = NULL;
+				}
 		}
-	}
 
-	connectedMask = 1; // always report first controller as connected
+		connectedMask = 1; // always report first controller as connected
 }
 
 static inline s32 inputTryController(const s32 cidx, const s32 jidx)
 {
-	if (!pads[cidx]) {
-		pads[cidx] = SDL_GameControllerOpen(jidx);
-		if (pads[cidx]) {
-			inputInitController(cidx, jidx);
-			return 1;
+		if (!pads[cidx]) {
+				pads[cidx] = SDL_GameControllerOpen(jidx);
+				if (pads[cidx]) {
+						inputInitController(cidx, jidx);
+						return 1;
+				}
 		}
-	}
-	return 0;
+		return 0;
 }
 
 static inline void inputInitAllControllers(void)
 {
-	SDL_GameControllerUpdate();
+		SDL_GameControllerUpdate();
 
-	numJoysticks = SDL_NumJoysticks();
+		numJoysticks = SDL_NumJoysticks();
 
-	connectedMask = 1; // always report first controller as connected
+		connectedMask = 1; // always report first controller as connected
 
-	// first try to assign the controllers that we had last time
-	// we're still free to check by device index before any controller device events fire
-	for (s32 cidx = 0; cidx < INPUT_MAX_CONTROLLERS; ++cidx) {
-		const s32 jidx = padsCfg[cidx].deviceIndex;
-		if (jidx >= 0 && jidx < numJoysticks) {
-			if (SDL_IsGameController(jidx) && inputControllerGetIndexByDeviceIndex(jidx) < 0) {
-				// using the full assign function in case user sets same index for several players
-				if (inputTryController(cidx, jidx)) {
-					// success
-					continue;
+		// first try to assign the controllers that we had last time
+		// we're still free to check by device index before any controller device events fire
+		for (s32 cidx = 0; cidx < INPUT_MAX_CONTROLLERS; ++cidx) {
+				const s32 jidx = padsCfg[cidx].deviceIndex;
+				if (jidx >= 0 && jidx < numJoysticks) {
+						if (SDL_IsGameController(jidx) && inputControllerGetIndexByDeviceIndex(jidx) < 0) {
+								// using the full assign function in case user sets same index for several players
+								if (inputTryController(cidx, jidx)) {
+										// success
+										continue;
+								}
+						}
+						// nothing was there, forget it
+						padsCfg[cidx].deviceIndex = -1;
 				}
-			}
-			// nothing was there, forget it
-			padsCfg[cidx].deviceIndex = -1;
 		}
-	}
 
-	// now try autofilling the rest, starting with firstController
-	for (s32 jidx = 0; jidx < numJoysticks; ++jidx) {
-		if (SDL_IsGameController(jidx) && inputControllerGetIndexByDeviceIndex(jidx) < 0) {
-			for (s32 cidx = firstController; cidx < INPUT_MAX_CONTROLLERS; ++cidx) {
-				if (inputTryController(cidx, jidx)) {
-					break;
+		// now try autofilling the rest, starting with firstController
+		for (s32 jidx = 0; jidx < numJoysticks; ++jidx) {
+				if (SDL_IsGameController(jidx) && inputControllerGetIndexByDeviceIndex(jidx) < 0) {
+						for (s32 cidx = firstController; cidx < INPUT_MAX_CONTROLLERS; ++cidx) {
+								if (inputTryController(cidx, jidx)) {
+										break;
+								}
+						}
 				}
-			}
 		}
-	}
 
-	const s32 overrideMask = (1 << fakeControllers) - 1;
-	if (overrideMask) {
-		connectedMask = overrideMask;
-	}
+		const s32 overrideMask = (1 << fakeControllers) - 1;
+		if (overrideMask) {
+				connectedMask = overrideMask;
+		}
 }
 
-static int inputEventFilter(void *data, SDL_Event *event)
+static int inputEventFilter(void* data, SDL_Event* event)
 {
-	switch (event->type) {
+		switch (event->type) {
 		case SDL_CONTROLLERDEVICEADDED:
-			for (s32 i = firstController; i < INPUT_MAX_CONTROLLERS; ++i) {
-				if (!pads[i]) {
-					pads[i] = SDL_GameControllerOpen(event->cdevice.which);
-					if (pads[i]) {
-						inputInitController(i, event->cdevice.which);
-					}
-					break;
+				for (s32 i = firstController; i < INPUT_MAX_CONTROLLERS; ++i) {
+						if (!pads[i]) {
+								pads[i] = SDL_GameControllerOpen(event->cdevice.which);
+								if (pads[i]) {
+										inputInitController(i, event->cdevice.which);
+								}
+								break;
+						}
 				}
-			}
-			break;
+				break;
 
 		case SDL_CONTROLLERDEVICEREMOVED: {
-			SDL_GameController *ctrl = SDL_GameControllerFromInstanceID(event->cdevice.which);
-			const s32 idx = inputControllerGetIndex(ctrl);
-			if (idx >= 0) {
-				inputCloseController(idx);
-				padsCfg[idx].deviceIndex = -1;
-			}
-			break;
+				SDL_GameController* ctrl = SDL_GameControllerFromInstanceID(event->cdevice.which);
+				const s32 idx = inputControllerGetIndex(ctrl);
+				if (idx >= 0) {
+						inputCloseController(idx);
+						padsCfg[idx].deviceIndex = -1;
+				}
+				break;
 		}
 
 		case SDL_JOYDEVICEADDED:
@@ -559,59 +559,59 @@ static int inputEventFilter(void *data, SDL_Event *event)
 				break;
 
 		case SDL_MOUSEWHEEL:
-			mouseWheel = event->wheel.y;
-			if (!lastKey && mouseWheel) {
-				lastKey = (mouseWheel < 0) + VK_MOUSE_WHEEL_UP;
-			}
-			break;
+				mouseWheel = event->wheel.y;
+				if (!lastKey && mouseWheel) {
+						lastKey = (mouseWheel < 0) + VK_MOUSE_WHEEL_UP;
+				}
+				break;
 
 		case SDL_MOUSEBUTTONDOWN:
-			if (!lastKey) {
-				lastKey = VK_MOUSE_BEGIN - 1 + event->button.button;
-			}
-			break;
+				if (!lastKey) {
+						lastKey = VK_MOUSE_BEGIN - 1 + event->button.button;
+				}
+				break;
 
 		case SDL_KEYDOWN:
-			if (!lastKey) {
-				lastKey = VK_KEYBOARD_BEGIN + event->key.keysym.scancode;
-			}
-			break;
+				if (!lastKey) {
+						lastKey = VK_KEYBOARD_BEGIN + event->key.keysym.scancode;
+				}
+				break;
 
 		case SDL_CONTROLLERBUTTONDOWN:
-			if (!lastKey) {
-				lastKey = VK_JOY1_BEGIN + event->cbutton.button;
-				SDL_GameController *ctrl = SDL_GameControllerFromInstanceID(event->cdevice.which);
-				const s32 idx = inputControllerGetIndex(ctrl);
-				if (idx >= 0) {
-					lastKey += idx * INPUT_MAX_CONTROLLER_BUTTONS;
+				if (!lastKey) {
+						lastKey = VK_JOY1_BEGIN + event->cbutton.button;
+						SDL_GameController* ctrl = SDL_GameControllerFromInstanceID(event->cdevice.which);
+						const s32 idx = inputControllerGetIndex(ctrl);
+						if (idx >= 0) {
+								lastKey += idx * INPUT_MAX_CONTROLLER_BUTTONS;
+						}
 				}
-			}
-			break;
+				break;
 
 		case SDL_CONTROLLERAXISMOTION:
-			if (!lastKey) {
-				if (event->caxis.axis >= SDL_CONTROLLER_AXIS_TRIGGERLEFT && event->caxis.value > TRIG_THRESHOLD) {
-					lastKey = VK_JOY1_LTRIG + (event->caxis.axis - SDL_CONTROLLER_AXIS_TRIGGERLEFT);
-					SDL_GameController *ctrl = SDL_GameControllerFromInstanceID(event->cdevice.which);
-					const s32 idx = inputControllerGetIndex(ctrl);
-					if (idx >= 0) {
-						lastKey += idx * INPUT_MAX_CONTROLLER_BUTTONS;
-					}
+				if (!lastKey) {
+						if (event->caxis.axis >= SDL_CONTROLLER_AXIS_TRIGGERLEFT && event->caxis.value > TRIG_THRESHOLD) {
+								lastKey = VK_JOY1_LTRIG + (event->caxis.axis - SDL_CONTROLLER_AXIS_TRIGGERLEFT);
+								SDL_GameController* ctrl = SDL_GameControllerFromInstanceID(event->cdevice.which);
+								const s32 idx = inputControllerGetIndex(ctrl);
+								if (idx >= 0) {
+										lastKey += idx * INPUT_MAX_CONTROLLER_BUTTONS;
+								}
+						}
 				}
-			}
-			break;
+				break;
 
 		case SDL_TEXTINPUT:
-			if (!lastChar && event->text.text[0] && (u8)event->text.text[0] < 0x80) {
-				lastChar = event->text.text[0];
-			}
-			break;
+				if (!lastChar && event->text.text[0] && (u8)event->text.text[0] < 0x80) {
+						lastChar = event->text.text[0];
+				}
+				break;
 
 		default:
-			break;
-	}
+				break;
+		}
 
-	return 0;
+		return 0;
 }
 
 
