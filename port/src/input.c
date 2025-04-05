@@ -115,8 +115,8 @@ static f32 gyroYaw, gyroPitch, gyroRoll;
 static f32 gyroDeltaYaw, gyroDeltaPitch, gyroDeltaRoll;
 static f32 gyroSensX = 2.5f;
 static f32 gyroSensY = 2.5f;
-static f32 gyroAimSensX = 1.0f; 
-static f32 gyroAimSensY = 1.0f;
+static f32 gyroAimSensX = 5.0f; 
+static f32 gyroAimSensY = 5.0f;
 static s32 g_GyroAxisMode = GYRO_YAW; 
 static s32 g_GyroAimMode = GYRO_AIM_MODE_BOTH;
 static f32 gyroMinThreshold = 0.05f;
@@ -151,6 +151,7 @@ static const char *ckNames[CK_TOTAL_COUNT] = {
 	"STICK_YPOS",
 	"ACCEPT_BUTTON",
 	"CANCEL_BUTTON",
+	"CK_GYRO_MOD",
 	"CK_0040",
 	"CK_0080",
 	"CK_0100",
@@ -240,7 +241,7 @@ void inputSetDefaultKeyBinds(s32 cidx, s32 n64mode)
 		{ CK_STICK_YNEG,    SDL_SCANCODE_DOWN,   0                   },
 		{ CK_STICK_YPOS,    SDL_SCANCODE_UP,     0                   },
 		{ CK_4000,          SDL_SCANCODE_LSHIFT, 0                   },
-		{ CK_2000,          SDL_SCANCODE_LCTRL,  0                   }
+		{ CK_2000,          SDL_SCANCODE_LCTRL,  0                   },
 	};
 
 	static const u32 pcjoybinds[][2] = {
@@ -260,6 +261,7 @@ void inputSetDefaultKeyBinds(s32 cidx, s32 n64mode)
 		{ CK_ACCEPT, SDL_CONTROLLER_BUTTON_A             },
 		{ CK_CANCEL, SDL_CONTROLLER_BUTTON_B             },
 		{ CK_8000,   SDL_CONTROLLER_BUTTON_LEFTSTICK     },
+		{ CK_GYRO_MOD, SDL_CONTROLLER_BUTTON_RIGHTSTICK  },
 	};
 
 	static const u32 n64kbbinds[][3] = {
@@ -1736,7 +1738,7 @@ void applyGyroActivationMode(f32* deltaX, f32* deltaY, s32 activationMode)
 
 		case GYRO_TOGGLE:
 				// Toggle the gyro input state when CK_GYRO_MOD is pressed
-				if (inputKeyJustPressed(CK_GYRO_MOD)) {
+				if (inputKeyPressed(CK_GYRO_MOD)) {
 						g_GyroActivationMode = (g_GyroActivationMode == GYRO_TOGGLE) ? GYRO_ALWAYS_ON : GYRO_TOGGLE;
 				}
 
@@ -1748,16 +1750,16 @@ void applyGyroActivationMode(f32* deltaX, f32* deltaY, s32 activationMode)
 				break;
 
 		case GYRO_HOLD:
-				// Only allow gyro input while CK_GYRO_MOD is held down
-				if (!inputKeyJustPressed(CK_GYRO_MOD)) {
+				// Only allow gyro input while CK_GYRO_MOD is actively held down
+				if (!inputKeyPressed(CK_GYRO_MOD)) {
 						if (deltaX) *deltaX = 0.f;
 						if (deltaY) *deltaY = 0.f;
 				}
 				break;
 
 		case GYRO_HOLD_INVERTED:
-				// Inverted hold; disable gyro input when CK_GYRO_MOD is held down
-				if (inputKeyJustPressed(CK_GYRO_MOD)) {
+				// Inverted hold: disable gyro input when CK_GYRO_MOD is held down
+				if (inputKeyPressed(CK_GYRO_MOD)) {
 						if (deltaX) *deltaX = 0.f;
 						if (deltaY) *deltaY = 0.f;
 				}
@@ -1784,36 +1786,38 @@ void inputSetGyroMinThreshold(f32 threshold)
 void applyGyroThreshold(f32* deltaX, f32* deltaY, f32 threshold)
 {
 		// Define smoothing and deadzone parameters
-		const f32 smoothingFactor = 0.85f;
-		const f32 deadzone = fmaxf(threshold, 0.03f); // Ensure minimum stability
+		const f32 baseSmoothing = 0.85f;
+		const f32 baseDeadzone = fmaxf(threshold, 0.05f); // Slightly lowered for finer control
 		const f32 maxDelta = fmaxf(15.f, threshold * 3.f);
 		const f32 minDelta = -maxDelta;
 
-		// Dynamic threshold scaling only for larger movements
-		const f32 dynamicThreshold = (fabsf(*deltaX) > 5.f || fabsf(*deltaY) > 5.f) ? threshold * smoothingFactor : threshold;
+		// Ensure input pointers are valid before accessing values
+		if (!deltaX || !deltaY) return;
 
-		if (deltaX) {
-				if (fabsf(*deltaX) < deadzone) {
-						*deltaX = 0.f;
-				}
-				else {
-						f32 adjustedX = (*deltaX > 0) ? (*deltaX - dynamicThreshold) : (*deltaX + dynamicThreshold);
-						*deltaX = fmaxf(fminf(adjustedX, maxDelta), minDelta);
-				}
+		// Dynamic threshold scaling based on movement magnitude
+		const f32 dynamicThreshold = (fabsf(*deltaX) > 5.f || fabsf(*deltaY) > 5.f) ? threshold * baseSmoothing : threshold;
+
+		// Process X-axis (yaw)
+		if (fabsf(*deltaX) < baseDeadzone) {
+				*deltaX = 0.f; // Apply deadzone
+		}
+		else {
+				f32 adjustedX = (*deltaX > 0) ? (*deltaX - dynamicThreshold) : (*deltaX + dynamicThreshold);
+				*deltaX = fmaxf(fminf(adjustedX, maxDelta), minDelta);
 		}
 
-		if (deltaY) {
-				if (fabsf(*deltaY) < deadzone) {
-						*deltaY = 0.f;
-				}
-				else {
-						f32 adjustedY = (*deltaY > 0) ? (*deltaY - dynamicThreshold) : (*deltaY + dynamicThreshold);
-						*deltaY = fmaxf(fminf(adjustedY, maxDelta), minDelta);
-				}
+		// Process Y-axis (pitch)
+		if (fabsf(*deltaY) < baseDeadzone) {
+				*deltaY = 0.f; // Apply deadzone
+		}
+		else {
+				f32 adjustedY = (*deltaY > 0) ? (*deltaY - dynamicThreshold) : (*deltaY + dynamicThreshold);
+				*deltaY = fmaxf(fminf(adjustedY, maxDelta), minDelta);
 		}
 
+		// Debug print statement to verify values
 		printf("Gyro Threshold Applied - X: %.2f, Y: %.2f (Deadzone: %.2f, ClampRange: [%.2f, %.2f])\n",
-				deltaX ? *deltaX : 0.f, deltaY ? *deltaY : 0.f, deadzone, minDelta, maxDelta);
+				*deltaX, *deltaY, baseDeadzone, minDelta, maxDelta);
 }
 
 
