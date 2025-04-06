@@ -1000,36 +1000,60 @@ void initializeGyroController() {
 		}
 }
 
+void autoCalibrateGyro(void);
+
 static inline void inputUpdateGyro(void)
 {
-		if (!gyroEnabled) {
+		if (!gyroEnabled)
+		{
 				return; // Exit if gyro is not enabled
 		}
 
-		// Declare variables for gyro input
+		// Declare an array for gyro sensor data
 		float gyroData[3];
 
+		// **Check if any controllers are connected**
+		if (SDL_NumJoysticks() == 0 || connectedMask == 0)
+		{
+				// **No controllers connected—reset gyro offsets and prevent drift**
+				gyroYaw = 0.f;
+				gyroPitch = 0.f;
+				gyroRoll = 0.f;
+				gyroDeltaYaw = 0.f;
+				gyroDeltaPitch = 0.f;
+				gyroDeltaRoll = 0.f;
+				gyroOffsetX = 0.f;
+				gyroOffsetY = 0.f;
+
+				sysLogPrintf(LOG_NOTE, "Gyro Reset: No controllers detected. Preventing drift.");
+				return;
+		}
+
 		// Iterate through all connected controllers
-		for (int i = 0; i < SDL_NumJoysticks(); i++) {
-				if (SDL_IsGameController(i)) {
+		for (int i = 0; i < SDL_NumJoysticks(); i++)
+		{
+				if (SDL_IsGameController(i))
+				{
 						SDL_GameController* controller = SDL_GameControllerFromInstanceID(i);
-						if (controller) {
+						if (controller)
+						{
 								// Ensure the gyro sensor is enabled
 								SDL_GameControllerSetSensorEnabled(controller, SDL_SENSOR_GYRO, SDL_TRUE);
 
 								// Retrieve gyro data
 								s32 gyroState = SDL_GameControllerGetSensorData(controller, SDL_SENSOR_GYRO, gyroData, 3);
 
-								// Reset deltas
+								// Reset global gyro deltas
 								gyroDeltaYaw = 0.f;
 								gyroDeltaPitch = 0.f;
 								gyroDeltaRoll = 0.f;
 
-								// Process gyro input if available
-								if (gyroState == 0) {
+								// Process gyro input only if sensor data is valid
+								if (gyroState == 0)
+								{
 										f32 deltaX = 0.f, deltaY = 0.f;
 
-										// Apply axis mapping to gyro input
+										// Apply axis mapping to raw gyro data
 										applyGyroAxisMapping(gyroData, &deltaX, &deltaY);
 
 										// Apply gyro aim mode logic
@@ -1041,12 +1065,18 @@ static inline void inputUpdateGyro(void)
 										// Apply movement threshold
 										applyGyroThreshold(&deltaX, &deltaY, inputGetGyroMinThreshold());
 
-										// Assign raw deltas based on axis mapping without scaling
-										gyroDeltaYaw = deltaX;    // Map X-axis delta
-										gyroDeltaPitch = deltaY;  // Map Y-axis delta
+										// **Perform auto-calibration ONLY when controller is connected**
+										if (inputGyroAutoCalibrationIsEnabled() && SDL_NumJoysticks() > 0)
+										{
+												autoCalibrateGyro();
+										}
+
+										// Assign the processed deltas to the global values
+										gyroDeltaYaw = deltaX;       // X-axis delta
+										gyroDeltaPitch = deltaY;     // Y-axis delta
 										gyroDeltaRoll = gyroData[2]; // Keep Roll for other use cases
 
-										// Update current gyro values
+										// Update the global accumulated gyro values
 										gyroYaw += gyroDeltaYaw;
 										gyroPitch += gyroDeltaPitch;
 										gyroRoll += gyroDeltaRoll;
