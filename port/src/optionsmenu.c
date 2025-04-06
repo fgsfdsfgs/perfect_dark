@@ -763,6 +763,19 @@ static MenuItemHandlerResult menuhandlerGyroMinThreshold(s32 operation, struct m
     return 0;
 }
 
+// Function to handle gyro auto-calibration while stationary
+static MenuItemHandlerResult menuhandlerGyroAutoCalibrationEnabled(s32 operation, struct menuitem* item, union handlerdata* data)
+{
+		switch (operation) {
+		case MENUOP_GET:
+				return inputGyroAutoCalibrationIsEnabled(); // Fetch current state of auto-calibration
+		case MENUOP_SET:
+				inputGyroAutoCalibrationEnable(data->checkbox.value); // Update auto-calibration based on user action
+				break;
+		}
+		return 0; // Ensure proper return value
+}
+
 
 struct menuitem g_ExtendedGyroMenuItems[] = {
 		{
@@ -836,6 +849,14 @@ struct menuitem g_ExtendedGyroMenuItems[] = {
 				(uintptr_t)"Movement Threshold",
 				100,
 				menuhandlerGyroMinThreshold,
+		},
+		{
+				MENUITEMTYPE_CHECKBOX,
+				0,
+				MENUITEMFLAG_LITERAL_TEXT,
+				(uintptr_t)"Auto-Calibrate while Stationary",
+				0,
+				menuhandlerGyroAutoCalibrationEnabled,
 		},
 		{
 				MENUITEMTYPE_SEPARATOR,

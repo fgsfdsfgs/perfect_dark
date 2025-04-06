@@ -121,6 +121,9 @@ static s32 g_GyroAxisMode = GYRO_YAW;
 static s32 g_GyroAimMode = GYRO_AIM_MODE_BOTH;
 static f32 gyroMinThreshold = 0.05f;
 static s32 g_GyroActivationMode = GYRO_ALWAYS_ON;
+static s32 gyroAutoCalibration = 1;
+static f32 gyroOffsetX = 0.f;
+static f32 gyroOffsetY = 0.f;
 
 static s32 lastKey = 0;
 static char lastChar = 0;
@@ -1773,6 +1776,38 @@ void applyGyroActivationMode(f32* deltaX, f32* deltaY, s32 activationMode)
 		}
 }
 
+s32 inputGyroAutoCalibrationIsEnabled(void) {
+		return gyroAutoCalibration; // Returns the current state of auto-calibration
+}
+
+void inputGyroAutoCalibrationEnable(s32 enabled) {
+		gyroAutoCalibration = (enabled != 0); // Toggles auto-calibration
+}
+
+void autoCalibrateGyro() {
+		static f32 accumulatedOffsetX = 0.f;
+		static f32 accumulatedOffsetY = 0.f;
+		static s32 sampleCount = 0;
+
+		// Collect small drift movements when stationary
+		accumulatedOffsetX += gyroDeltaYaw;
+		accumulatedOffsetY += gyroDeltaPitch;
+		sampleCount++;
+
+		// Average the collected values over multiple frames
+		if (sampleCount >= 200) { // Increased sample count to improve accuracy
+				gyroOffsetX = accumulatedOffsetX / sampleCount;
+				gyroOffsetY = accumulatedOffsetY / sampleCount;
+
+				// Reset accumulation but retain calculated offsets
+				accumulatedOffsetX = 0.f;
+				accumulatedOffsetY = 0.f;
+				sampleCount = 0;
+
+				printf("Gyro Auto-Calibration Completed! OffsetX: %.2f, OffsetY: %.2f\n", gyroOffsetX, gyroOffsetY);
+		}
+}
+
 f32 inputGetGyroMinThreshold(void)
 {
 		return gyroMinThreshold;
@@ -2019,6 +2054,7 @@ PD_CONSTRUCTOR static void inputConfigInit(void)
 		configRegisterFloat("Input.gyroAimSensX", &gyroAimSensX, -10.f, 10.f);
 		configRegisterFloat("Input.gyroAimSensY", &gyroAimSensY, -10.f, 10.f);
 		configRegisterFloat("Input.gyroMinThreshold", &gyroMinThreshold, 0.f, 1.f);
+		configRegisterInt("Input.gyroAutoCalibration", &gyroAutoCalibration, 0, 1);
 		configRegisterInt("Input.FakeGamepads", &fakeControllers, 0, 4);
 		configRegisterInt("Input.FirstGamepadNum", &firstController, 0, 3);
 		configRegisterInt("Input.UseHIDAPI", &useHIDAPI, 0, 1);

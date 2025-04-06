@@ -257,6 +257,11 @@ void initializeGyroController(void);
 s32 inputGyroIsEnabled(void);
 void inputGyroEnable(s32 enabled);
 
+// Gyro Auto-Calibration Management (NEW)
+s32 inputGyroAutoCalibrationIsEnabled(void);
+void inputGyroAutoCalibrationEnable(s32 enabled);
+void processGyroAutoCalibration(void); // Handles automatic calibration while stationary
+
 // Raw Gyro Movement Retrieval
 void inputGyroGetRawDelta(s32* dx, s32* dy, s32* dz);
 
