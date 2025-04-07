@@ -983,13 +983,25 @@ static inline void inputUpdateMouse(void)
 }
 
 void initializeGyroController() {
+		// Check if a controller is already open
+		if (gyroController) {
+				printf("Gyro Controller is already initialized.\n");
+				return;
+		}
+
 		if (SDL_NumJoysticks() > 0) {
 				// Open the first available controller
 				gyroController = SDL_GameControllerOpen(0);
+
 				if (gyroController) {
 						// Enable gyro sensor
-						SDL_GameControllerSetSensorEnabled(gyroController, SDL_SENSOR_GYRO, SDL_TRUE);
-						printf("Gyro Controller initialized: %s\n", SDL_GameControllerName(gyroController));
+						if (SDL_GameControllerHasSensor(gyroController, SDL_SENSOR_GYRO)) {
+								SDL_GameControllerSetSensorEnabled(gyroController, SDL_SENSOR_GYRO, SDL_TRUE);
+								printf("Gyro Controller initialized: %s\n", SDL_GameControllerName(gyroController));
+						}
+						else {
+								printf("Controller %s does not support motion sensors.\n", SDL_GameControllerName(gyroController));
+						}
 				}
 				else {
 						printf("Failed to initialize gyro controller: %s\n", SDL_GetError());
@@ -1000,7 +1012,39 @@ void initializeGyroController() {
 		}
 }
 
-void autoCalibrateGyro(void);
+// Function to clean up when a controller disconnects
+void closeGyroController() {
+		if (gyroController) {
+				printf("Closing Gyro Controller: %s\n", SDL_GameControllerName(gyroController));
+				SDL_GameControllerClose(gyroController);
+				gyroController = NULL;
+		}
+}
+
+
+void autoCalibrateGyro() {
+		static f32 accumulatedOffsetX = 0.f;
+		static f32 accumulatedOffsetY = 0.f;
+		static s32 sampleCount = 0;
+
+		// Collect small drift movements when stationary
+		accumulatedOffsetX += gyroDeltaYaw;
+		accumulatedOffsetY += gyroDeltaPitch;
+		sampleCount++;
+
+		// Average the collected values over multiple frames
+		if (sampleCount >= 200) { // Increased sample count to improve accuracy
+				gyroOffsetX = accumulatedOffsetX / sampleCount;
+				gyroOffsetY = accumulatedOffsetY / sampleCount;
+
+				// Reset accumulation but retain calculated offsets
+				accumulatedOffsetX = 0.f;
+				accumulatedOffsetY = 0.f;
+				sampleCount = 0;
+
+				printf("Gyro Auto-Calibration Completed! OffsetX: %.2f, OffsetY: %.2f\n", gyroOffsetX, gyroOffsetY);
+		}
+}
 
 static inline void inputUpdateGyro(void)
 {
@@ -1015,7 +1059,7 @@ static inline void inputUpdateGyro(void)
 		// **Check if any controllers are connected**
 		if (SDL_NumJoysticks() == 0 || connectedMask == 0)
 		{
-				// **No controllers connected—reset gyro offsets and prevent drift**
+				// **No controllers detected—reset gyro offsets to prevent drift**
 				gyroYaw = 0.f;
 				gyroPitch = 0.f;
 				gyroRoll = 0.f;
@@ -1029,6 +1073,8 @@ static inline void inputUpdateGyro(void)
 				return;
 		}
 
+		static bool controllerPreviouslyConnected = false;
+
 		// Iterate through all connected controllers
 		for (int i = 0; i < SDL_NumJoysticks(); i++)
 		{
@@ -1037,8 +1083,27 @@ static inline void inputUpdateGyro(void)
 						SDL_GameController* controller = SDL_GameControllerFromInstanceID(i);
 						if (controller)
 						{
-								// Ensure the gyro sensor is enabled
-								SDL_GameControllerSetSensorEnabled(controller, SDL_SENSOR_GYRO, SDL_TRUE);
+								// **Handle Controller Reconnection Properly**
+								bool hasGyro = SDL_GameControllerHasSensor(controller, SDL_SENSOR_GYRO);
+								bool hasAccel = SDL_GameControllerHasSensor(controller, SDL_SENSOR_ACCEL);
+
+								if (!controllerPreviouslyConnected || (!hasGyro && !hasAccel))
+								{
+										sysLogPrintf(LOG_WARNING, "Controller %d reconnected. Re-enabling gyro.", i);
+
+										// **Reset gyro offsets to prevent spinning**
+										gyroOffsetX = 0.f;
+										gyroOffsetY = 0.f;
+										gyroYaw = 0.f;
+										gyroPitch = 0.f;
+										gyroRoll = 0.f;
+
+										// **Re-enable gyro sensors**
+										SDL_GameControllerSetSensorEnabled(controller, SDL_SENSOR_GYRO, SDL_TRUE);
+										SDL_GameControllerSetSensorEnabled(controller, SDL_SENSOR_ACCEL, SDL_TRUE);
+
+										controllerPreviouslyConnected = true;
+								}
 
 								// Retrieve gyro data
 								s32 gyroState = SDL_GameControllerGetSensorData(controller, SDL_SENSOR_GYRO, gyroData, 3);
@@ -1086,6 +1151,10 @@ static inline void inputUpdateGyro(void)
 												"Controller %d - Gyro Input Updated - Yaw: %f, Pitch: %f, Roll: %f (DeltaX: %f, DeltaY: %f)",
 												i, gyroYaw, gyroPitch, gyroRoll, deltaX, deltaY);
 								}
+						}
+						else
+						{
+								controllerPreviouslyConnected = false; // Mark as disconnected
 						}
 				}
 		}
@@ -1812,30 +1881,6 @@ s32 inputGyroAutoCalibrationIsEnabled(void) {
 
 void inputGyroAutoCalibrationEnable(s32 enabled) {
 		gyroAutoCalibration = (enabled != 0); // Toggles auto-calibration
-}
-
-void autoCalibrateGyro() {
-		static f32 accumulatedOffsetX = 0.f;
-		static f32 accumulatedOffsetY = 0.f;
-		static s32 sampleCount = 0;
-
-		// Collect small drift movements when stationary
-		accumulatedOffsetX += gyroDeltaYaw;
-		accumulatedOffsetY += gyroDeltaPitch;
-		sampleCount++;
-
-		// Average the collected values over multiple frames
-		if (sampleCount >= 200) { // Increased sample count to improve accuracy
-				gyroOffsetX = accumulatedOffsetX / sampleCount;
-				gyroOffsetY = accumulatedOffsetY / sampleCount;
-
-				// Reset accumulation but retain calculated offsets
-				accumulatedOffsetX = 0.f;
-				accumulatedOffsetY = 0.f;
-				sampleCount = 0;
-
-				printf("Gyro Auto-Calibration Completed! OffsetX: %.2f, OffsetY: %.2f\n", gyroOffsetX, gyroOffsetY);
-		}
 }
 
 f32 inputGetGyroMinThreshold(void)
