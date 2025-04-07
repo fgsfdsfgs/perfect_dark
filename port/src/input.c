@@ -1907,8 +1907,9 @@ void applyGyroThreshold(f32* deltaX, f32* deltaY, f32 threshold)
 						controllerType == SDL_CONTROLLER_TYPE_NINTENDO_SWITCH_JOYCON_PAIR);
 		}
 
-		// **Set deadzone & smoothing dynamically**
-		const f32 baseDeadzone = isNintendoController ? fmaxf(threshold, 0.08f) : fmaxf(threshold, 0.05f);
+		// Adjust deadzone dynamically based on threshold slider
+		const f32 minDeadzone = (threshold == 0.00f) ? 0.01f : threshold; // **Reduce deadzone system-wide when threshold is off**
+		const f32 baseDeadzone = isNintendoController ? fmaxf(minDeadzone, 0.06f) : fmaxf(minDeadzone, 0.03f); // **Slightly higher for Switch controllers**
 		const f32 baseSmoothing = isNintendoController ? 0.80f : 0.85f;
 		const f32 maxDelta = fmaxf(15.f, threshold * 3.f);
 		const f32 minDelta = -maxDelta;
