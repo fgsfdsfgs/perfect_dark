@@ -1026,18 +1026,35 @@ void autoCalibrateGyro() {
 		static f32 accumulatedOffsetX = 0.f;
 		static f32 accumulatedOffsetY = 0.f;
 		static s32 sampleCount = 0;
+		static bool calibrationRun = false; // Prevent repeated calibration
 
-		// Collect small drift movements when stationary
+		// **Ensure gyro variables are initialized properly at startup**
+		if (!calibrationRun) {
+				sampleCount = 0;
+				accumulatedOffsetX = 0.f;
+				accumulatedOffsetY = 0.f;
+				gyroDeltaYaw = 0.f;   // Reset gyro movement variables at boot
+				gyroDeltaPitch = 0.f;
+				calibrationRun = true;
+				printf("Gyro Auto-Calibration Triggered on Boot!\n");
+		}
+
+		// **Prevent division by zero**
+		if (sampleCount == 0) {
+				return; // Avoid invalid calculations
+		}
+
+		// **Collect small drift movements when stationary**
 		accumulatedOffsetX += gyroDeltaYaw;
 		accumulatedOffsetY += gyroDeltaPitch;
 		sampleCount++;
 
-		// Average the collected values over multiple frames
-		if (sampleCount >= 200) { // Increased sample count to improve accuracy
+		// **Perform averaging over multiple frames**
+		if (sampleCount >= 200) {
 				gyroOffsetX = accumulatedOffsetX / sampleCount;
 				gyroOffsetY = accumulatedOffsetY / sampleCount;
 
-				// Reset accumulation but retain calculated offsets
+				// **Reset accumulation but retain offsets**
 				accumulatedOffsetX = 0.f;
 				accumulatedOffsetY = 0.f;
 				sampleCount = 0;
