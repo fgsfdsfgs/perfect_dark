@@ -1117,13 +1117,13 @@ static inline void inputUpdateGyro(void)
 										applyGyroActivationMode(&deltaX, &deltaY, inputGetGyroActivationMode());
 										applyGyroThreshold(&deltaX, &deltaY, inputGetGyroMinThreshold());
 
-										// **Perform auto-calibration ONLY when the controller is connected**
+										// **Perform auto-calibration ONLY when the controller is connected
 										if (inputGyroAutoCalibrationIsEnabled() && SDL_NumJoysticks() > 0)
 										{
 												autoCalibrateGyro();
 										}
 
-										// Apply updated offsets **immediately after calibration**
+										// Apply updated offsets **immediately after calibration
 										deltaX -= gyroOffsetX;
 										deltaY -= gyroOffsetY;
 
