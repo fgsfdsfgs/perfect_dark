@@ -119,7 +119,7 @@ static f32 gyroAimSensX = 5.0f;
 static f32 gyroAimSensY = 5.0f;
 static s32 g_GyroAxisMode = GYRO_YAW; 
 static s32 g_GyroAimMode = GYRO_AIM_MODE_BOTH;
-static f32 gyroMinThreshold = 0.05f;
+static f32 gyroMinThreshold = 0.06f;
 static s32 g_GyroActivationMode = GYRO_ALWAYS_ON;
 static s32 gyroAutoCalibration = 1;
 static f32 gyroOffsetX = 0.f;
@@ -1053,7 +1053,6 @@ static inline void inputUpdateGyro(void)
 				return; // Exit if gyro is not enabled
 		}
 
-		// Declare an array for gyro sensor data
 		float gyroData[3];
 
 		// **Check if any controllers are connected**
@@ -1073,9 +1072,6 @@ static inline void inputUpdateGyro(void)
 				return;
 		}
 
-		static bool controllerPreviouslyConnected = false;
-
-		// Iterate through all connected controllers
 		for (int i = 0; i < SDL_NumJoysticks(); i++)
 		{
 				if (SDL_IsGameController(i))
@@ -1087,7 +1083,7 @@ static inline void inputUpdateGyro(void)
 								bool hasGyro = SDL_GameControllerHasSensor(controller, SDL_SENSOR_GYRO);
 								bool hasAccel = SDL_GameControllerHasSensor(controller, SDL_SENSOR_ACCEL);
 
-								if (!controllerPreviouslyConnected || (!hasGyro && !hasAccel))
+								if (!hasGyro && !hasAccel)
 								{
 										sysLogPrintf(LOG_WARNING, "Controller %d reconnected. Re-enabling gyro.", i);
 
@@ -1101,8 +1097,6 @@ static inline void inputUpdateGyro(void)
 										// **Re-enable gyro sensors**
 										SDL_GameControllerSetSensorEnabled(controller, SDL_SENSOR_GYRO, SDL_TRUE);
 										SDL_GameControllerSetSensorEnabled(controller, SDL_SENSOR_ACCEL, SDL_TRUE);
-
-										controllerPreviouslyConnected = true;
 								}
 
 								// Retrieve gyro data
@@ -1118,43 +1112,33 @@ static inline void inputUpdateGyro(void)
 								{
 										f32 deltaX = 0.f, deltaY = 0.f;
 
-										// Apply axis mapping to raw gyro data
 										applyGyroAxisMapping(gyroData, &deltaX, &deltaY);
-
-										// Apply gyro aim mode logic
 										applyGyroAimMode(&deltaX, &deltaY);
-
-										// Apply activation mode logic
 										applyGyroActivationMode(&deltaX, &deltaY, inputGetGyroActivationMode());
-
-										// Apply movement threshold
 										applyGyroThreshold(&deltaX, &deltaY, inputGetGyroMinThreshold());
 
-										// **Perform auto-calibration ONLY when controller is connected**
+										// **Perform auto-calibration ONLY when the controller is connected**
 										if (inputGyroAutoCalibrationIsEnabled() && SDL_NumJoysticks() > 0)
 										{
 												autoCalibrateGyro();
 										}
 
-										// Assign the processed deltas to the global values
-										gyroDeltaYaw = deltaX;       // X-axis delta
-										gyroDeltaPitch = deltaY;     // Y-axis delta
-										gyroDeltaRoll = gyroData[2]; // Keep Roll for other use cases
+										// Apply updated offsets **immediately after calibration**
+										deltaX -= gyroOffsetX;
+										deltaY -= gyroOffsetY;
 
-										// Update the global accumulated gyro values
+										gyroDeltaYaw = deltaX;
+										gyroDeltaPitch = deltaY;
+										gyroDeltaRoll = gyroData[2];
+
 										gyroYaw += gyroDeltaYaw;
 										gyroPitch += gyroDeltaPitch;
 										gyroRoll += gyroDeltaRoll;
 
-										// Optionally, log gyro state for debugging
 										sysLogPrintf(LOG_NOTE,
-												"Controller %d - Gyro Input Updated - Yaw: %f, Pitch: %f, Roll: %f (DeltaX: %f, DeltaY: %f)",
-												i, gyroYaw, gyroPitch, gyroRoll, deltaX, deltaY);
+												"Controller %d - Gyro Updated - Yaw: %f, Pitch: %f, Roll: %f | OffsetX: %f, OffsetY: %f",
+												i, gyroYaw, gyroPitch, gyroRoll, gyroOffsetX, gyroOffsetY);
 								}
-						}
-						else
-						{
-								controllerPreviouslyConnected = false; // Mark as disconnected
 						}
 				}
 		}
