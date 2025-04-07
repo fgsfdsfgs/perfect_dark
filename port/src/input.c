@@ -1896,19 +1896,27 @@ void inputSetGyroMinThreshold(f32 threshold)
 
 void applyGyroThreshold(f32* deltaX, f32* deltaY, f32 threshold)
 {
-		// Define smoothing and deadzone parameters
-		const f32 baseSmoothing = 0.85f;
-		const f32 baseDeadzone = fmaxf(threshold, 0.05f); // Slightly lowered for finer control
+		// **Ensure input pointers are valid**
+		if (!deltaX || !deltaY) return;
+
+		// **Check if a controller exists before accessing it**
+		bool isNintendoController = false;
+		if (pads[0]) {
+				SDL_GameControllerType controllerType = SDL_GameControllerGetType(pads[0]);
+				isNintendoController = (controllerType == SDL_CONTROLLER_TYPE_NINTENDO_SWITCH_PRO ||
+						controllerType == SDL_CONTROLLER_TYPE_NINTENDO_SWITCH_JOYCON_PAIR);
+		}
+
+		// **Set deadzone & smoothing dynamically**
+		const f32 baseDeadzone = isNintendoController ? fmaxf(threshold, 0.08f) : fmaxf(threshold, 0.05f);
+		const f32 baseSmoothing = isNintendoController ? 0.80f : 0.85f;
 		const f32 maxDelta = fmaxf(15.f, threshold * 3.f);
 		const f32 minDelta = -maxDelta;
 
-		// Ensure input pointers are valid before accessing values
-		if (!deltaX || !deltaY) return;
-
-		// Dynamic threshold scaling based on movement magnitude
+		// **Dynamic threshold scaling based on movement magnitude**
 		const f32 dynamicThreshold = (fabsf(*deltaX) > 5.f || fabsf(*deltaY) > 5.f) ? threshold * baseSmoothing : threshold;
 
-		// Process X-axis (yaw)
+		// **Process X-axis (yaw)**
 		if (fabsf(*deltaX) < baseDeadzone) {
 				*deltaX = 0.f; // Apply deadzone
 		}
@@ -1917,7 +1925,7 @@ void applyGyroThreshold(f32* deltaX, f32* deltaY, f32 threshold)
 				*deltaX = fmaxf(fminf(adjustedX, maxDelta), minDelta);
 		}
 
-		// Process Y-axis (pitch)
+		// **Process Y-axis (pitch)**
 		if (fabsf(*deltaY) < baseDeadzone) {
 				*deltaY = 0.f; // Apply deadzone
 		}
@@ -1926,11 +1934,10 @@ void applyGyroThreshold(f32* deltaX, f32* deltaY, f32 threshold)
 				*deltaY = fmaxf(fminf(adjustedY, maxDelta), minDelta);
 		}
 
-		// Debug print statement to verify values
-		printf("Gyro Threshold Applied - X: %.2f, Y: %.2f (Deadzone: %.2f, ClampRange: [%.2f, %.2f])\n",
-				*deltaX, *deltaY, baseDeadzone, minDelta, maxDelta);
+		// **Debug print statement to verify values**
+		printf("Gyro Threshold Applied - X: %.2f, Y: %.2f (Deadzone: %.2f, ClampRange: [%.2f, %.2f], Nintendo: %s)\n",
+				*deltaX, *deltaY, baseDeadzone, minDelta, maxDelta, isNintendoController ? "YES" : "NO");
 }
-
 
 const char *inputGetContKeyName(u32 ck)
 {
