@@ -1647,74 +1647,48 @@ void inputGyroGetRawDelta(s32* dx, s32* dy, s32* dz)
 
 void inputGyroGetScaledDelta(f32* dx, f32* dy)
 {
-		// Ensure input pointers are valid
-		if (!dx || !dy) return;
+		if (!dx || !dy) return; // Safety check
 
-		// Default deltas to zero
 		f32 gdx = 0.f, gdy = 0.f;
 
 		if (gyroEnabled) {
-				// Retrieve raw gyro deltas (yaw and pitch)
-				gdx = (f32)gyroDeltaYaw;
-				gdy = (f32)gyroDeltaPitch;
+				// Ensure values aren't NaN before applying scaling
+				if (!isnan(gyroDeltaYaw) && !isnan(gyroDeltaPitch)) {
+						gdx = gyroSensX * (f32)gyroDeltaYaw / 100.0f;
+						gdy = gyroSensY * (f32)gyroDeltaPitch / 100.0f;
 
-				// Prevent frame time anomalies
-				static Uint64 lastTick = 0;
-				Uint64 currentTick = SDL_GetTicks();
-				f32 frameTime = (lastTick > 0) ? ((f32)(currentTick - lastTick) / 1000.0f) : (1.0f / 60.0f);
-				lastTick = currentTick;
-
-				// Ensure frameTime remains in a stable range
-				frameTime = fmaxf(frameTime, 1.0f / 240.0f);
-
-				// Sensitivity Scaling
-				const f32 targetFPS = 60.f;
-				const f32 frameScale = targetFPS * frameTime;
-
-				// Reduce sensitivity slightly to smooth input
-				gdx *= gyroSensX * 0.26f * frameScale;
-				gdy *= gyroSensY * 0.26f * frameScale;
+						// Prevent excessive movement spikes
+						gdx = fminf(fmaxf(gdx, -2.0f), 2.0f);
+						gdy = fminf(fmaxf(gdy, -2.0f), 2.0f);
+				}
+				else {
+						gdx = 0.f;
+						gdy = 0.f;
+				}
 		}
 
-		// Assign scaled deltas
 		*dx = gdx;
 		*dy = gdy;
 }
 
 void inputGyroGetAbsScaledDelta(f32* dx, f32* dy)
 {
-    // Default deltas to zero
-    f32 gdx = 0.f, gdy = 0.f;
+		if (!dx || !dy) return; // Safety check
 
-    if (gyroEnabled) {
-        // Retrieve raw gyro deltas (yaw and pitch)
-        gdx = (f32)gyroDeltaYaw;
-        gdy = (f32)gyroDeltaPitch;
+		f32 gdx = 0.f, gdy = 0.f;
 
-        // Normalize Scaling Based on Frame Rate
-        static Uint64 lastTick = 0;
-        Uint64 currentTick = SDL_GetTicks();
-        f32 frameTime = (lastTick > 0) ? ((f32)(currentTick - lastTick) / 1000.0f) : (1.0f / 60.0f);
-        lastTick = currentTick;
+		if (gyroEnabled) {
+				// Apply absolute scaling to mimic mouse behavior
+				gdx = fabsf(gyroSensX) * (f32)gyroDeltaYaw / 100.0f;
+				gdy = fabsf(gyroSensY) * (f32)gyroDeltaPitch / 100.0f;
 
-        // Ensure frameTime is within a stable range
-        frameTime = fmaxf(frameTime, 1.0f / 240.0f);
+				// Clamp values for stability
+				gdx = fminf(fmaxf(gdx, -2.0f), 2.0f);
+				gdy = fminf(fmaxf(gdy, -2.0f), 2.0f);
+		}
 
-        // Apply frame-rate normalization scaling
-        const f32 targetFPS = 60.f;
-        const f32 frameScale = targetFPS * frameTime;
-
-        // Apply absolute scaling with refined sensitivity handling
-        const f32 minSensX = fmaxf(fabsf(gyroSensX), 0.030f);
-        const f32 minSensY = fmaxf(fabsf(gyroSensY), 0.030f);
-
-        gdx = (gdx / minSensX) * frameScale;
-        gdy = (gdy / minSensY) * frameScale;
-    }
-
-    // Assign deltas to output variables
-    if (dx) *dx = gdx;
-    if (dy) *dy = gdy;
+		*dx = gdx;
+		*dy = gdy;
 }
 
 void inputGyroGetSpeed(f32* x, f32* y)
