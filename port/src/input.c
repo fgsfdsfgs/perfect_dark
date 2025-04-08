@@ -1903,19 +1903,28 @@ void applyGyroThreshold(f32* deltaX, f32* deltaY, f32 threshold)
 		bool isNintendoController = false;
 		if (pads[0]) {
 				SDL_GameControllerType controllerType = SDL_GameControllerGetType(pads[0]);
-				isNintendoController = (controllerType == SDL_CONTROLLER_TYPE_NINTENDO_SWITCH_PRO ||
-						controllerType == SDL_CONTROLLER_TYPE_NINTENDO_SWITCH_JOYCON_PAIR);
+				if (controllerType != SDL_CONTROLLER_TYPE_UNKNOWN) {
+						isNintendoController = (controllerType == SDL_CONTROLLER_TYPE_NINTENDO_SWITCH_PRO ||
+								controllerType == SDL_CONTROLLER_TYPE_NINTENDO_SWITCH_JOYCON_PAIR);
+				}
 		}
 
-		// Adjust deadzone dynamically based on threshold slider
-		const f32 minDeadzone = (threshold == 0.00f) ? 0.01f : threshold; // **Reduce deadzone system-wide when threshold is off**
-		const f32 baseDeadzone = isNintendoController ? fmaxf(minDeadzone, 0.06f) : fmaxf(minDeadzone, 0.03f); // **Slightly higher for Switch controllers**
+		// **Refined Deadzone Scaling**
+		const f32 minDeadzone = (threshold == 0.00f) ? 0.01f : threshold;
+		const f32 baseDeadzone = (threshold == 0.00f) ? (isNintendoController ? 0.07f : 0.04f)
+				: (isNintendoController ? fmaxf(threshold, 0.08f) : fmaxf(threshold, 0.05f));
 		const f32 baseSmoothing = isNintendoController ? 0.80f : 0.85f;
 		const f32 maxDelta = fmaxf(15.f, threshold * 3.f);
 		const f32 minDelta = -maxDelta;
 
 		// **Dynamic threshold scaling based on movement magnitude**
 		const f32 dynamicThreshold = (fabsf(*deltaX) > 5.f || fabsf(*deltaY) > 5.f) ? threshold * baseSmoothing : threshold;
+
+		// **Fix: Apply gyro offsets only when the slider is NOT raw (`0.00`)**
+		if (threshold != 0.00f) {
+				*deltaX -= gyroOffsetX;
+				*deltaY -= gyroOffsetY;
+		}
 
 		// **Process X-axis (yaw)**
 		if (fabsf(*deltaX) < baseDeadzone) {
@@ -1934,10 +1943,6 @@ void applyGyroThreshold(f32* deltaX, f32* deltaY, f32 threshold)
 				f32 adjustedY = (*deltaY > 0) ? (*deltaY - dynamicThreshold) : (*deltaY + dynamicThreshold);
 				*deltaY = fmaxf(fminf(adjustedY, maxDelta), minDelta);
 		}
-
-		// **Debug print statement to verify values**
-		printf("Gyro Threshold Applied - X: %.2f, Y: %.2f (Deadzone: %.2f, ClampRange: [%.2f, %.2f], Nintendo: %s)\n",
-				*deltaX, *deltaY, baseDeadzone, minDelta, maxDelta, isNintendoController ? "YES" : "NO");
 }
 
 const char *inputGetContKeyName(u32 ck)
