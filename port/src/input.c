@@ -1658,6 +1658,9 @@ void inputGyroGetRawDelta(s32* dx, s32* dy, s32* dz)
 
 void inputGyroGetScaledDelta(f32* dx, f32* dy)
 {
+		// Ensure input pointers are valid
+		if (!dx || !dy) return;
+
 		// Default deltas to zero
 		f32 gdx = 0.f, gdy = 0.f;
 
@@ -1666,29 +1669,27 @@ void inputGyroGetScaledDelta(f32* dx, f32* dy)
 				gdx = (f32)gyroDeltaYaw;
 				gdy = (f32)gyroDeltaPitch;
 
-				// Normalize Scaling Based on Frame Rate
+				// Prevent frame time anomalies
 				static Uint64 lastTick = 0;
 				Uint64 currentTick = SDL_GetTicks();
 				f32 frameTime = (lastTick > 0) ? ((f32)(currentTick - lastTick) / 1000.0f) : (1.0f / 60.0f);
 				lastTick = currentTick;
 
-				// Adjust frame time dynamically based on detected FPS values
-				frameTime = fmaxf(frameTime, 1.0f / 240.0f); // Prevent extreme scaling at high FPS
+				// Ensure frameTime remains in a stable range
+				frameTime = fmaxf(frameTime, 1.0f / 240.0f);
 
-				// Apply normalized sensitivity scaling
+				// Sensitivity Scaling
 				const f32 targetFPS = 60.f;
 				const f32 frameScale = targetFPS * frameTime;
 
-				// Reduce baseline sensitivity slightly for smoother input
-				const f32 baselineSensitivityFactor = 0.26f; // Lowered from 0.30f
-
-				gdx *= (gyroSensX * baselineSensitivityFactor) * frameScale;
-				gdy *= (gyroSensY * baselineSensitivityFactor) * frameScale;
+				// Reduce sensitivity slightly to smooth input
+				gdx *= gyroSensX * 0.26f * frameScale;
+				gdy *= gyroSensY * 0.26f * frameScale;
 		}
 
-		// Assign scaled deltas to output variables
-		if (dx) *dx = gdx;
-		if (dy) *dy = gdy;
+		// Assign scaled deltas
+		*dx = gdx;
+		*dy = gdy;
 }
 
 void inputGyroGetAbsScaledDelta(f32* dx, f32* dy)
@@ -1896,37 +1897,34 @@ void inputSetGyroMinThreshold(f32 threshold)
 
 void applyGyroThreshold(f32* deltaX, f32* deltaY, f32 threshold)
 {
-		// **Ensure input pointers are valid**
+		// Ensure input pointers are valid
 		if (!deltaX || !deltaY) return;
 
-		// **Check if a controller exists before accessing it**
+		// Check if a controller exists before accessing it
 		bool isNintendoController = false;
 		if (pads[0]) {
 				SDL_GameControllerType controllerType = SDL_GameControllerGetType(pads[0]);
-				if (controllerType != SDL_CONTROLLER_TYPE_UNKNOWN) {
-						isNintendoController = (controllerType == SDL_CONTROLLER_TYPE_NINTENDO_SWITCH_PRO ||
-								controllerType == SDL_CONTROLLER_TYPE_NINTENDO_SWITCH_JOYCON_PAIR);
-				}
+				isNintendoController = (controllerType == SDL_CONTROLLER_TYPE_NINTENDO_SWITCH_PRO ||
+						controllerType == SDL_CONTROLLER_TYPE_NINTENDO_SWITCH_JOYCON_PAIR);
 		}
 
-		// **Refined Deadzone Scaling**
+		// Adjust deadzone dynamically based on threshold slider
 		const f32 minDeadzone = (threshold == 0.00f) ? 0.01f : threshold;
-		const f32 baseDeadzone = (threshold == 0.00f) ? (isNintendoController ? 0.07f : 0.04f)
-				: (isNintendoController ? fmaxf(threshold, 0.08f) : fmaxf(threshold, 0.05f));
+		const f32 baseDeadzone = (threshold == 0.00f) ? (isNintendoController ? 0.07f : 0.04f) : (isNintendoController ? fmaxf(threshold, 0.08f) : fmaxf(threshold, 0.05f));
 		const f32 baseSmoothing = isNintendoController ? 0.80f : 0.85f;
 		const f32 maxDelta = fmaxf(15.f, threshold * 3.f);
 		const f32 minDelta = -maxDelta;
 
-		// **Dynamic threshold scaling based on movement magnitude**
+		// Dynamic threshold scaling based on movement magnitude
 		const f32 dynamicThreshold = (fabsf(*deltaX) > 5.f || fabsf(*deltaY) > 5.f) ? threshold * baseSmoothing : threshold;
 
-		// **Fix: Apply gyro offsets only when the slider is NOT raw (`0.00`)**
+		// **Ensure that offsets are applied only when threshold isn't zero**
 		if (threshold != 0.00f) {
 				*deltaX -= gyroOffsetX;
 				*deltaY -= gyroOffsetY;
 		}
 
-		// **Process X-axis (yaw)**
+		// Process X-axis (yaw)
 		if (fabsf(*deltaX) < baseDeadzone) {
 				*deltaX = 0.f; // Apply deadzone
 		}
@@ -1935,7 +1933,7 @@ void applyGyroThreshold(f32* deltaX, f32* deltaY, f32 threshold)
 				*deltaX = fmaxf(fminf(adjustedX, maxDelta), minDelta);
 		}
 
-		// **Process Y-axis (pitch)**
+		// Process Y-axis (pitch)
 		if (fabsf(*deltaY) < baseDeadzone) {
 				*deltaY = 0.f; // Apply deadzone
 		}
@@ -1943,6 +1941,10 @@ void applyGyroThreshold(f32* deltaX, f32* deltaY, f32 threshold)
 				f32 adjustedY = (*deltaY > 0) ? (*deltaY - dynamicThreshold) : (*deltaY + dynamicThreshold);
 				*deltaY = fmaxf(fminf(adjustedY, maxDelta), minDelta);
 		}
+
+		// Debug print statement to verify values
+		printf("Gyro Threshold Applied - X: %.2f, Y: %.2f (Deadzone: %.2f, ClampRange: [%.2f, %.2f], Nintendo: %s)\n",
+				*deltaX, *deltaY, baseDeadzone, minDelta, maxDelta, isNintendoController ? "YES" : "NO");
 }
 
 const char *inputGetContKeyName(u32 ck)
