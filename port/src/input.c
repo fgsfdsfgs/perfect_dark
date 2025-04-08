@@ -6,6 +6,7 @@
 #include <PR/os_cont.h>
 #include "platform.h"
 #include "input.h"
+#include "gyrospace.h"
 #include "../include/types.h"
 #include "video.h"
 #include "config.h"
