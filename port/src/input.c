@@ -1654,8 +1654,8 @@ void inputGyroGetScaledDelta(f32* dx, f32* dy)
 		if (gyroEnabled) {
 				// Ensure values aren't NaN before applying scaling
 				if (!isnan(gyroDeltaYaw) && !isnan(gyroDeltaPitch)) {
-						gdx = gyroSensX * (f32)gyroDeltaYaw / 100.0f;
-						gdy = gyroSensY * (f32)gyroDeltaPitch / 100.0f;
+						gdx = gyroSensX * (f32)gyroDeltaYaw / 15.0f;
+						gdy = gyroSensY * (f32)gyroDeltaPitch / 15.0f;
 
 						// Prevent excessive movement spikes
 						gdx = fminf(fmaxf(gdx, -2.0f), 2.0f);
@@ -1679,8 +1679,8 @@ void inputGyroGetAbsScaledDelta(f32* dx, f32* dy)
 
 		if (gyroEnabled) {
 				// Apply absolute scaling to mimic mouse behavior
-				gdx = fabsf(gyroSensX) * (f32)gyroDeltaYaw / 100.0f;
-				gdy = fabsf(gyroSensY) * (f32)gyroDeltaPitch / 100.0f;
+				gdx = fabsf(gyroSensX) * (f32)gyroDeltaYaw / 15.0f;
+				gdy = fabsf(gyroSensY) * (f32)gyroDeltaPitch / 15.0f;
 
 				// Clamp values for stability
 				gdx = fminf(fmaxf(gdx, -2.0f), 2.0f);
