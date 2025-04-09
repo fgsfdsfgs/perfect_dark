@@ -131,7 +131,7 @@ enum gyroaxismode {
 		GYRO_ROLL = 1,
 		GYRO_LOCAL = 2,
 		GYRO_PLAYER = 3,
-		GYRO_SPACE = 4,
+		GYRO_WORLD = 4
 };
 
 
