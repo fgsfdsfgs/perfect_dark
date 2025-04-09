@@ -1623,16 +1623,18 @@ void applyGyroAxisMapping(float gyroData[3], f32* deltaX, f32* deltaY)
 						return;
 				}
 
-				// Apply Local Space transformation using a proper rotation matrix
-				Matrix4 localTransformMatrix = ComputeRotationMatrix(
-						clamp(-gyroData[1], -2.0f, 2.0f),  // Yaw
-						clamp(-gyroData[0], -2.0f, 2.0f),  // Pitch
-						clamp(gyroData[2], -2.0f, 2.0f));  // Roll
+				// Ensure yaw, pitch, and roll match GYRO_YAW and GYRO_ROLL behavior
+				float processedYaw = -gyroData[1];  // Yaw for horizontal movement
+				float processedRoll = gyroData[2];   // Roll for horizontal movement
+				float processedPitch = -gyroData[0]; // Pitch for vertical movement
 
-				Vector3 rawGyro = Vec3_New(-gyroData[1], -gyroData[0], gyroData[2]);
-				Vector3 transformedGyro = MultiplyMatrixVector(localTransformMatrix, rawGyro);
+				// Apply Local Space transformation
+				Vector3 transformedGyro = TransformToLocalSpace(
+						processedYaw, processedPitch, processedRoll,
+						1.0f, 1.0f, 1.0f, 0.0f // Sensitivities remain constant
+				);
 
-				// Assign transformed values ensuring stability
+				// Assign transformed values, keeping them aligned with YAW & ROLL logic
 				*deltaX = transformedGyro.x;
 				*deltaY = transformedGyro.y;
 		}

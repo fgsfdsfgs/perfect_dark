@@ -26,11 +26,8 @@
 extern "C" {
 #else
 #include "math.h"
-#include "stdint.h"
-
-#if !defined(__cplusplus) && !defined(__bool_true_false_are_defined)
 #include "stdbool.h"
-#endif
+#include "stdint.h"
 
 #endif
 
@@ -38,15 +35,7 @@ extern "C" {
 #define EPSILON 1e-5
 #endif
 
-
- // ---- Fix bool redefinition conflict ----
-#ifndef __cplusplus
-#include <stdbool.h>  // Standard bool type
-#else
-#define bool s32      // Custom bool type for C++
-#endif
-
-// ---- Debugging and Logging ----
+ // ---- Debugging and Logging ----
 #ifdef ENABLE_DEBUG_LOGS
 #ifdef __cplusplus
 #include <iostream>
@@ -60,6 +49,7 @@ extern "C" {
 #endif
 
 // ---- Type Definitions ----
+
 typedef struct {
 		float x, y, z;
 } Vector3;
@@ -69,6 +59,7 @@ typedef struct {
 } Matrix4;
 
 // ---- Utility Functions ----
+
 static inline float clamp(float value, float min, float max) {
 		return (value > max) ? max : (value < min) ? min : value;
 }
@@ -338,13 +329,6 @@ static inline Vector3 IntegrateWorldSpaceGyro(GamepadMotion* motion, float sideR
 #endif // ENABLE_GAMEPAD_MOTION_HELPERS
 
 
-// ----  ComputeRotationMatrix ----
-static inline Matrix4 ComputeRotationMatrix(float yaw, float pitch, float roll) {
-		Matrix4 rotationMatrix = Matrix4_Identity();
-		// TODO: Implement actual rotation logic here
-		return rotationMatrix;
-}
-
 // ---- Gyro Space Transformations ----
 
 #ifdef __cplusplus
@@ -381,25 +365,26 @@ using GyroSpace::TransformToWorldSpace;
  */
 Vector3 TransformToLocalSpace(float yaw, float pitch, float roll,
 		float yawSensitivity, float pitchSensitivity, float rollSensitivity, float couplingFactor) {
-
-		// Adjust roll independently
-		float adjustedRoll = roll * rollSensitivity;
-
-		// Compute proper rotation matrix for local space
-		Matrix4 localTransformMatrix = ComputeRotationMatrix(
-				yaw * yawSensitivity,
+		// ---- Adjust Roll and Combine Inputs ----
+		float adjustedRoll = (roll * rollSensitivity) - (yaw * couplingFactor);
+		Vector3 rawGyro = Vec3_New(
+				yaw * yawSensitivity - adjustedRoll,
 				pitch * pitchSensitivity,
-				adjustedRoll
+				0.0f
 		);
 
-		// Apply transformation to raw gyro input
-		Vector3 rawGyro = Vec3_New(yaw * yawSensitivity, pitch * pitchSensitivity, adjustedRoll);
+		// ---- Define Local Transformation Matrix ----
+		Matrix4 localTransformMatrix = Matrix4_Identity(); // Identity matrix for simplicity
+
+		// ---- Apply Transformation ----
 		Vector3 localGyro = MultiplyMatrixVector(localTransformMatrix, rawGyro);
 
-		// Return correctly transformed local gyro vector
+		// ---- Lean Fix for Roll ----
+		localGyro.z = -localGyro.z;
+
+		// ---- Return the Transformed Vector ----
 		return localGyro;
 }
-
 
 /**
  * Transforms gyro inputs to Player Space, considering gravity alignment.
