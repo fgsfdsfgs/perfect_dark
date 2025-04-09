@@ -1708,8 +1708,6 @@ void applyGyroAxisMapping(float gyroData[3], f32* deltaX, f32* deltaY)
 		}
 		break;
 
-
-				// Add other modes (GYRO_LOCAL, GYRO_PLAYER, GYRO_SPACE))
 		default:
 				*deltaX = 0.f; // Default to zero if mode is unrecognized
 				*deltaY = 0.f;

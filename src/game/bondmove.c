@@ -717,11 +717,11 @@ void bmoveProcessInput(bool allowc1x, bool allowc1y, bool allowc1buttons, bool i
 	f32 increment2;
 	f32 newverta;
 #ifndef PLATFORM_N64
-	// Mouse sensitivity scaling (already working correctly)
+	// Mouse sensitivity scaling )
 	const f32 mlookscale = g_Vars.lvupdate240 ? (4.f / (f32)g_Vars.lvupdate240) : 4.f;
 	const bool allowmlook = (g_Vars.currentplayernum == 0) && (allowc1x || allowc1y);
 
-	// **Fix: Separate gyro sensitivity from framerate fluctuations**
+	// Gyro sensitivity scaling
 	const f32 gyroBaseSens = 4.f; // Define fixed base sensitivity
 	const f32 gyroscale = gyroBaseSens; // Ensure it is constant and independent of FPS
 
@@ -732,7 +732,7 @@ void bmoveProcessInput(bool allowc1x, bool allowc1y, bool allowc1buttons, bool i
 			(PLAYER_EXTCFG().gyroaimmode == GYRO_AIM_MODE_CROSSHAIR ||
 					PLAYER_EXTCFG().gyroaimmode == GYRO_AIM_MODE_BOTH);
 
-	// Keep frameScale for other calculations, but NOT for gyro sensitivity
+	// frameScale for other calculations
 	const f32 targetFPS = 60.f;
 	const f32 frameScale = g_Vars.lvupdate240 ? (targetFPS / (f32)g_Vars.lvupdate240) : 1.0f;
 #endif
@@ -2268,12 +2268,11 @@ void bmoveProcessInput(bool allowc1x, bool allowc1y, bool allowc1buttons, bool i
 		}
 	}
 	else if (movedata.canmanualaim) {
-			// Adjust crosshair's position on screen when holding aim and moving stick
 			bgunSetAimType(0);
 
 #ifndef PLATFORM_N64
 			if (allowgcross) {
-					// Gyro is active—apply gyro movement FIRST
+					// Gyro is active, apply gyro movement FIRST
 					inputGyroGetScaledDeltaCrosshair(&movedata.gyrolookdx, &movedata.gyrolookdy);
 
 					const f32 xcoeff = 320.f / 1080.f;
