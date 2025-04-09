@@ -38,6 +38,14 @@ extern "C" {
 #define EPSILON 1e-5
 #endif
 
+
+ // ---- Fix bool redefinition conflict ----
+#ifndef __cplusplus
+#include <stdbool.h>  // Standard bool type
+#else
+#define bool s32      // Custom bool type for C++
+#endif
+
 // ---- Debugging and Logging ----
 #ifdef ENABLE_DEBUG_LOGS
 #ifdef __cplusplus
@@ -53,78 +61,78 @@ extern "C" {
 
 // ---- Type Definitions ----
 typedef struct {
-    float x, y, z;
+		float x, y, z;
 } Vector3;
 
 typedef struct {
-    float m[4][4];
+		float m[4][4];
 } Matrix4;
 
 // ---- Utility Functions ----
 static inline float clamp(float value, float min, float max) {
-    return (value > max) ? max : (value < min) ? min : value;
+		return (value > max) ? max : (value < min) ? min : value;
 }
 
 static inline Vector3 Vec3_New(float x, float y, float z) {
-    Vector3 v = { x, y, z };
-    return v;
+		Vector3 v = { x, y, z };
+		return v;
 }
 
 static inline Vector3 Vec3_Subtract(Vector3 a, Vector3 b) {
-    return Vec3_New(a.x - b.x, a.y - b.y, a.z - b.z);
+		return Vec3_New(a.x - b.x, a.y - b.y, a.z - b.z);
 }
 
 static inline Vector3 Vec3_Scale(Vector3 v, float scalar) {
-    return Vec3_New(v.x * scalar, v.y * scalar, v.z * scalar);
+		return Vec3_New(v.x * scalar, v.y * scalar, v.z * scalar);
 }
 
 static inline float Vec3_Dot(Vector3 a, Vector3 b) {
-    return a.x * b.x + a.y * b.y + a.z * b.z;
+		return a.x * b.x + a.y * b.y + a.z * b.z;
 }
 
 static inline Vector3 Vec3_Cross(Vector3 a, Vector3 b) {
-    return Vec3_New(
-        a.y * b.z - a.z * b.y,
-        a.z * b.x - a.x * b.z,
-        a.x * b.y - a.y * b.x
-    );
+		return Vec3_New(
+				a.y * b.z - a.z * b.y,
+				a.z * b.x - a.x * b.z,
+				a.x * b.y - a.y * b.x
+		);
 }
 
 static inline float Vec3_Magnitude(Vector3 v) {
-    return sqrtf(v.x * v.x + v.y * v.y + v.z * v.z);
+		return sqrtf(v.x * v.x + v.y * v.y + v.z * v.z);
 }
 
 static inline Vector3 Vec3_Normalize(Vector3 v) {
-    float lengthSquared = v.x * v.x + v.y * v.y + v.z * v.z;
-    if (lengthSquared < EPSILON) {
-        DEBUG_LOG("Warning: Attempted to normalize a near-zero vector.\n");
-        return Vec3_New(0.0f, 0.0f, 0.0f);
-    }
-    return Vec3_Scale(v, 1.0f / sqrtf(lengthSquared));
+		float lengthSquared = v.x * v.x + v.y * v.y + v.z * v.z;
+		if (lengthSquared < EPSILON) {
+				DEBUG_LOG("Warning: Attempted to normalize a near-zero vector.\n");
+				return Vec3_New(0.0f, 0.0f, 0.0f);
+		}
+		return Vec3_Scale(v, 1.0f / sqrtf(lengthSquared));
 }
 
 static inline bool Vec3_IsZero(Vector3 v) {
-    return (fabsf(v.x) < EPSILON && fabsf(v.y) < EPSILON && fabsf(v.z) < EPSILON);
+		return (fabsf(v.x) < EPSILON && fabsf(v.y) < EPSILON && fabsf(v.z) < EPSILON);
 }
 
 static inline Vector3 Vec3_Lerp(Vector3 a, Vector3 b, float t) {
-    return Vec3_New(
-        a.x + t * (b.x - a.x),
-        a.y + t * (b.y - a.y),
-        a.z + t * (b.z - a.z)
-    );
+		return Vec3_New(
+				a.x + t * (b.x - a.x),
+				a.y + t * (b.y - a.y),
+				a.z + t * (b.z - a.z)
+		);
 }
 
 static inline Vector3 Vec3_Reflect(Vector3 v, Vector3 normal) {
-    return Vec3_Subtract(v, Vec3_Scale(normal, 2.0f * Vec3_Dot(v, normal)));
+		return Vec3_Subtract(v, Vec3_Scale(normal, 2.0f * Vec3_Dot(v, normal)));
 }
 
 static inline Matrix4 Matrix4_Identity() {
-    Matrix4 matrix = { {{1.0f, 0.0f, 0.0f, 0.0f},
-                       {0.0f, 1.0f, 0.0f, 0.0f},
-                       {0.0f, 0.0f, 1.0f, 0.0f},
-                       {0.0f, 0.0f, 0.0f, 1.0f}} };
-    return matrix;
+		Matrix4 matrix = { {{1.0f, 0.0f, 0.0f, 0.0f},
+											 {0.0f, 1.0f, 0.0f, 0.0f},
+											 {0.0f, 0.0f, 1.0f, 0.0f},
+											 {0.0f, 0.0f, 0.0f, 1.0f}} };
+		return matrix;
 }
 
 // ---- Matrix Operations ----
@@ -134,11 +142,11 @@ static inline Matrix4 Matrix4_Identity() {
  * This implementation must be in the header for `static inline` to work.
  */
 static inline Vector3 MultiplyMatrixVector(Matrix4 matrix, Vector3 vector) {
-    return Vec3_New(
-        matrix.m[0][0] * vector.x + matrix.m[1][0] * vector.y + matrix.m[2][0] * vector.z,
-        matrix.m[0][1] * vector.x + matrix.m[1][1] * vector.y + matrix.m[2][1] * vector.z,
-        matrix.m[0][2] * vector.x + matrix.m[1][2] * vector.y + matrix.m[2][2] * vector.z
-    );
+		return Vec3_New(
+				matrix.m[0][0] * vector.x + matrix.m[1][0] * vector.y + matrix.m[2][0] * vector.z,
+				matrix.m[0][1] * vector.x + matrix.m[1][1] * vector.y + matrix.m[2][1] * vector.z,
+				matrix.m[0][2] * vector.x + matrix.m[1][2] * vector.y + matrix.m[2][2] * vector.z
+		);
 }
 
 // ---- Global Gravity Vector Management ----
@@ -157,23 +165,23 @@ static Vector3 gravNorm = { 0.0f, 1.0f, 0.0f };
  * @param z Z-component of the gravity vector.
  */
 static inline void SetGravityVector(float x, float y, float z) {
-    if (isnan(x) || isnan(y) || isnan(z)) {
-        DEBUG_LOG("Error: Gravity vector contains NaN values. Retaining previous value.\n");
-        return;
-    }
-    float magnitude = sqrtf(x * x + y * y + z * z);
-    if (magnitude < EPSILON) {  // Prevent division by zero
-        DEBUG_LOG("Warning: Gravity vector magnitude is near zero. Retaining previous value.\n");
-        return;
-    }
-    gravNorm = Vec3_Scale(Vec3_New(x, y, z), 1.0f / magnitude); // Normalize
+		if (isnan(x) || isnan(y) || isnan(z)) {
+				DEBUG_LOG("Error: Gravity vector contains NaN values. Retaining previous value.\n");
+				return;
+		}
+		float magnitude = sqrtf(x * x + y * y + z * z);
+		if (magnitude < EPSILON) {  // Prevent division by zero
+				DEBUG_LOG("Warning: Gravity vector magnitude is near zero. Retaining previous value.\n");
+				return;
+		}
+		gravNorm = Vec3_Scale(Vec3_New(x, y, z), 1.0f / magnitude); // Normalize
 }
 
 /**
  * Resets the gravity vector to its default value (0, 1, 0).
  */
 static inline void ResetGravityVector(void) {
-    gravNorm = Vec3_New(0.0f, 1.0f, 0.0f);
+		gravNorm = Vec3_New(0.0f, 1.0f, 0.0f);
 }
 
 /**
@@ -182,7 +190,7 @@ static inline void ResetGravityVector(void) {
  * @return The normalized gravity vector.
  */
 static inline Vector3 GetGravityVector(void) {
-    return gravNorm;
+		return gravNorm;
 }
 
 
@@ -223,112 +231,119 @@ static inline Vector3 GetGravityVector(void) {
 static Vector3 helperGravNorm = { 0.0f, 1.0f, 0.0f }; // Separate gravity for GamepadMotionHelper
 
 static inline void SetHelperGravityVector(float x, float y, float z) {
-    if (x == 0.0f && y == 0.0f && z == 0.0f) { // Check for zero vector
-        DEBUG_LOG("Warning: Gravity vector is zero. Resetting to default.\n");
-        helperGravNorm = Vec3_New(0.0f, 1.0f, 0.0f);
-        return;
-    }
+		if (x == 0.0f && y == 0.0f && z == 0.0f) { // Check for zero vector
+				DEBUG_LOG("Warning: Gravity vector is zero. Resetting to default.\n");
+				helperGravNorm = Vec3_New(0.0f, 1.0f, 0.0f);
+				return;
+		}
 
-    if (isnan(x) || isnan(y) || isnan(z)) {
-        DEBUG_LOG("Error: Gravity vector contains NaN values.\n");
-        return;
-    }
+		if (isnan(x) || isnan(y) || isnan(z)) {
+				DEBUG_LOG("Error: Gravity vector contains NaN values.\n");
+				return;
+		}
 
-    float magnitude = sqrtf(x * x + y * y + z * z);
-    if (magnitude < EPSILON) {
-        DEBUG_LOG("Warning: Gravity vector magnitude is near zero. Resetting to default.\n");
-        helperGravNorm = Vec3_New(0.0f, 1.0f, 0.0f);
-        return;
-    }
+		float magnitude = sqrtf(x * x + y * y + z * z);
+		if (magnitude < EPSILON) {
+				DEBUG_LOG("Warning: Gravity vector magnitude is near zero. Resetting to default.\n");
+				helperGravNorm = Vec3_New(0.0f, 1.0f, 0.0f);
+				return;
+		}
 
-    helperGravNorm = Vec3_Scale(Vec3_New(x, y, z), 1.0f / magnitude);
+		helperGravNorm = Vec3_Scale(Vec3_New(x, y, z), 1.0f / magnitude);
 }
 
 static inline void ResetHelperGravityVector(void) {
-    SetHelperGravityVector(0.0f, 1.0f, 0.0f); // Delegate to SetHelperGravityVector
+		SetHelperGravityVector(0.0f, 1.0f, 0.0f); // Delegate to SetHelperGravityVector
 }
 
 static inline Vector3 GetHelperGravityVector(void) {
-    return helperGravNorm;
+		return helperGravNorm;
 }
 
 /**
  * Uses GamepadMotionHelper for Player Space transformation.
  */
 inline Vector3 IntegratePlayerSpaceGyro(const GamepadMotionHelpers::MotionData& motionData, float yawRelaxFactor = 1.41f) {
-    DEBUG_LOG("GamepadMotionHelper: IntegratePlayerSpaceGyro invoked.\n");
-    float x = 0.0f, y = 0.0f;
+		DEBUG_LOG("GamepadMotionHelper: IntegratePlayerSpaceGyro invoked.\n");
+		float x = 0.0f, y = 0.0f;
 
-    GamepadMotionHelpers::CalculatePlayerSpaceGyro(
-        x, y,
-        motionData.Gyro.x, motionData.Gyro.y, motionData.Gyro.z,
-        helperGravNorm.x, helperGravNorm.y, helperGravNorm.z, // Independent gravity
-        yawRelaxFactor
-    );
+		GamepadMotionHelpers::CalculatePlayerSpaceGyro(
+				x, y,
+				motionData.Gyro.x, motionData.Gyro.y, motionData.Gyro.z,
+				helperGravNorm.x, helperGravNorm.y, helperGravNorm.z, // Independent gravity
+				yawRelaxFactor
+		);
 
-    return Vec3_New(x, y, 0.0f);
+		return Vec3_New(x, y, 0.0f);
 }
 
 /**
  * Uses GamepadMotionHelper for World Space transformation.
  */
 inline Vector3 IntegrateWorldSpaceGyro(const GamepadMotionHelpers::MotionData& motionData, float sideReductionThreshold = 0.125f) {
-    DEBUG_LOG("GamepadMotionHelper: IntegrateWorldSpaceGyro invoked.\n");
-    float x = 0.0f, y = 0.0f;
+		DEBUG_LOG("GamepadMotionHelper: IntegrateWorldSpaceGyro invoked.\n");
+		float x = 0.0f, y = 0.0f;
 
-    GamepadMotionHelpers::CalculateWorldSpaceGyro(
-        x, y,
-        motionData.Gyro.x, motionData.Gyro.y, motionData.Gyro.z,
-        helperGravNorm.x, helperGravNorm.y, helperGravNorm.z, // Independent gravity
-        sideReductionThreshold
-    );
+		GamepadMotionHelpers::CalculateWorldSpaceGyro(
+				x, y,
+				motionData.Gyro.x, motionData.Gyro.y, motionData.Gyro.z,
+				helperGravNorm.x, helperGravNorm.y, helperGravNorm.z, // Independent gravity
+				sideReductionThreshold
+		);
 
-    return Vec3_New(x, y, 0.0f);
+		return Vec3_New(x, y, 0.0f);
 }
 
 #else // C Implementation using GamepadMotion.h
 
  /**
-  * Uses GamepadMotionHelper for Player Space transformation (C wrapper).
-  */
+	* Uses GamepadMotionHelper for Player Space transformation (C wrapper).
+	*/
 static inline Vector3 IntegratePlayerSpaceGyro(GamepadMotion* motion, float yawRelaxFactor) {
-    if (!motion) {
-        DEBUG_LOG("Error: Motion object is NULL in Player Space Gyro.\n");
-        return Vec3_New(0.0f, 0.0f, 0.0f);
-    }
+		if (!motion) {
+				DEBUG_LOG("Error: Motion object is NULL in Player Space Gyro.\n");
+				return Vec3_New(0.0f, 0.0f, 0.0f);
+		}
 
-    DEBUG_LOG("GamepadMotionHelper: IntegratePlayerSpaceGyro invoked (C wrapper).\n");
-    float x = 0.0f, y = 0.0f;
+		DEBUG_LOG("GamepadMotionHelper: IntegratePlayerSpaceGyro invoked (C wrapper).\n");
+		float x = 0.0f, y = 0.0f;
 
-    ProcessMotion(motion, motion->gyroX, motion->gyroY, motion->gyroZ,
-        motion->accelX, motion->accelY, motion->accelZ, motion->deltaTime);
-    GetPlayerSpaceGyro(motion, &x, &y, yawRelaxFactor);
+		ProcessMotion(motion, motion->gyroX, motion->gyroY, motion->gyroZ,
+				motion->accelX, motion->accelY, motion->accelZ, motion->deltaTime);
+		GetPlayerSpaceGyro(motion, &x, &y, yawRelaxFactor);
 
-    return Vec3_New(x, y, 0.0f);
+		return Vec3_New(x, y, 0.0f);
 }
 
 /**
  * Uses GamepadMotionHelper for World Space transformation (C wrapper).
  */
 static inline Vector3 IntegrateWorldSpaceGyro(GamepadMotion* motion, float sideReductionThreshold) {
-    if (!motion) {
-        DEBUG_LOG("Error: Motion object is NULL in World Space Gyro.\n");
-        return Vec3_New(0.0f, 0.0f, 0.0f);
-    }
+		if (!motion) {
+				DEBUG_LOG("Error: Motion object is NULL in World Space Gyro.\n");
+				return Vec3_New(0.0f, 0.0f, 0.0f);
+		}
 
-    DEBUG_LOG("GamepadMotionHelper: IntegrateWorldSpaceGyro invoked (C wrapper).\n");
-    float x = 0.0f, y = 0.0f;
+		DEBUG_LOG("GamepadMotionHelper: IntegrateWorldSpaceGyro invoked (C wrapper).\n");
+		float x = 0.0f, y = 0.0f;
 
-    ProcessMotion(motion, motion->gyroX, motion->gyroY, motion->gyroZ,
-        motion->accelX, motion->accelY, motion->accelZ, motion->deltaTime);
-    GetWorldSpaceGyro(motion, &x, &y, sideReductionThreshold);
+		ProcessMotion(motion, motion->gyroX, motion->gyroY, motion->gyroZ,
+				motion->accelX, motion->accelY, motion->accelZ, motion->deltaTime);
+		GetWorldSpaceGyro(motion, &x, &y, sideReductionThreshold);
 
-    return Vec3_New(x, y, 0.0f);
+		return Vec3_New(x, y, 0.0f);
 }
 
 #endif // C++ or C
 #endif // ENABLE_GAMEPAD_MOTION_HELPERS
 
+
+// ----  ComputeRotationMatrix ----
+static inline Matrix4 ComputeRotationMatrix(float yaw, float pitch, float roll) {
+		Matrix4 rotationMatrix = Matrix4_Identity();
+		// TODO: Implement actual rotation logic here
+		return rotationMatrix;
+}
 
 // ---- Gyro Space Transformations ----
 
@@ -336,20 +351,20 @@ static inline Vector3 IntegrateWorldSpaceGyro(GamepadMotion* motion, float sideR
 namespace GyroSpace {
 #endif
 
-    // Function declarations for gyro space transformations
-    Vector3 TransformToLocalSpace(float yaw, float pitch, float roll,
-        float yawSensitivity, float pitchSensitivity,
-        float rollSensitivity, float couplingFactor);
+		// Function declarations for gyro space transformations
+		Vector3 TransformToLocalSpace(float yaw, float pitch, float roll,
+				float yawSensitivity, float pitchSensitivity,
+				float rollSensitivity, float couplingFactor);
 
-    Vector3 TransformToPlayerSpace(float yaw_input, float pitch_input, float roll_input,
-        Vector3 gravNorm,
-        float yawSensitivity, float pitchSensitivity,
-        float rollSensitivity);
+		Vector3 TransformToPlayerSpace(float yaw_input, float pitch_input, float roll_input,
+				Vector3 gravNorm,
+				float yawSensitivity, float pitchSensitivity,
+				float rollSensitivity);
 
-    Vector3 TransformToWorldSpace(float yaw_input, float pitch_input, float roll_input,
-        Vector3 gravNorm,
-        float yawSensitivity, float pitchSensitivity,
-        float rollSensitivity);
+		Vector3 TransformToWorldSpace(float yaw_input, float pitch_input, float roll_input,
+				Vector3 gravNorm,
+				float yawSensitivity, float pitchSensitivity,
+				float rollSensitivity);
 
 #ifdef __cplusplus
 } // namespace GyroSpace
@@ -365,74 +380,73 @@ using GyroSpace::TransformToWorldSpace;
  * Transforms gyro inputs to Local Space using a transformation matrix.
  */
 Vector3 TransformToLocalSpace(float yaw, float pitch, float roll,
-    float yawSensitivity, float pitchSensitivity, float rollSensitivity, float couplingFactor) {
-    // ---- Adjust Roll and Combine Inputs ----
-    float adjustedRoll = (roll * rollSensitivity) - (yaw * couplingFactor);
-    Vector3 rawGyro = Vec3_New(
-        yaw * yawSensitivity - adjustedRoll,
-        pitch * pitchSensitivity,
-        0.0f
-    );
+		float yawSensitivity, float pitchSensitivity, float rollSensitivity, float couplingFactor) {
 
-    // ---- Define Local Transformation Matrix ----
-    Matrix4 localTransformMatrix = Matrix4_Identity(); // Identity matrix for simplicity
+		// Adjust roll independently
+		float adjustedRoll = roll * rollSensitivity;
 
-    // ---- Apply Transformation ----
-    Vector3 localGyro = MultiplyMatrixVector(localTransformMatrix, rawGyro);
+		// Compute proper rotation matrix for local space
+		Matrix4 localTransformMatrix = ComputeRotationMatrix(
+				yaw * yawSensitivity,
+				pitch * pitchSensitivity,
+				adjustedRoll
+		);
 
-    // ---- Lean Fix for Roll ----
-    localGyro.z = -localGyro.z;
+		// Apply transformation to raw gyro input
+		Vector3 rawGyro = Vec3_New(yaw * yawSensitivity, pitch * pitchSensitivity, adjustedRoll);
+		Vector3 localGyro = MultiplyMatrixVector(localTransformMatrix, rawGyro);
 
-    // ---- Return the Transformed Vector ----
-    return localGyro;
+		// Return correctly transformed local gyro vector
+		return localGyro;
 }
+
 
 /**
  * Transforms gyro inputs to Player Space, considering gravity alignment.
  */
 Vector3 TransformToPlayerSpace(float yaw_input, float pitch_input, float roll_input, Vector3 gravNorm,
-    float yawSensitivity, float pitchSensitivity, float rollSensitivity) {
+		float yawSensitivity, float pitchSensitivity, float rollSensitivity) {
 #ifdef ENABLE_GAMEPAD_MOTION_HELPERS
-    DEBUG_LOG("Using GamepadMotionHelper for Player Space Transformation.\n");
+		DEBUG_LOG("Using GamepadMotionHelper for Player Space Transformation.\n");
 
-    // Initialize GamepadMotion object
-    GamepadMotion* motion = CreateGamepadMotion();
+		// Initialize GamepadMotion object
+		GamepadMotion* motion = CreateGamepadMotion();
 
-    // Ensure gravNorm is valid
-    if (Vec3_IsZero(gravNorm)) {
-        DEBUG_LOG("Warning: gravNorm is zero. Defaulting to (0, 1, 0).\n");
-        gravNorm = Vec3_New(0.0f, 1.0f, 0.0f);
-    }
-    gravNorm = Vec3_Normalize(gravNorm);
+		// Ensure gravNorm is valid
+		if (Vec3_IsZero(gravNorm)) {
+				DEBUG_LOG("Warning: gravNorm is zero. Defaulting to (0, 1, 0).\n");
+				gravNorm = Vec3_New(0.0f, 1.0f, 0.0f);
+		}
+		gravNorm = Vec3_Normalize(gravNorm);
 
-    // Process motion to align inputs with GamepadMotionHelper
-    ProcessMotion(motion, yaw_input, pitch_input, roll_input,
-        gravNorm.x, gravNorm.y, gravNorm.z, 0.0f); // Set deltaTime to 0.0f for alignment
+		// Process motion to align inputs with GamepadMotionHelper
+		ProcessMotion(motion, yaw_input, pitch_input, roll_input,
+				gravNorm.x, gravNorm.y, gravNorm.z, 0.0f); // Set deltaTime to 0.0f for alignment
 
-    // Use Player Space gyro calculation via wrapper
-    float x = 0.0f, y = 0.0f;
-    GetPlayerSpaceGyro(motion, &x, &y, yawSensitivity);
+		// Use Player Space gyro calculation via wrapper
+		float x = 0.0f, y = 0.0f;
+		GetPlayerSpaceGyro(motion, &x, &y, yawSensitivity);
 
-    // Cleanup GamepadMotion object
-    DeleteGamepadMotion(motion);
+		// Cleanup GamepadMotion object
+		DeleteGamepadMotion(motion);
 
-    return Vec3_New(x, y, 0.0f);
+		return Vec3_New(x, y, 0.0f);
 #else
-    // Fallback logic for Player Space transformation
-    if (Vec3_IsZero(gravNorm)) {
-        gravNorm = Vec3_New(0.0f, 1.0f, 0.0f); // Default gravity vector
-        DEBUG_LOG("Warning: gravNorm was zero, defaulting to (0, 1, 0)\n");
-    }
-    gravNorm = Vec3_Normalize(gravNorm);
+		// Fallback logic for Player Space transformation
+		if (Vec3_IsZero(gravNorm)) {
+				gravNorm = Vec3_New(0.0f, 1.0f, 0.0f); // Default gravity vector
+				DEBUG_LOG("Warning: gravNorm was zero, defaulting to (0, 1, 0)\n");
+		}
+		gravNorm = Vec3_Normalize(gravNorm);
 
-    float adjustedYaw = (yaw_input * yawSensitivity) * gravNorm.y + pitch_input * gravNorm.z;
-    float adjustedPitch = pitch_input * pitchSensitivity;
-    float adjustedRoll = (roll_input * rollSensitivity) * gravNorm.x;
+		float adjustedYaw = (yaw_input * yawSensitivity) * gravNorm.y + pitch_input * gravNorm.z;
+		float adjustedPitch = pitch_input * pitchSensitivity;
+		float adjustedRoll = (roll_input * rollSensitivity) * gravNorm.x;
 
-    Vector3 adjustedGyro = Vec3_New(adjustedYaw, adjustedPitch, adjustedRoll);
+		Vector3 adjustedGyro = Vec3_New(adjustedYaw, adjustedPitch, adjustedRoll);
 
-    Matrix4 playerViewMatrix = Matrix4_Identity(); // Placeholder matrix
-    return MultiplyMatrixVector(playerViewMatrix, adjustedGyro);
+		Matrix4 playerViewMatrix = Matrix4_Identity(); // Placeholder matrix
+		return MultiplyMatrixVector(playerViewMatrix, adjustedGyro);
 #endif
 }
 
@@ -441,51 +455,51 @@ Vector3 TransformToPlayerSpace(float yaw_input, float pitch_input, float roll_in
  * Transforms gyro inputs to World Space, considering gravity orientation.
  */
 Vector3 TransformToWorldSpace(float yaw_input, float pitch_input, float roll_input, Vector3 gravNorm,
-    float yawSensitivity, float pitchSensitivity, float rollSensitivity) {
+		float yawSensitivity, float pitchSensitivity, float rollSensitivity) {
 #ifdef ENABLE_GAMEPAD_MOTION_HELPERS
-    DEBUG_LOG("Using GamepadMotionHelper for World Space Transformation.\n");
+		DEBUG_LOG("Using GamepadMotionHelper for World Space Transformation.\n");
 
-    // Initialize GamepadMotion object
-    GamepadMotion* motion = CreateGamepadMotion();
+		// Initialize GamepadMotion object
+		GamepadMotion* motion = CreateGamepadMotion();
 
-    // Ensure gravNorm is valid
-    if (Vec3_IsZero(gravNorm)) {
-        DEBUG_LOG("Warning: gravNorm is zero. Defaulting to (0, 1, 0).\n");
-        gravNorm = Vec3_New(0.0f, 1.0f, 0.0f);
-    }
-    gravNorm = Vec3_Normalize(gravNorm);
+		// Ensure gravNorm is valid
+		if (Vec3_IsZero(gravNorm)) {
+				DEBUG_LOG("Warning: gravNorm is zero. Defaulting to (0, 1, 0).\n");
+				gravNorm = Vec3_New(0.0f, 1.0f, 0.0f);
+		}
+		gravNorm = Vec3_Normalize(gravNorm);
 
-    // Process motion to align inputs with GamepadMotionHelper
-    ProcessMotion(motion, yaw_input, pitch_input, roll_input,
-        gravNorm.x, gravNorm.y, gravNorm.z, 0.0f); // Set deltaTime to 0.0f for alignment
+		// Process motion to align inputs with GamepadMotionHelper
+		ProcessMotion(motion, yaw_input, pitch_input, roll_input,
+				gravNorm.x, gravNorm.y, gravNorm.z, 0.0f); // Set deltaTime to 0.0f for alignment
 
-    // Use World Space gyro calculation via wrapper
-    float x = 0.0f, y = 0.0f;
-    GetWorldSpaceGyro(motion, &x, &y, rollSensitivity);
+		// Use World Space gyro calculation via wrapper
+		float x = 0.0f, y = 0.0f;
+		GetWorldSpaceGyro(motion, &x, &y, rollSensitivity);
 
-    // Cleanup GamepadMotion object
-    DeleteGamepadMotion(motion);
+		// Cleanup GamepadMotion object
+		DeleteGamepadMotion(motion);
 
-    return Vec3_New(x, y, 0.0f);
+		return Vec3_New(x, y, 0.0f);
 #else
-    // Fallback logic for World Space transformation
-    gravNorm = Vec3_Normalize(Vec3_IsZero(gravNorm) ? Vec3_New(0.0f, 1.0f, 0.0f) : gravNorm);
+		// Fallback logic for World Space transformation
+		gravNorm = Vec3_Normalize(Vec3_IsZero(gravNorm) ? Vec3_New(0.0f, 1.0f, 0.0f) : gravNorm);
 
-    Vector3 rawGyro = Vec3_New(
-        pitch_input * pitchSensitivity,
-        -yaw_input * yawSensitivity,
-        roll_input * rollSensitivity
-    );
+		Vector3 rawGyro = Vec3_New(
+				pitch_input * pitchSensitivity,
+				-yaw_input * yawSensitivity,
+				roll_input * rollSensitivity
+		);
 
-    float gravDotPitch = Vec3_Dot(gravNorm, Vec3_New(1.0f, 0.0f, 0.0f));
-    Vector3 pitchAxis = Vec3_Subtract(Vec3_New(1.0f, 0.0f, 0.0f), Vec3_Scale(gravNorm, gravDotPitch));
-    pitchAxis = Vec3_Normalize(Vec3_IsZero(pitchAxis) ? Vec3_New(1.0f, 0.0f, 0.0f) : pitchAxis);
+		float gravDotPitch = Vec3_Dot(gravNorm, Vec3_New(1.0f, 0.0f, 0.0f));
+		Vector3 pitchAxis = Vec3_Subtract(Vec3_New(1.0f, 0.0f, 0.0f), Vec3_Scale(gravNorm, gravDotPitch));
+		pitchAxis = Vec3_Normalize(Vec3_IsZero(pitchAxis) ? Vec3_New(1.0f, 0.0f, 0.0f) : pitchAxis);
 
-    return Vec3_New(
-        -Vec3_Dot(rawGyro, gravNorm),  // Yaw Alignment
-        Vec3_Dot(rawGyro, pitchAxis), // Pitch Alignment
-        rawGyro.z                     // Roll Mapping
-    );
+		return Vec3_New(
+				-Vec3_Dot(rawGyro, gravNorm),  // Yaw Alignment
+				Vec3_Dot(rawGyro, pitchAxis), // Pitch Alignment
+				rawGyro.z                     // Roll Mapping
+		);
 #endif
 }
 

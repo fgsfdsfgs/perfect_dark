@@ -1610,10 +1610,33 @@ void applyGyroAxisMapping(float gyroData[3], f32* deltaX, f32* deltaY)
 				break;
 
 		case GYRO_LOCAL:
-				*deltaX = -gyroData[1]; // Yaw for horizontal movement
-				*deltaY = -gyroData[0]; // Pitch for vertical movement
-				*deltaX += gyroData[2]; // Add Roll for horizontal movement
-				break;
+		{
+				// Apply dead zone to prevent drift
+				if (fabsf(gyroData[0]) < 0.01f) gyroData[0] = 0.f;
+				if (fabsf(gyroData[1]) < 0.01f) gyroData[1] = 0.f;
+				if (fabsf(gyroData[2]) < 0.01f) gyroData[2] = 0.f;
+
+				// Check for NaN values before proceeding
+				if (isnan(gyroData[0]) || isnan(gyroData[1]) || isnan(gyroData[2])) {
+						*deltaX = 0.f;
+						*deltaY = 0.f;
+						return;
+				}
+
+				// Apply Local Space transformation using a proper rotation matrix
+				Matrix4 localTransformMatrix = ComputeRotationMatrix(
+						clamp(-gyroData[1], -2.0f, 2.0f),  // Yaw
+						clamp(-gyroData[0], -2.0f, 2.0f),  // Pitch
+						clamp(gyroData[2], -2.0f, 2.0f));  // Roll
+
+				Vector3 rawGyro = Vec3_New(-gyroData[1], -gyroData[0], gyroData[2]);
+				Vector3 transformedGyro = MultiplyMatrixVector(localTransformMatrix, rawGyro);
+
+				// Assign transformed values ensuring stability
+				*deltaX = transformedGyro.x;
+				*deltaY = transformedGyro.y;
+		}
+		break;
 
 				// Add other modes (GYRO_LOCAL, GYRO_PLAYER, GYRO_SPACE))
 		default:
