@@ -1022,7 +1022,6 @@ void closeGyroController() {
 		}
 }
 
-
 void autoCalibrateGyro() {
 		static f32 accumulatedOffsetX = 0.f;
 		static f32 accumulatedOffsetY = 0.f;
@@ -1045,10 +1044,19 @@ void autoCalibrateGyro() {
 
 		// Apply calibration offsets after 200 stable frames
 		if (sampleCount >= 200) {
-				gyroOffsetX = accumulatedOffsetX / sampleCount;
-				gyroOffsetY = accumulatedOffsetY / sampleCount;
+				if (sampleCount > 0) {
+						gyroOffsetX = accumulatedOffsetX / sampleCount;
+						gyroOffsetY = accumulatedOffsetY / sampleCount;
+				}
+				else {
+						gyroOffsetX = 0.f;
+						gyroOffsetY = 0.f;
+						printf("WARNING: Sample count was zero; skipping calibration.\n");
+				}
 
-				sampleCount = 0; // Reset sample count after applying offsets
+				// Reset sample count after applying offsets
+				sampleCount = 0;
+
 				printf("Gyro Auto-Calibration Completed! OffsetX: %.4f, OffsetY: %.4f\n", gyroOffsetX, gyroOffsetY);
 		}
 }
