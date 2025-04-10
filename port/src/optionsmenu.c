@@ -573,20 +573,18 @@ static MenuItemHandlerResult menuhandlerSwapSticks(s32 operation, struct menuite
 	return 0;
 }
 
-// Function to enable gyro aiming
 static MenuItemHandlerResult menuhandlerGyroEnabled(s32 operation, struct menuitem* item, union handlerdata* data)
 {
 		switch (operation) {
 		case MENUOP_GET:
-				return inputGyroIsEnabled(); // Fetch current state of gyroEnabled
+				return inputGyroIsEnabled(); 
 		case MENUOP_SET:
-				inputGyroEnable(data->checkbox.value); // Update gyroEnabled based on user action
+				inputGyroEnable(data->checkbox.value);
 				break;
 		}
-		return 0; // Ensure proper return value
+		return 0; 
 }
 
-// Function to handle gyro aim mode
 static MenuItemHandlerResult menuhandlerGyroAimMode(s32 operation, struct menuitem* item, union handlerdata* data)
 {
 		static const char* opts[] = {
@@ -597,21 +595,20 @@ static MenuItemHandlerResult menuhandlerGyroAimMode(s32 operation, struct menuit
 
 		switch (operation) {
 		case MENUOP_GETOPTIONCOUNT:
-				data->dropdown.value = ARRAYCOUNT(opts); // Provides count of options
+				data->dropdown.value = ARRAYCOUNT(opts);
 				break;
 		case MENUOP_GETOPTIONTEXT:
-				return (intptr_t)opts[data->dropdown.value]; // Fetches the text of the current option
+				return (intptr_t)opts[data->dropdown.value]; 
 		case MENUOP_SET:
-				inputSetGyroAimMode(data->dropdown.value); // Sets selected mode
+				inputSetGyroAimMode(data->dropdown.value); 
 				break;
 		case MENUOP_GETSELECTEDINDEX:
-				data->dropdown.value = inputGetGyroAimMode(); // Retrieves current aim mode
+				data->dropdown.value = inputGetGyroAimMode();
 		}
 
 		return 0;
 }
 
-// Function to handle gyro activation mode
 static MenuItemHandlerResult menuhandlerGyroActivationMode(s32 operation, struct menuitem* item, union handlerdata* data)
 {
 		static const char* opts[] = {
@@ -637,7 +634,6 @@ static MenuItemHandlerResult menuhandlerGyroActivationMode(s32 operation, struct
 		return 0;
 }
 
-// Function to handle gyro axis mode
 static MenuItemHandlerResult menuhandlerGyroAxisMode(s32 operation, struct menuitem* item, union handlerdata* data)
 {
 		static const char* opts[] = {
@@ -664,40 +660,32 @@ static MenuItemHandlerResult menuhandlerGyroAxisMode(s32 operation, struct menui
 		return 0;
 }
 
-// Function to set gyro sensitivity for X axis
 static MenuItemHandlerResult menuhandlerGyroSensitivityX(s32 operation, struct menuitem* item, union handlerdata* data)
 {
 		switch (operation) {
 		case MENUOP_GETSLIDER:
-				// Retrieve gyro sensitivity for X-axis
 				data->slider.value = inputGyroGetSpeedX() * 100.f + 0.1f;
 				break;
 		case MENUOP_SET:
-				// Update gyro sensitivity for X-axis
 				inputGyroSetSpeedX((f32)data->slider.value / 100.f);
 				break;
 		case MENUOP_GETSLIDERLABEL:
-				// Display X sensitivity on the slider label
 				sprintf(data->slider.label, "%.2f", inputGyroGetSpeedX());
 				break;
 		}
 		return 0;
 }
 
-// Function to set gyro sensitivity for Y axis
 static MenuItemHandlerResult menuhandlerGyroSensitivityY(s32 operation, struct menuitem* item, union handlerdata* data)
 {
 		switch (operation) {
 		case MENUOP_GETSLIDER:
-				// Retrieve gyro sensitivity for Y-axis
 				data->slider.value = inputGyroGetSpeedY() * 100.f + 0.1f;
 				break;
 		case MENUOP_SET:
-				// Update gyro sensitivity for Y-axis
 				inputGyroSetSpeedY((f32)data->slider.value / 100.f);
 				break;
 		case MENUOP_GETSLIDERLABEL:
-				// Display Y sensitivity on the slider label
 				sprintf(data->slider.label, "%.2f", inputGyroGetSpeedY());
 				break;
 		}
@@ -708,15 +696,12 @@ static MenuItemHandlerResult menuhandlerGyroCrosshairSpeedX(s32 operation, struc
 {
 		switch (operation) {
 		case MENUOP_GETSLIDER:
-				// Retrieve gyro aim sensitivity for X-axis
 				data->slider.value = inputGyroGetAimSpeedX() * 100.f + 0.5f;
 				break;
 		case MENUOP_SET:
-				// Update gyro aim sensitivity for X-axis
 				inputGyroSetAimSpeedX((f32)data->slider.value / 100.f);
 				break;
 		case MENUOP_GETSLIDERLABEL:
-				// Display X-axis aim sensitivity on slider label
 				sprintf(data->slider.label, "%.2f", inputGyroGetAimSpeedX());
 				break;
 		}
@@ -727,35 +712,28 @@ static MenuItemHandlerResult menuhandlerGyroCrosshairSpeedY(s32 operation, struc
 {
 		switch (operation) {
 		case MENUOP_GETSLIDER:
-				// Retrieve gyro aim sensitivity for Y-axis
 				data->slider.value = inputGyroGetAimSpeedY() * 100.f + 0.5f;
 				break;
 		case MENUOP_SET:
-				// Update gyro aim sensitivity for Y-axis
 				inputGyroSetAimSpeedY((f32)data->slider.value / 100.f);
 				break;
 		case MENUOP_GETSLIDERLABEL:
-				// Display Y-axis aim sensitivity on slider label
 				sprintf(data->slider.label, "%.2f", inputGyroGetAimSpeedY());
 				break;
 		}
 		return 0;
 }
 
-// Function to handle gyro movement threshold
 static MenuItemHandlerResult menuhandlerGyroMinThreshold(s32 operation, struct menuitem* item, union handlerdata* data)
 {
     switch (operation) {
     case MENUOP_GETSLIDER:
-        // Retrieve the gyro minimum threshold and scale it for the slider
         data->slider.value = inputGetGyroMinThreshold() * 100.0f;
         break;
     case MENUOP_SET:
-        // Set the gyro minimum threshold based on the slider value
         inputSetGyroMinThreshold((f32)data->slider.value / 100.0f);
         break;
     case MENUOP_GETSLIDERLABEL:
-        // Format and display the threshold value on the slider label
         sprintf(data->slider.label, "%.2f", inputGetGyroMinThreshold());
         break;
     }
@@ -763,14 +741,13 @@ static MenuItemHandlerResult menuhandlerGyroMinThreshold(s32 operation, struct m
     return 0;
 }
 
-// Function to handle gyro auto-calibration while stationary
 static MenuItemHandlerResult menuhandlerGyroAutoCalibrationEnabled(s32 operation, struct menuitem* item, union handlerdata* data)
 {
 		switch (operation) {
 		case MENUOP_GET:
-				return inputGyroAutoCalibrationIsEnabled(); // Fetch current state of auto-calibration
+				return inputGyroAutoCalibrationIsEnabled();
 		case MENUOP_SET:
-				inputGyroAutoCalibrationEnable(data->checkbox.value); // Update auto-calibration based on user action
+				inputGyroAutoCalibrationEnable(data->checkbox.value);
 				break;
 		}
 		return 0; // Ensure proper return value
