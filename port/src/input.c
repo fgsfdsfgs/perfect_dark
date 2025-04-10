@@ -122,7 +122,7 @@ static s32 g_GyroAxisMode = GYRO_YAW;
 static s32 g_GyroAimMode = GYRO_AIM_MODE_BOTH;
 static f32 gyroMinThreshold = 0.06f;
 static s32 g_GyroActivationMode = GYRO_ALWAYS_ON;
-static s32 gyroAutoCalibration = 1;
+static s32 gyroAutoCalibration = 0;
 static f32 gyroOffsetX = 0.f;
 static f32 gyroOffsetY = 0.f;
 
