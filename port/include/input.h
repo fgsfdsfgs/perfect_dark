@@ -257,7 +257,7 @@ void initializeGyroController(void);
 s32 inputGyroIsEnabled(void);
 void inputGyroEnable(s32 enabled);
 
-// Gyro Auto-Calibration Management (NEW)
+// Gyro Auto-Calibration Management
 s32 inputGyroAutoCalibrationIsEnabled(void);
 void inputGyroAutoCalibrationEnable(s32 enabled);
 void processGyroAutoCalibration(void); // Handles automatic calibration while stationary
@@ -266,8 +266,8 @@ void processGyroAutoCalibration(void); // Handles automatic calibration while st
 void inputGyroGetRawDelta(s32* dx, s32* dy, s32* dz);
 
 // Scaled Gyro Movement Retrieval
-void inputGyroGetScaledDelta(f32* dx, f32* dy);
-void inputGyroGetAbsScaledDelta(f32* dx, f32* dy); // Returns 0,0 if gyro is disabled
+void inputGyroGetScaledDelta(f32* dx, f32* dy, f32* dz);
+void inputGyroGetAbsScaledDelta(f32* dx, f32* dy, f32* dz);
 
 // Gyro Crosshair Movement Retrieval & Adjustment
 void inputGyroGetScaledDeltaCrosshair(f32* dx, f32* dy);
@@ -292,17 +292,17 @@ void inputGyroSetAimSpeedY(f32 y);
 // Gyro Aim Mode Management
 s32 inputGetGyroAimMode(void);
 void inputSetGyroAimMode(s32 mode);
-void applyGyroAimMode(f32* deltaX, f32* deltaY);
+void applyGyroAimMode(f32* deltaX, f32* deltaY, f32* deltaZ);
 
 // Gyro Axis Mapping Management
 enum gyroaxismode inputGetGyroAxisMode(void);
 void inputSetGyroAxisMode(enum gyroaxismode mode);
-void applyGyroAxisMapping(float gyroData[3], f32* deltaX, f32* deltaY);
+void applyGyroAxisMapping(float gyroData[3], f32* deltaX, f32* deltaY, f32* deltaZ);
 
 // Gyro Activation Mode Management
 s32 inputGetGyroActivationMode(void);
 void inputSetGyroActivationMode(s32 mode);
-void applyGyroActivationMode(f32* deltaX, f32* deltaY, s32 activationMode);
+void applyGyroActivationMode(f32* deltaX, f32* deltaY, f32* deltaZ, s32 activationMode);
 
 // Gyro Crosshair Sensitivity Management (Renamed for Accuracy)
 void inputGyroGetCrosshairSpeed(f32* x, f32* y);
@@ -313,7 +313,7 @@ f32 inputGyroGetCrosshairSpeedY(void);
 void inputGyroSetCrosshairSpeedY(f32 y);
 
 // Gyro Movement Threshold Management
-void applyGyroThreshold(f32* deltaX, f32* deltaY, f32 threshold);
+void applyGyroThreshold(f32* deltaX, f32* deltaY, f32* deltaZ, f32 threshold);
 f32 inputGetGyroMinThreshold(void);
 void inputSetGyroMinThreshold(f32 threshold);
 

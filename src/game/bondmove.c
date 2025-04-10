@@ -805,12 +805,12 @@ void bmoveProcessInput(bool allowc1x, bool allowc1y, bool allowc1buttons, bool i
 
 	// Handle Gyro Input
 	if (allowgyro) {
-			f32 gyroCamDx = 0.f, gyroCamDy = 0.f;
+			f32 gyroCamDx = 0.f, gyroCamDy = 0.f, gyroCamDz = 0.f;
 			f32 gyroCrossDx = 0.f, gyroCrossDy = 0.f;
 
 			// Apply gyro activator logic for freelook (camera movement)
 			if (inputGetGyroAimMode() == GYRO_AIM_MODE_CAMERA || inputGetGyroAimMode() == GYRO_AIM_MODE_BOTH) {
-					inputGyroGetScaledDelta(&gyroCamDx, &gyroCamDy);
+					inputGyroGetScaledDelta(&gyroCamDx, &gyroCamDy, &gyroCamDz);
 					movedata.gyrolookdx += gyroCamDx;
 					movedata.gyrolookdy += gyroCamDy;
 			}
