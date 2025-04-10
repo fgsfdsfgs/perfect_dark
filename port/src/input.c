@@ -1955,7 +1955,7 @@ void applyGyroThreshold(f32* deltaX, f32* deltaY, f32 threshold)
 {
 		if (!deltaX || !deltaY) return;
 
-		// **Check if a controller is connected; prevent forced drift**
+		// Check if a controller is connected; prevent forced drift
 		if (SDL_NumJoysticks() == 0 || connectedMask == 0) {
 				*deltaX = 0.f;
 				*deltaY = 0.f;
@@ -1969,31 +1969,31 @@ void applyGyroThreshold(f32* deltaX, f32* deltaY, f32 threshold)
 						controllerType == SDL_CONTROLLER_TYPE_NINTENDO_SWITCH_JOYCON_PAIR);
 		}
 
-		// Adjust deadzone dynamically
-		const f32 baseDeadzone = isNintendoController ? fmaxf(threshold, 0.08f) : fmaxf(threshold, 0.05f);
-		const f32 maxDelta = fmaxf(15.f, threshold * 3.f);
+		// Define deadzone threshold for smoother input
+		const f32 baseDeadzone = isNintendoController ? fmaxf(threshold * 0.85f, 0.06f) : fmaxf(threshold * 0.75f, 0.04f);
+		const f32 maxDelta = fmaxf(15.f, threshold * 2.5f);  // Lower multiplier for finer control
 		const f32 minDelta = -maxDelta;
 
-		// **Only apply offsets when gyro input is valid**
+		// Only apply offsets when gyro input is valid
 		if (gyroEnabled) {
 				*deltaX -= gyroOffsetX;
 				*deltaY -= gyroOffsetY;
 		}
 
-		// **Process X-axis (yaw)**
+		// Process X-axis (yaw) with improved transition
 		if (fabsf(*deltaX) < baseDeadzone) {
 				*deltaX = 0.f;
 		}
 		else {
-				*deltaX = fmaxf(fminf(*deltaX, maxDelta), minDelta);
+				*deltaX = fmaxf(fminf(*deltaX * 0.95f, maxDelta), minDelta); // Smooth out sudden spikes
 		}
 
-		// **Process Y-axis (pitch)**
+		// Process Y-axis (pitch) with improved transition
 		if (fabsf(*deltaY) < baseDeadzone) {
 				*deltaY = 0.f;
 		}
 		else {
-				*deltaY = fmaxf(fminf(*deltaY, maxDelta), minDelta);
+				*deltaY = fmaxf(fminf(*deltaY * 0.95f, maxDelta), minDelta); // Smooth out sudden spikes
 		}
 }
 
