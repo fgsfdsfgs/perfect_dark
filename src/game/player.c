@@ -3682,38 +3682,44 @@ void playerTick(bool arg0)
 
 				// Gyro control
 				if (g_Vars.currentplayernum == 0) {
-					f32 gdx_cam = 0.f, gdy_cam = 0.f, gdz_cam = 0.f;
-					f32 gdx_crosshair = 0.f, gdy_crosshair = 0.f;
+						f32 gdx_cam = 0.f, gdy_cam = 0.f, gdz_cam = 0.f;
+						f32 gdx_crosshair = 0.f, gdy_crosshair = 0.f;
 
-					// Apply gyro movement based on mode
-					if (inputGetGyroAimMode() == GYRO_AIM_MODE_CAMERA || inputGetGyroAimMode() == GYRO_AIM_MODE_BOTH) {
-						inputGyroGetScaledDelta(&gdx_cam, &gdy_cam, &gdz_cam); // Camera movement
-					}
-
-					if (inputGetGyroAimMode() == GYRO_AIM_MODE_CROSSHAIR || inputGetGyroAimMode() == GYRO_AIM_MODE_BOTH) {
-						inputGyroGetScaledDeltaCrosshair(&gdx_crosshair, &gdy_crosshair); // Crosshair movement
-					}
-
-					// Apply gyro movement only when detected
-					if (gdx_cam || gdy_cam || gdx_crosshair || gdy_crosshair) {
-							// Clamp values to prevent extreme gyro movements (not scaling)
-							gdx_cam = (gdx_cam < -128.f) ? -128.f : (gdx_cam > 127.f) ? 127.f : gdx_cam;
-							gdy_cam = (gdy_cam < -128.f) ? -128.f : (gdy_cam > 127.f) ? 127.f : gdy_cam;
-							gdx_crosshair = (gdx_crosshair < -128.f) ? -128.f : (gdx_crosshair > 127.f) ? 127.f : gdx_crosshair;
-							gdy_crosshair = (gdy_crosshair < -128.f) ? -128.f : (gdy_crosshair > 127.f) ? 127.f : gdy_crosshair;
-
-						if (g_Vars.currentplayerstats && !optionsGetForwardPitch(g_Vars.currentplayerstats->mpindex)) {
-							gdy_cam = -gdy_cam;
-							gdy_crosshair = -gdy_crosshair;
+						// Apply gyro movement based on mode
+						if (inputGetGyroAimMode() == GYRO_AIM_MODE_CAMERA || inputGetGyroAimMode() == GYRO_AIM_MODE_BOTH) {
+								inputGyroGetScaledDelta(&gdx_cam, &gdy_cam, &gdz_cam); // Camera movement
 						}
 
-						// Apply movement separately for each mode
-						sp178 += gdy_cam * 0.00022f;  // Camera movement
-						sp174 -= gdx_cam * 0.00022f;
+						if (inputGetGyroAimMode() == GYRO_AIM_MODE_CROSSHAIR || inputGetGyroAimMode() == GYRO_AIM_MODE_BOTH) {
+								inputGyroGetScaledDeltaCrosshair(&gdx_crosshair, &gdy_crosshair); // Crosshair movement
+						}
 
-						g_Vars.currentplayer->swivelpos[0] += gdx_crosshair; // Crosshair movement
-						g_Vars.currentplayer->swivelpos[1] += gdy_crosshair;
-					}
+						// Apply gyro movement only when detected
+						if (gdx_cam || gdy_cam || gdx_crosshair || gdy_crosshair) {
+								gdx_cam *= 0.022f;
+								gdy_cam *= 0.022f;
+								gdx_crosshair *= 0.022f;
+								gdy_crosshair *= 0.022f;
+
+								// Clamping to match mouse sensitivity limits
+								gdx_cam = (gdx_cam < -128.f) ? -128.f : (gdx_cam > 127.f) ? 127.f : gdx_cam;
+								gdy_cam = (gdy_cam < -128.f) ? -128.f : (gdy_cam > 127.f) ? 127.f : gdy_cam;
+								gdx_crosshair = (gdx_crosshair < -128.f) ? -128.f : (gdx_crosshair > 127.f) ? 127.f : gdx_crosshair;
+								gdy_crosshair = (gdy_crosshair < -128.f) ? -128.f : (gdy_crosshair > 127.f) ? 127.f : gdy_crosshair;
+
+								// Respect forward pitch setting
+								if (g_Vars.currentplayerstats && !optionsGetForwardPitch(g_Vars.currentplayerstats->mpindex)) {
+										gdy_cam = -gdy_cam;
+										gdy_crosshair = -gdy_crosshair;
+								}
+
+								// Apply movement separately for each mode
+								sp178 += gdy_cam;
+								sp174 -= gdx_cam;
+
+								g_Vars.currentplayer->swivelpos[0] += gdx_crosshair; // Crosshair movement
+								g_Vars.currentplayer->swivelpos[1] += gdy_crosshair;
+						}
 				}
 #endif
 
