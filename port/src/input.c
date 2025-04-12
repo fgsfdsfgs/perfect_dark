@@ -748,7 +748,16 @@ void inputHandleGyroController()
 						return;
 				}
 
-				// Enable gyro and accelerometer sensors safely
+#if !SDL_VERSION_ATLEAST(2, 0, 14)
+				// Ensure compatibility with older SDL versions (Pre-2.0.14)
+				if (hasGyro) {
+						sysLogPrintf(LOG_WARNING, "SDL < 2.0.14 does not fully support gyro sensors.");
+				}
+				if (hasAccel) {
+						sysLogPrintf(LOG_WARNING, "SDL < 2.0.14 does not fully support accelerometers.");
+				}
+#else
+				// Enable gyro and accelerometer sensors safely for newer versions
 				if (hasGyro && SDL_GameControllerSetSensorEnabled(gyroController, SDL_SENSOR_GYRO, SDL_TRUE) != 0) {
 						sysLogPrintf(LOG_WARNING, "Failed to enable gyro sensor.");
 				}
@@ -756,6 +765,7 @@ void inputHandleGyroController()
 				if (hasAccel && SDL_GameControllerSetSensorEnabled(gyroController, SDL_SENSOR_ACCEL, SDL_TRUE) != 0) {
 						sysLogPrintf(LOG_WARNING, "Failed to enable accelerometer sensor.");
 				}
+#endif
 
 				// Fetch sensor data
 				float sensorData[3] = { 0.f, 0.f, 0.f }; // Prevent garbage values
