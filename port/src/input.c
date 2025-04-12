@@ -1954,8 +1954,13 @@ void applyGyroThreshold(f32* deltaX, f32* deltaY, f32* deltaZ, f32 threshold)
 		bool isNintendoController = false;
 		if (pads[0]) {
 				SDL_GameControllerType controllerType = SDL_GameControllerGetType(pads[0]);
+
+#if SDL_VERSION_ATLEAST(2, 0, 14)
 				isNintendoController = (controllerType == SDL_CONTROLLER_TYPE_NINTENDO_SWITCH_PRO ||
 						controllerType == SDL_CONTROLLER_TYPE_NINTENDO_SWITCH_JOYCON_PAIR);
+#else
+				isNintendoController = (controllerType == SDL_CONTROLLER_TYPE_NINTENDO_SWITCH_PRO);
+#endif
 		}
 
 		// Define dedicated deadzones per controller type
