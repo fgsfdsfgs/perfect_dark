@@ -1564,12 +1564,12 @@ void inputSetMouseLockMode(s32 lockmode)
 
 s32 inputGyroIsEnabled(void)
 {
-		return gyroEnabled; // Returns the current state of gyro input (enabled or not)
+		return gyroEnabled;
 }
 
 void inputGyroEnable(s32 enabled)
 {
-		gyroEnabled = (enabled != 0); // Update the gyroEnabled state (true or false)
+		gyroEnabled = (enabled != 0);
 }
 
 enum gyroaxismode inputGetGyroAxisMode(void)
@@ -1584,14 +1584,14 @@ void inputSetGyroAxisMode(enum gyroaxismode mode)
 
 void applyGyroAxisMapping(float gyroData[3], f32* deltaX, f32* deltaY, f32* deltaZ)
 {
-		switch (inputGetGyroAxisMode()) { // Correct function call to retrieve the axis mode
+		switch (inputGetGyroAxisMode()) {
 		case GYRO_YAW:
 				*deltaX = -gyroData[1]; // Yaw for horizontal movement
 				*deltaY = -gyroData[0]; // Pitch for vertical movement
 				break;
 
 		case GYRO_ROLL:
-				*deltaX = gyroData[2]; // Roll for horizontal movement
+				*deltaX = gyroData[2];  // Roll for horizontal movement
 				*deltaY = -gyroData[0]; // Pitch for vertical movement
 				break;
 
