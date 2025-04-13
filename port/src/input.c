@@ -1606,21 +1606,21 @@ void applyGyroAxisMapping(float gyroData[3], f32* deltaX, f32* deltaY, f32* delt
 				if (isnan(gyroData[0]) || isnan(gyroData[1]) || isnan(gyroData[2])) {
 						*deltaX = 0.f;
 						*deltaY = 0.f;
+						*deltaZ = 0.f;
 						return;
 				}
 
-				// Ensure yaw, pitch, and roll match GYRO_YAW and GYRO_ROLL behavior
-				float processedYaw = -gyroData[1];  // Yaw for horizontal movement
-				float processedRoll = gyroData[2];   // Roll for horizontal movement
-				float processedPitch = -gyroData[0]; // Pitch for vertical movement
+				// Preserve all axes: Yaw, Pitch, and Roll
+				float processedYaw = -gyroData[1];
+				float processedRoll = gyroData[2];
+				float processedPitch = -gyroData[0];
 
-				// Apply Local Space transformation
+				// Apply Local Space transformation with full-axis control
 				Vector3 transformedGyro = TransformToLocalSpace(
 						processedYaw, processedPitch, processedRoll,
-						1.0f, 1.0f, 1.0f, 0.0f // Sensitivities remain constant
+						1.0f, 1.0f, 1.0f, 0.0f
 				);
 
-				// Assign transformed values, keeping them aligned with YAW & ROLL logic
 				*deltaX = transformedGyro.x;
 				*deltaY = transformedGyro.y;
 				*deltaZ = transformedGyro.z;
@@ -1638,13 +1638,11 @@ void applyGyroAxisMapping(float gyroData[3], f32* deltaX, f32* deltaY, f32* delt
 				if (isnan(gyroData[0]) || isnan(gyroData[1]) || isnan(gyroData[2])) {
 						*deltaX = 0.f;
 						*deltaY = 0.f;
+						*deltaZ = 0.f;
 						return;
 				}
 
-				// Get gravity vector for Player Space transformations
-				Vector3 gravityVector = GetGravityVector();
-
-				// Ensure yaw, pitch, and roll match player-relative transformation
+				// Preserve all axes: Yaw, Pitch, and Roll
 				float processedYaw = -gyroData[1];
 				float processedRoll = gyroData[2];
 				float processedPitch = -gyroData[0];
@@ -1652,10 +1650,9 @@ void applyGyroAxisMapping(float gyroData[3], f32* deltaX, f32* deltaY, f32* delt
 				// Apply Player Space transformation with gravity alignment
 				Vector3 transformedGyro = TransformToPlayerSpace(
 						processedYaw, processedPitch, processedRoll,
-						gravityVector, 1.0f, 1.0f, 1.0f
+						GetGravityVector(), 1.0f, 1.0f, 1.0f
 				);
 
-				// Assign transformed values, ensuring proper Player Space movement
 				*deltaX = transformedGyro.x;
 				*deltaY = transformedGyro.y;
 				*deltaZ = transformedGyro.z;
@@ -1673,13 +1670,11 @@ void applyGyroAxisMapping(float gyroData[3], f32* deltaX, f32* deltaY, f32* delt
 				if (isnan(gyroData[0]) || isnan(gyroData[1]) || isnan(gyroData[2])) {
 						*deltaX = 0.f;
 						*deltaY = 0.f;
+						*deltaZ = 0.f;
 						return;
 				}
 
-				// Retrieve gravity vector for World Space alignment
-				Vector3 gravityVector = GetGravityVector();
-
-				// Process gyro inputs, ensuring global alignment
+				// Preserve all axes: Yaw, Pitch, and Roll
 				float processedYaw = -gyroData[1];
 				float processedRoll = gyroData[2];
 				float processedPitch = -gyroData[0];
@@ -1687,10 +1682,9 @@ void applyGyroAxisMapping(float gyroData[3], f32* deltaX, f32* deltaY, f32* delt
 				// Apply World Space transformation with gravity influence
 				Vector3 transformedGyro = TransformToWorldSpace(
 						processedYaw, processedPitch, processedRoll,
-						gravityVector, 1.0f, 1.0f, 1.0f
+						GetGravityVector(), 1.0f, 1.0f, 1.0f
 				);
 
-				// Assign transformed values, keeping them aligned with global world movement
 				*deltaX = transformedGyro.x;
 				*deltaY = transformedGyro.y;
 				*deltaZ = transformedGyro.z;
@@ -1698,11 +1692,13 @@ void applyGyroAxisMapping(float gyroData[3], f32* deltaX, f32* deltaY, f32* delt
 		break;
 
 		default:
-				*deltaX = 0.f; // Default to zero if mode is unrecognized
+				*deltaX = 0.f;
 				*deltaY = 0.f;
+				*deltaZ = 0.f;
 				break;
 		}
 }
+
 
 s32 inputGetGyroAimMode(void)
 {
