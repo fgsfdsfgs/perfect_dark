@@ -723,41 +723,38 @@ static SDL_GameController* gyroController = NULL;
 
 void inputHandleGyroController()
 {
-		// Ensure previous controller is closed before initializing a new one
+		// Ensure previous controller is safely closed before initializing a new one
 		if (gyroController) {
 				closeGyroController();
+				gyroController = NULL;
 		}
 
+		// Check available controllers
 		if (SDL_NumJoysticks() > 0) {
-				// Open the first available controller
 				gyroController = SDL_GameControllerOpen(0);
 
 				if (!gyroController) {
 						sysLogPrintf(LOG_WARNING, "Failed to initialize gyro controller.");
-						gyroController = NULL;
 						return;
 				}
 
-				// Check for sensor availability
+				// Verify sensor availability
 				bool hasGyro = SDL_GameControllerHasSensor(gyroController, SDL_SENSOR_GYRO);
 				bool hasAccel = SDL_GameControllerHasSensor(gyroController, SDL_SENSOR_ACCEL);
 
 				if (!hasGyro && !hasAccel) {
 						sysLogPrintf(LOG_WARNING, "Controller does not support gyro or accelerometer. Closing.");
 						closeGyroController();
+						gyroController = NULL;
 						return;
 				}
 
 #if !SDL_VERSION_ATLEAST(2, 0, 14)
-				// Ensure compatibility with older SDL versions (Pre-2.0.14)
-				if (hasGyro) {
-						sysLogPrintf(LOG_WARNING, "SDL < 2.0.14 does not fully support gyro sensors.");
-				}
-				if (hasAccel) {
-						sysLogPrintf(LOG_WARNING, "SDL < 2.0.14 does not fully support accelerometers.");
-				}
+				// Compatibility warning for older SDL versions
+				if (hasGyro) sysLogPrintf(LOG_WARNING, "SDL < 2.0.14 lacks full gyro support.");
+				if (hasAccel) sysLogPrintf(LOG_WARNING, "SDL < 2.0.14 lacks full accelerometer support.");
 #else
-				// Enable gyro and accelerometer sensors safely for newer versions
+				// Safely enable gyro and accelerometer sensors
 				if (hasGyro && SDL_GameControllerSetSensorEnabled(gyroController, SDL_SENSOR_GYRO, SDL_TRUE) != 0) {
 						sysLogPrintf(LOG_WARNING, "Failed to enable gyro sensor.");
 				}
@@ -767,19 +764,35 @@ void inputHandleGyroController()
 				}
 #endif
 
-				// Fetch sensor data
-				float sensorData[3] = { 0.f, 0.f, 0.f }; // Prevent garbage values
-				if (hasGyro && SDL_GameControllerGetSensorData(gyroController, SDL_SENSOR_GYRO, sensorData, 3) == 0) {
-						gyroDeltaYaw = sensorData[0];
-						gyroDeltaPitch = sensorData[1];
-						gyroDeltaRoll = sensorData[2];
+				// Fetch sensor data safely (prevent invalid reads)
+				float sensorData[3] = { 0.f, 0.f, 0.f }; 
+
+				if (hasGyro) {
+						if (SDL_GameControllerGetSensorData(gyroController, SDL_SENSOR_GYRO, sensorData, 3) != 0) {
+								sysLogPrintf(LOG_WARNING, "Failed to retrieve gyro data.");
+								gyroDeltaYaw = gyroDeltaPitch = gyroDeltaRoll = 0.f;
+						}
+						else {
+								gyroDeltaYaw = sensorData[0];
+								gyroDeltaPitch = sensorData[1];
+								gyroDeltaRoll = sensorData[2];
+						}
 				}
 
-				if (hasAccel && SDL_GameControllerGetSensorData(gyroController, SDL_SENSOR_ACCEL, sensorData, 3) == 0) {
-						accelDeltaX = sensorData[0];
-						accelDeltaY = sensorData[1];
-						accelDeltaZ = sensorData[2];
+				if (hasAccel) {
+						if (SDL_GameControllerGetSensorData(gyroController, SDL_SENSOR_ACCEL, sensorData, 3) != 0) {
+								sysLogPrintf(LOG_WARNING, "Failed to retrieve accelerometer data.");
+								accelDeltaX = accelDeltaY = accelDeltaZ = 0.f;
+						}
+						else {
+								accelDeltaX = sensorData[0];
+								accelDeltaY = sensorData[1];
+								accelDeltaZ = sensorData[2];
+						}
 				}
+		}
+		else {
+				sysLogPrintf(LOG_WARNING, "No joysticks detected.");
 		}
 }
 
