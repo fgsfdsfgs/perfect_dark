@@ -120,7 +120,7 @@ static f32 gyroAimSensX = 5.0f;
 static f32 gyroAimSensY = 5.0f;
 static s32 g_GyroAxisMode = GYRO_YAW; 
 static s32 g_GyroAimMode = GYRO_AIM_MODE_BOTH;
-static f32 gyroMinThreshold = 0.06f;
+static f32 gyroMinThreshold = 0.07f;
 static s32 g_GyroActivationMode = GYRO_ALWAYS_ON;
 static s32 gyroAutoCalibration = 0;
 static f32 gyroOffsetX = 0.f;
@@ -1962,15 +1962,20 @@ void applyGyroThreshold(f32* deltaX, f32* deltaY, f32* deltaZ, f32 threshold)
 #endif
 		}
 
-		// Define dedicated deadzones per controller type
-		const f32 nintendoDeadzone = fmaxf(threshold * 0.75f, 0.05f);  // Reduced deadzone for smoother input
-		const f32 baseDeadzone = fmaxf(threshold * 0.65f, 0.03f);
-		const f32 appliedDeadzone = isNintendoController ? nintendoDeadzone : baseDeadzone;
+		// **Fine-tune Deadzone for Nintendo Controllers to fix upward drift**
+		const f32 nintendoDeadzoneX = fmaxf(threshold * 0.82f, 0.05f);
+		const f32 nintendoDeadzoneY = fmaxf(threshold * 0.85f, 0.075f);
+		const f32 baseDeadzone = fmaxf(threshold * 0.75f, 0.04f);
 
-		// Apply **gradual** threshold, instead of snapping to zero immediately
-		*deltaX = (fabsf(*deltaX) < appliedDeadzone) ? (*deltaX * 0.5f) : *deltaX;  // Soft fade-out
-		*deltaY = (fabsf(*deltaY) < appliedDeadzone) ? (*deltaY * 0.5f) : *deltaY;
-		*deltaZ = (fabsf(*deltaZ) < appliedDeadzone) ? (*deltaZ * 0.5f) : *deltaZ;
+		// **Apply different deadzone thresholds per axis**
+		const f32 appliedDeadzoneX = isNintendoController ? nintendoDeadzoneX : baseDeadzone;
+		const f32 appliedDeadzoneY = isNintendoController ? nintendoDeadzoneY : baseDeadzone;
+		const f32 appliedDeadzoneZ = isNintendoController ? nintendoDeadzoneX : baseDeadzone;
+
+		// Apply strict deadzone correction
+		if (fabsf(*deltaX) < appliedDeadzoneX) *deltaX = 0.f;
+		if (fabsf(*deltaY) < appliedDeadzoneY) *deltaY = 0.f;
+		if (fabsf(*deltaZ) < appliedDeadzoneZ) *deltaZ = 0.f;
 }
 
 const char *inputGetContKeyName(u32 ck)
