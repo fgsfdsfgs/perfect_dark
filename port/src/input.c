@@ -1047,50 +1047,55 @@ void autoCalibrateGyro() {
 		static f32 accumulatedOffsetY = 0.f;
 		static s32 sampleCount = 0;
 		static bool calibrating = true;
+		static s32 stationarySampleCount = 0;
 
+		// If auto-calibration is disabled, reset offsets to stock values
 		if (!inputGyroAutoCalibrationIsEnabled()) {
+				gyroOffsetX = 0.f;
+				gyroOffsetY = 0.f;
+				sampleCount = 0;
+				calibrating = false;
 				return;
 		}
 
 		// Validate gyro sensor readings before processing
 		if (isnan(gyroDeltaYaw) || isinf(gyroDeltaYaw) || isnan(gyroDeltaPitch) || isinf(gyroDeltaPitch)) {
-				printf("WARNING: Invalid gyro data detected.\n");
-				return;
+				return; // Ignore invalid gyro data
 		}
 
-		// Reset calibration data at the beginning of the process
-		if (sampleCount == 0) {
-				accumulatedOffsetX = 0.f;
-				accumulatedOffsetY = 0.f;
-				gyroOffsetX = 0.f;
-				gyroOffsetY = 0.f;
+		// Detect if controller is stationary (placed on a flat surface)
+		const f32 noiseThreshold = 0.005f;
+		bool isStationary = fabsf(gyroDeltaYaw) < noiseThreshold && fabsf(gyroDeltaPitch) < noiseThreshold;
+
+		// Count samples where controller remains stationary
+		if (isStationary) {
+				stationarySampleCount++;
+		}
+		else {
+				stationarySampleCount = 0; // Reset count if movement is detected
 		}
 
-		// Accumulate offset values when movement is minimal
-		if (calibrating && fabsf(gyroDeltaYaw) < 0.02f && fabsf(gyroDeltaPitch) < 0.02f) {
+		// Accumulate offsets only when controller has been stationary for multiple frames
+		if (calibrating && stationarySampleCount > 50) { 
 				accumulatedOffsetX += gyroDeltaYaw;
 				accumulatedOffsetY += gyroDeltaPitch;
 				sampleCount++;
 		}
 
-		// Apply calibration offsets once enough samples are gathered
+		// Apply calibration offsets once enough stationary samples are gathered
 		if (sampleCount >= 200) {
-				if (sampleCount > 0) {
-						gyroOffsetX = accumulatedOffsetX / sampleCount;
-						gyroOffsetY = accumulatedOffsetY / sampleCount;
-				}
-				else {
-						gyroOffsetX = 0.f;
-						gyroOffsetY = 0.f;
-						printf("WARNING: Sample count was zero; skipping calibration.\n");
-				}
-
-				// Reset sample count after applying offsets
+				gyroOffsetX = accumulatedOffsetX / sampleCount;
+				gyroOffsetY = accumulatedOffsetY / sampleCount;
 				sampleCount = 0;
-				calibrating = false;
+				stationarySampleCount = 0;
+				calibrating = true;
 
 				printf("Gyro Auto-Calibration Completed! OffsetX: %.4f, OffsetY: %.4f\n", gyroOffsetX, gyroOffsetY);
 		}
+
+		// Continuous drift correction
+		gyroDeltaYaw -= gyroOffsetX;
+		gyroDeltaPitch -= gyroOffsetY;
 }
 
 static inline void inputUpdateGyro(void)
@@ -1962,10 +1967,6 @@ void applyGyroThreshold(f32* deltaX, f32* deltaY, f32* deltaZ, f32 threshold)
 {
 		if (!deltaX || !deltaY || !deltaZ) return;
 
-		// Prevent threshold from being 0.00 (set minimum threshold)
-		const f32 minThreshold = 0.01f;
-		threshold = fmaxf(threshold, minThreshold);
-
 		// Detect if the active controller is a Nintendo Switch controller
 		bool isNintendoController = false;
 		if (pads[0]) {
@@ -1978,20 +1979,35 @@ void applyGyroThreshold(f32* deltaX, f32* deltaY, f32* deltaZ, f32 threshold)
 #endif
 		}
 
-		// Ensure threshold is non-zero for deadzone calculations
-		const f32 nintendoDeadzoneX = fmaxf(threshold * 0.82f, 0.05f);
-		const f32 nintendoDeadzoneY = fmaxf(threshold * 0.85f, 0.075f);
-		const f32 baseDeadzone = fmaxf(threshold * 0.75f, 0.04f);
+		// Fine-tune deadzone values, but only apply if threshold is > 0
+		const f32 nintendoDeadzoneX = threshold > 0.f ? fmaxf(threshold * 0.82f, 0.05f) : 0.f;
+		const f32 nintendoDeadzoneY = threshold > 0.f ? fmaxf(threshold * 0.85f, 0.075f) : 0.f;
+		const f32 baseDeadzone = threshold > 0.f ? fmaxf(threshold * 0.75f, 0.04f) : 0.f;
 
 		// Apply different deadzone thresholds per axis
 		const f32 appliedDeadzoneX = isNintendoController ? nintendoDeadzoneX : baseDeadzone;
 		const f32 appliedDeadzoneY = isNintendoController ? nintendoDeadzoneY : baseDeadzone;
 		const f32 appliedDeadzoneZ = isNintendoController ? nintendoDeadzoneX : baseDeadzone;
 
-		// Apply strict deadzone correction
-		if (fabsf(*deltaX) < appliedDeadzoneX) *deltaX = 0.f;
-		if (fabsf(*deltaY) < appliedDeadzoneY) *deltaY = 0.f;
-		if (fabsf(*deltaZ) < appliedDeadzoneZ) *deltaZ = 0.f;
+		// Soft Tiered Smoothing: Apply smoothing only to small movements
+		static f32 prevDeltaX = 0.f, prevDeltaY = 0.f, prevDeltaZ = 0.f;
+		const f32 smoothingFactor = 0.85f; // Adjust for desired responsiveness
+
+		if (threshold > 0.f) {
+				if (fabsf(*deltaX) < appliedDeadzoneX) *deltaX = 0.f;
+				else *deltaX = (*deltaX * smoothingFactor) + (prevDeltaX * (1.f - smoothingFactor));
+
+				if (fabsf(*deltaY) < appliedDeadzoneY) *deltaY = 0.f;
+				else *deltaY = (*deltaY * smoothingFactor) + (prevDeltaY * (1.f - smoothingFactor));
+
+				if (fabsf(*deltaZ) < appliedDeadzoneZ) *deltaZ = 0.f;
+				else *deltaZ = (*deltaZ * smoothingFactor) + (prevDeltaZ * (1.f - smoothingFactor));
+		}
+
+		// Store previous values for smoothing
+		prevDeltaX = *deltaX;
+		prevDeltaY = *deltaY;
+		prevDeltaZ = *deltaZ;
 }
 
 const char *inputGetContKeyName(u32 ck)
