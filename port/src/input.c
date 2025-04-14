@@ -268,6 +268,7 @@ void inputSetDefaultKeyBinds(s32 cidx, s32 n64mode)
 			{ CK_C_L,    SDL_CONTROLLER_BUTTON_DPAD_LEFT     },
 			{ CK_ACCEPT, SDL_CONTROLLER_BUTTON_A             },
 			{ CK_CANCEL, SDL_CONTROLLER_BUTTON_B             },
+			{ CK_GYRO_MOD, SDL_CONTROLLER_BUTTON_RIGHTSTICK  },
 			{ CK_8000,   SDL_CONTROLLER_BUTTON_LEFTSTICK     },
 		};
 

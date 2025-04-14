@@ -1985,6 +1985,7 @@ struct menuitem g_ExtendedBindsMenuItems[] = {
 	DEFINE_MENU_BIND(),
 	DEFINE_MENU_BIND(),
 	DEFINE_MENU_BIND(),
+	DEFINE_MENU_BIND(),
 	{
 		MENUITEMTYPE_SEPARATOR,
 		0,

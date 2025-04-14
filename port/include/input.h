@@ -134,7 +134,6 @@ enum gyroaxismode {
 		GYRO_WORLD = 4
 };
 
-
 enum gyroaimmode {
 		GYRO_AIM_MODE_CAMERA = 0,
 		GYRO_AIM_MODE_CROSSHAIR = 1,
