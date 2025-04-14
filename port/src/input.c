@@ -1892,19 +1892,21 @@ void inputSetGyroActivationMode(s32 mode)
 
 void applyGyroActivationMode(f32* deltaX, f32* deltaY, f32* deltaZ, s32 activationMode)
 {
+		static bool gyroToggleState = false; 
+
 		switch (activationMode) {
 		case GYRO_ALWAYS_ON:
 				// Gyro input is always active; no changes needed
 				break;
 
 		case GYRO_TOGGLE:
-				// Toggle the gyro input state when CK_GYRO_MOD is pressed
-				if (inputKeyPressed(CK_GYRO_MOD)) {
-						g_GyroActivationMode = (g_GyroActivationMode == GYRO_TOGGLE) ? GYRO_ALWAYS_ON : GYRO_TOGGLE;
+				// Toggle gyro state only when CK_GYRO_MOD is pressed
+				if (inputKeyJustPressed(CK_GYRO_MOD)) { 
+						gyroToggleState = !gyroToggleState; 
 				}
 
-				// If gyro is not in "on" state, zero out input
-				if (g_GyroActivationMode != GYRO_ALWAYS_ON) {
+				// Zero out input only when gyro is toggled OFF
+				if (!gyroToggleState) {
 						if (deltaX) *deltaX = 0.f;
 						if (deltaY) *deltaY = 0.f;
 						if (deltaZ) *deltaZ = 0.f;
@@ -1912,7 +1914,7 @@ void applyGyroActivationMode(f32* deltaX, f32* deltaY, f32* deltaZ, s32 activati
 				break;
 
 		case GYRO_HOLD:
-				// Only allow gyro input while CK_GYRO_MOD is actively held down
+				// Activate gyro only while CK_GYRO_MOD is held down
 				if (!inputKeyPressed(CK_GYRO_MOD)) {
 						if (deltaX) *deltaX = 0.f;
 						if (deltaY) *deltaY = 0.f;
@@ -1921,7 +1923,7 @@ void applyGyroActivationMode(f32* deltaX, f32* deltaY, f32* deltaZ, s32 activati
 				break;
 
 		case GYRO_HOLD_INVERTED:
-				// Inverted hold: disable gyro input when CK_GYRO_MOD is held down
+				// Disable gyro when CK_GYRO_MOD is held down
 				if (inputKeyPressed(CK_GYRO_MOD)) {
 						if (deltaX) *deltaX = 0.f;
 						if (deltaY) *deltaY = 0.f;
@@ -1930,7 +1932,7 @@ void applyGyroActivationMode(f32* deltaX, f32* deltaY, f32* deltaZ, s32 activati
 				break;
 
 		default:
-				// Invalid activation mode; disable gyro input
+				// Invalid mode, disable gyro input
 				if (deltaX) *deltaX = 0.f;
 				if (deltaY) *deltaY = 0.f;
 				if (deltaZ) *deltaZ = 0.f;
@@ -1960,6 +1962,10 @@ void applyGyroThreshold(f32* deltaX, f32* deltaY, f32* deltaZ, f32 threshold)
 {
 		if (!deltaX || !deltaY || !deltaZ) return;
 
+		// Prevent threshold from being 0.00 (set minimum threshold)
+		const f32 minThreshold = 0.01f;
+		threshold = fmaxf(threshold, minThreshold);
+
 		// Detect if the active controller is a Nintendo Switch controller
 		bool isNintendoController = false;
 		if (pads[0]) {
@@ -1972,12 +1978,12 @@ void applyGyroThreshold(f32* deltaX, f32* deltaY, f32* deltaZ, f32 threshold)
 #endif
 		}
 
-		// **Fine-tune Deadzone for Nintendo Controllers to fix upward drift**
+		// Ensure threshold is non-zero for deadzone calculations
 		const f32 nintendoDeadzoneX = fmaxf(threshold * 0.82f, 0.05f);
 		const f32 nintendoDeadzoneY = fmaxf(threshold * 0.85f, 0.075f);
 		const f32 baseDeadzone = fmaxf(threshold * 0.75f, 0.04f);
 
-		// **Apply different deadzone thresholds per axis**
+		// Apply different deadzone thresholds per axis
 		const f32 appliedDeadzoneX = isNintendoController ? nintendoDeadzoneX : baseDeadzone;
 		const f32 appliedDeadzoneY = isNintendoController ? nintendoDeadzoneY : baseDeadzone;
 		const f32 appliedDeadzoneZ = isNintendoController ? nintendoDeadzoneX : baseDeadzone;
