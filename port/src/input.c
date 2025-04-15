@@ -1616,25 +1616,12 @@ void applyGyroAxisMapping(float gyroData[3], f32* deltaX, f32* deltaY, f32* delt
 
 		case GYRO_LOCAL:
 		{
-				// Apply dead zone to prevent drift
-				if (fabsf(gyroData[0]) < 0.01f) gyroData[0] = 0.f;
-				if (fabsf(gyroData[1]) < 0.01f) gyroData[1] = 0.f;
-				if (fabsf(gyroData[2]) < 0.01f) gyroData[2] = 0.f;
+				// Process gyro axes: Yaw, Pitch, Roll
+        float processedYaw = -gyroData[1];
+        float processedPitch = -gyroData[0];
+        float processedRoll = -gyroData[2];	
 
-				// Check for NaN values before proceeding
-				if (isnan(gyroData[0]) || isnan(gyroData[1]) || isnan(gyroData[2])) {
-						*deltaX = 0.f;
-						*deltaY = 0.f;
-						*deltaZ = 0.f;
-						return;
-				}
-
-				// Preserve all axes: Yaw, Pitch, and Roll
-				float processedYaw = -gyroData[1];
-				float processedRoll = gyroData[2];
-				float processedPitch = -gyroData[0];
-
-				// Apply Local Space transformation with full-axis control
+				// Apply Local Space transformation
 				Vector3 transformedGyro = TransformToLocalSpace(
 						processedYaw, processedPitch, processedRoll,
 						1.0f, 1.0f, 1.0f, 0.0f
@@ -1648,23 +1635,10 @@ void applyGyroAxisMapping(float gyroData[3], f32* deltaX, f32* deltaY, f32* delt
 
 		case GYRO_PLAYER:
 		{
-				// Apply dead zone to prevent drift
-				if (fabsf(gyroData[0]) < 0.01f) gyroData[0] = 0.f;
-				if (fabsf(gyroData[1]) < 0.01f) gyroData[1] = 0.f;
-				if (fabsf(gyroData[2]) < 0.01f) gyroData[2] = 0.f;
-
-				// Check for NaN values before proceeding
-				if (isnan(gyroData[0]) || isnan(gyroData[1]) || isnan(gyroData[2])) {
-						*deltaX = 0.f;
-						*deltaY = 0.f;
-						*deltaZ = 0.f;
-						return;
-				}
-
-				// Preserve all axes: Yaw, Pitch, and Roll
+				// Process gyro axes: Yaw, Pitch, Roll
 				float processedYaw = -gyroData[1];
-				float processedRoll = gyroData[2];
 				float processedPitch = -gyroData[0];
+				float processedRoll = -gyroData[2];
 
 				// Apply Player Space transformation with gravity alignment
 				Vector3 transformedGyro = TransformToPlayerSpace(
@@ -1680,23 +1654,10 @@ void applyGyroAxisMapping(float gyroData[3], f32* deltaX, f32* deltaY, f32* delt
 
 		case GYRO_WORLD:
 		{
-				// Apply dead zone to prevent drift
-				if (fabsf(gyroData[0]) < 0.01f) gyroData[0] = 0.f;
-				if (fabsf(gyroData[1]) < 0.01f) gyroData[1] = 0.f;
-				if (fabsf(gyroData[2]) < 0.01f) gyroData[2] = 0.f;
-
-				// Check for NaN values before proceeding
-				if (isnan(gyroData[0]) || isnan(gyroData[1]) || isnan(gyroData[2])) {
-						*deltaX = 0.f;
-						*deltaY = 0.f;
-						*deltaZ = 0.f;
-						return;
-				}
-
-				// Preserve all axes: Yaw, Pitch, and Roll
+				// Process gyro axes: Yaw, Pitch, Roll
 				float processedYaw = -gyroData[1];
-				float processedRoll = gyroData[2];
 				float processedPitch = -gyroData[0];
+				float processedRoll = -gyroData[2];
 
 				// Apply World Space transformation with gravity influence
 				Vector3 transformedGyro = TransformToWorldSpace(
