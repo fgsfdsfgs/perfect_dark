@@ -123,12 +123,12 @@ static inline float Vec3_Magnitude(Vector3 v) {
  * Normalizes a vector (scales it to unit length).
  */
 static inline Vector3 Vec3_Normalize(Vector3 v) {
-		float lengthSquared = Vec3_Dot(v, v);
-		if (lengthSquared < EPSILON) {
+		float magnitude = Vec3_Magnitude(v);
+		if (magnitude < EPSILON) {
 				DEBUG_LOG("Warning: Attempted to normalize a near-zero vector.\n");
 				return Vec3_New(0.0f, 0.0f, 0.0f);
 		}
-		return Vec3_Scale(v, 1.0f / sqrtf(lengthSquared));
+		return Vec3_Scale(v, 1.0f / magnitude);
 }
 
 /**
@@ -142,11 +142,7 @@ static inline bool Vec3_IsZero(Vector3 v) {
  * Performs linear interpolation between two vectors.
  */
 static inline Vector3 Vec3_Lerp(Vector3 a, Vector3 b, float t) {
-		return Vec3_New(
-				a.x + t * (b.x - a.x),
-				a.y + t * (b.y - a.y),
-				a.z + t * (b.z - a.z)
-		);
+		return Vec3_Add(a, Vec3_Scale(Vec3_Subtract(b, a), t));
 }
 
 /**
@@ -162,13 +158,13 @@ static inline Vector3 Vec3_Reflect(Vector3 v, Vector3 normal) {
  * Returns an identity matrix.
  */
 static inline Matrix4 Matrix4_Identity() {
-		return (Matrix4) {
-				{ { 1.0f, 0.0f, 0.0f, 0.0f },
-						{ 0.0f, 1.0f, 0.0f, 0.0f },
-						{ 0.0f, 0.0f, 1.0f, 0.0f },
-						{ 0.0f, 0.0f, 0.0f, 1.0f }
-				}
-		};
+		Matrix4 matrix = { {
+				{1.0f, 0.0f, 0.0f, 0.0f},
+				{0.0f, 1.0f, 0.0f, 0.0f},
+				{0.0f, 0.0f, 1.0f, 0.0f},
+				{0.0f, 0.0f, 0.0f, 1.0f}
+		} };
+		return matrix;
 }
 
 /**
@@ -176,12 +172,11 @@ static inline Matrix4 Matrix4_Identity() {
  */
 static inline Vector3 MultiplyMatrixVector(Matrix4 matrix, Vector3 vector) {
 		return Vec3_New(
-				matrix.m[0][0] * vector.x + matrix.m[1][0] * vector.y + matrix.m[2][0] * vector.z,
-				matrix.m[0][1] * vector.x + matrix.m[1][1] * vector.y + matrix.m[2][1] * vector.z,
-				matrix.m[0][2] * vector.x + matrix.m[1][2] * vector.y + matrix.m[2][2] * vector.z
+				matrix.m[0][0] * vector.x + matrix.m[1][0] * vector.y + matrix.m[2][0] * vector.z + matrix.m[3][0],
+				matrix.m[0][1] * vector.x + matrix.m[1][1] * vector.y + matrix.m[2][1] * vector.z + matrix.m[3][1],
+				matrix.m[0][2] * vector.x + matrix.m[1][2] * vector.y + matrix.m[2][2] * vector.z + matrix.m[3][2]
 		);
 }
-
 
 // ---- Global Gravity Vector Management ----
 
@@ -266,98 +261,137 @@ extern "C" {
 				float rollSensitivity, float couplingFactor);
 
 		Vector3 TransformToPlayerSpace(float yaw_input, float pitch_input, float roll_input,
-				Vector3 gravNorm,
-				float yawSensitivity, float pitchSensitivity, float rollSensitivity);
+				Vector3 gravNorm, float yawSensitivity, float pitchSensitivity, float rollSensitivity);
 
 		Vector3 TransformToWorldSpace(float yaw_input, float pitch_input, float roll_input,
-				Vector3 gravNorm,
-				float yawSensitivity, float pitchSensitivity, float rollSensitivity);
-
+				Vector3 gravNorm, float yawSensitivity, float pitchSensitivity, float rollSensitivity);
 
 #ifdef __cplusplus
 }
 #endif
 
-#ifdef __cplusplus
-using GyroSpace::TransformToLocalSpace;
-using GyroSpace::TransformToPlayerSpace;
-using GyroSpace::TransformToWorldSpace;
-#endif
+
+// Dynamic Orientation Adjustment
 
 /**
- * Transforms gyro inputs to Local Space using a transformation matrix.
+ * Dynamically adjusts gyro space transformation based on controller orientation.
+ */
+Vector3 TransformWithDynamicOrientation(float yaw_input, float pitch_input, float roll_input,
+		float yawSensitivity, float pitchSensitivity, float rollSensitivity, bool useWorldSpace) {
+
+		Vector3 gravNorm = GetGravityVector();
+
+		// ---- Compute Tilt Factor ----
+		float tiltFactor = fabsf(gravNorm.y); // Higher means Yaw Mode, lower means Roll Mode
+
+		// ---- Blend between modes smoothly ----
+		float blendAmount = clamp(tiltFactor, 0.0f, 1.0f); // Ensures smooth switching
+
+		// ---- Corrected Manual Float Lerp ----
+		float dynamicYaw = (blendAmount * yaw_input * yawSensitivity) + ((1.0f - blendAmount) * roll_input * rollSensitivity);
+		float dynamicPitch = pitch_input * pitchSensitivity;
+		float dynamicRoll = (blendAmount * roll_input * rollSensitivity) + ((1.0f - blendAmount) * yaw_input * yawSensitivity);
+
+		// ---- Apply Either Player or World Space Transformation ----
+		if (useWorldSpace) {
+				return TransformToWorldSpace(dynamicYaw, dynamicPitch, dynamicRoll, gravNorm, yawSensitivity, pitchSensitivity, rollSensitivity);
+		}
+		else {
+				return TransformToPlayerSpace(dynamicYaw, dynamicPitch, dynamicRoll, gravNorm, yawSensitivity, pitchSensitivity, rollSensitivity);
+		}
+
+		// ---- Default Fallback ----
+		return Vec3_New(0.0f, 0.0f, 0.0f);
+}
+
+// Gyro Space Transformation Functions
+
+/**
+ * Transforms gyro inputs to Local Space
  */
 Vector3 TransformToLocalSpace(float yaw, float pitch, float roll,
 		float yawSensitivity, float pitchSensitivity,
 		float rollSensitivity, float couplingFactor) {
 
-		// Adjust roll to compensate for coupling factor influence
+		// ---- Adjust roll to compensate for yaw-roll coupling ----
 		float adjustedRoll = (roll * rollSensitivity) - (yaw * couplingFactor);
 
-		// Apply scaling based on individual sensitivities
+		// ---- Apply individual sensitivity scaling ----
 		Vector3 rawGyro = Vec3_New(
 				(yaw * yawSensitivity) - adjustedRoll,
 				pitch * pitchSensitivity,
 				roll * rollSensitivity
 		);
 
-		// Define Local Space Transformation Matrix
+		// ---- Define Local Space Transformation Matrix ----
 		Matrix4 localTransformMatrix = Matrix4_Identity();
 
-		// Apply transformation matrix to gyro input
+		// ---- Apply transformation matrix to gyro input ----
 		Vector3 localGyro = MultiplyMatrixVector(localTransformMatrix, rawGyro);
 
-		// Prevent unintended roll drift (Lean Fix)
+		// ---- Prevent unintended roll drift (Lean Fix) ----
 		localGyro.z = -localGyro.z;
 
+		// ---- Return the transformed vector ----
 		return localGyro;
 }
 
 /**
- * Transforms gyro inputs to Player Space, considering gravity alignment.
+ * Transforms gyro inputs to Player Space
  */
 Vector3 TransformToPlayerSpace(float yaw_input, float pitch_input, float roll_input,
 		Vector3 gravNorm, float yawSensitivity, float pitchSensitivity, float rollSensitivity) {
 
-		// ---- Override gravNorm to ensure correct gravity is used ----
+		// ---- Retrieve updated gravity vector ----
 		gravNorm = GetGravityVector();
 
-		// ---- Adjust Inputs ----
-		float adjustedYaw = (yaw_input * yawSensitivity) * gravNorm.y + pitch_input * gravNorm.z;
+		// ---- Compute Tilt Factor for Dynamic Orientation Adjustment ----
+		float tiltFactor = fabsf(gravNorm.y); // Higher means Yaw Mode, lower means Roll Mode
+		float blendAmount = clamp(tiltFactor, 0.0f, 1.0f); // Ensures smooth switching
+
+		// ---- Adjust Inputs Dynamically ----
+		float adjustedYaw = (blendAmount * yaw_input * yawSensitivity) + ((1.0f - blendAmount) * roll_input * rollSensitivity);
 		float adjustedPitch = pitch_input * pitchSensitivity;
+		float adjustedRoll = (blendAmount * roll_input * rollSensitivity) + ((1.0f - blendAmount) * yaw_input * yawSensitivity);
 
-		// ---- Align Roll Using Gravity ----
-		float gravDotRoll = Vec3_Dot(gravNorm, Vec3_New(0.0f, 0.0f, 1.0f));
-		Vector3 rollAxis = Vec3_Subtract(Vec3_New(0.0f, 0.0f, 1.0f), Vec3_Scale(gravNorm, gravDotRoll));
+		// ---- Define Roll Axis Independent of Gravity ----
+		Vector3 rollAxis = Vec3_New(1.0f, 0.0f, 0.0f);
 
-		if (!Vec3_IsZero(rollAxis)) {
-				rollAxis = Vec3_Normalize(rollAxis);
-		}
-
-		float adjustedRoll = Vec3_Lerp(Vec3_New(roll_input * rollSensitivity, 0.0f, 0.0f), rollAxis, 0.1f).x;
+		// ---- Flip roll BEFORE matrix transformation ----
+		adjustedRoll = -adjustedRoll;
 
 		// ---- Apply Player View Matrix ----
 		Vector3 adjustedGyro = Vec3_New(adjustedYaw, adjustedPitch, adjustedRoll);
 		Matrix4 playerViewMatrix = Matrix4_Identity();
 
-		return MultiplyMatrixVector(playerViewMatrix, adjustedGyro);
+		Vector3 playerGyro = MultiplyMatrixVector(playerViewMatrix, adjustedGyro);
+
+		// ---- Return the transformed vector ----
+		return playerGyro;
 }
 
 /**
- * Transforms gyro inputs to World Space, considering gravity orientation.
+ * Transforms gyro inputs to World Space
  */
 Vector3 TransformToWorldSpace(float yaw_input, float pitch_input, float roll_input,
 		Vector3 gravNorm, float yawSensitivity, float pitchSensitivity, float rollSensitivity) {
 
-		// ---- Override gravNorm to ensure correct gravity is used ----
+		// ---- Retrieve updated gravity vector ----
 		gravNorm = GetGravityVector();
 
-		// ---- Map Inputs ----
+		// ---- Compute Tilt Factor for Dynamic Orientation Adjustment ----
+		float tiltFactor = fabsf(gravNorm.y); // Higher means Yaw Mode, lower means Roll Mode
+		float blendAmount = clamp(tiltFactor, 0.0f, 1.0f); // Ensures smooth switching
+
+		// ---- Adjust Inputs Dynamically ----
 		Vector3 rawGyro = Vec3_New(
 				pitch_input * pitchSensitivity,
 				-yaw_input * yawSensitivity,
-				roll_input * rollSensitivity
+				(blendAmount * roll_input * rollSensitivity) + ((1.0f - blendAmount) * yaw_input * yawSensitivity)
 		);
+
+		// ---- Flip Roll BEFORE Gravity Alignment ----
+		rawGyro.z = -rawGyro.z;
 
 		// ---- Align Pitch Using Gravity ----
 		float gravDotPitch = Vec3_Dot(gravNorm, Vec3_New(1.0f, 0.0f, 0.0f));
@@ -367,16 +401,6 @@ Vector3 TransformToWorldSpace(float yaw_input, float pitch_input, float roll_inp
 				pitchAxis = Vec3_Normalize(pitchAxis);
 		}
 
-		// ---- Align Roll Using Gravity ----
-		float gravDotRoll = Vec3_Dot(gravNorm, Vec3_New(0.0f, 0.0f, 1.0f));
-		Vector3 rollAxis = Vec3_Subtract(Vec3_New(0.0f, 0.0f, 1.0f), Vec3_Scale(gravNorm, gravDotRoll));
-
-		if (!Vec3_IsZero(rollAxis)) {
-				rollAxis = Vec3_Normalize(rollAxis);
-		}
-
-		rawGyro.z = Vec3_Lerp(rawGyro, rollAxis, 0.1f).x;
-
 		// ---- Calculate Transformed Values ----
 		Vector3 worldGyro = Vec3_New(
 				-Vec3_Dot(rawGyro, gravNorm),
@@ -384,6 +408,7 @@ Vector3 TransformToWorldSpace(float yaw_input, float pitch_input, float roll_inp
 				rawGyro.z
 		);
 
+		// ---- Return the transformed vector ----
 		return worldGyro;
 }
 

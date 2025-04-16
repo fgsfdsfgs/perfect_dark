@@ -1679,7 +1679,6 @@ void applyGyroAxisMapping(float gyroData[3], f32* deltaX, f32* deltaY, f32* delt
 		}
 }
 
-
 s32 inputGetGyroAimMode(void)
 {
 		return g_GyroAimMode;
