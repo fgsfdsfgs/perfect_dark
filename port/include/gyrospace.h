@@ -28,6 +28,16 @@ extern "C" {
 #include "stdint.h"
 #endif
 
+#ifdef bool
+#undef bool
+#define bool s32
+#endif
+
+#ifdef ubool
+#undef ubool
+#define ubool u32
+#endif
+
 #ifndef EPSILON
 #define EPSILON 1e-5
 #endif
@@ -371,6 +381,9 @@ Vector3 TransformToPlayerSpace(float yaw_input, float pitch_input, float roll_in
 /**
  * Transforms gyro inputs to World Space
  */
+ /**
+	* Transforms gyro inputs to World Space
+	*/
 Vector3 TransformToWorldSpace(float yaw_input, float pitch_input, float roll_input,
 		Vector3 gravNorm, float yawSensitivity, float pitchSensitivity, float rollSensitivity) {
 
@@ -384,8 +397,8 @@ Vector3 TransformToWorldSpace(float yaw_input, float pitch_input, float roll_inp
 		// ---- Adjust Inputs Dynamically ----
 		Vector3 rawGyro = Vec3_New(
 				pitch_input * pitchSensitivity,
-				-yaw_input * yawSensitivity,
-				(blendAmount * roll_input * rollSensitivity) + ((1.0f - blendAmount) * yaw_input * yawSensitivity)
+				-yaw_input * yawSensitivity,  // Yaw is now independent from gravity influence
+				roll_input * rollSensitivity
 		);
 
 		// ---- Flip Roll BEFORE Gravity Alignment ----
@@ -399,12 +412,12 @@ Vector3 TransformToWorldSpace(float yaw_input, float pitch_input, float roll_inp
 				pitchAxis = Vec3_Normalize(pitchAxis);
 		}
 
-		// ---- Apply Gravity-Based Roll Adjustment ----
+		// ---- Apply Gravity-Based Roll Adjustment with Smoothing ----
 		float gravDotRoll = Vec3_Dot(gravNorm, Vec3_New(0.0f, 0.0f, 1.0f));
 		Vector3 rollAxis = Vec3_Subtract(Vec3_New(0.0f, 0.0f, 1.0f), Vec3_Scale(gravNorm, gravDotRoll));
 
 		if (!Vec3_IsZero(rollAxis)) {
-				rollAxis = Vec3_Normalize(rollAxis);
+				rollAxis = Vec3_Lerp(rollAxis, Vec3_Normalize(rollAxis), 0.1f); // Smoothing factor applied
 		}
 
 		// ---- Calculate Transformed Values ----
