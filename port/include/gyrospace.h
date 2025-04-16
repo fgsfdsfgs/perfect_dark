@@ -28,13 +28,21 @@ extern "C" {
 #include "stdint.h"
 #endif
 
-#ifdef bool
-#undef bool
+ // Ensure `s32` and `u32` are correctly defined
+#ifndef s32
+#define s32 int32_t
+#endif
+
+#ifndef u32
+#define u32 uint32_t
+#endif
+
+// Apply correct boolean type definitions
+#ifndef bool
 #define bool s32
 #endif
 
-#ifdef ubool
-#undef ubool
+#ifndef ubool
 #define ubool u32
 #endif
 
@@ -284,31 +292,29 @@ extern "C" {
  * Dynamically adjusts gyro space transformation based on controller orientation.
  */
 Vector3 TransformWithDynamicOrientation(float yaw_input, float pitch_input, float roll_input,
-		float yawSensitivity, float pitchSensitivity, float rollSensitivity, bool useWorldSpace) {
+		float yawSensitivity, float pitchSensitivity, float rollSensitivity, float couplingFactor) {
 
 		Vector3 gravNorm = GetGravityVector();
 
 		// ---- Compute Tilt Factor ----
-		float tiltFactor = fabsf(gravNorm.y); // Higher means Yaw Mode, lower means Roll Mode
-
-		// ---- Blend between modes smoothly ----
+		float tiltFactor = powf(fabsf(gravNorm.y), 0.75f); // Exponential smoothing for sharper transition
 		float blendAmount = clamp(tiltFactor, 0.0f, 1.0f); // Ensures smooth switching
 
-		// ---- Corrected Manual Float Lerp ----
+		// ---- Adjust Dynamic Sensitivity ----
 		float dynamicYaw = (blendAmount * yaw_input * yawSensitivity) + ((1.0f - blendAmount) * roll_input * rollSensitivity);
 		float dynamicPitch = pitch_input * pitchSensitivity;
 		float dynamicRoll = (blendAmount * roll_input * rollSensitivity) + ((1.0f - blendAmount) * yaw_input * yawSensitivity);
 
-		// ---- Apply Either Player or World Space Transformation ----
-		if (useWorldSpace) {
-				return TransformToWorldSpace(dynamicYaw, dynamicPitch, dynamicRoll, gravNorm, yawSensitivity, pitchSensitivity, rollSensitivity);
-		}
-		else {
-				return TransformToPlayerSpace(dynamicYaw, dynamicPitch, dynamicRoll, gravNorm, yawSensitivity, pitchSensitivity, rollSensitivity);
-		}
+		// ---- Apply Local Space transformation first ----
+		Vector3 localGyro = TransformToLocalSpace(dynamicYaw, dynamicPitch, dynamicRoll, yawSensitivity, pitchSensitivity, rollSensitivity, couplingFactor);
 
-		// ---- Default Fallback ----
-		return Vec3_New(0.0f, 0.0f, 0.0f);
+		// ---- Further transformation into either Player or World Space ----
+		Vector3 adjustedGyro = (gravNorm.y > 0.5f)
+				? TransformToPlayerSpace(localGyro.x, localGyro.y, localGyro.z, gravNorm, yawSensitivity, pitchSensitivity, rollSensitivity)
+				: TransformToWorldSpace(localGyro.x, localGyro.y, localGyro.z, gravNorm, yawSensitivity, pitchSensitivity, rollSensitivity);
+
+		// ---- Return final transformed vector ----
+		return adjustedGyro;
 }
 
 // Gyro Space Transformation Functions
@@ -381,9 +387,6 @@ Vector3 TransformToPlayerSpace(float yaw_input, float pitch_input, float roll_in
 /**
  * Transforms gyro inputs to World Space
  */
- /**
-	* Transforms gyro inputs to World Space
-	*/
 Vector3 TransformToWorldSpace(float yaw_input, float pitch_input, float roll_input,
 		Vector3 gravNorm, float yawSensitivity, float pitchSensitivity, float rollSensitivity) {
 
@@ -397,8 +400,8 @@ Vector3 TransformToWorldSpace(float yaw_input, float pitch_input, float roll_inp
 		// ---- Adjust Inputs Dynamically ----
 		Vector3 rawGyro = Vec3_New(
 				pitch_input * pitchSensitivity,
-				-yaw_input * yawSensitivity,  // Yaw is now independent from gravity influence
-				roll_input * rollSensitivity
+				-yaw_input * yawSensitivity,
+				(blendAmount * roll_input * rollSensitivity) + ((1.0f - blendAmount) * yaw_input * yawSensitivity)
 		);
 
 		// ---- Flip Roll BEFORE Gravity Alignment ----
@@ -412,12 +415,12 @@ Vector3 TransformToWorldSpace(float yaw_input, float pitch_input, float roll_inp
 				pitchAxis = Vec3_Normalize(pitchAxis);
 		}
 
-		// ---- Apply Gravity-Based Roll Adjustment with Smoothing ----
+		// ---- Apply Gravity-Based Roll Adjustment ----
 		float gravDotRoll = Vec3_Dot(gravNorm, Vec3_New(0.0f, 0.0f, 1.0f));
 		Vector3 rollAxis = Vec3_Subtract(Vec3_New(0.0f, 0.0f, 1.0f), Vec3_Scale(gravNorm, gravDotRoll));
 
 		if (!Vec3_IsZero(rollAxis)) {
-				rollAxis = Vec3_Lerp(rollAxis, Vec3_Normalize(rollAxis), 0.1f); // Smoothing factor applied
+				rollAxis = Vec3_Normalize(rollAxis);
 		}
 
 		// ---- Calculate Transformed Values ----
