@@ -1643,7 +1643,7 @@ void applyGyroAxisMapping(float gyroData[3], f32* deltaX, f32* deltaY, f32* delt
 				// Apply Player Space transformation with gravity alignment
 				Vector3 transformedGyro = TransformToPlayerSpace(
 						processedYaw, processedPitch, processedRoll,
-						GetGravityVector()
+						GetGravityVector(), 1.0f, 1.0f, 1.0f
 				);
 
 				*deltaX = transformedGyro.x;
@@ -1662,7 +1662,7 @@ void applyGyroAxisMapping(float gyroData[3], f32* deltaX, f32* deltaY, f32* delt
 				// Apply World Space transformation with gravity influence
 				Vector3 transformedGyro = TransformToWorldSpace(
 						processedYaw, processedPitch, processedRoll,
-						GetGravityVector()
+						GetGravityVector(), 1.0f, 1.0f, 1.0f
 				);
 
 				*deltaX = transformedGyro.x;
