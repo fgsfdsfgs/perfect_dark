@@ -392,20 +392,31 @@ static inline void inputInitController(const s32 cidx, const s32 jidx)
 
 static inline void inputCloseController(const s32 cidx)
 {
+		if (cidx < 0 || cidx >= INPUT_MAX_CONTROLLERS || !pads[cidx]) {
+				return; // Invalid index or no controller to close
+		}
+
 		sysLogPrintf(LOG_NOTE, "input: removed controller '%d: (%s)' (id %d) from player %d",
 				padsCfg[cidx].deviceIndex, SDL_GameControllerName(pads[cidx]), inputControllerGetId(pads[cidx]), cidx);
 
-		// reset player LEDs
+		// Reset player LEDs
 		SDL_GameControllerSetPlayerIndex(pads[cidx], -1);
 
+		// Close the controller
 		SDL_GameControllerClose(pads[cidx]);
-
 		pads[cidx] = NULL;
-		padsCfg[cidx].rumbleOn = 0;
 
-		if (cidx) {
-				connectedMask &= ~(1 << cidx);
-		}
+		// Reset controller configuration
+		padsCfg[cidx] = (struct controllercfg)CONTROLLERCFG_DEFAULT;
+
+		// Update the connected mask
+		connectedMask &= ~(1 << cidx);
+
+		// Ensure no lingering input data is processed
+		memset(binds[cidx], 0, sizeof(binds[cidx]));
+		memset(bindStrs[cidx], 0, sizeof(bindStrs[cidx]));
+
+		sysLogPrintf(LOG_NOTE, "input: controller %d fully reset and disconnected.", cidx);
 }
 
 static inline s32 inputControllerGetIndex(SDL_GameController* ctrl)
@@ -511,31 +522,44 @@ static inline void inputInitAllControllers(void)
 static int inputEventFilter(void* data, SDL_Event* event)
 {
 		switch (event->type) {
-		case SDL_CONTROLLERDEVICEADDED:
+		case SDL_CONTROLLERDEVICEADDED: {
+				sysLogPrintf(LOG_NOTE, "Controller added: device index %d", event->cdevice.which);
+
 				for (s32 i = firstController; i < INPUT_MAX_CONTROLLERS; ++i) {
 						if (!pads[i]) {
 								pads[i] = SDL_GameControllerOpen(event->cdevice.which);
 								if (pads[i]) {
 										inputInitController(i, event->cdevice.which);
+										sysLogPrintf(LOG_NOTE, "Controller assigned to slot %d", i);
+								}
+								else {
+										sysLogPrintf(LOG_WARNING, "Failed to open controller at device index %d", event->cdevice.which);
 								}
 								break;
 						}
 				}
 				break;
+		}
 
 		case SDL_CONTROLLERDEVICEREMOVED: {
 				SDL_GameController* ctrl = SDL_GameControllerFromInstanceID(event->cdevice.which);
 				const s32 idx = inputControllerGetIndex(ctrl);
+
 				if (idx >= 0) {
+						sysLogPrintf(LOG_NOTE, "Controller removed: instance ID %d, slot %d", event->cdevice.which, idx);
 						inputCloseController(idx);
 						padsCfg[idx].deviceIndex = -1;
+				}
+				else {
+						sysLogPrintf(LOG_WARNING, "Controller removal event for unknown instance ID %d", event->cdevice.which);
 				}
 				break;
 		}
 
 		case SDL_JOYDEVICEADDED:
 		case SDL_JOYDEVICEREMOVED:
-				numJoysticks = SDL_NumJoysticks(); // joystick count has changed
+				numJoysticks = SDL_NumJoysticks(); // Update joystick count
+				sysLogPrintf(LOG_NOTE, "Joystick count updated: %d", numJoysticks);
 				break;
 
 		case SDL_MOUSEWHEEL:
@@ -557,7 +581,7 @@ static int inputEventFilter(void* data, SDL_Event* event)
 				}
 				break;
 
-		case SDL_CONTROLLERBUTTONDOWN:
+		case SDL_CONTROLLERBUTTONDOWN: {
 				if (!lastKey) {
 						lastKey = VK_JOY1_BEGIN + event->cbutton.button;
 						SDL_GameController* ctrl = SDL_GameControllerFromInstanceID(event->cdevice.which);
@@ -567,8 +591,9 @@ static int inputEventFilter(void* data, SDL_Event* event)
 						}
 				}
 				break;
+		}
 
-		case SDL_CONTROLLERAXISMOTION:
+		case SDL_CONTROLLERAXISMOTION: {
 				if (!lastKey) {
 						if (event->caxis.axis >= SDL_CONTROLLER_AXIS_TRIGGERLEFT && event->caxis.value > TRIG_THRESHOLD) {
 								lastKey = VK_JOY1_LTRIG + (event->caxis.axis - SDL_CONTROLLER_AXIS_TRIGGERLEFT);
@@ -580,6 +605,7 @@ static int inputEventFilter(void* data, SDL_Event* event)
 						}
 				}
 				break;
+		}
 
 		case SDL_TEXTINPUT:
 				if (!lastChar && event->text.text[0] && (u8)event->text.text[0] < 0x80) {
@@ -1101,6 +1127,7 @@ void autoCalibrateGyro() {
 static inline void inputUpdateGyro(void)
 {
 		if (!gyroEnabled) {
+				sysLogPrintf(LOG_NOTE, "Gyro is disabled. Skipping update.");
 				return; // Exit if gyro is not enabled
 		}
 
@@ -1149,10 +1176,6 @@ static inline void inputUpdateGyro(void)
 				gyroYaw += gyroDeltaYaw;
 				gyroPitch += gyroDeltaPitch;
 				gyroRoll += gyroDeltaRoll;
-
-				sysLogPrintf(LOG_NOTE,
-						"Gyro Updated - Yaw: %f, Pitch: %f, Roll: %f | OffsetX: %f, OffsetY: %f",
-						gyroYaw, gyroPitch, gyroRoll, gyroOffsetX, gyroOffsetY);
 		}
 }
 
