@@ -717,12 +717,12 @@ void bmoveProcessInput(bool allowc1x, bool allowc1y, bool allowc1buttons, bool i
 	f32 increment2;
 	f32 newverta;
 #ifndef PLATFORM_N64
-	// Mouse sensitivity scaling )
-	const f32 mlookscale = g_Vars.lvupdate240 ? (4.f / (f32)g_Vars.lvupdate240) : 4.f;
+	// Mouse sensitivity scaling
+	const f32 mlookscale = 4.f; // Fixed base sensitivity for mouse input
 	const bool allowmlook = (g_Vars.currentplayernum == 0) && (allowc1x || allowc1y);
 
 	// Gyro sensitivity scaling
-	const f32 gyroBaseSens = 4.f; // Define fixed base sensitivity
+	const f32 gyroBaseSens = 4.f; // Fixed base sensitivity for gyro input
 	const f32 gyroscale = gyroBaseSens; // Ensure it is constant and independent of FPS
 
 	const bool allowgyro = (g_Vars.currentplayernum == 0) && (allowc1x || allowc1y);
