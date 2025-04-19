@@ -1878,53 +1878,52 @@ void inputSetGyroActivationMode(s32 mode)
 		g_GyroActivationMode = mode;
 }
 
-void applyGyroActivationMode(f32* deltaX, f32* deltaY, f32* deltaZ, s32 activationMode)
-{
-		static bool gyroToggleState = false; 
+void applyGyroActivationMode(f32* deltaX, f32* deltaY, f32* deltaZ, s32 activationMode) {
+		static bool gyroToggleState = true; // Default to gyro being active
+		bool gyroActive = false;
 
+		// Ensure valid pointers
+		if (!deltaX || !deltaY || !deltaZ) {
+				return;
+		}
+
+		// Handle activation modes
 		switch (activationMode) {
 		case GYRO_ALWAYS_ON:
-				// Gyro input is always active; no changes needed
+				// Gyro is always active
+				gyroActive = true;
 				break;
 
 		case GYRO_TOGGLE:
-				// Toggle gyro state only when CK_GYRO_MOD is pressed
-				if (inputKeyJustPressed(CK_GYRO_MOD)) { 
-						gyroToggleState = !gyroToggleState; 
+				// Toggle gyro state when CK_GYRO_MOD is pressed
+				if (inputKeyJustPressed(CK_GYRO_MOD)) {
+						gyroToggleState = !gyroToggleState;
 				}
-
-				// Zero out input only when gyro is toggled OFF
-				if (!gyroToggleState) {
-						if (deltaX) *deltaX = 0.f;
-						if (deltaY) *deltaY = 0.f;
-						if (deltaZ) *deltaZ = 0.f;
-				}
+				gyroActive = gyroToggleState;
 				break;
 
 		case GYRO_HOLD:
-				// Activate gyro only while CK_GYRO_MOD is held down
-				if (!inputKeyPressed(CK_GYRO_MOD)) {
-						if (deltaX) *deltaX = 0.f;
-						if (deltaY) *deltaY = 0.f;
-						if (deltaZ) *deltaZ = 0.f;
-				}
+				// Gyro is active only while CK_GYRO_MOD is held down
+				gyroActive = inputKeyPressed(CK_GYRO_MOD);
 				break;
 
 		case GYRO_HOLD_INVERTED:
-				// Disable gyro when CK_GYRO_MOD is held down
-				if (inputKeyPressed(CK_GYRO_MOD)) {
-						if (deltaX) *deltaX = 0.f;
-						if (deltaY) *deltaY = 0.f;
-						if (deltaZ) *deltaZ = 0.f;
-				}
+				// Gyro is disabled while CK_GYRO_MOD is held down
+				gyroActive = !inputKeyPressed(CK_GYRO_MOD);
 				break;
 
 		default:
-				// Invalid mode, disable gyro input
-				if (deltaX) *deltaX = 0.f;
-				if (deltaY) *deltaY = 0.f;
-				if (deltaZ) *deltaZ = 0.f;
+				// Invalid mode, disable gyro
+				gyroActive = false;
 				break;
+		}
+
+		// Apply gyro state
+		if (!gyroActive) {
+				// Zero out input if gyro is inactive
+				*deltaX = 0.f;
+				*deltaY = 0.f;
+				*deltaZ = 0.f;
 		}
 }
 
@@ -2186,6 +2185,7 @@ PD_CONSTRUCTOR static void inputConfigInit(void)
 		configRegisterInt("Input.GyroEnabled", &gyroEnabled, 0, 1);
 		configRegisterInt("Input.GyroAxisMode", &g_GyroAxisMode, GYRO_AXIS_YAW, GYRO_AXIS_WORLD);
 		configRegisterInt("Input.GyroAimMode", &g_GyroAimMode, GYRO_AIM_MODE_CAMERA, GYRO_AIM_MODE_BOTH);
+		configRegisterInt("Input.GyroActivationMode", &g_GyroActivationMode, GYRO_ALWAYS_ON, GYRO_HOLD_INVERTED);
 		configRegisterFloat("Input.gyroSpeedX", &gyroSensX, -10.f, 10.f);
 		configRegisterFloat("Input.gyroSpeedY", &gyroSensY, -10.f, 10.f);
 		configRegisterFloat("Input.gyroAimSensX", &gyroAimSensX, -10.f, 10.f);
