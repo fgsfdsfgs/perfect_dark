@@ -138,7 +138,7 @@ Controls can be rebound in `pd.ini`. Default control scheme is as follows:
    cp build/pd.i686.exe bin/
    cp build_pal/pd.pal.i686.exe bin/
    cp build_jpn/pd.jpn.i686.exe bin/
-   cp /mingw32/bin/{SDL2.dll,zlib1.dll,libwinpthread-1.dll,libgcc_s_seh-1.dll} bin/
+   cp /mingw32/bin/{SDL2.dll,zlib1.dll,libgcc_s_dw2-1.dll,libwinpthread-1.dll} bin/
    touch bin/data/put_your_rom_here.txt
    ```
 9. If you don't know where you downloaded the source to, you can run `explorer .` to open the current directory.
