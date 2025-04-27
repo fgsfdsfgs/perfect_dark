@@ -202,24 +202,6 @@ Controls can be rebound in `pd.ini`. Default control scheme is as follows:
 5. Ensure devkitA64 environment variables are set:
    * Execute command: `source /opt/devkitpro/switchvars.sh`
    * If your `$DEVKITPRO` path is different, substitute that instead or set the variables manually.
-   * on MSYS you need to setup extra variables:
-   ```
-     export PORTLIBS_ROOT=${DEVKITPRO}/portlibs
-     export PATH=${DEVKITPRO}/tools/bin:${DEVKITPRO}/devkitA64/bin:$PATH
-     export TOOL_PREFIX=aarch64-none-elf-
-     export CC=${TOOL_PREFIX}gcc
-     export CXX=${TOOL_PREFIX}g++
-     export AR=${TOOL_PREFIX}gcc-ar
-     export RANLIB=${TOOL_PREFIX}gcc-ranlib
-     export PORTLIBS_PREFIX=${DEVKITPRO}/portlibs/switch
-     export PATH=$PORTLIBS_PREFIX/bin:$PATH
-     export ARCH="-march=armv8-a+crc+crypto -mtune=cortex-a57 -mtp=soft -fPIC -ftls-model=local-exec"
-     export CFLAGS="${ARCH} -O2 -ffunction-sections -fdata-sections"
-     export CXXFLAGS="${CFLAGS}"
-     export CPPFLAGS="-D__SWITCH__ -I${PORTLIBS_PREFIX}/include -isystem ${DEVKITPRO}/libnx/include"
-     export LDFLAGS="${ARCH} -L${PORTLIBS_PREFIX}/lib -L${DEVKITPRO}/libnx/lib"
-     export LIBS="-lnx"
-     ```
 7. Configure:
    * Execute command: `aarch64-none-elf-cmake -G"Unix Makefiles" -Bbuild .`
    * Add ` -DROMID=pal-final` or ` -DROMID=jpn-final` at the end of the command if you want to build a PAL or JPN executable respectively.
