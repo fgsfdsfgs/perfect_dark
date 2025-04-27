@@ -1069,60 +1069,79 @@ static inline void inputUpdateMouse(void)
 }
 
 void autoCalibrateGyro() {
-		static f32 accumulatedOffsetX = 0.f;
-		static f32 accumulatedOffsetY = 0.f;
-		static s32 sampleCount = 0;
-		static bool calibrating = true;
-		static s32 stationarySampleCount = 0;
+    static f32 accumulatedOffsetX = 0.f;
+    static f32 accumulatedOffsetY = 0.f;
+    static s32 sampleCount = 0;
+    static s32 stationarySampleCount = 0;
+    static f32 calibrationConfidence = 0.f;
+    static f32 previousYaw = 0.f, previousPitch = 0.f;
+    static f32 previousOffsetX = 0.f, previousOffsetY = 0.f;
 
-		// If auto-calibration is disabled, reset offsets to stock values
-		if (!inputGyroAutoCalibrationIsEnabled()) {
-				gyroOffsetX = 0.f;
-				gyroOffsetY = 0.f;
-				sampleCount = 0;
-				calibrating = false;
-				return;
-		}
+    // Calculate acceleration magnitude using existing delta values
+    f32 accelMagnitude = sqrtf(accelDeltaX * accelDeltaX +
+                               accelDeltaY * accelDeltaY +
+                               accelDeltaZ * accelDeltaZ);
 
-		// Validate gyro sensor readings before processing
-		if (isnan(gyroDeltaYaw) || isinf(gyroDeltaYaw) || isnan(gyroDeltaPitch) || isinf(gyroDeltaPitch)) {
-				return; // Ignore invalid gyro data
-		}
+    // If auto-calibration is disabled, reset offsets
+    if (!inputGyroAutoCalibrationIsEnabled()) {
+        gyroOffsetX = 0.f;
+        gyroOffsetY = 0.f;
+        sampleCount = 0;
+        calibrationConfidence = 0.f;
+        return;
+    }
 
-		// Detect if controller is stationary (placed on a flat surface)
-		const f32 noiseThreshold = 0.005f;
-		bool isStationary = fabsf(gyroDeltaYaw) < noiseThreshold && fabsf(gyroDeltaPitch) < noiseThreshold;
+    // Validate gyro readings before processing
+    if (isnan(gyroDeltaYaw) || isinf(gyroDeltaYaw) || isnan(gyroDeltaPitch) || isinf(gyroDeltaPitch)) {
+        return; // Ignore invalid gyro data
+    }
 
-		// Count samples where controller remains stationary
-		if (isStationary) {
-				stationarySampleCount++;
-		}
-		else {
-				stationarySampleCount = 0; // Reset count if movement is detected
-		}
+    // Detect stillness using rolling averages
+    f32 yawDifference = fabsf(gyroDeltaYaw - previousYaw);
+    f32 pitchDifference = fabsf(gyroDeltaPitch - previousPitch);
+    bool isStationary = yawDifference < 0.002f && pitchDifference < 0.002f;
 
-		// Accumulate offsets only when controller has been stationary for multiple frames
-		if (calibrating && stationarySampleCount > 50) { 
-				accumulatedOffsetX += gyroDeltaYaw;
-				accumulatedOffsetY += gyroDeltaPitch;
-				sampleCount++;
-		}
+    previousYaw = gyroDeltaYaw;
+    previousPitch = gyroDeltaPitch;
 
-		// Apply calibration offsets once enough stationary samples are gathered
-		if (sampleCount >= 200) {
-				gyroOffsetX = accumulatedOffsetX / sampleCount;
-				gyroOffsetY = accumulatedOffsetY / sampleCount;
-				sampleCount = 0;
-				stationarySampleCount = 0;
-				calibrating = true;
+    // Count stationary samples for calibration adjustments
+    if (isStationary) {
+        stationarySampleCount++;
+    } else {
+        stationarySampleCount = fmaxf(stationarySampleCount - 1, 0); // Allow slight movement without full reset
+    }
 
-				printf("Gyro Auto-Calibration Completed! OffsetX: %.4f, OffsetY: %.4f\n", gyroOffsetX, gyroOffsetY);
-		}
+    // Accumulate offsets based on confidence scaling
+    if (stationarySampleCount > 50) { 
+        accumulatedOffsetX += gyroDeltaYaw * (1.0f - calibrationConfidence);
+        accumulatedOffsetY += gyroDeltaPitch * (1.0f - calibrationConfidence);
+        sampleCount++;
 
-		// Continuous drift correction
-		gyroDeltaYaw -= gyroOffsetX;
-		gyroDeltaPitch -= gyroOffsetY;
+        // Increase calibration confidence over time
+        calibrationConfidence = fminf(calibrationConfidence + 0.01f, 1.0f);
+    }
+
+    // Apply calibration offsets once enough steady samples are gathered
+    if (sampleCount >= 200) {
+        previousOffsetX = gyroOffsetX;
+        previousOffsetY = gyroOffsetY;
+
+        // Smoothly blend new calibration offsets with previous offsets to prevent sudden jumps
+        gyroOffsetX = (accumulatedOffsetX / sampleCount) * 0.9f + previousOffsetX * 0.1f;
+        gyroOffsetY = (accumulatedOffsetY / sampleCount) * 0.9f + previousOffsetY * 0.1f;
+
+        sampleCount = 0;
+        stationarySampleCount = 0;
+        calibrationConfidence = 1.0f;
+
+        printf("Gyro Auto-Calibration Completed! OffsetX: %.4f, OffsetY: %.4f\n", gyroOffsetX, gyroOffsetY);
+    }
+
+    // **Continuous drift correction with adaptive scaling**
+    gyroDeltaYaw -= gyroOffsetX * calibrationConfidence;
+    gyroDeltaPitch -= gyroOffsetY * calibrationConfidence;
 }
+
 
 static inline void inputUpdateGyro(void)
 {
@@ -1158,8 +1177,13 @@ static inline void inputUpdateGyro(void)
 				applyGyroActivationMode(&deltaX, &deltaY, &deltaZ, inputGetGyroActivationMode());
 				applyGyroThreshold(&deltaX, &deltaY, &deltaZ, inputGetGyroMinThreshold());
 
-				// Perform auto-calibration if enabled
-				if (inputGyroAutoCalibrationIsEnabled()) {
+				// Calculate acceleration magnitude using existing delta values
+				f32 accelMagnitude = sqrtf(accelDeltaX * accelDeltaX +
+						accelDeltaY * accelDeltaY +
+						accelDeltaZ * accelDeltaZ);
+
+				// Perform auto-calibration if enabled and stillness is detected
+				if (inputGyroAutoCalibrationIsEnabled() && fabsf(accelMagnitude - 1.0f) < inputGetGyroMinThreshold()) {
 						autoCalibrateGyro();
 				}
 
