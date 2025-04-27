@@ -202,13 +202,13 @@ Controls can be rebound in `pd.ini`. Default control scheme is as follows:
 5. Ensure devkitA64 environment variables are set:
    * Execute command: `source /opt/devkitpro/switchvars.sh`
    * If your `$DEVKITPRO` path is different, substitute that instead or set the variables manually.
-7. Configure:
+6. Configure:
    * Execute command: `aarch64-none-elf-cmake -G"Unix Makefiles" -Bbuild .`
    * Add ` -DROMID=pal-final` or ` -DROMID=jpn-final` at the end of the command if you want to build a PAL or JPN executable respectively.
-8. Build:
+7. Build:
    * Execute command: `make -C build -j$(nproc)`.  Also yo can execute `make -C build_pal -j$(nproc)` or `make -C build_jpn -j$(nproc)` to build the PAL and JPN versions
-9. The resulting executable will be at `build/pd.arm64.nro`.
-10. to create a `build` folder with all files needed (except the ROM) you can execute the commands:
+8. The resulting executable will be at `build/pd.arm64.nro`.
+9. to create a `build` folder with all files needed (except the ROM) you can execute the commands:
     ```
     mkdir -p bin/perfectdark/data
     cp build/pd.arm64.nro bin/perfectdark/
