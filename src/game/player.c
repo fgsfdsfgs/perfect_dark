@@ -3658,26 +3658,25 @@ void playerTick(bool arg0)
 				sp174 = -stickx * LVUPDATE60FREAL() * 0.00025f;
 
 #ifndef PLATFORM_N64
-				// Respect the invert pitch setting
+				// respect the invert pitch setting
 				if (optionsGetForwardPitch(g_Vars.currentplayerstats->mpindex)) {
-						sp178 = -sp178;
+					sp178 = -sp178;
 				}
-
 				// Mouse control
 				if (g_Vars.currentplayernum == 0) {
-						f32 mdx, mdy;
-						inputMouseGetScaledDelta(&mdx, &mdy);
-						if (mdx || mdy) {
-								mdx *= 48.f;
-								mdy *= 48.f;
-								mdx = (mdx < -128.f) ? -128.f : (mdx > 127.f) ? 127.f : mdx;
-								mdy = (mdy < -128.f) ? -128.f : (mdy > 127.f) ? 127.f : mdy;
-								if (g_Vars.currentplayerstats && !optionsGetForwardPitch(g_Vars.currentplayerstats->mpindex)) {
-										mdy = -mdy;
-								}
-								sp178 += mdy * 0.00025f;
-								sp174 -= mdx * 0.00025f;
+					f32 mdx, mdy;
+					inputMouseGetScaledDelta(&mdx, &mdy);
+					if (mdx || mdy) {
+						mdx *= 0.022f;
+						mdy *= 0.022f;
+						mdx = (mdx < -128.f) ? -128.f : (mdx > 127.f) ? 127.f : mdx;
+						mdy = (mdy < -128.f) ? -128.f : (mdy > 127.f) ? 127.f : mdy;
+						if (g_Vars.currentplayerstats && !optionsGetForwardPitch(g_Vars.currentplayerstats->mpindex)) {
+							mdy = -mdy;
 						}
+						sp178 += mdy;
+						sp174 -= mdx;
+					}
 				}
 
 				// Gyro control
