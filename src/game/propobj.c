@@ -4381,7 +4381,16 @@ void weaponTick(struct prop *prop)
 					}
 				}
 
-				nbombCreateStorm_hack(&prop->pos, ownerprop, prop);
+				// Can't understand why it's 0 when chr is holding nbomb
+				// Owner is the one who shot, not weapon owner
+				if(prop->pos.x == 0 
+					&& prop->pos.y == 0
+					&& prop->pos.y == 0) {
+					nbombCreateStorm_hack(&prop->parent->pos, ownerprop, prop);
+				}
+				else {
+					nbombCreateStorm_hack(&prop->pos, ownerprop, prop);				
+				}
 				propUnsetDangerous(prop);
 
 				obj->hidden |= OBJHFLAG_DELETING;
@@ -15412,6 +15421,7 @@ void objDamage(struct defaultobj *obj, f32 damage, struct coord *pos, s32 weapon
 					|| weapon->weaponnum == WEAPON_ROCKET
 					|| weapon->weaponnum == WEAPON_HOMINGROCKET
 					|| weapon->weaponnum == WEAPON_GRENADEROUND
+					|| weapon->weaponnum == WEAPON_NBOMB
 					|| (weapon->weaponnum == WEAPON_DRAGON && weapon->gunfunc == FUNC_SECONDARY)) {
 				// Homing rockets are immune to remote mines? Or maybe they just
 				// don't explode because the mine is exploding anyway
