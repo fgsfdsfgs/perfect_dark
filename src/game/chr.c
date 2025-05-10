@@ -4696,8 +4696,8 @@ void chrHit(struct shotdata *shotdata, struct hit *hit)
 					chr->hidden |= CHRHFLAG_DROPPINGITEM;
 					objDamage(&weapon->base, gsetGetDamage(&shotdata->gset), &sp98, shotdata->gset.weaponnum, g_Vars.currentplayernum);
 					return;
-				} 
-				
+				}
+
 				// Create decal depending on the weapon's surface type
 				if (hit->hitthing.texturenum < 0 || hit->hitthing.texturenum >= NUM_TEXTURES) {
 					surfacetype = SURFACETYPE_DEFAULT;
