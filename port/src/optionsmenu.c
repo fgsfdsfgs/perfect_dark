@@ -1565,6 +1565,56 @@ struct menuitem g_ExtendedGameMenuItems[] = {
 	{ MENUITEMTYPE_END },
 };
 
+static MenuItemHandlerResult menuhandlerNbombExplosive(s32 operation, struct menuitem *item, union handlerdata *data)
+{
+	switch (operation) {
+	case MENUOP_GET:
+		return g_NbombsExplosive;
+	case MENUOP_SET:
+		g_NbombsExplosive = data->checkbox.value;
+		break;
+	}
+
+	return 0;
+}
+
+struct menuitem g_ExtendedGameplayMenuItems[] = {
+	{
+			MENUITEMTYPE_CHECKBOX,
+			0,
+			MENUITEMFLAG_LITERAL_TEXT,
+			(uintptr_t)"Nbombs behave like explosive",
+			0,
+			menuhandlerNbombExplosive,
+		},
+	{
+		MENUITEMTYPE_SEPARATOR,
+		0,
+		0,
+		0,
+		0,
+		NULL,
+	},
+	{
+		MENUITEMTYPE_SELECTABLE,
+		0,
+		MENUITEMFLAG_SELECTABLE_CLOSESDIALOG,
+		L_OPTIONS_213, // "Back"
+		0,
+		NULL,
+	},
+	{ MENUITEMTYPE_END },
+};
+
+struct menudialogdef g_ExtendedGameplayMenuDialog = {
+	MENUDIALOGTYPE_DEFAULT,
+	(uintptr_t)"Extended Gameplay Options",
+	g_ExtendedGameplayMenuItems,
+	NULL,
+	MENUDIALOGFLAG_LITERAL_TEXT,
+	NULL,
+};
+
 static char g_ExtendedGameMenuTitle[] = "Player 1 Game Options";
 struct menudialogdef g_ExtendedGameMenuDialog = {
 	MENUDIALOGTYPE_DEFAULT,
@@ -1889,6 +1939,14 @@ struct menuitem g_ExtendedMenuItems[] = {
 		(uintptr_t)"Game\n",
 		0,
 		menuhandlerOpenGameMenu,
+	},
+	{
+		MENUITEMTYPE_SELECTABLE,
+		0,
+		MENUITEMFLAG_SELECTABLE_OPENSDIALOG | MENUITEMFLAG_LITERAL_TEXT,
+		(uintptr_t)"Gameplay\n",
+		0,
+		(void *)&g_ExtendedGameplayMenuDialog,
 	},
 	{
 		MENUITEMTYPE_SELECTABLE,
