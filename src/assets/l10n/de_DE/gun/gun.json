@@ -1,0 +1,1284 @@
+{
+    "messages": [
+        {
+            "id": "L_GUN_000",
+            "context": "L_GUN_000",
+            "string": "\n"
+        },
+        {
+            "id": "L_GUN_001",
+            "context": "L_GUN_001",
+            "string": "Hits"
+        },
+        {
+            "id": "L_GUN_002",
+            "context": "L_GUN_002",
+            "string": "Ein Fehlversuch\n"
+        },
+        {
+            "id": "L_GUN_003",
+            "context": "L_GUN_003",
+            "string": "Versagt"
+        },
+        {
+            "id": "L_GUN_004",
+            "context": "L_GUN_004",
+            "string": "Fehlversuche"
+        },
+        {
+            "id": "L_GUN_005",
+            "context": "L_GUN_005",
+            "string": "Selber schuld!"
+        },
+        {
+            "id": "L_GUN_006",
+            "context": "L_GUN_006",
+            "string": "unbewaffnet\n"
+        },
+        {
+            "id": "L_GUN_007",
+            "context": "L_GUN_007",
+            "string": "Falcon 2\n"
+        },
+        {
+            "id": "L_GUN_008",
+            "context": "L_GUN_008",
+            "string": "Falcon 2 (Schalld.)\n"
+        },
+        {
+            "id": "L_GUN_009",
+            "context": "L_GUN_009",
+            "string": "Falcon 2 (Zielf.)\n"
+        },
+        {
+            "id": "L_GUN_010",
+            "context": "L_GUN_010",
+            "string": "MagSec 4\n"
+        },
+        {
+            "id": "L_GUN_011",
+            "context": "L_GUN_011",
+            "string": "Mauler\n"
+        },
+        {
+            "id": "L_GUN_012",
+            "context": "L_GUN_012",
+            "string": "DY357 Magnum\n"
+        },
+        {
+            "id": "L_GUN_013",
+            "context": "L_GUN_013",
+            "string": "DY357-LX\n"
+        },
+        {
+            "id": "L_GUN_014",
+            "context": "L_GUN_014",
+            "string": "Phoenix\n"
+        },
+        {
+            "id": "L_GUN_015",
+            "context": "L_GUN_015",
+            "string": "CMP150\n"
+        },
+        {
+            "id": "L_GUN_016",
+            "context": "L_GUN_016",
+            "string": "AR34\n"
+        },
+        {
+            "id": "L_GUN_017",
+            "context": "L_GUN_017",
+            "string": "Dragon\n"
+        },
+        {
+            "id": "L_GUN_018",
+            "context": "L_GUN_018",
+            "string": "SuperDragon\n"
+        },
+        {
+            "id": "L_GUN_019",
+            "context": "L_GUN_019",
+            "string": "K7 Avenger\n"
+        },
+        {
+            "id": "L_GUN_020",
+            "context": "L_GUN_020",
+            "string": "Cyclone\n"
+        },
+        {
+            "id": "L_GUN_021",
+            "context": "L_GUN_021",
+            "string": "MagSec SMG\n"
+        },
+        {
+            "id": "L_GUN_022",
+            "context": "L_GUN_022",
+            "string": "RC-P120\n"
+        },
+        {
+            "id": "L_GUN_023",
+            "context": "L_GUN_023",
+            "string": "Callisto NTG\n"
+        },
+        {
+            "id": "L_GUN_024",
+            "context": "L_GUN_024",
+            "string": "Laptop-Gewehr\n"
+        },
+        {
+            "id": "L_GUN_025",
+            "context": "L_GUN_025",
+            "string": "Schrotflinte\n"
+        },
+        {
+            "id": "L_GUN_026",
+            "context": "L_GUN_026",
+            "string": "Reaper\n"
+        },
+        {
+            "id": "L_GUN_027",
+            "context": "L_GUN_027",
+            "string": "Raketenwerfer\n"
+        },
+        {
+            "id": "L_GUN_028",
+            "context": "L_GUN_028",
+            "string": "Devastator\n"
+        },
+        {
+            "id": "L_GUN_029",
+            "context": "L_GUN_029",
+            "string": "Slayer\n"
+        },
+        {
+            "id": "L_GUN_030",
+            "context": "L_GUN_030",
+            "string": "Maianische Granate\n"
+        },
+        {
+            "id": "L_GUN_031",
+            "context": "L_GUN_031",
+            "string": "FS XR-20\n"
+        },
+        {
+            "id": "L_GUN_032",
+            "context": "L_GUN_032",
+            "string": "Sniper-Gewehr\n"
+        },
+        {
+            "id": "L_GUN_033",
+            "context": "L_GUN_033",
+            "string": "Armbrust\n"
+        },
+        {
+            "id": "L_GUN_034",
+            "context": "L_GUN_034",
+            "string": "Betäubungs-Gewehr\n"
+        },
+        {
+            "id": "L_GUN_035",
+            "context": "L_GUN_035",
+            "string": "Kampfmesser\n"
+        },
+        {
+            "id": "L_GUN_036",
+            "context": "L_GUN_036",
+            "string": "Granate\n"
+        },
+        {
+            "id": "L_GUN_037",
+            "context": "L_GUN_037",
+            "string": "N-Bombe\n"
+        },
+        {
+            "id": "L_GUN_038",
+            "context": "L_GUN_038",
+            "string": "Zeitzünder-Mine\n"
+        },
+        {
+            "id": "L_GUN_039",
+            "context": "L_GUN_039",
+            "string": "Annäherungs-Mine\n"
+        },
+        {
+            "id": "L_GUN_040",
+            "context": "L_GUN_040",
+            "string": "Fernzünder-Mine\n"
+        },
+        {
+            "id": "L_GUN_041",
+            "context": "L_GUN_041",
+            "string": "ECM-Mine\n"
+        },
+        {
+            "id": "L_GUN_042",
+            "context": "L_GUN_042",
+            "string": "FlashBang\n"
+        },
+        {
+            "id": "L_GUN_043",
+            "context": "L_GUN_043",
+            "string": "Verkleidung\n"
+        },
+        {
+            "id": "L_GUN_044",
+            "context": "L_GUN_044",
+            "string": "Rakete\n"
+        },
+        {
+            "id": "L_GUN_045",
+            "context": "L_GUN_045",
+            "string": "Zielsuch-Rakete\n"
+        },
+        {
+            "id": "L_GUN_046",
+            "context": "L_GUN_046",
+            "string": "Granaten\n"
+        },
+        {
+            "id": "L_GUN_047",
+            "context": "L_GUN_047",
+            "string": "Laser\n"
+        },
+        {
+            "id": "L_GUN_048",
+            "context": "L_GUN_048",
+            "string": "Bolzen\n"
+        },
+        {
+            "id": "L_GUN_049",
+            "context": "L_GUN_049",
+            "string": "Psychosis-Gewehr\n"
+        },
+        {
+            "id": "L_GUN_050",
+            "context": "L_GUN_050",
+            "string": "PP9i\n"
+        },
+        {
+            "id": "L_GUN_051",
+            "context": "L_GUN_051",
+            "string": "CC13\n"
+        },
+        {
+            "id": "L_GUN_052",
+            "context": "L_GUN_052",
+            "string": "KLO1313\n"
+        },
+        {
+            "id": "L_GUN_053",
+            "context": "L_GUN_053",
+            "string": "KF7 Spezial\n"
+        },
+        {
+            "id": "L_GUN_054",
+            "context": "L_GUN_054",
+            "string": "ZZT (9mm)\n"
+        },
+        {
+            "id": "L_GUN_055",
+            "context": "L_GUN_055",
+            "string": "DMC\n"
+        },
+        {
+            "id": "L_GUN_056",
+            "context": "L_GUN_056",
+            "string": "AR53\n"
+        },
+        {
+            "id": "L_GUN_057",
+            "context": "L_GUN_057",
+            "string": "RC-P45\n"
+        },
+        {
+            "id": "L_GUN_058",
+            "context": "L_GUN_058",
+            "string": "Test\n"
+        },
+        {
+            "id": "L_GUN_059",
+            "context": "L_GUN_059",
+            "string": "Nachtsicht-Gerät\n"
+        },
+        {
+            "id": "L_GUN_060",
+            "context": "L_GUN_060",
+            "string": "CamSpy\n"
+        },
+        {
+            "id": "L_GUN_061",
+            "context": "L_GUN_061",
+            "string": "DrugSpy\n"
+        },
+        {
+            "id": "L_GUN_062",
+            "context": "L_GUN_062",
+            "string": "BombSpy\n"
+        },
+        {
+            "id": "L_GUN_063",
+            "context": "L_GUN_063",
+            "string": "Tür-Decoder\n"
+        },
+        {
+            "id": "L_GUN_064",
+            "context": "L_GUN_064",
+            "string": "Sprengsatz\n"
+        },
+        {
+            "id": "L_GUN_065",
+            "context": "L_GUN_065",
+            "string": "Röntgen-Scanner\n"
+        },
+        {
+            "id": "L_GUN_066",
+            "context": "L_GUN_066",
+            "string": "extraterrestrisches Medipack\n"
+        },
+        {
+            "id": "L_GUN_067",
+            "context": "L_GUN_067",
+            "string": "Koffer\n"
+        },
+        {
+            "id": "L_GUN_068",
+            "context": "L_GUN_068",
+            "string": "Verkleidung\n"
+        },
+        {
+            "id": "L_GUN_069",
+            "context": "L_GUN_069",
+            "string": "IR-Scanner\n"
+        },
+        {
+            "id": "L_GUN_070",
+            "context": "L_GUN_070",
+            "string": "R-Tracker\n"
+        },
+        {
+            "id": "L_GUN_071",
+            "context": "L_GUN_071",
+            "string": "Aktenkoffer\n"
+        },
+        {
+            "id": "L_GUN_072",
+            "context": "L_GUN_072",
+            "string": "Suizid-Kapsel\n"
+        },
+        {
+            "id": "L_GUN_073",
+            "context": "L_GUN_073",
+            "string": "Tarnkappe\n"
+        },
+        {
+            "id": "L_GUN_074",
+            "context": "L_GUN_074",
+            "string": "Adrenalin\n"
+        },
+        {
+            "id": "L_GUN_075",
+            "context": "L_GUN_075",
+            "string": "Data Uplink\n"
+        },
+        {
+            "id": "L_GUN_076",
+            "context": "L_GUN_076",
+            "string": "Horizont-Scanner\n"
+        },
+        {
+            "id": "L_GUN_077",
+            "context": "L_GUN_077",
+            "string": "Falcon 2 (s)\n"
+        },
+        {
+            "id": "L_GUN_078",
+            "context": "L_GUN_078",
+            "string": "Falcon 2 (+)\n"
+        },
+        {
+            "id": "L_GUN_079",
+            "context": "L_GUN_079",
+            "string": "FS XR-20\n"
+        },
+        {
+            "id": "L_GUN_080",
+            "context": "L_GUN_080",
+            "string": "R-Werfer\n"
+        },
+        {
+            "id": "L_GUN_081",
+            "context": "L_GUN_081",
+            "string": "A-Mine\n"
+        },
+        {
+            "id": "L_GUN_082",
+            "context": "L_GUN_082",
+            "string": "Psychosis\n"
+        },
+        {
+            "id": "L_GUN_083",
+            "context": "L_GUN_083",
+            "string": "Messer\n"
+        },
+        {
+            "id": "L_GUN_084",
+            "context": "L_GUN_084",
+            "string": "DY357\n"
+        },
+        {
+            "id": "L_GUN_085",
+            "context": "L_GUN_085",
+            "string": "Einzelfeuer\n"
+        },
+        {
+            "id": "L_GUN_086",
+            "context": "L_GUN_086",
+            "string": "Schnellfeuer\n"
+        },
+        {
+            "id": "L_GUN_087",
+            "context": "L_GUN_087",
+            "string": "Feuerstoß\n"
+        },
+        {
+            "id": "L_GUN_088",
+            "context": "L_GUN_088",
+            "string": "Streufeuer\n"
+        },
+        {
+            "id": "L_GUN_089",
+            "context": "L_GUN_089",
+            "string": "Schrotflintenfeuer\n"
+        },
+        {
+            "id": "L_GUN_090",
+            "context": "L_GUN_090",
+            "string": "Rail-gun-Effekt\n"
+        },
+        {
+            "id": "L_GUN_091",
+            "context": "L_GUN_091",
+            "string": "Raketenabschuss\n"
+        },
+        {
+            "id": "L_GUN_092",
+            "context": "L_GUN_092",
+            "string": "kalibrierte Rakete\n"
+        },
+        {
+            "id": "L_GUN_093",
+            "context": "L_GUN_093",
+            "string": "Fly-By-Wire-Rakete\n"
+        },
+        {
+            "id": "L_GUN_094",
+            "context": "L_GUN_094",
+            "string": "Schlag \n"
+        },
+        {
+            "id": "L_GUN_095",
+            "context": "L_GUN_095",
+            "string": "Explosiv-Munition\n"
+        },
+        {
+            "id": "L_GUN_096",
+            "context": "L_GUN_096",
+            "string": "gezielte Schüsse\n"
+        },
+        {
+            "id": "L_GUN_097",
+            "context": "L_GUN_097",
+            "string": "Magazin-Entleerung\n"
+        },
+        {
+            "id": "L_GUN_098",
+            "context": "L_GUN_098",
+            "string": "Granat-Werfer\n"
+        },
+        {
+            "id": "L_GUN_099",
+            "context": "L_GUN_099",
+            "string": "Wandhaftung\n"
+        },
+        {
+            "id": "L_GUN_100",
+            "context": "L_GUN_100",
+            "string": "Schlag\n"
+        },
+        {
+            "id": "L_GUN_101",
+            "context": "L_GUN_101",
+            "string": "entwaffnen\n"
+        },
+        {
+            "id": "L_GUN_102",
+            "context": "L_GUN_102",
+            "string": "Zielaufschaltung\n"
+        },
+        {
+            "id": "L_GUN_103",
+            "context": "L_GUN_103",
+            "string": "Zielfernrohr kompatibel\n"
+        },
+        {
+            "id": "L_GUN_104",
+            "context": "L_GUN_104",
+            "string": "halbes Magazin wird entleert\n"
+        },
+        {
+            "id": "L_GUN_105",
+            "context": "L_GUN_105",
+            "string": "Doppelschuss\n"
+        },
+        {
+            "id": "L_GUN_106",
+            "context": "L_GUN_106",
+            "string": "Schleifer\n"
+        },
+        {
+            "id": "L_GUN_107",
+            "context": "L_GUN_107",
+            "string": "Sedativ\n"
+        },
+        {
+            "id": "L_GUN_108",
+            "context": "L_GUN_108",
+            "string": "letale Injektion\n"
+        },
+        {
+            "id": "L_GUN_109",
+            "context": "L_GUN_109",
+            "string": "Messerstich\n"
+        },
+        {
+            "id": "L_GUN_110",
+            "context": "L_GUN_110",
+            "string": "vergiftetes Wurfmesser\n"
+        },
+        {
+            "id": "L_GUN_111",
+            "context": "L_GUN_111",
+            "string": "Zielsucher\n"
+        },
+        {
+            "id": "L_GUN_112",
+            "context": "L_GUN_112",
+            "string": "sofortige Eliminierung\n"
+        },
+        {
+            "id": "L_GUN_113",
+            "context": "L_GUN_113",
+            "string": "Verstärkung\n"
+        },
+        {
+            "id": "L_GUN_114",
+            "context": "L_GUN_114",
+            "string": "Umkehr\n"
+        },
+        {
+            "id": "L_GUN_115",
+            "context": "L_GUN_115",
+            "string": "High Impact-Munition\n"
+        },
+        {
+            "id": "L_GUN_116",
+            "context": "L_GUN_116",
+            "string": "Tarnung\n"
+        },
+        {
+            "id": "L_GUN_117",
+            "context": "L_GUN_117",
+            "string": "Selbstschussanlage\n"
+        },
+        {
+            "id": "L_GUN_118",
+            "context": "L_GUN_118",
+            "string": "Annäherungsfunktion\n"
+        },
+        {
+            "id": "L_GUN_119",
+            "context": "L_GUN_119",
+            "string": "Gefahrenmelder\n"
+        },
+        {
+            "id": "L_GUN_120",
+            "context": "L_GUN_120",
+            "string": "verzögerte Explosion\n"
+        },
+        {
+            "id": "L_GUN_121",
+            "context": "L_GUN_121",
+            "string": "Expl. bei Näherung\n"
+        },
+        {
+            "id": "L_GUN_122",
+            "context": "L_GUN_122",
+            "string": "ferngez. Explosion\n"
+        },
+        {
+            "id": "L_GUN_123",
+            "context": "L_GUN_123",
+            "string": "Detonator\n"
+        },
+        {
+            "id": "L_GUN_124",
+            "context": "L_GUN_124",
+            "string": "Vier-Sekunden-Zündung\n"
+        },
+        {
+            "id": "L_GUN_125",
+            "context": "L_GUN_125",
+            "string": "Annäherungs-Pinball\n"
+        },
+        {
+            "id": "L_GUN_126",
+            "context": "L_GUN_126",
+            "string": "Verzögerte Detonation\n"
+        },
+        {
+            "id": "L_GUN_127",
+            "context": "L_GUN_127",
+            "string": "Expl. bei Näherung\n"
+        },
+        {
+            "id": "L_GUN_128",
+            "context": "L_GUN_128",
+            "string": "dreifacher Schuss\n"
+        },
+        {
+            "id": "L_GUN_129",
+            "context": "L_GUN_129",
+            "string": "aufgeladener Schuss\n"
+        },
+        {
+            "id": "L_GUN_130",
+            "context": "L_GUN_130",
+            "string": "Hocken\n"
+        },
+        {
+            "id": "L_GUN_131",
+            "context": "L_GUN_131",
+            "string": "infizieren\n"
+        },
+        {
+            "id": "L_GUN_132",
+            "context": "L_GUN_132",
+            "string": "Feuerstöße\n"
+        },
+        {
+            "id": "L_GUN_133",
+            "context": "L_GUN_133",
+            "string": "Kurzstrecken-Strahl\n"
+        },
+        {
+            "id": "L_GUN_134",
+            "context": "L_GUN_134",
+            "string": "Kontakt-Detonation\n"
+        },
+        {
+            "id": "L_GUN_135",
+            "context": "L_GUN_135",
+            "string": "Restlichtverstärker\n"
+        },
+        {
+            "id": "L_GUN_136",
+            "context": "L_GUN_136",
+            "string": "Mobile Kamera\n"
+        },
+        {
+            "id": "L_GUN_137",
+            "context": "L_GUN_137",
+            "string": "Röntgen-Sicht\n"
+        },
+        {
+            "id": "L_GUN_138",
+            "context": "L_GUN_138",
+            "string": "Infrarot-Scanning\n"
+        },
+        {
+            "id": "L_GUN_139",
+            "context": "L_GUN_139",
+            "string": "Zoom\n"
+        },
+        {
+            "id": "L_GUN_140",
+            "context": "L_GUN_140",
+            "string": "Störsender\n"
+        },
+        {
+            "id": "L_GUN_141",
+            "context": "L_GUN_141",
+            "string": "Verbindung\n"
+        },
+        {
+            "id": "L_GUN_142",
+            "context": "L_GUN_142",
+            "string": "Zielidentifizierung\n"
+        },
+        {
+            "id": "L_GUN_143",
+            "context": "L_GUN_143",
+            "string": "Kann angelegt werden\n"
+        },
+        {
+            "id": "L_GUN_144",
+            "context": "L_GUN_144",
+            "string": "Sprengsätze müssen platziert werden\n"
+        },
+        {
+            "id": "L_GUN_145",
+            "context": "L_GUN_145",
+            "string": "Teleskop-Sicht\n"
+        },
+        {
+            "id": "L_GUN_146",
+            "context": "L_GUN_146",
+            "string": "Schalldämpfer\n"
+        },
+        {
+            "id": "L_GUN_147",
+            "context": "L_GUN_147",
+            "string": "Magazin-Erweiterung\n"
+        },
+        {
+            "id": "L_GUN_148",
+            "context": "L_GUN_148",
+            "string": "Ziel-Laser\n"
+        },
+        {
+            "id": "L_GUN_149",
+            "context": "L_GUN_149",
+            "string": "dataDyne\n"
+        },
+        {
+            "id": "L_GUN_150",
+            "context": "L_GUN_150",
+            "string": "Carrington\n"
+        },
+        {
+            "id": "L_GUN_151",
+            "context": "L_GUN_151",
+            "string": "Chesluk Industries\n"
+        },
+        {
+            "id": "L_GUN_152",
+            "context": "L_GUN_152",
+            "string": "Skedar\n"
+        },
+        {
+            "id": "L_GUN_153",
+            "context": "L_GUN_153",
+            "string": "Maianisch\n"
+        },
+        {
+            "id": "L_GUN_154",
+            "context": "L_GUN_154",
+            "string": "JonesCorp\n"
+        },
+        {
+            "id": "L_GUN_155",
+            "context": "L_GUN_155",
+            "string": "Auch ohne Waffen sind Sie ein würdiger Gegner. Setzen Sie Ihre Fäuste ein, um Gegner niederzuschlagen oder zu entwaffnen. Anschließend können Sie deren Waffen aufsammeln.\n"
+        },
+        {
+            "id": "L_GUN_156",
+            "context": "L_GUN_156",
+            "string": "Diese zielgenaue und treffsichere Waffe wird von den Mitarbeitern des Instituts bevorzugt eingesetzt. Verwenden Sie die Laser-Zieleinheit, um Schüsse punktgenau zu platzieren. Im Gefecht empfiehlt es sich, von der Pistolen-Funktion Gebrauch zu machen.\n"
+        },
+        {
+            "id": "L_GUN_157",
+            "context": "L_GUN_157",
+            "string": "Eine verbesserte Falcon 2, die noch zusätzlich über einen Schalldämpfer verfügt.\n"
+        },
+        {
+            "id": "L_GUN_158",
+            "context": "L_GUN_158",
+            "string": "Eine verbesserte Falcon 2, die durch ein Präzisions-Fernrohr noch zusätzlich an Genauigkeit gewinnt.\n"
+        },
+        {
+            "id": "L_GUN_159",
+            "context": "L_GUN_159",
+            "string": "Eine state-of-the-art Militär-Pistole, die hauptsächlich von Friedenstruppen eingesetzt wird. Die Waffe verfügt über eine leichte Zoom-Funktion und feuert drei Kugeln gleichzeitig ab (Sekundär).\n"
+        },
+        {
+            "id": "L_GUN_160",
+            "context": "L_GUN_160",
+            "string": "Wenn Sie auf einen Skedar treffen, ist er vermutlich mit dieser Waffe ausgestattet. Ein großes Magazin macht diese Pistole zu einer formidablen Handfeuerwaffe. Aber die Sekundär-Funktion ist noch bemerkenswerter. Die Feuerkraft kann durch Aufladen verstärkt werden, kostet aber Munition.\n"
+        },
+        {
+            "id": "L_GUN_161",
+            "context": "L_GUN_161",
+            "string": "Die dataDyne DY357 ist die stärkste Handfeuerwaffe der Welt. Jede Kugel verfügt über einen hohen Penetrations-Faktor und schleudert das Ziel zurück. Modifizierte Modelle werden nur für spezielle Kunden angefertigt. NSA-Chef Trent Easton verfügt angeblich über eine vergoldete Variante.\n"
+        },
+        {
+            "id": "L_GUN_162",
+            "context": "L_GUN_162",
+            "string": "Die DY357-LX wurde speziell für Trent Easton angefertigt. Neben einem mit Tigerleder überzogenen Griff verfügt diese Pistole über einen integrierten Beschleuniger, der jeder Kugel noch mehr Kraft verleiht.\n"
+        },
+        {
+            "id": "L_GUN_163",
+            "context": "L_GUN_163",
+            "string": "Die Maianische Standard-Waffe. Eine flexible Waffe, die in der Lage ist, sowohl normale als auch Explosiv-Geschosse abzufeuern. Bei letzterer Variante wird nicht mehr Munition als sonst verbraucht.\n"
+        },
+        {
+            "id": "L_GUN_164",
+            "context": "L_GUN_164",
+            "string": "Ein dataDyne-Klassiker und Bestseller! Dieses Maschinengewehr verfügt über ein 32er Magazin und eine Sonderfunktion. Jedes sichtbare Ziel kann fixiert werden. Dieses Feature macht jeden durchschnittlichen Schützen zu einem Profi. Vorausgesetzt natürlich, er oder sie ist intelligent genug, die Waffe zu bedienen. Durchschnittliche Feuerrate: 900 rpm.\n"
+        },
+        {
+            "id": "L_GUN_165",
+            "context": "L_GUN_165",
+            "string": "Das Sturmgewehr des Carrington Instituts. Diese Waffe zeichnet sich durch hohe Reichweite und Magazin-Kapazität aus. Die Sekundär-Funktion ermöglicht es dem Schützen, sich zu bewegen, während er auf ein Ziel zoomt. Durchschnittliche Feuerrate: 750 rpm.\n"
+        },
+        {
+            "id": "L_GUN_166",
+            "context": "L_GUN_166",
+            "string": "Ein Standard-Gewehr mit Überraschungseffekt. Die Sekundär-Funktion verwandelt es in eine Mine, die auf Bewegungen reagiert, aber nach wie vor wie ein herumliegendes Gewehr aussieht. Durchschnittliche Feuerrate: 700 rpm.\n"
+        },
+        {
+            "id": "L_GUN_167",
+            "context": "L_GUN_167",
+            "string": "Eine Variante des Dragon. Anstatt der Minen-Funktion verfügt die Waffe über einen kleinen Granat-Werfer. Hervorragend als Unterstützung. Durchschnittliche Feuerrate: 700 rpm.\n"
+        },
+        {
+            "id": "L_GUN_168",
+            "context": "L_GUN_168",
+            "string": "High-tech pur von dataDyne. Der Avenger wird als Sturmgewehr eingesetzt. Die wichtigste Funktion ist ein Gefahren-Melder, der auf die Anwesenheit von Sprengkörpern, Selbstschußanlagen und Ähnlichem reagiert. Durchschnittliche Feuerrate: 950 rpm.\n"
+        },
+        {
+            "id": "L_GUN_169",
+            "context": "L_GUN_169",
+            "string": "Speziell für Bodyguards. Die Cyclone wird auch von der Leibwache des Präsidenten eingesetzt. In Extremsituationen kann die Feuerrate um mehr als das Doppelte erhöht werden. Allerdings wird durch diese Aktion das Magazin in sekundenschnelle geleert. Durchschnittliche Feuerrate: 900 rpm bzw. 2000 rpm.\n"
+        },
+        {
+            "id": "L_GUN_170",
+            "context": "L_GUN_170",
+            "string": "Die geheime Waffe des Carrington Instituts. Verfügt über eine hohe Feuerrate und ein großes Magazin. Die Sekundär-Funktion aktiviert eine Tarnfunktion, allerdings auf Kosten der Munition. Daher sollte diese Funktion mit größter Vorsicht gehandhabt werden. Durchschnittliche Feuerrate: 1100 rpm.\n"
+        },
+        {
+            "id": "L_GUN_171",
+            "context": "L_GUN_171",
+            "string": "Ein weiteres Beispiel Maianischer Waffentechnik. Diese Waffe feuert normale Munition mit der gleichen Geschwindigkeit ab, wie jedes andere Gewehr. Es sind aber auch Hochgeschwindigkeits-Schüsse möglich, die Deckungen durchbrechen können. Der Nachteil dabei ist, dass die Feuerrate sinkt und aufgrund des Rückstoßes die Genauigkeit leidet. Durchschnittliche Feuerrate: 900 rpm bzw. 300 rpm.\n"
+        },
+        {
+            "id": "L_GUN_172",
+            "context": "L_GUN_172",
+            "string": "Ein Maschinengewehr, das in der Form eines Laptops designt wurde. In Tarnform kann nicht gefeuert werden. Diese Waffe hält auch einer genaueren Untersuchung stand. Sie wird wie jeder PC gebootet, verfügt aber nur über ein Viertel des Speichers. Durschnittliche Feuerrate: 1000 rpm.\n"
+        },
+        {
+            "id": "L_GUN_173",
+            "context": "L_GUN_173",
+            "string": "Eine dataDyne-Waffe für die hausinterne Security. Ein neunfaches Magazin in Kombination mit Einfach- oder Doppelfeuer macht diese Waffe zu einem gefährlichen Nahkampf-Instrument.\n"
+        },
+        {
+            "id": "L_GUN_174",
+            "context": "L_GUN_174",
+            "string": "In den Händen von jemandem, der den starken Rückstoß ausgleichen kann, ist dies wohl die schrecklichste aller Waffen. Auf jeden Fall eignet sie sich hervorragend für Gefechte in engen Korridoren. Maximale Feuerrate: 1800 rpm.\n"
+        },
+        {
+            "id": "L_GUN_175",
+            "context": "L_GUN_175",
+            "string": "An und für sich eine sehr unhandliche Waffe. Sie feuert eine Standard-Rakete oder eine langsamere Zielsuch-Rakete auf das Ziel ab.\n"
+        },
+        {
+            "id": "L_GUN_176",
+            "context": "L_GUN_176",
+            "string": "Ein von dataDyne entworfener Granatwerfer. Die Sekundärfunktion umhüllt die Granate mit einer klebrigen Substanz, welche die Haftung an Wänden und Decken ermöglicht. Einige Sekunden später fällt die Granate zu Boden, wo sie detoniert.\n"
+        },
+        {
+            "id": "L_GUN_177",
+            "context": "L_GUN_177",
+            "string": "Die Skedar lieben es, die Angst in den Augen ihrer Gegner zu sehen. Daher ist es beinahe selbstverständlich, dass sie mit der Sekundär-Funktion ihres Raketenwerfers ein Geschoss fernsteuern können. So können sie sich an den vergeblichen Fluchtversuchen ihrer Opfer weiden.\n"
+        },
+        {
+            "id": "L_GUN_178",
+            "context": "L_GUN_178",
+            "string": "Das Fernsicht-Gewehr ist ein Maianischer Hybrid zwischen einem Röntgen-Scanner und einem Gewehr, das durch feste Objekte schießen kann. Das Fernrohr ist in der Lage, langsame lebende Objekte zu erfassen und als festgelegten Zielpunkt zu speichern.\n"
+        },
+        {
+            "id": "L_GUN_179",
+            "context": "L_GUN_179",
+            "string": "Ausgestattet mit hervorragender Zoom-Fähigkeit und Hochgeschwindigkeits-Kugeln ist dies wohl eines der besten Sniper-Gewehre aller Zeiten. In geduckter Haltung erzielen Sie die bestmögliche Genauigkeit.\n"
+        },
+        {
+            "id": "L_GUN_180",
+            "context": "L_GUN_180",
+            "string": "Die Armbrust ist nicht größer als eine Pistole, und wird am Handgelenk des Agenten befestigt. Die Spannweite der Waffe kann aus Gründen der Geheimhaltung verringert werden. Die Munition umfasst bis zu fünf entweder vergiftete oder regelrecht letale Bolzen.\n"
+        },
+        {
+            "id": "L_GUN_181",
+            "context": "L_GUN_181",
+            "string": "Eine Vorrichtung, die im Notfall auch als Waffe benutzt werden kann. Der eigentliche Verwendungszweck dient aber der Verabreichung von Sedativen. Eine volle Entladung des Reservoirs kann durchaus fatale Folgen haben.\n"
+        },
+        {
+            "id": "L_GUN_182",
+            "context": "L_GUN_182",
+            "string": "Ein sehr großes Kampfmesser. Es enthält eine Giftkapsel, die beim Aufprall nach einem Wurf zerbricht. Das Gift entfaltet im Normalfall nach ca. sechs Sekunden seine Wirkung. Eine typische dataDyne-Waffe.\n"
+        },
+        {
+            "id": "L_GUN_183",
+            "context": "L_GUN_183",
+            "string": "Eine verbesserte Version der Granate. Kann sowohl mit verzögerter Detonation als auch mit Annäherungs-Sensor eingesetzt werden. \n"
+        },
+        {
+            "id": "L_GUN_184",
+            "context": "L_GUN_184",
+            "string": "Eine kleine Neutronenbombe mit reduziertem Wirkungsradius. Die Detonation kann, je nach Wunsch, beim Aufprall oder bei Annäherung erfolgen.\n"
+        },
+        {
+            "id": "L_GUN_185",
+            "context": "L_GUN_185",
+            "string": "Eine Mine mit verzögerter Detonation. Diese Waffe verfügt über einen Gefahren-Sensor, der als Sekundär-Funktion aktiviert werden kann.\n"
+        },
+        {
+            "id": "L_GUN_186",
+            "context": "L_GUN_186",
+            "string": "Eine Mine, die auf Bewegung reagiert. Diese Waffe verfügt über einen Gefahren-Sensor, der als Sekundär-Funktion aktiviert werden kann.\n"
+        },
+        {
+            "id": "L_GUN_187",
+            "context": "L_GUN_187",
+            "string": "Diese Mine kann ferngezündet werden. Die Sekundär-Funktion stellt quasi die Aktivierung dar.\n"
+        },
+        {
+            "id": "L_GUN_188",
+            "context": "L_GUN_188",
+            "string": "Diese Störsender-Vorrichtung ist in der Lage, in jedem System, mit dem sie verbunden ist, eine fokusierte elektrische Störung zu simulieren. Voraussetzung ist ein unmittelbarer Kontakt mit dem System.\n"
+        },
+        {
+            "id": "L_GUN_189",
+            "context": "L_GUN_189",
+            "string": "Der Laser wird am Handgelenk getragen und verfügt über perfekte Präzision. Man kann mit ihm entweder Langstrecken-Energiestöße oder einen konstanten, hochkonzentrierten Kurstrecken-Energiestrom entladen.\n"
+        },
+        {
+            "id": "L_GUN_190",
+            "context": "L_GUN_190",
+            "string": "Genetische Stimulation für die Anwendung im Kampf. Nach der Anwendung erscheint der zeitliche Ablauf verlangsamt, was eine wesentlich höhere Reaktionsfähigkeit zur Folge hat.\n"
+        },
+        {
+            "id": "L_GUN_191",
+            "context": "L_GUN_191",
+            "string": "Das neueste Produkt in einer Reihe von Geräten, das nicht nur Restlicht verstärkt, um eine klarere Wahrnehmung der Umgebung zu ermöglichen, sondern auch mit Hilfe eines Ziel-Algorithmus mögliche Gefahren erkennt und entsprechend hervorhebt.\n"
+        },
+        {
+            "id": "L_GUN_192",
+            "context": "L_GUN_192",
+            "string": "Dieses Gerät beinhaltet die kleinstmögliche Antigravitations-Technologie. Als ultimative Spionage-Einheit bietet der CamSpy Video- und Audio-Links, Aufzeichnungsfunktion und eine integrierte Vorrichtung für spektroskopische Holografie.\n"
+        },
+        {
+            "id": "L_GUN_193",
+            "context": "L_GUN_193",
+            "string": "Dieser Scanner kann auf kurze Strecken jegliches Material durchleuchten. Blei bildet hier keine Ausnahme! Der Anwender nimmt eine vereinfachte, chromatisierte Darstellung der Umgebung wahr.\n"
+        },
+        {
+            "id": "L_GUN_194",
+            "context": "L_GUN_194",
+            "string": "Der IR-Scanner setzt mit Ultraschall modulierte Infrarot-Strahlung ein, um die Umgebung auf strukturelle Irregularitäten zu untersuchen. Der Anwender erhält ein erstaunlich detailliertes Bild der Gegebenheiten. Außerdem durchdringt der Scanner auch jegliche Art von Tarnkappen-Technologie und andere optische Täuschungen.\n"
+        },
+        {
+            "id": "L_GUN_195",
+            "context": "L_GUN_195",
+            "string": "Diese Maschine nutzt die lichtbrechenden Eigenschaften einer kristallinen extraterrestrischen Substanz, um den Träger unsichtbar erscheinen zu lassen. Solange es zu keinen kybernetischen Störungen kommt, bleibt das Feld intakt. Aber schon der Einsatz einer Waffe unterbricht diese Funktion.\n"
+        },
+        {
+            "id": "L_GUN_196",
+            "context": "L_GUN_196",
+            "string": "Ein binokularer Langstrecken-Scanner. Im Sichtfenster erscheint ein Bild, welches aus den beiden optischen Eingaben zusammengestellt wird. Zoom vorhanden.\n"
+        },
+        {
+            "id": "L_GUN_197",
+            "context": "L_GUN_197",
+            "string": "Mit Hilfe dieses Geräts können nahezu alle Arten von gespeicherten Daten abgerufen und direkt an die Hacker des Instituts gesandt werden. Eine Variante dieser Maschine erlaubt den Hackern durch einen direkten Link den Zutritt zum lokalen System.\n"
+        },
+        {
+            "id": "L_GUN_198",
+            "context": "L_GUN_198",
+            "string": "Ein ausgezeichnetes Suchgerät, das auf jegliche Parameter konfiguriert werden kann: Personen, Waffen, Gegenstände und Orte sind nur ein Bruchteil der Optionen, welche der Tracker anbietet.\n"
+        },
+        {
+            "id": "L_GUN_199",
+            "context": "L_GUN_199",
+            "string": "Ein modifizierter medizinischer Scanner, der die aktuellen Vital-Werte des Präsidenten anzeigt. Es werden auch ältere Daten und verschiedene Behandlungen archiviert. Der Scanner ist in der Lage, die entsprechenden Werte auch über größere Entfernungen zu erfassen. Dies ist auch möglich, wenn sich das Ziel inmitten einer Menschenmenge befindet.\n"
+        },
+        {
+            "id": "L_GUN_200",
+            "context": "L_GUN_200",
+            "string": "Ein einfacher, aber wirkungsvoller Safeknacker, der elektronisch codierte Schlösser normalerweise innerhalb von Sekunden knackt. Selbstverständlich hängt dies auch vom jeweiligen Schloss ab.\n"
+        },
+        {
+            "id": "L_GUN_201",
+            "context": "L_GUN_201",
+            "string": "Ein Wunder Maianischer Technologie. Dieses Instrument erstellt eine automatische Diagnose und führt die entsprechenden chirurgischen Eingriffe OHNE Einschnitte durch. Der Nachteil ist, dass es nur bei Maianern funktioniert.\n"
+        },
+        {
+            "id": "L_GUN_202",
+            "context": "L_GUN_202",
+            "string": "Ein kleiner Plastik-Sprengsatz, dessen Timer durch ein Siegel vor Missbrauch geschützt wird. Die Schrapnelle sind mit Teflon ummantelt. Sehr böse!\n"
+        },
+        {
+            "id": "L_GUN_203",
+            "context": "L_GUN_203",
+            "string": "Hierbei handelt es sich um eine direktionale Fusionsbombe, die so platziert wird, dass die Entladung nach unten geht. Dadurch werden die dataDyne-Labors verwüstet, und der Rest des Gebäudes stürzt in das so entstandene Loch.\n"
+        },
+        {
+            "id": "L_GUN_204",
+            "context": "L_GUN_204",
+            "string": "Eine kleine Wanze, die an jedem Kommunikations-Gerät angebracht werden kann. Diese Vorrichtung benutzt das Fremdsignal, um eine Verbindung zwischen dem Agenten und dem Institut herzustellen. Das Signal kann auch zurückverfolgt werden, um den Standort des Agenten zu bestimmen. Vor allem in Situationen höchster Bedrängnis hat sich der Einsatz hervorragend bewährt. Ein unverzichtbares Zubehör für jeden Agenten.\n"
+        },
+        {
+            "id": "L_GUN_205",
+            "context": "L_GUN_205",
+            "string": "Das Innenleben dieser Wanze ist ein gut gehütetes Geheimnis. Fest steht, dass der Selbstzerstörungsmechanismus ein wichtiger Bestandteil ist. Man vermutet, das die Wanze auf quantenmolekularer Kommunikation aufbaut, welche die phänomenale Verlässlichkeit des Geräts erklären würde.\n"
+        },
+        {
+            "id": "L_GUN_206",
+            "context": "L_GUN_206",
+            "string": "Quantenmolekulare Technologie ermöglicht außerordentlich akkurate Zielerfassung für Orbitalwaffen. Dadurch wird der Schadensradius auf den nötigen Umfang beschränkt. \n"
+        },
+        {
+            "id": "L_GUN_207",
+            "context": "L_GUN_207",
+            "string": "Detaillierte Flugpläne, Kommunikationscodes und Frequenzen für die Air Force One. Beinhaltet auch Dechiffrier-Codes.\n"
+        },
+        {
+            "id": "L_GUN_208",
+            "context": "L_GUN_208",
+            "string": "Betrifft alle Daten der Forschungsarbeit, die durch dataDyne von der gekaperten Pelagic II am Meeresgrund durchgeführt wurden. Der Inhalt besteht aus Sonar-Karten, geologischen Daten, Gewebeproben etc.\n"
+        },
+        {
+            "id": "L_GUN_209",
+            "context": "L_GUN_209",
+            "string": "Die letzte Aufzeichnung der Persönlichkeit der künstlichen Intelligenz, die sich selbst Dr. Caroll nennt. Die Aufzeichnung wurde vor der Löschung und cerebralen Restrukturierung durchgeführt. Kann zu Studienzwecken herangezogen worden. dataDyne I.S.C.E.O. 23/6/23\n"
+        },
+        {
+            "id": "L_GUN_210",
+            "context": "L_GUN_210",
+            "string": "Ein chemischer Cocktail, der die Realitätswahrnehmung der Zielperson umkehrt. Gut wird zu Böse, Böse wird zu gut, Freund und Feind tauschen die Plätze. Ein weiteres Forschungsergebnis, entwickelt von Trent Easton in der Area 51.\n"
+        },
+        {
+            "id": "L_GUN_211",
+            "context": "L_GUN_211",
+            "string": "Tragen Sie diese Verkleidung, um unerkannt zu bleiben.\n"
+        },
+        {
+            "id": "L_GUN_212",
+            "context": "L_GUN_212",
+            "string": "BEWEG\n"
+        },
+        {
+            "id": "L_GUN_213",
+            "context": "L_GUN_213",
+            "string": "ZEIT\n"
+        },
+        {
+            "id": "L_GUN_214",
+            "context": "L_GUN_214",
+            "string": "FERN\n"
+        },
+        {
+            "id": "L_GUN_215",
+            "context": "L_GUN_215",
+            "string": "AUTO\n"
+        },
+        {
+            "id": "L_GUN_216",
+            "context": "L_GUN_216",
+            "string": "SCHLAG\n"
+        },
+        {
+            "id": "L_GUN_217",
+            "context": "L_GUN_217",
+            "string": "Big King-Rakete\n"
+        },
+        {
+            "id": "L_GUN_218",
+            "context": "L_GUN_218",
+            "string": "Data Uplink\n"
+        },
+        {
+            "id": "L_GUN_219",
+            "context": "L_GUN_219",
+            "string": "Präsidenten-Scanner\n"
+        },
+        {
+            "id": "L_GUN_220",
+            "context": "L_GUN_220",
+            "string": "Auto-Chirurg\n"
+        },
+        {
+            "id": "L_GUN_221",
+            "context": "L_GUN_221",
+            "string": "Skedar-Bombe\n"
+        },
+        {
+            "id": "L_GUN_222",
+            "context": "L_GUN_222",
+            "string": "Komm-Wanze\n"
+        },
+        {
+            "id": "L_GUN_223",
+            "context": "L_GUN_223",
+            "string": "Wanze\n"
+        },
+        {
+            "id": "L_GUN_224",
+            "context": "L_GUN_224",
+            "string": "Peilgerät\n"
+        },
+        {
+            "id": "L_GUN_225",
+            "context": "L_GUN_225",
+            "string": "Flugpläne\n"
+        },
+        {
+            "id": "L_GUN_226",
+            "context": "L_GUN_226",
+            "string": "Forschungsdaten\n"
+        },
+        {
+            "id": "L_GUN_227",
+            "context": "L_GUN_227",
+            "string": "Sicherungsdiskette\n"
+        },
+        {
+            "id": "L_GUN_228",
+            "context": "L_GUN_228",
+            "string": "Schlüsselkarte\n"
+        },
+        {
+            "id": "L_GUN_229",
+            "context": "L_GUN_229",
+            "string": "Aktentasche\n"
+        },
+        {
+            "id": "L_GUN_230",
+            "context": "L_GUN_230",
+            "string": "Halskette\n"
+        },
+        {
+            "id": "L_GUN_231",
+            "context": "L_GUN_231",
+            "string": "PräsidentScan\n"
+        },
+        {
+            "id": "L_GUN_232",
+            "context": "L_GUN_232",
+            "string": "Adrenalin\n"
+        },
+        {
+            "id": "L_GUN_233",
+            "context": "L_GUN_233",
+            "string": "R-Scanner\n"
+        },
+        {
+            "id": "L_GUN_234",
+            "context": "L_GUN_234",
+            "string": "H-Scanner\n"
+        },
+        {
+            "id": "L_GUN_235",
+            "context": "L_GUN_235",
+            "string": "Ziel-Verst.\n"
+        },
+        {
+            "id": "L_GUN_236",
+            "context": "L_GUN_236",
+            "string": "Bei dieser Version des CamSpy wurde die Aufzeichnungs-Funktion durch einen starken Plastik-Sprengsatz ersetzt.\n"
+        },
+        {
+            "id": "L_GUN_237",
+            "context": "L_GUN_237",
+            "string": "Diese Version des CamSpy verfügt über ein paralysierendes Nervengift, das die Zielperson fast augenblicklich in Katatonie versetzt.\n"
+        },
+        {
+            "id": "L_GUN_238",
+            "context": "L_GUN_238",
+            "string": "Cassandra De Vries Halskette. Beinhaltet eine Annäherungs-Schlüsselkarte, um Sperrzonen betreten zu können. Das MK3 Modell funktioniert nur, solange der Besitzer am Leben ist. Sicherheitsklasse AA-1 (gamma)."
+        },
+        {
+            "id": "L_GUN_239",
+            "context": "L_GUN_239",
+            "string": "Cassandra De Vries Ersatzhalskette. Benuzername: %s  Passwort: %s\n"
+        },
+        {
+            "id": "L_GUN_240",
+            "context": "L_GUN_240",
+            "string": "Schild\n"
+        },
+        {
+            "id": "L_GUN_241",
+            "context": "L_GUN_241",
+            "string": "Der Schild schützt den Träger, indem er automatisch Gefahren erkennt und ein temporäres Kraftfeld errichtet. Dadurch wird die Attacke neutralisiert. Der Schild verfügt über einen begrenzten Energievorrat. Die Schutzfunktion kann also nur über eine bestimmte Zeitspanne gewährleistet werden. Im Normalfall werden Schilde aktiv, sobald sie von jemandem getragen werden, auch wenn es so aussieht, als wäre dieser spezielle Schild ein nicht-funktionabler Prototyp.\n"
+        },
+        {
+            "id": "L_GUN_242",
+            "context": "L_GUN_242",
+            "string": "Adrenalin\n"
+        },
+        {
+            "id": "L_GUN_243",
+            "context": "L_GUN_243",
+            "string": "Data Uplink\n"
+        },
+        {
+            "id": "L_GUN_244",
+            "context": "L_GUN_244",
+            "string": "Nachtsicht\n"
+        },
+        {
+            "id": "L_GUN_245",
+            "context": "L_GUN_245",
+            "string": "Decoder\n"
+        },
+        {
+            "id": "L_GUN_246",
+            "context": "L_GUN_246",
+            "string": "Suizid-Pille\n"
+        },
+        {
+            "id": "L_GUN_247",
+            "context": "L_GUN_247",
+            "string": "B-Gewehr\n"
+        },
+        {
+            "id": "L_GUN_248",
+            "context": "L_GUN_248",
+            "string": "Medipack\n"
+        },
+        {
+            "id": "L_GUN_249",
+            "context": "L_GUN_249",
+            "string": "Backup\n"
+        },
+        {
+            "id": "L_GUN_250",
+            "context": "L_GUN_250",
+            "string": "Verkl.\n"
+        },
+        {
+            "id": "L_GUN_251",
+            "context": "L_GUN_251",
+            "string": "Laptop\n"
+        },
+        {
+            "id": "L_GUN_252",
+            "context": "L_GUN_252",
+            "string": "F-Mine\n"
+        },
+        {
+            "id": "L_GUN_253",
+            "context": "L_GUN_253",
+            "string": "Schrotfl.\n"
+        },
+        {
+            "id": "L_GUN_254",
+            "context": "L_GUN_254",
+            "string": "Sniper\n"
+        },
+        {
+            "id": "L_GUN_255",
+            "context": "L_GUN_255",
+            "string": "Z-Mine\n"
+        }
+    ]
+}

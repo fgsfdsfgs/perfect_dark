@@ -1,0 +1,1424 @@
+{
+    "messages": [
+        {
+            "id": "L_MPWEAPONS_000",
+            "context": "L_MPWEAPONS_000",
+            "string": "%s は\nデ-タリンカを\n手に入れた\n"
+        },
+        {
+            "id": "L_MPWEAPONS_000_2",
+            "context": "L_MPWEAPONS_000_2",
+            "string": "%s は\nアタッシュを\n手に入れた\n"
+        },
+        {
+            "id": "L_MPWEAPONS_000_3",
+            "context": "L_MPWEAPONS_000_3",
+            "string": "%s は\n%s の\nアタッシュを\n手に入れた\n"
+        },
+        {
+            "id": "L_MPWEAPONS_002",
+            "context": "L_MPWEAPONS_002",
+            "string": "%s は\n我々の\nアタッシュを\n手に入れた\n"
+        },
+        {
+            "id": "L_MPWEAPONS_003",
+            "context": "L_MPWEAPONS_003",
+            "string": "%s の\nアタッシュを\n手に入れた\n"
+        },
+        {
+            "id": "L_MPWEAPONS_004",
+            "context": "L_MPWEAPONS_004",
+            "string": "%s の\nアタッシュで\n３ポイント！\n"
+        },
+        {
+            "id": "L_MPWEAPONS_005",
+            "context": "L_MPWEAPONS_005",
+            "string": "%s は\n我々の\nアタッシュで\n３ポイント！\n"
+        },
+        {
+            "id": "L_MPWEAPONS_006",
+            "context": "L_MPWEAPONS_006",
+            "string": "%s は\n%s の\nアタッシュで\n３ポイント！\n"
+        },
+        {
+            "id": "L_MPWEAPONS_007",
+            "context": "L_MPWEAPONS_007",
+            "string": "生存ポイント！\n"
+        },
+        {
+            "id": "L_MPWEAPONS_008",
+            "context": "L_MPWEAPONS_008",
+            "string": "味方のオニを\n"
+        },
+        {
+            "id": "L_MPWEAPONS_009",
+            "context": "L_MPWEAPONS_009",
+            "string": "倒してしまった！\n"
+        },
+        {
+            "id": "L_MPWEAPONS_010",
+            "context": "L_MPWEAPONS_010",
+            "string": "ヨシ！\n"
+        },
+        {
+            "id": "L_MPWEAPONS_011",
+            "context": "L_MPWEAPONS_011",
+            "string": "オニを倒した！\n"
+        },
+        {
+            "id": "L_MPWEAPONS_012",
+            "context": "L_MPWEAPONS_012",
+            "string": "２ポイント獲得\n"
+        },
+        {
+            "id": "L_MPWEAPONS_013",
+            "context": "L_MPWEAPONS_013",
+            "string": "あなたがオニ\n"
+        },
+        {
+            "id": "L_MPWEAPONS_014",
+            "context": "L_MPWEAPONS_014",
+            "string": "%s\nを守れ！\n"
+        },
+        {
+            "id": "L_MPWEAPONS_015",
+            "context": "L_MPWEAPONS_015",
+            "string": "%s\nを倒せ！\n"
+        },
+        {
+            "id": "L_MPWEAPONS_016",
+            "context": "L_MPWEAPONS_016",
+            "string": "ハッキング成功\n"
+        },
+        {
+            "id": "L_MPWEAPONS_017",
+            "context": "L_MPWEAPONS_017",
+            "string": "接続が途切れました\n"
+        },
+        {
+            "id": "L_MPWEAPONS_018",
+            "context": "L_MPWEAPONS_018",
+            "string": "ハッキング開始\n"
+        },
+        {
+            "id": "L_MPWEAPONS_019",
+            "context": "L_MPWEAPONS_019",
+            "string": "データリンカが必要\n"
+        },
+        {
+            "id": "L_MPWEAPONS_020",
+            "context": "L_MPWEAPONS_020",
+            "string": "陣取り完了！\n"
+        },
+        {
+            "id": "L_MPWEAPONS_021",
+            "context": "L_MPWEAPONS_021",
+            "string": "陣取り開始！\n"
+        },
+        {
+            "id": "L_MPWEAPONS_022",
+            "context": "L_MPWEAPONS_022",
+            "string": "%s が\n陣取り開始！\n"
+        },
+        {
+            "id": "L_MPWEAPONS_023",
+            "context": "L_MPWEAPONS_023",
+            "string": "%d秒１点\n"
+        },
+        {
+            "id": "L_MPWEAPONS_024",
+            "context": "L_MPWEAPONS_024",
+            "string": "１ポイント！\n"
+        },
+        {
+            "id": "L_MPWEAPONS_025",
+            "context": "L_MPWEAPONS_025",
+            "string": "シールド無し\n"
+        },
+        {
+            "id": "L_MPWEAPONS_026",
+            "context": "L_MPWEAPONS_026",
+            "string": "オートマチック\n"
+        },
+        {
+            "id": "L_MPWEAPONS_027",
+            "context": "L_MPWEAPONS_027",
+            "string": "ロケットランチャ\n"
+        },
+        {
+            "id": "L_MPWEAPONS_028",
+            "context": "L_MPWEAPONS_028",
+            "string": "シミュラント\n"
+        },
+        {
+            "id": "L_MPWEAPONS_029",
+            "context": "L_MPWEAPONS_029",
+            "string": "陣取り\n"
+        },
+        {
+            "id": "L_MPWEAPONS_030",
+            "context": "L_MPWEAPONS_030",
+            "string": "遺跡　ファーサイト\n"
+        },
+        {
+            "id": "L_MPWEAPONS_031",
+            "context": "L_MPWEAPONS_031",
+            "string": "アタッシュケース１\n"
+        },
+        {
+            "id": "L_MPWEAPONS_032",
+            "context": "L_MPWEAPONS_032",
+            "string": "ピストル　一撃必殺\n"
+        },
+        {
+            "id": "L_MPWEAPONS_033",
+            "context": "L_MPWEAPONS_033",
+            "string": "アタッシュケース２\n"
+        },
+        {
+            "id": "L_MPWEAPONS_034",
+            "context": "L_MPWEAPONS_034",
+            "string": "スパイクローク\n"
+        },
+        {
+            "id": "L_MPWEAPONS_035",
+            "context": "L_MPWEAPONS_035",
+            "string": "寺院　爆発系\n"
+        },
+        {
+            "id": "L_MPWEAPONS_036",
+            "context": "L_MPWEAPONS_036",
+            "string": "スレイヤー\n"
+        },
+        {
+            "id": "L_MPWEAPONS_037",
+            "context": "L_MPWEAPONS_037",
+            "string": "トランキライザ\n"
+        },
+        {
+            "id": "L_MPWEAPONS_038",
+            "context": "L_MPWEAPONS_038",
+            "string": "スローモーション\n"
+        },
+        {
+            "id": "L_MPWEAPONS_039",
+            "context": "L_MPWEAPONS_039",
+            "string": "スタートボタン\n"
+        },
+        {
+            "id": "L_MPWEAPONS_040",
+            "context": "L_MPWEAPONS_040",
+            "string": "ポーズ中\n"
+        },
+        {
+            "id": "L_MPWEAPONS_041",
+            "context": "L_MPWEAPONS_041",
+            "string": "カスタム\n"
+        },
+        {
+            "id": "L_MPWEAPONS_042",
+            "context": "L_MPWEAPONS_042",
+            "string": "ランダム\n"
+        },
+        {
+            "id": "L_MPWEAPONS_043",
+            "context": "L_MPWEAPONS_043",
+            "string": "ランダム５\n"
+        },
+        {
+            "id": "L_MPWEAPONS_044",
+            "context": "L_MPWEAPONS_044",
+            "string": "接近戦\n"
+        },
+        {
+            "id": "L_MPWEAPONS_045",
+            "context": "L_MPWEAPONS_045",
+            "string": "センサー爆弾\n"
+        },
+        {
+            "id": "L_MPWEAPONS_046",
+            "context": "L_MPWEAPONS_046",
+            "string": "Ｒランチャ\n"
+        },
+        {
+            "id": "L_MPWEAPONS_047",
+            "context": "L_MPWEAPONS_047",
+            "string": "Ｇランチャ\n"
+        },
+        {
+            "id": "L_MPWEAPONS_048",
+            "context": "L_MPWEAPONS_048",
+            "string": "爆発系\n"
+        },
+        {
+            "id": "L_MPWEAPONS_049",
+            "context": "L_MPWEAPONS_049",
+            "string": "黄金銃\n"
+        },
+        {
+            "id": "L_MPWEAPONS_050",
+            "context": "L_MPWEAPONS_050",
+            "string": "ヘビー系\n"
+        },
+        {
+            "id": "L_MPWEAPONS_051",
+            "context": "L_MPWEAPONS_051",
+            "string": "鎮静剤\n"
+        },
+        {
+            "id": "L_MPWEAPONS_052",
+            "context": "L_MPWEAPONS_052",
+            "string": "ファーサイト\n"
+        },
+        {
+            "id": "L_MPWEAPONS_053",
+            "context": "L_MPWEAPONS_053",
+            "string": "パワー系\n"
+        },
+        {
+            "id": "L_MPWEAPONS_054",
+            "context": "L_MPWEAPONS_054",
+            "string": "機関銃系\n"
+        },
+        {
+            "id": "L_MPWEAPONS_055",
+            "context": "L_MPWEAPONS_055",
+            "string": "ピストル系\n"
+        },
+        {
+            "id": "L_MPWEAPONS_056",
+            "context": "L_MPWEAPONS_056",
+            "string": "テスト\n"
+        },
+        {
+            "id": "L_MPWEAPONS_057",
+            "context": "L_MPWEAPONS_057",
+            "string": "４Ｍテスト\n"
+        },
+        {
+            "id": "L_MPWEAPONS_058",
+            "context": "L_MPWEAPONS_058",
+            "string": "無し\n"
+        },
+        {
+            "id": "L_MPWEAPONS_059",
+            "context": "L_MPWEAPONS_059",
+            "string": "シールド\n"
+        },
+        {
+            "id": "L_MPWEAPONS_060",
+            "context": "L_MPWEAPONS_060",
+            "string": "無効\n"
+        },
+        {
+            "id": "L_MPWEAPONS_061",
+            "context": "L_MPWEAPONS_061",
+            "string": "任務完了\n"
+        },
+        {
+            "id": "L_MPWEAPONS_062",
+            "context": "L_MPWEAPONS_062",
+            "string": "不明\n"
+        },
+        {
+            "id": "L_MPWEAPONS_063",
+            "context": "L_MPWEAPONS_063",
+            "string": "行方不明\n"
+        },
+        {
+            "id": "L_MPWEAPONS_064",
+            "context": "L_MPWEAPONS_064",
+            "string": "パック不良\n"
+        },
+        {
+            "id": "L_MPWEAPONS_065",
+            "context": "L_MPWEAPONS_065",
+            "string": "は壊れているか正しく\n"
+        },
+        {
+            "id": "L_MPWEAPONS_066",
+            "context": "L_MPWEAPONS_066",
+            "string": "接続されていません\n"
+        },
+        {
+            "id": "L_MPWEAPONS_067",
+            "context": "L_MPWEAPONS_067",
+            "string": "修復を試みる\n"
+        },
+        {
+            "id": "L_MPWEAPONS_068",
+            "context": "L_MPWEAPONS_068",
+            "string": "もう一度\n"
+        },
+        {
+            "id": "L_MPWEAPONS_069",
+            "context": "L_MPWEAPONS_069",
+            "string": "コントローラパックを\n使わずに続ける\n"
+        },
+        {
+            "id": "L_MPWEAPONS_070",
+            "context": "L_MPWEAPONS_070",
+            "string": "パックフル\n"
+        },
+        {
+            "id": "L_MPWEAPONS_071",
+            "context": "L_MPWEAPONS_071",
+            "string": "は、いっぱいです。\nセーブするには\n１ノート・２８ページ\nが必要です。\n"
+        },
+        {
+            "id": "L_MPWEAPONS_072",
+            "context": "L_MPWEAPONS_072",
+            "string": ""
+        },
+        {
+            "id": "L_MPWEAPONS_073",
+            "context": "L_MPWEAPONS_073",
+            "string": "ＯＫ\n"
+        },
+        {
+            "id": "L_MPWEAPONS_074",
+            "context": "L_MPWEAPONS_074",
+            "string": "－－－－－－－－\n"
+        },
+        {
+            "id": "L_MPWEAPONS_075",
+            "context": "L_MPWEAPONS_075",
+            "string": "高速パンチ\n"
+        },
+        {
+            "id": "L_MPWEAPONS_076",
+            "context": "L_MPWEAPONS_076",
+            "string": "スパイクローク\n"
+        },
+        {
+            "id": "L_MPWEAPONS_077",
+            "context": "L_MPWEAPONS_077",
+            "string": "無敵モード\n"
+        },
+        {
+            "id": "L_MPWEAPONS_078",
+            "context": "L_MPWEAPONS_078",
+            "string": "オール武器（ソロ）\n"
+        },
+        {
+            "id": "L_MPWEAPONS_079",
+            "context": "L_MPWEAPONS_079",
+            "string": "弾無制限\n"
+        },
+        {
+            "id": "L_MPWEAPONS_080",
+            "context": "L_MPWEAPONS_080",
+            "string": "弾無制限　リロード不要\n"
+        },
+        {
+            "id": "L_MPWEAPONS_081",
+            "context": "L_MPWEAPONS_081",
+            "string": "スローモーション（ソロ）\n"
+        },
+        {
+            "id": "L_MPWEAPONS_082",
+            "context": "L_MPWEAPONS_082",
+            "string": "ＤＫモード\n"
+        },
+        {
+            "id": "L_MPWEAPONS_083",
+            "context": "L_MPWEAPONS_083",
+            "string": "トレントのマグナム銃\n"
+        },
+        {
+            "id": "L_MPWEAPONS_084",
+            "context": "L_MPWEAPONS_084",
+            "string": "ファーサイト\n"
+        },
+        {
+            "id": "L_MPWEAPONS_085",
+            "context": "L_MPWEAPONS_085",
+            "string": "タイニージョアンナ\n"
+        },
+        {
+            "id": "L_MPWEAPONS_086",
+            "context": "L_MPWEAPONS_086",
+            "string": "敵スモール\n"
+        },
+        {
+            "id": "L_MPWEAPONS_087",
+            "context": "L_MPWEAPONS_087",
+            "string": "シールド装備（敵）\n"
+        },
+        {
+            "id": "L_MPWEAPONS_088",
+            "context": "L_MPWEAPONS_088",
+            "string": "シールド装備\n"
+        },
+        {
+            "id": "L_MPWEAPONS_089",
+            "context": "L_MPWEAPONS_089",
+            "string": "スーパーシールド\n"
+        },
+        {
+            "id": "L_MPWEAPONS_090",
+            "context": "L_MPWEAPONS_090",
+            "string": "クラシック照準\n"
+        },
+        {
+            "id": "L_MPWEAPONS_091",
+            "context": "L_MPWEAPONS_091",
+            "string": "開発スタッフのみ\n"
+        },
+        {
+            "id": "L_MPWEAPONS_092",
+            "context": "L_MPWEAPONS_092",
+            "string": "エルビスでプレイ\n"
+        },
+        {
+            "id": "L_MPWEAPONS_093",
+            "context": "L_MPWEAPONS_093",
+            "string": "全敵Ｒランチャ\n"
+        },
+        {
+            "id": "L_MPWEAPONS_094",
+            "context": "L_MPWEAPONS_094",
+            "string": "ラップトップ自動機銃　弾無制限\n"
+        },
+        {
+            "id": "L_MPWEAPONS_095",
+            "context": "L_MPWEAPONS_095",
+            "string": "全敵素手\n"
+        },
+        {
+            "id": "L_MPWEAPONS_096",
+            "context": "L_MPWEAPONS_096",
+            "string": "暗闇モード\n"
+        },
+        {
+            "id": "L_MPWEAPONS_097",
+            "context": "L_MPWEAPONS_097",
+            "string": "ボクサー\n"
+        },
+        {
+            "id": "L_MPWEAPONS_098",
+            "context": "L_MPWEAPONS_098",
+            "string": "ホットショット\n"
+        },
+        {
+            "id": "L_MPWEAPONS_099",
+            "context": "L_MPWEAPONS_099",
+            "string": "ヒット＆ラン\n"
+        },
+        {
+            "id": "L_MPWEAPONS_100",
+            "context": "L_MPWEAPONS_100",
+            "string": "エイリアン\n"
+        },
+        {
+            "id": "L_MPWEAPONS_101",
+            "context": "L_MPWEAPONS_101",
+            "string": "Ｒトラッカに秘密武器表示\n"
+        },
+        {
+            "id": "L_MPWEAPONS_102",
+            "context": "L_MPWEAPONS_102",
+            "string": "Ｒランチャ\n"
+        },
+        {
+            "id": "L_MPWEAPONS_103",
+            "context": "L_MPWEAPONS_103",
+            "string": "Ｓライフル\n"
+        },
+        {
+            "id": "L_MPWEAPONS_104",
+            "context": "L_MPWEAPONS_104",
+            "string": "Ｘスキャン\n"
+        },
+        {
+            "id": "L_MPWEAPONS_105",
+            "context": "L_MPWEAPONS_105",
+            "string": "Ｓドラゴン\n"
+        },
+        {
+            "id": "L_MPWEAPONS_106",
+            "context": "L_MPWEAPONS_106",
+            "string": "ラップトップガン\n"
+        },
+        {
+            "id": "L_MPWEAPONS_107",
+            "context": "L_MPWEAPONS_107",
+            "string": "フェニクス\n"
+        },
+        {
+            "id": "L_MPWEAPONS_108",
+            "context": "L_MPWEAPONS_108",
+            "string": "サイキックガン\n"
+        },
+        {
+            "id": "L_MPWEAPONS_109",
+            "context": "L_MPWEAPONS_109",
+            "string": "PP9i\n"
+        },
+        {
+            "id": "L_MPWEAPONS_110",
+            "context": "L_MPWEAPONS_110",
+            "string": "CC13\n"
+        },
+        {
+            "id": "L_MPWEAPONS_111",
+            "context": "L_MPWEAPONS_111",
+            "string": "KL01313\n"
+        },
+        {
+            "id": "L_MPWEAPONS_112",
+            "context": "L_MPWEAPONS_112",
+            "string": "KF7 Special\n"
+        },
+        {
+            "id": "L_MPWEAPONS_113",
+            "context": "L_MPWEAPONS_113",
+            "string": "ZZT (9mm)\n"
+        },
+        {
+            "id": "L_MPWEAPONS_114",
+            "context": "L_MPWEAPONS_114",
+            "string": "DMC\n"
+        },
+        {
+            "id": "L_MPWEAPONS_115",
+            "context": "L_MPWEAPONS_115",
+            "string": "AR53\n"
+        },
+        {
+            "id": "L_MPWEAPONS_116",
+            "context": "L_MPWEAPONS_116",
+            "string": "RC-P45\n"
+        },
+        {
+            "id": "L_MPWEAPONS_117",
+            "context": "L_MPWEAPONS_117",
+            "string": "ベルベット・ダーク\n"
+        },
+        {
+            "id": "L_MPWEAPONS_118",
+            "context": "L_MPWEAPONS_118",
+            "string": "おたのしみ\n"
+        },
+        {
+            "id": "L_MPWEAPONS_119",
+            "context": "L_MPWEAPONS_119",
+            "string": "ゲームプレイ\n"
+        },
+        {
+            "id": "L_MPWEAPONS_120",
+            "context": "L_MPWEAPONS_120",
+            "string": "ウェポン\n"
+        },
+        {
+            "id": "L_MPWEAPONS_121",
+            "context": "L_MPWEAPONS_121",
+            "string": "チームメイト\n"
+        },
+        {
+            "id": "L_MPWEAPONS_122",
+            "context": "L_MPWEAPONS_122",
+            "string": "ジョアンナ用の武器（ソロ）\n"
+        },
+        {
+            "id": "L_MPWEAPONS_123",
+            "context": "L_MPWEAPONS_123",
+            "string": "クラシックウェポン（ソロ）\n"
+        },
+        {
+            "id": "L_MPWEAPONS_124",
+            "context": "L_MPWEAPONS_124",
+            "string": "データダイン本社＜始動＞"
+        },
+        {
+            "id": "L_MPWEAPONS_125",
+            "context": "L_MPWEAPONS_125",
+            "string": "データダイン本社＜保護＞"
+        },
+        {
+            "id": "L_MPWEAPONS_126",
+            "context": "L_MPWEAPONS_126",
+            "string": "エリア５１＜突破＞"
+        },
+        {
+            "id": "L_MPWEAPONS_127",
+            "context": "L_MPWEAPONS_127",
+            "string": "エリア５１＜救出＞"
+        },
+        {
+            "id": "L_MPWEAPONS_128",
+            "context": "L_MPWEAPONS_128",
+            "string": "エリア５１＜脱出＞"
+        },
+        {
+            "id": "L_MPWEAPONS_129",
+            "context": "L_MPWEAPONS_129",
+            "string": "難易度：\n"
+        },
+        {
+            "id": "L_MPWEAPONS_130",
+            "context": "L_MPWEAPONS_130",
+            "string": "（チート）ソロ・ミッション\n"
+        },
+        {
+            "id": "L_MPWEAPONS_131",
+            "context": "L_MPWEAPONS_131",
+            "string": "（チート）コンバットシミュレータ\n"
+        },
+        {
+            "id": "L_MPWEAPONS_132",
+            "context": "L_MPWEAPONS_132",
+            "string": "（チート）協力ミッション\n"
+        },
+        {
+            "id": "L_MPWEAPONS_133",
+            "context": "L_MPWEAPONS_133",
+            "string": "（チート）敵対ミッション\n"
+        },
+        {
+            "id": "L_MPWEAPONS_134",
+            "context": "L_MPWEAPONS_134",
+            "string": "プライドなし\n"
+        },
+        {
+            "id": "L_MPWEAPONS_135",
+            "context": "L_MPWEAPONS_135",
+            "string": "チート使用\n"
+        },
+        {
+            "id": "L_MPWEAPONS_136",
+            "context": "L_MPWEAPONS_136",
+            "string": "利用可能："
+        },
+        {
+            "id": "L_MPWEAPONS_137",
+            "context": "L_MPWEAPONS_137",
+            "string": "ステージ："
+        },
+        {
+            "id": "L_MPWEAPONS_138",
+            "context": "L_MPWEAPONS_138",
+            "string": "をクリアすれば："
+        },
+        {
+            "id": "L_MPWEAPONS_139",
+            "context": "L_MPWEAPONS_139",
+            "string": "難易度："
+        },
+        {
+            "id": "L_MPWEAPONS_140",
+            "context": "L_MPWEAPONS_140",
+            "string": "制限時間："
+        },
+        {
+            "id": "L_MPWEAPONS_141",
+            "context": "L_MPWEAPONS_141",
+            "string": ""
+        },
+        {
+            "id": "L_MPWEAPONS_142",
+            "context": "L_MPWEAPONS_142",
+            "string": "情報をチェックしたいチートを選んで下さい。\n"
+        },
+        {
+            "id": "L_MPWEAPONS_143",
+            "context": "L_MPWEAPONS_143",
+            "string": "利用可能協力者："
+        },
+        {
+            "id": "L_MPWEAPONS_144",
+            "context": "L_MPWEAPONS_144",
+            "string": "射撃トレーニングでゴールドメダルをたくさんゲット。\n"
+        },
+        {
+            "id": "L_MPWEAPONS_145",
+            "context": "L_MPWEAPONS_145",
+            "string": "照準情報の表示\n"
+        },
+        {
+            "id": "L_MPWEAPONS_146",
+            "context": "L_MPWEAPONS_146",
+            "string": "照準を常に表示\n"
+        },
+        {
+            "id": "L_MPWEAPONS_147",
+            "context": "L_MPWEAPONS_147",
+            "string": "ズーム範囲\n"
+        },
+        {
+            "id": "L_MPWEAPONS_148",
+            "context": "L_MPWEAPONS_148",
+            "string": "弾数の表示\n"
+        },
+        {
+            "id": "L_MPWEAPONS_149",
+            "context": "L_MPWEAPONS_149",
+            "string": "武器モード表示\n"
+        },
+        {
+            "id": "L_MPWEAPONS_150",
+            "context": "L_MPWEAPONS_150",
+            "string": "ペイントボール\n"
+        },
+        {
+            "id": "L_MPWEAPONS_151",
+            "context": "L_MPWEAPONS_151",
+            "string": "字幕の表示\n"
+        },
+        {
+            "id": "L_MPWEAPONS_152",
+            "context": "L_MPWEAPONS_152",
+            "string": "ミッションタイム\n"
+        },
+        {
+            "id": "L_MPWEAPONS_153",
+            "context": "L_MPWEAPONS_153",
+            "string": "モード\n"
+        },
+        {
+            "id": "L_MPWEAPONS_154",
+            "context": "L_MPWEAPONS_154",
+            "string": "画面分割\n"
+        },
+        {
+            "id": "L_MPWEAPONS_155",
+            "context": "L_MPWEAPONS_155",
+            "string": "任務を放棄\nしますか？\n"
+        },
+        {
+            "id": "L_MPWEAPONS_156",
+            "context": "L_MPWEAPONS_156",
+            "string": "ＪＤレザースーツ\n"
+        },
+        {
+            "id": "L_MPWEAPONS_157",
+            "context": "L_MPWEAPONS_157",
+            "string": "ＪＤオフィス\n"
+        },
+        {
+            "id": "L_MPWEAPONS_158",
+            "context": "L_MPWEAPONS_158",
+            "string": "エルビス　チョッキ\n"
+        },
+        {
+            "id": "L_MPWEAPONS_159",
+            "context": "L_MPWEAPONS_159",
+            "string": "エラー\n"
+        },
+        {
+            "id": "L_MPWEAPONS_160",
+            "context": "L_MPWEAPONS_160",
+            "string": "このファイルは使用中\nなので消去出来ません\n"
+        },
+        {
+            "id": "L_MPWEAPONS_161",
+            "context": "L_MPWEAPONS_161",
+            "string": "キャンセル\n"
+        },
+        {
+            "id": "L_MPWEAPONS_162",
+            "context": "L_MPWEAPONS_162",
+            "string": "制限時間：\n"
+        },
+        {
+            "id": "L_MPWEAPONS_163",
+            "context": "L_MPWEAPONS_163",
+            "string": "目標個人得点：\n"
+        },
+        {
+            "id": "L_MPWEAPONS_164",
+            "context": "L_MPWEAPONS_164",
+            "string": "目標合計得点：\n"
+        },
+        {
+            "id": "L_MPWEAPONS_165",
+            "context": "L_MPWEAPONS_165",
+            "string": "チャレンジ　クリア！\n"
+        },
+        {
+            "id": "L_MPWEAPONS_166",
+            "context": "L_MPWEAPONS_166",
+            "string": "チャレンジ　失敗！\n"
+        },
+        {
+            "id": "L_MPWEAPONS_167",
+            "context": "L_MPWEAPONS_167",
+            "string": "チャレンジ　チート使用！\n"
+        },
+        {
+            "id": "L_MPWEAPONS_168",
+            "context": "L_MPWEAPONS_168",
+            "string": "シネマの字幕\n"
+        },
+        {
+            "id": "L_MPWEAPONS_169",
+            "context": "L_MPWEAPONS_169",
+            "string": "ゲーム中の字幕\n"
+        },
+        {
+            "id": "L_MPWEAPONS_170",
+            "context": "L_MPWEAPONS_170",
+            "string": "タイトルスクリーンその２\n"
+        },
+        {
+            "id": "L_MPWEAPONS_171",
+            "context": "L_MPWEAPONS_171",
+            "string": "チャレンジスタート\n"
+        },
+        {
+            "id": "L_MPWEAPONS_172",
+            "context": "L_MPWEAPONS_172",
+            "string": "データダイン地下研究所"
+        },
+        {
+            "id": "L_MPWEAPONS_173",
+            "context": "L_MPWEAPONS_173",
+            "string": "エラー\n"
+        },
+        {
+            "id": "L_MPWEAPONS_174",
+            "context": "L_MPWEAPONS_174",
+            "string": "元のコントローラ\nパックがありません\n"
+        },
+        {
+            "id": "L_MPWEAPONS_175",
+            "context": "L_MPWEAPONS_175",
+            "string": "修復を試みる\n"
+        },
+        {
+            "id": "L_MPWEAPONS_176",
+            "context": "L_MPWEAPONS_176",
+            "string": "このコントローラ\nパックを修復しても\nよろしいですか？\n"
+        },
+        {
+            "id": "L_MPWEAPONS_177",
+            "context": "L_MPWEAPONS_177",
+            "string": "データは失われます！\n"
+        },
+        {
+            "id": "L_MPWEAPONS_178",
+            "context": "L_MPWEAPONS_178",
+            "string": "キャンセル\n"
+        },
+        {
+            "id": "L_MPWEAPONS_179",
+            "context": "L_MPWEAPONS_179",
+            "string": "修復する\n"
+        },
+        {
+            "id": "L_MPWEAPONS_180",
+            "context": "L_MPWEAPONS_180",
+            "string": "修復完了\n"
+        },
+        {
+            "id": "L_MPWEAPONS_181",
+            "context": "L_MPWEAPONS_181",
+            "string": "コントローラパックは\n修復されました\n"
+        },
+        {
+            "id": "L_MPWEAPONS_182",
+            "context": "L_MPWEAPONS_182",
+            "string": "修復失敗\n"
+        },
+        {
+            "id": "L_MPWEAPONS_183",
+            "context": "L_MPWEAPONS_183",
+            "string": "コントローラパックの\n修復に失敗しました\nこのコントローラ\nパックは使えません\n"
+        },
+        {
+            "id": "L_MPWEAPONS_184",
+            "context": "L_MPWEAPONS_184",
+            "string": "ハンディ\n"
+        },
+        {
+            "id": "L_MPWEAPONS_185",
+            "context": "L_MPWEAPONS_185",
+            "string": "L/R: "
+        },
+        {
+            "id": "L_MPWEAPONS_186",
+            "context": "L_MPWEAPONS_186",
+            "string": "C-UP: "
+        },
+        {
+            "id": "L_MPWEAPONS_187",
+            "context": "L_MPWEAPONS_187",
+            "string": "C-LEFT/RIGHT: "
+        },
+        {
+            "id": "L_MPWEAPONS_188",
+            "context": "L_MPWEAPONS_188",
+            "string": "C-DOWN: "
+        },
+        {
+            "id": "L_MPWEAPONS_189",
+            "context": "L_MPWEAPONS_189",
+            "string": "A: "
+        },
+        {
+            "id": "L_MPWEAPONS_190",
+            "context": "L_MPWEAPONS_190",
+            "string": "B: "
+        },
+        {
+            "id": "L_MPWEAPONS_191",
+            "context": "L_MPWEAPONS_191",
+            "string": "3D: "
+        },
+        {
+            "id": "L_MPWEAPONS_192",
+            "context": "L_MPWEAPONS_192",
+            "string": "Z: "
+        },
+        {
+            "id": "L_MPWEAPONS_193",
+            "context": "L_MPWEAPONS_193",
+            "string": "+ PAD: "
+        },
+        {
+            "id": "L_MPWEAPONS_194",
+            "context": "L_MPWEAPONS_194",
+            "string": "照準…ホールド"
+        },
+        {
+            "id": "L_MPWEAPONS_195",
+            "context": "L_MPWEAPONS_195",
+            "string": "照準…切り替え"
+        },
+        {
+            "id": "L_MPWEAPONS_196",
+            "context": "L_MPWEAPONS_196",
+            "string": "見上げる"
+        },
+        {
+            "id": "L_MPWEAPONS_197",
+            "context": "L_MPWEAPONS_197",
+            "string": "見下ろす"
+        },
+        {
+            "id": "L_MPWEAPONS_198",
+            "context": "L_MPWEAPONS_198",
+            "string": "見下ろす"
+        },
+        {
+            "id": "L_MPWEAPONS_199",
+            "context": "L_MPWEAPONS_199",
+            "string": "見上げる"
+        },
+        {
+            "id": "L_MPWEAPONS_200",
+            "context": "L_MPWEAPONS_200",
+            "string": "前進"
+        },
+        {
+            "id": "L_MPWEAPONS_201",
+            "context": "L_MPWEAPONS_201",
+            "string": "バック"
+        },
+        {
+            "id": "L_MPWEAPONS_202",
+            "context": "L_MPWEAPONS_202",
+            "string": "サイドステップ"
+        },
+        {
+            "id": "L_MPWEAPONS_203",
+            "context": "L_MPWEAPONS_203",
+            "string": "武器選択"
+        },
+        {
+            "id": "L_MPWEAPONS_204",
+            "context": "L_MPWEAPONS_204",
+            "string": "アクション／リロード"
+        },
+        {
+            "id": "L_MPWEAPONS_205",
+            "context": "L_MPWEAPONS_205",
+            "string": "撃つ"
+        },
+        {
+            "id": "L_MPWEAPONS_206",
+            "context": "L_MPWEAPONS_206",
+            "string": "移動／ターン"
+        },
+        {
+            "id": "L_MPWEAPONS_207",
+            "context": "L_MPWEAPONS_207",
+            "string": "見回し"
+        },
+        {
+            "id": "L_MPWEAPONS_208",
+            "context": "L_MPWEAPONS_208",
+            "string": "移動／サイドステップ"
+        },
+        {
+            "id": "L_MPWEAPONS_209",
+            "context": "L_MPWEAPONS_209",
+            "string": "見回し／サイドステップ"
+        },
+        {
+            "id": "L_MPWEAPONS_210",
+            "context": "L_MPWEAPONS_210",
+            "string": "Ｃボタンと同じ"
+        },
+        {
+            "id": "L_MPWEAPONS_211",
+            "context": "L_MPWEAPONS_211",
+            "string": "コントローラ１："
+        },
+        {
+            "id": "L_MPWEAPONS_212",
+            "context": "L_MPWEAPONS_212",
+            "string": "コントローラ２："
+        },
+        {
+            "id": "L_MPWEAPONS_213",
+            "context": "L_MPWEAPONS_213",
+            "string": "操作モード %s %s\n"
+        },
+        {
+            "id": "L_MPWEAPONS_214",
+            "context": "L_MPWEAPONS_214",
+            "string": "（１個モード）"
+        },
+        {
+            "id": "L_MPWEAPONS_215",
+            "context": "L_MPWEAPONS_215",
+            "string": "（２個モード）"
+        },
+        {
+            "id": "L_MPWEAPONS_216",
+            "context": "L_MPWEAPONS_216",
+            "string": "「武器選択」ホールド：クイックメニュー\n「Ｂ」ホールド：武器モードの切替\n「Ｂ」＋「撃つ」：武器モードの一時切替\n「照準」＋「Ｃ下」：しゃがむ\n「照準」＋「Ｃ上」：立つ\n"
+        },
+        {
+            "id": "L_MPWEAPONS_217",
+            "context": "L_MPWEAPONS_217",
+            "string": "全てのチートを無効にする\n"
+        },
+        {
+            "id": "L_MPWEAPONS_218",
+            "context": "L_MPWEAPONS_218",
+            "string": "スラングＯＦＦ\n"
+        },
+        {
+            "id": "L_MPWEAPONS_219",
+            "context": "L_MPWEAPONS_219",
+            "string": "ユーザーＩＤ：\n"
+        },
+        {
+            "id": "L_MPWEAPONS_220",
+            "context": "L_MPWEAPONS_220",
+            "string": "パスワード：\n"
+        },
+        {
+            "id": "L_MPWEAPONS_221",
+            "context": "L_MPWEAPONS_221",
+            "string": "スペシャル\n"
+        },
+        {
+            "id": "L_MPWEAPONS_222",
+            "context": "L_MPWEAPONS_222",
+            "string": "特別オプション：\n"
+        },
+        {
+            "id": "L_MPWEAPONS_223",
+            "context": "L_MPWEAPONS_223",
+            "string": "敵のスピード：\n"
+        },
+        {
+            "id": "L_MPWEAPONS_224",
+            "context": "L_MPWEAPONS_224",
+            "string": "敵の体力：\n"
+        },
+        {
+            "id": "L_MPWEAPONS_225",
+            "context": "L_MPWEAPONS_225",
+            "string": "敵の強さ：\n"
+        },
+        {
+            "id": "L_MPWEAPONS_226",
+            "context": "L_MPWEAPONS_226",
+            "string": "敵の命中率：\n"
+        },
+        {
+            "id": "L_MPWEAPONS_227",
+            "context": "L_MPWEAPONS_227",
+            "string": "ＯＫ\n"
+        },
+        {
+            "id": "L_MPWEAPONS_228",
+            "context": "L_MPWEAPONS_228",
+            "string": "キャンセル\n"
+        },
+        {
+            "id": "L_MPWEAPONS_229",
+            "context": "L_MPWEAPONS_229",
+            "string": "コントローラパックが見つかりません\n"
+        },
+        {
+            "id": "L_MPWEAPONS_230",
+            "context": "L_MPWEAPONS_230",
+            "string": "ネーム：\n"
+        },
+        {
+            "id": "L_MPWEAPONS_231",
+            "context": "L_MPWEAPONS_231",
+            "string": "場所：\n"
+        },
+        {
+            "id": "L_MPWEAPONS_232",
+            "context": "L_MPWEAPONS_232",
+            "string": "－－注意－－\n"
+        },
+        {
+            "id": "L_MPWEAPONS_233",
+            "context": "L_MPWEAPONS_233",
+            "string": "同名ファイルが存在\n"
+        },
+        {
+            "id": "L_MPWEAPONS_234",
+            "context": "L_MPWEAPONS_234",
+            "string": ""
+        },
+        {
+            "id": "L_MPWEAPONS_235",
+            "context": "L_MPWEAPONS_235",
+            "string": "名前の変更\n"
+        },
+        {
+            "id": "L_MPWEAPONS_236",
+            "context": "L_MPWEAPONS_236",
+            "string": "場所の変更\n"
+        },
+        {
+            "id": "L_MPWEAPONS_237",
+            "context": "L_MPWEAPONS_237",
+            "string": "キャンセル\n"
+        },
+        {
+            "id": "L_MPWEAPONS_238",
+            "context": "L_MPWEAPONS_238",
+            "string": "ファイル名の変更\n"
+        },
+        {
+            "id": "L_MPWEAPONS_239",
+            "context": "L_MPWEAPONS_239",
+            "string": "新たなファイル名：\n"
+        },
+        {
+            "id": "L_MPWEAPONS_240",
+            "context": "L_MPWEAPONS_240",
+            "string": "コピー元のファイル\nなので消去できません\n"
+        },
+        {
+            "id": "L_MPWEAPONS_241",
+            "context": "L_MPWEAPONS_241",
+            "string": "ｄＤ戦闘員：%d\n"
+        },
+        {
+            "id": "L_MPWEAPONS_242",
+            "context": "L_MPWEAPONS_242",
+            "string": "ターゲットタイム：\n"
+        },
+        {
+            "id": "L_MPWEAPONS_243",
+            "context": "L_MPWEAPONS_243",
+            "string": "新たなチートを獲得！：\n"
+        },
+        {
+            "id": "L_MPWEAPONS_244",
+            "context": "L_MPWEAPONS_244",
+            "string": "続ける\n"
+        },
+        {
+            "id": "L_MPWEAPONS_245",
+            "context": "L_MPWEAPONS_245",
+            "string": "もう一度プレイする\n"
+        },
+        {
+            "id": "L_MPWEAPONS_246",
+            "context": "L_MPWEAPONS_246",
+            "string": "個人設定のセーブ\n"
+        },
+        {
+            "id": "L_MPWEAPONS_247",
+            "context": "L_MPWEAPONS_247",
+            "string": "個人設定を\nセーブしますか？\n"
+        },
+        {
+            "id": "L_MPWEAPONS_248",
+            "context": "L_MPWEAPONS_248",
+            "string": "セーブする\n"
+        },
+        {
+            "id": "L_MPWEAPONS_249",
+            "context": "L_MPWEAPONS_249",
+            "string": "セーブしない\n"
+        },
+        {
+            "id": "L_MPWEAPONS_250",
+            "context": "L_MPWEAPONS_250",
+            "string": "プレイヤーネーム：\n"
+        },
+        {
+            "id": "L_MPWEAPONS_251",
+            "context": "L_MPWEAPONS_251",
+            "string": "セーブファイルは\n破損のために\n消去されました\n"
+        },
+        {
+            "id": "L_MPWEAPONS_252",
+            "context": "L_MPWEAPONS_252",
+            "string": "続ける\n"
+        },
+        {
+            "id": "L_MPWEAPONS_253",
+            "context": "L_MPWEAPONS_253",
+            "string": "エラー\n"
+        },
+        {
+            "id": "L_MPWEAPONS_254",
+            "context": "L_MPWEAPONS_254",
+            "string": "ゲームボーイのカートリッジを\n読み込めません。接続が正しい\nか、カートリッジが正しいかを\n確認して下さい。\n"
+        },
+        {
+            "id": "L_MPWEAPONS_255",
+            "context": "L_MPWEAPONS_255",
+            "string": "キャンセル\n"
+        },
+        {
+            "id": "L_MPWEAPONS_256",
+            "context": "L_MPWEAPONS_256",
+            "string": "エラー\n"
+        },
+        {
+            "id": "L_MPWEAPONS_257",
+            "context": "L_MPWEAPONS_257",
+            "string": "セーブファイルは\n"
+        },
+        {
+            "id": "L_MPWEAPONS_258",
+            "context": "L_MPWEAPONS_258",
+            "string": "破損のために\n"
+        },
+        {
+            "id": "L_MPWEAPONS_259",
+            "context": "L_MPWEAPONS_259",
+            "string": "消去されました\n"
+        },
+        {
+            "id": "L_MPWEAPONS_260",
+            "context": "L_MPWEAPONS_260",
+            "string": "キャンセル\n"
+        },
+        {
+            "id": "L_MPWEAPONS_261",
+            "context": "L_MPWEAPONS_261",
+            "string": "ランゲージ選択：\n"
+        },
+        {
+            "id": "L_MPWEAPONS_262",
+            "context": "L_MPWEAPONS_262",
+            "string": "イングリッシュ\n"
+        },
+        {
+            "id": "L_MPWEAPONS_263",
+            "context": "L_MPWEAPONS_263",
+            "string": "フレンチ\n"
+        },
+        {
+            "id": "L_MPWEAPONS_264",
+            "context": "L_MPWEAPONS_264",
+            "string": "ジャーマン\n"
+        },
+        {
+            "id": "L_MPWEAPONS_265",
+            "context": "L_MPWEAPONS_265",
+            "string": "イタリアン\n"
+        },
+        {
+            "id": "L_MPWEAPONS_266",
+            "context": "L_MPWEAPONS_266",
+            "string": "スパニッシュ\n"
+        },
+        {
+            "id": "L_MPWEAPONS_267",
+            "context": "L_MPWEAPONS_267",
+            "string": "アメリカン\n"
+        },
+        {
+            "id": "L_MPWEAPONS_268",
+            "context": "L_MPWEAPONS_268",
+            "string": "ランゲージ：\n"
+        },
+        {
+            "id": "L_MPWEAPONS_269",
+            "context": "L_MPWEAPONS_269",
+            "string": "ランゲージ\n"
+        },
+        {
+            "id": "L_MPWEAPONS_270",
+            "context": "L_MPWEAPONS_270",
+            "string": "操作モード\n"
+        },
+        {
+            "id": "L_MPWEAPONS_271",
+            "context": "L_MPWEAPONS_271",
+            "string": "視点移動の上下逆\n"
+        },
+        {
+            "id": "L_MPWEAPONS_272",
+            "context": "L_MPWEAPONS_272",
+            "string": "自動前方視点\n"
+        },
+        {
+            "id": "L_MPWEAPONS_273",
+            "context": "L_MPWEAPONS_273",
+            "string": "頭のゆれ\n"
+        },
+        {
+            "id": "L_MPWEAPONS_274",
+            "context": "L_MPWEAPONS_274",
+            "string": "自動照準\n"
+        },
+        {
+            "id": "L_MPWEAPONS_275",
+            "context": "L_MPWEAPONS_275",
+            "string": "照準設定\n"
+        },
+        {
+            "id": "L_MPWEAPONS_276",
+            "context": "L_MPWEAPONS_276",
+            "string": "ホールド\n"
+        },
+        {
+            "id": "L_MPWEAPONS_277",
+            "context": "L_MPWEAPONS_277",
+            "string": "切り替え\n"
+        },
+        {
+            "id": "L_MPWEAPONS_278",
+            "context": "L_MPWEAPONS_278",
+            "string": "シネマの字幕\n"
+        },
+        {
+            "id": "L_MPWEAPONS_279",
+            "context": "L_MPWEAPONS_279",
+            "string": "ゲーム中の字幕\n"
+        },
+        {
+            "id": "L_MPWEAPONS_280",
+            "context": "L_MPWEAPONS_280",
+            "string": "Perfect Dark Registered Trademark No. 4366801\n"
+        },
+        {
+            "id": "L_MPWEAPONS_281",
+            "context": "L_MPWEAPONS_281",
+            "string": "このゲームには、メモリー拡張パック\n"
+        },
+        {
+            "id": "L_MPWEAPONS_282",
+            "context": "L_MPWEAPONS_282",
+            "string": "が必要です。　詳しくはゲームの取扱\n"
+        }
+    ]
+}

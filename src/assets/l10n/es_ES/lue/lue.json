@@ -1,0 +1,384 @@
+{
+    "messages": [
+        {
+            "id": "L_LUE_000",
+            "context": "L_LUE_000",
+            "string": "|Antecedentes - \n\nUna nave que transportaba asesores del Instituto ha sido derribada en Nevada. Los restos del impacto y los cuerpos de los asesores han sido trasladados al Área 51. Un espía infiltrado en la base ha conseguido llevar información al Instituto acerca de un posible superviviente. La misión consiste en rescatar a este superviviente.\n\n|Carrington - \n\nEsto es un desastre para nosotros, Joanna. Necesitamos sacar a nuestro aliado de allí antes de que sea demasiado tarde. Y también había cierto equipo especial dentro de la nave, que no debe permanecer en las garras de Trent Easton. Tendrás algo de ayuda en esta misión gracias a nuestro espía en el Área 51 que está disfrazado de guarda.\n\n|Objetivo Uno: - Apagar el Radar Interceptor Aéreo\n\nEste dispositivo fue capaz de penetrar la protección de la nave de nuestros aliados, así que los interceptores robot pudieron localizarla y derribarla. Para que tu escape tenga éxito, debes destruir la unidad de control de radar con los explosivos, y seguramente estará escondida bajo tierra rodeada de ordenadores.\n\n|Objetivo Dos: - Colocar Controlador de Comunicaciones en la Antena\n\nLas secciones subterráneas del Área 51 están protegidas de dispositivos de escucha, lo que significa que nuestra conexión se romperá tan pronto como entres en la base. Para remediarlo, debes colocar un dispositivo Controlador de Comunicaciones en la antena parabólica cercana a la entrada.\n\n|Objetivo Tres: - Desactivar Robots Interceptores en tierra\n\nIncluso con el radar interceptor aéreo apagado, los propios robots interceptores serán un problema. Destruye tantas unidades en tierra como sea posible; nuestra última foto de satélite muestra dos en tierra, pero quizá haya más.\n\n|Objetivo Cuatro: - Acceder al Ascensor del Hangar\n\nAtravesar la entrada principal puede ser suicida, así que en lugar de eso, dirige tu atención al ascensor del hangar. Nuestro espía informó que necesitarás una llave magnética para hacer funcionar el ascensor y el técnico de mantenimiento será tu mejor apuesta para encontrar una.\n\n|Objetivo Cinco: - Contactar con el Agente\n\nNuestro agente estará vestido como un guarda. Ello significa que no podrá apartarse demasiado de su puesto dentro de la base sin atraer la atención, así que depende de ti encontrarle. Está apostado en uno de los dos hangares principales, lo cual, desafortunadamente, no es muy específico.\n\nFIN\n"
+        },
+        {
+            "id": "L_LUE_001",
+            "context": "L_LUE_001",
+            "string": "ÁREA 51 - EXTERIOR\n"
+        },
+        {
+            "id": "L_LUE_002",
+            "context": "L_LUE_002",
+            "string": "|Antecedentes - \n\nUna nave que transportaba asesores del Instituto ha sido derribada en Nevada. Los restos del impacto y los cuerpos de los asesores han sido trasladados al Área 51. Un espía infiltrado en la base ha conseguido llevar información al Instituto acerca de un posible superviviente. La misión consiste en rescatar a este superviviente.\n\n|Carrington - \n\nEsto es un desastre para nosotros, Joanna. Necesitamos sacar a nuestro aliado de allí antes de que sea demasiado tarde. Y también había cierto equipo especial dentro de la nave, que no debe permanecer en las garras de Trent Easton. Tendrás algo de ayuda en esta misión gracias a nuestro espía en el Área 51 que está disfrazado de guarda.\n\n|Objetivo Uno: - Apagar el Radar Interceptor Aéreo\n\nEste dispositivo fue capaz de penetrar la protección de la nave de nuestros aliados, así que los interceptores robot pudieron localizarla y derribarla. Para que tu escape tenga éxito, debes destruir la unidad de control de radar con los explosivos, y seguramente estará escondida bajo tierra rodeada de ordenadores.\n\n|Objetivo Dos: - Colocar Controlador de Comunicaciones en la Antena\n\nLas secciones subterráneas del Área 51 están protegidas de dispositivos de escucha, lo que significa que nuestra conexión se romperá tan pronto como entres en la base. Para remediarlo, debes colocar un dispositivo Controlador de Comunicaciones en la antena parabólica cercana a la entrada.\n\n|Objetivo Tres: - Acceder al Ascensor del Hangar\n\nAtravesar la entrada principal puede ser suicida, así que en lugar de eso, dirige tu atención al ascensor del hangar. Nuestro espía informó que necesitarás una llave magnética para hacer funcionar el ascensor y el técnico de mantenimiento será tu mejor apuesta para encontrar una.\n\n|Objetivo Cuatro: - Contactar con el Agente\n\nNuestro agente estará vestido como un guarda. Ello significa que no podrá apartarse demasiado de su puesto dentro de la base sin atraer la atención, así que depende de ti encontrarle. Está apostado en uno de los dos hangares principales, lo cual, desafortunadamente, no es muy específico.\n\nFIN\n"
+        },
+        {
+            "id": "L_LUE_003",
+            "context": "L_LUE_003",
+            "string": "|Antecedentes - \n\nUna nave que transportaba asesores del Instituto ha sido derribada en Nevada. Los restos del impacto y los cuerpos de los asesores han sido trasladados al Área 51. Un espía infiltrado en la base ha conseguido llevar información al Instituto acerca de un posible superviviente. La misión consiste en rescatar a este superviviente.\n\n|Carrington - \n\nEsto es un desastre para nosotros, Joanna. Necesitamos sacar a nuestro aliado de allí antes de que sea demasiado tarde. Y también había cierto equipo especial dentro de la nave, que no debe permanecer en las garras de Trent Easton. Tendrás algo de ayuda en esta misión gracias a nuestro espía en el Área 51 que está disfrazado de guarda.\n\n|Objetivo Uno: - Apagar el Radar Interceptor Aéreo\n\nEste dispositivo fue capaz de penetrar la protección de la nave de nuestros aliados, así que los interceptores robot pudieron localizarla y derribarla. Para que tu escape tenga éxito, debes destruir la unidad de control de radar con los explosivos, y seguramente estará escondida bajo tierra rodeada de ordenadores.\n\n|Objetivo Dos: - Acceder al Ascensor del Hangar\n\nAtravesar la entrada principal puede ser suicida, así que en lugar de eso, dirige tu atención al ascensor del hangar. Nuestro espía informó que necesitarás una llave magnética para hacer funcionar el ascensor y el técnico de mantenimiento será tu mejor apuesta para encontrar una.\n\n|Objetivo Tres: - Contactar con el Agente\n\nNuestro agente estará vestido como un guarda. Ello significa que no podrá apartarse demasiado de su puesto dentro de la base sin atraer la atención, así que depende de ti encontrarle. Está apostado en uno de los dos hangares principales, lo cual, desafortunadamente, no es muy específico.\n\nFIN\n"
+        },
+        {
+            "id": "L_LUE_004",
+            "context": "L_LUE_004",
+            "string": "\n"
+        },
+        {
+            "id": "L_LUE_005",
+            "context": "L_LUE_005",
+            "string": "\n"
+        },
+        {
+            "id": "L_LUE_006",
+            "context": "L_LUE_006",
+            "string": "\n"
+        },
+        {
+            "id": "L_LUE_007",
+            "context": "L_LUE_007",
+            "string": "\n"
+        },
+        {
+            "id": "L_LUE_008",
+            "context": "L_LUE_008",
+            "string": "\n"
+        },
+        {
+            "id": "L_LUE_009",
+            "context": "L_LUE_009",
+            "string": "Apagar el radar interceptor aéreo\n"
+        },
+        {
+            "id": "L_LUE_010",
+            "context": "L_LUE_010",
+            "string": "Colocar disp. de com. en antena\n"
+        },
+        {
+            "id": "L_LUE_011",
+            "context": "L_LUE_011",
+            "string": "Desac. todos los robots interceptores\n"
+        },
+        {
+            "id": "L_LUE_012",
+            "context": "L_LUE_012",
+            "string": "Acceder al ascensor del hangar\n"
+        },
+        {
+            "id": "L_LUE_013",
+            "context": "L_LUE_013",
+            "string": "Contactar con el espía del IC\n"
+        },
+        {
+            "id": "L_LUE_014",
+            "context": "L_LUE_014",
+            "string": "Obtén granadas.\n"
+        },
+        {
+            "id": "L_LUE_015",
+            "context": "L_LUE_015",
+            "string": "Dr. Caroll:\n"
+        },
+        {
+            "id": "L_LUE_016",
+            "context": "L_LUE_016",
+            "string": "Granada\n"
+        },
+        {
+            "id": "L_LUE_017",
+            "context": "L_LUE_017",
+            "string": "Una granada\n"
+        },
+        {
+            "id": "L_LUE_018",
+            "context": "L_LUE_018",
+            "string": "Granada obtenida.\n"
+        },
+        {
+            "id": "L_LUE_019",
+            "context": "L_LUE_019",
+            "string": "Robot interceptor desactivado.\n"
+        },
+        {
+            "id": "L_LUE_020",
+            "context": "L_LUE_020",
+            "string": "Todos los robots interceptores están desactivados.\n"
+        },
+        {
+            "id": "L_LUE_021",
+            "context": "L_LUE_021",
+            "string": "Obtén controlador de comunicaciones.\n"
+        },
+        {
+            "id": "L_LUE_022",
+            "context": "L_LUE_022",
+            "string": "Dr. Caroll:\n"
+        },
+        {
+            "id": "L_LUE_023",
+            "context": "L_LUE_023",
+            "string": "Control com.\n"
+        },
+        {
+            "id": "L_LUE_024",
+            "context": "L_LUE_024",
+            "string": "Controlador de comunicaciones\n"
+        },
+        {
+            "id": "L_LUE_025",
+            "context": "L_LUE_025",
+            "string": "Controlador de comunicaciones obtenido.\n"
+        },
+        {
+            "id": "L_LUE_026",
+            "context": "L_LUE_026",
+            "string": "'Bicho' de comunicaciones colocado correctamente.\n"
+        },
+        {
+            "id": "L_LUE_027",
+            "context": "L_LUE_027",
+            "string": "'Bicho' de comunicaciones colocado incorrectamente.\n"
+        },
+        {
+            "id": "L_LUE_028",
+            "context": "L_LUE_028",
+            "string": "La antena ha sido destruida.\n"
+        },
+        {
+            "id": "L_LUE_029",
+            "context": "L_LUE_029",
+            "string": "Antena elevada.\n"
+        },
+        {
+            "id": "L_LUE_030",
+            "context": "L_LUE_030",
+            "string": "Antena bajada.\n"
+        },
+        {
+            "id": "L_LUE_031",
+            "context": "L_LUE_031",
+            "string": "Obtén llave magnética del ascensor.\n"
+        },
+        {
+            "id": "L_LUE_032",
+            "context": "L_LUE_032",
+            "string": "Dr. Caroll:\n"
+        },
+        {
+            "id": "L_LUE_033",
+            "context": "L_LUE_033",
+            "string": "Llave del ascensor\n"
+        },
+        {
+            "id": "L_LUE_034",
+            "context": "L_LUE_034",
+            "string": "Llave magnética del ascensor\n"
+        },
+        {
+            "id": "L_LUE_035",
+            "context": "L_LUE_035",
+            "string": "Llave magnética del ascensor obtenida\n"
+        },
+        {
+            "id": "L_LUE_036",
+            "context": "L_LUE_036",
+            "string": "Acceso al ascensor denegado - llave magnética requerida.\n"
+        },
+        {
+            "id": "L_LUE_037",
+            "context": "L_LUE_037",
+            "string": "Llave magnética aceptada - ascensor operativo.\n"
+        },
+        {
+            "id": "L_LUE_038",
+            "context": "L_LUE_038",
+            "string": "El ascensor está completamente operativo.\n"
+        },
+        {
+            "id": "L_LUE_039",
+            "context": "L_LUE_039",
+            "string": "Has accedido al hangar.\n"
+        },
+        {
+            "id": "L_LUE_040",
+            "context": "L_LUE_040",
+            "string": "Has encontrado al agente del IC.\n"
+        },
+        {
+            "id": "L_LUE_041",
+            "context": "L_LUE_041",
+            "string": "Radar interceptor aéreo apagado.\n"
+        },
+        {
+            "id": "L_LUE_042",
+            "context": "L_LUE_042",
+            "string": "Objeto crítico de la misión destruido.\n"
+        },
+        {
+            "id": "L_LUE_043",
+            "context": "L_LUE_043",
+            "string": "La puerta principal ha sido abierta.\n"
+        },
+        {
+            "id": "L_LUE_044",
+            "context": "L_LUE_044",
+            "string": "La puerta principal ha sido cerrada.\n"
+        },
+        {
+            "id": "L_LUE_045",
+            "context": "L_LUE_045",
+            "string": "Acceso denegado.\n"
+        },
+        {
+            "id": "L_LUE_046",
+            "context": "L_LUE_046",
+            "string": "El explosivo ha sido colocado.\n"
+        },
+        {
+            "id": "L_LUE_047",
+            "context": "L_LUE_047",
+            "string": "Intruso detectado - sistema de seguridad activo.\n"
+        },
+        {
+            "id": "L_LUE_048",
+            "context": "L_LUE_048",
+            "string": "Obtén explosivos.\n"
+        },
+        {
+            "id": "L_LUE_049",
+            "context": "L_LUE_049",
+            "string": "Dr. Caroll:\n"
+        },
+        {
+            "id": "L_LUE_050",
+            "context": "L_LUE_050",
+            "string": "Explosivos\n"
+        },
+        {
+            "id": "L_LUE_051",
+            "context": "L_LUE_051",
+            "string": "Explosivos\n"
+        },
+        {
+            "id": "L_LUE_052",
+            "context": "L_LUE_052",
+            "string": "Explosivos obtenidos.\n"
+        },
+        {
+            "id": "L_LUE_053",
+            "context": "L_LUE_053",
+            "string": "El radar interceptor aéreo es controlado desde \nese búnker.\n"
+        },
+        {
+            "id": "L_LUE_054",
+            "context": "L_LUE_054",
+            "string": "Ahí está la antena, pero... ¡no puedo lanzar un \n'bicho' a esa altura!\n"
+        },
+        {
+            "id": "L_LUE_055",
+            "context": "L_LUE_055",
+            "string": "El ascensor del hangar está al otro lado \nde esa gran puerta.\n"
+        },
+        {
+            "id": "L_LUE_056",
+            "context": "L_LUE_056",
+            "string": "Cuidado con el dedo en el gatillo, Agente Dark. Te estás acercando a mi posición.\n"
+        },
+        {
+            "id": "L_LUE_057",
+            "context": "L_LUE_057",
+            "string": "Terminales de acceso del ascensor destruidos.\n"
+        },
+        {
+            "id": "L_LUE_058",
+            "context": "L_LUE_058",
+            "string": "Vale, Joanna, echa un vistazo a esto. \nNuestro agente en el Área 51 fue capaz \nde sacar esto para nosotros.\n"
+        },
+        {
+            "id": "L_LUE_059",
+            "context": "L_LUE_059",
+            "string": "Éste es tu punto de entrada. Un helipuerto \ndesierto en el borde de la base.\n"
+        },
+        {
+            "id": "L_LUE_060",
+            "context": "L_LUE_060",
+            "string": "El ascensor que baja a los hangares y el \npunto de encuentro están detrás de ese \nmuro... Cuidado con esos guardas.\n"
+        },
+        {
+            "id": "L_LUE_061",
+            "context": "L_LUE_061",
+            "string": "Aquí está la antena de comunicaciones. \nColoca un 'bicho' para que podamos contactar \ncuando estés dentro de la base. De nuevo, \ncuidado con el personal hostil.\n"
+        },
+        {
+            "id": "L_LUE_062",
+            "context": "L_LUE_062",
+            "string": "¡Oh, Dios mío!\n"
+        },
+        {
+            "id": "L_LUE_063",
+            "context": "L_LUE_063",
+            "string": "Aquí está nuestro amigo. Parece que no \nestá físicamente dañado, aunque no ha \nrecuperado la consciencia todavía. Por lo \nque parece, los cirujanos casi han hecho \nsus pruebas preliminares y comenzarán \npronto con la disección.\n"
+        },
+        {
+            "id": "L_LUE_064",
+            "context": "L_LUE_064",
+            "string": "¿Pero qué es...?\n"
+        },
+        {
+            "id": "L_LUE_065",
+            "context": "L_LUE_065",
+            "string": "¿Alguna pregunta? No. Bien. Después \nirás al hangar.\n"
+        },
+        {
+            "id": "L_LUE_066",
+            "context": "L_LUE_066",
+            "string": "Informe de Misión del Agente Dark, 10:28 horas. \nContra mi mejor juicio, estoy a punto de \nentrar en el Área 51.\n"
+        },
+        {
+            "id": "L_LUE_067",
+            "context": "L_LUE_067",
+            "string": "¡Agente Dark! ¡Aquí!\n"
+        },
+        {
+            "id": "L_LUE_068",
+            "context": "L_LUE_068",
+            "string": "¡Aquí estás! Estaba empezando a \npreguntarme si...\n"
+        },
+        {
+            "id": "L_LUE_069",
+            "context": "L_LUE_069",
+            "string": "¿Si qué?\n"
+        },
+        {
+            "id": "L_LUE_070",
+            "context": "L_LUE_070",
+            "string": "Si habías sido descubierto ya. Y francamente, \nsi así es como trabajas, estoy asombrada de \nque hayas sobrevivido más de cinco minutos.\n"
+        },
+        {
+            "id": "L_LUE_071",
+            "context": "L_LUE_071",
+            "string": "Estaba atando uno de tus cabos sueltos.\n"
+        },
+        {
+            "id": "L_LUE_072",
+            "context": "L_LUE_072",
+            "string": "¿Mis cabos sueltos?\n"
+        },
+        {
+            "id": "L_LUE_073",
+            "context": "L_LUE_073",
+            "string": "Lo siento, no pensaba que quisieras que él \nte disparara. Puedo llamar a más guardas \nsi tú quieres...\n"
+        },
+        {
+            "id": "L_LUE_074",
+            "context": "L_LUE_074",
+            "string": "Vale, vale, olvídalo. Voy a hacer saber al \nInstituto que hemos contactado.\n"
+        },
+        {
+            "id": "L_LUE_075",
+            "context": "L_LUE_075",
+            "string": "Objeto extraño detectado - seguridad alertada.\n"
+        }
+    ]
+}

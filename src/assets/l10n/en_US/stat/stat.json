@@ -1,0 +1,64 @@
+{
+    "messages": [
+        {
+            "id": "L_STAT_000",
+            "context": "L_STAT_000",
+            "string": "|Background - \n\nThe fleet bombardment has now ceased. Teams of Maian Protectors are being assembled for mopping up operations on the surface. Gene-spectrum scanning has brought another candidate for the Skedar King to our attention.\n\n|Objective One: - Regicide Part One\n\nThis clone of the Skedar King was activated when Joanna Dark shot and killed the existing King. It should be confused, and not as much of a threat as the previous King - at the moment. Destroy it before it can take control of the remnants of the Skedar army.\n\n|Objective Two: - Regicide Part Two\n\nThere is another clone! A fault in the Skedar clone tanks meant that two Kings were activated at once. This one has had more time to acclimatize itself, so it is therefore more dangerous. Once it has been destroyed, the threat is over.\n\n|Objective Three: - Regicide Part Three\n\nSorry, sorry, it seems that there is a third King. Our scanners had trouble detecting it due to the extreme amount of surface disturbance caused by the fleet bombardment. As a result, this King is more prepared than the other two; this makes it even more vital that the King be destroyed.\n\nEND\n"
+        },
+        {
+            "id": "L_STAT_001",
+            "context": "L_STAT_001",
+            "string": "BATTLE SHRINE\n"
+        },
+        {
+            "id": "L_STAT_002",
+            "context": "L_STAT_002",
+            "string": "|Background - \n\nThe fleet bombardment has now ceased. Teams of Maian Protectors are being assembled for mopping up operations on the surface. Gene-spectrum scanning has brought another candidate for the Skedar King to our attention.\n\n|Objective One: - Regicide Part One\n\nThis clone of the Skedar King was activated when Joanna Dark shot and killed the existing King. It should be confused, and not as much of a threat as the previous King - at the moment. Destroy it before it can take control of the remnants of the Skedar army.\n\n|Objective Two: - Regicide Part Two\n\nThere is another clone! A fault in the Skedar clone tanks meant that two Kings were activated at once. This one has had more time to acclimatize itself, so it is therefore more dangerous. Once it has been destroyed, the threat is over.\n\nEND\n"
+        },
+        {
+            "id": "L_STAT_003",
+            "context": "L_STAT_003",
+            "string": "|Background - \n\nThe fleet bombardment has now ceased. Teams of Maian Protectors are being assembled for mopping up operations on the surface. Gene-spectrum scanning has brought another candidate for the Skedar King to our attention.\n\n|Objective One: - Regicide\n\nThis clone of the Skedar King was activated when Joanna Dark shot and killed the existing King. It should be confused, and not as much of a threat as the previous King - at the moment. Destroy it before it can take control of the remnants of the Skedar army.\n\nEND\n"
+        },
+        {
+            "id": "L_STAT_004",
+            "context": "L_STAT_004",
+            "string": "Kill Skedar King.\n"
+        },
+        {
+            "id": "L_STAT_005",
+            "context": "L_STAT_005",
+            "string": "Kill Skedar King 2.\n"
+        },
+        {
+            "id": "L_STAT_006",
+            "context": "L_STAT_006",
+            "string": "Kill Skedar King 3.\n"
+        },
+        {
+            "id": "L_STAT_007",
+            "context": "L_STAT_007",
+            "string": "Maian leader has been killed.\n"
+        },
+        {
+            "id": "L_STAT_008",
+            "context": "L_STAT_008",
+            "string": "Skedar King has been killed.\n"
+        },
+        {
+            "id": "L_STAT_009",
+            "context": "L_STAT_009",
+            "string": null
+        },
+        {
+            "id": "L_STAT_010",
+            "context": "L_STAT_010",
+            "string": null
+        },
+        {
+            "id": "L_STAT_011",
+            "context": "L_STAT_011",
+            "string": null
+        }
+    ]
+}

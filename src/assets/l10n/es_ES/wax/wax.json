@@ -1,0 +1,144 @@
+{
+    "messages": [
+        {
+            "id": "L_WAX_000",
+            "context": "L_WAX_000",
+            "string": "|Antecedentes - \n\nLa incompetente Cassandra De Vries de la corporación humana dataDyne ha obstruido la causa Skedar demasiado tiempo. Entra en su cuartel general y captúrala, para así poderla llevar ante la honesta justicia Skedar.\n\n|Objetivo Uno: - Colocar un Dispositivo Explosivo en el Ascensor\n\nNo se permitirá que los ineptos científicos de la Corporación dataDyne continúen investigando con nuestra tecnología. Deberás colocar una bomba en el ascensor para destruir completamente sus investigaciones, además de las posibles evidencias físicas.\n\n|Objetivo Dos: - Eliminar al Capitán de dataDyne\n\nSuprime a este individuo para acabar con cualquier represalia dirigida contra los Skedar por elementos residuales de la traidora corporación. Aunque el concepto de un humano eliminando a la raza Skedar pueda resultar gracioso, no debemos cegarnos ante la fuerza de la venganza.\n\n|Objetivo Tres: - Localizar y Escoltar a De Vries al Helipuerto\n\nPara asegurar que esta humana tan vil paga por sus crímenes contra nosotros, debes obligarla a llegar al tejado, donde será recogida por una lanzadera en el helipuerto. Sería bastante insensato por tu parte permitir que ella sufra un daño prematuro.\n\nFIN\n"
+        },
+        {
+            "id": "L_WAX_001",
+            "context": "L_WAX_001",
+            "string": "EDIFICIO LUCERNE\n"
+        },
+        {
+            "id": "L_WAX_002",
+            "context": "L_WAX_002",
+            "string": "|Antecedentes - \n\nLa incompetente Cassandra De Vries de la corporación humana dataDyne ha obstruido la causa Skedar demasiado tiempo. Entra en su cuartel general y captúrala, para así poderla llevar ante la honesta justicia Skedar.\n\n|Objetivo Uno: - Colocar un Dispositivo Explosivo en el Ascensor\n\nNo se permitirá que los ineptos científicos de la Corporación dataDyne continúen investigando con nuestra tecnología. Deberás colocar una bomba en el ascensor para destruir completamente sus investigaciones, además de las posibles evidencias físicas.\n\n|Objetivo Dos: - Localizar y Escoltar a De Vries al Helipuerto\n\nPara asegurar que esta humana tan vil paga por sus crímenes contra nosotros, debes obligarla a llegar al tejado, donde será recogida por una lanzadera en el helipuerto. Sería bastante insensato por tu parte permitir que ella sufra un daño prematuro.\n\nFIN\n"
+        },
+        {
+            "id": "L_WAX_003",
+            "context": "L_WAX_003",
+            "string": "|Antecedentes - \n\nLa incompetente Cassandra De Vries de la corporación humana dataDyne ha obstruido la causa Skedar demasiado tiempo. Entra en su cuartel general y captúrala, para así poderla llevar ante la honesta justicia Skedar.\n\n|Objetivo Uno: - Localizar y Escoltar a De Vries al Helipuerto\n\nPara asegurar que esta humana tan vil paga por sus crímenes contra nosotros, debes obligarla a llegar al tejado, donde será recogida por una lanzadera en el helipuerto. Sería bastante insensato por tu parte permitir que ella sufra un daño prematuro.\n\nFIN\n"
+        },
+        {
+            "id": "L_WAX_004",
+            "context": "L_WAX_004",
+            "string": "Buscar/guiar a Cassandra al helipuerto\n"
+        },
+        {
+            "id": "L_WAX_005",
+            "context": "L_WAX_005",
+            "string": "Colocar explosivo en ascensor del lab.\n"
+        },
+        {
+            "id": "L_WAX_006",
+            "context": "L_WAX_006",
+            "string": "Eliminar al Capitán de dataDyne\n"
+        },
+        {
+            "id": "L_WAX_007",
+            "context": "L_WAX_007",
+            "string": "Fuera de mi oficina...\n"
+        },
+        {
+            "id": "L_WAX_008",
+            "context": "L_WAX_008",
+            "string": "Ve al helipuerto si quieres vivir.\n"
+        },
+        {
+            "id": "L_WAX_009",
+            "context": "L_WAX_009",
+            "string": "¡No me dispararás!\n"
+        },
+        {
+            "id": "L_WAX_010",
+            "context": "L_WAX_010",
+            "string": "¡Cómo te atreves a molestarme!\n"
+        },
+        {
+            "id": "L_WAX_011",
+            "context": "L_WAX_011",
+            "string": "Vas a lamentar esta intrusión, chica.\n"
+        },
+        {
+            "id": "L_WAX_012",
+            "context": "L_WAX_012",
+            "string": "Si yo fuera tú, me marcharía... ¡AHORA!\n"
+        },
+        {
+            "id": "L_WAX_013",
+            "context": "L_WAX_013",
+            "string": "¡No me dispararás!\n"
+        },
+        {
+            "id": "L_WAX_014",
+            "context": "L_WAX_014",
+            "string": "Cassandra ha sido inmovilizada.\n"
+        },
+        {
+            "id": "L_WAX_015",
+            "context": "L_WAX_015",
+            "string": "Cassandra ha sido capturada con éxito.\n"
+        },
+        {
+            "id": "L_WAX_016",
+            "context": "L_WAX_016",
+            "string": "El jefe de seguridad ha sido eliminado.\n"
+        },
+        {
+            "id": "L_WAX_017",
+            "context": "L_WAX_017",
+            "string": "\n"
+        },
+        {
+            "id": "L_WAX_018",
+            "context": "L_WAX_018",
+            "string": "\n"
+        },
+        {
+            "id": "L_WAX_019",
+            "context": "L_WAX_019",
+            "string": "Bomba Skedar\n"
+        },
+        {
+            "id": "L_WAX_020",
+            "context": "L_WAX_020",
+            "string": "Bomba Skedar\n"
+        },
+        {
+            "id": "L_WAX_021",
+            "context": "L_WAX_021",
+            "string": "Bomba Skedar recogida.\n"
+        },
+        {
+            "id": "L_WAX_022",
+            "context": "L_WAX_022",
+            "string": "La Bomba Skedar ha sido colocada con éxito.\n"
+        },
+        {
+            "id": "L_WAX_023",
+            "context": "L_WAX_023",
+            "string": "La Bomba Skedar ha sido detonada.\n"
+        },
+        {
+            "id": "L_WAX_024",
+            "context": "L_WAX_024",
+            "string": "Ascensor bloqueado. La bomba no puede ser colocada.\n"
+        },
+        {
+            "id": "L_WAX_025",
+            "context": "L_WAX_025",
+            "string": "El ascensor ha sido desactivado.\n"
+        },
+        {
+            "id": "L_WAX_026",
+            "context": "L_WAX_026",
+            "string": null
+        },
+        {
+            "id": "L_WAX_027",
+            "context": "L_WAX_027",
+            "string": null
+        }
+    ]
+}

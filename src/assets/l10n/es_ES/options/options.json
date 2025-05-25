@@ -1,0 +1,2484 @@
+{
+    "messages": [
+        {
+            "id": "L_OPTIONS_000",
+            "context": "L_OPTIONS_000",
+            "string": "Completado\n"
+        },
+        {
+            "id": "L_OPTIONS_001",
+            "context": "L_OPTIONS_001",
+            "string": "No completado\n"
+        },
+        {
+            "id": "L_OPTIONS_002",
+            "context": "L_OPTIONS_002",
+            "string": "Fallado\n"
+        },
+        {
+            "id": "L_OPTIONS_003",
+            "context": "L_OPTIONS_003",
+            "string": "\n"
+        },
+        {
+            "id": "L_OPTIONS_004",
+            "context": "L_OPTIONS_004",
+            "string": ""
+        },
+        {
+            "id": "L_OPTIONS_005",
+            "context": "L_OPTIONS_005",
+            "string": "tierra:"
+        },
+        {
+            "id": "L_OPTIONS_006",
+            "context": "L_OPTIONS_006",
+            "string": "   prehistoria"
+        },
+        {
+            "id": "L_OPTIONS_007",
+            "context": "L_OPTIONS_007",
+            "string": "rare presenta"
+        },
+        {
+            "id": "L_OPTIONS_008",
+            "context": "L_OPTIONS_008",
+            "string": "Rojo\n"
+        },
+        {
+            "id": "L_OPTIONS_009",
+            "context": "L_OPTIONS_009",
+            "string": "Amarillo\n"
+        },
+        {
+            "id": "L_OPTIONS_010",
+            "context": "L_OPTIONS_010",
+            "string": "Azul\n"
+        },
+        {
+            "id": "L_OPTIONS_011",
+            "context": "L_OPTIONS_011",
+            "string": "Magenta\n"
+        },
+        {
+            "id": "L_OPTIONS_012",
+            "context": "L_OPTIONS_012",
+            "string": "Az. Claro\n"
+        },
+        {
+            "id": "L_OPTIONS_013",
+            "context": "L_OPTIONS_013",
+            "string": "Naranja\n"
+        },
+        {
+            "id": "L_OPTIONS_014",
+            "context": "L_OPTIONS_014",
+            "string": "Rosa\n"
+        },
+        {
+            "id": "L_OPTIONS_015",
+            "context": "L_OPTIONS_015",
+            "string": "Marrón\n"
+        },
+        {
+            "id": "L_OPTIONS_016",
+            "context": "L_OPTIONS_016",
+            "string": "Joanna de Combate\n"
+        },
+        {
+            "id": "L_OPTIONS_017",
+            "context": "L_OPTIONS_017",
+            "string": "Joanna con Gabardina\n"
+        },
+        {
+            "id": "L_OPTIONS_018",
+            "context": "L_OPTIONS_018",
+            "string": "Joanna de Gala\n"
+        },
+        {
+            "id": "L_OPTIONS_019",
+            "context": "L_OPTIONS_019",
+            "string": "Joanna de Fiesta\n"
+        },
+        {
+            "id": "L_OPTIONS_020",
+            "context": "L_OPTIONS_020",
+            "string": "Joanna Azafata\n"
+        },
+        {
+            "id": "L_OPTIONS_021",
+            "context": "L_OPTIONS_021",
+            "string": "Joanna Traje Isotérmico\n"
+        },
+        {
+            "id": "L_OPTIONS_022",
+            "context": "L_OPTIONS_022",
+            "string": "Joanna con Escafandra\n"
+        },
+        {
+            "id": "L_OPTIONS_023",
+            "context": "L_OPTIONS_023",
+            "string": "Joanna con Traje Polar\n"
+        },
+        {
+            "id": "L_OPTIONS_024",
+            "context": "L_OPTIONS_024",
+            "string": "Joanna Científica\n"
+        },
+        {
+            "id": "L_OPTIONS_025",
+            "context": "L_OPTIONS_025",
+            "string": "Elvis\n"
+        },
+        {
+            "id": "L_OPTIONS_026",
+            "context": "L_OPTIONS_026",
+            "string": "Maian\n"
+        },
+        {
+            "id": "L_OPTIONS_027",
+            "context": "L_OPTIONS_027",
+            "string": "Daniel Carrington\n"
+        },
+        {
+            "id": "L_OPTIONS_028",
+            "context": "L_OPTIONS_028",
+            "string": "Carrington de Gala\n"
+        },
+        {
+            "id": "L_OPTIONS_029",
+            "context": "L_OPTIONS_029",
+            "string": "Mr. Blonde\n"
+        },
+        {
+            "id": "L_OPTIONS_030",
+            "context": "L_OPTIONS_030",
+            "string": "Cassandra De Vries\n"
+        },
+        {
+            "id": "L_OPTIONS_031",
+            "context": "L_OPTIONS_031",
+            "string": "Trent Easton\n"
+        },
+        {
+            "id": "L_OPTIONS_032",
+            "context": "L_OPTIONS_032",
+            "string": "Jonathan\n"
+        },
+        {
+            "id": "L_OPTIONS_033",
+            "context": "L_OPTIONS_033",
+            "string": "Técnico Masculino del IC\n"
+        },
+        {
+            "id": "L_OPTIONS_034",
+            "context": "L_OPTIONS_034",
+            "string": "Técnico Femenino del IC\n"
+        },
+        {
+            "id": "L_OPTIONS_035",
+            "context": "L_OPTIONS_035",
+            "string": "Soldado del IC\n"
+        },
+        {
+            "id": "L_OPTIONS_036",
+            "context": "L_OPTIONS_036",
+            "string": "Tropa Asalto dataDyne\n"
+        },
+        {
+            "id": "L_OPTIONS_037",
+            "context": "L_OPTIONS_037",
+            "string": "Guarda de dataDyne\n"
+        },
+        {
+            "id": "L_OPTIONS_038",
+            "context": "L_OPTIONS_038",
+            "string": "Seguridad de dataDyne\n"
+        },
+        {
+            "id": "L_OPTIONS_039",
+            "context": "L_OPTIONS_039",
+            "string": "Infantería de dataDyne\n"
+        },
+        {
+            "id": "L_OPTIONS_040",
+            "context": "L_OPTIONS_040",
+            "string": "Soldado de dataDyne\n"
+        },
+        {
+            "id": "L_OPTIONS_041",
+            "context": "L_OPTIONS_041",
+            "string": "Secretaria\n"
+        },
+        {
+            "id": "L_OPTIONS_042",
+            "context": "L_OPTIONS_042",
+            "string": "Ropa de Oficina\n"
+        },
+        {
+            "id": "L_OPTIONS_043",
+            "context": "L_OPTIONS_043",
+            "string": "Ropa Normal\n"
+        },
+        {
+            "id": "L_OPTIONS_044",
+            "context": "L_OPTIONS_044",
+            "string": "Negociadora\n"
+        },
+        {
+            "id": "L_OPTIONS_045",
+            "context": "L_OPTIONS_045",
+            "string": "Francotirador dataDyne\n"
+        },
+        {
+            "id": "L_OPTIONS_046",
+            "context": "L_OPTIONS_046",
+            "string": "Guarda del G5\n"
+        },
+        {
+            "id": "L_OPTIONS_047",
+            "context": "L_OPTIONS_047",
+            "string": "Guarda SWAT del G5\n"
+        },
+        {
+            "id": "L_OPTIONS_048",
+            "context": "L_OPTIONS_048",
+            "string": "Agente de la CIA\n"
+        },
+        {
+            "id": "L_OPTIONS_049",
+            "context": "L_OPTIONS_049",
+            "string": "Agente del FBI\n"
+        },
+        {
+            "id": "L_OPTIONS_050",
+            "context": "L_OPTIONS_050",
+            "string": "Guarda del Área 51\n"
+        },
+        {
+            "id": "L_OPTIONS_051",
+            "context": "L_OPTIONS_051",
+            "string": "Soldado del Área 51\n"
+        },
+        {
+            "id": "L_OPTIONS_052",
+            "context": "L_OPTIONS_052",
+            "string": "Piloto\n"
+        },
+        {
+            "id": "L_OPTIONS_053",
+            "context": "L_OPTIONS_053",
+            "string": "Mono de Trabajo\n"
+        },
+        {
+            "id": "L_OPTIONS_054",
+            "context": "L_OPTIONS_054",
+            "string": "Guardaespaldas de la ANS\n"
+        },
+        {
+            "id": "L_OPTIONS_055",
+            "context": "L_OPTIONS_055",
+            "string": "Técnico Masculino Lab.\n"
+        },
+        {
+            "id": "L_OPTIONS_056",
+            "context": "L_OPTIONS_056",
+            "string": "Técnico Femenino Lab.\n"
+        },
+        {
+            "id": "L_OPTIONS_057",
+            "context": "L_OPTIONS_057",
+            "string": "Técnico del Lab. dataDyne\n"
+        },
+        {
+            "id": "L_OPTIONS_058",
+            "context": "L_OPTIONS_058",
+            "string": "Biotécnico\n"
+        },
+        {
+            "id": "L_OPTIONS_059",
+            "context": "L_OPTIONS_059",
+            "string": "Guarda de Alaska\n"
+        },
+        {
+            "id": "L_OPTIONS_060",
+            "context": "L_OPTIONS_060",
+            "string": "Piloto del Air Force One\n"
+        },
+        {
+            "id": "L_OPTIONS_061",
+            "context": "L_OPTIONS_061",
+            "string": "Auxiliar\n"
+        },
+        {
+            "id": "L_OPTIONS_062",
+            "context": "L_OPTIONS_062",
+            "string": "Azafata\n"
+        },
+        {
+            "id": "L_OPTIONS_063",
+            "context": "L_OPTIONS_063",
+            "string": "Azafata Jefe\n"
+        },
+        {
+            "id": "L_OPTIONS_064",
+            "context": "L_OPTIONS_064",
+            "string": "El Presidente\n"
+        },
+        {
+            "id": "L_OPTIONS_065",
+            "context": "L_OPTIONS_065",
+            "string": "Lacayo de la ANS\n"
+        },
+        {
+            "id": "L_OPTIONS_066",
+            "context": "L_OPTIONS_066",
+            "string": "Seguridad Presidencial\n"
+        },
+        {
+            "id": "L_OPTIONS_067",
+            "context": "L_OPTIONS_067",
+            "string": "Clon del Presidente\n"
+        },
+        {
+            "id": "L_OPTIONS_068",
+            "context": "L_OPTIONS_068",
+            "string": "Guarda del Pelagic II\n"
+        },
+        {
+            "id": "L_OPTIONS_069",
+            "context": "L_OPTIONS_069",
+            "string": "Soldado Maian\n"
+        },
+        {
+            "id": "L_OPTIONS_070",
+            "context": "L_OPTIONS_070",
+            "string": "Esmoquin\n"
+        },
+        {
+            "id": "L_OPTIONS_071",
+            "context": "L_OPTIONS_071",
+            "string": "- no hay mando conectado a la ranura 1 -"
+        },
+        {
+            "id": "L_OPTIONS_072",
+            "context": "L_OPTIONS_072",
+            "string": "por favor, apaga la consola y conecta un mando"
+        },
+        {
+            "id": "L_OPTIONS_073",
+            "context": "L_OPTIONS_073",
+            "string": "DETECTADO"
+        },
+        {
+            "id": "L_OPTIONS_074",
+            "context": "L_OPTIONS_074",
+            "string": "NO DETECTADO"
+        },
+        {
+            "id": "L_OPTIONS_075",
+            "context": "L_OPTIONS_075",
+            "string": "tm"
+        },
+        {
+            "id": "L_OPTIONS_076",
+            "context": "L_OPTIONS_076",
+            "string": "N64 EXPANSION PAK"
+        },
+        {
+            "id": "L_OPTIONS_077",
+            "context": "L_OPTIONS_077",
+            "string": "Nintendo 64 Product Identification\n"
+        },
+        {
+            "id": "L_OPTIONS_078",
+            "context": "L_OPTIONS_078",
+            "string": "Product ID:\n"
+        },
+        {
+            "id": "L_OPTIONS_079",
+            "context": "L_OPTIONS_079",
+            "string": "Product Code:\n"
+        },
+        {
+            "id": "L_OPTIONS_080",
+            "context": "L_OPTIONS_080",
+            "string": "Variant:\n"
+        },
+        {
+            "id": "L_OPTIONS_081",
+            "context": "L_OPTIONS_081",
+            "string": "Developer:\n"
+        },
+        {
+            "id": "L_OPTIONS_082",
+            "context": "L_OPTIONS_082",
+            "string": "Perfect Dark\n"
+        },
+        {
+            "id": "L_OPTIONS_083",
+            "context": "L_OPTIONS_083",
+            "string": "NUS-NPDE-USA\n"
+        },
+        {
+            "id": "L_OPTIONS_084",
+            "context": "L_OPTIONS_084",
+            "string": "PAL version 8.7 final\n"
+        },
+        {
+            "id": "L_OPTIONS_085",
+            "context": "L_OPTIONS_085",
+            "string": "Rare Ltd. (twycross)\n"
+        },
+        {
+            "id": "L_OPTIONS_086",
+            "context": "L_OPTIONS_086",
+            "string": "Copyright Rare Ltd. 2000\n"
+        },
+        {
+            "id": "L_OPTIONS_087",
+            "context": "L_OPTIONS_087",
+            "string": "The Rareware Logo and Perfect Dark are trademarks of Rare Ltd.\n"
+        },
+        {
+            "id": "L_OPTIONS_088",
+            "context": "L_OPTIONS_088",
+            "string": "Presented in Dolby Surround.  Dolby and the double-D\nsymbol are trademarks of Dolby Laboratories."
+        },
+        {
+            "id": "L_OPTIONS_089",
+            "context": "L_OPTIONS_089",
+            "string": "Uses Miles Sound System Copyright 1991-1999 RAD Game Tools Inc.\nMPEG Layer-3 playback supplied with the Miles Sound System from\nRAD Game Tools, Inc. MPEG Layer-3 audio compression technology\nlicensed by Fraunhofer IIS and THOMSON multimedia\n"
+        },
+        {
+            "id": "L_OPTIONS_090",
+            "context": "L_OPTIONS_090",
+            "string": ""
+        },
+        {
+            "id": "L_OPTIONS_091",
+            "context": "L_OPTIONS_091",
+            "string": ""
+        },
+        {
+            "id": "L_OPTIONS_092",
+            "context": "L_OPTIONS_092",
+            "string": ""
+        },
+        {
+            "id": "L_OPTIONS_093",
+            "context": "L_OPTIONS_093",
+            "string": "rare designs on the future <<<\n"
+        },
+        {
+            "id": "L_OPTIONS_094",
+            "context": "L_OPTIONS_094",
+            "string": "Published by Rareware.\n"
+        },
+        {
+            "id": "L_OPTIONS_095",
+            "context": "L_OPTIONS_095",
+            "string": "Perfect Dark\n"
+        },
+        {
+            "id": "L_OPTIONS_096",
+            "context": "L_OPTIONS_096",
+            "string": "Elige Tu Realidad\n"
+        },
+        {
+            "id": "L_OPTIONS_097",
+            "context": "L_OPTIONS_097",
+            "string": "Nuevo...\n"
+        },
+        {
+            "id": "L_OPTIONS_098",
+            "context": "L_OPTIONS_098",
+            "string": "Nuevo Agente...\n"
+        },
+        {
+            "id": "L_OPTIONS_099",
+            "context": "L_OPTIONS_099",
+            "string": "Ficheros de Juego\n"
+        },
+        {
+            "id": "L_OPTIONS_100",
+            "context": "L_OPTIONS_100",
+            "string": "Copiar:\n"
+        },
+        {
+            "id": "L_OPTIONS_101",
+            "context": "L_OPTIONS_101",
+            "string": "Borrar:\n"
+        },
+        {
+            "id": "L_OPTIONS_102",
+            "context": "L_OPTIONS_102",
+            "string": "Borrar Notas de Juego...\n"
+        },
+        {
+            "id": "L_OPTIONS_103",
+            "context": "L_OPTIONS_103",
+            "string": "Fichero de Agente Un Jugador\n"
+        },
+        {
+            "id": "L_OPTIONS_104",
+            "context": "L_OPTIONS_104",
+            "string": "Fichero de Opciones del Simulador\n"
+        },
+        {
+            "id": "L_OPTIONS_105",
+            "context": "L_OPTIONS_105",
+            "string": "Ficheros de Jugador del Simulador\n"
+        },
+        {
+            "id": "L_OPTIONS_106",
+            "context": "L_OPTIONS_106",
+            "string": "Ficheros PerfectHead\n"
+        },
+        {
+            "id": "L_OPTIONS_107",
+            "context": "L_OPTIONS_107",
+            "string": "Menú Controller Pak\n"
+        },
+        {
+            "id": "L_OPTIONS_108",
+            "context": "L_OPTIONS_108",
+            "string": "Usa este menú para borrar notas de juego\nde tus Controller Pak.\n"
+        },
+        {
+            "id": "L_OPTIONS_109",
+            "context": "L_OPTIONS_109",
+            "string": "Elige Controller Pak a Editar:\n"
+        },
+        {
+            "id": "L_OPTIONS_110",
+            "context": "L_OPTIONS_110",
+            "string": "Salir\n"
+        },
+        {
+            "id": "L_OPTIONS_111",
+            "context": "L_OPTIONS_111",
+            "string": "Cartucho\n"
+        },
+        {
+            "id": "L_OPTIONS_112",
+            "context": "L_OPTIONS_112",
+            "string": "Controller Pak 1\n"
+        },
+        {
+            "id": "L_OPTIONS_113",
+            "context": "L_OPTIONS_113",
+            "string": "Controller Pak 2\n"
+        },
+        {
+            "id": "L_OPTIONS_114",
+            "context": "L_OPTIONS_114",
+            "string": "Controller Pak 3\n"
+        },
+        {
+            "id": "L_OPTIONS_115",
+            "context": "L_OPTIONS_115",
+            "string": "Controller Pak 4\n"
+        },
+        {
+            "id": "L_OPTIONS_116",
+            "context": "L_OPTIONS_116",
+            "string": "Menú Perfecto\n"
+        },
+        {
+            "id": "L_OPTIONS_117",
+            "context": "L_OPTIONS_117",
+            "string": "Misiones Solo\n"
+        },
+        {
+            "id": "L_OPTIONS_118",
+            "context": "L_OPTIONS_118",
+            "string": "Simulador de Combate\n"
+        },
+        {
+            "id": "L_OPTIONS_119",
+            "context": "L_OPTIONS_119",
+            "string": "Co-Operativo\n"
+        },
+        {
+            "id": "L_OPTIONS_120",
+            "context": "L_OPTIONS_120",
+            "string": "Contra-Operativa\n"
+        },
+        {
+            "id": "L_OPTIONS_121",
+            "context": "L_OPTIONS_121",
+            "string": "Películas\n"
+        },
+        {
+            "id": "L_OPTIONS_122",
+            "context": "L_OPTIONS_122",
+            "string": "Selecciona Misión\n"
+        },
+        {
+            "id": "L_OPTIONS_123",
+            "context": "L_OPTIONS_123",
+            "string": "Misión 1\n"
+        },
+        {
+            "id": "L_OPTIONS_124",
+            "context": "L_OPTIONS_124",
+            "string": "Misión 2\n"
+        },
+        {
+            "id": "L_OPTIONS_125",
+            "context": "L_OPTIONS_125",
+            "string": "Misión 3\n"
+        },
+        {
+            "id": "L_OPTIONS_126",
+            "context": "L_OPTIONS_126",
+            "string": "Misión 4\n"
+        },
+        {
+            "id": "L_OPTIONS_127",
+            "context": "L_OPTIONS_127",
+            "string": "Misión 5\n"
+        },
+        {
+            "id": "L_OPTIONS_128",
+            "context": "L_OPTIONS_128",
+            "string": "Misión 6\n"
+        },
+        {
+            "id": "L_OPTIONS_129",
+            "context": "L_OPTIONS_129",
+            "string": "Misión 7\n"
+        },
+        {
+            "id": "L_OPTIONS_130",
+            "context": "L_OPTIONS_130",
+            "string": "Misión 8\n"
+        },
+        {
+            "id": "L_OPTIONS_131",
+            "context": "L_OPTIONS_131",
+            "string": "Misión 9\n"
+        },
+        {
+            "id": "L_OPTIONS_132",
+            "context": "L_OPTIONS_132",
+            "string": "Asignaciones Especiales\n"
+        },
+        {
+            "id": "L_OPTIONS_133",
+            "context": "L_OPTIONS_133",
+            "string": "Central dataDyne"
+        },
+        {
+            "id": "L_OPTIONS_134",
+            "context": "L_OPTIONS_134",
+            "string": "- Comienzo"
+        },
+        {
+            "id": "L_OPTIONS_135",
+            "context": "L_OPTIONS_135",
+            "string": "Lab. dataDyne"
+        },
+        {
+            "id": "L_OPTIONS_136",
+            "context": "L_OPTIONS_136",
+            "string": "- Investigación"
+        },
+        {
+            "id": "L_OPTIONS_137",
+            "context": "L_OPTIONS_137",
+            "string": "Central dataDyne"
+        },
+        {
+            "id": "L_OPTIONS_138",
+            "context": "L_OPTIONS_138",
+            "string": "- Extracción"
+        },
+        {
+            "id": "L_OPTIONS_139",
+            "context": "L_OPTIONS_139",
+            "string": "Villa Carrington"
+        },
+        {
+            "id": "L_OPTIONS_140",
+            "context": "L_OPTIONS_140",
+            "string": "- Rehén Uno"
+        },
+        {
+            "id": "L_OPTIONS_141",
+            "context": "L_OPTIONS_141",
+            "string": "Chicago"
+        },
+        {
+            "id": "L_OPTIONS_142",
+            "context": "L_OPTIONS_142",
+            "string": "- Sigilo"
+        },
+        {
+            "id": "L_OPTIONS_143",
+            "context": "L_OPTIONS_143",
+            "string": "Edificio G5"
+        },
+        {
+            "id": "L_OPTIONS_144",
+            "context": "L_OPTIONS_144",
+            "string": "- Reconocimiento"
+        },
+        {
+            "id": "L_OPTIONS_145",
+            "context": "L_OPTIONS_145",
+            "string": "Área 51"
+        },
+        {
+            "id": "L_OPTIONS_146",
+            "context": "L_OPTIONS_146",
+            "string": "- Infiltración"
+        },
+        {
+            "id": "L_OPTIONS_147",
+            "context": "L_OPTIONS_147",
+            "string": "Área 51"
+        },
+        {
+            "id": "L_OPTIONS_148",
+            "context": "L_OPTIONS_148",
+            "string": "- Rescate"
+        },
+        {
+            "id": "L_OPTIONS_149",
+            "context": "L_OPTIONS_149",
+            "string": "Área 51"
+        },
+        {
+            "id": "L_OPTIONS_150",
+            "context": "L_OPTIONS_150",
+            "string": "- Escape"
+        },
+        {
+            "id": "L_OPTIONS_151",
+            "context": "L_OPTIONS_151",
+            "string": "Base Aérea"
+        },
+        {
+            "id": "L_OPTIONS_152",
+            "context": "L_OPTIONS_152",
+            "string": "- Espionaje"
+        },
+        {
+            "id": "L_OPTIONS_153",
+            "context": "L_OPTIONS_153",
+            "string": "Air Force One"
+        },
+        {
+            "id": "L_OPTIONS_154",
+            "context": "L_OPTIONS_154",
+            "string": "- Antiterrorismo"
+        },
+        {
+            "id": "L_OPTIONS_155",
+            "context": "L_OPTIONS_155",
+            "string": "Lugar del Impacto"
+        },
+        {
+            "id": "L_OPTIONS_156",
+            "context": "L_OPTIONS_156",
+            "string": "- Confrontación"
+        },
+        {
+            "id": "L_OPTIONS_157",
+            "context": "L_OPTIONS_157",
+            "string": "Pelagic II"
+        },
+        {
+            "id": "L_OPTIONS_158",
+            "context": "L_OPTIONS_158",
+            "string": "- Exploración"
+        },
+        {
+            "id": "L_OPTIONS_159",
+            "context": "L_OPTIONS_159",
+            "string": "Mar Profundo"
+        },
+        {
+            "id": "L_OPTIONS_160",
+            "context": "L_OPTIONS_160",
+            "string": "- Anular Amenaza"
+        },
+        {
+            "id": "L_OPTIONS_161",
+            "context": "L_OPTIONS_161",
+            "string": "Instituto Carrington"
+        },
+        {
+            "id": "L_OPTIONS_162",
+            "context": "L_OPTIONS_162",
+            "string": "- Defensa"
+        },
+        {
+            "id": "L_OPTIONS_163",
+            "context": "L_OPTIONS_163",
+            "string": "Nave de Ataque"
+        },
+        {
+            "id": "L_OPTIONS_164",
+            "context": "L_OPTIONS_164",
+            "string": "- Asalto"
+        },
+        {
+            "id": "L_OPTIONS_165",
+            "context": "L_OPTIONS_165",
+            "string": "Ruinas Skedar"
+        },
+        {
+            "id": "L_OPTIONS_166",
+            "context": "L_OPTIONS_166",
+            "string": "- Templo"
+        },
+        {
+            "id": "L_OPTIONS_167",
+            "context": "L_OPTIONS_167",
+            "string": "Venganza de Mr. Blonde"
+        },
+        {
+            "id": "L_OPTIONS_168",
+            "context": "L_OPTIONS_168",
+            "string": "SOS Maian"
+        },
+        {
+            "id": "L_OPTIONS_169",
+            "context": "L_OPTIONS_169",
+            "string": "Retomando el Instituto"
+        },
+        {
+            "id": "L_OPTIONS_170",
+            "context": "L_OPTIONS_170",
+            "string": "¡GUERRA!"
+        },
+        {
+            "id": "L_OPTIONS_171",
+            "context": "L_OPTIONS_171",
+            "string": "El Duelo"
+        },
+        {
+            "id": "L_OPTIONS_172",
+            "context": "L_OPTIONS_172",
+            "string": "Estatus\n"
+        },
+        {
+            "id": "L_OPTIONS_173",
+            "context": "L_OPTIONS_173",
+            "string": "¡Abortar!\n"
+        },
+        {
+            "id": "L_OPTIONS_174",
+            "context": "L_OPTIONS_174",
+            "string": "Cuidado\n"
+        },
+        {
+            "id": "L_OPTIONS_175",
+            "context": "L_OPTIONS_175",
+            "string": "¿Quieres abortar la misión?\n"
+        },
+        {
+            "id": "L_OPTIONS_176",
+            "context": "L_OPTIONS_176",
+            "string": "Cancelar\n"
+        },
+        {
+            "id": "L_OPTIONS_177",
+            "context": "L_OPTIONS_177",
+            "string": "Abortar\n"
+        },
+        {
+            "id": "L_OPTIONS_178",
+            "context": "L_OPTIONS_178",
+            "string": "Inventario\n"
+        },
+        {
+            "id": "L_OPTIONS_179",
+            "context": "L_OPTIONS_179",
+            "string": "Armas Disponibles\n"
+        },
+        {
+            "id": "L_OPTIONS_180",
+            "context": "L_OPTIONS_180",
+            "string": "Opciones\n"
+        },
+        {
+            "id": "L_OPTIONS_181",
+            "context": "L_OPTIONS_181",
+            "string": "Audio\n"
+        },
+        {
+            "id": "L_OPTIONS_182",
+            "context": "L_OPTIONS_182",
+            "string": "Vídeo\n"
+        },
+        {
+            "id": "L_OPTIONS_183",
+            "context": "L_OPTIONS_183",
+            "string": "Controles\n"
+        },
+        {
+            "id": "L_OPTIONS_184",
+            "context": "L_OPTIONS_184",
+            "string": "Pantalla\n"
+        },
+        {
+            "id": "L_OPTIONS_185",
+            "context": "L_OPTIONS_185",
+            "string": "Trucos\n"
+        },
+        {
+            "id": "L_OPTIONS_186",
+            "context": "L_OPTIONS_186",
+            "string": "Guardar Juego\n"
+        },
+        {
+            "id": "L_OPTIONS_187",
+            "context": "L_OPTIONS_187",
+            "string": "Cambiar Agente...\n"
+        },
+        {
+            "id": "L_OPTIONS_188",
+            "context": "L_OPTIONS_188",
+            "string": "Cuidado\n"
+        },
+        {
+            "id": "L_OPTIONS_189",
+            "context": "L_OPTIONS_189",
+            "string": "¿Quieres cargar otro agente?\n"
+        },
+        {
+            "id": "L_OPTIONS_190",
+            "context": "L_OPTIONS_190",
+            "string": "Sí\n"
+        },
+        {
+            "id": "L_OPTIONS_191",
+            "context": "L_OPTIONS_191",
+            "string": "No\n"
+        },
+        {
+            "id": "L_OPTIONS_192",
+            "context": "L_OPTIONS_192",
+            "string": "Opciones de Control\n"
+        },
+        {
+            "id": "L_OPTIONS_193",
+            "context": "L_OPTIONS_193",
+            "string": "Controles Jugador 2\n"
+        },
+        {
+            "id": "L_OPTIONS_194",
+            "context": "L_OPTIONS_194",
+            "string": "Estilo de Control\n"
+        },
+        {
+            "id": "L_OPTIONS_195",
+            "context": "L_OPTIONS_195",
+            "string": "Control Opuesto\n"
+        },
+        {
+            "id": "L_OPTIONS_196",
+            "context": "L_OPTIONS_196",
+            "string": "Mirar al Frente\n"
+        },
+        {
+            "id": "L_OPTIONS_197",
+            "context": "L_OPTIONS_197",
+            "string": "Giro de Cabeza\n"
+        },
+        {
+            "id": "L_OPTIONS_198",
+            "context": "L_OPTIONS_198",
+            "string": "Auto-Apuntar\n"
+        },
+        {
+            "id": "L_OPTIONS_199",
+            "context": "L_OPTIONS_199",
+            "string": "Control Apuntar\n"
+        },
+        {
+            "id": "L_OPTIONS_200",
+            "context": "L_OPTIONS_200",
+            "string": "Volver\n"
+        },
+        {
+            "id": "L_OPTIONS_201",
+            "context": "L_OPTIONS_201",
+            "string": "Mantener\n"
+        },
+        {
+            "id": "L_OPTIONS_202",
+            "context": "L_OPTIONS_202",
+            "string": "Cambiar\n"
+        },
+        {
+            "id": "L_OPTIONS_203",
+            "context": "L_OPTIONS_203",
+            "string": "Opciones de Pantalla\n"
+        },
+        {
+            "id": "L_OPTIONS_204",
+            "context": "L_OPTIONS_204",
+            "string": "Pantalla Jugador 2\n"
+        },
+        {
+            "id": "L_OPTIONS_205",
+            "context": "L_OPTIONS_205",
+            "string": "Mirilla en Pantalla\n"
+        },
+        {
+            "id": "L_OPTIONS_206",
+            "context": "L_OPTIONS_206",
+            "string": "Siempre Muestra Objetivo\n"
+        },
+        {
+            "id": "L_OPTIONS_207",
+            "context": "L_OPTIONS_207",
+            "string": "Mostrar Alcance del Zoom\n"
+        },
+        {
+            "id": "L_OPTIONS_208",
+            "context": "L_OPTIONS_208",
+            "string": "Munición en Pantalla\n"
+        },
+        {
+            "id": "L_OPTIONS_209",
+            "context": "L_OPTIONS_209",
+            "string": "Mostrar Función del Arma\n"
+        },
+        {
+            "id": "L_OPTIONS_210",
+            "context": "L_OPTIONS_210",
+            "string": "Bolas de Pintura\n"
+        },
+        {
+            "id": "L_OPTIONS_211",
+            "context": "L_OPTIONS_211",
+            "string": "Subtítulos\n"
+        },
+        {
+            "id": "L_OPTIONS_212",
+            "context": "L_OPTIONS_212",
+            "string": "Mostrar Tiempo de Misión\n"
+        },
+        {
+            "id": "L_OPTIONS_213",
+            "context": "L_OPTIONS_213",
+            "string": "Volver\n"
+        },
+        {
+            "id": "L_OPTIONS_214",
+            "context": "L_OPTIONS_214",
+            "string": "Opciones de Vídeo\n"
+        },
+        {
+            "id": "L_OPTIONS_215",
+            "context": "L_OPTIONS_215",
+            "string": "Tamaño de Pantalla\n"
+        },
+        {
+            "id": "L_OPTIONS_216",
+            "context": "L_OPTIONS_216",
+            "string": "Ratio\n"
+        },
+        {
+            "id": "L_OPTIONS_217",
+            "context": "L_OPTIONS_217",
+            "string": "Alta Resolución\n"
+        },
+        {
+            "id": "L_OPTIONS_218",
+            "context": "L_OPTIONS_218",
+            "string": "Pantalla Partida 2 Jugadores\n"
+        },
+        {
+            "id": "L_OPTIONS_219",
+            "context": "L_OPTIONS_219",
+            "string": "Volver\n"
+        },
+        {
+            "id": "L_OPTIONS_220",
+            "context": "L_OPTIONS_220",
+            "string": "Completa\n"
+        },
+        {
+            "id": "L_OPTIONS_221",
+            "context": "L_OPTIONS_221",
+            "string": "Panorámica\n"
+        },
+        {
+            "id": "L_OPTIONS_222",
+            "context": "L_OPTIONS_222",
+            "string": "Cine\n"
+        },
+        {
+            "id": "L_OPTIONS_223",
+            "context": "L_OPTIONS_223",
+            "string": "Normal\n"
+        },
+        {
+            "id": "L_OPTIONS_224",
+            "context": "L_OPTIONS_224",
+            "string": "16:9\n"
+        },
+        {
+            "id": "L_OPTIONS_225",
+            "context": "L_OPTIONS_225",
+            "string": "Horizontal\n"
+        },
+        {
+            "id": "L_OPTIONS_226",
+            "context": "L_OPTIONS_226",
+            "string": "Vertical\n"
+        },
+        {
+            "id": "L_OPTIONS_227",
+            "context": "L_OPTIONS_227",
+            "string": "Opciones de Audio\n"
+        },
+        {
+            "id": "L_OPTIONS_228",
+            "context": "L_OPTIONS_228",
+            "string": "Sonido\n"
+        },
+        {
+            "id": "L_OPTIONS_229",
+            "context": "L_OPTIONS_229",
+            "string": "Música\n"
+        },
+        {
+            "id": "L_OPTIONS_230",
+            "context": "L_OPTIONS_230",
+            "string": "Modo de Sonido\n"
+        },
+        {
+            "id": "L_OPTIONS_231",
+            "context": "L_OPTIONS_231",
+            "string": "Volver\n"
+        },
+        {
+            "id": "L_OPTIONS_232",
+            "context": "L_OPTIONS_232",
+            "string": "Mono"
+        },
+        {
+            "id": "L_OPTIONS_233",
+            "context": "L_OPTIONS_233",
+            "string": "Estéreo"
+        },
+        {
+            "id": "L_OPTIONS_234",
+            "context": "L_OPTIONS_234",
+            "string": "Cascos"
+        },
+        {
+            "id": "L_OPTIONS_235",
+            "context": "L_OPTIONS_235",
+            "string": "Surround"
+        },
+        {
+            "id": "L_OPTIONS_236",
+            "context": "L_OPTIONS_236",
+            "string": "Controles\n"
+        },
+        {
+            "id": "L_OPTIONS_237",
+            "context": "L_OPTIONS_237",
+            "string": "Simple\n"
+        },
+        {
+            "id": "L_OPTIONS_238",
+            "context": "L_OPTIONS_238",
+            "string": "Doble\n"
+        },
+        {
+            "id": "L_OPTIONS_239",
+            "context": "L_OPTIONS_239",
+            "string": "1.1"
+        },
+        {
+            "id": "L_OPTIONS_240",
+            "context": "L_OPTIONS_240",
+            "string": "1.2"
+        },
+        {
+            "id": "L_OPTIONS_241",
+            "context": "L_OPTIONS_241",
+            "string": "1.3"
+        },
+        {
+            "id": "L_OPTIONS_242",
+            "context": "L_OPTIONS_242",
+            "string": "1.4"
+        },
+        {
+            "id": "L_OPTIONS_243",
+            "context": "L_OPTIONS_243",
+            "string": "2.1"
+        },
+        {
+            "id": "L_OPTIONS_244",
+            "context": "L_OPTIONS_244",
+            "string": "2.2"
+        },
+        {
+            "id": "L_OPTIONS_245",
+            "context": "L_OPTIONS_245",
+            "string": "2.3"
+        },
+        {
+            "id": "L_OPTIONS_246",
+            "context": "L_OPTIONS_246",
+            "string": "2.4"
+        },
+        {
+            "id": "L_OPTIONS_247",
+            "context": "L_OPTIONS_247",
+            "string": "Informe\n"
+        },
+        {
+            "id": "L_OPTIONS_248",
+            "context": "L_OPTIONS_248",
+            "string": "Elegir Dificultad\n"
+        },
+        {
+            "id": "L_OPTIONS_249",
+            "context": "L_OPTIONS_249",
+            "string": "Dificultad\n"
+        },
+        {
+            "id": "L_OPTIONS_250",
+            "context": "L_OPTIONS_250",
+            "string": "Mejor Tiempo\n"
+        },
+        {
+            "id": "L_OPTIONS_251",
+            "context": "L_OPTIONS_251",
+            "string": "Agente\n"
+        },
+        {
+            "id": "L_OPTIONS_252",
+            "context": "L_OPTIONS_252",
+            "string": "Agente Especial\n"
+        },
+        {
+            "id": "L_OPTIONS_253",
+            "context": "L_OPTIONS_253",
+            "string": "Agente Perfecto\n"
+        },
+        {
+            "id": "L_OPTIONS_254",
+            "context": "L_OPTIONS_254",
+            "string": "Cancelar\n"
+        },
+        {
+            "id": "L_OPTIONS_255",
+            "context": "L_OPTIONS_255",
+            "string": "Opciones Modo Cooperativo\n"
+        },
+        {
+            "id": "L_OPTIONS_256",
+            "context": "L_OPTIONS_256",
+            "string": "Radar Sí\n"
+        },
+        {
+            "id": "L_OPTIONS_257",
+            "context": "L_OPTIONS_257",
+            "string": "Fuego Amigo\n"
+        },
+        {
+            "id": "L_OPTIONS_258",
+            "context": "L_OPTIONS_258",
+            "string": "Compañero Perfecto\n"
+        },
+        {
+            "id": "L_OPTIONS_259",
+            "context": "L_OPTIONS_259",
+            "string": "Continuar\n"
+        },
+        {
+            "id": "L_OPTIONS_260",
+            "context": "L_OPTIONS_260",
+            "string": "Cancelar\n"
+        },
+        {
+            "id": "L_OPTIONS_261",
+            "context": "L_OPTIONS_261",
+            "string": "Humano"
+        },
+        {
+            "id": "L_OPTIONS_262",
+            "context": "L_OPTIONS_262",
+            "string": "1 Simulante"
+        },
+        {
+            "id": "L_OPTIONS_263",
+            "context": "L_OPTIONS_263",
+            "string": "2 Simulantes"
+        },
+        {
+            "id": "L_OPTIONS_264",
+            "context": "L_OPTIONS_264",
+            "string": "3 Simulantes"
+        },
+        {
+            "id": "L_OPTIONS_265",
+            "context": "L_OPTIONS_265",
+            "string": "4 Simulantes"
+        },
+        {
+            "id": "L_OPTIONS_266",
+            "context": "L_OPTIONS_266",
+            "string": "Opciones Contra-Operativa\n"
+        },
+        {
+            "id": "L_OPTIONS_267",
+            "context": "L_OPTIONS_267",
+            "string": "Radar Sí\n"
+        },
+        {
+            "id": "L_OPTIONS_268",
+            "context": "L_OPTIONS_268",
+            "string": "Contra-Operativa\n"
+        },
+        {
+            "id": "L_OPTIONS_269",
+            "context": "L_OPTIONS_269",
+            "string": "Continuar\n"
+        },
+        {
+            "id": "L_OPTIONS_270",
+            "context": "L_OPTIONS_270",
+            "string": "Cancelar\n"
+        },
+        {
+            "id": "L_OPTIONS_271",
+            "context": "L_OPTIONS_271",
+            "string": "Jugador 1"
+        },
+        {
+            "id": "L_OPTIONS_272",
+            "context": "L_OPTIONS_272",
+            "string": "Jugador 2"
+        },
+        {
+            "id": "L_OPTIONS_273",
+            "context": "L_OPTIONS_273",
+            "string": "Visión General\n"
+        },
+        {
+            "id": "L_OPTIONS_274",
+            "context": "L_OPTIONS_274",
+            "string": "Aceptar\n"
+        },
+        {
+            "id": "L_OPTIONS_275",
+            "context": "L_OPTIONS_275",
+            "string": "Declinar\n"
+        },
+        {
+            "id": "L_OPTIONS_276",
+            "context": "L_OPTIONS_276",
+            "string": "Completado\n"
+        },
+        {
+            "id": "L_OPTIONS_277",
+            "context": "L_OPTIONS_277",
+            "string": "Fallado\n"
+        },
+        {
+            "id": "L_OPTIONS_278",
+            "context": "L_OPTIONS_278",
+            "string": "Estatus de Misión:\n"
+        },
+        {
+            "id": "L_OPTIONS_279",
+            "context": "L_OPTIONS_279",
+            "string": "Estatus de Agente:\n"
+        },
+        {
+            "id": "L_OPTIONS_280",
+            "context": "L_OPTIONS_280",
+            "string": "Tiempo de Misión:\n"
+        },
+        {
+            "id": "L_OPTIONS_281",
+            "context": "L_OPTIONS_281",
+            "string": "Arma Preferida:\n"
+        },
+        {
+            "id": "L_OPTIONS_282",
+            "context": "L_OPTIONS_282",
+            "string": "Muertos:\n"
+        },
+        {
+            "id": "L_OPTIONS_283",
+            "context": "L_OPTIONS_283",
+            "string": "Precisión:\n"
+        },
+        {
+            "id": "L_OPTIONS_284",
+            "context": "L_OPTIONS_284",
+            "string": "Total Disparos:\n"
+        },
+        {
+            "id": "L_OPTIONS_285",
+            "context": "L_OPTIONS_285",
+            "string": "    Disp. Cabeza:\n"
+        },
+        {
+            "id": "L_OPTIONS_286",
+            "context": "L_OPTIONS_286",
+            "string": "    Disp. Cuerpo:\n"
+        },
+        {
+            "id": "L_OPTIONS_287",
+            "context": "L_OPTIONS_287",
+            "string": "    Disp. Miembros:\n"
+        },
+        {
+            "id": "L_OPTIONS_288",
+            "context": "L_OPTIONS_288",
+            "string": "    Otros:\n"
+        },
+        {
+            "id": "L_OPTIONS_289",
+            "context": "L_OPTIONS_289",
+            "string": "Pulsa START\n"
+        },
+        {
+            "id": "L_OPTIONS_290",
+            "context": "L_OPTIONS_290",
+            "string": "Difunto\n"
+        },
+        {
+            "id": "L_OPTIONS_291",
+            "context": "L_OPTIONS_291",
+            "string": "Activo\n"
+        },
+        {
+            "id": "L_OPTIONS_292",
+            "context": "L_OPTIONS_292",
+            "string": "Anulado\n"
+        },
+        {
+            "id": "L_OPTIONS_293",
+            "context": "L_OPTIONS_293",
+            "string": "Fallada\n"
+        },
+        {
+            "id": "L_OPTIONS_294",
+            "context": "L_OPTIONS_294",
+            "string": "Completada\n"
+        },
+        {
+            "id": "L_OPTIONS_295",
+            "context": "L_OPTIONS_295",
+            "string": "Abortada\n"
+        },
+        {
+            "id": "L_OPTIONS_296",
+            "context": "L_OPTIONS_296",
+            "string": "Reintentar"
+        },
+        {
+            "id": "L_OPTIONS_297",
+            "context": "L_OPTIONS_297",
+            "string": "Sig. Misión"
+        },
+        {
+            "id": "L_OPTIONS_298",
+            "context": "L_OPTIONS_298",
+            "string": "Aceptar\n"
+        },
+        {
+            "id": "L_OPTIONS_299",
+            "context": "L_OPTIONS_299",
+            "string": "Declinar\n"
+        },
+        {
+            "id": "L_OPTIONS_300",
+            "context": "L_OPTIONS_300",
+            "string": "Objetivos\n"
+        },
+        {
+            "id": "L_OPTIONS_301",
+            "context": "L_OPTIONS_301",
+            "string": "Pulsa START\n"
+        },
+        {
+            "id": "L_OPTIONS_302",
+            "context": "L_OPTIONS_302",
+            "string": "Menú Pequeño pero Perfecto\n"
+        },
+        {
+            "id": "L_OPTIONS_303",
+            "context": "L_OPTIONS_303",
+            "string": "Simulador de Combate\n"
+        },
+        {
+            "id": "L_OPTIONS_304",
+            "context": "L_OPTIONS_304",
+            "string": "Entrenamiento\n"
+        },
+        {
+            "id": "L_OPTIONS_305",
+            "context": "L_OPTIONS_305",
+            "string": "Audio/Vídeo\n"
+        },
+        {
+            "id": "L_OPTIONS_306",
+            "context": "L_OPTIONS_306",
+            "string": "Cambiar Agente\n"
+        },
+        {
+            "id": "L_OPTIONS_307",
+            "context": "L_OPTIONS_307",
+            "string": "Audio/Visual\n"
+        },
+        {
+            "id": "L_OPTIONS_308",
+            "context": "L_OPTIONS_308",
+            "string": "Sonido\n"
+        },
+        {
+            "id": "L_OPTIONS_309",
+            "context": "L_OPTIONS_309",
+            "string": "Música\n"
+        },
+        {
+            "id": "L_OPTIONS_310",
+            "context": "L_OPTIONS_310",
+            "string": "Modo de Sonido\n"
+        },
+        {
+            "id": "L_OPTIONS_311",
+            "context": "L_OPTIONS_311",
+            "string": "Ratio\n"
+        },
+        {
+            "id": "L_OPTIONS_312",
+            "context": "L_OPTIONS_312",
+            "string": "Volver\n"
+        },
+        {
+            "id": "L_OPTIONS_313",
+            "context": "L_OPTIONS_313",
+            "string": "< Vacío >\n"
+        },
+        {
+            "id": "L_OPTIONS_314",
+            "context": "L_OPTIONS_314",
+            "string": "SUPR"
+        },
+        {
+            "id": "L_OPTIONS_315",
+            "context": "L_OPTIONS_315",
+            "string": "MAY."
+        },
+        {
+            "id": "L_OPTIONS_316",
+            "context": "L_OPTIONS_316",
+            "string": "SALIR"
+        },
+        {
+            "id": "L_OPTIONS_317",
+            "context": "L_OPTIONS_317",
+            "string": "OK"
+        },
+        {
+            "id": "L_OPTIONS_318",
+            "context": "L_OPTIONS_318",
+            "string": "Cabezas Simulador Combate\n"
+        },
+        {
+            "id": "L_OPTIONS_319",
+            "context": "L_OPTIONS_319",
+            "string": "Cabezas de Misiones\n"
+        },
+        {
+            "id": "L_OPTIONS_320",
+            "context": "L_OPTIONS_320",
+            "string": "Error\n"
+        },
+        {
+            "id": "L_OPTIONS_321",
+            "context": "L_OPTIONS_321",
+            "string": "Cancelar\n"
+        },
+        {
+            "id": "L_OPTIONS_322",
+            "context": "L_OPTIONS_322",
+            "string": "El Controller Pak\nno se encontró\nen ningún mando.\n"
+        },
+        {
+            "id": "L_OPTIONS_323",
+            "context": "L_OPTIONS_323",
+            "string": "El fichero no ha sido salvado.\n"
+        },
+        {
+            "id": "L_OPTIONS_324",
+            "context": "L_OPTIONS_324",
+            "string": "El fichero no se cargará.\n"
+        },
+        {
+            "id": "L_OPTIONS_325",
+            "context": "L_OPTIONS_325",
+            "string": "No se puede borrar el fichero.\n"
+        },
+        {
+            "id": "L_OPTIONS_326",
+            "context": "L_OPTIONS_326",
+            "string": "Sin memoria.\n"
+        },
+        {
+            "id": "L_OPTIONS_327",
+            "context": "L_OPTIONS_327",
+            "string": "Este jugador ya ha sido\ncargado en este juego.\n"
+        },
+        {
+            "id": "L_OPTIONS_328",
+            "context": "L_OPTIONS_328",
+            "string": "ha sido quitado.\n"
+        },
+        {
+            "id": "L_OPTIONS_329",
+            "context": "L_OPTIONS_329",
+            "string": "El Controller Pak está dañado o mal insertado.\n"
+        },
+        {
+            "id": "L_OPTIONS_330",
+            "context": "L_OPTIONS_330",
+            "string": "Falló el borrado de la Nota de Juego.\n"
+        },
+        {
+            "id": "L_OPTIONS_331",
+            "context": "L_OPTIONS_331",
+            "string": "Error Cargando\n"
+        },
+        {
+            "id": "L_OPTIONS_332",
+            "context": "L_OPTIONS_332",
+            "string": "Error Guardando\n"
+        },
+        {
+            "id": "L_OPTIONS_333",
+            "context": "L_OPTIONS_333",
+            "string": "Error Cargando\n"
+        },
+        {
+            "id": "L_OPTIONS_334",
+            "context": "L_OPTIONS_334",
+            "string": "Error Guardando\n"
+        },
+        {
+            "id": "L_OPTIONS_335",
+            "context": "L_OPTIONS_335",
+            "string": "Error Cargando\n"
+        },
+        {
+            "id": "L_OPTIONS_336",
+            "context": "L_OPTIONS_336",
+            "string": "Error Guardando\n"
+        },
+        {
+            "id": "L_OPTIONS_337",
+            "context": "L_OPTIONS_337",
+            "string": "Error Leyendo\n"
+        },
+        {
+            "id": "L_OPTIONS_338",
+            "context": "L_OPTIONS_338",
+            "string": "Error Escribiendo\n"
+        },
+        {
+            "id": "L_OPTIONS_339",
+            "context": "L_OPTIONS_339",
+            "string": "Error\n"
+        },
+        {
+            "id": "L_OPTIONS_340",
+            "context": "L_OPTIONS_340",
+            "string": "Borrar Fallado\n"
+        },
+        {
+            "id": "L_OPTIONS_341",
+            "context": "L_OPTIONS_341",
+            "string": "No se puede borrar el fichero.\n"
+        },
+        {
+            "id": "L_OPTIONS_342",
+            "context": "L_OPTIONS_342",
+            "string": "- Comprueba que el Controller Pak\nestá insertado correctamente.\n"
+        },
+        {
+            "id": "L_OPTIONS_343",
+            "context": "L_OPTIONS_343",
+            "string": "Cancelar\n"
+        },
+        {
+            "id": "L_OPTIONS_344",
+            "context": "L_OPTIONS_344",
+            "string": "No hay espacio.\n"
+        },
+        {
+            "id": "L_OPTIONS_345",
+            "context": "L_OPTIONS_345",
+            "string": "¡Bien!\n"
+        },
+        {
+            "id": "L_OPTIONS_346",
+            "context": "L_OPTIONS_346",
+            "string": "Fichero Guardado.\n"
+        },
+        {
+            "id": "L_OPTIONS_347",
+            "context": "L_OPTIONS_347",
+            "string": "Aceptar\n"
+        },
+        {
+            "id": "L_OPTIONS_348",
+            "context": "L_OPTIONS_348",
+            "string": "Ha aparecido un error\nal intentar guardar.\n"
+        },
+        {
+            "id": "L_OPTIONS_349",
+            "context": "L_OPTIONS_349",
+            "string": "Reintentar\n"
+        },
+        {
+            "id": "L_OPTIONS_350",
+            "context": "L_OPTIONS_350",
+            "string": "Guardar en otro Sitio\n"
+        },
+        {
+            "id": "L_OPTIONS_351",
+            "context": "L_OPTIONS_351",
+            "string": "Cancelar\n"
+        },
+        {
+            "id": "L_OPTIONS_352",
+            "context": "L_OPTIONS_352",
+            "string": "Ha aparecido un error\nal intentar cargar.\n"
+        },
+        {
+            "id": "L_OPTIONS_353",
+            "context": "L_OPTIONS_353",
+            "string": "Reintentar\n"
+        },
+        {
+            "id": "L_OPTIONS_354",
+            "context": "L_OPTIONS_354",
+            "string": "Cancelar\n"
+        },
+        {
+            "id": "L_OPTIONS_355",
+            "context": "L_OPTIONS_355",
+            "string": "Necesitas Espacio para la Cabeza\n"
+        },
+        {
+            "id": "L_OPTIONS_356",
+            "context": "L_OPTIONS_356",
+            "string": "Elige una cabeza para cargar encima:\n"
+        },
+        {
+            "id": "L_OPTIONS_357",
+            "context": "L_OPTIONS_357",
+            "string": "Aceptar\n"
+        },
+        {
+            "id": "L_OPTIONS_358",
+            "context": "L_OPTIONS_358",
+            "string": "Cancelar\n"
+        },
+        {
+            "id": "L_OPTIONS_359",
+            "context": "L_OPTIONS_359",
+            "string": "Guardar\n"
+        },
+        {
+            "id": "L_OPTIONS_360",
+            "context": "L_OPTIONS_360",
+            "string": "¿Quieres guardar tu\nfichero en otro sitio?\n"
+        },
+        {
+            "id": "L_OPTIONS_361",
+            "context": "L_OPTIONS_361",
+            "string": "Sí\n"
+        },
+        {
+            "id": "L_OPTIONS_362",
+            "context": "L_OPTIONS_362",
+            "string": "No\n"
+        },
+        {
+            "id": "L_OPTIONS_363",
+            "context": "L_OPTIONS_363",
+            "string": "Por favor, inserta el Controller Pak que contiene tu %s en cualquier mando.\n"
+        },
+        {
+            "id": "L_OPTIONS_364",
+            "context": "L_OPTIONS_364",
+            "string": "Por favor, inserta el\nController Pak\ndonde estés salvando\nen cualquier mando.\n"
+        },
+        {
+            "id": "L_OPTIONS_365",
+            "context": "L_OPTIONS_365",
+            "string": "Aceptar\n"
+        },
+        {
+            "id": "L_OPTIONS_366",
+            "context": "L_OPTIONS_366",
+            "string": "Cancelar\n"
+        },
+        {
+            "id": "L_OPTIONS_367",
+            "context": "L_OPTIONS_367",
+            "string": "Elige Lugar\n"
+        },
+        {
+            "id": "L_OPTIONS_368",
+            "context": "L_OPTIONS_368",
+            "string": "Dónde\n"
+        },
+        {
+            "id": "L_OPTIONS_369",
+            "context": "L_OPTIONS_369",
+            "string": "Espacios\n"
+        },
+        {
+            "id": "L_OPTIONS_370",
+            "context": "L_OPTIONS_370",
+            "string": "Borrar Ficheros...\n"
+        },
+        {
+            "id": "L_OPTIONS_371",
+            "context": "L_OPTIONS_371",
+            "string": "Cancelar\n"
+        },
+        {
+            "id": "L_OPTIONS_372",
+            "context": "L_OPTIONS_372",
+            "string": "Completo"
+        },
+        {
+            "id": "L_OPTIONS_373",
+            "context": "L_OPTIONS_373",
+            "string": "Copiar Fichero\n"
+        },
+        {
+            "id": "L_OPTIONS_374",
+            "context": "L_OPTIONS_374",
+            "string": "Elige fichero a copiar:\n"
+        },
+        {
+            "id": "L_OPTIONS_375",
+            "context": "L_OPTIONS_375",
+            "string": "Pulsa B para salir.\n"
+        },
+        {
+            "id": "L_OPTIONS_376",
+            "context": "L_OPTIONS_376",
+            "string": "Borrar Fichero\n"
+        },
+        {
+            "id": "L_OPTIONS_377",
+            "context": "L_OPTIONS_377",
+            "string": "Elige fichero a borrar:\n"
+        },
+        {
+            "id": "L_OPTIONS_378",
+            "context": "L_OPTIONS_378",
+            "string": "Pulsa B para salir.\n"
+        },
+        {
+            "id": "L_OPTIONS_379",
+            "context": "L_OPTIONS_379",
+            "string": "Cuidado\n"
+        },
+        {
+            "id": "L_OPTIONS_380",
+            "context": "L_OPTIONS_380",
+            "string": "¿Seguro que quieres\nborrar este fichero?\n"
+        },
+        {
+            "id": "L_OPTIONS_381",
+            "context": "L_OPTIONS_381",
+            "string": "Cancelar\n"
+        },
+        {
+            "id": "L_OPTIONS_382",
+            "context": "L_OPTIONS_382",
+            "string": "Aceptar\n"
+        },
+        {
+            "id": "L_OPTIONS_383",
+            "context": "L_OPTIONS_383",
+            "string": "Borrar Nota de Juego\n"
+        },
+        {
+            "id": "L_OPTIONS_384",
+            "context": "L_OPTIONS_384",
+            "string": "¿Estás seguro de\nque quieres borrar\nesta nota de juego?\n"
+        },
+        {
+            "id": "L_OPTIONS_385",
+            "context": "L_OPTIONS_385",
+            "string": "No\n"
+        },
+        {
+            "id": "L_OPTIONS_386",
+            "context": "L_OPTIONS_386",
+            "string": "Sí\n"
+        },
+        {
+            "id": "L_OPTIONS_387",
+            "context": "L_OPTIONS_387",
+            "string": "Notas de Juego\n"
+        },
+        {
+            "id": "L_OPTIONS_388",
+            "context": "L_OPTIONS_388",
+            "string": "Borra Notas de Juego:\n"
+        },
+        {
+            "id": "L_OPTIONS_389",
+            "context": "L_OPTIONS_389",
+            "string": "Nota\n"
+        },
+        {
+            "id": "L_OPTIONS_390",
+            "context": "L_OPTIONS_390",
+            "string": "Páginas\n"
+        },
+        {
+            "id": "L_OPTIONS_391",
+            "context": "L_OPTIONS_391",
+            "string": "Pulsa B para salir.\n"
+        },
+        {
+            "id": "L_OPTIONS_392",
+            "context": "L_OPTIONS_392",
+            "string": "Vacío\n"
+        },
+        {
+            "id": "L_OPTIONS_393",
+            "context": "L_OPTIONS_393",
+            "string": "--\n"
+        },
+        {
+            "id": "L_OPTIONS_394",
+            "context": "L_OPTIONS_394",
+            "string": "Páginas Libres: \n"
+        },
+        {
+            "id": "L_OPTIONS_395",
+            "context": "L_OPTIONS_395",
+            "string": "Páginas Libres: %d\n"
+        },
+        {
+            "id": "L_OPTIONS_396",
+            "context": "L_OPTIONS_396",
+            "string": "Páginas Usadas: \n"
+        },
+        {
+            "id": "L_OPTIONS_397",
+            "context": "L_OPTIONS_397",
+            "string": "Páginas Usadas: %d\n"
+        },
+        {
+            "id": "L_OPTIONS_398",
+            "context": "L_OPTIONS_398",
+            "string": "Ya existe información de Perfect Dark\nen este Controller Pak.\n"
+        },
+        {
+            "id": "L_OPTIONS_399",
+            "context": "L_OPTIONS_399",
+            "string": "Hay espacio suficiente para\nnotas de Perfect Dark.\n"
+        },
+        {
+            "id": "L_OPTIONS_400",
+            "context": "L_OPTIONS_400",
+            "string": "El Controller Pak está demasiado lleno - 1 nota\ny 28 páginas son necesarias para guardar.\n"
+        },
+        {
+            "id": "L_OPTIONS_401",
+            "context": "L_OPTIONS_401",
+            "string": "Introduce Nombre del Agente\n"
+        },
+        {
+            "id": "L_OPTIONS_402",
+            "context": "L_OPTIONS_402",
+            "string": "Nuevo...\n"
+        },
+        {
+            "id": "L_OPTIONS_403",
+            "context": "L_OPTIONS_403",
+            "string": "Nuevo Agente...\n"
+        },
+        {
+            "id": "L_OPTIONS_404",
+            "context": "L_OPTIONS_404",
+            "string": "Nuevo Recluta"
+        },
+        {
+            "id": "L_OPTIONS_405",
+            "context": "L_OPTIONS_405",
+            "string": "Tiempo de Misión:"
+        },
+        {
+            "id": "L_OPTIONS_406",
+            "context": "L_OPTIONS_406",
+            "string": "Desafío 1"
+        },
+        {
+            "id": "L_OPTIONS_407",
+            "context": "L_OPTIONS_407",
+            "string": "Desafío 2"
+        },
+        {
+            "id": "L_OPTIONS_408",
+            "context": "L_OPTIONS_408",
+            "string": "Desafío 3"
+        },
+        {
+            "id": "L_OPTIONS_409",
+            "context": "L_OPTIONS_409",
+            "string": "Desafío 4"
+        },
+        {
+            "id": "L_OPTIONS_410",
+            "context": "L_OPTIONS_410",
+            "string": "Desafío 5"
+        },
+        {
+            "id": "L_OPTIONS_411",
+            "context": "L_OPTIONS_411",
+            "string": "Desafío 6"
+        },
+        {
+            "id": "L_OPTIONS_412",
+            "context": "L_OPTIONS_412",
+            "string": "Desafío 7"
+        },
+        {
+            "id": "L_OPTIONS_413",
+            "context": "L_OPTIONS_413",
+            "string": "Desafío 8"
+        },
+        {
+            "id": "L_OPTIONS_414",
+            "context": "L_OPTIONS_414",
+            "string": "Desafío 9"
+        },
+        {
+            "id": "L_OPTIONS_415",
+            "context": "L_OPTIONS_415",
+            "string": "Desafío 10"
+        },
+        {
+            "id": "L_OPTIONS_416",
+            "context": "L_OPTIONS_416",
+            "string": "Desafío 11"
+        },
+        {
+            "id": "L_OPTIONS_417",
+            "context": "L_OPTIONS_417",
+            "string": "Desafío 12"
+        },
+        {
+            "id": "L_OPTIONS_418",
+            "context": "L_OPTIONS_418",
+            "string": "Desafío 13"
+        },
+        {
+            "id": "L_OPTIONS_419",
+            "context": "L_OPTIONS_419",
+            "string": "Desafío 14"
+        },
+        {
+            "id": "L_OPTIONS_420",
+            "context": "L_OPTIONS_420",
+            "string": "Desafío 15"
+        },
+        {
+            "id": "L_OPTIONS_421",
+            "context": "L_OPTIONS_421",
+            "string": "Desafío 16"
+        },
+        {
+            "id": "L_OPTIONS_422",
+            "context": "L_OPTIONS_422",
+            "string": "Desafío 17"
+        },
+        {
+            "id": "L_OPTIONS_423",
+            "context": "L_OPTIONS_423",
+            "string": "Desafío 18"
+        },
+        {
+            "id": "L_OPTIONS_424",
+            "context": "L_OPTIONS_424",
+            "string": "Desafío 19"
+        },
+        {
+            "id": "L_OPTIONS_425",
+            "context": "L_OPTIONS_425",
+            "string": "Desafío 20"
+        },
+        {
+            "id": "L_OPTIONS_426",
+            "context": "L_OPTIONS_426",
+            "string": "Desafío 21"
+        },
+        {
+            "id": "L_OPTIONS_427",
+            "context": "L_OPTIONS_427",
+            "string": "Desafío 22"
+        },
+        {
+            "id": "L_OPTIONS_428",
+            "context": "L_OPTIONS_428",
+            "string": "Desafío 23"
+        },
+        {
+            "id": "L_OPTIONS_429",
+            "context": "L_OPTIONS_429",
+            "string": "Desafío 24"
+        },
+        {
+            "id": "L_OPTIONS_430",
+            "context": "L_OPTIONS_430",
+            "string": "Desafío 25"
+        },
+        {
+            "id": "L_OPTIONS_431",
+            "context": "L_OPTIONS_431",
+            "string": "Desafío 26"
+        },
+        {
+            "id": "L_OPTIONS_432",
+            "context": "L_OPTIONS_432",
+            "string": "Desafío 27"
+        },
+        {
+            "id": "L_OPTIONS_433",
+            "context": "L_OPTIONS_433",
+            "string": "Desafío 28"
+        },
+        {
+            "id": "L_OPTIONS_434",
+            "context": "L_OPTIONS_434",
+            "string": "Desafío 29"
+        },
+        {
+            "id": "L_OPTIONS_435",
+            "context": "L_OPTIONS_435",
+            "string": "Desafío 30"
+        },
+        {
+            "id": "L_OPTIONS_436",
+            "context": "L_OPTIONS_436",
+            "string": "Especial\n"
+        },
+        {
+            "id": "L_OPTIONS_437",
+            "context": "L_OPTIONS_437",
+            "string": "Introducción\n"
+        },
+        {
+            "id": "L_OPTIONS_438",
+            "context": "L_OPTIONS_438",
+            "string": "Misión 1 - Central dataDyne\n"
+        },
+        {
+            "id": "L_OPTIONS_439",
+            "context": "L_OPTIONS_439",
+            "string": "Misión 2 - Villa Carrington\n"
+        },
+        {
+            "id": "L_OPTIONS_440",
+            "context": "L_OPTIONS_440",
+            "string": "Misión 3 - Edificio G5\n"
+        },
+        {
+            "id": "L_OPTIONS_441",
+            "context": "L_OPTIONS_441",
+            "string": "Misión 4 - Área 51\n"
+        },
+        {
+            "id": "L_OPTIONS_442",
+            "context": "L_OPTIONS_442",
+            "string": "Misión 5 - Air Force One\n"
+        },
+        {
+            "id": "L_OPTIONS_443",
+            "context": "L_OPTIONS_443",
+            "string": "Misión 6 - Pelagic II\n"
+        },
+        {
+            "id": "L_OPTIONS_444",
+            "context": "L_OPTIONS_444",
+            "string": "Misión 7 - Instituto Carrington\n"
+        },
+        {
+            "id": "L_OPTIONS_445",
+            "context": "L_OPTIONS_445",
+            "string": "Misión 8 - Nave de Ataque Skedar\n"
+        },
+        {
+            "id": "L_OPTIONS_446",
+            "context": "L_OPTIONS_446",
+            "string": "Misión 9 - Ruinas Skedar\n"
+        },
+        {
+            "id": "L_OPTIONS_447",
+            "context": "L_OPTIONS_447",
+            "string": "Final\n"
+        },
+        {
+            "id": "L_OPTIONS_448",
+            "context": "L_OPTIONS_448",
+            "string": "Mostrar Todo\n"
+        },
+        {
+            "id": "L_OPTIONS_449",
+            "context": "L_OPTIONS_449",
+            "string": "Introducción\n"
+        },
+        {
+            "id": "L_OPTIONS_450",
+            "context": "L_OPTIONS_450",
+            "string": "Intro 1:1 - En la Oscuridad\n"
+        },
+        {
+            "id": "L_OPTIONS_451",
+            "context": "L_OPTIONS_451",
+            "string": "Final 1:1 - Descenso Rápido\n"
+        },
+        {
+            "id": "L_OPTIONS_452",
+            "context": "L_OPTIONS_452",
+            "string": "Intro 1:2 - Bajando\n"
+        },
+        {
+            "id": "L_OPTIONS_453",
+            "context": "L_OPTIONS_453",
+            "string": "Final 1:2 - El Doctor\n"
+        },
+        {
+            "id": "L_OPTIONS_454",
+            "context": "L_OPTIONS_454",
+            "string": "Intro 1:3 - Luces Fuera\n"
+        },
+        {
+            "id": "L_OPTIONS_455",
+            "context": "L_OPTIONS_455",
+            "string": "Final 1:3 - ¿Dónde vas?\n"
+        },
+        {
+            "id": "L_OPTIONS_456",
+            "context": "L_OPTIONS_456",
+            "string": "Intro 2:1 - ¡Negocia esto!\n"
+        },
+        {
+            "id": "L_OPTIONS_457",
+            "context": "L_OPTIONS_457",
+            "string": "Intro 2 2:1 - Vida en Línea\n"
+        },
+        {
+            "id": "L_OPTIONS_458",
+            "context": "L_OPTIONS_458",
+            "string": "Final 2:1 - Carrington Rescatado\n"
+        },
+        {
+            "id": "L_OPTIONS_459",
+            "context": "L_OPTIONS_459",
+            "string": "Intro 3:1 - Callejón Oscuro\n"
+        },
+        {
+            "id": "L_OPTIONS_460",
+            "context": "L_OPTIONS_460",
+            "string": "Final 3:1 - Entrando al G5\n"
+        },
+        {
+            "id": "L_OPTIONS_461",
+            "context": "L_OPTIONS_461",
+            "string": "Intro 3:2 - Armas y Poses\n"
+        },
+        {
+            "id": "L_OPTIONS_462",
+            "context": "L_OPTIONS_462",
+            "string": "Especial 3:2 - Conspiración\n"
+        },
+        {
+            "id": "L_OPTIONS_463",
+            "context": "L_OPTIONS_463",
+            "string": "Final 3:2 - Salida de Incendios\n"
+        },
+        {
+            "id": "L_OPTIONS_464",
+            "context": "L_OPTIONS_464",
+            "string": "Intro 4:1 - Vídeos\n"
+        },
+        {
+            "id": "L_OPTIONS_465",
+            "context": "L_OPTIONS_465",
+            "string": "Final 4:1 - Sin Salida\n"
+        },
+        {
+            "id": "L_OPTIONS_466",
+            "context": "L_OPTIONS_466",
+            "string": "Intro 4:2 - Perlas de Sabiduría\n"
+        },
+        {
+            "id": "L_OPTIONS_467",
+            "context": "L_OPTIONS_467",
+            "string": "Final 4:2 - A Cuchillo\n"
+        },
+        {
+            "id": "L_OPTIONS_468",
+            "context": "L_OPTIONS_468",
+            "string": "Intro 4:3 - ¡Gas!\n"
+        },
+        {
+            "id": "L_OPTIONS_469",
+            "context": "L_OPTIONS_469",
+            "string": "Especial 4:3 - Elvis Despierta\n"
+        },
+        {
+            "id": "L_OPTIONS_470",
+            "context": "L_OPTIONS_470",
+            "string": "Final 4:3 - Escape\n"
+        },
+        {
+            "id": "L_OPTIONS_471",
+            "context": "L_OPTIONS_471",
+            "string": "Intro 5:1 - Gran Altitud\n"
+        },
+        {
+            "id": "L_OPTIONS_472",
+            "context": "L_OPTIONS_472",
+            "string": "Final 5:1 - Despegue\n"
+        },
+        {
+            "id": "L_OPTIONS_473",
+            "context": "L_OPTIONS_473",
+            "string": "Intro 5:2 - Última Oportunidad\n"
+        },
+        {
+            "id": "L_OPTIONS_474",
+            "context": "L_OPTIONS_474",
+            "string": "Especial 5:2 - Atraque\n"
+        },
+        {
+            "id": "L_OPTIONS_475",
+            "context": "L_OPTIONS_475",
+            "string": "Final 5:2 - Sin Opciones\n"
+        },
+        {
+            "id": "L_OPTIONS_476",
+            "context": "L_OPTIONS_476",
+            "string": "Intro 5:3 - Horizontes Rojos\n"
+        },
+        {
+            "id": "L_OPTIONS_477",
+            "context": "L_OPTIONS_477",
+            "string": "Final 5:3 - Maníaco Rubio\n"
+        },
+        {
+            "id": "L_OPTIONS_478",
+            "context": "L_OPTIONS_478",
+            "string": "Intro 6:1 - Sube a Bordo\n"
+        },
+        {
+            "id": "L_OPTIONS_479",
+            "context": "L_OPTIONS_479",
+            "string": "Final 6:1 - Descendiendo\n"
+        },
+        {
+            "id": "L_OPTIONS_480",
+            "context": "L_OPTIONS_480",
+            "string": "Intro 6:2 - Más Profundo\n"
+        },
+        {
+            "id": "L_OPTIONS_481",
+            "context": "L_OPTIONS_481",
+            "string": "Especial 6:2 - ¡Virus!\n"
+        },
+        {
+            "id": "L_OPTIONS_482",
+            "context": "L_OPTIONS_482",
+            "string": "Final 6:2 - Saliendo\n"
+        },
+        {
+            "id": "L_OPTIONS_483",
+            "context": "L_OPTIONS_483",
+            "string": "Intro 7:1 - Saludo Victorioso\n"
+        },
+        {
+            "id": "L_OPTIONS_484",
+            "context": "L_OPTIONS_484",
+            "string": "Final 7:1 - Ayudando a Escapar\n"
+        },
+        {
+            "id": "L_OPTIONS_485",
+            "context": "L_OPTIONS_485",
+            "string": "Intro 8:1 - ¡Atrapada!\n"
+        },
+        {
+            "id": "L_OPTIONS_486",
+            "context": "L_OPTIONS_486",
+            "string": "Final 8:1 - Buscando Problemas\n"
+        },
+        {
+            "id": "L_OPTIONS_487",
+            "context": "L_OPTIONS_487",
+            "string": "Intro 9:1 - Aire en Calma\n"
+        },
+        {
+            "id": "L_OPTIONS_488",
+            "context": "L_OPTIONS_488",
+            "string": "Final 9:1 - ¡Te pillé!\n"
+        },
+        {
+            "id": "L_OPTIONS_489",
+            "context": "L_OPTIONS_489",
+            "string": "Secuencia Final\n"
+        },
+        {
+            "id": "L_OPTIONS_490",
+            "context": "L_OPTIONS_490",
+            "string": "Películas\n"
+        },
+        {
+            "id": "L_OPTIONS_491",
+            "context": "L_OPTIONS_491",
+            "string": "Oculto %d\n"
+        },
+        {
+            "id": "L_OPTIONS_492",
+            "context": "L_OPTIONS_492",
+            "string": "Escoge Objetivo\n"
+        },
+        {
+            "id": "L_OPTIONS_493",
+            "context": "L_OPTIONS_493",
+            "string": "Puntuación\n"
+        },
+        {
+            "id": "L_OPTIONS_494",
+            "context": "L_OPTIONS_494",
+            "string": null
+        },
+        {
+            "id": "L_OPTIONS_495",
+            "context": "L_OPTIONS_495",
+            "string": null
+        }
+    ]
+}

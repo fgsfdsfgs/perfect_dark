@@ -1,0 +1,84 @@
+{
+    "messages": [
+        {
+            "id": "L_ATE_000",
+            "context": "L_ATE_000",
+            "string": "|Hintergrund - \n\nFinaler Test: Besiegen Sie die holografische Gegner-Simulation!\n\n|Carrington - \n\nIch habe volles Vertrauen in Ihre Fähigkeiten, Joanna. Bleiben Sie stets aufmerksam und besinnen Sie sich darauf, was Sie im Laufe Ihres Trainings gelernt haben. Viel Glück!\n\n|1. Ziel: - Besiegen Sie die dataDyne-Wache!\n\nBesiegen Sie die Simulation einer dataDyne-Wache! Der Simulant verfügt über moderate Kampffähigkeiten. Sie sollten ihn jedoch nicht unterschätzen.\n\n|2. Ziel: - Besiegen Sie Jonathan Dark!\n\nBesiegen Sie die Simulation von Jonathan Dark, den aktuellen Rekordhalter des institutsinternen Testverfahrens. Der Simulant verfügt über gute Kampffähigkeiten und ist in der Lage, einen zu selbstsicheren Gegner im kritischsten Moment zu überraschen.\n\n|3. Ziel: - Besiegen Sie Trent Easton!\n\nBesiegen Sie die Simulation eines äußerst gefährlichen Regierungsagenten. Der Simulant ist ein überdurchschnittlich erfahrener Kämpfer. Wenn Sie diesen Test bestehen, dürfen Sie zu Recht stolz auf sich sein.\n\nENDE\n"
+        },
+        {
+            "id": "L_ATE_001",
+            "context": "L_ATE_001",
+            "string": "LUCERNE TOWER\n"
+        },
+        {
+            "id": "L_ATE_002",
+            "context": "L_ATE_002",
+            "string": "|Hintergrund - \n\nFinaler Test: Besiegen Sie die holografische Gegner-Simulation!\n\n|Carrington - \n\nIch habe volles Vertrauen in Ihre Fähigkeiten, Joanna. Bleiben Sie stets aufmerksam und besinnen Sie sich darauf, was Sie im Laufe Ihres Trainings gelernt haben. Viel Glück!\n\n|1. Ziel: - Besiegen Sie die dataDyne-Wache!\n\nBesiegen Sie die Simulation einer dataDyne-Wache! Der Simulant verfügt über moderate Kampffähigkeiten. Sie sollten ihn jedoch nicht unterschätzen.\n\n|2. Ziel: - Besiegen Sie Jonathan Dark!\n\nBesiegen Sie die Simulation von Jonathan Dark, den aktuellen Rekordhalter des institutsinternen Testverfahrens. Der Simulant verfügt über gute Kampffähigkeiten und ist in der Lage, einen zu selbstsicheren Gegner im kritischsten Moment zu überraschen.\n\nENDE\n"
+        },
+        {
+            "id": "L_ATE_003",
+            "context": "L_ATE_003",
+            "string": "|Hintergrund - \n\nFinaler Test: Besiegen Sie die holografische Gegner-Simulation!\n\n|Carrington - \n\nIch habe volles Vertrauen in Ihre Fähigkeiten, Joanna. Bleiben Sie stets aufmerksam und besinnen Sie sich darauf, was Sie im Laufe Ihres Trainings gelernt haben. Viel Glück!\n\n|1. Ziel: - Besiegen Sie die dataDyne-Wache!\n\nBesiegen Sie die Simulation einer dataDyne-Wache! Der Simulant verfügt über moderate Kampffähigkeiten. Sie sollten ihn jedoch nicht unterschätzen.\n\nENDE\n"
+        },
+        {
+            "id": "L_ATE_004",
+            "context": "L_ATE_004",
+            "string": "Besiegen Sie die dataDyne-Wache!\n"
+        },
+        {
+            "id": "L_ATE_005",
+            "context": "L_ATE_005",
+            "string": "Besiegen Sie Jonathan Dark!\n"
+        },
+        {
+            "id": "L_ATE_006",
+            "context": "L_ATE_006",
+            "string": "Besiegen Sie Trent Easton!\n"
+        },
+        {
+            "id": "L_ATE_007",
+            "context": "L_ATE_007",
+            "string": "DAS DUELL\n"
+        },
+        {
+            "id": "L_ATE_008",
+            "context": "L_ATE_008",
+            "string": "Besiegen Sie Ihren Gegner!\n"
+        },
+        {
+            "id": "L_ATE_009",
+            "context": "L_ATE_009",
+            "string": "Sie waren zu schnell für ihn!\n"
+        },
+        {
+            "id": "L_ATE_010",
+            "context": "L_ATE_010",
+            "string": "Sie waren zu schnell für ihn!\n"
+        },
+        {
+            "id": "L_ATE_011",
+            "context": "L_ATE_011",
+            "string": "Sie waren zu schnell für ihn!\n"
+        },
+        {
+            "id": "L_ATE_012",
+            "context": "L_ATE_012",
+            "string": "Schwierigkeitsgrad: AGENT\n"
+        },
+        {
+            "id": "L_ATE_013",
+            "context": "L_ATE_013",
+            "string": "Schwierigkeitsgrad: SPEZIALAGENT\n"
+        },
+        {
+            "id": "L_ATE_014",
+            "context": "L_ATE_014",
+            "string": "Schwierigkeitsgrad: PERFEKTER AGENT\n"
+        },
+        {
+            "id": "L_ATE_015",
+            "context": "L_ATE_015",
+            "string": null
+        }
+    ]
+}

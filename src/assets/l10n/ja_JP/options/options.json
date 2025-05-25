@@ -1,0 +1,2484 @@
+{
+    "messages": [
+        {
+            "id": "L_OPTIONS_000",
+            "context": "L_OPTIONS_000",
+            "string": "完了\n"
+        },
+        {
+            "id": "L_OPTIONS_001",
+            "context": "L_OPTIONS_001",
+            "string": "未完了\n"
+        },
+        {
+            "id": "L_OPTIONS_002",
+            "context": "L_OPTIONS_002",
+            "string": "任務失敗\n"
+        },
+        {
+            "id": "L_OPTIONS_003",
+            "context": "L_OPTIONS_003",
+            "string": "\n"
+        },
+        {
+            "id": "L_OPTIONS_004",
+            "context": "L_OPTIONS_004",
+            "string": ""
+        },
+        {
+            "id": "L_OPTIONS_005",
+            "context": "L_OPTIONS_005",
+            "string": "地球："
+        },
+        {
+            "id": "L_OPTIONS_006",
+            "context": "L_OPTIONS_006",
+            "string": "　プレヒストリー"
+        },
+        {
+            "id": "L_OPTIONS_007",
+            "context": "L_OPTIONS_007",
+            "string": "Ｒａｒｅ提供"
+        },
+        {
+            "id": "L_OPTIONS_008",
+            "context": "L_OPTIONS_008",
+            "string": "Red\n"
+        },
+        {
+            "id": "L_OPTIONS_009",
+            "context": "L_OPTIONS_009",
+            "string": "Yellow\n"
+        },
+        {
+            "id": "L_OPTIONS_010",
+            "context": "L_OPTIONS_010",
+            "string": "Blue\n"
+        },
+        {
+            "id": "L_OPTIONS_011",
+            "context": "L_OPTIONS_011",
+            "string": "Magenta\n"
+        },
+        {
+            "id": "L_OPTIONS_012",
+            "context": "L_OPTIONS_012",
+            "string": "Cyan\n"
+        },
+        {
+            "id": "L_OPTIONS_013",
+            "context": "L_OPTIONS_013",
+            "string": "Orange\n"
+        },
+        {
+            "id": "L_OPTIONS_014",
+            "context": "L_OPTIONS_014",
+            "string": "Pink\n"
+        },
+        {
+            "id": "L_OPTIONS_015",
+            "context": "L_OPTIONS_015",
+            "string": "Brown\n"
+        },
+        {
+            "id": "L_OPTIONS_016",
+            "context": "L_OPTIONS_016",
+            "string": "ＪＤコンバットスーツ\n"
+        },
+        {
+            "id": "L_OPTIONS_017",
+            "context": "L_OPTIONS_017",
+            "string": "ＪＤトレンチコート\n"
+        },
+        {
+            "id": "L_OPTIONS_018",
+            "context": "L_OPTIONS_018",
+            "string": "ＪＤチャイナドレス\n"
+        },
+        {
+            "id": "L_OPTIONS_019",
+            "context": "L_OPTIONS_019",
+            "string": "ＪＤ破れたドレス\n"
+        },
+        {
+            "id": "L_OPTIONS_020",
+            "context": "L_OPTIONS_020",
+            "string": "ＪＤスチュワーデス\n"
+        },
+        {
+            "id": "L_OPTIONS_021",
+            "context": "L_OPTIONS_021",
+            "string": "ＪＤウェットスーツ\n"
+        },
+        {
+            "id": "L_OPTIONS_022",
+            "context": "L_OPTIONS_022",
+            "string": "ＪＤアクアラング\n"
+        },
+        {
+            "id": "L_OPTIONS_023",
+            "context": "L_OPTIONS_023",
+            "string": "ＪＤ雪山\n"
+        },
+        {
+            "id": "L_OPTIONS_024",
+            "context": "L_OPTIONS_024",
+            "string": "ＪＤ研究員\n"
+        },
+        {
+            "id": "L_OPTIONS_025",
+            "context": "L_OPTIONS_025",
+            "string": "エルビス\n"
+        },
+        {
+            "id": "L_OPTIONS_026",
+            "context": "L_OPTIONS_026",
+            "string": "マイアン\n"
+        },
+        {
+            "id": "L_OPTIONS_027",
+            "context": "L_OPTIONS_027",
+            "string": "キャリントン\n"
+        },
+        {
+            "id": "L_OPTIONS_028",
+            "context": "L_OPTIONS_028",
+            "string": "ＤＣタキシード\n"
+        },
+        {
+            "id": "L_OPTIONS_029",
+            "context": "L_OPTIONS_029",
+            "string": "ミスター・ブロンド\n"
+        },
+        {
+            "id": "L_OPTIONS_030",
+            "context": "L_OPTIONS_030",
+            "string": "カサンドラ\n"
+        },
+        {
+            "id": "L_OPTIONS_031",
+            "context": "L_OPTIONS_031",
+            "string": "トレント・イーストン\n"
+        },
+        {
+            "id": "L_OPTIONS_032",
+            "context": "L_OPTIONS_032",
+            "string": "ジョナサン\n"
+        },
+        {
+            "id": "L_OPTIONS_033",
+            "context": "L_OPTIONS_033",
+            "string": "協会　研究員　男\n"
+        },
+        {
+            "id": "L_OPTIONS_034",
+            "context": "L_OPTIONS_034",
+            "string": "協会　研究員　女\n"
+        },
+        {
+            "id": "L_OPTIONS_035",
+            "context": "L_OPTIONS_035",
+            "string": "協会　戦闘員\n"
+        },
+        {
+            "id": "L_OPTIONS_036",
+            "context": "L_OPTIONS_036",
+            "string": "ｄＤ上級戦闘員\n"
+        },
+        {
+            "id": "L_OPTIONS_037",
+            "context": "L_OPTIONS_037",
+            "string": "ｄＤ女ガード\n"
+        },
+        {
+            "id": "L_OPTIONS_038",
+            "context": "L_OPTIONS_038",
+            "string": "ｄＤ警備員\n"
+        },
+        {
+            "id": "L_OPTIONS_039",
+            "context": "L_OPTIONS_039",
+            "string": "ｄＤ兵士\n"
+        },
+        {
+            "id": "L_OPTIONS_040",
+            "context": "L_OPTIONS_040",
+            "string": "ｄＤ戦闘員\n"
+        },
+        {
+            "id": "L_OPTIONS_041",
+            "context": "L_OPTIONS_041",
+            "string": "秘書\n"
+        },
+        {
+            "id": "L_OPTIONS_042",
+            "context": "L_OPTIONS_042",
+            "string": "ビジネスマン１\n"
+        },
+        {
+            "id": "L_OPTIONS_043",
+            "context": "L_OPTIONS_043",
+            "string": "ビジネスマン２\n"
+        },
+        {
+            "id": "L_OPTIONS_044",
+            "context": "L_OPTIONS_044",
+            "string": "ＯＬ\n"
+        },
+        {
+            "id": "L_OPTIONS_045",
+            "context": "L_OPTIONS_045",
+            "string": "ｄＤスナイパー\n"
+        },
+        {
+            "id": "L_OPTIONS_046",
+            "context": "L_OPTIONS_046",
+            "string": "Ｇ５　ガード\n"
+        },
+        {
+            "id": "L_OPTIONS_047",
+            "context": "L_OPTIONS_047",
+            "string": "Ｇ５　スワット\n"
+        },
+        {
+            "id": "L_OPTIONS_048",
+            "context": "L_OPTIONS_048",
+            "string": "ＣＩＡ　スパイ\n"
+        },
+        {
+            "id": "L_OPTIONS_049",
+            "context": "L_OPTIONS_049",
+            "string": "ＦＢＩ　スパイ\n"
+        },
+        {
+            "id": "L_OPTIONS_050",
+            "context": "L_OPTIONS_050",
+            "string": "エリア５１　ガード\n"
+        },
+        {
+            "id": "L_OPTIONS_051",
+            "context": "L_OPTIONS_051",
+            "string": "エリア５１　戦闘員\n"
+        },
+        {
+            "id": "L_OPTIONS_052",
+            "context": "L_OPTIONS_052",
+            "string": "パイロット\n"
+        },
+        {
+            "id": "L_OPTIONS_053",
+            "context": "L_OPTIONS_053",
+            "string": "作業ツナギ\n"
+        },
+        {
+            "id": "L_OPTIONS_054",
+            "context": "L_OPTIONS_054",
+            "string": "国防省ボディーガード\n"
+        },
+        {
+            "id": "L_OPTIONS_055",
+            "context": "L_OPTIONS_055",
+            "string": "研究員　男\n"
+        },
+        {
+            "id": "L_OPTIONS_056",
+            "context": "L_OPTIONS_056",
+            "string": "研究員　女\n"
+        },
+        {
+            "id": "L_OPTIONS_057",
+            "context": "L_OPTIONS_057",
+            "string": "ｄＤ研究員\n"
+        },
+        {
+            "id": "L_OPTIONS_058",
+            "context": "L_OPTIONS_058",
+            "string": "バイオ研究員\n"
+        },
+        {
+            "id": "L_OPTIONS_059",
+            "context": "L_OPTIONS_059",
+            "string": "アラスカ　ガード\n"
+        },
+        {
+            "id": "L_OPTIONS_060",
+            "context": "L_OPTIONS_060",
+            "string": "専用機　パイロット\n"
+        },
+        {
+            "id": "L_OPTIONS_061",
+            "context": "L_OPTIONS_061",
+            "string": "パーサー\n"
+        },
+        {
+            "id": "L_OPTIONS_062",
+            "context": "L_OPTIONS_062",
+            "string": "スチュワーデス１\n"
+        },
+        {
+            "id": "L_OPTIONS_063",
+            "context": "L_OPTIONS_063",
+            "string": "スチュワーデス２\n"
+        },
+        {
+            "id": "L_OPTIONS_064",
+            "context": "L_OPTIONS_064",
+            "string": "大統領\n"
+        },
+        {
+            "id": "L_OPTIONS_065",
+            "context": "L_OPTIONS_065",
+            "string": "国防省　役人\n"
+        },
+        {
+            "id": "L_OPTIONS_066",
+            "context": "L_OPTIONS_066",
+            "string": "大統領ＳＰ\n"
+        },
+        {
+            "id": "L_OPTIONS_067",
+            "context": "L_OPTIONS_067",
+            "string": "大統領クローン\n"
+        },
+        {
+            "id": "L_OPTIONS_068",
+            "context": "L_OPTIONS_068",
+            "string": "ペラジック２　ガード\n"
+        },
+        {
+            "id": "L_OPTIONS_069",
+            "context": "L_OPTIONS_069",
+            "string": "マイアン戦士\n"
+        },
+        {
+            "id": "L_OPTIONS_070",
+            "context": "L_OPTIONS_070",
+            "string": "ディナージャケット\n"
+        },
+        {
+            "id": "L_OPTIONS_071",
+            "context": "L_OPTIONS_071",
+            "string": "コントローラコネクタ１にコントローラが接続されていません。"
+        },
+        {
+            "id": "L_OPTIONS_072",
+            "context": "L_OPTIONS_072",
+            "string": "本体の電源を切ってから、コントローラを接続して下さい。"
+        },
+        {
+            "id": "L_OPTIONS_073",
+            "context": "L_OPTIONS_073",
+            "string": "検出"
+        },
+        {
+            "id": "L_OPTIONS_074",
+            "context": "L_OPTIONS_074",
+            "string": "無し"
+        },
+        {
+            "id": "L_OPTIONS_075",
+            "context": "L_OPTIONS_075",
+            "string": ""
+        },
+        {
+            "id": "L_OPTIONS_076",
+            "context": "L_OPTIONS_076",
+            "string": "メモリー拡張パック"
+        },
+        {
+            "id": "L_OPTIONS_077",
+            "context": "L_OPTIONS_077",
+            "string": "Nintendo 64 Product Identification\n"
+        },
+        {
+            "id": "L_OPTIONS_078",
+            "context": "L_OPTIONS_078",
+            "string": "Product ID:\n"
+        },
+        {
+            "id": "L_OPTIONS_079",
+            "context": "L_OPTIONS_079",
+            "string": "Product Code:\n"
+        },
+        {
+            "id": "L_OPTIONS_080",
+            "context": "L_OPTIONS_080",
+            "string": "Variant:\n"
+        },
+        {
+            "id": "L_OPTIONS_081",
+            "context": "L_OPTIONS_081",
+            "string": "Developer:\n"
+        },
+        {
+            "id": "L_OPTIONS_082",
+            "context": "L_OPTIONS_082",
+            "string": "Perfect Dark\n"
+        },
+        {
+            "id": "L_OPTIONS_083",
+            "context": "L_OPTIONS_083",
+            "string": "NUS-NPDJ-JPN\n"
+        },
+        {
+            "id": "L_OPTIONS_084",
+            "context": "L_OPTIONS_084",
+            "string": "JPN version 8.9 final\n"
+        },
+        {
+            "id": "L_OPTIONS_085",
+            "context": "L_OPTIONS_085",
+            "string": "Rare Ltd. (twycross)\n"
+        },
+        {
+            "id": "L_OPTIONS_086",
+            "context": "L_OPTIONS_086",
+            "string": "Copyright Rare Ltd. 2000\n"
+        },
+        {
+            "id": "L_OPTIONS_087",
+            "context": "L_OPTIONS_087",
+            "string": "The Rareware Logo and Perfect Dark are trademarks of Rare Ltd.\n"
+        },
+        {
+            "id": "L_OPTIONS_088",
+            "context": "L_OPTIONS_088",
+            "string": "Presented in Dolby Surround.  Dolby and the double-D\nsymbol are trademarks of Dolby Laboratories."
+        },
+        {
+            "id": "L_OPTIONS_089",
+            "context": "L_OPTIONS_089",
+            "string": "Uses Miles Sound System Copyright 1991-1999 RAD Game Tools Inc.\nMPEG Layer-3 playback supplied with the Miles Sound System from\nRAD Game Tools, Inc. MPEG Layer-3 audio compression technology\nlicensed by Fraunhofer IIS and THOMSON multimedia\n"
+        },
+        {
+            "id": "L_OPTIONS_090",
+            "context": "L_OPTIONS_090",
+            "string": ""
+        },
+        {
+            "id": "L_OPTIONS_091",
+            "context": "L_OPTIONS_091",
+            "string": ""
+        },
+        {
+            "id": "L_OPTIONS_092",
+            "context": "L_OPTIONS_092",
+            "string": ""
+        },
+        {
+            "id": "L_OPTIONS_093",
+            "context": "L_OPTIONS_093",
+            "string": "rare designs on the future <<<\n"
+        },
+        {
+            "id": "L_OPTIONS_094",
+            "context": "L_OPTIONS_094",
+            "string": "Published by Rareware.\n"
+        },
+        {
+            "id": "L_OPTIONS_095",
+            "context": "L_OPTIONS_095",
+            "string": "ファイル選択\n"
+        },
+        {
+            "id": "L_OPTIONS_096",
+            "context": "L_OPTIONS_096",
+            "string": "ゲームファイルを選択して下さい\n"
+        },
+        {
+            "id": "L_OPTIONS_097",
+            "context": "L_OPTIONS_097",
+            "string": "ニューファイル…\n"
+        },
+        {
+            "id": "L_OPTIONS_098",
+            "context": "L_OPTIONS_098",
+            "string": "ニューエージェント…\n"
+        },
+        {
+            "id": "L_OPTIONS_099",
+            "context": "L_OPTIONS_099",
+            "string": "ファイルメニュー\n"
+        },
+        {
+            "id": "L_OPTIONS_100",
+            "context": "L_OPTIONS_100",
+            "string": "コピー：\n"
+        },
+        {
+            "id": "L_OPTIONS_101",
+            "context": "L_OPTIONS_101",
+            "string": "消去：\n"
+        },
+        {
+            "id": "L_OPTIONS_102",
+            "context": "L_OPTIONS_102",
+            "string": "コントローラパックのメニューへ\n"
+        },
+        {
+            "id": "L_OPTIONS_103",
+            "context": "L_OPTIONS_103",
+            "string": "１人用ゲームファイル\n"
+        },
+        {
+            "id": "L_OPTIONS_104",
+            "context": "L_OPTIONS_104",
+            "string": "コンバットシミュレータ・ゲーム設定\n"
+        },
+        {
+            "id": "L_OPTIONS_105",
+            "context": "L_OPTIONS_105",
+            "string": "コンバットシミュレータ・個人設定\n"
+        },
+        {
+            "id": "L_OPTIONS_106",
+            "context": "L_OPTIONS_106",
+            "string": "パーフェクトヘッドファイル\n"
+        },
+        {
+            "id": "L_OPTIONS_107",
+            "context": "L_OPTIONS_107",
+            "string": "コントローラパックメニュー\n"
+        },
+        {
+            "id": "L_OPTIONS_108",
+            "context": "L_OPTIONS_108",
+            "string": "コントローラパックのゲームノートを\n消去することが出来ます。\n"
+        },
+        {
+            "id": "L_OPTIONS_109",
+            "context": "L_OPTIONS_109",
+            "string": "コントローラパックの選択：\n"
+        },
+        {
+            "id": "L_OPTIONS_110",
+            "context": "L_OPTIONS_110",
+            "string": "戻る\n"
+        },
+        {
+            "id": "L_OPTIONS_111",
+            "context": "L_OPTIONS_111",
+            "string": "ゲームカセット\n"
+        },
+        {
+            "id": "L_OPTIONS_112",
+            "context": "L_OPTIONS_112",
+            "string": "Controller PAK 1\n"
+        },
+        {
+            "id": "L_OPTIONS_113",
+            "context": "L_OPTIONS_113",
+            "string": "Controller PAK 2\n"
+        },
+        {
+            "id": "L_OPTIONS_114",
+            "context": "L_OPTIONS_114",
+            "string": "Controller PAK 3\n"
+        },
+        {
+            "id": "L_OPTIONS_115",
+            "context": "L_OPTIONS_115",
+            "string": "Controller PAK 4\n"
+        },
+        {
+            "id": "L_OPTIONS_116",
+            "context": "L_OPTIONS_116",
+            "string": "メインメニュー\n"
+        },
+        {
+            "id": "L_OPTIONS_117",
+            "context": "L_OPTIONS_117",
+            "string": "ソロ・ミッション\n"
+        },
+        {
+            "id": "L_OPTIONS_118",
+            "context": "L_OPTIONS_118",
+            "string": "コンバット・シミュレータ\n"
+        },
+        {
+            "id": "L_OPTIONS_119",
+            "context": "L_OPTIONS_119",
+            "string": "協力ミッション\n"
+        },
+        {
+            "id": "L_OPTIONS_120",
+            "context": "L_OPTIONS_120",
+            "string": "敵対ミッション\n"
+        },
+        {
+            "id": "L_OPTIONS_121",
+            "context": "L_OPTIONS_121",
+            "string": "シネマ\n"
+        },
+        {
+            "id": "L_OPTIONS_122",
+            "context": "L_OPTIONS_122",
+            "string": "ミッション選択\n"
+        },
+        {
+            "id": "L_OPTIONS_123",
+            "context": "L_OPTIONS_123",
+            "string": "ミッション１\n"
+        },
+        {
+            "id": "L_OPTIONS_124",
+            "context": "L_OPTIONS_124",
+            "string": "ミッション２\n"
+        },
+        {
+            "id": "L_OPTIONS_125",
+            "context": "L_OPTIONS_125",
+            "string": "ミッション３\n"
+        },
+        {
+            "id": "L_OPTIONS_126",
+            "context": "L_OPTIONS_126",
+            "string": "ミッション４\n"
+        },
+        {
+            "id": "L_OPTIONS_127",
+            "context": "L_OPTIONS_127",
+            "string": "ミッション５\n"
+        },
+        {
+            "id": "L_OPTIONS_128",
+            "context": "L_OPTIONS_128",
+            "string": "ミッション６\n"
+        },
+        {
+            "id": "L_OPTIONS_129",
+            "context": "L_OPTIONS_129",
+            "string": "ミッション７\n"
+        },
+        {
+            "id": "L_OPTIONS_130",
+            "context": "L_OPTIONS_130",
+            "string": "ミッション８\n"
+        },
+        {
+            "id": "L_OPTIONS_131",
+            "context": "L_OPTIONS_131",
+            "string": "ミッション９\n"
+        },
+        {
+            "id": "L_OPTIONS_132",
+            "context": "L_OPTIONS_132",
+            "string": "スペシャルミッション\n"
+        },
+        {
+            "id": "L_OPTIONS_133",
+            "context": "L_OPTIONS_133",
+            "string": "データダイン本社"
+        },
+        {
+            "id": "L_OPTIONS_134",
+            "context": "L_OPTIONS_134",
+            "string": "＜始動＞"
+        },
+        {
+            "id": "L_OPTIONS_135",
+            "context": "L_OPTIONS_135",
+            "string": "データダイン地下研究所"
+        },
+        {
+            "id": "L_OPTIONS_136",
+            "context": "L_OPTIONS_136",
+            "string": "＜探索＞"
+        },
+        {
+            "id": "L_OPTIONS_137",
+            "context": "L_OPTIONS_137",
+            "string": "データダイン本社"
+        },
+        {
+            "id": "L_OPTIONS_138",
+            "context": "L_OPTIONS_138",
+            "string": "＜保護＞"
+        },
+        {
+            "id": "L_OPTIONS_139",
+            "context": "L_OPTIONS_139",
+            "string": "キャリントンの別荘"
+        },
+        {
+            "id": "L_OPTIONS_140",
+            "context": "L_OPTIONS_140",
+            "string": "＜人質＞"
+        },
+        {
+            "id": "L_OPTIONS_141",
+            "context": "L_OPTIONS_141",
+            "string": "シカゴ"
+        },
+        {
+            "id": "L_OPTIONS_142",
+            "context": "L_OPTIONS_142",
+            "string": "＜潜入＞"
+        },
+        {
+            "id": "L_OPTIONS_143",
+            "context": "L_OPTIONS_143",
+            "string": "Ｇ５ビル"
+        },
+        {
+            "id": "L_OPTIONS_144",
+            "context": "L_OPTIONS_144",
+            "string": "＜盗撮＞"
+        },
+        {
+            "id": "L_OPTIONS_145",
+            "context": "L_OPTIONS_145",
+            "string": "エリア５１"
+        },
+        {
+            "id": "L_OPTIONS_146",
+            "context": "L_OPTIONS_146",
+            "string": "＜突破＞"
+        },
+        {
+            "id": "L_OPTIONS_147",
+            "context": "L_OPTIONS_147",
+            "string": "エリア５１"
+        },
+        {
+            "id": "L_OPTIONS_148",
+            "context": "L_OPTIONS_148",
+            "string": "＜救出＞"
+        },
+        {
+            "id": "L_OPTIONS_149",
+            "context": "L_OPTIONS_149",
+            "string": "エリア５１"
+        },
+        {
+            "id": "L_OPTIONS_150",
+            "context": "L_OPTIONS_150",
+            "string": "＜脱出＞"
+        },
+        {
+            "id": "L_OPTIONS_151",
+            "context": "L_OPTIONS_151",
+            "string": "アラスカ空軍基地"
+        },
+        {
+            "id": "L_OPTIONS_152",
+            "context": "L_OPTIONS_152",
+            "string": "＜変装＞"
+        },
+        {
+            "id": "L_OPTIONS_153",
+            "context": "L_OPTIONS_153",
+            "string": "大統領専用機"
+        },
+        {
+            "id": "L_OPTIONS_154",
+            "context": "L_OPTIONS_154",
+            "string": "＜暴露＞"
+        },
+        {
+            "id": "L_OPTIONS_155",
+            "context": "L_OPTIONS_155",
+            "string": "墜落現場"
+        },
+        {
+            "id": "L_OPTIONS_156",
+            "context": "L_OPTIONS_156",
+            "string": "＜対決＞"
+        },
+        {
+            "id": "L_OPTIONS_157",
+            "context": "L_OPTIONS_157",
+            "string": "ペラジック２"
+        },
+        {
+            "id": "L_OPTIONS_158",
+            "context": "L_OPTIONS_158",
+            "string": "＜妨害＞"
+        },
+        {
+            "id": "L_OPTIONS_159",
+            "context": "L_OPTIONS_159",
+            "string": "深海"
+        },
+        {
+            "id": "L_OPTIONS_160",
+            "context": "L_OPTIONS_160",
+            "string": "＜別れ＞"
+        },
+        {
+            "id": "L_OPTIONS_161",
+            "context": "L_OPTIONS_161",
+            "string": "キャリントン協会ビル"
+        },
+        {
+            "id": "L_OPTIONS_162",
+            "context": "L_OPTIONS_162",
+            "string": "＜防衛＞"
+        },
+        {
+            "id": "L_OPTIONS_163",
+            "context": "L_OPTIONS_163",
+            "string": "スケダー宇宙船"
+        },
+        {
+            "id": "L_OPTIONS_164",
+            "context": "L_OPTIONS_164",
+            "string": "＜制圧＞"
+        },
+        {
+            "id": "L_OPTIONS_165",
+            "context": "L_OPTIONS_165",
+            "string": "スケダーの神殿"
+        },
+        {
+            "id": "L_OPTIONS_166",
+            "context": "L_OPTIONS_166",
+            "string": "＜決戦＞"
+        },
+        {
+            "id": "L_OPTIONS_167",
+            "context": "L_OPTIONS_167",
+            "string": "ミスター・ブロンド"
+        },
+        {
+            "id": "L_OPTIONS_168",
+            "context": "L_OPTIONS_168",
+            "string": "マイアンＳＯＳ"
+        },
+        {
+            "id": "L_OPTIONS_169",
+            "context": "L_OPTIONS_169",
+            "string": "協会の奪回"
+        },
+        {
+            "id": "L_OPTIONS_170",
+            "context": "L_OPTIONS_170",
+            "string": "ＷＡＲ！"
+        },
+        {
+            "id": "L_OPTIONS_171",
+            "context": "L_OPTIONS_171",
+            "string": "決闘"
+        },
+        {
+            "id": "L_OPTIONS_172",
+            "context": "L_OPTIONS_172",
+            "string": "任務状況\n"
+        },
+        {
+            "id": "L_OPTIONS_173",
+            "context": "L_OPTIONS_173",
+            "string": "任務放棄！\n"
+        },
+        {
+            "id": "L_OPTIONS_174",
+            "context": "L_OPTIONS_174",
+            "string": "－警告－\n"
+        },
+        {
+            "id": "L_OPTIONS_175",
+            "context": "L_OPTIONS_175",
+            "string": "今回は任務を放棄しますか？\n"
+        },
+        {
+            "id": "L_OPTIONS_176",
+            "context": "L_OPTIONS_176",
+            "string": "キャンセル\n"
+        },
+        {
+            "id": "L_OPTIONS_177",
+            "context": "L_OPTIONS_177",
+            "string": "任務放棄\n"
+        },
+        {
+            "id": "L_OPTIONS_178",
+            "context": "L_OPTIONS_178",
+            "string": "持ち物\n"
+        },
+        {
+            "id": "L_OPTIONS_179",
+            "context": "L_OPTIONS_179",
+            "string": "使用可能な武器\n"
+        },
+        {
+            "id": "L_OPTIONS_180",
+            "context": "L_OPTIONS_180",
+            "string": "オプション\n"
+        },
+        {
+            "id": "L_OPTIONS_181",
+            "context": "L_OPTIONS_181",
+            "string": "オーディオ\n"
+        },
+        {
+            "id": "L_OPTIONS_182",
+            "context": "L_OPTIONS_182",
+            "string": "ビデオ\n"
+        },
+        {
+            "id": "L_OPTIONS_183",
+            "context": "L_OPTIONS_183",
+            "string": "操作設定\n"
+        },
+        {
+            "id": "L_OPTIONS_184",
+            "context": "L_OPTIONS_184",
+            "string": "表示設定\n"
+        },
+        {
+            "id": "L_OPTIONS_185",
+            "context": "L_OPTIONS_185",
+            "string": "チート\n"
+        },
+        {
+            "id": "L_OPTIONS_186",
+            "context": "L_OPTIONS_186",
+            "string": "セーブする\n"
+        },
+        {
+            "id": "L_OPTIONS_187",
+            "context": "L_OPTIONS_187",
+            "string": "ファイル変更\n"
+        },
+        {
+            "id": "L_OPTIONS_188",
+            "context": "L_OPTIONS_188",
+            "string": "－警告－\n"
+        },
+        {
+            "id": "L_OPTIONS_189",
+            "context": "L_OPTIONS_189",
+            "string": "別のゲームファイルに変更しますか？\n"
+        },
+        {
+            "id": "L_OPTIONS_190",
+            "context": "L_OPTIONS_190",
+            "string": "はい\n"
+        },
+        {
+            "id": "L_OPTIONS_191",
+            "context": "L_OPTIONS_191",
+            "string": "いいえ\n"
+        },
+        {
+            "id": "L_OPTIONS_192",
+            "context": "L_OPTIONS_192",
+            "string": "操作設定\n"
+        },
+        {
+            "id": "L_OPTIONS_193",
+            "context": "L_OPTIONS_193",
+            "string": "２Ｐの操作設定\n"
+        },
+        {
+            "id": "L_OPTIONS_194",
+            "context": "L_OPTIONS_194",
+            "string": "操作モード\n"
+        },
+        {
+            "id": "L_OPTIONS_195",
+            "context": "L_OPTIONS_195",
+            "string": "視点移動の上下逆\n"
+        },
+        {
+            "id": "L_OPTIONS_196",
+            "context": "L_OPTIONS_196",
+            "string": "自動前方視点\n"
+        },
+        {
+            "id": "L_OPTIONS_197",
+            "context": "L_OPTIONS_197",
+            "string": "頭のゆれ\n"
+        },
+        {
+            "id": "L_OPTIONS_198",
+            "context": "L_OPTIONS_198",
+            "string": "自動照準\n"
+        },
+        {
+            "id": "L_OPTIONS_199",
+            "context": "L_OPTIONS_199",
+            "string": "照準設定\n"
+        },
+        {
+            "id": "L_OPTIONS_200",
+            "context": "L_OPTIONS_200",
+            "string": "戻る\n"
+        },
+        {
+            "id": "L_OPTIONS_201",
+            "context": "L_OPTIONS_201",
+            "string": "ホールド\n"
+        },
+        {
+            "id": "L_OPTIONS_202",
+            "context": "L_OPTIONS_202",
+            "string": "切り替え\n"
+        },
+        {
+            "id": "L_OPTIONS_203",
+            "context": "L_OPTIONS_203",
+            "string": "表示設定\n"
+        },
+        {
+            "id": "L_OPTIONS_204",
+            "context": "L_OPTIONS_204",
+            "string": "２Ｐの表示設定\n"
+        },
+        {
+            "id": "L_OPTIONS_205",
+            "context": "L_OPTIONS_205",
+            "string": "照準情報の表示\n"
+        },
+        {
+            "id": "L_OPTIONS_206",
+            "context": "L_OPTIONS_206",
+            "string": "照準を常に表示\n"
+        },
+        {
+            "id": "L_OPTIONS_207",
+            "context": "L_OPTIONS_207",
+            "string": "ズーム範囲の表示\n"
+        },
+        {
+            "id": "L_OPTIONS_208",
+            "context": "L_OPTIONS_208",
+            "string": "弾数の表示\n"
+        },
+        {
+            "id": "L_OPTIONS_209",
+            "context": "L_OPTIONS_209",
+            "string": "武器モード表示\n"
+        },
+        {
+            "id": "L_OPTIONS_210",
+            "context": "L_OPTIONS_210",
+            "string": "ペイントボールモード\n"
+        },
+        {
+            "id": "L_OPTIONS_211",
+            "context": "L_OPTIONS_211",
+            "string": "字幕の表示\n"
+        },
+        {
+            "id": "L_OPTIONS_212",
+            "context": "L_OPTIONS_212",
+            "string": "ミッションタイムの表示\n"
+        },
+        {
+            "id": "L_OPTIONS_213",
+            "context": "L_OPTIONS_213",
+            "string": "戻る\n"
+        },
+        {
+            "id": "L_OPTIONS_214",
+            "context": "L_OPTIONS_214",
+            "string": "ビデオ設定\n"
+        },
+        {
+            "id": "L_OPTIONS_215",
+            "context": "L_OPTIONS_215",
+            "string": "画面サイズ\n"
+        },
+        {
+            "id": "L_OPTIONS_216",
+            "context": "L_OPTIONS_216",
+            "string": "画角\n"
+        },
+        {
+            "id": "L_OPTIONS_217",
+            "context": "L_OPTIONS_217",
+            "string": "ハイレゾ\n"
+        },
+        {
+            "id": "L_OPTIONS_218",
+            "context": "L_OPTIONS_218",
+            "string": "２Ｐモードの画面分割\n"
+        },
+        {
+            "id": "L_OPTIONS_219",
+            "context": "L_OPTIONS_219",
+            "string": "戻る\n"
+        },
+        {
+            "id": "L_OPTIONS_220",
+            "context": "L_OPTIONS_220",
+            "string": "フル\n"
+        },
+        {
+            "id": "L_OPTIONS_221",
+            "context": "L_OPTIONS_221",
+            "string": "ワイド\n"
+        },
+        {
+            "id": "L_OPTIONS_222",
+            "context": "L_OPTIONS_222",
+            "string": "シネマ\n"
+        },
+        {
+            "id": "L_OPTIONS_223",
+            "context": "L_OPTIONS_223",
+            "string": "ノーマル\n"
+        },
+        {
+            "id": "L_OPTIONS_224",
+            "context": "L_OPTIONS_224",
+            "string": "広角\n"
+        },
+        {
+            "id": "L_OPTIONS_225",
+            "context": "L_OPTIONS_225",
+            "string": "ヨコ\n"
+        },
+        {
+            "id": "L_OPTIONS_226",
+            "context": "L_OPTIONS_226",
+            "string": "タテ\n"
+        },
+        {
+            "id": "L_OPTIONS_227",
+            "context": "L_OPTIONS_227",
+            "string": "オーディオ設定\n"
+        },
+        {
+            "id": "L_OPTIONS_228",
+            "context": "L_OPTIONS_228",
+            "string": "効果音\n"
+        },
+        {
+            "id": "L_OPTIONS_229",
+            "context": "L_OPTIONS_229",
+            "string": "ＢＧＭ\n"
+        },
+        {
+            "id": "L_OPTIONS_230",
+            "context": "L_OPTIONS_230",
+            "string": "モード\n"
+        },
+        {
+            "id": "L_OPTIONS_231",
+            "context": "L_OPTIONS_231",
+            "string": "戻る\n"
+        },
+        {
+            "id": "L_OPTIONS_232",
+            "context": "L_OPTIONS_232",
+            "string": "モノラル"
+        },
+        {
+            "id": "L_OPTIONS_233",
+            "context": "L_OPTIONS_233",
+            "string": "ステレオ"
+        },
+        {
+            "id": "L_OPTIONS_234",
+            "context": "L_OPTIONS_234",
+            "string": "ヘッドホン"
+        },
+        {
+            "id": "L_OPTIONS_235",
+            "context": "L_OPTIONS_235",
+            "string": "サラウンド"
+        },
+        {
+            "id": "L_OPTIONS_236",
+            "context": "L_OPTIONS_236",
+            "string": "操作設定\n"
+        },
+        {
+            "id": "L_OPTIONS_237",
+            "context": "L_OPTIONS_237",
+            "string": "Single\n"
+        },
+        {
+            "id": "L_OPTIONS_238",
+            "context": "L_OPTIONS_238",
+            "string": "Double\n"
+        },
+        {
+            "id": "L_OPTIONS_239",
+            "context": "L_OPTIONS_239",
+            "string": "1-1"
+        },
+        {
+            "id": "L_OPTIONS_240",
+            "context": "L_OPTIONS_240",
+            "string": "1-2"
+        },
+        {
+            "id": "L_OPTIONS_241",
+            "context": "L_OPTIONS_241",
+            "string": "1-3"
+        },
+        {
+            "id": "L_OPTIONS_242",
+            "context": "L_OPTIONS_242",
+            "string": "1-4"
+        },
+        {
+            "id": "L_OPTIONS_243",
+            "context": "L_OPTIONS_243",
+            "string": "2-1"
+        },
+        {
+            "id": "L_OPTIONS_244",
+            "context": "L_OPTIONS_244",
+            "string": "2-2"
+        },
+        {
+            "id": "L_OPTIONS_245",
+            "context": "L_OPTIONS_245",
+            "string": "2-3"
+        },
+        {
+            "id": "L_OPTIONS_246",
+            "context": "L_OPTIONS_246",
+            "string": "2-4"
+        },
+        {
+            "id": "L_OPTIONS_247",
+            "context": "L_OPTIONS_247",
+            "string": "ミッション情報\n"
+        },
+        {
+            "id": "L_OPTIONS_248",
+            "context": "L_OPTIONS_248",
+            "string": "難易度選択\n"
+        },
+        {
+            "id": "L_OPTIONS_249",
+            "context": "L_OPTIONS_249",
+            "string": "難易度\n"
+        },
+        {
+            "id": "L_OPTIONS_250",
+            "context": "L_OPTIONS_250",
+            "string": "ベストタイム\n"
+        },
+        {
+            "id": "L_OPTIONS_251",
+            "context": "L_OPTIONS_251",
+            "string": "エージェント\n"
+        },
+        {
+            "id": "L_OPTIONS_252",
+            "context": "L_OPTIONS_252",
+            "string": "アドバンスト\n"
+        },
+        {
+            "id": "L_OPTIONS_253",
+            "context": "L_OPTIONS_253",
+            "string": "パーフェクト\n"
+        },
+        {
+            "id": "L_OPTIONS_254",
+            "context": "L_OPTIONS_254",
+            "string": "キャンセル\n"
+        },
+        {
+            "id": "L_OPTIONS_255",
+            "context": "L_OPTIONS_255",
+            "string": "協力ミッション　設定\n"
+        },
+        {
+            "id": "L_OPTIONS_256",
+            "context": "L_OPTIONS_256",
+            "string": "レーダー　オン\n"
+        },
+        {
+            "id": "L_OPTIONS_257",
+            "context": "L_OPTIONS_257",
+            "string": "味方への攻撃\n"
+        },
+        {
+            "id": "L_OPTIONS_258",
+            "context": "L_OPTIONS_258",
+            "string": "協力者の選択\n"
+        },
+        {
+            "id": "L_OPTIONS_259",
+            "context": "L_OPTIONS_259",
+            "string": "進む\n"
+        },
+        {
+            "id": "L_OPTIONS_260",
+            "context": "L_OPTIONS_260",
+            "string": "戻る\n"
+        },
+        {
+            "id": "L_OPTIONS_261",
+            "context": "L_OPTIONS_261",
+            "string": "プレイヤー２"
+        },
+        {
+            "id": "L_OPTIONS_262",
+            "context": "L_OPTIONS_262",
+            "string": "シミュラント１体"
+        },
+        {
+            "id": "L_OPTIONS_263",
+            "context": "L_OPTIONS_263",
+            "string": "シミュラント２体"
+        },
+        {
+            "id": "L_OPTIONS_264",
+            "context": "L_OPTIONS_264",
+            "string": "シミュラント３体"
+        },
+        {
+            "id": "L_OPTIONS_265",
+            "context": "L_OPTIONS_265",
+            "string": "シミュラント４体"
+        },
+        {
+            "id": "L_OPTIONS_266",
+            "context": "L_OPTIONS_266",
+            "string": "敵対ミッション　設定\n"
+        },
+        {
+            "id": "L_OPTIONS_267",
+            "context": "L_OPTIONS_267",
+            "string": "レーダー　オン\n"
+        },
+        {
+            "id": "L_OPTIONS_268",
+            "context": "L_OPTIONS_268",
+            "string": "敵側プレイヤー\n"
+        },
+        {
+            "id": "L_OPTIONS_269",
+            "context": "L_OPTIONS_269",
+            "string": "進む\n"
+        },
+        {
+            "id": "L_OPTIONS_270",
+            "context": "L_OPTIONS_270",
+            "string": "戻る\n"
+        },
+        {
+            "id": "L_OPTIONS_271",
+            "context": "L_OPTIONS_271",
+            "string": "プレイヤー１"
+        },
+        {
+            "id": "L_OPTIONS_272",
+            "context": "L_OPTIONS_272",
+            "string": "プレイヤー２"
+        },
+        {
+            "id": "L_OPTIONS_273",
+            "context": "L_OPTIONS_273",
+            "string": "必須任務\n"
+        },
+        {
+            "id": "L_OPTIONS_274",
+            "context": "L_OPTIONS_274",
+            "string": "了解する\n"
+        },
+        {
+            "id": "L_OPTIONS_275",
+            "context": "L_OPTIONS_275",
+            "string": "辞退する\n"
+        },
+        {
+            "id": "L_OPTIONS_276",
+            "context": "L_OPTIONS_276",
+            "string": "任務完了\n"
+        },
+        {
+            "id": "L_OPTIONS_277",
+            "context": "L_OPTIONS_277",
+            "string": "任務失敗\n"
+        },
+        {
+            "id": "L_OPTIONS_278",
+            "context": "L_OPTIONS_278",
+            "string": "任務結果：\n"
+        },
+        {
+            "id": "L_OPTIONS_279",
+            "context": "L_OPTIONS_279",
+            "string": "プレイヤー状況：\n"
+        },
+        {
+            "id": "L_OPTIONS_280",
+            "context": "L_OPTIONS_280",
+            "string": "ミッションタイム：\n"
+        },
+        {
+            "id": "L_OPTIONS_281",
+            "context": "L_OPTIONS_281",
+            "string": "一番よく使った武器：\n"
+        },
+        {
+            "id": "L_OPTIONS_282",
+            "context": "L_OPTIONS_282",
+            "string": "倒した総数：\n"
+        },
+        {
+            "id": "L_OPTIONS_283",
+            "context": "L_OPTIONS_283",
+            "string": "命中率：\n"
+        },
+        {
+            "id": "L_OPTIONS_284",
+            "context": "L_OPTIONS_284",
+            "string": "総ショット数：\n"
+        },
+        {
+            "id": "L_OPTIONS_285",
+            "context": "L_OPTIONS_285",
+            "string": "　頭部ヒット：\n"
+        },
+        {
+            "id": "L_OPTIONS_286",
+            "context": "L_OPTIONS_286",
+            "string": "　胴体ヒット：\n"
+        },
+        {
+            "id": "L_OPTIONS_287",
+            "context": "L_OPTIONS_287",
+            "string": "　手足ヒット：\n"
+        },
+        {
+            "id": "L_OPTIONS_288",
+            "context": "L_OPTIONS_288",
+            "string": "　その他：\n"
+        },
+        {
+            "id": "L_OPTIONS_289",
+            "context": "L_OPTIONS_289",
+            "string": "スタートボタン\n"
+        },
+        {
+            "id": "L_OPTIONS_290",
+            "context": "L_OPTIONS_290",
+            "string": "死亡\n"
+        },
+        {
+            "id": "L_OPTIONS_291",
+            "context": "L_OPTIONS_291",
+            "string": "良好\n"
+        },
+        {
+            "id": "L_OPTIONS_292",
+            "context": "L_OPTIONS_292",
+            "string": "逃亡\n"
+        },
+        {
+            "id": "L_OPTIONS_293",
+            "context": "L_OPTIONS_293",
+            "string": "任務失敗\n"
+        },
+        {
+            "id": "L_OPTIONS_294",
+            "context": "L_OPTIONS_294",
+            "string": "任務完了\n"
+        },
+        {
+            "id": "L_OPTIONS_295",
+            "context": "L_OPTIONS_295",
+            "string": "任務中止\n"
+        },
+        {
+            "id": "L_OPTIONS_296",
+            "context": "L_OPTIONS_296",
+            "string": "リトライ"
+        },
+        {
+            "id": "L_OPTIONS_297",
+            "context": "L_OPTIONS_297",
+            "string": "次のミッション"
+        },
+        {
+            "id": "L_OPTIONS_298",
+            "context": "L_OPTIONS_298",
+            "string": "了解する\n"
+        },
+        {
+            "id": "L_OPTIONS_299",
+            "context": "L_OPTIONS_299",
+            "string": "辞退する\n"
+        },
+        {
+            "id": "L_OPTIONS_300",
+            "context": "L_OPTIONS_300",
+            "string": "必須任務\n"
+        },
+        {
+            "id": "L_OPTIONS_301",
+            "context": "L_OPTIONS_301",
+            "string": "スタートボタン\n"
+        },
+        {
+            "id": "L_OPTIONS_302",
+            "context": "L_OPTIONS_302",
+            "string": "メインメニュー（拡張パック無し）\n"
+        },
+        {
+            "id": "L_OPTIONS_303",
+            "context": "L_OPTIONS_303",
+            "string": "コンバット・シミュレータ\n"
+        },
+        {
+            "id": "L_OPTIONS_304",
+            "context": "L_OPTIONS_304",
+            "string": "トレーニング\n"
+        },
+        {
+            "id": "L_OPTIONS_305",
+            "context": "L_OPTIONS_305",
+            "string": "オーディオ／ビデオ\n"
+        },
+        {
+            "id": "L_OPTIONS_306",
+            "context": "L_OPTIONS_306",
+            "string": "ファイル変更\n"
+        },
+        {
+            "id": "L_OPTIONS_307",
+            "context": "L_OPTIONS_307",
+            "string": "オーディオ／ビデオ設定l\n"
+        },
+        {
+            "id": "L_OPTIONS_308",
+            "context": "L_OPTIONS_308",
+            "string": "効果音\n"
+        },
+        {
+            "id": "L_OPTIONS_309",
+            "context": "L_OPTIONS_309",
+            "string": "ＢＧＭ\n"
+        },
+        {
+            "id": "L_OPTIONS_310",
+            "context": "L_OPTIONS_310",
+            "string": "モード\n"
+        },
+        {
+            "id": "L_OPTIONS_311",
+            "context": "L_OPTIONS_311",
+            "string": "画角\n"
+        },
+        {
+            "id": "L_OPTIONS_312",
+            "context": "L_OPTIONS_312",
+            "string": "戻る\n"
+        },
+        {
+            "id": "L_OPTIONS_313",
+            "context": "L_OPTIONS_313",
+            "string": "＜Ｎｅｗ＞\n"
+        },
+        {
+            "id": "L_OPTIONS_314",
+            "context": "L_OPTIONS_314",
+            "string": "DEL"
+        },
+        {
+            "id": "L_OPTIONS_315",
+            "context": "L_OPTIONS_315",
+            "string": "CAPS"
+        },
+        {
+            "id": "L_OPTIONS_316",
+            "context": "L_OPTIONS_316",
+            "string": "CANCEL"
+        },
+        {
+            "id": "L_OPTIONS_317",
+            "context": "L_OPTIONS_317",
+            "string": "OK"
+        },
+        {
+            "id": "L_OPTIONS_318",
+            "context": "L_OPTIONS_318",
+            "string": "コンバットシミュレータ・ヘッド\n"
+        },
+        {
+            "id": "L_OPTIONS_319",
+            "context": "L_OPTIONS_319",
+            "string": "ミッション・ヘッド\n"
+        },
+        {
+            "id": "L_OPTIONS_320",
+            "context": "L_OPTIONS_320",
+            "string": "エラー\n"
+        },
+        {
+            "id": "L_OPTIONS_321",
+            "context": "L_OPTIONS_321",
+            "string": "キャンセル\n"
+        },
+        {
+            "id": "L_OPTIONS_322",
+            "context": "L_OPTIONS_322",
+            "string": "コントローラパックが\n見つかりません\n"
+        },
+        {
+            "id": "L_OPTIONS_323",
+            "context": "L_OPTIONS_323",
+            "string": "セーブ出来ません\n"
+        },
+        {
+            "id": "L_OPTIONS_324",
+            "context": "L_OPTIONS_324",
+            "string": "ロード出来ません\n"
+        },
+        {
+            "id": "L_OPTIONS_325",
+            "context": "L_OPTIONS_325",
+            "string": "消去出来ません\n"
+        },
+        {
+            "id": "L_OPTIONS_326",
+            "context": "L_OPTIONS_326",
+            "string": "メモリー不足です\n"
+        },
+        {
+            "id": "L_OPTIONS_327",
+            "context": "L_OPTIONS_327",
+            "string": "すでにこの設定は\nロードされています\n"
+        },
+        {
+            "id": "L_OPTIONS_328",
+            "context": "L_OPTIONS_328",
+            "string": "が有りません\n"
+        },
+        {
+            "id": "L_OPTIONS_329",
+            "context": "L_OPTIONS_329",
+            "string": "コントローラパックが壊れているようです\n"
+        },
+        {
+            "id": "L_OPTIONS_330",
+            "context": "L_OPTIONS_330",
+            "string": "ゲームノートの消去に失敗しました\n"
+        },
+        {
+            "id": "L_OPTIONS_331",
+            "context": "L_OPTIONS_331",
+            "string": "ロードエラー\n"
+        },
+        {
+            "id": "L_OPTIONS_332",
+            "context": "L_OPTIONS_332",
+            "string": "セーブエラー\n"
+        },
+        {
+            "id": "L_OPTIONS_333",
+            "context": "L_OPTIONS_333",
+            "string": "ロードエラー\n"
+        },
+        {
+            "id": "L_OPTIONS_334",
+            "context": "L_OPTIONS_334",
+            "string": "セーブエラー\n"
+        },
+        {
+            "id": "L_OPTIONS_335",
+            "context": "L_OPTIONS_335",
+            "string": "ロードエラー\n"
+        },
+        {
+            "id": "L_OPTIONS_336",
+            "context": "L_OPTIONS_336",
+            "string": "セーブエラー\n"
+        },
+        {
+            "id": "L_OPTIONS_337",
+            "context": "L_OPTIONS_337",
+            "string": "ロードエラー\n"
+        },
+        {
+            "id": "L_OPTIONS_338",
+            "context": "L_OPTIONS_338",
+            "string": "セーブエラー\n"
+        },
+        {
+            "id": "L_OPTIONS_339",
+            "context": "L_OPTIONS_339",
+            "string": "エラー\n"
+        },
+        {
+            "id": "L_OPTIONS_340",
+            "context": "L_OPTIONS_340",
+            "string": "消去失敗\n"
+        },
+        {
+            "id": "L_OPTIONS_341",
+            "context": "L_OPTIONS_341",
+            "string": "ファイルの消去が出来ません\n"
+        },
+        {
+            "id": "L_OPTIONS_342",
+            "context": "L_OPTIONS_342",
+            "string": "コントローラパックが\n正しく接続されて\nいますか？\n"
+        },
+        {
+            "id": "L_OPTIONS_343",
+            "context": "L_OPTIONS_343",
+            "string": "キャンセル\n"
+        },
+        {
+            "id": "L_OPTIONS_344",
+            "context": "L_OPTIONS_344",
+            "string": "空きがありません\n"
+        },
+        {
+            "id": "L_OPTIONS_345",
+            "context": "L_OPTIONS_345",
+            "string": "完了！\n"
+        },
+        {
+            "id": "L_OPTIONS_346",
+            "context": "L_OPTIONS_346",
+            "string": "セーブされました\n"
+        },
+        {
+            "id": "L_OPTIONS_347",
+            "context": "L_OPTIONS_347",
+            "string": "ＯＫ\n"
+        },
+        {
+            "id": "L_OPTIONS_348",
+            "context": "L_OPTIONS_348",
+            "string": "セーブ中エラー発生\n"
+        },
+        {
+            "id": "L_OPTIONS_349",
+            "context": "L_OPTIONS_349",
+            "string": "もう１度\n"
+        },
+        {
+            "id": "L_OPTIONS_350",
+            "context": "L_OPTIONS_350",
+            "string": "別の場所にセーブ\n"
+        },
+        {
+            "id": "L_OPTIONS_351",
+            "context": "L_OPTIONS_351",
+            "string": "キャンセル\n"
+        },
+        {
+            "id": "L_OPTIONS_352",
+            "context": "L_OPTIONS_352",
+            "string": "ロード中にエラーが\n発生しました\n"
+        },
+        {
+            "id": "L_OPTIONS_353",
+            "context": "L_OPTIONS_353",
+            "string": "もう１度\n"
+        },
+        {
+            "id": "L_OPTIONS_354",
+            "context": "L_OPTIONS_354",
+            "string": "キャンセル\n"
+        },
+        {
+            "id": "L_OPTIONS_355",
+            "context": "L_OPTIONS_355",
+            "string": "ヘッド用のスペースが必要\n"
+        },
+        {
+            "id": "L_OPTIONS_356",
+            "context": "L_OPTIONS_356",
+            "string": "上書きするヘッドの選択：\n"
+        },
+        {
+            "id": "L_OPTIONS_357",
+            "context": "L_OPTIONS_357",
+            "string": "ＯＫ\n"
+        },
+        {
+            "id": "L_OPTIONS_358",
+            "context": "L_OPTIONS_358",
+            "string": "キャンセル\n"
+        },
+        {
+            "id": "L_OPTIONS_359",
+            "context": "L_OPTIONS_359",
+            "string": "セーブ\n"
+        },
+        {
+            "id": "L_OPTIONS_360",
+            "context": "L_OPTIONS_360",
+            "string": "別の場所に\nセーブしますか？\n"
+        },
+        {
+            "id": "L_OPTIONS_361",
+            "context": "L_OPTIONS_361",
+            "string": "ハイ\n"
+        },
+        {
+            "id": "L_OPTIONS_362",
+            "context": "L_OPTIONS_362",
+            "string": "イイエ\n"
+        },
+        {
+            "id": "L_OPTIONS_363",
+            "context": "L_OPTIONS_363",
+            "string": "%sが入った元のパックを接続して下さい\n"
+        },
+        {
+            "id": "L_OPTIONS_364",
+            "context": "L_OPTIONS_364",
+            "string": "セーブしたいコントローラパックを\nどれかのコントローラに\n入れて下さい\n"
+        },
+        {
+            "id": "L_OPTIONS_365",
+            "context": "L_OPTIONS_365",
+            "string": "ＯＫ\n"
+        },
+        {
+            "id": "L_OPTIONS_366",
+            "context": "L_OPTIONS_366",
+            "string": "キャンセル\n"
+        },
+        {
+            "id": "L_OPTIONS_367",
+            "context": "L_OPTIONS_367",
+            "string": "場所選択\n"
+        },
+        {
+            "id": "L_OPTIONS_368",
+            "context": "L_OPTIONS_368",
+            "string": "場所\n"
+        },
+        {
+            "id": "L_OPTIONS_369",
+            "context": "L_OPTIONS_369",
+            "string": "空き\n"
+        },
+        {
+            "id": "L_OPTIONS_370",
+            "context": "L_OPTIONS_370",
+            "string": "ファイル消去…\n"
+        },
+        {
+            "id": "L_OPTIONS_371",
+            "context": "L_OPTIONS_371",
+            "string": "キャンセル\n"
+        },
+        {
+            "id": "L_OPTIONS_372",
+            "context": "L_OPTIONS_372",
+            "string": "無"
+        },
+        {
+            "id": "L_OPTIONS_373",
+            "context": "L_OPTIONS_373",
+            "string": "ファイルコピー\n"
+        },
+        {
+            "id": "L_OPTIONS_374",
+            "context": "L_OPTIONS_374",
+            "string": "コピーファイルの選択\n"
+        },
+        {
+            "id": "L_OPTIONS_375",
+            "context": "L_OPTIONS_375",
+            "string": "Ｂボタンで戻る\n"
+        },
+        {
+            "id": "L_OPTIONS_376",
+            "context": "L_OPTIONS_376",
+            "string": "ファイル消去\n"
+        },
+        {
+            "id": "L_OPTIONS_377",
+            "context": "L_OPTIONS_377",
+            "string": "消去ファイルの選択\n"
+        },
+        {
+            "id": "L_OPTIONS_378",
+            "context": "L_OPTIONS_378",
+            "string": "Ｂボタンで戻る\n"
+        },
+        {
+            "id": "L_OPTIONS_379",
+            "context": "L_OPTIONS_379",
+            "string": "－警告－\n"
+        },
+        {
+            "id": "L_OPTIONS_380",
+            "context": "L_OPTIONS_380",
+            "string": "このファイルを消去し\nてもよろしいですか？\n"
+        },
+        {
+            "id": "L_OPTIONS_381",
+            "context": "L_OPTIONS_381",
+            "string": "キャンセル\n"
+        },
+        {
+            "id": "L_OPTIONS_382",
+            "context": "L_OPTIONS_382",
+            "string": "ＯＫ\n"
+        },
+        {
+            "id": "L_OPTIONS_383",
+            "context": "L_OPTIONS_383",
+            "string": "ゲームノートの消去\n"
+        },
+        {
+            "id": "L_OPTIONS_384",
+            "context": "L_OPTIONS_384",
+            "string": "本当にこの\nゲームノートを\n消去しますか？\n"
+        },
+        {
+            "id": "L_OPTIONS_385",
+            "context": "L_OPTIONS_385",
+            "string": "イイエ\n"
+        },
+        {
+            "id": "L_OPTIONS_386",
+            "context": "L_OPTIONS_386",
+            "string": "ハイ\n"
+        },
+        {
+            "id": "L_OPTIONS_387",
+            "context": "L_OPTIONS_387",
+            "string": "ゲームノート\n"
+        },
+        {
+            "id": "L_OPTIONS_388",
+            "context": "L_OPTIONS_388",
+            "string": "ゲームノートの消去：\n"
+        },
+        {
+            "id": "L_OPTIONS_389",
+            "context": "L_OPTIONS_389",
+            "string": "ノート\n"
+        },
+        {
+            "id": "L_OPTIONS_390",
+            "context": "L_OPTIONS_390",
+            "string": "ページ\n"
+        },
+        {
+            "id": "L_OPTIONS_391",
+            "context": "L_OPTIONS_391",
+            "string": "Ｂボタンで戻る\n"
+        },
+        {
+            "id": "L_OPTIONS_392",
+            "context": "L_OPTIONS_392",
+            "string": "空き\n"
+        },
+        {
+            "id": "L_OPTIONS_393",
+            "context": "L_OPTIONS_393",
+            "string": "--\n"
+        },
+        {
+            "id": "L_OPTIONS_394",
+            "context": "L_OPTIONS_394",
+            "string": "空きページ： \n"
+        },
+        {
+            "id": "L_OPTIONS_395",
+            "context": "L_OPTIONS_395",
+            "string": "空きページ： %d\n"
+        },
+        {
+            "id": "L_OPTIONS_396",
+            "context": "L_OPTIONS_396",
+            "string": "使用ページ： \n"
+        },
+        {
+            "id": "L_OPTIONS_397",
+            "context": "L_OPTIONS_397",
+            "string": "使用ページ： %d\n"
+        },
+        {
+            "id": "L_OPTIONS_398",
+            "context": "L_OPTIONS_398",
+            "string": "このゲームのゲームノートは\nこのコントローラパックに既に存在します\n"
+        },
+        {
+            "id": "L_OPTIONS_399",
+            "context": "L_OPTIONS_399",
+            "string": "このゲームのゲームノートを作るための\n十分な空きスペースがあります\n"
+        },
+        {
+            "id": "L_OPTIONS_400",
+            "context": "L_OPTIONS_400",
+            "string": "コントローラパックがいっぱいです　セーブ\nするには１ノート（２８ページ）が必要です\n"
+        },
+        {
+            "id": "L_OPTIONS_401",
+            "context": "L_OPTIONS_401",
+            "string": "名前の入力\n"
+        },
+        {
+            "id": "L_OPTIONS_402",
+            "context": "L_OPTIONS_402",
+            "string": "Ｎｅｗファイル…\n"
+        },
+        {
+            "id": "L_OPTIONS_403",
+            "context": "L_OPTIONS_403",
+            "string": "Ｎｅｗエージェント\n"
+        },
+        {
+            "id": "L_OPTIONS_404",
+            "context": "L_OPTIONS_404",
+            "string": "新人エージェント"
+        },
+        {
+            "id": "L_OPTIONS_405",
+            "context": "L_OPTIONS_405",
+            "string": "ミッションタイム："
+        },
+        {
+            "id": "L_OPTIONS_406",
+            "context": "L_OPTIONS_406",
+            "string": "チャレンジ１"
+        },
+        {
+            "id": "L_OPTIONS_407",
+            "context": "L_OPTIONS_407",
+            "string": "チャレンジ２"
+        },
+        {
+            "id": "L_OPTIONS_408",
+            "context": "L_OPTIONS_408",
+            "string": "チャレンジ３"
+        },
+        {
+            "id": "L_OPTIONS_409",
+            "context": "L_OPTIONS_409",
+            "string": "チャレンジ４"
+        },
+        {
+            "id": "L_OPTIONS_410",
+            "context": "L_OPTIONS_410",
+            "string": "チャレンジ５"
+        },
+        {
+            "id": "L_OPTIONS_411",
+            "context": "L_OPTIONS_411",
+            "string": "チャレンジ６"
+        },
+        {
+            "id": "L_OPTIONS_412",
+            "context": "L_OPTIONS_412",
+            "string": "チャレンジ７"
+        },
+        {
+            "id": "L_OPTIONS_413",
+            "context": "L_OPTIONS_413",
+            "string": "チャレンジ８"
+        },
+        {
+            "id": "L_OPTIONS_414",
+            "context": "L_OPTIONS_414",
+            "string": "チャレンジ９"
+        },
+        {
+            "id": "L_OPTIONS_415",
+            "context": "L_OPTIONS_415",
+            "string": "チャレンジ１０"
+        },
+        {
+            "id": "L_OPTIONS_416",
+            "context": "L_OPTIONS_416",
+            "string": "チャレンジ１１"
+        },
+        {
+            "id": "L_OPTIONS_417",
+            "context": "L_OPTIONS_417",
+            "string": "チャレンジ１２"
+        },
+        {
+            "id": "L_OPTIONS_418",
+            "context": "L_OPTIONS_418",
+            "string": "チャレンジ１３"
+        },
+        {
+            "id": "L_OPTIONS_419",
+            "context": "L_OPTIONS_419",
+            "string": "チャレンジ１４"
+        },
+        {
+            "id": "L_OPTIONS_420",
+            "context": "L_OPTIONS_420",
+            "string": "チャレンジ１５"
+        },
+        {
+            "id": "L_OPTIONS_421",
+            "context": "L_OPTIONS_421",
+            "string": "チャレンジ１６"
+        },
+        {
+            "id": "L_OPTIONS_422",
+            "context": "L_OPTIONS_422",
+            "string": "チャレンジ１７"
+        },
+        {
+            "id": "L_OPTIONS_423",
+            "context": "L_OPTIONS_423",
+            "string": "チャレンジ１８"
+        },
+        {
+            "id": "L_OPTIONS_424",
+            "context": "L_OPTIONS_424",
+            "string": "チャレンジ１９"
+        },
+        {
+            "id": "L_OPTIONS_425",
+            "context": "L_OPTIONS_425",
+            "string": "チャレンジ２０"
+        },
+        {
+            "id": "L_OPTIONS_426",
+            "context": "L_OPTIONS_426",
+            "string": "チャレンジ２１"
+        },
+        {
+            "id": "L_OPTIONS_427",
+            "context": "L_OPTIONS_427",
+            "string": "チャレンジ２２"
+        },
+        {
+            "id": "L_OPTIONS_428",
+            "context": "L_OPTIONS_428",
+            "string": "チャレンジ２３"
+        },
+        {
+            "id": "L_OPTIONS_429",
+            "context": "L_OPTIONS_429",
+            "string": "チャレンジ２４"
+        },
+        {
+            "id": "L_OPTIONS_430",
+            "context": "L_OPTIONS_430",
+            "string": "チャレンジ２５"
+        },
+        {
+            "id": "L_OPTIONS_431",
+            "context": "L_OPTIONS_431",
+            "string": "チャレンジ２６"
+        },
+        {
+            "id": "L_OPTIONS_432",
+            "context": "L_OPTIONS_432",
+            "string": "チャレンジ２７"
+        },
+        {
+            "id": "L_OPTIONS_433",
+            "context": "L_OPTIONS_433",
+            "string": "チャレンジ２８"
+        },
+        {
+            "id": "L_OPTIONS_434",
+            "context": "L_OPTIONS_434",
+            "string": "チャレンジ２９"
+        },
+        {
+            "id": "L_OPTIONS_435",
+            "context": "L_OPTIONS_435",
+            "string": "チャレンジ３０"
+        },
+        {
+            "id": "L_OPTIONS_436",
+            "context": "L_OPTIONS_436",
+            "string": "スペシャル\n"
+        },
+        {
+            "id": "L_OPTIONS_437",
+            "context": "L_OPTIONS_437",
+            "string": "イントロ\n"
+        },
+        {
+            "id": "L_OPTIONS_438",
+            "context": "L_OPTIONS_438",
+            "string": "ミッション１…データダイン本社\n"
+        },
+        {
+            "id": "L_OPTIONS_439",
+            "context": "L_OPTIONS_439",
+            "string": "ミッション２…キャリントンの別荘\n"
+        },
+        {
+            "id": "L_OPTIONS_440",
+            "context": "L_OPTIONS_440",
+            "string": "ミッション３…Ｇ５ビル\n"
+        },
+        {
+            "id": "L_OPTIONS_441",
+            "context": "L_OPTIONS_441",
+            "string": "ミッション４…エリア５１\n"
+        },
+        {
+            "id": "L_OPTIONS_442",
+            "context": "L_OPTIONS_442",
+            "string": "ミッション５…大統領専用機\n"
+        },
+        {
+            "id": "L_OPTIONS_443",
+            "context": "L_OPTIONS_443",
+            "string": "ミッション６…ペラジック２\n"
+        },
+        {
+            "id": "L_OPTIONS_444",
+            "context": "L_OPTIONS_444",
+            "string": "ミッション７…キャリントン協会ビル\n"
+        },
+        {
+            "id": "L_OPTIONS_445",
+            "context": "L_OPTIONS_445",
+            "string": "ミッション８…スケダー宇宙船\n"
+        },
+        {
+            "id": "L_OPTIONS_446",
+            "context": "L_OPTIONS_446",
+            "string": "ミッション９…スケダーの神殿\n"
+        },
+        {
+            "id": "L_OPTIONS_447",
+            "context": "L_OPTIONS_447",
+            "string": "ファイナル\n"
+        },
+        {
+            "id": "L_OPTIONS_448",
+            "context": "L_OPTIONS_448",
+            "string": "全てをプレイ\n"
+        },
+        {
+            "id": "L_OPTIONS_449",
+            "context": "L_OPTIONS_449",
+            "string": "オープニング\n"
+        },
+        {
+            "id": "L_OPTIONS_450",
+            "context": "L_OPTIONS_450",
+            "string": "1-1　序：闇への始動\n"
+        },
+        {
+            "id": "L_OPTIONS_451",
+            "context": "L_OPTIONS_451",
+            "string": "1-1　終：急降下\n"
+        },
+        {
+            "id": "L_OPTIONS_452",
+            "context": "L_OPTIONS_452",
+            "string": "1-2　序：地下へ\n"
+        },
+        {
+            "id": "L_OPTIONS_453",
+            "context": "L_OPTIONS_453",
+            "string": "1-2　終：出会い\n"
+        },
+        {
+            "id": "L_OPTIONS_454",
+            "context": "L_OPTIONS_454",
+            "string": "1-3　序：消灯\n"
+        },
+        {
+            "id": "L_OPTIONS_455",
+            "context": "L_OPTIONS_455",
+            "string": "1-3　終：「どこにお出かけかしら？」\n"
+        },
+        {
+            "id": "L_OPTIONS_456",
+            "context": "L_OPTIONS_456",
+            "string": "2-1　序：オトリ作戦\n"
+        },
+        {
+            "id": "L_OPTIONS_457",
+            "context": "L_OPTIONS_457",
+            "string": "2-1　序２：風前のともし火\n"
+        },
+        {
+            "id": "L_OPTIONS_458",
+            "context": "L_OPTIONS_458",
+            "string": "2-1　終：キャリントンの救出\n"
+        },
+        {
+            "id": "L_OPTIONS_459",
+            "context": "L_OPTIONS_459",
+            "string": "3-1　序：暗き路地\n"
+        },
+        {
+            "id": "L_OPTIONS_460",
+            "context": "L_OPTIONS_460",
+            "string": "3-1　終：Ｇ５ビルへ\n"
+        },
+        {
+            "id": "L_OPTIONS_461",
+            "context": "L_OPTIONS_461",
+            "string": "3-2　序：スパイクローク\n"
+        },
+        {
+            "id": "L_OPTIONS_462",
+            "context": "L_OPTIONS_462",
+            "string": "3-2　特：ミーティング\n"
+        },
+        {
+            "id": "L_OPTIONS_463",
+            "context": "L_OPTIONS_463",
+            "string": "3-2　終：非常口\n"
+        },
+        {
+            "id": "L_OPTIONS_464",
+            "context": "L_OPTIONS_464",
+            "string": "4-1　序：危険な映像\n"
+        },
+        {
+            "id": "L_OPTIONS_465",
+            "context": "L_OPTIONS_465",
+            "string": "4-1　終：合流\n"
+        },
+        {
+            "id": "L_OPTIONS_466",
+            "context": "L_OPTIONS_466",
+            "string": "4-2　序：キュート？なコンテナ\n"
+        },
+        {
+            "id": "L_OPTIONS_467",
+            "context": "L_OPTIONS_467",
+            "string": "4-2　終：救出\n"
+        },
+        {
+            "id": "L_OPTIONS_468",
+            "context": "L_OPTIONS_468",
+            "string": "4-3　序：ガス！\n"
+        },
+        {
+            "id": "L_OPTIONS_469",
+            "context": "L_OPTIONS_469",
+            "string": "4-3　特：エルビスの目覚め\n"
+        },
+        {
+            "id": "L_OPTIONS_470",
+            "context": "L_OPTIONS_470",
+            "string": "4-3　終：脱出\n"
+        },
+        {
+            "id": "L_OPTIONS_471",
+            "context": "L_OPTIONS_471",
+            "string": "5-1　序：雪山の要塞\n"
+        },
+        {
+            "id": "L_OPTIONS_472",
+            "context": "L_OPTIONS_472",
+            "string": "5-1　終：離陸\n"
+        },
+        {
+            "id": "L_OPTIONS_473",
+            "context": "L_OPTIONS_473",
+            "string": "5-2　序：ラストチャンス\n"
+        },
+        {
+            "id": "L_OPTIONS_474",
+            "context": "L_OPTIONS_474",
+            "string": "5-2　特：ドッキング\n"
+        },
+        {
+            "id": "L_OPTIONS_475",
+            "context": "L_OPTIONS_475",
+            "string": "5-2　終：制御不能\n"
+        },
+        {
+            "id": "L_OPTIONS_476",
+            "context": "L_OPTIONS_476",
+            "string": "5-3　序：焼けた雪原\n"
+        },
+        {
+            "id": "L_OPTIONS_477",
+            "context": "L_OPTIONS_477",
+            "string": "5-3　終：ブロンドの怪物\n"
+        },
+        {
+            "id": "L_OPTIONS_478",
+            "context": "L_OPTIONS_478",
+            "string": "6-1　序：ふたりのダイバー\n"
+        },
+        {
+            "id": "L_OPTIONS_479",
+            "context": "L_OPTIONS_479",
+            "string": "6-1　終：深海へ\n"
+        },
+        {
+            "id": "L_OPTIONS_480",
+            "context": "L_OPTIONS_480",
+            "string": "6-2　序：海底にて\n"
+        },
+        {
+            "id": "L_OPTIONS_481",
+            "context": "L_OPTIONS_481",
+            "string": "6-2　特：別れ\n"
+        },
+        {
+            "id": "L_OPTIONS_482",
+            "context": "L_OPTIONS_482",
+            "string": "6-2　終：消滅\n"
+        },
+        {
+            "id": "L_OPTIONS_483",
+            "context": "L_OPTIONS_483",
+            "string": "7-1　序：パーティ前の…\n"
+        },
+        {
+            "id": "L_OPTIONS_484",
+            "context": "L_OPTIONS_484",
+            "string": "7-1　終：逃げて！\n"
+        },
+        {
+            "id": "L_OPTIONS_485",
+            "context": "L_OPTIONS_485",
+            "string": "8-1　序：捕らわれの…\n"
+        },
+        {
+            "id": "L_OPTIONS_486",
+            "context": "L_OPTIONS_486",
+            "string": "8-1　終：赤き星へ\n"
+        },
+        {
+            "id": "L_OPTIONS_487",
+            "context": "L_OPTIONS_487",
+            "string": "9-1　序：嵐の前の…\n"
+        },
+        {
+            "id": "L_OPTIONS_488",
+            "context": "L_OPTIONS_488",
+            "string": "9-1　終：ジョアンナ\n"
+        },
+        {
+            "id": "L_OPTIONS_489",
+            "context": "L_OPTIONS_489",
+            "string": "エンディング\n"
+        },
+        {
+            "id": "L_OPTIONS_490",
+            "context": "L_OPTIONS_490",
+            "string": "シネマ\n"
+        },
+        {
+            "id": "L_OPTIONS_491",
+            "context": "L_OPTIONS_491",
+            "string": "クローク%d\n"
+        },
+        {
+            "id": "L_OPTIONS_492",
+            "context": "L_OPTIONS_492",
+            "string": "ターゲット選択\n"
+        },
+        {
+            "id": "L_OPTIONS_493",
+            "context": "L_OPTIONS_493",
+            "string": "敵を倒すと得点\n"
+        },
+        {
+            "id": "L_OPTIONS_494",
+            "context": "L_OPTIONS_494",
+            "string": null
+        },
+        {
+            "id": "L_OPTIONS_495",
+            "context": "L_OPTIONS_495",
+            "string": null
+        }
+    ]
+}

@@ -1,0 +1,384 @@
+{
+    "messages": [
+        {
+            "id": "L_ARK_000",
+            "context": "L_ARK_000",
+            "string": "|Situazione:\n\nÈ stato dato l'allarme e l'edificio è pieno di soldati pronti a darti il benvenuto! La fuga dall'atrio è impossibile a causa del numero di soldati presenti. Tu e il Dr. Caroll sarete prelevati da un mezzo di salvataggio dall'eliporto sul tetto.\n\n|Carrington:\n\nNon penso sia necessario ricordarti di proteggere il Dr. Caroll ad ogni costo, vero Joanna? Cassandra e la dataDyne faranno di tutto per impedirti di salvarlo. Fa attenzione!\n\n|Obiettivo 1: - Raggiungi i piani superiori\n\nFatti strada nell'atrio fino a raggiungere uno degli ascensori che porteranno te e il Dr. Caroll ai piani superiori dell'edificio.\n\n|Obiettivo 2: - Riattiva l'ascensore\n\nIn un PC del piano inferiore degli uffici abbiamo rintracciato l'ordine di bloccare l'unico ascensore accessibile. Devi trovare quel PC e cambiare l'ordine per rimettere in funzione l'ascensore.\n\n|Obiettivo 3: - Distruggi la cannoniera della dataDyne\n\nL'edificio dataDyne è sorvegliato da una potente cannoniera di difesa pronta a farti fuori in ogni momento per impedirti di procedere. Distruggila con estrema determinazione, o abbatterà la navetta e annienterà anche te.\n\n|Obiettivo 4: - Elimina guardie del corpo di Cassandra\n\nAbbiamo ragione di sospettare che Cassandra abbia sguinzagliato le sue guardie del corpo per bloccare l'accesso all'eliporto. Non riuscirai ad evitarle, quindi aspettati una lotta all'ultimo sangue quando le incontri.\n\n|Obiettivo 5: - Torna sul tetto per l'evacuamento\n\nRaggiungi l'eliporto dove ti attenderà il mezzo di salvataggio. Non dimenticarti del Dr. Caroll!\n\nFINE\n"
+        },
+        {
+            "id": "L_ARK_001",
+            "context": "L_ARK_001",
+            "string": "LUCERNE TOWER\n"
+        },
+        {
+            "id": "L_ARK_002",
+            "context": "L_ARK_002",
+            "string": "|Situazione:\n\nÈ stato dato l'allarme e l'edificio è pieno di soldati pronti a darti il benvenuto! La fuga dall'atrio è impossibile a causa del numero di soldati presenti. Tu e il Dr. Caroll sarete prelevati da un mezzo di salvataggio dall'eliporto sul tetto.\n\n|Carrington:\n\nNon penso sia necessario ricordarti di proteggere il Dr. Caroll ad ogni costo, vero Joanna? Cassandra e la dataDyne faranno di tutto per impedirti di salvarlo. Fa attenzione!\n\n|Obiettivo 1: - Raggiungi i piani superiori\n\nFatti strada nell'atrio fino a raggiungere uno degli ascensori che porteranno te e il Dr. Caroll ai piani superiori dell'edificio.\n\n|Obiettivo 2: - Distruggi la cannoniera della dataDyne\n\nL'edificio dataDyne è sorvegliato da una potente cannoniera di difesa pronta a farti fuori in ogni momento per impedirti di procedere. Distruggila con estrema determinazione, o abbatterà la navetta e annienterà anche te.\n\n|Obiettivo 3: - Elimina guardie del corpo di Cassandra\n\nAbbiamo ragione di sospettare che Cassandra abbia sguinzagliato le sue guardie del corpo per bloccare l'accesso all'eliporto. Non riuscirai ad evitarle, quindi aspettati una lotta all'ultimo sangue quando le incontri.\n\n|Obiettivo 4: - Torna sul tetto per l'evacuamento\n\nRaggiungi l'eliporto dove ti attenderà il mezzo di salvataggio. Non dimenticarti del Dr. Caroll!\n\nFINE\n"
+        },
+        {
+            "id": "L_ARK_003",
+            "context": "L_ARK_003",
+            "string": "|Situazione:\n\nÈ stato dato l'allarme e l'edificio è pieno di soldati pronti a darti il benvenuto! La fuga dall'atrio è impossibile a causa del numero di soldati presenti. Tu e il Dr. Caroll sarete prelevati da un mezzo di salvataggio dall'eliporto sul tetto.\n\n|Carrington:\n\nNon penso sia necessario ricordarti di proteggere il Dr. Caroll ad ogni costo, vero Joanna? Cassandra e la dataDyne faranno di tutto per impedirti di salvarlo. Fa attenzione!\n\n|Obiettivo 1: - Raggiungi i piani superiori\n\nFatti strada nell'atrio fino a raggiungere uno degli ascensori che porteranno te e il Dr. Caroll ai piani superiori dell'edificio.\n\n|Obiettivo 2: - Elimina guardie del corpo di Cassandra\n\nAbbiamo ragione di sospettare che Cassandra abbia sguinzagliato le sue guardie del corpo per bloccare l'accesso all'eliporto. Non riuscirai ad evitarle, quindi aspettati una lotta all'ultimo sangue quando le incontri.\n\n|Obiettivo 3: - Torna sul tetto per l'evacuamento\n\nRaggiungi l'eliporto dove ti attenderà il mezzo di salvataggio. Non dimenticarti del Dr. Caroll!\n\nFINE\n"
+        },
+        {
+            "id": "L_ARK_004",
+            "context": "L_ARK_004",
+            "string": null
+        },
+        {
+            "id": "L_ARK_005",
+            "context": "L_ARK_005",
+            "string": null
+        },
+        {
+            "id": "L_ARK_006",
+            "context": "L_ARK_006",
+            "string": null
+        },
+        {
+            "id": "L_ARK_007",
+            "context": "L_ARK_007",
+            "string": null
+        },
+        {
+            "id": "L_ARK_008",
+            "context": "L_ARK_008",
+            "string": null
+        },
+        {
+            "id": "L_ARK_009",
+            "context": "L_ARK_009",
+            "string": "Usa l'ascensore dell'atrio\n"
+        },
+        {
+            "id": "L_ARK_010",
+            "context": "L_ARK_010",
+            "string": "Riattiva l'ascensore degli uffici\n"
+        },
+        {
+            "id": "L_ARK_011",
+            "context": "L_ARK_011",
+            "string": "Distruggi la cannoniera dataDyne\n"
+        },
+        {
+            "id": "L_ARK_012",
+            "context": "L_ARK_012",
+            "string": "Elimina guardie del corpo di Cassandra\n"
+        },
+        {
+            "id": "L_ARK_013",
+            "context": "L_ARK_013",
+            "string": "Appuntamento all'eliporto\n"
+        },
+        {
+            "id": "L_ARK_014",
+            "context": "L_ARK_014",
+            "string": "I comandi dell'ascensore...\n"
+        },
+        {
+            "id": "L_ARK_015",
+            "context": "L_ARK_015",
+            "string": "LE LUCI SONO ACCESE!\n"
+        },
+        {
+            "id": "L_ARK_016",
+            "context": "L_ARK_016",
+            "string": "Il Dr. Caroll è stato ucciso!\n"
+        },
+        {
+            "id": "L_ARK_017",
+            "context": "L_ARK_017",
+            "string": "Attaccano il Dr. Caroll!\n"
+        },
+        {
+            "id": "L_ARK_018",
+            "context": "L_ARK_018",
+            "string": "Il Dr. Caroll è ferito!\n"
+        },
+        {
+            "id": "L_ARK_019",
+            "context": "L_ARK_019",
+            "string": "Troppo tardi! È già qui!\n"
+        },
+        {
+            "id": "L_ARK_020",
+            "context": "L_ARK_020",
+            "string": "Sei una vera scocciatura!\n"
+        },
+        {
+            "id": "L_ARK_021",
+            "context": "L_ARK_021",
+            "string": "Buona notte, Perfect Dark!\n"
+        },
+        {
+            "id": "L_ARK_022",
+            "context": "L_ARK_022",
+            "string": "LUCI ACCESE ORA\n"
+        },
+        {
+            "id": "L_ARK_023",
+            "context": "L_ARK_023",
+            "string": "LUCI SPENTE ORA\n"
+        },
+        {
+            "id": "L_ARK_024",
+            "context": "L_ARK_024",
+            "string": "MISSIONE FALLITA\n"
+        },
+        {
+            "id": "L_ARK_025",
+            "context": "L_ARK_025",
+            "string": "MISSIONE COMPIUTA\n"
+        },
+        {
+            "id": "L_ARK_026",
+            "context": "L_ARK_026",
+            "string": "Allarme cannoniera!\n"
+        },
+        {
+            "id": "L_ARK_027",
+            "context": "L_ARK_027",
+            "string": "Procurati Vista Notturna\n"
+        },
+        {
+            "id": "L_ARK_028",
+            "context": "L_ARK_028",
+            "string": "Cassandra De Vries:\n"
+        },
+        {
+            "id": "L_ARK_029",
+            "context": "L_ARK_029",
+            "string": "Vista Notturna\n"
+        },
+        {
+            "id": "L_ARK_030",
+            "context": "L_ARK_030",
+            "string": "Vista Notturna\n"
+        },
+        {
+            "id": "L_ARK_031",
+            "context": "L_ARK_031",
+            "string": "Presa Vista Notturna\n"
+        },
+        {
+            "id": "L_ARK_032",
+            "context": "L_ARK_032",
+            "string": "Chi non muore si rivede!\n"
+        },
+        {
+            "id": "L_ARK_033",
+            "context": "L_ARK_033",
+            "string": "Raggiunto l'ascensore nell'atrio.\n"
+        },
+        {
+            "id": "L_ARK_034",
+            "context": "L_ARK_034",
+            "string": "Aperta la porta ascensore uffici.\n"
+        },
+        {
+            "id": "L_ARK_035",
+            "context": "L_ARK_035",
+            "string": "Eliminata la cannoniera dataDyne.\n"
+        },
+        {
+            "id": "L_ARK_036",
+            "context": "L_ARK_036",
+            "string": "Sconfitte le guardie del corpo di Cassandra.\n"
+        },
+        {
+            "id": "L_ARK_037",
+            "context": "L_ARK_037",
+            "string": "Non si fa così, idiota!\n"
+        },
+        {
+            "id": "L_ARK_038",
+            "context": "L_ARK_038",
+            "string": "Sì, invece!\n"
+        },
+        {
+            "id": "L_ARK_039",
+            "context": "L_ARK_039",
+            "string": "Dammi qua! Faccio io!\n"
+        },
+        {
+            "id": "L_ARK_040",
+            "context": "L_ARK_040",
+            "string": "Non scocciarmi!\n"
+        },
+        {
+            "id": "L_ARK_041",
+            "context": "L_ARK_041",
+            "string": "Ti vuoi dare una mossa?!\n"
+        },
+        {
+            "id": "L_ARK_042",
+            "context": "L_ARK_042",
+            "string": "Oh, no! Troppo tardi.\n"
+        },
+        {
+            "id": "L_ARK_043",
+            "context": "L_ARK_043",
+            "string": "Ci ha raggiunti...\n"
+        },
+        {
+            "id": "L_ARK_044",
+            "context": "L_ARK_044",
+            "string": "Prendila!\n"
+        },
+        {
+            "id": "L_ARK_045",
+            "context": "L_ARK_045",
+            "string": "Distrutto strumento essenziale alla missione\n"
+        },
+        {
+            "id": "L_ARK_046",
+            "context": "L_ARK_046",
+            "string": "Procurati TeleSpia.\n"
+        },
+        {
+            "id": "L_ARK_047",
+            "context": "L_ARK_047",
+            "string": "Dr. Caroll:\n"
+        },
+        {
+            "id": "L_ARK_048",
+            "context": "L_ARK_048",
+            "string": "TeleSpia\n"
+        },
+        {
+            "id": "L_ARK_049",
+            "context": "L_ARK_049",
+            "string": "TeleSpia\n"
+        },
+        {
+            "id": "L_ARK_050",
+            "context": "L_ARK_050",
+            "string": "Presa la TeleSpia.\n"
+        },
+        {
+            "id": "L_ARK_051",
+            "context": "L_ARK_051",
+            "string": "Hanno chiuso il pianterreno! \nVa all'ascensore!\n"
+        },
+        {
+            "id": "L_ARK_052",
+            "context": "L_ARK_052",
+            "string": "Bisogna tirar giù quella cannoniera \no abbatterà la navetta!\n"
+        },
+        {
+            "id": "L_ARK_053",
+            "context": "L_ARK_053",
+            "string": "Non posso lasciar vive le guardie!\n"
+        },
+        {
+            "id": "L_ARK_054",
+            "context": "L_ARK_054",
+            "string": "Fai presto: vai alla navetta! \nTorna all'eliporto!\n"
+        },
+        {
+            "id": "L_ARK_055",
+            "context": "L_ARK_055",
+            "string": "Procurati la chiave alfa\n"
+        },
+        {
+            "id": "L_ARK_056",
+            "context": "L_ARK_056",
+            "string": "Guardia:\n"
+        },
+        {
+            "id": "L_ARK_057",
+            "context": "L_ARK_057",
+            "string": "Chiave dell'ufficio\n"
+        },
+        {
+            "id": "L_ARK_058",
+            "context": "L_ARK_058",
+            "string": "Chiave dell'ufficio\n"
+        },
+        {
+            "id": "L_ARK_059",
+            "context": "L_ARK_059",
+            "string": "Presa chiave ufficio di Cassandra\n"
+        },
+        {
+            "id": "L_ARK_060",
+            "context": "L_ARK_060",
+            "string": "Date l'allarme: è qui!\n"
+        },
+        {
+            "id": "L_ARK_061",
+            "context": "L_ARK_061",
+            "string": "Ma chiudi il becco!\n"
+        },
+        {
+            "id": "L_ARK_062",
+            "context": "L_ARK_062",
+            "string": "Ma cosa...?\n"
+        },
+        {
+            "id": "L_ARK_063",
+            "context": "L_ARK_063",
+            "string": "Dove credi di andare?\n"
+        },
+        {
+            "id": "L_ARK_064",
+            "context": "L_ARK_064",
+            "string": "Posso aiutarla, madama?\n"
+        },
+        {
+            "id": "L_ARK_065",
+            "context": "L_ARK_065",
+            "string": "Ridacci immediatamente il Sapiente! \nNon sai quel che fai!\n"
+        },
+        {
+            "id": "L_ARK_066",
+            "context": "L_ARK_066",
+            "string": "Certo che lo so: me ne vado!\n"
+        },
+        {
+            "id": "L_ARK_067",
+            "context": "L_ARK_067",
+            "string": "Te lo ripeto! Restituiscilo e \npotrai venire a lavorare per me.\n"
+        },
+        {
+            "id": "L_ARK_068",
+            "context": "L_ARK_068",
+            "string": "Spiacente! Ho da fare!\n"
+        },
+        {
+            "id": "L_ARK_069",
+            "context": "L_ARK_069",
+            "string": "Devi recuperare il Sapiente: senza \nnon è possibile andare avanti.\n"
+        },
+        {
+            "id": "L_ARK_070",
+            "context": "L_ARK_070",
+            "string": "Lo so benissimo!\n"
+        },
+        {
+            "id": "L_ARK_071",
+            "context": "L_ARK_071",
+            "string": "So anche con chi parlare... \ncon Carrington!\n"
+        },
+        {
+            "id": "L_ARK_072",
+            "context": "L_ARK_072",
+            "string": "La porta dell'ascensore è fuori servizio.\n"
+        },
+        {
+            "id": "L_ARK_073",
+            "context": "L_ARK_073",
+            "string": null
+        },
+        {
+            "id": "L_ARK_074",
+            "context": "L_ARK_074",
+            "string": null
+        },
+        {
+            "id": "L_ARK_075",
+            "context": "L_ARK_075",
+            "string": null
+        }
+    ]
+}

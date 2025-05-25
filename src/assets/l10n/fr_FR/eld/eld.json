@@ -1,0 +1,264 @@
+{
+    "messages": [
+        {
+            "id": "L_ELD_000",
+            "context": "L_ELD_000",
+            "string": "|Briefing - \n\nDaniel Carrington est pris en otage dans sa villa privée. Un message de Cassandra De Vries pose les conditions suivantes: la vie de Daniel contre l'IA nommée Dr. Caroll. Un élément que la dataDyne ignore: l'IA se trouvait dans la villa lors de l'attaque. Nous supposons que Daniel l'a dissimulée avant leur arrivée.\n\n |Carrington - \n\nNon disponible.\n\n|Objectif 1: - Eliminer les snipers du toit\n\nAprès avoir reçu la demande de rançon, nous avons effectué un vol de reconnaissance au-dessus de la villa. Nos prises de vues révèlent la présence de plusieurs snipers sur les toits. Pour progresser tranquillement, vous devez les éliminer.\n\n|Objectif 2: - Activer l'éolienne\n\nL'éolienne et les accumulateurs d'énergie sont coupés. Nous pensons que Daniel est le responsable de cette manoeuvre visant à empêcher les troupes de la dataDyne d'accéder aux systèmes de la villa. Une fois le courant rétabli, toutes les portes s'ouvriront. Ceci facilitera votre progression, mais aussi celle des troupes ennemies.\n\n|Objectif 3: - Trouver et neutraliser les pirates\n\nA de nombreuses reprises, les hackers de la dataDyne ont tenté de pirater les fichiers de l'Institut. Leur tâche sera plus facile s'ils interviennent directement dans la villa. S'ils lancent une telle opération, vous devrez agir promptement. Assurez-vous aussi que les terminaux contenant des données vitales pour l'Institut ne sont pas endommagés.\n\n|Objectif 4: - Capturer un garde ennemi\n\nCapturer un membre de l'équipe d'assaut de la dataDyne nous donnerait une idée de leurs plans. Surtout ne le tuez pas: assommez-le si vous le pouvez, ainsi il ne pourra pas s'échapper.\n\n|Objectif 5: - Sauver Carrington\n\nSeul Daniel connaît la position du Dr. Caroll. Tôt ou tard la dataDyne s'en rendra compte et tentera de le faire parler d'une manière ou d'une autre. Une fois l'IA entre leurs mains, la vie de Daniel ne vaudra plus rien.\n\nFIN\n"
+        },
+        {
+            "id": "L_ELD_001",
+            "context": "L_ELD_001",
+            "string": "VILLA CARRINGTON\n"
+        },
+        {
+            "id": "L_ELD_002",
+            "context": "L_ELD_002",
+            "string": "|Briefing - \n\nDaniel Carrington est pris en otage dans sa villa privée. Un message de Cassandra De Vries pose les conditions suivantes: la vie de Daniel contre l'IA nommée Dr. Caroll. Un élément que la dataDyne ignore: l'IA se trouvait dans la villa lors de l'attaque. Nous supposons que Daniel l'a dissimulée avant leur arrivée.\n\n |Carrington - \n\nNon disponible.\n\n|Objectif 1: - Sauver la négociatrice\n\nUn membre de l'Institut s'est porté volontaire pour créer une diversion pendant votre entrée sur les lieux. Elle sera très certainement executée par les soldats de la dataDyne si vous ne la tirez pas de là très rapidement. Déplacez-vous en rampant.\n\n|Objectif 2: - Eliminer les snipers du toit\n\nAprès avoir reçu la demande de rançon, nous avons effectué un vol de reconnaissance au-dessus de la villa. Nos prises de vues révèlent la présence de plusieurs snipers sur les toits. Pour progresser tranquillement, vous devez les éliminer.\n\n|Objectif 3: - Activer l'éolienne\n\nL'éolienne et les accumulateurs d'énergie sont coupés. Nous pensons que Daniel est le responsable de cette manoeuvre visant à empêcher les troupes de la dataDyne d'accéder aux systèmes de la villa. Une fois le courant rétabli, toutes les portes s'ouvriront. Ceci facilitera votre progression, mais aussi celle des troupes ennemies.\n\n|Objectif 4: - Sauver Carrington\n\nSeul Daniel connaît la position du Dr. Caroll. Tôt ou tard la dataDyne s'en rendra compte et tentera de le faire parler d'une manière ou d'une autre. Une fois l'IA entre leurs mains, la vie de Daniel ne vaudra plus rien.\n\nFIN\n"
+        },
+        {
+            "id": "L_ELD_003",
+            "context": "L_ELD_003",
+            "string": "|Briefing - \n\nDaniel Carrington est pris en otage dans sa villa privée. Un message de Cassandra De Vries pose les conditions suivantes: la vie de Daniel contre l'IA nommée Dr. Caroll. Un élément que la dataDyne ignore: l'IA se trouvait dans la villa lors de l'attaque. Nous supposons que Daniel l'a dissimulée avant leur arrivée.\n\n |Carrington - \n\nNon disponible.\n\n|Objectif 1: - Sauver la négociatrice\n\nUn membre de l'Institut s'est porté volontaire pour créer une diversion pendant votre entrée sur les lieux. Elle sera très certainement executée par les soldats de la dataDyne si vous ne la tirez pas de là très rapidement. Déplacez-vous en rampant.\n\n|Objectif 2: - Activer l'éolienne\n\nL'éolienne et les accumulateurs d'énergie sont coupés. Nous pensons que Daniel est le responsable de cette manoeuvre visant à empêcher les troupes de la dataDyne d'accéder aux systèmes de la villa. Une fois le courant rétabli, toutes les portes s'ouvriront. Ceci facilitera votre progression, mais aussi celle des troupes ennemies.\n\n|Objectif 3: - Sauver Carrington\n\nSeul Daniel connaît la position du Dr. Caroll. Tôt ou tard la dataDyne s'en rendra compte et tentera de le faire parler d'une manière ou d'une autre. Une fois l'IA entre leurs mains, la vie de Daniel ne vaudra plus rien.\n\nFIN\n"
+        },
+        {
+            "id": "L_ELD_004",
+            "context": "L_ELD_004",
+            "string": "\n"
+        },
+        {
+            "id": "L_ELD_005",
+            "context": "L_ELD_005",
+            "string": "Sauver la négociatrice\n"
+        },
+        {
+            "id": "L_ELD_006",
+            "context": "L_ELD_006",
+            "string": "Eliminer les snipers du toit\n"
+        },
+        {
+            "id": "L_ELD_007",
+            "context": "L_ELD_007",
+            "string": "Activer l'éolienne\n"
+        },
+        {
+            "id": "L_ELD_008",
+            "context": "L_ELD_008",
+            "string": "Trouver et neutraliser les pirates\n"
+        },
+        {
+            "id": "L_ELD_009",
+            "context": "L_ELD_009",
+            "string": "Sauver Carrington\n"
+        },
+        {
+            "id": "L_ELD_010",
+            "context": "L_ELD_010",
+            "string": "Capturer un garde ennemi\n"
+        },
+        {
+            "id": "L_ELD_011",
+            "context": "L_ELD_011",
+            "string": "Négociatrice abattue.\n"
+        },
+        {
+            "id": "L_ELD_012",
+            "context": "L_ELD_012",
+            "string": "Snipers éliminés.\n"
+        },
+        {
+            "id": "L_ELD_013",
+            "context": "L_ELD_013",
+            "string": "Négociatrice en sécurité.\n"
+        },
+        {
+            "id": "L_ELD_014",
+            "context": "L_ELD_014",
+            "string": "Refroidisseurs activés.\n"
+        },
+        {
+            "id": "L_ELD_015",
+            "context": "L_ELD_015",
+            "string": "Refroidisseurs désactivés.\n"
+        },
+        {
+            "id": "L_ELD_016",
+            "context": "L_ELD_016",
+            "string": "Générateurs activés.\n"
+        },
+        {
+            "id": "L_ELD_017",
+            "context": "L_ELD_017",
+            "string": "Générateurs désactivés.\n"
+        },
+        {
+            "id": "L_ELD_018",
+            "context": "L_ELD_018",
+            "string": "Eolienne réactivée.\n"
+        },
+        {
+            "id": "L_ELD_019",
+            "context": "L_ELD_019",
+            "string": "Eolienne désactivée.\n"
+        },
+        {
+            "id": "L_ELD_020",
+            "context": "L_ELD_020",
+            "string": "Courant rétabli dans la villa.\n"
+        },
+        {
+            "id": "L_ELD_021",
+            "context": "L_ELD_021",
+            "string": "Objet crucial détruit.\n"
+        },
+        {
+            "id": "L_ELD_022",
+            "context": "L_ELD_022",
+            "string": "Joanna! C'est Grimshaw. Il y a des hackers dans \nla villa! Arrêtez-les avant\n qu'ils ne piratent nos fichiers!\n"
+        },
+        {
+            "id": "L_ELD_023",
+            "context": "L_ELD_023",
+            "string": "Les hackers ont copié les fichiers vitaux.\n"
+        },
+        {
+            "id": "L_ELD_024",
+            "context": "L_ELD_024",
+            "string": "Hackers éliminés.\n"
+        },
+        {
+            "id": "L_ELD_025",
+            "context": "L_ELD_025",
+            "string": "Carrington sauvé.\n"
+        },
+        {
+            "id": "L_ELD_026",
+            "context": "L_ELD_026",
+            "string": "Objectifs incomplets - mission échouée.\n"
+        },
+        {
+            "id": "L_ELD_027",
+            "context": "L_ELD_027",
+            "string": "PC gun\n"
+        },
+        {
+            "id": "L_ELD_028",
+            "context": "L_ELD_028",
+            "string": "Fusil sniper\n"
+        },
+        {
+            "id": "L_ELD_029",
+            "context": "L_ELD_029",
+            "string": "Garde ennemi enlevé.\n"
+        },
+        {
+            "id": "L_ELD_030",
+            "context": "L_ELD_030",
+            "string": "Obtenir clé de porte.\n"
+        },
+        {
+            "id": "L_ELD_031",
+            "context": "L_ELD_031",
+            "string": "Garde: \n"
+        },
+        {
+            "id": "L_ELD_032",
+            "context": "L_ELD_032",
+            "string": "Clé de porte\n"
+        },
+        {
+            "id": "L_ELD_033",
+            "context": "L_ELD_033",
+            "string": "Clé de porte\n"
+        },
+        {
+            "id": "L_ELD_034",
+            "context": "L_ELD_034",
+            "string": "Clé de porte obtenue.\n"
+        },
+        {
+            "id": "L_ELD_035",
+            "context": "L_ELD_035",
+            "string": "Si je réactive l'éolienne, je pourrai \nrétablir le courant dans le sous-sol.\n"
+        },
+        {
+            "id": "L_ELD_036",
+            "context": "L_ELD_036",
+            "string": "Je dois faire vite ou ils tueront la \nnégociatrice!\n"
+        },
+        {
+            "id": "L_ELD_037",
+            "context": "L_ELD_037",
+            "string": "Ils doivent garder Daniel ici.\n"
+        },
+        {
+            "id": "L_ELD_038",
+            "context": "L_ELD_038",
+            "string": "Je dois arrêter les hackers avant de \nsauver Daniel.\n"
+        },
+        {
+            "id": "L_ELD_039",
+            "context": "L_ELD_039",
+            "string": "Journal de mission de l'agent Dark, 18:46. \nNous avons reçu un appel de Cassandra de Vries hier soir. \nUne équipe de la dataDyne retient Daniel Carrington \nen otage dans sa villa privée sur la côte, \net épargnera sa vie en échange de l'IA.\n"
+        },
+        {
+            "id": "L_ELD_040",
+            "context": "L_ELD_040",
+            "string": "Malheureusement, nous ne l'avons pas. Daniel et \nle Dr. Caroll étaient tous deux dans la villa \npour un 'arrangement'. Il semblerait que \nDaniel ait pu dissimuler le Dr. Caroll dans la \nvilla lors de l'arrivée des troupes de la \ndataDyne.\n"
+        },
+        {
+            "id": "L_ELD_041",
+            "context": "L_ELD_041",
+            "string": "Par chance notre ruse 'de la négociatrice' \nme donnera l'occasion de surprendre les \nsoldats de la dataDyne. Cette fois il ne \ns'agit pas que de ma propre vie.\n"
+        },
+        {
+            "id": "L_ELD_042",
+            "context": "L_ELD_042",
+            "string": "Monsieur? Etes-vous blessé?\n"
+        },
+        {
+            "id": "L_ELD_043",
+            "context": "L_ELD_043",
+            "string": "Non, Joanna. Je vais bien. Mais ces \nordures de la dataDyne m'ont fait dire \noù se trouvait le Dr. Caroll. Si seulement \nj'avais pu tenir une minute de plus...\n"
+        },
+        {
+            "id": "L_ELD_044",
+            "context": "L_ELD_044",
+            "string": "Ce n'est pas de votre faute. J'aurais dû \nfaire plus vite.\n"
+        },
+        {
+            "id": "L_ELD_045",
+            "context": "L_ELD_045",
+            "string": "Le Dr. Caroll m'a confié qu'il s'attendait \nà une telle action. De plus, les hommes \nde la dataDyne, fiers de leur succès, \nont discuté alors que je faisais semblant \nd'être inconscient. Ils ont mentionné une \nrencontre dans l'immeuble G5 de Chicago, \nen Illinois, ce soir. Vous devez vous y \nrendre, bien qu'il ne vous reste que \npeu de temps pour vous préparer.\n"
+        },
+        {
+            "id": "L_ELD_046",
+            "context": "L_ELD_046",
+            "string": "Aucun problème, monsieur. Le Dr. Caroll \na-t-il pu vous révéler des informations \nimportantes?\n"
+        },
+        {
+            "id": "L_ELD_047",
+            "context": "L_ELD_047",
+            "string": "En effet, très importantes. \nJe vous brieferai sur la route de \nChicago. Nous pourrons peut-être encore \nl'aider, même si ces sadiques lui enlèvent \nsa personnalité. Il veulent en garder \nune sauvegarde à l'abri. Il est \nenfin temps que j'appelle certains amis \npour s'occuper de la dataDyne.\n"
+        },
+        {
+            "id": "L_ELD_048",
+            "context": "L_ELD_048",
+            "string": "Opération refusée - éolienne active.\n"
+        },
+        {
+            "id": "L_ELD_049",
+            "context": "L_ELD_049",
+            "string": "Mission échouée - garde ennemi non capturé.\n"
+        },
+        {
+            "id": "L_ELD_050",
+            "context": "L_ELD_050",
+            "string": null
+        },
+        {
+            "id": "L_ELD_051",
+            "context": "L_ELD_051",
+            "string": null
+        }
+    ]
+}

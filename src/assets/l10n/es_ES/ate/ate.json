@@ -1,0 +1,84 @@
+{
+    "messages": [
+        {
+            "id": "L_ATE_000",
+            "context": "L_ATE_000",
+            "string": "|Antecedentes - \n\nPrueba Final. Derrota al oponente simulado holográficamente.\n\n|Carrington - \n\nTengo total confianza en tus habilidades, Joanna. Presta atención a la prueba, y usa toda la experiencia que has obtenido a través de tu entrenamiento. Buena suerte.\n\n|Objetivo Uno: - Derrotar al Guardián de dataDyne\n\nDerrota a la simulación de un guardián de dataDyne. El Simulante tendrá habilidades moderadas en combate, pero no debes subestimarlo.\n\n|Objetivo Dos: - Derrotar a Jonathan Dark\n\nDerrota a la simulación de Jonathan Dark, actual poseedor del récord de la prueba del Instituto. El Simulante tiene buenas habilidades de combate y es capaz de sorprender al enemigo despistado.\n\n|Objetivo Tres: - Derrotar a Trent Easton\n\nDerrota a la simulación de un habilidoso agente del gobierno. El Simulante es un oponente especialmente capacitado; si pasas esta prueba, podrás estar orgullosa de tu logro.\n\nFIN\n"
+        },
+        {
+            "id": "L_ATE_001",
+            "context": "L_ATE_001",
+            "string": "EDIFICIO LUCERNE\n"
+        },
+        {
+            "id": "L_ATE_002",
+            "context": "L_ATE_002",
+            "string": "|Antecedentes - \n\nPrueba Final. Derrota al oponente simulado holográficamente.\n\n|Carrington - \n\nTengo total confianza en tus habilidades, Joanna. Presta atención a la prueba, y usa toda la experiencia que has obtenido a través de tu entrenamiento. Buena suerte.\n\n|Objetivo Uno: - Derrotar al Guardián de dataDyne\n\nDerrota a la simulación de un guardián de dataDyne. El Simulante tendrá habilidades moderadas en combate, pero no debes subestimarlo.\n\n|Objetivo Dos: - Derrotar a Jonathan Dark\n\nDerrota a la simulación de Jonathan Dark, actual poseedor del récord de la prueba del Instituto. El Simulante tiene buenas habilidades de combate y es capaz de sorprender al enemigo despistado.\n\nFIN\n"
+        },
+        {
+            "id": "L_ATE_003",
+            "context": "L_ATE_003",
+            "string": "|Antecedentes - \n\nPrueba Final. Derrota al oponente simulado holográficamente.\n\n|Carrington - \n\nTengo total confianza en tus habilidades, Joanna. Presta atención a la prueba, y usa toda la experiencia que has obtenido a través de tu entrenamiento. Buena suerte.\n\n|Objetivo Uno: - Derrotar al Guardián de dataDyne\n\nDerrota a la simulación de un guardián de dataDyne. El Simulante tendrá habilidades moderadas en combate, pero no debes subestimarlo.\n\nFIN\n"
+        },
+        {
+            "id": "L_ATE_004",
+            "context": "L_ATE_004",
+            "string": "Derrotar al guardián de dataDyne\n"
+        },
+        {
+            "id": "L_ATE_005",
+            "context": "L_ATE_005",
+            "string": "Derrotar a Jonathan Dark\n"
+        },
+        {
+            "id": "L_ATE_006",
+            "context": "L_ATE_006",
+            "string": "Derrotar a Trent Easton\n"
+        },
+        {
+            "id": "L_ATE_007",
+            "context": "L_ATE_007",
+            "string": "EL DUELO\n"
+        },
+        {
+            "id": "L_ATE_008",
+            "context": "L_ATE_008",
+            "string": "Derrota a tu oponente.\n"
+        },
+        {
+            "id": "L_ATE_009",
+            "context": "L_ATE_009",
+            "string": "¡Bien hecho! ¡Fuiste demasiado rápida para él!\n"
+        },
+        {
+            "id": "L_ATE_010",
+            "context": "L_ATE_010",
+            "string": "¡Bien hecho! ¡Fuiste demasiado rápida para él!\n"
+        },
+        {
+            "id": "L_ATE_011",
+            "context": "L_ATE_011",
+            "string": "¡Bien hecho! ¡Fuiste demasiado rápida para él!\n"
+        },
+        {
+            "id": "L_ATE_012",
+            "context": "L_ATE_012",
+            "string": "Nivel del oponente: AGENTE\n"
+        },
+        {
+            "id": "L_ATE_013",
+            "context": "L_ATE_013",
+            "string": "Nivel del oponente: AGENTE ESPECIAL\n"
+        },
+        {
+            "id": "L_ATE_014",
+            "context": "L_ATE_014",
+            "string": "Nivel del oponente: AGENTE PERFECTO\n"
+        },
+        {
+            "id": "L_ATE_015",
+            "context": "L_ATE_015",
+            "string": null
+        }
+    ]
+}

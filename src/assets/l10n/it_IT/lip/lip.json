@@ -1,0 +1,544 @@
+{
+    "messages": [
+        {
+            "id": "L_LIP_000",
+            "context": "L_LIP_000",
+            "string": "|Situazione:\n\nIl velivolo con a bordo i membri dell'istituto è stato abbattuto in Nevada. I resti del mezzo e i corpi delle vittime sono stati portati nell'Area 51. Una spia presente alla base è riuscita a comunicare all'istituto la notizia di un possibile sopravvissuto. L'obiettivo di questa missione è salvare quel sopravvissuto.\n\n|Carrington:\n\nDevi fare un lavoro pulito senza lasciare tracce e portare in salvo il nostro uomo più in fretta che puoi. Un travestimento ti sarà utile, ma non durerà in eterno, quindi cerca di farne buon uso. Distruggi le informazioni che hanno raccolto e assicurati che non ci siano altri sopravvissuti di cui siamo ignari. Il tempo stringe: sbrigati!\n\n|Obiettivo 1: - Distruggi i file di ricerca nel PC\n\nLe informazioni che i tecnici dell'Area 51 sono riusciti ad ottenere dai resti del disastro devono essere eliminate dalla loro banca dati. Il terminale centrale si trova in una stanza chiusa a chiave in fondo al corridoio principale. Installa un virus tramite il Connettore Dati e poi distruggi anche il computer. Se il virus viene propagato anche agli altri terminali potrebbe avere effetti formidabili.\n\n|Obiettivo 2: - Trova le prove della cospirazione\n\nNella sua relazione Jonathan menzionava un'unità di contenimento tessuti in cui vengono conservati campioni di tessuto organico a temperature molto basse. Ritiene che tale unità possa servire a congelare criogenicamente i corpi prima di interventi chirurgici o di sezionamento. Trova questa unità e conferma la morte dei tre passeggeri del velivolo.\n\n|Obiettivo 3: - Procurati travestimento da tecnico\n\nTrova un camice di uno dei tecnici di laboratorio e indossalo per superare la sicurezza. Una volta che ti sarai travestita muoviti in fretta, poiché il tuo furto non passerà inosservato per molto!\n\n|Obiettivo 4: - Entra nel laboratorio autopsie\n\nIn uno dei laboratori medici di sicurezza avrà presto luogo un'autopsia. Sarà vietato l'accesso a tutti coloro senza autorizzazione, quindi procurati la tessera giusta per entrare. Ricorda che non tutte le tessere funzioneranno e che in alcuni punti potrai anche trovare delle guardie.\n\n|Obiettivo 5: - Salva il sopravvissuto al disastro\n\nUna volta nel laboratorio dovrai riuscire ad accedere alla sala autopsie prima che succeda qualcosa al soggetto in questione. Gli scienziati tenteranno di ucciderlo se scoprono che è ancora vivo o cercheranno di danneggiare ciò che ritengono essere un cadavere non appena si accorgono chi sei. Attenzione, ancora una volta la velocità è fondamentale!\n\nFINE\n"
+        },
+        {
+            "id": "L_LIP_001",
+            "context": "L_LIP_001",
+            "string": "AREA 51 - LABORATORI MEDICI\n"
+        },
+        {
+            "id": "L_LIP_002",
+            "context": "L_LIP_002",
+            "string": "|Situazione:\n\nIl velivolo con a bordo i membri dell'istituto è stato abbattuto in Nevada. I resti del mezzo e i corpi delle vittime sono stati portati nell'Area 51. Una spia presente alla base è riuscita a comunicare all'istituto la notizia di un possibile sopravvissuto. L'obiettivo di questa missione è salvare quel sopravvissuto.\n\n|Carrington:\n\nDevi fare un lavoro pulito senza lasciare tracce e portare in salvo il nostro uomo più in fretta che puoi. Un travestimento ti sarà utile, ma non durerà in eterno, quindi cerca di farne buon uso. Distruggi le informazioni che hanno raccolto e assicurati che non ci siano altri sopravvissuti di cui siamo ignari. Il tempo stringe: sbrigati!\n\n|Obiettivo 1: - Trova le prove della cospirazione\n\nNella sua relazione Jonathan menzionava un'unità di contenimento tessuti in cui vengono conservati campioni di tessuto organico a temperature molto basse. Ritiene che tale unità possa servire a congelare criogenicamente i corpi prima di interventi chirurgici o di sezionamento. Trova questa unità e conferma la morte dei tre passeggeri del velivolo.\n\n|Obiettivo 2: - Procurati travestimento da tecnico\n\nTrova un camice di uno dei tecnici di laboratorio e indossalo per superare la sicurezza. Una volta che ti sarai travestita muoviti in fretta, poiché il tuo furto non passerà inosservato per molto!\n\n|Obiettivo 3: - Entra nel laboratorio autopsie\n\nIn uno dei laboratori medici di sicurezza avrà presto luogo un'autopsia. Sarà vietato l'accesso a tutti coloro senza autorizzazione, quindi procurati la tessera giusta per entrare. Ricorda che non tutte le tessere funzioneranno e che in alcuni punti potrai anche trovare delle guardie.\n\n|Obiettivo 4: - Salva il sopravvissuto al disastro\n\nUna volta nel laboratorio dovrai riuscire ad accedere alla sala autopsie prima che succeda qualcosa al soggetto in questione. Gli scienziati tenteranno di ucciderlo se scoprono che è ancora vivo o cercheranno di danneggiare ciò che ritengono essere un cadavere non appena si accorgono chi sei. Attenzione, ancora una volta la velocità è fondamentale!\n\nFINE\n"
+        },
+        {
+            "id": "L_LIP_003",
+            "context": "L_LIP_003",
+            "string": "|Situazione:\n\nIl velivolo con a bordo i membri dell'istituto è stato abbattuto in Nevada. I resti del mezzo e i corpi delle vittime sono stati portati nell'Area 51. Una spia presente alla base è riuscita a comunicare all'istituto la notizia di un possibile sopravvissuto. L'obiettivo di questa missione è salvare quel sopravvissuto.\n\n|Carrington:\n\nDevi fare un lavoro pulito senza lasciare tracce e portare in salvo il nostro uomo più in fretta che puoi. Un travestimento ti sarà utile, ma non durerà in eterno, quindi cerca di farne buon uso. Distruggi le informazioni che hanno raccolto e assicurati che non ci siano altri sopravvissuti di cui siamo ignari. Il tempo stringe: sbrigati!\n\n|Obiettivo 1: - Procurati travestimento da tecnico\n\nTrova un camice di uno dei tecnici di laboratorio e indossalo per superare la sicurezza. Una volta che ti sarai travestita muoviti in fretta, poiché il tuo furto non passerà inosservato per molto!\n\n|Obiettivo 2: - Entra nel laboratorio autopsie\n\nIn uno dei laboratori medici di sicurezza avrà presto luogo un'autopsia. Sarà vietato l'accesso a tutti coloro senza autorizzazione, quindi procurati la tessera giusta per entrare. Ricorda che non tutte le tessere funzioneranno e che in alcuni punti potrai anche trovare delle guardie.\n\n|Obiettivo 3: - Salva il sopravvissuto al disastro\n\nUna volta nel laboratorio dovrai riuscire ad accedere alla sala autopsie prima che succeda qualcosa al soggetto in questione. Gli scienziati tenteranno di ucciderlo se scoprono che è ancora vivo o cercheranno di danneggiare ciò che ritengono essere un cadavere non appena si accorgono chi sei. Attenzione, ancora una volta la velocità è fondamentale!\n\nFINE\n"
+        },
+        {
+            "id": "L_LIP_004",
+            "context": "L_LIP_004",
+            "string": "\n"
+        },
+        {
+            "id": "L_LIP_005",
+            "context": "L_LIP_005",
+            "string": "\n"
+        },
+        {
+            "id": "L_LIP_006",
+            "context": "L_LIP_006",
+            "string": "\n"
+        },
+        {
+            "id": "L_LIP_007",
+            "context": "L_LIP_007",
+            "string": "\n"
+        },
+        {
+            "id": "L_LIP_008",
+            "context": "L_LIP_008",
+            "string": "\n"
+        },
+        {
+            "id": "L_LIP_009",
+            "context": "L_LIP_009",
+            "string": "Procurati travestimento da tecnico\n"
+        },
+        {
+            "id": "L_LIP_010",
+            "context": "L_LIP_010",
+            "string": "Distruggi i file nel PC\n"
+        },
+        {
+            "id": "L_LIP_011",
+            "context": "L_LIP_011",
+            "string": "Trova le prove della cospirazione\n"
+        },
+        {
+            "id": "L_LIP_012",
+            "context": "L_LIP_012",
+            "string": "Entra nel laboratorio autopsie\n"
+        },
+        {
+            "id": "L_LIP_013",
+            "context": "L_LIP_013",
+            "string": "Salva il sopravvissuto al disastro\n"
+        },
+        {
+            "id": "L_LIP_014",
+            "context": "L_LIP_014",
+            "string": "Distrutti file di ricerca\n"
+        },
+        {
+            "id": "L_LIP_015",
+            "context": "L_LIP_015",
+            "string": "Procurati camice\n"
+        },
+        {
+            "id": "L_LIP_016",
+            "context": "L_LIP_016",
+            "string": "Tecnico di laboratorio:\n"
+        },
+        {
+            "id": "L_LIP_017",
+            "context": "L_LIP_017",
+            "string": "Camice\n"
+        },
+        {
+            "id": "L_LIP_018",
+            "context": "L_LIP_018",
+            "string": "Camice\n"
+        },
+        {
+            "id": "L_LIP_019",
+            "context": "L_LIP_019",
+            "string": "Preso camice\n"
+        },
+        {
+            "id": "L_LIP_020",
+            "context": "L_LIP_020",
+            "string": "Negato accesso al sistema comando porte\n"
+        },
+        {
+            "id": "L_LIP_021",
+            "context": "L_LIP_021",
+            "string": "Negato accesso al sistema comando luci\n"
+        },
+        {
+            "id": "L_LIP_022",
+            "context": "L_LIP_022",
+            "string": "Negato accesso al sistema comando sicurezza\n"
+        },
+        {
+            "id": "L_LIP_023",
+            "context": "L_LIP_023",
+            "string": "Scaricato il virus\n"
+        },
+        {
+            "id": "L_LIP_024",
+            "context": "L_LIP_024",
+            "string": "Procurati Connettore Dati.\n"
+        },
+        {
+            "id": "L_LIP_025",
+            "context": "L_LIP_025",
+            "string": "Tecnico di laboratorio:\n"
+        },
+        {
+            "id": "L_LIP_026",
+            "context": "L_LIP_026",
+            "string": "C. Dati\n"
+        },
+        {
+            "id": "L_LIP_027",
+            "context": "L_LIP_027",
+            "string": "Connettore Dati\n"
+        },
+        {
+            "id": "L_LIP_028",
+            "context": "L_LIP_028",
+            "string": "Preso Connettore Dati.\n"
+        },
+        {
+            "id": "L_LIP_029",
+            "context": "L_LIP_029",
+            "string": "Accesso laboratorio: riuscito.\n"
+        },
+        {
+            "id": "L_LIP_030",
+            "context": "L_LIP_030",
+            "string": "Connettore Dati connesso.\n"
+        },
+        {
+            "id": "L_LIP_031",
+            "context": "L_LIP_031",
+            "string": "Connessione Connettore Dati interrotta.\n"
+        },
+        {
+            "id": "L_LIP_032",
+            "context": "L_LIP_032",
+            "string": "Procurati tessera lab.2\n"
+        },
+        {
+            "id": "L_LIP_033",
+            "context": "L_LIP_033",
+            "string": "Guardia:\n"
+        },
+        {
+            "id": "L_LIP_034",
+            "context": "L_LIP_034",
+            "string": "Tessera lab.2\n"
+        },
+        {
+            "id": "L_LIP_035",
+            "context": "L_LIP_035",
+            "string": "Tessera lab.2 \n"
+        },
+        {
+            "id": "L_LIP_036",
+            "context": "L_LIP_036",
+            "string": "Presa tessera lab.2\n"
+        },
+        {
+            "id": "L_LIP_037",
+            "context": "L_LIP_037",
+            "string": "Chi diavolo sei?\n"
+        },
+        {
+            "id": "L_LIP_038",
+            "context": "L_LIP_038",
+            "string": "Ehi, hai rubato il mio camice!\n"
+        },
+        {
+            "id": "L_LIP_039",
+            "context": "L_LIP_039",
+            "string": "Aiuto, aiuto!!!\n"
+        },
+        {
+            "id": "L_LIP_040",
+            "context": "L_LIP_040",
+            "string": "Non spararmi!\n"
+        },
+        {
+            "id": "L_LIP_041",
+            "context": "L_LIP_041",
+            "string": "Oh, maledizione! Una pistola!\n"
+        },
+        {
+            "id": "L_LIP_042",
+            "context": "L_LIP_042",
+            "string": "C'è un intruso nel complesso!\n"
+        },
+        {
+            "id": "L_LIP_043",
+            "context": "L_LIP_043",
+            "string": "Ridammi il camice, altrimenti...\n"
+        },
+        {
+            "id": "L_LIP_044",
+            "context": "L_LIP_044",
+            "string": "Bene, l'hai voluto tu!\n"
+        },
+        {
+            "id": "L_LIP_045",
+            "context": "L_LIP_045",
+            "string": "Ridammi indietro il camice!\n"
+        },
+        {
+            "id": "L_LIP_046",
+            "context": "L_LIP_046",
+            "string": "Non ho molto tempo!!!\n"
+        },
+        {
+            "id": "L_LIP_047",
+            "context": "L_LIP_047",
+            "string": "Il nemico ha scoperto il travestimento.\n"
+        },
+        {
+            "id": "L_LIP_048",
+            "context": "L_LIP_048",
+            "string": "Il virus è già stato scaricato.\n"
+        },
+        {
+            "id": "L_LIP_049",
+            "context": "L_LIP_049",
+            "string": "Scaricamento virus in corso...\n"
+        },
+        {
+            "id": "L_LIP_050",
+            "context": "L_LIP_050",
+            "string": "Bene, finalmente sei qui!\n"
+        },
+        {
+            "id": "L_LIP_051",
+            "context": "L_LIP_051",
+            "string": "Ehi, ma tu non sei... SICUREZZA ALL'ERTA!\n"
+        },
+        {
+            "id": "L_LIP_052",
+            "context": "L_LIP_052",
+            "string": "Non sono ammesse pistole qui: posa quell'arma!\n"
+        },
+        {
+            "id": "L_LIP_053",
+            "context": "L_LIP_053",
+            "string": "Non fartelo ripetere: posa l'arma!\n"
+        },
+        {
+            "id": "L_LIP_054",
+            "context": "L_LIP_054",
+            "string": "Benissimo, chiamerò la sicurezza!\n"
+        },
+        {
+            "id": "L_LIP_055",
+            "context": "L_LIP_055",
+            "string": "Ti stavamo giusto aspettando...\n"
+        },
+        {
+            "id": "L_LIP_056",
+            "context": "L_LIP_056",
+            "string": "Ucciso personale essenziale alla missione.\n"
+        },
+        {
+            "id": "L_LIP_057",
+            "context": "L_LIP_057",
+            "string": "Non puoi accedere al laboratorio.\n"
+        },
+        {
+            "id": "L_LIP_058",
+            "context": "L_LIP_058",
+            "string": "Ehi, non è Harry! È un intruso!!!\n"
+        },
+        {
+            "id": "L_LIP_059",
+            "context": "L_LIP_059",
+            "string": "Procurati chiave sala operatoria.\n"
+        },
+        {
+            "id": "L_LIP_060",
+            "context": "L_LIP_060",
+            "string": "Guardia:\n"
+        },
+        {
+            "id": "L_LIP_061",
+            "context": "L_LIP_061",
+            "string": "Chiave sala operatoria\n"
+        },
+        {
+            "id": "L_LIP_062",
+            "context": "L_LIP_062",
+            "string": "Chiave sala operatoria\n"
+        },
+        {
+            "id": "L_LIP_063",
+            "context": "L_LIP_063",
+            "string": "Presa chiave sala operatoria.\n"
+        },
+        {
+            "id": "L_LIP_064",
+            "context": "L_LIP_064",
+            "string": "Elvis è stato ucciso.\n"
+        },
+        {
+            "id": "L_LIP_065",
+            "context": "L_LIP_065",
+            "string": "Porta il tuo muso fuori di qua!\n"
+        },
+        {
+            "id": "L_LIP_066",
+            "context": "L_LIP_066",
+            "string": "Alzata unità di contenimento.\n"
+        },
+        {
+            "id": "L_LIP_067",
+            "context": "L_LIP_067",
+            "string": "Abbassata unità di contenimento.\n"
+        },
+        {
+            "id": "L_LIP_068",
+            "context": "L_LIP_068",
+            "string": "Distrutto strumento essenziale alla missione.\n"
+        },
+        {
+            "id": "L_LIP_069",
+            "context": "L_LIP_069",
+            "string": "Procurati scanner a raggi X.\n"
+        },
+        {
+            "id": "L_LIP_070",
+            "context": "L_LIP_070",
+            "string": "\n"
+        },
+        {
+            "id": "L_LIP_071",
+            "context": "L_LIP_071",
+            "string": "Scanner a raggi X\n"
+        },
+        {
+            "id": "L_LIP_072",
+            "context": "L_LIP_072",
+            "string": "Scanner a raggi X\n"
+        },
+        {
+            "id": "L_LIP_073",
+            "context": "L_LIP_073",
+            "string": "Preso scanner a raggi X.\n"
+        },
+        {
+            "id": "L_LIP_074",
+            "context": "L_LIP_074",
+            "string": "Localizzato obiettivo scanner\n"
+        },
+        {
+            "id": "L_LIP_075",
+            "context": "L_LIP_075",
+            "string": "Obiettivo identificato: extraterrestre\n"
+        },
+        {
+            "id": "L_LIP_076",
+            "context": "L_LIP_076",
+            "string": "Perso obiettivo scanner\n"
+        },
+        {
+            "id": "L_LIP_077",
+            "context": "L_LIP_077",
+            "string": "Indossato il travestimento\n"
+        },
+        {
+            "id": "L_LIP_078",
+            "context": "L_LIP_078",
+            "string": "Le docce... Se riuscissi a convincere \nqualcuno a cedermi il camice...\n"
+        },
+        {
+            "id": "L_LIP_079",
+            "context": "L_LIP_079",
+            "string": "La temperatura sta scendendo: devi essere \nvicino alla sala criogena.\n"
+        },
+        {
+            "id": "L_LIP_080",
+            "context": "L_LIP_080",
+            "string": "Qui c'è un forte ricircolo d'aria: devi essere \nvicino al laboratorio autopsie.\n"
+        },
+        {
+            "id": "L_LIP_081",
+            "context": "L_LIP_081",
+            "string": "Eccolo, Jo! Fa presto o sarà troppo tardi!\n"
+        },
+        {
+            "id": "L_LIP_082",
+            "context": "L_LIP_082",
+            "string": "Abbandona subito quest'area.\n"
+        },
+        {
+            "id": "L_LIP_083",
+            "context": "L_LIP_083",
+            "string": "Che diavolo ci fai qua?\n"
+        },
+        {
+            "id": "L_LIP_084",
+            "context": "L_LIP_084",
+            "string": "Santo...\n"
+        },
+        {
+            "id": "L_LIP_085",
+            "context": "L_LIP_085",
+            "string": "È una spia, dannazione!\n"
+        },
+        {
+            "id": "L_LIP_086",
+            "context": "L_LIP_086",
+            "string": "Avverti gli altri...\n"
+        },
+        {
+            "id": "L_LIP_087",
+            "context": "L_LIP_087",
+            "string": "Impostore!\n"
+        },
+        {
+            "id": "L_LIP_088",
+            "context": "L_LIP_088",
+            "string": "Sistema di illuminazione in sovraccarico\n"
+        },
+        {
+            "id": "L_LIP_089",
+            "context": "L_LIP_089",
+            "string": "Creato ingresso alternativo ai laboratori\n"
+        },
+        {
+            "id": "L_LIP_090",
+            "context": "L_LIP_090",
+            "string": "Il tuo problema è che non esiste nessun \nmodo per infiltrarsi nel reparto ricerca. \nL'unica possibilità è un sottile tratto \ndi muro che ho contrassegnato nella stanza \ndietro ai magazzini. Lo potrai abbattere \ncon un po' di esplosivo.\n"
+        },
+        {
+            "id": "L_LIP_091",
+            "context": "L_LIP_091",
+            "string": "Non mi pare si tratti di un problema! \nDov'è l'esplosivo?\n"
+        },
+        {
+            "id": "L_LIP_092",
+            "context": "L_LIP_092",
+            "string": "In quella cassa!\n"
+        },
+        {
+            "id": "L_LIP_093",
+            "context": "L_LIP_093",
+            "string": "Fantastico... veramente!\n"
+        },
+        {
+            "id": "L_LIP_094",
+            "context": "L_LIP_094",
+            "string": "Ah, a proposito... i magazzini brulicano \ndi guardie. Magari è contro la tua natura, \nma cerca di insinuarti in mezzo a loro, \npiuttosto che far saltar per aria tutto!\n"
+        },
+        {
+            "id": "L_LIP_095",
+            "context": "L_LIP_095",
+            "string": "Certamente! Altri consigli illuminanti?\n"
+        },
+        {
+            "id": "L_LIP_096",
+            "context": "L_LIP_096",
+            "string": "Quella cassa...\n"
+        },
+        {
+            "id": "L_LIP_097",
+            "context": "L_LIP_097",
+            "string": "Allora?\n"
+        },
+        {
+            "id": "L_LIP_098",
+            "context": "L_LIP_098",
+            "string": "Meglio non sparargli contro...\n"
+        },
+        {
+            "id": "L_LIP_099",
+            "context": "L_LIP_099",
+            "string": "Bravo ragazzo! Cercherò di resistere \nal piacere di denunciarti alle forze \ndi sicurezza della base...\n"
+        },
+        {
+            "id": "L_LIP_100",
+            "context": "L_LIP_100",
+            "string": "Mani in alto e sta lontano dall'alieno.\n"
+        },
+        {
+            "id": "L_LIP_101",
+            "context": "L_LIP_101",
+            "string": "Cosa diavolo pensi di fare? \nL'accesso a questa sala è vietato! \nNon sei a conoscenza della procedura \ndell'autopsia?\n"
+        },
+        {
+            "id": "L_LIP_102",
+            "context": "L_LIP_102",
+            "string": "Non se lo faccia ripetere, Dottore! \nSpenga subito quel laser!\n"
+        },
+        {
+            "id": "L_LIP_103",
+            "context": "L_LIP_103",
+            "string": "Il direttor Easton lo verrà \na sapere, signorina!\n"
+        },
+        {
+            "id": "L_LIP_104",
+            "context": "L_LIP_104",
+            "string": "Certo che lo verrà a sapere, idiota! \nSono riuscita ad entrare nella sua base \nsegretissima e ora sto anche rubando il \nsuo alieno. E non lo deve venire a \nsapere?! Fammi ridere!!!\n"
+        },
+        {
+            "id": "L_LIP_105",
+            "context": "L_LIP_105",
+            "string": "Disattivate difese automatiche\n"
+        },
+        {
+            "id": "L_LIP_106",
+            "context": "L_LIP_106",
+            "string": null
+        },
+        {
+            "id": "L_LIP_107",
+            "context": "L_LIP_107",
+            "string": null
+        }
+    ]
+}

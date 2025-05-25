@@ -1,0 +1,244 @@
+{
+    "messages": [
+        {
+            "id": "L_DAM_000",
+            "context": "L_DAM_000",
+            "string": "|Hintergrund - \n\nDie Verschwörer haben ihre Deckung fallen gelassen und einen Akt der Piraterie eingeleitet. Die Pelagic II wurde geentert und führt nun ein Tauchmanöver im Pazifischen Ozean durch. Sowohl dataDyne als auch ihre eigenartigen Verbündeten scheinen in diese Operation verwickelt zu sein.\n\n|Carrington - \n\nObwohl dieser Schritt sehr leichtsinnig erscheint, zeigt diese Maßnahme, wie wichtig diese Tiefsee-Operation für die dataDyne-Gruppe und ihre Verbündeten sein muss. Ihre Aufgabe ist es, diese Operation zu stören. Bedenken Sie aber auch unsere Verhaltensregeln gegenüber unbeteiligten Personen.\n\n|1. Ziel: - Setzen Sie den Generator außer Kraft!\n\nDurch die Abschaltung des Generators wird das Schiff gezwungen, das Operationsgebiet zu verlassen. Allerdings führt der Energieverlust in manchen Teilen des Schiffs auch zu Blackouts. Setzen Sie den Röntgen-Scanner ein, um die aktiven Schalter zu finden.\n\n|2. Ziel: - Sichern Sie die Daten der Forschungen!\n\nWir wollen sämtliche Informationen, die dataDyne bis dato über dieses Projekt gesammelt hat. Sichern Sie die Laboratorien am Forschungs-Deck, und setzen Sie die anwesenden Wissenschaftler und Techniker außer Gefecht. Vergessen Sie nicht, dass wir sie später noch verhören wollen!\n\n|3. Ziel: - Deaktivieren Sie das GPS und den Autopiloten!\n\nEs ist erforderlich, das GPS-Ortungssystem und den Autopiloten zu deaktivieren. Ohne die Unterstützung dieser Systeme beginnt das Schiff abzudriften. Die Abschaltung von nur einem System reicht nicht aus, die Fortführung der Operation zu unterbrechen. Zivilisten dürfen auf keinen Fall zu Schaden kommen.\n\n|4. Ziel: - Aktivieren Sie den Moon Pool-Aufzug!\n\nDie Steuerungselemente für das Tauchschiff befinden sich im Tiefhangar. Wenn Sie den Autopiloten des Tauchschiffs aktivieren, gelangt es für Sie und Elvis in Reichweite.\n\n|5. Ziel: - Treffen Sie sich mit Elvis, und flüchten Sie gemeinsam!\n\nFinden Sie Elvis und kehren Sie mit ihm zum Moon Pool zurück. Bereiten Sie dort sich selbst und das Tauchschiff für den Tauchgang zum Meeresgrund vor.\n\nENDE\n"
+        },
+        {
+            "id": "L_DAM_001",
+            "context": "L_DAM_001",
+            "string": "Cetanisches Schiff\n"
+        },
+        {
+            "id": "L_DAM_002",
+            "context": "L_DAM_002",
+            "string": "|Hintergrund - \n\nDie Verschwörer haben ihre Deckung fallen gelassen und einen Akt der Piraterie eingeleitet. Die Pelagic II wurde geentert und führt nun ein Tauchmanöver im Pazifischen Ozean durch. Sowohl dataDyne als auch ihre eigenartigen Verbündeten scheinen in diese Operation verwickelt zu sein.\n\n|Carrington - \n\nObwohl dieser Schritt sehr leichtsinnig erscheint, zeigt diese Maßnahme, wie wichtig diese Tiefsee-Operation für die dataDyne-Gruppe und ihre Verbündeten sein muss. Ihre Aufgabe ist es, diese Operation zu stören. Bedenken Sie aber auch unsere Verhaltensregeln gegenüber unbeteiligten Personen.\n\n|1. Ziel: - Setzen Sie den Generator außer Kraft!\n\nDurch die Abschaltung des Generators wird das Schiff gezwungen, das Operationsgebiet zu verlassen. Allerdings führt der Energieverlust in manchen Teilen des Schiffs auch zu Blackouts. Setzen Sie den Röntgen-Scanner ein, um die aktiven Schalter zu finden.\n\n|2. Ziel: - Deaktivieren Sie das GPS und den Autopiloten!\n\nEs ist erforderlich, das GPS-Ortungssystem und den Autopiloten zu deaktivieren. Ohne die Unterstützung dieser Systeme beginnt das Schiff abzudriften. Die Abschaltung von nur einem System reicht nicht aus, die Fortführung der Operation zu unterbrechen. Zivilisten dürfen auf keinen Fall zu Schaden kommen.\n\n|3. Ziel: - Aktivieren Sie den Moon Pool-Aufzug!\n\nDie Steuerungselemente für das Tauchschiff befinden sich im Tiefhangar. Wenn Sie den Autopiloten des Tauchschiffs aktivieren, gelangt es für Sie und Elvis in Reichweite.\n\n|4. Ziel: - Treffen Sie sich mit Elvis und flüchten Sie gemeinsam!\n\nFinden Sie Elvis und kehren Sie mit ihm zum Moon Pool zurück. Bereiten Sie dort sich selbst und das Tauchschiff für den Tauchgang zum Meeresgrund vor.\n\nENDE\n"
+        },
+        {
+            "id": "L_DAM_003",
+            "context": "L_DAM_003",
+            "string": "|Hintergrund - \n\nDie Verschwörer haben ihre Deckung fallen gelassen und einen Akt der Piraterie eingeleitet. Die Pelagic II wurde geentert und führt nun ein Tauchmanöver im Pazifischen Ozean durch. Sowohl dataDyne als auch ihre eigenartigen Verbündeten scheinen in diese Operation verwickelt zu sein.\n\n|Carrington - \n\nObwohl dieser Schritt sehr leichtsinnig erscheint, zeigt diese Maßnahme, wie wichtig diese Tiefsee-Operation für die dataDyne-Gruppe und ihre Verbündeten sein muss. Ihre Aufgabe ist es, diese Operation zu stören. Bedenken Sie aber auch unsere Verhaltensregeln gegenüber unbeteiligten Personen.\n\n|1. Ziel: - Setzen Sie den Generator außer Kraft!\n\nDurch die Abschaltung des Generators wird das Schiff gezwungen, das Operationsgebiet zu verlassen. Allerdings führt der Energieverlust in manchen Teilen des Schiffs auch zu Blackouts. Setzen Sie den Röntgen-Scanner ein, um die aktiven Schalter zu finden.\n\n|2. Ziel: - Deaktivieren Sie das GPS und den Autopiloten!\n\nEs ist erforderlich, das GPS-Ortungssystem und den Autopiloten zu deaktivieren. Ohne die Unterstützung dieser Systeme beginnt das Schiff abzudriften. Die Abschaltung von nur einem System reicht nicht aus, die Fortführung der Operation zu unterbrechen. Zivilisten dürfen auf keinen Fall zu Schaden kommen.\n\n|3. Ziel: - Treffen Sie sich mit Elvis und flüchten Sie gemeinsam!\n\nFinden Sie Elvis und kehren Sie mit ihm zum Moon Pool zurück. Bereiten Sie dort sich selbst und das Tauchschiff für den Tauchgang zum Meeresgrund vor.\n\nENDE\n"
+        },
+        {
+            "id": "L_DAM_004",
+            "context": "L_DAM_004",
+            "string": "\n"
+        },
+        {
+            "id": "L_DAM_005",
+            "context": "L_DAM_005",
+            "string": "Deaktivieren Sie den Autopiloten!\n"
+        },
+        {
+            "id": "L_DAM_006",
+            "context": "L_DAM_006",
+            "string": "Setzen Sie den Generator außer Kraft!\n"
+        },
+        {
+            "id": "L_DAM_007",
+            "context": "L_DAM_007",
+            "string": "Sichern Sie die Daten!\n"
+        },
+        {
+            "id": "L_DAM_008",
+            "context": "L_DAM_008",
+            "string": "Aktivieren Sie den Moon Pool-Aufzug!\n"
+        },
+        {
+            "id": "L_DAM_009",
+            "context": "L_DAM_009",
+            "string": "Flüchten Sie gemeinsam mit Elvis!\n"
+        },
+        {
+            "id": "L_DAM_010",
+            "context": "L_DAM_010",
+            "string": "Leg die Maschinen lahm, dann \ndriftet das Schiff ab... Perfekt!\n"
+        },
+        {
+            "id": "L_DAM_011",
+            "context": "L_DAM_011",
+            "string": "Von hier aus wird das Schiff gesteuert.\n"
+        },
+        {
+            "id": "L_DAM_012",
+            "context": "L_DAM_012",
+            "string": "Ohne Autopilot und GPS kann das Schiff \nseine Position nicht halten.\n"
+        },
+        {
+            "id": "L_DAM_013",
+            "context": "L_DAM_013",
+            "string": "Das Schiff wird ohne Stromzufuhr völlig \nnavigationsunfähig sein.\n"
+        },
+        {
+            "id": "L_DAM_014",
+            "context": "L_DAM_014",
+            "string": "Autopilot wurde deaktiviert\n"
+        },
+        {
+            "id": "L_DAM_015",
+            "context": "L_DAM_015",
+            "string": "GPS-System wurde deaktiviert\n"
+        },
+        {
+            "id": "L_DAM_016",
+            "context": "L_DAM_016",
+            "string": "Wichtiges Objekt wurde zerstört\n"
+        },
+        {
+            "id": "L_DAM_017",
+            "context": "L_DAM_017",
+            "string": "Reaktor-Kontrollkonsole geöffnet\n"
+        },
+        {
+            "id": "L_DAM_018",
+            "context": "L_DAM_018",
+            "string": "Reaktor wurde abgeschaltet.\n"
+        },
+        {
+            "id": "L_DAM_019",
+            "context": "L_DAM_019",
+            "string": "Tauch-Kontrollzentrum wurde geortet.\n"
+        },
+        {
+            "id": "L_DAM_020",
+            "context": "L_DAM_020",
+            "string": "Wichtige Person neutralisiert\n"
+        },
+        {
+            "id": "L_DAM_021",
+            "context": "L_DAM_021",
+            "string": "Forschungsdaten wurden gesichert.\n"
+        },
+        {
+            "id": "L_DAM_022",
+            "context": "L_DAM_022",
+            "string": "\n"
+        },
+        {
+            "id": "L_DAM_023",
+            "context": "L_DAM_023",
+            "string": "\n"
+        },
+        {
+            "id": "L_DAM_024",
+            "context": "L_DAM_024",
+            "string": "Sicherungsdiskette\n"
+        },
+        {
+            "id": "L_DAM_025",
+            "context": "L_DAM_025",
+            "string": "Eine Sicherungsdiskette\n"
+        },
+        {
+            "id": "L_DAM_026",
+            "context": "L_DAM_026",
+            "string": "Sicherungsdiskette aufgenommen\n"
+        },
+        {
+            "id": "L_DAM_027",
+            "context": "L_DAM_027",
+            "string": "Wichtige Personen wurden neutralisiert.\n"
+        },
+        {
+            "id": "L_DAM_028",
+            "context": "L_DAM_028",
+            "string": "Aufzugstür wurde entriegelt.\n"
+        },
+        {
+            "id": "L_DAM_029",
+            "context": "L_DAM_029",
+            "string": "Aufzug wurde aktiviert.\n"
+        },
+        {
+            "id": "L_DAM_030",
+            "context": "L_DAM_030",
+            "string": "Unzulässige Operation - Die Hangartüren sind noch geschlossen.\n"
+        },
+        {
+            "id": "L_DAM_031",
+            "context": "L_DAM_031",
+            "string": "Entriegelungssequenz wurde abgebrochen.\n"
+        },
+        {
+            "id": "L_DAM_032",
+            "context": "L_DAM_032",
+            "string": "Du gehst voraus, Jo. Ich sichere das Gelände. \nWir treffen uns später.\n"
+        },
+        {
+            "id": "L_DAM_033",
+            "context": "L_DAM_033",
+            "string": "Elvis wurde neutralisiert.\n"
+        },
+        {
+            "id": "L_DAM_034",
+            "context": "L_DAM_034",
+            "string": "Joanna... Was hat dich aufgehalten? Folge mir! \nLass uns von dieser Rostschüssel verschwinden.\n"
+        },
+        {
+            "id": "L_DAM_035",
+            "context": "L_DAM_035",
+            "string": "Zivile Verluste!!!\n"
+        },
+        {
+            "id": "L_DAM_036",
+            "context": "L_DAM_036",
+            "string": "Wichtiges Objekt wurde zerstört.\n"
+        },
+        {
+            "id": "L_DAM_037",
+            "context": "L_DAM_037",
+            "string": "Alarm wurde aktiviert.\n"
+        },
+        {
+            "id": "L_DAM_038",
+            "context": "L_DAM_038",
+            "string": "Alarm wurde deaktiviert.\n"
+        },
+        {
+            "id": "L_DAM_039",
+            "context": "L_DAM_039",
+            "string": "Korrekt. Die Operation wurde an der Oberfläche unterbrochen.\nZeit für ein wenig Badevergnügen.\n"
+        },
+        {
+            "id": "L_DAM_040",
+            "context": "L_DAM_040",
+            "string": "Ich hoffe, die Regierung will dieses Schiff so rasch nicht benutzen.\n"
+        },
+        {
+            "id": "L_DAM_041",
+            "context": "L_DAM_041",
+            "string": "Glaubst du, wir waren ein wenig zu grob?\n"
+        },
+        {
+            "id": "L_DAM_042",
+            "context": "L_DAM_042",
+            "string": "Ach, stell Dich nicht so mädchenhaft an!\n"
+        },
+        {
+            "id": "L_DAM_043",
+            "context": "L_DAM_043",
+            "string": "Zieh den Stecker raus!\n"
+        },
+        {
+            "id": "L_DAM_044",
+            "context": "L_DAM_044",
+            "string": "Schalte das Ding ab!\n"
+        },
+        {
+            "id": "L_DAM_045",
+            "context": "L_DAM_045",
+            "string": "Ich schalte es ab.\n"
+        },
+        {
+            "id": "L_DAM_046",
+            "context": "L_DAM_046",
+            "string": "Bitte tu mir nichts.\n"
+        },
+        {
+            "id": "L_DAM_047",
+            "context": "L_DAM_047",
+            "string": "Jetzt seid ihr dran, Verräter.\n"
+        }
+    ]
+}

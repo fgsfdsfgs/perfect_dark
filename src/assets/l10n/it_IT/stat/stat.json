@@ -1,0 +1,64 @@
+{
+    "messages": [
+        {
+            "id": "L_STAT_000",
+            "context": "L_STAT_000",
+            "string": "|Situazione:\n\nDopo la fine dei bombardamenti sono state formate alcune squadre di difensori Maian per portare a termine le operazioni di devastazione sulla superficie del pianeta. Purtroppo l'esplorazione dello spettro genetico ha evidenziato un altro candidato destinato a diventare il re degli Skedar.\n\n|Obiettivo 1: - Regicidio - Parte prima\n\nQuesto clone del re degli Skedar è stato attivato al momento in cui Joanna Dark ha colpito e ucciso il re in carica. Tuttavia è probabile che sia confuso e che per adesso non presenti una vera e propria minaccia come il suo predecessore. Eliminalo prima che si chiarisca le idee e prenda il comando dei reduci di guerra dell'esercito Skedar.\n\n|Obiettivo 2: - Regicidio - Parte seconda\n\nEsiste un altro clone! Un difetto della sala dei cloni ha provocato l'attivazione di due cloni contemporaneamente. Tuttavia questo ha avuto più tempo per ambientarsi e per questo motivo è anche più pericoloso. Una volta che lo avrai eliminato la minaccia non sussisterà più.\n\n|Obiettivo 3: - Regicidio - Parte terza\n\nMi rincresce doverti comunicare che esiste un terzo clone del re. I nostri scanner hanno incontrato difficoltà nel riconoscerlo a causa delle forti interferenze della superficie dovute alla veemenza dei bombardamenti. Attenzione questo re è più pericoloso degli altri due! È pertanto di vitale importanza che venga soppresso al più presto.\n\nFINE\n"
+        },
+        {
+            "id": "L_STAT_001",
+            "context": "L_STAT_001",
+            "string": "TEMPIO DI GUERRA\n"
+        },
+        {
+            "id": "L_STAT_002",
+            "context": "L_STAT_002",
+            "string": "|Situazione:\n\nDopo la fine dei bombardamenti sono state formate alcune squadre di difensori Maian per portare a termine le operazioni di devastazione sulla superficie del pianeta. Purtroppo l'esplorazione dello spettro genetico ha evidenziato un altro candidato destinato a diventare il re degli Skedar.\n\n|Obiettivo 1: - Regicidio - Parte prima\n\nQuesto clone del re degli Skedar è stato attivato al momento in cui Joanna Dark ha colpito e ucciso il re in carica. Tuttavia è probabile che sia confuso e che per adesso non presenti una vera e propria minaccia come il suo predecessore. Eliminalo prima che si chiarisca le idee e prenda il comando dei reduci di guerra dell'esercito Skedar.\n\n|Obiettivo 2: - Regicidio - Parte seconda\n\nEsiste un altro clone! Un difetto della sala dei cloni ha provocato l'attivazione di due cloni contemporaneamente. Tuttavia questo ha avuto più tempo per ambientarsi e per questo motivo è anche più pericoloso. Una volta che lo avrai eliminato la minaccia non al più presto.\n\nFINE\n"
+        },
+        {
+            "id": "L_STAT_003",
+            "context": "L_STAT_003",
+            "string": "|Situazione:\n\nDopo la fine dei bombardamenti sono state formate alcune squadre di difensori Maian per portare a termine le operazioni di devastazione sulla superficie del pianeta. Purtroppo l'esplorazione dello spettro genetico ha evidenziato un altro candidato destinato a diventare il re degli Skedar.\n\n|Obiettivo 1: - Regicidio\n\nQuesto clone del re degli Skedar è stato attivato al momento in cui Joanna Dark ha colpito e ucciso il re in carica. Tuttavia è probabile che sia confuso e che per adesso non presenti una vera e propria minaccia come il suo predecessore. Eliminalo prima che si chiarisca le idee e prenda il comando dei reduci di guerra al più presto.\n\nFINE\n"
+        },
+        {
+            "id": "L_STAT_004",
+            "context": "L_STAT_004",
+            "string": "Uccidi il re degli Skedar\n"
+        },
+        {
+            "id": "L_STAT_005",
+            "context": "L_STAT_005",
+            "string": "Uccidi il 2° re degli Skedar\n"
+        },
+        {
+            "id": "L_STAT_006",
+            "context": "L_STAT_006",
+            "string": "Uccidi il 3° re degli Skedar\n"
+        },
+        {
+            "id": "L_STAT_007",
+            "context": "L_STAT_007",
+            "string": "Il capo dei Maian è stato ucciso.\n"
+        },
+        {
+            "id": "L_STAT_008",
+            "context": "L_STAT_008",
+            "string": "Il re degli Skedar è stato ucciso.\n"
+        },
+        {
+            "id": "L_STAT_009",
+            "context": "L_STAT_009",
+            "string": null
+        },
+        {
+            "id": "L_STAT_010",
+            "context": "L_STAT_010",
+            "string": null
+        },
+        {
+            "id": "L_STAT_011",
+            "context": "L_STAT_011",
+            "string": null
+        }
+    ]
+}

@@ -1,0 +1,84 @@
+{
+    "messages": [
+        {
+            "id": "L_SEV_000",
+            "context": "L_SEV_000",
+            "string": "|Situazione:\n\nAttivati protocolli per misure di emergenza. Velivolo XD-310372 ha subito un attacco nemico ed è stato abbattuto. Maian Difensore 1 (Aelphaeis Mangarae) è l'unico sopravvissuto. Stato di precontatto progettato per il pianeta: paranoia grado 'B+', intolleranza grado 'B', xenofobia grado 'A'. Distruggi la strumentazione rimanente. Impedisci l'analisi della tecnologia Maian e/o degli individui.\n\n|Obiettivo 1: - Sabotaggio esperimento medico nemico\n\nIl corpo di cui sono responsabile, quello dell'ambasciatore Maian sulla Terra, è stato sottoposto ad un esperimento. Per compiere il mio dovere come Difensore Maian devo accertarmi che quel corpo venga eliminato.\n\n|Obiettivo 2: - Elimina la navicella Maian sequestrata\n\nL'ultimo mio dovere sarà quello di distruggere quel che rimane della navicella Maian con cui sono arrivato sulla Terra. Se qualcuno scoprisse che la tecnologia di costruzione è simile a quella delle 'invenzioni' del Carrington Institute, i nostri alleati sulla Terra sarebbero in grave pericolo e io avrei fallito la mia missione.\n\n|Obiettivo 3: - Invia segnale di pericolo agli alleati\n\nIl Carrington Institute potrebbe essere in grado di aiutarmi. Devo riuscire a far pervenire loro un messaggio per informarli della mia posizione e del mio stato di salute. In tal modo potranno distruggere loro qualsiasi apparecchiatura che non riesco a raggiungere ed eliminare io stessa.\n\nFINE\n"
+        },
+        {
+            "id": "L_SEV_001",
+            "context": "L_SEV_001",
+            "string": "AREA 51, NEVADA, TERRA\n"
+        },
+        {
+            "id": "L_SEV_002",
+            "context": "L_SEV_002",
+            "string": "|Situazione:\n\nAttivati protocolli per misure di emergenza. Velivolo XD-310372 ha subito un attacco nemico ed è stato abbattuto. Maian Difensore 1 (Aelphaeis Mangarae) è l'unico sopravvissuto. Stato di precontatto progettato per il pianeta: paranoia grado 'B+', intolleranza grado 'B', xenofobia grado 'A'. Distruggi la strumentazione rimanente. Impedisci l'analisi della tecnologia Maian e/o degli individui.\n\n|Obiettivo 1: - Sabotaggio esperimento medico nemico\n\nIl corpo di cui sono responsabile, quello dell'ambasciatore Maian sulla Terra, è stato sottoposto ad un esperimento. Per compiere il mio dovere come Difensore Maian devo accertarmi che quel corpo venga eliminato.\n\n|Obiettivo 2: - Invia segnale di pericolo agli alleati\n\nIl Carrington Institute potrebbe essere in grado di aiutarmi. Devo riuscire a far pervenire loro un messaggio per informarli della mia posizione e del mio stato di salute. In tal modo potranno distruggere loro qualsiasi apparecchiatura che non riesco a raggiungere ed eliminare io stessa.\n\nFINE\n"
+        },
+        {
+            "id": "L_SEV_003",
+            "context": "L_SEV_003",
+            "string": "|Situazione:\n\nAttivati protocolli per misure di emergenza. Velivolo XD-310372 ha subito un attacco nemico ed è stato abbattuto. Maian Difensore 1 (Aelphaeis Mangarae) è l'unico sopravvissuto. Stato di precontatto progettato per il pianeta: paranoia grado 'B+', intolleranza grado 'B', xenofobia grado 'A'. Distruggi la strumentazione rimanente. Impedisci l'analisi della tecnologia Maian e/o degli individui.\n\n|Obiettivo 1: - Invia segnale di pericolo agli alleati\n\nIl Carrington Institute potrebbe essere in grado di aiutarmi. Devo riuscire a far pervenire loro un messaggio per informarli della mia posizione e del mio stato di salute. In tal modo potranno distruggere loro qualsiasi apparecchiatura che non riesco a raggiungere ed eliminare io stessa.\n\nFINE\n"
+        },
+        {
+            "id": "L_SEV_004",
+            "context": "L_SEV_004",
+            "string": "Sabotaggio esperimento medico nemico\n"
+        },
+        {
+            "id": "L_SEV_005",
+            "context": "L_SEV_005",
+            "string": "Elimina la navicella Maian sequestrata\n"
+        },
+        {
+            "id": "L_SEV_006",
+            "context": "L_SEV_006",
+            "string": "Invia segnale di pericolo\n"
+        },
+        {
+            "id": "L_SEV_007",
+            "context": "L_SEV_007",
+            "string": "L'esperimento medico è stato sabotato.\n"
+        },
+        {
+            "id": "L_SEV_008",
+            "context": "L_SEV_008",
+            "string": "La navicella Maian è stata distrutta.\n"
+        },
+        {
+            "id": "L_SEV_009",
+            "context": "L_SEV_009",
+            "string": "Il segnale di pericolo è stato inviato.\n"
+        },
+        {
+            "id": "L_SEV_010",
+            "context": "L_SEV_010",
+            "string": "Distrutto strumento essenziale alla missione.\n"
+        },
+        {
+            "id": "L_SEV_011",
+            "context": "L_SEV_011",
+            "string": "Missione fallita - Impossibile uscire dal laboratorio\n"
+        },
+        {
+            "id": "L_SEV_012",
+            "context": "L_SEV_012",
+            "string": "Trovata via di fuga alternativa.\n"
+        },
+        {
+            "id": "L_SEV_013",
+            "context": "L_SEV_013",
+            "string": null
+        },
+        {
+            "id": "L_SEV_014",
+            "context": "L_SEV_014",
+            "string": null
+        },
+        {
+            "id": "L_SEV_015",
+            "context": "L_SEV_015",
+            "string": null
+        }
+    ]
+}

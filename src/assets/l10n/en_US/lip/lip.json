@@ -1,0 +1,544 @@
+{
+    "messages": [
+        {
+            "id": "L_LIP_000",
+            "context": "L_LIP_000",
+            "string": "|Background - \n\nA craft carrying Institute advisors has been shot down in Nevada. Debris from the crash and the bodies of the advisors have been taken to Area 51. A spy inside the base has managed to get footage to the Institute of a possible survivor. This mission is to rescue that survivor.\n\n|Carrington - \n\nYou need to cover our tracks and rescue our friend as fast as you can. A disguise will help you do that, but it won't last forever, so make good use of it. Wipe out their records, and make sure there are no more survivors we are unaware of. Time is pressing, so hurry.\n\n|Objective One: - Destroy Computer Research Records\n\nAny information that the Area 51 techs were able to get from the crash wreckage and objects must be wiped from their databases. The main databank terminal is kept in a locked room at the top of the main corridor. Install a virus using the Data Uplink device, and then destroy the terminal itself. If the virus is loaded into other terminals, it may produce helpful effects.\n\n|Objective Two: - Locate Conspiracy Evidence\n\nJonathan's report made reference to a tissue containment unit where organic samples are stored at extremely low temperatures. He believes that it could be used to cryogenically freeze bodies before surgery or dissection. Find this area and confirm the death of any of the three other passengers of the craft.\n\n|Objective Three: - Obtain and Use Lab Technician Disguise\n\nFind a Lab Technician's outfit and use it to get past the security. Once you have, move fast, since the theft won't go unnoticed for long.\n\n|Objective Four: - Gain Access to Autopsy Lab\n\nA premature autopsy will soon be taking place in one of the secure medical laboratories. It will be locked to those without clearance, so get a card with the appropriate level to get in. Not all cards will work, and there may be door guards as well.\n\n|Objective Five: - Rescue the Crash Survivor\n\nOnce you are in the lab, you will have to get into the autopsy chamber before any harm comes to the subject. The scientists will try to kill him if they think he's alive or will attempt to damage what they think is a corpse as soon as they see you. Yet again, speed is vital.\n\nEND\n"
+        },
+        {
+            "id": "L_LIP_001",
+            "context": "L_LIP_001",
+            "string": "AREA 51 - MEDLABS\n"
+        },
+        {
+            "id": "L_LIP_002",
+            "context": "L_LIP_002",
+            "string": "|Background - \n\nA craft carrying Institute advisors has been shot down in Nevada. Debris from the crash and the bodies of the advisors have been taken to Area 51. A spy inside the base has managed to get footage to the Institute of a possible survivor. This mission is to rescue that survivor.\n\n|Carrington - \n\nYou need to cover our tracks and rescue our friend as fast as you can. A disguise will help you do that, but it won't last forever, so make good use of it. Wipe out their records, and make sure there are no more survivors we are unaware of. Time is pressing, so hurry.\n\n|Objective One: - Locate Conspiracy Evidence\n\nJonathan's report made reference to a tissue containment unit where organic samples are stored at extremely low temperatures. He believes that it could be used to cryogenically freeze bodies before surgery or dissection. Find this area and confirm the death of any of the three other passengers of the craft.\n\n|Objective Two: - Obtain and Use Lab Technician Disguise\n\nFind a Lab Technician's outfit and use it to get past the security. Once you have, move fast, since the theft won't go unnoticed for long.\n\n|Objective Three: - Gain Access to Autopsy Lab\n\nA premature autopsy will soon be taking place in one of the secure medical laboratories. It will be locked to those without clearance, so get a card with the appropriate level to get in. Not all cards will work, and there may be door guards as well.\n\n|Objective Four: - Rescue the Crash Survivor\n\nOnce you are in the lab, you will have to get into the autopsy chamber before any harm comes to the subject. The scientists will try to kill him if they think he's alive or will attempt to damage what they think is a corpse as soon as they see you. Yet again, speed is vital.\n\nEND\n"
+        },
+        {
+            "id": "L_LIP_003",
+            "context": "L_LIP_003",
+            "string": "|Background - \n\nA craft carrying Institute advisors has been shot down in Nevada. Debris from the crash and the bodies of the advisors have been taken to Area 51. A spy inside the base has managed to get footage to the Institute of a possible survivor. This mission is to rescue that survivor.\n\n|Carrington - \n\nYou need to cover our tracks and rescue our friend as fast as you can. A disguise will help you do that, but it won't last forever, so make good use of it. Wipe out their records, and make sure there are no more survivors we are unaware of. Time is pressing, so hurry.\n\n|Objective One: - Obtain and Use Lab Technician Disguise\n\nFind a Lab Technician's outfit and use it to get past the security. Once you have, move fast, since the theft won't go unnoticed for long.\n\n|Objective Two: - Gain Access to Autopsy Lab\n\nA premature autopsy will soon be taking place in one of the secure medical laboratories. It will be locked to those without clearance, so get a card with the appropriate level to get in. Not all cards will work, and there may be door guards as well.\n\n|Objective Three: - Rescue the Crash Survivor\n\nOnce you are in the lab, you will have to get into the autopsy chamber before any harm comes to the subject. The scientists will try to kill him if they think he's alive or will attempt to damage what they think is a corpse as soon as they see you. Yet again, speed is vital.\n\nEND\n"
+        },
+        {
+            "id": "L_LIP_004",
+            "context": "L_LIP_004",
+            "string": "\n"
+        },
+        {
+            "id": "L_LIP_005",
+            "context": "L_LIP_005",
+            "string": "\n"
+        },
+        {
+            "id": "L_LIP_006",
+            "context": "L_LIP_006",
+            "string": "\n"
+        },
+        {
+            "id": "L_LIP_007",
+            "context": "L_LIP_007",
+            "string": "\n"
+        },
+        {
+            "id": "L_LIP_008",
+            "context": "L_LIP_008",
+            "string": "\n"
+        },
+        {
+            "id": "L_LIP_009",
+            "context": "L_LIP_009",
+            "string": "Obtain and use lab technician disguise\n"
+        },
+        {
+            "id": "L_LIP_010",
+            "context": "L_LIP_010",
+            "string": "Destroy computer records\n"
+        },
+        {
+            "id": "L_LIP_011",
+            "context": "L_LIP_011",
+            "string": "Locate conspiracy evidence\n"
+        },
+        {
+            "id": "L_LIP_012",
+            "context": "L_LIP_012",
+            "string": "Gain access to autopsy lab\n"
+        },
+        {
+            "id": "L_LIP_013",
+            "context": "L_LIP_013",
+            "string": "Rescue the crash Survivor\n"
+        },
+        {
+            "id": "L_LIP_014",
+            "context": "L_LIP_014",
+            "string": "Research records destroyed.\n"
+        },
+        {
+            "id": "L_LIP_015",
+            "context": "L_LIP_015",
+            "string": "Obtain lab clothes.\n"
+        },
+        {
+            "id": "L_LIP_016",
+            "context": "L_LIP_016",
+            "string": "Lab Tech's\n"
+        },
+        {
+            "id": "L_LIP_017",
+            "context": "L_LIP_017",
+            "string": "Lab clothes\n"
+        },
+        {
+            "id": "L_LIP_018",
+            "context": "L_LIP_018",
+            "string": "Lab clothes\n"
+        },
+        {
+            "id": "L_LIP_019",
+            "context": "L_LIP_019",
+            "string": "Picked up lab clothes.\n"
+        },
+        {
+            "id": "L_LIP_020",
+            "context": "L_LIP_020",
+            "string": "Access to door control systems denied.\n"
+        },
+        {
+            "id": "L_LIP_021",
+            "context": "L_LIP_021",
+            "string": "Access to light control systems denied.\n"
+        },
+        {
+            "id": "L_LIP_022",
+            "context": "L_LIP_022",
+            "string": "Access to security control systems denied.\n"
+        },
+        {
+            "id": "L_LIP_023",
+            "context": "L_LIP_023",
+            "string": "Virus downloaded to console.\n"
+        },
+        {
+            "id": "L_LIP_024",
+            "context": "L_LIP_024",
+            "string": "Obtain Data Uplink.\n"
+        },
+        {
+            "id": "L_LIP_025",
+            "context": "L_LIP_025",
+            "string": "Lab Tech's\n"
+        },
+        {
+            "id": "L_LIP_026",
+            "context": "L_LIP_026",
+            "string": "Data Uplink\n"
+        },
+        {
+            "id": "L_LIP_027",
+            "context": "L_LIP_027",
+            "string": "Data Uplink\n"
+        },
+        {
+            "id": "L_LIP_028",
+            "context": "L_LIP_028",
+            "string": "Picked up Data Uplink.\n"
+        },
+        {
+            "id": "L_LIP_029",
+            "context": "L_LIP_029",
+            "string": "Laboratory accessed successfully.\n"
+        },
+        {
+            "id": "L_LIP_030",
+            "context": "L_LIP_030",
+            "string": "Data Uplink connected.\n"
+        },
+        {
+            "id": "L_LIP_031",
+            "context": "L_LIP_031",
+            "string": "Data Uplink connection broken.\n"
+        },
+        {
+            "id": "L_LIP_032",
+            "context": "L_LIP_032",
+            "string": "Obtain medlab 2 key card.\n"
+        },
+        {
+            "id": "L_LIP_033",
+            "context": "L_LIP_033",
+            "string": "Guard's\n"
+        },
+        {
+            "id": "L_LIP_034",
+            "context": "L_LIP_034",
+            "string": "Medlab 2 key card\n"
+        },
+        {
+            "id": "L_LIP_035",
+            "context": "L_LIP_035",
+            "string": "Medlab 2 key card\n"
+        },
+        {
+            "id": "L_LIP_036",
+            "context": "L_LIP_036",
+            "string": "Picked up medlab 2 key card.\n"
+        },
+        {
+            "id": "L_LIP_037",
+            "context": "L_LIP_037",
+            "string": "Who are you?\n"
+        },
+        {
+            "id": "L_LIP_038",
+            "context": "L_LIP_038",
+            "string": "Hey - you've got my clothes.\n"
+        },
+        {
+            "id": "L_LIP_039",
+            "context": "L_LIP_039",
+            "string": "Help - help!\n"
+        },
+        {
+            "id": "L_LIP_040",
+            "context": "L_LIP_040",
+            "string": "Don't shoot me!\n"
+        },
+        {
+            "id": "L_LIP_041",
+            "context": "L_LIP_041",
+            "string": "Oh, my God - a gun!\n"
+        },
+        {
+            "id": "L_LIP_042",
+            "context": "L_LIP_042",
+            "string": "There's an intruder in the complex.\n"
+        },
+        {
+            "id": "L_LIP_043",
+            "context": "L_LIP_043",
+            "string": "Give me back my clothes - or else!\n"
+        },
+        {
+            "id": "L_LIP_044",
+            "context": "L_LIP_044",
+            "string": "Right - you've asked for it!\n"
+        },
+        {
+            "id": "L_LIP_045",
+            "context": "L_LIP_045",
+            "string": "Give me my clothes.\n"
+        },
+        {
+            "id": "L_LIP_046",
+            "context": "L_LIP_046",
+            "string": "I don't have much time!!!\n"
+        },
+        {
+            "id": "L_LIP_047",
+            "context": "L_LIP_047",
+            "string": "The enemy has discovered the disguise.\n"
+        },
+        {
+            "id": "L_LIP_048",
+            "context": "L_LIP_048",
+            "string": "Virus has already been downloaded.\n"
+        },
+        {
+            "id": "L_LIP_049",
+            "context": "L_LIP_049",
+            "string": "Initiating virus download.\n"
+        },
+        {
+            "id": "L_LIP_050",
+            "context": "L_LIP_050",
+            "string": "So, you got here at last.\n"
+        },
+        {
+            "id": "L_LIP_051",
+            "context": "L_LIP_051",
+            "string": "Hey, you're not... SECURITY ALERT!\n"
+        },
+        {
+            "id": "L_LIP_052",
+            "context": "L_LIP_052",
+            "string": "No guns allowed in here - put your weapon away.\n"
+        },
+        {
+            "id": "L_LIP_053",
+            "context": "L_LIP_053",
+            "string": "I won't tell you again - lose the weapon.\n"
+        },
+        {
+            "id": "L_LIP_054",
+            "context": "L_LIP_054",
+            "string": "Right - I'm calling security.\n"
+        },
+        {
+            "id": "L_LIP_055",
+            "context": "L_LIP_055",
+            "string": "Everyone's been waiting for you...\n"
+        },
+        {
+            "id": "L_LIP_056",
+            "context": "L_LIP_056",
+            "string": "Critical mission personnel killed.\n"
+        },
+        {
+            "id": "L_LIP_057",
+            "context": "L_LIP_057",
+            "string": "Cannot gain access to autopsy lab.\n"
+        },
+        {
+            "id": "L_LIP_058",
+            "context": "L_LIP_058",
+            "string": "Hey, that's not Harry. It's an intruder.\n"
+        },
+        {
+            "id": "L_LIP_059",
+            "context": "L_LIP_059",
+            "string": "Obtain op room key card.\n"
+        },
+        {
+            "id": "L_LIP_060",
+            "context": "L_LIP_060",
+            "string": "Guard's\n"
+        },
+        {
+            "id": "L_LIP_061",
+            "context": "L_LIP_061",
+            "string": "Op room key card\n"
+        },
+        {
+            "id": "L_LIP_062",
+            "context": "L_LIP_062",
+            "string": "Op room key card\n"
+        },
+        {
+            "id": "L_LIP_063",
+            "context": "L_LIP_063",
+            "string": "Picked up operation room key card.\n"
+        },
+        {
+            "id": "L_LIP_064",
+            "context": "L_LIP_064",
+            "string": "Elvis has been killed.\n"
+        },
+        {
+            "id": "L_LIP_065",
+            "context": "L_LIP_065",
+            "string": "Get the hell out of here!\n"
+        },
+        {
+            "id": "L_LIP_066",
+            "context": "L_LIP_066",
+            "string": "Containment unit raised up.\n"
+        },
+        {
+            "id": "L_LIP_067",
+            "context": "L_LIP_067",
+            "string": "Containment unit lowered down.\n"
+        },
+        {
+            "id": "L_LIP_068",
+            "context": "L_LIP_068",
+            "string": "Mission critical equipment destroyed.\n"
+        },
+        {
+            "id": "L_LIP_069",
+            "context": "L_LIP_069",
+            "string": "Obtain X-Ray Scanner.\n"
+        },
+        {
+            "id": "L_LIP_070",
+            "context": "L_LIP_070",
+            "string": "\n"
+        },
+        {
+            "id": "L_LIP_071",
+            "context": "L_LIP_071",
+            "string": "X-Ray Scanner\n"
+        },
+        {
+            "id": "L_LIP_072",
+            "context": "L_LIP_072",
+            "string": "X-Ray Scanner\n"
+        },
+        {
+            "id": "L_LIP_073",
+            "context": "L_LIP_073",
+            "string": "Picked up X-Ray Scanner.\n"
+        },
+        {
+            "id": "L_LIP_074",
+            "context": "L_LIP_074",
+            "string": "Scanner target acquired.\n"
+        },
+        {
+            "id": "L_LIP_075",
+            "context": "L_LIP_075",
+            "string": "Target ID confirmed - XT origin.\n"
+        },
+        {
+            "id": "L_LIP_076",
+            "context": "L_LIP_076",
+            "string": "Scanner lock lost.\n"
+        },
+        {
+            "id": "L_LIP_077",
+            "context": "L_LIP_077",
+            "string": "Disguise has been worn.\n"
+        },
+        {
+            "id": "L_LIP_078",
+            "context": "L_LIP_078",
+            "string": "The showers... Now, if I can convince someone \nto part with their uniform...\n"
+        },
+        {
+            "id": "L_LIP_079",
+            "context": "L_LIP_079",
+            "string": "The temperature's dropping... You must be \nclose to the cryo room.\n"
+        },
+        {
+            "id": "L_LIP_080",
+            "context": "L_LIP_080",
+            "string": "The air's heavily recycled around here - must\n be near the autopsy lab.\n"
+        },
+        {
+            "id": "L_LIP_081",
+            "context": "L_LIP_081",
+            "string": "There he is, Jo! Hurry or you'll be too late!\n"
+        },
+        {
+            "id": "L_LIP_082",
+            "context": "L_LIP_082",
+            "string": "Leave this area now.\n"
+        },
+        {
+            "id": "L_LIP_083",
+            "context": "L_LIP_083",
+            "string": "Should you be in here?\n"
+        },
+        {
+            "id": "L_LIP_084",
+            "context": "L_LIP_084",
+            "string": "Holy...\n"
+        },
+        {
+            "id": "L_LIP_085",
+            "context": "L_LIP_085",
+            "string": "It's a spy!\n"
+        },
+        {
+            "id": "L_LIP_086",
+            "context": "L_LIP_086",
+            "string": "Warn the others...\n"
+        },
+        {
+            "id": "L_LIP_087",
+            "context": "L_LIP_087",
+            "string": "Imposter!\n"
+        },
+        {
+            "id": "L_LIP_088",
+            "context": "L_LIP_088",
+            "string": "Lighting systems overloaded.\n"
+        },
+        {
+            "id": "L_LIP_089",
+            "context": "L_LIP_089",
+            "string": "Alternative entrance to medlabs created.\n"
+        },
+        {
+            "id": "L_LIP_090",
+            "context": "L_LIP_090",
+            "string": "The problem you have is that there is no \nway to sneak into the research section. \nThe only way in available to you is a \nweak section of wall I've marked in the \nroom beyond the stores. It can be destroyed \nwith explosives.\n"
+        },
+        {
+            "id": "L_LIP_091",
+            "context": "L_LIP_091",
+            "string": "Doesn't sound like a problem to me. Where \nare these explosives?\n"
+        },
+        {
+            "id": "L_LIP_092",
+            "context": "L_LIP_092",
+            "string": "In that crate.\n"
+        },
+        {
+            "id": "L_LIP_093",
+            "context": "L_LIP_093",
+            "string": "Cute. Very cute.\n"
+        },
+        {
+            "id": "L_LIP_094",
+            "context": "L_LIP_094",
+            "string": "By the way, the stores are crawling with \nguards. It may go against your nature, but \ntry sneaking through rather than blasting \neverything.\n"
+        },
+        {
+            "id": "L_LIP_095",
+            "context": "L_LIP_095",
+            "string": "Certainly. Any other pearls of wisdom?\n"
+        },
+        {
+            "id": "L_LIP_096",
+            "context": "L_LIP_096",
+            "string": "That crate...\n"
+        },
+        {
+            "id": "L_LIP_097",
+            "context": "L_LIP_097",
+            "string": "Yes?\n"
+        },
+        {
+            "id": "L_LIP_098",
+            "context": "L_LIP_098",
+            "string": "It really doesn't like being shot.\n"
+        },
+        {
+            "id": "L_LIP_099",
+            "context": "L_LIP_099",
+            "string": "Great. Now, if I can just fight the urge \nto report him to Base Security...\n"
+        },
+        {
+            "id": "L_LIP_100",
+            "context": "L_LIP_100",
+            "string": "Put your hands up and step away from the \nalien.\n"
+        },
+        {
+            "id": "L_LIP_101",
+            "context": "L_LIP_101",
+            "string": "What the hell do you think you're doing? \nThis is supposed to be a sealed room! \nDon't you know anything about autopsy \nprocedures?\n"
+        },
+        {
+            "id": "L_LIP_102",
+            "context": "L_LIP_102",
+            "string": "Don't make me tell you again, Doctor. And \nturn that laser off.\n"
+        },
+        {
+            "id": "L_LIP_103",
+            "context": "L_LIP_103",
+            "string": "Director Easton will hear about this, \nyoung lady.\n"
+        },
+        {
+            "id": "L_LIP_104",
+            "context": "L_LIP_104",
+            "string": "Of course he's going to hear of it, you \nmoron. I've just got into his top secret \nbase, and now I'm stealing his alien.\n"
+        },
+        {
+            "id": "L_LIP_105",
+            "context": "L_LIP_105",
+            "string": "Automatic Defenses Disabled.\n"
+        },
+        {
+            "id": "L_LIP_106",
+            "context": "L_LIP_106",
+            "string": null
+        },
+        {
+            "id": "L_LIP_107",
+            "context": "L_LIP_107",
+            "string": null
+        }
+    ]
+}

@@ -1,0 +1,64 @@
+{
+    "messages": [
+        {
+            "id": "L_STAT_000",
+            "context": "L_STAT_000",
+            "string": "|Briefing - \n\nLe bombardement de la flotte est terminé. Des équipes de Protecteurs maians sont constituées pour mener des opérations à la surface de la planète. Un balayage au spectre génétique a révélé la présence d'un nouveau clone du Roi skedar.\n\n|Objectif 1: - Régicide Acte Un\n\nCe clone du Roi skedar a été activé quand Joanna Dark a éliminé le Roi existant. Il est encore au stade juvénile, il est certainement moins dangereux que l'ancien Roi pour le moment. Eliminez-le avant qu'il ne rassemble les restes de l'armée skedar.\n\n|Objectif 2: - Régicide Acte deux\n\nIl y a un autre clone! Un défaut de fonctionnement des cuves génitrices a provoqué l'activation simultanée de deux Rois skedars. Celui-ci a eu plus de temps pour s'habituer au monde, il sera certainement plus dangereux que son frère. Une fois que vous l'aurez détruit, la menace sera écartée.\n\n|Objectif 3: - Régicide Acte trois\n\nPardon, désolé, il y a un troisième Roi. Nos détecteurs n'ont pu le repérer auparavant en raison de fortes perturbations dues aux bombardements massifs de la flotte. Ce Roi est mieux préparé que les deux autres, il est impératif qu'il soit éliminé dans les plus brefs délais. Dépêchez-vous, il ne faut pas qu'il rassemble ses armées.\n\nFIN\n"
+        },
+        {
+            "id": "L_STAT_001",
+            "context": "L_STAT_001",
+            "string": "AUTEL DE COMBAT\n"
+        },
+        {
+            "id": "L_STAT_002",
+            "context": "L_STAT_002",
+            "string": "|Briefing - \n\nLe bombardement de la flotte est terminé. Des équipes de Protecteurs maians sont constituées pour mener des opérations à la surface de la planète. Un balayage au spectre génétique a révélé la présence d'un nouveau clone du Roi skedar.\n\n|Objectif 1: - Régicide Acte Un\n\nCe clone du Roi skedar a été activé quand Joanna Dark a éliminé le Roi existant. Il est encore au stade juvénile, il est certainement moins dangereux que l'ancien Roi pour le moment. Eliminez-le avant qu'il ne rassemble les restes de l'armée skedar.\n\n|Objectif 2: - Régicide Acte deux\n\nIl y a un autre clone! Un défaut de fonctionnement des cuves génitrices a provoqué l'activation simultanée de deux Rois skedars. Celui-ci a eu plus de temps pour s'habituer au monde, il sera certainement plus dangereux que son frère. Une fois que vous l'aurez détruit, la menace sera écartée.\n\nFIN\n"
+        },
+        {
+            "id": "L_STAT_003",
+            "context": "L_STAT_003",
+            "string": "|Briefing - \n\nLe bombardement de la flotte est terminé. Des équipes de Protecteurs maians sont constituées pour mener des opérations à la surface de la planète. Un balayage au spectre génétique a révélé la présence d'un nouveau clone du Roi skedar.\n\n|Objectif 1: - Régicide Acte Un\n\nCe clone du Roi skedar a été activé quand Joanna Dark a éliminé le Roi existant. Il est encore au stade juvénile, il est certainement moins dangereux que l'ancien Roi pour le moment. Eliminez-le avant qu'il ne regroupe les restes de l'armée skedar.\n\nFIN\n"
+        },
+        {
+            "id": "L_STAT_004",
+            "context": "L_STAT_004",
+            "string": "Tuer Roi skedar\n"
+        },
+        {
+            "id": "L_STAT_005",
+            "context": "L_STAT_005",
+            "string": "Tuer Roi skedar 2\n"
+        },
+        {
+            "id": "L_STAT_006",
+            "context": "L_STAT_006",
+            "string": "Tuer Roi skedar 3\n"
+        },
+        {
+            "id": "L_STAT_007",
+            "context": "L_STAT_007",
+            "string": "Le Dirigeant maian a été tué.\n"
+        },
+        {
+            "id": "L_STAT_008",
+            "context": "L_STAT_008",
+            "string": "Le Roi skedar a été tué.\n"
+        },
+        {
+            "id": "L_STAT_009",
+            "context": "L_STAT_009",
+            "string": null
+        },
+        {
+            "id": "L_STAT_010",
+            "context": "L_STAT_010",
+            "string": null
+        },
+        {
+            "id": "L_STAT_011",
+            "context": "L_STAT_011",
+            "string": null
+        }
+    ]
+}

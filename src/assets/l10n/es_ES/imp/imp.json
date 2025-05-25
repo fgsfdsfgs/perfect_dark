@@ -1,0 +1,324 @@
+{
+    "messages": [
+        {
+            "id": "L_IMP_000",
+            "context": "L_IMP_000",
+            "string": "|Antecedentes - \n\nEn venganza por desbaratar su gran plan, los Skedar han atacado la fuente de sus problemas, el Instituto Carrington. Con una reacción organizada fuera de toda duda, recae en Joanna salvar lo que pueda del Instituto de la destrucción total.\n\n|Carrington - \n\n¡Nos han cogido completamente desprevenidos, Joanna! Salva a todo el que puedas, entonces sal tú misma. Después de todo, el Instituto es la gente, no el edificio.\n\n|Objetivo Uno: - Reactivar Defensas Automáticas\n\nHay armas automáticas situadas en lugares estratégicos por todo el Instituto Carrington. En este momento están inactivas, pero si puedes llegar a los paneles de control y activarlas, te ayudarán a terminar con los atacantes.\n\n|Objetivo Dos: - Liberar a los Rehenes\n\nParte de las fuerzas invasoras mantienen a personal clave del Instituto como rehenes. Salva a tantos como puedas. Mira en los diversos laboratorios.\n\n|Objetivo Tres: - Recuperar Arma Experimental\n\nEn el laboratorio de armas de Foster hay un prototipo de metralleta que no podemos dejar caer en manos enemigas. Esto se debe a que ese arma es capaz de crear un campo temporal de ocultación. Encuéntrala y lleva a cabo un poco de 'investigación de campo'.\n\n|Objetivo Cuatro: - Destruir Información Sensible\n\nEn la oficina de Daniel hay una caja fuerte donde se guardan los algoritmos que usó para descifrar los códigos de comunicación Maian hace unos años. Deben ser destruidos antes de que dataDyne o los Skedar se hagan con ellos. Usa el láser para abrir la puerta.\n\n|Objetivo Cinco: - Desactivar Bomba\n\n¡Nuestros sensores indican que hay una bomba en la nave Skedar de la plataforma de aterrizaje! Lo único que puede ayudarte es el Conector de Datos: acércate a la nave, y úsalo para instalar un virus. La nave volará fuera del Instituto, y la bomba detonará sin dañar a nadie.\n\nFIN\n"
+        },
+        {
+            "id": "L_IMP_001",
+            "context": "L_IMP_001",
+            "string": "INSTITUTO CARRINGTON\n"
+        },
+        {
+            "id": "L_IMP_002",
+            "context": "L_IMP_002",
+            "string": "|Antecedentes - \n\nEn venganza por desbaratar su gran plan, los Skedar han atacado la fuente de sus problemas, el Instituto Carrington. Con una reacción organizada fuera de toda duda, recae en Joanna salvar lo que pueda del Instituto de la destrucción total.\n\n|Carrington - \n\n¡Nos han cogido completamente desprevenidos, Joanna! Salva a todo el que puedas, entonces sal tú misma. Después de todo, el Instituto es la gente, no el edificio.\n\n|Objetivo Uno: - Reactivar Defensas Automáticas\n\nHay armas automáticas situadas en lugares estratégicos por todo el Instituto Carrington. En este momento están inactivas, pero si puedes llegar a los paneles de control y activarlas, te ayudarán a terminar con los atacantes.\n\n|Objetivo Dos: - Liberar a los Rehenes\n\nParte de las fuerzas invasoras mantienen a personal clave del Instituto como rehenes. Salva a tantos como puedas. Mira en los diversos laboratorios.\n\n|Objetivo Tres: - Recuperar Arma Experimental\n\nEn el laboratorio de armas de Foster hay un prototipo de metralleta que no podemos dejar caer en manos enemigas. Esto se debe a que ese arma es capaz de crear un campo temporal de ocultación. Encuéntrala y lleva a cabo un poco de 'investigación de campo'.\n\n|Objetivo Cuatro: - Desactivar Bomba\n\n¡Nuestros sensores indican que hay una bomba en la nave Skedar de la plataforma de aterrizaje! Lo único que puede ayudarte es el Conector de Datos: acércate a la nave, y úsalo para instalar un virus. La nave volará fuera del Instituto, y la bomba detonará sin dañar a nadie.\n\nFIN\n"
+        },
+        {
+            "id": "L_IMP_003",
+            "context": "L_IMP_003",
+            "string": "|Antecedentes - \n\nEn venganza por desbaratar su gran plan, los Skedar han atacado la fuente de sus problemas, el Instituto Carrington. Con una reacción organizada fuera de toda duda, recae en Joanna salvar lo que pueda del Instituto de la destrucción total.\n\n|Carrington - \n\n¡Nos han cogido completamente desprevenidos, Joanna! Salva a todo el que puedas, entonces sal tú misma. Después de todo, el Instituto es la gente, no el edificio.\n\n|Objetivo Uno: - Liberar a los Rehenes\n\nParte de las fuerzas invasoras mantienen a personal clave del Instituto como rehenes. Salva a tantos como puedas. Mira en los diversos laboratorios.\n\n|Objetivo Dos: - Recuperar Arma Experimental\n\nEn el laboratorio de armas de Foster hay un prototipo de metralleta que no podemos dejar caer en manos enemigas. Esto se debe a que ese arma es capaz de crear un campo temporal de ocultación. Encuéntrala y lleva a cabo un poco de 'investigación de campo'.\n\n|Objetivo Tres: - Desactivar Bomba\n\n¡Nuestros sensores indican que hay una bomba en la nave Skedar de la plataforma de aterrizaje! Lo único que puede ayudarte es el Conector de Datos: acércate a la nave, y úsalo para instalar un virus. La nave volará fuera del Instituto, y la bomba detonará sin dañar a nadie.\n\nFIN\n"
+        },
+        {
+            "id": "L_IMP_004",
+            "context": "L_IMP_004",
+            "string": "\n"
+        },
+        {
+            "id": "L_IMP_005",
+            "context": "L_IMP_005",
+            "string": "Reactivar defensas automáticas\n"
+        },
+        {
+            "id": "L_IMP_006",
+            "context": "L_IMP_006",
+            "string": "Liberar a los rehenes\n"
+        },
+        {
+            "id": "L_IMP_007",
+            "context": "L_IMP_007",
+            "string": "Recuperar arma experimental\n"
+        },
+        {
+            "id": "L_IMP_008",
+            "context": "L_IMP_008",
+            "string": "Destruir información sensible\n"
+        },
+        {
+            "id": "L_IMP_009",
+            "context": "L_IMP_009",
+            "string": "Desactivar bomba\n"
+        },
+        {
+            "id": "L_IMP_010",
+            "context": "L_IMP_010",
+            "string": "Obtén información sensible.\n"
+        },
+        {
+            "id": "L_IMP_011",
+            "context": "L_IMP_011",
+            "string": "Guarda:\n"
+        },
+        {
+            "id": "L_IMP_012",
+            "context": "L_IMP_012",
+            "string": "Información sensible\n"
+        },
+        {
+            "id": "L_IMP_013",
+            "context": "L_IMP_013",
+            "string": "Información sensible\n"
+        },
+        {
+            "id": "L_IMP_014",
+            "context": "L_IMP_014",
+            "string": "Información sensible obtenida.\n"
+        },
+        {
+            "id": "L_IMP_015",
+            "context": "L_IMP_015",
+            "string": "Arma automática activada.\n"
+        },
+        {
+            "id": "L_IMP_016",
+            "context": "L_IMP_016",
+            "string": "Demasiados rehenes muertos.\n"
+        },
+        {
+            "id": "L_IMP_017",
+            "context": "L_IMP_017",
+            "string": "Los rehenes han sido salvados.\n"
+        },
+        {
+            "id": "L_IMP_018",
+            "context": "L_IMP_018",
+            "string": "La información sensible ha sido destruida.\n"
+        },
+        {
+            "id": "L_IMP_019",
+            "context": "L_IMP_019",
+            "string": "Carrington ha muerto.\n"
+        },
+        {
+            "id": "L_IMP_020",
+            "context": "L_IMP_020",
+            "string": "Joanna, nos atacan.\n"
+        },
+        {
+            "id": "L_IMP_021",
+            "context": "L_IMP_021",
+            "string": "Activa las armas, deprisa.\n"
+        },
+        {
+            "id": "L_IMP_022",
+            "context": "L_IMP_022",
+            "string": "Los Skedar han tomado rehenes.\n"
+        },
+        {
+            "id": "L_IMP_023",
+            "context": "L_IMP_023",
+            "string": "Sube a las oficinas y sálvalos.\n"
+        },
+        {
+            "id": "L_IMP_024",
+            "context": "L_IMP_024",
+            "string": "Están usando una nueva forma de tecnología de escudo.\n"
+        },
+        {
+            "id": "L_IMP_025",
+            "context": "L_IMP_025",
+            "string": "Foster estaba trabajando en una nueva arma que \npodría ser útil.\n"
+        },
+        {
+            "id": "L_IMP_026",
+            "context": "L_IMP_026",
+            "string": "Maldición. Mi oficina... Si logran acceder...\n"
+        },
+        {
+            "id": "L_IMP_027",
+            "context": "L_IMP_027",
+            "string": "Ve allí primero, Joanna, y destruye los ficheros.\n"
+        },
+        {
+            "id": "L_IMP_028",
+            "context": "L_IMP_028",
+            "string": "Las cosas van muy mal. Han puesto una bomba.\n"
+        },
+        {
+            "id": "L_IMP_029",
+            "context": "L_IMP_029",
+            "string": "Encuéntrala y sácala del edificio.\n"
+        },
+        {
+            "id": "L_IMP_030",
+            "context": "L_IMP_030",
+            "string": "Acceso denegado: autorización fallida.\n"
+        },
+        {
+            "id": "L_IMP_031",
+            "context": "L_IMP_031",
+            "string": "Las medidas de emergencia se han activado.\n"
+        },
+        {
+            "id": "L_IMP_032",
+            "context": "L_IMP_032",
+            "string": "Bien hecho, Joanna. Estamos casi a salvo...\n"
+        },
+        {
+            "id": "L_IMP_033",
+            "context": "L_IMP_033",
+            "string": "La última nave te está esperando. Deprisa.\n"
+        },
+        {
+            "id": "L_IMP_034",
+            "context": "L_IMP_034",
+            "string": "Objeto crítico de la misión destruido.\n"
+        },
+        {
+            "id": "L_IMP_035",
+            "context": "L_IMP_035",
+            "string": "Las autodefensas me ayudarán de veras.\n"
+        },
+        {
+            "id": "L_IMP_036",
+            "context": "L_IMP_036",
+            "string": "Así que esto es en lo que Foster estaba trabajando.\n"
+        },
+        {
+            "id": "L_IMP_037",
+            "context": "L_IMP_037",
+            "string": "Debo de ir con cuidado... Los prisioneros \ncuentan conmigo.\n"
+        },
+        {
+            "id": "L_IMP_038",
+            "context": "L_IMP_038",
+            "string": "Bien, al menos no sabré si estoy \nhaciendo algo mal.\n"
+        },
+        {
+            "id": "L_IMP_039",
+            "context": "L_IMP_039",
+            "string": "La bomba ha sido detonada...\n"
+        },
+        {
+            "id": "L_IMP_040",
+            "context": "L_IMP_040",
+            "string": "Has obtenido un Devastador.\n"
+        },
+        {
+            "id": "L_IMP_041",
+            "context": "L_IMP_041",
+            "string": "¿Preparada, Joanna? No podemos hacer esperar a la delegación Maian. Ni al Presidente, por supuesto.\n"
+        },
+        {
+            "id": "L_IMP_042",
+            "context": "L_IMP_042",
+            "string": "¿Preparada? ¿Qué quieres decir? Llevo preparada desde hace media hora. \n¡Tú nos has entretenido!\n"
+        },
+        {
+            "id": "L_IMP_043",
+            "context": "L_IMP_043",
+            "string": "Pero ya sabes cómo va, Joanna... Tengo que estar seguro de que mi pelo está bien, y también estaba el traje...\n"
+        },
+        {
+            "id": "L_IMP_044",
+            "context": "L_IMP_044",
+            "string": "Deberían alejarte de los espejos. ¿Nervioso?\n"
+        },
+        {
+            "id": "L_IMP_045",
+            "context": "L_IMP_045",
+            "string": "Mucho. Llevo esperando este momento desde hace bastantes años. El contacto, amigable, entre Humanos y Maian es para lo que se fundó el Instituto. Y en unos minutos estaremos en la Casa Blanca, y ocurrirá finalmente...\n"
+        },
+        {
+            "id": "L_IMP_046",
+            "context": "L_IMP_046",
+            "string": "¿De dónde proviene ese ruido?\n"
+        },
+        {
+            "id": "L_IMP_047",
+            "context": "L_IMP_047",
+            "string": "Parece la planta baja...\n"
+        },
+        {
+            "id": "L_IMP_048",
+            "context": "L_IMP_048",
+            "string": "Parece que alguien no sabe cuándo retirarse. ¡Tenemos que sacar a todo el mundo fuera!\n"
+        },
+        {
+            "id": "L_IMP_049",
+            "context": "L_IMP_049",
+            "string": "¡Largo! Les mantendré alejados... ¡Puedes volver y recogerme luego!\n"
+        },
+        {
+            "id": "L_IMP_050",
+            "context": "L_IMP_050",
+            "string": "Al menos, espero que puedas.\n"
+        },
+        {
+            "id": "L_IMP_051",
+            "context": "L_IMP_051",
+            "string": "Necesitas el Conector de Datos.\n"
+        },
+        {
+            "id": "L_IMP_052",
+            "context": "L_IMP_052",
+            "string": "Se ha realizado la conexión.\n"
+        },
+        {
+            "id": "L_IMP_053",
+            "context": "L_IMP_053",
+            "string": "Saltando sistemas de seguridad.\n"
+        },
+        {
+            "id": "L_IMP_054",
+            "context": "L_IMP_054",
+            "string": "El virus ha sido descargado con éxito.\n"
+        },
+        {
+            "id": "L_IMP_055",
+            "context": "L_IMP_055",
+            "string": "Los motores de la nave han sido activados.\n"
+        },
+        {
+            "id": "L_IMP_056",
+            "context": "L_IMP_056",
+            "string": "La conexión con la nave se ha cortado.\n"
+        },
+        {
+            "id": "L_IMP_057",
+            "context": "L_IMP_057",
+            "string": "Obtén el Conector de Datos.\n"
+        },
+        {
+            "id": "L_IMP_058",
+            "context": "L_IMP_058",
+            "string": "\n"
+        },
+        {
+            "id": "L_IMP_059",
+            "context": "L_IMP_059",
+            "string": "C. Datos\n"
+        },
+        {
+            "id": "L_IMP_060",
+            "context": "L_IMP_060",
+            "string": "Un Conector de Datos\n"
+        },
+        {
+            "id": "L_IMP_061",
+            "context": "L_IMP_061",
+            "string": "Conector de Datos obtenido.\n"
+        },
+        {
+            "id": "L_IMP_062",
+            "context": "L_IMP_062",
+            "string": null
+        },
+        {
+            "id": "L_IMP_063",
+            "context": "L_IMP_063",
+            "string": null
+        }
+    ]
+}

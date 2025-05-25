@@ -1,0 +1,84 @@
+{
+    "messages": [
+        {
+            "id": "L_ATE_000",
+            "context": "L_ATE_000",
+            "string": "|Situazione:\n\nProva finale: sconfiggi l'avversario olografico simulato.\n\n|Carrington:\n\nHo completa fiducia nelle tue capacità, Joanna. Tieni gli occhi bene aperti durante la prova e usa tutta l'esperienza che hai accumulatodurante l'allenamento. In bocca al lupo!\n\n|Obiettivo 1: - Sconfiggi la guardia dataDyne\n\nSconfiggi la simulazione della guardia dataDyne. Il replicante dispone di mediocri capacità in lotta, ma non deve assolutamente essere sottovalutato.\n\n|Obiettivo 2: - Sconfiggi Jonathan Dark\n\nSconfiggi la simulazione di Jonathan Dark che al momento detiene il record nel punteggio delle prove. Il replicante ha buone capacità di combattimento ed è in grado di mettere in difficoltà anche combattenti affermati.\n\n|Obiettivo 3: - Sconfiggi Trent Easton\n\nSconfiggi la simulazione di questo esperto agente governativo. Il replicante è un avversario particolarmente duro. Se superi questa prova, puoi ritenerti soddisfatta dei risultati raggiunti!\n\nFINE\n"
+        },
+        {
+            "id": "L_ATE_001",
+            "context": "L_ATE_001",
+            "string": "LUCERNE TOWER\n"
+        },
+        {
+            "id": "L_ATE_002",
+            "context": "L_ATE_002",
+            "string": "|Situazione:\n\nProva finale: sconfiggi l'avversario olografico simulato.\n\n|Carrington:\n\nHo completa fiducia nelle tue capacità, Joanna. Tieni gli occhi bene aperti durante la prova e usa tutta l'esperienza che hai accumulatodurante l'allenamento. In bocca al lupo!\n\n|Obiettivo 1: - Sconfiggi la guardia dataDyne\n\nSconfiggi la simulazione della guardia dataDyne. Il replicante dispone di mediocri capacità in lotta, ma non deve assolutamente essere sottovalutato.\n\n|Obiettivo 2: - Sconfiggi Jonathan Dark\n\nSconfiggi la simulazione di Jonathan Dark che al momento detiene il record nel punteggio delle prove. Il replicante ha buone capacità di combattimento ed è in grado di mettere in difficoltà anche combattenti affermati.\n\nFINE\n "
+        },
+        {
+            "id": "L_ATE_003",
+            "context": "L_ATE_003",
+            "string": "|Situazione:\n\nProva finale: sconfiggi l'avversario olografico simulato.\n\n|Carrington:\n\nHo completa fiducia nelle tue capacità, Joanna. Tieni gli occhi bene aperti durante la prova e usa tutta l'esperienza che hai accumulatodurante l'allenamento. In bocca al lupo!\n\n|Obiettivo 1: - Sconfiggi la guardia dataDyne\n\nSconfiggi la simulazione della guardia dataDyne. Il replicante dispone di mediocri capacità in lotta, ma non deve assolutamente essere sottovalutato.\n\nFINE\n "
+        },
+        {
+            "id": "L_ATE_004",
+            "context": "L_ATE_004",
+            "string": "Sconfiggi la guardia dataDyne \n"
+        },
+        {
+            "id": "L_ATE_005",
+            "context": "L_ATE_005",
+            "string": "Sconfiggi Jonathan Dark \n"
+        },
+        {
+            "id": "L_ATE_006",
+            "context": "L_ATE_006",
+            "string": "Sconfiggi Trent Easton \n"
+        },
+        {
+            "id": "L_ATE_007",
+            "context": "L_ATE_007",
+            "string": "IL DUELLO\n"
+        },
+        {
+            "id": "L_ATE_008",
+            "context": "L_ATE_008",
+            "string": "Sconfiggi l'avversario.\n"
+        },
+        {
+            "id": "L_ATE_009",
+            "context": "L_ATE_009",
+            "string": "Ben fatto! Sei troppo veloce per lui!\n"
+        },
+        {
+            "id": "L_ATE_010",
+            "context": "L_ATE_010",
+            "string": "Ben fatto! Sei troppo veloce per lui!\n"
+        },
+        {
+            "id": "L_ATE_011",
+            "context": "L_ATE_011",
+            "string": "Ben fatto! Sei troppo veloce per lui!\n"
+        },
+        {
+            "id": "L_ATE_012",
+            "context": "L_ATE_012",
+            "string": "Livello abilità avversario: AGENTE\n"
+        },
+        {
+            "id": "L_ATE_013",
+            "context": "L_ATE_013",
+            "string": "Livello abilità avversario: AGENTE SPECIALE\n"
+        },
+        {
+            "id": "L_ATE_014",
+            "context": "L_ATE_014",
+            "string": "Livello abilità avversario: AGENTE PERFECT\n"
+        },
+        {
+            "id": "L_ATE_015",
+            "context": "L_ATE_015",
+            "string": null
+        }
+    ]
+}

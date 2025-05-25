@@ -1,0 +1,244 @@
+{
+    "messages": [
+        {
+            "id": "L_DAM_000",
+            "context": "L_DAM_000",
+            "string": "|Briefing - \n\nLes conspirateurs ont détourné le Pelagic II et ont entamé d'importantes opérations sous-marines dans l'Océan Pacifique. La dataDyne et leurs mystérieux alliés semblent être impliqués dans une manoeuvre de coopération.\n\n|Carrington - \n\nBien que cette action semble maladroite, elle met en évidence l'importance de cette zone sous-marine aux yeux de la dataDyne et de ses alliés. Contrecarrez du mieux que vous pouvez l'opération tout en respectant notre protocole de sauvegarde des civils.\n\n|Objectif 1: - Désactiver source d'énergie principale\n\nLa coupure du générateur principal fera dériver le vaisseau de sa zone d'opération mais provoquera des blackouts dans les sections secondaires de l'appareil. Utilisez un scanner rayons X pour trouver les interrupteurs sur le générateur.\n\n|Objectif 2: - Sécuriser labos et données de recherche\n\nNous voulons les informations recueillies par la dataDyne sur ce projet. Sécurisez les labos du pont scientifique et souvenez-vous d'assommer les scientifiques et les techniciens du site. Nous les interrogerons plus tard.\n\n|Objectif 3: - Désactiver GPS et Auto-pilote\n\nDébrancher le système de localisation GPS et l'auto-pilote du vaisseau le fera s'écarter de la station. Si seulement l'un des deux est éteint, les opérations de plongée ne seront pas perturbées et suivront leur cours.\n\n|Objectif 4: - Activer l'ascenseur du sas\n\nCeci enclenchera le pilote automatique du submersible, ramenant celui-ci pour vous et Elvis. Les commandes se trouvent dans le hangar du sous-marin.\n\n|Objectif 5: - Retrouver Elvis et s'enfuir avec lui\n\nTrouvez Elvis et retournez au sas pour préparer le submersible et votre équipement pour une plongée.\n\nFIN\n"
+        },
+        {
+            "id": "L_DAM_001",
+            "context": "L_DAM_001",
+            "string": "Vaisseau Cetan\n"
+        },
+        {
+            "id": "L_DAM_002",
+            "context": "L_DAM_002",
+            "string": "|Briefing - \n\nLes conspirateurs ont détourné le Pelagic II et ont entamé d'importantes opérations sous-marines dans l'Océan Pacifique. La dataDyne et leurs mystérieux alliés semblent être impliqués dans une manoeuvre de coopération.\n\n|Carrington - \n\nBien que cette action semble maladroite, elle met en évidence l'importance de cette zone sous-marine aux yeux de la dataDyne et de ses alliés. Contrecarrez du mieux que vous pouvez l'opération tout en respectant notre protocole de sauvegarde des civils.\n\n|Objectif 1: - Désactiver source d'énergie principale\n\nLa coupure du générateur principal fera dériver le vaisseau de sa zone d'opération mais provoquera des blackouts dans les sections secondaires de l'appareil. Utilisez un scanner rayons X pour trouver les interrupteurs sur le générateur.\n\n|Objectif 2: - Désactiver GPS et Auto-pilote\n\nDébrancher le système de localisation GPS et l'auto-pilote du vaisseau le fera s'écarter de la station. Si seulement l'un des deux est éteint, les opérations de plongée ne seront pas perturbées et suivront leur cours. Epargnez les civils.\n\n|Objectif 3: - Activer l'ascenseur du sas\n\nCeci enclenchera le pilote automatique du submersible, ramenant celui-ci pour vous et Elvis. Les commandes se trouvent dans le hangar du sous-marin.\n\n|Objectif 4: - Retrouver Elvis et s'enfuir avec lui\n\nTrouvez Elvis et retournez au sas pour préparer le submersible et votre équipement pour une plongée.\n\nFIN\n"
+        },
+        {
+            "id": "L_DAM_003",
+            "context": "L_DAM_003",
+            "string": "|Briefing - \n\nLes conspirateurs ont détourné le Pelagic II et ont entamé d'importantes opérations sous-marines dans l'Océan Pacifique. La dataDyne et leurs mystérieux alliés semblent être impliqués dans une manoeuvre de coopération.\n\n|Carrington - \n\nBien que cette action semble maladroite, elle met en évidence l'importance de cette zone sous-marine aux yeux de la dataDyne et de ses alliés. Contrecarrez du mieux que vous pouvez l'opération tout en respectant notre protocole de sauvegarde des civils.\n\n|Objectif 1: - Désactiver source d'énergie principale\n\nLa coupure du générateur principal fera dériver le vaisseau de sa zone d'opération mais provoquera des blackouts dans les sections secondaires de l'appareil. Utilisez un scanner rayons X pour trouver les interrupteurs sur le générateur.\n\n|Objectif 2: - Désactiver GPS et Auto-pilote\n\nDébrancher le système de localisation GPS et l'auto-pilote du vaisseau le fera s'écarter de la station. Si seulement l'un des deux est éteint, les opérations de plongée ne seront pas perturbées et suivront leur cours. Epargnez les civils.\n\n|Objectif 3: - Retrouver Elvis et s'enfuir avec lui\n\nTrouvez Elvis et retournez au sas pour préparer le submersible et votre équipement pour une plongée.\n\nFIN\n"
+        },
+        {
+            "id": "L_DAM_004",
+            "context": "L_DAM_004",
+            "string": "\n"
+        },
+        {
+            "id": "L_DAM_005",
+            "context": "L_DAM_005",
+            "string": "Désactiver GPS et Auto-pilote\n"
+        },
+        {
+            "id": "L_DAM_006",
+            "context": "L_DAM_006",
+            "string": "Désactiver source d'énergie principale\n"
+        },
+        {
+            "id": "L_DAM_007",
+            "context": "L_DAM_007",
+            "string": "Sécuriser labos et données de recherche\n"
+        },
+        {
+            "id": "L_DAM_008",
+            "context": "L_DAM_008",
+            "string": "Activer l'ascenseur du sas\n"
+        },
+        {
+            "id": "L_DAM_009",
+            "context": "L_DAM_009",
+            "string": "Retrouver Elvis et s'enfuir avec lui\n"
+        },
+        {
+            "id": "L_DAM_010",
+            "context": "L_DAM_010",
+            "string": "On sabote les moteurs et le vaisseau \ndérivera... Parfait!\n"
+        },
+        {
+            "id": "L_DAM_011",
+            "context": "L_DAM_011",
+            "string": "Le sous-marin doit être contrôlé d'ici. \n"
+        },
+        {
+            "id": "L_DAM_012",
+            "context": "L_DAM_012",
+            "string": "Sans auto-pilote ni GPS, l'appareil \ns'éloignera de la station. \n"
+        },
+        {
+            "id": "L_DAM_013",
+            "context": "L_DAM_013",
+            "string": "Ils ne pourront plus continuer l'opération \nsans énergie.\n"
+        },
+        {
+            "id": "L_DAM_014",
+            "context": "L_DAM_014",
+            "string": "Système auto-pilote désactivé.\n"
+        },
+        {
+            "id": "L_DAM_015",
+            "context": "L_DAM_015",
+            "string": "Système GPS désactivé.\n"
+        },
+        {
+            "id": "L_DAM_016",
+            "context": "L_DAM_016",
+            "string": "Objet crucial détruit.\n"
+        },
+        {
+            "id": "L_DAM_017",
+            "context": "L_DAM_017",
+            "string": "Porte de commande d'arrêt du réacteur ouverte.\n"
+        },
+        {
+            "id": "L_DAM_018",
+            "context": "L_DAM_018",
+            "string": "Réacteur désactivé.\n"
+        },
+        {
+            "id": "L_DAM_019",
+            "context": "L_DAM_019",
+            "string": "Centre de contrôle de plongée localisé.\n"
+        },
+        {
+            "id": "L_DAM_020",
+            "context": "L_DAM_020",
+            "string": "Personnel crucial abattu.\n"
+        },
+        {
+            "id": "L_DAM_021",
+            "context": "L_DAM_021",
+            "string": "Données de recherche sécurisées.\n"
+        },
+        {
+            "id": "L_DAM_022",
+            "context": "L_DAM_022",
+            "string": "\n"
+        },
+        {
+            "id": "L_DAM_023",
+            "context": "L_DAM_023",
+            "string": "\n"
+        },
+        {
+            "id": "L_DAM_024",
+            "context": "L_DAM_024",
+            "string": "Disque de recherche\n"
+        },
+        {
+            "id": "L_DAM_025",
+            "context": "L_DAM_025",
+            "string": "Un disque de recherche\n"
+        },
+        {
+            "id": "L_DAM_026",
+            "context": "L_DAM_026",
+            "string": "Disque de recherche obtenu.\n"
+        },
+        {
+            "id": "L_DAM_027",
+            "context": "L_DAM_027",
+            "string": "Personnel crucial abattu.\n"
+        },
+        {
+            "id": "L_DAM_028",
+            "context": "L_DAM_028",
+            "string": "Porte ascenseur déverrouillée.\n"
+        },
+        {
+            "id": "L_DAM_029",
+            "context": "L_DAM_029",
+            "string": "Ascenseur activé.\n"
+        },
+        {
+            "id": "L_DAM_030",
+            "context": "L_DAM_030",
+            "string": "Opération refusée - portes du hangar fermées.\n"
+        },
+        {
+            "id": "L_DAM_031",
+            "context": "L_DAM_031",
+            "string": "Séquence de déverrouillage réinitialisée.\n"
+        },
+        {
+            "id": "L_DAM_032",
+            "context": "L_DAM_032",
+            "string": "Vas-y. Je sécurise le périmètre. \nOn se retrouve plus tard.\n"
+        },
+        {
+            "id": "L_DAM_033",
+            "context": "L_DAM_033",
+            "string": "Elvis a été abattu.\n"
+        },
+        {
+            "id": "L_DAM_034",
+            "context": "L_DAM_034",
+            "string": "Qu'est-ce que tu faisais? Suis-moi... \nOn décampe.\n"
+        },
+        {
+            "id": "L_DAM_035",
+            "context": "L_DAM_035",
+            "string": "Des civils ont été abattus.\n"
+        },
+        {
+            "id": "L_DAM_036",
+            "context": "L_DAM_036",
+            "string": "Objet crucial détruit.\n"
+        },
+        {
+            "id": "L_DAM_037",
+            "context": "L_DAM_037",
+            "string": "Alarme activée.\n"
+        },
+        {
+            "id": "L_DAM_038",
+            "context": "L_DAM_038",
+            "string": "Alarme désactivée.\n"
+        },
+        {
+            "id": "L_DAM_039",
+            "context": "L_DAM_039",
+            "string": "Bien. L'opération de plongée a été annulée à la surface. \nIl est temps de piquer une tête.\n"
+        },
+        {
+            "id": "L_DAM_040",
+            "context": "L_DAM_040",
+            "string": "J'espère que le gouvernement ne compte pas utiliser ce vaisseau tout de suite.\n"
+        },
+        {
+            "id": "L_DAM_041",
+            "context": "L_DAM_041",
+            "string": "On y est allé un peu fort, non?\n"
+        },
+        {
+            "id": "L_DAM_042",
+            "context": "L_DAM_042",
+            "string": "Mais non.\n"
+        },
+        {
+            "id": "L_DAM_043",
+            "context": "L_DAM_043",
+            "string": "Débranche ce truc.\n"
+        },
+        {
+            "id": "L_DAM_044",
+            "context": "L_DAM_044",
+            "string": "Eteins-moi ça.\n"
+        },
+        {
+            "id": "L_DAM_045",
+            "context": "L_DAM_045",
+            "string": "Je vais l'éteindre.\n"
+        },
+        {
+            "id": "L_DAM_046",
+            "context": "L_DAM_046",
+            "string": "Ne me faites pas de mal!\n"
+        },
+        {
+            "id": "L_DAM_047",
+            "context": "L_DAM_047",
+            "string": "Crevez, charognes!\n"
+        }
+    ]
+}

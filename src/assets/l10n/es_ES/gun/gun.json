@@ -1,0 +1,1284 @@
+{
+    "messages": [
+        {
+            "id": "L_GUN_000",
+            "context": "L_GUN_000",
+            "string": "\n"
+        },
+        {
+            "id": "L_GUN_001",
+            "context": "L_GUN_001",
+            "string": "Cuenta de muertes"
+        },
+        {
+            "id": "L_GUN_002",
+            "context": "L_GUN_002",
+            "string": "Muerto una vez\n"
+        },
+        {
+            "id": "L_GUN_003",
+            "context": "L_GUN_003",
+            "string": "Muerto"
+        },
+        {
+            "id": "L_GUN_004",
+            "context": "L_GUN_004",
+            "string": "veces"
+        },
+        {
+            "id": "L_GUN_005",
+            "context": "L_GUN_005",
+            "string": "Cuenta de suicidios"
+        },
+        {
+            "id": "L_GUN_006",
+            "context": "L_GUN_006",
+            "string": "Desarmado\n"
+        },
+        {
+            "id": "L_GUN_007",
+            "context": "L_GUN_007",
+            "string": "Falcon 2\n"
+        },
+        {
+            "id": "L_GUN_008",
+            "context": "L_GUN_008",
+            "string": "Falcon 2 (silenc.)\n"
+        },
+        {
+            "id": "L_GUN_009",
+            "context": "L_GUN_009",
+            "string": "Falcon 2 (mirilla)\n"
+        },
+        {
+            "id": "L_GUN_010",
+            "context": "L_GUN_010",
+            "string": "MagSec 4\n"
+        },
+        {
+            "id": "L_GUN_011",
+            "context": "L_GUN_011",
+            "string": "Mauler\n"
+        },
+        {
+            "id": "L_GUN_012",
+            "context": "L_GUN_012",
+            "string": "DY357 Magnum\n"
+        },
+        {
+            "id": "L_GUN_013",
+            "context": "L_GUN_013",
+            "string": "DY357-LX\n"
+        },
+        {
+            "id": "L_GUN_014",
+            "context": "L_GUN_014",
+            "string": "Phoenix\n"
+        },
+        {
+            "id": "L_GUN_015",
+            "context": "L_GUN_015",
+            "string": "CMP150\n"
+        },
+        {
+            "id": "L_GUN_016",
+            "context": "L_GUN_016",
+            "string": "AR34\n"
+        },
+        {
+            "id": "L_GUN_017",
+            "context": "L_GUN_017",
+            "string": "Dragón\n"
+        },
+        {
+            "id": "L_GUN_018",
+            "context": "L_GUN_018",
+            "string": "SuperDragón\n"
+        },
+        {
+            "id": "L_GUN_019",
+            "context": "L_GUN_019",
+            "string": "Vengador K7\n"
+        },
+        {
+            "id": "L_GUN_020",
+            "context": "L_GUN_020",
+            "string": "Ciclón\n"
+        },
+        {
+            "id": "L_GUN_021",
+            "context": "L_GUN_021",
+            "string": "MagSec SMG\n"
+        },
+        {
+            "id": "L_GUN_022",
+            "context": "L_GUN_022",
+            "string": "RC-P120\n"
+        },
+        {
+            "id": "L_GUN_023",
+            "context": "L_GUN_023",
+            "string": "Calisto NTG\n"
+        },
+        {
+            "id": "L_GUN_024",
+            "context": "L_GUN_024",
+            "string": "Arma PC\n"
+        },
+        {
+            "id": "L_GUN_025",
+            "context": "L_GUN_025",
+            "string": "Escopeta\n"
+        },
+        {
+            "id": "L_GUN_026",
+            "context": "L_GUN_026",
+            "string": "Segadora\n"
+        },
+        {
+            "id": "L_GUN_027",
+            "context": "L_GUN_027",
+            "string": "Lanzacohetes\n"
+        },
+        {
+            "id": "L_GUN_028",
+            "context": "L_GUN_028",
+            "string": "Devastador\n"
+        },
+        {
+            "id": "L_GUN_029",
+            "context": "L_GUN_029",
+            "string": "Slayer\n"
+        },
+        {
+            "id": "L_GUN_030",
+            "context": "L_GUN_030",
+            "string": "Granada Maian\n"
+        },
+        {
+            "id": "L_GUN_031",
+            "context": "L_GUN_031",
+            "string": "FarSight XR-20\n"
+        },
+        {
+            "id": "L_GUN_032",
+            "context": "L_GUN_032",
+            "string": "Rifle Fr\n"
+        },
+        {
+            "id": "L_GUN_033",
+            "context": "L_GUN_033",
+            "string": "Ballesta\n"
+        },
+        {
+            "id": "L_GUN_034",
+            "context": "L_GUN_034",
+            "string": "Tranquilizador\n"
+        },
+        {
+            "id": "L_GUN_035",
+            "context": "L_GUN_035",
+            "string": "Cuchillo Combate\n"
+        },
+        {
+            "id": "L_GUN_036",
+            "context": "L_GUN_036",
+            "string": "Granada\n"
+        },
+        {
+            "id": "L_GUN_037",
+            "context": "L_GUN_037",
+            "string": "Bomba-N\n"
+        },
+        {
+            "id": "L_GUN_038",
+            "context": "L_GUN_038",
+            "string": "Mina Tiempo\n"
+        },
+        {
+            "id": "L_GUN_039",
+            "context": "L_GUN_039",
+            "string": "Mina de Proximidad\n"
+        },
+        {
+            "id": "L_GUN_040",
+            "context": "L_GUN_040",
+            "string": "Mina Remota\n"
+        },
+        {
+            "id": "L_GUN_041",
+            "context": "L_GUN_041",
+            "string": "Mina ECM\n"
+        },
+        {
+            "id": "L_GUN_042",
+            "context": "L_GUN_042",
+            "string": "FlashBang\n"
+        },
+        {
+            "id": "L_GUN_043",
+            "context": "L_GUN_043",
+            "string": "Disfraz\n"
+        },
+        {
+            "id": "L_GUN_044",
+            "context": "L_GUN_044",
+            "string": "Cohete\n"
+        },
+        {
+            "id": "L_GUN_045",
+            "context": "L_GUN_045",
+            "string": "Cohete Buscador\n"
+        },
+        {
+            "id": "L_GUN_046",
+            "context": "L_GUN_046",
+            "string": "Cinto de Granadas\n"
+        },
+        {
+            "id": "L_GUN_047",
+            "context": "L_GUN_047",
+            "string": "Láser\n"
+        },
+        {
+            "id": "L_GUN_048",
+            "context": "L_GUN_048",
+            "string": "Rayo\n"
+        },
+        {
+            "id": "L_GUN_049",
+            "context": "L_GUN_049",
+            "string": "Psicosis\n"
+        },
+        {
+            "id": "L_GUN_050",
+            "context": "L_GUN_050",
+            "string": "PP9i\n"
+        },
+        {
+            "id": "L_GUN_051",
+            "context": "L_GUN_051",
+            "string": "CC13\n"
+        },
+        {
+            "id": "L_GUN_052",
+            "context": "L_GUN_052",
+            "string": "KL01313\n"
+        },
+        {
+            "id": "L_GUN_053",
+            "context": "L_GUN_053",
+            "string": "KF7 Especial\n"
+        },
+        {
+            "id": "L_GUN_054",
+            "context": "L_GUN_054",
+            "string": "ZZT (9mm)\n"
+        },
+        {
+            "id": "L_GUN_055",
+            "context": "L_GUN_055",
+            "string": "DMC\n"
+        },
+        {
+            "id": "L_GUN_056",
+            "context": "L_GUN_056",
+            "string": "AR53\n"
+        },
+        {
+            "id": "L_GUN_057",
+            "context": "L_GUN_057",
+            "string": "RC-P45\n"
+        },
+        {
+            "id": "L_GUN_058",
+            "context": "L_GUN_058",
+            "string": "Testeador\n"
+        },
+        {
+            "id": "L_GUN_059",
+            "context": "L_GUN_059",
+            "string": "Visión Nocturna\n"
+        },
+        {
+            "id": "L_GUN_060",
+            "context": "L_GUN_060",
+            "string": "CamSpy\n"
+        },
+        {
+            "id": "L_GUN_061",
+            "context": "L_GUN_061",
+            "string": "DrugSpy\n"
+        },
+        {
+            "id": "L_GUN_062",
+            "context": "L_GUN_062",
+            "string": "BombSpy\n"
+        },
+        {
+            "id": "L_GUN_063",
+            "context": "L_GUN_063",
+            "string": "Decodificador\n"
+        },
+        {
+            "id": "L_GUN_064",
+            "context": "L_GUN_064",
+            "string": "Explosivos\n"
+        },
+        {
+            "id": "L_GUN_065",
+            "context": "L_GUN_065",
+            "string": "Escáner Rayos-X\n"
+        },
+        {
+            "id": "L_GUN_066",
+            "context": "L_GUN_066",
+            "string": "Paquete Médico\n"
+        },
+        {
+            "id": "L_GUN_067",
+            "context": "L_GUN_067",
+            "string": "Maleta\n"
+        },
+        {
+            "id": "L_GUN_068",
+            "context": "L_GUN_068",
+            "string": "Disfraz\n"
+        },
+        {
+            "id": "L_GUN_069",
+            "context": "L_GUN_069",
+            "string": "Escáner IR\n"
+        },
+        {
+            "id": "L_GUN_070",
+            "context": "L_GUN_070",
+            "string": "Rastreador-R\n"
+        },
+        {
+            "id": "L_GUN_071",
+            "context": "L_GUN_071",
+            "string": "Maletín\n"
+        },
+        {
+            "id": "L_GUN_072",
+            "context": "L_GUN_072",
+            "string": "Píldora Suicidio\n"
+        },
+        {
+            "id": "L_GUN_073",
+            "context": "L_GUN_073",
+            "string": "Disp. Ocultación\n"
+        },
+        {
+            "id": "L_GUN_074",
+            "context": "L_GUN_074",
+            "string": "Reforzador\n"
+        },
+        {
+            "id": "L_GUN_075",
+            "context": "L_GUN_075",
+            "string": "Conector de Datos\n"
+        },
+        {
+            "id": "L_GUN_076",
+            "context": "L_GUN_076",
+            "string": "Esc. Horizonte\n"
+        },
+        {
+            "id": "L_GUN_077",
+            "context": "L_GUN_077",
+            "string": "Falcon 2 (+)\n"
+        },
+        {
+            "id": "L_GUN_078",
+            "context": "L_GUN_078",
+            "string": "Falcon 2 (s)\n"
+        },
+        {
+            "id": "L_GUN_079",
+            "context": "L_GUN_079",
+            "string": "FarSight\n"
+        },
+        {
+            "id": "L_GUN_080",
+            "context": "L_GUN_080",
+            "string": "L.Cohetes\n"
+        },
+        {
+            "id": "L_GUN_081",
+            "context": "L_GUN_081",
+            "string": "Mina Prox.\n"
+        },
+        {
+            "id": "L_GUN_082",
+            "context": "L_GUN_082",
+            "string": "Psicosis\n"
+        },
+        {
+            "id": "L_GUN_083",
+            "context": "L_GUN_083",
+            "string": "Cuchillo\n"
+        },
+        {
+            "id": "L_GUN_084",
+            "context": "L_GUN_084",
+            "string": "DY357\n"
+        },
+        {
+            "id": "L_GUN_085",
+            "context": "L_GUN_085",
+            "string": "Disparo único\n"
+        },
+        {
+            "id": "L_GUN_086",
+            "context": "L_GUN_086",
+            "string": "Fuego rápido\n"
+        },
+        {
+            "id": "L_GUN_087",
+            "context": "L_GUN_087",
+            "string": "Fuego en ráfaga\n"
+        },
+        {
+            "id": "L_GUN_088",
+            "context": "L_GUN_088",
+            "string": "Cosechar\n"
+        },
+        {
+            "id": "L_GUN_089",
+            "context": "L_GUN_089",
+            "string": "Fuego de escopeta\n"
+        },
+        {
+            "id": "L_GUN_090",
+            "context": "L_GUN_090",
+            "string": "Efecto carrete\n"
+        },
+        {
+            "id": "L_GUN_091",
+            "context": "L_GUN_091",
+            "string": "Lanzacohetes\n"
+        },
+        {
+            "id": "L_GUN_092",
+            "context": "L_GUN_092",
+            "string": "Cohete Dirigido\n"
+        },
+        {
+            "id": "L_GUN_093",
+            "context": "L_GUN_093",
+            "string": "Cohete Teledirigido\n"
+        },
+        {
+            "id": "L_GUN_094",
+            "context": "L_GUN_094",
+            "string": "Culatazo\n"
+        },
+        {
+            "id": "L_GUN_095",
+            "context": "L_GUN_095",
+            "string": "Cartuchos Explosivos\n"
+        },
+        {
+            "id": "L_GUN_096",
+            "context": "L_GUN_096",
+            "string": "Disparos Guiados\n"
+        },
+        {
+            "id": "L_GUN_097",
+            "context": "L_GUN_097",
+            "string": "Descarga de Cartuchos\n"
+        },
+        {
+            "id": "L_GUN_098",
+            "context": "L_GUN_098",
+            "string": "Lanzagranadas\n"
+        },
+        {
+            "id": "L_GUN_099",
+            "context": "L_GUN_099",
+            "string": "Mina Lapa\n"
+        },
+        {
+            "id": "L_GUN_100",
+            "context": "L_GUN_100",
+            "string": "Puñetazo\n"
+        },
+        {
+            "id": "L_GUN_101",
+            "context": "L_GUN_101",
+            "string": "Desarmar\n"
+        },
+        {
+            "id": "L_GUN_102",
+            "context": "L_GUN_102",
+            "string": "Seguir Objetivo\n"
+        },
+        {
+            "id": "L_GUN_103",
+            "context": "L_GUN_103",
+            "string": "Usar Mirilla\n"
+        },
+        {
+            "id": "L_GUN_104",
+            "context": "L_GUN_104",
+            "string": "Dispara Medio Cargador\n"
+        },
+        {
+            "id": "L_GUN_105",
+            "context": "L_GUN_105",
+            "string": "Disparo Doble\n"
+        },
+        {
+            "id": "L_GUN_106",
+            "context": "L_GUN_106",
+            "string": "Trituradora\n"
+        },
+        {
+            "id": "L_GUN_107",
+            "context": "L_GUN_107",
+            "string": "Sedante\n"
+        },
+        {
+            "id": "L_GUN_108",
+            "context": "L_GUN_108",
+            "string": "Inyección Letal\n"
+        },
+        {
+            "id": "L_GUN_109",
+            "context": "L_GUN_109",
+            "string": "Cuchillada\n"
+        },
+        {
+            "id": "L_GUN_110",
+            "context": "L_GUN_110",
+            "string": "Cuchillo Envenenado\n"
+        },
+        {
+            "id": "L_GUN_111",
+            "context": "L_GUN_111",
+            "string": "Localizador Objetivos\n"
+        },
+        {
+            "id": "L_GUN_112",
+            "context": "L_GUN_112",
+            "string": "Muerte Instantánea\n"
+        },
+        {
+            "id": "L_GUN_113",
+            "context": "L_GUN_113",
+            "string": "Reforzador\n"
+        },
+        {
+            "id": "L_GUN_114",
+            "context": "L_GUN_114",
+            "string": "Revertir\n"
+        },
+        {
+            "id": "L_GUN_115",
+            "context": "L_GUN_115",
+            "string": "Cartuchos Alto-Impacto\n"
+        },
+        {
+            "id": "L_GUN_116",
+            "context": "L_GUN_116",
+            "string": "Ocultación\n"
+        },
+        {
+            "id": "L_GUN_117",
+            "context": "L_GUN_117",
+            "string": "Dejar como Centinela\n"
+        },
+        {
+            "id": "L_GUN_118",
+            "context": "L_GUN_118",
+            "string": "Autodestrucción Prox.\n"
+        },
+        {
+            "id": "L_GUN_119",
+            "context": "L_GUN_119",
+            "string": "Detector de Trampas\n"
+        },
+        {
+            "id": "L_GUN_120",
+            "context": "L_GUN_120",
+            "string": "Explosivo de Tiempo\n"
+        },
+        {
+            "id": "L_GUN_121",
+            "context": "L_GUN_121",
+            "string": "Explosivo de Proximidad\n"
+        },
+        {
+            "id": "L_GUN_122",
+            "context": "L_GUN_122",
+            "string": "Explosivo Remoto\n"
+        },
+        {
+            "id": "L_GUN_123",
+            "context": "L_GUN_123",
+            "string": "Detonación\n"
+        },
+        {
+            "id": "L_GUN_124",
+            "context": "L_GUN_124",
+            "string": "Fusible 4 segundos\n"
+        },
+        {
+            "id": "L_GUN_125",
+            "context": "L_GUN_125",
+            "string": "Pinball Proximidad\n"
+        },
+        {
+            "id": "L_GUN_126",
+            "context": "L_GUN_126",
+            "string": "Detonación temporal\n"
+        },
+        {
+            "id": "L_GUN_127",
+            "context": "L_GUN_127",
+            "string": "Detonación Proximidad\n"
+        },
+        {
+            "id": "L_GUN_128",
+            "context": "L_GUN_128",
+            "string": "Ráfaga 3 Cartuchos\n"
+        },
+        {
+            "id": "L_GUN_129",
+            "context": "L_GUN_129",
+            "string": "Disparo Cargado\n"
+        },
+        {
+            "id": "L_GUN_130",
+            "context": "L_GUN_130",
+            "string": "Agacharse\n"
+        },
+        {
+            "id": "L_GUN_131",
+            "context": "L_GUN_131",
+            "string": "Infectar\n"
+        },
+        {
+            "id": "L_GUN_132",
+            "context": "L_GUN_132",
+            "string": "Disparo con Ritmo\n"
+        },
+        {
+            "id": "L_GUN_133",
+            "context": "L_GUN_133",
+            "string": "Rayo Bajo-Alcance\n"
+        },
+        {
+            "id": "L_GUN_134",
+            "context": "L_GUN_134",
+            "string": "Detonación por Impacto\n"
+        },
+        {
+            "id": "L_GUN_135",
+            "context": "L_GUN_135",
+            "string": "Amplificador de Luz\n"
+        },
+        {
+            "id": "L_GUN_136",
+            "context": "L_GUN_136",
+            "string": "Cámara Móvil\n"
+        },
+        {
+            "id": "L_GUN_137",
+            "context": "L_GUN_137",
+            "string": "Visión de Rayos-X\n"
+        },
+        {
+            "id": "L_GUN_138",
+            "context": "L_GUN_138",
+            "string": "Imagen Termal\n"
+        },
+        {
+            "id": "L_GUN_139",
+            "context": "L_GUN_139",
+            "string": "Zoom\n"
+        },
+        {
+            "id": "L_GUN_140",
+            "context": "L_GUN_140",
+            "string": "Dispositivo de Bloqueo\n"
+        },
+        {
+            "id": "L_GUN_141",
+            "context": "L_GUN_141",
+            "string": "Conectar\n"
+        },
+        {
+            "id": "L_GUN_142",
+            "context": "L_GUN_142",
+            "string": "Identificar Objetivos\n"
+        },
+        {
+            "id": "L_GUN_143",
+            "context": "L_GUN_143",
+            "string": "Llevar Disfraz\n"
+        },
+        {
+            "id": "L_GUN_144",
+            "context": "L_GUN_144",
+            "string": "Colocar Explosivos\n"
+        },
+        {
+            "id": "L_GUN_145",
+            "context": "L_GUN_145",
+            "string": "Mira Telescópica\n"
+        },
+        {
+            "id": "L_GUN_146",
+            "context": "L_GUN_146",
+            "string": "Silenciador\n"
+        },
+        {
+            "id": "L_GUN_147",
+            "context": "L_GUN_147",
+            "string": "Extensión de Cartucho\n"
+        },
+        {
+            "id": "L_GUN_148",
+            "context": "L_GUN_148",
+            "string": "Mira Láser\n"
+        },
+        {
+            "id": "L_GUN_149",
+            "context": "L_GUN_149",
+            "string": "dataDyne\n"
+        },
+        {
+            "id": "L_GUN_150",
+            "context": "L_GUN_150",
+            "string": "Carrington\n"
+        },
+        {
+            "id": "L_GUN_151",
+            "context": "L_GUN_151",
+            "string": "Industrias Chesluk\n"
+        },
+        {
+            "id": "L_GUN_152",
+            "context": "L_GUN_152",
+            "string": "Skedar\n"
+        },
+        {
+            "id": "L_GUN_153",
+            "context": "L_GUN_153",
+            "string": "Maian\n"
+        },
+        {
+            "id": "L_GUN_154",
+            "context": "L_GUN_154",
+            "string": "JonesCorp\n"
+        },
+        {
+            "id": "L_GUN_155",
+            "context": "L_GUN_155",
+            "string": "Incluso desarmado, eres un adversario respetable. Usa tus puños para noquear a tus oponentes o desarmarles para usar sus armas contra ellos.\n"
+        },
+        {
+            "id": "L_GUN_156",
+            "context": "L_GUN_156",
+            "string": "Precisa y digna de confianza, esta arma es el caballo de batalla de las operaciones del Instituto. Usa la mira láser para situar las balas con un efecto mortal, o golpea a los adversarios para noquearles.\n"
+        },
+        {
+            "id": "L_GUN_157",
+            "context": "L_GUN_157",
+            "string": "Una Falcon 2 mejorada, con la ventaja añadida de que es silenciosa, pero mortal.\n"
+        },
+        {
+            "id": "L_GUN_158",
+            "context": "L_GUN_158",
+            "string": "Una Falcon 2 mejorada, que cuenta con una mirilla duplicadora que te permite beneficiarte de la superior precisión de la Falcon.\n"
+        },
+        {
+            "id": "L_GUN_159",
+            "context": "L_GUN_159",
+            "string": "Una pistola de tecnología militar punta, usada en gran parte por fuerzas de paz. Cuenta con una ligera capacidad de zoom, y tiene un modo secundario de disparo de ráfaga de tres cartuchos.\n"
+        },
+        {
+            "id": "L_GUN_160",
+            "context": "L_GUN_160",
+            "string": "Si ves a un Skedar viniendo hacia ti, es más que posible que lleve una de éstas. Un amplio cargador y su cañón rayado hacen de esta pistola una formidable arma de mano, pero la descarga asesina viene del modo secundario: carga el disparo para fuerza extra al coste de unos cuantos cartuchos.\n"
+        },
+        {
+            "id": "L_GUN_161",
+            "context": "L_GUN_161",
+            "string": "La DY357 de dataDyne es la más poderosa arma de mano del mundo. Cada cartucho tiene un factor de penetración increíble y noquea al objetivo con el peso y fuerza del disparo. Se han hecho modelos de encargo para clientes importantes; se rumorea que el director de ANS, Trent Easton, tiene una variante bañada en oro.\n"
+        },
+        {
+            "id": "L_GUN_162",
+            "context": "L_GUN_162",
+            "string": "La DY357-LX fue diseñada especialmente para el director de la ANS, Trent Easton. Además de tener una atractiva empuñadura de genuina piel de tigre, este arma dorada incluye un cañón optimizado, lo que significa que cada bala siempre encuentra su objetivo con una fuerza mortífera.\n"
+        },
+        {
+            "id": "L_GUN_163",
+            "context": "L_GUN_163",
+            "string": "El arma Maian estándar. Se trata de un arma flexible, una pistola que dispara proyectiles estándar o proyectiles explosivos sin que afecte a la capacidad del cargador.\n"
+        },
+        {
+            "id": "L_GUN_164",
+            "context": "L_GUN_164",
+            "string": "Un clásico de dataDyne, y excelentemente vendida, esta metralleta cuenta con un cargador de 32 cartuchos y una característica especial: la habilidad de designar y fijar objetivos en la línea de fuego. Convierte a un tirador medio en uno excelente, siempre que sea inteligente para manejar el arma. Ratio de disparo normal: 900 dpm.\n"
+        },
+        {
+            "id": "L_GUN_165",
+            "context": "L_GUN_165",
+            "string": "El principal rifle de asalto del Instituto Carrington. Su gran alcance y el tamaño de su cargador hacen de ella un arma muy útil; el modo secundario permite al usuario moverse mientras hace zoom sobre un adversario. Ratio de disparo normal: 750 dpm.\n"
+        },
+        {
+            "id": "L_GUN_166",
+            "context": "L_GUN_166",
+            "string": "Un rifle de asalto estándar con un giro diabólico: cuando se activa el modo secundario, se convierte en una mina activada por proximidad que parece un arma. Ratio de disparo normal: 700 dpm.\n"
+        },
+        {
+            "id": "L_GUN_167",
+            "context": "L_GUN_167",
+            "string": "Es una variante del rifle de asalto Dragón: en vez de un explosivo de proximidad, es un pequeño lanzagranadas. Es una excelente arma de apoyo. Ratio de disparo normal: 700 dpm.\n"
+        },
+        {
+            "id": "L_GUN_168",
+            "context": "L_GUN_168",
+            "string": "Es otra pieza de alta tecnología de dataDyne. Ordinariamente es un rifle de asalto con un cargador más bien pequeño y una descarga poderosa, cuenta con un modo detector de trampas que muestra explosivos, armas de pared y peligros similares. Ratio de disparo normal: 950 dpm.\n"
+        },
+        {
+            "id": "L_GUN_169",
+            "context": "L_GUN_169",
+            "string": "Diseñado para ser usado por guardaespaldas, el Ciclón ha sido adoptado por la Seguridad Presidencial debido a su excelente capacidad cuando es usado para 'suprimir'. En circunstancias extremas, puede más que doblar el ritmo de disparo, descargando el cargador completo en un segundo. Ratio de disparo normal: 900 dpm. Descarga a 2000 dpm.\n"
+        },
+        {
+            "id": "L_GUN_170",
+            "context": "L_GUN_170",
+            "string": "El arma secreta del Instituto Carrington. Dispara a un ritmo fenomenal y cuenta con una capacidad de cargador gigantesca. El modo secundario es un dispositivo de ocultación que funciona con la munición del cargador. Es un arma devastadora. Ratio de disparo normal: 1100 dpm.\n"
+        },
+        {
+            "id": "L_GUN_171",
+            "context": "L_GUN_171",
+            "string": "Se trata de otro ejemplo del excelente diseño de armas de fuego Maian. Puede disparar tiros estándar tan rápido como cualquier otro SMG, o puede disparar cartuchos de alta velocidad que pueden penetrar fácilmente en objetos para encontrar al objetivo al otro lado. La única desventaja con el modo de disparo secundario es que el ritmo de disparo es lento y la precisión sufre con la potencia del disparo. Ratio de disparo normal: 950 dpm., (f/s: 300 dpm).\n"
+        },
+        {
+            "id": "L_GUN_172",
+            "context": "L_GUN_172",
+            "string": "Una ametralladora diseñada para parecer un PC portátil. Disimulada, el arma no puede disparar, pero una vez activada, se despliega. El Arma PC no permite inspecciones detalladas; puede arrancar, pero la memoria es un cuarto de lo que se supone que es. Ratio de disparo normal: 1000 dpm.\n"
+        },
+        {
+            "id": "L_GUN_173",
+            "context": "L_GUN_173",
+            "string": "Es un arma de dataDyne fabricada para fuerzas de seguridad. Su cargador de nueve cartuchos combinado con modos de disparo simple o doble hacen que se trate de una peligrosa arma de cerca.\n"
+        },
+        {
+            "id": "L_GUN_174",
+            "context": "L_GUN_174",
+            "string": "Es un arma realmente aterradora en manos de alguien lo suficientemente fuerte para controlar su gran retroceso; para el resto, un arma difícil de manejar pero efectiva para despejar pasillos. Ratio de disparo normal: 1800 dpm.\n"
+        },
+        {
+            "id": "L_GUN_175",
+            "context": "L_GUN_175",
+            "string": "Es un arma incómoda. Dispara tanto un cohete estándar como un cohete más lento dirigido cuando se centra en el desafortunado objetivo.\n"
+        },
+        {
+            "id": "L_GUN_176",
+            "context": "L_GUN_176",
+            "string": "Se trata de un sistema lanzador de granadas de largo alcance fabricado por dataDyne. El modo de disparo secundario recubre las granadas con una sustancia pegajosa; cuando se dispara la bomba, ésta se pega en las paredes o el techo. Tras unos cuantos segundos, se suelta para caer al suelo, donde detona.\n"
+        },
+        {
+            "id": "L_GUN_177",
+            "context": "L_GUN_177",
+            "string": "Los Skedar disfrutan viendo a sus enemigos aterrorizados. Parece natural que cuenten con un cohete a control remoto como modo secundario de fuego en su lanzacohetes básico, así pueden tener el placer de sentir los vanos intentos de escapar de su presa del proyectil que se acerca.\n"
+        },
+        {
+            "id": "L_GUN_178",
+            "context": "L_GUN_178",
+            "string": "El rifle FarSight es un híbrido Maian de un dispositivo de escáner de Rayos-X emparejado con un rifle que puede disparar a través de objetos. La mira puede centrarse en formas de vida, aunque el dispositivo no puede centrar tan rápido como se mueve el enemigo.\n"
+        },
+        {
+            "id": "L_GUN_179",
+            "context": "L_GUN_179",
+            "string": "Con su poderoso zoom y sus balas de alta velocidad, este arma del Instituto Carrington es uno de los mejores rifles de francotirador jamás hechos. Agáchate para una mayor precisión.\n"
+        },
+        {
+            "id": "L_GUN_180",
+            "context": "L_GUN_180",
+            "string": "Esta ballesta es un ejemplo de 'pistola' de corto alcance, montada en la muñeca de un agente del Instituto Carrington. Se pliega para ocultarla y puede disparar hasta cinco flechas, entre los más usuales tiros sedantes o los dardos mortales.\n"
+        },
+        {
+            "id": "L_GUN_181",
+            "context": "L_GUN_181",
+            "string": "Es un dispositivo de fuego rápido, que puede ser usado como arma en un caso de emergencia, pero que está diseñado en principio como un inyector dérmico de sedantes. Los usuarios son advertidos que una descarga completa de la reserva de droga puede ser fatal.\n"
+        },
+        {
+            "id": "L_GUN_182",
+            "context": "L_GUN_182",
+            "string": "Es una versión ampliada del cuchillo de combate. Contiene una ampolla de veneno que se hace añicos cuando se lanza, dando al enemigo unos seis segundos de vida. Un arma que sólo podía haber sido creada por dataDyne.\n"
+        },
+        {
+            "id": "L_GUN_183",
+            "context": "L_GUN_183",
+            "string": "Es una versión mejorada de la fiel granada. Puede ser lanzada con un fusible de cuatro segundos, o ser usada como una bomba de proximidad que rebota.\n"
+        },
+        {
+            "id": "L_GUN_184",
+            "context": "L_GUN_184",
+            "string": "Es una bomba de neutrones de mano que afecta a un área muy pequeña. Puede detonar por impacto o ser fijada en detonación por proximidad.\n"
+        },
+        {
+            "id": "L_GUN_185",
+            "context": "L_GUN_185",
+            "string": "Es una mina con un corto fusible de tiempo. Tiene un sensor de detección/evaluación que puede ser activado como modo secundario.\n"
+        },
+        {
+            "id": "L_GUN_186",
+            "context": "L_GUN_186",
+            "string": "Es una mina con un sensor de proximidad. Tiene un sensor de detección/evaluación que puede ser activado como modo secundario.\n"
+        },
+        {
+            "id": "L_GUN_187",
+            "context": "L_GUN_187",
+            "string": "Es una mina que puede ser activada remotamente. El comando de activación es el modo secundario.\n"
+        },
+        {
+            "id": "L_GUN_188",
+            "context": "L_GUN_188",
+            "string": "Se trata de un dispositivo de bloqueo de 'ruido-blanco', capaz de simular alguno de los fallos eléctricos más comunes en cualquier sistema donde sea directamente colocado.\n"
+        },
+        {
+            "id": "L_GUN_189",
+            "context": "L_GUN_189",
+            "string": "El láser está montado en la muñeca y su precisión es mortal. Puede disparar 'pulsos' de larga distancia, o puede mantener una constante y concentrada corriente de energía en corto alcance.\n"
+        },
+        {
+            "id": "L_GUN_190",
+            "context": "L_GUN_190",
+            "string": "Son estimulantes genéticos diseñados para aplicar en combate. Cuando son administrados, parecen frenar el paso del tiempo para abrir una 'ventana de reacción'.\n"
+        },
+        {
+            "id": "L_GUN_191",
+            "context": "L_GUN_191",
+            "string": "Lo último en la línea de miras 'starlight' que mejoran la luz visible para producir una imagen clara del ambiente que la rodea. Usa un algoritmo de movimiento de objetivo para mostrar posibles trampas.\n"
+        },
+        {
+            "id": "L_GUN_192",
+            "context": "L_GUN_192",
+            "string": "Usando la aplicación más pequeña de la tecnología anti-gravedad, esto es lo último en dispositivos para fisgar. Tiene una conexión de audio/vídeo con función de grabación y la posibilidad interna de holografiar espectroscópicamente.\n"
+        },
+        {
+            "id": "L_GUN_193",
+            "context": "L_GUN_193",
+            "string": "Una mira de corto alcance que puede ver a través de algunos materiales, incluso el acero, produciendo una representación cromática simplificada del entorno.\n"
+        },
+        {
+            "id": "L_GUN_194",
+            "context": "L_GUN_194",
+            "string": "Esta mira usa escaneo de infrarrojos modulados con datos ultrasónicos para ofrecer no sólo una imagen clara del área colindante, sino también la ubicación de irregularidades estructurales. También puede localizar enemigos que empleen tecnología de ocultación u otros desconciertos ópticos.\n"
+        },
+        {
+            "id": "L_GUN_195",
+            "context": "L_GUN_195",
+            "string": "Usa las cualidades de 'salto de luz' de cristales alienígenas para crear un campo refractivo alrededor del portador. Funciona mientras sólo existan pequeñas perturbaciones kinéticas en el campo límite; el acto de disparar un arma es suficiente para causar que vuelva la visibilidad.\n"
+        },
+        {
+            "id": "L_GUN_196",
+            "context": "L_GUN_196",
+            "string": "Es un escáner binocular de largo alcance. El visor muestra una imagen compuesta por las dos fuentes recibidas. También cuenta con función zoom.\n"
+        },
+        {
+            "id": "L_GUN_197",
+            "context": "L_GUN_197",
+            "string": "Es capaz de consultar remotamente casi cualquier tipo de datos guardados, los cuales son directamente enviados a los 'hackers' del Instituto. Una variante de este dispositivo provee a los 'hackers' de conexión directa con los sistemas locales.\n"
+        },
+        {
+            "id": "L_GUN_198",
+            "context": "L_GUN_198",
+            "string": "Es un poderoso sistema de rastreo que puede ser preparado para encajar con cualquier tipo de parámetros: gente, armas, objetos y lugares son algunas de las posibilidades.\n"
+        },
+        {
+            "id": "L_GUN_199",
+            "context": "L_GUN_199",
+            "string": "Se trata de un escáner médico modificado que contiene la más moderna información acerca del estado de salud del Presidente y una biblioteca de pasadas condiciones y tratamientos. Puede detectar las funciones vitales del Presidente a gran distancia, incluso cuando el objetivo esté en medio de una multitud.\n"
+        },
+        {
+            "id": "L_GUN_200",
+            "context": "L_GUN_200",
+            "string": "Abre cajas fuertes, simple y llanamente. Rompe cierres codificados electrónicamente, habitualmente en cuestión de segundos, aunque esto, por supuesto, depende de cada cerradura.\n"
+        },
+        {
+            "id": "L_GUN_201",
+            "context": "L_GUN_201",
+            "string": "Esta maravilla médica Maian puede auto-diagnosticar y realizar operaciones quirúrgicas sin necesidad de cortes. Una desventaja es que sólo funciona en Maian; la otra desventaja es que no tiene habilidad en el trato a los pacientes.\n"
+        },
+        {
+            "id": "L_GUN_202",
+            "context": "L_GUN_202",
+            "string": "Se trata de una pequeña carga de explosivo plástico, completada con un temporizador sellado, e incrustada dentro de una capa de teflón con metralla. Muy desagradable.\n"
+        },
+        {
+            "id": "L_GUN_203",
+            "context": "L_GUN_203",
+            "string": "Como ya eres consciente, se trata de una bomba de fusión direccional, que se coloca para que la carga se dirija hacia abajo. Esto arrasará los laboratorios de investigación de dataDyne y causará que el resto del edificio se colapse y caiga al agujero.\n"
+        },
+        {
+            "id": "L_GUN_204",
+            "context": "L_GUN_204",
+            "string": "Es un pequeño 'bicho' que se coloca en cualquier parte de un transmisor de comunicaciones. Se oculta en la señal oficial, permitiendo la conexión entre el Instituto y el agente aunque haya importantes contramedidas locales; para todas las posibilidades y propósitos, es parte de la localización de las comunicaciones de los objetivos.\n"
+        },
+        {
+            "id": "L_GUN_205",
+            "context": "L_GUN_205",
+            "string": "El funcionamiento interno de este 'bicho' es alto secreto: gran parte del dispositivo pertenece al mecanismo de autodestrucción. Se especula que esto es un ejemplo de comunicación molecular cuántica, lo cual explica la fenomenal fiabilidad del dispositivo cuando se usa.\n"
+        },
+        {
+            "id": "L_GUN_206",
+            "context": "L_GUN_206",
+            "string": "Usa tecnología de comunicación cuántica para proveer información precisa de los objetivos a las armas orbitales, ayudándolas a minimizar los daños colaterales. La misma tecnología es usada en los rastreadores del Instituto Carrington.\n"
+        },
+        {
+            "id": "L_GUN_207",
+            "context": "L_GUN_207",
+            "string": "Son detalles de la trayectoria de vuelo y los códigos de comunicación y frecuencias del Air Force One: incluso las claves actuales de encriptación.\n"
+        },
+        {
+            "id": "L_GUN_208",
+            "context": "L_GUN_208",
+            "string": "Todos los datos relacionados con la investigación en el fondo oceánico desarrollada por dataDyne con el navío de operaciones submarinas Pelagic II. El contenido incluye mapeados de sónar, datos geológicos, datos del artefacto alienígena, muestras del casco, etc.\n"
+        },
+        {
+            "id": "L_GUN_209",
+            "context": "L_GUN_209",
+            "string": "Es la última grabación del estado de personalidad de la inteligencia artificial, que se llama a sí misma Dr. Caroll, antes de su lavado de cerebro y reestructura cerebral. Usada para el estudio del caso, contiene sólo proyecciones teóricas. Moralmente incorrupta, y por lo tanto peligrosa. dataDyne I.S.C.E.O. 23/6/23\n"
+        },
+        {
+            "id": "L_GUN_210",
+            "context": "L_GUN_210",
+            "string": "Se trata de un cóctel químico que cambia la realidad que el objetivo percibe. Lo bueno es malo, lo malo es bueno; enemigos y amigos intercambian sus papeles. Se trata de otra de las investigaciones 'oscuras' del Área 51 de Trent Easton.\n"
+        },
+        {
+            "id": "L_GUN_211",
+            "context": "L_GUN_211",
+            "string": "No es tu vestimenta habitual. Llévalo para pretender no ser tú.\n"
+        },
+        {
+            "id": "L_GUN_212",
+            "context": "L_GUN_212",
+            "string": "PROX.\n"
+        },
+        {
+            "id": "L_GUN_213",
+            "context": "L_GUN_213",
+            "string": "TIEMPO\n"
+        },
+        {
+            "id": "L_GUN_214",
+            "context": "L_GUN_214",
+            "string": "REMOTO\n"
+        },
+        {
+            "id": "L_GUN_215",
+            "context": "L_GUN_215",
+            "string": "AUTOARMA\n"
+        },
+        {
+            "id": "L_GUN_216",
+            "context": "L_GUN_216",
+            "string": "IMPACTO\n"
+        },
+        {
+            "id": "L_GUN_217",
+            "context": "L_GUN_217",
+            "string": "Cohete Big King\n"
+        },
+        {
+            "id": "L_GUN_218",
+            "context": "L_GUN_218",
+            "string": "Conector de Datos\n"
+        },
+        {
+            "id": "L_GUN_219",
+            "context": "L_GUN_219",
+            "string": "Esc. Presidencial\n"
+        },
+        {
+            "id": "L_GUN_220",
+            "context": "L_GUN_220",
+            "string": "AutoCirujano\n"
+        },
+        {
+            "id": "L_GUN_221",
+            "context": "L_GUN_221",
+            "string": "Bomba Skedar\n"
+        },
+        {
+            "id": "L_GUN_222",
+            "context": "L_GUN_222",
+            "string": "Controlador\n"
+        },
+        {
+            "id": "L_GUN_223",
+            "context": "L_GUN_223",
+            "string": "'Bicho' R.\n"
+        },
+        {
+            "id": "L_GUN_224",
+            "context": "L_GUN_224",
+            "string": "Amplificador\n"
+        },
+        {
+            "id": "L_GUN_225",
+            "context": "L_GUN_225",
+            "string": "Planes de Vuelo\n"
+        },
+        {
+            "id": "L_GUN_226",
+            "context": "L_GUN_226",
+            "string": "Cinta Investigación\n"
+        },
+        {
+            "id": "L_GUN_227",
+            "context": "L_GUN_227",
+            "string": "Copia de Seguridad\n"
+        },
+        {
+            "id": "L_GUN_228",
+            "context": "L_GUN_228",
+            "string": "Llave Magnética\n"
+        },
+        {
+            "id": "L_GUN_229",
+            "context": "L_GUN_229",
+            "string": "Maletín\n"
+        },
+        {
+            "id": "L_GUN_230",
+            "context": "L_GUN_230",
+            "string": "Collar\n"
+        },
+        {
+            "id": "L_GUN_231",
+            "context": "L_GUN_231",
+            "string": "Esc. Pres.\n"
+        },
+        {
+            "id": "L_GUN_232",
+            "context": "L_GUN_232",
+            "string": "Reforzador\n"
+        },
+        {
+            "id": "L_GUN_233",
+            "context": "L_GUN_233",
+            "string": "Esc. R-X\n"
+        },
+        {
+            "id": "L_GUN_234",
+            "context": "L_GUN_234",
+            "string": "Esc. Horiz.\n"
+        },
+        {
+            "id": "L_GUN_235",
+            "context": "L_GUN_235",
+            "string": "Amplific.\n"
+        },
+        {
+            "id": "L_GUN_236",
+            "context": "L_GUN_236",
+            "string": "En este modelo de la Cámara Espía el dispositivo de grabación ha sido reemplazado por un poderoso explosivo plástico.\n"
+        },
+        {
+            "id": "L_GUN_237",
+            "context": "L_GUN_237",
+            "string": "Este modelo de la Cámara Espía usa una toxina nerviosa paralizadora para que los blancos queden en estado catatónico.\n"
+        },
+        {
+            "id": "L_GUN_238",
+            "context": "L_GUN_238",
+            "string": "Es el collar de Cassandra De Vries. Está equipado con una llave de proximidad que permite el acceso a áreas restringidas. El modelo Mk3 sólo funciona si el propietario está vivo. Clase de Seguridad AA-1 (gamma)."
+        },
+        {
+            "id": "L_GUN_239",
+            "context": "L_GUN_239",
+            "string": "Collar de repuesto de Cassandra De Vries.  Usuario: %s  Clave: %s\n"
+        },
+        {
+            "id": "L_GUN_240",
+            "context": "L_GUN_240",
+            "string": "Escudo\n"
+        },
+        {
+            "id": "L_GUN_241",
+            "context": "L_GUN_241",
+            "string": "El escudo protege al usuario detectando un ataque y generando momentáneamente un campo de fuerza concentrado para repeler el ataque. El escudo tiene una reserva de energía limitada, así que sólo puede proteger al usuario hasta cierto punto. Los escudos suelen permanecer activos cuando el usuario los lleva, aunque este escudo en particular parece no ser funcional, como un prototipo no finalizado.\n"
+        },
+        {
+            "id": "L_GUN_242",
+            "context": "L_GUN_242",
+            "string": "Reforzadores\n"
+        },
+        {
+            "id": "L_GUN_243",
+            "context": "L_GUN_243",
+            "string": "C. Datos\n"
+        },
+        {
+            "id": "L_GUN_244",
+            "context": "L_GUN_244",
+            "string": "V. Nocturna\n"
+        },
+        {
+            "id": "L_GUN_245",
+            "context": "L_GUN_245",
+            "string": "Decodif.\n"
+        },
+        {
+            "id": "L_GUN_246",
+            "context": "L_GUN_246",
+            "string": "P. Suicidio\n"
+        },
+        {
+            "id": "L_GUN_247",
+            "context": "L_GUN_247",
+            "string": "Tranquiliz.\n"
+        },
+        {
+            "id": "L_GUN_248",
+            "context": "L_GUN_248",
+            "string": "AutoCirujano\n"
+        },
+        {
+            "id": "L_GUN_249",
+            "context": "L_GUN_249",
+            "string": "Disco S.\n"
+        },
+        {
+            "id": "L_GUN_250",
+            "context": "L_GUN_250",
+            "string": "Disfraz\n"
+        },
+        {
+            "id": "L_GUN_251",
+            "context": "L_GUN_251",
+            "string": "Arma PC\n"
+        },
+        {
+            "id": "L_GUN_252",
+            "context": "L_GUN_252",
+            "string": "Mina Remota\n"
+        },
+        {
+            "id": "L_GUN_253",
+            "context": "L_GUN_253",
+            "string": "Escopeta\n"
+        },
+        {
+            "id": "L_GUN_254",
+            "context": "L_GUN_254",
+            "string": "Rifle Fr\n"
+        },
+        {
+            "id": "L_GUN_255",
+            "context": "L_GUN_255",
+            "string": "Mina Tiempo\n"
+        }
+    ]
+}

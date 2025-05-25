@@ -1,0 +1,564 @@
+{
+    "messages": [
+        {
+            "id": "L_AME_000",
+            "context": "L_AME_000",
+            "string": "|Background - \n\nA dataDyne scientist calling himself Dr. Caroll has contacted the Carrington Institute requesting that we rescue him from the dataDyne headquarters tonight. He claims that he has complained to dataDyne about the moral implications of his current project, but rather than dismiss him, they will mentally restructure him until he finds the nature of the project acceptable again.\n\n|Carrington - \n\nThis is your first mission, Joanna, and it could hardly be more vital to us. We need to get Dr. Caroll out of there before anything happens to him, and we also need to know about dataDyne's future plans. Our standard rules of engagement apply: do not kill unarmed civilians. Remember, the code keys only work if their owners are alive.\n\n|Objective One: - Jam the Internal Security Comms Hub\n\nThis is located in one of the top floors of the building, away from ground traffic interference. Use an ECM Mine to jam the hub and black out the security cameras. The mine must be attached to the hub to be effective. Be quick, though, as the mine will only last for about a minute or so.\n\n|Objective Two: - Obtain De Vries' Necklace/Key\n\nCassandra De Vries carries her Access Key for restricted areas of the building on her necklace. It is linked to her personal health monitor and will cease to be active if her life signs fail. If you take the Necklace/Key from her, you must render her unconscious, not kill her.\n\n|Objective Three: - Access Executive Computer Files\n\nDr. Caroll's future is being decided in a meeting on one of the office floors. The Executive in charge of Dr. Caroll's project is present at the meeting. Follow him to his office and gain access to his project files, then download them to us using your Data Uplink device.\n\n|Objective Four: - Jam the External Security Comms Link\n\nComplete the communication blackout by placing another ECM Mine on the equipment in the Security Room at the base of the building. This will jam any automatic calls for outside help.\n\n|Objective Five: - Secure the Secret Lift\n\nLocate the secure lift to the Basement Laboratory where Dr. Caroll is incarcerated. The exact location is unknown, but it should be found somewhere on the foyer level.\n\nEND\n"
+        },
+        {
+            "id": "L_AME_001",
+            "context": "L_AME_001",
+            "string": "LUCERNE TOWER\n"
+        },
+        {
+            "id": "L_AME_002",
+            "context": "L_AME_002",
+            "string": "|Background - \n\nA dataDyne scientist calling himself Dr. Caroll has contacted the Carrington Institute requesting that we rescue him from the dataDyne headquarters tonight. He claims that he has complained to dataDyne about the moral implications of his current project, but rather than dismiss him, they will mentally restructure him until he finds the nature of the project acceptable again.\n\n|Carrington - \n\nThis is your first mission, Joanna, and it could hardly be more vital to us. We need to get Dr. Caroll out of there before anything happens to him, and we also need to know about dataDyne's future plans. Our standard rules of engagement apply: do not kill unarmed civilians. Remember, the code keys only work if their owners are alive.\n\n|Objective One: - Jam the Internal Security Comms Hub\n\nThis is located in one of the top floors of the building, away from ground traffic interference. Use an ECM Mine to jam the hub and black out the security cameras. The mine must be attached to the hub to be effective. Be quick, though, as the mine will only last for about a minute or so.\n\n|Objective Two: - Obtain De Vries' Necklace/Key\n\nCassandra De Vries carries her Access Key for restricted areas of the building on her necklace. It is linked to her personal health monitor and will cease to be active if her life signs fail. If you take the Necklace/Key from her, you must render her unconscious, not kill her.\n\n|Objective Three: - Jam the External Security Comms Link\n\nComplete the communication blackout by placing another ECM Mine on the equipment in the Security Room at the base of the building. This will jam any automatic calls for outside help.\n\n|Objective Four: - Secure the Secret Lift\n\nLocate the secure lift to the Basement Laboratory where Dr. Caroll is incarcerated. The exact location is unknown, but it should be found somewhere on the foyer level.\n\nEND\n"
+        },
+        {
+            "id": "L_AME_003",
+            "context": "L_AME_003",
+            "string": "|Background - \n\nA dataDyne scientist calling himself Dr. Caroll has contacted the Carrington Institute requesting that we rescue him from the dataDyne headquarters tonight. He claims that he has complained to dataDyne about the moral implications of his current project, but rather than dismiss him, they will mentally restructure him until he finds the nature of the project acceptable again.\n\n|Carrington - \n\nThis is your first mission, Joanna, and it could hardly be more vital to us. We need to get Dr. Caroll out of there before anything happens to him, and we also need to know about dataDyne's future plans. Our standard rules of engagement apply: do not kill unarmed civilians. Remember, the code keys only work if their owners are alive.\n\n|Objective One: - Secure the Secret Lift\n\nLocate the secure lift to the Basement Laboratory where Dr. Caroll is incarcerated. The exact location is unknown, but it should be found somewhere on the foyer level.\n\nEND\n"
+        },
+        {
+            "id": "L_AME_004",
+            "context": "L_AME_004",
+            "string": "    NULL3"
+        },
+        {
+            "id": "L_AME_005",
+            "context": "L_AME_005",
+            "string": "    NULL4"
+        },
+        {
+            "id": "L_AME_006",
+            "context": "L_AME_006",
+            "string": "    NULL5"
+        },
+        {
+            "id": "L_AME_007",
+            "context": "L_AME_007",
+            "string": "    NULL6"
+        },
+        {
+            "id": "L_AME_008",
+            "context": "L_AME_008",
+            "string": "    NULL7"
+        },
+        {
+            "id": "L_AME_009",
+            "context": "L_AME_009",
+            "string": "dataDyne\nCentral Divisional HQ Chicago IL USA."
+        },
+        {
+            "id": "L_AME_010",
+            "context": "L_AME_010",
+            "string": "0230 Hours  15 AUG 2023\n"
+        },
+        {
+            "id": "L_AME_011",
+            "context": "L_AME_011",
+            "string": "Obtain De Vries' necklace.\n"
+        },
+        {
+            "id": "L_AME_012",
+            "context": "L_AME_012",
+            "string": "Cassandra De Vries'\n"
+        },
+        {
+            "id": "L_AME_013",
+            "context": "L_AME_013",
+            "string": "Necklace\n"
+        },
+        {
+            "id": "L_AME_014",
+            "context": "L_AME_014",
+            "string": "De Vries' necklace\n"
+        },
+        {
+            "id": "L_AME_015",
+            "context": "L_AME_015",
+            "string": "Picked up De Vries' necklace.\n"
+        },
+        {
+            "id": "L_AME_016",
+            "context": "L_AME_016",
+            "string": "Disable internal security hub\n"
+        },
+        {
+            "id": "L_AME_017",
+            "context": "L_AME_017",
+            "string": "Obtain keycode necklace\n"
+        },
+        {
+            "id": "L_AME_018",
+            "context": "L_AME_018",
+            "string": "Download project files\n"
+        },
+        {
+            "id": "L_AME_019",
+            "context": "L_AME_019",
+            "string": "Disable external comms hub\n"
+        },
+        {
+            "id": "L_AME_020",
+            "context": "L_AME_020",
+            "string": "Gain entrance to laboratory\n"
+        },
+        {
+            "id": "L_AME_021",
+            "context": "L_AME_021",
+            "string": "Who are you and what are you doing here?\n"
+        },
+        {
+            "id": "L_AME_022",
+            "context": "L_AME_022",
+            "string": "Look out! She's got a gun.\n"
+        },
+        {
+            "id": "L_AME_023",
+            "context": "L_AME_023",
+            "string": "You won't shoot me, foolish child!\n"
+        },
+        {
+            "id": "L_AME_024",
+            "context": "L_AME_024",
+            "string": "Don't you know who I am?\n"
+        },
+        {
+            "id": "L_AME_025",
+            "context": "L_AME_025",
+            "string": "Let's see how you deal with security.\n"
+        },
+        {
+            "id": "L_AME_026",
+            "context": "L_AME_026",
+            "string": "PLEASE!!!!  Don't kill me!\n"
+        },
+        {
+            "id": "L_AME_027",
+            "context": "L_AME_027",
+            "string": "If I were you, I'd leave... NOW!\n"
+        },
+        {
+            "id": "L_AME_028",
+            "context": "L_AME_028",
+            "string": "Badly placed ECM Mine.\n"
+        },
+        {
+            "id": "L_AME_029",
+            "context": "L_AME_029",
+            "string": "ECM Mine placed correctly.\n"
+        },
+        {
+            "id": "L_AME_030",
+            "context": "L_AME_030",
+            "string": "MISSION FAILED - objectives incomplete.\n"
+        },
+        {
+            "id": "L_AME_031",
+            "context": "L_AME_031",
+            "string": "       MISSION SUCCESSFUL      \n"
+        },
+        {
+            "id": "L_AME_032",
+            "context": "L_AME_032",
+            "string": "CANNOT complete all objectives.\n"
+        },
+        {
+            "id": "L_AME_033",
+            "context": "L_AME_033",
+            "string": "Time to erase those files.\n"
+        },
+        {
+            "id": "L_AME_034",
+            "context": "L_AME_034",
+            "string": "Computer executive erased.\n"
+        },
+        {
+            "id": "L_AME_035",
+            "context": "L_AME_035",
+            "string": "I'll do what you want!\n"
+        },
+        {
+            "id": "L_AME_036",
+            "context": "L_AME_036",
+            "string": "HELP - Intruder!\n"
+        },
+        {
+            "id": "L_AME_037",
+            "context": "L_AME_037",
+            "string": "You talk too much.\n"
+        },
+        {
+            "id": "L_AME_038",
+            "context": "L_AME_038",
+            "string": "HELP, HELP!\n"
+        },
+        {
+            "id": "L_AME_039",
+            "context": "L_AME_039",
+            "string": "I'll do what you want...\n"
+        },
+        {
+            "id": "L_AME_040",
+            "context": "L_AME_040",
+            "string": "Logging on now...\n"
+        },
+        {
+            "id": "L_AME_041",
+            "context": "L_AME_041",
+            "string": "Okay, I'm in...\n"
+        },
+        {
+            "id": "L_AME_042",
+            "context": "L_AME_042",
+            "string": "Goodbye, Dr. Caroll.\n"
+        },
+        {
+            "id": "L_AME_043",
+            "context": "L_AME_043",
+            "string": "You've written your last bug, traitor!\n"
+        },
+        {
+            "id": "L_AME_044",
+            "context": "L_AME_044",
+            "string": "File download initiated.\n"
+        },
+        {
+            "id": "L_AME_045",
+            "context": "L_AME_045",
+            "string": "File download completed.\n"
+        },
+        {
+            "id": "L_AME_046",
+            "context": "L_AME_046",
+            "string": "ACCESS DENIED - password needed.\n"
+        },
+        {
+            "id": "L_AME_047",
+            "context": "L_AME_047",
+            "string": "Door unlocked.\n"
+        },
+        {
+            "id": "L_AME_048",
+            "context": "L_AME_048",
+            "string": "DOH!\n"
+        },
+        {
+            "id": "L_AME_049",
+            "context": "L_AME_049",
+            "string": "Unable to download - Data Uplink needed.\n"
+        },
+        {
+            "id": "L_AME_050",
+            "context": "L_AME_050",
+            "string": "LIGHTS NOW ON\n"
+        },
+        {
+            "id": "L_AME_051",
+            "context": "L_AME_051",
+            "string": "LIGHTS NOW OFF\n"
+        },
+        {
+            "id": "L_AME_052",
+            "context": "L_AME_052",
+            "string": "Erase Dr. Caroll conversation...\n"
+        },
+        {
+            "id": "L_AME_053",
+            "context": "L_AME_053",
+            "string": "Don't shoot, don't shoot!\n"
+        },
+        {
+            "id": "L_AME_054",
+            "context": "L_AME_054",
+            "string": "Critical mission object destroyed.\n"
+        },
+        {
+            "id": "L_AME_055",
+            "context": "L_AME_055",
+            "string": "Unacceptable civilian casualties.\n"
+        },
+        {
+            "id": "L_AME_056",
+            "context": "L_AME_056",
+            "string": "MISSION FAILED \n - objectives cannot be completed.\n"
+        },
+        {
+            "id": "L_AME_057",
+            "context": "L_AME_057",
+            "string": "Critical mission personnel killed.\n"
+        },
+        {
+            "id": "L_AME_058",
+            "context": "L_AME_058",
+            "string": "Obtain ECM Mines.\n"
+        },
+        {
+            "id": "L_AME_059",
+            "context": "L_AME_059",
+            "string": "Dr. Caroll's\n"
+        },
+        {
+            "id": "L_AME_060",
+            "context": "L_AME_060",
+            "string": "ECM Mine\n"
+        },
+        {
+            "id": "L_AME_061",
+            "context": "L_AME_061",
+            "string": "An ECM Mine\n"
+        },
+        {
+            "id": "L_AME_062",
+            "context": "L_AME_062",
+            "string": "Picked up an ECM Mine.\n"
+        },
+        {
+            "id": "L_AME_063",
+            "context": "L_AME_063",
+            "string": "Obtain Data Uplink.\n"
+        },
+        {
+            "id": "L_AME_064",
+            "context": "L_AME_064",
+            "string": "\n"
+        },
+        {
+            "id": "L_AME_065",
+            "context": "L_AME_065",
+            "string": "Data Uplink\n"
+        },
+        {
+            "id": "L_AME_066",
+            "context": "L_AME_066",
+            "string": "A Data Uplink\n"
+        },
+        {
+            "id": "L_AME_067",
+            "context": "L_AME_067",
+            "string": "Picked up a Data Uplink.\n"
+        },
+        {
+            "id": "L_AME_068",
+            "context": "L_AME_068",
+            "string": "Yes, yes, I agree. Personality is expendable\n in this case.\n"
+        },
+        {
+            "id": "L_AME_069",
+            "context": "L_AME_069",
+            "string": "No, I can start the process from my office\n terminal and delete the necessary files\n at the same time.\n"
+        },
+        {
+            "id": "L_AME_070",
+            "context": "L_AME_070",
+            "string": "I'll begin at once. Goodbye.\n"
+        },
+        {
+            "id": "L_AME_071",
+            "context": "L_AME_071",
+            "string": "Move it!\n"
+        },
+        {
+            "id": "L_AME_072",
+            "context": "L_AME_072",
+            "string": "I've got a password problem, and you're \nthe man to help me with it.\n"
+        },
+        {
+            "id": "L_AME_073",
+            "context": "L_AME_073",
+            "string": "Don't shoot, don't shoot!\n"
+        },
+        {
+            "id": "L_AME_074",
+            "context": "L_AME_074",
+            "string": "Datalink broken - connection terminated.\n"
+        },
+        {
+            "id": "L_AME_075",
+            "context": "L_AME_075",
+            "string": "Datalink error - incomplete file download.\n"
+        },
+        {
+            "id": "L_AME_076",
+            "context": "L_AME_076",
+            "string": "Internal security system temporarily disabled.\n"
+        },
+        {
+            "id": "L_AME_077",
+            "context": "L_AME_077",
+            "string": "External communications hub disabled.\n"
+        },
+        {
+            "id": "L_AME_078",
+            "context": "L_AME_078",
+            "string": "Laboratory lift located.\n"
+        },
+        {
+            "id": "L_AME_079",
+            "context": "L_AME_079",
+            "string": "Security... Help me!\n"
+        },
+        {
+            "id": "L_AME_080",
+            "context": "L_AME_080",
+            "string": "ECM Mine needed to disable security hub.\n"
+        },
+        {
+            "id": "L_AME_081",
+            "context": "L_AME_081",
+            "string": "ECM Mine needed to disable comms hub.\n"
+        },
+        {
+            "id": "L_AME_082",
+            "context": "L_AME_082",
+            "string": "Dummy\n"
+        },
+        {
+            "id": "L_AME_083",
+            "context": "L_AME_083",
+            "string": "How dare you disturb me!\n"
+        },
+        {
+            "id": "L_AME_084",
+            "context": "L_AME_084",
+            "string": "You will regret this intrusion, girl!\n"
+        },
+        {
+            "id": "L_AME_085",
+            "context": "L_AME_085",
+            "string": "If I were you, I'd leave...NOW!\n"
+        },
+        {
+            "id": "L_AME_086",
+            "context": "L_AME_086",
+            "string": "Please don't kill me!\n"
+        },
+        {
+            "id": "L_AME_087",
+            "context": "L_AME_087",
+            "string": "Don't shoot!\n"
+        },
+        {
+            "id": "L_AME_088",
+            "context": "L_AME_088",
+            "string": "Obtain CamSpy.\n"
+        },
+        {
+            "id": "L_AME_089",
+            "context": "L_AME_089",
+            "string": "Dr. Caroll's\n"
+        },
+        {
+            "id": "L_AME_090",
+            "context": "L_AME_090",
+            "string": "CamSpy\n"
+        },
+        {
+            "id": "L_AME_091",
+            "context": "L_AME_091",
+            "string": "A CamSpy\n"
+        },
+        {
+            "id": "L_AME_092",
+            "context": "L_AME_092",
+            "string": "Picked up a CamSpy.\n"
+        },
+        {
+            "id": "L_AME_093",
+            "context": "L_AME_093",
+            "string": "We're getting a positive reading - \nthe internal comms hub is nearby.\n"
+        },
+        {
+            "id": "L_AME_094",
+            "context": "L_AME_094",
+            "string": "You're on the same floor as \nCassandra's office.\n"
+        },
+        {
+            "id": "L_AME_095",
+            "context": "L_AME_095",
+            "string": "The other hub has got to be in the \nSecurity Room.\n"
+        },
+        {
+            "id": "L_AME_096",
+            "context": "L_AME_096",
+            "string": "The basement elevator must be around \nthere somewhere.\n"
+        },
+        {
+            "id": "L_AME_097",
+            "context": "L_AME_097",
+            "string": "Security system is now back online.\n"
+        },
+        {
+            "id": "L_AME_098",
+            "context": "L_AME_098",
+            "string": "You vandal, you've broken it!\n"
+        },
+        {
+            "id": "L_AME_099",
+            "context": "L_AME_099",
+            "string": "2023 AD, 2214 Hours  Lucerne Tower - dataDyne HQ\n"
+        },
+        {
+            "id": "L_AME_100",
+            "context": "L_AME_100",
+            "string": "Why the big hurry?\n"
+        },
+        {
+            "id": "L_AME_101",
+            "context": "L_AME_101",
+            "string": "If Dr. Caroll is not extracted tonight, \ndataDyne will put him through mind \nconditioning, and we'll lose our best \nchance of finding out what dataDyne \nare up to.\n"
+        },
+        {
+            "id": "L_AME_102",
+            "context": "L_AME_102",
+            "string": "Are they all expendable?\n"
+        },
+        {
+            "id": "L_AME_103",
+            "context": "L_AME_103",
+            "string": "Don't joke! You have to be careful, Joanna. \nCode keys will only operate while the owner \nis alive... If you kill them, the key is \nuseless. Armed guards are a different matter, \nof course.\n"
+        },
+        {
+            "id": "L_AME_104",
+            "context": "L_AME_104",
+            "string": "What's the target location?\n"
+        },
+        {
+            "id": "L_AME_105",
+            "context": "L_AME_105",
+            "string": "Work your way down the building to the ground \nlevel. Dr. Caroll will be in a research lab \nsomewhere in the underground facility.\n"
+        },
+        {
+            "id": "L_AME_106",
+            "context": "L_AME_106",
+            "string": "How will I recognize him?\n"
+        },
+        {
+            "id": "L_AME_107",
+            "context": "L_AME_107",
+            "string": "We don't have an image record, and we can't \nfind any official files. All we have is the \nname. Good luck, Perfect Dark.\n"
+        },
+        {
+            "id": "L_AME_108",
+            "context": "L_AME_108",
+            "string": "Right, I'm in...\n"
+        },
+        {
+            "id": "L_AME_109",
+            "context": "L_AME_109",
+            "string": "I...I'm logging on now.\n"
+        },
+        {
+            "id": "L_AME_110",
+            "context": "L_AME_110",
+            "string": null
+        },
+        {
+            "id": "L_AME_111",
+            "context": "L_AME_111",
+            "string": null
+        }
+    ]
+}

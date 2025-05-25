@@ -1,0 +1,384 @@
+{
+    "messages": [
+        {
+            "id": "L_PETE_000",
+            "context": "L_PETE_000",
+            "string": "|Briefing - \n\nLa Corporation G5 sert de couverture à la dataDyne. Il faudra être prudent, il va y avoir beaucoup de civils dans les rues. Attendez-vous à une forte résistance à l'intérieur comme à l'extérieur de l'immeuble. Nos espions ont rapporté la mobilisation de leurs troupes.\n\n|Carrington - \n\nIl va falloir mettre en application votre entraînement en milieu urbain. La situation n'a pas beaucoup évolué depuis la première reconnaissance. Faites attention, une unité de sécurité robotique patrouille les rues. Evitez-la autant que possible.\n\n|Objectif 1: - Récupérer l'équipement au point de largage\n\nL'escouade de reconnaissance a laissé de l'équipement derrière elle pour vous, caché dans une bouche d'égout. Il y aura tout ce qu'il vous faut pour mener à bien votre mission.\n\n|Objectif 2: - Placer un Pisteur sur la limousine\n\nLa limousine est arrivée dans la rue principale peu après vous. Toutes les tentatives pour la pister ont échouées, il va falloir faire ça à l'ancienne. Placez le Pisteur sur la limousine. Nous pourrons alors savoir d'où elle vient.\n\n|Objectif 3: - Préparer voie de sortie\n\nIl y a une issue de secours désaffectée à l'arrière de l'immeuble du G5 qui vous servira à vous enfuir. Préparer le chemin en plaçant des explosifs à la porte. Pour éviter de donner l'alarme, vous devrez déclencher la mine une fois le meeting terminé.\n\n|Objectif 4: - Créer une diversion\n\nLes gardes sont très vigilants, n'importe quel mouvement est susceptible d'attirer leur attention. Vous allez utiliser ceci à votre avantage. Reprogrammez l'ordinateur du taxi pour qu'il aille s'écraser devant les gardes pour créer une diversion.\n\n|Objectif 5: - Entrer dans l'immeuble du G5\n\nUn des gardes près de l'entrée de l'ascenseur est chargé du panneau de contrôle qui permet de verrouiller les portes. La diversion engendrée par le taxi devrait attirer ce garde et les autres dans la rue. Le chemin vous sera alors ouvert. Souvenez-vous : vous ne devez pas blesser de civils.\n\nFIN\n"
+        },
+        {
+            "id": "L_PETE_001",
+            "context": "L_PETE_001",
+            "string": "LES RUES DE CHICAGO\n"
+        },
+        {
+            "id": "L_PETE_002",
+            "context": "L_PETE_002",
+            "string": "|Briefing - \n\nLa Corporation G5 sert de couverture à la dataDyne. Il faudra être prudent, il va y avoir beaucoup de civils dans les rues. Attendez-vous à une forte résistance à l'intérieur comme à l'extérieur de l'immeuble. Nos espions ont rapporté la mobilisation de leurs troupes.\n\n|Carrington - \n\nIl va falloir mettre en application votre entraînement en milieu urbain. La situation n'a pas beaucoup évolué depuis la première reconnaissance. Faites attention, une unité de sécurité robotique patrouille les rues. Evitez-la autant que possible.\n\n|Objectif 1: - Récupérer l'équipement au point de largage\n\nL'escouade de reconnaissance a laissé de l'équipement derrière elle pour vous, caché dans une bouche d'égout. Il y aura tout ce qu'il vous faut pour mener à bien votre mission.\n\n|Objectif 2 - Préparer voie de sortie\n\nIl y a une issue de secours désaffectée à l'arrière de l'immeuble du G5 qui vous servira à vous enfuir. Préparer le chemin en plaçant des explosifs à la porte. Pour éviter de donner l'alarme, vous devrez déclencher la mine une fois le meeting terminé.\n\n|Objectif 3 - Créer une diversion\n\nLes gardes sont très vigilants, n'importe quel mouvement est susceptible d'attirer leur attention. Vous allez utiliser ceci à votre avantage. Reprogrammez l'ordinateur du taxi pour qu'il aille s'écraser devant les gardes pour créer une diversion.\n\n|Objectif 4 - Entrer dans l'immeuble du G5\n\nUn des gardes près de l'entrée de l'ascenseur est chargé du panneau de contrôle qui permet de verrouiller les portes. La diversion engendrée par le taxi devrait attirer ce garde et les autres dans la rue. Le chemin vous sera alors ouvert. Souvenez-vous : vous ne devez pas blesser de civils.\n\nFIN\n"
+        },
+        {
+            "id": "L_PETE_003",
+            "context": "L_PETE_003",
+            "string": "|Briefing - \n\nLa Corporation G5 sert de couverture à la dataDyne. Il faudra être prudent, il va y avoir beaucoup de civils dans les rues. Attendez-vous à une forte résistance à l'intérieur comme à l'extérieur de l'immeuble. Nos espions ont rapporté la mobilisation de leurs troupes.\n\n|Carrington - \n\nIl va falloir mettre en application votre entraînement en milieu urbain. La situation n'a pas beaucoup évolué depuis la première reconnaissance. Faites attention, une unité de sécurité robotique patrouille les rues. Evitez-la autant que possible.\n\n|Objectif 1: - Récupérer l'équipement au point de largage\n\nL'escouade de reconnaissance a laissé de l'équipement derrière elle pour vous, caché dans une bouche d'égout. Il y aura tout ce qu'il vous faut pour mener à bien votre mission.\n\n|Objectif 2: - Créer une diversion\n\nLes gardes sont très vigilants, n'importe quel mouvement est susceptible d'attirer leur attention. Vous allez utiliser ceci à votre avantage. Reprogrammez l'ordinateur du taxi pour qu'il aille s'écraser devant les gardes pour créer une diversion.\n\n|Objectif 3: - Entrer dans l'immeuble du G5\n\nUn des gardes près de l'entrée de l'ascenseur est chargé du panneau de contrôle qui permet de verrouiller les portes. La diversion engendrée par le taxi devrait attirer ce garde et les autres dans la rue. Le chemin vous sera alors ouvert. Souvenez-vous : vous ne devez pas blesser de civils.\n\nFIN\n"
+        },
+        {
+            "id": "L_PETE_004",
+            "context": "L_PETE_004",
+            "string": "\n"
+        },
+        {
+            "id": "L_PETE_005",
+            "context": "L_PETE_005",
+            "string": "\n"
+        },
+        {
+            "id": "L_PETE_006",
+            "context": "L_PETE_006",
+            "string": "\n"
+        },
+        {
+            "id": "L_PETE_007",
+            "context": "L_PETE_007",
+            "string": "\n"
+        },
+        {
+            "id": "L_PETE_008",
+            "context": "L_PETE_008",
+            "string": "\n"
+        },
+        {
+            "id": "L_PETE_009",
+            "context": "L_PETE_009",
+            "string": "Récupérer équipement point de largage\n"
+        },
+        {
+            "id": "L_PETE_010",
+            "context": "L_PETE_010",
+            "string": "Placer Pisteur sur limousine\n"
+        },
+        {
+            "id": "L_PETE_011",
+            "context": "L_PETE_011",
+            "string": "Préparer voie de sortie\n"
+        },
+        {
+            "id": "L_PETE_012",
+            "context": "L_PETE_012",
+            "string": "Acquérir cible de diversion\n"
+        },
+        {
+            "id": "L_PETE_013",
+            "context": "L_PETE_013",
+            "string": "Créer diversion\n"
+        },
+        {
+            "id": "L_PETE_014",
+            "context": "L_PETE_014",
+            "string": "Entrer dans l'immeuble du G5\n"
+        },
+        {
+            "id": "L_PETE_015",
+            "context": "L_PETE_015",
+            "string": "Mine bien positionnée.\n"
+        },
+        {
+            "id": "L_PETE_016",
+            "context": "L_PETE_016",
+            "string": "Mine mal positionnée.\n"
+        },
+        {
+            "id": "L_PETE_017",
+            "context": "L_PETE_017",
+            "string": "Virus téléchargé dans le NavComp.\n"
+        },
+        {
+            "id": "L_PETE_018",
+            "context": "L_PETE_018",
+            "string": "Taxi incontrôlable - reprogrammation nécessaire.\n"
+        },
+        {
+            "id": "L_PETE_019",
+            "context": "L_PETE_019",
+            "string": "Accès au système de navigation du taxi.\n"
+        },
+        {
+            "id": "L_PETE_020",
+            "context": "L_PETE_020",
+            "string": "Virus téléchargé.\n"
+        },
+        {
+            "id": "L_PETE_021",
+            "context": "L_PETE_021",
+            "string": "Système de navigation taxi reprogrammé.\n"
+        },
+        {
+            "id": "L_PETE_022",
+            "context": "L_PETE_022",
+            "string": "Connexion au taxi perdu.\n"
+        },
+        {
+            "id": "L_PETE_023",
+            "context": "L_PETE_023",
+            "string": "Pisteur bien positionné.\n"
+        },
+        {
+            "id": "L_PETE_024",
+            "context": "L_PETE_024",
+            "string": "Pisteur mal positionné.\n"
+        },
+        {
+            "id": "L_PETE_025",
+            "context": "L_PETE_025",
+            "string": "Véhicule crucial détruit.\n"
+        },
+        {
+            "id": "L_PETE_026",
+            "context": "L_PETE_026",
+            "string": "MISSION ECHOUEE\n"
+        },
+        {
+            "id": "L_PETE_027",
+            "context": "L_PETE_027",
+            "string": "MISSION ACCOMPLIE\n"
+        },
+        {
+            "id": "L_PETE_028",
+            "context": "L_PETE_028",
+            "string": "Limousine DataDyne perdue.\n"
+        },
+        {
+            "id": "L_PETE_029",
+            "context": "L_PETE_029",
+            "string": "Mission échouée - trop de pertes civiles.\n"
+        },
+        {
+            "id": "L_PETE_030",
+            "context": "L_PETE_030",
+            "string": "Attention - elle a une arme!\n"
+        },
+        {
+            "id": "L_PETE_031",
+            "context": "L_PETE_031",
+            "string": "Y'a une maniaque dans les rues!\n"
+        },
+        {
+            "id": "L_PETE_032",
+            "context": "L_PETE_032",
+            "string": "Alerte Intrus - Envoyez des renforts.\n"
+        },
+        {
+            "id": "L_PETE_033",
+            "context": "L_PETE_033",
+            "string": "Accès ascenseur scellé.\n"
+        },
+        {
+            "id": "L_PETE_034",
+            "context": "L_PETE_034",
+            "string": "Hé - Qu'est-ce que vous faites là?\n"
+        },
+        {
+            "id": "L_PETE_035",
+            "context": "L_PETE_035",
+            "string": "Pfff. Même pas peur!\n"
+        },
+        {
+            "id": "L_PETE_036",
+            "context": "L_PETE_036",
+            "string": "Pisteur remarqué.\n"
+        },
+        {
+            "id": "L_PETE_037",
+            "context": "L_PETE_037",
+            "string": "Salutations, citoyen.\n"
+        },
+        {
+            "id": "L_PETE_038",
+            "context": "L_PETE_038",
+            "string": "Obtenir Mine télécom.\n"
+        },
+        {
+            "id": "L_PETE_039",
+            "context": "L_PETE_039",
+            "string": "Dr. Caroll: \n"
+        },
+        {
+            "id": "L_PETE_040",
+            "context": "L_PETE_040",
+            "string": "Mine télécom\n"
+        },
+        {
+            "id": "L_PETE_041",
+            "context": "L_PETE_041",
+            "string": "Une mine télécom.\n"
+        },
+        {
+            "id": "L_PETE_042",
+            "context": "L_PETE_042",
+            "string": "Mine télécom. obtenue.\n"
+        },
+        {
+            "id": "L_PETE_043",
+            "context": "L_PETE_043",
+            "string": "Obtenir pisteur.\n"
+        },
+        {
+            "id": "L_PETE_044",
+            "context": "L_PETE_044",
+            "string": "Dr Caroll: \n"
+        },
+        {
+            "id": "L_PETE_045",
+            "context": "L_PETE_045",
+            "string": "Pisteur\n"
+        },
+        {
+            "id": "L_PETE_046",
+            "context": "L_PETE_046",
+            "string": "Un pisteur\n"
+        },
+        {
+            "id": "L_PETE_047",
+            "context": "L_PETE_047",
+            "string": "Pisteur obtenu.\n"
+        },
+        {
+            "id": "L_PETE_048",
+            "context": "L_PETE_048",
+            "string": "Les portes ascenseur ne peuvent plus être ouvertes.\n"
+        },
+        {
+            "id": "L_PETE_049",
+            "context": "L_PETE_049",
+            "string": "Obtenir Reprogrammeur.\n"
+        },
+        {
+            "id": "L_PETE_050",
+            "context": "L_PETE_050",
+            "string": "Dr. Caroll: \n"
+        },
+        {
+            "id": "L_PETE_051",
+            "context": "L_PETE_051",
+            "string": "Reprogram.\n"
+        },
+        {
+            "id": "L_PETE_052",
+            "context": "L_PETE_052",
+            "string": "Un reprogrammeur\n"
+        },
+        {
+            "id": "L_PETE_053",
+            "context": "L_PETE_053",
+            "string": "Reprogrammeur obtenu.\n"
+        },
+        {
+            "id": "L_PETE_054",
+            "context": "L_PETE_054",
+            "string": "Diversion créée.\n"
+        },
+        {
+            "id": "L_PETE_055",
+            "context": "L_PETE_055",
+            "string": "Obtenir mine télécom.\n"
+        },
+        {
+            "id": "L_PETE_056",
+            "context": "L_PETE_056",
+            "string": "Dr. Caroll: \n"
+        },
+        {
+            "id": "L_PETE_057",
+            "context": "L_PETE_057",
+            "string": "Falcon 2\n"
+        },
+        {
+            "id": "L_PETE_058",
+            "context": "L_PETE_058",
+            "string": "Une mine télécom.\n"
+        },
+        {
+            "id": "L_PETE_059",
+            "context": "L_PETE_059",
+            "string": "Mine télécom.\n"
+        },
+        {
+            "id": "L_PETE_060",
+            "context": "L_PETE_060",
+            "string": "Nous avons caché l'équipement \ndans une bouche d'égout.\n"
+        },
+        {
+            "id": "L_PETE_061",
+            "context": "L_PETE_061",
+            "string": "N'importe laquelle de ces portes bloquée \npeut servir de sortie.\n"
+        },
+        {
+            "id": "L_PETE_062",
+            "context": "L_PETE_062",
+            "string": "Reprogrammez ce taxi, c'est un type 2. \nIl devrait être compatible.\n"
+        },
+        {
+            "id": "L_PETE_063",
+            "context": "L_PETE_063",
+            "string": "Cet ascenseur à voiture est votre \nseul point d'entrée.\n"
+        },
+        {
+            "id": "L_PETE_064",
+            "context": "L_PETE_064",
+            "string": "EEPROM flag has been set.\n"
+        },
+        {
+            "id": "L_PETE_065",
+            "context": "L_PETE_065",
+            "string": "EEPROM flag has been cleared.\n"
+        },
+        {
+            "id": "L_PETE_066",
+            "context": "L_PETE_066",
+            "string": "Une autre diversion a été créée!\n"
+        },
+        {
+            "id": "L_PETE_067",
+            "context": "L_PETE_067",
+            "string": "Pisteur à été découvert.\n"
+        },
+        {
+            "id": "L_PETE_068",
+            "context": "L_PETE_068",
+            "string": "Nous pensons que le G5 n'est qu'une \ncouverture de la dataDyne et qu'il est \nimpliqué dans ce complot. Je sais que \nCassandra de Vries sera présente, mais j'ai besoin \nde savoir qui d'autre sera là et de quoi ils \nvont parler. Le temps que vous évacuiez, \nles renforts débarqueront.\n"
+        },
+        {
+            "id": "L_PETE_069",
+            "context": "L_PETE_069",
+            "string": "Une cavalerie va venir me sauver... \nA qui avez-vous fait appel?\n"
+        },
+        {
+            "id": "L_PETE_070",
+            "context": "L_PETE_070",
+            "string": "Je ne peux rien dire pour l'instant. \nSilence radio! Bonne chance, Joanna!\n"
+        },
+        {
+            "id": "L_PETE_071",
+            "context": "L_PETE_071",
+            "string": "Merci, chef.\n"
+        },
+        {
+            "id": "L_PETE_072",
+            "context": "L_PETE_072",
+            "string": "Mine télécom. gâchée.\n"
+        },
+        {
+            "id": "L_PETE_073",
+            "context": "L_PETE_073",
+            "string": null
+        },
+        {
+            "id": "L_PETE_074",
+            "context": "L_PETE_074",
+            "string": null
+        },
+        {
+            "id": "L_PETE_075",
+            "context": "L_PETE_075",
+            "string": null
+        }
+    ]
+}

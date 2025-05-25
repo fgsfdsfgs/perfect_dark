@@ -1,0 +1,424 @@
+{
+    "messages": [
+        {
+            "id": "L_DEPO_000",
+            "context": "L_DEPO_000",
+            "string": "|Antecedentes - \n\nUna vez dentro del Cuartel General de G5, procede hasta el corazón del edificio donde una reunión tendrá lugar. Obtén una grabación visual de la reunión y sal tan pronto como te sea posible.\n\n|Carrington - \n\nEl Edificio G5 tiene un sistema integrado de alarmas. Cuidado con cualquier guarda que te vea, ya que seguro que intentarán activarlas. Esto alertará a los conspiradores, que casi seguro que no tendrán la reunión bajo esas circunstancias. Suavemente, Joanna, suavemente...\n\n|Objetivo Uno: - Desactivar el Generador de Campo Húmedo\n\nSe trata de un dispositivo en el garaje del edificio evita la transmisión de cualquier información grabada por la Cámara Espía. Una vez apagado, la Cámara Espía puede enviar cualquier grabación al Cuartel General.\n\n|Objetivo Dos: - Desactivar los Sistemas de la Rejilla Láser\n\nUn examen del suministro energético del Edificio G5 indica una red de rejillas láser. Estas rejillas están colocadas específicamente para evitar una posible ruta hacia la sala de reuniones, pero si puedes apagarlas, el camino estará limpio.\n\n|Objetivo Tres: - Holografiar la Reunión de los Conspiradores\n\nEl dispositivo de la Cámara Espía es un excelente modo de grabar la reunión sin alertar a De Vries y los otros conspiradores.\n\n|Objetivo Cuatro: - Recuperar Copia de Seguridad de la Caja Fuerte\n\nEl Dr. Caroll informó a Daniel de una copia de su personalidad que está guardada en una caja fuerte en el Edificio G5. Si nos hacemos con ella, podremos restaurar la personalidad del Dr. Caroll posteriormente.\n\n|Objetivo Cinco: - Salir del Edificio\n\nDestruye la puerta bloqueada para crear una salida. Si recuerdas en qué nivel estaba fuera la salida de incendios, te ahorrarás bastante tiempo.\n\nFIN\n"
+        },
+        {
+            "id": "L_DEPO_001",
+            "context": "L_DEPO_001",
+            "string": "EDIFICIO G5\n"
+        },
+        {
+            "id": "L_DEPO_002",
+            "context": "L_DEPO_002",
+            "string": "|Antecedentes - \n\nUna vez dentro del Cuartel General de G5, procede hasta el corazón del edificio donde una reunión tendrá lugar. Obtén una grabación visual de la reunión y sal tan pronto como te sea posible.\n\n|Carrington - \n\nEl Edificio G5 tiene un sistema integrado de alarmas. Cuidado con cualquier guarda que te vea, ya que seguro que intentarán activarlas. Esto alertará a los conspiradores, que casi seguro que no tendrán la reunión bajo esas circunstancias. Suavemente, Joanna, suavemente...\n\n|Objetivo Uno: - Desactivar los Sistemas de la Parrilla Láser\n\nUn examen del suministro energético del Edificio G5 indica una red de rejillas láser. Estas rejillas están colocadas específicamente para evitar una posible ruta hacia la sala de reuniones, pero si puedes apagarlas, el camino estará limpio.\n\n|Objetivo Dos- Holografiar la Reunión de los Conspiradores\n\nEl dispositivo de la Cámara Espía es un excelente modo de grabar la reunión sin alertar a De Vries y los otros conspiradores.\n\n|Objetivo Tres: - Recuperar Copia de Seguridad de la Caja Fuerte\n\nEl Dr. Caroll informó a Daniel de una copia de su personalidad que está guardada en una caja fuerte en el Edificio G5. Si nos hacemos con ella, podremos restaurar la personalidad del Dr. Caroll posteriormente.\n\n|Objetivo Cuatro: - Salir del Edificio\n\nDestruye la puerta bloqueada para crear una salida. Si recuerdas en qué nivel estaba fuera la salida de incendios, te ahorrarás bastante tiempo.\n\nFIN\n"
+        },
+        {
+            "id": "L_DEPO_003",
+            "context": "L_DEPO_003",
+            "string": "|Antecedentes - \n\nUna vez dentro del Cuartel General de G5, procede hasta el corazón del edificio donde una reunión tendrá lugar. Obtén una grabación visual de la reunión y sal tan pronto como te sea posible.\n\n|Carrington - \n\nEl Edificio G5 tiene un sistema integrado de alarmas. Cuidado con cualquier guarda que te vea, ya que seguro que intentarán activarlas. Esto alertará a los conspiradores, que casi seguro que no tendrán la reunión bajo esas circunstancias. Suavemente, Joanna, suavemente...\n\n|Objetivo Uno: - Holografiar la Reunión de los Conspiradores\n\nEl dispositivo de la Cámara Espía es un excelente modo de grabar la reunión sin alertar a De Vries y los otros conspiradores.\n\n|Objetivo Dos: - Recuperar Copia de Seguridad de la Caja Fuerte\n\nEl Dr. Caroll informó a Daniel de una copia de su personalidad que está guardada en una caja fuerte en el Edificio G5. Si nos hacemos con ella, podremos restaurar la personalidad del Dr. Caroll posteriormente.\n\n|Objetivo Tres: - Salir del Edificio\n\nDestruye la puerta bloqueada para crear una salida. Si recuerdas en qué nivel estaba fuera la salida de incendios, te ahorrarás bastante tiempo.\n\nFIN\n"
+        },
+        {
+            "id": "L_DEPO_004",
+            "context": "L_DEPO_004",
+            "string": null
+        },
+        {
+            "id": "L_DEPO_005",
+            "context": "L_DEPO_005",
+            "string": null
+        },
+        {
+            "id": "L_DEPO_006",
+            "context": "L_DEPO_006",
+            "string": null
+        },
+        {
+            "id": "L_DEPO_007",
+            "context": "L_DEPO_007",
+            "string": null
+        },
+        {
+            "id": "L_DEPO_008",
+            "context": "L_DEPO_008",
+            "string": null
+        },
+        {
+            "id": "L_DEPO_009",
+            "context": "L_DEPO_009",
+            "string": "Desactivar generador de campo húmedo\n"
+        },
+        {
+            "id": "L_DEPO_010",
+            "context": "L_DEPO_010",
+            "string": "Desactivar sistemas de rejilla láser\n"
+        },
+        {
+            "id": "L_DEPO_011",
+            "context": "L_DEPO_011",
+            "string": "Holografiar reunión de conspiradores\n"
+        },
+        {
+            "id": "L_DEPO_012",
+            "context": "L_DEPO_012",
+            "string": "Recuperar copia del Dr. Caroll\n"
+        },
+        {
+            "id": "L_DEPO_013",
+            "context": "L_DEPO_013",
+            "string": "Salir del edificio\n"
+        },
+        {
+            "id": "L_DEPO_014",
+            "context": "L_DEPO_014",
+            "string": "Obtén la llave magnética alfa.\n"
+        },
+        {
+            "id": "L_DEPO_015",
+            "context": "L_DEPO_015",
+            "string": "Guarda:\n"
+        },
+        {
+            "id": "L_DEPO_016",
+            "context": "L_DEPO_016",
+            "string": "Llave de Nivel 1\n"
+        },
+        {
+            "id": "L_DEPO_017",
+            "context": "L_DEPO_017",
+            "string": "Llave Magnética del Guarda\n"
+        },
+        {
+            "id": "L_DEPO_018",
+            "context": "L_DEPO_018",
+            "string": "Llave Magnética del Guarda obtenida\n"
+        },
+        {
+            "id": "L_DEPO_019",
+            "context": "L_DEPO_019",
+            "string": "Obtén la llave magnética alfa.\n"
+        },
+        {
+            "id": "L_DEPO_020",
+            "context": "L_DEPO_020",
+            "string": "Guarda:\n"
+        },
+        {
+            "id": "L_DEPO_021",
+            "context": "L_DEPO_021",
+            "string": "Llave de Nivel 2\n"
+        },
+        {
+            "id": "L_DEPO_022",
+            "context": "L_DEPO_022",
+            "string": "Llave Magnética del Guarda\n"
+        },
+        {
+            "id": "L_DEPO_023",
+            "context": "L_DEPO_023",
+            "string": "Llave Magnética del Guarda obtenida\n"
+        },
+        {
+            "id": "L_DEPO_024",
+            "context": "L_DEPO_024",
+            "string": "Objeto crítico de la misión destruido.\n"
+        },
+        {
+            "id": "L_DEPO_025",
+            "context": "L_DEPO_025",
+            "string": "Generador de campo húmedo apagado.\n"
+        },
+        {
+            "id": "L_DEPO_026",
+            "context": "L_DEPO_026",
+            "string": "El generador no puede reiniciarse.\n"
+        },
+        {
+            "id": "L_DEPO_027",
+            "context": "L_DEPO_027",
+            "string": "Unidad de rejilla láser apagada.\n"
+        },
+        {
+            "id": "L_DEPO_028",
+            "context": "L_DEPO_028",
+            "string": "Unidad de rejilla láser activada.\n"
+        },
+        {
+            "id": "L_DEPO_029",
+            "context": "L_DEPO_029",
+            "string": "Todos los sistemas de rejilla láser apagados.\n"
+        },
+        {
+            "id": "L_DEPO_030",
+            "context": "L_DEPO_030",
+            "string": "Obtén la cinta de Datos.\n"
+        },
+        {
+            "id": "L_DEPO_031",
+            "context": "L_DEPO_031",
+            "string": "Dr. Caroll:\n"
+        },
+        {
+            "id": "L_DEPO_032",
+            "context": "L_DEPO_032",
+            "string": "Disco de seguridad\n"
+        },
+        {
+            "id": "L_DEPO_033",
+            "context": "L_DEPO_033",
+            "string": "Disco de seguridad\n"
+        },
+        {
+            "id": "L_DEPO_034",
+            "context": "L_DEPO_034",
+            "string": "Disco de seguridad obtenido.\n"
+        },
+        {
+            "id": "L_DEPO_035",
+            "context": "L_DEPO_035",
+            "string": "Decodificador de puertas colocado en el acceso.\n"
+        },
+        {
+            "id": "L_DEPO_036",
+            "context": "L_DEPO_036",
+            "string": "Iniciando rutinas de apertura.\n"
+        },
+        {
+            "id": "L_DEPO_037",
+            "context": "L_DEPO_037",
+            "string": "El decodificador de puertas terminó: puerta abierta.\n"
+        },
+        {
+            "id": "L_DEPO_038",
+            "context": "L_DEPO_038",
+            "string": "ALERTA DE INTRUSOS: toda la seguridad a la caja.\n"
+        },
+        {
+            "id": "L_DEPO_039",
+            "context": "L_DEPO_039",
+            "string": "Decodificador de puertas colocado correctamente.\n"
+        },
+        {
+            "id": "L_DEPO_040",
+            "context": "L_DEPO_040",
+            "string": "Decodificador de puertas colocado incorrectamente.\n"
+        },
+        {
+            "id": "L_DEPO_041",
+            "context": "L_DEPO_041",
+            "string": "Los conspiradores han sido alertados.\n"
+        },
+        {
+            "id": "L_DEPO_042",
+            "context": "L_DEPO_042",
+            "string": "Alarma activada.\n"
+        },
+        {
+            "id": "L_DEPO_043",
+            "context": "L_DEPO_043",
+            "string": "Alarma desactivada.\n"
+        },
+        {
+            "id": "L_DEPO_044",
+            "context": "L_DEPO_044",
+            "string": "La puerta de la caja fuerte está cerrada.\n"
+        },
+        {
+            "id": "L_DEPO_045",
+            "context": "L_DEPO_045",
+            "string": "Decodificador de puertas colocado.\n"
+        },
+        {
+            "id": "L_DEPO_046",
+            "context": "L_DEPO_046",
+            "string": "Obtén el Revienta-puertas.\n"
+        },
+        {
+            "id": "L_DEPO_047",
+            "context": "L_DEPO_047",
+            "string": "Dr. Caroll:\n"
+        },
+        {
+            "id": "L_DEPO_048",
+            "context": "L_DEPO_048",
+            "string": "Revienta-puertas\n"
+        },
+        {
+            "id": "L_DEPO_049",
+            "context": "L_DEPO_049",
+            "string": "Revienta-puertas\n"
+        },
+        {
+            "id": "L_DEPO_050",
+            "context": "L_DEPO_050",
+            "string": "Revienta-puertas obtenido.\n"
+        },
+        {
+            "id": "L_DEPO_051",
+            "context": "L_DEPO_051",
+            "string": "Objetivos incompletos: MISIÓN FALLADA.\n"
+        },
+        {
+            "id": "L_DEPO_052",
+            "context": "L_DEPO_052",
+            "string": "MISIÓN CONSEGUIDA\n"
+        },
+        {
+            "id": "L_DEPO_053",
+            "context": "L_DEPO_053",
+            "string": "'Bicho' de comunicaciones colocado correctamente.\n"
+        },
+        {
+            "id": "L_DEPO_054",
+            "context": "L_DEPO_054",
+            "string": "'Bicho' de comunicaciones colocado incorrectamente.\n"
+        },
+        {
+            "id": "L_DEPO_055",
+            "context": "L_DEPO_055",
+            "string": "Obtén la Cámara Espía.\n"
+        },
+        {
+            "id": "L_DEPO_056",
+            "context": "L_DEPO_056",
+            "string": "Dr. Caroll:\n"
+        },
+        {
+            "id": "L_DEPO_057",
+            "context": "L_DEPO_057",
+            "string": "Cámara Espía\n"
+        },
+        {
+            "id": "L_DEPO_058",
+            "context": "L_DEPO_058",
+            "string": "Una Camára Espía\n"
+        },
+        {
+            "id": "L_DEPO_059",
+            "context": "L_DEPO_059",
+            "string": "Cámara Espía obtenida.\n"
+        },
+        {
+            "id": "L_DEPO_060",
+            "context": "L_DEPO_060",
+            "string": "No hay ningún camino posible mientras \nesos láseres estén activos.\n"
+        },
+        {
+            "id": "L_DEPO_061",
+            "context": "L_DEPO_061",
+            "string": "Eso de ahí delante debe ser la sala de reuniones. \nHora de usar la Cámara Espía.\n"
+        },
+        {
+            "id": "L_DEPO_062",
+            "context": "L_DEPO_062",
+            "string": "La caja fuerte está fuertemente encriptada. \nEl decodificador va a tomarse su tiempo.\n"
+        },
+        {
+            "id": "L_DEPO_063",
+            "context": "L_DEPO_063",
+            "string": "¡Hora de irse! Vamos a la puerta que creé \nantes.\n"
+        },
+        {
+            "id": "L_DEPO_064",
+            "context": "L_DEPO_064",
+            "string": "Objeto crítico de la misión destruido.\n"
+        },
+        {
+            "id": "L_DEPO_065",
+            "context": "L_DEPO_065",
+            "string": "Aparta, Joanna. Crearemos tu ruta \nde escape.\n"
+        },
+        {
+            "id": "L_DEPO_066",
+            "context": "L_DEPO_066",
+            "string": "\n"
+        },
+        {
+            "id": "L_DEPO_067",
+            "context": "L_DEPO_067",
+            "string": "\n"
+        },
+        {
+            "id": "L_DEPO_068",
+            "context": "L_DEPO_068",
+            "string": "Detonador\n"
+        },
+        {
+            "id": "L_DEPO_069",
+            "context": "L_DEPO_069",
+            "string": "Detonador\n"
+        },
+        {
+            "id": "L_DEPO_070",
+            "context": "L_DEPO_070",
+            "string": "Detonador obtenido.\n"
+        },
+        {
+            "id": "L_DEPO_071",
+            "context": "L_DEPO_071",
+            "string": "La Cámara Espía ha sido destruida: abortar misión.\n"
+        },
+        {
+            "id": "L_DEPO_072",
+            "context": "L_DEPO_072",
+            "string": "Hemos recuperado la IA de manos de Carrington \ny alterado su programación. Nunca más tendrá \npersonalidad, así no podrá haber posibles \nfuturos incidentes.\n"
+        },
+        {
+            "id": "L_DEPO_073",
+            "context": "L_DEPO_073",
+            "string": "Esto reducirá su eficiencia. Mi equipo tendrá \nque llevarlo al núcleo por sí mismo. Esto les \npondrá en peligro. Debías haber anticipado \nque la IA podría desarrollar un problemático \ncódigo moral.\n"
+        },
+        {
+            "id": "L_DEPO_074",
+            "context": "L_DEPO_074",
+            "string": "¡Nadie podría haber predecido eso! ¡Y me \nmolesta que me echen la culpa de ello! \n¿Qué pasa con él?\n"
+        },
+        {
+            "id": "L_DEPO_075",
+            "context": "L_DEPO_075",
+            "string": "¿El Presidente no ha admitido tu petición \nde préstamo del Pelagic II?\n"
+        },
+        {
+            "id": "L_DEPO_076",
+            "context": "L_DEPO_076",
+            "string": "¿No podría ser que hayas sobreestimado \ntu influencia sobre él?\n"
+        },
+        {
+            "id": "L_DEPO_077",
+            "context": "L_DEPO_077",
+            "string": "¡No! Quizá haya menospreciado su resolución. \nTenemos un plan de contigencia preparado, \ny comenzará tan pronto como el séquito presidencial\nllegue a la base aérea. Todo lo que necesito del \nPresidente es una muestra de tejido cutáneo.\n"
+        },
+        {
+            "id": "L_DEPO_078",
+            "context": "L_DEPO_078",
+            "string": "¡Ja! Eso asumiendo que no sufras interferencias. \nSi Carrington ha recabado suficientes piezas de \nesto, seguro que avisará a los refuerzos.\n"
+        },
+        {
+            "id": "L_DEPO_079",
+            "context": "L_DEPO_079",
+            "string": "No habrá ayuda exterior para el Sr. Carrington. \nLa tecnología que nos diste está instalada en \nNevada y es totalmente operativa. \nPodemos interceptar cualquier nave que usen.\n"
+        },
+        {
+            "id": "L_DEPO_080",
+            "context": "L_DEPO_080",
+            "string": "¿Entonces los dispositivos que os dimos funcionan \ncorrectamente? Bien. Porque nosotros creemos que \ncualquier cosa que no funcione correctamente debe \nser destruida. Tenlo en cuenta para tus 'planes \nalternativos'.\n"
+        },
+        {
+            "id": "L_DEPO_081",
+            "context": "L_DEPO_081",
+            "string": "¡Agente Dark informando! Preparaos para \nrecibir los datos de la reunión. \nPetición prioritaria de un Equipo de Soporte \ndel Instituto para proteger al Presidente \nantes de que vaya a Alaska.\n"
+        },
+        {
+            "id": "L_DEPO_082",
+            "context": "L_DEPO_082",
+            "string": "No hay tiempo para eso ahora, Agente Dark. Se \nha progresado durante el silencio de radio. \nLa nave que llevaba a esos 'amigos' de los \nque te hablaba, fue derribada sobre Nevada. \nEl arma responsable fue disparada desde el\nÁrea 51... Allí es donde los supervivientes \ny los restos del siniestro han sido llevados. \nDebes prepararte para ser enviada de inmediato \nen cuanto regreses aquí. Carrington fuera.\n"
+        },
+        {
+            "id": "L_DEPO_083",
+            "context": "L_DEPO_083",
+            "string": "¿Al Área 51? ¿Pero qué pasa con el Presidente?\n"
+        }
+    ]
+}

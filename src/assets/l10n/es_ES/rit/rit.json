@@ -1,0 +1,444 @@
+{
+    "messages": [
+        {
+            "id": "L_RIT_000",
+            "context": "L_RIT_000",
+            "string": "|Antecedentes - \n\nEl plan de Trent Easton para secuestrar al Presidente está en marcha. El Instituto Carrington debe hacer de bisagra sacando al Presidente del Air Force One antes de que Trent lo haga.\n\n|Carrington - \n\nQueda poco tiempo, Joanna. Para frustrar el plan de Trent, deberás sacar al Presidente del avión. Esto lo convencerá de la traición de Trent, lo que significa poder obtener evidencias en la bodega de carga de equipaje, las cuales podremos enseñar al Presidente.\n\n|Objetivo Uno: - Localizar y Recuperar el Equipo\n\nEncuentra el equipo escondido en la bodega de carga en la parte inferior del avión, y tráelo de vuelta. Recuerda que los agentes de la seguridad Presidencial son neutrales por lo que no deben ser dañados.\n\n|Objetivo Dos: - Localizar al Presidente\n\nSe desconoce el paradero exacto de la oficina Presidencial. Cuando la encuentres, muestra las evidencias al Presidente. Asegúrate de llegar allí antes de que lo haga Trent, o puedes estar segura de que manipulará la situación a su favor.\n\n|Objetivo Tres: - Llevar al Presidente a la Cápsula de Escape\n\nExiste una cápsula de escape de emergencia en la bahía inferior del avión. Escolta al Presidente hasta la cápsula, asegurándote de que no recibe ningún daño.\n\n|Objetivo Cuatro: - Asegurar la Trayectoria de Vuelo del Air Force One\n\nNo se conocen los detalles específicos del plan de Trent, pero se cree que la tripulación está en peligro. Llega hasta la cabina y asegúrate de su bienestar. Si ocurre lo peor, activa el piloto automático.\n\n|Objetivo Cinco: - Separar el OVNI del Air Force One\n\n¡Separa la conexión umbilical del Air Force One! La manera más rápida de hacerlo es detonar una mina en la propia conexión. \n\nFIN\n"
+        },
+        {
+            "id": "L_RIT_001",
+            "context": "L_RIT_001",
+            "string": "AIR FORCE ONE\n"
+        },
+        {
+            "id": "L_RIT_002",
+            "context": "L_RIT_002",
+            "string": "|Antecedentes - \n\nEl plan de Trent Easton para secuestrar al Presidente está en marcha. El Instituto Carrington debe hacer de bisagra sacando al Presidente del Air Force One antes de que Trent lo haga.\n\n|Carrington - \n\nQueda poco tiempo, Joanna. Para frustrar el plan de Trent, debemos sacar al Presidente del avión. Esto lo convencerá de la traición de Trent, lo que significa poder obtener evidencias en la bodega de carga de equipaje, las cuales podremos enseñar al Presidente.\n\n|Objetivo Uno: - Localizar y Recuperar el Equipo\n\nEncuentra el equipo escondido en la bodega de carga en la parte inferior del avión, y tráelo de vuelta. Recuerda que los agentes de la seguridad Presidencial son neutrales por lo que no deben ser dañados.\n\n|Objetivo Dos: - Localizar al Presidente\n\nSe desconoce el paradero exacto de la oficina Presidencial. Cuando la encuentres, muestra las evidencias al Presidente. Asegúrate de llegar allí antes de que lo haga Trent, o puedes estar segura de que manipulará la situación a su favor.\n\n|Objetivo Tres: - Llevar al Presidente a la Cápsula de Escape\n\nExiste una cápsula de escape de emergencia en la bahía inferior del avión. Escolta al Presidente hasta la cápsula, asegurándote de que no recibe ningún daño.\n\n|Objetivo Cuatro: - Separar el OVNI del Air Force One\n\n¡Separa la conexión umbilical del Air Force One! La manera más rápida de hacerlo es detonar una mina en la propia conexión. \n\nFIN\n"
+        },
+        {
+            "id": "L_RIT_003",
+            "context": "L_RIT_003",
+            "string": "|Antecedentes - \n\nEl plan de Trent Easton para secuestrar al Presidente está en marcha. El Instituto Carrington debe hacer de bisagra sacando al Presidente del Air Force One antes de que Trent lo haga.\n\n|Carrington - \n\nQueda poco tiempo, Joanna. Para frustrar el plan de Trent, debemos sacar al Presidente del avión. Esto lo convencerá de la traición de Trent, lo que significa poder obtener evidencias en la bodega de carga de equipaje, las cuales podremos enseñar al Presidente.\n\n|Objetivo Uno: - Localizar al Presidente\n\nSe desconoce el paradero exacto de la oficina Presidencial. Cuando la encuentres, muestra las evidencias al Presidente. Asegúrate de llegar allí antes de que lo haga Trent, o puedes estar segura de que manipulará la situación a su favor.\n\n|Objetivo Dos: - Llevar al Presidente a la Cápsula de Escape\n\nExiste una cápsula de escape de emergencia en la bahía inferior del avión. Escolta al Presidente hasta la cápsula, asegurándote de que no recibe ningún daño.\n\n|Objetivo Tres: - Separar el OVNI del Air Force One\n\n¡Separa la conexión umbilical del Air Force One! La manera más rápida de hacerlo es detonar una mina en la propia conexión. \n\nFIN\n"
+        },
+        {
+            "id": "L_RIT_004",
+            "context": "L_RIT_004",
+            "string": "\n"
+        },
+        {
+            "id": "L_RIT_005",
+            "context": "L_RIT_005",
+            "string": "Localizar y recuperar el equipo\n"
+        },
+        {
+            "id": "L_RIT_006",
+            "context": "L_RIT_006",
+            "string": "Localizar al Presidente\n"
+        },
+        {
+            "id": "L_RIT_007",
+            "context": "L_RIT_007",
+            "string": "Llevar al Presidente a la cápsula\n"
+        },
+        {
+            "id": "L_RIT_008",
+            "context": "L_RIT_008",
+            "string": "Asegurar trayectoría del Air Force One\n"
+        },
+        {
+            "id": "L_RIT_009",
+            "context": "L_RIT_009",
+            "string": "Separar el OVNI del Air Force One\n"
+        },
+        {
+            "id": "L_RIT_010",
+            "context": "L_RIT_010",
+            "string": "Obtén la Maleta.\n"
+        },
+        {
+            "id": "L_RIT_011",
+            "context": "L_RIT_011",
+            "string": "\n"
+        },
+        {
+            "id": "L_RIT_012",
+            "context": "L_RIT_012",
+            "string": "Maleta\n"
+        },
+        {
+            "id": "L_RIT_013",
+            "context": "L_RIT_013",
+            "string": "Maleta\n"
+        },
+        {
+            "id": "L_RIT_014",
+            "context": "L_RIT_014",
+            "string": "Maleta obtenida.\n"
+        },
+        {
+            "id": "L_RIT_015",
+            "context": "L_RIT_015",
+            "string": "Obtén la Ballesta.\n"
+        },
+        {
+            "id": "L_RIT_016",
+            "context": "L_RIT_016",
+            "string": "\n"
+        },
+        {
+            "id": "L_RIT_017",
+            "context": "L_RIT_017",
+            "string": "Ballesta\n"
+        },
+        {
+            "id": "L_RIT_018",
+            "context": "L_RIT_018",
+            "string": "Ballesta\n"
+        },
+        {
+            "id": "L_RIT_019",
+            "context": "L_RIT_019",
+            "string": "Ballesta obtenida.\n"
+        },
+        {
+            "id": "L_RIT_020",
+            "context": "L_RIT_020",
+            "string": "Has causado demasiadas bajas neutrales.\n"
+        },
+        {
+            "id": "L_RIT_021",
+            "context": "L_RIT_021",
+            "string": "Conexión del OVNI dañado.\n"
+        },
+        {
+            "id": "L_RIT_022",
+            "context": "L_RIT_022",
+            "string": "Incapaz de separar el OVNI.\n"
+        },
+        {
+            "id": "L_RIT_023",
+            "context": "L_RIT_023",
+            "string": "El Piloto Automático ha sido activado.\n"
+        },
+        {
+            "id": "L_RIT_024",
+            "context": "L_RIT_024",
+            "string": "El Air Force One ha sido estabilizado.\n"
+        },
+        {
+            "id": "L_RIT_025",
+            "context": "L_RIT_025",
+            "string": "El Piloto Automático ha sido destruido.\n"
+        },
+        {
+            "id": "L_RIT_026",
+            "context": "L_RIT_026",
+            "string": "El Presidente ha sido eliminado.\n"
+        },
+        {
+            "id": "L_RIT_027",
+            "context": "L_RIT_027",
+            "string": "Los pilotos han muerto.\n"
+        },
+        {
+            "id": "L_RIT_028",
+            "context": "L_RIT_028",
+            "string": "Los pilotos han sido salvados.\n"
+        },
+        {
+            "id": "L_RIT_029",
+            "context": "L_RIT_029",
+            "string": "El Air Force One está a punto de estrellarse.\n"
+        },
+        {
+            "id": "L_RIT_030",
+            "context": "L_RIT_030",
+            "string": "Obtén la mina remota.\n"
+        },
+        {
+            "id": "L_RIT_031",
+            "context": "L_RIT_031",
+            "string": "\n"
+        },
+        {
+            "id": "L_RIT_032",
+            "context": "L_RIT_032",
+            "string": "Mina remota\n"
+        },
+        {
+            "id": "L_RIT_033",
+            "context": "L_RIT_033",
+            "string": "Mina remota\n"
+        },
+        {
+            "id": "L_RIT_034",
+            "context": "L_RIT_034",
+            "string": "Mina remota obtenida.\n"
+        },
+        {
+            "id": "L_RIT_035",
+            "context": "L_RIT_035",
+            "string": "¿Quién es usted, jovencita?\n"
+        },
+        {
+            "id": "L_RIT_036",
+            "context": "L_RIT_036",
+            "string": "¡¡Seguridad, SEGURIDAD!!\n"
+        },
+        {
+            "id": "L_RIT_037",
+            "context": "L_RIT_037",
+            "string": "Sr. Presidente, está usted en peligro. Trent intenta \nsecuestrarle.\n"
+        },
+        {
+            "id": "L_RIT_038",
+            "context": "L_RIT_038",
+            "string": "¡Qué demonios es eso!\n"
+        },
+        {
+            "id": "L_RIT_039",
+            "context": "L_RIT_039",
+            "string": "Debemos llevarle a la cápsula de escape. \nSígame.\n"
+        },
+        {
+            "id": "L_RIT_040",
+            "context": "L_RIT_040",
+            "string": "No puede hacer acusaciones como ésa sin evidencias.\n ¿Asumo que tendrá alguna?\n"
+        },
+        {
+            "id": "L_RIT_041",
+            "context": "L_RIT_041",
+            "string": "Ésta es una grabación de una reunión entre \nTrent y los otros conspiradores.\n"
+        },
+        {
+            "id": "L_RIT_042",
+            "context": "L_RIT_042",
+            "string": "Parece abrumador... Estoy en sus manos. \n¿Qué hacemos ahora?\n"
+        },
+        {
+            "id": "L_RIT_043",
+            "context": "L_RIT_043",
+            "string": "Hey, tú no eres...\n"
+        },
+        {
+            "id": "L_RIT_044",
+            "context": "L_RIT_044",
+            "string": "Es una intrusa...\n"
+        },
+        {
+            "id": "L_RIT_045",
+            "context": "L_RIT_045",
+            "string": "¿Cómo ha subido a bordo?\n"
+        },
+        {
+            "id": "L_RIT_046",
+            "context": "L_RIT_046",
+            "string": "Ahora, recuperemos la evidencia.\n"
+        },
+        {
+            "id": "L_RIT_047",
+            "context": "L_RIT_047",
+            "string": "La habitación del Presidente está en \neste nivel, Joanna.\n"
+        },
+        {
+            "id": "L_RIT_048",
+            "context": "L_RIT_048",
+            "string": "Algo va mal... ¡Debes llegar a la cabina!\n"
+        },
+        {
+            "id": "L_RIT_049",
+            "context": "L_RIT_049",
+            "string": "Quizá una mina separe el OVNI.\n"
+        },
+        {
+            "id": "L_RIT_050",
+            "context": "L_RIT_050",
+            "string": "\n"
+        },
+        {
+            "id": "L_RIT_051",
+            "context": "L_RIT_051",
+            "string": "\n"
+        },
+        {
+            "id": "L_RIT_052",
+            "context": "L_RIT_052",
+            "string": "Adrenalina\n"
+        },
+        {
+            "id": "L_RIT_053",
+            "context": "L_RIT_053",
+            "string": "Pastilla de Adrenalina\n"
+        },
+        {
+            "id": "L_RIT_054",
+            "context": "L_RIT_054",
+            "string": "Pastilla de Adrenalina obtenida.\n"
+        },
+        {
+            "id": "L_RIT_055",
+            "context": "L_RIT_055",
+            "string": "\n"
+        },
+        {
+            "id": "L_RIT_056",
+            "context": "L_RIT_056",
+            "string": "\n"
+        },
+        {
+            "id": "L_RIT_057",
+            "context": "L_RIT_057",
+            "string": "Llave magnética\n"
+        },
+        {
+            "id": "L_RIT_058",
+            "context": "L_RIT_058",
+            "string": "Llave magnética \n"
+        },
+        {
+            "id": "L_RIT_059",
+            "context": "L_RIT_059",
+            "string": "Llave magnética obtenida.\n"
+        },
+        {
+            "id": "L_RIT_060",
+            "context": "L_RIT_060",
+            "string": "La bahía de carga ha sido bajada.\n"
+        },
+        {
+            "id": "L_RIT_061",
+            "context": "L_RIT_061",
+            "string": "La bahía de carga ha sido subida.\n"
+        },
+        {
+            "id": "L_RIT_062",
+            "context": "L_RIT_062",
+            "string": "Objeto crítico de la misión destruido.\n"
+        },
+        {
+            "id": "L_RIT_063",
+            "context": "L_RIT_063",
+            "string": "Acceso denegado: llave magnética del ascensor requerida.\n"
+        },
+        {
+            "id": "L_RIT_064",
+            "context": "L_RIT_064",
+            "string": "\n"
+        },
+        {
+            "id": "L_RIT_065",
+            "context": "L_RIT_065",
+            "string": "\n"
+        },
+        {
+            "id": "L_RIT_066",
+            "context": "L_RIT_066",
+            "string": "Llave ascensor\n"
+        },
+        {
+            "id": "L_RIT_067",
+            "context": "L_RIT_067",
+            "string": "Llave magnética del ascensor \n"
+        },
+        {
+            "id": "L_RIT_068",
+            "context": "L_RIT_068",
+            "string": "Llave magnética del ascensor obtenida.\n"
+        },
+        {
+            "id": "L_RIT_069",
+            "context": "L_RIT_069",
+            "string": "La mina de tiempo ha sido desperdiciada.\n"
+        },
+        {
+            "id": "L_RIT_070",
+            "context": "L_RIT_070",
+            "string": "Ja, ja, ja, ja, ja.\n"
+        },
+        {
+            "id": "L_RIT_071",
+            "context": "L_RIT_071",
+            "string": "Ahora ya no podrás salvarle.\n"
+        },
+        {
+            "id": "L_RIT_072",
+            "context": "L_RIT_072",
+            "string": "Están atacando al Presidente.\n"
+        },
+        {
+            "id": "L_RIT_073",
+            "context": "L_RIT_073",
+            "string": "¿Ha reconsiderado algo más la propuesta que le hice, señor?\n"
+        },
+        {
+            "id": "L_RIT_074",
+            "context": "L_RIT_074",
+            "string": "Mi respuesta es la misma: lo siento, Trent, pero no. No quiero prestar el Pelagic II a dataDyne. Por favor, ¿podemos ahora tratar otras cuestiones?\n"
+        },
+        {
+            "id": "L_RIT_075",
+            "context": "L_RIT_075",
+            "string": "Pero ésta es una oportunidad de oro para demostrar que América tiene fe en sus industrias y que las apoya...\n"
+        },
+        {
+            "id": "L_RIT_076",
+            "context": "L_RIT_076",
+            "string": "¡Maldición! ¡He dicho no y significa no! ¡No pienso cambiar de opinión! Necesito que mis asesores sean imparciales, y ahora no me estás dando la imparcialidad que necesito. Déjalo, y no hablemos más de ello. Es tu última oportunidad.\n"
+        },
+        {
+            "id": "L_RIT_077",
+            "context": "L_RIT_077",
+            "string": "Como quiera, señor.\n"
+        },
+        {
+            "id": "L_RIT_078",
+            "context": "L_RIT_078",
+            "string": "¿Mi última oportunidad? ¡Ja! Idiota. Fue la tuya...\n"
+        },
+        {
+            "id": "L_RIT_079",
+            "context": "L_RIT_079",
+            "string": "¡Elvis! ¡Elvis! ¡No puedo soltar ese tubo del fuselaje! ¿Puedes hacerlo tú?\n"
+        },
+        {
+            "id": "L_RIT_080",
+            "context": "L_RIT_080",
+            "string": "Pan comido, Joanna. ¡Mira esto!\n"
+        },
+        {
+            "id": "L_RIT_081",
+            "context": "L_RIT_081",
+            "string": "Oh-oh.\n"
+        },
+        {
+            "id": "L_RIT_082",
+            "context": "L_RIT_082",
+            "string": "¿Mirar, qué? ¿Quieres dejar de juguetear? ¡Dispara!\n"
+        },
+        {
+            "id": "L_RIT_083",
+            "context": "L_RIT_083",
+            "string": "No hay más opciones... ¡Joanna, prepárate para el impacto!\n"
+        },
+        {
+            "id": "L_RIT_084",
+            "context": "L_RIT_084",
+            "string": "Los pilotos han estabilizado el Air Force One.\n"
+        },
+        {
+            "id": "L_RIT_085",
+            "context": "L_RIT_085",
+            "string": null
+        },
+        {
+            "id": "L_RIT_086",
+            "context": "L_RIT_086",
+            "string": null
+        },
+        {
+            "id": "L_RIT_087",
+            "context": "L_RIT_087",
+            "string": null
+        }
+    ]
+}

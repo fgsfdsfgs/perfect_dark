@@ -1,0 +1,424 @@
+{
+    "messages": [
+        {
+            "id": "L_DEPO_000",
+            "context": "L_DEPO_000",
+            "string": "|Hintergrund - \n\nSobald Sie in das G5-Hauptquartier eingedrungen sind, müssen Sie ins Herz des Gebäudes vordringen. Dort sollte das Meeting stattfinden. Erstellen Sie eine visuelle Aufzeichnung des Meetings, und verlassen Sie anschließend sofort das Gebäude!\n\n|Carrington - \n\nDas G5-Building verfügt über ein integriertes Alarmsystem. Achten Sie auf Patrouillen. Wenn Sie gesehen werden, wird der Alarm sofort ausgelöst. In diesem Fall würden die Verschwörer das Meeting sofort abbrechen. Also, Joanna, gehen Sie sanft vor! Es ist ja nicht Ihr erstes Mal...\n\n|1. Ziel: - Setzen Sie den Generator außer Kraft!\n\nAuf dem Garagen-Deck des Gebäudes befindet sich eine Vorrichtung, die den Einsatz jeglicher Rekorder verhindert. Finden Sie das Gerät und schalten Sie es ab! Anschließend sollte der CamSpy die Daten ohne Probleme übermitteln können.\n\n|2. Ziel: - Deaktivieren Sie das Laser-Netz!\n\nEine Untersuchung der Spannungsfelder im G5-Building hat ergeben, dass sich ein System von Laser-Netzen durch das ganze Gebäude zieht. Diese Netze wurden so platziert, dass ein direkter Zugang zum Meeting-Raum verhindert wird. Wenn Sie das System abschalten können, ist der Weg frei.\n\n|3. Ziel: - Holografieren Sie die Verschwörer!\n\nDer CamSpy ist die perfekte Lösung, De Vries und die anderen Verschwörer bei der 'Arbeit' zu ertappen, ohne viel Aufsehen zu erregen.\n\n|4. Ziel: - Stehlen Sie die Sicherheitskopie aus dem Safe!\n\nDr. Caroll hat Daniel informiert, dass in einem Safe eine Kopie seiner Persönlichkeit aufbewahrt wird. Bringen Sie uns diese Kopie, damit wir Dr. Carolls Persönlichkeit zu einem späteren Zeitpunkt wiederherstellen können.\n\n|5. Ziel: - Verlassen Sie das Gebäude!\n\nZerstören Sie die blockierte Tür, um einen Fluchtweg zu schaffen. Sie sollten sich daran erinnern, wo sich die Feuerleiter befindet. Dadurch erhalten Sie einen nicht zu unterschätzenden Zeitvorteil.\n\nENDE\n"
+        },
+        {
+            "id": "L_DEPO_001",
+            "context": "L_DEPO_001",
+            "string": "G5-BUILDING\n"
+        },
+        {
+            "id": "L_DEPO_002",
+            "context": "L_DEPO_002",
+            "string": "|Hintergrund - \n\nSobald Sie in das G5-Hauptquartier eingedrungen sind, müssen Sie ins Herz des Gebäudes vordringen. Dort sollte das Meeting stattfinden. Erstellen Sie eine visuelle Aufzeichnung des Meetings, und verlassen Sie anschließend sofort das Gebäude!\n\n|Carrington - \n\nDas G5-Building verfügt über ein integriertes Alarmsystem. Achten Sie auf Patrouillen. Wenn Sie gesehen werden, wird der Alarm sofort ausgelöst. In diesem Fall würden die Verschwörer das Meeting sofort abbrechen. Also, Joanna, gehen Sie sanft vor! Es ist ja nicht Ihr erstes Mal...\n\n|1. Ziel: - Deaktivieren Sie das Laser-Netz!\n\nEine Untersuchung der Spannungsfelder im G5-Building hat ergeben, dass sich ein System von Laser-Netzen durch das ganze Gebäude zieht. Diese Netze wurden so platziert, dass ein direkter Zugang zum Meeting-Raum verhindert wird. Wenn Sie das System abschalten können, ist der Weg frei.\n\n|2. Ziel: - Holografieren Sie die Verschwörer!\n\nDer CamSpy ist die perfekte Lösung, De Vries und die anderen Verschwörer bei der 'Arbeit' zu ertappen, ohne viel Aufsehen zu erregen.\n\n|3. Ziel: - Stehlen Sie die Sicherheitskopie aus dem Safe!\n\nDr. Caroll hat Daniel informiert, dass in einem Safe eine Kopie seiner Persönlichkeit aufbewahrt wird. Bringen Sie uns diese Kopie, damit wir Dr. Carolls Persönlichkeit zu einem späteren Zeitpunkt wiederherstellen können.\n\n|4. Ziel: - Verlassen Sie das Gebäude!\n\nZerstören Sie die blockierte Tür, um einen Fluchtweg zu schaffen. Sie sollten sich daran erinnern, wo sich die Feuerleiter befindet. Dadurch erhalten Sie einen nicht zu unterschätzenden Zeitvorteil.\n\nENDE\n"
+        },
+        {
+            "id": "L_DEPO_003",
+            "context": "L_DEPO_003",
+            "string": "|Hintergrund - \n\nSobald Sie in das G5-Hauptquartier eingedrungen sind, müssen Sie ins Herz des Gebäudes vordringen. Dort sollte das Meeting stattfinden. Erstellen Sie eine visuelle Aufzeichnung des Meetings, und verlassen Sie anschließend sofort das Gebäude!\n\n|Carrington - \n\nDas G5-Building verfügt über ein integriertes Alarmsystem. Achten Sie auf Patrouillen. Wenn Sie gesehen werden, wird der Alarm sofort ausgelöst. In diesem Fall würden die Verschwörer das Meeting sofort abbrechen. Also, Joanna, gehen Sie sanft vor! Es ist ja nicht Ihr erstes Mal...\n\n|1. Ziel: - Holografieren Sie die Verschwörer!\n\nDer CamSpy ist die perfekte Lösung, De Vries und die anderen Verschwörer bei der 'Arbeit' zu ertappen, ohne viel Aufsehen zu erregen.\n\n|2. Ziel: - Stehlen Sie die Sicherheitskopie aus dem Safe!\n\nDr. Caroll hat Daniel informiert, dass in einem Safe eine Kopie seiner Persönlichkeit aufbewahrt wird. Bringen Sie uns diese Kopie, damit wir Dr. Carolls Persönlichkeit zu einem späteren Zeitpunkt wiederherstellen können.\n\n|3. Ziel: - Verlassen Sie das Gebäude!\n\nZerstören Sie die blockierte Tür, um einen Fluchtweg zu schaffen. Sie sollten sich daran erinnern, wo sich die Feuerleiter befindet. Dadurch erhalten Sie einen nicht zu unterschätzenden Zeitvorteil.\n\nENDE\n"
+        },
+        {
+            "id": "L_DEPO_004",
+            "context": "L_DEPO_004",
+            "string": null
+        },
+        {
+            "id": "L_DEPO_005",
+            "context": "L_DEPO_005",
+            "string": null
+        },
+        {
+            "id": "L_DEPO_006",
+            "context": "L_DEPO_006",
+            "string": null
+        },
+        {
+            "id": "L_DEPO_007",
+            "context": "L_DEPO_007",
+            "string": null
+        },
+        {
+            "id": "L_DEPO_008",
+            "context": "L_DEPO_008",
+            "string": null
+        },
+        {
+            "id": "L_DEPO_009",
+            "context": "L_DEPO_009",
+            "string": "Setzen Sie den Generator außer Kraft!\n"
+        },
+        {
+            "id": "L_DEPO_010",
+            "context": "L_DEPO_010",
+            "string": "Deaktivieren Sie das Laser-Netz!\n"
+        },
+        {
+            "id": "L_DEPO_011",
+            "context": "L_DEPO_011",
+            "string": "Holografieren Sie die Verschwörer!\n"
+        },
+        {
+            "id": "L_DEPO_012",
+            "context": "L_DEPO_012",
+            "string": "Stehlen Sie die Sicherheitskopie!\n"
+        },
+        {
+            "id": "L_DEPO_013",
+            "context": "L_DEPO_013",
+            "string": "Verlassen Sie das Gebäude!\n"
+        },
+        {
+            "id": "L_DEPO_014",
+            "context": "L_DEPO_014",
+            "string": "Erlangen Sie die Alpha-Schlüsselkarte!\n"
+        },
+        {
+            "id": "L_DEPO_015",
+            "context": "L_DEPO_015",
+            "string": "Level 1 Schlüsselkarte\n"
+        },
+        {
+            "id": "L_DEPO_016",
+            "context": "L_DEPO_016",
+            "string": "der Wache\n"
+        },
+        {
+            "id": "L_DEPO_017",
+            "context": "L_DEPO_017",
+            "string": "Schlüsselkarte der Wache\n"
+        },
+        {
+            "id": "L_DEPO_018",
+            "context": "L_DEPO_018",
+            "string": "Schlüsselkarte der Wache aufgenommen\n"
+        },
+        {
+            "id": "L_DEPO_019",
+            "context": "L_DEPO_019",
+            "string": "Erlangen Sie die Alpha-Schlüsselkarte!\n"
+        },
+        {
+            "id": "L_DEPO_020",
+            "context": "L_DEPO_020",
+            "string": "Level 2 Schlüsselkarte\n"
+        },
+        {
+            "id": "L_DEPO_021",
+            "context": "L_DEPO_021",
+            "string": "der Wache\n"
+        },
+        {
+            "id": "L_DEPO_022",
+            "context": "L_DEPO_022",
+            "string": "Schlüsselkarte der Wache\n"
+        },
+        {
+            "id": "L_DEPO_023",
+            "context": "L_DEPO_023",
+            "string": "Schlüsselkarte der Wache aufgenommen\n"
+        },
+        {
+            "id": "L_DEPO_024",
+            "context": "L_DEPO_024",
+            "string": "Wichtiges Objekt wurde zerstört.\n"
+        },
+        {
+            "id": "L_DEPO_025",
+            "context": "L_DEPO_025",
+            "string": "Generator wurde abgeschaltet.\n"
+        },
+        {
+            "id": "L_DEPO_026",
+            "context": "L_DEPO_026",
+            "string": "Der Generator kann nicht wieder gestartet werden.\n"
+        },
+        {
+            "id": "L_DEPO_027",
+            "context": "L_DEPO_027",
+            "string": "Laser-Netz wurde deaktiviert.\n"
+        },
+        {
+            "id": "L_DEPO_028",
+            "context": "L_DEPO_028",
+            "string": "Laser-Netz wurde aktiviert.\n"
+        },
+        {
+            "id": "L_DEPO_029",
+            "context": "L_DEPO_029",
+            "string": "Das gesamte Laser-Netz wurde deaktiviert.\n"
+        },
+        {
+            "id": "L_DEPO_030",
+            "context": "L_DEPO_030",
+            "string": "Erlangen Sie das DAT-Tape.\n"
+        },
+        {
+            "id": "L_DEPO_031",
+            "context": "L_DEPO_031",
+            "string": "Dr. Carolls\n"
+        },
+        {
+            "id": "L_DEPO_032",
+            "context": "L_DEPO_032",
+            "string": "Sicherheitskopie\n"
+        },
+        {
+            "id": "L_DEPO_033",
+            "context": "L_DEPO_033",
+            "string": "Sicherheitskopie\n"
+        },
+        {
+            "id": "L_DEPO_034",
+            "context": "L_DEPO_034",
+            "string": "Sicherheitskopie aufgenommen\n"
+        },
+        {
+            "id": "L_DEPO_035",
+            "context": "L_DEPO_035",
+            "string": "Tür-Decoder wurde an der Konsole angebracht.\n"
+        },
+        {
+            "id": "L_DEPO_036",
+            "context": "L_DEPO_036",
+            "string": "Crack-Routine wurde initiiert.\n"
+        },
+        {
+            "id": "L_DEPO_037",
+            "context": "L_DEPO_037",
+            "string": "Crack-Vorgang abgeschlossen - Tür wurde entriegelt.\n"
+        },
+        {
+            "id": "L_DEPO_038",
+            "context": "L_DEPO_038",
+            "string": "ZUTRITTSVERLETZUNG - Alle Sicherheitskräfte sofort ins Kellergeschoß!\n"
+        },
+        {
+            "id": "L_DEPO_039",
+            "context": "L_DEPO_039",
+            "string": "Tür-Decoder wurde korrekt platziert.\n"
+        },
+        {
+            "id": "L_DEPO_040",
+            "context": "L_DEPO_040",
+            "string": "Tür-Decoder wurde nicht korrekt platziert.\n"
+        },
+        {
+            "id": "L_DEPO_041",
+            "context": "L_DEPO_041",
+            "string": "Die Verschwörer wurden alarmiert.\n"
+        },
+        {
+            "id": "L_DEPO_042",
+            "context": "L_DEPO_042",
+            "string": "Alarm wurde aktiviert.\n"
+        },
+        {
+            "id": "L_DEPO_043",
+            "context": "L_DEPO_043",
+            "string": "Alarm wurde deaktiviert.\n"
+        },
+        {
+            "id": "L_DEPO_044",
+            "context": "L_DEPO_044",
+            "string": "Die Safetür ist versperrt.\n"
+        },
+        {
+            "id": "L_DEPO_045",
+            "context": "L_DEPO_045",
+            "string": "Tür-Decoder wurde angebracht.\n"
+        },
+        {
+            "id": "L_DEPO_046",
+            "context": "L_DEPO_046",
+            "string": "Erlangen Sie den Sprengsatz.\n"
+        },
+        {
+            "id": "L_DEPO_047",
+            "context": "L_DEPO_047",
+            "string": "Dr. Carolls\n"
+        },
+        {
+            "id": "L_DEPO_048",
+            "context": "L_DEPO_048",
+            "string": "Sprengsatz\n"
+        },
+        {
+            "id": "L_DEPO_049",
+            "context": "L_DEPO_049",
+            "string": "Sprengsatz\n"
+        },
+        {
+            "id": "L_DEPO_050",
+            "context": "L_DEPO_050",
+            "string": "Sprengsatz aufgenommen\n"
+        },
+        {
+            "id": "L_DEPO_051",
+            "context": "L_DEPO_051",
+            "string": "Zielerreichung unvollständig - MISSION FEHLGESCHLAGEN!\n"
+        },
+        {
+            "id": "L_DEPO_052",
+            "context": "L_DEPO_052",
+            "string": "MISSION ERFOLGREICH\n"
+        },
+        {
+            "id": "L_DEPO_053",
+            "context": "L_DEPO_053",
+            "string": "Sender wurde korrekt platziert.\n"
+        },
+        {
+            "id": "L_DEPO_054",
+            "context": "L_DEPO_054",
+            "string": "Sender wurde nicht korrekt platziert.\n"
+        },
+        {
+            "id": "L_DEPO_055",
+            "context": "L_DEPO_055",
+            "string": "Erlangen Sie den CamSpy.\n"
+        },
+        {
+            "id": "L_DEPO_056",
+            "context": "L_DEPO_056",
+            "string": "Dr. Carolls\n"
+        },
+        {
+            "id": "L_DEPO_057",
+            "context": "L_DEPO_057",
+            "string": "CamSpy\n"
+        },
+        {
+            "id": "L_DEPO_058",
+            "context": "L_DEPO_058",
+            "string": "Ein CamSpy\n"
+        },
+        {
+            "id": "L_DEPO_059",
+            "context": "L_DEPO_059",
+            "string": "CamSpy aufgenommen\n"
+        },
+        {
+            "id": "L_DEPO_060",
+            "context": "L_DEPO_060",
+            "string": "Es gibt hier kein Weiterkommen, solange die \nLaser aktiv sind.\n"
+        },
+        {
+            "id": "L_DEPO_061",
+            "context": "L_DEPO_061",
+            "string": "Weiter vorne muss der Meeting-Raum sein.\nZeit für den CamSpy.\n"
+        },
+        {
+            "id": "L_DEPO_062",
+            "context": "L_DEPO_062",
+            "string": "Der Safe-Code ist sehr ausgeklügelt.\nDer Decoder wird etwas mehr Zeit benötigen.\n"
+        },
+        {
+            "id": "L_DEPO_063",
+            "context": "L_DEPO_063",
+            "string": "Zeit zu gehen! Ich muss zu der Tür, die ich \nvorhin 'präpariert' habe.\n"
+        },
+        {
+            "id": "L_DEPO_064",
+            "context": "L_DEPO_064",
+            "string": "Wichtiges Objekt wurde zerstört.\n"
+        },
+        {
+            "id": "L_DEPO_065",
+            "context": "L_DEPO_065",
+            "string": "Halten Sie Abstand, Joanna. Wir schaffen Ihnen einen\nFluchtweg.\n"
+        },
+        {
+            "id": "L_DEPO_066",
+            "context": "L_DEPO_066",
+            "string": "\n"
+        },
+        {
+            "id": "L_DEPO_067",
+            "context": "L_DEPO_067",
+            "string": "\n"
+        },
+        {
+            "id": "L_DEPO_068",
+            "context": "L_DEPO_068",
+            "string": "Detonator\n"
+        },
+        {
+            "id": "L_DEPO_069",
+            "context": "L_DEPO_069",
+            "string": "Detonator\n"
+        },
+        {
+            "id": "L_DEPO_070",
+            "context": "L_DEPO_070",
+            "string": "Detonator aufgenommen\n"
+        },
+        {
+            "id": "L_DEPO_071",
+            "context": "L_DEPO_071",
+            "string": "Der CamSpy wurde zerstört - Brechen Sie die Mission ab!\n"
+        },
+        {
+            "id": "L_DEPO_072",
+            "context": "L_DEPO_072",
+            "string": "Wir haben uns den Sapienten von Carrington zurückgeholt \nund sein Programm verändert. Es hat nun keine \nPersönlichkeit mehr. Daher sind auch keine \nweiteren Zwischenfälle mehr zu befürchten.\n"
+        },
+        {
+            "id": "L_DEPO_073",
+            "context": "L_DEPO_073",
+            "string": "Aber dadurch wird seine Effizienz reduziert. Mein Team muss \nnun selbst ins Zentrum vordringen. Sie \ngeraten dadurch in Gefahr! Sie hätten \nvoraussehen müssen, dass der Sapient \nin der Lage ist, Moral zu entwickeln.\n"
+        },
+        {
+            "id": "L_DEPO_074",
+            "context": "L_DEPO_074",
+            "string": "Niemand hätte das voraussehen können! Und ich \nlehne es ab, dafür verantwortlich gemacht zu \nwerden! Was ist mit ihm?\n"
+        },
+        {
+            "id": "L_DEPO_075",
+            "context": "L_DEPO_075",
+            "string": "Der Präsident hat die Anfrage nach der Pelagic II \nstrikt abgelehnt?\n"
+        },
+        {
+            "id": "L_DEPO_076",
+            "context": "L_DEPO_076",
+            "string": "Kann es sein, dass Sie Ihren Einfluss auf ihn \nein wenig überschätzt haben?\n"
+        },
+        {
+            "id": "L_DEPO_077",
+            "context": "L_DEPO_077",
+            "string": "Nein! Ich habe nur seine Entschlossenheit unterschätzt. \nWir haben einen Notfallplan parat, der in Kraft tritt, \nsobald die Air Force One am Stützpunkt landet. \nAlles, was ich brauche, ist eine Gewebeprobe des \nPräsidenten.\n"
+        },
+        {
+            "id": "L_DEPO_078",
+            "context": "L_DEPO_078",
+            "string": "Ha! Vorausgesetzt, es gibt keine Störmaßnahmen. \nWenn Carrington eins und eins zusammengezählt hat, \ndann ist Verstärkung schon unterwegs.\n"
+        },
+        {
+            "id": "L_DEPO_079",
+            "context": "L_DEPO_079",
+            "string": "Carrington wird keine Hilfe von außen erhalten. \nDie Technologie, die Sie uns zur Verfügung gestellt \nhaben, wurde in Nevada installiert und ist einsatzbereit. \nDamit können wir jedes Flugzeug vom Himmel holen.\n"
+        },
+        {
+            "id": "L_DEPO_080",
+            "context": "L_DEPO_080",
+            "string": "Die Vorrichtung arbeitet also einwandfrei? Gut. Wir \nsind der Meinung, dass alles, was nicht korrekt arbeitet, \nzerstört werden muss. Ziehen Sie das in Betracht, \nwenn Sie daran gehen, Ihren 'Plan B' in die Tat \numzusetzen.\n"
+        },
+        {
+            "id": "L_DEPO_081",
+            "context": "L_DEPO_081",
+            "string": "Hier ist Agent Dark! Bereiten Sie sich auf die \nÜbertragung der Aufzeichnung vor. Ich beantrage ein \nUnterstützungsteam des Instituts zum Schutz des \nPräsidenten, noch bevor er nach Alaska abreist. \nDiese Anfrage hat die Priorität Eins.\n"
+        },
+        {
+            "id": "L_DEPO_082",
+            "context": "L_DEPO_082",
+            "string": "Dafür ist nun keine Zeit, Agent Dark. Während \nder Funkstille haben wir neue Informationen erhalten. \nDas Flugzeug mit unseren 'Freunden', von denen ich \ngesprochen habe, wurde über Nevada abgeschossen. \nDie dafür verantwortliche Waffe wurde von der \nArea 51 abgefeuert; dorthin wurden vermutlich auch \nÜberlebende und die Wrackteile gebracht. Bereiten \nSie sich für die sofortige Abreise vor, wenn Sie \nwieder hier sind. Carrington over und out.\n"
+        },
+        {
+            "id": "L_DEPO_083",
+            "context": "L_DEPO_083",
+            "string": "Area 51? Aber was geschieht mit dem Präsidenten?\n"
+        }
+    ]
+}

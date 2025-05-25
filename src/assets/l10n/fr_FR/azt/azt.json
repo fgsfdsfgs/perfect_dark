@@ -1,0 +1,244 @@
+{
+    "messages": [
+        {
+            "id": "L_AZT_000",
+            "context": "L_AZT_000",
+            "string": "|Briefing - \n\nEn suivant la dernière manoeuvre d'Elvis, les trois appareils impliqués se sont écrasés ensemble en Alaska. La position du Président est incertaine et un écran de brouillage CME empêche toute action de sauvetage ou de localisation du site.\n\n|Carrington - \n\nPour l'instant nous ne pouvons que vous envoyer des messages, Joanna. Si vous parvenez à éliminer la source du brouillage, nous pourrons déterminer votre position et envoyer de l'aide. Trouver et protéger le Président demeure en revanche votre priorité absolue.\n\n|Objectif 1: - Récupérer scanner médical présidentiel\n\nCet appareil actualise en permanence le journal médical du Président et lui assure un état de santé stable. Trouvez-le pour garder le Président en bonne santé.\n\n|Objectif 2: - Activer le signal de détresse\n\nCelui-ci ne sera efficace qu'une fois le brouillage éliminé mais s'il est activé au point d'évacuation, les équipes de sauvetage arriveront plus vite.\n\n|Objectif 3: - Désactiver appareil brouillage\n\nUn système ennemi sophistiqué inonde le secteur d'un brouillage CME impénétrable. Vous pourrez déterminer sa position plus facilement au sol que nos appareils en altitude. Une fois trouvé, coupez le courant et nous vous fournirons de l'aide.\n\n|Objectif 4: - Eliminer le clone du Président\n\nLa sécurité des Etats Unis serait menacée si deux individus identiques ayant tout pouvoir affirmaient être le Président. Identifiez l'imposteur et éliminez la menace.\n\n|Objectif 5: - Trouver et sauver le Président\n\nCet objectif est votre priorité. La sécurité du Président est vitale. Il vous faut le protéger à tout prix avant l'arrivée de renforts ou écarter tout danger.\n\nFIN\n"
+        },
+        {
+            "id": "L_AZT_001",
+            "context": "L_AZT_001",
+            "string": "SITE du CRASH\n"
+        },
+        {
+            "id": "L_AZT_002",
+            "context": "L_AZT_002",
+            "string": "|Briefing - \n\nEn suivant la dernière manoeuvre d'Elvis, les trois appareils impliqués se sont écrasés ensemble en Alaska. La position du Président est incertaine et un écran de brouillage CME empêche toute action de sauvetage ou de localisation du site.\n\n|Carrington - \n\nPour l'instant nous ne pouvons que vous envoyer des messages, Joanna. Si vous parvenez à éliminer la source du brouillage, nous pourrons déterminer votre position et envoyer de l'aide. Trouver et protéger le Président demeure en revanche votre priorité absolue.\n\n|Objectif 1: - Récupérer scanner médical présidentiel\n\nCet appareil actualise en permanence le journal médical du Président et lui assure un état de santé stable. Trouvez-le pour garder le Président en bonne santé.\n\n|Objectif 2: - Activer le signal de détresse\n\nCelui-ci ne sera efficace qu'une fois le brouillage éliminé mais s'il est activé au point d'évacuation, les équipes de sauvetage arriveront plus vite.\n\n|Objectif 3: - Eliminer le clone du Président\n\nLa sécurité des Etats Unis serait menacée si deux individus identiques ayant tout pouvoir affirmaient être le Président. Identifiez l'imposteur et éliminez la menace.\n\n|Objectif 4: - Trouver et sauver le Président\n\nCet objectif est votre priorité. La sécurité du Président est vitale. Il vous faut le protéger à tout prix avant l'arrivée de renforts ou écarter tout danger.\n\nFIN\n"
+        },
+        {
+            "id": "L_AZT_003",
+            "context": "L_AZT_003",
+            "string": "|Briefing - \n\nEn suivant la dernière manoeuvre d'Elvis, les trois appareils impliqués se sont écrasés ensemble en Alaska. La position du Président est incertaine et un écran de brouillage CME empêche toute action de sauvetage ou de localisation du site.\n\n|Carrington - \n\nPour l'instant nous ne pouvons que vous envoyer des messages, Joanna. Si vous parvenez à éliminer la source du brouillage, nous pourrons déterminer votre position et envoyer de l'aide. Trouver et protéger le Président demeure en revanche votre priorité absolue.\n\n|Objectif 1: - Activer le signal de détresse\n\nCelui-ci ne sera efficace qu'une fois le brouillage éliminé mais s'il est activé au point d'évacuation, les équipes de sauvetage arriveront plus vite.\n\n|Objectif 2: - Eliminer le clone du Président\n\nLa sécurité des Etats Unis serait menacée si deux individus identiques ayant tout pouvoir affirmaient être le Président. Identifiez l'imposteur et éliminez la menace.\n\n|Objectif 3: - Trouver et sauver le Président\n\nCet objectif est votre priorité. La sécurité du Président est vitale. Il vous faut le protéger à tout prix avant l'arrivée de renforts ou écarter tout danger.\n\nFIN\n"
+        },
+        {
+            "id": "L_AZT_004",
+            "context": "L_AZT_004",
+            "string": "\n"
+        },
+        {
+            "id": "L_AZT_005",
+            "context": "L_AZT_005",
+            "string": "Récupérer scanner médical présidentiel\n"
+        },
+        {
+            "id": "L_AZT_006",
+            "context": "L_AZT_006",
+            "string": "Activer le signal de détresse\n"
+        },
+        {
+            "id": "L_AZT_007",
+            "context": "L_AZT_007",
+            "string": "Désactiver appareil brouillage\n"
+        },
+        {
+            "id": "L_AZT_008",
+            "context": "L_AZT_008",
+            "string": "Eliminer le clone du Président\n"
+        },
+        {
+            "id": "L_AZT_009",
+            "context": "L_AZT_009",
+            "string": "Trouver et sauver le Président\n"
+        },
+        {
+            "id": "L_AZT_010",
+            "context": "L_AZT_010",
+            "string": "Voilà le point d'évacuation. \n"
+        },
+        {
+            "id": "L_AZT_011",
+            "context": "L_AZT_011",
+            "string": "Le signal peut venir de là. \n"
+        },
+        {
+            "id": "L_AZT_012",
+            "context": "L_AZT_012",
+            "string": "Le brouillage... Il vient de ce vaisseau. \n"
+        },
+        {
+            "id": "L_AZT_013",
+            "context": "L_AZT_013",
+            "string": "Elvis... Il pourra protéger le Président.\n"
+        },
+        {
+            "id": "L_AZT_014",
+            "context": "L_AZT_014",
+            "string": "Signal de détresse activé.\n"
+        },
+        {
+            "id": "L_AZT_015",
+            "context": "L_AZT_015",
+            "string": "Objet crucial détruit.\n"
+        },
+        {
+            "id": "L_AZT_016",
+            "context": "L_AZT_016",
+            "string": "Obtenir le scanner présidentiel.\n"
+        },
+        {
+            "id": "L_AZT_017",
+            "context": "L_AZT_017",
+            "string": "\n"
+        },
+        {
+            "id": "L_AZT_018",
+            "context": "L_AZT_018",
+            "string": "\n"
+        },
+        {
+            "id": "L_AZT_019",
+            "context": "L_AZT_019",
+            "string": "Un Scanner présidentiel\n"
+        },
+        {
+            "id": "L_AZT_020",
+            "context": "L_AZT_020",
+            "string": "Scanner présidentiel obtenu.\n"
+        },
+        {
+            "id": "L_AZT_021",
+            "context": "L_AZT_021",
+            "string": "Appareil de brouillage désactivé.\n"
+        },
+        {
+            "id": "L_AZT_022",
+            "context": "L_AZT_022",
+            "string": "Le Président a été abattu.\n"
+        },
+        {
+            "id": "L_AZT_023",
+            "context": "L_AZT_023",
+            "string": "Clone présidentiel éliminé.\n"
+        },
+        {
+            "id": "L_AZT_024",
+            "context": "L_AZT_024",
+            "string": "Vous ne pourrez pas le sauver!\n"
+        },
+        {
+            "id": "L_AZT_025",
+            "context": "L_AZT_025",
+            "string": "Président sauvé.\n"
+        },
+        {
+            "id": "L_AZT_026",
+            "context": "L_AZT_026",
+            "string": "Obtenir Vue nocturne.\n"
+        },
+        {
+            "id": "L_AZT_027",
+            "context": "L_AZT_027",
+            "string": "Cassandra De Vries: \n"
+        },
+        {
+            "id": "L_AZT_028",
+            "context": "L_AZT_028",
+            "string": "Vue nocturne\n"
+        },
+        {
+            "id": "L_AZT_029",
+            "context": "L_AZT_029",
+            "string": "Vue nocturne\n"
+        },
+        {
+            "id": "L_AZT_030",
+            "context": "L_AZT_030",
+            "string": "Vue nocturne obtenue.\n"
+        },
+        {
+            "id": "L_AZT_031",
+            "context": "L_AZT_031",
+            "string": "Prends ceci. Cela te sera utile!\n"
+        },
+        {
+            "id": "L_AZT_032",
+            "context": "L_AZT_032",
+            "string": "Ahhh... oohhhh...\n"
+        },
+        {
+            "id": "L_AZT_033",
+            "context": "L_AZT_033",
+            "string": "Ahhh... ohh... ouuuuhhh...\n"
+        },
+        {
+            "id": "L_AZT_034",
+            "context": "L_AZT_034",
+            "string": "Agent Dark! Quel est votre statut?\n"
+        },
+        {
+            "id": "L_AZT_035",
+            "context": "L_AZT_035",
+            "string": "Perfect Dark, répondez!\n"
+        },
+        {
+            "id": "L_AZT_036",
+            "context": "L_AZT_036",
+            "string": "A-agent Dark au rapport...\n"
+        },
+        {
+            "id": "L_AZT_037",
+            "context": "L_AZT_037",
+            "string": "Agent Dark! Parlez bon sang!\n"
+        },
+        {
+            "id": "L_AZT_038",
+            "context": "L_AZT_038",
+            "string": "Quelque chose brouille mes transmissions... Cela vient peut-être de l'autre appareil.\n"
+        },
+        {
+            "id": "L_AZT_039",
+            "context": "L_AZT_039",
+            "string": "Je ferais mieux de trouver la source du brouillage et m'assurer qu'Elvis est en bonne santé. Sans oublier le Président...\n"
+        },
+        {
+            "id": "L_AZT_040",
+            "context": "L_AZT_040",
+            "string": "Comment vous sentez-vous, M. le Président?\n"
+        },
+        {
+            "id": "L_AZT_041",
+            "context": "L_AZT_041",
+            "string": "Mieux. Merci mon petit. Je me souviendrai de cette journée. Comment Easton a-t-il pu faire une chose pareille? Je le savais ambitieux, mais tout ceci...\n"
+        },
+        {
+            "id": "L_AZT_042",
+            "context": "L_AZT_042",
+            "string": "Une question, monsieur. Qu'est-ce que le Pelagic II, cette chose que Trent cherchait?\n"
+        },
+        {
+            "id": "L_AZT_043",
+            "context": "L_AZT_043",
+            "string": "Un vaisseau de recherche sous-marin du gouvernement américain. Un modèle unique pouvant mener des expériences à de grandes profondeurs. Trent a formulé une demande de prêt au nom de la dataDyne Corporation. J'ai refusé.\n"
+        },
+        {
+            "id": "L_AZT_044",
+            "context": "L_AZT_044",
+            "string": "Trent devra répondre de ses actes. Encore faut-il le trouver.\n"
+        },
+        {
+            "id": "L_AZT_045",
+            "context": "L_AZT_045",
+            "string": "Vous avez échoué, Easton. Vous êtes un élément corrompu. Nous nous passerons de vous.\n"
+        },
+        {
+            "id": "L_AZT_046",
+            "context": "L_AZT_046",
+            "string": "C'est ça oui. Pétasse suédoise, va!\n"
+        },
+        {
+            "id": "L_AZT_047",
+            "context": "L_AZT_047",
+            "string": "Noooooooon!!!\n"
+        }
+    ]
+}

@@ -1,0 +1,424 @@
+{
+    "messages": [
+        {
+            "id": "L_DEPO_000",
+            "context": "L_DEPO_000",
+            "string": "|Situazione:\n\nUna volta raggiunto il complesso G5 procedi verso il cuore dell'edificio dove dovrebbe aver luogo la riunione. Procurati la videoregistrazione dell'incontro e poi esci di lì il più in fretta possibile.\n\n|Carrington:\n\nL'edificio G5 ha un sistema d'allarme integrato. Fa attenzione alle guardie che ti vedono, poiché cercheranno certamente di attivarlo. Se ci riescono, i cospiratori interromperanno quasi sicuramente la riunione. Vacci piano, Joanna, molto, molto piano!\n\n|Obiettivo 1: - Disattiva generatore segnali di disturbo\n\nNel garage dell'edificio è collocato un dispositivo che impedisce la trasmissione di qualsiasi informazione registrata dalla TeleSpia. Una volta disattivato, la TeleSpia potrà trasmettere i dati al Quartier Generale!\n\n|Obiettivo 2: - Disattiva il sistema delle griglie laser\n\nL'analisi dell'impianto elettrico dell'Edificio G5 evidenzia una fitta rete di griglie laser collocate in modo da impedire l'accesso ai passaggi che portano alla sala riunioni. Se riesci a disattivarlo avrai via libera.\n\n|Obiettivo 3: - Olografa i cospiratori in riunione\n\nLa TeleSpia è uno strumento eccellente per registrare indisturbata la riunione, senza attirare l'attenzione di Cassandra De Vries e degli altri cospiratori.\n\n|Obiettivo 4: - Prendi copia backup dalla cassaforte\n\nIl Dr. Caroll ha comunicato a Daniel che nella cassaforte dell'Edificio G5 si troverebbe una copia di backup del suo cervello. Se riuscissimo ad impadronircene, potremmo ridare al Dr. Caroll il suo cervello originario in un secondo momento.\n\n|Obiettivo 5: - Esci dall'edificio\n\nDistruggi le porte bloccate per crearti una via di fuga. Se riesci a ricordare dove l'uscita antincendio dà sull'esterno, te la caverai più in fretta.\n\nFINE\n"
+        },
+        {
+            "id": "L_DEPO_001",
+            "context": "L_DEPO_001",
+            "string": "EDIFICIO G5\n"
+        },
+        {
+            "id": "L_DEPO_002",
+            "context": "L_DEPO_002",
+            "string": "|Situazione:\n\nUna volta raggiunto il complesso G5 procedi verso il cuore dell'edificio dove dovrebbe aver luogo la riunione. Procurati la videoregistrazione dell'incontro e poi esci di lì il più in fretta possibile.\n\n|Carrington:\n\nL'edificio G5 ha un sistema d'allarme integrato. Fa attenzione alle guardie che ti vedono, poiché cercheranno certamente di attivarlo. Se ci riescono, i cospiratori interromperanno quasi sicuramente la riunione. Vacci piano, Joanna, molto, molto piano!\n\n|Obiettivo 1: - Disattiva il sistema delle griglie laser\n\nL'analisi dell'impianto elettrico dell'Edificio G5 evidenzia una fitta rete di griglie laser collocate in modo da impedire l'accesso ai passaggi che portano alla sala riunioni. Se riesci a disattivarlo avrai via libera.\n\n|Obiettivo 2: - Olografa i cospiratori in riunione\n\nLa TeleSpia è uno strumento eccellente per registrare indisturbata la riunione, senza attirare l'attenzione di Cassandra De Vries e degli altri cospiratori.\n\n|Obiettivo 3: - Prendi copia backup dalla cassaforte\n\nIl Dr. Caroll ha comunicato a Daniel che nella cassaforte dell'Edificio G5 si troverebbe una copia di backup del suo cervello. Se riuscissimo ad impadronircene, potremmo ridare al Dr. Caroll il suo cervello originario in un secondo momento.\n\n|Obiettivo 4: - Esci dall'edificio\n\nDistruggi le porte bloccate per crearti una via di fuga. Se riesci a ricordare dove l'uscita antincendio dà sull'esterno, te la caverai più in fretta.\n\nFINE\n"
+        },
+        {
+            "id": "L_DEPO_003",
+            "context": "L_DEPO_003",
+            "string": "|Situazione:\n\nUna volta raggiunto il complesso G5 procedi verso il cuore dell'edificio dove dovrebbe aver luogo la riunione. Procurati la videoregistrazione dell'incontro e poi esci di lì il più in fretta possibile.\n\n|Carrington:\n\nL'edificio G5 ha un sistema d'allarme integrato. Fa attenzione alle guardie che ti vedono, poiché cercheranno certamente di attivarlo. Se ci riescono, i cospiratori interromperanno quasi sicuramente la riunione. Vacci piano, Joanna, molto, molto piano!\n\n|Obiettivo 1: - Olografa i cospiratori in riunione\n\nLa TeleSpia è uno strumento eccellente per registrare indisturbata la riunione, senza attirare l'attenzione di Cassandra De Vries e degli altri cospiratori.\n\n|Obiettivo 2: - Prendi copia dalla cassaforte\n\nIl Dr. Caroll ha comunicato a Daniel che nella cassaforte dell'Edificio G5 si troverebbe una copia di backup del suo cervello. Se riuscissimo ad impadronircene, potremmo ridare al Dr. Caroll il suo cervello originario in un secondo momento.\n\n|Obiettivo 3: - Esci dall'edificio\n\nDistruggi le porte bloccate per crearti una via di fuga. Se riesci a ricordare dove l'uscita antincendio dà sull'esterno, te la caverai più in fretta.\n\nFINE\n"
+        },
+        {
+            "id": "L_DEPO_004",
+            "context": "L_DEPO_004",
+            "string": null
+        },
+        {
+            "id": "L_DEPO_005",
+            "context": "L_DEPO_005",
+            "string": null
+        },
+        {
+            "id": "L_DEPO_006",
+            "context": "L_DEPO_006",
+            "string": null
+        },
+        {
+            "id": "L_DEPO_007",
+            "context": "L_DEPO_007",
+            "string": null
+        },
+        {
+            "id": "L_DEPO_008",
+            "context": "L_DEPO_008",
+            "string": null
+        },
+        {
+            "id": "L_DEPO_009",
+            "context": "L_DEPO_009",
+            "string": "Disattiva generatore segnali\n"
+        },
+        {
+            "id": "L_DEPO_010",
+            "context": "L_DEPO_010",
+            "string": "Disattiva il sistema delle griglie laser\n"
+        },
+        {
+            "id": "L_DEPO_011",
+            "context": "L_DEPO_011",
+            "string": "Olografa i cospiratori in riunione\n"
+        },
+        {
+            "id": "L_DEPO_012",
+            "context": "L_DEPO_012",
+            "string": "Prendi copia backup dalla cassaforte\n"
+        },
+        {
+            "id": "L_DEPO_013",
+            "context": "L_DEPO_013",
+            "string": "Esci dall'edificio\n"
+        },
+        {
+            "id": "L_DEPO_014",
+            "context": "L_DEPO_014",
+            "string": "Procurati chiave alfa\n"
+        },
+        {
+            "id": "L_DEPO_015",
+            "context": "L_DEPO_015",
+            "string": "Guardia:\n"
+        },
+        {
+            "id": "L_DEPO_016",
+            "context": "L_DEPO_016",
+            "string": "Chiave 1° piano\n"
+        },
+        {
+            "id": "L_DEPO_017",
+            "context": "L_DEPO_017",
+            "string": "Chiave della guardia\n"
+        },
+        {
+            "id": "L_DEPO_018",
+            "context": "L_DEPO_018",
+            "string": "Presa chiave della guardia\n"
+        },
+        {
+            "id": "L_DEPO_019",
+            "context": "L_DEPO_019",
+            "string": "Procurati chiave alfa\n"
+        },
+        {
+            "id": "L_DEPO_020",
+            "context": "L_DEPO_020",
+            "string": "Guardia:\n"
+        },
+        {
+            "id": "L_DEPO_021",
+            "context": "L_DEPO_021",
+            "string": "Chiave 2° piano\n"
+        },
+        {
+            "id": "L_DEPO_022",
+            "context": "L_DEPO_022",
+            "string": "Chiave della guardia\n"
+        },
+        {
+            "id": "L_DEPO_023",
+            "context": "L_DEPO_023",
+            "string": "Presa chiave della guardia\n"
+        },
+        {
+            "id": "L_DEPO_024",
+            "context": "L_DEPO_024",
+            "string": "Distrutto strumento essenziale alla missione\n"
+        },
+        {
+            "id": "L_DEPO_025",
+            "context": "L_DEPO_025",
+            "string": "Disattivato generatore segnali di disturbo\n"
+        },
+        {
+            "id": "L_DEPO_026",
+            "context": "L_DEPO_026",
+            "string": "Impossibile riaccendere il generatore\n"
+        },
+        {
+            "id": "L_DEPO_027",
+            "context": "L_DEPO_027",
+            "string": "Disattivata unità griglie laser\n"
+        },
+        {
+            "id": "L_DEPO_028",
+            "context": "L_DEPO_028",
+            "string": "Attivata unità griglie laser\n"
+        },
+        {
+            "id": "L_DEPO_029",
+            "context": "L_DEPO_029",
+            "string": "Disattivati tutti i sistemi griglie laser\n"
+        },
+        {
+            "id": "L_DEPO_030",
+            "context": "L_DEPO_030",
+            "string": "Procurati nastro DAT\n"
+        },
+        {
+            "id": "L_DEPO_031",
+            "context": "L_DEPO_031",
+            "string": "Dr. Caroll:\n"
+        },
+        {
+            "id": "L_DEPO_032",
+            "context": "L_DEPO_032",
+            "string": "Disco di backup \n"
+        },
+        {
+            "id": "L_DEPO_033",
+            "context": "L_DEPO_033",
+            "string": "Disco di backup\n"
+        },
+        {
+            "id": "L_DEPO_034",
+            "context": "L_DEPO_034",
+            "string": "Preso disco di backup.\n"
+        },
+        {
+            "id": "L_DEPO_035",
+            "context": "L_DEPO_035",
+            "string": "Decodificatore porta in azione\n"
+        },
+        {
+            "id": "L_DEPO_036",
+            "context": "L_DEPO_036",
+            "string": "Decodifica in corso...\n"
+        },
+        {
+            "id": "L_DEPO_037",
+            "context": "L_DEPO_037",
+            "string": "Decodificatore ha finito: porta aperta.\n"
+        },
+        {
+            "id": "L_DEPO_038",
+            "context": "L_DEPO_038",
+            "string": "ALLARME INTRUSIONE - Sicurezza all'erta\n"
+        },
+        {
+            "id": "L_DEPO_039",
+            "context": "L_DEPO_039",
+            "string": "Decodificatore piazzato correttamente\n"
+        },
+        {
+            "id": "L_DEPO_040",
+            "context": "L_DEPO_040",
+            "string": "Decodificatore in posizione errata\n"
+        },
+        {
+            "id": "L_DEPO_041",
+            "context": "L_DEPO_041",
+            "string": "Allertati i cospiratori\n"
+        },
+        {
+            "id": "L_DEPO_042",
+            "context": "L_DEPO_042",
+            "string": "Attivato l'allarme\n"
+        },
+        {
+            "id": "L_DEPO_043",
+            "context": "L_DEPO_043",
+            "string": "Disattivato l'allarme\n"
+        },
+        {
+            "id": "L_DEPO_044",
+            "context": "L_DEPO_044",
+            "string": "Bloccata porta di sicurezza \n"
+        },
+        {
+            "id": "L_DEPO_045",
+            "context": "L_DEPO_045",
+            "string": "Decodificatore in azione\n"
+        },
+        {
+            "id": "L_DEPO_046",
+            "context": "L_DEPO_046",
+            "string": "Procurati Esplodiporta\n"
+        },
+        {
+            "id": "L_DEPO_047",
+            "context": "L_DEPO_047",
+            "string": "Dr. Caroll:\n"
+        },
+        {
+            "id": "L_DEPO_048",
+            "context": "L_DEPO_048",
+            "string": "Esplodiporta\n"
+        },
+        {
+            "id": "L_DEPO_049",
+            "context": "L_DEPO_049",
+            "string": "Esplodiporta\n"
+        },
+        {
+            "id": "L_DEPO_050",
+            "context": "L_DEPO_050",
+            "string": "Preso Esplodiporta\n"
+        },
+        {
+            "id": "L_DEPO_051",
+            "context": "L_DEPO_051",
+            "string": "MISSIONE FALLITA - Obiettivi incompleti\n"
+        },
+        {
+            "id": "L_DEPO_052",
+            "context": "L_DEPO_052",
+            "string": "MISSIONE COMPIUTA\n"
+        },
+        {
+            "id": "L_DEPO_053",
+            "context": "L_DEPO_053",
+            "string": "Cimice piazzata correttamente\n"
+        },
+        {
+            "id": "L_DEPO_054",
+            "context": "L_DEPO_054",
+            "string": "Cimice in posizione errata\n"
+        },
+        {
+            "id": "L_DEPO_055",
+            "context": "L_DEPO_055",
+            "string": "Procurati TeleSpia\n"
+        },
+        {
+            "id": "L_DEPO_056",
+            "context": "L_DEPO_056",
+            "string": "Dr. Caroll:\n"
+        },
+        {
+            "id": "L_DEPO_057",
+            "context": "L_DEPO_057",
+            "string": "TeleSpia\n"
+        },
+        {
+            "id": "L_DEPO_058",
+            "context": "L_DEPO_058",
+            "string": "TeleSpia\n"
+        },
+        {
+            "id": "L_DEPO_059",
+            "context": "L_DEPO_059",
+            "string": "Presa TeleSpia\n"
+        },
+        {
+            "id": "L_DEPO_060",
+            "context": "L_DEPO_060",
+            "string": "È impossibile passare finché sono \nattivi quei laser.\n"
+        },
+        {
+            "id": "L_DEPO_061",
+            "context": "L_DEPO_061",
+            "string": "Quella dev'essere la sala riunioni. \nÈ ora di usare la TeleSpia.\n"
+        },
+        {
+            "id": "L_DEPO_062",
+            "context": "L_DEPO_062",
+            "string": "La cassaforte è criptata. \nIl decodificatore ci metterà un po'.\n"
+        },
+        {
+            "id": "L_DEPO_063",
+            "context": "L_DEPO_063",
+            "string": "È ora di andare! Passiamo per la porta che ho \npredisposto!\n"
+        },
+        {
+            "id": "L_DEPO_064",
+            "context": "L_DEPO_064",
+            "string": "Distrutto strumento essenziale alla missione.\n"
+        },
+        {
+            "id": "L_DEPO_065",
+            "context": "L_DEPO_065",
+            "string": "Sta indietro, Joanna! Apriremo un varco \ndi fuga!\n"
+        },
+        {
+            "id": "L_DEPO_066",
+            "context": "L_DEPO_066",
+            "string": "\n"
+        },
+        {
+            "id": "L_DEPO_067",
+            "context": "L_DEPO_067",
+            "string": "\n"
+        },
+        {
+            "id": "L_DEPO_068",
+            "context": "L_DEPO_068",
+            "string": "Detonatore\n"
+        },
+        {
+            "id": "L_DEPO_069",
+            "context": "L_DEPO_069",
+            "string": "Detonatore\n"
+        },
+        {
+            "id": "L_DEPO_070",
+            "context": "L_DEPO_070",
+            "string": "Preso detonatore.\n"
+        },
+        {
+            "id": "L_DEPO_071",
+            "context": "L_DEPO_071",
+            "string": "Distrutta la TeleSpia - Missione fallita\n"
+        },
+        {
+            "id": "L_DEPO_072",
+            "context": "L_DEPO_072",
+            "string": "Abbiamo recuperato il Sapiente da Carrington \ne ne abbiamo alterato la programmazione. Ora \nha perso la sua personalità, così non \navremo più spiacevoli sorprese.\n"
+        },
+        {
+            "id": "L_DEPO_073",
+            "context": "L_DEPO_073",
+            "string": "Questo ridurrà la sua efficienza. La mia \nsquadra dovrà portarlo subito al centro, \nma ciò li metterà in pericolo. Avrebbe \ndovuto comunicarci che il Sapiente avrebbe \nsviluppato un codice morale problematico!\n"
+        },
+        {
+            "id": "L_DEPO_074",
+            "context": "L_DEPO_074",
+            "string": "Nessuno poteva prevedere una cosa simile! \nE non ammetto che mi vengano mossi dei \nrimproveri. E lui allora?\n"
+        },
+        {
+            "id": "L_DEPO_075",
+            "context": "L_DEPO_075",
+            "string": "Il Presidente ha rifiutato la sua richiesta \ndi finanziamento per il Pelagic II?\n"
+        },
+        {
+            "id": "L_DEPO_076",
+            "context": "L_DEPO_076",
+            "string": "Forse ha sopravvalutato la sua \ninfluenza su di lui!\n"
+        },
+        {
+            "id": "L_DEPO_077",
+            "context": "L_DEPO_077",
+            "string": "No! Avrò sottovalutato la sua determinazione, \npiuttosto! Abbiamo un piano contingente pronto \na partire non appena l'entourage del Presidente \narriva alla base aerea. Tutto ciò che mi serve \ndal Presidente è un campione di tessuto.\n"
+        },
+        {
+            "id": "L_DEPO_078",
+            "context": "L_DEPO_078",
+            "string": "Sì... salvo imprevisti! Se Carrington \nha raccolto elementi sufficienti, a \nquest'ora avrà già chiamato i rinforzi!\n"
+        },
+        {
+            "id": "L_DEPO_079",
+            "context": "L_DEPO_079",
+            "string": "Non ci saranno aiuti esterni per Carrington. \nLa tecnologia che ci ha dato è stata \ninstallata in Nevada ed è già operativa: \nsiamo in grado di intercettare qualsiasi \nmezzo utilizzino.\n"
+        },
+        {
+            "id": "L_DEPO_080",
+            "context": "L_DEPO_080",
+            "string": "Ciò significa che il dispositivo che vi \nabbiamo fornito funziona? Bene! Perfetto! \nRiteniamo infatti che tutto ciò che non \nfunziona correttamente debba essere eliminato. \nLo tenga bene a mente durante l'attuazione \ndel suo 'piano di emergenza'!\n"
+        },
+        {
+            "id": "L_DEPO_081",
+            "context": "L_DEPO_081",
+            "string": "Agente Dark a rapporto! Preparatevi a \nricevere e scaricare i dati della riunione. \nRichiesta prioritaria di una squadra di \nsupporto dell'istituto che protegga il \nPresidente prima del suo viaggio in Alaska.\n"
+        },
+        {
+            "id": "L_DEPO_082",
+            "context": "L_DEPO_082",
+            "string": "Ora non c'è tempo per questo, Agent Dark! \nCi sono stati degli sviluppi durante il \nsilenzio radio. Il mezzo con a bordo quegli \n'amici' di cui ti parlavo è stato abbattuto \nin Nevada. Il colpo è stato sparato dall'\nArea 51, dove saranno stati portati anche i \nsopravvissuti e i resti del velivolo. Dovrai \nprepararti a partire immediatamente appena \nrientri. Passo e chiudo! \n"
+        },
+        {
+            "id": "L_DEPO_083",
+            "context": "L_DEPO_083",
+            "string": "L'Area 51? E che ne sarà del Presidente?\n"
+        }
+    ]
+}

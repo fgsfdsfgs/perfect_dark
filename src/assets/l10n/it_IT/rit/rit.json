@@ -1,0 +1,444 @@
+{
+    "messages": [
+        {
+            "id": "L_RIT_000",
+            "context": "L_RIT_000",
+            "string": "|Situazione:\n\nIl piano di Trent Easton per il rapimento del Presidente è iniziato. La reazione del Carrington Institute consiste nell'allontanamento del Presidente dall'Air Force One prima che ci riesca Trent.\n\n|Carrington:\n\nIl tempo stringe, Joanna. Per mandare a monte il piano di Trent devi riuscire a far scendere il Presidente dall'aereo. Ciò significa convincerlo del tradimento di Trent, il che a sua volta implica il ritrovamento delle prove dal bagagliaio dell'aereo e la loro esibizione al Presidente.\n\n|Obiettivo 1: - Trova e recupera la tua attrezzatura\n\nTrova la tua attrezzatura nascosta nel bagagliaio sul fondo dell'aereo e riprenditela. Ricorda che le forze di sicurezza del Presidente sono neutrali e non devono essere ferite, né tanto meno uccise.\n\n|Obiettivo 2: - Localizza il Presidente\n\nL'esatta posizione dell'ufficio presidenziale è sconosciuta. Cercalo e una volta trovato presenta al Presidente le prove del tradimento. Fa in modo di arrivare là prima di Trent o sta sicura che sarà in grado di manipolare la situazione e rigirarla a suo vantaggio.\n\n|Obiettivo 3: - Porta il Presidente alla capsula\n\nSul piano inferiore del velivolo si trova una capsula di salvataggio. Scorta il Presidente fino ad essa facendo attenzione che non gli succeda nulla nel tragitto.\n\n|Obiettivo 4: - Accerta rotta di volo Air Force One\n\nNon siamo a conoscenza dei dettagli del piano di Trent, ma riteniamo che il personale di volo sia in pericolo. Va nella cabina di pilotaggio e assicurati che stiano bene. Se è accaduto l'irreparabile, attiva il pilota automatico!\n\n|Obiettivo 5: - Stacca la capsula dall'Air Force One\n\nTaglia il cordone ombelicale dell'Air Force One! Il modo più semplice e veloce è quello di far esplodere una mina sul collegamento stesso.\n\nFINE\n"
+        },
+        {
+            "id": "L_RIT_001",
+            "context": "L_RIT_001",
+            "string": "AIR FORCE ONE\n"
+        },
+        {
+            "id": "L_RIT_002",
+            "context": "L_RIT_002",
+            "string": "|Situazione:\n\nIl piano di Trent Easton per il rapimento del Presidente è iniziato. La reazione del Carrington Institute consiste nell'allontanamento del Presidente dall'Air Force One prima che ci riesca Trent.\n\n|Carrington:\n\nIl tempo stringe, Joanna. Per mandare a monte il piano di Trent devi riuscire a far scendere il Presidente dall'aereo. Ciò significa convincerlo del tradimento di Trent, il che a sua volta implica il ritrovamento delle prove dal bagagliaio dell'aereo e la loro esibizione al Presidente.\n\n|Obiettivo 1: - Trova e recupera la tua attrezzatura\n\nTrova la tua attrezzatura nascosta nel bagagliaio sul fondo dell'aereo e riprenditela. Ricorda che le forze di sicurezza del Presidente sono neutrali e non devono essere ferite, né tanto meno uccise.\n\n|Obiettivo 2: - Localizza il Presidente\n\nL'esatta posizione dell'ufficio presidenziale è sconosciuta. Cercalo e una volta trovato presenta al Presidente le prove del tradimento. Fa in modo di arrivare là prima di Trent o sta sicura che sarà in grado di manipolare la situazione e rigirarla a suo vantaggio.\n\n|Obiettivo 3: - Porta il Presidente alla capsula\n\nSul piano inferiore del velivolo si trova una capsula di salvataggio. Scorta il Presidente fino ad essa facendo attenzione che non gli succeda nulla nel tragitto.\n\n|Obiettivo 4: - Stacca la capsula dall'Air Force One\n\nTaglia il cordone ombelicale dell'Air Force One! Il modo più semplice e veloce è quello di far esplodere una mina sul collegamento stesso.\n\nFINE\n"
+        },
+        {
+            "id": "L_RIT_003",
+            "context": "L_RIT_003",
+            "string": "|Situazione:\n\nIl piano di Trent Easton per il rapimento del Presidente è iniziato. La reazione del Carrington Institute consiste nell'allontanamento del Presidente dall'Air Force One prima che ci riesca Trent.\n\n|Carrington:\n\nIl tempo stringe, Joanna. Per mandare a monte il piano di Trent devi riuscire a far scendere il Presidente dall'aereo. Ciò significa convincerlo del tradimento di Trent, il che a sua volta implica il ritrovamento delle prove dal bagagliaio dell'aereo e la loro esibizione al Presidente.\n\n|Obiettivo 1: - Localizza il Presidente\n\nL'esatta posizione dell'ufficio presidenziale è sconosciuta. Cercalo e una volta trovato presenta al Presidente le prove del tradimento. Fa in modo di arrivare là prima di Trent o sta sicura che sarà in grado di manipolare la situazione e rigirarla a suo vantaggio.\n\n|Obiettivo 2: - Porta il Presidente alla capsula\n\nSul piano inferiore del velivolo si trova una capsula di salvataggio. Scorta il Presidente fino ad essa facendo attenzione che non gli succeda nulla nel tragitto.\n\n|Obiettivo 3: - Stacca la capsula dall'Air Force One\n\nTaglia il cordone ombelicale dell'Air Force One! Il modo più semplice e veloce è quello di far esplodere una mina sul collegamento stesso.\n\nFINE\n"
+        },
+        {
+            "id": "L_RIT_004",
+            "context": "L_RIT_004",
+            "string": "\n"
+        },
+        {
+            "id": "L_RIT_005",
+            "context": "L_RIT_005",
+            "string": "Trova e recupera l'attrezzatura\n"
+        },
+        {
+            "id": "L_RIT_006",
+            "context": "L_RIT_006",
+            "string": "Localizza il Presidente\n"
+        },
+        {
+            "id": "L_RIT_007",
+            "context": "L_RIT_007",
+            "string": "Porta il Presidente alla capsula\n"
+        },
+        {
+            "id": "L_RIT_008",
+            "context": "L_RIT_008",
+            "string": "Accerta rotta di volo Air Force One\n"
+        },
+        {
+            "id": "L_RIT_009",
+            "context": "L_RIT_009",
+            "string": "Stacca la capsula dall'Air Force One\n"
+        },
+        {
+            "id": "L_RIT_010",
+            "context": "L_RIT_010",
+            "string": "Procurati valigia.\n"
+        },
+        {
+            "id": "L_RIT_011",
+            "context": "L_RIT_011",
+            "string": "\n"
+        },
+        {
+            "id": "L_RIT_012",
+            "context": "L_RIT_012",
+            "string": "Valigia\n"
+        },
+        {
+            "id": "L_RIT_013",
+            "context": "L_RIT_013",
+            "string": "Valigia\n"
+        },
+        {
+            "id": "L_RIT_014",
+            "context": "L_RIT_014",
+            "string": "Presa valigia.\n"
+        },
+        {
+            "id": "L_RIT_015",
+            "context": "L_RIT_015",
+            "string": "Procurati balestra.\n"
+        },
+        {
+            "id": "L_RIT_016",
+            "context": "L_RIT_016",
+            "string": "\n"
+        },
+        {
+            "id": "L_RIT_017",
+            "context": "L_RIT_017",
+            "string": "Balestra\n"
+        },
+        {
+            "id": "L_RIT_018",
+            "context": "L_RIT_018",
+            "string": "Balestra\n"
+        },
+        {
+            "id": "L_RIT_019",
+            "context": "L_RIT_019",
+            "string": "Presa balestra.\n"
+        },
+        {
+            "id": "L_RIT_020",
+            "context": "L_RIT_020",
+            "string": "Implicate vittime civili.\n"
+        },
+        {
+            "id": "L_RIT_021",
+            "context": "L_RIT_021",
+            "string": "Danneggiato collegamento a capsula.\n"
+        },
+        {
+            "id": "L_RIT_022",
+            "context": "L_RIT_022",
+            "string": "Impossibile staccare capsula.\n"
+        },
+        {
+            "id": "L_RIT_023",
+            "context": "L_RIT_023",
+            "string": "Attivato pilota automatico.\n"
+        },
+        {
+            "id": "L_RIT_024",
+            "context": "L_RIT_024",
+            "string": "L'Air Force One è stato stabilizzato.\n"
+        },
+        {
+            "id": "L_RIT_025",
+            "context": "L_RIT_025",
+            "string": "Distrutto pilota automatico.\n"
+        },
+        {
+            "id": "L_RIT_026",
+            "context": "L_RIT_026",
+            "string": "Il Presidente è stato ucciso.\n"
+        },
+        {
+            "id": "L_RIT_027",
+            "context": "L_RIT_027",
+            "string": "I piloti sono stati uccisi.\n"
+        },
+        {
+            "id": "L_RIT_028",
+            "context": "L_RIT_028",
+            "string": "I piloti sono stati salvati.\n"
+        },
+        {
+            "id": "L_RIT_029",
+            "context": "L_RIT_029",
+            "string": "L'Air Force One sta per schiantarsi.\n"
+        },
+        {
+            "id": "L_RIT_030",
+            "context": "L_RIT_030",
+            "string": "Procurati mina a distanza.\n"
+        },
+        {
+            "id": "L_RIT_031",
+            "context": "L_RIT_031",
+            "string": "\n"
+        },
+        {
+            "id": "L_RIT_032",
+            "context": "L_RIT_032",
+            "string": "Mina distanza\n"
+        },
+        {
+            "id": "L_RIT_033",
+            "context": "L_RIT_033",
+            "string": "Mina distanza\n"
+        },
+        {
+            "id": "L_RIT_034",
+            "context": "L_RIT_034",
+            "string": "Presa mina a distanza.\n"
+        },
+        {
+            "id": "L_RIT_035",
+            "context": "L_RIT_035",
+            "string": "E lei chi sarebbe?\n"
+        },
+        {
+            "id": "L_RIT_036",
+            "context": "L_RIT_036",
+            "string": "Sicurezza, SICUREZZA!!!\n"
+        },
+        {
+            "id": "L_RIT_037",
+            "context": "L_RIT_037",
+            "string": "Signor Presidente, lei è in pericolo. Trent sta \ntentando di rapirla!\n"
+        },
+        {
+            "id": "L_RIT_038",
+            "context": "L_RIT_038",
+            "string": "Cosa diavolo è stato?!\n"
+        },
+        {
+            "id": "L_RIT_039",
+            "context": "L_RIT_039",
+            "string": "Dobbiamo raggiungere la capsula di salvataggio! \nMi segua!\n"
+        },
+        {
+            "id": "L_RIT_040",
+            "context": "L_RIT_040",
+            "string": "Non può mica andare in giro a fare certe accuse \nsenza prove concrete!!! Spero che abbia \nuna valida spiegazione!\n"
+        },
+        {
+            "id": "L_RIT_041",
+            "context": "L_RIT_041",
+            "string": "Questa è una registrazione della riunione \ntra Trent e gli altri cospiratori!\n"
+        },
+        {
+            "id": "L_RIT_042",
+            "context": "L_RIT_042",
+            "string": "Una prova schiacciante... Sono nelle sue mani! \nCosa dobbiamo fare?\n"
+        },
+        {
+            "id": "L_RIT_043",
+            "context": "L_RIT_043",
+            "string": "Ehi, non è...\n"
+        },
+        {
+            "id": "L_RIT_044",
+            "context": "L_RIT_044",
+            "string": "È un intruso...\n"
+        },
+        {
+            "id": "L_RIT_045",
+            "context": "L_RIT_045",
+            "string": "Come diavolo sei salita a bordo?\n"
+        },
+        {
+            "id": "L_RIT_046",
+            "context": "L_RIT_046",
+            "string": "È ora di recuperare le prove!\n"
+        },
+        {
+            "id": "L_RIT_047",
+            "context": "L_RIT_047",
+            "string": "L'ufficio del Presidente è su \nquesto piano, Joanna!\n"
+        },
+        {
+            "id": "L_RIT_048",
+            "context": "L_RIT_048",
+            "string": "C'è qualcosa che non quadra... Devi andare nella cabina di pilotaggio, presto!\n"
+        },
+        {
+            "id": "L_RIT_049",
+            "context": "L_RIT_049",
+            "string": "Forse la capsula si può staccare con una mina.\n"
+        },
+        {
+            "id": "L_RIT_050",
+            "context": "L_RIT_050",
+            "string": "\n"
+        },
+        {
+            "id": "L_RIT_051",
+            "context": "L_RIT_051",
+            "string": "\n"
+        },
+        {
+            "id": "L_RIT_052",
+            "context": "L_RIT_052",
+            "string": "Compressa di adrenalina\n"
+        },
+        {
+            "id": "L_RIT_053",
+            "context": "L_RIT_053",
+            "string": "Compressa di adrenalina\n"
+        },
+        {
+            "id": "L_RIT_054",
+            "context": "L_RIT_054",
+            "string": "Presa compressa di adrenalina.\n"
+        },
+        {
+            "id": "L_RIT_055",
+            "context": "L_RIT_055",
+            "string": "\n"
+        },
+        {
+            "id": "L_RIT_056",
+            "context": "L_RIT_056",
+            "string": "\n"
+        },
+        {
+            "id": "L_RIT_057",
+            "context": "L_RIT_057",
+            "string": "Tessera magnetica\n"
+        },
+        {
+            "id": "L_RIT_058",
+            "context": "L_RIT_058",
+            "string": "Tessera magnetica\n"
+        },
+        {
+            "id": "L_RIT_059",
+            "context": "L_RIT_059",
+            "string": "Presa tessera magnetica.\n"
+        },
+        {
+            "id": "L_RIT_060",
+            "context": "L_RIT_060",
+            "string": "Abbassato bagagliaio.\n"
+        },
+        {
+            "id": "L_RIT_061",
+            "context": "L_RIT_061",
+            "string": "Alzato bagagliaio.\n"
+        },
+        {
+            "id": "L_RIT_062",
+            "context": "L_RIT_062",
+            "string": "Distrutto strumento essenziale alla missione.\n"
+        },
+        {
+            "id": "L_RIT_063",
+            "context": "L_RIT_063",
+            "string": "Accesso negato - Serve tessera ascensore.\n"
+        },
+        {
+            "id": "L_RIT_064",
+            "context": "L_RIT_064",
+            "string": "\n"
+        },
+        {
+            "id": "L_RIT_065",
+            "context": "L_RIT_065",
+            "string": "\n"
+        },
+        {
+            "id": "L_RIT_066",
+            "context": "L_RIT_066",
+            "string": "Tessera ascensore\n"
+        },
+        {
+            "id": "L_RIT_067",
+            "context": "L_RIT_067",
+            "string": "Tessera ascensore\n"
+        },
+        {
+            "id": "L_RIT_068",
+            "context": "L_RIT_068",
+            "string": "Presa tessera ascensore.\n"
+        },
+        {
+            "id": "L_RIT_069",
+            "context": "L_RIT_069",
+            "string": "La mina a orologeria è stata sprecata.\n"
+        },
+        {
+            "id": "L_RIT_070",
+            "context": "L_RIT_070",
+            "string": "Ah, ah, ah , ah!!!\n"
+        },
+        {
+            "id": "L_RIT_071",
+            "context": "L_RIT_071",
+            "string": "Oramai non puoi più salvarlo!\n"
+        },
+        {
+            "id": "L_RIT_072",
+            "context": "L_RIT_072",
+            "string": "Stanno attaccando il Presidente!!!\n"
+        },
+        {
+            "id": "L_RIT_073",
+            "context": "L_RIT_073",
+            "string": "Ha più pensato alla proposta che le ho fatto, signore?\n"
+        },
+        {
+            "id": "L_RIT_074",
+            "context": "L_RIT_074",
+            "string": "La mia risposta è sempre la stessa, Trent! No, mi dispiace! Non metterò il Pelagic II a disposizione della dataDyne. Ora possiamo cambiare argomento, per favore?\n"
+        },
+        {
+            "id": "L_RIT_075",
+            "context": "L_RIT_075",
+            "string": "Ma questa è un'occasione d'oro per dimostrare che l'America ha piena fiducia nel suo tessuto industriale e che lo sostiene...\n"
+        },
+        {
+            "id": "L_RIT_076",
+            "context": "L_RIT_076",
+            "string": "Maledizione! Ho detto NO ed è NO! Non mi farà cambiare idea su questo punto Trent! I miei consiglieri devono essere imparziali e negli ultimi tempi non si può proprio dire che lei lo sia stato! Lasciamo perdere e dimentichiamo l'accaduto! Questa è la sua ultima possibilità, Trent!\n"
+        },
+        {
+            "id": "L_RIT_077",
+            "context": "L_RIT_077",
+            "string": "Come preferisce, signor Presidente!\n"
+        },
+        {
+            "id": "L_RIT_078",
+            "context": "L_RIT_078",
+            "string": "La MIA ultima possibilità? Si sbaglia di grosso: questa era la SUA!\n"
+        },
+        {
+            "id": "L_RIT_079",
+            "context": "L_RIT_079",
+            "string": "Elvis! Elvis! Non riesco a staccare il tubo dalla fusoliera! Tu ce la fai?\n"
+        },
+        {
+            "id": "L_RIT_080",
+            "context": "L_RIT_080",
+            "string": "Elementare, Joanna. Guarda qua!\n"
+        },
+        {
+            "id": "L_RIT_081",
+            "context": "L_RIT_081",
+            "string": "Eee... hop!\n"
+        },
+        {
+            "id": "L_RIT_082",
+            "context": "L_RIT_082",
+            "string": "Guarda cosa? La vuoi piantare di giocare e sparare una buona volta?!\n"
+        },
+        {
+            "id": "L_RIT_083",
+            "context": "L_RIT_083",
+            "string": "Non abbiamo scelta... Joanna, preparati all'impatto!\n"
+        },
+        {
+            "id": "L_RIT_084",
+            "context": "L_RIT_084",
+            "string": "I piloti hanno stabilizzato l'Air Force One.\n"
+        },
+        {
+            "id": "L_RIT_085",
+            "context": "L_RIT_085",
+            "string": null
+        },
+        {
+            "id": "L_RIT_086",
+            "context": "L_RIT_086",
+            "string": null
+        },
+        {
+            "id": "L_RIT_087",
+            "context": "L_RIT_087",
+            "string": null
+        }
+    ]
+}

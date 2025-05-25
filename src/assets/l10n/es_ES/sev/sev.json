@@ -1,0 +1,84 @@
+{
+    "messages": [
+        {
+            "id": "L_SEV_000",
+            "context": "L_SEV_000",
+            "string": "|Antecedentes - \n\nProtocolos de captura de emergencia activados. La nave XD-310372 ha caído en un planeta hostil. Protector Maian Uno (Aelphaeis Mangarae) es el único superviviente. Estatus del planeta designado: grado de paranoia 'B+', grado de intolerancia 'B', grado de xenofobia 'A'. Se debe destruir el equipo restante y evitar el estudio de la tecnología Maian y/o del personal.\n\n|Objetivo Uno: - Sabotear el Experimento Médico Enemigo\n\nEstán experimentando con el cuerpo a mi cargo, el Embajador Maian para la Tierra. Para completar mi tarea como Protector Maian, debo asegurarme de que el cuerpo es destruido.\n\n|Objetivo Dos: - Destruir la Nave Maian capturada\n\nMi último acto y mi deber será destruir lo que queda del vehículo en el que llegué a la Tierra. Si alguien descubre que su tecnología es similar a la de las 'invenciones' del Instituto Carrington, nuestros aliados terrícolas estarán en peligro, y habremos fallado.\n\n|Objetivo Tres: - Enviar una Señal de Socorro a nuestros Aliados\n\nEl Instituto Carrington podrá ayudarme. Si pudiera enviarles un mensaje, sabrían dónde localizarme y mi estatus. Cualquier equipo que yo no sea capaz de alcanzar ni destruir, seguro que ellos podrán hacerlo.\n\nFIN\n"
+        },
+        {
+            "id": "L_SEV_001",
+            "context": "L_SEV_001",
+            "string": "ÁREA 51, NEVADA, TIERRA\n"
+        },
+        {
+            "id": "L_SEV_002",
+            "context": "L_SEV_002",
+            "string": "|Antecedentes - \n\nProtocolos de captura de emergencia activados. La nave XD-310372 ha caído en un planeta hostil. Protector Maian Uno (Aelphaeis Mangarae) es el único superviviente. Estatus del planeta designado: grado de paranoia 'B+', grado de intolerancia 'B', grado de xenofobia 'A'. Se debe destruir el equipo restante y evitar el estudio de la tecnología Maian y/o del personal.\n\n|Objetivo Uno: - Sabotear el Experimento Médico Enemigo\n\nEstán experimentando con el cuerpo a mi cargo, el Embajador Maian para la Tierra. Para completar mi tarea como Protector Maian, debo asegurarme que el cuerpo es destruido.\n\n|Objetivo Dos: - Enviar una Señal de Socorro a nuestros Aliados\n\nEl Instituto Carrington podrá ayudarme. Si pudiera enviarles un mensaje, sabrían dónde localizarme y mi estatus. Cualquier equipo que yo no sea capaz de alcanzar ni destruir, seguro que ellos podrán hacerlo.\n\nFIN\n"
+        },
+        {
+            "id": "L_SEV_003",
+            "context": "L_SEV_003",
+            "string": "|Antecedentes - \n\nProtocolos de captura de emergencia activados. La nave XD-310372 ha caído en un planeta hostil. Protector Maian Uno (Aelphaeis Mangarae) es el único superviviente. Estatus del planeta designado: grado de paranoia 'B+', grado de intolerancia 'B', grado de xenofobia 'A'. Se debe destruir el equipo restante y evitar el estudio de la tecnología Maian y/o del personal.\n\n|Objetivo Uno: - Enviar una Señal de Socorro a nuestros Aliados\n\nEl Instituto Carrington podrá ayudarme. Si pudiera enviarles un mensaje, sabrían dónde localizarme y mi estatus. Cualquier equipo que yo no sea capaz de alcanzar ni destruir, seguro que ellos podrán hacerlo.\n\nFIN\n"
+        },
+        {
+            "id": "L_SEV_004",
+            "context": "L_SEV_004",
+            "string": "Sabotear experimento médico enemigo\n"
+        },
+        {
+            "id": "L_SEV_005",
+            "context": "L_SEV_005",
+            "string": "Destruir platillo Maian capturado\n"
+        },
+        {
+            "id": "L_SEV_006",
+            "context": "L_SEV_006",
+            "string": "Activar la señal de socorro\n"
+        },
+        {
+            "id": "L_SEV_007",
+            "context": "L_SEV_007",
+            "string": "El experimento médico ha sido saboteado.\n"
+        },
+        {
+            "id": "L_SEV_008",
+            "context": "L_SEV_008",
+            "string": "El platillo Maian ha sido destruido.\n"
+        },
+        {
+            "id": "L_SEV_009",
+            "context": "L_SEV_009",
+            "string": "La señal de socorro ha sido enviada.\n"
+        },
+        {
+            "id": "L_SEV_010",
+            "context": "L_SEV_010",
+            "string": "Objeto crítico de la misión ha sido destruido.\n"
+        },
+        {
+            "id": "L_SEV_011",
+            "context": "L_SEV_011",
+            "string": "Misión fallada: no puedes escapar del laboratorio.\n"
+        },
+        {
+            "id": "L_SEV_012",
+            "context": "L_SEV_012",
+            "string": "Ruta de escape alternativa encontrada.\n"
+        },
+        {
+            "id": "L_SEV_013",
+            "context": "L_SEV_013",
+            "string": null
+        },
+        {
+            "id": "L_SEV_014",
+            "context": "L_SEV_014",
+            "string": null
+        },
+        {
+            "id": "L_SEV_015",
+            "context": "L_SEV_015",
+            "string": null
+        }
+    ]
+}

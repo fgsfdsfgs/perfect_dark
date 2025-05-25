@@ -1,0 +1,64 @@
+{
+    "messages": [
+        {
+            "id": "L_STAT_000",
+            "context": "L_STAT_000",
+            "string": "|Hintergrund - \n\nDas Bombardement wurde nunmehr eingestellt. Es werden nun Teams, bestehend aus Maianischen Protektoren, zusammengestellt, um die Oberfläche des Planeten zu durchkämmen. Ein spektrales Gen-Scanning hat ergeben, das ein neuer Anwärter auf den Thron der Skedar existiert.\n\n|1. Ziel: - Königsmord Teil Eins\n\nAls Joanna Dark den König der Skedar eliminierte, wurde sein Klon aktiviert. Der Klon müsste in seinem momentanen Stadium sehr desorientiert sein. Daher dürfte er nicht die gleiche Bedrohung darstellen, wie sein Vorgänger. Sie müssen ihn besiegen, bevor er die Kontrolle über die verbleibenden Soldaten der Skedar-Armee erlangt!\n\n|2. Ziel: - Königsmord Teil Zwei\n\nEs gibt noch einen zweiten Klon! Ein Fehler im System der Klon-Behälter hat dazu geführt, dass zwei Könige gleichzeitig aktiviert worden sind. Dieser Klon hatte mehr Zeit, sich zu akklimatisieren. Das bedeutet, dass er um ein Vielfaches gefährlicher ist. Wird er eliminiert, ist die Bedrohung vorüber.\n\n|3. Ziel: - Königsmord Teil Drei\n\nEs tut uns leid, aber es sieht so aus, als gäbe es noch einen dritten König. Aufgrund der starken Interferenzen nach dem Bombardement, konnten ihn unsere Scanner nicht erfassen. Dieser König konnte sich noch weiter entwickeln, als die beiden anderen. Das bedeutet, dass er noch gefährlicher ist. Die Notwendigkeit, ihn zu eliminieren, ist daher noch größer.\n\nENDE\n"
+        },
+        {
+            "id": "L_STAT_001",
+            "context": "L_STAT_001",
+            "string": "KRIEGSSCHREIN\n"
+        },
+        {
+            "id": "L_STAT_002",
+            "context": "L_STAT_002",
+            "string": "|Hintergrund - \n\nDas Bombardement wurde nunmehr eingestellt. Es werden nun Teams, bestehend aus Maianischen Protektoren, zusammengestellt, um die Oberfläche des Planeten zu durchkämmen. Ein spektrales Gen-Scanning hat ergeben, das ein neuer Anwärter auf den Thron der Skedar existiert.\n\n|1. Ziel: - Königsmord Teil Eins\n\nAls Joanna Dark den König der Skedar eliminierte, wurde sein Klon aktiviert. Der Klon müsste in seinem momentanen Stadium sehr desorientiert sein. Daher dürfte er nicht die gleiche Bedrohung darstellen, wie sein Vorgänger. Sie müssen ihn besiegen, bevor er die Kontrolle über die verbleibenden Soldaten der Skedar-Armee erlangt!\n\n|2. Ziel: - Königsmord Teil Zwei\n\nEs gibt noch einen zweiten Klon! Ein Fehler im System der Klon-Behälter hat dazu geführt, dass zwei Könige gleichzeitig aktiviert worden sind. Dieser Klon hatte mehr Zeit, sich zu akklimatisieren. Das bedeutet, dass er um ein Vielfaches gefährlicher ist. Wird er eliminiert, ist die Bedrohung vorüber.\n\nENDE\n"
+        },
+        {
+            "id": "L_STAT_003",
+            "context": "L_STAT_003",
+            "string": "|Hintergrund - \n\nDas Bombardement wurde nunmehr eingestellt. Es werden nun Teams, bestehend aus Maianischen Protektoren, zusammengestellt, um die Oberfläche des Planeten zu durchkämmen. Ein spektrales Gen-Scanning hat ergeben, das ein neuer Anwärter auf den Thron der Skedar existiert.\n\n|1. Ziel: - Königsmord Teil Eins\n\nAls Joanna Dark den König der Skedar eliminierte, wurde sein Klon aktiviert. Der Klon müsste in seinem momentanen Stadium sehr desorientiert sein. Daher dürfte er nicht die gleiche Bedrohung darstellen, wie sein Vorgänger. Sie müssen ihn besiegen, bevor er die Kontrolle über die verbleibenden Soldaten der Skedar-Armee erlangt!\n\nENDE\n"
+        },
+        {
+            "id": "L_STAT_004",
+            "context": "L_STAT_004",
+            "string": "Vernichten Sie den Skedar-König!\n"
+        },
+        {
+            "id": "L_STAT_005",
+            "context": "L_STAT_005",
+            "string": "Vernichten Sie den Skedar-König 2!\n"
+        },
+        {
+            "id": "L_STAT_006",
+            "context": "L_STAT_006",
+            "string": "Vernichten Sie den Skedar-König 3!\n"
+        },
+        {
+            "id": "L_STAT_007",
+            "context": "L_STAT_007",
+            "string": "Der Maianische Anführer wurde eliminiert.\n"
+        },
+        {
+            "id": "L_STAT_008",
+            "context": "L_STAT_008",
+            "string": "Der Skedar-König wurde eliminiert.\n"
+        },
+        {
+            "id": "L_STAT_009",
+            "context": "L_STAT_009",
+            "string": null
+        },
+        {
+            "id": "L_STAT_010",
+            "context": "L_STAT_010",
+            "string": null
+        },
+        {
+            "id": "L_STAT_011",
+            "context": "L_STAT_011",
+            "string": null
+        }
+    ]
+}

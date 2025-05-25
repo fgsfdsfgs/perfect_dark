@@ -1,0 +1,2484 @@
+{
+    "messages": [
+        {
+            "id": "L_MPMENU_000",
+            "context": "L_MPMENU_000",
+            "string": "Suizidal\n"
+        },
+        {
+            "id": "L_MPMENU_001",
+            "context": "L_MPMENU_001",
+            "string": "Muni?\n"
+        },
+        {
+            "id": "L_MPMENU_002",
+            "context": "L_MPMENU_002",
+            "string": "Schilde?\n"
+        },
+        {
+            "id": "L_MPMENU_003",
+            "context": "L_MPMENU_003",
+            "string": "Bestgeschützt\n"
+        },
+        {
+            "id": "L_MPMENU_004",
+            "context": "L_MPMENU_004",
+            "string": "Treffsicher\n"
+        },
+        {
+            "id": "L_MPMENU_005",
+            "context": "L_MPMENU_005",
+            "string": "Professionell\n"
+        },
+        {
+            "id": "L_MPMENU_006",
+            "context": "L_MPMENU_006",
+            "string": "Gefährlich\n"
+        },
+        {
+            "id": "L_MPMENU_007",
+            "context": "L_MPMENU_007",
+            "string": "Harmlos\n"
+        },
+        {
+            "id": "L_MPMENU_008",
+            "context": "L_MPMENU_008",
+            "string": "Feig\n"
+        },
+        {
+            "id": "L_MPMENU_009",
+            "context": "L_MPMENU_009",
+            "string": "Verzweifelt\n"
+        },
+        {
+            "id": "L_MPMENU_010",
+            "context": "L_MPMENU_010",
+            "string": "Ehrenhaft\n"
+        },
+        {
+            "id": "L_MPMENU_011",
+            "context": "L_MPMENU_011",
+            "string": "Unehrenhaft\n"
+        },
+        {
+            "id": "L_MPMENU_012",
+            "context": "L_MPMENU_012",
+            "string": "Eintagsfliege\n"
+        },
+        {
+            "id": "L_MPMENU_013",
+            "context": "L_MPMENU_013",
+            "string": "Methusalem\n"
+        },
+        {
+            "id": "L_MPMENU_014",
+            "context": "L_MPMENU_014",
+            "string": "Doppel-Treffer\n"
+        },
+        {
+            "id": "L_MPMENU_015",
+            "context": "L_MPMENU_015",
+            "string": "Trippel-Treffer\n"
+        },
+        {
+            "id": "L_MPMENU_016",
+            "context": "L_MPMENU_016",
+            "string": "Quadro-Treffer\n"
+        },
+        {
+            "id": "L_MPMENU_017",
+            "context": "L_MPMENU_017",
+            "string": "Spiel-Einstellungen\n"
+        },
+        {
+            "id": "L_MPMENU_018",
+            "context": "L_MPMENU_018",
+            "string": "Laden\n"
+        },
+        {
+            "id": "L_MPMENU_019",
+            "context": "L_MPMENU_019",
+            "string": "Szenario\n"
+        },
+        {
+            "id": "L_MPMENU_020",
+            "context": "L_MPMENU_020",
+            "string": "Arena\n"
+        },
+        {
+            "id": "L_MPMENU_021",
+            "context": "L_MPMENU_021",
+            "string": "Optionen\n"
+        },
+        {
+            "id": "L_MPMENU_022",
+            "context": "L_MPMENU_022",
+            "string": "Teams\n"
+        },
+        {
+            "id": "L_MPMENU_023",
+            "context": "L_MPMENU_023",
+            "string": "Waffen\n"
+        },
+        {
+            "id": "L_MPMENU_024",
+            "context": "L_MPMENU_024",
+            "string": "Limits\n"
+        },
+        {
+            "id": "L_MPMENU_025",
+            "context": "L_MPMENU_025",
+            "string": "Simulanten\n"
+        },
+        {
+            "id": "L_MPMENU_026",
+            "context": "L_MPMENU_026",
+            "string": "Speichern\n"
+        },
+        {
+            "id": "L_MPMENU_027",
+            "context": "L_MPMENU_027",
+            "string": "Spiel abbrechen\n"
+        },
+        {
+            "id": "L_MPMENU_028",
+            "context": "L_MPMENU_028",
+            "string": "Spieler-Einstellungen\n"
+        },
+        {
+            "id": "L_MPMENU_029",
+            "context": "L_MPMENU_029",
+            "string": "Spieler laden\n"
+        },
+        {
+            "id": "L_MPMENU_030",
+            "context": "L_MPMENU_030",
+            "string": "Name\n"
+        },
+        {
+            "id": "L_MPMENU_031",
+            "context": "L_MPMENU_031",
+            "string": "Charakter\n"
+        },
+        {
+            "id": "L_MPMENU_032",
+            "context": "L_MPMENU_032",
+            "string": "Handicap\n"
+        },
+        {
+            "id": "L_MPMENU_033",
+            "context": "L_MPMENU_033",
+            "string": "Steuerung\n"
+        },
+        {
+            "id": "L_MPMENU_034",
+            "context": "L_MPMENU_034",
+            "string": "Spieler-Optionen\n"
+        },
+        {
+            "id": "L_MPMENU_035",
+            "context": "L_MPMENU_035",
+            "string": "Statistik\n"
+        },
+        {
+            "id": "L_MPMENU_036",
+            "context": "L_MPMENU_036",
+            "string": "Spielstart\n"
+        },
+        {
+            "id": "L_MPMENU_037",
+            "context": "L_MPMENU_037",
+            "string": "Abbruch\n"
+        },
+        {
+            "id": "L_MPMENU_038",
+            "context": "L_MPMENU_038",
+            "string": "Spieler speichern\n"
+        },
+        {
+            "id": "L_MPMENU_039",
+            "context": "L_MPMENU_039",
+            "string": "Kopie speichern\n"
+        },
+        {
+            "id": "L_MPMENU_040",
+            "context": "L_MPMENU_040",
+            "string": "Zeugs\n"
+        },
+        {
+            "id": "L_MPMENU_041",
+            "context": "L_MPMENU_041",
+            "string": "Soundtrack\n"
+        },
+        {
+            "id": "L_MPMENU_042",
+            "context": "L_MPMENU_042",
+            "string": "Team-Namen\n"
+        },
+        {
+            "id": "L_MPMENU_043",
+            "context": "L_MPMENU_043",
+            "string": "Rate\n"
+        },
+        {
+            "id": "L_MPMENU_044",
+            "context": "L_MPMENU_044",
+            "string": "Sperre\n"
+        },
+        {
+            "id": "L_MPMENU_045",
+            "context": "L_MPMENU_045",
+            "string": "keine\n"
+        },
+        {
+            "id": "L_MPMENU_046",
+            "context": "L_MPMENU_046",
+            "string": "Letzt. Gewinner\n"
+        },
+        {
+            "id": "L_MPMENU_047",
+            "context": "L_MPMENU_047",
+            "string": "Letzt. Verlierer\n"
+        },
+        {
+            "id": "L_MPMENU_048",
+            "context": "L_MPMENU_048",
+            "string": "zufällig\n"
+        },
+        {
+            "id": "L_MPMENU_049",
+            "context": "L_MPMENU_049",
+            "string": "Challenge\n"
+        },
+        {
+            "id": "L_MPMENU_050",
+            "context": "L_MPMENU_050",
+            "string": "Kampf-Challenge\n"
+        },
+        {
+            "id": "L_MPMENU_051",
+            "context": "L_MPMENU_051",
+            "string": "Challenge abbrechen\n"
+        },
+        {
+            "id": "L_MPMENU_052",
+            "context": "L_MPMENU_052",
+            "string": "Abbruch\n"
+        },
+        {
+            "id": "L_MPMENU_053",
+            "context": "L_MPMENU_053",
+            "string": "Möchten Sie wirklich\nabbrechen?\n"
+        },
+        {
+            "id": "L_MPMENU_054",
+            "context": "L_MPMENU_054",
+            "string": "Abbruch\n"
+        },
+        {
+            "id": "L_MPMENU_055",
+            "context": "L_MPMENU_055",
+            "string": "Zurück\n"
+        },
+        {
+            "id": "L_MPMENU_056",
+            "context": "L_MPMENU_056",
+            "string": "%s\n"
+        },
+        {
+            "id": "L_MPMENU_057",
+            "context": "L_MPMENU_057",
+            "string": "Annehmen\n"
+        },
+        {
+            "id": "L_MPMENU_058",
+            "context": "L_MPMENU_058",
+            "string": "Zurück\n"
+        },
+        {
+            "id": "L_MPMENU_059",
+            "context": "L_MPMENU_059",
+            "string": "Team-Namen\n"
+        },
+        {
+            "id": "L_MPMENU_060",
+            "context": "L_MPMENU_060",
+            "string": "Zurück\n"
+        },
+        {
+            "id": "L_MPMENU_061",
+            "context": "L_MPMENU_061",
+            "string": "Team-Name ändern\n"
+        },
+        {
+            "id": "L_MPMENU_062",
+            "context": "L_MPMENU_062",
+            "string": "Soundtrack\n"
+        },
+        {
+            "id": "L_MPMENU_063",
+            "context": "L_MPMENU_063",
+            "string": "Derzeit:\n"
+        },
+        {
+            "id": "L_MPMENU_064",
+            "context": "L_MPMENU_064",
+            "string": "Multiple Sound\n"
+        },
+        {
+            "id": "L_MPMENU_065",
+            "context": "L_MPMENU_065",
+            "string": "Zurück\n"
+        },
+        {
+            "id": "L_MPMENU_066",
+            "context": "L_MPMENU_066",
+            "string": "Multiple Sounds\n"
+        },
+        {
+            "id": "L_MPMENU_067",
+            "context": "L_MPMENU_067",
+            "string": "zufällig\n"
+        },
+        {
+            "id": "L_MPMENU_068",
+            "context": "L_MPMENU_068",
+            "string": "Wähle Sounds\n"
+        },
+        {
+            "id": "L_MPMENU_069",
+            "context": "L_MPMENU_069",
+            "string": "Wähle Sound\n"
+        },
+        {
+            "id": "L_MPMENU_070",
+            "context": "L_MPMENU_070",
+            "string": "Team-Steuerung\n"
+        },
+        {
+            "id": "L_MPMENU_071",
+            "context": "L_MPMENU_071",
+            "string": "Teams ermächtigt\n"
+        },
+        {
+            "id": "L_MPMENU_072",
+            "context": "L_MPMENU_072",
+            "string": "Teams:\n"
+        },
+        {
+            "id": "L_MPMENU_073",
+            "context": "L_MPMENU_073",
+            "string": "Auto-Team...\n"
+        },
+        {
+            "id": "L_MPMENU_074",
+            "context": "L_MPMENU_074",
+            "string": "Zurück\n"
+        },
+        {
+            "id": "L_MPMENU_075",
+            "context": "L_MPMENU_075",
+            "string": "Auto-Team\n"
+        },
+        {
+            "id": "L_MPMENU_076",
+            "context": "L_MPMENU_076",
+            "string": "Zwei Teams\n"
+        },
+        {
+            "id": "L_MPMENU_077",
+            "context": "L_MPMENU_077",
+            "string": "Drei Teams\n"
+        },
+        {
+            "id": "L_MPMENU_078",
+            "context": "L_MPMENU_078",
+            "string": "Vier Teams\n"
+        },
+        {
+            "id": "L_MPMENU_079",
+            "context": "L_MPMENU_079",
+            "string": "Maximum Teams\n"
+        },
+        {
+            "id": "L_MPMENU_080",
+            "context": "L_MPMENU_080",
+            "string": "Menschen vs. Sim.\n"
+        },
+        {
+            "id": "L_MPMENU_081",
+            "context": "L_MPMENU_081",
+            "string": "Menschen-Sim.-Paare\n"
+        },
+        {
+            "id": "L_MPMENU_082",
+            "context": "L_MPMENU_082",
+            "string": "Zurück\n"
+        },
+        {
+            "id": "L_MPMENU_083",
+            "context": "L_MPMENU_083",
+            "string": "Simulanten\n"
+        },
+        {
+            "id": "L_MPMENU_084",
+            "context": "L_MPMENU_084",
+            "string": "Simulant hinzufügen...\n"
+        },
+        {
+            "id": "L_MPMENU_085",
+            "context": "L_MPMENU_085",
+            "string": "1:\n"
+        },
+        {
+            "id": "L_MPMENU_086",
+            "context": "L_MPMENU_086",
+            "string": "2:\n"
+        },
+        {
+            "id": "L_MPMENU_087",
+            "context": "L_MPMENU_087",
+            "string": "3:\n"
+        },
+        {
+            "id": "L_MPMENU_088",
+            "context": "L_MPMENU_088",
+            "string": "4:\n"
+        },
+        {
+            "id": "L_MPMENU_089",
+            "context": "L_MPMENU_089",
+            "string": "5:\n"
+        },
+        {
+            "id": "L_MPMENU_090",
+            "context": "L_MPMENU_090",
+            "string": "6:\n"
+        },
+        {
+            "id": "L_MPMENU_091",
+            "context": "L_MPMENU_091",
+            "string": "7:\n"
+        },
+        {
+            "id": "L_MPMENU_092",
+            "context": "L_MPMENU_092",
+            "string": "8:\n"
+        },
+        {
+            "id": "L_MPMENU_093",
+            "context": "L_MPMENU_093",
+            "string": "Alle löschen\n"
+        },
+        {
+            "id": "L_MPMENU_094",
+            "context": "L_MPMENU_094",
+            "string": "Zurück\n"
+        },
+        {
+            "id": "L_MPMENU_095",
+            "context": "L_MPMENU_095",
+            "string": "Schwierigkeit:\n"
+        },
+        {
+            "id": "L_MPMENU_096",
+            "context": "L_MPMENU_096",
+            "string": "Typ wechseln...\n"
+        },
+        {
+            "id": "L_MPMENU_097",
+            "context": "L_MPMENU_097",
+            "string": "Charakter...\n"
+        },
+        {
+            "id": "L_MPMENU_098",
+            "context": "L_MPMENU_098",
+            "string": "Simulant löschen\n"
+        },
+        {
+            "id": "L_MPMENU_099",
+            "context": "L_MPMENU_099",
+            "string": "Zurück\n"
+        },
+        {
+            "id": "L_MPMENU_100",
+            "context": "L_MPMENU_100",
+            "string": "Simulanten-Charakter\n"
+        },
+        {
+            "id": "L_MPMENU_101",
+            "context": "L_MPMENU_101",
+            "string": "Simulant hinzufügen\n"
+        },
+        {
+            "id": "L_MPMENU_102",
+            "context": "L_MPMENU_102",
+            "string": "Simulant wechseln\n"
+        },
+        {
+            "id": "L_MPMENU_103",
+            "context": "L_MPMENU_103",
+            "string": "Normale Simulanten\n"
+        },
+        {
+            "id": "L_MPMENU_104",
+            "context": "L_MPMENU_104",
+            "string": "Spezielle Simulanten\n"
+        },
+        {
+            "id": "L_MPMENU_105",
+            "context": "L_MPMENU_105",
+            "string": "Fertig!\n"
+        },
+        {
+            "id": "L_MPMENU_106",
+            "context": "L_MPMENU_106",
+            "string": "...und bereit\n"
+        },
+        {
+            "id": "L_MPMENU_107",
+            "context": "L_MPMENU_107",
+            "string": "Limits\n"
+        },
+        {
+            "id": "L_MPMENU_108",
+            "context": "L_MPMENU_108",
+            "string": "Zeit\n"
+        },
+        {
+            "id": "L_MPMENU_109",
+            "context": "L_MPMENU_109",
+            "string": "Score\n"
+        },
+        {
+            "id": "L_MPMENU_110",
+            "context": "L_MPMENU_110",
+            "string": "Grundeinstellung\n"
+        },
+        {
+            "id": "L_MPMENU_111",
+            "context": "L_MPMENU_111",
+            "string": "Zurück\n"
+        },
+        {
+            "id": "L_MPMENU_112",
+            "context": "L_MPMENU_112",
+            "string": "Unbegr.\n"
+        },
+        {
+            "id": "L_MPMENU_113",
+            "context": "L_MPMENU_113",
+            "string": "%d\n"
+        },
+        {
+            "id": "L_MPMENU_114",
+            "context": "L_MPMENU_114",
+            "string": "%d Min\n"
+        },
+        {
+            "id": "L_MPMENU_115",
+            "context": "L_MPMENU_115",
+            "string": "Arena\n"
+        },
+        {
+            "id": "L_MPMENU_116",
+            "context": "L_MPMENU_116",
+            "string": "Dark\n"
+        },
+        {
+            "id": "L_MPMENU_117",
+            "context": "L_MPMENU_117",
+            "string": "Classic\n"
+        },
+        {
+            "id": "L_MPMENU_118",
+            "context": "L_MPMENU_118",
+            "string": "zufällig\n"
+        },
+        {
+            "id": "L_MPMENU_119",
+            "context": "L_MPMENU_119",
+            "string": "Skedar"
+        },
+        {
+            "id": "L_MPMENU_120",
+            "context": "L_MPMENU_120",
+            "string": "Rohre"
+        },
+        {
+            "id": "L_MPMENU_121",
+            "context": "L_MPMENU_121",
+            "string": "Graben"
+        },
+        {
+            "id": "L_MPMENU_122",
+            "context": "L_MPMENU_122",
+            "string": "G5-Building"
+        },
+        {
+            "id": "L_MPMENU_123",
+            "context": "L_MPMENU_123",
+            "string": "Kanäle"
+        },
+        {
+            "id": "L_MPMENU_124",
+            "context": "L_MPMENU_124",
+            "string": "Lagerhaus"
+        },
+        {
+            "id": "L_MPMENU_125",
+            "context": "L_MPMENU_125",
+            "string": "Netz"
+        },
+        {
+            "id": "L_MPMENU_126",
+            "context": "L_MPMENU_126",
+            "string": "Ruinen"
+        },
+        {
+            "id": "L_MPMENU_127",
+            "context": "L_MPMENU_127",
+            "string": "Area 52"
+        },
+        {
+            "id": "L_MPMENU_128",
+            "context": "L_MPMENU_128",
+            "string": "Basis"
+        },
+        {
+            "id": "L_MPMENU_129",
+            "context": "L_MPMENU_129",
+            "string": "Dächer"
+        },
+        {
+            "id": "L_MPMENU_130",
+            "context": "L_MPMENU_130",
+            "string": "Festung"
+        },
+        {
+            "id": "L_MPMENU_131",
+            "context": "L_MPMENU_131",
+            "string": "Villa"
+        },
+        {
+            "id": "L_MPMENU_132",
+            "context": "L_MPMENU_132",
+            "string": "Parkdeck"
+        },
+        {
+            "id": "L_MPMENU_133",
+            "context": "L_MPMENU_133",
+            "string": "Tempel"
+        },
+        {
+            "id": "L_MPMENU_134",
+            "context": "L_MPMENU_134",
+            "string": "Komplex"
+        },
+        {
+            "id": "L_MPMENU_135",
+            "context": "L_MPMENU_135",
+            "string": "Glückseligkeit"
+        },
+        {
+            "id": "L_MPMENU_136",
+            "context": "L_MPMENU_136",
+            "string": "Zufällig"
+        },
+        {
+            "id": "L_MPMENU_137",
+            "context": "L_MPMENU_137",
+            "string": "Spieler laden\n"
+        },
+        {
+            "id": "L_MPMENU_138",
+            "context": "L_MPMENU_138",
+            "string": "Abbruch\n"
+        },
+        {
+            "id": "L_MPMENU_139",
+            "context": "L_MPMENU_139",
+            "string": "Laden\n"
+        },
+        {
+            "id": "L_MPMENU_140",
+            "context": "L_MPMENU_140",
+            "string": "%s:  Szenario: %s   Arena: %s    Simulanten: %d"
+        },
+        {
+            "id": "L_MPMENU_141",
+            "context": "L_MPMENU_141",
+            "string": "Voreinstellungen\n"
+        },
+        {
+            "id": "L_MPMENU_142",
+            "context": "L_MPMENU_142",
+            "string": "Spieler-Name\n"
+        },
+        {
+            "id": "L_MPMENU_143",
+            "context": "L_MPMENU_143",
+            "string": "Charakter\n"
+        },
+        {
+            "id": "L_MPMENU_144",
+            "context": "L_MPMENU_144",
+            "string": "Kopf laden...\n"
+        },
+        {
+            "id": "L_MPMENU_145",
+            "context": "L_MPMENU_145",
+            "string": "Statistik für %s\n"
+        },
+        {
+            "id": "L_MPMENU_146",
+            "context": "L_MPMENU_146",
+            "string": "Treff.:\n"
+        },
+        {
+            "id": "L_MPMENU_147",
+            "context": "L_MPMENU_147",
+            "string": "Versuche:\n"
+        },
+        {
+            "id": "L_MPMENU_148",
+            "context": "L_MPMENU_148",
+            "string": "Genauigkeit:\n"
+        },
+        {
+            "id": "L_MPMENU_149",
+            "context": "L_MPMENU_149",
+            "string": "Kopftreffer:\n"
+        },
+        {
+            "id": "L_MPMENU_150",
+            "context": "L_MPMENU_150",
+            "string": "Munition:\n"
+        },
+        {
+            "id": "L_MPMENU_151",
+            "context": "L_MPMENU_151",
+            "string": "Schaden:\n"
+        },
+        {
+            "id": "L_MPMENU_152",
+            "context": "L_MPMENU_152",
+            "string": "Schmerzen:\n"
+        },
+        {
+            "id": "L_MPMENU_153",
+            "context": "L_MPMENU_153",
+            "string": "Spiele gesamt:\n"
+        },
+        {
+            "id": "L_MPMENU_154",
+            "context": "L_MPMENU_154",
+            "string": "Gewinne:\n"
+        },
+        {
+            "id": "L_MPMENU_155",
+            "context": "L_MPMENU_155",
+            "string": "Verluste:\n"
+        },
+        {
+            "id": "L_MPMENU_156",
+            "context": "L_MPMENU_156",
+            "string": "Zeit:\n"
+        },
+        {
+            "id": "L_MPMENU_157",
+            "context": "L_MPMENU_157",
+            "string": "Distanz:\n"
+        },
+        {
+            "id": "L_MPMENU_158",
+            "context": "L_MPMENU_158",
+            "string": "Medaillen:\n"
+        },
+        {
+            "id": "L_MPMENU_159",
+            "context": "L_MPMENU_159",
+            "string": "   Genauigkeit:\n"
+        },
+        {
+            "id": "L_MPMENU_160",
+            "context": "L_MPMENU_160",
+            "string": "   Kopftreffer:\n"
+        },
+        {
+            "id": "L_MPMENU_161",
+            "context": "L_MPMENU_161",
+            "string": "   Meisterschütze:\n"
+        },
+        {
+            "id": "L_MPMENU_162",
+            "context": "L_MPMENU_162",
+            "string": "   Überlebender:\n"
+        },
+        {
+            "id": "L_MPMENU_163",
+            "context": "L_MPMENU_163",
+            "string": "Ihr Titel:\n"
+        },
+        {
+            "id": "L_MPMENU_164",
+            "context": "L_MPMENU_164",
+            "string": "Zurück\n"
+        },
+        {
+            "id": "L_MPMENU_165",
+            "context": "L_MPMENU_165",
+            "string": "Challenges OK\n"
+        },
+        {
+            "id": "L_MPMENU_166",
+            "context": "L_MPMENU_166",
+            "string": "Zurück\n"
+        },
+        {
+            "id": "L_MPMENU_167",
+            "context": "L_MPMENU_167",
+            "string": "Optionen\n"
+        },
+        {
+            "id": "L_MPMENU_168",
+            "context": "L_MPMENU_168",
+            "string": "Items anzeigen\n"
+        },
+        {
+            "id": "L_MPMENU_169",
+            "context": "L_MPMENU_169",
+            "string": "Spieler anzeigen\n"
+        },
+        {
+            "id": "L_MPMENU_170",
+            "context": "L_MPMENU_170",
+            "string": "Teams anzeigen\n"
+        },
+        {
+            "id": "L_MPMENU_171",
+            "context": "L_MPMENU_171",
+            "string": "Radar\n"
+        },
+        {
+            "id": "L_MPMENU_172",
+            "context": "L_MPMENU_172",
+            "string": "Zurück\n"
+        },
+        {
+            "id": "L_MPMENU_173",
+            "context": "L_MPMENU_173",
+            "string": "Bewaffnung\n"
+        },
+        {
+            "id": "L_MPMENU_174",
+            "context": "L_MPMENU_174",
+            "string": "Einstellung:\n"
+        },
+        {
+            "id": "L_MPMENU_175",
+            "context": "L_MPMENU_175",
+            "string": "Aktuelle Einstellung:\n"
+        },
+        {
+            "id": "L_MPMENU_176",
+            "context": "L_MPMENU_176",
+            "string": "1:\n"
+        },
+        {
+            "id": "L_MPMENU_177",
+            "context": "L_MPMENU_177",
+            "string": "2:\n"
+        },
+        {
+            "id": "L_MPMENU_178",
+            "context": "L_MPMENU_178",
+            "string": "3:\n"
+        },
+        {
+            "id": "L_MPMENU_179",
+            "context": "L_MPMENU_179",
+            "string": "4:\n"
+        },
+        {
+            "id": "L_MPMENU_180",
+            "context": "L_MPMENU_180",
+            "string": "5:\n"
+        },
+        {
+            "id": "L_MPMENU_181",
+            "context": "L_MPMENU_181",
+            "string": "6:\n"
+        },
+        {
+            "id": "L_MPMENU_182",
+            "context": "L_MPMENU_182",
+            "string": "Zurück\n"
+        },
+        {
+            "id": "L_MPMENU_183",
+            "context": "L_MPMENU_183",
+            "string": "Speichern\n"
+        },
+        {
+            "id": "L_MPMENU_184",
+            "context": "L_MPMENU_184",
+            "string": "Möchten Sie das \nbestehende File\nüberschreiben?\n"
+        },
+        {
+            "id": "L_MPMENU_185",
+            "context": "L_MPMENU_185",
+            "string": "Überschreiben\n"
+        },
+        {
+            "id": "L_MPMENU_186",
+            "context": "L_MPMENU_186",
+            "string": "Kopieren\n"
+        },
+        {
+            "id": "L_MPMENU_187",
+            "context": "L_MPMENU_187",
+            "string": "Nicht speichern\n"
+        },
+        {
+            "id": "L_MPMENU_188",
+            "context": "L_MPMENU_188",
+            "string": "File-Name\n"
+        },
+        {
+            "id": "L_MPMENU_189",
+            "context": "L_MPMENU_189",
+            "string": "Bitte benennen Sie\nIhr File:\n"
+        },
+        {
+            "id": "L_MPMENU_190",
+            "context": "L_MPMENU_190",
+            "string": "Bestätigen\n"
+        },
+        {
+            "id": "L_MPMENU_191",
+            "context": "L_MPMENU_191",
+            "string": "Ihr Spieler-File wird\nimmer automatisch\ngespeichert.\n"
+        },
+        {
+            "id": "L_MPMENU_192",
+            "context": "L_MPMENU_192",
+            "string": "Kopie speichern?\n"
+        },
+        {
+            "id": "L_MPMENU_193",
+            "context": "L_MPMENU_193",
+            "string": "Nein\n"
+        },
+        {
+            "id": "L_MPMENU_194",
+            "context": "L_MPMENU_194",
+            "string": "Ja\n"
+        },
+        {
+            "id": "L_MPMENU_195",
+            "context": "L_MPMENU_195",
+            "string": "Abbruch\n"
+        },
+        {
+            "id": "L_MPMENU_196",
+            "context": "L_MPMENU_196",
+            "string": "Möchten Sie wirklich\nabbrechen?\n"
+        },
+        {
+            "id": "L_MPMENU_197",
+            "context": "L_MPMENU_197",
+            "string": "Abbrechen\n"
+        },
+        {
+            "id": "L_MPMENU_198",
+            "context": "L_MPMENU_198",
+            "string": "Zurück\n"
+        },
+        {
+            "id": "L_MPMENU_199",
+            "context": "L_MPMENU_199",
+            "string": "Steuerung\n"
+        },
+        {
+            "id": "L_MPMENU_200",
+            "context": "L_MPMENU_200",
+            "string": "Steuerungsart\n"
+        },
+        {
+            "id": "L_MPMENU_201",
+            "context": "L_MPMENU_201",
+            "string": "Blick vertauschen\n"
+        },
+        {
+            "id": "L_MPMENU_202",
+            "context": "L_MPMENU_202",
+            "string": "Vorausschauen\n"
+        },
+        {
+            "id": "L_MPMENU_203",
+            "context": "L_MPMENU_203",
+            "string": "Kopfneigung\n"
+        },
+        {
+            "id": "L_MPMENU_204",
+            "context": "L_MPMENU_204",
+            "string": "Auto-Ziel\n"
+        },
+        {
+            "id": "L_MPMENU_205",
+            "context": "L_MPMENU_205",
+            "string": "Ziel-Steuerung\n"
+        },
+        {
+            "id": "L_MPMENU_206",
+            "context": "L_MPMENU_206",
+            "string": "Screen-Anzeigen\n"
+        },
+        {
+            "id": "L_MPMENU_207",
+            "context": "L_MPMENU_207",
+            "string": "Ziel zeigen\n"
+        },
+        {
+            "id": "L_MPMENU_208",
+            "context": "L_MPMENU_208",
+            "string": "Zoom-Bereich\n"
+        },
+        {
+            "id": "L_MPMENU_209",
+            "context": "L_MPMENU_209",
+            "string": "Munition anzeigen\n"
+        },
+        {
+            "id": "L_MPMENU_210",
+            "context": "L_MPMENU_210",
+            "string": "Funktion anzeigen\n"
+        },
+        {
+            "id": "L_MPMENU_211",
+            "context": "L_MPMENU_211",
+            "string": "Paintball\n"
+        },
+        {
+            "id": "L_MPMENU_212",
+            "context": "L_MPMENU_212",
+            "string": "Zurück\n"
+        },
+        {
+            "id": "L_MPMENU_213",
+            "context": "L_MPMENU_213",
+            "string": "Halten\n"
+        },
+        {
+            "id": "L_MPMENU_214",
+            "context": "L_MPMENU_214",
+            "string": "Umschalten\n"
+        },
+        {
+            "id": "L_MPMENU_215",
+            "context": "L_MPMENU_215",
+            "string": "Kampf-Optionen\n"
+        },
+        {
+            "id": "L_MPMENU_216",
+            "context": "L_MPMENU_216",
+            "string": "Aktenkoffer-Optionen\n"
+        },
+        {
+            "id": "L_MPMENU_217",
+            "context": "L_MPMENU_217",
+            "string": "Hacker-Optionen\n"
+        },
+        {
+            "id": "L_MPMENU_218",
+            "context": "L_MPMENU_218",
+            "string": "Pop a Cap-Optionen\n"
+        },
+        {
+            "id": "L_MPMENU_219",
+            "context": "L_MPMENU_219",
+            "string": "Hügel-Optionen\n"
+        },
+        {
+            "id": "L_MPMENU_220",
+            "context": "L_MPMENU_220",
+            "string": "Fang-Optionen\n"
+        },
+        {
+            "id": "L_MPMENU_221",
+            "context": "L_MPMENU_221",
+            "string": "Boxen-Optionen\n"
+        },
+        {
+            "id": "L_MPMENU_222",
+            "context": "L_MPMENU_222",
+            "string": "Ein Treffer\n"
+        },
+        {
+            "id": "L_MPMENU_223",
+            "context": "L_MPMENU_223",
+            "string": "Zeitlupe\n"
+        },
+        {
+            "id": "L_MPMENU_224",
+            "context": "L_MPMENU_224",
+            "string": "Zeitraffer\n"
+        },
+        {
+            "id": "L_MPMENU_225",
+            "context": "L_MPMENU_225",
+            "string": "Team anzeigen\n"
+        },
+        {
+            "id": "L_MPMENU_226",
+            "context": "L_MPMENU_226",
+            "string": "Kein Radar\n"
+        },
+        {
+            "id": "L_MPMENU_227",
+            "context": "L_MPMENU_227",
+            "string": "Kein Auto-Ziel\n"
+        },
+        {
+            "id": "L_MPMENU_228",
+            "context": "L_MPMENU_228",
+            "string": "Spieler nicht zeigen\n"
+        },
+        {
+            "id": "L_MPMENU_229",
+            "context": "L_MPMENU_229",
+            "string": "Items nicht zeigen\n"
+        },
+        {
+            "id": "L_MPMENU_230",
+            "context": "L_MPMENU_230",
+            "string": "Ziel anzeigen\n"
+        },
+        {
+            "id": "L_MPMENU_231",
+            "context": "L_MPMENU_231",
+            "string": "Terminal anzeigen\n"
+        },
+        {
+            "id": "L_MPMENU_232",
+            "context": "L_MPMENU_232",
+            "string": "Boxen am Radar zeigen\n"
+        },
+        {
+            "id": "L_MPMENU_233",
+            "context": "L_MPMENU_233",
+            "string": "Hügel zeigen\n"
+        },
+        {
+            "id": "L_MPMENU_234",
+            "context": "L_MPMENU_234",
+            "string": "Mobiler Hügel\n"
+        },
+        {
+            "id": "L_MPMENU_235",
+            "context": "L_MPMENU_235",
+            "string": "Zeit\n"
+        },
+        {
+            "id": "L_MPMENU_236",
+            "context": "L_MPMENU_236",
+            "string": "Am Radar zeigen\n"
+        },
+        {
+            "id": "L_MPMENU_237",
+            "context": "L_MPMENU_237",
+            "string": "Koffer zeigen\n"
+        },
+        {
+            "id": "L_MPMENU_238",
+            "context": "L_MPMENU_238",
+            "string": "Am Radar zeigen\n"
+        },
+        {
+            "id": "L_MPMENU_239",
+            "context": "L_MPMENU_239",
+            "string": "Zurück\n"
+        },
+        {
+            "id": "L_MPMENU_240",
+            "context": "L_MPMENU_240",
+            "string": "Aus\n"
+        },
+        {
+            "id": "L_MPMENU_241",
+            "context": "L_MPMENU_241",
+            "string": "Ein\n"
+        },
+        {
+            "id": "L_MPMENU_242",
+            "context": "L_MPMENU_242",
+            "string": "Smart\n"
+        },
+        {
+            "id": "L_MPMENU_243",
+            "context": "L_MPMENU_243",
+            "string": "Szenario\n"
+        },
+        {
+            "id": "L_MPMENU_244",
+            "context": "L_MPMENU_244",
+            "string": "Frei für alle!\n"
+        },
+        {
+            "id": "L_MPMENU_245",
+            "context": "L_MPMENU_245",
+            "string": "-Teamwork-\n"
+        },
+        {
+            "id": "L_MPMENU_246",
+            "context": "L_MPMENU_246",
+            "string": "Kampf"
+        },
+        {
+            "id": "L_MPMENU_247",
+            "context": "L_MPMENU_247",
+            "string": "Der Koffer 1"
+        },
+        {
+            "id": "L_MPMENU_248",
+            "context": "L_MPMENU_248",
+            "string": "Hacker-Zentrale"
+        },
+        {
+            "id": "L_MPMENU_249",
+            "context": "L_MPMENU_249",
+            "string": "Pop a Cap"
+        },
+        {
+            "id": "L_MPMENU_250",
+            "context": "L_MPMENU_250",
+            "string": "Herr des Hügels"
+        },
+        {
+            "id": "L_MPMENU_251",
+            "context": "L_MPMENU_251",
+            "string": "Der Koffer 2"
+        },
+        {
+            "id": "L_MPMENU_252",
+            "context": "L_MPMENU_252",
+            "string": "Berühr die Box"
+        },
+        {
+            "id": "L_MPMENU_253",
+            "context": "L_MPMENU_253",
+            "string": "Kampf"
+        },
+        {
+            "id": "L_MPMENU_254",
+            "context": "L_MPMENU_254",
+            "string": "Aktenkoffer"
+        },
+        {
+            "id": "L_MPMENU_255",
+            "context": "L_MPMENU_255",
+            "string": "Hacker"
+        },
+        {
+            "id": "L_MPMENU_256",
+            "context": "L_MPMENU_256",
+            "string": "Pop"
+        },
+        {
+            "id": "L_MPMENU_257",
+            "context": "L_MPMENU_257",
+            "string": "Hügel"
+        },
+        {
+            "id": "L_MPMENU_258",
+            "context": "L_MPMENU_258",
+            "string": "Fang"
+        },
+        {
+            "id": "L_MPMENU_259",
+            "context": "L_MPMENU_259",
+            "string": "Boxen"
+        },
+        {
+            "id": "L_MPMENU_260",
+            "context": "L_MPMENU_260",
+            "string": "Game Over\n"
+        },
+        {
+            "id": "L_MPMENU_261",
+            "context": "L_MPMENU_261",
+            "string": "Titel:\n"
+        },
+        {
+            "id": "L_MPMENU_262",
+            "context": "L_MPMENU_262",
+            "string": "Bevorzugte Waffe:\n"
+        },
+        {
+            "id": "L_MPMENU_263",
+            "context": "L_MPMENU_263",
+            "string": "Preise:\n"
+        },
+        {
+            "id": "L_MPMENU_264",
+            "context": "L_MPMENU_264",
+            "string": "1.\n"
+        },
+        {
+            "id": "L_MPMENU_265",
+            "context": "L_MPMENU_265",
+            "string": "2.\n"
+        },
+        {
+            "id": "L_MPMENU_266",
+            "context": "L_MPMENU_266",
+            "string": "3.\n"
+        },
+        {
+            "id": "L_MPMENU_267",
+            "context": "L_MPMENU_267",
+            "string": "4.\n"
+        },
+        {
+            "id": "L_MPMENU_268",
+            "context": "L_MPMENU_268",
+            "string": "5.\n"
+        },
+        {
+            "id": "L_MPMENU_269",
+            "context": "L_MPMENU_269",
+            "string": "6.\n"
+        },
+        {
+            "id": "L_MPMENU_270",
+            "context": "L_MPMENU_270",
+            "string": "7.\n"
+        },
+        {
+            "id": "L_MPMENU_271",
+            "context": "L_MPMENU_271",
+            "string": "8.\n"
+        },
+        {
+            "id": "L_MPMENU_272",
+            "context": "L_MPMENU_272",
+            "string": "9.\n"
+        },
+        {
+            "id": "L_MPMENU_273",
+            "context": "L_MPMENU_273",
+            "string": "10.\n"
+        },
+        {
+            "id": "L_MPMENU_274",
+            "context": "L_MPMENU_274",
+            "string": "11.\n"
+        },
+        {
+            "id": "L_MPMENU_275",
+            "context": "L_MPMENU_275",
+            "string": "12.\n"
+        },
+        {
+            "id": "L_MPMENU_276",
+            "context": "L_MPMENU_276",
+            "string": "Spieler-Bewertung\n"
+        },
+        {
+            "id": "L_MPMENU_277",
+            "context": "L_MPMENU_277",
+            "string": "Versuche\n"
+        },
+        {
+            "id": "L_MPMENU_278",
+            "context": "L_MPMENU_278",
+            "string": "Score\n"
+        },
+        {
+            "id": "L_MPMENU_279",
+            "context": "L_MPMENU_279",
+            "string": "Team-Bewertung\n"
+        },
+        {
+            "id": "L_MPMENU_280",
+            "context": "L_MPMENU_280",
+            "string": "Statistik für %s"
+        },
+        {
+            "id": "L_MPMENU_281",
+            "context": "L_MPMENU_281",
+            "string": "Suizide\n"
+        },
+        {
+            "id": "L_MPMENU_282",
+            "context": "L_MPMENU_282",
+            "string": "Versuche\n"
+        },
+        {
+            "id": "L_MPMENU_283",
+            "context": "L_MPMENU_283",
+            "string": "Hits\n"
+        },
+        {
+            "id": "L_MPMENU_284",
+            "context": "L_MPMENU_284",
+            "string": "Inventar\n"
+        },
+        {
+            "id": "L_MPMENU_285",
+            "context": "L_MPMENU_285",
+            "string": "Steuerung\n"
+        },
+        {
+            "id": "L_MPMENU_286",
+            "context": "L_MPMENU_286",
+            "string": "Spielzeit:\n"
+        },
+        {
+            "id": "L_MPMENU_287",
+            "context": "L_MPMENU_287",
+            "string": "Spiel beenden\n"
+        },
+        {
+            "id": "L_MPMENU_288",
+            "context": "L_MPMENU_288",
+            "string": "Pause\n"
+        },
+        {
+            "id": "L_MPMENU_289",
+            "context": "L_MPMENU_289",
+            "string": "Pause beenden\n"
+        },
+        {
+            "id": "L_MPMENU_290",
+            "context": "L_MPMENU_290",
+            "string": "Spiel beenden\n"
+        },
+        {
+            "id": "L_MPMENU_291",
+            "context": "L_MPMENU_291",
+            "string": "Sind Sie sicher?\n"
+        },
+        {
+            "id": "L_MPMENU_292",
+            "context": "L_MPMENU_292",
+            "string": "Zurück\n"
+        },
+        {
+            "id": "L_MPMENU_293",
+            "context": "L_MPMENU_293",
+            "string": "Spiel beenden\n"
+        },
+        {
+            "id": "L_MPMENU_294",
+            "context": "L_MPMENU_294",
+            "string": "PerfectHead\n"
+        },
+        {
+            "id": "L_MPMENU_295",
+            "context": "L_MPMENU_295",
+            "string": "Gespeicherten Kopf laden\n"
+        },
+        {
+            "id": "L_MPMENU_296",
+            "context": "L_MPMENU_296",
+            "string": "Neuen Kopf erstellen\n"
+        },
+        {
+            "id": "L_MPMENU_297",
+            "context": "L_MPMENU_297",
+            "string": "Kopf editieren\n"
+        },
+        {
+            "id": "L_MPMENU_298",
+            "context": "L_MPMENU_298",
+            "string": "PerfectHead editieren\n"
+        },
+        {
+            "id": "L_MPMENU_299",
+            "context": "L_MPMENU_299",
+            "string": "Wähle den Kopf:\n"
+        },
+        {
+            "id": "L_MPMENU_300",
+            "context": "L_MPMENU_300",
+            "string": "Abbruch\n"
+        },
+        {
+            "id": "L_MPMENU_301",
+            "context": "L_MPMENU_301",
+            "string": "Neuen Kopf erstellen\n"
+        },
+        {
+            "id": "L_MPMENU_302",
+            "context": "L_MPMENU_302",
+            "string": "Gespeicherten Kopf laden\n"
+        },
+        {
+            "id": "L_MPMENU_303",
+            "context": "L_MPMENU_303",
+            "string": "Wo möchtest du diesen\n"
+        },
+        {
+            "id": "L_MPMENU_304",
+            "context": "L_MPMENU_304",
+            "string": "Kopf einsetzen?\n"
+        },
+        {
+            "id": "L_MPMENU_305",
+            "context": "L_MPMENU_305",
+            "string": "Kampfsimulator\n"
+        },
+        {
+            "id": "L_MPMENU_306",
+            "context": "L_MPMENU_306",
+            "string": "Alle Missionen\n"
+        },
+        {
+            "id": "L_MPMENU_307",
+            "context": "L_MPMENU_307",
+            "string": "Beide\n"
+        },
+        {
+            "id": "L_MPMENU_308",
+            "context": "L_MPMENU_308",
+            "string": "Abbruch\n"
+        },
+        {
+            "id": "L_MPMENU_309",
+            "context": "L_MPMENU_309",
+            "string": "Camera Setup\n"
+        },
+        {
+            "id": "L_MPMENU_310",
+            "context": "L_MPMENU_310",
+            "string": "Insert your camera into your\n"
+        },
+        {
+            "id": "L_MPMENU_311",
+            "context": "L_MPMENU_311",
+            "string": "Game Boy Pak.\n"
+        },
+        {
+            "id": "L_MPMENU_312",
+            "context": "L_MPMENU_312",
+            "string": "Then, insert your Game Boy Pak\n"
+        },
+        {
+            "id": "L_MPMENU_313",
+            "context": "L_MPMENU_313",
+            "string": "into any controller.\n"
+        },
+        {
+            "id": "L_MPMENU_314",
+            "context": "L_MPMENU_314",
+            "string": "OK\n"
+        },
+        {
+            "id": "L_MPMENU_315",
+            "context": "L_MPMENU_315",
+            "string": "Cancel\n"
+        },
+        {
+            "id": "L_MPMENU_316",
+            "context": "L_MPMENU_316",
+            "string": "Error\n"
+        },
+        {
+            "id": "L_MPMENU_317",
+            "context": "L_MPMENU_317",
+            "string": "Game Boy Camera Not Detected!\n"
+        },
+        {
+            "id": "L_MPMENU_318",
+            "context": "L_MPMENU_318",
+            "string": "Please check all connections\n"
+        },
+        {
+            "id": "L_MPMENU_319",
+            "context": "L_MPMENU_319",
+            "string": "and try again.\n"
+        },
+        {
+            "id": "L_MPMENU_320",
+            "context": "L_MPMENU_320",
+            "string": "Cancel\n"
+        },
+        {
+            "id": "L_MPMENU_321",
+            "context": "L_MPMENU_321",
+            "string": "Choose Camera\n"
+        },
+        {
+            "id": "L_MPMENU_322",
+            "context": "L_MPMENU_322",
+            "string": "More than one camera detected.\n"
+        },
+        {
+            "id": "L_MPMENU_323",
+            "context": "L_MPMENU_323",
+            "string": "Please select which camera you\nwant to use\n"
+        },
+        {
+            "id": "L_MPMENU_324",
+            "context": "L_MPMENU_324",
+            "string": "OK\n"
+        },
+        {
+            "id": "L_MPMENU_325",
+            "context": "L_MPMENU_325",
+            "string": "Cancel\n"
+        },
+        {
+            "id": "L_MPMENU_326",
+            "context": "L_MPMENU_326",
+            "string": "PerfectHead\n"
+        },
+        {
+            "id": "L_MPMENU_327",
+            "context": "L_MPMENU_327",
+            "string": "Take A Picture Now\n"
+        },
+        {
+            "id": "L_MPMENU_328",
+            "context": "L_MPMENU_328",
+            "string": "Load Picture From Camera\n"
+        },
+        {
+            "id": "L_MPMENU_329",
+            "context": "L_MPMENU_329",
+            "string": "Cancel\n"
+        },
+        {
+            "id": "L_MPMENU_330",
+            "context": "L_MPMENU_330",
+            "string": "Load From Camera\n"
+        },
+        {
+            "id": "L_MPMENU_331",
+            "context": "L_MPMENU_331",
+            "string": "Choose picture to read from camera:\n"
+        },
+        {
+            "id": "L_MPMENU_332",
+            "context": "L_MPMENU_332",
+            "string": "Cancel\n"
+        },
+        {
+            "id": "L_MPMENU_333",
+            "context": "L_MPMENU_333",
+            "string": "Take Picture\n"
+        },
+        {
+            "id": "L_MPMENU_334",
+            "context": "L_MPMENU_334",
+            "string": "Shoot!\n"
+        },
+        {
+            "id": "L_MPMENU_335",
+            "context": "L_MPMENU_335",
+            "string": "Cancel\n"
+        },
+        {
+            "id": "L_MPMENU_336",
+            "context": "L_MPMENU_336",
+            "string": "Keep Picture\n"
+        },
+        {
+            "id": "L_MPMENU_337",
+            "context": "L_MPMENU_337",
+            "string": "Try Again\n"
+        },
+        {
+            "id": "L_MPMENU_338",
+            "context": "L_MPMENU_338",
+            "string": "PerfectHead laden\n"
+        },
+        {
+            "id": "L_MPMENU_339",
+            "context": "L_MPMENU_339",
+            "string": "Legen Sie das Controller Pak\n"
+        },
+        {
+            "id": "L_MPMENU_340",
+            "context": "L_MPMENU_340",
+            "string": "mit dem Kopf, den Sie laden\n"
+        },
+        {
+            "id": "L_MPMENU_341",
+            "context": "L_MPMENU_341",
+            "string": "möchten in einen beliebigen\n"
+        },
+        {
+            "id": "L_MPMENU_342",
+            "context": "L_MPMENU_342",
+            "string": "Controller ein.\n"
+        },
+        {
+            "id": "L_MPMENU_343",
+            "context": "L_MPMENU_343",
+            "string": "Controller Pak:\n"
+        },
+        {
+            "id": "L_MPMENU_344",
+            "context": "L_MPMENU_344",
+            "string": "Abbruch\n"
+        },
+        {
+            "id": "L_MPMENU_345",
+            "context": "L_MPMENU_345",
+            "string": "Quelle:\n"
+        },
+        {
+            "id": "L_MPMENU_346",
+            "context": "L_MPMENU_346",
+            "string": "Pak 1"
+        },
+        {
+            "id": "L_MPMENU_347",
+            "context": "L_MPMENU_347",
+            "string": "Pak 2"
+        },
+        {
+            "id": "L_MPMENU_348",
+            "context": "L_MPMENU_348",
+            "string": "Pak 3"
+        },
+        {
+            "id": "L_MPMENU_349",
+            "context": "L_MPMENU_349",
+            "string": "Pak 4"
+        },
+        {
+            "id": "L_MPMENU_350",
+            "context": "L_MPMENU_350",
+            "string": "<none>"
+        },
+        {
+            "id": "L_MPMENU_351",
+            "context": "L_MPMENU_351",
+            "string": "PerfectHead Editor\n"
+        },
+        {
+            "id": "L_MPMENU_352",
+            "context": "L_MPMENU_352",
+            "string": "Take Another Picture\n"
+        },
+        {
+            "id": "L_MPMENU_353",
+            "context": "L_MPMENU_353",
+            "string": "Change Head\n"
+        },
+        {
+            "id": "L_MPMENU_354",
+            "context": "L_MPMENU_354",
+            "string": "Position Picture\n"
+        },
+        {
+            "id": "L_MPMENU_355",
+            "context": "L_MPMENU_355",
+            "string": "Color Face & Hair\n"
+        },
+        {
+            "id": "L_MPMENU_356",
+            "context": "L_MPMENU_356",
+            "string": "Shape Head\n"
+        },
+        {
+            "id": "L_MPMENU_357",
+            "context": "L_MPMENU_357",
+            "string": "Remove Head\n"
+        },
+        {
+            "id": "L_MPMENU_358",
+            "context": "L_MPMENU_358",
+            "string": "Cancel Changes\n"
+        },
+        {
+            "id": "L_MPMENU_359",
+            "context": "L_MPMENU_359",
+            "string": "Keep Changes\n"
+        },
+        {
+            "id": "L_MPMENU_360",
+            "context": "L_MPMENU_360",
+            "string": "Shape Head\n"
+        },
+        {
+            "id": "L_MPMENU_361",
+            "context": "L_MPMENU_361",
+            "string": "Depth\n"
+        },
+        {
+            "id": "L_MPMENU_362",
+            "context": "L_MPMENU_362",
+            "string": "OK\n"
+        },
+        {
+            "id": "L_MPMENU_363",
+            "context": "L_MPMENU_363",
+            "string": "Cancel\n"
+        },
+        {
+            "id": "L_MPMENU_364",
+            "context": "L_MPMENU_364",
+            "string": "Position Image\n"
+        },
+        {
+            "id": "L_MPMENU_365",
+            "context": "L_MPMENU_365",
+            "string": "Brightness\n"
+        },
+        {
+            "id": "L_MPMENU_366",
+            "context": "L_MPMENU_366",
+            "string": "OK\n"
+        },
+        {
+            "id": "L_MPMENU_367",
+            "context": "L_MPMENU_367",
+            "string": "Cancel\n"
+        },
+        {
+            "id": "L_MPMENU_368",
+            "context": "L_MPMENU_368",
+            "string": "Choose Head\n"
+        },
+        {
+            "id": "L_MPMENU_369",
+            "context": "L_MPMENU_369",
+            "string": "OK\n"
+        },
+        {
+            "id": "L_MPMENU_370",
+            "context": "L_MPMENU_370",
+            "string": "Cancel\n"
+        },
+        {
+            "id": "L_MPMENU_371",
+            "context": "L_MPMENU_371",
+            "string": "Remove PerfectHead\n"
+        },
+        {
+            "id": "L_MPMENU_372",
+            "context": "L_MPMENU_372",
+            "string": "Are you sure you want to\n"
+        },
+        {
+            "id": "L_MPMENU_373",
+            "context": "L_MPMENU_373",
+            "string": "remove this head from memory?\n"
+        },
+        {
+            "id": "L_MPMENU_374",
+            "context": "L_MPMENU_374",
+            "string": "Delete\n"
+        },
+        {
+            "id": "L_MPMENU_375",
+            "context": "L_MPMENU_375",
+            "string": "Cancel\n"
+        },
+        {
+            "id": "L_MPMENU_376",
+            "context": "L_MPMENU_376",
+            "string": "Cancel Changes\n"
+        },
+        {
+            "id": "L_MPMENU_377",
+            "context": "L_MPMENU_377",
+            "string": "Are you sure you want to\n"
+        },
+        {
+            "id": "L_MPMENU_378",
+            "context": "L_MPMENU_378",
+            "string": "throw away your changes?\n"
+        },
+        {
+            "id": "L_MPMENU_379",
+            "context": "L_MPMENU_379",
+            "string": "Throw Away\n"
+        },
+        {
+            "id": "L_MPMENU_380",
+            "context": "L_MPMENU_380",
+            "string": "Go Back To Editor\n"
+        },
+        {
+            "id": "L_MPMENU_381",
+            "context": "L_MPMENU_381",
+            "string": "Save PerfectHead\n"
+        },
+        {
+            "id": "L_MPMENU_382",
+            "context": "L_MPMENU_382",
+            "string": "You have edited this head.\n"
+        },
+        {
+            "id": "L_MPMENU_383",
+            "context": "L_MPMENU_383",
+            "string": "Do you want to keep your changes?\n"
+        },
+        {
+            "id": "L_MPMENU_384",
+            "context": "L_MPMENU_384",
+            "string": "Keep\n"
+        },
+        {
+            "id": "L_MPMENU_385",
+            "context": "L_MPMENU_385",
+            "string": "Revert\n"
+        },
+        {
+            "id": "L_MPMENU_386",
+            "context": "L_MPMENU_386",
+            "string": "Save PerfectHead\n"
+        },
+        {
+            "id": "L_MPMENU_387",
+            "context": "L_MPMENU_387",
+            "string": "Your changes will be kept in memory.\n"
+        },
+        {
+            "id": "L_MPMENU_388",
+            "context": "L_MPMENU_388",
+            "string": "Would you like to save your changes\n"
+        },
+        {
+            "id": "L_MPMENU_389",
+            "context": "L_MPMENU_389",
+            "string": "to the controller pak?\n"
+        },
+        {
+            "id": "L_MPMENU_390",
+            "context": "L_MPMENU_390",
+            "string": "Save\n"
+        },
+        {
+            "id": "L_MPMENU_391",
+            "context": "L_MPMENU_391",
+            "string": "Don't Save\n"
+        },
+        {
+            "id": "L_MPMENU_392",
+            "context": "L_MPMENU_392",
+            "string": "PerfectHead speichern\n"
+        },
+        {
+            "id": "L_MPMENU_393",
+            "context": "L_MPMENU_393",
+            "string": "Sie können jetzt den Kopf auf\n"
+        },
+        {
+            "id": "L_MPMENU_394",
+            "context": "L_MPMENU_394",
+            "string": "ein Controller Pak speichern.\n"
+        },
+        {
+            "id": "L_MPMENU_395",
+            "context": "L_MPMENU_395",
+            "string": "In diesem Fall stellen Sie bitte\n"
+        },
+        {
+            "id": "L_MPMENU_396",
+            "context": "L_MPMENU_396",
+            "string": "sicher, dass ein Controller Pak\n"
+        },
+        {
+            "id": "L_MPMENU_397",
+            "context": "L_MPMENU_397",
+            "string": "eingelegt ist. Wählen Sie \"Speichern\".\n"
+        },
+        {
+            "id": "L_MPMENU_398",
+            "context": "L_MPMENU_398",
+            "string": "Speichern\n"
+        },
+        {
+            "id": "L_MPMENU_399",
+            "context": "L_MPMENU_399",
+            "string": "Nicht speichern\n"
+        },
+        {
+            "id": "L_MPMENU_400",
+            "context": "L_MPMENU_400",
+            "string": "Kopf wurde erstellt!\n"
+        },
+        {
+            "id": "L_MPMENU_401",
+            "context": "L_MPMENU_401",
+            "string": "Um diesen Kopf im Kampsimulator einzusetzen,\n"
+        },
+        {
+            "id": "L_MPMENU_402",
+            "context": "L_MPMENU_402",
+            "string": "wählen Sie ihn aus dem Charakter-Menü vom\n"
+        },
+        {
+            "id": "L_MPMENU_403",
+            "context": "L_MPMENU_403",
+            "string": "Spieler/Simulanten-Einstellungs-Menü.\n"
+        },
+        {
+            "id": "L_MPMENU_404",
+            "context": "L_MPMENU_404",
+            "string": "Die gewünschten Köpfe erscheinen nun\n"
+        },
+        {
+            "id": "L_MPMENU_405",
+            "context": "L_MPMENU_405",
+            "string": "in allen Missionen, die Sie spielen.\n"
+        },
+        {
+            "id": "L_MPMENU_406",
+            "context": "L_MPMENU_406",
+            "string": "Sie können den Kopf nun noch weiter editieren.\n"
+        },
+        {
+            "id": "L_MPMENU_407",
+            "context": "L_MPMENU_407",
+            "string": "Beenden\n"
+        },
+        {
+            "id": "L_MPMENU_408",
+            "context": "L_MPMENU_408",
+            "string": "Kopf editieren\n"
+        },
+        {
+            "id": "L_MPMENU_409",
+            "context": "L_MPMENU_409",
+            "string": "Farbe des Kopfes:\n"
+        },
+        {
+            "id": "L_MPMENU_410",
+            "context": "L_MPMENU_410",
+            "string": "Gesicht:\n"
+        },
+        {
+            "id": "L_MPMENU_411",
+            "context": "L_MPMENU_411",
+            "string": "Frisur:\n"
+        },
+        {
+            "id": "L_MPMENU_412",
+            "context": "L_MPMENU_412",
+            "string": "OK\n"
+        },
+        {
+            "id": "L_MPMENU_413",
+            "context": "L_MPMENU_413",
+            "string": "Abbruch\n"
+        },
+        {
+            "id": "L_MPMENU_414",
+            "context": "L_MPMENU_414",
+            "string": "Abbruch\n"
+        },
+        {
+            "id": "L_MPMENU_415",
+            "context": "L_MPMENU_415",
+            "string": "Hangar Information\n"
+        },
+        {
+            "id": "L_MPMENU_416",
+            "context": "L_MPMENU_416",
+            "string": "Holotraining\n"
+        },
+        {
+            "id": "L_MPMENU_417",
+            "context": "L_MPMENU_417",
+            "string": "Geräte-Liste\n"
+        },
+        {
+            "id": "L_MPMENU_418",
+            "context": "L_MPMENU_418",
+            "string": "Information\n"
+        },
+        {
+            "id": "L_MPMENU_419",
+            "context": "L_MPMENU_419",
+            "string": "Örtlichkeiten\n"
+        },
+        {
+            "id": "L_MPMENU_420",
+            "context": "L_MPMENU_420",
+            "string": "Fahrzeuge\n"
+        },
+        {
+            "id": "L_MPMENU_421",
+            "context": "L_MPMENU_421",
+            "string": "Character-Profile\n"
+        },
+        {
+            "id": "L_MPMENU_422",
+            "context": "L_MPMENU_422",
+            "string": "Weitere Informationen\n"
+        },
+        {
+            "id": "L_MPMENU_423",
+            "context": "L_MPMENU_423",
+            "string": "Trainings-Statistik\n"
+        },
+        {
+            "id": "L_MPMENU_424",
+            "context": "L_MPMENU_424",
+            "string": "benötigte Zeit:\n"
+        },
+        {
+            "id": "L_MPMENU_425",
+            "context": "L_MPMENU_425",
+            "string": "Abgeschlossen!\n"
+        },
+        {
+            "id": "L_MPMENU_426",
+            "context": "L_MPMENU_426",
+            "string": "Durchgefallen!\n"
+        },
+        {
+            "id": "L_MPMENU_427",
+            "context": "L_MPMENU_427",
+            "string": "OK\n"
+        },
+        {
+            "id": "L_MPMENU_428",
+            "context": "L_MPMENU_428",
+            "string": "Weiter\n"
+        },
+        {
+            "id": "L_MPMENU_429",
+            "context": "L_MPMENU_429",
+            "string": "Zurück\n"
+        },
+        {
+            "id": "L_MPMENU_430",
+            "context": "L_MPMENU_430",
+            "string": "Abbruch\n"
+        },
+        {
+            "id": "L_MPMENU_431",
+            "context": "L_MPMENU_431",
+            "string": "Character-Profile\n"
+        },
+        {
+            "id": "L_MPMENU_432",
+            "context": "L_MPMENU_432",
+            "string": "Name:\n"
+        },
+        {
+            "id": "L_MPMENU_433",
+            "context": "L_MPMENU_433",
+            "string": "Alter:\n"
+        },
+        {
+            "id": "L_MPMENU_434",
+            "context": "L_MPMENU_434",
+            "string": "Rasse:\n"
+        },
+        {
+            "id": "L_MPMENU_435",
+            "context": "L_MPMENU_435",
+            "string": "Abbruch\n"
+        },
+        {
+            "id": "L_MPMENU_436",
+            "context": "L_MPMENU_436",
+            "string": "Cheats\n"
+        },
+        {
+            "id": "L_MPMENU_437",
+            "context": "L_MPMENU_437",
+            "string": "Sie können das Gerät jetzt abschalten.\n"
+        },
+        {
+            "id": "L_MPMENU_438",
+            "context": "L_MPMENU_438",
+            "string": "Abbruch\n"
+        },
+        {
+            "id": "L_MPMENU_439",
+            "context": "L_MPMENU_439",
+            "string": "Bronze\n"
+        },
+        {
+            "id": "L_MPMENU_440",
+            "context": "L_MPMENU_440",
+            "string": "Silber\n"
+        },
+        {
+            "id": "L_MPMENU_441",
+            "context": "L_MPMENU_441",
+            "string": "Gold\n"
+        },
+        {
+            "id": "L_MPMENU_442",
+            "context": "L_MPMENU_442",
+            "string": "Schwierigkeit\n"
+        },
+        {
+            "id": "L_MPMENU_443",
+            "context": "L_MPMENU_443",
+            "string": "Schwierigkeit:\n"
+        },
+        {
+            "id": "L_MPMENU_444",
+            "context": "L_MPMENU_444",
+            "string": "Wählen Sie die Schwierigkeit:\n"
+        },
+        {
+            "id": "L_MPMENU_445",
+            "context": "L_MPMENU_445",
+            "string": "   \n"
+        },
+        {
+            "id": "L_MPMENU_446",
+            "context": "L_MPMENU_446",
+            "string": "Waffe\n"
+        },
+        {
+            "id": "L_MPMENU_447",
+            "context": "L_MPMENU_447",
+            "string": "Trainings-Info\n"
+        },
+        {
+            "id": "L_MPMENU_448",
+            "context": "L_MPMENU_448",
+            "string": "Trainings-Statistik\n"
+        },
+        {
+            "id": "L_MPMENU_449",
+            "context": "L_MPMENU_449",
+            "string": "Abgeschlossen!\n"
+        },
+        {
+            "id": "L_MPMENU_450",
+            "context": "L_MPMENU_450",
+            "string": "Score:\n"
+        },
+        {
+            "id": "L_MPMENU_451",
+            "context": "L_MPMENU_451",
+            "string": "Zerstörte Ziele:\n"
+        },
+        {
+            "id": "L_MPMENU_452",
+            "context": "L_MPMENU_452",
+            "string": "Schwierigkeit:\n"
+        },
+        {
+            "id": "L_MPMENU_453",
+            "context": "L_MPMENU_453",
+            "string": "benötigte Zeit:\n"
+        },
+        {
+            "id": "L_MPMENU_454",
+            "context": "L_MPMENU_454",
+            "string": "Waffe:\n"
+        },
+        {
+            "id": "L_MPMENU_455",
+            "context": "L_MPMENU_455",
+            "string": "Genauigkeit:\n"
+        },
+        {
+            "id": "L_MPMENU_456",
+            "context": "L_MPMENU_456",
+            "string": "Nicht durchgefallen\n"
+        },
+        {
+            "id": "L_MPMENU_457",
+            "context": "L_MPMENU_457",
+            "string": "Keine Munition\n"
+        },
+        {
+            "id": "L_MPMENU_458",
+            "context": "L_MPMENU_458",
+            "string": "Zeit abgelaufen\n"
+        },
+        {
+            "id": "L_MPMENU_459",
+            "context": "L_MPMENU_459",
+            "string": "Score nicht erreicht\n"
+        },
+        {
+            "id": "L_MPMENU_460",
+            "context": "L_MPMENU_460",
+            "string": "Zu ungenau\n"
+        },
+        {
+            "id": "L_MPMENU_461",
+            "context": "L_MPMENU_461",
+            "string": "Bingo\n"
+        },
+        {
+            "id": "L_MPMENU_462",
+            "context": "L_MPMENU_462",
+            "string": "Zone 1\n"
+        },
+        {
+            "id": "L_MPMENU_463",
+            "context": "L_MPMENU_463",
+            "string": "Zone 2\n"
+        },
+        {
+            "id": "L_MPMENU_464",
+            "context": "L_MPMENU_464",
+            "string": "Zone 3\n"
+        },
+        {
+            "id": "L_MPMENU_465",
+            "context": "L_MPMENU_465",
+            "string": "Total\n"
+        },
+        {
+            "id": "L_MPMENU_466",
+            "context": "L_MPMENU_466",
+            "string": "Scoring\n"
+        },
+        {
+            "id": "L_MPMENU_467",
+            "context": "L_MPMENU_467",
+            "string": "10\n"
+        },
+        {
+            "id": "L_MPMENU_468",
+            "context": "L_MPMENU_468",
+            "string": "5\n"
+        },
+        {
+            "id": "L_MPMENU_469",
+            "context": "L_MPMENU_469",
+            "string": "2\n"
+        },
+        {
+            "id": "L_MPMENU_470",
+            "context": "L_MPMENU_470",
+            "string": "1\n"
+        },
+        {
+            "id": "L_MPMENU_471",
+            "context": "L_MPMENU_471",
+            "string": "Munitions-Limit:\n"
+        },
+        {
+            "id": "L_MPMENU_472",
+            "context": "L_MPMENU_472",
+            "string": "Zeit-Limit:\n"
+        },
+        {
+            "id": "L_MPMENU_473",
+            "context": "L_MPMENU_473",
+            "string": "Min. Genauigkeit:\n"
+        },
+        {
+            "id": "L_MPMENU_474",
+            "context": "L_MPMENU_474",
+            "string": "Ziele:\n"
+        },
+        {
+            "id": "L_MPMENU_475",
+            "context": "L_MPMENU_475",
+            "string": "Score:\n"
+        },
+        {
+            "id": "L_MPMENU_476",
+            "context": "L_MPMENU_476",
+            "string": "Cheats\n"
+        },
+        {
+            "id": "L_MPMENU_477",
+            "context": "L_MPMENU_477",
+            "string": "Fertig\n"
+        },
+        {
+            "id": "L_MPMENU_478",
+            "context": "L_MPMENU_478",
+            "string": "Warnung!\n"
+        },
+        {
+            "id": "L_MPMENU_479",
+            "context": "L_MPMENU_479",
+            "string": "Sollten Sie Cheats aktivieren, können Sie nicht\nweiter ins Spiel vordringen, solange\ndiese Cheats aktiv sind.\n"
+        },
+        {
+            "id": "L_MPMENU_480",
+            "context": "L_MPMENU_480",
+            "string": "OK\n"
+        },
+        {
+            "id": "L_MPMENU_481",
+            "context": "L_MPMENU_481",
+            "string": "Zurück\n"
+        },
+        {
+            "id": "L_MPMENU_482",
+            "context": "L_MPMENU_482",
+            "string": "Spieler %d: "
+        },
+        {
+            "id": "L_MPMENU_483",
+            "context": "L_MPMENU_483",
+            "string": "START!\n"
+        },
+        {
+            "id": "L_MPMENU_484",
+            "context": "L_MPMENU_484",
+            "string": "Searching for Camera!\n"
+        },
+        {
+            "id": "L_MPMENU_485",
+            "context": "L_MPMENU_485",
+            "string": "Calibrating Camera\n"
+        },
+        {
+            "id": "L_MPMENU_486",
+            "context": "L_MPMENU_486",
+            "string": "Downloading Image\n"
+        },
+        {
+            "id": "L_MPMENU_487",
+            "context": "L_MPMENU_487",
+            "string": "Loading Image\n"
+        },
+        {
+            "id": "L_MPMENU_488",
+            "context": "L_MPMENU_488",
+            "string": "Saving Image\n"
+        },
+        {
+            "id": "L_MPMENU_489",
+            "context": "L_MPMENU_489",
+            "string": "Transfering Image\n"
+        },
+        {
+            "id": "L_MPMENU_490",
+            "context": "L_MPMENU_490",
+            "string": "Uploading Segment\n"
+        },
+        {
+            "id": "L_MPMENU_491",
+            "context": "L_MPMENU_491",
+            "string": "Controller Pak \nwird geprüft\n"
+        },
+        {
+            "id": "L_MPMENU_492",
+            "context": "L_MPMENU_492",
+            "string": "Getting PerfectHead\n"
+        },
+        {
+            "id": "L_MPMENU_493",
+            "context": "L_MPMENU_493",
+            "string": "Saving PerfectHead\n"
+        },
+        {
+            "id": "L_MPMENU_494",
+            "context": "L_MPMENU_494",
+            "string": "Auto Camera Adjustment\n"
+        },
+        {
+            "id": "L_MPMENU_495",
+            "context": "L_MPMENU_495",
+            "string": "Bitte warten...\n"
+        }
+    ]
+}

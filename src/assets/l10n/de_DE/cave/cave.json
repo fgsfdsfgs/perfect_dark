@@ -1,0 +1,344 @@
+{
+    "messages": [
+        {
+            "id": "L_CAVE_000",
+            "context": "L_CAVE_000",
+            "string": "|Hintergrund - \n\nTrent Easton ist nach Alaska gereist, um den Präsidenten auf einem Stützpunkt zu treffen. Aufgrund der in Chicago gesammelten Beweise gehen wir davon aus, dass er nun seinen ersten Schachzug macht, um gegen die Person des Präsidenten vorzugehen. Dies muss auf jeden Fall verhindert werden! \n\n|Carrington - \n\nIn diesem Fall müssen Sie mit allerhöchster Sorgfalt vorgehen! Am Stützpunkt befinden sich viele unbeteiligte Personen. Nur Trents Leute und diese eigenartigen blonden Männer sind legitime Ziele. Vergessen Sie nicht: Je länger Sie Ihre Tarnung aufrecht erhalten, desto größer sind Ihre Erfolgschancen.\n\n|1. Ziel: - Erlangen Sie die Tarnung und betreten Sie die Basis!\n\nEine der Stewardessen kommt mit der Bahn. Sie trägt ihre Uniform in ihrer Tasche. Überwältigen Sie sie und ihre Begleitung, und verwenden Sie die Uniform als Verkleidung, um den Stützpunkt unerkannt betreten zu können. Bedenken Sie, dass diese Leute nichts mit Trents Absichten zu tun haben. Daher dürfen sie nicht zu Schaden kommen.\n\n|2. Ziel: - Checken Sie Ihre Ausrüstung ein!\n\nSie müssen Ihre Ausrüstung so schnell wie möglich loswerden. Vermeiden Sie es, verdächtig wirkende Gegenstände mit sich herumzutragen. Sie können wieder auf Ihre Ausrüstung zugreifen, nachdem Sie sie mit einem Hover-Trolley an Bord gebracht haben. Zuerst müssen Sie natürlich einen Koffer finden, um die Ausrüstung zu verstauen.\n\n|3. Ziel: - Unterminieren Sie das Überwachungssystem!\n\nMit Ihrer Verkleidung können Sie zwar das menschliche Auge täuschen, das elektronische Wachsystem erfordert aber eine andere Vorgehensweise. Sobald es die Waffe in Ihrem Gepäck erfasst, wird sofort der Alarm ausgelöst. Dies hat zur Folge, dass die Basis hermetisch abgeriegelt wird. Sorgen Sie dafür, dass der Alarm unter keinen Umständen ausgelöst wird!\n\n|4. Ziel: - Entwenden Sie die Flugpläne aus dem Safe!\n\nDie Route, welche für die Air Force One geplant ist, wird in einem Safe auf der Basis aufbewahrt. Bringen Sie die Pläne in Ihren Besitz! Durch diese Daten werden wir in der Lage sein, auch Elvis auf Ihre Route zu bringen. Im Falle einer Kalamität dient er als Ihre Verstärkung.\n\n|5. Ziel: - Gehen Sie an Bord der Air Force One!\n\nSie müssen unter allen Umständen an Bord des Flugzeugs gelangen. Sollte Ihre Tarnung noch bestehen, sollten Sie problemlos Zutritt zum Shuttle bekommen. Andernfalls müssen Sie einen anderen Weg finden, um an Bord zu gelangen.\n\nENDE\n"
+        },
+        {
+            "id": "L_CAVE_001",
+            "context": "L_CAVE_001",
+            "string": "PRÄSIDENTEN TERMINAL \nUS AIRBASIS, ALASKA\n"
+        },
+        {
+            "id": "L_CAVE_002",
+            "context": "L_CAVE_002",
+            "string": "|Hintergrund - \n\nTrent Easton ist nach Alaska gereist, um den Präsidenten auf einem Stützpunkt zu treffen. Aufgrund der in Chicago gesammelten Beweise gehen wir davon aus, dass er nun seinen ersten Schachzug macht, um gegen die Person des Präsidenten vorzugehen. Dies muss auf jeden Fall verhindert werden! \n\n|Carrington - \n\nIn diesem Fall müssen Sie mit allerhöchster Sorgfalt vorgehen! Am Stützpunkt befinden sich viele unbeteiligte Personen. Nur Trents Leute und diese eigenartigen blonden Männer sind legitime Ziele. Vergessen Sie nicht: Je länger Sie Ihre Tarnung aufrecht erhalten, desto größer sind Ihre Erfolgschancen.\n\n|1. Ziel: - Erlangen Sie die Tarnung und betreten Sie die Basis!\n\nEine der Stewardessen kommt mit der Bahn. Sie trägt ihre Uniform in Ihrer Tasche. Überwältigen Sie sie und ihre Begleitung, und verwenden Sie die Uniform als Verkleidung, um den Stützpunkt unerkannt betreten zu können. Bedenken Sie, dass diese Leute nichts mit Trents Absichten zu tun haben. Daher dürfen sie nicht zu Schaden kommen.\n\n|2. Ziel: - Checken Sie Ihre Ausrüstung ein!\n\nSie müssen Ihre Ausrüstung so schnell wie möglich loswerden. Vermeiden Sie es, verdächtig wirkende Gegenstände mit sich herumzutragen. Sie können wieder auf Ihre Ausrüstung zugreifen, nachdem Sie sie mit einem Hover-Trolley an Bord gebracht haben. Zuerst müssen Sie natürlich einen Koffer finden, um die Ausrüstung zu verstauen.\n\n|3. Ziel: - Unterminieren Sie das Überwachungssystem!\n\nMit Ihrer Verkleidung können Sie zwar das menschliche Auge täuschen, das elektronische Wachsystem erfordert aber eine andere Vorgehensweise. Sobald es die Waffe in Ihrem Gepäck erfasst, wird sofort der Alarm ausgelöst. Dies hat zur Folge, dass die Basis hermetisch abgeriegelt wird. Sorgen Sie dafür, dass der Alarm unter keinen Umständen ausgelöst wird!\n\n|4. Ziel: - Gehen Sie an Bord der Air Force One!\n\nSie müssen unter allen Umständen an Bord des Flugzeugs gelangen. Sollte Ihre Tarnung noch bestehen, sollten Sie problemlos Zutritt zum Shuttle bekommen. Andernfalls müssen Sie einen anderen Weg finden, um an Bord zu gelangen. \n\nENDE\n"
+        },
+        {
+            "id": "L_CAVE_003",
+            "context": "L_CAVE_003",
+            "string": "|Hintergrund - \n\nTrent Easton ist nach Alaska gereist, um den Präsidenten auf einem Stützpunkt zu treffen. Aufgrund der in Chicago gesammelten Beweise gehen wir davon aus, dass er nun seinen ersten Schachzug macht, um gegen die Person des Präsidenten vorzugehen. Dies muss auf jeden Fall verhindert werden! \n\n|Carrington - \n\nIn diesem Fall müssen Sie mit allerhöchster Sorgfalt vorgehen! Am Stützpunkt befinden sich viele unbeteiligte Personen. Nur Trents Leute und diese eigenartigen blonden Männer sind legitime Ziele. Vergessen Sie nicht: Je länger Sie Ihre Tarnung aufrecht erhalten, desto größer sind Ihre Erfolgschancen.\n\n|1. Ziel: - Erlangen Sie die Tarnung und betreten Sie die Basis!\n\nEine der Stewardessen kommt mit der Bahn. Sie trägt ihre Uniform in Ihrer Tasche. Überwältigen Sie sie und ihre Begleitung, und verwenden Sie die Uniform als Verkleidung, um den Stützpunkt unerkannt betreten zu können. Bedenken Sie, dass diese Leute nichts mit Trents Absichten zu tun haben. Daher dürfen sie nicht zu Schaden kommen.\n\n|2. Ziel: - Unterminieren Sie das Überwachungssystem!\n\nMit Ihrer Verkleidung können Sie zwar das menschliche Auge täuschen, das elektronische Wachsystem erfordert aber eine andere Vorgehensweise. Sobald es die Waffe in Ihrem Gepäck erfasst, wird sofort der Alarm ausgelöst. Dies hat zur Folge, dass die Basis hermetisch abgeriegelt wird. Sorgen Sie dafür, dass der Alarm unter keinen Umständen ausgelöst wird!\n\n|3. Ziel: - Gehen Sie an Bord der Air Force One!\n\nSie müssen unter allen Umständen an Bord des Flugzeugs gelangen. Sollte Ihre Tarnung noch bestehen, sollten Sie problemlos Zutritt zum Shuttle bekommen. Andernfalls müssen Sie einen anderen Weg finden, um an Bord zu gelangen.\n\nENDE\n"
+        },
+        {
+            "id": "L_CAVE_004",
+            "context": "L_CAVE_004",
+            "string": "\n"
+        },
+        {
+            "id": "L_CAVE_005",
+            "context": "L_CAVE_005",
+            "string": "Erlangen Sie die Tarnung!\n"
+        },
+        {
+            "id": "L_CAVE_006",
+            "context": "L_CAVE_006",
+            "string": "Checken Sie Ihre Ausrüstung ein!\n"
+        },
+        {
+            "id": "L_CAVE_007",
+            "context": "L_CAVE_007",
+            "string": "Unterminieren Sie die Überwachung!\n"
+        },
+        {
+            "id": "L_CAVE_008",
+            "context": "L_CAVE_008",
+            "string": "Entwenden Sie die Flugpläne!\n"
+        },
+        {
+            "id": "L_CAVE_009",
+            "context": "L_CAVE_009",
+            "string": "Gehen Sie an Bord der Air Force One!\n"
+        },
+        {
+            "id": "L_CAVE_010",
+            "context": "L_CAVE_010",
+            "string": "Erlangen Sie den Koffer!\n"
+        },
+        {
+            "id": "L_CAVE_011",
+            "context": "L_CAVE_011",
+            "string": "\n"
+        },
+        {
+            "id": "L_CAVE_012",
+            "context": "L_CAVE_012",
+            "string": "Koffer\n"
+        },
+        {
+            "id": "L_CAVE_013",
+            "context": "L_CAVE_013",
+            "string": "Koffer\n"
+        },
+        {
+            "id": "L_CAVE_014",
+            "context": "L_CAVE_014",
+            "string": "Koffer aufgenommen\n"
+        },
+        {
+            "id": "L_CAVE_015",
+            "context": "L_CAVE_015",
+            "string": "Erlangen Sie die Uniform!\n"
+        },
+        {
+            "id": "L_CAVE_016",
+            "context": "L_CAVE_016",
+            "string": "\n"
+        },
+        {
+            "id": "L_CAVE_017",
+            "context": "L_CAVE_017",
+            "string": "Verkleidung\n"
+        },
+        {
+            "id": "L_CAVE_018",
+            "context": "L_CAVE_018",
+            "string": "Verkleidung\n"
+        },
+        {
+            "id": "L_CAVE_019",
+            "context": "L_CAVE_019",
+            "string": "Uniform aufgenommen\n"
+        },
+        {
+            "id": "L_CAVE_020",
+            "context": "L_CAVE_020",
+            "string": "Entwenden Sie die Flugpläne aus dem Safe!\n"
+        },
+        {
+            "id": "L_CAVE_021",
+            "context": "L_CAVE_021",
+            "string": "\n"
+        },
+        {
+            "id": "L_CAVE_022",
+            "context": "L_CAVE_022",
+            "string": "Flugpläne\n"
+        },
+        {
+            "id": "L_CAVE_023",
+            "context": "L_CAVE_023",
+            "string": "Flugpläne\n"
+        },
+        {
+            "id": "L_CAVE_024",
+            "context": "L_CAVE_024",
+            "string": "Flugpläne aufgenommen\n"
+        },
+        {
+            "id": "L_CAVE_025",
+            "context": "L_CAVE_025",
+            "string": "Vorsicht - Ein Eindringling...\n"
+        },
+        {
+            "id": "L_CAVE_026",
+            "context": "L_CAVE_026",
+            "string": "Es sind unschuldige Zivilisten zu Schaden gekommen.\n"
+        },
+        {
+            "id": "L_CAVE_027",
+            "context": "L_CAVE_027",
+            "string": "Ist er OK?\n"
+        },
+        {
+            "id": "L_CAVE_028",
+            "context": "L_CAVE_028",
+            "string": "Ich gehe und hole Hilfe.\n"
+        },
+        {
+            "id": "L_CAVE_029",
+            "context": "L_CAVE_029",
+            "string": "Schönen guten Tag.\n"
+        },
+        {
+            "id": "L_CAVE_030",
+            "context": "L_CAVE_030",
+            "string": "OK, von hier aus kennen Sie ja den Weg.\n"
+        },
+        {
+            "id": "L_CAVE_031",
+            "context": "L_CAVE_031",
+            "string": "Sie müssen Ihre Waffe hier einchecken, Miss.\n"
+        },
+        {
+            "id": "L_CAVE_032",
+            "context": "L_CAVE_032",
+            "string": "Oh nein!\n"
+        },
+        {
+            "id": "L_CAVE_033",
+            "context": "L_CAVE_033",
+            "string": "Das Tragen von Waffen ist in diesem Areal nicht erlaubt.\n"
+        },
+        {
+            "id": "L_CAVE_034",
+            "context": "L_CAVE_034",
+            "string": "Ich alarmiere die Security.\n"
+        },
+        {
+            "id": "L_CAVE_035",
+            "context": "L_CAVE_035",
+            "string": "System wird heruntergefahren...\n"
+        },
+        {
+            "id": "L_CAVE_036",
+            "context": "L_CAVE_036",
+            "string": "Überwachungssystem wurde deaktiviert.\n"
+        },
+        {
+            "id": "L_CAVE_037",
+            "context": "L_CAVE_037",
+            "string": "WAFFEN WURDEN ENTDECKT!!!\n"
+        },
+        {
+            "id": "L_CAVE_038",
+            "context": "L_CAVE_038",
+            "string": "Der Koffer wurde deponiert.\n"
+        },
+        {
+            "id": "L_CAVE_039",
+            "context": "L_CAVE_039",
+            "string": "Der Koffer wurde gescannt.\n"
+        },
+        {
+            "id": "L_CAVE_040",
+            "context": "L_CAVE_040",
+            "string": "Hey, Sie - Sie befinden sich in einer Sperrzone.\n"
+        },
+        {
+            "id": "L_CAVE_041",
+            "context": "L_CAVE_041",
+            "string": "Sind Sie neu hier?\n"
+        },
+        {
+            "id": "L_CAVE_042",
+            "context": "L_CAVE_042",
+            "string": "Hey - geben Sie mir meinen Koffer zurück!\n"
+        },
+        {
+            "id": "L_CAVE_043",
+            "context": "L_CAVE_043",
+            "string": "Du holst die Security - Ich kümmere mich um sie...\n"
+        },
+        {
+            "id": "L_CAVE_044",
+            "context": "L_CAVE_044",
+            "string": "Wache... Es befindet sich ein Eindringling in der Basis!\n"
+        },
+        {
+            "id": "L_CAVE_045",
+            "context": "L_CAVE_045",
+            "string": "Zugriff auf die Lasermatrix verweigert\n"
+        },
+        {
+            "id": "L_CAVE_046",
+            "context": "L_CAVE_046",
+            "string": "Lasermatrix-System wurde überladen!!!\n"
+        },
+        {
+            "id": "L_CAVE_047",
+            "context": "L_CAVE_047",
+            "string": "Es sind zu viele unschuldige Opfer zu beklagen.\n"
+        },
+        {
+            "id": "L_CAVE_048",
+            "context": "L_CAVE_048",
+            "string": "Haltet sie vom Safe fern...\n"
+        },
+        {
+            "id": "L_CAVE_049",
+            "context": "L_CAVE_049",
+            "string": "Verkleidung wurde angelegt.\n"
+        },
+        {
+            "id": "L_CAVE_050",
+            "context": "L_CAVE_050",
+            "string": "Das ist Ihre Chance! Schnappen Sie sich \ndie Tasche der Stewardess! \n"
+        },
+        {
+            "id": "L_CAVE_051",
+            "context": "L_CAVE_051",
+            "string": "Verbergen Sie Ihre Ausrüstung in der Tasche. \n"
+        },
+        {
+            "id": "L_CAVE_052",
+            "context": "L_CAVE_052",
+            "string": "Wenn Sie nichts unternehmen, wird der Koffer abgefangen. \n"
+        },
+        {
+            "id": "L_CAVE_053",
+            "context": "L_CAVE_053",
+            "string": "Das ist also die Air Force One? ... Hm, kleiner als ich \ndachte.\n"
+        },
+        {
+            "id": "L_CAVE_054",
+            "context": "L_CAVE_054",
+            "string": "Haltet sie auf - sie brechen den Safe auf...\n"
+        },
+        {
+            "id": "L_CAVE_055",
+            "context": "L_CAVE_055",
+            "string": "Agent Dark ist in Position. Ich kann bereits den Haupteingang der Basis sehen. Auch die Haltestelle ist in Sichtweite.\n"
+        },
+        {
+            "id": "L_CAVE_056",
+            "context": "L_CAVE_056",
+            "string": "Ausgezeichnet, Joanna. In der Bahn befindet sich etwas, dass Sie brauchen. Unser Beobachter hat uns mitgeteilt, dass ein Crew-Mitglied vor einer Minute die Bahn betreten hat. Sie wird von Soldaten eskortiert. Ich muss Sie wohl nicht daran erinnern, dass...\n"
+        },
+        {
+            "id": "L_CAVE_057",
+            "context": "L_CAVE_057",
+            "string": "...dass diese Leute nichts mit Trents kleiner Inszenierung zu tun haben, und ich darf mich nicht mal wehren, selbst wenn sie mich angreifen. Was ist mit den NSA-Agenten?\n"
+        },
+        {
+            "id": "L_CAVE_058",
+            "context": "L_CAVE_058",
+            "string": "Ich weiß nicht, wie weit diese Verschwörung innerhalb der NSA fortgeschritten ist, aber ich wette, dass Trents Leute ihm und seinem Plan gegenüber absolut loyal sind. Sie müssen einen Beweis gegen Trent erbringen und diesen dem Präsidenten vorlegen.\n"
+        },
+        {
+            "id": "L_CAVE_059",
+            "context": "L_CAVE_059",
+            "string": "Und ich soll ihn auch noch beschützen. Haben Sie schon eine Vorstellung, wie sich Trents Vorhaben gestalten könnte? Und was hat es mit diesen blonden Kerlen auf sich?\n"
+        },
+        {
+            "id": "L_CAVE_060",
+            "context": "L_CAVE_060",
+            "string": "Nur vage Vermutungen, mit denen ich Sie nicht belasten will. Viel Glück! Over und out.\n"
+        },
+        {
+            "id": "L_CAVE_061",
+            "context": "L_CAVE_061",
+            "string": "Aufzug inoperativ - Sicherheitssystem ist aktiv.\n"
+        },
+        {
+            "id": "L_CAVE_062",
+            "context": "L_CAVE_062",
+            "string": "Wichtige Person eliminiert\n"
+        },
+        {
+            "id": "L_CAVE_063",
+            "context": "L_CAVE_063",
+            "string": "Wichtiges Objekt zerstört\n"
+        },
+        {
+            "id": "L_CAVE_064",
+            "context": "L_CAVE_064",
+            "string": "Eingang wurde gesichert.\n"
+        },
+        {
+            "id": "L_CAVE_065",
+            "context": "L_CAVE_065",
+            "string": "Wir übernehmen jetzt!!\n"
+        },
+        {
+            "id": "L_CAVE_066",
+            "context": "L_CAVE_066",
+            "string": "Hover-Trolley wurde abgeschaltet.\n"
+        },
+        {
+            "id": "L_CAVE_067",
+            "context": "L_CAVE_067",
+            "string": "Ausrüstung kann nicht überprüft werden.\n"
+        }
+    ]
+}

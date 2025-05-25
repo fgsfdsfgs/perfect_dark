@@ -1,0 +1,384 @@
+{
+    "messages": [
+        {
+            "id": "L_LUE_000",
+            "context": "L_LUE_000",
+            "string": "|Situazione:\n\nIl velivolo con a bordo i membri dell'istituto è stato abbattuto in Nevada. I resti del mezzo e i corpi delle vittime sono stati portati nell'Area 51. Una spia presente alla base è riuscita a comunicare all'istituto la notizia di un possibile sopravvissuto. L'obiettivo di questa missione è salvare quel sopravvissuto.\n\n|Carrington:\n\nQuesto è un vero disastro per noi, Joanna! Dobbiamo salvare il nostro alleato prima che sia troppo tardi. E c'era anche un'apparecchiatura speciale nel velivolo, che non deve assolutamente cadere nelle grinfie di Trent Easton. Per questa missione avrai un supporto: si tratta di un nostro agente infiltratosi nell'Area 51 travestito da guardia.\n\n|Obiettivo 1: - Disattiva radar d'intercettazione aerea\n\nQuesto dispositivo è riuscito a penetrare lo scudo mimetico del velivolo dei nostri alleati in modo che gli intercettatori lo potessero localizzare e abbattere. Se vuoi riuscire a fuggire, dovrai distruggere l'unità di comando del radar con l'esplosivo che con tutta probabilità è nascosta sottoterra e circondata da speciali elaboratori.\n\n|Obiettivo 2: - Piazza cimice sull'antenna satellitare\n\nLe sezioni sotterranee dell'Area 51 sono protette da microspie che ci impediranno di rimanere in contatto mentre sei all'interno della base. Per ovviare a questo inconveniente piazza una cimice sull'antenna parabolica vicino all'ingresso pedonale.\n\n|Obiettivo 3: - Disattiva gli intercettatori di terra\n\nSebbene il radar d'intercettazione aerea sia disattivato, gli intercettatori di terra continueranno ad essere un problema. Eliminane quanti più possibile: la nostra ultima foto satellitare ne mostrava due a terra, ma potrebbero essercene anche altri.\n\n|Obiettivo 4: - Penetra nell'ascensore dell'hangar\n\nEntrare dall'ingresso pedonale sarebbe un suicidio, quindi dirigiti verso l'ascensore dell'hangar. Il nostro agente dice che per attivare l'ascensore ti servirà una tessera magnetica e che i tecnici della manutenzione potrebbero averne una.\n\n|Obiettivo 5: - Mettiti in contatto con l'agente segreto\n\nIl nostro agente sarà travestito da guardia, il che significa che non ha molta libertà di movimento all'interno della base, se non vuole destare sospetti, quindi lo dovrai trovare tu! È posizionato in uno dei due piani principali dell'hangar. Sfortunatamente non disponiamo di informazioni più specifiche a questo riguardo.\n\nFINE\n"
+        },
+        {
+            "id": "L_LUE_001",
+            "context": "L_LUE_001",
+            "string": "AREA 51 - ESTERNO\n"
+        },
+        {
+            "id": "L_LUE_002",
+            "context": "L_LUE_002",
+            "string": "|Situazione:\n\nIl velivolo con a bordo i membri dell'istituto è stato abbattuto in Nevada. I resti del mezzo e i corpi delle vittime sono stati portati nell'Area 51. Una spia presente alla base è riuscita a comunicare all'istituto la notizia di un possibile sopravvissuto. L'obiettivo di questa missione è salvare quel sopravvissuto.\n\n|Carrington:\n\nQuesto è un vero disastro per noi, Joanna! Dobbiamo salvare il nostro alleato prima che sia troppo tardi. E c'era anche un'apparecchiatura speciale nel velivolo, che non deve assolutamente cadere nelle grinfie di Trent Easton. Per questa missione avrai un supporto: si tratta di un nostro agente infiltratosi nell'Area 51 travestito da guardia.\n\n|Obiettivo 1: - Disattiva radar d'intercettazione aerea\n\nQuesto dispositivo è riuscito a penetrare lo scudo mimetico del velivolo dei nostri alleati in modo che gli intercettatori lo potessero localizzare e abbattere. Se vuoi riuscire a fuggire, dovrai distruggere l'unità di comando del radar con l'esplosivo che con tutta probabilità è nascosta sottoterra e circondata da speciali elaboratori.\n\n|Obiettivo 2: - Piazza cimice sull'antenna satellitare\n\nLe sezioni sotterranee dell'Area 51 sono protette da microspie che ci impediranno di rimanere in contatto mentre sei all'interno della base. Per ovviare a questo inconveniente piazza una cimice sull'antenna parabolica vicino all'ingresso pedonale.\n\n|Obiettivo 3: - Penetra nell'ascensore dell'hangar\n\nEntrare dall'ingresso pedonale sarebbe un suicidio, quindi dirigiti verso l'ascensore dell'hangar. Il nostro agente dice che per attivare l'ascensore ti servirà una tessera magnetica e che i tecnici della manutenzione potrebbero averne una.\n\n|Obiettivo 4: - Mettiti in contatto con l'agente segreto\n\nIl nostro agente sarà travestito da guardia, il che significa che non ha molta libertà di movimento all'interno della base, se non vuole destare sospetti, quindi lo dovrai trovare tu! È posizionato in uno dei due piani principali dell'hangar. Sfortunatamente non disponiamo di informazioni più specifiche a questo riguardo.\n\nFINE\n"
+        },
+        {
+            "id": "L_LUE_003",
+            "context": "L_LUE_003",
+            "string": "|Situazione:\n\nIl velivolo con a bordo i membri dell'istituto è stato abbattuto in Nevada. I resti del mezzo e i corpi delle vittime sono stati portati nell'Area 51. Una spia presente alla base è riuscita a comunicare all'istituto la notizia di un possibile sopravvissuto. L'obiettivo di questa missione è salvare quel sopravvissuto.\n\n|Carrington:\n\nQuesto è un vero disastro per noi, Joanna! Dobbiamo salvare il nostro alleato prima che sia troppo tardi. E c'era anche un'apparecchiatura speciale nel velivolo, che non deve assolutamente cadere nelle grinfie di Trent Easton. Per questa missione avrai un supporto: si tratta di un nostro agente infiltratosi nell'Area 51 travestito da guardia.\n\n|Obiettivo 1: - Disattiva radar d'intercettazione aerea\n\nQuesto dispositivo è riuscito a penetrare lo scudo mimetico del velivolo dei nostri alleati in modo che gli intercettatori lo potessero localizzare e abbattere. Se vuoi riuscire a fuggire, dovrai distruggere l'unità di comando del radar con l'esplosivo che con tutta probabilità è nascosta sottoterra e circondata da speciali elaboratori.\n\n|Obiettivo 2: - Penetra nell'ascensore dell'hangar\n\nEntrare dall'ingresso pedonale sarebbe un suicidio, quindi dirigiti verso l'ascensore dell'hangar. Il nostro agente dice che per attivare l'ascensore ti servirà una tessera magnetica e che i tecnici della manutenzione potrebbero averne una.\n\n|Obiettivo 3: - Mettiti in contatto con l'agente segreto\n\nIl nostro agente sarà travestito da guardia, il che significa che non ha molta libertà di movimento all'interno della base, se non vuole destare sospetti, quindi lo dovrai trovare tu! È posizionato in uno dei due piani principali dell'hangar. Sfortunatamente non disponiamo di informazioni più specifiche a questo riguardo.\n\nFINE\n"
+        },
+        {
+            "id": "L_LUE_004",
+            "context": "L_LUE_004",
+            "string": "\n"
+        },
+        {
+            "id": "L_LUE_005",
+            "context": "L_LUE_005",
+            "string": "\n"
+        },
+        {
+            "id": "L_LUE_006",
+            "context": "L_LUE_006",
+            "string": "\n"
+        },
+        {
+            "id": "L_LUE_007",
+            "context": "L_LUE_007",
+            "string": "\n"
+        },
+        {
+            "id": "L_LUE_008",
+            "context": "L_LUE_008",
+            "string": "\n"
+        },
+        {
+            "id": "L_LUE_009",
+            "context": "L_LUE_009",
+            "string": "Disattiva radar d'intercettazione aerea\n"
+        },
+        {
+            "id": "L_LUE_010",
+            "context": "L_LUE_010",
+            "string": "Piazza una cimice sull'antenna\n"
+        },
+        {
+            "id": "L_LUE_011",
+            "context": "L_LUE_011",
+            "string": "Disattiva gli intercettatori di terra\n"
+        },
+        {
+            "id": "L_LUE_012",
+            "context": "L_LUE_012",
+            "string": "Penetra nell'ascensore dell'hangar\n"
+        },
+        {
+            "id": "L_LUE_013",
+            "context": "L_LUE_013",
+            "string": "Mettiti in contatto con l'agente segreto\n"
+        },
+        {
+            "id": "L_LUE_014",
+            "context": "L_LUE_014",
+            "string": "Procurati granate.\n"
+        },
+        {
+            "id": "L_LUE_015",
+            "context": "L_LUE_015",
+            "string": "Dr. Caroll:\n"
+        },
+        {
+            "id": "L_LUE_016",
+            "context": "L_LUE_016",
+            "string": "Granata\n"
+        },
+        {
+            "id": "L_LUE_017",
+            "context": "L_LUE_017",
+            "string": "Granata\n"
+        },
+        {
+            "id": "L_LUE_018",
+            "context": "L_LUE_018",
+            "string": "Presa una granata.\n"
+        },
+        {
+            "id": "L_LUE_019",
+            "context": "L_LUE_019",
+            "string": "Disattivato l'intercettatore\n"
+        },
+        {
+            "id": "L_LUE_020",
+            "context": "L_LUE_020",
+            "string": "Disattivati tutti gli intercettatori\n"
+        },
+        {
+            "id": "L_LUE_021",
+            "context": "L_LUE_021",
+            "string": "Procurati cimice\n"
+        },
+        {
+            "id": "L_LUE_022",
+            "context": "L_LUE_022",
+            "string": "Dr. Caroll:\n"
+        },
+        {
+            "id": "L_LUE_023",
+            "context": "L_LUE_023",
+            "string": "Cimice\n"
+        },
+        {
+            "id": "L_LUE_024",
+            "context": "L_LUE_024",
+            "string": "Cimice\n"
+        },
+        {
+            "id": "L_LUE_025",
+            "context": "L_LUE_025",
+            "string": "Presa cimice\n"
+        },
+        {
+            "id": "L_LUE_026",
+            "context": "L_LUE_026",
+            "string": "Cimice piazzata correttamente\n"
+        },
+        {
+            "id": "L_LUE_027",
+            "context": "L_LUE_027",
+            "string": "Cimice in posizione errata\n"
+        },
+        {
+            "id": "L_LUE_028",
+            "context": "L_LUE_028",
+            "string": "L'antenna è stata distrutta.\n"
+        },
+        {
+            "id": "L_LUE_029",
+            "context": "L_LUE_029",
+            "string": "Alzata l'antenna\n"
+        },
+        {
+            "id": "L_LUE_030",
+            "context": "L_LUE_030",
+            "string": "Abbassata l'antenna\n"
+        },
+        {
+            "id": "L_LUE_031",
+            "context": "L_LUE_031",
+            "string": "Procurati tessera ascensore\n"
+        },
+        {
+            "id": "L_LUE_032",
+            "context": "L_LUE_032",
+            "string": "Dr. Caroll:\n"
+        },
+        {
+            "id": "L_LUE_033",
+            "context": "L_LUE_033",
+            "string": "Tessera ascensore\n"
+        },
+        {
+            "id": "L_LUE_034",
+            "context": "L_LUE_034",
+            "string": "Tessera ascensore\n"
+        },
+        {
+            "id": "L_LUE_035",
+            "context": "L_LUE_035",
+            "string": "Presa tessera ascensore\n"
+        },
+        {
+            "id": "L_LUE_036",
+            "context": "L_LUE_036",
+            "string": "Negato accesso ascensore - Serve tessera\n"
+        },
+        {
+            "id": "L_LUE_037",
+            "context": "L_LUE_037",
+            "string": "Tessera valida - Ascensore in funzione\n"
+        },
+        {
+            "id": "L_LUE_038",
+            "context": "L_LUE_038",
+            "string": "L'ascensore è in funzione.\n"
+        },
+        {
+            "id": "L_LUE_039",
+            "context": "L_LUE_039",
+            "string": "Raggiunto l'hangar\n"
+        },
+        {
+            "id": "L_LUE_040",
+            "context": "L_LUE_040",
+            "string": "Incontrato l'agente segreto\n"
+        },
+        {
+            "id": "L_LUE_041",
+            "context": "L_LUE_041",
+            "string": "Disattivato radar d'intercettazione aerea\n"
+        },
+        {
+            "id": "L_LUE_042",
+            "context": "L_LUE_042",
+            "string": "Distrutto strumento essenziale alla missione\n"
+        },
+        {
+            "id": "L_LUE_043",
+            "context": "L_LUE_043",
+            "string": "Aperto cancello principale\n"
+        },
+        {
+            "id": "L_LUE_044",
+            "context": "L_LUE_044",
+            "string": "Chiuso cancello principale\n"
+        },
+        {
+            "id": "L_LUE_045",
+            "context": "L_LUE_045",
+            "string": "Accesso negato\n"
+        },
+        {
+            "id": "L_LUE_046",
+            "context": "L_LUE_046",
+            "string": "Piazzato esplosivo\n"
+        },
+        {
+            "id": "L_LUE_047",
+            "context": "L_LUE_047",
+            "string": "Allarme intrusione - Sistema di sicurezza operativo\n"
+        },
+        {
+            "id": "L_LUE_048",
+            "context": "L_LUE_048",
+            "string": "Procurati esplosivo\n"
+        },
+        {
+            "id": "L_LUE_049",
+            "context": "L_LUE_049",
+            "string": "Dr. Caroll:\n"
+        },
+        {
+            "id": "L_LUE_050",
+            "context": "L_LUE_050",
+            "string": "Esplosivo\n"
+        },
+        {
+            "id": "L_LUE_051",
+            "context": "L_LUE_051",
+            "string": "Esplosivo\n"
+        },
+        {
+            "id": "L_LUE_052",
+            "context": "L_LUE_052",
+            "string": "Preso esplosivo\n"
+        },
+        {
+            "id": "L_LUE_053",
+            "context": "L_LUE_053",
+            "string": "Il radar d'intercettazione aerea è \ncomandato da quel bunker!\n"
+        },
+        {
+            "id": "L_LUE_054",
+            "context": "L_LUE_054",
+            "string": "Ecco l'antenna, ma... non posso mica lanciare \nuna cimice fin lassù!\n"
+        },
+        {
+            "id": "L_LUE_055",
+            "context": "L_LUE_055",
+            "string": "L'ascensore dell'hangar è oltre \nquel portone.\n"
+        },
+        {
+            "id": "L_LUE_056",
+            "context": "L_LUE_056",
+            "string": "Vacci piano con quel grilletto, Agente Dark: \nti stai avvicinando alla mia postazione.\n"
+        },
+        {
+            "id": "L_LUE_057",
+            "context": "L_LUE_057",
+            "string": "Distrutti i terminali di accesso all'ascensore\n"
+        },
+        {
+            "id": "L_LUE_058",
+            "context": "L_LUE_058",
+            "string": "Bene, Joanna, guarda qua! Il nostro \nagente nell'Area 51 è riuscito a \nprocurarci questo!\n"
+        },
+        {
+            "id": "L_LUE_059",
+            "context": "L_LUE_059",
+            "string": "Questo è il tuo punto d'ingresso: un \neliporto deserto ai margini della base.\n"
+        },
+        {
+            "id": "L_LUE_060",
+            "context": "L_LUE_060",
+            "string": "L'ascensore per gli hangar e il punto \nd'incontro sono oltre quel muro: \nattenzione a queste guardie!\n"
+        },
+        {
+            "id": "L_LUE_061",
+            "context": "L_LUE_061",
+            "string": "Qui c'è un'antenna di comunicazione: \nattaccaci una cimice in modo che possiamo \nrimanere in contatto mentre sei dentro la \nbase. Ripeto, attenta alle guardie!\n"
+        },
+        {
+            "id": "L_LUE_062",
+            "context": "L_LUE_062",
+            "string": "Oh, maledizione!\n"
+        },
+        {
+            "id": "L_LUE_063",
+            "context": "L_LUE_063",
+            "string": "Ecco il nostro amico: sembra illeso \nfisicamente, sebbene non abbia ancora \nripreso conoscenza. A prima vista \nsembra che i chirurghi abbiano finito \ni loro esami preliminari e che stiano \nper iniziare il sezionamento.\n"
+        },
+        {
+            "id": "L_LUE_064",
+            "context": "L_LUE_064",
+            "string": "Ma chi era...\n"
+        },
+        {
+            "id": "L_LUE_065",
+            "context": "L_LUE_065",
+            "string": "Qualche domanda? No! Benissimo. Forza! \nVa nell'hangar!\n"
+        },
+        {
+            "id": "L_LUE_066",
+            "context": "L_LUE_066",
+            "string": "Missione dell'Agente Dark, ore 10.28. \nAnche se stento a crederci sto per \nentrare nell'Area 51.\n"
+        },
+        {
+            "id": "L_LUE_067",
+            "context": "L_LUE_067",
+            "string": "Agente Dark! Da questa parte!\n"
+        },
+        {
+            "id": "L_LUE_068",
+            "context": "L_LUE_068",
+            "string": "Eccoti, finalmente! Stavo iniziando \na chiedermi se...\n"
+        },
+        {
+            "id": "L_LUE_069",
+            "context": "L_LUE_069",
+            "string": "Se cosa?!\n"
+        },
+        {
+            "id": "L_LUE_070",
+            "context": "L_LUE_070",
+            "string": "Se magari non t'eri già fatto scoprire! \nE francamente se questo è il modo in cui \nlavori, sono sorpresa che tu abbia \nresistito per più di cinque minuti!\n"
+        },
+        {
+            "id": "L_LUE_071",
+            "context": "L_LUE_071",
+            "string": "Stavo solo cercando di coprirti le spalle!\n"
+        },
+        {
+            "id": "L_LUE_072",
+            "context": "L_LUE_072",
+            "string": "Le MIE spalle?\n"
+        },
+        {
+            "id": "L_LUE_073",
+            "context": "L_LUE_073",
+            "string": "Scusa, non m'ero accorto che volevi \nche ti sparasse. Posso chiamare \nqualche altra guardia se vuoi!\n"
+        },
+        {
+            "id": "L_LUE_074",
+            "context": "L_LUE_074",
+            "string": "Va bene, va bene. Lascia perdere! \nComunicherò all'istituto che ci \nsiamo incontrati.\n"
+        },
+        {
+            "id": "L_LUE_075",
+            "context": "L_LUE_075",
+            "string": "Rilevato oggetto strano - Sicurezza allertata\n"
+        }
+    ]
+}

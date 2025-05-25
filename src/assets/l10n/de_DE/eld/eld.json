@@ -1,0 +1,264 @@
+{
+    "messages": [
+        {
+            "id": "L_ELD_000",
+            "context": "L_ELD_000",
+            "string": "|Hintergrund - \n\nDaniel Carrington wird als Geisel in seiner eigenen Villa festgehalten. Cassandra De Vries hat uns ihre Bedingungen mitgeteilt: Daniels Leben gegen die KI, bekannt als Dr. Caroll. Was dataDyne nicht weiß, ist die Tatsache, dass die KI zum Zeitpunkt des Verbrechens bereits in der Villa war. Wir gehen davon aus, dass die Maschine von Daniel in Sicherheit gebracht wurde, bevor sie ihn als Geisel genommen haben.\n\n |Carrington - \n\nNicht verfügbar.\n\n|1. Ziel: - Eliminieren Sie die Scharfschützen auf dem Dach!\n\nGleich nachdem wir die Forderungen übermittelt bekommen haben, wurde von uns ein Aufklärungsflug über der Villa durchgeführt. Die Auswertung der Daten hat ergeben, dass mehrere Scharfschützen auf den Dächern positioniert wurden. Es ist von höchster Notwendigkeit, diese Schützen zu eliminieren.\n\n|2. Ziel: - Aktivieren Sie den Windkraft-Generator!\n\nDer Generator und der Stromspeicher sind inaktiv. Wir vermuten, dass sie von Daniel abgeschaltet wurden, um zu verhindern, dass dataDyne auf die hausinternen Systeme zugreifen kann. Sobald die Stromversorgung wiederhergestellt ist, haben Sie auch Zutritt zum Kellerbereich des Hauses.\n\n|3. Ziel: - Finden und stoppen Sie die dataDyne-Hacker!\n\nIn der Vergangenheit hat es sporadische Versuche von dataDyne-Hackern gegeben, Zugriff auf die Daten des Instituts zu erhalten. Es würde ihre Arbeit stark vereinfachen, wenn sie in der Villa auf die Direktverbindung zum Institut zugreifen könnten. Sollte dies der Fall sein, müssen Sie rasch reagieren. Achten Sie allerdings darauf, dass die Terminals nicht beschädigt werden dürfen, da sonst das Institut Daten der Prioritätsstufe 1 verliert.\n\n|4. Ziel: - Nehmen Sie eine Wache gefangen!\n\nDie Gefangennahme eines Mitglieds der dataDyne-Truppe verschafft uns Einblick in ihre tatsächlichen Vorhaben. Sie dürfen diese Wachen nicht eliminieren, sondern nur bewusstlos schlagen. Dadurch verhindern Sie auch eine Flucht.\n\n|5. Ziel: - Retten Sie Carrington!\n\nNur Daniel kennt den genauen Aufenthaltsort von Dr. Caroll. Früher oder später wird auch dataDyne auf diesen Trichter kommen. Spätestens dann werden sie ihn auf irgendeine Weise zwingen, diese Information preiszugeben. Sobald sie dieses Wissen aus ihm herausbekommen haben, hat sein Leben für sie keinen Wert mehr.\n\nENDE\n"
+        },
+        {
+            "id": "L_ELD_001",
+            "context": "L_ELD_001",
+            "string": "CARRINGTON VILLA\n"
+        },
+        {
+            "id": "L_ELD_002",
+            "context": "L_ELD_002",
+            "string": "|Hintergrund - \n\nDaniel Carrington wird als Geisel in seiner eigenen Villa festgehalten. Cassandra De Vries hat uns ihre Bedingungen mitgeteilt: Daniels Leben gegen die KI, bekannt als Dr. Caroll. Was dataDyne nicht weiß, ist die Tatsache, dass die KI zum Zeitpunkt des Verbrechens bereits in der Villa war. Wir gehen davon aus, dass die Maschine von Daniel in Sicherheit gebracht wurde, bevor sie ihn als Geisel genommen haben.\n\n |Carrington - \n\nNicht verfügbar.\n\n|1. Ziel: - Retten Sie die Unterhändlerin!\n\nEin Mitglied des Instituts wurde quasi als Ablenkung eingesetzt, um Ihnen das Eindringen in die Villa zu erleichtern. Wenn Sie es nicht schaffen, die dataDyne-Soldaten rechtzeitig auszuschalten, wird unsere Frau unter Garantie exekutiert!\n\n|2. Ziel: - Eliminieren Sie die Scharfschützen auf dem Dach!\n\nGleich nachdem wir die Forderungen übermittelt bekommen haben, wurde von uns ein Aufklärungsflug über der Villa durchgeführt. Die Auswertung der Daten hat ergeben, dass mehrere Scharfschützen auf den Dächern positioniert wurden. Es ist von höchster Notwendigkeit, diese Schützen zu eliminieren.\n\n|3. Ziel: - Aktivieren Sie den Windkraft-Generator!\n\nDer Generator und der Stromspeicher sind inaktiv. Wir vermuten, dass sie von Daniel abgeschaltet wurden, um zu verhindern, dass dataDyne auf die hausinternen Systeme zugreifen kann. Sobald die Stromversorgung wiederhergestellt ist, haben Sie auch Zutritt zum Kellerbereich des Hauses.\n\n|4. Ziel: - Retten Sie Carrington!\n\nNur Daniel kennt den genauen Aufenthaltsort von Dr. Caroll. Früher oder später wird auch dataDyne auf diesen Trichter kommen. Spätestens dann werden sie ihn auf irgendeine Weise zwingen, diese Information preiszugeben. Sobald sie dieses Wissen aus ihm herausbekommen haben, hat sein Leben für sie keinen Wert mehr.\n\nENDE\n"
+        },
+        {
+            "id": "L_ELD_003",
+            "context": "L_ELD_003",
+            "string": "|Hintergrund - \n\nDaniel Carrington wird als Geisel in seiner eigenen Villa festgehalten. Cassandra De Vries hat uns ihre Bedingungen mitgeteilt: Daniels Leben gegen die KI, bekannt als Dr. Caroll. Was dataDyne nicht weiß, ist die Tatsache, dass die KI zum Zeitpunkt des Verbrechens bereits in der Villa war. Wir gehen davon aus, dass die Maschine von Daniel in Sicherheit gebracht wurde, bevor sie ihn als Geisel genommen haben.\n\n |Carrington - \n\nNicht verfügbar.\n\n|1. Ziel: - Retten Sie die Unterhändlerin!\n\nEin Mitglied des Instituts wurde quasi als Ablenkung eingesetzt, um Ihnen das Eindringen in die Villa zu erleichtern. Wenn Sie es nicht schaffen, die dataDyne-Soldaten rechtzeitig auszuschalten, wird unsere Frau unter Garantie exekutiert!\n\n|2. Ziel: - Aktivieren Sie den Windkraft-Generator!\n\nDer Generator und der Stromspeicher sind inaktiv. Wir vermuten, dass sie von Daniel abgeschaltet wurden, um zu verhindern, dass dataDyne auf die hausinternen Systeme zugreifen kann. Sobald die Stromversorgung wiederhergestellt ist, haben Sie auch Zutritt zum Kellerbereich des Hauses.\n\n|3. Ziel: - Retten Sie Carrington!\n\nNur Daniel kennt den genauen Aufenthaltsort von Dr. Caroll. Früher oder später wird auch dataDyne auf diesen Trichter kommen. Spätestens dann werden sie ihn auf irgendeine Weise zwingen, diese Information preiszugeben. Sobald sie dieses Wissen aus ihm herausbekommen haben, hat sein Leben für sie keinen Wert mehr.\n\nENDE\n"
+        },
+        {
+            "id": "L_ELD_004",
+            "context": "L_ELD_004",
+            "string": "\n"
+        },
+        {
+            "id": "L_ELD_005",
+            "context": "L_ELD_005",
+            "string": "Retten Sie die Unterhändlerin!\n"
+        },
+        {
+            "id": "L_ELD_006",
+            "context": "L_ELD_006",
+            "string": "Eliminieren Sie die Scharfschützen!\n"
+        },
+        {
+            "id": "L_ELD_007",
+            "context": "L_ELD_007",
+            "string": "Aktivieren Sie den Generator!\n"
+        },
+        {
+            "id": "L_ELD_008",
+            "context": "L_ELD_008",
+            "string": "Stoppen Sie die Hacker!\n"
+        },
+        {
+            "id": "L_ELD_009",
+            "context": "L_ELD_009",
+            "string": "Retten Sie Carrington!\n"
+        },
+        {
+            "id": "L_ELD_010",
+            "context": "L_ELD_010",
+            "string": "Nehmen Sie eine Wache gefangen!\n"
+        },
+        {
+            "id": "L_ELD_011",
+            "context": "L_ELD_011",
+            "string": "Die Unterhändlerin wurde verloren.\n"
+        },
+        {
+            "id": "L_ELD_012",
+            "context": "L_ELD_012",
+            "string": "Die Scharfschützen wurden eliminiert.\n"
+        },
+        {
+            "id": "L_ELD_013",
+            "context": "L_ELD_013",
+            "string": "Die Unterhändlerin konnte sich in Sicherheit bringen.\n"
+        },
+        {
+            "id": "L_ELD_014",
+            "context": "L_ELD_014",
+            "string": "Kühlsysteme wurden aktiviert.\n"
+        },
+        {
+            "id": "L_ELD_015",
+            "context": "L_ELD_015",
+            "string": "Kühlsysteme wurden deaktiviert.\n"
+        },
+        {
+            "id": "L_ELD_016",
+            "context": "L_ELD_016",
+            "string": "Stromversorgung wurde aktiviert.\n"
+        },
+        {
+            "id": "L_ELD_017",
+            "context": "L_ELD_017",
+            "string": "Stromversorgung wurde deaktiviert.\n"
+        },
+        {
+            "id": "L_ELD_018",
+            "context": "L_ELD_018",
+            "string": "Windmühle wurde aktiviert.\n"
+        },
+        {
+            "id": "L_ELD_019",
+            "context": "L_ELD_019",
+            "string": "Windmühle wurde deaktiviert.\n"
+        },
+        {
+            "id": "L_ELD_020",
+            "context": "L_ELD_020",
+            "string": "Die Stromversorgung der Villa wurde wiederhergestellt.\n"
+        },
+        {
+            "id": "L_ELD_021",
+            "context": "L_ELD_021",
+            "string": "Wichtiges Objekt wurde zerstört.\n"
+        },
+        {
+            "id": "L_ELD_022",
+            "context": "L_ELD_022",
+            "string": "Joanna! Hier spricht Grimshaw. In der Villa befinden \n sich Hacker! Sie müssen Sie aufhalten, \n bevor sie an unsere Daten gelangen!\n"
+        },
+        {
+            "id": "L_ELD_023",
+            "context": "L_ELD_023",
+            "string": "Die Hacker haben geheime Daten kopiert.\n"
+        },
+        {
+            "id": "L_ELD_024",
+            "context": "L_ELD_024",
+            "string": "Die Hacker wurden eliminiert.\n"
+        },
+        {
+            "id": "L_ELD_025",
+            "context": "L_ELD_025",
+            "string": "Carrington wurde gerettet.\n"
+        },
+        {
+            "id": "L_ELD_026",
+            "context": "L_ELD_026",
+            "string": "Es wurden nicht alle Ziele erreicht - die Mission ist fehlgeschlagen.\n"
+        },
+        {
+            "id": "L_ELD_027",
+            "context": "L_ELD_027",
+            "string": "Laptop-Gewehr\n"
+        },
+        {
+            "id": "L_ELD_028",
+            "context": "L_ELD_028",
+            "string": "Sniper-Gewehr\n"
+        },
+        {
+            "id": "L_ELD_029",
+            "context": "L_ELD_029",
+            "string": "Feindliche Wache wurde kampfunfähig gemacht.\n"
+        },
+        {
+            "id": "L_ELD_030",
+            "context": "L_ELD_030",
+            "string": "Finden Sie den Schlüssel!\n"
+        },
+        {
+            "id": "L_ELD_031",
+            "context": "L_ELD_031",
+            "string": "Schlüssel\n"
+        },
+        {
+            "id": "L_ELD_032",
+            "context": "L_ELD_032",
+            "string": "der Wache\n"
+        },
+        {
+            "id": "L_ELD_033",
+            "context": "L_ELD_033",
+            "string": "Schlüssel\n"
+        },
+        {
+            "id": "L_ELD_034",
+            "context": "L_ELD_034",
+            "string": "Schlüssel aufgenommen\n"
+        },
+        {
+            "id": "L_ELD_035",
+            "context": "L_ELD_035",
+            "string": "Wenn ich den Windkraft-Generator aktiviere, \nsteht auch die Stromversorgung im Keller wieder.\n"
+        },
+        {
+            "id": "L_ELD_036",
+            "context": "L_ELD_036",
+            "string": "Ich muss schnell sein, oder der Unterhändler \nist verloren!\n"
+        },
+        {
+            "id": "L_ELD_037",
+            "context": "L_ELD_037",
+            "string": "Hier müssen sie Daniel gefangenhalten.\n"
+        },
+        {
+            "id": "L_ELD_038",
+            "context": "L_ELD_038",
+            "string": "Bevor ich Daniel rette, müssen diese Hacker \ngestoppt werden.\n"
+        },
+        {
+            "id": "L_ELD_039",
+            "context": "L_ELD_039",
+            "string": "Agent Dark Missions-Logbuch, 18.46 Uhr. Letzte \nNacht erhielten wir einen Anruf von Cassandra de Vries. \nEin dataDyne-Trupp hat Daniel Carrington \nin seiner Villa an der Küste als Geisel genommen. \nSie sagen, dass sie sein Leben im Austausch \nfür die KI schonen werden.\n"
+        },
+        {
+            "id": "L_ELD_040",
+            "context": "L_ELD_040",
+            "string": "Unglücklicherweise haben wir die KI nicht. Daniel und \nDr. Caroll waren in der Villa, um 'Themen von \nbeiderseitigem Interesse' zu besprechen. Es sieht \nso aus, als hätte Daniel einen Weg gefunden, Dr. Caroll \nin der Villa zu verstecken, bevor die dataDyne-Truppen \neingetroffen sind.\n"
+        },
+        {
+            "id": "L_ELD_041",
+            "context": "L_ELD_041",
+            "string": "Ich hoffe, dass mir unser Unterhändler-Trick \nzu einer Chance verhilft, die dataDyne-Truppen zu \nüberraschen. Diesmal geht es nicht nur um mein \nLeben...\n"
+        },
+        {
+            "id": "L_ELD_042",
+            "context": "L_ELD_042",
+            "string": "Sir? Sind Sie verletzt?\n"
+        },
+        {
+            "id": "L_ELD_043",
+            "context": "L_ELD_043",
+            "string": "Nein, Joanna, ich bin okay, aber diese dataDyne-\nSchläger haben aus mir herausgeprügelt, wo ich \nDr. Caroll versteckt habe. Wenn ich nur noch ein \npaar Minuten länger durchgehalten hätte...\n"
+        },
+        {
+            "id": "L_ELD_044",
+            "context": "L_ELD_044",
+            "string": "Es ist nicht Ihre Schuld, Sir. Ich hätte schneller \nsein müssen.\n"
+        },
+        {
+            "id": "L_ELD_045",
+            "context": "L_ELD_045",
+            "string": "Machen Sie sich keine Vorwürfe! Dr. Caroll \nhat mir gesagt, dass er diesen Zug erwartet hat. \nAls sie ihn gefunden haben, sind die dataDyne-Leute \netwas unvorsichtig geworden. Sie dachten, ich wäre \nbewusstlos und haben darüber gesprochen, wohin sie \nihn bringen. Sie erwähnten ein Meeting im \nG5-Building in Chicago, Illinois, noch heute Nacht.\nIch möchte, dass Sie dorthin gehen, aber das \nbedeutet, dass Sie nicht viel Zeit haben, um sich \nauf die Mission vorzubereiten.\n"
+        },
+        {
+            "id": "L_ELD_046",
+            "context": "L_ELD_046",
+            "string": "Das soll nicht das Problem sein, Sir. Konnte \nIhnen Dr. Caroll wenigstens einige nützliche \nInformationen weitergeben?\n"
+        },
+        {
+            "id": "L_ELD_047",
+            "context": "L_ELD_047",
+            "string": "Oh ja, das konnte er. Ich werde Sie weiterinformieren, \nwenn Sie sich auf dem Weg nach Chicago befinden. \nWir sind noch immer in der Lage, ihm zu helfen, \nselbst wenn diese Schlächter seine Persönlichkeit \nverändern. Er glaubt, dass sie eine Sicherungskopie \nseiner Daten haben. Es ist wohl an der Zeit, dass ich \nmich mit ein paar Freunden unterhalte, die mit dataDyne \nabrechnen werden.\n"
+        },
+        {
+            "id": "L_ELD_048",
+            "context": "L_ELD_048",
+            "string": "Unzulässige Operation - Windmühle ist aktiv.\n"
+        },
+        {
+            "id": "L_ELD_049",
+            "context": "L_ELD_049",
+            "string": "Mission nicht erfolgreich - Feindliche Wache wurde nicht gefangen.\n"
+        },
+        {
+            "id": "L_ELD_050",
+            "context": "L_ELD_050",
+            "string": null
+        },
+        {
+            "id": "L_ELD_051",
+            "context": "L_ELD_051",
+            "string": null
+        }
+    ]
+}

@@ -1,0 +1,444 @@
+{
+    "messages": [
+        {
+            "id": "L_PROPOBJ_000",
+            "context": "L_PROPOBJ_000",
+            "string": "Picked up %s.\n"
+        },
+        {
+            "id": "L_PROPOBJ_001",
+            "context": "L_PROPOBJ_001",
+            "string": "Picked up %s.\n"
+        },
+        {
+            "id": "L_PROPOBJ_002",
+            "context": "L_PROPOBJ_002",
+            "string": "Picked up %s.\n"
+        },
+        {
+            "id": "L_PROPOBJ_003",
+            "context": "L_PROPOBJ_003",
+            "string": "Picked up %s.\n"
+        },
+        {
+            "id": "L_PROPOBJ_004",
+            "context": "L_PROPOBJ_004",
+            "string": "Picked up %s.\n"
+        },
+        {
+            "id": "L_PROPOBJ_005",
+            "context": "L_PROPOBJ_005",
+            "string": "Picked up %s.\n"
+        },
+        {
+            "id": "L_PROPOBJ_006",
+            "context": "L_PROPOBJ_006",
+            "string": "Picked up %s.\n"
+        },
+        {
+            "id": "L_PROPOBJ_007",
+            "context": "L_PROPOBJ_007",
+            "string": "Picked up %s.\n"
+        },
+        {
+            "id": "L_PROPOBJ_008",
+            "context": "L_PROPOBJ_008",
+            "string": "Double "
+        },
+        {
+            "id": "L_PROPOBJ_009",
+            "context": "L_PROPOBJ_009",
+            "string": "ammo"
+        },
+        {
+            "id": "L_PROPOBJ_010",
+            "context": "L_PROPOBJ_010",
+            "string": "cartridge"
+        },
+        {
+            "id": "L_PROPOBJ_011",
+            "context": "L_PROPOBJ_011",
+            "string": "magnum bullet"
+        },
+        {
+            "id": "L_PROPOBJ_012",
+            "context": "L_PROPOBJ_012",
+            "string": "golden bullet"
+        },
+        {
+            "id": "L_PROPOBJ_013",
+            "context": "L_PROPOBJ_013",
+            "string": "grenade"
+        },
+        {
+            "id": "L_PROPOBJ_014",
+            "context": "L_PROPOBJ_014",
+            "string": "grenade round"
+        },
+        {
+            "id": "L_PROPOBJ_015",
+            "context": "L_PROPOBJ_015",
+            "string": "rocket"
+        },
+        {
+            "id": "L_PROPOBJ_016",
+            "context": "L_PROPOBJ_016",
+            "string": "homing rocket"
+        },
+        {
+            "id": "L_PROPOBJ_017",
+            "context": "L_PROPOBJ_017",
+            "string": "remote mine"
+        },
+        {
+            "id": "L_PROPOBJ_018",
+            "context": "L_PROPOBJ_018",
+            "string": "proximity mine"
+        },
+        {
+            "id": "L_PROPOBJ_019",
+            "context": "L_PROPOBJ_019",
+            "string": "timed mine"
+        },
+        {
+            "id": "L_PROPOBJ_020",
+            "context": "L_PROPOBJ_020",
+            "string": "combat knife"
+        },
+        {
+            "id": "L_PROPOBJ_021",
+            "context": "L_PROPOBJ_021",
+            "string": "combat knives"
+        },
+        {
+            "id": "L_PROPOBJ_025",
+            "context": "L_PROPOBJ_025",
+            "string": "dart"
+        },
+        {
+            "id": "L_PROPOBJ_026",
+            "context": "L_PROPOBJ_026",
+            "string": "N-Bomb"
+        },
+        {
+            "id": "L_PROPOBJ_027",
+            "context": "L_PROPOBJ_027",
+            "string": "sedatives"
+        },
+        {
+            "id": "L_PROPOBJ_028",
+            "context": "L_PROPOBJ_028",
+            "string": "explosive pen"
+        },
+        {
+            "id": "L_PROPOBJ_029",
+            "context": "L_PROPOBJ_029",
+            "string": "explosive case"
+        },
+        {
+            "id": "L_PROPOBJ_030",
+            "context": "L_PROPOBJ_030",
+            "string": "flare"
+        },
+        {
+            "id": "L_PROPOBJ_031",
+            "context": "L_PROPOBJ_031",
+            "string": "piton"
+        },
+        {
+            "id": "L_PROPOBJ_032",
+            "context": "L_PROPOBJ_032",
+            "string": "of dynamite"
+        },
+        {
+            "id": "L_PROPOBJ_033",
+            "context": "L_PROPOBJ_033",
+            "string": "stick "
+        },
+        {
+            "id": "L_PROPOBJ_034",
+            "context": "L_PROPOBJ_034",
+            "string": "sticks "
+        },
+        {
+            "id": "L_PROPOBJ_035",
+            "context": "L_PROPOBJ_035",
+            "string": "bug"
+        },
+        {
+            "id": "L_PROPOBJ_036",
+            "context": "L_PROPOBJ_036",
+            "string": "micro camera"
+        },
+        {
+            "id": "L_PROPOBJ_037",
+            "context": "L_PROPOBJ_037",
+            "string": "GoldenEye key"
+        },
+        {
+            "id": "L_PROPOBJ_038",
+            "context": "L_PROPOBJ_038",
+            "string": "token"
+        },
+        {
+            "id": "L_PROPOBJ_039",
+            "context": "L_PROPOBJ_039",
+            "string": "plastique"
+        },
+        {
+            "id": "L_PROPOBJ_040",
+            "context": "L_PROPOBJ_040",
+            "string": "Picked up a key.\n"
+        },
+        {
+            "id": "L_PROPOBJ_041",
+            "context": "L_PROPOBJ_041",
+            "string": "Picked up a shield.\n"
+        },
+        {
+            "id": "L_PROPOBJ_042",
+            "context": "L_PROPOBJ_042",
+            "string": "A shield.\n"
+        },
+        {
+            "id": "L_PROPOBJ_043",
+            "context": "L_PROPOBJ_043",
+            "string": "Picked up something.\n"
+        },
+        {
+            "id": "L_PROPOBJ_044",
+            "context": "L_PROPOBJ_044",
+            "string": "This door is locked.\n"
+        },
+        {
+            "id": "L_PROPOBJ_045",
+            "context": "L_PROPOBJ_045",
+            "string": "bolt"
+        },
+        {
+            "id": "L_PROPOBJ_046",
+            "context": "L_PROPOBJ_046",
+            "string": "orb"
+        },
+        {
+            "id": "L_PROPOBJ_047",
+            "context": "L_PROPOBJ_047",
+            "string": "Reaper ammo"
+        },
+        {
+            "id": "L_PROPOBJ_048",
+            "context": "L_PROPOBJ_048",
+            "string": "cloaking device"
+        },
+        {
+            "id": "L_PROPOBJ_049",
+            "context": "L_PROPOBJ_049",
+            "string": "boost pill"
+        },
+        {
+            "id": "L_PROPOBJ_050",
+            "context": "L_PROPOBJ_050",
+            "string": "your "
+        },
+        {
+            "id": "L_PROPOBJ_051",
+            "context": "L_PROPOBJ_051",
+            "string": "Your "
+        },
+        {
+            "id": "L_PROPOBJ_052",
+            "context": "L_PROPOBJ_052",
+            "string": "some "
+        },
+        {
+            "id": "L_PROPOBJ_053",
+            "context": "L_PROPOBJ_053",
+            "string": "Some "
+        },
+        {
+            "id": "L_PROPOBJ_054",
+            "context": "L_PROPOBJ_054",
+            "string": "some "
+        },
+        {
+            "id": "L_PROPOBJ_055",
+            "context": "L_PROPOBJ_055",
+            "string": "Some "
+        },
+        {
+            "id": "L_PROPOBJ_056",
+            "context": "L_PROPOBJ_056",
+            "string": "some "
+        },
+        {
+            "id": "L_PROPOBJ_057",
+            "context": "L_PROPOBJ_057",
+            "string": "Some "
+        },
+        {
+            "id": "L_PROPOBJ_058",
+            "context": "L_PROPOBJ_058",
+            "string": ""
+        },
+        {
+            "id": "L_PROPOBJ_059",
+            "context": "L_PROPOBJ_059",
+            "string": ""
+        },
+        {
+            "id": "L_PROPOBJ_060",
+            "context": "L_PROPOBJ_060",
+            "string": "a "
+        },
+        {
+            "id": "L_PROPOBJ_061",
+            "context": "L_PROPOBJ_061",
+            "string": "A "
+        },
+        {
+            "id": "L_PROPOBJ_062",
+            "context": "L_PROPOBJ_062",
+            "string": "an "
+        },
+        {
+            "id": "L_PROPOBJ_063",
+            "context": "L_PROPOBJ_063",
+            "string": "An "
+        },
+        {
+            "id": "L_PROPOBJ_064",
+            "context": "L_PROPOBJ_064",
+            "string": "the "
+        },
+        {
+            "id": "L_PROPOBJ_065",
+            "context": "L_PROPOBJ_065",
+            "string": "The "
+        },
+        {
+            "id": "L_PROPOBJ_066",
+            "context": "L_PROPOBJ_066",
+            "string": ""
+        },
+        {
+            "id": "L_PROPOBJ_067",
+            "context": "L_PROPOBJ_067",
+            "string": ""
+        },
+        {
+            "id": "L_PROPOBJ_068",
+            "context": "L_PROPOBJ_068",
+            "string": "bolts"
+        },
+        {
+            "id": "L_PROPOBJ_069",
+            "context": "L_PROPOBJ_069",
+            "string": "orbs"
+        },
+        {
+            "id": "L_PROPOBJ_070",
+            "context": "L_PROPOBJ_070",
+            "string": "Reaper ammo"
+        },
+        {
+            "id": "L_PROPOBJ_071",
+            "context": "L_PROPOBJ_071",
+            "string": "cloaking devices"
+        },
+        {
+            "id": "L_PROPOBJ_072",
+            "context": "L_PROPOBJ_072",
+            "string": "boost pills"
+        },
+        {
+            "id": "L_PROPOBJ_073",
+            "context": "L_PROPOBJ_073",
+            "string": "ammo"
+        },
+        {
+            "id": "L_PROPOBJ_074",
+            "context": "L_PROPOBJ_074",
+            "string": "cartridges"
+        },
+        {
+            "id": "L_PROPOBJ_075",
+            "context": "L_PROPOBJ_075",
+            "string": "magnum bullets"
+        },
+        {
+            "id": "L_PROPOBJ_076",
+            "context": "L_PROPOBJ_076",
+            "string": "golden bullets"
+        },
+        {
+            "id": "L_PROPOBJ_077",
+            "context": "L_PROPOBJ_077",
+            "string": "grenades"
+        },
+        {
+            "id": "L_PROPOBJ_078",
+            "context": "L_PROPOBJ_078",
+            "string": "grenade rounds"
+        },
+        {
+            "id": "L_PROPOBJ_079",
+            "context": "L_PROPOBJ_079",
+            "string": "rockets"
+        },
+        {
+            "id": "L_PROPOBJ_080",
+            "context": "L_PROPOBJ_080",
+            "string": "homing rockets"
+        },
+        {
+            "id": "L_PROPOBJ_081",
+            "context": "L_PROPOBJ_081",
+            "string": "remote mines"
+        },
+        {
+            "id": "L_PROPOBJ_082",
+            "context": "L_PROPOBJ_082",
+            "string": "proximity mines"
+        },
+        {
+            "id": "L_PROPOBJ_083",
+            "context": "L_PROPOBJ_083",
+            "string": "timed mines"
+        },
+        {
+            "id": "L_PROPOBJ_084",
+            "context": "L_PROPOBJ_084",
+            "string": "darts"
+        },
+        {
+            "id": "L_PROPOBJ_085",
+            "context": "L_PROPOBJ_085",
+            "string": "n-bombs"
+        },
+        {
+            "id": "L_PROPOBJ_086",
+            "context": "L_PROPOBJ_086",
+            "string": "sedatives"
+        },
+        {
+            "id": "L_PROPOBJ_087",
+            "context": "L_PROPOBJ_087",
+            "string": "tokens"
+        },
+        {
+            "id": "L_PROPOBJ_088",
+            "context": "L_PROPOBJ_088",
+            "string": null
+        },
+        {
+            "id": "L_PROPOBJ_089",
+            "context": "L_PROPOBJ_089",
+            "string": null
+        },
+        {
+            "id": "L_PROPOBJ_090",
+            "context": "L_PROPOBJ_090",
+            "string": null
+        }
+    ]
+}

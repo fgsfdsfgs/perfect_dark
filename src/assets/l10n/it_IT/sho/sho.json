@@ -1,0 +1,284 @@
+{
+    "messages": [
+        {
+            "id": "L_SHO_000",
+            "context": "L_SHO_000",
+            "string": "|Situazione:\n\nFinalmente è stato scoperto il fulcro della religione Skedar: un pianeta deserto, arso dal calore di tre soli. Il capo della fazione terroristica Skedar ha la sua roccaforte nel Tempio della Guerra sulla superficie del pianeta. La distruzione del tempio e la morte del loro capo implicherebbe la decadenza degli Skedar.\n\n|Carrington:\n\nIrreperibile.\n\n|Elvis:\n\nC'è da fare un po' di lavoro preliminare, Joanna! Bisogna contrassegnare vari settori del tempio come obiettivi per il bombardamento. Inoltre dobbiamo essere assolutamente sicuri che il capo degli Skedar sia morto stecchito! Sappiamo che dispone di uno scudo molto potente in grado di contrastare le armi da fuoco, quindi dovrai distruggere parte del tempio stesso in preparazione al colpo finale.\n\n|Obiettivo 1: - Identifica gli obiettivi nel tempio\n\nAttacca un bersaglio su ciascuno dei tre obelischi del tempio. Essi fanno parte del generatore degli scudi che è stato danneggiato, ma è ancora attivo e perciò in grado di proteggere parte del tempio dalla distruzione totale. Usa il puntatore-R per identificare gli obiettivi corretti.\n\n|Obiettivo 2: - Attiva il ponte retrattile\n\nPer riuscire ad accedere al tempio dovrai ricavare un passaggio nel muro esterno. Lo scanner a infrarossi ti aiuterà a scoprire un punto debole nella struttura muraria. All'interno ti attende un altro problema: la zona dove si erge il Santuario Interno è separata dal resto del tempio da un profondo abisso apparentemente causato molti secoli or sono da uno dei frequenti terremoti che affliggono il pianeta. Per raggiungere tale area gli Skedar hanno costruito un ponte retrattile, che sarà sicuramente sotto sorveglianza speciale.\n\n|Obiettivo 3: - Trova l'accesso al Santuario Interno\n\nInoltrati nel labirinto di corridoi sotterranei per trovare l'ingresso al Santuario Interno. Troverai una resistenza accanita e talvolta addirittura fanatica. Si tratta di un tempio dedicato alla guerra, costruito da creature estremamente devote al loro culto.\n\n|Obiettivo 4: - Distruggi l'esercito segreto Skedar \n\nIl Comandante Supremo Maian sospetta la presenza di altri guerrieri Skedar conservati in stasi in luoghi a noi ignoti e questo potrebbe essere uno di quelli, perciò lo dovrai distruggere. L'ultima cosa di cui abbiamo bisogno ora è un'orda di fanatici psicotici.\n\n|Obiettivo 5: - Elimina il capo degli Skedar\n\nIl capo è un guerriero particolarmente venerato dagli Skedar. La sua morte sarebbe un colpo fatale per questa civiltà e segnerebbe la fine del loro sentiero di guerra attraverso la galassia. Finalmente regnerà la pace!\n\nFINE\n"
+        },
+        {
+            "id": "L_SHO_001",
+            "context": "L_SHO_001",
+            "string": "TEMPIO DI GUERRA SKEDAR\n"
+        },
+        {
+            "id": "L_SHO_002",
+            "context": "L_SHO_002",
+            "string": "|Situazione:\n\nFinalmente è stato scoperto il fulcro della religione Skedar: un pianeta deserto, arso dal calore di tre soli. Il capo della fazione terroristica Skedar ha la sua roccaforte nel Tempio della Guerra sulla superficie del pianeta. La distruzione del tempio e la morte del loro capo implicherebbe la decadenza degli Skedar.\n\n|Carrington:\n\nIrreperibile.\n\n|Elvis:\n\nC'è da fare un po' di lavoro preliminare, Joanna! Bisogna contrassegnare vari settori del tempio come obiettivi per il bombardamento. Inoltre dobbiamo essere assolutamente sicuri che il capo degli Skedar sia morto stecchito! Sappiamo che dispone di uno scudo molto potente in grado di contrastare le armi da fuoco, quindi dovrai distruggere parte del tempio stesso in preparazione al colpo finale.\n\n|Obiettivo 1: - Identifica gli obiettivi nel tempio\n\nAttacca un bersaglio su ciascuno dei tre obelischi del tempio. Essi fanno parte del generatore degli scudi che è stato danneggiato, ma è ancora attivo e perciò in grado di proteggere parte del tempio dalla distruzione totale. Usa il puntatore-R per identificare gli obiettivi corretti.\n\n|Obiettivo 2: - Attiva il ponte retrattile\n\nPer riuscire ad accedere al tempio dovrai ricavare un passaggio nel muro esterno. Lo scanner a infrarossi ti aiuterà a scoprire un punto debole nella struttura muraria. All'interno ti attende un altro problema: la zona dove si erge il Santuario Interno è separata dal resto del tempio da un profondo abisso apparentemente causato molti secoli or sono da uno dei frequenti terremoti che affliggono il pianeta. Per raggiungere tale area gli Skedar hanno costruito un ponte retrattile, che sarà sicuramente sotto sorveglianza speciale.\n\n|Obiettivo 3: - Trova l'accesso al Santuario Interno\n\nInoltrati nel labirinto di corridoi sotterranei per trovare l'ingresso al Santuario Interno. Troverai una resistenza accanita e talvolta addirittura fanatica. Si tratta di un tempio dedicato alla guerra, costruito da creature estremamente devote al loro culto.\n\n|Obiettivo 4: - Elimina il capo degli Skedar\n\nIl capo è un guerriero particolarmente venerato dagli Skedar. La sua morte sarebbe un colpo fatale per questa civiltà e segnerebbe la fine del loro sentiero di guerra attraverso la galassia. Finalmente sarà la pace!\n\nFINE\n"
+        },
+        {
+            "id": "L_SHO_003",
+            "context": "L_SHO_003",
+            "string": "|Situazione:\n\nFinalmente è stato scoperto il fulcro della religione Skedar: un pianeta deserto, arso dal calore di tre soli. Il capo della fazione terroristica Skedar ha la sua roccaforte nel Tempio della Guerra sulla superficie del pianeta. La distruzione del tempio e la morte del loro capo implicherebbe la decadenza degli Skedar.\n\n|Carrington:\n\nIrreperibile.\n\n|Elvis:\n\nC'è da fare un po' di lavoro preliminare, Joanna! Bisogna contrassegnare vari settori del tempio come obiettivi per il bombardamento. Inoltre dobbiamo essere assolutamente sicuri che il capo degli Skedar sia morto stecchito! Sappiamo che dispone di uno scudo molto potente in grado di contrastare le armi da fuoco, quindi dovrai distruggere parte del tempio stesso in preparazione al colpo finale.\n\n|Obiettivo 1: - Identifica gli obiettivi nel tempio\n\nAttacca un bersaglio su ciascuno dei tre obelischi del tempio. Essi fanno parte del generatore degli scudi che è stato danneggiato, ma è ancora attivo e perciò in grado di proteggere parte del tempio dalla distruzione totale. Usa il puntatore-R per identificare gli obiettivi corretti.\n\n|Obiettivo 2: - Attiva il ponte retrattile\n\nPer riuscire ad accedere al tempio dovrai ricavare un passaggio nel muro esterno. Lo scanner a infrarossi ti aiuterà a scoprire un punto debole nella struttura muraria. All'interno ti attende un altro problema: la zona dove si erge il Santuario Interno è separata dal resto del tempio da un profondo abisso apparentemente causato molti secoli or sono da uno dei frequenti terremoti che affliggono il pianeta. Per raggiungere tale area gli Skedar hanno costruito un ponte retrattile, che sarà sicuramente sotto sorveglianza speciale.\n\n|Obiettivo 3: - Elimina il capo degli Skedar\n\nIl capo è un guerriero particolarmente venerato dagli Skedar. La sua morte sarebbe un colpo fatale per questa civiltà e segnerebbe la fine del loro sentiero di guerra attraverso la galassia. Finalmente sarà la pace!\n\nFINE\n"
+        },
+        {
+            "id": "L_SHO_004",
+            "context": "L_SHO_004",
+            "string": "\n"
+        },
+        {
+            "id": "L_SHO_005",
+            "context": "L_SHO_005",
+            "string": "Identifica gli obiettivi nel tempio\n"
+        },
+        {
+            "id": "L_SHO_006",
+            "context": "L_SHO_006",
+            "string": "Attiva il ponte retrattile\n"
+        },
+        {
+            "id": "L_SHO_007",
+            "context": "L_SHO_007",
+            "string": "Trova l'accesso al Santuario Interno\n"
+        },
+        {
+            "id": "L_SHO_008",
+            "context": "L_SHO_008",
+            "string": "Distruggi l'esercito segreto Skedar\n"
+        },
+        {
+            "id": "L_SHO_009",
+            "context": "L_SHO_009",
+            "string": "Elimina il capo degli Skedar\n"
+        },
+        {
+            "id": "L_SHO_010",
+            "context": "L_SHO_010",
+            "string": "Procurati Vista Notturna.\n"
+        },
+        {
+            "id": "L_SHO_011",
+            "context": "L_SHO_011",
+            "string": "\n"
+        },
+        {
+            "id": "L_SHO_012",
+            "context": "L_SHO_012",
+            "string": "Vista Notturna\n"
+        },
+        {
+            "id": "L_SHO_013",
+            "context": "L_SHO_013",
+            "string": "Vista Notturna\n"
+        },
+        {
+            "id": "L_SHO_014",
+            "context": "L_SHO_014",
+            "string": "Presa Vista Notturna.\n"
+        },
+        {
+            "id": "L_SHO_015",
+            "context": "L_SHO_015",
+            "string": "Procurati scanner.\n"
+        },
+        {
+            "id": "L_SHO_016",
+            "context": "L_SHO_016",
+            "string": "\n"
+        },
+        {
+            "id": "L_SHO_017",
+            "context": "L_SHO_017",
+            "string": "Scanner\n"
+        },
+        {
+            "id": "L_SHO_018",
+            "context": "L_SHO_018",
+            "string": "Scanner\n"
+        },
+        {
+            "id": "L_SHO_019",
+            "context": "L_SHO_019",
+            "string": "Preso scanner.\n"
+        },
+        {
+            "id": "L_SHO_020",
+            "context": "L_SHO_020",
+            "string": "Procurati bersaglio.\n"
+        },
+        {
+            "id": "L_SHO_021",
+            "context": "L_SHO_021",
+            "string": "\n"
+        },
+        {
+            "id": "L_SHO_022",
+            "context": "L_SHO_022",
+            "string": "Bersaglio\n"
+        },
+        {
+            "id": "L_SHO_023",
+            "context": "L_SHO_023",
+            "string": "Bersaglio\n"
+        },
+        {
+            "id": "L_SHO_024",
+            "context": "L_SHO_024",
+            "string": "Preso bersaglio.\n"
+        },
+        {
+            "id": "L_SHO_025",
+            "context": "L_SHO_025",
+            "string": "Bersaglio piazzato correttamente.\n"
+        },
+        {
+            "id": "L_SHO_026",
+            "context": "L_SHO_026",
+            "string": "Bersaglio in posizione errata.\n"
+        },
+        {
+            "id": "L_SHO_027",
+            "context": "L_SHO_027",
+            "string": "Il generatore è stato riattivato.\n"
+        },
+        {
+            "id": "L_SHO_028",
+            "context": "L_SHO_028",
+            "string": "Raggiunto Santuario Interno Skedar.\n"
+        },
+        {
+            "id": "L_SHO_029",
+            "context": "L_SHO_029",
+            "string": "Distrutto esercito segreto Skedar.\n"
+        },
+        {
+            "id": "L_SHO_030",
+            "context": "L_SHO_030",
+            "string": "Questo sembra uno degli obelischi.\n"
+        },
+        {
+            "id": "L_SHO_031",
+            "context": "L_SHO_031",
+            "string": "Qui il campo energetico sembra più costante. \nIl Santuario Interno non può essere lontano.\n"
+        },
+        {
+            "id": "L_SHO_032",
+            "context": "L_SHO_032",
+            "string": "OH, NO!!! Un esercito Skedar in stato di morte apparente!\n"
+        },
+        {
+            "id": "L_SHO_033",
+            "context": "L_SHO_033",
+            "string": "Benissimo, ecco fatto! Mozzandogli il capo \nil corpo morirà!\n"
+        },
+        {
+            "id": "L_SHO_034",
+            "context": "L_SHO_034",
+            "string": "Questo è il luogo più SACRO per quei fanatici degli Skedar! Credono che questo pianeta sia SACRO ed inviolabile. Il Tempio di Guerra si trova nella parte più SACRA di questo pianeta SACRO!\n"
+        },
+        {
+            "id": "L_SHO_035",
+            "context": "L_SHO_035",
+            "string": "Fammi capire bene... Ma, allora è SACRO! Però c'è anche dell'altro, vero?\n"
+        },
+        {
+            "id": "L_SHO_036",
+            "context": "L_SHO_036",
+            "string": "Sì! In tutto il tempo che noi Maian abbiamo lottato contro gli Skedar non siamo mai riusciti a scoprire questo posto. Sapevamo che la guerra non sarebbe mai finita finché non fosse stato distrutto: abbiamo costretto gli Skedar a una tregua, li abbiamo piegati a cessare il fuoco, ma comunque non potevamo mai abbassare la guardia. La distruzione di questo posto implicherà una pace vera! \n"
+        },
+        {
+            "id": "L_SHO_037",
+            "context": "L_SHO_037",
+            "string": "Allora dobbiamo accertarci che non ci sfugga nessun fanatico: io entro e porto fuori il capo; tu chiami a raccolta la flotta Maian per radere al suolo il tempio!\n"
+        },
+        {
+            "id": "L_SHO_038",
+            "context": "L_SHO_038",
+            "string": "Se ti trovi ancora in giro quando fa irruzione la flotta, non avrai più possibilità di salvezza!\n"
+        },
+        {
+            "id": "L_SHO_039",
+            "context": "L_SHO_039",
+            "string": "È un errore che intendo evitare!\n"
+        },
+        {
+            "id": "L_SHO_040",
+            "context": "L_SHO_040",
+            "string": "Proprio così...\n"
+        },
+        {
+            "id": "L_SHO_041",
+            "context": "L_SHO_041",
+            "string": "Joanna! Joanna!\n"
+        },
+        {
+            "id": "L_SHO_042",
+            "context": "L_SHO_042",
+            "string": "Elvis! Elvis! Da questa parte!\n"
+        },
+        {
+            "id": "L_SHO_043",
+            "context": "L_SHO_043",
+            "string": "Nessun problema! Afferra il mio braccio! Ti tireremo fuori in un batter d'occhio!\n"
+        },
+        {
+            "id": "L_SHO_044",
+            "context": "L_SHO_044",
+            "string": "No, presto! Dammi la pistola!\n"
+        },
+        {
+            "id": "L_SHO_045",
+            "context": "L_SHO_045",
+            "string": "VUOI LASCIARMI ANDARE?! PER LA MISERIA?!!\n"
+        },
+        {
+            "id": "L_SHO_046",
+            "context": "L_SHO_046",
+            "string": "La flotta ha interrotto il bombardamento per darmi il tempo di trovarti. Andranno avanti non appena saremo fuori di qui!\n"
+        },
+        {
+            "id": "L_SHO_047",
+            "context": "L_SHO_047",
+            "string": "Sarei riuscita a svignarmela in tempo, se quello non mi si fosse aggrappato al piede!\n"
+        },
+        {
+            "id": "L_SHO_048",
+            "context": "L_SHO_048",
+            "string": "Ma certo, Joanna, naturalmente!\n"
+        },
+        {
+            "id": "L_SHO_049",
+            "context": "L_SHO_049",
+            "string": "No, veramente!!!\n"
+        },
+        {
+            "id": "L_SHO_050",
+            "context": "L_SHO_050",
+            "string": "Sì, sì, ti credo!\n"
+        },
+        {
+            "id": "L_SHO_051",
+            "context": "L_SHO_051",
+            "string": "Compi il tuo sacrificio in onore del Dio della Guerra.\n"
+        },
+        {
+            "id": "L_SHO_052",
+            "context": "L_SHO_052",
+            "string": "Granate esaurite - Impossibile entrare nel tempio.\n"
+        },
+        {
+            "id": "L_SHO_053",
+            "context": "L_SHO_053",
+            "string": "Creata entrata alternativa al tempio.\n"
+        },
+        {
+            "id": "L_SHO_054",
+            "context": "L_SHO_054",
+            "string": "Dove sei? Sei ferita?\n"
+        },
+        {
+            "id": "L_SHO_055",
+            "context": "L_SHO_055",
+            "string": null
+        }
+    ]
+}

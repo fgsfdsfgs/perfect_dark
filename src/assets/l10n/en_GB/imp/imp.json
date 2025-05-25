@@ -1,0 +1,324 @@
+{
+    "messages": [
+        {
+            "id": "L_IMP_000",
+            "context": "L_IMP_000",
+            "string": "|Background - \n\nIn revenge for the foiling of their grand plan, the Skedar have attacked the source of their troubles, the Carrington Institute. With an organized response out of the question, it falls to Joanna to save what she can of the Institute from total destruction.\n\n|Carrington - \n\nThey've caught us completely off guard, Jo! Save who and what you can, then get out yourself. After all, the Institute is the people, not the building.\n\n|Objective One: - Reactivate Automatic Defenses\n\nThere are automatic guns situated at strategic locations throughout the Carrington Institute. At present they are inactive, but if you can get to the control panels and activate them, they will help thin the attackers out.\n\n|Objective Two: - Release Hostages\n\nSome of the invading forces are holding key Institute staff hostage. Save as many of the hostages as you can. Look in the various labs throughout the upper floors of the building.\n\n|Objective Three: - Retrieve Experimental Weapon\n\nIn Foster's weapons lab there is a prototype submachine gun that we cannot let fall into enemy hands. This is because the weapon is capable of creating a temporary cloaking field. Find it and carry out some 'field research.'\n\n|Objective Four: - Destroy Sensitive Information\n\nIn Daniel's office there is a safe in which is kept the algorithm he used to crack the Maian communication codes so many years ago. It must be destroyed before dataDyne or the Skedar get hold of it. Use the laser to cut a way through the door.\n\n|Objective Five: - Deactivate Bomb\n\nOur sensors indicate there is a bomb in the Skedar craft on the landing pad! The only thing that can help you is the Data Uplink - get close to the ship, and use it to install a virus. The ship should then float clear of the Institute, and the bomb will detonate without harming anyone.\n\nEND\n"
+        },
+        {
+            "id": "L_IMP_001",
+            "context": "L_IMP_001",
+            "string": "CARRINGTON INSTITUTE\n"
+        },
+        {
+            "id": "L_IMP_002",
+            "context": "L_IMP_002",
+            "string": "|Background - \n\nIn revenge for the foiling of their grand plan, the Skedar have attacked the source of their troubles, the Carrington Institute. With an organized response out of the question, it falls to Joanna to save what she can of the Institute from total destruction.\n\n|Carrington - \n\nThey've caught us completely off guard, Jo! Save who and what you can, then get out yourself. After all, the Institute is the people, not the building.\n\n|Objective One: - Reactivate Automatic Defenses\n\nThere are automatic guns situated at strategic locations throughout the Carrington Institute. At present they are inactive, but if you can get to the control panels and activate them, they will help thin the attackers out.\n\n|Objective Two: - Release Hostages\n\nSome of the invading forces are holding key Institute staff hostage. Save as many of the hostages as you can. Look in the various labs throughout the upper floors of the building.\n\n|Objective Three: - Retrieve Experimental Weapon\n\nIn Foster's weapons lab there is a prototype submachine gun that we cannot let fall into enemy hands. This is because the weapon is capable of creating a temporary cloaking field. Find it and carry out some 'field research.'\n\n|Objective Four: - Deactivate Bomb\n\nOur sensors indicate there is a bomb in the Skedar craft on the landing pad! The only thing that can help you is the Data Uplink - get close to the ship, and use it to install a virus. The ship should then float clear of the Institute, and the bomb will detonate without harming anyone.\n\nEND\n"
+        },
+        {
+            "id": "L_IMP_003",
+            "context": "L_IMP_003",
+            "string": "|Background - \n\nIn revenge for the foiling of their grand plan, the Skedar have attacked the source of their troubles, the Carrington Institute. With an organized response out of the question, it falls to Joanna to save what she can of the Institute from total destruction.\n\n|Carrington - \n\nThey've caught us completely off guard, Jo! Save who and what you can, then get out yourself. After all, the Institute is the people, not the building.\n\n|Objective One: - Release Hostages\n\nSome of the invading forces are holding key Institute staff hostage. Save as many of the hostages as you can. Look in the various labs throughout the upper floors of the building.\n\n|Objective Two: - Retrieve Experimental Weapon\n\nIn Foster's weapons lab there is a prototype submachine gun that we cannot let fall into enemy hands. This is because the weapon is capable of creating a temporary cloaking field. Find it and carry out some 'field research.'\n\n|Objective Three: - Deactivate Bomb\n\nOur sensors indicate there is a bomb in the Skedar craft on the landing pad! The only thing that can help you is the Data Uplink - get close to the ship, and use it to install a virus. The ship should then float clear of the Institute, and the bomb will detonate without harming anyone.\n\nEND\n"
+        },
+        {
+            "id": "L_IMP_004",
+            "context": "L_IMP_004",
+            "string": "\n"
+        },
+        {
+            "id": "L_IMP_005",
+            "context": "L_IMP_005",
+            "string": "Reactivate automatic defenses\n"
+        },
+        {
+            "id": "L_IMP_006",
+            "context": "L_IMP_006",
+            "string": "Release hostages\n"
+        },
+        {
+            "id": "L_IMP_007",
+            "context": "L_IMP_007",
+            "string": "Retrieve experimental weapon\n"
+        },
+        {
+            "id": "L_IMP_008",
+            "context": "L_IMP_008",
+            "string": "Destroy sensitive information\n"
+        },
+        {
+            "id": "L_IMP_009",
+            "context": "L_IMP_009",
+            "string": "Deactivate bomb\n"
+        },
+        {
+            "id": "L_IMP_010",
+            "context": "L_IMP_010",
+            "string": "Obtain sensitive info.\n"
+        },
+        {
+            "id": "L_IMP_011",
+            "context": "L_IMP_011",
+            "string": "Guard's\n"
+        },
+        {
+            "id": "L_IMP_012",
+            "context": "L_IMP_012",
+            "string": "Sensitive info\n"
+        },
+        {
+            "id": "L_IMP_013",
+            "context": "L_IMP_013",
+            "string": "Sensitive info\n"
+        },
+        {
+            "id": "L_IMP_014",
+            "context": "L_IMP_014",
+            "string": "Picked up sensitive info.\n"
+        },
+        {
+            "id": "L_IMP_015",
+            "context": "L_IMP_015",
+            "string": "Automatic gun activated.\n"
+        },
+        {
+            "id": "L_IMP_016",
+            "context": "L_IMP_016",
+            "string": "Too many hostages killed.\n"
+        },
+        {
+            "id": "L_IMP_017",
+            "context": "L_IMP_017",
+            "string": "Hostages have been saved.\n"
+        },
+        {
+            "id": "L_IMP_018",
+            "context": "L_IMP_018",
+            "string": "Sensitive information has been destroyed.\n"
+        },
+        {
+            "id": "L_IMP_019",
+            "context": "L_IMP_019",
+            "string": "Carrington has been killed.\n"
+        },
+        {
+            "id": "L_IMP_020",
+            "context": "L_IMP_020",
+            "string": "Joanna - we're under attack.\n"
+        },
+        {
+            "id": "L_IMP_021",
+            "context": "L_IMP_021",
+            "string": "Get the guns back on line - hurry.\n"
+        },
+        {
+            "id": "L_IMP_022",
+            "context": "L_IMP_022",
+            "string": "The Skedar have taken hostages.\n"
+        },
+        {
+            "id": "L_IMP_023",
+            "context": "L_IMP_023",
+            "string": "Get up to the offices and save them.\n"
+        },
+        {
+            "id": "L_IMP_024",
+            "context": "L_IMP_024",
+            "string": "They're using a new form of shield technology.\n"
+        },
+        {
+            "id": "L_IMP_025",
+            "context": "L_IMP_025",
+            "string": "Foster was working on a new weapon which may \nbe useful.\n"
+        },
+        {
+            "id": "L_IMP_026",
+            "context": "L_IMP_026",
+            "string": "Damn it. My office... If they get access...\n"
+        },
+        {
+            "id": "L_IMP_027",
+            "context": "L_IMP_027",
+            "string": "Get there first, Jo, and destroy the files.\n"
+        },
+        {
+            "id": "L_IMP_028",
+            "context": "L_IMP_028",
+            "string": "Things are desperate. They've planted a bomb.\n"
+        },
+        {
+            "id": "L_IMP_029",
+            "context": "L_IMP_029",
+            "string": "Find it and get it out of the building.\n"
+        },
+        {
+            "id": "L_IMP_030",
+            "context": "L_IMP_030",
+            "string": "Access denied - authorization failure.\n"
+        },
+        {
+            "id": "L_IMP_031",
+            "context": "L_IMP_031",
+            "string": "Emergency overrides have been engaged.\n"
+        },
+        {
+            "id": "L_IMP_032",
+            "context": "L_IMP_032",
+            "string": "Well done, Joanna. We're nearly clear...\n"
+        },
+        {
+            "id": "L_IMP_033",
+            "context": "L_IMP_033",
+            "string": "The last dropship is waiting for you. Hurry.\n"
+        },
+        {
+            "id": "L_IMP_034",
+            "context": "L_IMP_034",
+            "string": "Critical mission object has been destroyed.\n"
+        },
+        {
+            "id": "L_IMP_035",
+            "context": "L_IMP_035",
+            "string": "The autodefenses will really help me out.\n"
+        },
+        {
+            "id": "L_IMP_036",
+            "context": "L_IMP_036",
+            "string": "So this is what Foster was working on.\n"
+        },
+        {
+            "id": "L_IMP_037",
+            "context": "L_IMP_037",
+            "string": "I'll have to go carefully... The hostages are \ncounting on me.\n"
+        },
+        {
+            "id": "L_IMP_038",
+            "context": "L_IMP_038",
+            "string": "Well, at least I won't know if I'm doing \nanything wrong.\n"
+        },
+        {
+            "id": "L_IMP_039",
+            "context": "L_IMP_039",
+            "string": "The bomb has been detonated...\n"
+        },
+        {
+            "id": "L_IMP_040",
+            "context": "L_IMP_040",
+            "string": "You have been given a Devastator.\n"
+        },
+        {
+            "id": "L_IMP_041",
+            "context": "L_IMP_041",
+            "string": "All ready, Joanna? We can't keep the Maian delegation waiting. Or the President, of course.\n"
+        },
+        {
+            "id": "L_IMP_042",
+            "context": "L_IMP_042",
+            "string": "Am I ready? What do you mean? I was ready half an hour ago. It was you holding us up!\n"
+        },
+        {
+            "id": "L_IMP_043",
+            "context": "L_IMP_043",
+            "string": "But you know how it is, Joanna... I had to make sure my hair was just right, and then there was the suit...\n"
+        },
+        {
+            "id": "L_IMP_044",
+            "context": "L_IMP_044",
+            "string": "They should keep you away from mirrors. Nervous?\n"
+        },
+        {
+            "id": "L_IMP_045",
+            "context": "L_IMP_045",
+            "string": "Very. I've waited for this moment for so many years. Contact, friendly contact, between Humans and Maians is what the Institute was founded for. And in a few minutes we'll be at the White House, and it will finally happen...\n"
+        },
+        {
+            "id": "L_IMP_046",
+            "context": "L_IMP_046",
+            "string": "Where did that come from?\n"
+        },
+        {
+            "id": "L_IMP_047",
+            "context": "L_IMP_047",
+            "string": "It was up on ground level...\n"
+        },
+        {
+            "id": "L_IMP_048",
+            "context": "L_IMP_048",
+            "string": "Looks like someone doesn't know when to quit. We've got to get everyone out!\n"
+        },
+        {
+            "id": "L_IMP_049",
+            "context": "L_IMP_049",
+            "string": "Get clear! I'll hold them off... You can come back and get me later!\n"
+        },
+        {
+            "id": "L_IMP_050",
+            "context": "L_IMP_050",
+            "string": "At least, I hope you can.\n"
+        },
+        {
+            "id": "L_IMP_051",
+            "context": "L_IMP_051",
+            "string": "You need the Data Uplink.\n"
+        },
+        {
+            "id": "L_IMP_052",
+            "context": "L_IMP_052",
+            "string": "Connection has been made.\n"
+        },
+        {
+            "id": "L_IMP_053",
+            "context": "L_IMP_053",
+            "string": "Bypassing security systems.\n"
+        },
+        {
+            "id": "L_IMP_054",
+            "context": "L_IMP_054",
+            "string": "Virus has been downloaded successfully.\n"
+        },
+        {
+            "id": "L_IMP_055",
+            "context": "L_IMP_055",
+            "string": "Ship's engines have been activated.\n"
+        },
+        {
+            "id": "L_IMP_056",
+            "context": "L_IMP_056",
+            "string": "Connection to ship has been broken.\n"
+        },
+        {
+            "id": "L_IMP_057",
+            "context": "L_IMP_057",
+            "string": "Obtain Data Uplink.\n"
+        },
+        {
+            "id": "L_IMP_058",
+            "context": "L_IMP_058",
+            "string": "\n"
+        },
+        {
+            "id": "L_IMP_059",
+            "context": "L_IMP_059",
+            "string": "Data Uplink\n"
+        },
+        {
+            "id": "L_IMP_060",
+            "context": "L_IMP_060",
+            "string": "A Data Uplink\n"
+        },
+        {
+            "id": "L_IMP_061",
+            "context": "L_IMP_061",
+            "string": "Picked up a Data Uplink.\n"
+        },
+        {
+            "id": "L_IMP_062",
+            "context": "L_IMP_062",
+            "string": null
+        },
+        {
+            "id": "L_IMP_063",
+            "context": "L_IMP_063",
+            "string": null
+        }
+    ]
+}

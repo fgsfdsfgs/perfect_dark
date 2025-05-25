@@ -1,0 +1,544 @@
+{
+    "messages": [
+        {
+            "id": "L_EAR_000",
+            "context": "L_EAR_000",
+            "string": "|Background - \n\nA dataDyne scientist calling himself Dr. Caroll has contacted the Carrington Institute requesting that we rescue him from the dataDyne headquarters tonight. He claims that he has complained to dataDyne about the moral implications of his current project, but rather than dismiss him, they will mentally restructure him until he finds the nature of the project acceptable again.\n\n|Carrington - \n\nYou'll need to use your remote comlink to get past the door to the sector where Dr. Caroll's lab is located. Unfortunately, we've detected huge levels of electro-magnetic activity around the laboratories which interfere with all our comms equipment. Convince the scientists to shut their experiments down. Remember that they are noncombatants; don't kill them. And don't forget your Data Uplink, Jo - it may come in handy.\n\n|Objective One: - Holograph Radioactive Isotope\n\nUse the CamSpy to obtain a spectrographic photo record of the isotope on test in the dataDyne basement labs. Dr. Caroll has linked the isotope to an enhancement of the currently experimental shield technology item, also present in the laboratories.\n\n|Objective Two: - Start Maintenance Cycle on the Security Systems\n\nReprogram the cleaning robots in the service area to start work on the security systems. This will permit you to get farther into the laboratory complex, though you will have to stay close to the robot you reprogram if you want to remain unharmed.\n\n|Objective Three: - Shut Down the Experiments\n\nThe experiments in sector two of the laboratories are causing extreme interference with the communications uplink, preventing our hackers from cracking the security lock code. Get the scientists present to shut them down unless you want to risk setting off alarms by doing it yourself.  Be careful not to kill the scientists.\n\n|Objective Four: - Obtain Items of Experimental Technology\n\nDr. Caroll informs us that there are three other major projects nearing completion in the labs besides his own. You are to collect the prototypes for the three projects and return them to the Carrington Institute for assessment.\n\n|Objective Five: - Locate Dr. Caroll\n\nThe basement is divided into four security zones - Dr. Caroll is in the last of these areas, sector four. In-between the sectors are systems designed to keep out those without clearance, such as you. Bypass them as best you can, and search for the scientist in the final sector.\n\nEND\n"
+        },
+        {
+            "id": "L_EAR_001",
+            "context": "L_EAR_001",
+            "string": "BASEMENT LABORATORY\n"
+        },
+        {
+            "id": "L_EAR_002",
+            "context": "L_EAR_002",
+            "string": "|Background - \n\nA dataDyne scientist calling himself Dr. Caroll has contacted the Carrington Institute requesting that we rescue him from the dataDyne headquarters tonight. He claims that he has complained to dataDyne about the moral implications of his current project, but rather than dismiss him, they will mentally restructure him until he finds the nature of the project acceptable again.\n\n|Carrington - \n\nYou'll need to use your remote comlink to get past the door to the sector where Dr. Caroll's lab is located. Unfortunately, we've detected huge levels of electro-magnetic activity around the laboratories which interfere with all our comms equipment. Convince the scientists to shut their experiments down. Remember that they are noncombatants; don't kill them. And don't forget your Data Uplink, Jo - it may come in handy.\n\n|Objective One: - Holograph Radioactive Isotope\n\nUse the CamSpy to obtain a spectrographic photo record of the isotope on test in the dataDyne basement labs. Dr. Caroll has linked the isotope to an enhancement of the currently experimental shield technology item, also present in the laboratories.\n\n|Objective Two: - Start Maintenance Cycle on the Security Systems\n\nReprogram the cleaning robots in the service area to start work on the security systems. This will permit you to get farther into the laboratory complex, though you will have to stay close to the robot you reprogram if you want to remain unharmed.\n\n|Objective Three: - Shut Down the Experiments\n\nThe experiments in sector two of the laboratories are causing extreme interference with the communications uplink, preventing our hackers from cracking the security lock code. Get the scientists present to shut them down unless you want to risk setting off alarms by doing it yourself. Be careful not to kill the scientists.\n\n|Objective Four: - Locate Dr. Caroll\n\nThe basement is divided into four security zones - Dr. Caroll is in the last of these areas, sector four. In-between the sectors are systems designed to keep out those without clearance, such as you. Bypass them as best you can, and search for the scientist in the final sector.\n\nEND\n"
+        },
+        {
+            "id": "L_EAR_003",
+            "context": "L_EAR_003",
+            "string": "|Background - \n\nA dataDyne scientist calling himself Dr. Caroll has contacted the Carrington Institute requesting that we rescue him from the dataDyne headquarters tonight. He claims that he has complained to dataDyne about the moral implications of his current project, but rather than dismiss him, they will mentally restructure him until he finds the nature of the project acceptable again.\n\n|Carrington - \n\nYou'll need to use your remote comlink to get past the door to the sector where Dr. Caroll's lab is located. Unfortunately, we've detected huge levels of electro-magnetic activity around the laboratories which interfere with all our comms equipment. Convince the scientists to shut their experiments down. Remember that they are noncombatants; don't kill them. And don't forget your Data Uplink, Jo - it may come in handy.\n\n|Objective One: - Holograph Radioactive Isotope\n\nUse the CamSpy to obtain a spectrographic photo record of the isotope on test in the dataDyne basement labs. Dr. Caroll has linked the isotope to an enhancement of the currently experimental shield technology item, also present in the laboratories.\n\n|Objective Two: - Locate Dr. Caroll\n\nThe basement is divided into four security zones - Dr. Caroll is in the last of these areas, sector four. In-between the sectors are systems designed to keep out those without clearance, such as you. Bypass them as best you can, and search for the scientist in the final sector.\n\nEND\n"
+        },
+        {
+            "id": "L_EAR_004",
+            "context": "L_EAR_004",
+            "string": null
+        },
+        {
+            "id": "L_EAR_005",
+            "context": "L_EAR_005",
+            "string": null
+        },
+        {
+            "id": "L_EAR_006",
+            "context": "L_EAR_006",
+            "string": null
+        },
+        {
+            "id": "L_EAR_007",
+            "context": "L_EAR_007",
+            "string": null
+        },
+        {
+            "id": "L_EAR_008",
+            "context": "L_EAR_008",
+            "string": null
+        },
+        {
+            "id": "L_EAR_009",
+            "context": "L_EAR_009",
+            "string": "Locate Dr. Caroll\n"
+        },
+        {
+            "id": "L_EAR_010",
+            "context": "L_EAR_010",
+            "string": "Shut down experiments\n"
+        },
+        {
+            "id": "L_EAR_011",
+            "context": "L_EAR_011",
+            "string": "Start security maintenance cycle\n"
+        },
+        {
+            "id": "L_EAR_012",
+            "context": "L_EAR_012",
+            "string": "Obtain experimental technologies\n"
+        },
+        {
+            "id": "L_EAR_013",
+            "context": "L_EAR_013",
+            "string": "Holograph radioactive isotope\n"
+        },
+        {
+            "id": "L_EAR_014",
+            "context": "L_EAR_014",
+            "string": "Machinery scream sound Fx.\n"
+        },
+        {
+            "id": "L_EAR_015",
+            "context": "L_EAR_015",
+            "string": "Maintenance robots activated.\n"
+        },
+        {
+            "id": "L_EAR_016",
+            "context": "L_EAR_016",
+            "string": "Maintenance robots reprogrammed.\n"
+        },
+        {
+            "id": "L_EAR_017",
+            "context": "L_EAR_017",
+            "string": "Security doors unlocked.\n"
+        },
+        {
+            "id": "L_EAR_018",
+            "context": "L_EAR_018",
+            "string": "Maintenance cycle activated.\n"
+        },
+        {
+            "id": "L_EAR_019",
+            "context": "L_EAR_019",
+            "string": "Routine cleaning cycle activated.\n"
+        },
+        {
+            "id": "L_EAR_020",
+            "context": "L_EAR_020",
+            "string": "Operation not allowed - robots busy.\n"
+        },
+        {
+            "id": "L_EAR_021",
+            "context": "L_EAR_021",
+            "string": "Maintenance robots deactivated.\n"
+        },
+        {
+            "id": "L_EAR_022",
+            "context": "L_EAR_022",
+            "string": "Critical mission object destroyed.\n"
+        },
+        {
+            "id": "L_EAR_023",
+            "context": "L_EAR_023",
+            "string": "Maintenance robot system offline.\n"
+        },
+        {
+            "id": "L_EAR_024",
+            "context": "L_EAR_024",
+            "string": "MISSION FAILED \n - objectives cannot be completed.\n"
+        },
+        {
+            "id": "L_EAR_025",
+            "context": "L_EAR_025",
+            "string": "Who are you?\n"
+        },
+        {
+            "id": "L_EAR_026",
+            "context": "L_EAR_026",
+            "string": "Unacceptable scientist casualties.\n"
+        },
+        {
+            "id": "L_EAR_027",
+            "context": "L_EAR_027",
+            "string": "Terminal is not active.\n"
+        },
+        {
+            "id": "L_EAR_028",
+            "context": "L_EAR_028",
+            "string": "Powering down active systems.\n"
+        },
+        {
+            "id": "L_EAR_029",
+            "context": "L_EAR_029",
+            "string": "Experiment has been shut down.\n"
+        },
+        {
+            "id": "L_EAR_030",
+            "context": "L_EAR_030",
+            "string": "Alarm activated.\n"
+        },
+        {
+            "id": "L_EAR_031",
+            "context": "L_EAR_031",
+            "string": "Alarm deactivated.\n"
+        },
+        {
+            "id": "L_EAR_032",
+            "context": "L_EAR_032",
+            "string": "Don't shoot me - I'll help you.\n"
+        },
+        {
+            "id": "L_EAR_033",
+            "context": "L_EAR_033",
+            "string": "What the hell are you doing in my lab?\n"
+        },
+        {
+            "id": "L_EAR_034",
+            "context": "L_EAR_034",
+            "string": "Let me help you.\n"
+        },
+        {
+            "id": "L_EAR_035",
+            "context": "L_EAR_035",
+            "string": "Accidents will happen.\n"
+        },
+        {
+            "id": "L_EAR_036",
+            "context": "L_EAR_036",
+            "string": "ACCESS DENIED - security code required.\n"
+        },
+        {
+            "id": "L_EAR_037",
+            "context": "L_EAR_037",
+            "string": "Searching for password.\n"
+        },
+        {
+            "id": "L_EAR_038",
+            "context": "L_EAR_038",
+            "string": "."
+        },
+        {
+            "id": "L_EAR_039",
+            "context": "L_EAR_039",
+            "string": "Password located - bypassing lock.\n"
+        },
+        {
+            "id": "L_EAR_040",
+            "context": "L_EAR_040",
+            "string": "Contact broken - reestablish link.\n"
+        },
+        {
+            "id": "L_EAR_041",
+            "context": "L_EAR_041",
+            "string": "Security door already unlocked.\n"
+        },
+        {
+            "id": "L_EAR_042",
+            "context": "L_EAR_042",
+            "string": "Experiment already powered down.\n"
+        },
+        {
+            "id": "L_EAR_043",
+            "context": "L_EAR_043",
+            "string": "Strange - the experiment's already off!\n"
+        },
+        {
+            "id": "L_EAR_044",
+            "context": "L_EAR_044",
+            "string": "It appears someone has broken my PC.\n"
+        },
+        {
+            "id": "L_EAR_045",
+            "context": "L_EAR_045",
+            "string": "Obtain Night Vision.\n"
+        },
+        {
+            "id": "L_EAR_046",
+            "context": "L_EAR_046",
+            "string": "Cassandra De Vries'\n"
+        },
+        {
+            "id": "L_EAR_047",
+            "context": "L_EAR_047",
+            "string": "Night Vision\n"
+        },
+        {
+            "id": "L_EAR_048",
+            "context": "L_EAR_048",
+            "string": "De Vries' briefcase\n"
+        },
+        {
+            "id": "L_EAR_049",
+            "context": "L_EAR_049",
+            "string": "Picked up Night Vision.\n"
+        },
+        {
+            "id": "L_EAR_050",
+            "context": "L_EAR_050",
+            "string": "Obtain shield tech item.\n"
+        },
+        {
+            "id": "L_EAR_051",
+            "context": "L_EAR_051",
+            "string": "Cassandra De Vries'\n"
+        },
+        {
+            "id": "L_EAR_052",
+            "context": "L_EAR_052",
+            "string": "Shield tech item\n"
+        },
+        {
+            "id": "L_EAR_053",
+            "context": "L_EAR_053",
+            "string": "De Vries' briefcase\n"
+        },
+        {
+            "id": "L_EAR_054",
+            "context": "L_EAR_054",
+            "string": "Picked up shield tech item.\n"
+        },
+        {
+            "id": "L_EAR_055",
+            "context": "L_EAR_055",
+            "string": "Obtain Data Uplink.\n"
+        },
+        {
+            "id": "L_EAR_056",
+            "context": "L_EAR_056",
+            "string": "\n"
+        },
+        {
+            "id": "L_EAR_057",
+            "context": "L_EAR_057",
+            "string": "Data Uplink\n"
+        },
+        {
+            "id": "L_EAR_058",
+            "context": "L_EAR_058",
+            "string": "A Data Uplink\n"
+        },
+        {
+            "id": "L_EAR_059",
+            "context": "L_EAR_059",
+            "string": "Picked up a Data Uplink.\n"
+        },
+        {
+            "id": "L_EAR_060",
+            "context": "L_EAR_060",
+            "string": "Connection established.\n"
+        },
+        {
+            "id": "L_EAR_061",
+            "context": "L_EAR_061",
+            "string": "Maintenance hatch is now open.\n"
+        },
+        {
+            "id": "L_EAR_062",
+            "context": "L_EAR_062",
+            "string": "Maintenance hatch is already open.\n"
+        },
+        {
+            "id": "L_EAR_063",
+            "context": "L_EAR_063",
+            "string": "WARNING - radioactive matter detected.\n"
+        },
+        {
+            "id": "L_EAR_064",
+            "context": "L_EAR_064",
+            "string": "What are you doing in my lab?\n"
+        },
+        {
+            "id": "L_EAR_065",
+            "context": "L_EAR_065",
+            "string": "I haven't seen you before...\n"
+        },
+        {
+            "id": "L_EAR_066",
+            "context": "L_EAR_066",
+            "string": "Who the hell are you?\n"
+        },
+        {
+            "id": "L_EAR_067",
+            "context": "L_EAR_067",
+            "string": "Shut down the experiment.\n"
+        },
+        {
+            "id": "L_EAR_068",
+            "context": "L_EAR_068",
+            "string": "Pull the plug on that, NOW.\n"
+        },
+        {
+            "id": "L_EAR_069",
+            "context": "L_EAR_069",
+            "string": "Switch this thing off.\n"
+        },
+        {
+            "id": "L_EAR_070",
+            "context": "L_EAR_070",
+            "string": "I'll shut it down.\n"
+        },
+        {
+            "id": "L_EAR_071",
+            "context": "L_EAR_071",
+            "string": "Please don't hurt me.\n"
+        },
+        {
+            "id": "L_EAR_072",
+            "context": "L_EAR_072",
+            "string": "Allow me to assist you.\n"
+        },
+        {
+            "id": "L_EAR_073",
+            "context": "L_EAR_073",
+            "string": "My experiments!\n"
+        },
+        {
+            "id": "L_EAR_074",
+            "context": "L_EAR_074",
+            "string": "There, the experiment is down.\n"
+        },
+        {
+            "id": "L_EAR_075",
+            "context": "L_EAR_075",
+            "string": "Leave this area NOW!\n"
+        },
+        {
+            "id": "L_EAR_076",
+            "context": "L_EAR_076",
+            "string": "Security!\n"
+        },
+        {
+            "id": "L_EAR_077",
+            "context": "L_EAR_077",
+            "string": "I'm calling security.\n"
+        },
+        {
+            "id": "L_EAR_078",
+            "context": "L_EAR_078",
+            "string": "Accidents will happen.\n"
+        },
+        {
+            "id": "L_EAR_079",
+            "context": "L_EAR_079",
+            "string": "How did that happen?\n"
+        },
+        {
+            "id": "L_EAR_080",
+            "context": "L_EAR_080",
+            "string": "Looks like it's off already.\n"
+        },
+        {
+            "id": "L_EAR_081",
+            "context": "L_EAR_081",
+            "string": "Have you been tampering with this?\n"
+        },
+        {
+            "id": "L_EAR_082",
+            "context": "L_EAR_082",
+            "string": "Someone's broken my equipment.\n"
+        },
+        {
+            "id": "L_EAR_083",
+            "context": "L_EAR_083",
+            "string": "What's happened to the terminal?\n"
+        },
+        {
+            "id": "L_EAR_084",
+            "context": "L_EAR_084",
+            "string": "You vandal - you've broken it.\n"
+        },
+        {
+            "id": "L_EAR_085",
+            "context": "L_EAR_085",
+            "string": "Connection broken - experiments still active.\n"
+        },
+        {
+            "id": "L_EAR_086",
+            "context": "L_EAR_086",
+            "string": "Experimental item 1 acquired.\n"
+        },
+        {
+            "id": "L_EAR_087",
+            "context": "L_EAR_087",
+            "string": "Experimental item 2 acquired.\n"
+        },
+        {
+            "id": "L_EAR_088",
+            "context": "L_EAR_088",
+            "string": "Experimental item 3 acquired.\n"
+        },
+        {
+            "id": "L_EAR_089",
+            "context": "L_EAR_089",
+            "string": "Obtain CamSpy.\n"
+        },
+        {
+            "id": "L_EAR_090",
+            "context": "L_EAR_090",
+            "string": "Dr. Caroll's\n"
+        },
+        {
+            "id": "L_EAR_091",
+            "context": "L_EAR_091",
+            "string": "CamSpy\n"
+        },
+        {
+            "id": "L_EAR_092",
+            "context": "L_EAR_092",
+            "string": "A CamSpy\n"
+        },
+        {
+            "id": "L_EAR_093",
+            "context": "L_EAR_093",
+            "string": "Picked up a CamSpy.\n"
+        },
+        {
+            "id": "L_EAR_094",
+            "context": "L_EAR_094",
+            "string": "That's the highest security sector - Dr. Caroll \nhas got to be nearby.\n"
+        },
+        {
+            "id": "L_EAR_095",
+            "context": "L_EAR_095",
+            "string": "Something around here's using a lot of power.\n"
+        },
+        {
+            "id": "L_EAR_096",
+            "context": "L_EAR_096",
+            "string": "Reprogram that cleaning bot - \nit'll give you a way in.\n"
+        },
+        {
+            "id": "L_EAR_097",
+            "context": "L_EAR_097",
+            "string": "Get out, Jo! The levels are too high. \nUse the CamSpy.\n"
+        },
+        {
+            "id": "L_EAR_098",
+            "context": "L_EAR_098",
+            "string": "Secret weapons compartment opened.\n"
+        },
+        {
+            "id": "L_EAR_099",
+            "context": "L_EAR_099",
+            "string": "Enemy detected - weapon cache locked.\n"
+        },
+        {
+            "id": "L_EAR_100",
+            "context": "L_EAR_100",
+            "string": "Dr. Caroll?\n"
+        },
+        {
+            "id": "L_EAR_101",
+            "context": "L_EAR_101",
+            "string": "Dr. Caroll, are you here?\n"
+        },
+        {
+            "id": "L_EAR_102",
+            "context": "L_EAR_102",
+            "string": "Well, is it safe to come out?\n"
+        },
+        {
+            "id": "L_EAR_103",
+            "context": "L_EAR_103",
+            "string": "Yes, all clear.\n"
+        },
+        {
+            "id": "L_EAR_104",
+            "context": "L_EAR_104",
+            "string": "Wh..what... you're...\n"
+        },
+        {
+            "id": "L_EAR_105",
+            "context": "L_EAR_105",
+            "string": "Very professionally done, my dear, but there's \nno time to waste! We must leave immediately!\n"
+        },
+        {
+            "id": "L_EAR_106",
+            "context": "L_EAR_106",
+            "string": "Come on. I have vital information, and you \nmust protect me.\n"
+        },
+        {
+            "id": "L_EAR_107",
+            "context": "L_EAR_107",
+            "string": null
+        }
+    ]
+}

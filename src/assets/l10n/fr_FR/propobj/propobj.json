@@ -1,0 +1,444 @@
+{
+    "messages": [
+        {
+            "id": "L_PROPOBJ_000",
+            "context": "L_PROPOBJ_000",
+            "string": "%s obtenu.\n"
+        },
+        {
+            "id": "L_PROPOBJ_001",
+            "context": "L_PROPOBJ_001",
+            "string": "%s obtenue.\n"
+        },
+        {
+            "id": "L_PROPOBJ_002",
+            "context": "L_PROPOBJ_002",
+            "string": ""
+        },
+        {
+            "id": "L_PROPOBJ_003",
+            "context": "L_PROPOBJ_003",
+            "string": ""
+        },
+        {
+            "id": "L_PROPOBJ_004",
+            "context": "L_PROPOBJ_004",
+            "string": "%s obtenus.\n"
+        },
+        {
+            "id": "L_PROPOBJ_005",
+            "context": "L_PROPOBJ_005",
+            "string": "%s obtenues.\n"
+        },
+        {
+            "id": "L_PROPOBJ_006",
+            "context": "L_PROPOBJ_006",
+            "string": ""
+        },
+        {
+            "id": "L_PROPOBJ_007",
+            "context": "L_PROPOBJ_007",
+            "string": ""
+        },
+        {
+            "id": "L_PROPOBJ_008",
+            "context": "L_PROPOBJ_008",
+            "string": "Double "
+        },
+        {
+            "id": "L_PROPOBJ_009",
+            "context": "L_PROPOBJ_009",
+            "string": "Munitions"
+        },
+        {
+            "id": "L_PROPOBJ_010",
+            "context": "L_PROPOBJ_010",
+            "string": "Cartouche"
+        },
+        {
+            "id": "L_PROPOBJ_011",
+            "context": "L_PROPOBJ_011",
+            "string": "Balle Magnum"
+        },
+        {
+            "id": "L_PROPOBJ_012",
+            "context": "L_PROPOBJ_012",
+            "string": "balle en or"
+        },
+        {
+            "id": "L_PROPOBJ_013",
+            "context": "L_PROPOBJ_013",
+            "string": "Grenade"
+        },
+        {
+            "id": "L_PROPOBJ_014",
+            "context": "L_PROPOBJ_014",
+            "string": "Munit. grenade"
+        },
+        {
+            "id": "L_PROPOBJ_015",
+            "context": "L_PROPOBJ_015",
+            "string": "Roquette"
+        },
+        {
+            "id": "L_PROPOBJ_016",
+            "context": "L_PROPOBJ_016",
+            "string": "Roquette tête cher."
+        },
+        {
+            "id": "L_PROPOBJ_017",
+            "context": "L_PROPOBJ_017",
+            "string": "Mine télécom."
+        },
+        {
+            "id": "L_PROPOBJ_018",
+            "context": "L_PROPOBJ_018",
+            "string": "Mine prox."
+        },
+        {
+            "id": "L_PROPOBJ_019",
+            "context": "L_PROPOBJ_019",
+            "string": "Mine retard."
+        },
+        {
+            "id": "L_PROPOBJ_020",
+            "context": "L_PROPOBJ_020",
+            "string": "Couteau combat"
+        },
+        {
+            "id": "L_PROPOBJ_021",
+            "context": "L_PROPOBJ_021",
+            "string": "Couteaux combat"
+        },
+        {
+            "id": "L_PROPOBJ_025",
+            "context": "L_PROPOBJ_025",
+            "string": "Fléchette"
+        },
+        {
+            "id": "L_PROPOBJ_026",
+            "context": "L_PROPOBJ_026",
+            "string": "Bombe-N"
+        },
+        {
+            "id": "L_PROPOBJ_027",
+            "context": "L_PROPOBJ_027",
+            "string": "Sédatif"
+        },
+        {
+            "id": "L_PROPOBJ_028",
+            "context": "L_PROPOBJ_028",
+            "string": "stylo explosif"
+        },
+        {
+            "id": "L_PROPOBJ_029",
+            "context": "L_PROPOBJ_029",
+            "string": "malle explosive"
+        },
+        {
+            "id": "L_PROPOBJ_030",
+            "context": "L_PROPOBJ_030",
+            "string": "fusée"
+        },
+        {
+            "id": "L_PROPOBJ_031",
+            "context": "L_PROPOBJ_031",
+            "string": "piton"
+        },
+        {
+            "id": "L_PROPOBJ_032",
+            "context": "L_PROPOBJ_032",
+            "string": "de dynamite"
+        },
+        {
+            "id": "L_PROPOBJ_033",
+            "context": "L_PROPOBJ_033",
+            "string": "bâton "
+        },
+        {
+            "id": "L_PROPOBJ_034",
+            "context": "L_PROPOBJ_034",
+            "string": "bâtons "
+        },
+        {
+            "id": "L_PROPOBJ_035",
+            "context": "L_PROPOBJ_035",
+            "string": "mouchard"
+        },
+        {
+            "id": "L_PROPOBJ_036",
+            "context": "L_PROPOBJ_036",
+            "string": "micro camera"
+        },
+        {
+            "id": "L_PROPOBJ_037",
+            "context": "L_PROPOBJ_037",
+            "string": "Clé GoldenEye"
+        },
+        {
+            "id": "L_PROPOBJ_038",
+            "context": "L_PROPOBJ_038",
+            "string": "jeton"
+        },
+        {
+            "id": "L_PROPOBJ_039",
+            "context": "L_PROPOBJ_039",
+            "string": "plastique"
+        },
+        {
+            "id": "L_PROPOBJ_040",
+            "context": "L_PROPOBJ_040",
+            "string": "Clé obtenue.\n"
+        },
+        {
+            "id": "L_PROPOBJ_041",
+            "context": "L_PROPOBJ_041",
+            "string": "Bouclier obtenu.\n"
+        },
+        {
+            "id": "L_PROPOBJ_042",
+            "context": "L_PROPOBJ_042",
+            "string": "Un bouclier.\n"
+        },
+        {
+            "id": "L_PROPOBJ_043",
+            "context": "L_PROPOBJ_043",
+            "string": "Elément obtenu.\n"
+        },
+        {
+            "id": "L_PROPOBJ_044",
+            "context": "L_PROPOBJ_044",
+            "string": "Cette porte est fermée.\n"
+        },
+        {
+            "id": "L_PROPOBJ_045",
+            "context": "L_PROPOBJ_045",
+            "string": "Carreau"
+        },
+        {
+            "id": "L_PROPOBJ_046",
+            "context": "L_PROPOBJ_046",
+            "string": "Orbe"
+        },
+        {
+            "id": "L_PROPOBJ_047",
+            "context": "L_PROPOBJ_047",
+            "string": "Munit. Reaper"
+        },
+        {
+            "id": "L_PROPOBJ_048",
+            "context": "L_PROPOBJ_048",
+            "string": "Occulteur"
+        },
+        {
+            "id": "L_PROPOBJ_049",
+            "context": "L_PROPOBJ_049",
+            "string": "Pilule boost"
+        },
+        {
+            "id": "L_PROPOBJ_050",
+            "context": "L_PROPOBJ_050",
+            "string": "votre "
+        },
+        {
+            "id": "L_PROPOBJ_051",
+            "context": "L_PROPOBJ_051",
+            "string": "Votre "
+        },
+        {
+            "id": "L_PROPOBJ_052",
+            "context": "L_PROPOBJ_052",
+            "string": "des "
+        },
+        {
+            "id": "L_PROPOBJ_053",
+            "context": "L_PROPOBJ_053",
+            "string": "Des "
+        },
+        {
+            "id": "L_PROPOBJ_054",
+            "context": "L_PROPOBJ_054",
+            "string": "des "
+        },
+        {
+            "id": "L_PROPOBJ_055",
+            "context": "L_PROPOBJ_055",
+            "string": "Des "
+        },
+        {
+            "id": "L_PROPOBJ_056",
+            "context": "L_PROPOBJ_056",
+            "string": ""
+        },
+        {
+            "id": "L_PROPOBJ_057",
+            "context": "L_PROPOBJ_057",
+            "string": ""
+        },
+        {
+            "id": "L_PROPOBJ_058",
+            "context": "L_PROPOBJ_058",
+            "string": ""
+        },
+        {
+            "id": "L_PROPOBJ_059",
+            "context": "L_PROPOBJ_059",
+            "string": ""
+        },
+        {
+            "id": "L_PROPOBJ_060",
+            "context": "L_PROPOBJ_060",
+            "string": "un "
+        },
+        {
+            "id": "L_PROPOBJ_061",
+            "context": "L_PROPOBJ_061",
+            "string": "Un "
+        },
+        {
+            "id": "L_PROPOBJ_062",
+            "context": "L_PROPOBJ_062",
+            "string": "une "
+        },
+        {
+            "id": "L_PROPOBJ_063",
+            "context": "L_PROPOBJ_063",
+            "string": "Une "
+        },
+        {
+            "id": "L_PROPOBJ_064",
+            "context": "L_PROPOBJ_064",
+            "string": ""
+        },
+        {
+            "id": "L_PROPOBJ_065",
+            "context": "L_PROPOBJ_065",
+            "string": ""
+        },
+        {
+            "id": "L_PROPOBJ_066",
+            "context": "L_PROPOBJ_066",
+            "string": ""
+        },
+        {
+            "id": "L_PROPOBJ_067",
+            "context": "L_PROPOBJ_067",
+            "string": ""
+        },
+        {
+            "id": "L_PROPOBJ_068",
+            "context": "L_PROPOBJ_068",
+            "string": "Carreaux"
+        },
+        {
+            "id": "L_PROPOBJ_069",
+            "context": "L_PROPOBJ_069",
+            "string": "Orbes"
+        },
+        {
+            "id": "L_PROPOBJ_070",
+            "context": "L_PROPOBJ_070",
+            "string": "Munit. Reaper"
+        },
+        {
+            "id": "L_PROPOBJ_071",
+            "context": "L_PROPOBJ_071",
+            "string": "Occulteurs"
+        },
+        {
+            "id": "L_PROPOBJ_072",
+            "context": "L_PROPOBJ_072",
+            "string": "Pilules boost"
+        },
+        {
+            "id": "L_PROPOBJ_073",
+            "context": "L_PROPOBJ_073",
+            "string": "Munitions"
+        },
+        {
+            "id": "L_PROPOBJ_074",
+            "context": "L_PROPOBJ_074",
+            "string": "Cartouches"
+        },
+        {
+            "id": "L_PROPOBJ_075",
+            "context": "L_PROPOBJ_075",
+            "string": "Balles Magnum"
+        },
+        {
+            "id": "L_PROPOBJ_076",
+            "context": "L_PROPOBJ_076",
+            "string": "Balles en or"
+        },
+        {
+            "id": "L_PROPOBJ_077",
+            "context": "L_PROPOBJ_077",
+            "string": "Grenades"
+        },
+        {
+            "id": "L_PROPOBJ_078",
+            "context": "L_PROPOBJ_078",
+            "string": "Munit. grenades"
+        },
+        {
+            "id": "L_PROPOBJ_079",
+            "context": "L_PROPOBJ_079",
+            "string": "Roquettes"
+        },
+        {
+            "id": "L_PROPOBJ_080",
+            "context": "L_PROPOBJ_080",
+            "string": "Roquettes tête cher."
+        },
+        {
+            "id": "L_PROPOBJ_081",
+            "context": "L_PROPOBJ_081",
+            "string": "Mines télécom."
+        },
+        {
+            "id": "L_PROPOBJ_082",
+            "context": "L_PROPOBJ_082",
+            "string": "Mines prox."
+        },
+        {
+            "id": "L_PROPOBJ_083",
+            "context": "L_PROPOBJ_083",
+            "string": "Mines retard."
+        },
+        {
+            "id": "L_PROPOBJ_084",
+            "context": "L_PROPOBJ_084",
+            "string": "Fléchettes"
+        },
+        {
+            "id": "L_PROPOBJ_085",
+            "context": "L_PROPOBJ_085",
+            "string": "Bombes-N"
+        },
+        {
+            "id": "L_PROPOBJ_086",
+            "context": "L_PROPOBJ_086",
+            "string": "Sédatifs"
+        },
+        {
+            "id": "L_PROPOBJ_087",
+            "context": "L_PROPOBJ_087",
+            "string": "jetons"
+        },
+        {
+            "id": "L_PROPOBJ_088",
+            "context": "L_PROPOBJ_088",
+            "string": null
+        },
+        {
+            "id": "L_PROPOBJ_089",
+            "context": "L_PROPOBJ_089",
+            "string": null
+        },
+        {
+            "id": "L_PROPOBJ_090",
+            "context": "L_PROPOBJ_090",
+            "string": null
+        }
+    ]
+}

@@ -1,0 +1,284 @@
+{
+    "messages": [
+        {
+            "id": "L_LEE_000",
+            "context": "L_LEE_000",
+            "string": "|Antecedentes - \n\nQuedando inconsciente durante la evacuación del Instituto Carrington, Joanna despierta para encontrarse prisionera abordo de una nave de asalto Skedar.\n\n|Carrington - No disponible.\n\n|Elvis - \n\n¡Joanna! ¡Estoy siguiendo a la nave de asalto que te retiene! Conmigo están dos protectores Maian de la delegación que estuvo en la Casa Blanca. Si nos puedes meter a bordo, podremos ayudarte a tomar la nave.\n\n|Objetivo Uno: - Desactivar Sistemas de Escudo\n\nEl sistema de escudo evita que haya maniobras de atraque. Baja los escudos para que Elvis y sus compañeros puedan iniciar la aproximación.\n\n|Objetivo Dos: - Abrir Puertas del Hangar\n\nNormalmente el sistema de atraque se controla de forma automática: debe ser anulado desde el puente. Abre las puertas usando los controles locales sin tener en cuenta el hangar, y Elvis podrá terminar el ciclo de aterrizaje.\n\n|Objetivo Tres: - Acceder a los Sistemas de Navegación\n\nLleva a Elvis hasta el mapa estelar para que pueda descubrir hacia donde se dirige la nave de asalto. En el mismo, debería estar también la posición de las fortalezas Skedar: esta información puede ser usada para los ataques de la Flota Maian.\n\n|Objetivo Cuatro: - Sabotear los Motores\n\nEl plan para tomar la nave de asalto debería salir mal si el Comandante altera el curso establecido. Manipula los motores para que así la nave se pare.\n\n|Objetivo Cinco: - Ganar el Control del Puente\n\nUna vez el Puente haya sido tomado, la nave no estará más bajo el control Skedar. Sólo quedará dentro el Comandante.\n\nFIN\n"
+        },
+        {
+            "id": "L_LEE_001",
+            "context": "L_LEE_001",
+            "string": "NAVE DE ASALTO SKEDAR\n"
+        },
+        {
+            "id": "L_LEE_002",
+            "context": "L_LEE_002",
+            "string": "|Antecedentes - \n\nQuedando inconsciente durante la evacuación del Instituto Carrington, Joanna despierta para encontrarse prisionera abordo de una nave de asalto Skedar.\n\n|Carrington - No disponible.\n\n|Elvis - \n\n¡Joanna! ¡Estoy siguiendo a la nave de asalto que te retiene! Conmigo están dos protectores Maian de la delegación que estuvo en la Casa Blanca. Si nos puedes meter a bordo, podremos ayudarte a tomar la nave.\n\n|Objetivo Uno: - Desactivar Sistemas de Escudo\n\nEl sistema de escudo evita que haya maniobras de atraque. Baja los escudos para que Elvis y sus compañeros puedan iniciar la aproximación.\n\n|Objetivo Dos: - Acceder a los Sistemas de Navegación\n\nLleva a Elvis hasta el mapa estelar para que pueda descubrir hacia donde se dirige la nave de asalto. En el mismo, debería estar también la posición de las fortalezas Skedar: esta información puede ser usada para los ataques de la Flota Maian.\n\n|Objetivo Tres: - Sabotear los Motores\n\nEl plan para tomar la nave de asalto debería salir mal si el Comandante altera el curso establecido. Manipula los motores para que así la nave se pare.\n\n|Objetivo Cuatro: - Ganar el Control del Puente\n\nUna vez el Puente haya sido tomado, la nave no estará más bajo el control Skedar. Sólo quedará dentro el Comandante.\n\nFIN\n"
+        },
+        {
+            "id": "L_LEE_003",
+            "context": "L_LEE_003",
+            "string": "|Antecedentes - \n\nQuedando inconsciente durante la evacuación del Instituto Carrington, Joanna despierta para encontrarse prisionera abordo de una nave de asalto Skedar.\n\n|Carrington - No disponible.\n\n|Elvis - \n\n¡Joanna! ¡Estoy siguiendo a la nave de asalto que te retiene! Conmigo están dos protectores Maian de la delegación que estuvo en la Casa Blanca. Si nos puedes meter a bordo, podremos ayudarte a tomar la nave.\n\n|Objetivo Uno: - Desactivar Sistemas de Escudo\n\nEl sistema de escudo evita que haya maniobras de atraque. Baja los escudos para que Elvis y sus compañeros puedan iniciar la aproximación.\n\n|Objetivo Dos: - Acceder a los Sistemas de Navegación\n\nLleva a Elvis hasta el mapa estelar para que pueda descubrir hacia donde se dirige la nave de asalto. En el mismo, debería estar también la posición de las fortalezas Skedar: esta información puede ser usada para los ataques de la Flota Maian.\n\n|Objetivo Tres: - Ganar el Control del Puente\n\nUna vez el Puente haya sido tomado, la nave no estará más bajo el control Skedar. Sólo quedará dentro el Comandante.\n\nFIN\n"
+        },
+        {
+            "id": "L_LEE_004",
+            "context": "L_LEE_004",
+            "string": "\n"
+        },
+        {
+            "id": "L_LEE_005",
+            "context": "L_LEE_005",
+            "string": "Desactivar sistemas de escudo\n"
+        },
+        {
+            "id": "L_LEE_006",
+            "context": "L_LEE_006",
+            "string": "Abrir puertas del hangar\n"
+        },
+        {
+            "id": "L_LEE_007",
+            "context": "L_LEE_007",
+            "string": "Acceder a los sistemas de navegación\n"
+        },
+        {
+            "id": "L_LEE_008",
+            "context": "L_LEE_008",
+            "string": "Sabotear los motores\n"
+        },
+        {
+            "id": "L_LEE_009",
+            "context": "L_LEE_009",
+            "string": "Ganar el control del puente\n"
+        },
+        {
+            "id": "L_LEE_010",
+            "context": "L_LEE_010",
+            "string": "Los escudos de la nave han sido bajados.\n"
+        },
+        {
+            "id": "L_LEE_011",
+            "context": "L_LEE_011",
+            "string": "Las puertas del hangar han sido abiertas.\n"
+        },
+        {
+            "id": "L_LEE_012",
+            "context": "L_LEE_012",
+            "string": "Elvis ha muerto.\n"
+        },
+        {
+            "id": "L_LEE_013",
+            "context": "L_LEE_013",
+            "string": "La información de navegación ha sido recuperada.\n"
+        },
+        {
+            "id": "L_LEE_014",
+            "context": "L_LEE_014",
+            "string": "El ascensor ha sido activado.\n"
+        },
+        {
+            "id": "L_LEE_015",
+            "context": "L_LEE_015",
+            "string": "Todos los Skedar del hangar han muerto.\n"
+        },
+        {
+            "id": "L_LEE_016",
+            "context": "L_LEE_016",
+            "string": "Espera, Joanna. Baja los escudos y \nte podremos ayudar.\n"
+        },
+        {
+            "id": "L_LEE_017",
+            "context": "L_LEE_017",
+            "string": "Tienes que abrir las puertas del hangar \npara que podamos atracar.\n"
+        },
+        {
+            "id": "L_LEE_018",
+            "context": "L_LEE_018",
+            "string": "Vale, estamos dentro. Te veré en el hangar.\n"
+        },
+        {
+            "id": "L_LEE_019",
+            "context": "L_LEE_019",
+            "string": "Me alegro de verte, Joanna.\n"
+        },
+        {
+            "id": "L_LEE_020",
+            "context": "L_LEE_020",
+            "string": "Toma esto: lo encontrarás útil...\n"
+        },
+        {
+            "id": "L_LEE_021",
+            "context": "L_LEE_021",
+            "string": "Rifle de asalto AR34 recibido.\n"
+        },
+        {
+            "id": "L_LEE_022",
+            "context": "L_LEE_022",
+            "string": "Es hora de avanzar. Yo tomaré este ascensor; \ntú toma el otro.\n"
+        },
+        {
+            "id": "L_LEE_023",
+            "context": "L_LEE_023",
+            "string": "Los motores han sido desactivados.\n"
+        },
+        {
+            "id": "L_LEE_024",
+            "context": "L_LEE_024",
+            "string": "¡Cuidado, Joanna! Creo que les hemos hecho enfadar...\n"
+        },
+        {
+            "id": "L_LEE_025",
+            "context": "L_LEE_025",
+            "string": "El puente ha sido capturado.\n"
+        },
+        {
+            "id": "L_LEE_026",
+            "context": "L_LEE_026",
+            "string": "Ve delante, Joanna. Aseguraré el perímetro. \nNos vemos luego.\n"
+        },
+        {
+            "id": "L_LEE_027",
+            "context": "L_LEE_027",
+            "string": "Tengo que conseguir bajar esos escudos para \nmeter a Elvis. Necesito toda la ayuda que pueda obtener.\n"
+        },
+        {
+            "id": "L_LEE_028",
+            "context": "L_LEE_028",
+            "string": "Ahora sólo las puertas del hangar nos molestan.\n"
+        },
+        {
+            "id": "L_LEE_029",
+            "context": "L_LEE_029",
+            "string": "Esta máquina contiene los mapas estelares Skedar.\n"
+        },
+        {
+            "id": "L_LEE_030",
+            "context": "L_LEE_030",
+            "string": "Si controlamos el puente, entonces la nave será nuestra.\n"
+        },
+        {
+            "id": "L_LEE_031",
+            "context": "L_LEE_031",
+            "string": "Es hora de avanzar...\n"
+        },
+        {
+            "id": "L_LEE_032",
+            "context": "L_LEE_032",
+            "string": "Oohhh... Preferiría no estar donde creo que estoy.\n"
+        },
+        {
+            "id": "L_LEE_033",
+            "context": "L_LEE_033",
+            "string": "Y es peor que eso, querida. Sólo mira a quién tienes por compañía.\n"
+        },
+        {
+            "id": "L_LEE_034",
+            "context": "L_LEE_034",
+            "string": "¡Tú! Creía que habías escapado. No encontramos ningún rastro tuyo.\n"
+        },
+        {
+            "id": "L_LEE_035",
+            "context": "L_LEE_035",
+            "string": "No pudisteis encontrarme. Pero no me escondía de los Skedar, como tú y el Sr. Carrington descubristeis.\n"
+        },
+        {
+            "id": "L_LEE_036",
+            "context": "L_LEE_036",
+            "string": "Eso es. ¡Espera aquí! Crearé una distracción; te daré la oportunidad de escapar. Úsala o moriremos ambas.\n"
+        },
+        {
+            "id": "L_LEE_037",
+            "context": "L_LEE_037",
+            "string": "¿Por qué haces esto, Cassandra?\n"
+        },
+        {
+            "id": "L_LEE_038",
+            "context": "L_LEE_038",
+            "string": "Los Skedar me usaron, Joanna. Tú eres mi mejor baza para vengarme.\n"
+        },
+        {
+            "id": "L_LEE_039",
+            "context": "L_LEE_039",
+            "string": "¡¡¡Eeeeaaarrrrggghhh!!!\n"
+        },
+        {
+            "id": "L_LEE_040",
+            "context": "L_LEE_040",
+            "string": "Guau. Ésta es la primera vez que veo otro planeta desde el espacio. Es precioso.\n"
+        },
+        {
+            "id": "L_LEE_041",
+            "context": "L_LEE_041",
+            "string": "¿Hmmmm?\n"
+        },
+        {
+            "id": "L_LEE_042",
+            "context": "L_LEE_042",
+            "string": "No... ¡No puedo creerlo!\n"
+        },
+        {
+            "id": "L_LEE_043",
+            "context": "L_LEE_043",
+            "string": "¿Elvis? ¿Qué pasa?\n"
+        },
+        {
+            "id": "L_LEE_044",
+            "context": "L_LEE_044",
+            "string": "¿Dónde vas?\n"
+        },
+        {
+            "id": "L_LEE_045",
+            "context": "L_LEE_045",
+            "string": "¡Tenemos que bajar a la superficie! ¡Sígueme!\n"
+        },
+        {
+            "id": "L_LEE_046",
+            "context": "L_LEE_046",
+            "string": "¡Tenemos que salir de aquí!\n"
+        },
+        {
+            "id": "L_LEE_047",
+            "context": "L_LEE_047",
+            "string": "Puertas del hangar cerradas - escudos todavía activos.\n"
+        },
+        {
+            "id": "L_LEE_048",
+            "context": "L_LEE_048",
+            "string": "Objeto crítico de la misión destruido.\n"
+        },
+        {
+            "id": "L_LEE_049",
+            "context": "L_LEE_049",
+            "string": "Munición agotada - las consolas no pueden ser destruidas.\n"
+        },
+        {
+            "id": "L_LEE_050",
+            "context": "L_LEE_050",
+            "string": "Obtén el collar de De Vries.\n"
+        },
+        {
+            "id": "L_LEE_051",
+            "context": "L_LEE_051",
+            "string": "Cassandra De Vries:\n"
+        },
+        {
+            "id": "L_LEE_052",
+            "context": "L_LEE_052",
+            "string": "Collar\n"
+        },
+        {
+            "id": "L_LEE_053",
+            "context": "L_LEE_053",
+            "string": "Collar de De Vries\n"
+        },
+        {
+            "id": "L_LEE_054",
+            "context": "L_LEE_054",
+            "string": "Recogiste el collar de De Vries.\n"
+        },
+        {
+            "id": "L_LEE_055",
+            "context": "L_LEE_055",
+            "string": null
+        }
+    ]
+}

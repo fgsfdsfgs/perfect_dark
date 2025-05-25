@@ -1,0 +1,444 @@
+{
+    "messages": [
+        {
+            "id": "L_TRA_000",
+            "context": "L_TRA_000",
+            "string": "|Hintergrund - \n\nEin Flugzeug mit Beratern des Instituts an Bord wurde in Nevada abgeschossen. Die Flugzeugtrümmer und die Überreste der Besatzung wurden in die Area 51 gebracht. Einer unserer Spione hat uns übermittelt, dass es möglicherweise einen Überlebenden gibt. Die Mission lautet: Retten Sie den Überlebenden!\n\n|Carrington - \n\nIch weiß, Sie haben Fragen, Jo. Aber ich befürchte, dies ist nicht der Zeitpunkt, um sie zu beantworten. Soviel sei gesagt: Der kleine Kerl, den Sie gerade gerettet haben, ist ein Maianer. Er ist der Bodyguard des Botschafters, dessen Schiff abgeschossen wurde. Weitere Details und Informationen dulden noch einigen Aufschub.\n\n|1. Ziel: - Finden Sie die den Auto-Chirugen der Aliens!\n\nAlle Maianischen Schiffe sind mit einem Gerät ausgestattet, das man als automatischen Chirurgen bezeichnen könnte. Da dieses Gerät auf Maianische Physiologie ausgerichtet ist, stellt es den einfachsten und sichersten Weg dar, den Bodyguard wieder zu Bewusstsein zu bringen. Das Gerät befindet sich entweder unter den Trümmern des Schiffs, oder es wurde bereits ins Labor zur Analyse gebracht.\n\n|2. Ziel: - Treffen Sie sich mit unserem Agenten!\n\nJonathan berichtet, dass seine Deckung durchschaut worden ist, und er jeden Moment verhaftet werden könnte. Finden Sie ihn, bevor es die Anderen tun!\n\n|3. Ziel: - Betreten Sie den geheimen Hangar!\n\nUnser Agent konnte bis jetzt den geheimen Hangar nicht betreten, weil sonst seine Deckung noch viel früher aufgeflogen wäre. Über diesen Umstand müssen wir uns jetzt keine Sorgen mehr machen. Halten Sie Jonathan den Rücken frei, während er versucht, den Türcode zu knacken. Wir vermuten, dass sich in diesem Hangar ein intaktes Maianisches Schiff befindet.\n\n|4. Ziel: - Wiederbeleben Sie den Maianischen Bodyguard!\n\nBevor Sie diese Zone verlassen, müssen Sie den Maianer erwecken. Bedenken Sie, dass ein Schwebebett schon unter normalen Umständen nicht einfach zu steuern ist. Sobald der Maianer wieder bei Bewusstsein ist, sollte er in der Lage sein, das Schiff zu steuern.\n\n|5. Ziel: - Flüchten Sie aus der Area 51!\n\nZuerst müssen Sie den Maianischen Bodyguard zum Schiff bringen. Anschließend gilt es, an Bord zu gelangen und die Basis zu verlassen. Die Luftabwehr sollte kein Problem mehr darstellen, da Sie ja schon von Ihnen außer Kraft gesetzt worden ist.\n\nENDE\n"
+        },
+        {
+            "id": "L_TRA_001",
+            "context": "L_TRA_001",
+            "string": "AREA 51 - FLUCHT\n"
+        },
+        {
+            "id": "L_TRA_002",
+            "context": "L_TRA_002",
+            "string": "|Hintergrund - \n\nEin Flugzeug mit Beratern des Instituts an Bord wurde in Nevada abgeschossen. Die Flugzeugtrümmer und die Überreste der Besatzung wurden in die Area 51 gebracht. Einer unserer Spione hat uns übermittelt, dass es möglicherweise einen Überlebenden gibt. Die Mission lautet: Retten Sie den Überlebenden!\n\n|Carrington - \n\nIch weiß, Sie haben Fragen, Jo. Aber ich befürchte, dies ist nicht der Zeitpunkt, um sie zu beantworten. Soviel sei gesagt: Der kleine Kerl, den Sie gerade gerettet haben, ist ein Maianer. Er ist der Bodyguard des Botschafters, dessen Schiff abgeschossen wurde. Weitere Details und Informationen dulden noch einigen Aufschub.\n\n|1. Ziel: - Treffen Sie sich mit unserem Agenten!\n\nJonathan berichtet, dass seine Deckung durchschaut worden ist, und er jeden Moment verhaftet werden könnte. Finden Sie ihn, bevor es die Anderen tun!\n\n|2. Ziel: - Betreten Sie den geheimen Hangar!\n\nUnser Agent konnte bis jetzt den geheimen Hangar nicht betreten, weil sonst seine Deckung noch viel früher aufgeflogen wäre. Über diesen Umstand müssen wir uns jetzt keine Sorgen mehr machen. Halten Sie Jonathan den Rücken frei, während er versucht, den Türcode zu knacken. Wir vermuten, dass sich in diesem Hangar ein intaktes Maianisches Schiff befindet.\n\n|3. Ziel: - Wiederbeleben Sie den Maianischen Bodyguard!\n\nBevor Sie diese Zone verlassen, müssen Sie den Maianer erwecken. Bedenken Sie, dass ein Schwebebett schon unter normalen Umständen nicht einfach zu steuern ist. Sobald der Maianer wieder bei Bewusstsein ist, sollte er in der Lage sein, das Schiff zu steuern.\n\n|4. Ziel: - Flüchten Sie aus der Area 51!\n\nZuerst müssen Sie den Maianischen Bodyguard zum Schiff bringen. Anschließend gilt es, an Bord zu gelangen und die Basis zu verlassen. Die Luftabwehr sollte kein Problem mehr darstellen, da Sie ja schon von Ihnen außer Kraft gesetzt worden ist.\n\nENDE\n"
+        },
+        {
+            "id": "L_TRA_003",
+            "context": "L_TRA_003",
+            "string": "|Hintergrund - \n\nEin Flugzeug mit Beratern des Instituts an Bord wurde in Nevada abgeschossen. Die Flugzeugtrümmer und die Überreste der Besatzung wurden in die Area 51 gebracht. Einer unserer Spione hat uns übermittelt, dass es möglicherweise einen Überlebenden gibt. Die Mission lautet: Retten Sie den Überlebenden!\n\n|Carrington - \n\nIch weiß, Sie haben Fragen, Jo. Aber ich befürchte, dies ist nicht der Zeitpunkt, um sie zu beantworten. Soviel sei gesagt: Der kleine Kerl, den Sie gerade gerettet haben, ist ein Maianer. Er ist der Bodyguard des Botschafters, dessen Schiff abgeschossen wurde. Weitere Details und Informationen dulden noch einigen Aufschub.\n\n|1. Ziel: - Treffen Sie sich mit unserem Agenten!\n\nJonathan berichtet, dass seine Deckung durchschaut worden ist, und er jeden Moment verhaftet werden könnte. Finden Sie ihn, bevor es die Anderen tun!\n\n|2. Ziel: - Betreten Sie den geheimen Hangar!\n\nUnser Agent konnte bis jetzt den geheimen Hangar nicht betreten, weil sonst seine Deckung noch viel früher aufgeflogen wäre. Über diesen Umstand müssen wir uns jetzt keine Sorgen mehr machen. Halten Sie Jonathan den Rücken frei, während er versucht, den Türcode zu knacken. Wir vermuten, dass sich in diesem Hangar ein intaktes Maianisches Schiff befindet.\n\n|3. Ziel: - Flüchten Sie aus der Area 51!\n\nZuerst müssen Sie den Maianischen Bodyguard zum Schiff bringen. Anschließend gilt es, an Bord zu gelangen und die Basis zu verlassen. Die Luftabwehr sollte kein Problem mehr darstellen, da Sie ja schon von Ihnen außer Kraft gesetzt worden ist.\n\nENDE\n"
+        },
+        {
+            "id": "L_TRA_004",
+            "context": "L_TRA_004",
+            "string": "\n"
+        },
+        {
+            "id": "L_TRA_005",
+            "context": "L_TRA_005",
+            "string": "\n"
+        },
+        {
+            "id": "L_TRA_006",
+            "context": "L_TRA_006",
+            "string": "\n"
+        },
+        {
+            "id": "L_TRA_007",
+            "context": "L_TRA_007",
+            "string": "\n"
+        },
+        {
+            "id": "L_TRA_008",
+            "context": "L_TRA_008",
+            "string": "\n"
+        },
+        {
+            "id": "L_TRA_009",
+            "context": "L_TRA_009",
+            "string": "Finden Sie das Medipack!\n"
+        },
+        {
+            "id": "L_TRA_010",
+            "context": "L_TRA_010",
+            "string": "Treffen Sie sich mit Jonathan!\n"
+        },
+        {
+            "id": "L_TRA_011",
+            "context": "L_TRA_011",
+            "string": "Wiederbeleben Sie den Maianer!\n"
+        },
+        {
+            "id": "L_TRA_012",
+            "context": "L_TRA_012",
+            "string": "Finden Sie den geheimen Hangar!\n"
+        },
+        {
+            "id": "L_TRA_013",
+            "context": "L_TRA_013",
+            "string": "Flüchten Sie aus der Area 51!\n"
+        },
+        {
+            "id": "L_TRA_014",
+            "context": "L_TRA_014",
+            "string": "Joanna - Hier spricht Jonathan. Du befindest dich in Gefahr.\n"
+        },
+        {
+            "id": "L_TRA_015",
+            "context": "L_TRA_015",
+            "string": "Die gesamte Zone wurde mit Nervengas kontaminiert.\n"
+        },
+        {
+            "id": "L_TRA_016",
+            "context": "L_TRA_016",
+            "string": "Bring unseren Freund ins Sicherheitslabor. \nDort kannst du ihn verstecken.\n"
+        },
+        {
+            "id": "L_TRA_017",
+            "context": "L_TRA_017",
+            "string": "Ich kontaktiere dich, wenn du dort bist. Viel Glück!\n"
+        },
+        {
+            "id": "L_TRA_018",
+            "context": "L_TRA_018",
+            "string": "Gute Arbeit, Jo. Wir müssen uns treffen. Ich \nglaube, sie haben mich erkannt.\n"
+        },
+        {
+            "id": "L_TRA_019",
+            "context": "L_TRA_019",
+            "string": "Geh durch den Wartungsschacht, den ich in einem \nder Sicherheitslabors geföffnet habe. Beeil dich!\n"
+        },
+        {
+            "id": "L_TRA_020",
+            "context": "L_TRA_020",
+            "string": "Erlangen Sie das extraterrestrische Medipack!\n"
+        },
+        {
+            "id": "L_TRA_021",
+            "context": "L_TRA_021",
+            "string": "Cassandra De Vries\n"
+        },
+        {
+            "id": "L_TRA_022",
+            "context": "L_TRA_022",
+            "string": "Medipack\n"
+        },
+        {
+            "id": "L_TRA_023",
+            "context": "L_TRA_023",
+            "string": ""
+        },
+        {
+            "id": "L_TRA_024",
+            "context": "L_TRA_024",
+            "string": "Medipack aufgenommen\n"
+        },
+        {
+            "id": "L_TRA_025",
+            "context": "L_TRA_025",
+            "string": "Joanna! Hier drüben.\n"
+        },
+        {
+            "id": "L_TRA_026",
+            "context": "L_TRA_026",
+            "string": "Wir müssen zu unserem Freund zurück.\n"
+        },
+        {
+            "id": "L_TRA_027",
+            "context": "L_TRA_027",
+            "string": "Wir sind schon ganz nahe. Gib mir Deckung, Jo...\n"
+        },
+        {
+            "id": "L_TRA_028",
+            "context": "L_TRA_028",
+            "string": "Okay - Bleib zurück!\n"
+        },
+        {
+            "id": "L_TRA_029",
+            "context": "L_TRA_029",
+            "string": "Jonathan wurde eliminiert.\n"
+        },
+        {
+            "id": "L_TRA_030",
+            "context": "L_TRA_030",
+            "string": "Elvis wurde eliminiert.\n"
+        },
+        {
+            "id": "L_TRA_031",
+            "context": "L_TRA_031",
+            "string": "Der geheime Hangar wurde gefunden.\n"
+        },
+        {
+            "id": "L_TRA_032",
+            "context": "L_TRA_032",
+            "string": "Okay, Jo - gehen wir.\n"
+        },
+        {
+            "id": "L_TRA_033",
+            "context": "L_TRA_033",
+            "string": "Medipack aktiviert\n"
+        },
+        {
+            "id": "L_TRA_034",
+            "context": "L_TRA_034",
+            "string": "Medipack-Atkivität unterbrochen\n"
+        },
+        {
+            "id": "L_TRA_035",
+            "context": "L_TRA_035",
+            "string": "Medipack wurde verabreicht.\n"
+        },
+        {
+            "id": "L_TRA_036",
+            "context": "L_TRA_036",
+            "string": "Wichtiges Objekt wurde zerstört.\n"
+        },
+        {
+            "id": "L_TRA_037",
+            "context": "L_TRA_037",
+            "string": "Äußeres Hangartor wird geöffnet.\n"
+        },
+        {
+            "id": "L_TRA_038",
+            "context": "L_TRA_038",
+            "string": "Äußeres Hangartor wird geschlossen.\n"
+        },
+        {
+            "id": "L_TRA_039",
+            "context": "L_TRA_039",
+            "string": "Inneres Hangartor wird geöffnet.\n"
+        },
+        {
+            "id": "L_TRA_040",
+            "context": "L_TRA_040",
+            "string": "Inneres Hangartor wird geschlossen.\n"
+        },
+        {
+            "id": "L_TRA_041",
+            "context": "L_TRA_041",
+            "string": "Das ist der einzige Weg hier raus.\n"
+        },
+        {
+            "id": "L_TRA_042",
+            "context": "L_TRA_042",
+            "string": "Du bist der einzige, der das Ding fliegen kann, Elvis, also los!\n"
+        },
+        {
+            "id": "L_TRA_043",
+            "context": "L_TRA_043",
+            "string": "Aber wir können dich nicht zurücklassen.\n"
+        },
+        {
+            "id": "L_TRA_044",
+            "context": "L_TRA_044",
+            "string": "Es muss doch einen Weg hier raus geben.\n"
+        },
+        {
+            "id": "L_TRA_045",
+            "context": "L_TRA_045",
+            "string": "Einer von uns muss hier bleiben, um die \nHangartore zu öffnen.\n"
+        },
+        {
+            "id": "L_TRA_046",
+            "context": "L_TRA_046",
+            "string": "Ich flüchte mit dem Hoverbike. Gebt mir Deckung, \nwährend ich die Tore öffne!\n"
+        },
+        {
+            "id": "L_TRA_047",
+            "context": "L_TRA_047",
+            "string": "Jonathan, geh mit Elvis. Ich kümmere mich um die Konsolen.\n"
+        },
+        {
+            "id": "L_TRA_048",
+            "context": "L_TRA_048",
+            "string": "Es ist gefährlich, Jo...\n"
+        },
+        {
+            "id": "L_TRA_049",
+            "context": "L_TRA_049",
+            "string": "Ich komme schon klar... Vertrau mir.\n"
+        },
+        {
+            "id": "L_TRA_050",
+            "context": "L_TRA_050",
+            "string": "...Okay.\n"
+        },
+        {
+            "id": "L_TRA_051",
+            "context": "L_TRA_051",
+            "string": "Verdammt, Joanna... Gib mir Deckung!\n"
+        },
+        {
+            "id": "L_TRA_052",
+            "context": "L_TRA_052",
+            "string": "Ich sichere die Treppe - kümmere du dich um die Rampe.\n"
+        },
+        {
+            "id": "L_TRA_053",
+            "context": "L_TRA_053",
+            "string": "Die Hangartore sind jetzt offen.\n"
+        },
+        {
+            "id": "L_TRA_054",
+            "context": "L_TRA_054",
+            "string": "Die Türen zum Sicherheitslabor wurden entriegelt.\n"
+        },
+        {
+            "id": "L_TRA_055",
+            "context": "L_TRA_055",
+            "string": "Das Medipack muss hier irgendwo sein.\n"
+        },
+        {
+            "id": "L_TRA_056",
+            "context": "L_TRA_056",
+            "string": "Ich muss mich mit Jonathan treffen, bevor\ner noch tiefer in Schwierigkeiten gerät.\n"
+        },
+        {
+            "id": "L_TRA_057",
+            "context": "L_TRA_057",
+            "string": "Dieser Geruch... Öl... Ich habe es schon in den \nanderen Hangars gerochen.\n"
+        },
+        {
+            "id": "L_TRA_058",
+            "context": "L_TRA_058",
+            "string": "Ich sollte auf dem Hoverbike entkommen, bevor\nalle Ausgänge geschlossen werden.\n"
+        },
+        {
+            "id": "L_TRA_059",
+            "context": "L_TRA_059",
+            "string": "Oh nein! Wir haben ein Problem. Hier ist nur für EINEN Platz!\n"
+        },
+        {
+            "id": "L_TRA_060",
+            "context": "L_TRA_060",
+            "string": "Zwei passen rein, aber das war´s dann schon.\n"
+        },
+        {
+            "id": "L_TRA_061",
+            "context": "L_TRA_061",
+            "string": "Und es ist nicht sehr stilvoll - wenn du weißt, wovon ich spreche.\n"
+        },
+        {
+            "id": "L_TRA_062",
+            "context": "L_TRA_062",
+            "string": "Ich lasse das nicht zu. Dieses Exemplar ist Regierungseigentum und darf die Basis nicht verlassen.\n"
+        },
+        {
+            "id": "L_TRA_063",
+            "context": "L_TRA_063",
+            "string": "Mal sehen, wie diese selbstgefällige Diebin mit Nervengas klarkommt. Sie wird es sich in Zukunft überlegen, sich mit mir anzulegen!\n"
+        },
+        {
+            "id": "L_TRA_064",
+            "context": "L_TRA_064",
+            "string": "Was ist das für ein Geräusch! Es ist... GAS!\n"
+        },
+        {
+            "id": "L_TRA_065",
+            "context": "L_TRA_065",
+            "string": "Neeiiin! Das war anders geplant!\n"
+        },
+        {
+            "id": "L_TRA_066",
+            "context": "L_TRA_066",
+            "string": "Aufhören! Ich will noch nicht... Sie... Arggghhh!\n"
+        },
+        {
+            "id": "L_TRA_067",
+            "context": "L_TRA_067",
+            "string": "Du Idiot! Wir müssen raus hier.\n"
+        },
+        {
+            "id": "L_TRA_068",
+            "context": "L_TRA_068",
+            "string": "Keuchen, röcheln und husten.\n"
+        },
+        {
+            "id": "L_TRA_069",
+            "context": "L_TRA_069",
+            "string": "***aahh...! aahaa...! aaaaahhh!  aha.  ahh.***\n"
+        },
+        {
+            "id": "L_TRA_070",
+            "context": "L_TRA_070",
+            "string": "Ich bin am Leben. Ich dachte, ich würde so wie die anderen auseinander genommen. Sie müssen vom Institut sein. Ich habe Sie schon mal gesehen. Danke, dass Sie mir geholfen haben.\n"
+        },
+        {
+            "id": "L_TRA_071",
+            "context": "L_TRA_071",
+            "string": "Sie... sie sprechen unsere Sprache?\n"
+        },
+        {
+            "id": "L_TRA_072",
+            "context": "L_TRA_072",
+            "string": "Vorsicht, mit ihr ist nicht zu scherzen.\n"
+        },
+        {
+            "id": "L_TRA_073",
+            "context": "L_TRA_073",
+            "string": "Earrggghh...eerggh...\n"
+        },
+        {
+            "id": "L_TRA_074",
+            "context": "L_TRA_074",
+            "string": "Was ist los?\n"
+        },
+        {
+            "id": "L_TRA_075",
+            "context": "L_TRA_075",
+            "string": "Ich habe Kopfschmerzen. Und mit einem Kopf von dieser Größe will das was heißen.\n"
+        },
+        {
+            "id": "L_TRA_076",
+            "context": "L_TRA_076",
+            "string": "Können Sie gehen? Wir müssen hier weg, bevor sie uns noch dichter auf den Fersen sind.\n"
+        },
+        {
+            "id": "L_TRA_077",
+            "context": "L_TRA_077",
+            "string": "Ich denke schon. Wie heißen Sie?\n"
+        },
+        {
+            "id": "L_TRA_078",
+            "context": "L_TRA_078",
+            "string": "Ich bin Agent Dark. Oder Joanna, falls Sie das bevorzugen.\n"
+        },
+        {
+            "id": "L_TRA_079",
+            "context": "L_TRA_079",
+            "string": "Gut, Joanna, ich bin der Protektor Eins. Aber nennen Sie... nenn mich einfach Elvis!\n"
+        },
+        {
+            "id": "L_TRA_080",
+            "context": "L_TRA_080",
+            "string": "Konsole ist nicht aktiv.\n"
+        },
+        {
+            "id": "L_TRA_081",
+            "context": "L_TRA_081",
+            "string": "Was zur Hölle machen Sie hier? \nDieser Raum ist nur für autorisiertes Personal! \nWissen Sie den gar nichts über die Vorschriften \nbei Autopsien?\n"
+        },
+        {
+            "id": "L_TRA_082",
+            "context": "L_TRA_082",
+            "string": "Direktor Easton wird darüber informiert werden, \njunge Dame.\n"
+        },
+        {
+            "id": "L_TRA_083",
+            "context": "L_TRA_083",
+            "string": "Sie dürfen das nicht! Das ist Regierungseigentum! \nDas ist nicht tolerabel! Das ist... das ist... \nunprofessionell!!!\n"
+        },
+        {
+            "id": "L_TRA_084",
+            "context": "L_TRA_084",
+            "string": "Ich habe für Vorschriften nicht viel übrig!\n"
+        },
+        {
+            "id": "L_TRA_085",
+            "context": "L_TRA_085",
+            "string": null
+        },
+        {
+            "id": "L_TRA_086",
+            "context": "L_TRA_086",
+            "string": null
+        },
+        {
+            "id": "L_TRA_087",
+            "context": "L_TRA_087",
+            "string": null
+        }
+    ]
+}

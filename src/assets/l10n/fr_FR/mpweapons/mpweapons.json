@@ -1,0 +1,1424 @@
+{
+    "messages": [
+        {
+            "id": "L_MPWEAPONS_000",
+            "context": "L_MPWEAPONS_000",
+            "string": "%s obtient:\nRécepteur\n"
+        },
+        {
+            "id": "L_MPWEAPONS_000_2",
+            "context": "L_MPWEAPONS_000_2",
+            "string": "%s obtient:\nMallette\n"
+        },
+        {
+            "id": "L_MPWEAPONS_000_3",
+            "context": "L_MPWEAPONS_000_3",
+            "string": "%s obtient:\nMallette %s\n"
+        },
+        {
+            "id": "L_MPWEAPONS_002",
+            "context": "L_MPWEAPONS_002",
+            "string": "%sa notre\nMallette\n"
+        },
+        {
+            "id": "L_MPWEAPONS_003",
+            "context": "L_MPWEAPONS_003",
+            "string": "Mallette %s"
+        },
+        {
+            "id": "L_MPWEAPONS_004",
+            "context": "L_MPWEAPONS_004",
+            "string": "Vous capturez:\nMallette %s\n"
+        },
+        {
+            "id": "L_MPWEAPONS_005",
+            "context": "L_MPWEAPONS_005",
+            "string": "%s capture notre\nMallette\n"
+        },
+        {
+            "id": "L_MPWEAPONS_006",
+            "context": "L_MPWEAPONS_006",
+            "string": "%s capture:\nMallette %s\n"
+        },
+        {
+            "id": "L_MPWEAPONS_007",
+            "context": "L_MPWEAPONS_007",
+            "string": "Un point pour survivre!\n"
+        },
+        {
+            "id": "L_MPWEAPONS_008",
+            "context": "L_MPWEAPONS_008",
+            "string": "Il faut s'occuper de\n"
+        },
+        {
+            "id": "L_MPWEAPONS_009",
+            "context": "L_MPWEAPONS_009",
+            "string": "vos amis!\n"
+        },
+        {
+            "id": "L_MPWEAPONS_010",
+            "context": "L_MPWEAPONS_010",
+            "string": "Bien joué!\n"
+        },
+        {
+            "id": "L_MPWEAPONS_011",
+            "context": "L_MPWEAPONS_011",
+            "string": "Vous décapsulez!\n"
+        },
+        {
+            "id": "L_MPWEAPONS_012",
+            "context": "L_MPWEAPONS_012",
+            "string": "2 Points...\n"
+        },
+        {
+            "id": "L_MPWEAPONS_013",
+            "context": "L_MPWEAPONS_013",
+            "string": "Vous êtes la victime!\n"
+        },
+        {
+            "id": "L_MPWEAPONS_014",
+            "context": "L_MPWEAPONS_014",
+            "string": "Protégez %s!\n"
+        },
+        {
+            "id": "L_MPWEAPONS_015",
+            "context": "L_MPWEAPONS_015",
+            "string": "Abattez %s!\n"
+        },
+        {
+            "id": "L_MPWEAPONS_016",
+            "context": "L_MPWEAPONS_016",
+            "string": "Téléchargement réussi.\n"
+        },
+        {
+            "id": "L_MPWEAPONS_017",
+            "context": "L_MPWEAPONS_017",
+            "string": "Connexion perdue.\n"
+        },
+        {
+            "id": "L_MPWEAPONS_018",
+            "context": "L_MPWEAPONS_018",
+            "string": "Début téléchargement.\n"
+        },
+        {
+            "id": "L_MPWEAPONS_019",
+            "context": "L_MPWEAPONS_019",
+            "string": "Il faut utiliser le récepteur.\n"
+        },
+        {
+            "id": "L_MPWEAPONS_020",
+            "context": "L_MPWEAPONS_020",
+            "string": "Roi de\nla zone!\n"
+        },
+        {
+            "id": "L_MPWEAPONS_021",
+            "context": "L_MPWEAPONS_021",
+            "string": "Vous avez\nla zone!\n"
+        },
+        {
+            "id": "L_MPWEAPONS_022",
+            "context": "L_MPWEAPONS_022",
+            "string": "%sa capturé\nla zone!\n"
+        },
+        {
+            "id": "L_MPWEAPONS_023",
+            "context": "L_MPWEAPONS_023",
+            "string": "%ds/Point\n"
+        },
+        {
+            "id": "L_MPWEAPONS_024",
+            "context": "L_MPWEAPONS_024",
+            "string": "1 Point!\n"
+        },
+        {
+            "id": "L_MPWEAPONS_025",
+            "context": "L_MPWEAPONS_025",
+            "string": "Pas de bouclier\n"
+        },
+        {
+            "id": "L_MPWEAPONS_026",
+            "context": "L_MPWEAPONS_026",
+            "string": "Automatiques\n"
+        },
+        {
+            "id": "L_MPWEAPONS_027",
+            "context": "L_MPWEAPONS_027",
+            "string": "L-roquettes\n"
+        },
+        {
+            "id": "L_MPWEAPONS_028",
+            "context": "L_MPWEAPONS_028",
+            "string": "Simulants\n"
+        },
+        {
+            "id": "L_MPWEAPONS_029",
+            "context": "L_MPWEAPONS_029",
+            "string": "Roi de la zone\n"
+        },
+        {
+            "id": "L_MPWEAPONS_030",
+            "context": "L_MPWEAPONS_030",
+            "string": "Complexe FarSight\n"
+        },
+        {
+            "id": "L_MPWEAPONS_031",
+            "context": "L_MPWEAPONS_031",
+            "string": "Tenir la mallette\n"
+        },
+        {
+            "id": "L_MPWEAPONS_032",
+            "context": "L_MPWEAPONS_032",
+            "string": "Pistolets meurtriers\n"
+        },
+        {
+            "id": "L_MPWEAPONS_033",
+            "context": "L_MPWEAPONS_033",
+            "string": "Capturer la mallette\n"
+        },
+        {
+            "id": "L_MPWEAPONS_034",
+            "context": "L_MPWEAPONS_034",
+            "string": "Occultage\n"
+        },
+        {
+            "id": "L_MPWEAPONS_035",
+            "context": "L_MPWEAPONS_035",
+            "string": "Temple Explosifs\n"
+        },
+        {
+            "id": "L_MPWEAPONS_036",
+            "context": "L_MPWEAPONS_036",
+            "string": "Slayer\n"
+        },
+        {
+            "id": "L_MPWEAPONS_037",
+            "context": "L_MPWEAPONS_037",
+            "string": "Tranquil.\n"
+        },
+        {
+            "id": "L_MPWEAPONS_038",
+            "context": "L_MPWEAPONS_038",
+            "string": "Ralenti\n"
+        },
+        {
+            "id": "L_MPWEAPONS_039",
+            "context": "L_MPWEAPONS_039",
+            "string": "Appuyer sur START\n"
+        },
+        {
+            "id": "L_MPWEAPONS_040",
+            "context": "L_MPWEAPONS_040",
+            "string": "En pause\n"
+        },
+        {
+            "id": "L_MPWEAPONS_041",
+            "context": "L_MPWEAPONS_041",
+            "string": "Custom\n"
+        },
+        {
+            "id": "L_MPWEAPONS_042",
+            "context": "L_MPWEAPONS_042",
+            "string": "Hasard\n"
+        },
+        {
+            "id": "L_MPWEAPONS_043",
+            "context": "L_MPWEAPONS_043",
+            "string": "Hasard 5\n"
+        },
+        {
+            "id": "L_MPWEAPONS_044",
+            "context": "L_MPWEAPONS_044",
+            "string": "Corps à corps\n"
+        },
+        {
+            "id": "L_MPWEAPONS_045",
+            "context": "L_MPWEAPONS_045",
+            "string": "Mine proximité\n"
+        },
+        {
+            "id": "L_MPWEAPONS_046",
+            "context": "L_MPWEAPONS_046",
+            "string": "L-roquettes\n"
+        },
+        {
+            "id": "L_MPWEAPONS_047",
+            "context": "L_MPWEAPONS_047",
+            "string": "Lance-grenades\n"
+        },
+        {
+            "id": "L_MPWEAPONS_048",
+            "context": "L_MPWEAPONS_048",
+            "string": "Explosif\n"
+        },
+        {
+            "id": "L_MPWEAPONS_049",
+            "context": "L_MPWEAPONS_049",
+            "string": "Magnum d'Or\n"
+        },
+        {
+            "id": "L_MPWEAPONS_050",
+            "context": "L_MPWEAPONS_050",
+            "string": "Lourd\n"
+        },
+        {
+            "id": "L_MPWEAPONS_051",
+            "context": "L_MPWEAPONS_051",
+            "string": "Tranquil.\n"
+        },
+        {
+            "id": "L_MPWEAPONS_052",
+            "context": "L_MPWEAPONS_052",
+            "string": "FarSight\n"
+        },
+        {
+            "id": "L_MPWEAPONS_053",
+            "context": "L_MPWEAPONS_053",
+            "string": "Puissant\n"
+        },
+        {
+            "id": "L_MPWEAPONS_054",
+            "context": "L_MPWEAPONS_054",
+            "string": "Automatiques\n"
+        },
+        {
+            "id": "L_MPWEAPONS_055",
+            "context": "L_MPWEAPONS_055",
+            "string": "Pistolets\n"
+        },
+        {
+            "id": "L_MPWEAPONS_056",
+            "context": "L_MPWEAPONS_056",
+            "string": "Test\n"
+        },
+        {
+            "id": "L_MPWEAPONS_057",
+            "context": "L_MPWEAPONS_057",
+            "string": "Test 4mb\n"
+        },
+        {
+            "id": "L_MPWEAPONS_058",
+            "context": "L_MPWEAPONS_058",
+            "string": "Rien\n"
+        },
+        {
+            "id": "L_MPWEAPONS_059",
+            "context": "L_MPWEAPONS_059",
+            "string": "Bouclier\n"
+        },
+        {
+            "id": "L_MPWEAPONS_060",
+            "context": "L_MPWEAPONS_060",
+            "string": "Annulé\n"
+        },
+        {
+            "id": "L_MPWEAPONS_061",
+            "context": "L_MPWEAPONS_061",
+            "string": "Objectifs remplis\n"
+        },
+        {
+            "id": "L_MPWEAPONS_062",
+            "context": "L_MPWEAPONS_062",
+            "string": "Inconnu\n"
+        },
+        {
+            "id": "L_MPWEAPONS_063",
+            "context": "L_MPWEAPONS_063",
+            "string": "Manquant\n"
+        },
+        {
+            "id": "L_MPWEAPONS_064",
+            "context": "L_MPWEAPONS_064",
+            "string": "Controller Pak inséré\n"
+        },
+        {
+            "id": "L_MPWEAPONS_065",
+            "context": "L_MPWEAPONS_065",
+            "string": "endommagé ou\n"
+        },
+        {
+            "id": "L_MPWEAPONS_066",
+            "context": "L_MPWEAPONS_066",
+            "string": "mal branché.\n"
+        },
+        {
+            "id": "L_MPWEAPONS_067",
+            "context": "L_MPWEAPONS_067",
+            "string": "Tenter répar.\n"
+        },
+        {
+            "id": "L_MPWEAPONS_068",
+            "context": "L_MPWEAPONS_068",
+            "string": "Recommencer\n"
+        },
+        {
+            "id": "L_MPWEAPONS_069",
+            "context": "L_MPWEAPONS_069",
+            "string": "Ne pas utiliser\n Controller Pak\n"
+        },
+        {
+            "id": "L_MPWEAPONS_070",
+            "context": "L_MPWEAPONS_070",
+            "string": "Controller Pak inséré\n"
+        },
+        {
+            "id": "L_MPWEAPONS_071",
+            "context": "L_MPWEAPONS_071",
+            "string": "Espace libre insuf.:\n1 note et 28 pages\nrequises.\n"
+        },
+        {
+            "id": "L_MPWEAPONS_072",
+            "context": "L_MPWEAPONS_072",
+            "string": "Utiliser le menu\npour faire de la place\n(maintenir START\nen allumant.)\n"
+        },
+        {
+            "id": "L_MPWEAPONS_073",
+            "context": "L_MPWEAPONS_073",
+            "string": "OK\n"
+        },
+        {
+            "id": "L_MPWEAPONS_074",
+            "context": "L_MPWEAPONS_074",
+            "string": "----------\n"
+        },
+        {
+            "id": "L_MPWEAPONS_075",
+            "context": "L_MPWEAPONS_075",
+            "string": "Poings du dragon\n"
+        },
+        {
+            "id": "L_MPWEAPONS_076",
+            "context": "L_MPWEAPONS_076",
+            "string": "Occulteur\n"
+        },
+        {
+            "id": "L_MPWEAPONS_077",
+            "context": "L_MPWEAPONS_077",
+            "string": "Invincible\n"
+        },
+        {
+            "id": "L_MPWEAPONS_078",
+            "context": "L_MPWEAPONS_078",
+            "string": "Toutes les armes en solo\n"
+        },
+        {
+            "id": "L_MPWEAPONS_079",
+            "context": "L_MPWEAPONS_079",
+            "string": "Munitions infinies\n"
+        },
+        {
+            "id": "L_MPWEAPONS_080",
+            "context": "L_MPWEAPONS_080",
+            "string": "Munit. inf. Pas de recharg.\n"
+        },
+        {
+            "id": "L_MPWEAPONS_081",
+            "context": "L_MPWEAPONS_081",
+            "string": "Ralenti\n"
+        },
+        {
+            "id": "L_MPWEAPONS_082",
+            "context": "L_MPWEAPONS_082",
+            "string": "Mode DK\n"
+        },
+        {
+            "id": "L_MPWEAPONS_083",
+            "context": "L_MPWEAPONS_083",
+            "string": "Magnum de Trent\n"
+        },
+        {
+            "id": "L_MPWEAPONS_084",
+            "context": "L_MPWEAPONS_084",
+            "string": "FarSight\n"
+        },
+        {
+            "id": "L_MPWEAPONS_085",
+            "context": "L_MPWEAPONS_085",
+            "string": "Petite Joanna\n"
+        },
+        {
+            "id": "L_MPWEAPONS_086",
+            "context": "L_MPWEAPONS_086",
+            "string": "Petits personnages\n"
+        },
+        {
+            "id": "L_MPWEAPONS_087",
+            "context": "L_MPWEAPONS_087",
+            "string": "Boucliers Ennemis\n"
+        },
+        {
+            "id": "L_MPWEAPONS_088",
+            "context": "L_MPWEAPONS_088",
+            "string": "Joanna bouclier\n"
+        },
+        {
+            "id": "L_MPWEAPONS_089",
+            "context": "L_MPWEAPONS_089",
+            "string": "Super bouclier\n"
+        },
+        {
+            "id": "L_MPWEAPONS_090",
+            "context": "L_MPWEAPONS_090",
+            "string": "Visée classique\n"
+        },
+        {
+            "id": "L_MPWEAPONS_091",
+            "context": "L_MPWEAPONS_091",
+            "string": "Têtes équipe seulement\n"
+        },
+        {
+            "id": "L_MPWEAPONS_092",
+            "context": "L_MPWEAPONS_092",
+            "string": "Jouer Elvis\n"
+        },
+        {
+            "id": "L_MPWEAPONS_093",
+            "context": "L_MPWEAPONS_093",
+            "string": "Ennemis roquettes\n"
+        },
+        {
+            "id": "L_MPWEAPONS_094",
+            "context": "L_MPWEAPONS_094",
+            "string": "Munit. inf. Laptop sentinelle\n"
+        },
+        {
+            "id": "L_MPWEAPONS_095",
+            "context": "L_MPWEAPONS_095",
+            "string": "Ennemis boxeurs\n"
+        },
+        {
+            "id": "L_MPWEAPONS_096",
+            "context": "L_MPWEAPONS_096",
+            "string": "Perfect Darkness\n"
+        },
+        {
+            "id": "L_MPWEAPONS_097",
+            "context": "L_MPWEAPONS_097",
+            "string": "Pugiliste\n"
+        },
+        {
+            "id": "L_MPWEAPONS_098",
+            "context": "L_MPWEAPONS_098",
+            "string": "Hotshot\n"
+        },
+        {
+            "id": "L_MPWEAPONS_099",
+            "context": "L_MPWEAPONS_099",
+            "string": "Touche et tire\n"
+        },
+        {
+            "id": "L_MPWEAPONS_100",
+            "context": "L_MPWEAPONS_100",
+            "string": "Extraterrestre\n"
+        },
+        {
+            "id": "L_MPWEAPONS_101",
+            "context": "L_MPWEAPONS_101",
+            "string": "Pisteur-R / Coffres armes\n"
+        },
+        {
+            "id": "L_MPWEAPONS_102",
+            "context": "L_MPWEAPONS_102",
+            "string": "Lance-roquettes\n"
+        },
+        {
+            "id": "L_MPWEAPONS_103",
+            "context": "L_MPWEAPONS_103",
+            "string": "Fusil sniper\n"
+        },
+        {
+            "id": "L_MPWEAPONS_104",
+            "context": "L_MPWEAPONS_104",
+            "string": "Scan rayonsX\n"
+        },
+        {
+            "id": "L_MPWEAPONS_105",
+            "context": "L_MPWEAPONS_105",
+            "string": "SuperDragon\n"
+        },
+        {
+            "id": "L_MPWEAPONS_106",
+            "context": "L_MPWEAPONS_106",
+            "string": "Laptop Gun\n"
+        },
+        {
+            "id": "L_MPWEAPONS_107",
+            "context": "L_MPWEAPONS_107",
+            "string": "Phoenix\n"
+        },
+        {
+            "id": "L_MPWEAPONS_108",
+            "context": "L_MPWEAPONS_108",
+            "string": "Psychosis Gun\n"
+        },
+        {
+            "id": "L_MPWEAPONS_109",
+            "context": "L_MPWEAPONS_109",
+            "string": "PP9i\n"
+        },
+        {
+            "id": "L_MPWEAPONS_110",
+            "context": "L_MPWEAPONS_110",
+            "string": "CC13\n"
+        },
+        {
+            "id": "L_MPWEAPONS_111",
+            "context": "L_MPWEAPONS_111",
+            "string": "KL01313\n"
+        },
+        {
+            "id": "L_MPWEAPONS_112",
+            "context": "L_MPWEAPONS_112",
+            "string": "KF7 Spécial\n"
+        },
+        {
+            "id": "L_MPWEAPONS_113",
+            "context": "L_MPWEAPONS_113",
+            "string": "ZZT (9mm)\n"
+        },
+        {
+            "id": "L_MPWEAPONS_114",
+            "context": "L_MPWEAPONS_114",
+            "string": "DMC\n"
+        },
+        {
+            "id": "L_MPWEAPONS_115",
+            "context": "L_MPWEAPONS_115",
+            "string": "AR53\n"
+        },
+        {
+            "id": "L_MPWEAPONS_116",
+            "context": "L_MPWEAPONS_116",
+            "string": "RC-P45\n"
+        },
+        {
+            "id": "L_MPWEAPONS_117",
+            "context": "L_MPWEAPONS_117",
+            "string": "Velvet Dark\n"
+        },
+        {
+            "id": "L_MPWEAPONS_118",
+            "context": "L_MPWEAPONS_118",
+            "string": "Fun\n"
+        },
+        {
+            "id": "L_MPWEAPONS_119",
+            "context": "L_MPWEAPONS_119",
+            "string": "Jouabilité\n"
+        },
+        {
+            "id": "L_MPWEAPONS_120",
+            "context": "L_MPWEAPONS_120",
+            "string": "Armes\n"
+        },
+        {
+            "id": "L_MPWEAPONS_121",
+            "context": "L_MPWEAPONS_121",
+            "string": "Amis\n"
+        },
+        {
+            "id": "L_MPWEAPONS_122",
+            "context": "L_MPWEAPONS_122",
+            "string": "Armes pour Joanna en solo\n"
+        },
+        {
+            "id": "L_MPWEAPONS_123",
+            "context": "L_MPWEAPONS_123",
+            "string": "Armes classiques pour Joanna en solo\n"
+        },
+        {
+            "id": "L_MPWEAPONS_124",
+            "context": "L_MPWEAPONS_124",
+            "string": "Désertion dataDyne"
+        },
+        {
+            "id": "L_MPWEAPONS_125",
+            "context": "L_MPWEAPONS_125",
+            "string": "Extraction dataDyne "
+        },
+        {
+            "id": "L_MPWEAPONS_126",
+            "context": "L_MPWEAPONS_126",
+            "string": "Infiltration S51 "
+        },
+        {
+            "id": "L_MPWEAPONS_127",
+            "context": "L_MPWEAPONS_127",
+            "string": "Sauvetage S51"
+        },
+        {
+            "id": "L_MPWEAPONS_128",
+            "context": "L_MPWEAPONS_128",
+            "string": "Fuite S51"
+        },
+        {
+            "id": "L_MPWEAPONS_129",
+            "context": "L_MPWEAPONS_129",
+            "string": "Difficulté:\n"
+        },
+        {
+            "id": "L_MPWEAPONS_130",
+            "context": "L_MPWEAPONS_130",
+            "string": "Triche Missions Solo\n"
+        },
+        {
+            "id": "L_MPWEAPONS_131",
+            "context": "L_MPWEAPONS_131",
+            "string": "Triche Simulateur Combat\n"
+        },
+        {
+            "id": "L_MPWEAPONS_132",
+            "context": "L_MPWEAPONS_132",
+            "string": "Triche Coopératif\n"
+        },
+        {
+            "id": "L_MPWEAPONS_133",
+            "context": "L_MPWEAPONS_133",
+            "string": "Triche Contre-Opération\n"
+        },
+        {
+            "id": "L_MPWEAPONS_134",
+            "context": "L_MPWEAPONS_134",
+            "string": "Déshonneur\n"
+        },
+        {
+            "id": "L_MPWEAPONS_135",
+            "context": "L_MPWEAPONS_135",
+            "string": "Tricheur\n"
+        },
+        {
+            "id": "L_MPWEAPONS_136",
+            "context": "L_MPWEAPONS_136",
+            "string": "Triche disponible"
+        },
+        {
+            "id": "L_MPWEAPONS_137",
+            "context": "L_MPWEAPONS_137",
+            "string": "Terminer"
+        },
+        {
+            "id": "L_MPWEAPONS_138",
+            "context": "L_MPWEAPONS_138",
+            "string": "pour Triche:"
+        },
+        {
+            "id": "L_MPWEAPONS_139",
+            "context": "L_MPWEAPONS_139",
+            "string": "sur"
+        },
+        {
+            "id": "L_MPWEAPONS_140",
+            "context": "L_MPWEAPONS_140",
+            "string": "sous"
+        },
+        {
+            "id": "L_MPWEAPONS_141",
+            "context": "L_MPWEAPONS_141",
+            "string": " ou brancher Perfect Dark Game Boy (r) dans le Transfer Pak (tm), connectez le Transfer Pak dans une manette , sortez et accédez au menu"
+        },
+        {
+            "id": "L_MPWEAPONS_142",
+            "context": "L_MPWEAPONS_142",
+            "string": "Choix Triche pour information\n"
+        },
+        {
+            "id": "L_MPWEAPONS_143",
+            "context": "L_MPWEAPONS_143",
+            "string": "Ami disponible"
+        },
+        {
+            "id": "L_MPWEAPONS_144",
+            "context": "L_MPWEAPONS_144",
+            "string": "Gagner Or sur le champ de tir pour les armes classiques.\n"
+        },
+        {
+            "id": "L_MPWEAPONS_145",
+            "context": "L_MPWEAPONS_145",
+            "string": "Visée à l'écran\n"
+        },
+        {
+            "id": "L_MPWEAPONS_146",
+            "context": "L_MPWEAPONS_146",
+            "string": "Cible\n"
+        },
+        {
+            "id": "L_MPWEAPONS_147",
+            "context": "L_MPWEAPONS_147",
+            "string": "Portée zoom\n"
+        },
+        {
+            "id": "L_MPWEAPONS_148",
+            "context": "L_MPWEAPONS_148",
+            "string": "Voir munit.\n"
+        },
+        {
+            "id": "L_MPWEAPONS_149",
+            "context": "L_MPWEAPONS_149",
+            "string": "Fonction arme\n"
+        },
+        {
+            "id": "L_MPWEAPONS_150",
+            "context": "L_MPWEAPONS_150",
+            "string": "Paintball\n"
+        },
+        {
+            "id": "L_MPWEAPONS_151",
+            "context": "L_MPWEAPONS_151",
+            "string": "Sous-titres\n"
+        },
+        {
+            "id": "L_MPWEAPONS_152",
+            "context": "L_MPWEAPONS_152",
+            "string": "Temps mission\n"
+        },
+        {
+            "id": "L_MPWEAPONS_153",
+            "context": "L_MPWEAPONS_153",
+            "string": "Mode\n"
+        },
+        {
+            "id": "L_MPWEAPONS_154",
+            "context": "L_MPWEAPONS_154",
+            "string": "Split\n"
+        },
+        {
+            "id": "L_MPWEAPONS_155",
+            "context": "L_MPWEAPONS_155",
+            "string": "Voulez-vous abandonner\nla mission?\n"
+        },
+        {
+            "id": "L_MPWEAPONS_156",
+            "context": "L_MPWEAPONS_156",
+            "string": "Joanna Cuir\n"
+        },
+        {
+            "id": "L_MPWEAPONS_157",
+            "context": "L_MPWEAPONS_157",
+            "string": "Joanna Négociatrice\n"
+        },
+        {
+            "id": "L_MPWEAPONS_158",
+            "context": "L_MPWEAPONS_158",
+            "string": "Elvis (gilet)\n"
+        },
+        {
+            "id": "L_MPWEAPONS_159",
+            "context": "L_MPWEAPONS_159",
+            "string": "Erreur\n"
+        },
+        {
+            "id": "L_MPWEAPONS_160",
+            "context": "L_MPWEAPONS_160",
+            "string": "Opér. impossible.\nUtilisation en cours.\n"
+        },
+        {
+            "id": "L_MPWEAPONS_161",
+            "context": "L_MPWEAPONS_161",
+            "string": "Annuler\n"
+        },
+        {
+            "id": "L_MPWEAPONS_162",
+            "context": "L_MPWEAPONS_162",
+            "string": "Limite temps:\n"
+        },
+        {
+            "id": "L_MPWEAPONS_163",
+            "context": "L_MPWEAPONS_163",
+            "string": "Limite score:\n"
+        },
+        {
+            "id": "L_MPWEAPONS_164",
+            "context": "L_MPWEAPONS_164",
+            "string": "Limite score équipe:\n"
+        },
+        {
+            "id": "L_MPWEAPONS_165",
+            "context": "L_MPWEAPONS_165",
+            "string": "Challenge réussi!\n"
+        },
+        {
+            "id": "L_MPWEAPONS_166",
+            "context": "L_MPWEAPONS_166",
+            "string": "Challenge échoué!\n"
+        },
+        {
+            "id": "L_MPWEAPONS_167",
+            "context": "L_MPWEAPONS_167",
+            "string": "Challenge triché!\n"
+        },
+        {
+            "id": "L_MPWEAPONS_168",
+            "context": "L_MPWEAPONS_168",
+            "string": "Sous-titres ciné\n"
+        },
+        {
+            "id": "L_MPWEAPONS_169",
+            "context": "L_MPWEAPONS_169",
+            "string": "Sous-titres jeu\n"
+        },
+        {
+            "id": "L_MPWEAPONS_170",
+            "context": "L_MPWEAPONS_170",
+            "string": "Ecran titre optionnel\n"
+        },
+        {
+            "id": "L_MPWEAPONS_171",
+            "context": "L_MPWEAPONS_171",
+            "string": "Commencer Challenge\n"
+        },
+        {
+            "id": "L_MPWEAPONS_172",
+            "context": "L_MPWEAPONS_172",
+            "string": "Enquête dataDyne"
+        },
+        {
+            "id": "L_MPWEAPONS_173",
+            "context": "L_MPWEAPONS_173",
+            "string": "Erreur\n"
+        },
+        {
+            "id": "L_MPWEAPONS_174",
+            "context": "L_MPWEAPONS_174",
+            "string": "Le Controller Pak\na été enlevé.\n"
+        },
+        {
+            "id": "L_MPWEAPONS_175",
+            "context": "L_MPWEAPONS_175",
+            "string": "Tentative réparation\n"
+        },
+        {
+            "id": "L_MPWEAPONS_176",
+            "context": "L_MPWEAPONS_176",
+            "string": "Tenter une\nréparation du\nController Pak?\n"
+        },
+        {
+            "id": "L_MPWEAPONS_177",
+            "context": "L_MPWEAPONS_177",
+            "string": "Donnée être\nperdue!\n"
+        },
+        {
+            "id": "L_MPWEAPONS_178",
+            "context": "L_MPWEAPONS_178",
+            "string": "Annuler\n"
+        },
+        {
+            "id": "L_MPWEAPONS_179",
+            "context": "L_MPWEAPONS_179",
+            "string": "Réparer\n"
+        },
+        {
+            "id": "L_MPWEAPONS_180",
+            "context": "L_MPWEAPONS_180",
+            "string": "Réparation réussie\n"
+        },
+        {
+            "id": "L_MPWEAPONS_181",
+            "context": "L_MPWEAPONS_181",
+            "string": "Controller Pak\nréparé.\n"
+        },
+        {
+            "id": "L_MPWEAPONS_182",
+            "context": "L_MPWEAPONS_182",
+            "string": "Réparation échouée\n"
+        },
+        {
+            "id": "L_MPWEAPONS_183",
+            "context": "L_MPWEAPONS_183",
+            "string": "Controller Pak\nne peut être réparé.\nSauvegarde ou\nchargement impossible\navec ce Cont. Pak.\n"
+        },
+        {
+            "id": "L_MPWEAPONS_184",
+            "context": "L_MPWEAPONS_184",
+            "string": "Handicap\n"
+        },
+        {
+            "id": "L_MPWEAPONS_185",
+            "context": "L_MPWEAPONS_185",
+            "string": "BOUTONS L/R: "
+        },
+        {
+            "id": "L_MPWEAPONS_186",
+            "context": "L_MPWEAPONS_186",
+            "string": "BOUTON C HAUT: "
+        },
+        {
+            "id": "L_MPWEAPONS_187",
+            "context": "L_MPWEAPONS_187",
+            "string": "BOUTONS C G/D: "
+        },
+        {
+            "id": "L_MPWEAPONS_188",
+            "context": "L_MPWEAPONS_188",
+            "string": "BOUTON C BAS: "
+        },
+        {
+            "id": "L_MPWEAPONS_189",
+            "context": "L_MPWEAPONS_189",
+            "string": "BOUTON A: "
+        },
+        {
+            "id": "L_MPWEAPONS_190",
+            "context": "L_MPWEAPONS_190",
+            "string": "BOUTON B: "
+        },
+        {
+            "id": "L_MPWEAPONS_191",
+            "context": "L_MPWEAPONS_191",
+            "string": "STICK ANALOG.: "
+        },
+        {
+            "id": "L_MPWEAPONS_192",
+            "context": "L_MPWEAPONS_192",
+            "string": "BOUTON Z: "
+        },
+        {
+            "id": "L_MPWEAPONS_193",
+            "context": "L_MPWEAPONS_193",
+            "string": "MANETTE +: "
+        },
+        {
+            "id": "L_MPWEAPONS_194",
+            "context": "L_MPWEAPONS_194",
+            "string": "VISER"
+        },
+        {
+            "id": "L_MPWEAPONS_195",
+            "context": "L_MPWEAPONS_195",
+            "string": "ALT. VISER"
+        },
+        {
+            "id": "L_MPWEAPONS_196",
+            "context": "L_MPWEAPONS_196",
+            "string": "REGARDER HAUT"
+        },
+        {
+            "id": "L_MPWEAPONS_197",
+            "context": "L_MPWEAPONS_197",
+            "string": "REGARDER BAS"
+        },
+        {
+            "id": "L_MPWEAPONS_198",
+            "context": "L_MPWEAPONS_198",
+            "string": "REGARDER BAS"
+        },
+        {
+            "id": "L_MPWEAPONS_199",
+            "context": "L_MPWEAPONS_199",
+            "string": "REGARDER HAUT"
+        },
+        {
+            "id": "L_MPWEAPONS_200",
+            "context": "L_MPWEAPONS_200",
+            "string": "AVANT"
+        },
+        {
+            "id": "L_MPWEAPONS_201",
+            "context": "L_MPWEAPONS_201",
+            "string": "ARRIERE"
+        },
+        {
+            "id": "L_MPWEAPONS_202",
+            "context": "L_MPWEAPONS_202",
+            "string": "DEP. LATERAL"
+        },
+        {
+            "id": "L_MPWEAPONS_203",
+            "context": "L_MPWEAPONS_203",
+            "string": "ARME"
+        },
+        {
+            "id": "L_MPWEAPONS_204",
+            "context": "L_MPWEAPONS_204",
+            "string": "ACTION/RECHARGER"
+        },
+        {
+            "id": "L_MPWEAPONS_205",
+            "context": "L_MPWEAPONS_205",
+            "string": "FEU"
+        },
+        {
+            "id": "L_MPWEAPONS_206",
+            "context": "L_MPWEAPONS_206",
+            "string": "MARCHER/TOURNER"
+        },
+        {
+            "id": "L_MPWEAPONS_207",
+            "context": "L_MPWEAPONS_207",
+            "string": "REGARDER"
+        },
+        {
+            "id": "L_MPWEAPONS_208",
+            "context": "L_MPWEAPONS_208",
+            "string": "MARCHER/LATERAL"
+        },
+        {
+            "id": "L_MPWEAPONS_209",
+            "context": "L_MPWEAPONS_209",
+            "string": "REGARDER/LATERAL"
+        },
+        {
+            "id": "L_MPWEAPONS_210",
+            "context": "L_MPWEAPONS_210",
+            "string": "COMME BOUTONS C"
+        },
+        {
+            "id": "L_MPWEAPONS_211",
+            "context": "L_MPWEAPONS_211",
+            "string": "MAnette 1:"
+        },
+        {
+            "id": "L_MPWEAPONS_212",
+            "context": "L_MPWEAPONS_212",
+            "string": "Manette 2:"
+        },
+        {
+            "id": "L_MPWEAPONS_213",
+            "context": "L_MPWEAPONS_213",
+            "string": "Style contrôle %s %s\n"
+        },
+        {
+            "id": "L_MPWEAPONS_214",
+            "context": "L_MPWEAPONS_214",
+            "string": "(Une main)"
+        },
+        {
+            "id": "L_MPWEAPONS_215",
+            "context": "L_MPWEAPONS_215",
+            "string": "(Deux mains)"
+        },
+        {
+            "id": "L_MPWEAPONS_216",
+            "context": "L_MPWEAPONS_216",
+            "string": "Maintenir bouton d'arme pour menu rapide.\nMaintenir action pour autre fonction.\nAction+Feu pour changer de fonction.\nViser pour plus de précision.\nViser + Bouton C Bas pour s'accroupir.\nViser + Bouton C Haut pour se lever.\n"
+        },
+        {
+            "id": "L_MPWEAPONS_217",
+            "context": "L_MPWEAPONS_217",
+            "string": "Désactiver toutes les triches\n"
+        },
+        {
+            "id": "L_MPWEAPONS_218",
+            "context": "L_MPWEAPONS_218",
+            "string": "Filtre langage\n"
+        },
+        {
+            "id": "L_MPWEAPONS_219",
+            "context": "L_MPWEAPONS_219",
+            "string": "UTILISATEUR:\n"
+        },
+        {
+            "id": "L_MPWEAPONS_220",
+            "context": "L_MPWEAPONS_220",
+            "string": "MOT DE PASSE:\n"
+        },
+        {
+            "id": "L_MPWEAPONS_221",
+            "context": "L_MPWEAPONS_221",
+            "string": "Perfect Dark\n"
+        },
+        {
+            "id": "L_MPWEAPONS_222",
+            "context": "L_MPWEAPONS_222",
+            "string": "Choix paramètres:\n"
+        },
+        {
+            "id": "L_MPWEAPONS_223",
+            "context": "L_MPWEAPONS_223",
+            "string": "Vit. réaction ennemis:\n"
+        },
+        {
+            "id": "L_MPWEAPONS_224",
+            "context": "L_MPWEAPONS_224",
+            "string": "Vie ennemis:\n"
+        },
+        {
+            "id": "L_MPWEAPONS_225",
+            "context": "L_MPWEAPONS_225",
+            "string": "Dégâts ennemis:\n"
+        },
+        {
+            "id": "L_MPWEAPONS_226",
+            "context": "L_MPWEAPONS_226",
+            "string": "Précision ennemis:\n"
+        },
+        {
+            "id": "L_MPWEAPONS_227",
+            "context": "L_MPWEAPONS_227",
+            "string": "OK\n"
+        },
+        {
+            "id": "L_MPWEAPONS_228",
+            "context": "L_MPWEAPONS_228",
+            "string": "Annuler\n"
+        },
+        {
+            "id": "L_MPWEAPONS_229",
+            "context": "L_MPWEAPONS_229",
+            "string": "Controller Pak introuvable\n"
+        },
+        {
+            "id": "L_MPWEAPONS_230",
+            "context": "L_MPWEAPONS_230",
+            "string": "Nom:\n"
+        },
+        {
+            "id": "L_MPWEAPONS_231",
+            "context": "L_MPWEAPONS_231",
+            "string": "Emplacement:\n"
+        },
+        {
+            "id": "L_MPWEAPONS_232",
+            "context": "L_MPWEAPONS_232",
+            "string": "Dupliquer nom fichier\n"
+        },
+        {
+            "id": "L_MPWEAPONS_233",
+            "context": "L_MPWEAPONS_233",
+            "string": "contient déjà\n"
+        },
+        {
+            "id": "L_MPWEAPONS_234",
+            "context": "L_MPWEAPONS_234",
+            "string": "un fichier nommé\n"
+        },
+        {
+            "id": "L_MPWEAPONS_235",
+            "context": "L_MPWEAPONS_235",
+            "string": "Renommer fichier\n"
+        },
+        {
+            "id": "L_MPWEAPONS_236",
+            "context": "L_MPWEAPONS_236",
+            "string": "Changer emplacement\n"
+        },
+        {
+            "id": "L_MPWEAPONS_237",
+            "context": "L_MPWEAPONS_237",
+            "string": "Annuler\n"
+        },
+        {
+            "id": "L_MPWEAPONS_238",
+            "context": "L_MPWEAPONS_238",
+            "string": "Changer nom fichier\n"
+        },
+        {
+            "id": "L_MPWEAPONS_239",
+            "context": "L_MPWEAPONS_239",
+            "string": "Nouveau nom fichier:\n"
+        },
+        {
+            "id": "L_MPWEAPONS_240",
+            "context": "L_MPWEAPONS_240",
+            "string": " Le fichier en copie\nne peut être effacé.\n"
+        },
+        {
+            "id": "L_MPWEAPONS_241",
+            "context": "L_MPWEAPONS_241",
+            "string": "ShockSim:%d\n"
+        },
+        {
+            "id": "L_MPWEAPONS_242",
+            "context": "L_MPWEAPONS_242",
+            "string": "Temps spécial:\n"
+        },
+        {
+            "id": "L_MPWEAPONS_243",
+            "context": "L_MPWEAPONS_243",
+            "string": "Nouvelle triche disponible:\n"
+        },
+        {
+            "id": "L_MPWEAPONS_244",
+            "context": "L_MPWEAPONS_244",
+            "string": "Continuer\n"
+        },
+        {
+            "id": "L_MPWEAPONS_245",
+            "context": "L_MPWEAPONS_245",
+            "string": "Recommencer dernier niveau\n"
+        },
+        {
+            "id": "L_MPWEAPONS_246",
+            "context": "L_MPWEAPONS_246",
+            "string": "Sauver joueur\n"
+        },
+        {
+            "id": "L_MPWEAPONS_247",
+            "context": "L_MPWEAPONS_247",
+            "string": "Sauver nouveau joueur\net stats?\n"
+        },
+        {
+            "id": "L_MPWEAPONS_248",
+            "context": "L_MPWEAPONS_248",
+            "string": "Sauver maintenant\n"
+        },
+        {
+            "id": "L_MPWEAPONS_249",
+            "context": "L_MPWEAPONS_249",
+            "string": "Non merci!\n"
+        },
+        {
+            "id": "L_MPWEAPONS_250",
+            "context": "L_MPWEAPONS_250",
+            "string": "Confirmer nom joueur:\n"
+        },
+        {
+            "id": "L_MPWEAPONS_251",
+            "context": "L_MPWEAPONS_251",
+            "string": "Le fichier sauvé\na été effacé:\ncorrupu ou\nendommagé.\n"
+        },
+        {
+            "id": "L_MPWEAPONS_252",
+            "context": "L_MPWEAPONS_252",
+            "string": "Continuer\n"
+        },
+        {
+            "id": "L_MPWEAPONS_253",
+            "context": "L_MPWEAPONS_253",
+            "string": "Erreur\n"
+        },
+        {
+            "id": "L_MPWEAPONS_254",
+            "context": "L_MPWEAPONS_254",
+            "string": "Cartouche Game Boy illisible.\nVérifier connexions et s'assurer\nque la bonne cartouche est\nutilisée.\n"
+        },
+        {
+            "id": "L_MPWEAPONS_255",
+            "context": "L_MPWEAPONS_255",
+            "string": "Annuler\n"
+        },
+        {
+            "id": "L_MPWEAPONS_256",
+            "context": "L_MPWEAPONS_256",
+            "string": "Erreur\n"
+        },
+        {
+            "id": "L_MPWEAPONS_257",
+            "context": "L_MPWEAPONS_257",
+            "string": "La sauvegarde a été\n"
+        },
+        {
+            "id": "L_MPWEAPONS_258",
+            "context": "L_MPWEAPONS_258",
+            "string": "effacée: corrompue\n"
+        },
+        {
+            "id": "L_MPWEAPONS_259",
+            "context": "L_MPWEAPONS_259",
+            "string": "ou endommagée.\n"
+        },
+        {
+            "id": "L_MPWEAPONS_260",
+            "context": "L_MPWEAPONS_260",
+            "string": "Annuler\n"
+        },
+        {
+            "id": "L_MPWEAPONS_261",
+            "context": "L_MPWEAPONS_261",
+            "string": "Choix de langue:\n"
+        },
+        {
+            "id": "L_MPWEAPONS_262",
+            "context": "L_MPWEAPONS_262",
+            "string": "English\n"
+        },
+        {
+            "id": "L_MPWEAPONS_263",
+            "context": "L_MPWEAPONS_263",
+            "string": "Français\n"
+        },
+        {
+            "id": "L_MPWEAPONS_264",
+            "context": "L_MPWEAPONS_264",
+            "string": "Deutsch\n"
+        },
+        {
+            "id": "L_MPWEAPONS_265",
+            "context": "L_MPWEAPONS_265",
+            "string": "Italiano\n"
+        },
+        {
+            "id": "L_MPWEAPONS_266",
+            "context": "L_MPWEAPONS_266",
+            "string": "Español\n"
+        },
+        {
+            "id": "L_MPWEAPONS_267",
+            "context": "L_MPWEAPONS_267",
+            "string": "American\n"
+        },
+        {
+            "id": "L_MPWEAPONS_268",
+            "context": "L_MPWEAPONS_268",
+            "string": "Langue:\n"
+        },
+        {
+            "id": "L_MPWEAPONS_269",
+            "context": "L_MPWEAPONS_269",
+            "string": "Langue\n"
+        },
+        {
+            "id": "L_MPWEAPONS_270",
+            "context": "L_MPWEAPONS_270",
+            "string": "Style contrôle\n"
+        },
+        {
+            "id": "L_MPWEAPONS_271",
+            "context": "L_MPWEAPONS_271",
+            "string": "Visée inv.\n"
+        },
+        {
+            "id": "L_MPWEAPONS_272",
+            "context": "L_MPWEAPONS_272",
+            "string": "Voir droit\n"
+        },
+        {
+            "id": "L_MPWEAPONS_273",
+            "context": "L_MPWEAPONS_273",
+            "string": "Vue tête\n"
+        },
+        {
+            "id": "L_MPWEAPONS_274",
+            "context": "L_MPWEAPONS_274",
+            "string": "Visée auto\n"
+        },
+        {
+            "id": "L_MPWEAPONS_275",
+            "context": "L_MPWEAPONS_275",
+            "string": "Contrôle cible\n"
+        },
+        {
+            "id": "L_MPWEAPONS_276",
+            "context": "L_MPWEAPONS_276",
+            "string": "Fixe\n"
+        },
+        {
+            "id": "L_MPWEAPONS_277",
+            "context": "L_MPWEAPONS_277",
+            "string": "Alt.\n"
+        },
+        {
+            "id": "L_MPWEAPONS_278",
+            "context": "L_MPWEAPONS_278",
+            "string": "Sous-titres ciné\n"
+        },
+        {
+            "id": "L_MPWEAPONS_279",
+            "context": "L_MPWEAPONS_279",
+            "string": "Sous-titres jeu\n"
+        },
+        {
+            "id": "L_MPWEAPONS_280",
+            "context": "L_MPWEAPONS_280",
+            "string": null
+        },
+        {
+            "id": "L_MPWEAPONS_281",
+            "context": "L_MPWEAPONS_281",
+            "string": null
+        },
+        {
+            "id": "L_MPWEAPONS_282",
+            "context": "L_MPWEAPONS_282",
+            "string": null
+        }
+    ]
+}

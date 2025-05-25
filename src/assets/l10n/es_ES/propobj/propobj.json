@@ -1,0 +1,444 @@
+{
+    "messages": [
+        {
+            "id": "L_PROPOBJ_000",
+            "context": "L_PROPOBJ_000",
+            "string": "Recogiste %s.\n"
+        },
+        {
+            "id": "L_PROPOBJ_001",
+            "context": "L_PROPOBJ_001",
+            "string": "Recogiste %s.\n"
+        },
+        {
+            "id": "L_PROPOBJ_002",
+            "context": "L_PROPOBJ_002",
+            "string": "Recogiste %s.\n"
+        },
+        {
+            "id": "L_PROPOBJ_003",
+            "context": "L_PROPOBJ_003",
+            "string": "Recogiste %s.\n"
+        },
+        {
+            "id": "L_PROPOBJ_004",
+            "context": "L_PROPOBJ_004",
+            "string": "Recogiste %s.\n"
+        },
+        {
+            "id": "L_PROPOBJ_005",
+            "context": "L_PROPOBJ_005",
+            "string": "Recogiste %s.\n"
+        },
+        {
+            "id": "L_PROPOBJ_006",
+            "context": "L_PROPOBJ_006",
+            "string": "Recogiste %s.\n"
+        },
+        {
+            "id": "L_PROPOBJ_007",
+            "context": "L_PROPOBJ_007",
+            "string": "Recogiste %s.\n"
+        },
+        {
+            "id": "L_PROPOBJ_008",
+            "context": "L_PROPOBJ_008",
+            "string": "Doble "
+        },
+        {
+            "id": "L_PROPOBJ_009",
+            "context": "L_PROPOBJ_009",
+            "string": "munición"
+        },
+        {
+            "id": "L_PROPOBJ_010",
+            "context": "L_PROPOBJ_010",
+            "string": "cartucho"
+        },
+        {
+            "id": "L_PROPOBJ_011",
+            "context": "L_PROPOBJ_011",
+            "string": "bala de magnum"
+        },
+        {
+            "id": "L_PROPOBJ_012",
+            "context": "L_PROPOBJ_012",
+            "string": "balas doradas"
+        },
+        {
+            "id": "L_PROPOBJ_013",
+            "context": "L_PROPOBJ_013",
+            "string": "granada"
+        },
+        {
+            "id": "L_PROPOBJ_014",
+            "context": "L_PROPOBJ_014",
+            "string": "cinto de granadas"
+        },
+        {
+            "id": "L_PROPOBJ_015",
+            "context": "L_PROPOBJ_015",
+            "string": "cohete"
+        },
+        {
+            "id": "L_PROPOBJ_016",
+            "context": "L_PROPOBJ_016",
+            "string": "cohete buscador"
+        },
+        {
+            "id": "L_PROPOBJ_017",
+            "context": "L_PROPOBJ_017",
+            "string": "mina remota"
+        },
+        {
+            "id": "L_PROPOBJ_018",
+            "context": "L_PROPOBJ_018",
+            "string": "mina de proximidad"
+        },
+        {
+            "id": "L_PROPOBJ_019",
+            "context": "L_PROPOBJ_019",
+            "string": "mina de tiempo"
+        },
+        {
+            "id": "L_PROPOBJ_020",
+            "context": "L_PROPOBJ_020",
+            "string": "cuchillo de combate"
+        },
+        {
+            "id": "L_PROPOBJ_021",
+            "context": "L_PROPOBJ_021",
+            "string": "cuchillos de combate"
+        },
+        {
+            "id": "L_PROPOBJ_025",
+            "context": "L_PROPOBJ_025",
+            "string": "dardo"
+        },
+        {
+            "id": "L_PROPOBJ_026",
+            "context": "L_PROPOBJ_026",
+            "string": "bomba-N"
+        },
+        {
+            "id": "L_PROPOBJ_027",
+            "context": "L_PROPOBJ_027",
+            "string": "sedante"
+        },
+        {
+            "id": "L_PROPOBJ_028",
+            "context": "L_PROPOBJ_028",
+            "string": "Boli Explosivo"
+        },
+        {
+            "id": "L_PROPOBJ_029",
+            "context": "L_PROPOBJ_029",
+            "string": "Caja de Explosivos"
+        },
+        {
+            "id": "L_PROPOBJ_030",
+            "context": "L_PROPOBJ_030",
+            "string": "Bengalas"
+        },
+        {
+            "id": "L_PROPOBJ_031",
+            "context": "L_PROPOBJ_031",
+            "string": "Pitón"
+        },
+        {
+            "id": "L_PROPOBJ_032",
+            "context": "L_PROPOBJ_032",
+            "string": ""
+        },
+        {
+            "id": "L_PROPOBJ_033",
+            "context": "L_PROPOBJ_033",
+            "string": "Cartucho de Dinamita"
+        },
+        {
+            "id": "L_PROPOBJ_034",
+            "context": "L_PROPOBJ_034",
+            "string": "Cartuchos de Dinamita"
+        },
+        {
+            "id": "L_PROPOBJ_035",
+            "context": "L_PROPOBJ_035",
+            "string": "Bicho"
+        },
+        {
+            "id": "L_PROPOBJ_036",
+            "context": "L_PROPOBJ_036",
+            "string": "Microcámara"
+        },
+        {
+            "id": "L_PROPOBJ_037",
+            "context": "L_PROPOBJ_037",
+            "string": "Llave GoldenEye"
+        },
+        {
+            "id": "L_PROPOBJ_038",
+            "context": "L_PROPOBJ_038",
+            "string": "Ficha"
+        },
+        {
+            "id": "L_PROPOBJ_039",
+            "context": "L_PROPOBJ_039",
+            "string": "Explosivo Plástico"
+        },
+        {
+            "id": "L_PROPOBJ_040",
+            "context": "L_PROPOBJ_040",
+            "string": "Has cogido una Llave.\n"
+        },
+        {
+            "id": "L_PROPOBJ_041",
+            "context": "L_PROPOBJ_041",
+            "string": "Has cogido un Escudo.\n"
+        },
+        {
+            "id": "L_PROPOBJ_042",
+            "context": "L_PROPOBJ_042",
+            "string": "Un Escudo.\n"
+        },
+        {
+            "id": "L_PROPOBJ_043",
+            "context": "L_PROPOBJ_043",
+            "string": "Has cogido algo.\n"
+        },
+        {
+            "id": "L_PROPOBJ_044",
+            "context": "L_PROPOBJ_044",
+            "string": "Esta puerta está cerrada.\n"
+        },
+        {
+            "id": "L_PROPOBJ_045",
+            "context": "L_PROPOBJ_045",
+            "string": "saeta"
+        },
+        {
+            "id": "L_PROPOBJ_046",
+            "context": "L_PROPOBJ_046",
+            "string": "orbe"
+        },
+        {
+            "id": "L_PROPOBJ_047",
+            "context": "L_PROPOBJ_047",
+            "string": "munición Segadora"
+        },
+        {
+            "id": "L_PROPOBJ_048",
+            "context": "L_PROPOBJ_048",
+            "string": "disp. de ocultación"
+        },
+        {
+            "id": "L_PROPOBJ_049",
+            "context": "L_PROPOBJ_049",
+            "string": "reforzador"
+        },
+        {
+            "id": "L_PROPOBJ_050",
+            "context": "L_PROPOBJ_050",
+            "string": "tu "
+        },
+        {
+            "id": "L_PROPOBJ_051",
+            "context": "L_PROPOBJ_051",
+            "string": "Tu "
+        },
+        {
+            "id": "L_PROPOBJ_052",
+            "context": "L_PROPOBJ_052",
+            "string": "algunos "
+        },
+        {
+            "id": "L_PROPOBJ_053",
+            "context": "L_PROPOBJ_053",
+            "string": "Algunos "
+        },
+        {
+            "id": "L_PROPOBJ_054",
+            "context": "L_PROPOBJ_054",
+            "string": "algunas "
+        },
+        {
+            "id": "L_PROPOBJ_055",
+            "context": "L_PROPOBJ_055",
+            "string": "Algunas "
+        },
+        {
+            "id": "L_PROPOBJ_056",
+            "context": "L_PROPOBJ_056",
+            "string": ""
+        },
+        {
+            "id": "L_PROPOBJ_057",
+            "context": "L_PROPOBJ_057",
+            "string": ""
+        },
+        {
+            "id": "L_PROPOBJ_058",
+            "context": "L_PROPOBJ_058",
+            "string": ""
+        },
+        {
+            "id": "L_PROPOBJ_059",
+            "context": "L_PROPOBJ_059",
+            "string": ""
+        },
+        {
+            "id": "L_PROPOBJ_060",
+            "context": "L_PROPOBJ_060",
+            "string": "un "
+        },
+        {
+            "id": "L_PROPOBJ_061",
+            "context": "L_PROPOBJ_061",
+            "string": "Un "
+        },
+        {
+            "id": "L_PROPOBJ_062",
+            "context": "L_PROPOBJ_062",
+            "string": "una "
+        },
+        {
+            "id": "L_PROPOBJ_063",
+            "context": "L_PROPOBJ_063",
+            "string": "Una "
+        },
+        {
+            "id": "L_PROPOBJ_064",
+            "context": "L_PROPOBJ_064",
+            "string": "unos"
+        },
+        {
+            "id": "L_PROPOBJ_065",
+            "context": "L_PROPOBJ_065",
+            "string": "Unos"
+        },
+        {
+            "id": "L_PROPOBJ_066",
+            "context": "L_PROPOBJ_066",
+            "string": "unas"
+        },
+        {
+            "id": "L_PROPOBJ_067",
+            "context": "L_PROPOBJ_067",
+            "string": "Unas"
+        },
+        {
+            "id": "L_PROPOBJ_068",
+            "context": "L_PROPOBJ_068",
+            "string": "saetas"
+        },
+        {
+            "id": "L_PROPOBJ_069",
+            "context": "L_PROPOBJ_069",
+            "string": "orbes"
+        },
+        {
+            "id": "L_PROPOBJ_070",
+            "context": "L_PROPOBJ_070",
+            "string": "Munición Segadora"
+        },
+        {
+            "id": "L_PROPOBJ_071",
+            "context": "L_PROPOBJ_071",
+            "string": "disp. de ocultación"
+        },
+        {
+            "id": "L_PROPOBJ_072",
+            "context": "L_PROPOBJ_072",
+            "string": "reforzadores"
+        },
+        {
+            "id": "L_PROPOBJ_073",
+            "context": "L_PROPOBJ_073",
+            "string": "Munición"
+        },
+        {
+            "id": "L_PROPOBJ_074",
+            "context": "L_PROPOBJ_074",
+            "string": "cartuchos"
+        },
+        {
+            "id": "L_PROPOBJ_075",
+            "context": "L_PROPOBJ_075",
+            "string": "balas de magnum"
+        },
+        {
+            "id": "L_PROPOBJ_076",
+            "context": "L_PROPOBJ_076",
+            "string": "balas doradas"
+        },
+        {
+            "id": "L_PROPOBJ_077",
+            "context": "L_PROPOBJ_077",
+            "string": "granadas"
+        },
+        {
+            "id": "L_PROPOBJ_078",
+            "context": "L_PROPOBJ_078",
+            "string": "cintos de granadas"
+        },
+        {
+            "id": "L_PROPOBJ_079",
+            "context": "L_PROPOBJ_079",
+            "string": "cohetes"
+        },
+        {
+            "id": "L_PROPOBJ_080",
+            "context": "L_PROPOBJ_080",
+            "string": "cohetes buscadores"
+        },
+        {
+            "id": "L_PROPOBJ_081",
+            "context": "L_PROPOBJ_081",
+            "string": "minas remotas"
+        },
+        {
+            "id": "L_PROPOBJ_082",
+            "context": "L_PROPOBJ_082",
+            "string": "minas de proximidad"
+        },
+        {
+            "id": "L_PROPOBJ_083",
+            "context": "L_PROPOBJ_083",
+            "string": "minas de tiempo"
+        },
+        {
+            "id": "L_PROPOBJ_084",
+            "context": "L_PROPOBJ_084",
+            "string": "dardos"
+        },
+        {
+            "id": "L_PROPOBJ_085",
+            "context": "L_PROPOBJ_085",
+            "string": "bombas-N"
+        },
+        {
+            "id": "L_PROPOBJ_086",
+            "context": "L_PROPOBJ_086",
+            "string": "sedantes"
+        },
+        {
+            "id": "L_PROPOBJ_087",
+            "context": "L_PROPOBJ_087",
+            "string": "fichas"
+        },
+        {
+            "id": "L_PROPOBJ_088",
+            "context": "L_PROPOBJ_088",
+            "string": null
+        },
+        {
+            "id": "L_PROPOBJ_089",
+            "context": "L_PROPOBJ_089",
+            "string": null
+        },
+        {
+            "id": "L_PROPOBJ_090",
+            "context": "L_PROPOBJ_090",
+            "string": null
+        }
+    ]
+}

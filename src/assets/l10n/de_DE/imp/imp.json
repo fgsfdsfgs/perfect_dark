@@ -1,0 +1,324 @@
+{
+    "messages": [
+        {
+            "id": "L_IMP_000",
+            "context": "L_IMP_000",
+            "string": "|Hintergrund - \n\nAus Rache für die Vereitelung ihres großangelegten Plans, haben die Skedar den Urheber dieser Aktion attackiert, nämlich das Carrington Institut. Aus Gründen der erforderlichen Effektivität steht es außer Frage, dass dieser Auftrag von Joanna auszuführen ist. Ihre Aufgabe ist es, zu retten, was noch zu retten ist.\n\n|Carrington - \n\nDie Skedar haben völlig überraschend angegriffen, Jo! Retten Sie alles und jeden, und dann machen Sie, dass Sie dort rauskommen! Es sind seine Mitarbeiter, die das Institut repräsentieren, nicht das Gebäude.\n\n|1. Ziel: - Reaktivieren Sie die automatischen Verteidigungsanlagen!\n\nIm gesamten Gebäude sind an strategisch wichtigen Punkten Selbstschuss- Anlagen installiert. Zurzeit sind sie zwar inaktiv, aber wenn Sie das Schaltpult erreichen und sie reaktivieren, werden die feindlichen Linien rasch ausgedünnt.\n\n|2. Ziel: - Befreien Sie die Geiseln!\n\nEinige der Eindringlinge haben wichtige Mitglieder des Instituts in ihrer Gewalt. Retten Sie so viele Geiseln wie möglich. Suchen Sie vor allem in den Labors in den oberen Stockwerken.\n\n|3. Ziel: - Finden Sie die experimentelle Waffe!\n\nIn Fosters Waffenlabor befindet sich der Prototyp eines Sub-MGs. Diese Waffe darf auf keinen Fall in die falschen Hände geraten, da sie in der Lage ist, ein temporäres Tarnfeld zu erzeugen. Finden Sie den Prototyp und nutzen Sie ihn gleich zur 'Feldforschung'.\n\n|4. Ziel: - Vernichten Sie die geheimen Informationen!\n\nIn Daniels Büro steht ein Safe, in dem der Algorithmus aufbewahrt wird, mit dem vor Jahren der Maianische Kom-Code geknackt wurde. Diese Information muss vernichtet werden, bevor dataDyne oder die Skedar darauf zugreifen können. Setzen Sie den Laser ein, um sich den Weg durch die Tür zu bahnen.\n\n|5. Ziel: - Reprogrammieren Sie die Bombe!\n\nUnsere Sensoren zeigen an, dass sich an Bord des Skedar-Schiffs eine Bombe befindet. Sie müssen so nahe wie möglich an das Schiff gelangen, das Data Uplink-Gerät einsetzen und einen Virus installieren. Wenn das Schiff dann abhebt und sich in sicherer Entfernung befindet, sollte die Bombe explodieren, ohne, dass jemand im Institut zu Schaden kommt.\n\nENDE\n"
+        },
+        {
+            "id": "L_IMP_001",
+            "context": "L_IMP_001",
+            "string": "CARRINGTON INSTITUT\n"
+        },
+        {
+            "id": "L_IMP_002",
+            "context": "L_IMP_002",
+            "string": "|Hintergrund - \n\nAus Rache für die Vereitelung ihres großangelegten Plans, haben die Skedar den Urheber dieser Aktion attackiert, nämlich das Carrington Institut. Aus Gründen der erforderlichen Effektivität steht es außer Frage, dass dieser Auftrag von Joanna auszuführen ist. Ihre Aufgabe ist es, zu retten, was noch zu retten ist.\n\n|Carrington - \n\nDie Skedar haben völlig überraschend angegriffen, Jo! Retten Sie alles und jeden, und dann machen Sie, dass Sie dort rauskommen! Es sind seine Mitarbeiter, die das Institut repräsentieren, nicht das Gebäude.\n\n|1. Ziel: - Reaktivieren Sie die automatischen Verteidigungsanlagen!\n\nIm gesamten Gebäude sind an strategisch wichtigen Punkten Selbstschuss- Anlagen installiert. Zurzeit sind sie zwar inaktiv, aber wenn Sie das Schaltpult erreichen und sie reaktivieren, werden die feindlichen Linien rasch ausgedünnt.\n\n|2. Ziel: - Befreien Sie die Geiseln!\n\nEinige der Eindringlinge haben wichtige Mitglieder des Instituts in ihrer Gewalt. Retten Sie so viele Geiseln wie möglich. Suchen Sie vor allem in den Labors in den oberen Stockwerken.\n\n|3. Ziel: - Finden Sie die experimentelle Waffe!\n\nIn Fosters Waffenlabor befindet sich der Prototyp eines Sub-MGs. Diese Waffe darf auf keinen Fall in die falschen Hände geraten, da sie in der Lage ist, ein temporäres Tarnfeld zu erzeugen. Finden Sie den Prototyp und nutzen Sie ihn gleich zur 'Feldforschung'.\n\n|4. Ziel: - Reprogrammieren Sie die Bombe!\n\nUnsere Sensoren zeigen an, dass sich an Bord des Skedar-Schiffs eine Bombe befindet. Sie müssen so nahe wie möglich an das Schiff gelangen, das Data Uplink-Gerät einsetzen und einen Virus installieren. Wenn das Schiff dann abhebt und sich in sicherer Entfernung befindet, sollte die Bombe explodieren, ohne, dass jemand im Institut zu Schaden kommt.\n\nENDE\n"
+        },
+        {
+            "id": "L_IMP_003",
+            "context": "L_IMP_003",
+            "string": "|Hintergrund - \n\nAus Rache für die Vereitelung ihres großangelegten Plans, haben die Skedar den Urheber dieser Aktion attackiert, nämlich das Carrington Institut. Aus Gründen der erforderlichen Effektivität steht es außer Frage, dass dieser Auftrag von Joanna auszuführen ist. Ihre Aufgabe ist es, zu retten, was noch zu retten ist.\n\n|Carrington - \n\nDie Skedar haben völlig überraschend angegriffen, Jo! Retten Sie alles und jeden, und dann machen Sie, dass Sie dort rauskommen! Es sind seine Mitarbeiter, die das Institut repräsentieren, nicht das Gebäude.\n\n|1. Ziel: - Befreien Sie die Geiseln!\n\nEinige der Eindringlinge haben wichtige Mitglieder des Instituts in ihrer Gewalt. Retten Sie so viele Geiseln wie möglich. Suchen Sie vor allem in den Labors in den oberen Stockwerken.\n\n|2. Ziel: - Finden Sie die experimentelle Waffe!\n\nIn Fosters Waffenlabor befindet sich der Prototyp eines Sub-MGs. Diese Waffe darf auf keinen Fall in die falschen Hände geraten, da sie in der Lage ist, ein temporäres Tarnfeld zu erzeugen. Finden Sie den Prototyp und nutzen Sie ihn gleich zur 'Feldforschung'.\n\n|3. Ziel: - Reprogrammieren Sie die Bombe!\n\nUnsere Sensoren zeigen an, dass sich an Bord des Skedar-Schiffs eine Bombe befindet. Sie müssen so nahe wie möglich an das Schiff gelangen, das Data Uplink-Gerät einsetzen und einen Virus installieren. Wenn das Schiff dann abhebt und sich in sicherer Entfernung befindet, sollte die Bombe explodieren, ohne, dass jemand im Institut zu Schaden kommt.\n\nENDE\n"
+        },
+        {
+            "id": "L_IMP_004",
+            "context": "L_IMP_004",
+            "string": "\n"
+        },
+        {
+            "id": "L_IMP_005",
+            "context": "L_IMP_005",
+            "string": "Aktivieren Sie die Verteidigung!\n"
+        },
+        {
+            "id": "L_IMP_006",
+            "context": "L_IMP_006",
+            "string": "Befreien Sie die Geiseln!\n"
+        },
+        {
+            "id": "L_IMP_007",
+            "context": "L_IMP_007",
+            "string": "Finden Sie die Versuchs-Waffe!\n"
+        },
+        {
+            "id": "L_IMP_008",
+            "context": "L_IMP_008",
+            "string": "Vernichten Sie die Informationen!\n"
+        },
+        {
+            "id": "L_IMP_009",
+            "context": "L_IMP_009",
+            "string": "Reprogrammieren Sie die Bombe!\n"
+        },
+        {
+            "id": "L_IMP_010",
+            "context": "L_IMP_010",
+            "string": "Vernichten Sie die Informationen!\n"
+        },
+        {
+            "id": "L_IMP_011",
+            "context": "L_IMP_011",
+            "string": "Geheime Informationen\n"
+        },
+        {
+            "id": "L_IMP_012",
+            "context": "L_IMP_012",
+            "string": "der Wache\n"
+        },
+        {
+            "id": "L_IMP_013",
+            "context": "L_IMP_013",
+            "string": "Geheime Informationen\n"
+        },
+        {
+            "id": "L_IMP_014",
+            "context": "L_IMP_014",
+            "string": "Geheime Informationen aufgenommen\n"
+        },
+        {
+            "id": "L_IMP_015",
+            "context": "L_IMP_015",
+            "string": "Selbstschussanlage aktiviert\n"
+        },
+        {
+            "id": "L_IMP_016",
+            "context": "L_IMP_016",
+            "string": "Es sind zu viele Opfer zu beklagen.\n"
+        },
+        {
+            "id": "L_IMP_017",
+            "context": "L_IMP_017",
+            "string": "Geiseln wurden gerettet.\n"
+        },
+        {
+            "id": "L_IMP_018",
+            "context": "L_IMP_018",
+            "string": "Die geheimen Informationen wurden zerstört.\n"
+        },
+        {
+            "id": "L_IMP_019",
+            "context": "L_IMP_019",
+            "string": "Carrington wurde eliminiert.\n"
+        },
+        {
+            "id": "L_IMP_020",
+            "context": "L_IMP_020",
+            "string": "Joanna - Wir werden angegriffen!\n"
+        },
+        {
+            "id": "L_IMP_021",
+            "context": "L_IMP_021",
+            "string": "Aktivieren Sie die Selbstschussanlagen - RASCH!\n"
+        },
+        {
+            "id": "L_IMP_022",
+            "context": "L_IMP_022",
+            "string": "Die Skedar haben Geiseln genommen.\n"
+        },
+        {
+            "id": "L_IMP_023",
+            "context": "L_IMP_023",
+            "string": "Dringen Sie zu den Büros vor und retten Sie sie!\n"
+        },
+        {
+            "id": "L_IMP_024",
+            "context": "L_IMP_024",
+            "string": "Sie verwenden eine neuartige Form der Schildtechnologie.\n"
+        },
+        {
+            "id": "L_IMP_025",
+            "context": "L_IMP_025",
+            "string": "Foster hat an einer Waffe gearbeitet, die sich als \nnützlich erweisen könnte.\n"
+        },
+        {
+            "id": "L_IMP_026",
+            "context": "L_IMP_026",
+            "string": "Verdammt! Mein Büro... Wenn Sie die Daten finden...\n"
+        },
+        {
+            "id": "L_IMP_027",
+            "context": "L_IMP_027",
+            "string": "Gehen Sie zuerst dorthin und vernichten Sie die Daten, Jo.\n"
+        },
+        {
+            "id": "L_IMP_028",
+            "context": "L_IMP_028",
+            "string": "Die Dinge überstürzen sich. Sie haben eine Bombe versteckt.\n"
+        },
+        {
+            "id": "L_IMP_029",
+            "context": "L_IMP_029",
+            "string": "Finden Sie sie und schaffen Sie sie aus dem Gebäude raus!\n"
+        },
+        {
+            "id": "L_IMP_030",
+            "context": "L_IMP_030",
+            "string": "Zugriff verweigert - Keine Zugriffsberechtigung.\n"
+        },
+        {
+            "id": "L_IMP_031",
+            "context": "L_IMP_031",
+            "string": "Notfallprogramm wurde initiiert.\n"
+        },
+        {
+            "id": "L_IMP_032",
+            "context": "L_IMP_032",
+            "string": "Ausgezeichnet, Joanna. Wir haben es fast geschafft...\n"
+        },
+        {
+            "id": "L_IMP_033",
+            "context": "L_IMP_033",
+            "string": "Das letzte Schiff wartet auf Sie. Beeilung!\n"
+        },
+        {
+            "id": "L_IMP_034",
+            "context": "L_IMP_034",
+            "string": "Wichtiges Objekt wurde zerstört.\n"
+        },
+        {
+            "id": "L_IMP_035",
+            "context": "L_IMP_035",
+            "string": "Die Selbstschussanlagen werden sehr hilfreich sein.\n"
+        },
+        {
+            "id": "L_IMP_036",
+            "context": "L_IMP_036",
+            "string": "Daran hat Foster also gearbeitet.\n"
+        },
+        {
+            "id": "L_IMP_037",
+            "context": "L_IMP_037",
+            "string": "Ich muss vorsichtig sein... Die Geiseln \nverlassen sich auf mich.\n"
+        },
+        {
+            "id": "L_IMP_038",
+            "context": "L_IMP_038",
+            "string": "Wenigstens werde ich es nie erfahren, \nwenn ich einen Fehler gemacht habe.\n"
+        },
+        {
+            "id": "L_IMP_039",
+            "context": "L_IMP_039",
+            "string": "Die Bombe ist detoniert...\n"
+        },
+        {
+            "id": "L_IMP_040",
+            "context": "L_IMP_040",
+            "string": "Sie haben einen Devastator erhalten.\n"
+        },
+        {
+            "id": "L_IMP_041",
+            "context": "L_IMP_041",
+            "string": "Sind Sie fertig, Joanna? Wir können die Maianische Delegation nicht warten lassen. Den Präsidenten natürlich auch nicht.\n"
+        },
+        {
+            "id": "L_IMP_042",
+            "context": "L_IMP_042",
+            "string": "Ob ich fertig bin? Wovon reden Sie? Ich war schon vor einer halben Stunde fertig. SIE haben uns aufgehalten!\n"
+        },
+        {
+            "id": "L_IMP_043",
+            "context": "L_IMP_043",
+            "string": "Sie wissen ja, Joanna; Ich musste mich noch frisieren, und dann musste ich auch noch den passenden Anzug auswählen...\n"
+        },
+        {
+            "id": "L_IMP_044",
+            "context": "L_IMP_044",
+            "string": "Man sollte Sie von Spiegeln fernhalten. Nervös?\n"
+        },
+        {
+            "id": "L_IMP_045",
+            "context": "L_IMP_045",
+            "string": "Sehr sogar. Auf diesen Moment habe ich schon seit Jahren gewartet. Kontakt, friedlicher Kontakt zwischen Menschen und Maianern. Für diesen Zweck wurde das Institut gegründet. In wenigen Minuten sind wir im Weißen Haus, und die Zusammenkunft wird endlich stattfinden...\n"
+        },
+        {
+            "id": "L_IMP_046",
+            "context": "L_IMP_046",
+            "string": "Woher kam das?\n"
+        },
+        {
+            "id": "L_IMP_047",
+            "context": "L_IMP_047",
+            "string": "Es war im Erdgeschoss...\n"
+        },
+        {
+            "id": "L_IMP_048",
+            "context": "L_IMP_048",
+            "string": "Sieht so aus, als wüsste jemand nicht, wann er genug hat. Wir müssen die Leute hier rausschaffen!\n"
+        },
+        {
+            "id": "L_IMP_049",
+            "context": "L_IMP_049",
+            "string": "Bringen Sie sich in Sicherheit! Ich halte sie auf; Sie können später zurückkommen und mich abholen!\n"
+        },
+        {
+            "id": "L_IMP_050",
+            "context": "L_IMP_050",
+            "string": "Zumindest hoffe ich, dass Sie das können.\n"
+        },
+        {
+            "id": "L_IMP_051",
+            "context": "L_IMP_051",
+            "string": "Sie benötigen das Data Uplink-Gerät.\n"
+        },
+        {
+            "id": "L_IMP_052",
+            "context": "L_IMP_052",
+            "string": "Verbindung wurde hergestellt.\n"
+        },
+        {
+            "id": "L_IMP_053",
+            "context": "L_IMP_053",
+            "string": "Sicherheitssystem wird umgangen.\n"
+        },
+        {
+            "id": "L_IMP_054",
+            "context": "L_IMP_054",
+            "string": "Virus wurde erfolgreich kopiert.\n"
+        },
+        {
+            "id": "L_IMP_055",
+            "context": "L_IMP_055",
+            "string": "Der Antrieb des Schiffs wurde aktiviert.\n"
+        },
+        {
+            "id": "L_IMP_056",
+            "context": "L_IMP_056",
+            "string": "Verbindung wurde unterbrochen.\n"
+        },
+        {
+            "id": "L_IMP_057",
+            "context": "L_IMP_057",
+            "string": "Erlangen Sie das Data Uplink-Gerät!\n"
+        },
+        {
+            "id": "L_IMP_058",
+            "context": "L_IMP_058",
+            "string": "\n"
+        },
+        {
+            "id": "L_IMP_059",
+            "context": "L_IMP_059",
+            "string": "Data Uplink-Gerät\n"
+        },
+        {
+            "id": "L_IMP_060",
+            "context": "L_IMP_060",
+            "string": "Ein Data Uplink-Gerät\n"
+        },
+        {
+            "id": "L_IMP_061",
+            "context": "L_IMP_061",
+            "string": "Data Uplink-Gerät aufgenommen\n"
+        },
+        {
+            "id": "L_IMP_062",
+            "context": "L_IMP_062",
+            "string": null
+        },
+        {
+            "id": "L_IMP_063",
+            "context": "L_IMP_063",
+            "string": null
+        }
+    ]
+}

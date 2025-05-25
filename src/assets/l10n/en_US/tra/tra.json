@@ -1,0 +1,444 @@
+{
+    "messages": [
+        {
+            "id": "L_TRA_000",
+            "context": "L_TRA_000",
+            "string": "|Background - \n\nA craft carrying Institute advisors has been shot down in Nevada. Debris from the crash and the bodies of the advisors have been taken to Area 51. A spy inside the base has managed to get footage to the Institute of a possible survivor. This mission is to rescue that survivor.\n\n|Carrington - \n\nI know you have questions, Jo, and I'm afraid that this isn't the time to answer them. I can tell you that the little fellow you just rescued is a Maian, and he is a bodyguard for the Ambassador whose ship was shot down. Other details and background can wait until later.\n\n|Objective One: - Locate Alien AutoSurgeon Device\n\nAll Maian craft carry a device called an AutoSurgeon. Using this is the fastest and safest way of waking him up since they are designed to work on Maian physiology. It should be amongst the wreckage of the ship, or if not, with the items taken to the labs for analysis.\n\n|Objective Two: - Rendezvous With Agent\n\nJonathan reports that he is now under suspicion and expects to be arrested in a matter of minutes. Find him before the patrols do.\n\n|Objective Three: - Gain Entry to Secret Hangar\n\nOur agent has been unable to get into the secret hangar before because that would have meant blowing his cover, but the time for such worries is past. Keep the guards off Jonathan as he hacks into the door to the hangar where we suspect an intact Maian ship is kept.\n\n|Objective Four: - Revive Maian Bodyguard\n\nWake the Maian up before trying to get out - a hoverbed is not the easiest thing to steer even in normal situations. Once he's up and about, he should be able to fly the Maian craft out of Area 51.\n\n|Objective Five: - Escape From Area 51\n\nThat is, get the Maian bodyguard to the ship first. Then you and Jonathan get aboard the craft with him, and you should be able to fly out past the air defenses you took care of earlier.\n\nEND\n"
+        },
+        {
+            "id": "L_TRA_001",
+            "context": "L_TRA_001",
+            "string": "AREA 51 - ESCAPE\n"
+        },
+        {
+            "id": "L_TRA_002",
+            "context": "L_TRA_002",
+            "string": "|Background - \n\nA craft carrying Institute advisors has been shot down in Nevada. Debris from the crash and the bodies of the advisors have been taken to Area 51. A spy inside the base has managed to get footage to the Institute of a possible survivor. This mission is to rescue that survivor.\n\n|Carrington - \n\nI know you have questions, Jo, and I'm afraid that this isn't the time to answer them. I can tell you that the little fellow you just rescued is a Maian, and he is a bodyguard for the Ambassador whose ship was shot down. Other details and background can wait until later.\n\n|Objective One: - Rendezvous With Agent\n\nJonathan reports that he is now under suspicion and expects to be arrested in a matter of minutes. Find him before the patrols do.\n\n|Objective Two: - Gain Entry to Secret Hangar\n\nOur agent has been unable to get into the secret hangar before because that would have meant blowing his cover, but the time for such worries is past. Keep the guards off Jonathan as he hacks into the door to the hangar where we suspect an intact Maian ship is kept.\n\n|Objective Three: - Revive Maian Bodyguard\n\nWake the Maian up before trying to get out - a hoverbed is not the easiest thing to steer even in normal situations. Once he's up and about, he should be able to fly the Maian craft out of Area 51.\n\n|Objective Four: - Escape From Area 51\n\nThat is, get the Maian bodyguard to the ship first. Then you and Jonathan get aboard the craft with him, and you should be able to fly out past the air defenses you took care of earlier.\n\nEND\n"
+        },
+        {
+            "id": "L_TRA_003",
+            "context": "L_TRA_003",
+            "string": "|Background - \n\nA craft carrying Institute advisors has been shot down in Nevada. Debris from the crash and the bodies of the advisors have been taken to Area 51. A spy inside the base has managed to get footage to the Institute of a possible survivor. This mission is to rescue that survivor.\n\n|Carrington - \n\nI know you have questions, Jo, and I'm afraid that this isn't the time to answer them. I can tell you that the little fellow you just rescued is a Maian, and he is a bodyguard for the Ambassador whose ship was shot down. Other details and background can wait until later.\n\n|Objective One: - Rendezvous With Agent\n\nJonathan reports that he is now under suspicion and expects to be arrested in a matter of minutes. Find him before the patrols do.\n\n|Objective Two: - Gain Entry to Secret Hangar\n\nOur agent has been unable to get into the secret hangar before because that would have meant blowing his cover, but the time for such worries is past. Keep the guards off Jonathan as he hacks into the door to the hangar where we suspect an intact Maian ship is kept.\n\n|Objective Three: - Escape From Area 51\n\nThat is, get the Maian bodyguard to the ship first. Then you and Jonathan get aboard the craft with him, and you should be able to fly out past the air defenses you took care of earlier.\n\nEND\n"
+        },
+        {
+            "id": "L_TRA_004",
+            "context": "L_TRA_004",
+            "string": "\n"
+        },
+        {
+            "id": "L_TRA_005",
+            "context": "L_TRA_005",
+            "string": "\n"
+        },
+        {
+            "id": "L_TRA_006",
+            "context": "L_TRA_006",
+            "string": "\n"
+        },
+        {
+            "id": "L_TRA_007",
+            "context": "L_TRA_007",
+            "string": "\n"
+        },
+        {
+            "id": "L_TRA_008",
+            "context": "L_TRA_008",
+            "string": "\n"
+        },
+        {
+            "id": "L_TRA_009",
+            "context": "L_TRA_009",
+            "string": "Locate alien tech medpack\n"
+        },
+        {
+            "id": "L_TRA_010",
+            "context": "L_TRA_010",
+            "string": "Rendezvous with CI spy\n"
+        },
+        {
+            "id": "L_TRA_011",
+            "context": "L_TRA_011",
+            "string": "Revive Maian Bodyguard\n"
+        },
+        {
+            "id": "L_TRA_012",
+            "context": "L_TRA_012",
+            "string": "Locate secret hangar\n"
+        },
+        {
+            "id": "L_TRA_013",
+            "context": "L_TRA_013",
+            "string": "Escape from Area 51\n"
+        },
+        {
+            "id": "L_TRA_014",
+            "context": "L_TRA_014",
+            "string": "Joanna - this is Jonathan. You're in grave danger.\n"
+        },
+        {
+            "id": "L_TRA_015",
+            "context": "L_TRA_015",
+            "string": "They've flooded the area with nerve gas.\n"
+        },
+        {
+            "id": "L_TRA_016",
+            "context": "L_TRA_016",
+            "string": "Get our friend to the containment lab. \nThere's a hiding place there.\n"
+        },
+        {
+            "id": "L_TRA_017",
+            "context": "L_TRA_017",
+            "string": "I'll contact you when you get there - good luck!\n"
+        },
+        {
+            "id": "L_TRA_018",
+            "context": "L_TRA_018",
+            "string": "Good work, Jo. We need to meet up. They're \ngetting suspicious of me.\n"
+        },
+        {
+            "id": "L_TRA_019",
+            "context": "L_TRA_019",
+            "string": "Use the maintenance hatch I've opened \nin one of the containment labs. Hurry.\n"
+        },
+        {
+            "id": "L_TRA_020",
+            "context": "L_TRA_020",
+            "string": "Obtain alien medpack.\n"
+        },
+        {
+            "id": "L_TRA_021",
+            "context": "L_TRA_021",
+            "string": "Cassandra De Vries'\n"
+        },
+        {
+            "id": "L_TRA_022",
+            "context": "L_TRA_022",
+            "string": "Alien medpack\n"
+        },
+        {
+            "id": "L_TRA_023",
+            "context": "L_TRA_023",
+            "string": ""
+        },
+        {
+            "id": "L_TRA_024",
+            "context": "L_TRA_024",
+            "string": "Picked up an alien medpack.\n"
+        },
+        {
+            "id": "L_TRA_025",
+            "context": "L_TRA_025",
+            "string": "Joanna - over here.\n"
+        },
+        {
+            "id": "L_TRA_026",
+            "context": "L_TRA_026",
+            "string": "We need to get back to our friend.\n"
+        },
+        {
+            "id": "L_TRA_027",
+            "context": "L_TRA_027",
+            "string": "Right, we're near. Cover me, Jo...\n"
+        },
+        {
+            "id": "L_TRA_028",
+            "context": "L_TRA_028",
+            "string": "Okay - stand back.\n"
+        },
+        {
+            "id": "L_TRA_029",
+            "context": "L_TRA_029",
+            "string": "Jonathan has been killed.\n"
+        },
+        {
+            "id": "L_TRA_030",
+            "context": "L_TRA_030",
+            "string": "Elvis has been killed.\n"
+        },
+        {
+            "id": "L_TRA_031",
+            "context": "L_TRA_031",
+            "string": "The secret hangar has been located.\n"
+        },
+        {
+            "id": "L_TRA_032",
+            "context": "L_TRA_032",
+            "string": "Okay, Jo - let's go.\n"
+        },
+        {
+            "id": "L_TRA_033",
+            "context": "L_TRA_033",
+            "string": "Alien medpack activated.\n"
+        },
+        {
+            "id": "L_TRA_034",
+            "context": "L_TRA_034",
+            "string": "Alien medpack operation aborted.\n"
+        },
+        {
+            "id": "L_TRA_035",
+            "context": "L_TRA_035",
+            "string": "Alien medpack has been administered.\n"
+        },
+        {
+            "id": "L_TRA_036",
+            "context": "L_TRA_036",
+            "string": "Mission critical object destroyed.\n"
+        },
+        {
+            "id": "L_TRA_037",
+            "context": "L_TRA_037",
+            "string": "Outer hangar door is opening.\n"
+        },
+        {
+            "id": "L_TRA_038",
+            "context": "L_TRA_038",
+            "string": "Outer hangar door is closing.\n"
+        },
+        {
+            "id": "L_TRA_039",
+            "context": "L_TRA_039",
+            "string": "Inner hangar door is opening.\n"
+        },
+        {
+            "id": "L_TRA_040",
+            "context": "L_TRA_040",
+            "string": "Inner hangar door is closing.\n"
+        },
+        {
+            "id": "L_TRA_041",
+            "context": "L_TRA_041",
+            "string": "It's the only way out of here.\n"
+        },
+        {
+            "id": "L_TRA_042",
+            "context": "L_TRA_042",
+            "string": "You're the only one who can fly it, Elvis, so get in.\n"
+        },
+        {
+            "id": "L_TRA_043",
+            "context": "L_TRA_043",
+            "string": "But we can't leave you behind.\n"
+        },
+        {
+            "id": "L_TRA_044",
+            "context": "L_TRA_044",
+            "string": "There must be a way out of here.\n"
+        },
+        {
+            "id": "L_TRA_045",
+            "context": "L_TRA_045",
+            "string": "One of us will have to stay behind and open the \nhangar doors.\n"
+        },
+        {
+            "id": "L_TRA_046",
+            "context": "L_TRA_046",
+            "string": "I'll get out on that hoverbike. Cover me while I \nopen the doors.\n"
+        },
+        {
+            "id": "L_TRA_047",
+            "context": "L_TRA_047",
+            "string": "Jonathan, go with Elvis. I'll see to the consoles.\n"
+        },
+        {
+            "id": "L_TRA_048",
+            "context": "L_TRA_048",
+            "string": "It's dangerous, Jo...\n"
+        },
+        {
+            "id": "L_TRA_049",
+            "context": "L_TRA_049",
+            "string": "I can handle it... Trust me.\n"
+        },
+        {
+            "id": "L_TRA_050",
+            "context": "L_TRA_050",
+            "string": "...Okay.\n"
+        },
+        {
+            "id": "L_TRA_051",
+            "context": "L_TRA_051",
+            "string": "Damn it, Joanna... cover me!\n"
+        },
+        {
+            "id": "L_TRA_052",
+            "context": "L_TRA_052",
+            "string": "I'll cover the stairs - you take the ramp.\n"
+        },
+        {
+            "id": "L_TRA_053",
+            "context": "L_TRA_053",
+            "string": "The hangar doors are now open.\n"
+        },
+        {
+            "id": "L_TRA_054",
+            "context": "L_TRA_054",
+            "string": "Medical containment doors unlocked.\n"
+        },
+        {
+            "id": "L_TRA_055",
+            "context": "L_TRA_055",
+            "string": "The medpack's got to be somewhere around here.\n"
+        },
+        {
+            "id": "L_TRA_056",
+            "context": "L_TRA_056",
+            "string": "Time to hook up with Jonathan, before he gets \ninto any more trouble.\n"
+        },
+        {
+            "id": "L_TRA_057",
+            "context": "L_TRA_057",
+            "string": "That smell... oil... I smelt that in the other \nhangars.\n"
+        },
+        {
+            "id": "L_TRA_058",
+            "context": "L_TRA_058",
+            "string": "The jetbike should get me out before they lock \nthe base down.\n"
+        },
+        {
+            "id": "L_TRA_059",
+            "context": "L_TRA_059",
+            "string": "Oh, no! We have a problem. It's a single seater!\n"
+        },
+        {
+            "id": "L_TRA_060",
+            "context": "L_TRA_060",
+            "string": "Two can get in but no more.\n"
+        },
+        {
+            "id": "L_TRA_061",
+            "context": "L_TRA_061",
+            "string": "Plus, it's got no style, you know what I'm saying?\n"
+        },
+        {
+            "id": "L_TRA_062",
+            "context": "L_TRA_062",
+            "string": "I'm not having this. That specimen is government property and should not leave the base.\n"
+        },
+        {
+            "id": "L_TRA_063",
+            "context": "L_TRA_063",
+            "string": "Let's see how that overconfident thief deals with our gas defense system. She'll think twice before messing with me again!\n"
+        },
+        {
+            "id": "L_TRA_064",
+            "context": "L_TRA_064",
+            "string": "What's that noise? Can't be... Gas!\n"
+        },
+        {
+            "id": "L_TRA_065",
+            "context": "L_TRA_065",
+            "string": "Noooo, that wasn't meant to happen!\n"
+        },
+        {
+            "id": "L_TRA_066",
+            "context": "L_TRA_066",
+            "string": "Please stop! I'm not supposed to die. She... Arggghhh!\n"
+        },
+        {
+            "id": "L_TRA_067",
+            "context": "L_TRA_067",
+            "string": "You idiot! We'd better get out of here.\n"
+        },
+        {
+            "id": "L_TRA_068",
+            "context": "L_TRA_068",
+            "string": "Gasps, chokes, and wheezes.\n"
+        },
+        {
+            "id": "L_TRA_069",
+            "context": "L_TRA_069",
+            "string": "***aahh...! aahaa...! aaaaahhh!  aha.  ahh.***\n"
+        },
+        {
+            "id": "L_TRA_070",
+            "context": "L_TRA_070",
+            "string": "I'm alive. I thought I'd be chopped up like the others by now. You're from the Institute, aren't you? I recognize you from before. You helped me. Thank you.\n"
+        },
+        {
+            "id": "L_TRA_071",
+            "context": "L_TRA_071",
+            "string": "You... You speak our language?\n"
+        },
+        {
+            "id": "L_TRA_072",
+            "context": "L_TRA_072",
+            "string": "Watch her... she's sharp.\n"
+        },
+        {
+            "id": "L_TRA_073",
+            "context": "L_TRA_073",
+            "string": "Earrggghh...eerggh...\n"
+        },
+        {
+            "id": "L_TRA_074",
+            "context": "L_TRA_074",
+            "string": "What's wrong?\n"
+        },
+        {
+            "id": "L_TRA_075",
+            "context": "L_TRA_075",
+            "string": "I have a headache. And with a head this big, that's no joke.\n"
+        },
+        {
+            "id": "L_TRA_076",
+            "context": "L_TRA_076",
+            "string": "Can you walk? We must leave before they get organized and hunt us down.\n"
+        },
+        {
+            "id": "L_TRA_077",
+            "context": "L_TRA_077",
+            "string": "I think so. What's your name?\n"
+        },
+        {
+            "id": "L_TRA_078",
+            "context": "L_TRA_078",
+            "string": "I'm Agent Dark. Or Joanna, if you prefer.\n"
+        },
+        {
+            "id": "L_TRA_079",
+            "context": "L_TRA_079",
+            "string": "Well, Joanna, I'm Protector One. But you can call me... Elvis!\n"
+        },
+        {
+            "id": "L_TRA_080",
+            "context": "L_TRA_080",
+            "string": "Console is not active.\n"
+        },
+        {
+            "id": "L_TRA_081",
+            "context": "L_TRA_081",
+            "string": "What the hell do you think you're doing? \nThis is supposed to be a sealed room! \nDon't you know anything about autopsy \nprocedures?\n"
+        },
+        {
+            "id": "L_TRA_082",
+            "context": "L_TRA_082",
+            "string": "Director Easton will hear about this, \nyoung lady.\n"
+        },
+        {
+            "id": "L_TRA_083",
+            "context": "L_TRA_083",
+            "string": "You can't take that! It's government property! \nThis is intolerable! It's... it's... \nunprofessional!!\n"
+        },
+        {
+            "id": "L_TRA_084",
+            "context": "L_TRA_084",
+            "string": "I don't care much for procedures!\n"
+        },
+        {
+            "id": "L_TRA_085",
+            "context": "L_TRA_085",
+            "string": null
+        },
+        {
+            "id": "L_TRA_086",
+            "context": "L_TRA_086",
+            "string": null
+        },
+        {
+            "id": "L_TRA_087",
+            "context": "L_TRA_087",
+            "string": null
+        }
+    ]
+}
