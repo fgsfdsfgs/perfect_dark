@@ -1,0 +1,2003 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"POT-Creation-Date: 2025-05-28 15:30:39.011581+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "L_OPTIONS_000"
+msgid "Complete\\n"
+msgstr "Compiuto\\n"
+
+msgctxt "L_OPTIONS_001"
+msgid "Incomplete\\n"
+msgstr "Incompleto\\n"
+
+msgctxt "L_OPTIONS_002"
+msgid "Failed\\n"
+msgstr "Fallito\\n"
+
+msgctxt "L_OPTIONS_003"
+msgid "\\n"
+msgstr "\\n"
+
+msgctxt "L_OPTIONS_004"
+msgid ""
+msgstr ""
+
+msgctxt "L_OPTIONS_005"
+msgid "earth:"
+msgstr "Terra:"
+
+msgctxt "L_OPTIONS_006"
+msgid "   prehistory"
+msgstr "   nella preistoria"
+
+msgctxt "L_OPTIONS_007"
+msgid "rare presents"
+msgstr "Rare presenta"
+
+msgctxt "L_OPTIONS_008"
+msgid "Red\\n"
+msgstr "Rosso\\n"
+
+msgctxt "L_OPTIONS_009"
+msgid "Yellow\\n"
+msgstr "Giallo\\n"
+
+msgctxt "L_OPTIONS_010"
+msgid "Blue\\n"
+msgstr "Blu\\n"
+
+msgctxt "L_OPTIONS_011"
+msgid "Magenta\\n"
+msgstr "Magenta\\n"
+
+msgctxt "L_OPTIONS_012"
+msgid "Cyan\\n"
+msgstr "Azzurro\\n"
+
+msgctxt "L_OPTIONS_013"
+msgid "Orange\\n"
+msgstr "Arancio\\n"
+
+msgctxt "L_OPTIONS_014"
+msgid "Pink\\n"
+msgstr "Rosa\\n"
+
+msgctxt "L_OPTIONS_015"
+msgid "Brown\\n"
+msgstr "Marrone\\n"
+
+msgctxt "L_OPTIONS_016"
+msgid "Joanna Combat\\n"
+msgstr "Jo in tuta da lotta\\n"
+
+msgctxt "L_OPTIONS_017"
+msgid "Joanna Trench Coat\\n"
+msgstr "Jo in impermeabile\\n"
+
+msgctxt "L_OPTIONS_018"
+msgid "Joanna Party Frock\\n"
+msgstr "Jo in abito da sera\\n"
+
+msgctxt "L_OPTIONS_019"
+msgid "Joanna Frock (Ripped)\\n"
+msgstr "Jo in abito strappato\\n"
+
+msgctxt "L_OPTIONS_020"
+msgid "Joanna Stewardess\\n"
+msgstr "Jo come hostess\\n"
+
+msgctxt "L_OPTIONS_021"
+msgid "Joanna Wet Suit\\n"
+msgstr "Jo in muta da sub\\n"
+
+msgctxt "L_OPTIONS_022"
+msgid "Joanna Aqualung\\n"
+msgstr "Jo con bombole da sub\\n"
+
+msgctxt "L_OPTIONS_023"
+msgid "Joanna Arctic\\n"
+msgstr "Jo in tenuta polare\\n"
+
+msgctxt "L_OPTIONS_024"
+msgid "Joanna Lab Tech.\\n"
+msgstr "Jo in camice\\n"
+
+msgctxt "L_OPTIONS_025"
+msgid "Elvis\\n"
+msgstr "Elvis\\n"
+
+msgctxt "L_OPTIONS_026"
+msgid "Maian\\n"
+msgstr "Maian\\n"
+
+msgctxt "L_OPTIONS_027"
+msgid "Daniel Carrington\\n"
+msgstr "Daniel Carrington\\n"
+
+msgctxt "L_OPTIONS_028"
+msgid "Carrington Evening Wear\\n"
+msgstr "Carrington in smoking\\n"
+
+msgctxt "L_OPTIONS_029"
+msgid "Mr. Blonde\\n"
+msgstr "Mr Blonde\\n"
+
+msgctxt "L_OPTIONS_030"
+msgid "Cassandra De Vries\\n"
+msgstr "Cassandra De Vries\\n"
+
+msgctxt "L_OPTIONS_031"
+msgid "Trent Easton\\n"
+msgstr "Trent Easton\\n"
+
+msgctxt "L_OPTIONS_032"
+msgid "Jonathan\\n"
+msgstr "Jonathan\\n"
+
+msgctxt "L_OPTIONS_033"
+msgid "CI Male Lab Technician\\n"
+msgstr "Tecnico di lab. CI (uomo)\\n"
+
+msgctxt "L_OPTIONS_034"
+msgid "CI Female Lab Technician\\n"
+msgstr "Tecnico di lab. CI (donna)\\n"
+
+msgctxt "L_OPTIONS_035"
+msgid "CI Soldier\\n"
+msgstr "Soldato CI\\n"
+
+msgctxt "L_OPTIONS_036"
+msgid "dataDyne Shock Trooper\\n"
+msgstr "Soldato d'assalto dD\\n"
+
+msgctxt "L_OPTIONS_037"
+msgid "dataDyne Female Guard\\n"
+msgstr "Guardia (donna) dD\\n"
+
+msgctxt "L_OPTIONS_038"
+msgid "dataDyne Security\\n"
+msgstr "Sicurezza dataDyne\\n"
+
+msgctxt "L_OPTIONS_039"
+msgid "dataDyne Infantry\\n"
+msgstr "Fanteria dataDyne\\n"
+
+msgctxt "L_OPTIONS_040"
+msgid "dataDyne Trooper\\n"
+msgstr "Soldato dataDyne\\n"
+
+msgctxt "L_OPTIONS_041"
+msgid "Secretary\\n"
+msgstr "Segretaria\\n"
+
+msgctxt "L_OPTIONS_042"
+msgid "Office Suit\\n"
+msgstr "Vestito da ufficio\\n"
+
+msgctxt "L_OPTIONS_043"
+msgid "Office Casual\\n"
+msgstr "Vestito casual\\n"
+
+msgctxt "L_OPTIONS_044"
+msgid "Negotiator\\n"
+msgstr "Negoziatore\\n"
+
+msgctxt "L_OPTIONS_045"
+msgid "dataDyne Sniper\\n"
+msgstr "Cecchino dataDyne\\n"
+
+msgctxt "L_OPTIONS_046"
+msgid "G5 Guard\\n"
+msgstr "Guardia G5\\n"
+
+msgctxt "L_OPTIONS_047"
+msgid "G5 SWAT Guard\\n"
+msgstr "Guardia SWAT G5\\n"
+
+msgctxt "L_OPTIONS_048"
+msgid "CIA Agent\\n"
+msgstr "Agente CIA\\n"
+
+msgctxt "L_OPTIONS_049"
+msgid "FBI Agent\\n"
+msgstr "Agente FBI\\n"
+
+msgctxt "L_OPTIONS_050"
+msgid "Area 51 Guard\\n"
+msgstr "Guardia Area 51\\n"
+
+msgctxt "L_OPTIONS_051"
+msgid "Area 51 Trooper\\n"
+msgstr "Soldato Area 51\\n"
+
+msgctxt "L_OPTIONS_052"
+msgid "Pilot\\n"
+msgstr "Pilota\\n"
+
+msgctxt "L_OPTIONS_053"
+msgid "Overalls\\n"
+msgstr "Tute\\n"
+
+msgctxt "L_OPTIONS_054"
+msgid "NSA Bodyguard\\n"
+msgstr "Guardia del corpo NSA\\n"
+
+msgctxt "L_OPTIONS_055"
+msgid "Male Lab Technician\\n"
+msgstr "Tecnico di lab. (uomo)\\n"
+
+msgctxt "L_OPTIONS_056"
+msgid "Female Lab Technician\\n"
+msgstr "Tecnico di lab. (donna)\\n"
+
+msgctxt "L_OPTIONS_057"
+msgid "dataDyne Lab Technician\\n"
+msgstr "Tecnico di lab. dD\\n"
+
+msgctxt "L_OPTIONS_058"
+msgid "Biotechnician\\n"
+msgstr "Tecnico biologico\\n"
+
+msgctxt "L_OPTIONS_059"
+msgid "Alaskan Guard\\n"
+msgstr "Guardia dell'Alaska\\n"
+
+msgctxt "L_OPTIONS_060"
+msgid "Air Force One Pilot\\n"
+msgstr "Pilota Air Force One\\n"
+
+msgctxt "L_OPTIONS_061"
+msgid "Steward\\n"
+msgstr "Steward\\n"
+
+msgctxt "L_OPTIONS_062"
+msgid "Stewardess\\n"
+msgstr "Hostess\\n"
+
+msgctxt "L_OPTIONS_063"
+msgid "Head Stewardess\\n"
+msgstr "Hostess capo\\n"
+
+msgctxt "L_OPTIONS_064"
+msgid "The President\\n"
+msgstr "Presidente\\n"
+
+msgctxt "L_OPTIONS_065"
+msgid "NSA Lackey\\n"
+msgstr "Lacchè NSA\\n"
+
+msgctxt "L_OPTIONS_066"
+msgid "Presidential Security\\n"
+msgstr "Sicurezza presidenziale\\n"
+
+msgctxt "L_OPTIONS_067"
+msgid "President\\\"s Clone\\n"
+msgstr "Clone del Presidente\\n"
+
+msgctxt "L_OPTIONS_068"
+msgid "Pelagic II Guard\\n"
+msgstr "Guardia Pelagic II\\n"
+
+msgctxt "L_OPTIONS_069"
+msgid "Maian Soldier\\n"
+msgstr "Soldato Maian\\n"
+
+msgctxt "L_OPTIONS_070"
+msgid "Dinner Jacket\\n"
+msgstr "Giacca elegante\\n"
+
+msgctxt "L_OPTIONS_071"
+msgid "- no controller in controller socket 1 -"
+msgstr "nessun Controller nella presa 1"
+
+msgctxt "L_OPTIONS_072"
+msgid "please power off and attach a controller"
+msgstr "spegni la console e collega un Controller"
+
+msgctxt "L_OPTIONS_073"
+msgid "DETECTED"
+msgstr "PRESENTE"
+
+msgctxt "L_OPTIONS_074"
+msgid "NOT DETECTED"
+msgstr "ASSENTE"
+
+msgctxt "L_OPTIONS_075"
+msgid "tm"
+msgstr "tm"
+
+msgctxt "L_OPTIONS_076"
+msgid "N64 EXPANSION PAK"
+msgstr "EXPANSION PAK N64"
+
+msgctxt "L_OPTIONS_077"
+msgid "Nintendo 64 Product Identification\\n"
+msgstr "Identificazione prodotto Nintendo 64\\n"
+
+msgctxt "L_OPTIONS_078"
+msgid "Product ID:\\n"
+msgstr "ID prodotto:\\n"
+
+msgctxt "L_OPTIONS_079"
+msgid "Product Code:\\n"
+msgstr "Codice prodotto:\\n"
+
+msgctxt "L_OPTIONS_080"
+msgid "Variant:\\n"
+msgstr "Variante:\\n"
+
+msgctxt "L_OPTIONS_081"
+msgid "Developer:\\n"
+msgstr "Ideatore:\\n"
+
+msgctxt "L_OPTIONS_082"
+msgid "Perfect Dark\\n"
+msgstr "Perfect Dark\\n"
+
+msgctxt "L_OPTIONS_083"
+msgid "NUS-NPDE-USA\\n"
+msgstr "NUS-NPDE-USA\\n"
+
+msgctxt "L_OPTIONS_084"
+msgid "NTSC version 8.7 final\\n"
+msgstr "Versione PAL 8.7 finale\\n"
+
+msgctxt "L_OPTIONS_085"
+msgid "Rare Ltd. (twycross)\\n"
+msgstr "Rare Ltd. (twycross)\\n"
+
+msgctxt "L_OPTIONS_086"
+msgid "Copyright Rare Ltd. 2000\\n"
+msgstr "Copyright Rare Ltd. 2000\\n"
+
+msgctxt "L_OPTIONS_087"
+msgid "The Rareware Logo and Perfect Dark are trademarks of Rare Ltd.\\n"
+msgstr "I logo Rareware e Perfect Dark sono trademark di Rare Ltd.\\n"
+
+msgctxt "L_OPTIONS_088"
+msgid ""
+"Presented in Dolby Surround.  Dolby and the double-D\\nsymbol are trademarks"
+" of Dolby Laboratories."
+msgstr ""
+"Presentato in Dolby Surround.  Dolby e il simbolo\\ndoppia D sono trademark "
+"di Dolby Laboratories."
+
+msgctxt "L_OPTIONS_089"
+msgid ""
+"Uses Miles Sound System Copyright 1991-1999 RAD Game Tools Inc.\\nMPEG "
+"Layer-3 playback supplied with the Miles Sound System from\\nRAD Game Tools,"
+" Inc. MPEG Layer-3 audio compression technology\\nlicensed by Fraunhofer IIS"
+" and THOMSON multimedia\\n"
+msgstr ""
+"Usa Miles Sound System Copyright 1991-1999 RAD Game Tools Inc.\\nMPEG "
+"Layer-3 playback fornito con Miles Sound System da\\nRAD Game Tools, Inc. "
+"tecnologia di compressione audio MPEG Layer-3\\nsu licenza di Fraunhofer IIS"
+" e THOMSON multimedia\\n"
+
+msgctxt "L_OPTIONS_090"
+msgid ""
+msgstr ""
+
+msgctxt "L_OPTIONS_091"
+msgid ""
+msgstr ""
+
+msgctxt "L_OPTIONS_092"
+msgid ""
+msgstr ""
+
+msgctxt "L_OPTIONS_093"
+msgid "rare designs on the future <<<\\n"
+msgstr "Design Rare nel futuro <<<\\n"
+
+msgctxt "L_OPTIONS_094"
+msgid "Published by Rareware.\\n"
+msgstr "Edito da Rareware.\\n"
+
+msgctxt "L_OPTIONS_095"
+msgid "Perfect Dark\\n"
+msgstr "Perfect Dark\\n"
+
+msgctxt "L_OPTIONS_096"
+msgid "Choose Your Reality\\n"
+msgstr "Scegli la tua realtà\\n"
+
+msgctxt "L_OPTIONS_097"
+msgid "New...\\n"
+msgstr "Nuovo...\\n"
+
+msgctxt "L_OPTIONS_098"
+msgid "New Agent...\\n"
+msgstr "Nuovo agente...\\n"
+
+msgctxt "L_OPTIONS_099"
+msgid "Game Files\\n"
+msgstr "File di gioco\\n"
+
+msgctxt "L_OPTIONS_100"
+msgid "Copy:\\n"
+msgstr "Copia:\\n"
+
+msgctxt "L_OPTIONS_101"
+msgid "Delete:\\n"
+msgstr "Cancella:\\n"
+
+msgctxt "L_OPTIONS_102"
+msgid "Delete Game Notes...\\n"
+msgstr "Cancella dati gioco...\\n"
+
+msgctxt "L_OPTIONS_103"
+msgid "Single Player Agent File\\n"
+msgstr "File missioni individuali\\n"
+
+msgctxt "L_OPTIONS_104"
+msgid "Combat Simulator Settings File\\n"
+msgstr "File impostaz. simulatore lotta\\n"
+
+msgctxt "L_OPTIONS_105"
+msgid "Combat Simulator Player File\\n"
+msgstr "File giocatore simulatore lotta\\n"
+
+msgctxt "L_OPTIONS_106"
+msgid "PerfectHead Files\\n"
+msgstr "File testaPerfect\\n"
+
+msgctxt "L_OPTIONS_107"
+msgid "Controller Pak Menu\\n"
+msgstr "Menu Controller Pak\\n"
+
+msgctxt "L_OPTIONS_108"
+msgid "Use this menu to delete game notes\\nfrom your Controller Paks.\\n"
+msgstr "Usalo per cancellare i dati di gioco\\ndai Controller Pak.\\n"
+
+msgctxt "L_OPTIONS_109"
+msgid "Choose Controller Pak to Edit:\\n"
+msgstr "Scegli Controller Pak:\\n"
+
+msgctxt "L_OPTIONS_110"
+msgid "Exit\\n"
+msgstr "Esci\\n"
+
+msgctxt "L_OPTIONS_111"
+msgid "Game Pak\\n"
+msgstr "Cassetta gioco\\n"
+
+msgctxt "L_OPTIONS_112"
+msgid "Controller Pak 1\\n"
+msgstr "Controller Pak 1\\n"
+
+msgctxt "L_OPTIONS_113"
+msgid "Controller Pak 2\\n"
+msgstr "Controller Pak 2\\n"
+
+msgctxt "L_OPTIONS_114"
+msgid "Controller Pak 3\\n"
+msgstr "Controller Pak 3\\n"
+
+msgctxt "L_OPTIONS_115"
+msgid "Controller Pak 4\\n"
+msgstr "Controller Pak 4\\n"
+
+msgctxt "L_OPTIONS_116"
+msgid "Perfect Menu\\n"
+msgstr "Menu Perfect\\n"
+
+msgctxt "L_OPTIONS_117"
+msgid "Solo Missions\\n"
+msgstr "Missioni individuali\\n"
+
+msgctxt "L_OPTIONS_118"
+msgid "Combat Simulator\\n"
+msgstr "Simulatore lotta\\n"
+
+msgctxt "L_OPTIONS_119"
+msgid "Co-Operative\\n"
+msgstr "Collaborazione\\n"
+
+msgctxt "L_OPTIONS_120"
+msgid "Counter-Operative\\n"
+msgstr "Tutti contro tutti!\\n"
+
+msgctxt "L_OPTIONS_121"
+msgid "Cinema\\n"
+msgstr "Cinema\\n"
+
+msgctxt "L_OPTIONS_122"
+msgid "Mission Select\\n"
+msgstr "Seleziona Missione\\n"
+
+msgctxt "L_OPTIONS_123"
+msgid "Mission 1\\n"
+msgstr "Missione 1\\n"
+
+msgctxt "L_OPTIONS_124"
+msgid "Mission 2\\n"
+msgstr "Missione 2\\n"
+
+msgctxt "L_OPTIONS_125"
+msgid "Mission 3\\n"
+msgstr "Missione 3\\n"
+
+msgctxt "L_OPTIONS_126"
+msgid "Mission 4\\n"
+msgstr "Missione 4\\n"
+
+msgctxt "L_OPTIONS_127"
+msgid "Mission 5\\n"
+msgstr "Missione 5\\n"
+
+msgctxt "L_OPTIONS_128"
+msgid "Mission 6\\n"
+msgstr "Missione 6\\n"
+
+msgctxt "L_OPTIONS_129"
+msgid "Mission 7\\n"
+msgstr "Missione 7\\n"
+
+msgctxt "L_OPTIONS_130"
+msgid "Mission 8\\n"
+msgstr "Missione 8\\n"
+
+msgctxt "L_OPTIONS_131"
+msgid "Mission 9\\n"
+msgstr "Missione 9\\n"
+
+msgctxt "L_OPTIONS_132"
+msgid "Special Assignments\\n"
+msgstr "Missioni speciali\\n"
+
+msgctxt "L_OPTIONS_133"
+msgid "dataDyne Central"
+msgstr "QG dataDyne"
+
+msgctxt "L_OPTIONS_134"
+msgid "- Defection"
+msgstr "- Ribellione"
+
+msgctxt "L_OPTIONS_135"
+msgid "dataDyne Research"
+msgstr "Ricerca dataDyne"
+
+msgctxt "L_OPTIONS_136"
+msgid "- Investigation"
+msgstr "- L'indagine"
+
+msgctxt "L_OPTIONS_137"
+msgid "dataDyne Central"
+msgstr "QG dataDyne"
+
+msgctxt "L_OPTIONS_138"
+msgid "- Extraction"
+msgstr "- Salvataggio"
+
+msgctxt "L_OPTIONS_139"
+msgid "Carrington Villa"
+msgstr "Villa Carrington"
+
+msgctxt "L_OPTIONS_140"
+msgid "- Hostage One"
+msgstr "- L'ostaggio n°1"
+
+msgctxt "L_OPTIONS_141"
+msgid "Chicago"
+msgstr "Chicago"
+
+msgctxt "L_OPTIONS_142"
+msgid "- Stealth"
+msgstr "- In incognito"
+
+msgctxt "L_OPTIONS_143"
+msgid "G5 Building"
+msgstr "Edificio G5"
+
+msgctxt "L_OPTIONS_144"
+msgid "- Reconnaissance"
+msgstr "- Ricognizione"
+
+msgctxt "L_OPTIONS_145"
+msgid "Area 51"
+msgstr "Area 51"
+
+msgctxt "L_OPTIONS_146"
+msgid "- Infiltration"
+msgstr "- L'infiltrazione"
+
+msgctxt "L_OPTIONS_147"
+msgid "Area 51"
+msgstr "Area 51"
+
+msgctxt "L_OPTIONS_148"
+msgid "- Rescue"
+msgstr "- Salvataggio"
+
+msgctxt "L_OPTIONS_149"
+msgid "Area 51"
+msgstr "Area 51"
+
+msgctxt "L_OPTIONS_150"
+msgid "- Escape"
+msgstr "- La fuga"
+
+msgctxt "L_OPTIONS_151"
+msgid "Air Base"
+msgstr "Base aerea"
+
+msgctxt "L_OPTIONS_152"
+msgid "- Espionage"
+msgstr "- Lo spionaggio"
+
+msgctxt "L_OPTIONS_153"
+msgid "Air Force One"
+msgstr "Air Force One"
+
+msgctxt "L_OPTIONS_154"
+msgid "- Antiterrorism"
+msgstr "- Antiterrorismo"
+
+msgctxt "L_OPTIONS_155"
+msgid "Crash Site"
+msgstr "Luogo del disastro"
+
+msgctxt "L_OPTIONS_156"
+msgid "- Confrontation"
+msgstr "- Lo scontro"
+
+msgctxt "L_OPTIONS_157"
+msgid "Pelagic II"
+msgstr "Pelagic II"
+
+msgctxt "L_OPTIONS_158"
+msgid "- Exploration"
+msgstr "- L'esplorazione"
+
+msgctxt "L_OPTIONS_159"
+msgid "Deep Sea"
+msgstr "Negli abissi"
+
+msgctxt "L_OPTIONS_160"
+msgid "- Nullify Threat"
+msgstr "- La minaccia"
+
+msgctxt "L_OPTIONS_161"
+msgid "Carrington Institute"
+msgstr "Carrington Institute"
+
+msgctxt "L_OPTIONS_162"
+msgid "- Defense"
+msgstr "- La difesa"
+
+msgctxt "L_OPTIONS_163"
+msgid "Attack Ship"
+msgstr "Astronave d'assalto"
+
+msgctxt "L_OPTIONS_164"
+msgid "- Covert Assault"
+msgstr "- Attacco"
+
+msgctxt "L_OPTIONS_165"
+msgid "Skedar Ruins"
+msgstr "Rovine Skedar"
+
+msgctxt "L_OPTIONS_166"
+msgid "- Battle Shrine"
+msgstr "- Tempio di guerra"
+
+msgctxt "L_OPTIONS_167"
+msgid "Mr. Blonde's Revenge"
+msgstr "La vendetta di Mr Blonde"
+
+msgctxt "L_OPTIONS_168"
+msgid "Maian SOS"
+msgstr "L'SOS Maian"
+
+msgctxt "L_OPTIONS_169"
+msgid "Retaking the Institute"
+msgstr "Il riscatto dell'istituto"
+
+msgctxt "L_OPTIONS_170"
+msgid "WAR!"
+msgstr "GUERRA!"
+
+msgctxt "L_OPTIONS_171"
+msgid "The Duel"
+msgstr "Il duello"
+
+msgctxt "L_OPTIONS_172"
+msgid "Status\\n"
+msgstr "Situazione\\n"
+
+msgctxt "L_OPTIONS_173"
+msgid "Abort!\\n"
+msgstr "Interruzione!\\n"
+
+msgctxt "L_OPTIONS_174"
+msgid "Warning\\n"
+msgstr "Attenzione!\\n"
+
+msgctxt "L_OPTIONS_175"
+msgid "Do you want to abort the mission?\\n"
+msgstr "Vuoi interrompere la missione?\\n"
+
+msgctxt "L_OPTIONS_176"
+msgid "Cancel\\n"
+msgstr "Annulla\\n"
+
+msgctxt "L_OPTIONS_177"
+msgid "Abort\\n"
+msgstr "Interrompi\\n"
+
+msgctxt "L_OPTIONS_178"
+msgid "Inventory\\n"
+msgstr "Inventario\\n"
+
+msgctxt "L_OPTIONS_179"
+msgid "Weapons Available\\n"
+msgstr "Armi disponibili\\n"
+
+msgctxt "L_OPTIONS_180"
+msgid "Options\\n"
+msgstr "Opzioni\\n"
+
+msgctxt "L_OPTIONS_181"
+msgid "Audio\\n"
+msgstr "Audio\\n"
+
+msgctxt "L_OPTIONS_182"
+msgid "Video\\n"
+msgstr "Video\\n"
+
+msgctxt "L_OPTIONS_183"
+msgid "Control\\n"
+msgstr "Comandi\\n"
+
+msgctxt "L_OPTIONS_184"
+msgid "Display\\n"
+msgstr "Visualizza\\n"
+
+msgctxt "L_OPTIONS_185"
+msgid "Cheats\\n"
+msgstr "Trucchi\\n"
+
+msgctxt "L_OPTIONS_186"
+msgid "Save Game\\n"
+msgstr "Salva gioco\\n"
+
+msgctxt "L_OPTIONS_187"
+msgid "Change Agent...\\n"
+msgstr "Cambia agente...\\n"
+
+msgctxt "L_OPTIONS_188"
+msgid "Warning\\n"
+msgstr "Attenzione!\\n"
+
+msgctxt "L_OPTIONS_189"
+msgid "Do you want to load another agent?\\n"
+msgstr "Vuoi caricare un altro agente?\\n"
+
+msgctxt "L_OPTIONS_190"
+msgid "Yes\\n"
+msgstr "Sì\\n"
+
+msgctxt "L_OPTIONS_191"
+msgid "No\\n"
+msgstr "No\\n"
+
+msgctxt "L_OPTIONS_192"
+msgid "Control Options\\n"
+msgstr "Opzioni comandi\\n"
+
+msgctxt "L_OPTIONS_193"
+msgid "Control Player 2\\n"
+msgstr "Comandi giocatore 2\\n"
+
+msgctxt "L_OPTIONS_194"
+msgid "Control Style\\n"
+msgstr "Modalità comandi\\n"
+
+msgctxt "L_OPTIONS_195"
+msgid "Reverse Pitch\\n"
+msgstr "Inv. punto vista\\n"
+
+msgctxt "L_OPTIONS_196"
+msgid "Look Ahead\\n"
+msgstr "Vista in avanti\\n"
+
+msgctxt "L_OPTIONS_197"
+msgid "Head Roll\\n"
+msgstr "Rotazione testa\\n"
+
+msgctxt "L_OPTIONS_198"
+msgid "Auto-Aim\\n"
+msgstr "Mira automatica\\n"
+
+msgctxt "L_OPTIONS_199"
+msgid "Aim Control\\n"
+msgstr "Mirino\\n"
+
+msgctxt "L_OPTIONS_200"
+msgid "Back\\n"
+msgstr "Esci\\n"
+
+msgctxt "L_OPTIONS_201"
+msgid "Hold\\n"
+msgstr "Tieni premuto\\n"
+
+msgctxt "L_OPTIONS_202"
+msgid "Toggle\\n"
+msgstr "Attiva/Disattiva\\n"
+
+msgctxt "L_OPTIONS_203"
+msgid "Display Options\\n"
+msgstr "Visualizza opzioni\\n"
+
+msgctxt "L_OPTIONS_204"
+msgid "Display Player 2\\n"
+msgstr "Comandi giocatore 2\\n"
+
+msgctxt "L_OPTIONS_205"
+msgid "Sight on Screen\\n"
+msgstr "Vista su schermo\\n"
+
+msgctxt "L_OPTIONS_206"
+msgid "Always Show Target\\n"
+msgstr "Obiettivo sempre\\n"
+
+msgctxt "L_OPTIONS_207"
+msgid "Show Zoom Range\\n"
+msgstr "Area zoom\\n"
+
+msgctxt "L_OPTIONS_208"
+msgid "Ammo on Screen\\n"
+msgstr "Munizioni\\n"
+
+msgctxt "L_OPTIONS_209"
+msgid "Show Gun Function\\n"
+msgstr "Funzioni arma\\n"
+
+msgctxt "L_OPTIONS_210"
+msgid "Paintball\\n"
+msgstr "Macchia colorata\\n"
+
+msgctxt "L_OPTIONS_211"
+msgid "Subtitles\\n"
+msgstr "Didascalia\\n"
+
+msgctxt "L_OPTIONS_212"
+msgid "Show Mission Time\\n"
+msgstr "Tempo missione\\n"
+
+msgctxt "L_OPTIONS_213"
+msgid "Back\\n"
+msgstr "Esci\\n"
+
+msgctxt "L_OPTIONS_214"
+msgid "Video Options\\n"
+msgstr "Opzioni video\\n"
+
+msgctxt "L_OPTIONS_215"
+msgid "Screen Size\\n"
+msgstr "Dimensioni schermo\\n"
+
+msgctxt "L_OPTIONS_216"
+msgid "Ratio\\n"
+msgstr "Rapporto\\n"
+
+msgctxt "L_OPTIONS_217"
+msgid "Hi-Res\\n"
+msgstr "Alta risoluzione\\n"
+
+msgctxt "L_OPTIONS_218"
+msgid "2-Player Screen Split\\n"
+msgstr "Diviso per 2 giocatori\\n"
+
+msgctxt "L_OPTIONS_219"
+msgid "Back\\n"
+msgstr "Esci\\n"
+
+msgctxt "L_OPTIONS_220"
+msgid "Full\\n"
+msgstr "Intero\\n"
+
+msgctxt "L_OPTIONS_221"
+msgid "Wide\\n"
+msgstr "Allargato\\n"
+
+msgctxt "L_OPTIONS_222"
+msgid "Cinema\\n"
+msgstr "Cinema\\n"
+
+msgctxt "L_OPTIONS_223"
+msgid "Normal\\n"
+msgstr "Normale\\n"
+
+msgctxt "L_OPTIONS_224"
+msgid "16:9\\n"
+msgstr "16:9\\n"
+
+msgctxt "L_OPTIONS_225"
+msgid "Horizontal\\n"
+msgstr "Orizzontale\\n"
+
+msgctxt "L_OPTIONS_226"
+msgid "Vertical\\n"
+msgstr "Verticale\\n"
+
+msgctxt "L_OPTIONS_227"
+msgid "Audio Options\\n"
+msgstr "Opzioni audio\\n"
+
+msgctxt "L_OPTIONS_228"
+msgid "Sound\\n"
+msgstr "Suono\\n"
+
+msgctxt "L_OPTIONS_229"
+msgid "Music\\n"
+msgstr "Musica\\n"
+
+msgctxt "L_OPTIONS_230"
+msgid "Sound Mode\\n"
+msgstr "Modalità suono\\n"
+
+msgctxt "L_OPTIONS_231"
+msgid "Back\\n"
+msgstr "Esci\\n"
+
+msgctxt "L_OPTIONS_232"
+msgid "Mono"
+msgstr "Mono"
+
+msgctxt "L_OPTIONS_233"
+msgid "Stereo"
+msgstr "Stereo"
+
+msgctxt "L_OPTIONS_234"
+msgid "Headphone"
+msgstr "Cuffie"
+
+msgctxt "L_OPTIONS_235"
+msgid "Surround"
+msgstr "Surround"
+
+msgctxt "L_OPTIONS_236"
+msgid "Control\\n"
+msgstr "Comandi\\n"
+
+msgctxt "L_OPTIONS_237"
+msgid "Single\\n"
+msgstr "Singolo\\n"
+
+msgctxt "L_OPTIONS_238"
+msgid "Double\\n"
+msgstr "Doppio\\n"
+
+msgctxt "L_OPTIONS_239"
+msgid "1.1"
+msgstr "1.1"
+
+msgctxt "L_OPTIONS_240"
+msgid "1.2"
+msgstr "1.2"
+
+msgctxt "L_OPTIONS_241"
+msgid "1.3"
+msgstr "1.3"
+
+msgctxt "L_OPTIONS_242"
+msgid "1.4"
+msgstr "1.4"
+
+msgctxt "L_OPTIONS_243"
+msgid "2.1"
+msgstr "2.1"
+
+msgctxt "L_OPTIONS_244"
+msgid "2.2"
+msgstr "2.2"
+
+msgctxt "L_OPTIONS_245"
+msgid "2.3"
+msgstr "2.3"
+
+msgctxt "L_OPTIONS_246"
+msgid "2.4"
+msgstr "2.4"
+
+msgctxt "L_OPTIONS_247"
+msgid "Briefing\\n"
+msgstr "Istruzioni\\n"
+
+msgctxt "L_OPTIONS_248"
+msgid "Select Difficulty\\n"
+msgstr "Seleziona difficoltà\\n"
+
+msgctxt "L_OPTIONS_249"
+msgid "Difficulty\\n"
+msgstr "Difficoltà\\n"
+
+msgctxt "L_OPTIONS_250"
+msgid "Best Time\\n"
+msgstr "Tempo migliore\\n"
+
+msgctxt "L_OPTIONS_251"
+msgid "Agent\\n"
+msgstr "Agente\\n"
+
+msgctxt "L_OPTIONS_252"
+msgid "Special Agent\\n"
+msgstr "Agente speciale\\n"
+
+msgctxt "L_OPTIONS_253"
+msgid "Perfect Agent\\n"
+msgstr "Agente Perfect\\n"
+
+msgctxt "L_OPTIONS_254"
+msgid "Cancel\\n"
+msgstr "Annulla\\n"
+
+msgctxt "L_OPTIONS_255"
+msgid "Co-Operative Options\\n"
+msgstr "Opzioni collaborazione\\n"
+
+msgctxt "L_OPTIONS_256"
+msgid "Radar On\\n"
+msgstr "Radar acceso\\n"
+
+msgctxt "L_OPTIONS_257"
+msgid "Friendly Fire\\n"
+msgstr "Fuoco sugli amici\\n"
+
+msgctxt "L_OPTIONS_258"
+msgid "Perfect Buddy\\n"
+msgstr "AmicoPerfect\\n"
+
+msgctxt "L_OPTIONS_259"
+msgid "Continue\\n"
+msgstr "Continua\\n"
+
+msgctxt "L_OPTIONS_260"
+msgid "Cancel\\n"
+msgstr "Annulla\\n"
+
+msgctxt "L_OPTIONS_261"
+msgid "Human"
+msgstr "Umano"
+
+msgctxt "L_OPTIONS_262"
+msgid "1 Simulant"
+msgstr "Un replicante"
+
+msgctxt "L_OPTIONS_263"
+msgid "2 Simulants"
+msgstr "2 replicanti"
+
+msgctxt "L_OPTIONS_264"
+msgid "3 Simulants"
+msgstr "3 replicanti"
+
+msgctxt "L_OPTIONS_265"
+msgid "4 Simulants"
+msgstr "4 replicanti"
+
+msgctxt "L_OPTIONS_266"
+msgid "Counter-Operative Options\\n"
+msgstr "Tutti contro tutti!\\n"
+
+msgctxt "L_OPTIONS_267"
+msgid "Radar On\\n"
+msgstr "Radar acceso\\n"
+
+msgctxt "L_OPTIONS_268"
+msgid "Counter-Operative\\n"
+msgstr "Tutti contro tutti!\\n"
+
+msgctxt "L_OPTIONS_269"
+msgid "Continue\\n"
+msgstr "Continua\\n"
+
+msgctxt "L_OPTIONS_270"
+msgid "Cancel\\n"
+msgstr "Annulla\\n"
+
+msgctxt "L_OPTIONS_271"
+msgid "Player 1"
+msgstr "Giocat. 1"
+
+msgctxt "L_OPTIONS_272"
+msgid "Player 2"
+msgstr "Giocat. 2"
+
+msgctxt "L_OPTIONS_273"
+msgid "Overview\\n"
+msgstr "Panoramica\\n"
+
+msgctxt "L_OPTIONS_274"
+msgid "Accept\\n"
+msgstr "Accetta\\n"
+
+msgctxt "L_OPTIONS_275"
+msgid "Decline\\n"
+msgstr "Rifiuta\\n"
+
+msgctxt "L_OPTIONS_276"
+msgid "Completed\\n"
+msgstr "Compiuto\\n"
+
+msgctxt "L_OPTIONS_277"
+msgid "Failed\\n"
+msgstr "Fallito\\n"
+
+msgctxt "L_OPTIONS_278"
+msgid "Mission Status:\\n"
+msgstr "Risultati missione:\\n"
+
+msgctxt "L_OPTIONS_279"
+msgid "Agent Status:\\n"
+msgstr "Stato agente:\\n"
+
+msgctxt "L_OPTIONS_280"
+msgid "Mission Time:\\n"
+msgstr "Tempo missione:\\n"
+
+msgctxt "L_OPTIONS_281"
+msgid "Weapon of Choice:\\n"
+msgstr "Arma più usata:\\n"
+
+msgctxt "L_OPTIONS_282"
+msgid "Kills:\\n"
+msgstr "Vittime:\\n"
+
+msgctxt "L_OPTIONS_283"
+msgid "Accuracy:\\n"
+msgstr "Accuratezza:\\n"
+
+msgctxt "L_OPTIONS_284"
+msgid "Shot Total:\\n"
+msgstr "Colpi totali:\\n"
+
+msgctxt "L_OPTIONS_285"
+msgid "    Head Shots:\\n"
+msgstr " Colpi al capo:\\n"
+
+msgctxt "L_OPTIONS_286"
+msgid "    Body Shots:\\n"
+msgstr " Colpi al corpo:\\n"
+
+msgctxt "L_OPTIONS_287"
+msgid "    Limb Shots:\\n"
+msgstr " Colpi agli arti:\\n"
+
+msgctxt "L_OPTIONS_288"
+msgid "    Others:\\n"
+msgstr " Altro:\\n"
+
+msgctxt "L_OPTIONS_289"
+msgid "Press START\\n"
+msgstr "Premi START\\n"
+
+msgctxt "L_OPTIONS_290"
+msgid "Deceased\\n"
+msgstr "Deceduto\\n"
+
+msgctxt "L_OPTIONS_291"
+msgid "Active\\n"
+msgstr "Attivo\\n"
+
+msgctxt "L_OPTIONS_292"
+msgid "Disavowed\\n"
+msgstr "Fuggito\\n"
+
+msgctxt "L_OPTIONS_293"
+msgid "Failed\\n"
+msgstr "Fallito\\n"
+
+msgctxt "L_OPTIONS_294"
+msgid "Completed\\n"
+msgstr "Compiuto\\n"
+
+msgctxt "L_OPTIONS_295"
+msgid "Aborted\\n"
+msgstr "Interrotto\\n"
+
+msgctxt "L_OPTIONS_296"
+msgid "Retry"
+msgstr "Riprova"
+
+msgctxt "L_OPTIONS_297"
+msgid "Next Mission"
+msgstr "Missione seguente"
+
+msgctxt "L_OPTIONS_298"
+msgid "Accept\\n"
+msgstr "Accetta\\n"
+
+msgctxt "L_OPTIONS_299"
+msgid "Decline\\n"
+msgstr "Rifiuta\\n"
+
+msgctxt "L_OPTIONS_300"
+msgid "Objectives\\n"
+msgstr "Obiettivi\\n"
+
+msgctxt "L_OPTIONS_301"
+msgid "Press START\\n"
+msgstr "Premi START\\n"
+
+msgctxt "L_OPTIONS_302"
+msgid "Small but Perfect Menu\\n"
+msgstr "Menu breve e conciso\\n"
+
+msgctxt "L_OPTIONS_303"
+msgid "Combat Simulator\\n"
+msgstr "Simulatore\\n"
+
+msgctxt "L_OPTIONS_304"
+msgid "Training\\n"
+msgstr "Addestramento\\n"
+
+msgctxt "L_OPTIONS_305"
+msgid "Audio/Video\\n"
+msgstr "Audio/Video\\n"
+
+msgctxt "L_OPTIONS_306"
+msgid "Change Agent\\n"
+msgstr "Cambia agente\\n"
+
+msgctxt "L_OPTIONS_307"
+msgid "Audio/Visual\\n"
+msgstr "Audio/Video\\n"
+
+msgctxt "L_OPTIONS_308"
+msgid "Sound\\n"
+msgstr "Suono\\n"
+
+msgctxt "L_OPTIONS_309"
+msgid "Music\\n"
+msgstr "Musica\\n"
+
+msgctxt "L_OPTIONS_310"
+msgid "Sound Mode\\n"
+msgstr "Modalità suono\\n"
+
+msgctxt "L_OPTIONS_311"
+msgid "Ratio\\n"
+msgstr "Rapporto\\n"
+
+msgctxt "L_OPTIONS_312"
+msgid "Back\\n"
+msgstr "Esci\\n"
+
+msgctxt "L_OPTIONS_313"
+msgid "< Empty >\\n"
+msgstr "< Vuoto >\\n"
+
+msgctxt "L_OPTIONS_314"
+msgid "DEL"
+msgstr "CANC"
+
+msgctxt "L_OPTIONS_315"
+msgid "CAPS"
+msgstr "MAIU"
+
+msgctxt "L_OPTIONS_316"
+msgid "CANCEL"
+msgstr "ANNULLA"
+
+msgctxt "L_OPTIONS_317"
+msgid "OK"
+msgstr "OK"
+
+msgctxt "L_OPTIONS_318"
+msgid "Combat Simulator Heads\\n"
+msgstr "Testi simulatore\\n"
+
+msgctxt "L_OPTIONS_319"
+msgid "Mission Heads\\n"
+msgstr "Teste missione\\n"
+
+msgctxt "L_OPTIONS_320"
+msgid "Error\\n"
+msgstr "Errore\\n"
+
+msgctxt "L_OPTIONS_321"
+msgid "Cancel\\n"
+msgstr "Annulla\\n"
+
+msgctxt "L_OPTIONS_322"
+msgid "The Controller Pak\\nwas not found\\nin any controller.\\n"
+msgstr "Controller Pak assente\\nda tutti i Controller.\\n"
+
+msgctxt "L_OPTIONS_323"
+msgid "File was not saved.\\n"
+msgstr "File non salvato.\\n"
+
+msgctxt "L_OPTIONS_324"
+msgid "File would not load.\\n"
+msgstr "File non caricato.\\n"
+
+msgctxt "L_OPTIONS_325"
+msgid "Could not delete the file.\\n"
+msgstr "Impossibile cancellare file.\\n"
+
+msgctxt "L_OPTIONS_326"
+msgid "Out of memory.\\n"
+msgstr "Memoria esaurita.\\n"
+
+msgctxt "L_OPTIONS_327"
+msgid "This player is already\\nloaded for this game.\\n"
+msgstr "Giocatore già caricato\\nnel gioco.\\n"
+
+msgctxt "L_OPTIONS_328"
+msgid "has been removed.\\n"
+msgstr "rimosso.\\n"
+
+msgctxt "L_OPTIONS_329"
+msgid "Controller Pak is damaged or incorrectly inserted.\\n"
+msgstr "Controller Pak danneggiato o in posizione errata.\\n"
+
+msgctxt "L_OPTIONS_330"
+msgid "Game note delete failed.\\n"
+msgstr "Impossibile cancellare dati gioco.\\n"
+
+msgctxt "L_OPTIONS_331"
+msgid "Error Loading Game\\n"
+msgstr "Errore caric. gioco\\n"
+
+msgctxt "L_OPTIONS_332"
+msgid "Error Saving Game\\n"
+msgstr "Errore salv. gioco\\n"
+
+msgctxt "L_OPTIONS_333"
+msgid "Error Loading Player\\n"
+msgstr "Errore caric. giocat.\\n"
+
+msgctxt "L_OPTIONS_334"
+msgid "Error Saving Player\\n"
+msgstr "Errore salv. giocat.\\n"
+
+msgctxt "L_OPTIONS_335"
+msgid "Error Loading PerfectHead\\n"
+msgstr "Errore caric. testaPerfect\\n"
+
+msgctxt "L_OPTIONS_336"
+msgid "Error Saving PerfectHead\\n"
+msgstr "Errore salv. testaPerfect\\n"
+
+msgctxt "L_OPTIONS_337"
+msgid "Error Reading File\\n"
+msgstr "Errore lettura file\\n"
+
+msgctxt "L_OPTIONS_338"
+msgid "Error Writing File\\n"
+msgstr "Errore scrittura file\\n"
+
+msgctxt "L_OPTIONS_339"
+msgid "Error\\n"
+msgstr "Errore\\n"
+
+msgctxt "L_OPTIONS_340"
+msgid "Delete Failed\\n"
+msgstr "Non cancellato\\n"
+
+msgctxt "L_OPTIONS_341"
+msgid "Could not delete the file.\\n"
+msgstr "Impossibile cancellare.\\n"
+
+msgctxt "L_OPTIONS_342"
+msgid "- Check that the Controller Pak is\\ninserted correctly.\\n"
+msgstr "- Controlla che il Controller Pak \\nsia inserito correttamente.\\n"
+
+msgctxt "L_OPTIONS_343"
+msgid "Cancel\\n"
+msgstr "Annulla\\n"
+
+msgctxt "L_OPTIONS_344"
+msgid "There is no space.\\n"
+msgstr "Spazio esaurito.\\n"
+
+msgctxt "L_OPTIONS_345"
+msgid "Cool!\\n"
+msgstr "Perfetto!\\n"
+
+msgctxt "L_OPTIONS_346"
+msgid "File Saved.\\n"
+msgstr "File salvato.\\n"
+
+msgctxt "L_OPTIONS_347"
+msgid "OK\\n"
+msgstr "OK\\n"
+
+msgctxt "L_OPTIONS_348"
+msgid "An error occurred while\\ntrying to save.\\n"
+msgstr "Errore durante il \\nsalvataggio!\\n"
+
+msgctxt "L_OPTIONS_349"
+msgid "Try Again\\n"
+msgstr "Riprova\\n"
+
+msgctxt "L_OPTIONS_350"
+msgid "Save Elsewhere\\n"
+msgstr "Salva altrove\\n"
+
+msgctxt "L_OPTIONS_351"
+msgid "Cancel\\n"
+msgstr "Annulla\\n"
+
+msgctxt "L_OPTIONS_352"
+msgid "An error occurred while\\ntrying to load.\\n"
+msgstr "Errore durante il \\ncaricamento!\\n"
+
+msgctxt "L_OPTIONS_353"
+msgid "Try Again\\n"
+msgstr "Riprova\\n"
+
+msgctxt "L_OPTIONS_354"
+msgid "Cancel\\n"
+msgstr "Annulla\\n"
+
+msgctxt "L_OPTIONS_355"
+msgid "Need Space For Head\\n"
+msgstr "Serve spazio per la testa\\n"
+
+msgctxt "L_OPTIONS_356"
+msgid "Choose a head to load over:\\n"
+msgstr "Scegli una testa da caricare:\\n"
+
+msgctxt "L_OPTIONS_357"
+msgid "OK\\n"
+msgstr "OK\\n"
+
+msgctxt "L_OPTIONS_358"
+msgid "Cancel\\n"
+msgstr "Annulla\\n"
+
+msgctxt "L_OPTIONS_359"
+msgid "Save\\n"
+msgstr "Salva\\n"
+
+msgctxt "L_OPTIONS_360"
+msgid "Would you like to save\\nyour file elsewhere?\\n"
+msgstr "Vuoi salvare il file\\naltrove?\\n"
+
+msgctxt "L_OPTIONS_361"
+msgid "Yes\\n"
+msgstr "Sì\\n"
+
+msgctxt "L_OPTIONS_362"
+msgid "No\\n"
+msgstr "No\\n"
+
+msgctxt "L_OPTIONS_363"
+msgid ""
+"Please insert the Controller Pak containing your %s into any controller.\\n"
+msgstr "Inserisci il Controller Pak con il tuo %s in un Controller.\\n"
+
+msgctxt "L_OPTIONS_364"
+msgid ""
+"Please insert the\\nController Pak\\nyou are saving to\\ninto any "
+"controller.\\n"
+msgstr "Inserisci il\\nController Pak\\ndove vuoi salvare in un Controller.\\n"
+
+msgctxt "L_OPTIONS_365"
+msgid "OK\\n"
+msgstr "OK\\n"
+
+msgctxt "L_OPTIONS_366"
+msgid "Cancel\\n"
+msgstr "Annulla\\n"
+
+msgctxt "L_OPTIONS_367"
+msgid "Select Location\\n"
+msgstr "Scegli dove!\\n"
+
+msgctxt "L_OPTIONS_368"
+msgid "Where\\n"
+msgstr "Dove?\\n"
+
+msgctxt "L_OPTIONS_369"
+msgid "Spaces\\n"
+msgstr "Spazi\\n"
+
+msgctxt "L_OPTIONS_370"
+msgid "Delete Files...\\n"
+msgstr "Cancella file...\\n"
+
+msgctxt "L_OPTIONS_371"
+msgid "Cancel\\n"
+msgstr "Annulla\\n"
+
+msgctxt "L_OPTIONS_372"
+msgid "Full"
+msgstr "Pieno"
+
+msgctxt "L_OPTIONS_373"
+msgid "Copy File\\n"
+msgstr "Copia file\\n"
+
+msgctxt "L_OPTIONS_374"
+msgid "Select a file to copy:\\n"
+msgstr "Scegli un file da copiare:\\n"
+
+msgctxt "L_OPTIONS_375"
+msgid "Press B Button to exit.\\n"
+msgstr "Premi B per uscire.\\n"
+
+msgctxt "L_OPTIONS_376"
+msgid "Delete File\\n"
+msgstr "Cancella file\\n"
+
+msgctxt "L_OPTIONS_377"
+msgid "Select a file to delete:\\n"
+msgstr "Che file cancellare?\\n"
+
+msgctxt "L_OPTIONS_378"
+msgid "Press B Button to exit.\\n"
+msgstr "Premi B per uscire.\\n"
+
+msgctxt "L_OPTIONS_379"
+msgid "Warning\\n"
+msgstr "Attenzione!\\n"
+
+msgctxt "L_OPTIONS_380"
+msgid "Are you sure you want\\nto delete this file?\\n"
+msgstr "Sicuro di voler\\ncancellare il file?\\n"
+
+msgctxt "L_OPTIONS_381"
+msgid "Cancel\\n"
+msgstr "Annulla\\n"
+
+msgctxt "L_OPTIONS_382"
+msgid "OK\\n"
+msgstr "OK\\n"
+
+msgctxt "L_OPTIONS_383"
+msgid "Delete Game Note\\n"
+msgstr "Cancella dati gioco\\n"
+
+msgctxt "L_OPTIONS_384"
+msgid "Are you sure you\\nwant to delete\\nthis game note?\\n"
+msgstr "Sicuro di voler\\ncancellare\\nquesti dati?\\n"
+
+msgctxt "L_OPTIONS_385"
+msgid "No\\n"
+msgstr "No\\n"
+
+msgctxt "L_OPTIONS_386"
+msgid "Yes\\n"
+msgstr "Sì\\n"
+
+msgctxt "L_OPTIONS_387"
+msgid "Game Notes\\n"
+msgstr "Dati gioco\\n"
+
+msgctxt "L_OPTIONS_388"
+msgid "Delete Game Notes:\\n"
+msgstr "Cancella dati:\\n"
+
+msgctxt "L_OPTIONS_389"
+msgid "Note\\n"
+msgstr "Dati\\n"
+
+msgctxt "L_OPTIONS_390"
+msgid "Pages\\n"
+msgstr "Spazi\\n"
+
+msgctxt "L_OPTIONS_391"
+msgid "Press the B Button to exit.\\n"
+msgstr "Premi B per uscire.\\n"
+
+msgctxt "L_OPTIONS_392"
+msgid "Empty\\n"
+msgstr "Vuoto\\n"
+
+msgctxt "L_OPTIONS_393"
+msgid "--\\n"
+msgstr "--\\n"
+
+msgctxt "L_OPTIONS_394"
+msgid "Pages Free: \\n"
+msgstr "Spazi vuoti: \\n"
+
+msgctxt "L_OPTIONS_395"
+msgid "Pages Free: %d\\n"
+msgstr "Spazi vuoti: %d\\n"
+
+msgctxt "L_OPTIONS_396"
+msgid "Pages Used: \\n"
+msgstr "Spazi pieni: \\n"
+
+msgctxt "L_OPTIONS_397"
+msgid "Pages Used: %d\\n"
+msgstr "Spazi pieni: %d\\n"
+
+msgctxt "L_OPTIONS_398"
+msgid "Perfect Dark note already exists\\non this Controller Pak.\\n"
+msgstr "Questo Controller Pak contiene già\\nun gioco in memoria.\\n"
+
+msgctxt "L_OPTIONS_399"
+msgid "There is enough space for\\nPerfect Dark note.\\n"
+msgstr "Spazio sufficiente per\\ni dati di Perfect Dark.\\n"
+
+msgctxt "L_OPTIONS_400"
+msgid ""
+"Controller Pak is too full to save note- 1 note\\nand 28 pages required to "
+"save to Controller Pak.\\n"
+msgstr ""
+"Controller Pak pieno: impossibile salvare dati.\\nServono 28 spazi per "
+"salvare sul Controller Pak.\\n"
+
+msgctxt "L_OPTIONS_401"
+msgid "Enter Agent Name\\n"
+msgstr "Digita nome agente\\n"
+
+msgctxt "L_OPTIONS_402"
+msgid "New...\\n"
+msgstr "Nuovo...\\n"
+
+msgctxt "L_OPTIONS_403"
+msgid "New Agent...\\n"
+msgstr "Nuovo agente...\\n"
+
+msgctxt "L_OPTIONS_404"
+msgid "New Recruit"
+msgstr "Nuova recluta"
+
+msgctxt "L_OPTIONS_405"
+msgid "Mission Time:"
+msgstr "Tempo missione:"
+
+msgctxt "L_OPTIONS_406"
+msgid "Challenge 1"
+msgstr "Sfida 1"
+
+msgctxt "L_OPTIONS_407"
+msgid "Challenge 2"
+msgstr "Sfida 2"
+
+msgctxt "L_OPTIONS_408"
+msgid "Challenge 3"
+msgstr "Sfida 3"
+
+msgctxt "L_OPTIONS_409"
+msgid "Challenge 4"
+msgstr "Sfida 4"
+
+msgctxt "L_OPTIONS_410"
+msgid "Challenge 5"
+msgstr "Sfida 5"
+
+msgctxt "L_OPTIONS_411"
+msgid "Challenge 6"
+msgstr "Sfida 6"
+
+msgctxt "L_OPTIONS_412"
+msgid "Challenge 7"
+msgstr "Sfida 7"
+
+msgctxt "L_OPTIONS_413"
+msgid "Challenge 8"
+msgstr "Sfida 8"
+
+msgctxt "L_OPTIONS_414"
+msgid "Challenge 9"
+msgstr "Sfida 9"
+
+msgctxt "L_OPTIONS_415"
+msgid "Challenge 10"
+msgstr "Sfida 10"
+
+msgctxt "L_OPTIONS_416"
+msgid "Challenge 11"
+msgstr "Sfida 11"
+
+msgctxt "L_OPTIONS_417"
+msgid "Challenge 12"
+msgstr "Sfida 12"
+
+msgctxt "L_OPTIONS_418"
+msgid "Challenge 13"
+msgstr "Sfida 13"
+
+msgctxt "L_OPTIONS_419"
+msgid "Challenge 14"
+msgstr "Sfida 14"
+
+msgctxt "L_OPTIONS_420"
+msgid "Challenge 15"
+msgstr "Sfida 15"
+
+msgctxt "L_OPTIONS_421"
+msgid "Challenge 16"
+msgstr "Sfida 16"
+
+msgctxt "L_OPTIONS_422"
+msgid "Challenge 17"
+msgstr "Sfida 17"
+
+msgctxt "L_OPTIONS_423"
+msgid "Challenge 18"
+msgstr "Sfida 18"
+
+msgctxt "L_OPTIONS_424"
+msgid "Challenge 19"
+msgstr "Sfida 19"
+
+msgctxt "L_OPTIONS_425"
+msgid "Challenge 20"
+msgstr "Sfida 20"
+
+msgctxt "L_OPTIONS_426"
+msgid "Challenge 21"
+msgstr "Sfida 21"
+
+msgctxt "L_OPTIONS_427"
+msgid "Challenge 22"
+msgstr "Sfida 22"
+
+msgctxt "L_OPTIONS_428"
+msgid "Challenge 23"
+msgstr "Sfida 23"
+
+msgctxt "L_OPTIONS_429"
+msgid "Challenge 24"
+msgstr "Sfida 24"
+
+msgctxt "L_OPTIONS_430"
+msgid "Challenge 25"
+msgstr "Sfida 25"
+
+msgctxt "L_OPTIONS_431"
+msgid "Challenge 26"
+msgstr "Sfida 26"
+
+msgctxt "L_OPTIONS_432"
+msgid "Challenge 27"
+msgstr "Sfida 27"
+
+msgctxt "L_OPTIONS_433"
+msgid "Challenge 28"
+msgstr "Sfida 28"
+
+msgctxt "L_OPTIONS_434"
+msgid "Challenge 29"
+msgstr "Sfida 29"
+
+msgctxt "L_OPTIONS_435"
+msgid "Challenge 30"
+msgstr "Sfida 30"
+
+msgctxt "L_OPTIONS_436"
+msgid "Special\\n"
+msgstr "Speciale\\n"
+
+msgctxt "L_OPTIONS_437"
+msgid "Intro\\n"
+msgstr "Prologo\\n"
+
+msgctxt "L_OPTIONS_438"
+msgid "Mission 1 - dataDyne Central\\n"
+msgstr "Missione 1 - QG dataDyne\\n"
+
+msgctxt "L_OPTIONS_439"
+msgid "Mission 2 - Carrington Villa\\n"
+msgstr "Missione 2 - Villa Carrington\\n"
+
+msgctxt "L_OPTIONS_440"
+msgid "Mission 3 - G5 Building\\n"
+msgstr "Missione 3 - Edificio G5\\n"
+
+msgctxt "L_OPTIONS_441"
+msgid "Mission 4 - Area 51\\n"
+msgstr "Missione 4 - Area 51\\n"
+
+msgctxt "L_OPTIONS_442"
+msgid "Mission 5 - Air Force One\\n"
+msgstr "Missione 5 - Air Force One\\n"
+
+msgctxt "L_OPTIONS_443"
+msgid "Mission 6 - Pelagic II\\n"
+msgstr "Missione 6 - Pelagic II\\n"
+
+msgctxt "L_OPTIONS_444"
+msgid "Mission 7 - Carrington Institute\\n"
+msgstr "Missione 7 - Carrington Institute\\n"
+
+msgctxt "L_OPTIONS_445"
+msgid "Mission 8 - Skedar Attack Ship\\n"
+msgstr "Missione 8 - Astronave d'assalto Skedar\\n"
+
+msgctxt "L_OPTIONS_446"
+msgid "Mission 9 - Skedar Ruins\\n"
+msgstr "Missione 9 - Rovine Skedar\\n"
+
+msgctxt "L_OPTIONS_447"
+msgid "Finale\\n"
+msgstr "Finale\\n"
+
+msgctxt "L_OPTIONS_448"
+msgid "Play All\\n"
+msgstr "Mostra tutto!\\n"
+
+msgctxt "L_OPTIONS_449"
+msgid "Intro\\n"
+msgstr "Prologo\\n"
+
+msgctxt "L_OPTIONS_450"
+msgid "1:1 Intro - Enter The Dark\\n"
+msgstr "1:1 Prologo - Al buio\\n"
+
+msgctxt "L_OPTIONS_451"
+msgid "1:1 Outro - Quick Descent\\n"
+msgstr "1:1 Epilogo - Discesa rapida\\n"
+
+msgctxt "L_OPTIONS_452"
+msgid "1:2 Intro - Going Down\\n"
+msgstr "1:2 Prologo - Avanti!\\n"
+
+msgctxt "L_OPTIONS_453"
+msgid "1:2 Outro - Meet The Doctor\\n"
+msgstr "1:2 Epilogo - L'incontro\\n"
+
+msgctxt "L_OPTIONS_454"
+msgid "1:3 Intro - Lights Out\\n"
+msgstr "1:3 Prologo - A luci spente\\n"
+
+msgctxt "L_OPTIONS_455"
+msgid "1:3 Outro - Going Somewhere?\\n"
+msgstr "1:3 Epilogo - Dove si va?\\n"
+
+msgctxt "L_OPTIONS_456"
+msgid "2:1 Intro - Negotiate This!\\n"
+msgstr "2:1 Prologo - Il negoziato\\n"
+
+msgctxt "L_OPTIONS_457"
+msgid "2:1 Intro 2 - Life On The Line\\n"
+msgstr "2:1 Prologo 2 - Sul filo del rasoio\\n"
+
+msgctxt "L_OPTIONS_458"
+msgid "2:1 Outro - Carrington Rescued\\n"
+msgstr "2:1 Epilogo - Il salvataggio\\n"
+
+msgctxt "L_OPTIONS_459"
+msgid "3:1 Intro - Dark Alley\\n"
+msgstr "3:1 Prologo - Vicoli bui\\n"
+
+msgctxt "L_OPTIONS_460"
+msgid "3:1 Outro - G5 Penetrated\\n"
+msgstr "3:1 Epilogo - Irruzione G5\\n"
+
+msgctxt "L_OPTIONS_461"
+msgid "3:2 Intro - Guns 'n' Poses\\n"
+msgstr "3:2 Prologo - La perfezione\\n"
+
+msgctxt "L_OPTIONS_462"
+msgid "3:2 Special - Conspiracy\\n"
+msgstr "3:2 Speciale - La cospirazione\\n"
+
+msgctxt "L_OPTIONS_463"
+msgid "3:2 Outro - Fire Escape\\n"
+msgstr "3:2 Epilogo - Uscita antincendio\\n"
+
+msgctxt "L_OPTIONS_464"
+msgid "4:1 Intro - Video Nasty\\n"
+msgstr "4:1 Prologo - Interferenze\\n"
+
+msgctxt "L_OPTIONS_465"
+msgid "4:1 Outro - Loose Ends\\n"
+msgstr "4:1 Epilogo - Lasciamo perdere...\\n"
+
+msgctxt "L_OPTIONS_466"
+msgid "4:2 Intro - Pearls Of Wisdom\\n"
+msgstr "4:2 Prologo - Perle di saggezza\\n"
+
+msgctxt "L_OPTIONS_467"
+msgid "4:2 Outro - Under The Knife\\n"
+msgstr "4:2 Epilogo - Sotto i ferri\\n"
+
+msgctxt "L_OPTIONS_468"
+msgid "4:3 Intro - Gas!\\n"
+msgstr "4:3 Prologo - Gas!\\n"
+
+msgctxt "L_OPTIONS_469"
+msgid "4:3 Special - Elvis Wakes Up\\n"
+msgstr "4:3 Speciale - Il risveglio\\n"
+
+msgctxt "L_OPTIONS_470"
+msgid "4:3 Outro - Escape\\n"
+msgstr "4:3 Epilogo - La fuga\\n"
+
+msgctxt "L_OPTIONS_471"
+msgid "5:1 Intro - High Altitude\\n"
+msgstr "5:1 Prologo - Ad alta quota\\n"
+
+msgctxt "L_OPTIONS_472"
+msgid "5:1 Outro - Takeoff\\n"
+msgstr "5:1 Epilogo - Il decollo\\n"
+
+msgctxt "L_OPTIONS_473"
+msgid "5:2 Intro - Last Chance\\n"
+msgstr "5:2 Prologo - L'ultima possibilità\\n"
+
+msgctxt "L_OPTIONS_474"
+msgid "5:2 Special - Docking\\n"
+msgstr "5:2 Speciale - L'attracco\\n"
+
+msgctxt "L_OPTIONS_475"
+msgid "5:2 Outro - Out Of Options\\n"
+msgstr "5:2 Epilogo - L'inevitabile\\n"
+
+msgctxt "L_OPTIONS_476"
+msgid "5:3 Intro - Red Horizons\\n"
+msgstr "5:3 Prologo - Orizzonte rosso\\n"
+
+msgctxt "L_OPTIONS_477"
+msgid "5:3 Outro - Blonde Freak\\n"
+msgstr "5:3 Epilogo - Il fanatico biondo\\n"
+
+msgctxt "L_OPTIONS_478"
+msgid "6:1 Intro - Sneak On Board\\n"
+msgstr "6:1 Prologo - Chi va là?\\n"
+
+msgctxt "L_OPTIONS_479"
+msgid "6:1 Outro - Descent Into The Depths\\n"
+msgstr "6:1 Epilogo - Negli abissi\\n"
+
+msgctxt "L_OPTIONS_480"
+msgid "6:2 Intro - Deeper Inside\\n"
+msgstr "6:2 Prologo - Ancora più giù\\n"
+
+msgctxt "L_OPTIONS_481"
+msgid "6:2 Special - Virus!\\n"
+msgstr "6:2 Speciale - Virus!\\n"
+
+msgctxt "L_OPTIONS_482"
+msgid "6:2 Outro - Pulling Out\\n"
+msgstr "6:2 Epilogo - La risalita\\n"
+
+msgctxt "L_OPTIONS_483"
+msgid "7:1 Intro - Victory Salute\\n"
+msgstr "7:1 Prologo - L'ambasciata\\n"
+
+msgctxt "L_OPTIONS_484"
+msgid "7:1 Outro - Dash For Freedom\\n"
+msgstr "7:1 Epilogo - Fuga per la libertà\\n"
+
+msgctxt "L_OPTIONS_485"
+msgid "8:1 Intro - Snatched!\\n"
+msgstr "8:1 Prologo - Prigioniera\\n"
+
+msgctxt "L_OPTIONS_486"
+msgid "8:1 Outro - Heading For Trouble\\n"
+msgstr "8:1 Epilogo - Guai in vista\\n"
+
+msgctxt "L_OPTIONS_487"
+msgid "9:1 Intro - Air Of Calm\\n"
+msgstr "9:1 Prologo - Venti di guerra\\n"
+
+msgctxt "L_OPTIONS_488"
+msgid "9:1 Outro - Gotcha!\\n"
+msgstr "9:1 Epilogo - Fatto!\\n"
+
+msgctxt "L_OPTIONS_489"
+msgid "End Sequence\\n"
+msgstr "Fine sequenza\\n"
+
+msgctxt "L_OPTIONS_490"
+msgid "Cinema\\n"
+msgstr "Cinema\\n"
+
+msgctxt "L_OPTIONS_491"
+msgid "cloak %d\\n"
+msgstr "Mimesi %d\\n"
+
+msgctxt "L_OPTIONS_492"
+msgid "Pick Target\\n"
+msgstr "Scegli obiettivo\\n"
+
+msgctxt "L_OPTIONS_493"
+msgid "Kills Score\\n"
+msgstr "Uccisioni\\n"

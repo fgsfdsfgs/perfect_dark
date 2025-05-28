@@ -1,0 +1,1074 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"POT-Creation-Date: 2025-05-28 15:30:39.011581+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "L_MPWEAPONS_000"
+msgid "%shas the\\n%s"
+msgstr "%stiene el\\nC. de Datos\\n"
+
+msgctxt "L_MPWEAPONS_002"
+msgid "%shas our\\n%s"
+msgstr "%stiene nuestro Maletín\\n"
+
+msgctxt "L_MPWEAPONS_003"
+msgid "Got the %s%s"
+msgstr "Atrapaste el Maletín\\nde %s\\n"
+
+msgctxt "L_MPWEAPONS_004"
+msgid "You captured\\nthe %s%s"
+msgstr "Has capturado el\\nMaletín de %s\\n"
+
+msgctxt "L_MPWEAPONS_005"
+msgid "%scaptured our\\n%s"
+msgstr "%sha capturado\\nnuestro Maletín\\n"
+
+msgctxt "L_MPWEAPONS_006"
+msgid "%scaptured\\nthe %s%s"
+msgstr "%sha capturado\\nel Maletín de %s\\n"
+
+msgctxt "L_MPWEAPONS_007"
+msgid "Have a point for living!\\n"
+msgstr "¡Un punto por sobrevivir!\\n"
+
+msgctxt "L_MPWEAPONS_008"
+msgid "You're supposed to look\\n"
+msgstr "¡Se supone que debes\\n"
+
+msgctxt "L_MPWEAPONS_009"
+msgid "after your friends!\\n"
+msgstr "proteger a tus amigos!\\n"
+
+msgctxt "L_MPWEAPONS_010"
+msgid "Well done!\\n"
+msgstr "¡Bien hecho!\\n"
+
+msgctxt "L_MPWEAPONS_011"
+msgid "You popped a cap!\\n"
+msgstr "¡Tú la llevas!\\n"
+
+msgctxt "L_MPWEAPONS_012"
+msgid "Have 2 Points...\\n"
+msgstr "Obtienes 2 Puntos...\\n"
+
+msgctxt "L_MPWEAPONS_013"
+msgid "You are the victim!\\n"
+msgstr "¡Eres la víctima!\\n"
+
+msgctxt "L_MPWEAPONS_014"
+msgid "Protect %s!\\n"
+msgstr "¡Protege a\\n%s!\\n"
+
+msgctxt "L_MPWEAPONS_015"
+msgid "Get %s!\\n"
+msgstr "¡Coge a\\n%s!\\n"
+
+msgctxt "L_MPWEAPONS_016"
+msgid "Download successful.\\n"
+msgstr "Descarga completada.\\n"
+
+msgctxt "L_MPWEAPONS_017"
+msgid "Connection broken.\\n"
+msgstr "Conexión perdida.\\n"
+
+msgctxt "L_MPWEAPONS_018"
+msgid "Starting download.\\n"
+msgstr "Comenzando descarga.\\n"
+
+msgctxt "L_MPWEAPONS_019"
+msgid "You need to use the Data Uplink.\\n"
+msgstr "Necesitas usar el Conector de Datos.\\n"
+
+msgctxt "L_MPWEAPONS_020"
+msgid "King of\\nthe Hill!\\n"
+msgstr "¡Rey de\\nla Colina!\\n"
+
+msgctxt "L_MPWEAPONS_021"
+msgid "We have\\nthe Hill!\\n"
+msgstr "¡Tenemos\\nla Colina!\\n"
+
+msgctxt "L_MPWEAPONS_022"
+msgid "%shas captured\\nthe Hill!\\n"
+msgstr "¡%sha capturado\\nla Colina!\\n"
+
+msgctxt "L_MPWEAPONS_023"
+msgid "%ds/Point\\n"
+msgstr "%ds/Punto\\n"
+
+msgctxt "L_MPWEAPONS_024"
+msgid "1 Point!\\n"
+msgstr "¡1 Punto!\\n"
+
+msgctxt "L_MPWEAPONS_025"
+msgid "No Shield\\n"
+msgstr "Sin Escudo\\n"
+
+msgctxt "L_MPWEAPONS_026"
+msgid "Automatics\\n"
+msgstr "Automáticas\\n"
+
+msgctxt "L_MPWEAPONS_027"
+msgid "Rocket Launcher\\n"
+msgstr "Lanzacohetes\\n"
+
+msgctxt "L_MPWEAPONS_028"
+msgid "Simulants\\n"
+msgstr "Simulantes\\n"
+
+msgctxt "L_MPWEAPONS_029"
+msgid "King of the Hill\\n"
+msgstr "Rey de la Colina\\n"
+
+msgctxt "L_MPWEAPONS_030"
+msgid "Complex FarSight\\n"
+msgstr "Complejo FarSight\\n"
+
+msgctxt "L_MPWEAPONS_031"
+msgid "Hold the Briefcase\\n"
+msgstr "Mantén el Maletín\\n"
+
+msgctxt "L_MPWEAPONS_032"
+msgid "Pistol One-Hit Kills\\n"
+msgstr "Mata de Un Tiro\\n"
+
+msgctxt "L_MPWEAPONS_033"
+msgid "Capture the Case\\n"
+msgstr "Captura el Maletín\\n"
+
+msgctxt "L_MPWEAPONS_034"
+msgid "Cloaking\\n"
+msgstr "Ocultación\\n"
+
+msgctxt "L_MPWEAPONS_035"
+msgid "Temple Explosives\\n"
+msgstr "Explosivos Templo\\n"
+
+msgctxt "L_MPWEAPONS_036"
+msgid "Slayer\\n"
+msgstr "Asesino\\n"
+
+msgctxt "L_MPWEAPONS_037"
+msgid "Tranquilizer\\n"
+msgstr "Tranquilizante\\n"
+
+msgctxt "L_MPWEAPONS_038"
+msgid "Slow Motion\\n"
+msgstr "Cámara Lenta\\n"
+
+msgctxt "L_MPWEAPONS_039"
+msgid "Press START\\n"
+msgstr "Pulsa START\\n"
+
+msgctxt "L_MPWEAPONS_040"
+msgid "Paused\\n"
+msgstr "Pausa\\n"
+
+msgctxt "L_MPWEAPONS_041"
+msgid "Custom\\n"
+msgstr "Personalizado\\n"
+
+msgctxt "L_MPWEAPONS_042"
+msgid "Random\\n"
+msgstr "Aleatorio\\n"
+
+msgctxt "L_MPWEAPONS_043"
+msgid "Random Five\\n"
+msgstr "Cinco al Azar\\n"
+
+msgctxt "L_MPWEAPONS_044"
+msgid "Close Combat\\n"
+msgstr "Mano a Mano\\n"
+
+msgctxt "L_MPWEAPONS_045"
+msgid "Proximity Mine\\n"
+msgstr "Minas Proxim.\\n"
+
+msgctxt "L_MPWEAPONS_046"
+msgid "Rocket Launcher\\n"
+msgstr "Lanzacohetes\\n"
+
+msgctxt "L_MPWEAPONS_047"
+msgid "Grenade Launcher\\n"
+msgstr "Lanzagranadas\\n"
+
+msgctxt "L_MPWEAPONS_048"
+msgid "Explosive\\n"
+msgstr "Explosivos\\n"
+
+msgctxt "L_MPWEAPONS_049"
+msgid "Golden Magnum\\n"
+msgstr "Magnum Dorada\\n"
+
+msgctxt "L_MPWEAPONS_050"
+msgid "Heavy\\n"
+msgstr "Armas Pesadas\\n"
+
+msgctxt "L_MPWEAPONS_051"
+msgid "Tranquilizer\\n"
+msgstr "Tranquilizantes\\n"
+
+msgctxt "L_MPWEAPONS_052"
+msgid "FarSight\\n"
+msgstr "FarSight\\n"
+
+msgctxt "L_MPWEAPONS_053"
+msgid "Power\\n"
+msgstr "Fuerza Bruta\\n"
+
+msgctxt "L_MPWEAPONS_054"
+msgid "Automatics\\n"
+msgstr "Automáticas\\n"
+
+msgctxt "L_MPWEAPONS_055"
+msgid "Pistols\\n"
+msgstr "Pistolas\\n"
+
+msgctxt "L_MPWEAPONS_056"
+msgid "Test\\n"
+msgstr "Test\\n"
+
+msgctxt "L_MPWEAPONS_057"
+msgid "4mb Test\\n"
+msgstr "Test 4mb\\n"
+
+msgctxt "L_MPWEAPONS_058"
+msgid "Nothing\\n"
+msgstr "Nada\\n"
+
+msgctxt "L_MPWEAPONS_059"
+msgid "Shield\\n"
+msgstr "Escudo\\n"
+
+msgctxt "L_MPWEAPONS_060"
+msgid "Disabled\\n"
+msgstr "Desactivado\\n"
+
+msgctxt "L_MPWEAPONS_061"
+msgid "Objectives Complete\\n"
+msgstr "Objetivos Completados\\n"
+
+msgctxt "L_MPWEAPONS_062"
+msgid "Unknown\\n"
+msgstr "Desconocido\\n"
+
+msgctxt "L_MPWEAPONS_063"
+msgid "Missing\\n"
+msgstr "Desaparecido\\n"
+
+msgctxt "L_MPWEAPONS_064"
+msgid "Damaged Controller Pak\\n"
+msgstr "Controller Pak Dañado\\n"
+
+msgctxt "L_MPWEAPONS_065"
+msgid "is damaged or\\n"
+msgstr "está dañado o\\n"
+
+msgctxt "L_MPWEAPONS_066"
+msgid "inserted incorrectly.\\n"
+msgstr "mal insertado.\\n"
+
+msgctxt "L_MPWEAPONS_067"
+msgid "Attempt Repair\\n"
+msgstr "Intentar Reparar\\n"
+
+msgctxt "L_MPWEAPONS_068"
+msgid "Retry\\n"
+msgstr "Reintentar\\n"
+
+msgctxt "L_MPWEAPONS_069"
+msgid "Continue without using\\nthe Controller Pak\\n"
+msgstr "Continuar sin usar\\nel Controller Pak\\n"
+
+msgctxt "L_MPWEAPONS_070"
+msgid "Full Controller Pak\\n"
+msgstr "Controller Pak Lleno\\n"
+
+msgctxt "L_MPWEAPONS_071"
+msgid "is too full to save\\nnote - 1 note and 28\\npages required to save.\\n"
+msgstr "Está demasiado lleno. Se\\nnecesitan 1 nota y 28\\npáginas para guardar.\\n"
+
+msgctxt "L_MPWEAPONS_072"
+msgid ""
+"Enter the Controller\\nPak Menu to free some\\nspace (hold START\\nwhile "
+"powering up.)\\n"
+msgstr ""
+"Entra en el Menú del\\nController Pak para liberar\\nespacio (pulsa  "
+"START\\nmientras enciendes.)\\n"
+
+msgctxt "L_MPWEAPONS_073"
+msgid "OK\\n"
+msgstr "OK\\n"
+
+msgctxt "L_MPWEAPONS_074"
+msgid "----------\\n"
+msgstr "----------\\n"
+
+msgctxt "L_MPWEAPONS_075"
+msgid "Hurricane Fists\\n"
+msgstr "Puñetazos Huracán\\n"
+
+msgctxt "L_MPWEAPONS_076"
+msgid "Cloaking Device\\n"
+msgstr "Dispositivo de Ocultación\\n"
+
+msgctxt "L_MPWEAPONS_077"
+msgid "Invincible\\n"
+msgstr "Invencible\\n"
+
+msgctxt "L_MPWEAPONS_078"
+msgid "All Guns in Solo\\n"
+msgstr "Todas las Armas en Solo\\n"
+
+msgctxt "L_MPWEAPONS_079"
+msgid "Unlimited Ammo\\n"
+msgstr "Munición Ilimitada\\n"
+
+msgctxt "L_MPWEAPONS_080"
+msgid "Unlimited Ammo, No Reloads\\n"
+msgstr "Munición Ilimitada sin Recargas\\n"
+
+msgctxt "L_MPWEAPONS_081"
+msgid "Slo-mo Single Player\\n"
+msgstr "Un jugador Cámara Lenta\\n"
+
+msgctxt "L_MPWEAPONS_082"
+msgid "DK Mode\\n"
+msgstr "Modo DK\\n"
+
+msgctxt "L_MPWEAPONS_083"
+msgid "Trent's Magnum\\n"
+msgstr "Magnum de Trent\\n"
+
+msgctxt "L_MPWEAPONS_084"
+msgid "FarSight\\n"
+msgstr "FarSight\\n"
+
+msgctxt "L_MPWEAPONS_085"
+msgid "Small Jo\\n"
+msgstr "Mini-Joanna\\n"
+
+msgctxt "L_MPWEAPONS_086"
+msgid "Small Characters\\n"
+msgstr "Mini-Personajes\\n"
+
+msgctxt "L_MPWEAPONS_087"
+msgid "Enemy Shields\\n"
+msgstr "Escudo de Enemigos\\n"
+
+msgctxt "L_MPWEAPONS_088"
+msgid "Jo Shield\\n"
+msgstr "Escudo de Joanna\\n"
+
+msgctxt "L_MPWEAPONS_089"
+msgid "Super Shield\\n"
+msgstr "Súper Escudo\\n"
+
+msgctxt "L_MPWEAPONS_090"
+msgid "Classic Sight\\n"
+msgstr "Mirilla Clásica\\n"
+
+msgctxt "L_MPWEAPONS_091"
+msgid "Team Heads Only\\n"
+msgstr "Sólo Jefes de Equipo\\n"
+
+msgctxt "L_MPWEAPONS_092"
+msgid "Play as Elvis\\n"
+msgstr "Jugar como Elvis\\n"
+
+msgctxt "L_MPWEAPONS_093"
+msgid "Enemy Rockets\\n"
+msgstr "Cohetes Enemigos\\n"
+
+msgctxt "L_MPWEAPONS_094"
+msgid "Unlimited Ammo - Laptop Sentry Gun\\n"
+msgstr "Munición Ilimitada - Arma PC Centinela\\n"
+
+msgctxt "L_MPWEAPONS_095"
+msgid "Marquis of Queensbury Rules\\n"
+msgstr "Reglas del Marqués de Queensbury\\n"
+
+msgctxt "L_MPWEAPONS_096"
+msgid "Perfect Darkness\\n"
+msgstr "Oscuridad Perfecta\\n"
+
+msgctxt "L_MPWEAPONS_097"
+msgid "Pugilist\\n"
+msgstr "Pugilista\\n"
+
+msgctxt "L_MPWEAPONS_098"
+msgid "Hotshot\\n"
+msgstr "Disparo Caliente\\n"
+
+msgctxt "L_MPWEAPONS_099"
+msgid "Hit and Run\\n"
+msgstr "Golpea y Corre\\n"
+
+msgctxt "L_MPWEAPONS_100"
+msgid "Alien\\n"
+msgstr "Alienígena\\n"
+
+msgctxt "L_MPWEAPONS_101"
+msgid "R-Tracker/Weapon Cache Locations\\n"
+msgstr "Rastreador/Localización de armas\\n"
+
+msgctxt "L_MPWEAPONS_102"
+msgid "Rocket Launcher\\n"
+msgstr "Lanzacohetes\\n"
+
+msgctxt "L_MPWEAPONS_103"
+msgid "Sniper Rifle\\n"
+msgstr "Rifle Francotirador\\n"
+
+msgctxt "L_MPWEAPONS_104"
+msgid "X-Ray Scanner\\n"
+msgstr "Escáner de Rayos-X\\n"
+
+msgctxt "L_MPWEAPONS_105"
+msgid "SuperDragon\\n"
+msgstr "SuperDragón\\n"
+
+msgctxt "L_MPWEAPONS_106"
+msgid "Laptop Gun\\n"
+msgstr "Arma PC\\n"
+
+msgctxt "L_MPWEAPONS_107"
+msgid "Phoenix\\n"
+msgstr "Phoenix\\n"
+
+msgctxt "L_MPWEAPONS_108"
+msgid "Psychosis Gun\\n"
+msgstr "Pistola Psicosis\\n"
+
+msgctxt "L_MPWEAPONS_109"
+msgid "PP9i\\n"
+msgstr "PP9i\\n"
+
+msgctxt "L_MPWEAPONS_110"
+msgid "CC13\\n"
+msgstr "CC13\\n"
+
+msgctxt "L_MPWEAPONS_111"
+msgid "KL01313\\n"
+msgstr "Klo1313\\n"
+
+msgctxt "L_MPWEAPONS_112"
+msgid "KF7 Special\\n"
+msgstr "KF7 Especial\\n"
+
+msgctxt "L_MPWEAPONS_113"
+msgid "ZZT (9mm)\\n"
+msgstr "ZZT (9mm)\\n"
+
+msgctxt "L_MPWEAPONS_114"
+msgid "DMC\\n"
+msgstr "DMC\\n"
+
+msgctxt "L_MPWEAPONS_115"
+msgid "AR53\\n"
+msgstr "AR53\\n"
+
+msgctxt "L_MPWEAPONS_116"
+msgid "RC-P45\\n"
+msgstr "RC-P45\\n"
+
+msgctxt "L_MPWEAPONS_117"
+msgid "Velvet Dark\\n"
+msgstr "Velvet Dark\\n"
+
+msgctxt "L_MPWEAPONS_118"
+msgid "Fun\\n"
+msgstr "Diversión\\n"
+
+msgctxt "L_MPWEAPONS_119"
+msgid "Gameplay\\n"
+msgstr "Jugabilidad\\n"
+
+msgctxt "L_MPWEAPONS_120"
+msgid "Weapons\\n"
+msgstr "Armas\\n"
+
+msgctxt "L_MPWEAPONS_121"
+msgid "Buddies\\n"
+msgstr "Compañeros\\n"
+
+msgctxt "L_MPWEAPONS_122"
+msgid "Weapons for Jo in Solo\\n"
+msgstr "Armas para Joanna en Solo\\n"
+
+msgctxt "L_MPWEAPONS_123"
+msgid "Classic Weapons for Jo in Solo\\n"
+msgstr "Armas Clásicas para Joanna en Solo\\n"
+
+msgctxt "L_MPWEAPONS_124"
+msgid "dataDyne Defection"
+msgstr "Entrando en dataDyne"
+
+msgctxt "L_MPWEAPONS_125"
+msgid "dataDyne Extraction"
+msgstr "Extracción de dataDyne"
+
+msgctxt "L_MPWEAPONS_126"
+msgid "A51 Infiltration"
+msgstr "Infiltración en A51"
+
+msgctxt "L_MPWEAPONS_127"
+msgid "A51 Rescue"
+msgstr "Rescate en A51"
+
+msgctxt "L_MPWEAPONS_128"
+msgid "A51 Escape"
+msgstr "Escape de A51"
+
+msgctxt "L_MPWEAPONS_129"
+msgid "Difficulty:\\n"
+msgstr "Dificultad:\\n"
+
+msgctxt "L_MPWEAPONS_130"
+msgid "Cheat Solo Missions\\n"
+msgstr "Trucos en Misiones Solo\\n"
+
+msgctxt "L_MPWEAPONS_131"
+msgid "Cheat Combat Simulator\\n"
+msgstr "Trucos en Simulador de Combate\\n"
+
+msgctxt "L_MPWEAPONS_132"
+msgid "Cheat Co-Operative\\n"
+msgstr "Trucos en Co-operativo\\n"
+
+msgctxt "L_MPWEAPONS_133"
+msgid "Cheat Counter-Operative\\n"
+msgstr "Trucos en Contra-Operativa\\n"
+
+msgctxt "L_MPWEAPONS_134"
+msgid "Dishonored\\n"
+msgstr "Sin honor\\n"
+
+msgctxt "L_MPWEAPONS_135"
+msgid "Cheated\\n"
+msgstr "Trucada\\n"
+
+msgctxt "L_MPWEAPONS_136"
+msgid "Cheat available"
+msgstr "Truco disponible"
+
+msgctxt "L_MPWEAPONS_137"
+msgid "Complete"
+msgstr "Completa"
+
+msgctxt "L_MPWEAPONS_138"
+msgid "for cheat:"
+msgstr "para el truco:"
+
+msgctxt "L_MPWEAPONS_139"
+msgid "on"
+msgstr "en"
+
+msgctxt "L_MPWEAPONS_140"
+msgid "in under"
+msgstr "por debajo de"
+
+msgctxt "L_MPWEAPONS_141"
+msgid ""
+" or insert Game Boy (r) Perfect Dark into Transfer Pak (tm), connect "
+"Transfer Pak to any controller, then exit and enter menu"
+msgstr ""
+" o inserta Perfect Dark de Game Boy (r) en un Transfer Pak (tm), conecta el "
+"Transfer Pak a cualquier mando, y sal y vuelve a entrar en el menú"
+
+msgctxt "L_MPWEAPONS_142"
+msgid "Select cheat for information\\n"
+msgstr "Elige truco para más información\\n"
+
+msgctxt "L_MPWEAPONS_143"
+msgid "Buddy Available"
+msgstr "Camarada disponible"
+
+msgctxt "L_MPWEAPONS_144"
+msgid "Win Golds on the firing range to enable classic guns.\\n"
+msgstr "Gana Oros en las pruebas de tiro para activar las armas clásicas.\\n"
+
+msgctxt "L_MPWEAPONS_145"
+msgid "Sight on Screen\\n"
+msgstr "Mirilla\\n"
+
+msgctxt "L_MPWEAPONS_146"
+msgid "Target\\n"
+msgstr "Objetivo\\n"
+
+msgctxt "L_MPWEAPONS_147"
+msgid "Zoom Range\\n"
+msgstr "Alcance de Zoom\\n"
+
+msgctxt "L_MPWEAPONS_148"
+msgid "Show Ammo\\n"
+msgstr "Mostrar Munición\\n"
+
+msgctxt "L_MPWEAPONS_149"
+msgid "Gun Function\\n"
+msgstr "Función Arma\\n"
+
+msgctxt "L_MPWEAPONS_150"
+msgid "Paintball\\n"
+msgstr "Bolas de Pintura\\n"
+
+msgctxt "L_MPWEAPONS_151"
+msgid "Subtitles\\n"
+msgstr "Subtítulos\\n"
+
+msgctxt "L_MPWEAPONS_152"
+msgid "Mission Time\\n"
+msgstr "Tiempo Misión\\n"
+
+msgctxt "L_MPWEAPONS_153"
+msgid "Mode\\n"
+msgstr "Modo\\n"
+
+msgctxt "L_MPWEAPONS_154"
+msgid "Split\\n"
+msgstr "Corte\\n"
+
+msgctxt "L_MPWEAPONS_155"
+msgid "Do you want to abort\\nthe mission?\\n"
+msgstr "¿Quieres interrumpir\\nla misión?\\n"
+
+msgctxt "L_MPWEAPONS_156"
+msgid "Joanna Leather\\n"
+msgstr "Joanna en Piel\\n"
+
+msgctxt "L_MPWEAPONS_157"
+msgid "Joanna Negotiator\\n"
+msgstr "Joanna Negociadora\\n"
+
+msgctxt "L_MPWEAPONS_158"
+msgid "Elvis (Waistcoat)\\n"
+msgstr "Elvis (Chaleco)\\n"
+
+msgctxt "L_MPWEAPONS_159"
+msgid "Error\\n"
+msgstr "Error\\n"
+
+msgctxt "L_MPWEAPONS_160"
+msgid "Cannot delete file as\\nit is being used.\\n"
+msgstr "No se puede borrar un\\nfichero en uso.\\n"
+
+msgctxt "L_MPWEAPONS_161"
+msgid "Cancel\\n"
+msgstr "Cancelar\\n"
+
+msgctxt "L_MPWEAPONS_162"
+msgid "Time Limit:\\n"
+msgstr "Límite Tiempo:\\n"
+
+msgctxt "L_MPWEAPONS_163"
+msgid "Score Limit:\\n"
+msgstr "Límite Puntos:\\n"
+
+msgctxt "L_MPWEAPONS_164"
+msgid "Team Score Limit:\\n"
+msgstr "Límite P. Equipo:\\n"
+
+msgctxt "L_MPWEAPONS_165"
+msgid "Challenge Completed!\\n"
+msgstr "¡Desafío Completado!\\n"
+
+msgctxt "L_MPWEAPONS_166"
+msgid "Challenge Failed!\\n"
+msgstr "¡Desafío Fallado!\\n"
+
+msgctxt "L_MPWEAPONS_167"
+msgid "Challenge Cheated!\\n"
+msgstr "¡Desafío Trucado!\\n"
+
+msgctxt "L_MPWEAPONS_168"
+msgid "Cutscene Subtitles\\n"
+msgstr "Subtítulos en Escenas\\n"
+
+msgctxt "L_MPWEAPONS_169"
+msgid "In-Game Subtitles\\n"
+msgstr "Subtítulos en el Juego\\n"
+
+msgctxt "L_MPWEAPONS_170"
+msgid "Alternative Title Screen\\n"
+msgstr "Pantalla de Título Alternativa\\n"
+
+msgctxt "L_MPWEAPONS_171"
+msgid "Start Challenge\\n"
+msgstr "Empezar Desafío\\n"
+
+msgctxt "L_MPWEAPONS_172"
+msgid "dataDyne Investigation"
+msgstr "Investigación dataDyne"
+
+msgctxt "L_MPWEAPONS_173"
+msgid "Error\\n"
+msgstr "Error\\n"
+
+msgctxt "L_MPWEAPONS_174"
+msgid "The Controller Pak\\nhas been removed.\\n"
+msgstr "El Controller Pak\\nha sido quitado.\\n"
+
+msgctxt "L_MPWEAPONS_175"
+msgid "Attempt Repair\\n"
+msgstr "Intentar Reparación\\n"
+
+msgctxt "L_MPWEAPONS_176"
+msgid "Are you sure you want\\nto attempt repair of\\nthis Controller Pak?\\n"
+msgstr "¿Quieres intentar\\nreparar este\\nController Pak?\\n"
+
+msgctxt "L_MPWEAPONS_177"
+msgid "Data may be lost!\\n"
+msgstr "¡Puedes perder datos!\\n"
+
+msgctxt "L_MPWEAPONS_178"
+msgid "Cancel\\n"
+msgstr "Cancelar\\n"
+
+msgctxt "L_MPWEAPONS_179"
+msgid "Repair\\n"
+msgstr "Reparar\\n"
+
+msgctxt "L_MPWEAPONS_180"
+msgid "Repair Successful\\n"
+msgstr "Reparado con Éxito\\n"
+
+msgctxt "L_MPWEAPONS_181"
+msgid "The Controller Pak has\\nbeen repaired.\\n"
+msgstr "El Controller Pak ha\\nsido reparado.\\n"
+
+msgctxt "L_MPWEAPONS_182"
+msgid "Repair Failed\\n"
+msgstr "Reparación Fallada\\n"
+
+msgctxt "L_MPWEAPONS_183"
+msgid ""
+"The Controller Pak \\ncannot be repaired.\\nYou will not be able to\\nload "
+"from or save to\\nthis Controller Pak.\\n"
+msgstr ""
+"El Controller Pak \\nno puede ser reparado.\\nNo podrás cargar o\\nguardar "
+"en este\\nController Pak.\\n"
+
+msgctxt "L_MPWEAPONS_184"
+msgid "Player Handicaps\\n"
+msgstr "Hándicap Jugador\\n"
+
+msgctxt "L_MPWEAPONS_185"
+msgid "L/R BUTTONS: "
+msgstr "BOTONES L/R: "
+
+msgctxt "L_MPWEAPONS_186"
+msgid "UP C BUTTON: "
+msgstr "BOTÓN C ARRIBA: "
+
+msgctxt "L_MPWEAPONS_187"
+msgid "LEFT/RIGHT C BUTTONS: "
+msgstr "BOTONES C I./D.: "
+
+msgctxt "L_MPWEAPONS_188"
+msgid "DOWN C BUTTON: "
+msgstr "BOTÓN C ABAJO: "
+
+msgctxt "L_MPWEAPONS_189"
+msgid "A BUTTON: "
+msgstr "BOTÓN A: "
+
+msgctxt "L_MPWEAPONS_190"
+msgid "B BUTTON: "
+msgstr "BOTÓN B: "
+
+msgctxt "L_MPWEAPONS_191"
+msgid "CONTROL STICK: "
+msgstr "STICK C.: "
+
+msgctxt "L_MPWEAPONS_192"
+msgid "Z BUTTON: "
+msgstr "BÓTON Z: "
+
+msgctxt "L_MPWEAPONS_193"
+msgid "+ CONTROL PAD: "
+msgstr "+ PANEL C.: "
+
+msgctxt "L_MPWEAPONS_194"
+msgid "AIM"
+msgstr "APUNTAR"
+
+msgctxt "L_MPWEAPONS_195"
+msgid "AIM TOGGLE"
+msgstr "CAMBIAR A PUNTAR"
+
+msgctxt "L_MPWEAPONS_196"
+msgid "LOOK UP"
+msgstr "MIRAR ARRIBA"
+
+msgctxt "L_MPWEAPONS_197"
+msgid "LOOK DOWN"
+msgstr "MIRAR ABAJO"
+
+msgctxt "L_MPWEAPONS_198"
+msgid "LOOK DOWN"
+msgstr "MIRAR ABAJO"
+
+msgctxt "L_MPWEAPONS_199"
+msgid "LOOK UP"
+msgstr "MIRAR ARRIBA"
+
+msgctxt "L_MPWEAPONS_200"
+msgid "FORWARDS"
+msgstr "ADELANTE"
+
+msgctxt "L_MPWEAPONS_201"
+msgid "BACKWARDS"
+msgstr "ATRÁS"
+
+msgctxt "L_MPWEAPONS_202"
+msgid "STRAFE"
+msgstr "DESP. LATERAL"
+
+msgctxt "L_MPWEAPONS_203"
+msgid "WEAPON"
+msgstr "ARMA"
+
+msgctxt "L_MPWEAPONS_204"
+msgid "ACTION/RELOAD"
+msgstr "ACCIÓN/RECARGA"
+
+msgctxt "L_MPWEAPONS_205"
+msgid "FIRE"
+msgstr "DISPARO"
+
+msgctxt "L_MPWEAPONS_206"
+msgid "WALK/TURN"
+msgstr "CAMINAR/VOLVER"
+
+msgctxt "L_MPWEAPONS_207"
+msgid "LOOK"
+msgstr "MIRAR"
+
+msgctxt "L_MPWEAPONS_208"
+msgid "WALK/STRAFE"
+msgstr "CAMINAR/DESP."
+
+msgctxt "L_MPWEAPONS_209"
+msgid "LOOK/STRAFE"
+msgstr "MIRAR/DESP."
+
+msgctxt "L_MPWEAPONS_210"
+msgid "AS C BUTTONS"
+msgstr "COMO BOTONES C"
+
+msgctxt "L_MPWEAPONS_211"
+msgid "Controller 1:"
+msgstr "Mando 1:"
+
+msgctxt "L_MPWEAPONS_212"
+msgid "Controller 2:"
+msgstr "Mando 2:"
+
+msgctxt "L_MPWEAPONS_213"
+msgid "Control Style %s %s\\n"
+msgstr "Estilo de Control %s %s\\n"
+
+msgctxt "L_MPWEAPONS_214"
+msgid "(One-Handed)"
+msgstr "(1 Mando)"
+
+msgctxt "L_MPWEAPONS_215"
+msgid "(Two-Handed)"
+msgstr "(2 Mandos)"
+
+msgctxt "L_MPWEAPONS_216"
+msgid ""
+"Hold Weapon button for quick-menu.\\nHold Action button to toggle "
+"function.\\nAction+Fire temporarily changes function.\\nAim allows you to "
+"target accurately.\\nAim + Down C Button crouches.\\nAim + Up C Button gets "
+"up.\\n"
+msgstr ""
+"Mantén Arma para el menú rápido.\\nMantén Acción para cambiar "
+"función.\\nAcción+Disparo cambia temp. la función.\\nApuntar aporta una "
+"mayor precisión.\\nApuntar + Botón C Abajo te agacha.\\nApuntar + Botón C "
+"Arriba te levanta.\\n"
+
+msgctxt "L_MPWEAPONS_217"
+msgid "Turn off all Cheats\\n"
+msgstr "Desactiva todos los Trucos\\n"
+
+msgctxt "L_MPWEAPONS_218"
+msgid "Language Filter\\n"
+msgstr "Filtro de Lenguaje\\n"
+
+msgctxt "L_MPWEAPONS_219"
+msgid "USERNAME:\\n"
+msgstr "USUARIO:\\n"
+
+msgctxt "L_MPWEAPONS_220"
+msgid "PASSWORD:\\n"
+msgstr "CLAVE:\\n"
+
+msgctxt "L_MPWEAPONS_221"
+msgid "Perfect Dark\\n"
+msgstr "Oscuridad Perfecta\\n"
+
+msgctxt "L_MPWEAPONS_222"
+msgid "Choose Settings:\\n"
+msgstr "Elige Opciones:\\n"
+
+msgctxt "L_MPWEAPONS_223"
+msgid "Enemy Reaction Speed:\\n"
+msgstr "Vel. de Reacción Enemiga:\\n"
+
+msgctxt "L_MPWEAPONS_224"
+msgid "Enemy Health:\\n"
+msgstr "Salud del Enemigo:\\n"
+
+msgctxt "L_MPWEAPONS_225"
+msgid "Enemy Damage:\\n"
+msgstr "Daño del Enemigo:\\n"
+
+msgctxt "L_MPWEAPONS_226"
+msgid "Enemy Accuracy:\\n"
+msgstr "Precisión del Enemigo:\\n"
+
+msgctxt "L_MPWEAPONS_227"
+msgid "OK\\n"
+msgstr "Aceptar\\n"
+
+msgctxt "L_MPWEAPONS_228"
+msgid "Cancel\\n"
+msgstr "Cancelar\\n"
+
+msgctxt "L_MPWEAPONS_229"
+msgid "Controller Pak Not Found\\n"
+msgstr "Controller Pak No Encontrado\\n"
+
+msgctxt "L_MPWEAPONS_230"
+msgid "Name:\\n"
+msgstr "Nombre:\\n"
+
+msgctxt "L_MPWEAPONS_231"
+msgid "Location:\\n"
+msgstr "Lugar:\\n"
+
+msgctxt "L_MPWEAPONS_232"
+msgid "Duplicate File Name\\n"
+msgstr "Nombre Duplicado\\n"
+
+msgctxt "L_MPWEAPONS_233"
+msgid "already contains\\n"
+msgstr "ya tiene\\n"
+
+msgctxt "L_MPWEAPONS_234"
+msgid "a file named\\n"
+msgstr "un fichero nombrado\\n"
+
+msgctxt "L_MPWEAPONS_235"
+msgid "Rename File\\n"
+msgstr "Renombrar Fichero\\n"
+
+msgctxt "L_MPWEAPONS_236"
+msgid "Change Location\\n"
+msgstr "Cambiar Lugar\\n"
+
+msgctxt "L_MPWEAPONS_237"
+msgid "Cancel\\n"
+msgstr "Cancelar\\n"
+
+msgctxt "L_MPWEAPONS_238"
+msgid "Change File Name\\n"
+msgstr "Cambiar Nombre\\n"
+
+msgctxt "L_MPWEAPONS_239"
+msgid "Enter new file name:\\n"
+msgstr "Introduce nuevo nombre:\\n"
+
+msgctxt "L_MPWEAPONS_240"
+msgid "The file you are copying\\ncannot be deleted.\\n"
+msgstr "El fichero que estás copiando\\nno puede ser borrado.\\n"
+
+msgctxt "L_MPWEAPONS_241"
+msgid "ShockSim:%d\\n"
+msgstr "SimShock:%d\\n"
+
+msgctxt "L_MPWEAPONS_242"
+msgid "Target Time:\\n"
+msgstr "Tiempo Requerido:\\n"
+
+msgctxt "L_MPWEAPONS_243"
+msgid "New Cheat Available!:\\n"
+msgstr "¡Nuevo Truco Disponible!:\\n"
+
+msgctxt "L_MPWEAPONS_244"
+msgid "Continue\\n"
+msgstr "Continuar\\n"
+
+msgctxt "L_MPWEAPONS_245"
+msgid "Replay Last Level\\n"
+msgstr "Volver a Jugar el Nivel\\n"
+
+msgctxt "L_MPWEAPONS_246"
+msgid "Save Player\\n"
+msgstr "Guardar Jugador\\n"
+
+msgctxt "L_MPWEAPONS_247"
+msgid "Save new player\\nand statistics?\\n"
+msgstr "¿Guardar nuevo jugador\\ny estadísticas?\\n"
+
+msgctxt "L_MPWEAPONS_248"
+msgid "Save Now\\n"
+msgstr "Guardar Ahora\\n"
+
+msgctxt "L_MPWEAPONS_249"
+msgid "No Thanks!\\n"
+msgstr "¡No, Gracias!\\n"
+
+msgctxt "L_MPWEAPONS_250"
+msgid "Confirm player name:\\n"
+msgstr "Confirmar nombre:\\n"
+
+msgctxt "L_MPWEAPONS_251"
+msgid "The saved file has\\nbeen erased due\\nto corruption\\nor damage.\\n"
+msgstr ""
+"El fichero guardado ha\\nsido borrado debido\\na datos corruptos\\no "
+"dañados.\\n"
+
+msgctxt "L_MPWEAPONS_252"
+msgid "Continue\\n"
+msgstr "Continuar\\n"
+
+msgctxt "L_MPWEAPONS_253"
+msgid "Error\\n"
+msgstr "Error\\n"
+
+msgctxt "L_MPWEAPONS_254"
+msgid ""
+"Cannot read Game Boy Game Pak.\\nCheck connections and make sure\\ncorrect "
+"Game Boy Game Pak is\\nbeing used.\\n"
+msgstr ""
+"No se puede acceder al Cartucho de GB.\\nComprueba las conexiones y "
+"asegúrate\\nde que estás usando el cartucho de\\nGame Boy correcto.\\n"
+
+msgctxt "L_MPWEAPONS_255"
+msgid "Cancel\\n"
+msgstr "Cancelar\\n"
+
+msgctxt "L_MPWEAPONS_256"
+msgid "Error\\n"
+msgstr "Error\\n"
+
+msgctxt "L_MPWEAPONS_257"
+msgid "The saved data has\\n"
+msgstr "Los datos guardados\\n"
+
+msgctxt "L_MPWEAPONS_258"
+msgid "been erased due to\\n"
+msgstr "han sido borrados\\n"
+
+msgctxt "L_MPWEAPONS_259"
+msgid "corruption or damage.\\n"
+msgstr "porque estaban dañados.\\n"
+
+msgctxt "L_MPWEAPONS_260"
+msgid "Cancel\\n"
+msgstr "Cancelar\\n"

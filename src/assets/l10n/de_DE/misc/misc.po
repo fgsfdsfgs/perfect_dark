@@ -1,0 +1,986 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"POT-Creation-Date: 2025-05-28 15:30:39.011581+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "L_MISC_041"
+msgid "E R R O R\\n"
+msgstr "E R R O R\\n"
+
+msgctxt "L_MISC_042"
+msgid "No briefing for this mission\\n"
+msgstr "Für diese Mission gibt es kein Briefing.\\n"
+
+msgctxt "L_MISC_043"
+msgid "\\n"
+msgstr "\\n"
+
+msgctxt "L_MISC_044"
+msgid "Objective"
+msgstr "Ziel"
+
+msgctxt "L_MISC_045"
+msgid "Completed\\n"
+msgstr "erreicht\\n"
+
+msgctxt "L_MISC_046"
+msgid "Incomplete\\n"
+msgstr "nicht erreicht\\n"
+
+msgctxt "L_MISC_047"
+msgid "Failed\\n"
+msgstr "versagt\\n"
+
+msgctxt "L_MISC_068"
+msgid "One minute left.\\n"
+msgstr "Noch eine Minute.\\n"
+
+msgctxt "L_MISC_069"
+msgid "OBJECTIVES FAILED - abort mission.\\n"
+msgstr "ZIELERREICHUNG UNGENÜGEND - Mission abbrechen.\\n"
+
+msgctxt "L_MISC_070"
+msgid "Guard Greeting\\n"
+msgstr "Wachgruß.\\n"
+
+msgctxt "L_MISC_071"
+msgid "What's that gun?\\n"
+msgstr "Was soll die Waffe?\\n"
+
+msgctxt "L_MISC_072"
+msgid "Don't point that gun at me.\\n"
+msgstr "Zielen Sie nicht auf mich!\\n"
+
+msgctxt "L_MISC_073"
+msgid "S/MPS"
+msgstr "S/MPS"
+
+msgctxt "L_MISC_074"
+msgid "H/M"
+msgstr "H/M"
+
+msgctxt "L_MISC_075"
+msgid "Y/D"
+msgstr "Y/D"
+
+msgctxt "L_MISC_076"
+msgid "P/D"
+msgstr "P/D"
+
+msgctxt "L_MISC_077"
+msgid "CI 2023"
+msgstr "CI 2023"
+
+msgctxt "L_MISC_078"
+msgid "YKK: 95935"
+msgstr "YKK: 95935"
+
+msgctxt "L_MISC_079"
+msgid "CAMSPY"
+msgstr "CAMSPY"
+
+msgctxt "L_MISC_080"
+msgid "MODEL 1.2"
+msgstr "MODEL 1.2"
+
+msgctxt "L_MISC_081"
+msgid "GYROSTAT"
+msgstr "GYROSTAT"
+
+msgctxt "L_MISC_082"
+msgid "Meat"
+msgstr "Opfer"
+
+msgctxt "L_MISC_083"
+msgid "Easy"
+msgstr "Leicht"
+
+msgctxt "L_MISC_084"
+msgid "Normal"
+msgstr "Normal"
+
+msgctxt "L_MISC_085"
+msgid "Hard"
+msgstr "Schwer"
+
+msgctxt "L_MISC_086"
+msgid "Perfect"
+msgstr "Perfekt"
+
+msgctxt "L_MISC_087"
+msgid "Dark"
+msgstr "Dark"
+
+msgctxt "L_MISC_088"
+msgid "MeatSim"
+msgstr "OpferSim"
+
+msgctxt "L_MISC_089"
+msgid "EasySim"
+msgstr "LeichtSim"
+
+msgctxt "L_MISC_090"
+msgid "NormalSim"
+msgstr "NormalSim"
+
+msgctxt "L_MISC_091"
+msgid "HardSim"
+msgstr "SchwerSim"
+
+msgctxt "L_MISC_092"
+msgid "PerfectSim"
+msgstr "PerfektSim"
+
+msgctxt "L_MISC_093"
+msgid "DarkSim"
+msgstr "DarkSim"
+
+msgctxt "L_MISC_094"
+msgid "PeaceSim"
+msgstr "PazifistSim"
+
+msgctxt "L_MISC_095"
+msgid "ShieldSim"
+msgstr "SchildSim"
+
+msgctxt "L_MISC_096"
+msgid "RocketSim"
+msgstr "RaketenSim"
+
+msgctxt "L_MISC_097"
+msgid "KazeSim"
+msgstr "SuizidSim"
+
+msgctxt "L_MISC_098"
+msgid "FistSim"
+msgstr "FaustSim"
+
+msgctxt "L_MISC_099"
+msgid "PreySim"
+msgstr "JägerSim"
+
+msgctxt "L_MISC_100"
+msgid "CowardSim"
+msgstr "FeiglingSim"
+
+msgctxt "L_MISC_101"
+msgid "JudgeSim"
+msgstr "JustizSim"
+
+msgctxt "L_MISC_102"
+msgid "FeudSim"
+msgstr "VendetSim"
+
+msgctxt "L_MISC_103"
+msgid "SpeedSim"
+msgstr "SpeedSim"
+
+msgctxt "L_MISC_104"
+msgid "TurtleSim"
+msgstr "TurtleSim"
+
+msgctxt "L_MISC_105"
+msgid "VengeSim"
+msgstr "RacheSim"
+
+msgctxt "L_MISC_106"
+msgid ""
+"MeatSim:  This is the easiest of all the simulants to defeat and is, "
+"therefore, the best choice for the beginner.  It is not very intelligent, "
+"and its shooting skills are very poor.\\n"
+msgstr ""
+"OpferSim:  Der am leichtesten zu besiegende Simulant. Eignet sich daher "
+"hervorragend für Einsteiger.  Der Simulant ist nicht sonderlich intelligent "
+"und ist zudem ein mäßiger Schütze.\\n"
+
+msgctxt "L_MISC_107"
+msgid ""
+"EasySim:  This simulant has basic skills and intelligence, but it can still "
+"be dangerous.\\n"
+msgstr ""
+"LeichtSim:  Der Simulant verfügt zwar nur über Basis-Intelligenz und "
+"-Fähigkeiten, ist aber trotzdem nicht ungefährlich.\\n"
+
+msgctxt "L_MISC_108"
+msgid "NormalSim:  This simulant is as skilled as the average human player.\\n"
+msgstr ""
+"NormalSim:  Der Simulant verfügt über das Geschick eines menschlichen "
+"Spielers.\\n"
+
+msgctxt "L_MISC_109"
+msgid "HardSim:  This simulant is as skilled as a good human player.\\n"
+msgstr ""
+"SchwerSim:  Der Simulant verfügt über das Geschick eines guten menschlichen "
+"Spielers.\\n"
+
+msgctxt "L_MISC_110"
+msgid ""
+"PerfectSim: The ultimate adversary, the most intelligent and skilled "
+"simulant.  Most players will eventually want to use PerfectSim all the time "
+"as their skills improve.\\n"
+msgstr ""
+"PerfektSim: Der ultimative Gegner. Äußerst intelligent und unberechenbar. "
+"Viele Spieler werden bevorzugt gegen ihn antreten, da sich ihre eigenen "
+"Fähigkeiten dadurch ständig verbessern.\\n"
+
+msgctxt "L_MISC_111"
+msgid ""
+"DarkSim: Prototype cyborg developed by dataDyne to counteract Carrington "
+"operatives.  Remember that this simulant, unlike all the others, is not "
+"human.  This means that it may be able to do things which a human cannot.\\n"
+msgstr ""
+"DarkSim: Ein Cyborg-Prototyp, der von dataDyne entwickelt wurde, um gegen "
+"das Institut vorzugehen. Beachten Sie, dass dieser Simulant, im Gegensatz zu"
+" den anderen, nicht menschlich ist. Daher kann er Dinge tun, die Menschen "
+"nicht tun können.\\n"
+
+msgctxt "L_MISC_112"
+msgid ""
+"PeaceSim:  These simulants are scientists who protest the use of weapons.  "
+"They will go around the level hunting for guns that are lying around and "
+"hoard them so that players cannot use them.  Of course, if you were to shoot"
+" them, they might just drop a few!\\n"
+msgstr ""
+"PazifistSim:  Diese Simulanten sind Wissenschaftler, die keine Waffen "
+"einsetzen. Sie gehen durch die Level, um herumliegende Waffen einzusammeln, "
+"sodass der Spieler sie nicht finden kann. Wenn Sie aber auf sie schießen, "
+"lassen sie vielleicht die Waffen fallen.\\n"
+
+msgctxt "L_MISC_113"
+msgid ""
+"ShieldSim:  Always goes for maximum shield protection.  If this simulant "
+"loses any shield energy, it will go and search for a new shield.  Not much "
+"use if there are no shields on the level!\\n"
+msgstr ""
+"SchildSim:  Achtet immer auf maximalen Schild-Schutz. Verliert dieser "
+"Simulant seinen Schild, zieht er los,  um einen neuen zu suchen. Das hat "
+"natürlich wenig Sinn, wenn keine Schilde vorhanden sind!\\n"
+
+msgctxt "L_MISC_114"
+msgid ""
+"RocketSim:  This simulant loves to see things blow up.  It prefers weapons "
+"which make big explosions over conventional handguns or automatics.  This "
+"also extends to weapons which have explosive secondary functions!\\n"
+msgstr ""
+"RaketenSim:  Dieser Simulant liebt es, Dinge in die Luft zu jagen. Er zieht "
+"Explosions-Waffen gegenüber Pistolen und Automatik-Gewehren vor. Zu ersteren"
+" gehören auch Waffen, die eine 'explosive' Sekundär-Funktion haben.\\n"
+
+msgctxt "L_MISC_115"
+msgid ""
+"KazeSim:  This simulant will stop at nothing to destroy its target.  It is "
+"very aggressive and never keeps its distance - even if it's holding a "
+"grenade!  Be very careful of an adversary who is not afraid to die.\\n"
+msgstr ""
+"SuizidSim:  Dieser Simulant lässt sich durch nichts aufhalten. Er ist sehr "
+"aggressiv und hält keine Distanz zum Gegner. Auch nicht, wenn er eine "
+"Granate hält!  Seien Sie äußerst vorsichtig, denn dieser Gegner kennt keine "
+"Angst.\\n"
+
+msgctxt "L_MISC_116"
+msgid ""
+"FistSim:  This simulant protests the use of weapons in a similar way to the "
+"PeaceSims.  However, it has no such reservations when it comes to unarmed "
+"combat.  It will always try to use its fists to attack or disarm its "
+"opponent.\\n"
+msgstr ""
+"FaustSim:  Dieser Simulant verwendet, ähnlich wie der PazifistSim, keine "
+"Waffen.  Kommt es aber zum Kampf, wird er seine Fäuste einsetzen.  Er wird "
+"ständig versuchen, seinen Gegner zu entwaffnen.\\n"
+
+msgctxt "L_MISC_117"
+msgid ""
+"PreySim:  This simulant prefers to prey on the weak in order to get easier "
+"kills.  It will look for players who have just respawned, have an inferior "
+"weapon, or are low on health.\\n"
+msgstr ""
+"JägerSim:  Dieser Simulant jagt bevorzugt schwächere Gegner.  Er sucht nach "
+"Spielern, die die gerade erst erschienen sind, über schwache Bewaffnung "
+"verfügen oder wenig Energie haben.\\n"
+
+msgctxt "L_MISC_118"
+msgid ""
+"CowardSim:  This simulant does not really want to fight and will try to "
+"survive by running away.  It may sometimes attack, but only if the opponent "
+"has an inferior weapon.  Draw out a better gun or shoot it, and it will run "
+"away!\\n"
+msgstr ""
+"FeiglingSim:  Dieser Simulant wird eher sein Heil in der Flucht suchen, als "
+"zu kämpfen.  Er kann zwar hin und wieder attackieren, aber nur, wenn sein "
+"Gegner über eine schwache Waffe verfügt.  Ziehen Sie eine stärkere Waffe, "
+"und er wird flüchten!\\n"
+
+msgctxt "L_MISC_119"
+msgid ""
+"JudgeSim:  This simulant has a strong sense of justice and despises the "
+"tactics of the PreySim.  It will always try to kill the winning player in "
+"order to even up the score.\\n"
+msgstr ""
+"JustizSim:  Dieser Simulant hat einen starken Gerechtigkeitssinn. Daher "
+"verurteilt er die Taktiken des JägerSim.  Er wird immer den stärksten "
+"Spieler verfolgen, um für einen gleichmäßigen Score zu sorgen.\\n"
+
+msgctxt "L_MISC_120"
+msgid ""
+"FeudSim:  Once this simulant picks a target, that player had better watch "
+"out!  A FeudSim will pursue the player until the game is over!  Even if it "
+"is killed, it will bear its grudge.\\n"
+msgstr ""
+"VendetSim:  Hat sich dieser Simulant ein Opfer ausgesucht, sollte der "
+"Spieler sehr vorsichtig sein!  Ein VendetSim verfolgt diesen Spieler, bis "
+"das Spiel vorüber ist!  Er schreckt eventuell auch nicht vor einem Kamikaze-"
+"Angriff zurück.\\n"
+
+msgctxt "L_MISC_121"
+msgid ""
+"SpeedSim:  These simulants have been trained for speed.  They can easily "
+"outrun a human player, so it's no use  running away from a SpeedSim unless "
+"you know some good shortcuts!\\n"
+msgstr ""
+"SpeedSim:  Diese Simulanten sind unglaublich schnell.  In Punkto "
+"Geschwindigkeit sind sie jedem Menschen überlegen, daher hat  es keinen "
+"Sinn, vor ihnen zu flüchten. (Es sei denn, Sie kennen eine Abkürzung.)\\n"
+
+msgctxt "L_MISC_122"
+msgid ""
+"TurtleSim:  This simulant wears a prototype shield generator developed by "
+"dataDyne scientists.  The generator projects a protective shield around its "
+"host which has twice the strength of a normal shield.  Unfortunately, this "
+"restricts the host's movement, so it can only move at a slow pace.  "
+"TurtleSims carry this shield as standard even if there are no shields on the"
+" level.\\n"
+msgstr ""
+"TurtleSim:  Dieser Simulant verfügt über eine von dataDyne entwickelte "
+"Schildtechnologie.  Der Generator projiziert ein Schutzschild um seinen "
+"Träger, der doppelt so stark ist, wie ein normaler Schild.  Leider wird "
+"dadurch auch die Bewegungsfreiheit eingeschränkt, und er kann sich nur "
+"langsam bewegen.  TurtleSims tragen diesen Schild als  Standard-Ausrüstung, "
+"sogar, wenn es im aktuellen Level keine Schilde gibt.\\n"
+
+msgctxt "L_MISC_123"
+msgid ""
+"VengeSim:  Be careful if you shoot or kill a VengeSim because it always "
+"attacks the player who last killed it."
+msgstr ""
+"RacheSim:  Seien Sie vorsichtig, wenn Sie auf einen RacheSim schießen, da er"
+" danach nur seinen Bezwinger angreift."
+
+msgctxt "L_MISC_124"
+msgid "Dark Combat"
+msgstr "Dark Combat"
+
+msgctxt "L_MISC_125"
+msgid "Skedar Mystery"
+msgstr "Skedar-Mysterium"
+
+msgctxt "L_MISC_126"
+msgid "CI Operative"
+msgstr "CI-Operator"
+
+msgctxt "L_MISC_127"
+msgid "dataDyne Action"
+msgstr "dataDyne Action"
+
+msgctxt "L_MISC_128"
+msgid "Maian Tears"
+msgstr "Maianische Tränen"
+
+msgctxt "L_MISC_129"
+msgid "Alien Conflict"
+msgstr "Alien-Konflikt"
+
+msgctxt "L_MISC_130"
+msgid "Carrington Institute"
+msgstr "Carrington Institut"
+
+msgctxt "L_MISC_131"
+msgid "dD Central"
+msgstr "dD Zentrale"
+
+msgctxt "L_MISC_132"
+msgid "dD Central X"
+msgstr "dD Zentrale X"
+
+msgctxt "L_MISC_133"
+msgid "dD Research"
+msgstr "dD Forschung"
+
+msgctxt "L_MISC_134"
+msgid "dD Research X"
+msgstr "dD Forschung X"
+
+msgctxt "L_MISC_135"
+msgid "dD Extraction"
+msgstr "dD Extraktion"
+
+msgctxt "L_MISC_136"
+msgid "dD Extraction X"
+msgstr "dD Extraktion X"
+
+msgctxt "L_MISC_137"
+msgid "Carrington Villa"
+msgstr "Carrington Villa"
+
+msgctxt "L_MISC_138"
+msgid "Carrington Villa X"
+msgstr "Carrington Villa X"
+
+msgctxt "L_MISC_139"
+msgid "Chicago"
+msgstr "Chicago"
+
+msgctxt "L_MISC_140"
+msgid "Chicago X"
+msgstr "Chicago X"
+
+msgctxt "L_MISC_141"
+msgid "G5 Building"
+msgstr "G5-Building"
+
+msgctxt "L_MISC_142"
+msgid "G5 Building X"
+msgstr "G5-Building X"
+
+msgctxt "L_MISC_143"
+msgid "A51 Infiltration"
+msgstr "A-51 Infiltration"
+
+msgctxt "L_MISC_144"
+msgid "A51 Infiltration X"
+msgstr "A-51 Infiltration X"
+
+msgctxt "L_MISC_145"
+msgid "A51 Rescue"
+msgstr "A-51 Rettung"
+
+msgctxt "L_MISC_146"
+msgid "A51 Rescue X"
+msgstr "A-51 Rettung X"
+
+msgctxt "L_MISC_147"
+msgid "A51 Escape"
+msgstr "A-51 Flucht"
+
+msgctxt "L_MISC_148"
+msgid "A51 Escape X"
+msgstr "A-51 Flucht X"
+
+msgctxt "L_MISC_149"
+msgid "Air Base"
+msgstr "Stützpunkt"
+
+msgctxt "L_MISC_150"
+msgid "Air Base X"
+msgstr "Stützpunkt X"
+
+msgctxt "L_MISC_151"
+msgid "Air Force One"
+msgstr "Air Force One"
+
+msgctxt "L_MISC_152"
+msgid "Air Force One X"
+msgstr "Air Force One X"
+
+msgctxt "L_MISC_153"
+msgid "Crash Site"
+msgstr "Absturzstelle"
+
+msgctxt "L_MISC_154"
+msgid "Crash Site X"
+msgstr "Absturzstelle X"
+
+msgctxt "L_MISC_155"
+msgid "Pelagic II"
+msgstr "Pelagic II"
+
+msgctxt "L_MISC_156"
+msgid "Pelagic II X"
+msgstr "Pelagic II X"
+
+msgctxt "L_MISC_157"
+msgid "Deep Sea"
+msgstr "Tiefsee"
+
+msgctxt "L_MISC_158"
+msgid "Deep Sea X"
+msgstr "Tiefsee X"
+
+msgctxt "L_MISC_159"
+msgid "Institute Defense"
+msgstr "Verteidigung"
+
+msgctxt "L_MISC_160"
+msgid "Institute Defense X"
+msgstr "Verteidigung X"
+
+msgctxt "L_MISC_161"
+msgid "Attack Ship"
+msgstr "Feindliches Schiff"
+
+msgctxt "L_MISC_162"
+msgid "Attack Ship X"
+msgstr "Feindliches Schiff X"
+
+msgctxt "L_MISC_163"
+msgid "Skedar Ruins"
+msgstr "Skedar Ruinen"
+
+msgctxt "L_MISC_164"
+msgid "Skedar Ruins X"
+msgstr "Skedar Ruinen X"
+
+msgctxt "L_MISC_165"
+msgid "End Credits"
+msgstr "End Credits"
+
+msgctxt "L_MISC_166"
+msgid "Random\\n"
+msgstr "Zufällig\\n"
+
+msgctxt "L_MISC_167"
+msgid "Select All\\n"
+msgstr "Alle\\n"
+
+msgctxt "L_MISC_168"
+msgid "Select None\\n"
+msgstr "Keine\\n"
+
+msgctxt "L_MISC_169"
+msgid "Randomize\\n"
+msgstr "Zufallsgenerator\\n"
+
+msgctxt "L_MISC_170"
+msgid "Weapon\\n"
+msgstr "Waffe\\n"
+
+msgctxt "L_MISC_171"
+msgid "Function\\n"
+msgstr "Funktion\\n"
+
+msgctxt "L_MISC_172"
+msgid "Orders\\n"
+msgstr "Befehle\\n"
+
+msgctxt "L_MISC_173"
+msgid "No Weapon\\n"
+msgstr "Keine Waffe\\n"
+
+msgctxt "L_MISC_174"
+msgid "Pick Target\\n"
+msgstr "Zielauswahl\\n"
+
+msgctxt "L_MISC_175"
+msgid "Follow\\n"
+msgstr "Folgen\\n"
+
+msgctxt "L_MISC_176"
+msgid "Attack\\n"
+msgstr "Attackieren\\n"
+
+msgctxt "L_MISC_177"
+msgid "Defend\\n"
+msgstr "Verteidigen\\n"
+
+msgctxt "L_MISC_178"
+msgid "Hold\\n"
+msgstr "Halten\\n"
+
+msgctxt "L_MISC_179"
+msgid "Normal\\n"
+msgstr "Normal\\n"
+
+msgctxt "L_MISC_180"
+msgid "Download\\n"
+msgstr "Download\\n"
+
+msgctxt "L_MISC_181"
+msgid "Get Case\\n"
+msgstr "Schnapp den Koffer\\n"
+
+msgctxt "L_MISC_182"
+msgid "Tag Box\\n"
+msgstr "Tag Box\\n"
+
+msgctxt "L_MISC_183"
+msgid "Killed by"
+msgstr "Besiegt von:"
+
+msgctxt "L_MISC_184"
+msgid "Killed"
+msgstr "Besiegt wurde:"
+
+msgctxt "L_MISC_185"
+msgid "Beginner:21\\n"
+msgstr "Anfänger:21\\n"
+
+msgctxt "L_MISC_186"
+msgid "Trainee:20\\n"
+msgstr "Azubi:20\\n"
+
+msgctxt "L_MISC_187"
+msgid "Amateur:19\\n"
+msgstr "Amateur:19\\n"
+
+msgctxt "L_MISC_188"
+msgid "Rookie:18\\n"
+msgstr "Normal:18\\n"
+
+msgctxt "L_MISC_189"
+msgid "Novice:17\\n"
+msgstr "Neuling:17\\n"
+
+msgctxt "L_MISC_190"
+msgid "Trooper:16\\n"
+msgstr "Soldat:16\\n"
+
+msgctxt "L_MISC_191"
+msgid "Agent:15\\n"
+msgstr "Agent:15\\n"
+
+msgctxt "L_MISC_192"
+msgid "Star Agent:14\\n"
+msgstr "Star-Agent:14\\n"
+
+msgctxt "L_MISC_193"
+msgid "Special Agent:13\\n"
+msgstr "Spec-Agent:13\\n"
+
+msgctxt "L_MISC_194"
+msgid "Expert:12\\n"
+msgstr "Experte:12\\n"
+
+msgctxt "L_MISC_195"
+msgid "Veteran:11\\n"
+msgstr "Veteran:11\\n"
+
+msgctxt "L_MISC_196"
+msgid "Professional:10\\n"
+msgstr "Profi:10\\n"
+
+msgctxt "L_MISC_197"
+msgid "Dangerous:9\\n"
+msgstr "Gefährlich:9\\n"
+
+msgctxt "L_MISC_198"
+msgid "Deadly:8\\n"
+msgstr "Letal:8\\n"
+
+msgctxt "L_MISC_199"
+msgid "Killer:7\\n"
+msgstr "Tödlich:7\\n"
+
+msgctxt "L_MISC_200"
+msgid "Assassin:6\\n"
+msgstr "Verheerend:6\\n"
+
+msgctxt "L_MISC_201"
+msgid "Lethal:5\\n"
+msgstr "Zerstörer:5\\n"
+
+msgctxt "L_MISC_202"
+msgid "Elite:4\\n"
+msgstr "Elite:4\\n"
+
+msgctxt "L_MISC_203"
+msgid "Invincible:3\\n"
+msgstr "Berserker:3\\n"
+
+msgctxt "L_MISC_204"
+msgid "Near Perfect:2\\n"
+msgstr "Fast Perfekt:2\\n"
+
+msgctxt "L_MISC_205"
+msgid "Perfect:1\\n"
+msgstr "Perfekt:1\\n"
+
+msgctxt "L_MISC_206"
+msgid "DARTAMMO"
+msgstr "DARTMUNI"
+
+msgctxt "L_MISC_207"
+msgid "MODEL 1.4"
+msgstr "MODEL 1.4"
+
+msgctxt "L_MISC_208"
+msgid "JM: 201172"
+msgstr "JM: 201172"
+
+msgctxt "L_MISC_209"
+msgid "Save Case\\n"
+msgstr "Vert. Koffer\\n"
+
+msgctxt "L_MISC_210"
+msgid "Def Hill\\n"
+msgstr "Vert. Hügel\\n"
+
+msgctxt "L_MISC_211"
+msgid "Hold Hill\\n"
+msgstr "Halte Hügel\\n"
+
+msgctxt "L_MISC_212"
+msgid "Get Case\\n"
+msgstr "Erl. Koffer\\n"
+
+msgctxt "L_MISC_213"
+msgid "Pop Cap\\n"
+msgstr "Pop Cap\\n"
+
+msgctxt "L_MISC_214"
+msgid "Protect\\n"
+msgstr "Beschütze\\n"
+
+msgctxt "L_MISC_215"
+msgid "All Simulants\\n"
+msgstr "Alle Simulanten\\n"
+
+msgctxt "L_MISC_216"
+msgid "MODEL 1.3"
+msgstr "MODEL 1.3"
+
+msgctxt "L_MISC_217"
+msgid "BNC: 15877"
+msgstr "BNC: 15877"
+
+msgctxt "L_MISC_218"
+msgid "Not enough room to launch "
+msgstr "Nicht genügend Platz für den "
+
+msgctxt "L_MISC_417"
+msgid "GOAL TARGETS:"
+msgstr "ZIELE:"
+
+msgctxt "L_MISC_418"
+msgid "GOAL SCORE:"
+msgstr "SCORE:"
+
+msgctxt "L_MISC_419"
+msgid "MIN ACCURACY:"
+msgstr "MIN GENAUIGKEIT:"
+
+msgctxt "L_MISC_420"
+msgid "FIRE TO START\\n"
+msgstr "FEUER, UM LOSZULEGEN\\n"
+
+msgctxt "L_MISC_421"
+msgid "GET READY!\\n"
+msgstr "FERTIG!\\n"
+
+msgctxt "L_MISC_422"
+msgid "LIMIT:"
+msgstr "LIMIT:"
+
+msgctxt "L_MISC_423"
+msgid "ZONE 3\\n"
+msgstr "ZONE 3\\n"
+
+msgctxt "L_MISC_424"
+msgid "ZONE 2\\n"
+msgstr "ZONE 2\\n"
+
+msgctxt "L_MISC_425"
+msgid "ZONE 1\\n"
+msgstr "ZONE 1\\n"
+
+msgctxt "L_MISC_426"
+msgid "BULL'S-EYE\\n"
+msgstr "BULL'S-EYE\\n"
+
+msgctxt "L_MISC_427"
+msgid "EXPLODED\\n"
+msgstr "EXPLODIERT\\n"
+
+msgctxt "L_MISC_428"
+msgid "Elvis is dead.\\n"
+msgstr "Elvis wurde eliminiert.\\n"
+
+msgctxt "L_MISC_429"
+msgid "Style 1"
+msgstr "Style 1"
+
+msgctxt "L_MISC_430"
+msgid "Style 2"
+msgstr "Style 2"
+
+msgctxt "L_MISC_431"
+msgid "Style 3"
+msgstr "Style 3"
+
+msgctxt "L_MISC_432"
+msgid "Style 4"
+msgstr "Style 4"
+
+msgctxt "L_MISC_433"
+msgid "Blonde"
+msgstr "Blonde"
+
+msgctxt "L_MISC_434"
+msgid "Black"
+msgstr "Black"
+
+msgctxt "L_MISC_435"
+msgid "Auburn"
+msgstr "Auburn"
+
+msgctxt "L_MISC_436"
+msgid "Blue Rinse"
+msgstr "Blue Rinse"
+
+msgctxt "L_MISC_437"
+msgid "Player"
+msgstr "Spieler"
+
+msgctxt "L_MISC_438"
+msgid ""
+msgstr ""
+
+msgctxt "L_MISC_439"
+msgid "Identify\\n"
+msgstr "Identifizieren\\n"
+
+msgctxt "L_MISC_440"
+msgid "unused"
+msgstr "nicht verwendet"
+
+msgctxt "L_MISC_441"
+msgid "Challenges\\n"
+msgstr "Challenges\\n"
+
+msgctxt "L_MISC_442"
+msgid "Load/Preset Games\\n"
+msgstr "Laden/Voreinstellung\\n"
+
+msgctxt "L_MISC_443"
+msgid "Quick Start\\n"
+msgstr "Schnellstart\\n"
+
+msgctxt "L_MISC_444"
+msgid "Advanced Setup\\n"
+msgstr "Erweitertes Setup\\n"
+
+msgctxt "L_MISC_445"
+msgid "Combat Simulator\\n"
+msgstr "Kampf-Simulator\\n"
+
+msgctxt "L_MISC_446"
+msgid "Carrington Institute\\n"
+msgstr "Carrington Institut\\n"
+
+msgctxt "L_MISC_447"
+msgid "Team Score\\n"
+msgstr "Team-Score\\n"
+
+msgctxt "L_MISC_448"
+msgid "Finished Setup\\n"
+msgstr "Setup abgeschlossen\\n"
+
+msgctxt "L_MISC_449"
+msgid "Player 1 Team\\n"
+msgstr "Spieler 1 Team\\n"
+
+msgctxt "L_MISC_450"
+msgid "Player 2 Team\\n"
+msgstr "Spieler 2 Team\\n"
+
+msgctxt "L_MISC_451"
+msgid "Player 3 Team\\n"
+msgstr "Spieler 3 Team\\n"
+
+msgctxt "L_MISC_452"
+msgid "Player 4 Team\\n"
+msgstr "Spieler 4 Team\\n"
+
+msgctxt "L_MISC_453"
+msgid "Number Of Simulants\\n"
+msgstr "Anzahl der Simulanten\\n"
+
+msgctxt "L_MISC_454"
+msgid "Simulants Per Team\\n"
+msgstr "Simulanten pro Team\\n"
+
+msgctxt "L_MISC_455"
+msgid "Simulant Difficulty\\n"
+msgstr "Sim-Schwierigkeit\\n"
+
+msgctxt "L_MISC_456"
+msgid "Start Game\\n"
+msgstr "Start\\n"
+
+msgctxt "L_MISC_457"
+msgid "Drop Out\\n"
+msgstr "Abbrechen\\n"
+
+msgctxt "L_MISC_458"
+msgid "Player Settings\\n"
+msgstr "Spieler-Einstellungen\\n"
+
+msgctxt "L_MISC_459"
+msgid "Game Settings\\n"
+msgstr "Spiel-Einstellungen\\n"
+
+msgctxt "L_MISC_460"
+msgid "Quick Go\\n"
+msgstr "Quick Go\\n"
+
+msgctxt "L_MISC_461"
+msgid "Ready!\\n"
+msgstr "Fertig!\\n"
+
+msgctxt "L_MISC_462"
+msgid "Quick Team\\n"
+msgstr "Quick-Team\\n"
+
+msgctxt "L_MISC_463"
+msgid "Players Only\\n"
+msgstr "Nur Spieler\\n"
+
+msgctxt "L_MISC_464"
+msgid "Players and Simulants\\n"
+msgstr "Spieler und Simulanten\\n"
+
+msgctxt "L_MISC_465"
+msgid "Player Teams\\n"
+msgstr "Spieler-Teams\\n"
+
+msgctxt "L_MISC_466"
+msgid "Players vs. Simulants\\n"
+msgstr "Spieler vs. Simulanten\\n"
+
+msgctxt "L_MISC_467"
+msgid "Player-Simulant Teams\\n"
+msgstr "Spieler-Simulanten-Teams\\n"
+
+msgctxt "L_MISC_468"
+msgid "DRUGSPY"
+msgstr "DRUGSPY"
+
+msgctxt "L_MISC_469"
+msgid "BOMBSPY"
+msgstr "BOMBSPY"
+
+msgctxt "L_MISC_470"
+msgid "Replay Previous Mission\\n"
+msgstr "Mission wiederholen\\n"
+
+msgctxt "L_MISC_471"
+msgid "Holograph\\n"
+msgstr "Holografie\\n"
+
+msgctxt "L_MISC_472"
+msgid "Aggressive\\n"
+msgstr "Aggressiv\\n"
+
+msgctxt "L_MISC_473"
+msgid "Passive\\n"
+msgstr "Passiv\\n"
+
+msgctxt "L_MISC_474"
+msgid "Perfect Buddies\\n"
+msgstr "Perfekte Kumpels\\n"
+
+msgctxt "L_MISC_475"
+msgid "Stealth\\n"
+msgstr "Tarnung\\n"
