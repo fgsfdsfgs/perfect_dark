@@ -25,8 +25,16 @@ PAL_SOURCE_FILE_LOCATION = "src/assets/pal-final/lang"
 US_SOURCE_FILE_LOCATION = "src/assets/ntsc-final/lang"
 JPN_SOURCE_FILE_LOCATION = "src/assets/jpn-final/lang"
 
-L10N_BASE_LOCATION = "src/assets/l10n"
+L10N_BASE_LOCATION = "src/assets/i18n/locale"
 
+poMeta = {
+    'Project-Id-Version': 'Perfect Dark PC port localization',
+    'POT-Creation-Date': f'{datetime.now(timezone.utc)}',
+    'MIME-Version': '1.0',
+    'Content-Type': 'text/plain; charset=utf-8',
+    'Content-Transfer-Encoding': '8bit',
+    'X-Generator' : 'originalAssets_to_l10n.py script'
+}
 
 
 def main():
@@ -34,6 +42,8 @@ def main():
 
         with open(jsonFile, "r") as langFile:
             langData = json.load(langFile)
+            if len(langData) == 0:
+                continue
             us_langData = None
             jp_langData = None
 
@@ -47,18 +57,25 @@ def main():
                 jp_langData = json.load(jpLang)
 
             us_messages = polib.POFile()
+            us_messages.metadata = poMeta
 
             gb_messages = polib.POFile()
+            gb_messages.metadata = poMeta
 
             jp_messages = polib.POFile()
+            jp_messages.metadata = poMeta
 
             it_messages = polib.POFile()
+            it_messages.metadata = poMeta
 
             fr_messages = polib.POFile()
+            fr_messages.metadata = poMeta
 
             de_messages = polib.POFile()
+            de_messages.metadata = poMeta
 
             es_messages = polib.POFile()
+            es_messages.metadata = poMeta
 
             for item in langData:
 
@@ -130,111 +147,21 @@ def main():
                     msg.msgstr = polib.escape(item["es"])
                     es_messages.append(msg)
 
-            os.makedirs(PurePath(L10N_BASE_LOCATION,"en_US", textdomain), exist_ok=True)
-            os.makedirs(PurePath(L10N_BASE_LOCATION,"en_GB", textdomain), exist_ok=True)
-            os.makedirs(PurePath(L10N_BASE_LOCATION,"ja_JP", textdomain), exist_ok=True)
-            os.makedirs(PurePath(L10N_BASE_LOCATION,"it_IT", textdomain), exist_ok=True)
-            os.makedirs(PurePath(L10N_BASE_LOCATION,"fr_FR", textdomain), exist_ok=True)
-            os.makedirs(PurePath(L10N_BASE_LOCATION,"de_DE", textdomain), exist_ok=True)
-            os.makedirs(PurePath(L10N_BASE_LOCATION,"es_ES", textdomain), exist_ok=True)
+            os.makedirs(PurePath(L10N_BASE_LOCATION,"en_US"), exist_ok=True)
+            os.makedirs(PurePath(L10N_BASE_LOCATION,"en_GB"), exist_ok=True)
+            os.makedirs(PurePath(L10N_BASE_LOCATION,"ja_JP"), exist_ok=True)
+            os.makedirs(PurePath(L10N_BASE_LOCATION,"it_IT"), exist_ok=True)
+            os.makedirs(PurePath(L10N_BASE_LOCATION,"fr_FR"), exist_ok=True)
+            os.makedirs(PurePath(L10N_BASE_LOCATION,"de_DE"), exist_ok=True)
+            os.makedirs(PurePath(L10N_BASE_LOCATION,"es_ES"), exist_ok=True)
 
-            us_messages.save(PurePath(L10N_BASE_LOCATION,"en_US", textdomain, f"{textdomain}.po"))
-            gb_messages.save(PurePath(L10N_BASE_LOCATION,"en_GB", textdomain, f"{textdomain}.po"))
-            jp_messages.save(PurePath(L10N_BASE_LOCATION,"ja_JP", textdomain, f"{textdomain}.po"))
-            it_messages.save(PurePath(L10N_BASE_LOCATION,"it_IT", textdomain, f"{textdomain}.po"))
-            fr_messages.save(PurePath(L10N_BASE_LOCATION,"fr_FR", textdomain, f"{textdomain}.po"))
-            de_messages.save(PurePath(L10N_BASE_LOCATION,"de_DE", textdomain, f"{textdomain}.po"))
-            es_messages.save(PurePath(L10N_BASE_LOCATION,"es_ES", textdomain, f"{textdomain}.po"))
-
-            # I don't know why but polib append empty string when saving the file
-            # The entry doesn't even exists in xx_messages object
-            # so we will remove the 3 first lines
-            # I will also remove empty file here
-            
-            # en-US
-            lines = []
-            path = PurePath(L10N_BASE_LOCATION,"en_US", textdomain, f"{textdomain}.po")
-            with open(path, "r") as f:
-                lines = f.readlines()
-            with open(path, "w") as f:
-                for n, line in enumerate(lines):
-                    if n > 2:
-                        f.write(line)
-            if os.stat(path).st_size == 0:
-                os.remove(path)
-
-            # en-GB
-            lines = []
-            path = PurePath(L10N_BASE_LOCATION,"en_GB", textdomain, f"{textdomain}.po")
-            with open(path, "r") as f:
-                lines = f.readlines()
-            with open(path, "w") as f:
-                for n, line in enumerate(lines):
-                    if n > 2:
-                        f.write(line)
-            if os.stat(path).st_size == 0:
-                os.remove(path)
-            
-            # ja-JP
-            lines = []
-            path = PurePath(L10N_BASE_LOCATION,"ja_JP", textdomain, f"{textdomain}.po")
-            with open(path, "r") as f:
-                lines = f.readlines()
-            with open(path, "w") as f:
-                for n, line in enumerate(lines):
-                    if n > 2:
-                        f.write(line)
-            if os.stat(path).st_size == 0:
-                os.remove(path)
-            
-            # it-IT
-            lines = []
-            path = PurePath(L10N_BASE_LOCATION,"it_IT", textdomain, f"{textdomain}.po")
-            with open(path, "r") as f:
-                lines = f.readlines()
-            with open(path, "w") as f:
-                for n, line in enumerate(lines):
-                    if n > 2:
-                        f.write(line)
-            if os.stat(path).st_size == 0:
-                os.remove(path)
-            
-            # fr-FR
-            lines = []
-            path = PurePath(L10N_BASE_LOCATION,"fr_FR", textdomain, f"{textdomain}.po")
-            with open(path, "r") as f:
-                lines = f.readlines()
-            with open(path, "w") as f:
-                for n, line in enumerate(lines):
-                    if n > 2:
-                        f.write(line)
-            if os.stat(path).st_size == 0:
-                os.remove(path)
-            
-            # de-DE
-            lines = []
-            path = PurePath(L10N_BASE_LOCATION,"de_DE", textdomain, f"{textdomain}.po")
-            with open(path, "r") as f:
-                lines = f.readlines()
-            with open(path, "w") as f:
-                for n, line in enumerate(lines):
-                    if n > 2:
-                        f.write(line)
-            if os.stat(path).st_size == 0:
-                os.remove(path)
-            
-            # es-ES
-            lines = []
-            path = PurePath(L10N_BASE_LOCATION,"es_ES", textdomain, f"{textdomain}.po")
-            with open(path, "r") as f:
-                lines = f.readlines()
-            with open(path, "w") as f:
-                for n, line in enumerate(lines):
-                    if n > 2:
-                        f.write(line)
-            if os.stat(path).st_size == 0:
-                os.remove(path)
-
+            #us_messages.save(PurePath(L10N_BASE_LOCATION,"en_US", f"{textdomain}.po"))
+            #gb_messages.save(PurePath(L10N_BASE_LOCATION,"en_GB", f"{textdomain}.po"))
+            #jp_messages.save(PurePath(L10N_BASE_LOCATION,"ja_JP", f"{textdomain}.po"))
+            #it_messages.save(PurePath(L10N_BASE_LOCATION,"it_IT", f"{textdomain}.po"))
+            #fr_messages.save(PurePath(L10N_BASE_LOCATION,"fr_FR", f"{textdomain}.po"))
+            #de_messages.save(PurePath(L10N_BASE_LOCATION,"de_DE", f"{textdomain}.po"))
+            #es_messages.save(PurePath(L10N_BASE_LOCATION,"es_ES", f"{textdomain}.po"))
 
 
 if __name__ == "__main__":

@@ -1,0 +1,1062 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Perfect Dark PC port localization\n"
+"POT-Creation-Date: 2025-05-30 14:19:36.854417+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: originalAssets_to_l10n.py script\n"
+
+msgctxt "L_MPWEAPONS_000"
+msgid "%shas the\\n%s"
+msgstr "%s は\\nデ-タリンカを\\n手に入れた\\n"
+
+msgctxt "L_MPWEAPONS_002"
+msgid "%shas our\\n%s"
+msgstr "%s は\\n我々の\\nアタッシュを\\n手に入れた\\n"
+
+msgctxt "L_MPWEAPONS_003"
+msgid "Got the %s%s"
+msgstr "%s の\\nアタッシュを\\n手に入れた\\n"
+
+msgctxt "L_MPWEAPONS_004"
+msgid "You captured\\nthe %s%s"
+msgstr "%s の\\nアタッシュで\\n３ポイント！\\n"
+
+msgctxt "L_MPWEAPONS_005"
+msgid "%scaptured our\\n%s"
+msgstr "%s は\\n我々の\\nアタッシュで\\n３ポイント！\\n"
+
+msgctxt "L_MPWEAPONS_006"
+msgid "%scaptured\\nthe %s%s"
+msgstr "%s は\\n%s の\\nアタッシュで\\n３ポイント！\\n"
+
+msgctxt "L_MPWEAPONS_007"
+msgid "Have a point for living!\\n"
+msgstr "生存ポイント！\\n"
+
+msgctxt "L_MPWEAPONS_008"
+msgid "You're supposed to look\\n"
+msgstr "味方のオニを\\n"
+
+msgctxt "L_MPWEAPONS_009"
+msgid "after your friends!\\n"
+msgstr "倒してしまった！\\n"
+
+msgctxt "L_MPWEAPONS_010"
+msgid "Well done!\\n"
+msgstr "ヨシ！\\n"
+
+msgctxt "L_MPWEAPONS_011"
+msgid "You popped a cap!\\n"
+msgstr "オニを倒した！\\n"
+
+msgctxt "L_MPWEAPONS_012"
+msgid "Have 2 Points...\\n"
+msgstr "２ポイント獲得\\n"
+
+msgctxt "L_MPWEAPONS_013"
+msgid "You are the victim!\\n"
+msgstr "あなたがオニ\\n"
+
+msgctxt "L_MPWEAPONS_014"
+msgid "Protect %s!\\n"
+msgstr "%s\\nを守れ！\\n"
+
+msgctxt "L_MPWEAPONS_015"
+msgid "Get %s!\\n"
+msgstr "%s\\nを倒せ！\\n"
+
+msgctxt "L_MPWEAPONS_016"
+msgid "Download successful.\\n"
+msgstr "ハッキング成功\\n"
+
+msgctxt "L_MPWEAPONS_017"
+msgid "Connection broken.\\n"
+msgstr "接続が途切れました\\n"
+
+msgctxt "L_MPWEAPONS_018"
+msgid "Starting download.\\n"
+msgstr "ハッキング開始\\n"
+
+msgctxt "L_MPWEAPONS_019"
+msgid "You need to use the Data Uplink.\\n"
+msgstr "データリンカが必要\\n"
+
+msgctxt "L_MPWEAPONS_020"
+msgid "King of\\nthe Hill!\\n"
+msgstr "陣取り完了！\\n"
+
+msgctxt "L_MPWEAPONS_021"
+msgid "We have\\nthe Hill!\\n"
+msgstr "陣取り開始！\\n"
+
+msgctxt "L_MPWEAPONS_022"
+msgid "%shas captured\\nthe Hill!\\n"
+msgstr "%s が\\n陣取り開始！\\n"
+
+msgctxt "L_MPWEAPONS_023"
+msgid "%ds/Point\\n"
+msgstr "%d秒１点\\n"
+
+msgctxt "L_MPWEAPONS_024"
+msgid "1 Point!\\n"
+msgstr "１ポイント！\\n"
+
+msgctxt "L_MPWEAPONS_025"
+msgid "No Shield\\n"
+msgstr "シールド無し\\n"
+
+msgctxt "L_MPWEAPONS_026"
+msgid "Automatics\\n"
+msgstr "オートマチック\\n"
+
+msgctxt "L_MPWEAPONS_027"
+msgid "Rocket Launcher\\n"
+msgstr "ロケットランチャ\\n"
+
+msgctxt "L_MPWEAPONS_028"
+msgid "Simulants\\n"
+msgstr "シミュラント\\n"
+
+msgctxt "L_MPWEAPONS_029"
+msgid "King of the Hill\\n"
+msgstr "陣取り\\n"
+
+msgctxt "L_MPWEAPONS_030"
+msgid "Complex FarSight\\n"
+msgstr "遺跡　ファーサイト\\n"
+
+msgctxt "L_MPWEAPONS_031"
+msgid "Hold the Briefcase\\n"
+msgstr "アタッシュケース１\\n"
+
+msgctxt "L_MPWEAPONS_032"
+msgid "Pistol One-Hit Kills\\n"
+msgstr "ピストル　一撃必殺\\n"
+
+msgctxt "L_MPWEAPONS_033"
+msgid "Capture the Case\\n"
+msgstr "アタッシュケース２\\n"
+
+msgctxt "L_MPWEAPONS_034"
+msgid "Cloaking\\n"
+msgstr "スパイクローク\\n"
+
+msgctxt "L_MPWEAPONS_035"
+msgid "Temple Explosives\\n"
+msgstr "寺院　爆発系\\n"
+
+msgctxt "L_MPWEAPONS_036"
+msgid "Slayer\\n"
+msgstr "スレイヤー\\n"
+
+msgctxt "L_MPWEAPONS_037"
+msgid "Tranquilizer\\n"
+msgstr "トランキライザ\\n"
+
+msgctxt "L_MPWEAPONS_038"
+msgid "Slow Motion\\n"
+msgstr "スローモーション\\n"
+
+msgctxt "L_MPWEAPONS_039"
+msgid "Press START\\n"
+msgstr "スタートボタン\\n"
+
+msgctxt "L_MPWEAPONS_040"
+msgid "Paused\\n"
+msgstr "ポーズ中\\n"
+
+msgctxt "L_MPWEAPONS_041"
+msgid "Custom\\n"
+msgstr "カスタム\\n"
+
+msgctxt "L_MPWEAPONS_042"
+msgid "Random\\n"
+msgstr "ランダム\\n"
+
+msgctxt "L_MPWEAPONS_043"
+msgid "Random Five\\n"
+msgstr "ランダム５\\n"
+
+msgctxt "L_MPWEAPONS_044"
+msgid "Close Combat\\n"
+msgstr "接近戦\\n"
+
+msgctxt "L_MPWEAPONS_045"
+msgid "Proximity Mine\\n"
+msgstr "センサー爆弾\\n"
+
+msgctxt "L_MPWEAPONS_046"
+msgid "Rocket Launcher\\n"
+msgstr "Ｒランチャ\\n"
+
+msgctxt "L_MPWEAPONS_047"
+msgid "Grenade Launcher\\n"
+msgstr "Ｇランチャ\\n"
+
+msgctxt "L_MPWEAPONS_048"
+msgid "Explosive\\n"
+msgstr "爆発系\\n"
+
+msgctxt "L_MPWEAPONS_049"
+msgid "Golden Magnum\\n"
+msgstr "黄金銃\\n"
+
+msgctxt "L_MPWEAPONS_050"
+msgid "Heavy\\n"
+msgstr "ヘビー系\\n"
+
+msgctxt "L_MPWEAPONS_051"
+msgid "Tranquilizer\\n"
+msgstr "鎮静剤\\n"
+
+msgctxt "L_MPWEAPONS_052"
+msgid "FarSight\\n"
+msgstr "ファーサイト\\n"
+
+msgctxt "L_MPWEAPONS_053"
+msgid "Power\\n"
+msgstr "パワー系\\n"
+
+msgctxt "L_MPWEAPONS_054"
+msgid "Automatics\\n"
+msgstr "機関銃系\\n"
+
+msgctxt "L_MPWEAPONS_055"
+msgid "Pistols\\n"
+msgstr "ピストル系\\n"
+
+msgctxt "L_MPWEAPONS_056"
+msgid "Test\\n"
+msgstr "テスト\\n"
+
+msgctxt "L_MPWEAPONS_057"
+msgid "4mb Test\\n"
+msgstr "４Ｍテスト\\n"
+
+msgctxt "L_MPWEAPONS_058"
+msgid "Nothing\\n"
+msgstr "無し\\n"
+
+msgctxt "L_MPWEAPONS_059"
+msgid "Shield\\n"
+msgstr "シールド\\n"
+
+msgctxt "L_MPWEAPONS_060"
+msgid "Disabled\\n"
+msgstr "無効\\n"
+
+msgctxt "L_MPWEAPONS_061"
+msgid "Objectives Complete\\n"
+msgstr "任務完了\\n"
+
+msgctxt "L_MPWEAPONS_062"
+msgid "Unknown\\n"
+msgstr "不明\\n"
+
+msgctxt "L_MPWEAPONS_063"
+msgid "Missing\\n"
+msgstr "行方不明\\n"
+
+msgctxt "L_MPWEAPONS_064"
+msgid "Damaged Controller Pak\\n"
+msgstr "パック不良\\n"
+
+msgctxt "L_MPWEAPONS_065"
+msgid "is damaged or\\n"
+msgstr "は壊れているか正しく\\n"
+
+msgctxt "L_MPWEAPONS_066"
+msgid "inserted incorrectly.\\n"
+msgstr "接続されていません\\n"
+
+msgctxt "L_MPWEAPONS_067"
+msgid "Attempt Repair\\n"
+msgstr "修復を試みる\\n"
+
+msgctxt "L_MPWEAPONS_068"
+msgid "Retry\\n"
+msgstr "もう一度\\n"
+
+msgctxt "L_MPWEAPONS_069"
+msgid "Continue without using\\nthe Controller Pak\\n"
+msgstr "コントローラパックを\\n使わずに続ける\\n"
+
+msgctxt "L_MPWEAPONS_070"
+msgid "Full Controller Pak\\n"
+msgstr "パックフル\\n"
+
+msgctxt "L_MPWEAPONS_071"
+msgid "is too full to save\\nnote - 1 note and 28\\npages required to save.\\n"
+msgstr "は、いっぱいです。\\nセーブするには\\n１ノート・２８ページ\\nが必要です。\\n"
+
+msgctxt "L_MPWEAPONS_072"
+msgid ""
+"Enter the Controller\\nPak Menu to free some\\nspace (hold START\\nwhile "
+"powering up.)\\n"
+msgstr ""
+
+msgctxt "L_MPWEAPONS_073"
+msgid "OK\\n"
+msgstr "ＯＫ\\n"
+
+msgctxt "L_MPWEAPONS_074"
+msgid "----------\\n"
+msgstr "－－－－－－－－\\n"
+
+msgctxt "L_MPWEAPONS_075"
+msgid "Hurricane Fists\\n"
+msgstr "高速パンチ\\n"
+
+msgctxt "L_MPWEAPONS_076"
+msgid "Cloaking Device\\n"
+msgstr "スパイクローク\\n"
+
+msgctxt "L_MPWEAPONS_077"
+msgid "Invincible\\n"
+msgstr "無敵モード\\n"
+
+msgctxt "L_MPWEAPONS_078"
+msgid "All Guns in Solo\\n"
+msgstr "オール武器（ソロ）\\n"
+
+msgctxt "L_MPWEAPONS_079"
+msgid "Unlimited Ammo\\n"
+msgstr "弾無制限\\n"
+
+msgctxt "L_MPWEAPONS_080"
+msgid "Unlimited Ammo, No Reloads\\n"
+msgstr "弾無制限　リロード不要\\n"
+
+msgctxt "L_MPWEAPONS_081"
+msgid "Slo-mo Single Player\\n"
+msgstr "スローモーション（ソロ）\\n"
+
+msgctxt "L_MPWEAPONS_082"
+msgid "DK Mode\\n"
+msgstr "ＤＫモード\\n"
+
+msgctxt "L_MPWEAPONS_083"
+msgid "Trent's Magnum\\n"
+msgstr "トレントのマグナム銃\\n"
+
+msgctxt "L_MPWEAPONS_084"
+msgid "FarSight\\n"
+msgstr "ファーサイト\\n"
+
+msgctxt "L_MPWEAPONS_085"
+msgid "Small Jo\\n"
+msgstr "タイニージョアンナ\\n"
+
+msgctxt "L_MPWEAPONS_086"
+msgid "Small Characters\\n"
+msgstr "敵スモール\\n"
+
+msgctxt "L_MPWEAPONS_087"
+msgid "Enemy Shields\\n"
+msgstr "シールド装備（敵）\\n"
+
+msgctxt "L_MPWEAPONS_088"
+msgid "Jo Shield\\n"
+msgstr "シールド装備\\n"
+
+msgctxt "L_MPWEAPONS_089"
+msgid "Super Shield\\n"
+msgstr "スーパーシールド\\n"
+
+msgctxt "L_MPWEAPONS_090"
+msgid "Classic Sight\\n"
+msgstr "クラシック照準\\n"
+
+msgctxt "L_MPWEAPONS_091"
+msgid "Team Heads Only\\n"
+msgstr "開発スタッフのみ\\n"
+
+msgctxt "L_MPWEAPONS_092"
+msgid "Play as Elvis\\n"
+msgstr "エルビスでプレイ\\n"
+
+msgctxt "L_MPWEAPONS_093"
+msgid "Enemy Rockets\\n"
+msgstr "全敵Ｒランチャ\\n"
+
+msgctxt "L_MPWEAPONS_094"
+msgid "Unlimited Ammo - Laptop Sentry Gun\\n"
+msgstr "ラップトップ自動機銃　弾無制限\\n"
+
+msgctxt "L_MPWEAPONS_095"
+msgid "Marquis of Queensbury Rules\\n"
+msgstr "全敵素手\\n"
+
+msgctxt "L_MPWEAPONS_096"
+msgid "Perfect Darkness\\n"
+msgstr "暗闇モード\\n"
+
+msgctxt "L_MPWEAPONS_097"
+msgid "Pugilist\\n"
+msgstr "ボクサー\\n"
+
+msgctxt "L_MPWEAPONS_098"
+msgid "Hotshot\\n"
+msgstr "ホットショット\\n"
+
+msgctxt "L_MPWEAPONS_099"
+msgid "Hit and Run\\n"
+msgstr "ヒット＆ラン\\n"
+
+msgctxt "L_MPWEAPONS_100"
+msgid "Alien\\n"
+msgstr "エイリアン\\n"
+
+msgctxt "L_MPWEAPONS_101"
+msgid "R-Tracker/Weapon Cache Locations\\n"
+msgstr "Ｒトラッカに秘密武器表示\\n"
+
+msgctxt "L_MPWEAPONS_102"
+msgid "Rocket Launcher\\n"
+msgstr "Ｒランチャ\\n"
+
+msgctxt "L_MPWEAPONS_103"
+msgid "Sniper Rifle\\n"
+msgstr "Ｓライフル\\n"
+
+msgctxt "L_MPWEAPONS_104"
+msgid "X-Ray Scanner\\n"
+msgstr "Ｘスキャン\\n"
+
+msgctxt "L_MPWEAPONS_105"
+msgid "SuperDragon\\n"
+msgstr "Ｓドラゴン\\n"
+
+msgctxt "L_MPWEAPONS_106"
+msgid "Laptop Gun\\n"
+msgstr "ラップトップガン\\n"
+
+msgctxt "L_MPWEAPONS_107"
+msgid "Phoenix\\n"
+msgstr "フェニクス\\n"
+
+msgctxt "L_MPWEAPONS_108"
+msgid "Psychosis Gun\\n"
+msgstr "サイキックガン\\n"
+
+msgctxt "L_MPWEAPONS_109"
+msgid "PP9i\\n"
+msgstr "PP9i\\n"
+
+msgctxt "L_MPWEAPONS_110"
+msgid "CC13\\n"
+msgstr "CC13\\n"
+
+msgctxt "L_MPWEAPONS_111"
+msgid "KL01313\\n"
+msgstr "KL01313\\n"
+
+msgctxt "L_MPWEAPONS_112"
+msgid "KF7 Special\\n"
+msgstr "KF7 Special\\n"
+
+msgctxt "L_MPWEAPONS_113"
+msgid "ZZT (9mm)\\n"
+msgstr "ZZT (9mm)\\n"
+
+msgctxt "L_MPWEAPONS_114"
+msgid "DMC\\n"
+msgstr "DMC\\n"
+
+msgctxt "L_MPWEAPONS_115"
+msgid "AR53\\n"
+msgstr "AR53\\n"
+
+msgctxt "L_MPWEAPONS_116"
+msgid "RC-P45\\n"
+msgstr "RC-P45\\n"
+
+msgctxt "L_MPWEAPONS_117"
+msgid "Velvet Dark\\n"
+msgstr "ベルベット・ダーク\\n"
+
+msgctxt "L_MPWEAPONS_118"
+msgid "Fun\\n"
+msgstr "おたのしみ\\n"
+
+msgctxt "L_MPWEAPONS_119"
+msgid "Gameplay\\n"
+msgstr "ゲームプレイ\\n"
+
+msgctxt "L_MPWEAPONS_120"
+msgid "Weapons\\n"
+msgstr "ウェポン\\n"
+
+msgctxt "L_MPWEAPONS_121"
+msgid "Buddies\\n"
+msgstr "チームメイト\\n"
+
+msgctxt "L_MPWEAPONS_122"
+msgid "Weapons for Jo in Solo\\n"
+msgstr "ジョアンナ用の武器（ソロ）\\n"
+
+msgctxt "L_MPWEAPONS_123"
+msgid "Classic Weapons for Jo in Solo\\n"
+msgstr "クラシックウェポン（ソロ）\\n"
+
+msgctxt "L_MPWEAPONS_124"
+msgid "dataDyne Defection"
+msgstr "データダイン本社＜始動＞"
+
+msgctxt "L_MPWEAPONS_125"
+msgid "dataDyne Extraction"
+msgstr "データダイン本社＜保護＞"
+
+msgctxt "L_MPWEAPONS_126"
+msgid "A51 Infiltration"
+msgstr "エリア５１＜突破＞"
+
+msgctxt "L_MPWEAPONS_127"
+msgid "A51 Rescue"
+msgstr "エリア５１＜救出＞"
+
+msgctxt "L_MPWEAPONS_128"
+msgid "A51 Escape"
+msgstr "エリア５１＜脱出＞"
+
+msgctxt "L_MPWEAPONS_129"
+msgid "Difficulty:\\n"
+msgstr "難易度：\\n"
+
+msgctxt "L_MPWEAPONS_130"
+msgid "Cheat Solo Missions\\n"
+msgstr "（チート）ソロ・ミッション\\n"
+
+msgctxt "L_MPWEAPONS_131"
+msgid "Cheat Combat Simulator\\n"
+msgstr "（チート）コンバットシミュレータ\\n"
+
+msgctxt "L_MPWEAPONS_132"
+msgid "Cheat Co-Operative\\n"
+msgstr "（チート）協力ミッション\\n"
+
+msgctxt "L_MPWEAPONS_133"
+msgid "Cheat Counter-Operative\\n"
+msgstr "（チート）敵対ミッション\\n"
+
+msgctxt "L_MPWEAPONS_134"
+msgid "Dishonored\\n"
+msgstr "プライドなし\\n"
+
+msgctxt "L_MPWEAPONS_135"
+msgid "Cheated\\n"
+msgstr "チート使用\\n"
+
+msgctxt "L_MPWEAPONS_136"
+msgid "Cheat available"
+msgstr "利用可能："
+
+msgctxt "L_MPWEAPONS_137"
+msgid "Complete"
+msgstr "ステージ："
+
+msgctxt "L_MPWEAPONS_138"
+msgid "for cheat:"
+msgstr "をクリアすれば："
+
+msgctxt "L_MPWEAPONS_139"
+msgid "on"
+msgstr "難易度："
+
+msgctxt "L_MPWEAPONS_140"
+msgid "in under"
+msgstr "制限時間："
+
+msgctxt "L_MPWEAPONS_141"
+msgid ""
+" or insert Game Boy (r) Perfect Dark into Transfer Pak (tm), connect "
+"Transfer Pak to any controller, then exit and enter menu"
+msgstr ""
+
+msgctxt "L_MPWEAPONS_142"
+msgid "Select cheat for information\\n"
+msgstr "情報をチェックしたいチートを選んで下さい。\\n"
+
+msgctxt "L_MPWEAPONS_143"
+msgid "Buddy Available"
+msgstr "利用可能協力者："
+
+msgctxt "L_MPWEAPONS_144"
+msgid "Win Golds on the firing range to enable classic guns.\\n"
+msgstr "射撃トレーニングでゴールドメダルをたくさんゲット。\\n"
+
+msgctxt "L_MPWEAPONS_145"
+msgid "Sight on Screen\\n"
+msgstr "照準情報の表示\\n"
+
+msgctxt "L_MPWEAPONS_146"
+msgid "Target\\n"
+msgstr "照準を常に表示\\n"
+
+msgctxt "L_MPWEAPONS_147"
+msgid "Zoom Range\\n"
+msgstr "ズーム範囲\\n"
+
+msgctxt "L_MPWEAPONS_148"
+msgid "Show Ammo\\n"
+msgstr "弾数の表示\\n"
+
+msgctxt "L_MPWEAPONS_149"
+msgid "Gun Function\\n"
+msgstr "武器モード表示\\n"
+
+msgctxt "L_MPWEAPONS_150"
+msgid "Paintball\\n"
+msgstr "ペイントボール\\n"
+
+msgctxt "L_MPWEAPONS_151"
+msgid "Subtitles\\n"
+msgstr "字幕の表示\\n"
+
+msgctxt "L_MPWEAPONS_152"
+msgid "Mission Time\\n"
+msgstr "ミッションタイム\\n"
+
+msgctxt "L_MPWEAPONS_153"
+msgid "Mode\\n"
+msgstr "モード\\n"
+
+msgctxt "L_MPWEAPONS_154"
+msgid "Split\\n"
+msgstr "画面分割\\n"
+
+msgctxt "L_MPWEAPONS_155"
+msgid "Do you want to abort\\nthe mission?\\n"
+msgstr "任務を放棄\\nしますか？\\n"
+
+msgctxt "L_MPWEAPONS_156"
+msgid "Joanna Leather\\n"
+msgstr "ＪＤレザースーツ\\n"
+
+msgctxt "L_MPWEAPONS_157"
+msgid "Joanna Negotiator\\n"
+msgstr "ＪＤオフィス\\n"
+
+msgctxt "L_MPWEAPONS_158"
+msgid "Elvis (Waistcoat)\\n"
+msgstr "エルビス　チョッキ\\n"
+
+msgctxt "L_MPWEAPONS_159"
+msgid "Error\\n"
+msgstr "エラー\\n"
+
+msgctxt "L_MPWEAPONS_160"
+msgid "Cannot delete file as\\nit is being used.\\n"
+msgstr "このファイルは使用中\\nなので消去出来ません\\n"
+
+msgctxt "L_MPWEAPONS_161"
+msgid "Cancel\\n"
+msgstr "キャンセル\\n"
+
+msgctxt "L_MPWEAPONS_162"
+msgid "Time Limit:\\n"
+msgstr "制限時間：\\n"
+
+msgctxt "L_MPWEAPONS_163"
+msgid "Score Limit:\\n"
+msgstr "目標個人得点：\\n"
+
+msgctxt "L_MPWEAPONS_164"
+msgid "Team Score Limit:\\n"
+msgstr "目標合計得点：\\n"
+
+msgctxt "L_MPWEAPONS_165"
+msgid "Challenge Completed!\\n"
+msgstr "チャレンジ　クリア！\\n"
+
+msgctxt "L_MPWEAPONS_166"
+msgid "Challenge Failed!\\n"
+msgstr "チャレンジ　失敗！\\n"
+
+msgctxt "L_MPWEAPONS_167"
+msgid "Challenge Cheated!\\n"
+msgstr "チャレンジ　チート使用！\\n"
+
+msgctxt "L_MPWEAPONS_168"
+msgid "Cutscene Subtitles\\n"
+msgstr "シネマの字幕\\n"
+
+msgctxt "L_MPWEAPONS_169"
+msgid "In-Game Subtitles\\n"
+msgstr "ゲーム中の字幕\\n"
+
+msgctxt "L_MPWEAPONS_170"
+msgid "Alternative Title Screen\\n"
+msgstr "タイトルスクリーンその２\\n"
+
+msgctxt "L_MPWEAPONS_171"
+msgid "Start Challenge\\n"
+msgstr "チャレンジスタート\\n"
+
+msgctxt "L_MPWEAPONS_172"
+msgid "dataDyne Investigation"
+msgstr "データダイン地下研究所"
+
+msgctxt "L_MPWEAPONS_173"
+msgid "Error\\n"
+msgstr "エラー\\n"
+
+msgctxt "L_MPWEAPONS_174"
+msgid "The Controller Pak\\nhas been removed.\\n"
+msgstr "元のコントローラ\\nパックがありません\\n"
+
+msgctxt "L_MPWEAPONS_175"
+msgid "Attempt Repair\\n"
+msgstr "修復を試みる\\n"
+
+msgctxt "L_MPWEAPONS_176"
+msgid "Are you sure you want\\nto attempt repair of\\nthis Controller Pak?\\n"
+msgstr "このコントローラ\\nパックを修復しても\\nよろしいですか？\\n"
+
+msgctxt "L_MPWEAPONS_177"
+msgid "Data may be lost!\\n"
+msgstr "データは失われます！\\n"
+
+msgctxt "L_MPWEAPONS_178"
+msgid "Cancel\\n"
+msgstr "キャンセル\\n"
+
+msgctxt "L_MPWEAPONS_179"
+msgid "Repair\\n"
+msgstr "修復する\\n"
+
+msgctxt "L_MPWEAPONS_180"
+msgid "Repair Successful\\n"
+msgstr "修復完了\\n"
+
+msgctxt "L_MPWEAPONS_181"
+msgid "The Controller Pak has\\nbeen repaired.\\n"
+msgstr "コントローラパックは\\n修復されました\\n"
+
+msgctxt "L_MPWEAPONS_182"
+msgid "Repair Failed\\n"
+msgstr "修復失敗\\n"
+
+msgctxt "L_MPWEAPONS_183"
+msgid ""
+"The Controller Pak \\ncannot be repaired.\\nYou will not be able to\\nload "
+"from or save to\\nthis Controller Pak.\\n"
+msgstr "コントローラパックの\\n修復に失敗しました\\nこのコントローラ\\nパックは使えません\\n"
+
+msgctxt "L_MPWEAPONS_184"
+msgid "Player Handicaps\\n"
+msgstr "ハンディ\\n"
+
+msgctxt "L_MPWEAPONS_185"
+msgid "L/R BUTTONS: "
+msgstr "L/R: "
+
+msgctxt "L_MPWEAPONS_186"
+msgid "UP C BUTTON: "
+msgstr "C-UP: "
+
+msgctxt "L_MPWEAPONS_187"
+msgid "LEFT/RIGHT C BUTTONS: "
+msgstr "C-LEFT/RIGHT: "
+
+msgctxt "L_MPWEAPONS_188"
+msgid "DOWN C BUTTON: "
+msgstr "C-DOWN: "
+
+msgctxt "L_MPWEAPONS_189"
+msgid "A BUTTON: "
+msgstr "A: "
+
+msgctxt "L_MPWEAPONS_190"
+msgid "B BUTTON: "
+msgstr "B: "
+
+msgctxt "L_MPWEAPONS_191"
+msgid "CONTROL STICK: "
+msgstr "3D: "
+
+msgctxt "L_MPWEAPONS_192"
+msgid "Z BUTTON: "
+msgstr "Z: "
+
+msgctxt "L_MPWEAPONS_193"
+msgid "+ CONTROL PAD: "
+msgstr "+ PAD: "
+
+msgctxt "L_MPWEAPONS_194"
+msgid "AIM"
+msgstr "照準…ホールド"
+
+msgctxt "L_MPWEAPONS_195"
+msgid "AIM TOGGLE"
+msgstr "照準…切り替え"
+
+msgctxt "L_MPWEAPONS_196"
+msgid "LOOK UP"
+msgstr "見上げる"
+
+msgctxt "L_MPWEAPONS_197"
+msgid "LOOK DOWN"
+msgstr "見下ろす"
+
+msgctxt "L_MPWEAPONS_198"
+msgid "LOOK DOWN"
+msgstr "見下ろす"
+
+msgctxt "L_MPWEAPONS_199"
+msgid "LOOK UP"
+msgstr "見上げる"
+
+msgctxt "L_MPWEAPONS_200"
+msgid "FORWARDS"
+msgstr "前進"
+
+msgctxt "L_MPWEAPONS_201"
+msgid "BACKWARDS"
+msgstr "バック"
+
+msgctxt "L_MPWEAPONS_202"
+msgid "STRAFE"
+msgstr "サイドステップ"
+
+msgctxt "L_MPWEAPONS_203"
+msgid "WEAPON"
+msgstr "武器選択"
+
+msgctxt "L_MPWEAPONS_204"
+msgid "ACTION/RELOAD"
+msgstr "アクション／リロード"
+
+msgctxt "L_MPWEAPONS_205"
+msgid "FIRE"
+msgstr "撃つ"
+
+msgctxt "L_MPWEAPONS_206"
+msgid "WALK/TURN"
+msgstr "移動／ターン"
+
+msgctxt "L_MPWEAPONS_207"
+msgid "LOOK"
+msgstr "見回し"
+
+msgctxt "L_MPWEAPONS_208"
+msgid "WALK/STRAFE"
+msgstr "移動／サイドステップ"
+
+msgctxt "L_MPWEAPONS_209"
+msgid "LOOK/STRAFE"
+msgstr "見回し／サイドステップ"
+
+msgctxt "L_MPWEAPONS_210"
+msgid "AS C BUTTONS"
+msgstr "Ｃボタンと同じ"
+
+msgctxt "L_MPWEAPONS_211"
+msgid "Controller 1:"
+msgstr "コントローラ１："
+
+msgctxt "L_MPWEAPONS_212"
+msgid "Controller 2:"
+msgstr "コントローラ２："
+
+msgctxt "L_MPWEAPONS_213"
+msgid "Control Style %s %s\\n"
+msgstr "操作モード %s %s\\n"
+
+msgctxt "L_MPWEAPONS_214"
+msgid "(One-Handed)"
+msgstr "（１個モード）"
+
+msgctxt "L_MPWEAPONS_215"
+msgid "(Two-Handed)"
+msgstr "（２個モード）"
+
+msgctxt "L_MPWEAPONS_216"
+msgid ""
+"Hold Weapon button for quick-menu.\\nHold Action button to toggle "
+"function.\\nAction+Fire temporarily changes function.\\nAim allows you to "
+"target accurately.\\nAim + Down C Button crouches.\\nAim + Up C Button gets "
+"up.\\n"
+msgstr ""
+"「武器選択」ホールド：クイックメニュー\\n「Ｂ」ホールド：武器モードの切替\\n「Ｂ」＋「撃つ」：武器モードの一時切替\\n「照準」＋「Ｃ下」：しゃがむ\\n「照準」＋「Ｃ上」：立つ\\n"
+
+msgctxt "L_MPWEAPONS_217"
+msgid "Turn off all Cheats\\n"
+msgstr "全てのチートを無効にする\\n"
+
+msgctxt "L_MPWEAPONS_218"
+msgid "Language Filter\\n"
+msgstr "スラングＯＦＦ\\n"
+
+msgctxt "L_MPWEAPONS_219"
+msgid "USERNAME:\\n"
+msgstr "ユーザーＩＤ：\\n"
+
+msgctxt "L_MPWEAPONS_220"
+msgid "PASSWORD:\\n"
+msgstr "パスワード：\\n"
+
+msgctxt "L_MPWEAPONS_221"
+msgid "Perfect Dark\\n"
+msgstr "スペシャル\\n"
+
+msgctxt "L_MPWEAPONS_222"
+msgid "Choose Settings:\\n"
+msgstr "特別オプション：\\n"
+
+msgctxt "L_MPWEAPONS_223"
+msgid "Enemy Reaction Speed:\\n"
+msgstr "敵のスピード：\\n"
+
+msgctxt "L_MPWEAPONS_224"
+msgid "Enemy Health:\\n"
+msgstr "敵の体力：\\n"
+
+msgctxt "L_MPWEAPONS_225"
+msgid "Enemy Damage:\\n"
+msgstr "敵の強さ：\\n"
+
+msgctxt "L_MPWEAPONS_226"
+msgid "Enemy Accuracy:\\n"
+msgstr "敵の命中率：\\n"
+
+msgctxt "L_MPWEAPONS_227"
+msgid "OK\\n"
+msgstr "ＯＫ\\n"
+
+msgctxt "L_MPWEAPONS_228"
+msgid "Cancel\\n"
+msgstr "キャンセル\\n"
+
+msgctxt "L_MPWEAPONS_229"
+msgid "Controller Pak Not Found\\n"
+msgstr "コントローラパックが見つかりません\\n"
+
+msgctxt "L_MPWEAPONS_230"
+msgid "Name:\\n"
+msgstr "ネーム：\\n"
+
+msgctxt "L_MPWEAPONS_231"
+msgid "Location:\\n"
+msgstr "場所：\\n"
+
+msgctxt "L_MPWEAPONS_232"
+msgid "Duplicate File Name\\n"
+msgstr "－－注意－－\\n"
+
+msgctxt "L_MPWEAPONS_233"
+msgid "already contains\\n"
+msgstr "同名ファイルが存在\\n"
+
+msgctxt "L_MPWEAPONS_234"
+msgid "a file named\\n"
+msgstr ""
+
+msgctxt "L_MPWEAPONS_235"
+msgid "Rename File\\n"
+msgstr "名前の変更\\n"
+
+msgctxt "L_MPWEAPONS_236"
+msgid "Change Location\\n"
+msgstr "場所の変更\\n"
+
+msgctxt "L_MPWEAPONS_237"
+msgid "Cancel\\n"
+msgstr "キャンセル\\n"
+
+msgctxt "L_MPWEAPONS_238"
+msgid "Change File Name\\n"
+msgstr "ファイル名の変更\\n"
+
+msgctxt "L_MPWEAPONS_239"
+msgid "Enter new file name:\\n"
+msgstr "新たなファイル名：\\n"
+
+msgctxt "L_MPWEAPONS_240"
+msgid "The file you are copying\\ncannot be deleted.\\n"
+msgstr "コピー元のファイル\\nなので消去できません\\n"
+
+msgctxt "L_MPWEAPONS_241"
+msgid "ShockSim:%d\\n"
+msgstr "ｄＤ戦闘員：%d\\n"
+
+msgctxt "L_MPWEAPONS_242"
+msgid "Target Time:\\n"
+msgstr "ターゲットタイム：\\n"
+
+msgctxt "L_MPWEAPONS_243"
+msgid "New Cheat Available!:\\n"
+msgstr "新たなチートを獲得！：\\n"
+
+msgctxt "L_MPWEAPONS_244"
+msgid "Continue\\n"
+msgstr "続ける\\n"
+
+msgctxt "L_MPWEAPONS_245"
+msgid "Replay Last Level\\n"
+msgstr "もう一度プレイする\\n"
+
+msgctxt "L_MPWEAPONS_246"
+msgid "Save Player\\n"
+msgstr "個人設定のセーブ\\n"
+
+msgctxt "L_MPWEAPONS_247"
+msgid "Save new player\\nand statistics?\\n"
+msgstr "個人設定を\\nセーブしますか？\\n"
+
+msgctxt "L_MPWEAPONS_248"
+msgid "Save Now\\n"
+msgstr "セーブする\\n"
+
+msgctxt "L_MPWEAPONS_249"
+msgid "No Thanks!\\n"
+msgstr "セーブしない\\n"
+
+msgctxt "L_MPWEAPONS_250"
+msgid "Confirm player name:\\n"
+msgstr "プレイヤーネーム：\\n"
+
+msgctxt "L_MPWEAPONS_251"
+msgid "The saved file has\\nbeen erased due\\nto corruption\\nor damage.\\n"
+msgstr "セーブファイルは\\n破損のために\\n消去されました\\n"
+
+msgctxt "L_MPWEAPONS_252"
+msgid "Continue\\n"
+msgstr "続ける\\n"
+
+msgctxt "L_MPWEAPONS_253"
+msgid "Error\\n"
+msgstr "エラー\\n"
+
+msgctxt "L_MPWEAPONS_254"
+msgid ""
+"Cannot read Game Boy Game Pak.\\nCheck connections and make sure\\ncorrect "
+"Game Boy Game Pak is\\nbeing used.\\n"
+msgstr "ゲームボーイのカートリッジを\\n読み込めません。接続が正しい\\nか、カートリッジが正しいかを\\n確認して下さい。\\n"
+
+msgctxt "L_MPWEAPONS_255"
+msgid "Cancel\\n"
+msgstr "キャンセル\\n"
+
+msgctxt "L_MPWEAPONS_256"
+msgid "Error\\n"
+msgstr "エラー\\n"
+
+msgctxt "L_MPWEAPONS_257"
+msgid "The saved data has\\n"
+msgstr "セーブファイルは\\n"
+
+msgctxt "L_MPWEAPONS_258"
+msgid "been erased due to\\n"
+msgstr "破損のために\\n"
+
+msgctxt "L_MPWEAPONS_259"
+msgid "corruption or damage.\\n"
+msgstr "消去されました\\n"
+
+msgctxt "L_MPWEAPONS_260"
+msgid "Cancel\\n"
+msgstr "キャンセル\\n"

@@ -1,0 +1,1995 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Perfect Dark PC port localization\n"
+"POT-Creation-Date: 2025-05-30 14:19:36.854417+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: originalAssets_to_l10n.py script\n"
+
+msgctxt "L_MPMENU_000"
+msgid "Most Suicidal\\n"
+msgstr "Che schifo!\\n"
+
+msgctxt "L_MPMENU_001"
+msgid "Who Needs Ammo?\\n"
+msgstr "Servono munizioni?\\n"
+
+msgctxt "L_MPMENU_002"
+msgid "Least Shielded\\n"
+msgstr "Protezione minima\\n"
+
+msgctxt "L_MPMENU_003"
+msgid "Best Protected\\n"
+msgstr "Protezione massima\\n"
+
+msgctxt "L_MPMENU_004"
+msgid "Marksmanship\\n"
+msgstr "Precisione di tiro\\n"
+
+msgctxt "L_MPMENU_005"
+msgid "Most Professional\\n"
+msgstr "Professionale\\n"
+
+msgctxt "L_MPMENU_006"
+msgid "Most Deadly\\n"
+msgstr "Micidiale\\n"
+
+msgctxt "L_MPMENU_007"
+msgid "Most Harmless\\n"
+msgstr "Innocuo\\n"
+
+msgctxt "L_MPMENU_008"
+msgid "Most Cowardly\\n"
+msgstr "Codardo\\n"
+
+msgctxt "L_MPMENU_009"
+msgid "Most Frantic\\n"
+msgstr "Disperato\\n"
+
+msgctxt "L_MPMENU_010"
+msgid "Most Honorable\\n"
+msgstr "Lodevole\\n"
+
+msgctxt "L_MPMENU_011"
+msgid "Most Dishonorable\\n"
+msgstr "Disonorevole\\n"
+
+msgctxt "L_MPMENU_012"
+msgid "Shortest Life\\n"
+msgstr "Vita più breve\\n"
+
+msgctxt "L_MPMENU_013"
+msgid "Longest Life\\n"
+msgstr "Vita più lunga\\n"
+
+msgctxt "L_MPMENU_014"
+msgid "Double Kill\\n"
+msgstr "Doppio colpo\\n"
+
+msgctxt "L_MPMENU_015"
+msgid "Triple Kill\\n"
+msgstr "Triplo colpo\\n"
+
+msgctxt "L_MPMENU_016"
+msgid "Quad Kill\\n"
+msgstr "Colpo quadruplo\\n"
+
+msgctxt "L_MPMENU_017"
+msgid "Game Setup\\n"
+msgstr "Impostazioni gioco\\n"
+
+msgctxt "L_MPMENU_018"
+msgid "Load Settings\\n"
+msgstr "Carica impostazioni\\n"
+
+msgctxt "L_MPMENU_019"
+msgid "Scenario\\n"
+msgstr "Ambientaz.\\n"
+
+msgctxt "L_MPMENU_020"
+msgid "Arena\\n"
+msgstr "Scena\\n"
+
+msgctxt "L_MPMENU_021"
+msgid "Options\\n"
+msgstr "Opzioni\\n"
+
+msgctxt "L_MPMENU_022"
+msgid "Teams\\n"
+msgstr "Squadre\\n"
+
+msgctxt "L_MPMENU_023"
+msgid "Weapons\\n"
+msgstr "Armi\\n"
+
+msgctxt "L_MPMENU_024"
+msgid "Limits\\n"
+msgstr "Limiti\\n"
+
+msgctxt "L_MPMENU_025"
+msgid "Simulants\\n"
+msgstr "Replicanti\\n"
+
+msgctxt "L_MPMENU_026"
+msgid "Save Settings\\n"
+msgstr "Salva impostazioni\\n"
+
+msgctxt "L_MPMENU_027"
+msgid "Abort Game\\n"
+msgstr "Interrompi gioco\\n"
+
+msgctxt "L_MPMENU_028"
+msgid "Player Setup\\n"
+msgstr "Impostaz. giocatore\\n"
+
+msgctxt "L_MPMENU_029"
+msgid "Load Player\\n"
+msgstr "Carica giocatore\\n"
+
+msgctxt "L_MPMENU_030"
+msgid "Name\\n"
+msgstr "Nome\\n"
+
+msgctxt "L_MPMENU_031"
+msgid "Character\\n"
+msgstr "Personaggio\\n"
+
+msgctxt "L_MPMENU_032"
+msgid "Handicap\\n"
+msgstr "Svantaggi\\n"
+
+msgctxt "L_MPMENU_033"
+msgid "Control\\n"
+msgstr "Comandi\\n"
+
+msgctxt "L_MPMENU_034"
+msgid "Player Options\\n"
+msgstr "Opzioni giocatore\\n"
+
+msgctxt "L_MPMENU_035"
+msgid "Statistics\\n"
+msgstr "Statistiche\\n"
+
+msgctxt "L_MPMENU_036"
+msgid "Start Game\\n"
+msgstr "Avvio gioco\\n"
+
+msgctxt "L_MPMENU_037"
+msgid "Drop Out\\n"
+msgstr "Esci\\n"
+
+msgctxt "L_MPMENU_038"
+msgid "Save Player\\n"
+msgstr "Salva Giocatore\\n"
+
+msgctxt "L_MPMENU_039"
+msgid "Save Copy of Player\\n"
+msgstr "Salva Copia Giocat.\\n"
+
+msgctxt "L_MPMENU_040"
+msgid "Stuff\\n"
+msgstr "Varie\\n"
+
+msgctxt "L_MPMENU_041"
+msgid "Soundtrack\\n"
+msgstr "Colonna sonora\\n"
+
+msgctxt "L_MPMENU_042"
+msgid "Team Names\\n"
+msgstr "Nomi squadre\\n"
+
+msgctxt "L_MPMENU_043"
+msgid "Ratio\\n"
+msgstr "Rapporto\\n"
+
+msgctxt "L_MPMENU_044"
+msgid "Lock\\n"
+msgstr "Blocco\\n"
+
+msgctxt "L_MPMENU_045"
+msgid "None\\n"
+msgstr "Nessuno\\n"
+
+msgctxt "L_MPMENU_046"
+msgid "Last Winner\\n"
+msgstr "Ultimo vincit.\\n"
+
+msgctxt "L_MPMENU_047"
+msgid "Last Loser\\n"
+msgstr "Ultimo perden.\\n"
+
+msgctxt "L_MPMENU_048"
+msgid "Random\\n"
+msgstr "A caso\\n"
+
+msgctxt "L_MPMENU_049"
+msgid "Challenge\\n"
+msgstr "Sfida\\n"
+
+msgctxt "L_MPMENU_050"
+msgid "Combat Challenges\\n"
+msgstr "Sfide di lotta\\n"
+
+msgctxt "L_MPMENU_051"
+msgid "Abort Challenge\\n"
+msgstr "Interrompi la sfida\\n"
+
+msgctxt "L_MPMENU_052"
+msgid "Abort\\n"
+msgstr "Interrompi\\n"
+
+msgctxt "L_MPMENU_053"
+msgid "Are you sure you want\\nto abort the game?\\n"
+msgstr "Desideri veramente\\ninterrompere il gioco?\\n"
+
+msgctxt "L_MPMENU_054"
+msgid "Abort\\n"
+msgstr "Interrompi\\n"
+
+msgctxt "L_MPMENU_055"
+msgid "Cancel\\n"
+msgstr "Annulla\\n"
+
+msgctxt "L_MPMENU_056"
+msgid "%s\\n"
+msgstr "%s\\n"
+
+msgctxt "L_MPMENU_057"
+msgid "Accept\\n"
+msgstr "Accetta\\n"
+
+msgctxt "L_MPMENU_058"
+msgid "Cancel\\n"
+msgstr "Annulla\\n"
+
+msgctxt "L_MPMENU_059"
+msgid "Team Names\\n"
+msgstr "Nomi squadre\\n"
+
+msgctxt "L_MPMENU_060"
+msgid "Back\\n"
+msgstr "Esci\\n"
+
+msgctxt "L_MPMENU_061"
+msgid "Change Team Name\\n"
+msgstr "Cambia nomi squadre\\n"
+
+msgctxt "L_MPMENU_062"
+msgid "Soundtrack\\n"
+msgstr "Colonna sonora\\n"
+
+msgctxt "L_MPMENU_063"
+msgid "Current:\\n"
+msgstr "Attuale:\\n"
+
+msgctxt "L_MPMENU_064"
+msgid "Multiple Tunes\\n"
+msgstr "Più brani\\n"
+
+msgctxt "L_MPMENU_065"
+msgid "Back\\n"
+msgstr "Esci\\n"
+
+msgctxt "L_MPMENU_066"
+msgid "Multiple Tunes\\n"
+msgstr "Brani multipli\\n"
+
+msgctxt "L_MPMENU_067"
+msgid "Random\\n"
+msgstr "A caso\\n"
+
+msgctxt "L_MPMENU_068"
+msgid "Select Tunes\\n"
+msgstr "Seleziona brani\\n"
+
+msgctxt "L_MPMENU_069"
+msgid "Select Tune\\n"
+msgstr "Seleziona brano\\n"
+
+msgctxt "L_MPMENU_070"
+msgid "Team Control\\n"
+msgstr "Comandi squadra\\n"
+
+msgctxt "L_MPMENU_071"
+msgid "Teams Enabled\\n"
+msgstr "Squadre attivate\\n"
+
+msgctxt "L_MPMENU_072"
+msgid "Teams:\\n"
+msgstr "Squadre:\\n"
+
+msgctxt "L_MPMENU_073"
+msgid "Auto Team...\\n"
+msgstr "Squadra automatica...\\n"
+
+msgctxt "L_MPMENU_074"
+msgid "Back\\n"
+msgstr "Esci\\n"
+
+msgctxt "L_MPMENU_075"
+msgid "Auto Team\\n"
+msgstr "Squadra automatica\\n"
+
+msgctxt "L_MPMENU_076"
+msgid "Two Teams\\n"
+msgstr "Due squadre\\n"
+
+msgctxt "L_MPMENU_077"
+msgid "Three Teams\\n"
+msgstr "Tre squadre\\n"
+
+msgctxt "L_MPMENU_078"
+msgid "Four Teams\\n"
+msgstr "Quattro squadre\\n"
+
+msgctxt "L_MPMENU_079"
+msgid "Maximum Teams\\n"
+msgstr "Squadre al massimo\\n"
+
+msgctxt "L_MPMENU_080"
+msgid "Humans vs. Simulants\\n"
+msgstr "Umani contro replic.\\n"
+
+msgctxt "L_MPMENU_081"
+msgid "Human-Simulant Pairs\\n"
+msgstr "Coppie umani-replic.\\n"
+
+msgctxt "L_MPMENU_082"
+msgid "Cancel\\n"
+msgstr "Annulla\\n"
+
+msgctxt "L_MPMENU_083"
+msgid "Simulants\\n"
+msgstr "Replicanti\\n"
+
+msgctxt "L_MPMENU_084"
+msgid "Add Simulant...\\n"
+msgstr "Aggiungi replicanti...\\n"
+
+msgctxt "L_MPMENU_085"
+msgid "1:\\n"
+msgstr "1:\\n"
+
+msgctxt "L_MPMENU_086"
+msgid "2:\\n"
+msgstr "2:\\n"
+
+msgctxt "L_MPMENU_087"
+msgid "3:\\n"
+msgstr "3:\\n"
+
+msgctxt "L_MPMENU_088"
+msgid "4:\\n"
+msgstr "4:\\n"
+
+msgctxt "L_MPMENU_089"
+msgid "5:\\n"
+msgstr "5:\\n"
+
+msgctxt "L_MPMENU_090"
+msgid "6:\\n"
+msgstr "6:\\n"
+
+msgctxt "L_MPMENU_091"
+msgid "7:\\n"
+msgstr "7:\\n"
+
+msgctxt "L_MPMENU_092"
+msgid "8:\\n"
+msgstr "8:\\n"
+
+msgctxt "L_MPMENU_093"
+msgid "Clear All\\n"
+msgstr "Cancella tutto\\n"
+
+msgctxt "L_MPMENU_094"
+msgid "Back\\n"
+msgstr "Esci\\n"
+
+msgctxt "L_MPMENU_095"
+msgid "Difficulty:\\n"
+msgstr "Difficoltà:\\n"
+
+msgctxt "L_MPMENU_096"
+msgid "Change Type...\\n"
+msgstr "Cambia tipo...\\n"
+
+msgctxt "L_MPMENU_097"
+msgid "Character...\\n"
+msgstr "Personaggio...\\n"
+
+msgctxt "L_MPMENU_098"
+msgid "Delete Simulant\\n"
+msgstr "Cancella replicante\\n"
+
+msgctxt "L_MPMENU_099"
+msgid "Back\\n"
+msgstr "Esci\\n"
+
+msgctxt "L_MPMENU_100"
+msgid "Simulant Character\\n"
+msgstr "Personaggio replicante\\n"
+
+msgctxt "L_MPMENU_101"
+msgid "Add Simulant\\n"
+msgstr "Aggiungi replicante\\n"
+
+msgctxt "L_MPMENU_102"
+msgid "Change Simulant\\n"
+msgstr "Cambia replicante\\n"
+
+msgctxt "L_MPMENU_103"
+msgid "Normal Simulants\\n"
+msgstr "Replicanti normali\\n"
+
+msgctxt "L_MPMENU_104"
+msgid "Special Simulants\\n"
+msgstr "Replicanti speciali\\n"
+
+msgctxt "L_MPMENU_105"
+msgid "Ready!\\n"
+msgstr "Pronti!\\n"
+
+msgctxt "L_MPMENU_106"
+msgid "...and waiting\\n"
+msgstr "...attendere\\n"
+
+msgctxt "L_MPMENU_107"
+msgid "Limits\\n"
+msgstr "Limiti\\n"
+
+msgctxt "L_MPMENU_108"
+msgid "Time\\n"
+msgstr "Tempo\\n"
+
+msgctxt "L_MPMENU_109"
+msgid "Score\\n"
+msgstr "Punteggio\\n"
+
+msgctxt "L_MPMENU_110"
+msgid "Restore Defaults\\n"
+msgstr "Ripristina impostaz.\\n"
+
+msgctxt "L_MPMENU_111"
+msgid "Back\\n"
+msgstr "Esci\\n"
+
+msgctxt "L_MPMENU_112"
+msgid "No Limit\\n"
+msgstr "No limite\\n"
+
+msgctxt "L_MPMENU_113"
+msgid "%d\\n"
+msgstr "%d\\n"
+
+msgctxt "L_MPMENU_114"
+msgid "%d Min\\n"
+msgstr "%d min\\n"
+
+msgctxt "L_MPMENU_115"
+msgid "Arena\\n"
+msgstr "Scena\\n"
+
+msgctxt "L_MPMENU_116"
+msgid "Dark\\n"
+msgstr "Dark\\n"
+
+msgctxt "L_MPMENU_117"
+msgid "Classic\\n"
+msgstr "Classica\\n"
+
+msgctxt "L_MPMENU_118"
+msgid "Random\\n"
+msgstr "A caso\\n"
+
+msgctxt "L_MPMENU_119"
+msgid "Skedar"
+msgstr "Skedar"
+
+msgctxt "L_MPMENU_120"
+msgid "Pipes"
+msgstr "Condotte"
+
+msgctxt "L_MPMENU_121"
+msgid "Ravine"
+msgstr "Burrone"
+
+msgctxt "L_MPMENU_122"
+msgid "G5 Building"
+msgstr "Edificio G5"
+
+msgctxt "L_MPMENU_123"
+msgid "Sewers"
+msgstr "Fognature"
+
+msgctxt "L_MPMENU_124"
+msgid "Warehouse"
+msgstr "Magazzino"
+
+msgctxt "L_MPMENU_125"
+msgid "Grid"
+msgstr "Griglia"
+
+msgctxt "L_MPMENU_126"
+msgid "Ruins"
+msgstr "Rovine"
+
+msgctxt "L_MPMENU_127"
+msgid "Area 52"
+msgstr "Area 52"
+
+msgctxt "L_MPMENU_128"
+msgid "Base"
+msgstr "Base"
+
+msgctxt "L_MPMENU_129"
+msgid "Rooftop"
+msgstr "Tetto"
+
+msgctxt "L_MPMENU_130"
+msgid "Fortress"
+msgstr "Fortezza"
+
+msgctxt "L_MPMENU_131"
+msgid "Villa"
+msgstr "Villa"
+
+msgctxt "L_MPMENU_132"
+msgid "Car Park"
+msgstr "Parcheggio"
+
+msgctxt "L_MPMENU_133"
+msgid "Temple"
+msgstr "Tempio"
+
+msgctxt "L_MPMENU_134"
+msgid "Complex"
+msgstr "Complesso"
+
+msgctxt "L_MPMENU_135"
+msgid "Felicity"
+msgstr "Felicità"
+
+msgctxt "L_MPMENU_136"
+msgid "Random"
+msgstr "A caso"
+
+msgctxt "L_MPMENU_137"
+msgid "Load Player\\n"
+msgstr "Carica giocatore\\n"
+
+msgctxt "L_MPMENU_138"
+msgid "B Button to cancel\\n"
+msgstr "Premi B per annullare\\n"
+
+msgctxt "L_MPMENU_139"
+msgid "Load Game Settings\\n"
+msgstr "Carica impostaz. gioco\\n"
+
+msgctxt "L_MPMENU_140"
+msgid "%s:  Scenario: %s   Arena: %s    Simulants: %d"
+msgstr "%s:  Ambientazione: %s   Scena: %s    Replicanti: %d"
+
+msgctxt "L_MPMENU_141"
+msgid "Presets\\n"
+msgstr "Impostazioni\\n"
+
+msgctxt "L_MPMENU_142"
+msgid "Player Name\\n"
+msgstr "Nome giocatore\\n"
+
+msgctxt "L_MPMENU_143"
+msgid "Character\\n"
+msgstr "Personaggio\\n"
+
+msgctxt "L_MPMENU_144"
+msgid "Load Head...\\n"
+msgstr "Carica testa...\\n"
+
+msgctxt "L_MPMENU_145"
+msgid "Stats for %s\\n"
+msgstr "Statistiche %s\\n"
+
+msgctxt "L_MPMENU_146"
+msgid "Kills:\\n"
+msgstr "Vittime:\\n"
+
+msgctxt "L_MPMENU_147"
+msgid "Deaths:\\n"
+msgstr "Decessi:\\n"
+
+msgctxt "L_MPMENU_148"
+msgid "Accuracy:\\n"
+msgstr "Precisione:\\n"
+
+msgctxt "L_MPMENU_149"
+msgid "Head Shots:\\n"
+msgstr "Colpi al capo:\\n"
+
+msgctxt "L_MPMENU_150"
+msgid "Ammo Used:\\n"
+msgstr "Munizioni usate:\\n"
+
+msgctxt "L_MPMENU_151"
+msgid "Damage Dealt:\\n"
+msgstr "Danno arrecato:\\n"
+
+msgctxt "L_MPMENU_152"
+msgid "Pain Received:\\n"
+msgstr "Danno subito:\\n"
+
+msgctxt "L_MPMENU_153"
+msgid "Games Played:\\n"
+msgstr "Partite giocate:\\n"
+
+msgctxt "L_MPMENU_154"
+msgid "Games Won:\\n"
+msgstr "Partite vinte:\\n"
+
+msgctxt "L_MPMENU_155"
+msgid "Games Lost:\\n"
+msgstr "Partite perse:\\n"
+
+msgctxt "L_MPMENU_156"
+msgid "Time:\\n"
+msgstr "Tempo:\\n"
+
+msgctxt "L_MPMENU_157"
+msgid "Distance:\\n"
+msgstr "Distanza:\\n"
+
+msgctxt "L_MPMENU_158"
+msgid "Medals Won:\\n"
+msgstr "Medaglie vinte:\\n"
+
+msgctxt "L_MPMENU_159"
+msgid "   Accuracy:\\n"
+msgstr "   Precisione:\\n"
+
+msgctxt "L_MPMENU_160"
+msgid "   Head Shot:\\n"
+msgstr "   Colpi al capo:\\n"
+
+msgctxt "L_MPMENU_161"
+msgid "   KillMaster:\\n"
+msgstr "   Campione:\\n"
+
+msgctxt "L_MPMENU_162"
+msgid "   Survivor:\\n"
+msgstr "   Superstite:\\n"
+
+msgctxt "L_MPMENU_163"
+msgid "Your Title:\\n"
+msgstr "Tuo titolo:\\n"
+
+msgctxt "L_MPMENU_164"
+msgid "Back\\n"
+msgstr "Esci\\n"
+
+msgctxt "L_MPMENU_165"
+msgid "Completed Challenges\\n"
+msgstr "Sfide completate\\n"
+
+msgctxt "L_MPMENU_166"
+msgid "Back\\n"
+msgstr "Esci\\n"
+
+msgctxt "L_MPMENU_167"
+msgid "Options\\n"
+msgstr "Opzioni\\n"
+
+msgctxt "L_MPMENU_168"
+msgid "Highlight Pickups\\n"
+msgstr "Mostra strumenti\\n"
+
+msgctxt "L_MPMENU_169"
+msgid "Highlight Players\\n"
+msgstr "Mostra giocatori\\n"
+
+msgctxt "L_MPMENU_170"
+msgid "Highlight Teams\\n"
+msgstr "Mostra squadre\\n"
+
+msgctxt "L_MPMENU_171"
+msgid "Radar\\n"
+msgstr "Radar\\n"
+
+msgctxt "L_MPMENU_172"
+msgid "Back\\n"
+msgstr "Esci\\n"
+
+msgctxt "L_MPMENU_173"
+msgid "Weapons\\n"
+msgstr "Armi\\n"
+
+msgctxt "L_MPMENU_174"
+msgid "Set:\\n"
+msgstr "Imposta:\\n"
+
+msgctxt "L_MPMENU_175"
+msgid "Current Weapon Setup:\\n"
+msgstr "Impostaz. attuali armi:\\n"
+
+msgctxt "L_MPMENU_176"
+msgid "1:\\n"
+msgstr "1:\\n"
+
+msgctxt "L_MPMENU_177"
+msgid "2:\\n"
+msgstr "2:\\n"
+
+msgctxt "L_MPMENU_178"
+msgid "3:\\n"
+msgstr "3:\\n"
+
+msgctxt "L_MPMENU_179"
+msgid "4:\\n"
+msgstr "4:\\n"
+
+msgctxt "L_MPMENU_180"
+msgid "5:\\n"
+msgstr "5:\\n"
+
+msgctxt "L_MPMENU_181"
+msgid "6:\\n"
+msgstr "6:\\n"
+
+msgctxt "L_MPMENU_182"
+msgid "Back\\n"
+msgstr "Esci\\n"
+
+msgctxt "L_MPMENU_183"
+msgid "Save Game Setup\\n"
+msgstr "Salva impostaz. gioco\\n"
+
+msgctxt "L_MPMENU_184"
+msgid "Do you want to save\\nover your original\\ngame file?\\n"
+msgstr "Vuoi salvare sul file\\ndi gioco originale?\\n"
+
+msgctxt "L_MPMENU_185"
+msgid "Save Over Original\\n"
+msgstr "Salva su originale\\n"
+
+msgctxt "L_MPMENU_186"
+msgid "Save Copy\\n"
+msgstr "Salva copia\\n"
+
+msgctxt "L_MPMENU_187"
+msgid "Do Not Save\\n"
+msgstr "Non salvare\\n"
+
+msgctxt "L_MPMENU_188"
+msgid "Game File Name\\n"
+msgstr "Nome del file partita\\n"
+
+msgctxt "L_MPMENU_189"
+msgid "Enter a name for your\\ngame setup file:\\n"
+msgstr "Digita nome per il file\\nimpostazioni gioco:\\n"
+
+msgctxt "L_MPMENU_190"
+msgid "Confirm\\n"
+msgstr "Conferma\\n"
+
+msgctxt "L_MPMENU_191"
+msgid "Your player file is\\nalways saved\\nautomatically.\\n"
+msgstr "Il file giocatore è\\nsempre salvato\\nautomaticamente.\\n"
+
+msgctxt "L_MPMENU_192"
+msgid "Save a copy now?\\n"
+msgstr "Salvarne una copia?\\n"
+
+msgctxt "L_MPMENU_193"
+msgid "No\\n"
+msgstr "No\\n"
+
+msgctxt "L_MPMENU_194"
+msgid "Yes\\n"
+msgstr "Sì\\n"
+
+msgctxt "L_MPMENU_195"
+msgid "Drop Out\\n"
+msgstr "Esci\\n"
+
+msgctxt "L_MPMENU_196"
+msgid "Are you sure you\\nwant to drop out?\\n"
+msgstr "Desideri veramente\\nuscire?\\n"
+
+msgctxt "L_MPMENU_197"
+msgid "Drop Out\\n"
+msgstr "Esci\\n"
+
+msgctxt "L_MPMENU_198"
+msgid "Cancel\\n"
+msgstr "Annulla\\n"
+
+msgctxt "L_MPMENU_199"
+msgid "Control\\n"
+msgstr "Comandi\\n"
+
+msgctxt "L_MPMENU_200"
+msgid "Control Style\\n"
+msgstr "Modalità comandi\\n"
+
+msgctxt "L_MPMENU_201"
+msgid "Reverse Pitch\\n"
+msgstr "Inv. punto vista\\n"
+
+msgctxt "L_MPMENU_202"
+msgid "Look Ahead\\n"
+msgstr "Vista in avanti\\n"
+
+msgctxt "L_MPMENU_203"
+msgid "Head Roll\\n"
+msgstr "Rotazione testa\\n"
+
+msgctxt "L_MPMENU_204"
+msgid "Auto-Aim\\n"
+msgstr "Mira automatica\\n"
+
+msgctxt "L_MPMENU_205"
+msgid "Aim Control\\n"
+msgstr "Mirino\\n"
+
+msgctxt "L_MPMENU_206"
+msgid "Sight on Screen\\n"
+msgstr "Vista su schermo\\n"
+
+msgctxt "L_MPMENU_207"
+msgid "Show Target\\n"
+msgstr "Mostra obiettivo\\n"
+
+msgctxt "L_MPMENU_208"
+msgid "Zoom Range\\n"
+msgstr "Area zoom\\n"
+
+msgctxt "L_MPMENU_209"
+msgid "Ammo on Screen\\n"
+msgstr "Munizioni\\n"
+
+msgctxt "L_MPMENU_210"
+msgid "Gun Function\\n"
+msgstr "Funzioni arma\\n"
+
+msgctxt "L_MPMENU_211"
+msgid "Paintball\\n"
+msgstr "Macchia colorata\\n"
+
+msgctxt "L_MPMENU_212"
+msgid "Back\\n"
+msgstr "Esci\\n"
+
+msgctxt "L_MPMENU_213"
+msgid "Hold\\n"
+msgstr "Tieni premuto\\n"
+
+msgctxt "L_MPMENU_214"
+msgid "Toggle\\n"
+msgstr "Attiva/disattiva\\n"
+
+msgctxt "L_MPMENU_215"
+msgid "Combat Options\\n"
+msgstr "Opzioni lotta\\n"
+
+msgctxt "L_MPMENU_216"
+msgid "Briefcase Options\\n"
+msgstr "Opzioni cartella\\n"
+
+msgctxt "L_MPMENU_217"
+msgid "Hacker Options\\n"
+msgstr "Opzioni hacker\\n"
+
+msgctxt "L_MPMENU_218"
+msgid "Pop a Cap Options\\n"
+msgstr "Opzioni tutti contro 1\\n"
+
+msgctxt "L_MPMENU_219"
+msgid "Hill Options\\n"
+msgstr "Opzioni colle\\n"
+
+msgctxt "L_MPMENU_220"
+msgid "Capture Options\\n"
+msgstr "Opzioni cassa\\n"
+
+msgctxt "L_MPMENU_221"
+msgid "Boxes Options\\n"
+msgstr "Opzioni box\\n"
+
+msgctxt "L_MPMENU_222"
+msgid "One-Hit Kills\\n"
+msgstr "Vittime in un colpo\\n"
+
+msgctxt "L_MPMENU_223"
+msgid "Slow Motion\\n"
+msgstr "Al rallentatore\\n"
+
+msgctxt "L_MPMENU_224"
+msgid "Fast Movement\\n"
+msgstr "Accelerato\\n"
+
+msgctxt "L_MPMENU_225"
+msgid "Display Team\\n"
+msgstr "Mostra squadra\\n"
+
+msgctxt "L_MPMENU_226"
+msgid "No Radar\\n"
+msgstr "Nessun Radar\\n"
+
+msgctxt "L_MPMENU_227"
+msgid "No Auto-Aim\\n"
+msgstr "No mira autom.\\n"
+
+msgctxt "L_MPMENU_228"
+msgid "No Player Highlight\\n"
+msgstr "Nascondi giocatori\\n"
+
+msgctxt "L_MPMENU_229"
+msgid "No Pickup Highlight\\n"
+msgstr "Nascondi strumenti\\n"
+
+msgctxt "L_MPMENU_230"
+msgid "Highlight Target\\n"
+msgstr "Mostra obiettivo\\n"
+
+msgctxt "L_MPMENU_231"
+msgid "Highlight Terminal\\n"
+msgstr "Mostra terminale\\n"
+
+msgctxt "L_MPMENU_232"
+msgid "Boxes on Radar\\n"
+msgstr "Box su radar\\n"
+
+msgctxt "L_MPMENU_233"
+msgid "Hill on Radar\\n"
+msgstr "Colle su radar\\n"
+
+msgctxt "L_MPMENU_234"
+msgid "Mobile Hill\\n"
+msgstr "Colle mobile\\n"
+
+msgctxt "L_MPMENU_235"
+msgid "Time\\n"
+msgstr "Tempo\\n"
+
+msgctxt "L_MPMENU_236"
+msgid "Show on Radar\\n"
+msgstr "Mostra su radar\\n"
+
+msgctxt "L_MPMENU_237"
+msgid "Highlight Briefcase\\n"
+msgstr "Mostra cartella\\n"
+
+msgctxt "L_MPMENU_238"
+msgid "Show on Radar\\n"
+msgstr "Mostra su radar\\n"
+
+msgctxt "L_MPMENU_239"
+msgid "Back\\n"
+msgstr "Esci\\n"
+
+msgctxt "L_MPMENU_240"
+msgid "Off\\n"
+msgstr "No\\n"
+
+msgctxt "L_MPMENU_241"
+msgid "On\\n"
+msgstr "Sì\\n"
+
+msgctxt "L_MPMENU_242"
+msgid "Smart\\n"
+msgstr "Furbo\\n"
+
+msgctxt "L_MPMENU_243"
+msgid "Scenario\\n"
+msgstr "Ambientazione\\n"
+
+msgctxt "L_MPMENU_244"
+msgid "Free for All!\\n"
+msgstr "Per tutti!\\n"
+
+msgctxt "L_MPMENU_245"
+msgid "-Teamwork-\\n"
+msgstr "-Collaborazione-\\n"
+
+msgctxt "L_MPMENU_246"
+msgid "Combat"
+msgstr "Lotta"
+
+msgctxt "L_MPMENU_247"
+msgid "Hold the Briefcase"
+msgstr "Tieni cartella"
+
+msgctxt "L_MPMENU_248"
+msgid "Hacker Central"
+msgstr "Centrale Hacker"
+
+msgctxt "L_MPMENU_249"
+msgid "Pop a Cap"
+msgstr "Tutti contro 1"
+
+msgctxt "L_MPMENU_250"
+msgid "King of the Hill"
+msgstr "Re del colle"
+
+msgctxt "L_MPMENU_251"
+msgid "Capture the Case"
+msgstr "Prendi la cassa"
+
+msgctxt "L_MPMENU_252"
+msgid "Touch That Box"
+msgstr "Tocca quel box"
+
+msgctxt "L_MPMENU_253"
+msgid "Combat"
+msgstr "Lotta"
+
+msgctxt "L_MPMENU_254"
+msgid "Briefcase"
+msgstr "Cartella"
+
+msgctxt "L_MPMENU_255"
+msgid "Hacker"
+msgstr "Hacker"
+
+msgctxt "L_MPMENU_256"
+msgid "Pop"
+msgstr "Contro 1"
+
+msgctxt "L_MPMENU_257"
+msgid "Hill"
+msgstr "Colle"
+
+msgctxt "L_MPMENU_258"
+msgid "Capture"
+msgstr "Cassa"
+
+msgctxt "L_MPMENU_259"
+msgid "Boxes"
+msgstr "Box"
+
+msgctxt "L_MPMENU_260"
+msgid "Game Over\\n"
+msgstr "Fine partita\\n"
+
+msgctxt "L_MPMENU_261"
+msgid "Title:\\n"
+msgstr "Titolo:\\n"
+
+msgctxt "L_MPMENU_262"
+msgid "Weapon of Choice:\\n"
+msgstr "Arma più usata:\\n"
+
+msgctxt "L_MPMENU_263"
+msgid "Awards:\\n"
+msgstr "Premi:\\n"
+
+msgctxt "L_MPMENU_264"
+msgid "1st\\n"
+msgstr "1°\\n"
+
+msgctxt "L_MPMENU_265"
+msgid "2nd\\n"
+msgstr "2°\\n"
+
+msgctxt "L_MPMENU_266"
+msgid "3rd\\n"
+msgstr "3°\\n"
+
+msgctxt "L_MPMENU_267"
+msgid "4th\\n"
+msgstr "4°\\n"
+
+msgctxt "L_MPMENU_268"
+msgid "5th\\n"
+msgstr "5°\\n"
+
+msgctxt "L_MPMENU_269"
+msgid "6th\\n"
+msgstr "6°\\n"
+
+msgctxt "L_MPMENU_270"
+msgid "7th\\n"
+msgstr "7°\\n"
+
+msgctxt "L_MPMENU_271"
+msgid "8th\\n"
+msgstr "8°\\n"
+
+msgctxt "L_MPMENU_272"
+msgid "9th\\n"
+msgstr "9°\\n"
+
+msgctxt "L_MPMENU_273"
+msgid "10th\\n"
+msgstr "10°\\n"
+
+msgctxt "L_MPMENU_274"
+msgid "11th\\n"
+msgstr "11°\\n"
+
+msgctxt "L_MPMENU_275"
+msgid "12th\\n"
+msgstr "12°\\n"
+
+msgctxt "L_MPMENU_276"
+msgid "Player Ranking\\n"
+msgstr "Classifica giocatori\\n"
+
+msgctxt "L_MPMENU_277"
+msgid "Deaths\\n"
+msgstr "Decessi\\n"
+
+msgctxt "L_MPMENU_278"
+msgid "Score\\n"
+msgstr "Punti\\n"
+
+msgctxt "L_MPMENU_279"
+msgid "Team Ranking\\n"
+msgstr "Classifica squadre\\n"
+
+msgctxt "L_MPMENU_280"
+msgid "Stats for %s"
+msgstr "Statistiche %s"
+
+msgctxt "L_MPMENU_281"
+msgid "Suicides\\n"
+msgstr "Suicidi\\n"
+
+msgctxt "L_MPMENU_282"
+msgid "Deaths\\n"
+msgstr "Decessi\\n"
+
+msgctxt "L_MPMENU_283"
+msgid "Kills\\n"
+msgstr "Vitt.\\n"
+
+msgctxt "L_MPMENU_284"
+msgid "Inventory\\n"
+msgstr "Inventario\\n"
+
+msgctxt "L_MPMENU_285"
+msgid "Control\\n"
+msgstr "Comandi\\n"
+
+msgctxt "L_MPMENU_286"
+msgid "Game Time:\\n"
+msgstr "Tempo:\\n"
+
+msgctxt "L_MPMENU_287"
+msgid "End Game\\n"
+msgstr "Fine gioco\\n"
+
+msgctxt "L_MPMENU_288"
+msgid "Pause\\n"
+msgstr "Pausa\\n"
+
+msgctxt "L_MPMENU_289"
+msgid "Unpause\\n"
+msgstr "Fine pausa\\n"
+
+msgctxt "L_MPMENU_290"
+msgid "End Game\\n"
+msgstr "Esci dal gioco\\n"
+
+msgctxt "L_MPMENU_291"
+msgid "Are you sure?\\n"
+msgstr "Sicuro?\\n"
+
+msgctxt "L_MPMENU_292"
+msgid "Cancel\\n"
+msgstr "Annulla\\n"
+
+msgctxt "L_MPMENU_293"
+msgid "End Game\\n"
+msgstr "Fine gioco\\n"
+
+msgctxt "L_MPMENU_294"
+msgid "PerfectHead\\n"
+msgstr "TestaPerfect\\n"
+
+msgctxt "L_MPMENU_295"
+msgid "Load A Saved Head\\n"
+msgstr "Carica testa salvata\\n"
+
+msgctxt "L_MPMENU_296"
+msgid "Make A New Head\\n"
+msgstr "Crea nuova testa\\n"
+
+msgctxt "L_MPMENU_297"
+msgid "Edit A Loaded Head\\n"
+msgstr "Modifica testa caricata\\n"
+
+msgctxt "L_MPMENU_298"
+msgid "Edit A PerfectHead\\n"
+msgstr "Modifica testaPerfect\\n"
+
+msgctxt "L_MPMENU_299"
+msgid "Choose slot to edit:\\n"
+msgstr "Scegli casella per modifica:\\n"
+
+msgctxt "L_MPMENU_300"
+msgid "Cancel\\n"
+msgstr "Annulla\\n"
+
+msgctxt "L_MPMENU_301"
+msgid "Make A New Head\\n"
+msgstr "Crea nuova testa\\n"
+
+msgctxt "L_MPMENU_302"
+msgid "Load A Saved Head\\n"
+msgstr "Carica testa salvata\\n"
+
+msgctxt "L_MPMENU_303"
+msgid "Where do you want to be able\\n"
+msgstr "Dove desideri usare\\n"
+
+msgctxt "L_MPMENU_304"
+msgid "to use this head?\\n"
+msgstr "questa testa?\\n"
+
+msgctxt "L_MPMENU_305"
+msgid "Combat Simulator\\n"
+msgstr "Simulatore lotta\\n"
+
+msgctxt "L_MPMENU_306"
+msgid "All Missions\\n"
+msgstr "Tutte le missioni\\n"
+
+msgctxt "L_MPMENU_307"
+msgid "Both\\n"
+msgstr "Entrambi\\n"
+
+msgctxt "L_MPMENU_308"
+msgid "Cancel\\n"
+msgstr "Annulla\\n"
+
+msgctxt "L_MPMENU_309"
+msgid "Camera Setup\\n"
+msgstr "Impostaz. macch. fotografica\\n"
+
+msgctxt "L_MPMENU_310"
+msgid "Insert your camera into your\\n"
+msgstr "Inserisci la macch. fotografica\\n"
+
+msgctxt "L_MPMENU_311"
+msgid "Game Boy Pak.\\n"
+msgstr "nella cassetta Game Boy.\\n"
+
+msgctxt "L_MPMENU_312"
+msgid "Then, insert your Game Boy Pak\\n"
+msgstr "Poi inserisci la cassetta Game Boy\\n"
+
+msgctxt "L_MPMENU_313"
+msgid "into any controller.\\n"
+msgstr "in un Controller.\\n"
+
+msgctxt "L_MPMENU_314"
+msgid "OK\\n"
+msgstr "OK\\n"
+
+msgctxt "L_MPMENU_315"
+msgid "Cancel\\n"
+msgstr "Annulla\\n"
+
+msgctxt "L_MPMENU_316"
+msgid "Error\\n"
+msgstr "Errore\\n"
+
+msgctxt "L_MPMENU_317"
+msgid "Game Boy Camera Not Detected!\\n"
+msgstr "Macch. fotografica Game Boy non rilevata!\\n"
+
+msgctxt "L_MPMENU_318"
+msgid "Please check all connections\\n"
+msgstr "Controlla i collegamenti\\n"
+
+msgctxt "L_MPMENU_319"
+msgid "and try again.\\n"
+msgstr "e riprova.\\n"
+
+msgctxt "L_MPMENU_320"
+msgid "Cancel\\n"
+msgstr "Annulla\\n"
+
+msgctxt "L_MPMENU_321"
+msgid "Choose Camera\\n"
+msgstr "Scegli la macchina\\n"
+
+msgctxt "L_MPMENU_322"
+msgid "More than one camera detected.\\n"
+msgstr "Rilevate più macchine\\n"
+
+msgctxt "L_MPMENU_323"
+msgid "Please select which camera you\\nwant to use\\n"
+msgstr "Seleziona la macchina che\\nvuoi usare\\n"
+
+msgctxt "L_MPMENU_324"
+msgid "OK\\n"
+msgstr "OK\\n"
+
+msgctxt "L_MPMENU_325"
+msgid "Cancel\\n"
+msgstr "Annulla\\n"
+
+msgctxt "L_MPMENU_326"
+msgid "PerfectHead\\n"
+msgstr "TestaPerfect\\n"
+
+msgctxt "L_MPMENU_327"
+msgid "Take A Picture Now\\n"
+msgstr "Scatta foto ora\\n"
+
+msgctxt "L_MPMENU_328"
+msgid "Load Picture From Camera\\n"
+msgstr "Carica foto da macchina\\n"
+
+msgctxt "L_MPMENU_329"
+msgid "Cancel\\n"
+msgstr "Annulla\\n"
+
+msgctxt "L_MPMENU_330"
+msgid "Load From Camera\\n"
+msgstr "Carica da macchina\\n"
+
+msgctxt "L_MPMENU_331"
+msgid "Choose picture to read from camera:\\n"
+msgstr "Scegli foto:\\n"
+
+msgctxt "L_MPMENU_332"
+msgid "Cancel\\n"
+msgstr "Annulla\\n"
+
+msgctxt "L_MPMENU_333"
+msgid "Take Picture\\n"
+msgstr "Scatta foto\\n"
+
+msgctxt "L_MPMENU_334"
+msgid "Shoot!\\n"
+msgstr "Scatta!\\n"
+
+msgctxt "L_MPMENU_335"
+msgid "Cancel\\n"
+msgstr "Annulla\\n"
+
+msgctxt "L_MPMENU_336"
+msgid "Keep Picture\\n"
+msgstr "Tieni foto\\n"
+
+msgctxt "L_MPMENU_337"
+msgid "Try Again\\n"
+msgstr "Riprova\\n"
+
+msgctxt "L_MPMENU_338"
+msgid "Load PerfectHead\\n"
+msgstr "Carica testaPerfect\\n"
+
+msgctxt "L_MPMENU_339"
+msgid "Insert the Controller Pak\\n"
+msgstr "Inserisci il Controller Pak\\n"
+
+msgctxt "L_MPMENU_340"
+msgid "containing the head you\\n"
+msgstr "contenete la testa che\\n"
+
+msgctxt "L_MPMENU_341"
+msgid "wish to load into any\\n"
+msgstr "vuoi caricare in uno\\n"
+
+msgctxt "L_MPMENU_342"
+msgid "controller.\\n"
+msgstr "dei Controller.\\n"
+
+msgctxt "L_MPMENU_343"
+msgid "Controller Pak:\\n"
+msgstr "Controller Pak:\\n"
+
+msgctxt "L_MPMENU_344"
+msgid "Cancel\\n"
+msgstr "Annulla\\n"
+
+msgctxt "L_MPMENU_345"
+msgid "Source:\\n"
+msgstr "Fonte:\\n"
+
+msgctxt "L_MPMENU_346"
+msgid "Pak 1"
+msgstr "Pak 1"
+
+msgctxt "L_MPMENU_347"
+msgid "Pak 2"
+msgstr "Pak 2"
+
+msgctxt "L_MPMENU_348"
+msgid "Pak 3"
+msgstr "Pak 3"
+
+msgctxt "L_MPMENU_349"
+msgid "Pak 4"
+msgstr "Pak 4"
+
+msgctxt "L_MPMENU_350"
+msgid "<none>"
+msgstr "<none>"
+
+msgctxt "L_MPMENU_351"
+msgid "PerfectHead Editor\\n"
+msgstr "TestaPerfect Editor\\n"
+
+msgctxt "L_MPMENU_352"
+msgid "Take Another Picture\\n"
+msgstr "Scatta altra foto\\n"
+
+msgctxt "L_MPMENU_353"
+msgid "Change Head\\n"
+msgstr "Cambia testa\\n"
+
+msgctxt "L_MPMENU_354"
+msgid "Position Picture\\n"
+msgstr "Posiziona foto\\n"
+
+msgctxt "L_MPMENU_355"
+msgid "Color Face & Hair\\n"
+msgstr "Colora viso e capelli\\n"
+
+msgctxt "L_MPMENU_356"
+msgid "Shape Head\\n"
+msgstr "Dai forma a testa\\n"
+
+msgctxt "L_MPMENU_357"
+msgid "Remove Head\\n"
+msgstr "Rimuovi testa\\n"
+
+msgctxt "L_MPMENU_358"
+msgid "Cancel Changes\\n"
+msgstr "Cancella modifiche\\n"
+
+msgctxt "L_MPMENU_359"
+msgid "Keep Changes\\n"
+msgstr "Tieni modifiche\\n"
+
+msgctxt "L_MPMENU_360"
+msgid "Shape Head\\n"
+msgstr "Dai forma a testa\\n"
+
+msgctxt "L_MPMENU_361"
+msgid "Depth\\n"
+msgstr "Profondità\\n"
+
+msgctxt "L_MPMENU_362"
+msgid "OK\\n"
+msgstr "OK\\n"
+
+msgctxt "L_MPMENU_363"
+msgid "Cancel\\n"
+msgstr "Annulla\\n"
+
+msgctxt "L_MPMENU_364"
+msgid "Position Image\\n"
+msgstr "Posiziona immagine\\n"
+
+msgctxt "L_MPMENU_365"
+msgid "Brightness\\n"
+msgstr "Lumninosità\\n"
+
+msgctxt "L_MPMENU_366"
+msgid "OK\\n"
+msgstr "OK\\n"
+
+msgctxt "L_MPMENU_367"
+msgid "Cancel\\n"
+msgstr "Annulla\\n"
+
+msgctxt "L_MPMENU_368"
+msgid "Choose Head\\n"
+msgstr "Scegli testa\\n"
+
+msgctxt "L_MPMENU_369"
+msgid "OK\\n"
+msgstr "OK\\n"
+
+msgctxt "L_MPMENU_370"
+msgid "Cancel\\n"
+msgstr "Annulla\\n"
+
+msgctxt "L_MPMENU_371"
+msgid "Remove PerfectHead\\n"
+msgstr "Elimina testaPerfect\\n"
+
+msgctxt "L_MPMENU_372"
+msgid "Are you sure you want to\\n"
+msgstr "Desideri veramente eliminare\\n"
+
+msgctxt "L_MPMENU_373"
+msgid "remove this head from memory?\\n"
+msgstr "questa testa dalla memoria?\\n"
+
+msgctxt "L_MPMENU_374"
+msgid "Delete\\n"
+msgstr "Elimina\\n"
+
+msgctxt "L_MPMENU_375"
+msgid "Cancel\\n"
+msgstr "Annulla\\n"
+
+msgctxt "L_MPMENU_376"
+msgid "Cancel Changes\\n"
+msgstr "Annulla modifiche\\n"
+
+msgctxt "L_MPMENU_377"
+msgid "Are you sure you want to\\n"
+msgstr "Eliminare veramente\\n"
+
+msgctxt "L_MPMENU_378"
+msgid "throw away your changes?\\n"
+msgstr "le modifiche?\\n"
+
+msgctxt "L_MPMENU_379"
+msgid "Throw Away\\n"
+msgstr "Elimina\\n"
+
+msgctxt "L_MPMENU_380"
+msgid "Go Back To Editor\\n"
+msgstr "Esci\\n"
+
+msgctxt "L_MPMENU_381"
+msgid "Save PerfectHead\\n"
+msgstr "Salva testaPerfect\\n"
+
+msgctxt "L_MPMENU_382"
+msgid "You have edited this head.\\n"
+msgstr "Hai modificato questa testa.\\n"
+
+msgctxt "L_MPMENU_383"
+msgid "Do you want to keep your changes?\\n"
+msgstr "Vuoi tenere le modifiche?\\n"
+
+msgctxt "L_MPMENU_384"
+msgid "Keep\\n"
+msgstr "Tieni\\n"
+
+msgctxt "L_MPMENU_385"
+msgid "Revert\\n"
+msgstr "Annulla\\n"
+
+msgctxt "L_MPMENU_386"
+msgid "Save PerfectHead\\n"
+msgstr "Salva testaPerfect\\n"
+
+msgctxt "L_MPMENU_387"
+msgid "Your changes will be kept in memory.\\n"
+msgstr "Le modifiche saranno memorizzate.\\n"
+
+msgctxt "L_MPMENU_388"
+msgid "Would you like to save your changes\\n"
+msgstr "Vuoi salvare le modifiche\\n"
+
+msgctxt "L_MPMENU_389"
+msgid "to the Controller Pak?\\n"
+msgstr "nel Controller Pak?\\n"
+
+msgctxt "L_MPMENU_390"
+msgid "Save\\n"
+msgstr "Salva\\n"
+
+msgctxt "L_MPMENU_391"
+msgid "Don't Save\\n"
+msgstr "Non salvare\\n"
+
+msgctxt "L_MPMENU_392"
+msgid "Save PerfectHead\\n"
+msgstr "Salva testaPerfect\\n"
+
+msgctxt "L_MPMENU_393"
+msgid "You can now save your head on to\\n"
+msgstr "Ora puoi salvare la testa\\n"
+
+msgctxt "L_MPMENU_394"
+msgid "a Controller Pak if you wish.\\n"
+msgstr "su un Controller Pak se vuoi.\\n"
+
+msgctxt "L_MPMENU_395"
+msgid "If you want to do this, please\\n"
+msgstr "Prima però accertati che\\n"
+
+msgctxt "L_MPMENU_396"
+msgid "ensure a Controller Pak is inserted\\n"
+msgstr "sia inserito un Controller Pak\\n"
+
+msgctxt "L_MPMENU_397"
+msgid "and choose \\\"Save\\\".\\n"
+msgstr "e scegli \\\"Salva\\\".\\n"
+
+msgctxt "L_MPMENU_398"
+msgid "Save\\n"
+msgstr "Salva\\n"
+
+msgctxt "L_MPMENU_399"
+msgid "Don't Save\\n"
+msgstr "Non salvare\\n"
+
+msgctxt "L_MPMENU_400"
+msgid "Head Complete!\\n"
+msgstr "Testa completa!\\n"
+
+msgctxt "L_MPMENU_401"
+msgid "To use your head in the combat simulator,\\n"
+msgstr "Per usare la testa nel simulatore lotta,\\n"
+
+msgctxt "L_MPMENU_402"
+msgid "select the head from the character menu\\n"
+msgstr "selezionala dal menu personaggi delle\\n"
+
+msgctxt "L_MPMENU_403"
+msgid "of the player/simulant settings menu.\\n"
+msgstr "impostazioni giocatore/replicante.\\n"
+
+msgctxt "L_MPMENU_404"
+msgid "Your Mission heads will now appear\\n"
+msgstr "Appariranno le teste missione\\n"
+
+msgctxt "L_MPMENU_405"
+msgid "in any of the missions you play.\\n"
+msgstr "per ogni missione giocata.\\n"
+
+msgctxt "L_MPMENU_406"
+msgid "You can now edit your head further if you wish.\\n"
+msgstr "Puoi ancora modificare la testa.\\n"
+
+msgctxt "L_MPMENU_407"
+msgid "Finish\\n"
+msgstr "Esci\\n"
+
+msgctxt "L_MPMENU_408"
+msgid "Edit Head\\n"
+msgstr "Modifica testa\\n"
+
+msgctxt "L_MPMENU_409"
+msgid "Head Color\\n"
+msgstr "Colore testa\\n"
+
+msgctxt "L_MPMENU_410"
+msgid "Face:\\n"
+msgstr "Viso:\\n"
+
+msgctxt "L_MPMENU_411"
+msgid "Hairstyle:\\n"
+msgstr "Capelli:\\n"
+
+msgctxt "L_MPMENU_412"
+msgid "OK\\n"
+msgstr "OK\\n"
+
+msgctxt "L_MPMENU_413"
+msgid "Cancel\\n"
+msgstr "Annulla\\n"
+
+msgctxt "L_MPMENU_414"
+msgid "Press the B Button to go back.\\n"
+msgstr "Premi B per uscire.\\n"
+
+msgctxt "L_MPMENU_415"
+msgid "Hangar Information\\n"
+msgstr "Informazioni hangar\\n"
+
+msgctxt "L_MPMENU_416"
+msgid "Holotraining\\n"
+msgstr "Esercitazione olografica\\n"
+
+msgctxt "L_MPMENU_417"
+msgid "Device List\\n"
+msgstr "Lista strumenti\\n"
+
+msgctxt "L_MPMENU_418"
+msgid "Information\\n"
+msgstr "Informazioni\\n"
+
+msgctxt "L_MPMENU_419"
+msgid "Locations\\n"
+msgstr "Luoghi\\n"
+
+msgctxt "L_MPMENU_420"
+msgid "Vehicles\\n"
+msgstr "Veicoli\\n"
+
+msgctxt "L_MPMENU_421"
+msgid "Character Profiles\\n"
+msgstr "Profili personaggi\\n"
+
+msgctxt "L_MPMENU_422"
+msgid "Other Information\\n"
+msgstr "Altre informazioni\\n"
+
+msgctxt "L_MPMENU_423"
+msgid "Training Stats\\n"
+msgstr "Statistiche esercitazione\\n"
+
+msgctxt "L_MPMENU_424"
+msgid "Time Taken:\\n"
+msgstr "Tempo impiegato:\\n"
+
+msgctxt "L_MPMENU_425"
+msgid "Completed!\\n"
+msgstr "Compiuto!\\n"
+
+msgctxt "L_MPMENU_426"
+msgid "Failed!\\n"
+msgstr "Fallito!\\n"
+
+msgctxt "L_MPMENU_427"
+msgid "Ok\\n"
+msgstr "Ok\\n"
+
+msgctxt "L_MPMENU_428"
+msgid "Resume\\n"
+msgstr "Riprendi\\n"
+
+msgctxt "L_MPMENU_429"
+msgid "Cancel\\n"
+msgstr "Annulla\\n"
+
+msgctxt "L_MPMENU_430"
+msgid "Abort\\n"
+msgstr "Interrompi\\n"
+
+msgctxt "L_MPMENU_431"
+msgid "Character Profile\\n"
+msgstr "Profilo personaggio\\n"
+
+msgctxt "L_MPMENU_432"
+msgid "Name:\\n"
+msgstr "Nome:\\n"
+
+msgctxt "L_MPMENU_433"
+msgid "Age:\\n"
+msgstr "Età:\\n"
+
+msgctxt "L_MPMENU_434"
+msgid "Race:\\n"
+msgstr "Razza:\\n"
+
+msgctxt "L_MPMENU_435"
+msgid "Press the B Button to go back.\\n"
+msgstr "Premi B per uscire.\\n"
+
+msgctxt "L_MPMENU_436"
+msgid "Cheats\\n"
+msgstr "Trucchi\\n"
+
+msgctxt "L_MPMENU_437"
+msgid "It is now safe to turn off your computer.\\n"
+msgstr "Ora puoi spegnere il computer.\\n"
+
+msgctxt "L_MPMENU_438"
+msgid "Cancel\\n"
+msgstr "Annulla\\n"
+
+msgctxt "L_MPMENU_439"
+msgid "Bronze\\n"
+msgstr "Bronzo\\n"
+
+msgctxt "L_MPMENU_440"
+msgid "Silver\\n"
+msgstr "Argento\\n"
+
+msgctxt "L_MPMENU_441"
+msgid "Gold\\n"
+msgstr "Oro\\n"
+
+msgctxt "L_MPMENU_442"
+msgid "Difficulty\\n"
+msgstr "Difficoltà\\n"
+
+msgctxt "L_MPMENU_443"
+msgid "Difficulty:\\n"
+msgstr "Difficoltà:\\n"
+
+msgctxt "L_MPMENU_444"
+msgid "Select Difficulty:\\n"
+msgstr "Seleziona difficoltà:\\n"
+
+msgctxt "L_MPMENU_445"
+msgid "   \\n"
+msgstr "   \\n"
+
+msgctxt "L_MPMENU_446"
+msgid "Weapon\\n"
+msgstr "Arma\\n"
+
+msgctxt "L_MPMENU_447"
+msgid "Training Info\\n"
+msgstr "Informazioni esercitazione\\n"
+
+msgctxt "L_MPMENU_448"
+msgid "Training Stats\\n"
+msgstr "Statistiche esercitazione\\n"
+
+msgctxt "L_MPMENU_449"
+msgid "Completed!\\n"
+msgstr "Compiuto!\\n"
+
+msgctxt "L_MPMENU_450"
+msgid "Score:\\n"
+msgstr "Punti:\\n"
+
+msgctxt "L_MPMENU_451"
+msgid "Targets Destroyed:\\n"
+msgstr "Obiettivi distrutti:\\n"
+
+msgctxt "L_MPMENU_452"
+msgid "Difficulty:\\n"
+msgstr "Difficoltà:\\n"
+
+msgctxt "L_MPMENU_453"
+msgid "Time Taken:\\n"
+msgstr "Tempo impiegato:\\n"
+
+msgctxt "L_MPMENU_454"
+msgid "Weapon:\\n"
+msgstr "Arma:\\n"
+
+msgctxt "L_MPMENU_455"
+msgid "Accuracy:\\n"
+msgstr "Precisione:\\n"
+
+msgctxt "L_MPMENU_456"
+msgid "Not Failed\\n"
+msgstr "Non fallito\\n"
+
+msgctxt "L_MPMENU_457"
+msgid "Out of Ammo\\n"
+msgstr "Finite munizioni\\n"
+
+msgctxt "L_MPMENU_458"
+msgid "Time Over\\n"
+msgstr "Tempo scaduto\\n"
+
+msgctxt "L_MPMENU_459"
+msgid "Score Unattainable\\n"
+msgstr "Punteggio impossibile \\n"
+
+msgctxt "L_MPMENU_460"
+msgid "Too Inaccurate\\n"
+msgstr "Troppo impreciso\\n"
+
+msgctxt "L_MPMENU_461"
+msgid "Bull's-eye\\n"
+msgstr "Centro\\n"
+
+msgctxt "L_MPMENU_462"
+msgid "Zone 1\\n"
+msgstr "Zona 1\\n"
+
+msgctxt "L_MPMENU_463"
+msgid "Zone 2\\n"
+msgstr "Zona 2\\n"
+
+msgctxt "L_MPMENU_464"
+msgid "Zone 3\\n"
+msgstr "Zona 3\\n"
+
+msgctxt "L_MPMENU_465"
+msgid "Hit total\\n"
+msgstr "Colpi\\n"
+
+msgctxt "L_MPMENU_466"
+msgid "Scoring\\n"
+msgstr "Punti\\n"
+
+msgctxt "L_MPMENU_467"
+msgid "10\\n"
+msgstr "10\\n"
+
+msgctxt "L_MPMENU_468"
+msgid "5\\n"
+msgstr "5\\n"
+
+msgctxt "L_MPMENU_469"
+msgid "2\\n"
+msgstr "2\\n"
+
+msgctxt "L_MPMENU_470"
+msgid "1\\n"
+msgstr "1\\n"
+
+msgctxt "L_MPMENU_471"
+msgid "Ammo Limit:\\n"
+msgstr "Limite munizioni:\\n"
+
+msgctxt "L_MPMENU_472"
+msgid "Time Limit:\\n"
+msgstr "Limite tempo:\\n"
+
+msgctxt "L_MPMENU_473"
+msgid "Min Accuracy:\\n"
+msgstr "Precisione min.:\\n"
+
+msgctxt "L_MPMENU_474"
+msgid "Goal Targets:\\n"
+msgstr "Obiettivi:\\n"
+
+msgctxt "L_MPMENU_475"
+msgid "Goal Score:\\n"
+msgstr "Punteggio obiettivi:\\n"
+
+msgctxt "L_MPMENU_476"
+msgid "Cheats\\n"
+msgstr "Trucchi\\n"
+
+msgctxt "L_MPMENU_477"
+msgid "Done\\n"
+msgstr "Fatto\\n"
+
+msgctxt "L_MPMENU_478"
+msgid "Warning\\n"
+msgstr "Avvertenza\\n"
+
+msgctxt "L_MPMENU_479"
+msgid ""
+"If you activate any cheats, then you\\nwill be unable to progress further in"
+" the game\\nwhile those cheats are active.\\n"
+msgstr "Finché i trucchi sono attivi,\\nnon potrai progredire nel gioco\\n."
+
+msgctxt "L_MPMENU_480"
+msgid "OK\\n"
+msgstr "OK\\n"
+
+msgctxt "L_MPMENU_481"
+msgid "Cancel\\n"
+msgstr "Annulla\\n"
+
+msgctxt "L_MPMENU_482"
+msgid "Player %d: "
+msgstr "Giocat. %d: "
+
+msgctxt "L_MPMENU_483"
+msgid "Press START!\\n"
+msgstr "Premi START!\\n"
+
+msgctxt "L_MPMENU_484"
+msgid "Searching for Camera!\\n"
+msgstr "Ricerca macch. fotografica!\\n"
+
+msgctxt "L_MPMENU_485"
+msgid "Calibrating Camera\\n"
+msgstr "Regolazione macchina\\n"
+
+msgctxt "L_MPMENU_486"
+msgid "Downloading Image\\n"
+msgstr "Scaricamento immagine\\n"
+
+msgctxt "L_MPMENU_487"
+msgid "Loading Image\\n"
+msgstr "Caricamento immagine\\n"
+
+msgctxt "L_MPMENU_488"
+msgid "Saving Image\\n"
+msgstr "Salva immagine\\n"
+
+msgctxt "L_MPMENU_489"
+msgid "Transfering Image\\n"
+msgstr "Tasferimento immagine\\n"
+
+msgctxt "L_MPMENU_490"
+msgid "Uploading Segment\\n"
+msgstr "Caricamento segmento\\n"
+
+msgctxt "L_MPMENU_491"
+msgid "Checking Controller Pak\\n"
+msgstr "Esame Controller Pak\\n"
+
+msgctxt "L_MPMENU_492"
+msgid "Getting PerfectHead\\n"
+msgstr "Prelevam. testaPerfect\\n"
+
+msgctxt "L_MPMENU_493"
+msgid "Saving PerfectHead\\n"
+msgstr "Salvatag. testaPerfect\\n"
+
+msgctxt "L_MPMENU_494"
+msgid "Auto Camera Adjustment\\n"
+msgstr "Regolazione autom. macchina\\n"
+
+msgctxt "L_MPMENU_495"
+msgid "Please Wait...\\n"
+msgstr "Attendere prego...\\n"

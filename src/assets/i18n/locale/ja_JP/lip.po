@@ -1,0 +1,527 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Perfect Dark PC port localization\n"
+"POT-Creation-Date: 2025-05-30 14:19:36.854417+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: originalAssets_to_l10n.py script\n"
+
+msgctxt "L_LIP_000"
+msgid ""
+"|Background - \\n\\nA craft carrying Institute advisors has been shot down "
+"in Nevada. Debris from the crash and the bodies of the advisors have been "
+"taken to Area 51. A spy inside the base has managed to get footage to the "
+"Institute of a possible survivor. This mission is to rescue that "
+"survivor.\\n\\n|Carrington - \\n\\nYou need to cover our tracks and rescue "
+"our friend as fast as you can. A disguise will help you do that, but it "
+"won't last forever, so make good use of it. Wipe out their records, and make"
+" sure there are no more survivors we are unaware of. Time is pressing, so "
+"hurry.\\n\\n|Objective One: - Destroy Computer Research Records\\n\\nAny "
+"information that the Area 51 techs were able to get from the crash wreckage "
+"and objects must be wiped from their databases. The main databank terminal "
+"is kept in a locked room at the top of the main corridor. Install a virus "
+"using the Data Uplink device, and then destroy the terminal itself. If the "
+"virus is loaded into other terminals, it may produce helpful "
+"effects.\\n\\n|Objective Two: - Locate Conspiracy Evidence\\n\\nJonathan's "
+"report made reference to a tissue containment unit where organic samples are"
+" stored at extremely low temperatures. He believes that it could be used to "
+"cryogenically freeze bodies before surgery or dissection. Find this area and"
+" confirm the death of any of the three other passengers of the "
+"craft.\\n\\n|Objective Three: - Obtain and Use Lab Technician "
+"Disguise\\n\\nFind a Lab Technician's outfit and use it to get past the "
+"security. Once you have, move fast, since the theft won't go unnoticed for "
+"long.\\n\\n|Objective Four: - Gain Access to Autopsy Lab\\n\\nA premature "
+"autopsy will soon be taking place in one of the secure medical laboratories."
+" It will be locked to those without clearance, so get a card with the "
+"appropriate level to get in. Not all cards will work, and there may be door "
+"guards as well.\\n\\n|Objective Five: - Rescue the Crash Survivor\\n\\nOnce "
+"you are in the lab, you will have to get into the autopsy chamber before any"
+" harm comes to the subject. The scientists will try to kill him if they "
+"think he's alive or will attempt to damage what they think is a corpse as "
+"soon as they see you. Yet again, speed is vital.\\n\\nEND\\n"
+msgstr ""
+"|ステージ背景：\\n\\n我々の「フレンド」たちが、ネバダ上空を飛行中に撃ち落とされてしまった。残がいと「フレンド」たちは軍の秘密基地「エリア５１」へ運ばれた。同基地内にいる我々のスパイが、生存者の可能性を示す映像を電送してきた。今回の任務はその生存者の救出だ。\\n\\n|キャリントン：\\n\\n君は我々の潜入が気づかれないように、できるだけ早く「フレンド」を救出しなければならない。変装することで、任務をスムーズに進めることができるだろうが、長時間バレずにいるのは難しいだろう。上手に利用するんだ。今回の墜落に関する基地の記録を全て消し去り、その他の生存者を見落としていないかを、よく確認するのだ。時間が無い。急いでくれ。\\n\\n|任務１：データベースを破壊せよ\\n\\n今回、エリア５１の技術チームが入手した全情報を、彼らのデータベースから消し去らなくてはならない。データベースが保存されている研究室のドアは、おそらくロックされている。データリンカを使用して、ドアをコントロールしているコンピュータにウイルスを送りこみ、ドアのロックをはずすのだ。\\n\\n|任務２：冷凍カプセルをチェックせよ\\n\\nジョナサンからのレポートには、冷凍カプセルに関するものがある。解剖前の死体などがサンプルとして冷凍保存されているそうだ。この冷凍カプセルを探し出し、Ｘスキャンでチェックするのだ。もし「フレンド」の誰かが保存されていたら、その生死をよくチェックすること。\\n\\n|任務３：ユニフォームを着用せよ\\n\\n実験室スタッフのユニフォームを入手し、それを使って警備兵をやり過ごすのだ。変装できたら、急いで行動する必要がある。いずれは見破られてしまうからな。\\n\\n|任務４：医学実験室のカードキー入手\\n\\nまもなく、検死作業がどこかの医学実験室で行われるであろう。その部屋は、許可された者以外は入れないようにロックされているから、同じフロアーでカードキーを入手して中に入るのだ。全てのカードキーが有効なわけではないだろうし、ドアには警備兵もいるだろう。\\n\\n|任務５：事故の生存者を救出せよ\\n\\n医学実験室に入ったら、任務をジャマされる前にすぐにオペルームに入るのだ。科学者たちは、検体が生きていることに気づいたり、もしくは君が突入してくるのを見れば、すぐに検体を処分しようとするだろう。繰り返して言うがスピーディな行動が重要だ。\\n\\nEND\\n"
+
+msgctxt "L_LIP_001"
+msgid "AREA 51 - MEDLABS\\n"
+msgstr "エリア５１　研究開発エリア\\n"
+
+msgctxt "L_LIP_002"
+msgid ""
+"|Background - \\n\\nA craft carrying Institute advisors has been shot down "
+"in Nevada. Debris from the crash and the bodies of the advisors have been "
+"taken to Area 51. A spy inside the base has managed to get footage to the "
+"Institute of a possible survivor. This mission is to rescue that "
+"survivor.\\n\\n|Carrington - \\n\\nYou need to cover our tracks and rescue "
+"our friend as fast as you can. A disguise will help you do that, but it "
+"won't last forever, so make good use of it. Wipe out their records, and make"
+" sure there are no more survivors we are unaware of. Time is pressing, so "
+"hurry.\\n\\n|Objective One: - Locate Conspiracy Evidence\\n\\nJonathan's "
+"report made reference to a tissue containment unit where organic samples are"
+" stored at extremely low temperatures. He believes that it could be used to "
+"cryogenically freeze bodies before surgery or dissection. Find this area and"
+" confirm the death of any of the three other passengers of the "
+"craft.\\n\\n|Objective Two: - Obtain and Use Lab Technician "
+"Disguise\\n\\nFind a Lab Technician's outfit and use it to get past the "
+"security. Once you have, move fast, since the theft won't go unnoticed for "
+"long.\\n\\n|Objective Three: - Gain Access to Autopsy Lab\\n\\nA premature "
+"autopsy will soon be taking place in one of the secure medical laboratories."
+" It will be locked to those without clearance, so get a card with the "
+"appropriate level to get in. Not all cards will work, and there may be door "
+"guards as well.\\n\\n|Objective Four: - Rescue the Crash Survivor\\n\\nOnce "
+"you are in the lab, you will have to get into the autopsy chamber before any"
+" harm comes to the subject. The scientists will try to kill him if they "
+"think he's alive or will attempt to damage what they think is a corpse as "
+"soon as they see you. Yet again, speed is vital.\\n\\nEND\\n"
+msgstr ""
+"|ステージ背景：\\n\\n我々の「フレンド」たちが、ネバダ上空を飛行中に撃ち落とされてしまった。残がいと「フレンド」たちは軍の秘密基地「エリア５１」へ運ばれた。同基地内にいる我々のスパイが、生存者の可能性を示す映像を電送してきた。今回の任務はその生存者の救出だ。\\n\\n|キャリントン：\\n\\n君は我々の潜入が気づかれないように、できるだけ早く「フレンド」を救出しなければならない。変装することで、任務をスムーズに進めることができるだろうが、長時間バレずにいるのは難しいだろう。上手に利用するんだ。その他の生存者を見落としていないかをよく確認するのだ。時間が無い。急げ。\\n\\n|任務１：冷凍カプセルをチェックせよ\\n\\nジョナサンからのレポートには、冷凍カプセルに関するものがある。解剖前の死体などがサンプルとして冷凍保存されているそうだ。この冷凍カプセルを探し出し、Ｘスキャンでチェックするのだ。もし「フレンド」の誰かが保存されていたら、その生死をよくチェックすること。\\n\\n|任務２：ユニフォームを着用せよ\\n\\n実験室スタッフのユニフォームを入手し、それを使って警備兵をやり過ごすのだ。変装できたら、急いで行動する必要がある。いずれは見破られてしまうからな。\\n\\n|任務３：医学実験室のカードキー入手\\n\\nまもなく、検死作業がどこかの医学実験室で行われるであろう。その部屋は、許可された者以外は入れないようにロックされているから、同じフロアーでカードキーを入手して中に入るのだ。全てのカードキーが有効なわけではないだろうし、ドアには警備兵もいるだろう。\\n\\n|任務４：事故の生存者を救出せよ\\n\\n医学実験室に入ったら、任務をジャマされる前にすぐにオペルームに入るのだ。科学者たちは、検体が生きていることに気づいたり、もしくは君が突入してくるのを見れば、すぐに検体を処分しようとするだろう。繰り返して言うがスピーディな行動が重要だ。\\n\\nEND\\n"
+
+msgctxt "L_LIP_003"
+msgid ""
+"|Background - \\n\\nA craft carrying Institute advisors has been shot down "
+"in Nevada. Debris from the crash and the bodies of the advisors have been "
+"taken to Area 51. A spy inside the base has managed to get footage to the "
+"Institute of a possible survivor. This mission is to rescue that "
+"survivor.\\n\\n|Carrington - \\n\\nYou need to cover our tracks and rescue "
+"our friend as fast as you can. A disguise will help you do that, but it "
+"won't last forever, so make good use of it. Wipe out their records, and make"
+" sure there are no more survivors we are unaware of. Time is pressing, so "
+"hurry.\\n\\n|Objective One: - Obtain and Use Lab Technician "
+"Disguise\\n\\nFind a Lab Technician's outfit and use it to get past the "
+"security. Once you have, move fast, since the theft won't go unnoticed for "
+"long.\\n\\n|Objective Two: - Gain Access to Autopsy Lab\\n\\nA premature "
+"autopsy will soon be taking place in one of the secure medical laboratories."
+" It will be locked to those without clearance, so get a card with the "
+"appropriate level to get in. Not all cards will work, and there may be door "
+"guards as well.\\n\\n|Objective Three: - Rescue the Crash Survivor\\n\\nOnce"
+" you are in the lab, you will have to get into the autopsy chamber before "
+"any harm comes to the subject. The scientists will try to kill him if they "
+"think he's alive or will attempt to damage what they think is a corpse as "
+"soon as they see you. Yet again, speed is vital.\\n\\nEND\\n"
+msgstr ""
+"|ステージ背景：\\n\\n我々の「フレンド」たちが、ネバダ上空を飛行中に撃ち落とされてしまった。残がいと「フレンド」たちは軍の秘密基地「エリア５１」へ運ばれた。同基地内にいる我々のスパイが、生存者の可能性を示す映像を電送してきた。今回の任務はその生存者の救出だ。\\n\\n|キャリントン：\\n\\n君は我々の潜入が気づかれないように、できるだけ早く「フレンド」を救出しなければならない。変装することで、任務をスムーズに進めることができるだろうが、長時間バレずにいるのは難しいだろう。時間が無い。急いでくれ。\\n\\n|任務１：ユニフォームを着用せよ\\n\\n実験室スタッフのユニフォームを入手し、それを使って警備兵をやり過ごすのだ。変装できたら、急いで行動する必要がある。いずれは見破られてしまうからな。\\n\\n|任務２：医学実験室のカードキー入手\\n\\nまもなく、検死作業がどこかの医学実験室で行われるであろう。その部屋は、許可された者以外は入れないようにロックされているから、同じフロアーでカードキーを入手して中に入るのだ。全てのカードキーが有効なわけではないだろうし、ドアには警備兵もいるだろう。\\n\\n|任務３：事故の生存者を救出せよ\\n\\n医学実験室に入ったら、任務をジャマされる前にすぐにオペルームに入るのだ。科学者たちは、検体が生きていることに気づいたり、もしくは君が突入してくるのを見れば、すぐに検体を処分しようとするだろう。繰り返して言うがスピーディな行動が重要だ。\\n\\nEND\\n"
+
+msgctxt "L_LIP_004"
+msgid "\\n"
+msgstr "\\n"
+
+msgctxt "L_LIP_005"
+msgid "\\n"
+msgstr "\\n"
+
+msgctxt "L_LIP_006"
+msgid "\\n"
+msgstr "\\n"
+
+msgctxt "L_LIP_007"
+msgid "\\n"
+msgstr "\\n"
+
+msgctxt "L_LIP_008"
+msgid "\\n"
+msgstr "\\n"
+
+msgctxt "L_LIP_009"
+msgid "Obtain and use lab technician disguise\\n"
+msgstr "ユニフォームを着用せよ\\n"
+
+msgctxt "L_LIP_010"
+msgid "Destroy computer records\\n"
+msgstr "データベースを破壊せよ\\n"
+
+msgctxt "L_LIP_011"
+msgid "Locate conspiracy evidence\\n"
+msgstr "冷凍カプセルをチェックせよ\\n"
+
+msgctxt "L_LIP_012"
+msgid "Gain access to autopsy lab\\n"
+msgstr "医学実験室のカードキー入手\\n"
+
+msgctxt "L_LIP_013"
+msgid "Rescue the crash Survivor\\n"
+msgstr "事故の生存者を救出せよ\\n"
+
+msgctxt "L_LIP_014"
+msgid "Research records destroyed.\\n"
+msgstr "コンピュータ・リサーチの記録の破壊完了\\n"
+
+msgctxt "L_LIP_015"
+msgid "Obtain lab clothes.\\n"
+msgstr "Obtain lab clothes.\\n"
+
+msgctxt "L_LIP_016"
+msgid "Lab Tech's\\n"
+msgstr "Lab Tech's\\n"
+
+msgctxt "L_LIP_017"
+msgid "Lab clothes\\n"
+msgstr "ユニフォーム\\n"
+
+msgctxt "L_LIP_018"
+msgid "Lab clothes\\n"
+msgstr "ユニフォーム\\n"
+
+msgctxt "L_LIP_019"
+msgid "Picked up lab clothes.\\n"
+msgstr "ユニフォームを手に入れた\\n"
+
+msgctxt "L_LIP_020"
+msgid "Access to door control systems denied.\\n"
+msgstr "ドア用コントロールへのアクセスが拒否された\\n"
+
+msgctxt "L_LIP_021"
+msgid "Access to light control systems denied.\\n"
+msgstr "照明用コントロールへのアクセスが拒否された\\n"
+
+msgctxt "L_LIP_022"
+msgid "Access to security control systems denied.\\n"
+msgstr "警備コントロールへのアクセスが拒否された\\n"
+
+msgctxt "L_LIP_023"
+msgid "Virus downloaded to console.\\n"
+msgstr "コンピュータウイルスがセットされた\\n"
+
+msgctxt "L_LIP_024"
+msgid "Obtain Data Uplink.\\n"
+msgstr "Obtain Data Uplink.\\n"
+
+msgctxt "L_LIP_025"
+msgid "Lab Tech's\\n"
+msgstr "Lab Tech's\\n"
+
+msgctxt "L_LIP_026"
+msgid "Data Uplink\\n"
+msgstr "データリンカ\\n"
+
+msgctxt "L_LIP_027"
+msgid "Data Uplink\\n"
+msgstr "データリンカ\\n"
+
+msgctxt "L_LIP_028"
+msgid "Picked up Data Uplink.\\n"
+msgstr "データリンカを手に入れた\\n"
+
+msgctxt "L_LIP_029"
+msgid "Laboratory accessed successfully.\\n"
+msgstr "医学実験室に侵入した\\n"
+
+msgctxt "L_LIP_030"
+msgid "Data Uplink connected.\\n"
+msgstr "データリンカが接続された\\n"
+
+msgctxt "L_LIP_031"
+msgid "Data Uplink connection broken.\\n"
+msgstr "データリンカの接続が途切れた\\n"
+
+msgctxt "L_LIP_032"
+msgid "Obtain medlab 2 key card.\\n"
+msgstr "Obtain medlab 2 key card.\\n"
+
+msgctxt "L_LIP_033"
+msgid "Guard's\\n"
+msgstr "Guard's\\n"
+
+msgctxt "L_LIP_034"
+msgid "Medlab 2 key card\\n"
+msgstr "カードキーＭ\\n"
+
+msgctxt "L_LIP_035"
+msgid "Medlab 2 key card\\n"
+msgstr "カードキーＭ\\n"
+
+msgctxt "L_LIP_036"
+msgid "Picked up medlab 2 key card.\\n"
+msgstr "医学実験室のカードキーを手に入れた\\n"
+
+msgctxt "L_LIP_037"
+msgid "Who are you?\\n"
+msgstr "お前は誰だ？\\n"
+
+msgctxt "L_LIP_038"
+msgid "Hey - you've got my clothes.\\n"
+msgstr "こら、それはオレの服だぞ！\\n"
+
+msgctxt "L_LIP_039"
+msgid "Help - help!\\n"
+msgstr "助けて、助けてくれ！\\n"
+
+msgctxt "L_LIP_040"
+msgid "Don't shoot me!\\n"
+msgstr "撃たないで！\\n"
+
+msgctxt "L_LIP_041"
+msgid "Oh, my God - a gun!\\n"
+msgstr "何てこった、銃だ！\\n"
+
+msgctxt "L_LIP_042"
+msgid "There's an intruder in the complex.\\n"
+msgstr "ビル内に侵入者発見！\\n"
+
+msgctxt "L_LIP_043"
+msgid "Give me back my clothes - or else!\\n"
+msgstr "すぐに返さなきゃ、イタイ目にあうそ！\\n"
+
+msgctxt "L_LIP_044"
+msgid "Right - you've asked for it!\\n"
+msgstr "よーし、そっちがその気なら！\\n"
+
+msgctxt "L_LIP_045"
+msgid "Give me my clothes.\\n"
+msgstr "さっさと服を返せ…\\n"
+
+msgctxt "L_LIP_046"
+msgid "I don't have much time!!!\\n"
+msgstr "バレる前に急がなきゃ！\\n"
+
+msgctxt "L_LIP_047"
+msgid "The enemy has discovered the disguise.\\n"
+msgstr "ユニフォームを奪ったことが発覚した\\n"
+
+msgctxt "L_LIP_048"
+msgid "Virus has already been downloaded.\\n"
+msgstr "ウイルスは既にセットされています\\n"
+
+msgctxt "L_LIP_049"
+msgid "Initiating virus download.\\n"
+msgstr "コンピュータウイルスのセット開始\\n"
+
+msgctxt "L_LIP_050"
+msgid "So, you got here at last.\\n"
+msgstr "来たか、おそかったな。\\n"
+
+msgctxt "L_LIP_051"
+msgid "Hey, you're not... SECURITY ALERT!\\n"
+msgstr "おい、お前は…　アラームをならせ！\\n"
+
+msgctxt "L_LIP_052"
+msgid "No guns allowed in here - put your weapon away.\\n"
+msgstr "ここには武器は持ちこみ禁止だ。銃を収めろ。\\n"
+
+msgctxt "L_LIP_053"
+msgid "I won't tell you again - lose the weapon.\\n"
+msgstr "もう２度と言わないぞ！　銃を収めるんだ。\\n"
+
+msgctxt "L_LIP_054"
+msgid "Right - I'm calling security.\\n"
+msgstr "よろしい、では警備を呼ばせてもらおう\\n"
+
+msgctxt "L_LIP_055"
+msgid "Everyone's been waiting for you...\\n"
+msgstr "みんな君を待ってたんだぞ\\n"
+
+msgctxt "L_LIP_056"
+msgid "Critical mission personnel killed.\\n"
+msgstr "任務遂行に不可欠な人物が倒された\\n"
+
+msgctxt "L_LIP_057"
+msgid "Cannot gain access to autopsy lab.\\n"
+msgstr "医学実験室へのルートが確保できません\\n"
+
+msgctxt "L_LIP_058"
+msgid "Hey, that's not Harry. It's an intruder.\\n"
+msgstr "おい、こいつはハリーじゃないぞ。侵入者だ！\\n"
+
+msgctxt "L_LIP_059"
+msgid "Obtain op room key card.\\n"
+msgstr "Obtain op room key card.\\n"
+
+msgctxt "L_LIP_060"
+msgid "Guard's\\n"
+msgstr "Guard's\\n"
+
+msgctxt "L_LIP_061"
+msgid "Op room key card\\n"
+msgstr "カードキーＯｐ\\n"
+
+msgctxt "L_LIP_062"
+msgid "Op room key card\\n"
+msgstr "カードキーＯｐ\\n"
+
+msgctxt "L_LIP_063"
+msgid "Picked up operation room key card.\\n"
+msgstr "オペルームのカードキーを手に入れた\\n"
+
+msgctxt "L_LIP_064"
+msgid "Elvis has been killed.\\n"
+msgstr "「フレンド」が倒された\\n"
+
+msgctxt "L_LIP_065"
+msgid "Get the hell out of here!\\n"
+msgstr "ここから出ていってくれ！\\n"
+
+msgctxt "L_LIP_066"
+msgid "Containment unit raised up.\\n"
+msgstr "冷凍カプセルが上昇した\\n"
+
+msgctxt "L_LIP_067"
+msgid "Containment unit lowered down.\\n"
+msgstr "冷凍カプセルが下降した\\n"
+
+msgctxt "L_LIP_068"
+msgid "Mission critical equipment destroyed.\\n"
+msgstr "任務遂行に不可欠な要素が破壊された\\n"
+
+msgctxt "L_LIP_069"
+msgid "Obtain X-Ray Scanner.\\n"
+msgstr "Obtain X-Ray Scanner.\\n"
+
+msgctxt "L_LIP_070"
+msgid "\\n"
+msgstr "\\n"
+
+msgctxt "L_LIP_071"
+msgid "X-Ray Scanner\\n"
+msgstr "Ｘスキャン\\n"
+
+msgctxt "L_LIP_072"
+msgid "X-Ray Scanner\\n"
+msgstr "Ｘスキャン\\n"
+
+msgctxt "L_LIP_073"
+msgid "Picked up X-Ray Scanner.\\n"
+msgstr "Ｘスキャンを手に入れた\\n"
+
+msgctxt "L_LIP_074"
+msgid "Scanner target acquired.\\n"
+msgstr "スキャナーがターゲットをロックした\\n"
+
+msgctxt "L_LIP_075"
+msgid "Target ID confirmed - XT origin.\\n"
+msgstr "ターゲットＩＤ確認　生命反応なし\\n"
+
+msgctxt "L_LIP_076"
+msgid "Scanner lock lost.\\n"
+msgstr "スキャナーのロックが失われた\\n"
+
+msgctxt "L_LIP_077"
+msgid "Disguise has been worn.\\n"
+msgstr "ユニフォームを着用した\\n"
+
+msgctxt "L_LIP_078"
+msgid ""
+"The showers... Now, if I can convince someone \\nto part with their "
+"uniform...\\n"
+msgstr "ふーん、シャワー室か。そうそう、\\nここになら、ユニフォームがあるかも…\\n"
+
+msgctxt "L_LIP_079"
+msgid "The temperature's dropping... You must be \\nclose to the cryo room.\\n"
+msgstr "温度が下がってきているようだ。\\n冷凍カプセルは近いぞ！\\n"
+
+msgctxt "L_LIP_080"
+msgid ""
+"The air's heavily recycled around here - must\\n be near the autopsy lab.\\n"
+msgstr "エチルアルコールのにおい…。\\n医学実験室はこの近くね。\\n"
+
+msgctxt "L_LIP_081"
+msgid "There he is, Jo! Hurry or you'll be too late!\\n"
+msgstr "よーしここだ、ジョアンナ！\\n急がないと手遅れになるぞ！\\n"
+
+msgctxt "L_LIP_082"
+msgid "Leave this area now.\\n"
+msgstr "オイ！勝手に入るんじゃない！\\n"
+
+msgctxt "L_LIP_083"
+msgid "Should you be in here?\\n"
+msgstr "ここの担当か？\\n"
+
+msgctxt "L_LIP_084"
+msgid "Holy...\\n"
+msgstr "お、お前は…\\n"
+
+msgctxt "L_LIP_085"
+msgid "It's a spy!\\n"
+msgstr "こいつ、スパイだ！\\n"
+
+msgctxt "L_LIP_086"
+msgid "Warn the others...\\n"
+msgstr "アラームを！\\n"
+
+msgctxt "L_LIP_087"
+msgid "Imposter!\\n"
+msgstr "何者だ！\\n"
+
+msgctxt "L_LIP_088"
+msgid "Lighting systems overloaded.\\n"
+msgstr "照明システムがオーバーロードした\\n"
+
+msgctxt "L_LIP_089"
+msgid "Alternative entrance to medlabs created.\\n"
+msgstr "もう一つの方法で侵入ルートを作った\\n"
+
+msgctxt "L_LIP_090"
+msgid ""
+"The problem you have is that there is no \\nway to sneak into the research "
+"section. \\nThe only way in available to you is a \\nweak section of wall "
+"I've marked in the \\nroom beyond the stores. It can be destroyed \\nwith "
+"explosives.\\n"
+msgstr "この先に侵入するには\\n壁を壊すしかない。\\np倉庫の奥のモロい所に\\nマークをつけておいた。\\np爆破して侵入するんだ。\\n"
+
+msgctxt "L_LIP_091"
+msgid "Doesn't sound like a problem to me. Where \\nare these explosives?\\n"
+msgstr "全く問題ないわ。ところで\\n「爆薬」はどこにあるの？\\n"
+
+msgctxt "L_LIP_092"
+msgid "In that crate.\\n"
+msgstr "このコンテナの中さ。\\n"
+
+msgctxt "L_LIP_093"
+msgid "Cute. Very cute.\\n"
+msgstr "ふ～ん、なかなかキュートじゃない。\\n"
+
+msgctxt "L_LIP_094"
+msgid ""
+"By the way, the stores are crawling with \\nguards. It may go against your "
+"nature, but \\ntry sneaking through rather than blasting \\neverything.\\n"
+msgstr "倉庫には警備兵がウジャウジャいる。\\np何でも撃ちまくるんじゃなくて\\n静かに潜入するんだ、いいな。\\n"
+
+msgctxt "L_LIP_095"
+msgid "Certainly. Any other pearls of wisdom?\\n"
+msgstr "はいはい。\\n他に「オ・コ・ト・バ」はあって？\\n"
+
+msgctxt "L_LIP_096"
+msgid "That crate...\\n"
+msgstr "うん？　このコンテナだが…\\n"
+
+msgctxt "L_LIP_097"
+msgid "Yes?\\n"
+msgstr "な～に？\\n"
+
+msgctxt "L_LIP_098"
+msgid "It really doesn't like being shot.\\n"
+msgstr "コイツは撃たれるのがキライらしいぜ。\\n"
+
+msgctxt "L_LIP_099"
+msgid ""
+"Great. Now, if I can just fight the urge \\nto report him to Base "
+"Security...\\n"
+msgstr "なによ！　エラそうに…。\\n警備兵にチクッてやろうかしら…\\n"
+
+msgctxt "L_LIP_100"
+msgid "Put your hands up and step away from the \\nalien.\\n"
+msgstr "手を上げて！\\nそこから離れなさい！\\n"
+
+msgctxt "L_LIP_101"
+msgid ""
+"What the hell do you think you're doing? \\nThis is supposed to be a sealed "
+"room! \\nDon't you know anything about autopsy \\nprocedures?\\n"
+msgstr "一体何のマネだ？　ここは\\n超極秘エリアなんだぞ！！\\np検死の手続きを知らないのか！\\n"
+
+msgctxt "L_LIP_102"
+msgid "Don't make me tell you again, Doctor. And \\nturn that laser off.\\n"
+msgstr "何度も言わせないで！\\nさっさとレーザーを切るのよ！\\n"
+
+msgctxt "L_LIP_103"
+msgid "Director Easton will hear about this, \\nyoung lady.\\n"
+msgstr "イーストン司令にバレたら\\nタダでは済まないぞ！\\n"
+
+msgctxt "L_LIP_104"
+msgid ""
+"Of course he's going to hear of it, you \\nmoron. I've just got into his top"
+" secret \\nbase, and now I'm stealing his alien.\\n"
+msgstr "ええ、もちろん聞くことになるでしょうよ。\\n私が超極秘の基地に潜入して、エイリアンを\\nを盗んだってことをね。\\n"
+
+msgctxt "L_LIP_105"
+msgid "Automatic Defenses Disabled.\\n"
+msgstr "自動警備システムを破壊した\\n"

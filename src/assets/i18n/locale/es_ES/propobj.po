@@ -1,0 +1,205 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Perfect Dark PC port localization\n"
+"POT-Creation-Date: 2025-05-30 14:19:36.854417+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: originalAssets_to_l10n.py script\n"
+
+msgctxt "L_PROPOBJ_000"
+msgid "Picked up "
+msgstr "Recogiste %s.\\n"
+
+msgctxt "L_PROPOBJ_001"
+msgid "Double "
+msgstr "Recogiste %s.\\n"
+
+msgctxt "L_PROPOBJ_002"
+msgid "some "
+msgstr "Recogiste %s.\\n"
+
+msgctxt "L_PROPOBJ_003"
+msgid "Some "
+msgstr "Recogiste %s.\\n"
+
+msgctxt "L_PROPOBJ_004"
+msgid "a "
+msgstr "Recogiste %s.\\n"
+
+msgctxt "L_PROPOBJ_005"
+msgid "A "
+msgstr "Recogiste %s.\\n"
+
+msgctxt "L_PROPOBJ_006"
+msgid "an "
+msgstr "Recogiste %s.\\n"
+
+msgctxt "L_PROPOBJ_007"
+msgid "An "
+msgstr "Recogiste %s.\\n"
+
+msgctxt "L_PROPOBJ_008"
+msgid "the "
+msgstr "Doble "
+
+msgctxt "L_PROPOBJ_009"
+msgid "The "
+msgstr "munición"
+
+msgctxt "L_PROPOBJ_010"
+msgid "ammo"
+msgstr "cartucho"
+
+msgctxt "L_PROPOBJ_011"
+msgid "cartridge"
+msgstr "bala de magnum"
+
+msgctxt "L_PROPOBJ_012"
+msgid "magnum bullet"
+msgstr "balas doradas"
+
+msgctxt "L_PROPOBJ_013"
+msgid "golden bullet"
+msgstr "granada"
+
+msgctxt "L_PROPOBJ_014"
+msgid "grenade"
+msgstr "cinto de granadas"
+
+msgctxt "L_PROPOBJ_015"
+msgid "grenade round"
+msgstr "cohete"
+
+msgctxt "L_PROPOBJ_016"
+msgid "rocket"
+msgstr "cohete buscador"
+
+msgctxt "L_PROPOBJ_017"
+msgid "homing rocket"
+msgstr "mina remota"
+
+msgctxt "L_PROPOBJ_018"
+msgid "remote mine"
+msgstr "mina de proximidad"
+
+msgctxt "L_PROPOBJ_019"
+msgid "proximity mine"
+msgstr "mina de tiempo"
+
+msgctxt "L_PROPOBJ_020"
+msgid "timed mine"
+msgstr "cuchillo de combate"
+
+msgctxt "L_PROPOBJ_021"
+msgid "combat "
+msgstr "cuchillos de combate"
+
+msgctxt "L_PROPOBJ_025"
+msgid "dart"
+msgstr "dardo"
+
+msgctxt "L_PROPOBJ_026"
+msgid "N-Bomb"
+msgstr "bomba-N"
+
+msgctxt "L_PROPOBJ_027"
+msgid "sedatives"
+msgstr "sedante"
+
+msgctxt "L_PROPOBJ_028"
+msgid "explosive pen"
+msgstr "Boli Explosivo"
+
+msgctxt "L_PROPOBJ_029"
+msgid "explosive case"
+msgstr "Caja de Explosivos"
+
+msgctxt "L_PROPOBJ_030"
+msgid "flare"
+msgstr "Bengalas"
+
+msgctxt "L_PROPOBJ_031"
+msgid "piton"
+msgstr "Pitón"
+
+msgctxt "L_PROPOBJ_032"
+msgid "of dynamite"
+msgstr ""
+
+msgctxt "L_PROPOBJ_033"
+msgid "stick "
+msgstr "Cartucho de Dinamita"
+
+msgctxt "L_PROPOBJ_034"
+msgid "sticks "
+msgstr "Cartuchos de Dinamita"
+
+msgctxt "L_PROPOBJ_035"
+msgid "bug"
+msgstr "Bicho"
+
+msgctxt "L_PROPOBJ_036"
+msgid "micro camera"
+msgstr "Microcámara"
+
+msgctxt "L_PROPOBJ_037"
+msgid "GoldenEye key"
+msgstr "Llave GoldenEye"
+
+msgctxt "L_PROPOBJ_038"
+msgid "token"
+msgstr "Ficha"
+
+msgctxt "L_PROPOBJ_039"
+msgid "plastique"
+msgstr "Explosivo Plástico"
+
+msgctxt "L_PROPOBJ_040"
+msgid "Picked up a key.\\n"
+msgstr "Has cogido una Llave.\\n"
+
+msgctxt "L_PROPOBJ_041"
+msgid "Picked up a shield.\\n"
+msgstr "Has cogido un Escudo.\\n"
+
+msgctxt "L_PROPOBJ_042"
+msgid "A shield.\\n"
+msgstr "Un Escudo.\\n"
+
+msgctxt "L_PROPOBJ_043"
+msgid "Picked up something.\\n"
+msgstr "Has cogido algo.\\n"
+
+msgctxt "L_PROPOBJ_044"
+msgid "This door is locked.\\n"
+msgstr "Esta puerta está cerrada.\\n"
+
+msgctxt "L_PROPOBJ_045"
+msgid "bolt"
+msgstr "saeta"
+
+msgctxt "L_PROPOBJ_046"
+msgid "orb"
+msgstr "orbe"
+
+msgctxt "L_PROPOBJ_047"
+msgid "Reaper ammo"
+msgstr "munición Segadora"
+
+msgctxt "L_PROPOBJ_048"
+msgid "cloaking device"
+msgstr "disp. de ocultación"
+
+msgctxt "L_PROPOBJ_049"
+msgid "boost pill"
+msgstr "reforzador"
+
+msgctxt "L_PROPOBJ_050"
+msgid "your "
+msgstr "tu "
+
+msgctxt "L_PROPOBJ_051"
+msgid "Your "
+msgstr "Tu "
