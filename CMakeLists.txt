@@ -21,6 +21,7 @@ set(CMAKE_C_STANDARD 11)
 set(CMAKE_C_EXTENSIONS OFF)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_EXTENSIONS OFF)
+set(CMAKE_MESSAGE_LOG_LEVEL DEBUG)
 
 # On first build set the build type to RelWithDebInfo if it's not already set
 if (NOT EXISTS ${CMAKE_BINARY_DIR}/CMakeCache.txt)
@@ -241,6 +242,31 @@ if(NOT GL_LIBRARY)
 endif()
 list(APPEND LIBS "${GL_LIBRARY}")
 
+# i18n
+find_package(Intl REQUIRED)
+if (Intl_FOUND)
+    message(STATUS "Internationalization (i18n) found:")
+    message(STATUS " INTL_INCLUDE_DIRS: ${Intl_INCLUDE_DIRS}")
+    message(STATUS " INTL_LIBRARIES: ${Intl_LIBRARIES}")
+    message(STATUS " Version: ${Intl_VERSION}")
+    include_directories(${Intl_INCLUDE_DIRS})
+    link_directories(${Intl_LIBRARY_DIRS})
+else ()
+    message(STATUS "Internationalization (i18n) Not found!")
+endif ()
+
+# gettext
+find_package(Gettext REQUIRED)
+if (Gettext_FOUND)
+    message(STATUS "Gettext found:")
+    message(STATUS " Version: ${GETTEXT_VERSION_STRING}")
+else ()
+    message(STATUS "Gettext Not found!")
+endif ()
+
+find_program(GETTEXT_MSGCAT_EXECUTABLE msgcat)
+find_program(GETTEXT_MSGFMT_EXECUTABLE msgfmt)
+
 # Platform-specific extra libs
 if(NOT EXTRA_LIBRARIES)
   if(WIN32)
@@ -321,6 +347,74 @@ set(SRC
   ${SRC_LIB}
 )
 
+# Localization
+
+set(LOCALE_DIR "${CMAKE_SOURCE_DIR}/src/assets/i18n/locale")
+set(PO_DIR "${CMAKE_SOURCE_DIR}/src/generated/${ROMID}/i18n/locale")
+set(MO_DIR "${CMAKE_BINARY_DIR}/locale")
+
+file(MAKE_DIRECTORY ${PO_DIR})
+
+file(GLOB PO_LANGS LIST_DIRECTORIES true ${CMAKE_SOURCE_DIR}/src/assets/i18n/locale/*)
+message(TRACE " PO_LANGS: ${PO_LANGS}")
+
+# po file concatenation
+if (GETTEXT_MSGCAT_EXECUTABLE)
+
+    message(DEBUG " msgcat: ${GETTEXT_MSGCAT_EXECUTABLE}")
+
+    add_custom_target(
+        po-cat
+        COMMENT "po file concatenation: Done."
+    )
+
+    foreach(lang IN LISTS PO_LANGS)
+        file(GLOB PO_FILES ${lang}/*.po)
+        get_filename_component(lang_name ${lang} NAME)
+        message(TRACE " PO_FILES: ${PO_FILES}")
+        message(STATUS " Adding msgcat for: ${lang_name}")
+        add_custom_command(
+            TARGET po-cat
+            PRE_BUILD
+            COMMAND
+                ${GETTEXT_MSGCAT_EXECUTABLE} ${PO_FILES} --output-file=${PO_DIR}/${lang_name}.po
+            COMMENT "po-cat: ${lang_name}"
+        )
+        endforeach()
+
+endif (GETTEXT_MSGCAT_EXECUTABLE)
+
+# mo file generation
+if (GETTEXT_MSGFMT_EXECUTABLE)
+
+    message(DEBUG " msgmerge: ${GETTEXT_MSGFMT_EXECUTABLE}")
+    message(TRACE " PO_LANGS: ${PO_LANGS}")
+
+    add_custom_target(
+        po-compile
+        COMMENT "po-compile: Done."
+    )
+    add_dependencies(po-compile po-cat)
+
+    foreach(lang IN LISTS PO_LANGS)
+        get_filename_component(lang_name ${lang} NAME)
+        message(STATUS " Adding msgfmt for: ${lang_name}")
+        file(MAKE_DIRECTORY ${MO_DIR}/${lang_name}/LC_MESSAGES)
+        add_custom_command(
+            TARGET po-compile
+            PRE_BUILD
+            COMMAND
+                ${GETTEXT_MSGFMT_EXECUTABLE}
+                --output-file=${MO_DIR}/${lang_name}/LC_MESSAGES/perfect_dark.mo
+                ${PO_DIR}/${lang_name}.po
+            COMMENT "po-compile: ${lang_name}"
+        )
+    endforeach()
+
+endif (GETTEXT_MSGFMT_EXECUTABLE)
+
+file(GLOB_RECURSE MO_FILES "${MO_DIR}/*.mo")
+
 if(WIN32)
   list(APPEND SRC "${CMAKE_SOURCE_DIR}/dist/windows/icon.rc")
 endif()
@@ -341,13 +435,13 @@ add_custom_target(pd_headers ALL DEPENDS ${JSON_HEADERS})
 set(BIN_NAME "pd${BIN_REGION}.${TARGET_ARCH}")
 add_executable(pd ${SRC})
 add_dependencies(pd pd_headers)
+#add_dependencies(pd pd_headers)
+add_dependencies(pd po-compile)
 target_link_libraries(pd ${LIBS})
 set_target_properties(pd PROPERTIES OUTPUT_NAME "${BIN_NAME}")
 if(WIN32)
   set_target_properties(pd PROPERTIES WIN32_EXECUTABLE TRUE)
 endif()
-
-# Additional commands for specific platforms.
 
 if(NINTENDO_SWITCH)
   add_custom_command(TARGET pd POST_BUILD
