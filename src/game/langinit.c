@@ -4,6 +4,8 @@
 #include "lib/memp.h"
 #include "data.h"
 #include "types.h"
+#include <locale.h>
+#include <libintl.h>
 
 u16 *g_FrameBuffers[NUM_FRAMEBUFFERS];
 
@@ -18,6 +20,7 @@ u32 var8009d010pf[4];
 
 void langInit(void)
 {
+//#ifdef PLATFORM_N64
 	s32 i;
 
 #if VERSION >= VERSION_JPN_FINAL
@@ -41,4 +44,10 @@ void langInit(void)
 		}
 	}
 #endif
+//#else
+	setlocale(LC_MESSAGES, "");
+    bindtextdomain("perfect_dark", "build/locale");
+	bind_textdomain_codeset("perfect_dark", "UTF-8");
+    textdomain("perfect_dark");
+//#endif
 }

@@ -1,4 +1,6 @@
+#include <string.h>
 #include <ultra64.h>
+#include <unistd.h>
 #include "constants.h"
 #include "game/file.h"
 #include "game/lang.h"
@@ -12,6 +14,7 @@
 #include "platform.h"
 #ifndef PLATFORM_N64
 #include "video.h"
+#include <libintl.h>
 #endif
 
 /**
@@ -419,6 +422,12 @@ void langClearBank(s32 bank)
  */
 char *langGet(s32 textid)
 {
+	//dialogdef->items->param2 = (uintptr_t)gettext("Extended\n");
+	//dialogdef->items->param2 = (uintptr_t)"Coucou\n";
+	if(textid == L_OPTIONS_121) {
+		char *test = gettext("Cinema\n");
+		return test;
+	}
 	s32 bankindex = textid >> 9;
 	s32 textindex = textid & 0x1ff;
 	uintptr_t *bank = (uintptr_t*)g_LangBanks[bankindex];

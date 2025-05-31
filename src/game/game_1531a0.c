@@ -858,7 +858,7 @@ Gfx *text0f154ecc(Gfx *gdl, u32 arg1, u32 arg2)
 	return gdl;
 }
 
-#if VERSION >= VERSION_PAL_BETA
+#if VERSION >= VERSION_PAL_BETA || true
 void textMapCodeUnitToChar2(u8 *c)
 {
 	switch (*c) {
@@ -1051,6 +1051,100 @@ u16 func0f154968jf(u8 value)
 #endif
 
 void textMapCodeUnitToChar(char **text, struct fontchar **arg1, struct fontchar **arg2, struct fontchar *chars, u8 *prevchar);
+void textMapCodeUnitToChar(char **text, struct fontchar **arg1, struct fontchar **arg2, struct fontchar *chars, u8 *prevchar)
+{
+	u8 c;
+	u8 index;
+
+	if (g_Jpn) {
+		if (**text < 0x80) {
+			*arg1 = &chars[**text - 0x21];
+			*arg2 = &chars[*prevchar - 0x21];
+
+			*prevchar = **text;
+			*text += 1;
+			return;
+		}
+
+		*arg1 = &chars[*prevchar - 0x21];
+		*arg2 = &chars[*prevchar - 0x21];
+		return;
+	}
+
+	index = 0;
+	c = **text;
+
+	if (chars == g_CharsHandelGothicSm || chars == g_CharsHandelGothicMd || chars == g_CharsHandelGothicXs) {
+		switch (c) {
+		case 0xc4: index = 0x5e; break;
+		case 0xc1: index = 0x66; break;
+		case 0xc0: index = 0x70; break;
+		case 0xc9: index = 0x67; break;
+		case 0xc8: index = 0x71; break;
+		case 0xcd: index = 0x68; break;
+		case 0xcc: index = 0x72; break;
+		case 0xd6: index = 0x5f; break;
+		case 0xd3: index = 0x69; break;
+		case 0xd2: index = 0x73; break;
+		case 0xdc: index = 0x60; break;
+		case 0xda: index = 0x6a; break;
+		case 0xd9: index = 0x74; break;
+		case 0xe4: index = 0x61; break;
+		case 0xe1: index = 0x6b; break;
+		case 0xe0: index = 0x75; break;
+		case 0xe2: index = 0x7a; break;
+		case 0xea: index = 0x7b; break;
+		case 0xe9: index = 0x6c; break;
+		case 0xeb: index = 0x62; break;
+		case 0xe8: index = 0x76; break;
+		case 0xec: index = 0x77; break;
+		case 0xef: index = 0x63; break;
+		case 0xed: index = 0x6d; break;
+		case 0xee: index = 0x7c; break;
+		case 0xf4: index = 0x7d; break;
+		case 0xf6: index = 0x64; break;
+		case 0xf3: index = 0x6e; break;
+		case 0xf2: index = 0x78; break;
+		case 0xf9: index = 0x79; break;
+		case 0xfc: index = 0x65; break;
+		case 0xfa: index = 0x6f; break;
+		case 0xfb: index = 0x7e; break;
+		case 0xd1: index = 0x7f; break;
+		case 0xf1: index = 0x80; break;
+		case 0xe7: index = 0x81; break;
+		case 0xdf: index = 0x82; break;
+		case 0xbf: index = 0x83; break;
+		case 0xa1: index = 0x84; break;
+		case 0xb0: index = 0x85; break;
+		case 0xaa: index = 0x86; break;
+		}
+	} else {
+		textMapCodeUnitToChar2(&c);
+	}
+
+	if (index > 0) {
+		*arg1 = &chars[index];
+	} else {
+		if (c < 0x21) {
+			c = 0x21;
+		}
+
+		if (c > 0x7e) {
+			c = 0x21;
+		}
+
+		*arg1 = &chars[c - 0x21];
+	}
+
+	*arg2 = &chars[*prevchar - 0x21];
+
+	if (index > 0) {
+		textMapCodeUnitToChar2(&c);
+	}
+
+	*prevchar = c;
+	*text += 1;
+}
 
 #if VERSION == VERSION_JPN_FINAL
 #if MATCHING
@@ -2033,7 +2127,7 @@ Gfx *textRenderProjected(Gfx *gdl, s32 *x, s32 *y, char *text, struct fontchar *
 	g_Blend.colour04 = colour;
 	g_Blend.colour44 = colour;
 
-#if VERSION >= VERSION_PAL_BETA
+#if VERSION >= VERSION_PAL_BETA || true
 	if (text != NULL) {
 		while (*text != '\0') {
 			if (*text == ' ') {
@@ -2078,7 +2172,7 @@ Gfx *textRenderProjected(Gfx *gdl, s32 *x, s32 *y, char *text, struct fontchar *
 				}
 
 				*x = savedx;
-			} else if (*text < 0x80) {
+			} else if (*text < 0x80 || 1) {
 				gdl = text0f15568c(gdl, x, y, &chars[*text - 0x21], &chars[prevchar - 0x21], font, savedx, savedy, width, height, arg9);
 				prevchar = *text;
 				text++;
@@ -2304,7 +2398,7 @@ Gfx *textRender(Gfx *gdl, s32 *x, s32 *y, char *text,
 	g_Blend.colour04 = arg6;
 	g_Blend.colour44 = arg6;
 
-#if VERSION >= VERSION_PAL_BETA
+#if VERSION >= VERSION_PAL_BETA || true
 	while (*text != '\0') {
 		if (*text == ' ') {
 			*x += var8007fad0 * 5;
@@ -2319,7 +2413,7 @@ Gfx *textRender(Gfx *gdl, s32 *x, s32 *y, char *text,
 			struct fontchar *sp78;
 			struct fontchar *sp74;
 
-			textMapCodeUnitToChar(&text, &sp78, &sp74, chars, &prevchar);
+			textMapCodeUnitToChar(&text, &sp78, &sp74, chars, ((u8*)&prevchar));
 
 			gdl = textRenderChar(gdl, x, y, sp78, sp74,
 					font, savedx, savedy, width * var8007fad0, height, arg10);
