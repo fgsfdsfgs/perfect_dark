@@ -24,10 +24,6 @@ msgstr "Fehlgeschlagen\n"
 msgid "\n"
 msgstr "\n"
 
-#. "L_OPTIONS_004"
-msgid ""
-msgstr ""
-
 #. "L_OPTIONS_005"
 msgid "earth:"
 msgstr "Die Erde:"
@@ -379,18 +375,6 @@ msgstr ""
 "MPEG Layer-3 playback supplied with the Miles Sound System from\n"
 "RAD Game Tools, Inc. MPEG Layer-3 audio compression technology\n"
 "licensed by Fraunhofer IIS and THOMSON multimedia\n"
-
-#. "L_OPTIONS_090"
-msgid ""
-msgstr ""
-
-#. "L_OPTIONS_091"
-msgid ""
-msgstr ""
-
-#. "L_OPTIONS_092"
-msgid ""
-msgstr ""
 
 #. "L_OPTIONS_093"
 msgid "rare designs on the future <<<\n"

@@ -826,10 +826,6 @@ msgstr "Cachet blu"
 msgid "Player"
 msgstr "Giocat."
 
-#. "L_MISC_438"
-msgid ""
-msgstr ""
-
 #. "L_MISC_439"
 msgid "Identify\n"
 msgstr "Identifica\n"

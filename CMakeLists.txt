@@ -265,6 +265,7 @@ else ()
 endif ()
 
 find_program(GETTEXT_MSGCAT_EXECUTABLE msgcat)
+find_program(GETTEXT_MSGCOMM_EXECUTABLE msgcomm)
 find_program(GETTEXT_MSGFMT_EXECUTABLE msgfmt)
 
 # Platform-specific extra libs
@@ -359,7 +360,7 @@ file(GLOB PO_LANGS LIST_DIRECTORIES true ${CMAKE_SOURCE_DIR}/src/assets/i18n/loc
 message(TRACE " PO_LANGS: ${PO_LANGS}")
 
 # po file concatenation
-if (GETTEXT_MSGCAT_EXECUTABLE)
+if (GETTEXT_MSGCAT_EXECUTABLE AND GETTEXT_MSGCOMM_EXECUTABLE)
 
     message(DEBUG " msgcat: ${GETTEXT_MSGCAT_EXECUTABLE}")
 
@@ -372,17 +373,38 @@ if (GETTEXT_MSGCAT_EXECUTABLE)
         file(GLOB PO_FILES ${lang}/*.po)
         get_filename_component(lang_name ${lang} NAME)
         message(TRACE " PO_FILES: ${PO_FILES}")
-        message(STATUS " Adding msgcat for: ${lang_name}")
+
+        message(STATUS " Adding msguniq for: ${lang_name}")
+        #foreach(f IN LISTS PO_FILES)
+        #  message(TRACE " Single PO file: ${f}")
+        #  add_custom_command(
+        #      TARGET po-cat
+        #      PRE_BUILD
+        #      COMMAND
+        #          ${GETTEXT_MSGCUNIQ_EXECUTABLE} ${f} --output-file=${f}
+        #      COMMENT "po-msguniq: ${lang_name}"
+        #  )
+        #endforeach()
+
         add_custom_command(
             TARGET po-cat
             PRE_BUILD
             COMMAND
-                ${GETTEXT_MSGCAT_EXECUTABLE} ${PO_FILES} --output-file=${PO_DIR}/${lang_name}.po
+                ${GETTEXT_MSGCOMM_EXECUTABLE} ${PO_FILES} --output-file=${PO_DIR}/${lang_name}.po
             COMMENT "po-cat: ${lang_name}"
         )
+
+        message(STATUS " Adding msgcat for: ${lang_name}")
+        #add_custom_command(
+        #    TARGET po-cat
+        #    PRE_BUILD
+        #    COMMAND
+        #        ${GETTEXT_MSGCAT_EXECUTABLE} ${PO_FILES} --use-first --output-file=${PO_DIR}/${lang_name}.po
+        #    COMMENT "po-cat: ${lang_name}"
+        #)
         endforeach()
 
-endif (GETTEXT_MSGCAT_EXECUTABLE)
+endif (GETTEXT_MSGCAT_EXECUTABLE AND GETTEXT_MSGCOMM_EXECUTABLE)
 
 # mo file generation
 if (GETTEXT_MSGFMT_EXECUTABLE)
@@ -435,7 +457,6 @@ add_custom_target(pd_headers ALL DEPENDS ${JSON_HEADERS})
 set(BIN_NAME "pd${BIN_REGION}.${TARGET_ARCH}")
 add_executable(pd ${SRC})
 add_dependencies(pd pd_headers)
-#add_dependencies(pd pd_headers)
 add_dependencies(pd po-compile)
 target_link_libraries(pd ${LIBS})
 set_target_properties(pd PROPERTIES OUTPUT_NAME "${BIN_NAME}")

@@ -262,10 +262,6 @@ msgstr "Cassandra De Vries:\n"
 msgid "Alien medpack\n"
 msgstr "Paq. médico\n"
 
-#. "L_TRA_023"
-msgid ""
-msgstr ""
-
 #. "L_TRA_024"
 msgid "Picked up an alien medpack.\n"
 msgstr "Paquete médico alienígena obtenido.\n"

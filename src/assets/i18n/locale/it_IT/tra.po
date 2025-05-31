@@ -264,10 +264,6 @@ msgstr "Cassandra De Vries:\n"
 msgid "Alien medpack\n"
 msgstr "AutoChirurgo\n"
 
-#. "L_TRA_023"
-msgid ""
-msgstr ""
-
 #. "L_TRA_024"
 msgid "Picked up an alien medpack.\n"
 msgstr "Preso AutoChirurgo\n"
