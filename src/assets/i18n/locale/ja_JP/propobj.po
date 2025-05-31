@@ -8,198 +8,198 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: originalAssets_to_l10n.py script\n"
 
-msgctxt "L_PROPOBJ_000"
+#. "L_PROPOBJ_000"
 msgid "Picked up \n"
 msgstr "%sを手に入れた\n"
 
-msgctxt "L_PROPOBJ_001"
+#. "L_PROPOBJ_001"
 msgid "Double \n"
 msgstr "%sを手に入れた\n"
 
-msgctxt "L_PROPOBJ_002"
+#. "L_PROPOBJ_002"
 msgid "some \n"
 msgstr "%sを手に入れた\n"
 
-msgctxt "L_PROPOBJ_003"
+#. "L_PROPOBJ_003"
 msgid "Some \n"
 msgstr "%sを手に入れた\n"
 
-msgctxt "L_PROPOBJ_004"
+#. "L_PROPOBJ_004"
 msgid "a \n"
 msgstr "%sを手に入れた\n"
 
-msgctxt "L_PROPOBJ_005"
+#. "L_PROPOBJ_005"
 msgid "A \n"
 msgstr "%sを手に入れた\n"
 
-msgctxt "L_PROPOBJ_006"
+#. "L_PROPOBJ_006"
 msgid "an \n"
 msgstr "%sを手に入れた\n"
 
-msgctxt "L_PROPOBJ_007"
+#. "L_PROPOBJ_007"
 msgid "An \n"
 msgstr "%sを手に入れた\n"
 
-msgctxt "L_PROPOBJ_008"
+#. "L_PROPOBJ_008"
 msgid "the "
 msgstr "ダブル・"
 
-msgctxt "L_PROPOBJ_009"
+#. "L_PROPOBJ_009"
 msgid "The "
 msgstr "＜弾＞"
 
-msgctxt "L_PROPOBJ_010"
+#. "L_PROPOBJ_010"
 msgid "ammo"
 msgstr "カートリッジ"
 
-msgctxt "L_PROPOBJ_011"
+#. "L_PROPOBJ_011"
 msgid "cartridge"
 msgstr "マグナム銃の弾"
 
-msgctxt "L_PROPOBJ_012"
+#. "L_PROPOBJ_012"
 msgid "magnum bullet"
 msgstr "黄金の弾"
 
-msgctxt "L_PROPOBJ_013"
+#. "L_PROPOBJ_013"
 msgid "golden bullet"
 msgstr "手りゅう弾"
 
-msgctxt "L_PROPOBJ_014"
+#. "L_PROPOBJ_014"
 msgid "grenade"
 msgstr "Ｇランチャの弾"
 
-msgctxt "L_PROPOBJ_015"
+#. "L_PROPOBJ_015"
 msgid "grenade round"
 msgstr "ロケット弾"
 
-msgctxt "L_PROPOBJ_016"
+#. "L_PROPOBJ_016"
 msgid "rocket"
 msgstr "ホーミングロケット"
 
-msgctxt "L_PROPOBJ_017"
+#. "L_PROPOBJ_017"
 msgid "homing rocket"
 msgstr "リモート爆弾"
 
-msgctxt "L_PROPOBJ_018"
+#. "L_PROPOBJ_018"
 msgid "remote mine"
 msgstr "センサー爆弾"
 
-msgctxt "L_PROPOBJ_019"
+#. "L_PROPOBJ_019"
 msgid "proximity mine"
 msgstr "時限爆弾"
 
-msgctxt "L_PROPOBJ_020"
+#. "L_PROPOBJ_020"
 msgid "timed mine"
 msgstr "コンバットナイフ"
 
-msgctxt "L_PROPOBJ_021"
+#. "L_PROPOBJ_021"
 msgid "combat "
 msgstr "コンバットナイフ"
 
-msgctxt "L_PROPOBJ_025"
+#. "L_PROPOBJ_025"
 msgid "dart"
 msgstr "ダーツ"
 
-msgctxt "L_PROPOBJ_026"
+#. "L_PROPOBJ_026"
 msgid "N-Bomb"
 msgstr "Ｎボム"
 
-msgctxt "L_PROPOBJ_027"
+#. "L_PROPOBJ_027"
 msgid "sedatives"
 msgstr "鎮静剤"
 
-msgctxt "L_PROPOBJ_028"
+#. "L_PROPOBJ_028"
 msgid "explosive pen"
 msgstr "ペン爆弾"
 
-msgctxt "L_PROPOBJ_029"
+#. "L_PROPOBJ_029"
 msgid "explosive case"
 msgstr "カバン爆弾"
 
-msgctxt "L_PROPOBJ_030"
+#. "L_PROPOBJ_030"
 msgid "flare"
 msgstr "フレアー"
 
-msgctxt "L_PROPOBJ_031"
+#. "L_PROPOBJ_031"
 msgid "piton"
 msgstr "ピトン"
 
-msgctxt "L_PROPOBJ_032"
+#. "L_PROPOBJ_032"
 msgid "of dynamite"
 msgstr "ダイナマイト"
 
-msgctxt "L_PROPOBJ_033"
+#. "L_PROPOBJ_033"
 msgid "stick "
 msgstr "スティック"
 
-msgctxt "L_PROPOBJ_034"
+#. "L_PROPOBJ_034"
 msgid "sticks "
 msgstr "スティック"
 
-msgctxt "L_PROPOBJ_035"
+#. "L_PROPOBJ_035"
 msgid "bug"
 msgstr "発信器"
 
-msgctxt "L_PROPOBJ_036"
+#. "L_PROPOBJ_036"
 msgid "micro camera"
 msgstr "マイクロカメラ"
 
-msgctxt "L_PROPOBJ_037"
+#. "L_PROPOBJ_037"
 msgid "GoldenEye key"
 msgstr "ゴールデンアイ・キー"
 
-msgctxt "L_PROPOBJ_038"
+#. "L_PROPOBJ_038"
 msgid "token"
 msgstr "フラッグ"
 
-msgctxt "L_PROPOBJ_039"
+#. "L_PROPOBJ_039"
 msgid "plastique"
 msgstr "プラスチック爆弾"
 
-msgctxt "L_PROPOBJ_040"
+#. "L_PROPOBJ_040"
 msgid "Picked up a key.\n"
 msgstr "キーを手に入れた\n"
 
-msgctxt "L_PROPOBJ_041"
+#. "L_PROPOBJ_041"
 msgid "Picked up a shield.\n"
 msgstr "シールドを手に入れた\n"
 
-msgctxt "L_PROPOBJ_042"
+#. "L_PROPOBJ_042"
 msgid "A shield.\n"
 msgstr "シールド\n"
 
-msgctxt "L_PROPOBJ_043"
+#. "L_PROPOBJ_043"
 msgid "Picked up something.\n"
 msgstr "Picked up something.\n"
 
-msgctxt "L_PROPOBJ_044"
+#. "L_PROPOBJ_044"
 msgid "This door is locked.\n"
 msgstr "このドアはロックされています\n"
 
-msgctxt "L_PROPOBJ_045"
+#. "L_PROPOBJ_045"
 msgid "bolt"
 msgstr "矢"
 
-msgctxt "L_PROPOBJ_046"
+#. "L_PROPOBJ_046"
 msgid "orb"
 msgstr "オーブ"
 
-msgctxt "L_PROPOBJ_047"
+#. "L_PROPOBJ_047"
 msgid "Reaper ammo"
 msgstr "リーパーの弾"
 
-msgctxt "L_PROPOBJ_048"
+#. "L_PROPOBJ_048"
 msgid "cloaking device"
 msgstr "スパイクローク"
 
-msgctxt "L_PROPOBJ_049"
+#. "L_PROPOBJ_049"
 msgid "boost pill"
 msgstr "ブーストピル"
 
-msgctxt "L_PROPOBJ_050"
+#. "L_PROPOBJ_050"
 msgid "your "
 msgstr ""
 
-msgctxt "L_PROPOBJ_051"
+#. "L_PROPOBJ_051"
 msgid "Your "
 msgstr ""

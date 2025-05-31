@@ -8,198 +8,198 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: originalAssets_to_l10n.py script\n"
 
-msgctxt "L_PROPOBJ_000"
+#. "L_PROPOBJ_000"
 msgid "Picked up \n"
 msgstr "%s obtenu.\n"
 
-msgctxt "L_PROPOBJ_001"
+#. "L_PROPOBJ_001"
 msgid "Double \n"
 msgstr "%s obtenue.\n"
 
-msgctxt "L_PROPOBJ_002"
+#. "L_PROPOBJ_002"
 msgid "some \n"
 msgstr " \n"
 
-msgctxt "L_PROPOBJ_003"
+#. "L_PROPOBJ_003"
 msgid "Some \n"
 msgstr " \n"
 
-msgctxt "L_PROPOBJ_004"
+#. "L_PROPOBJ_004"
 msgid "a \n"
 msgstr "%s obtenus.\n"
 
-msgctxt "L_PROPOBJ_005"
+#. "L_PROPOBJ_005"
 msgid "A \n"
 msgstr "%s obtenues.\n"
 
-msgctxt "L_PROPOBJ_006"
+#. "L_PROPOBJ_006"
 msgid "an \n"
 msgstr " \n"
 
-msgctxt "L_PROPOBJ_007"
+#. "L_PROPOBJ_007"
 msgid "An \n"
 msgstr " \n"
 
-msgctxt "L_PROPOBJ_008"
+#. "L_PROPOBJ_008"
 msgid "the "
 msgstr "Double "
 
-msgctxt "L_PROPOBJ_009"
+#. "L_PROPOBJ_009"
 msgid "The "
 msgstr "Munitions"
 
-msgctxt "L_PROPOBJ_010"
+#. "L_PROPOBJ_010"
 msgid "ammo"
 msgstr "Cartouche"
 
-msgctxt "L_PROPOBJ_011"
+#. "L_PROPOBJ_011"
 msgid "cartridge"
 msgstr "Balle Magnum"
 
-msgctxt "L_PROPOBJ_012"
+#. "L_PROPOBJ_012"
 msgid "magnum bullet"
 msgstr "balle en or"
 
-msgctxt "L_PROPOBJ_013"
+#. "L_PROPOBJ_013"
 msgid "golden bullet"
 msgstr "Grenade"
 
-msgctxt "L_PROPOBJ_014"
+#. "L_PROPOBJ_014"
 msgid "grenade"
 msgstr "Munit. grenade"
 
-msgctxt "L_PROPOBJ_015"
+#. "L_PROPOBJ_015"
 msgid "grenade round"
 msgstr "Roquette"
 
-msgctxt "L_PROPOBJ_016"
+#. "L_PROPOBJ_016"
 msgid "rocket"
 msgstr "Roquette tête cher."
 
-msgctxt "L_PROPOBJ_017"
+#. "L_PROPOBJ_017"
 msgid "homing rocket"
 msgstr "Mine télécom."
 
-msgctxt "L_PROPOBJ_018"
+#. "L_PROPOBJ_018"
 msgid "remote mine"
 msgstr "Mine prox."
 
-msgctxt "L_PROPOBJ_019"
+#. "L_PROPOBJ_019"
 msgid "proximity mine"
 msgstr "Mine retard."
 
-msgctxt "L_PROPOBJ_020"
+#. "L_PROPOBJ_020"
 msgid "timed mine"
 msgstr "Couteau combat"
 
-msgctxt "L_PROPOBJ_021"
+#. "L_PROPOBJ_021"
 msgid "combat "
 msgstr "Couteaux combat"
 
-msgctxt "L_PROPOBJ_025"
+#. "L_PROPOBJ_025"
 msgid "dart"
 msgstr "Fléchette"
 
-msgctxt "L_PROPOBJ_026"
+#. "L_PROPOBJ_026"
 msgid "N-Bomb"
 msgstr "Bombe-N"
 
-msgctxt "L_PROPOBJ_027"
+#. "L_PROPOBJ_027"
 msgid "sedatives"
 msgstr "Sédatif"
 
-msgctxt "L_PROPOBJ_028"
+#. "L_PROPOBJ_028"
 msgid "explosive pen"
 msgstr "stylo explosif"
 
-msgctxt "L_PROPOBJ_029"
+#. "L_PROPOBJ_029"
 msgid "explosive case"
 msgstr "malle explosive"
 
-msgctxt "L_PROPOBJ_030"
+#. "L_PROPOBJ_030"
 msgid "flare"
 msgstr "fusée"
 
-msgctxt "L_PROPOBJ_031"
+#. "L_PROPOBJ_031"
 msgid "piton"
 msgstr "piton"
 
-msgctxt "L_PROPOBJ_032"
+#. "L_PROPOBJ_032"
 msgid "of dynamite"
 msgstr "de dynamite"
 
-msgctxt "L_PROPOBJ_033"
+#. "L_PROPOBJ_033"
 msgid "stick "
 msgstr "bâton "
 
-msgctxt "L_PROPOBJ_034"
+#. "L_PROPOBJ_034"
 msgid "sticks "
 msgstr "bâtons "
 
-msgctxt "L_PROPOBJ_035"
+#. "L_PROPOBJ_035"
 msgid "bug"
 msgstr "mouchard"
 
-msgctxt "L_PROPOBJ_036"
+#. "L_PROPOBJ_036"
 msgid "micro camera"
 msgstr "micro camera"
 
-msgctxt "L_PROPOBJ_037"
+#. "L_PROPOBJ_037"
 msgid "GoldenEye key"
 msgstr "Clé GoldenEye"
 
-msgctxt "L_PROPOBJ_038"
+#. "L_PROPOBJ_038"
 msgid "token"
 msgstr "jeton"
 
-msgctxt "L_PROPOBJ_039"
+#. "L_PROPOBJ_039"
 msgid "plastique"
 msgstr "plastique"
 
-msgctxt "L_PROPOBJ_040"
+#. "L_PROPOBJ_040"
 msgid "Picked up a key.\n"
 msgstr "Clé obtenue.\n"
 
-msgctxt "L_PROPOBJ_041"
+#. "L_PROPOBJ_041"
 msgid "Picked up a shield.\n"
 msgstr "Bouclier obtenu.\n"
 
-msgctxt "L_PROPOBJ_042"
+#. "L_PROPOBJ_042"
 msgid "A shield.\n"
 msgstr "Un bouclier.\n"
 
-msgctxt "L_PROPOBJ_043"
+#. "L_PROPOBJ_043"
 msgid "Picked up something.\n"
 msgstr "Elément obtenu.\n"
 
-msgctxt "L_PROPOBJ_044"
+#. "L_PROPOBJ_044"
 msgid "This door is locked.\n"
 msgstr "Cette porte est fermée.\n"
 
-msgctxt "L_PROPOBJ_045"
+#. "L_PROPOBJ_045"
 msgid "bolt"
 msgstr "Carreau"
 
-msgctxt "L_PROPOBJ_046"
+#. "L_PROPOBJ_046"
 msgid "orb"
 msgstr "Orbe"
 
-msgctxt "L_PROPOBJ_047"
+#. "L_PROPOBJ_047"
 msgid "Reaper ammo"
 msgstr "Munit. Reaper"
 
-msgctxt "L_PROPOBJ_048"
+#. "L_PROPOBJ_048"
 msgid "cloaking device"
 msgstr "Occulteur"
 
-msgctxt "L_PROPOBJ_049"
+#. "L_PROPOBJ_049"
 msgid "boost pill"
 msgstr "Pilule boost"
 
-msgctxt "L_PROPOBJ_050"
+#. "L_PROPOBJ_050"
 msgid "your "
 msgstr "votre "
 
-msgctxt "L_PROPOBJ_051"
+#. "L_PROPOBJ_051"
 msgid "Your "
 msgstr "Votre "

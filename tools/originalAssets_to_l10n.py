@@ -86,7 +86,7 @@ def main():
                 msg = polib.POEntry()
                 id = item["id"]
 
-                msg.msgctxt = item["id"]
+                msg.comment = item["id"]
                 found = False # sometimes there is not entry in ntsc-final but they exists in pal
                 for usItem in us_langData: # Probably a better way to do that but I was lazy, sorry
                     if usItem["id"] == id:
@@ -104,14 +104,14 @@ def main():
 
                     #en-GB
                     msg = polib.POEntry()
-                    msg.msgctxt = item["id"]
+                    msg.comment = item["id"]
                     msg.msgid = msgid
                     msg.msgstr = item["gb"]
                     gb_messages.append(msg)
 
                     #ja-JP
                     msg = polib.POEntry()
-                    msg.msgctxt = item["id"]
+                    msg.comment = item["id"]
                     msg.msgid = msgid
                     for jpItem in jp_langData: #yep, still lazy
                         if jpItem["id"] == id:
@@ -121,28 +121,28 @@ def main():
 
                     #it-IT
                     msg = polib.POEntry()
-                    msg.msgctxt = item["id"]
+                    msg.comment = item["id"]
                     msg.msgid = msgid
                     msg.msgstr = item["it"]
                     it_messages.append(msg)
 
                     #fr-FR
                     msg = polib.POEntry()
-                    msg.msgctxt = item["id"]
+                    msg.comment = item["id"]
                     msg.msgid = msgid
                     msg.msgstr = item["fr"]
                     fr_messages.append(msg)
 
                     #de-De
                     msg = polib.POEntry()
-                    msg.msgctxt = item["id"]
+                    msg.comment = item["id"]
                     msg.msgid = msgid
                     msg.msgstr = item["de"]
                     de_messages.append(msg)
 
                     #es-ES
                     msg = polib.POEntry()
-                    msg.msgctxt = item["id"]
+                    msg.comment = item["id"]
                     msg.msgid = msgid
                     msg.msgstr = item["es"]
                     es_messages.append(msg)
