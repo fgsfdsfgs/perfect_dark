@@ -1,0 +1,37 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Perfect Dark PC port localization\n"
+"POT-Creation-Date: 2025-05-31 06:37:14.299892+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: originalAssets_to_l10n.py script\n"
+
+msgctxt "L_SEVB_000"
+msgid ""
+"Retaking the Institute.\n"
+"Lead the team and clean out the building.\n"
+msgstr ""
+"Retaking the Institute.\n"
+"Lead the team and clean out the building.\n"
+
+msgctxt "L_SEVB_001"
+msgid "Lead the team and clean out the building.\n"
+msgstr "Lead the team and clean out the building.\n"
+
+msgctxt "L_SEVB_002"
+msgid "Lead the team and clean out the building.\n"
+msgstr "Lead the team and clean out the building.\n"
+
+msgctxt "L_SEVB_003"
+msgid "Kill All Enemy Agents\n"
+msgstr "Kill All Enemy Agents\n"
+
+msgctxt "L_SEVB_004"
+msgid "Do Something Else\n"
+msgstr "Do Something Else\n"
+
+msgctxt "L_SEVB_005"
+msgid "And Something Else\n"
+msgstr "And Something Else\n"
