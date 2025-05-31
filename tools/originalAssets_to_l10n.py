@@ -94,9 +94,9 @@ def main():
                         if usItem["en"] is None: # skipping empty string and entries
                             skip_entry = True
                             break
-                        msgid = polib.escape(usItem["en"])
-                        msg.msgid = polib.escape(usItem["en"])
-                        msg.msgstr = polib.escape(usItem["en"])
+                        msgid = usItem["en"]
+                        msg.msgid = usItem["en"]
+                        msg.msgstr = usItem["en"]
                         break
                 
                 if not skip_entry and found:
@@ -106,7 +106,7 @@ def main():
                     msg = polib.POEntry()
                     msg.msgctxt = item["id"]
                     msg.msgid = msgid
-                    msg.msgstr = polib.escape(item["gb"])
+                    msg.msgstr = item["gb"]
                     gb_messages.append(msg)
 
                     #ja-JP
@@ -115,7 +115,7 @@ def main():
                     msg.msgid = msgid
                     for jpItem in jp_langData: #yep, still lazy
                         if jpItem["id"] == id:
-                            msg.msgstr = polib.escape(jpItem["jp"])
+                            msg.msgstr = jpItem["jp"]
                             break
                     jp_messages.append(msg)
 
@@ -123,28 +123,28 @@ def main():
                     msg = polib.POEntry()
                     msg.msgctxt = item["id"]
                     msg.msgid = msgid
-                    msg.msgstr = polib.escape(item["it"])
+                    msg.msgstr = item["it"]
                     it_messages.append(msg)
 
                     #fr-FR
                     msg = polib.POEntry()
                     msg.msgctxt = item["id"]
                     msg.msgid = msgid
-                    msg.msgstr = polib.escape(item["fr"])
+                    msg.msgstr = item["fr"]
                     fr_messages.append(msg)
 
                     #de-De
                     msg = polib.POEntry()
                     msg.msgctxt = item["id"]
                     msg.msgid = msgid
-                    msg.msgstr = polib.escape(item["de"])
+                    msg.msgstr = item["de"]
                     de_messages.append(msg)
 
                     #es-ES
                     msg = polib.POEntry()
                     msg.msgctxt = item["id"]
                     msg.msgid = msgid
-                    msg.msgstr = polib.escape(item["es"])
+                    msg.msgstr = item["es"]
                     es_messages.append(msg)
 
             os.makedirs(PurePath(L10N_BASE_LOCATION,"en_US"), exist_ok=True)
