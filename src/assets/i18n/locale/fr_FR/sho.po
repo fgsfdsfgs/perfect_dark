@@ -328,7 +328,7 @@ msgid ""
 "isn't there?\n"
 msgstr ""
 "Je vois. Cet endroit est sacré pour eux. Mais ce n'est pas tout, il y a "
-"autre chose, n'est-ce pas?"
+"autre chose, n'est-ce pas?\n"
 
 msgctxt "L_SHO_036"
 msgid ""

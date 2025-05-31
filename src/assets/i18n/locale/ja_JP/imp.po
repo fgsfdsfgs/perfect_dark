@@ -324,7 +324,7 @@ msgctxt "L_IMP_038"
 msgid ""
 "Well, at least I won't know if I'm doing \n"
 "anything wrong.\n"
-msgstr "\n"
+msgstr " \n"
 
 msgctxt "L_IMP_039"
 msgid "The bomb has been detonated...\n"

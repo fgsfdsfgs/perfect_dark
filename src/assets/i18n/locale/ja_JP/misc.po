@@ -323,175 +323,175 @@ msgctxt "L_MISC_123"
 msgid ""
 "VengeSim:  Be careful if you shoot or kill a VengeSim because it always "
 "attacks the player who last killed it."
-msgstr "反撃タイプ：反撃タイプのシミュラントを撃ったり倒したりするとメンドーだ。こいつは前回自分を倒した相手のみを攻撃してくる。\n"
+msgstr "反撃タイプ：反撃タイプのシミュラントを撃ったり倒したりするとメンドーだ。こいつは前回自分を倒した相手のみを攻撃してくる。"
 
 msgctxt "L_MISC_124"
 msgid "Dark Combat"
-msgstr "ダークコンバット\n"
+msgstr "ダークコンバット"
 
 msgctxt "L_MISC_125"
 msgid "Skedar Mystery"
-msgstr "スケダー\n"
+msgstr "スケダー"
 
 msgctxt "L_MISC_126"
 msgid "CI Operative"
-msgstr "ＣＩエージェント\n"
+msgstr "ＣＩエージェント"
 
 msgctxt "L_MISC_127"
 msgid "dataDyne Action"
-msgstr "データダイン\n"
+msgstr "データダイン"
 
 msgctxt "L_MISC_128"
 msgid "Maian Tears"
-msgstr "マイアンの悲しみ\n"
+msgstr "マイアンの悲しみ"
 
 msgctxt "L_MISC_129"
 msgid "Alien Conflict"
-msgstr "エイリアンの対立\n"
+msgstr "エイリアンの対立"
 
 msgctxt "L_MISC_130"
 msgid "Carrington Institute"
-msgstr "キャリントン協会\n"
+msgstr "キャリントン協会"
 
 msgctxt "L_MISC_131"
 msgid "dD Central"
-msgstr "ｄＤセントラル\n"
+msgstr "ｄＤセントラル"
 
 msgctxt "L_MISC_132"
 msgid "dD Central X"
-msgstr "ｄＤセントラル！\n"
+msgstr "ｄＤセントラル！"
 
 msgctxt "L_MISC_133"
 msgid "dD Research"
-msgstr "ｄＤリサーチ\n"
+msgstr "ｄＤリサーチ"
 
 msgctxt "L_MISC_134"
 msgid "dD Research X"
-msgstr "ｄＤリサーチ！\n"
+msgstr "ｄＤリサーチ！"
 
 msgctxt "L_MISC_135"
 msgid "dD Extraction"
-msgstr "ｄＤエスケイプ\n"
+msgstr "ｄＤエスケイプ"
 
 msgctxt "L_MISC_136"
 msgid "dD Extraction X"
-msgstr "ｄＤエスケイプ！\n"
+msgstr "ｄＤエスケイプ！"
 
 msgctxt "L_MISC_137"
 msgid "Carrington Villa"
-msgstr "別荘\n"
+msgstr "別荘"
 
 msgctxt "L_MISC_138"
 msgid "Carrington Villa X"
-msgstr "別荘！\n"
+msgstr "別荘！"
 
 msgctxt "L_MISC_139"
 msgid "Chicago"
-msgstr "シカゴ\n"
+msgstr "シカゴ"
 
 msgctxt "L_MISC_140"
 msgid "Chicago X"
-msgstr "シカゴ！\n"
+msgstr "シカゴ！"
 
 msgctxt "L_MISC_141"
 msgid "G5 Building"
-msgstr "Ｇ５ビル\n"
+msgstr "Ｇ５ビル"
 
 msgctxt "L_MISC_142"
 msgid "G5 Building X"
-msgstr "Ｇ５ビル！\n"
+msgstr "Ｇ５ビル！"
 
 msgctxt "L_MISC_143"
 msgid "A51 Infiltration"
-msgstr "Ａ５１　突破\n"
+msgstr "Ａ５１　突破"
 
 msgctxt "L_MISC_144"
 msgid "A51 Infiltration X"
-msgstr "Ａ５１　突破！\n"
+msgstr "Ａ５１　突破！"
 
 msgctxt "L_MISC_145"
 msgid "A51 Rescue"
-msgstr "Ａ５１　救出\n"
+msgstr "Ａ５１　救出"
 
 msgctxt "L_MISC_146"
 msgid "A51 Rescue X"
-msgstr "Ａ５１　救出！\n"
+msgstr "Ａ５１　救出！"
 
 msgctxt "L_MISC_147"
 msgid "A51 Escape"
-msgstr "Ａ５１　脱出\n"
+msgstr "Ａ５１　脱出"
 
 msgctxt "L_MISC_148"
 msgid "A51 Escape X"
-msgstr "Ａ５１　脱出！\n"
+msgstr "Ａ５１　脱出！"
 
 msgctxt "L_MISC_149"
 msgid "Air Base"
-msgstr "空軍基地\n"
+msgstr "空軍基地"
 
 msgctxt "L_MISC_150"
 msgid "Air Base X"
-msgstr "空軍基地！\n"
+msgstr "空軍基地！"
 
 msgctxt "L_MISC_151"
 msgid "Air Force One"
-msgstr "大統領専用機\n"
+msgstr "大統領専用機"
 
 msgctxt "L_MISC_152"
 msgid "Air Force One X"
-msgstr "大統領専用機！\n"
+msgstr "大統領専用機！"
 
 msgctxt "L_MISC_153"
 msgid "Crash Site"
-msgstr "墜落現場\n"
+msgstr "墜落現場"
 
 msgctxt "L_MISC_154"
 msgid "Crash Site X"
-msgstr "墜落現場！\n"
+msgstr "墜落現場！"
 
 msgctxt "L_MISC_155"
 msgid "Pelagic II"
-msgstr "ペラジック２\n"
+msgstr "ペラジック２"
 
 msgctxt "L_MISC_156"
 msgid "Pelagic II X"
-msgstr "ペラジック２！\n"
+msgstr "ペラジック２！"
 
 msgctxt "L_MISC_157"
 msgid "Deep Sea"
-msgstr "深海\n"
+msgstr "深海"
 
 msgctxt "L_MISC_158"
 msgid "Deep Sea X"
-msgstr "深海！\n"
+msgstr "深海！"
 
 msgctxt "L_MISC_159"
 msgid "Institute Defense"
-msgstr "協会の防衛\n"
+msgstr "協会の防衛"
 
 msgctxt "L_MISC_160"
 msgid "Institute Defense X"
-msgstr "協会の防衛！\n"
+msgstr "協会の防衛！"
 
 msgctxt "L_MISC_161"
 msgid "Attack Ship"
-msgstr "スケダー宇宙船\n"
+msgstr "スケダー宇宙船"
 
 msgctxt "L_MISC_162"
 msgid "Attack Ship X"
-msgstr "スケダー宇宙船！\n"
+msgstr "スケダー宇宙船！"
 
 msgctxt "L_MISC_163"
 msgid "Skedar Ruins"
-msgstr "スケダーの神殿\n"
+msgstr "スケダーの神殿"
 
 msgctxt "L_MISC_164"
 msgid "Skedar Ruins X"
-msgstr "スケダーの神殿！\n"
+msgstr "スケダーの神殿！"
 
 msgctxt "L_MISC_165"
 msgid "End Credits"
-msgstr "エンディング\n"
+msgstr "エンディング"
 
 msgctxt "L_MISC_166"
 msgid "Random\n"
@@ -702,7 +702,7 @@ msgid "BNC: 15877"
 msgstr "BNC: 15877"
 
 msgctxt "L_MISC_218"
-msgid "Not enough room to launch "
+msgid "Not enough room to launch \n"
 msgstr "この場所にはセットできません。\n"
 
 msgctxt "L_MISC_417"
@@ -795,11 +795,11 @@ msgstr ""
 
 msgctxt "L_MISC_439"
 msgid "Identify\n"
-msgstr "\n"
+msgstr " \n"
 
 msgctxt "L_MISC_440"
 msgid "unused"
-msgstr "未使用\n"
+msgstr "未使用"
 
 msgctxt "L_MISC_441"
 msgid "Challenges\n"

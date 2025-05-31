@@ -72,7 +72,7 @@ msgstr ""
 
 msgctxt "L_LUE_001"
 msgid "AREA 51 - EXTERIOR\n"
-msgstr "エリア５１　外壁"
+msgstr "エリア５１　外壁\n"
 
 msgctxt "L_LUE_002"
 msgid ""

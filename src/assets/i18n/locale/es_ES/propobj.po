@@ -9,35 +9,35 @@ msgstr ""
 "X-Generator: originalAssets_to_l10n.py script\n"
 
 msgctxt "L_PROPOBJ_000"
-msgid "Picked up "
+msgid "Picked up \n"
 msgstr "Recogiste %s.\n"
 
 msgctxt "L_PROPOBJ_001"
-msgid "Double "
+msgid "Double \n"
 msgstr "Recogiste %s.\n"
 
 msgctxt "L_PROPOBJ_002"
-msgid "some "
+msgid "some \n"
 msgstr "Recogiste %s.\n"
 
 msgctxt "L_PROPOBJ_003"
-msgid "Some "
+msgid "Some \n"
 msgstr "Recogiste %s.\n"
 
 msgctxt "L_PROPOBJ_004"
-msgid "a "
+msgid "a \n"
 msgstr "Recogiste %s.\n"
 
 msgctxt "L_PROPOBJ_005"
-msgid "A "
+msgid "A \n"
 msgstr "Recogiste %s.\n"
 
 msgctxt "L_PROPOBJ_006"
-msgid "an "
+msgid "an \n"
 msgstr "Recogiste %s.\n"
 
 msgctxt "L_PROPOBJ_007"
-msgid "An "
+msgid "An \n"
 msgstr "Recogiste %s.\n"
 
 msgctxt "L_PROPOBJ_008"
