@@ -1,3 +1,4 @@
+#include <stdint.h>
 #include <ultra64.h>
 #include "constants.h"
 #include "game/chraction.h"
@@ -25,6 +26,11 @@
 #include "lib/str.h"
 #include "data.h"
 #include "types.h"
+#ifndef PLATFORM_N64
+#include <libintl.h>
+#define _(String) gettext (String)
+#define gettext_noop(String) String
+#endif
 
 struct activemenu g_AmMenus[MAX_PLAYERS];
 struct fontchar *g_AmFont1;
@@ -218,7 +224,7 @@ struct menuitem g_AmPickTargetMenuItems[] = {
 
 struct menudialogdef g_AmPickTargetMenuDialog = {
 	MENUDIALOGTYPE_DANGER,
-	L_OPTIONS_492, // "Pick Target"
+	gettext_noop("Pick Target\n"), // "Pick Target"
 	g_AmPickTargetMenuItems,
 	amPickTargetMenuDialog,
 	0,
@@ -413,7 +419,7 @@ void amGetSlotDetails(s32 slot, u32 *flags, char *label)
 	switch (g_AmMenus[g_AmIndex].screenindex) {
 	case 0: // Weapon screen
 		if (slot == 4) {
-			strcpy(label, langGet(L_MISC_170)); // "Weapon"
+			strcpy(label, _("Weapon\n")); // "Weapon"
 			return;
 		}
 
@@ -433,7 +439,7 @@ void amGetSlotDetails(s32 slot, u32 *flags, char *label)
 				qty = bgunGetReservedAmmoCount(AMMOTYPE_CLOAK);
 				secs = qty / TICKS(60);
 				modulo = (qty - (secs * TICKS(60))) * 100 / TICKS(60);
-				sprintf(label, langGet(L_OPTIONS_491), secs + (modulo > 0 ? 1 : 0)); // "cloak %d"
+				sprintf(label, _("cloak %d\n"), secs + (modulo > 0 ? 1 : 0)); // "cloak %d"
 			} else {
 				strcpy(label, invGetShortNameByIndex(g_AmMenus[g_AmIndex].invindexes[slot]));
 			}
@@ -455,7 +461,7 @@ void amGetSlotDetails(s32 slot, u32 *flags, char *label)
 		strcpy(label, "");
 
 		if (slot == 4) {
-			strcpy(label, langGet(L_MISC_171)); // "Function"
+			strcpy(label, _("Function\n")); // "Function"
 		} else if (slot == 1 || slot == 7) {
 			prifunc = weaponGetFunction(&g_Vars.currentplayer->hands[HAND_RIGHT].gset, FUNC_PRIMARY);
 			secfunc = weaponGetFunction(&g_Vars.currentplayer->hands[HAND_RIGHT].gset, FUNC_SECONDARY);
@@ -484,19 +490,19 @@ void amGetSlotDetails(s32 slot, u32 *flags, char *label)
 
 		if (g_MissionConfig.iscoop) {
 			if (slot == 4) {
-				strcpy(label, langGet(L_MISC_474)); // "Perfect Buddies"
+				strcpy(label, _("Perfect Buddies\n")); // "Perfect Buddies"
 			} else if (slot == 1) {
-				strcpy(label, langGet(L_MISC_472)); // "Aggressive"
+				strcpy(label, _("Aggressive\n")); // "Aggressive"
 			} else if (slot == 7) {
-				strcpy(label, langGet(L_MISC_473)); // "Passive"
+				strcpy(label, _("Passive\n")); // "Passive"
 #if VERSION >= VERSION_NTSC_1_0
 			} else if (slot == 3) {
-				strcpy(label, langGet(L_MISC_475)); // "Stealth"
+				strcpy(label, _("Stealth\n")); // "Stealth"
 #endif
 			}
 		} else {
 			if (slot == 4) {
-				strcpy(label, langGet(L_MISC_172)); // "Orders"
+				strcpy(label, _("Orders\n")); // "Orders"
 			} else {
 				strcpy(label, botGetCommandName(g_AmBotCommands[slot]));
 			}
@@ -1002,7 +1008,7 @@ Gfx *amRenderAibotInfo(Gfx *gdl, s32 buddynum)
 		}
 
 		if (weaponnum < WEAPON_FALCON2 || weaponnum > WEAPON_HORIZONSCANNER) {
-			weaponname = langGet(L_MISC_173); // "No Weapon"
+			weaponname = _("No Weapon\n"); // "No Weapon"
 		} else {
 			weaponname = bgunGetShortName(weaponnum);
 		}
@@ -1055,7 +1061,7 @@ Gfx *amRenderAibotInfo(Gfx *gdl, s32 buddynum)
 
 		g_Vars.currentplayer->commandingaibot = g_MpAllChrPtrs[buddynum];
 	} else {
-		char *title = langGet(L_MISC_215); // "All Simulants"
+		char *title = _("All Simulants\n"); // "All Simulants"
 
 		textMeasure(&textheight, &textwidth, title, g_AmFont1, g_AmFont2, 0);
 

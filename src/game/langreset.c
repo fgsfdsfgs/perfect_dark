@@ -13,6 +13,7 @@ extern s32 g_LangBufferSize;
 
 void langReset(s32 stagenum)
 {
+	// TODO - Lang: use setlocale
 	s32 i;
 	s32 size;
 
@@ -56,7 +57,7 @@ void langReset(s32 stagenum)
 	langReload();
 #else
 	// Versions prior to PAL load the language directly
-	g_LoadType = LOADTYPE_LANG; // find be a better way to do this..
+	/*g_LoadType = LOADTYPE_LANG; // find be a better way to do this..
 	g_LangBanks[LANGBANK_GUN] = fileLoadToNew(langGetFileId(LANGBANK_GUN), FILELOADMETHOD_DEFAULT, LOADTYPE_LANG);
 
 	g_LoadType = LOADTYPE_LANG;
@@ -77,6 +78,6 @@ void langReset(s32 stagenum)
 	if (stagenum == STAGE_CREDITS) {
 		g_LoadType = LOADTYPE_LANG;
 		g_LangBanks[LANGBANK_TITLE] = fileLoadToNew(langGetFileId(LANGBANK_TITLE), FILELOADMETHOD_DEFAULT, LOADTYPE_LANG);
-	}
+	}*/
 #endif
 }

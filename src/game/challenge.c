@@ -19,6 +19,11 @@
 #include "lib/rng.h"
 #include "data.h"
 #include "types.h"
+#ifndef PLATFORM_N64
+#include <libintl.h>
+#define _(String) gettext (String)
+#define gettext_noop(String) String
+#endif
 
 u8 g_MpFeaturesForceUnlocked[40];
 u8 g_MpFeaturesUnlocked[80];
@@ -27,36 +32,36 @@ u32 g_MpChallengeIndex = 0;
 struct mpconfigfull *g_MpCurrentChallengeConfig = NULL;
 
 struct challenge g_MpChallenges[] = {
-	{ L_OPTIONS_406, MPCONFIG_CHALLENGE01 }, // "Challenge 1"
-	{ L_OPTIONS_407, MPCONFIG_CHALLENGE02 }, // "Challenge 2"
-	{ L_OPTIONS_408, MPCONFIG_CHALLENGE03 }, // "Challenge 3"
-	{ L_OPTIONS_409, MPCONFIG_CHALLENGE04 }, // "Challenge 4"
-	{ L_OPTIONS_410, MPCONFIG_CHALLENGE05 }, // "Challenge 5"
-	{ L_OPTIONS_411, MPCONFIG_CHALLENGE06 }, // "Challenge 6"
-	{ L_OPTIONS_412, MPCONFIG_CHALLENGE07 }, // "Challenge 7"
-	{ L_OPTIONS_413, MPCONFIG_CHALLENGE08 }, // "Challenge 8"
-	{ L_OPTIONS_414, MPCONFIG_CHALLENGE09 }, // "Challenge 9"
-	{ L_OPTIONS_415, MPCONFIG_CHALLENGE10 }, // "Challenge 10"
-	{ L_OPTIONS_416, MPCONFIG_CHALLENGE11 }, // "Challenge 11"
-	{ L_OPTIONS_417, MPCONFIG_CHALLENGE12 }, // "Challenge 12"
-	{ L_OPTIONS_418, MPCONFIG_CHALLENGE13 }, // "Challenge 13"
-	{ L_OPTIONS_419, MPCONFIG_CHALLENGE14 }, // "Challenge 14"
-	{ L_OPTIONS_420, MPCONFIG_CHALLENGE15 }, // "Challenge 15"
-	{ L_OPTIONS_421, MPCONFIG_CHALLENGE16 }, // "Challenge 16"
-	{ L_OPTIONS_422, MPCONFIG_CHALLENGE17 }, // "Challenge 17"
-	{ L_OPTIONS_423, MPCONFIG_CHALLENGE18 }, // "Challenge 18"
-	{ L_OPTIONS_424, MPCONFIG_CHALLENGE19 }, // "Challenge 19"
-	{ L_OPTIONS_425, MPCONFIG_CHALLENGE20 }, // "Challenge 20"
-	{ L_OPTIONS_426, MPCONFIG_CHALLENGE21 }, // "Challenge 21"
-	{ L_OPTIONS_427, MPCONFIG_CHALLENGE22 }, // "Challenge 22"
-	{ L_OPTIONS_428, MPCONFIG_CHALLENGE23 }, // "Challenge 23"
-	{ L_OPTIONS_429, MPCONFIG_CHALLENGE24 }, // "Challenge 24"
-	{ L_OPTIONS_430, MPCONFIG_CHALLENGE25 }, // "Challenge 25"
-	{ L_OPTIONS_431, MPCONFIG_CHALLENGE26 }, // "Challenge 26"
-	{ L_OPTIONS_432, MPCONFIG_CHALLENGE27 }, // "Challenge 27"
-	{ L_OPTIONS_433, MPCONFIG_CHALLENGE28 }, // "Challenge 28"
-	{ L_OPTIONS_434, MPCONFIG_CHALLENGE29 }, // "Challenge 29"
-	{ L_OPTIONS_435, MPCONFIG_CHALLENGE30 }, // "Challenge 30"
+	{ gettext_noop("Challenge 1"), MPCONFIG_CHALLENGE01 }, // "Challenge 1"
+	{ gettext_noop("Challenge 2"), MPCONFIG_CHALLENGE02 }, // "Challenge 2"
+	{ gettext_noop("Challenge 3"), MPCONFIG_CHALLENGE03 }, // "Challenge 3"
+	{ gettext_noop("Challenge 4"), MPCONFIG_CHALLENGE04 }, // "Challenge 4"
+	{ gettext_noop("Challenge 5"), MPCONFIG_CHALLENGE05 }, // "Challenge 5"
+	{ gettext_noop("Challenge 6"), MPCONFIG_CHALLENGE06 }, // "Challenge 6"
+	{ gettext_noop("Challenge 7"), MPCONFIG_CHALLENGE07 }, // "Challenge 7"
+	{ gettext_noop("Challenge 8"), MPCONFIG_CHALLENGE08 }, // "Challenge 8"
+	{ gettext_noop("Challenge 9"), MPCONFIG_CHALLENGE09 }, // "Challenge 9"
+	{ gettext_noop("Challenge 10"), MPCONFIG_CHALLENGE10 }, // "Challenge 10"
+	{ gettext_noop("Challenge 11"), MPCONFIG_CHALLENGE11 }, // "Challenge 11"
+	{ gettext_noop("Challenge 12"), MPCONFIG_CHALLENGE12 }, // "Challenge 12"
+	{ gettext_noop("Challenge 13"), MPCONFIG_CHALLENGE13 }, // "Challenge 13"
+	{ gettext_noop("Challenge 14"), MPCONFIG_CHALLENGE14 }, // "Challenge 14"
+	{ gettext_noop("Challenge 15"), MPCONFIG_CHALLENGE15 }, // "Challenge 15"
+	{ gettext_noop("Challenge 16"), MPCONFIG_CHALLENGE16 }, // "Challenge 16"
+	{ gettext_noop("Challenge 17"), MPCONFIG_CHALLENGE17 }, // "Challenge 17"
+	{ gettext_noop("Challenge 18"), MPCONFIG_CHALLENGE18 }, // "Challenge 18"
+	{ gettext_noop("Challenge 19"), MPCONFIG_CHALLENGE19 }, // "Challenge 19"
+	{ gettext_noop("Challenge 20"), MPCONFIG_CHALLENGE20 }, // "Challenge 20"
+	{ gettext_noop("Challenge 21"), MPCONFIG_CHALLENGE21 }, // "Challenge 21"
+	{ gettext_noop("Challenge 22"), MPCONFIG_CHALLENGE22 }, // "Challenge 22"
+	{ gettext_noop("Challenge 23"), MPCONFIG_CHALLENGE23 }, // "Challenge 23"
+	{ gettext_noop("Challenge 24"), MPCONFIG_CHALLENGE24 }, // "Challenge 24"
+	{ gettext_noop("Challenge 25"), MPCONFIG_CHALLENGE25 }, // "Challenge 25"
+	{ gettext_noop("Challenge 26"), MPCONFIG_CHALLENGE26 }, // "Challenge 26"
+	{ gettext_noop("Challenge 27"), MPCONFIG_CHALLENGE27 }, // "Challenge 27"
+	{ gettext_noop("Challenge 28"), MPCONFIG_CHALLENGE28 }, // "Challenge 28"
+	{ gettext_noop("Challenge 29"), MPCONFIG_CHALLENGE29 }, // "Challenge 29"
+	{ gettext_noop("Challenge 30"), MPCONFIG_CHALLENGE30 }, // "Challenge 30"
 };
 
 bool challengeIsAvailable(s32 challengeindex)
@@ -286,7 +291,7 @@ s32 challengeGetNumAvailable(void)
 
 char *challengeGetName(s32 challengeindex)
 {
-	return langGet(g_MpChallenges[challengeindex].name);
+	return _(g_MpChallenges[challengeindex].name);
 }
 
 char *challengeGetNameBySlot(s32 slot)
@@ -764,7 +769,7 @@ s32 challengeGetAutoFocusedIndex(s32 mpchrnum)
 
 char *challengeGetName2(s32 playernum, s32 challengeindex)
 {
-	return langGet(g_MpChallenges[challengeindex].name);
+	return _(g_MpChallenges[challengeindex].name);
 }
 
 bool challengeIsCompletedByPlayerWithNumPlayers2(s32 mpchrnum, s32 index, s32 numplayers)

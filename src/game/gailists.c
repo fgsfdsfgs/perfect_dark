@@ -1,9 +1,15 @@
+#include <stdint.h>
 #include <ultra64.h>
 #include "game/chraicommands.h"
 #include "game/prop.h"
 #include "stagesetup.h"
 #include "data.h"
 #include "types.h"
+#ifndef PLATFORM_N64
+#include <libintl.h>
+#define _(String) gettext (String)
+#endif
+
 
 /**
  * gailists - Global AI Lists
@@ -4053,8 +4059,9 @@ u8 func0016_show_objective_failed_msg[] = {
 	set_ailist(CHR_SELF, GAILIST_IDLE)
 
 	// Show message first time
+	// TODO - Lang: Fix it
 	label(0x13)
-	show_hudmsg(CHR_BOND, L_MISC_069) // "OBJECTIVES FAILED - abort mission."
+	//show_hudmsg(CHR_BOND, _("OBJECTIVES FAILED - abort mission.\n")) // "OBJECTIVES FAILED - abort mission."
 
 	// Wait 60 seconds
 	restart_timer
@@ -4073,8 +4080,9 @@ u8 func0016_show_objective_failed_msg[] = {
 	set_ailist(CHR_SELF, GAILIST_IDLE)
 
 	// Show message second time
+	// TODO - Lang: Fix it
 	label(0x13)
-	show_hudmsg(CHR_BOND, L_MISC_069) // "OBJECTIVES FAILED - abort mission."
+	//show_hudmsg(CHR_BOND, _("OBJECTIVES FAILED - abort mission.\n")) // "OBJECTIVES FAILED - abort mission."
 	restart_timer
 
 	// Wait 2 minutes
@@ -4092,8 +4100,9 @@ u8 func0016_show_objective_failed_msg[] = {
 	set_ailist(CHR_SELF, GAILIST_IDLE)
 
 	// Show message third time
+	// TODO - Lang: Fix it
 	label(0x13)
-	show_hudmsg(CHR_BOND, L_MISC_069) // "OBJECTIVES FAILED - abort mission."
+	//show_hudmsg(CHR_BOND, _("OBJECTIVES FAILED - abort mission.\n")) // "OBJECTIVES FAILED - abort mission."
 	restart_timer
 
 	// Wait 5 minutes

@@ -9,6 +9,8 @@
 #include "types.h"
 #ifndef PLATFORM_N64
 #include "game/player.h"
+#include <libintl.h>
+#define _(String) gettext (String)
 #endif
 
 extern u32 g_BgunGunMemBaseSize4Mb2P;
@@ -247,21 +249,21 @@ void bgunReset(void)
 	g_Vars.currentplayer->gunzoomfovs[2] = ADJUST_ZOOM_FOV(30);
 
 	if (stageGetIndex(g_Vars.stagenum) == STAGEINDEX_AIRBASE) {
-		g_Weapons[WEAPON_EYESPY]->name = L_GUN_061; // "DrugSpy"
-		g_Weapons[WEAPON_EYESPY]->shortname = L_GUN_061; // "DrugSpy"
+		g_Weapons[WEAPON_EYESPY]->name = _("DrugSpy\n"); // "DrugSpy"
+		g_Weapons[WEAPON_EYESPY]->shortname = _("DrugSpy\n"); // "DrugSpy"
 		g_Weapons[WEAPON_EYESPY]->flags &= ~(WEAPONFLAG_DETERMINER_S_AN | WEAPONFLAG_DETERMINER_F_AN);
 	} else if (stageGetIndex(g_Vars.stagenum) == STAGEINDEX_CHICAGO
 			|| (stageGetIndex(g_Vars.stagenum) == STAGEINDEX_MBR)) {
-		g_Weapons[WEAPON_EYESPY]->name = L_GUN_062; // "BombSpy"
-		g_Weapons[WEAPON_EYESPY]->shortname = L_GUN_062; // "BombSpy"
+		g_Weapons[WEAPON_EYESPY]->name = _("BombSpy\n"); // "BombSpy"
+		g_Weapons[WEAPON_EYESPY]->shortname = _("BombSpy\n"); // "BombSpy"
 		g_Weapons[WEAPON_EYESPY]->flags &= ~(WEAPONFLAG_DETERMINER_S_AN | WEAPONFLAG_DETERMINER_F_AN);
 	} else {
 		// This is setting the "an" determiner for the camspy which seems
 		// unusual at first. The theory is that during development it was called
 		// the eyespy, then the pickup message was changed to "your camspy"
 		// which made the determiner unused, hence no need to update it.
-		g_Weapons[WEAPON_EYESPY]->name = L_GUN_060; // "CamSpy"
-		g_Weapons[WEAPON_EYESPY]->shortname = L_GUN_060; // "CamSpy"
+		g_Weapons[WEAPON_EYESPY]->name = _("CamSpy\n"); // "CamSpy"
+		g_Weapons[WEAPON_EYESPY]->shortname = _("CamSpy\n"); // "CamSpy"
 		g_Weapons[WEAPON_EYESPY]->flags |= (WEAPONFLAG_DETERMINER_S_AN | WEAPONFLAG_DETERMINER_F_AN);
 	}
 

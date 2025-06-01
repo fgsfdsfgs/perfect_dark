@@ -1,3 +1,4 @@
+#include <stdint.h>
 #include <ultra64.h>
 #include "constants.h"
 #include "game/bossfile.h"
@@ -30,6 +31,11 @@
 #include "lib/str.h"
 #include "data.h"
 #include "types.h"
+#ifndef PLATFORM_N64
+#include <libintl.h>
+#define _(String) gettext (String)
+#define gettext_noop(String) String
+#endif
 
 MenuItemHandlerResult endscreenHandleDeclineMission(s32 operation, struct menuitem *item, union handlerdata *data)
 {
@@ -101,10 +107,10 @@ char *endscreenMenuTitleRetryMission(struct menudialogdef *dialogdef)
 	char *prefix;
 
 	if (g_Menus[g_MpPlayerNum].curdialog->definition != dialogdef) {
-		return langGet(L_OPTIONS_300); // "Objectives"
+		return _("Objectives\n"); // "Objectives"
 	}
 
-	prefix = langGet(L_OPTIONS_296); // "Retry"
+	prefix = _("Retry"); // "Retry"
 	name = langGet(g_SoloStages[g_MissionConfig.stageindex].name3);
 
 	sprintf(g_StringPointer, "%s: %s\n", prefix, name);
@@ -118,10 +124,10 @@ char *endscreenMenuTitleNextMission(struct menudialogdef *dialogdef)
 	char *prefix;
 
 	if (g_Menus[g_MpPlayerNum].curdialog->definition != dialogdef) {
-		return langGet(L_OPTIONS_300); // "Objectives"
+		return _("Objectives\n"); // "Objectives"
 	}
 
-	prefix = langGet(L_OPTIONS_297); // "Next Mission"
+	prefix = _("Next Mission"); // "Next Mission"
 	name = langGet(g_SoloStages[g_MissionConfig.stageindex].name3);
 
 	sprintf(g_StringPointer, "%s: %s\n", prefix, name);
@@ -152,7 +158,7 @@ struct menuitem g_RetryMissionMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		0,
-		L_OPTIONS_298, // "Accept"
+		gettext_noop("Accept\n"), // "Accept"
 		0,
 		menuhandlerAcceptMission,
 	},
@@ -160,7 +166,7 @@ struct menuitem g_RetryMissionMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		0,
-		L_OPTIONS_299, // "Decline"
+		gettext_noop("Decline\n"), // "Decline"
 		0,
 		endscreenHandleDeclineMission,
 	},
@@ -169,7 +175,7 @@ struct menuitem g_RetryMissionMenuItems[] = {
 
 struct menudialogdef g_RetryMissionMenuDialog = {
 	MENUDIALOGTYPE_DEFAULT,
-	(uintptr_t)&endscreenMenuTitleRetryMission,
+	&endscreenMenuTitleRetryMission,
 	g_RetryMissionMenuItems,
 	endscreenHandleRetryMission,
 	MENUDIALOGFLAG_STARTSELECTS | MENUDIALOGFLAG_DISABLEITEMSCROLL,
@@ -189,7 +195,7 @@ struct menuitem g_NextMissionMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		0,
-		L_OPTIONS_298, // "Accept"
+		gettext_noop("Accept\n"), // "Accept"
 		0,
 		menuhandlerAcceptMission,
 	},
@@ -197,7 +203,7 @@ struct menuitem g_NextMissionMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		0,
-		L_OPTIONS_299, // "Decline"
+		gettext_noop("Accept\n"), // "Decline"
 		0,
 		endscreenHandleDeclineMission,
 	},
@@ -213,7 +219,7 @@ struct menuitem g_NextMissionMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		0,
-		L_MISC_470, // "Replay Previous Mission"
+		gettext_noop("Replay Previous Mission\n"), // "Replay Previous Mission"
 		0,
 		endscreenHandleReplayPreviousMission,
 	},
@@ -222,7 +228,7 @@ struct menuitem g_NextMissionMenuItems[] = {
 
 struct menudialogdef g_NextMissionMenuDialog = {
 	MENUDIALOGTYPE_DEFAULT,
-	(uintptr_t)&endscreenMenuTitleNextMission,
+	&endscreenMenuTitleNextMission,
 	g_NextMissionMenuItems,
 	endscreenHandleRetryMission,
 	MENUDIALOGFLAG_STARTSELECTS | MENUDIALOGFLAG_DISABLEITEMSCROLL,
@@ -295,79 +301,79 @@ char *endscreenMenuTextAccuracy(struct menuitem *item)
 char *endscreenMenuTextMissionStatus(struct menuitem *item)
 {
 	if (g_CheatsActiveBank0 || g_CheatsActiveBank1) {
-		return langGet(L_MPWEAPONS_135); // "Cheated"
+		return _("Cheated\n"); // "Cheated"
 	}
 
 	if (g_Vars.coopplayernum >= 0) {
 		if (g_Vars.bond->aborted || g_Vars.coop->aborted) {
-			return langGet(L_OPTIONS_295); // "Aborted"
+			return _("Aborted\n"); // "Aborted"
 		}
 
 		if (g_Vars.bond->isdead && g_Vars.coop->isdead) {
-			return langGet(L_OPTIONS_293); // "Failed"
+			return _("Failed\n"); // "Failed"
 		}
 	} else if (g_Vars.antiplayernum >= 0) {
 		if (g_Vars.currentplayer == g_Vars.bond) {
 			if (g_Vars.bond->aborted) {
-				return langGet(L_OPTIONS_295); // "Aborted"
+				return _("Aborted\n"); // "Aborted"
 			}
 
 			if (g_Vars.anti->aborted) {
-				return langGet(L_OPTIONS_295); // "Aborted"
+				return _("Aborted\n"); // "Aborted"
 			}
 
 			if (g_Vars.bond->isdead) {
-				return langGet(L_OPTIONS_293); // "Failed"
+				return _("Failed\n"); // "Failed"
 			}
 		} else {
 			if (g_Vars.anti->aborted) {
-				return langGet(L_OPTIONS_295); // "Aborted"
+				return _("Aborted\n"); // "Aborted"
 			}
 
 			if (!g_Vars.bond->aborted && !g_Vars.bond->isdead) {
-				return langGet(L_OPTIONS_293); // "Failed"
+				return _("Failed\n"); // "Failed"
 			}
 		}
 	} else {
 		if (g_Vars.bond->aborted) {
-			return langGet(L_OPTIONS_295); // "Aborted"
+			return _("Aborted\n"); // "Aborted"
 		}
 
 		if (g_Vars.bond->isdead) {
-			return langGet(L_OPTIONS_293); // "Failed"
+			return _("Failed\n"); // "Failed"
 		}
 	}
 
 	if (objectiveIsAllComplete() == false) {
-		return langGet(L_OPTIONS_293); // "Failed"
+		return _("Failed\n"); // "Failed"
 	}
 
 	if (g_StageIndex == STAGEINDEX_DEFENSE) {
-		return langGet(L_MPWEAPONS_062); // "Unknown"
+		return _("Unknown\n"); // "Unknown"
 	}
 
-	return langGet(L_OPTIONS_294); // "Completed"
+	return _("Completed\n"); // "Completed"
 }
 
 char *endscreenMenuTextAgentStatus(struct menuitem *item)
 {
 	if (g_CheatsActiveBank0 || g_CheatsActiveBank1) {
-		return langGet(L_MPWEAPONS_134); // "Dishonored"
+		return _("Dishonored\n"); // "Dishonored"
 	}
 
 	if (g_Vars.currentplayer->aborted) {
-		return langGet(L_OPTIONS_292); // "Disavowed"
+		return _("Disavowed\n"); // "Disavowed"
 	}
 
 	if (g_Vars.currentplayer->isdead) {
-		return langGet(L_OPTIONS_290); // "Deceased"
+		return _("Deceased\n"); // "Deceased"
 	}
 
 	if (g_StageIndex == STAGEINDEX_DEFENSE) {
-		return langGet(L_MPWEAPONS_063); // "Missing"
+		return _("Missing\n"); // "Missing"
 	}
 
-	return langGet(L_OPTIONS_291); // "Active"
+	return _("Active\n"); // "Active"
 }
 
 char *endscreenMenuTitleStageCompleted(struct menuitem *item)
@@ -375,7 +381,7 @@ char *endscreenMenuTitleStageCompleted(struct menuitem *item)
 #if VERSION >= VERSION_NTSC_1_0
 	sprintf(g_StringPointer, "%s: %s\n",
 			langGet(g_SoloStages[g_Menus[g_MpPlayerNum].endscreen.stageindex].name3),
-			langGet(L_OPTIONS_276)); // "Completed"
+			_("Completed\n")); // "Completed"
 #else
 	sprintf(g_StringPointer, "%s: %s\n",
 			langGet(g_SoloStages[g_MissionConfig.stageindex].name3),
@@ -399,7 +405,7 @@ char *endscreenMenuTitleStageFailed(struct menuitem *item)
 {
 	sprintf(g_StringPointer, "%s: %s\n",
 			langGet(g_SoloStages[g_MissionConfig.stageindex].name3),
-			langGet(L_OPTIONS_277)); // "Failed"
+			_("Failed\n")); // "Failed"
 
 	return g_StringPointer;
 }
@@ -480,7 +486,7 @@ struct menuitem g_2PMissionEndscreenObjectivesVMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_CENTRE,
-		L_OPTIONS_301, // "Press START"
+		gettext_noop("Press START\n"), // "Press START"
 		0,
 		NULL,
 	},
@@ -508,7 +514,7 @@ struct menuitem g_SoloEndscreenObjectivesMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_CENTRE,
-		L_OPTIONS_301, // "Press START"
+		gettext_noop("Press START\n"), // "Press START"
 		0,
 		NULL,
 	},
@@ -517,7 +523,7 @@ struct menuitem g_SoloEndscreenObjectivesMenuItems[] = {
 
 struct menudialogdef g_SoloEndscreenObjectivesFailedMenuDialog = {
 	MENUDIALOGTYPE_DANGER,
-	L_OPTIONS_300, // "Objectives"
+	gettext_noop("Objectives\n"), // "Objectives"
 	g_SoloEndscreenObjectivesMenuItems,
 	soloMenuDialogPauseStatus,
 	MENUDIALOGFLAG_DISABLEITEMSCROLL | MENUDIALOGFLAG_SMOOTHSCROLLABLE,
@@ -526,7 +532,7 @@ struct menudialogdef g_SoloEndscreenObjectivesFailedMenuDialog = {
 
 struct menudialogdef g_SoloEndscreenObjectivesCompletedMenuDialog = {
 	MENUDIALOGTYPE_SUCCESS,
-	L_OPTIONS_300, // "Objectives"
+	gettext_noop("Objectives\n"), // "Objectives"
 	g_SoloEndscreenObjectivesMenuItems,
 	soloMenuDialogPauseStatus,
 	MENUDIALOGFLAG_DISABLEITEMSCROLL | MENUDIALOGFLAG_SMOOTHSCROLLABLE,
@@ -535,7 +541,7 @@ struct menudialogdef g_SoloEndscreenObjectivesCompletedMenuDialog = {
 
 struct menudialogdef g_2PMissionEndscreenObjectivesFailedVMenuDialog = {
 	MENUDIALOGTYPE_DANGER,
-	L_OPTIONS_300, // "Objectives"
+	gettext_noop("Objectives\n"), // "Objectives"
 	g_2PMissionEndscreenObjectivesVMenuItems,
 	soloMenuDialogPauseStatus,
 	MENUDIALOGFLAG_DISABLEITEMSCROLL | MENUDIALOGFLAG_SMOOTHSCROLLABLE,
@@ -544,7 +550,7 @@ struct menudialogdef g_2PMissionEndscreenObjectivesFailedVMenuDialog = {
 
 struct menudialogdef g_2PMissionEndscreenObjectivesCompletedVMenuDialog = {
 	MENUDIALOGTYPE_SUCCESS,
-	L_OPTIONS_300, // "Objectives"
+	gettext_noop("Objectives\n"), // "Objectives"
 	g_2PMissionEndscreenObjectivesVMenuItems,
 	soloMenuDialogPauseStatus,
 	MENUDIALOGFLAG_DISABLEITEMSCROLL | MENUDIALOGFLAG_SMOOTHSCROLLABLE,
@@ -571,7 +577,7 @@ struct menuitem g_MissionContinueOrReplyMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_CENTRE,
-		L_MPWEAPONS_244, // "Continue"
+		gettext_noop("Continue\n"), // "Continue"
 		0,
 		endscreenHandleContinueMission,
 	},
@@ -579,7 +585,7 @@ struct menuitem g_MissionContinueOrReplyMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_CENTRE,
-		L_MPWEAPONS_245, // "Replay Last Level"
+		gettext_noop("Replay Last Level\n"), // "Replay Last Level"
 		0,
 		endscreenHandleReplayLastLevel,
 	},
@@ -588,7 +594,7 @@ struct menuitem g_MissionContinueOrReplyMenuItems[] = {
 
 struct menudialogdef g_MissionContinueOrReplyMenuDialog = {
 	MENUDIALOGTYPE_DEFAULT,
-	(uintptr_t)&endscreenMenuTextCurrentStageName3,
+	&endscreenMenuTextCurrentStageName3,
 	g_MissionContinueOrReplyMenuItems,
 	NULL,
 	MENUDIALOGFLAG_STARTSELECTS,
@@ -808,7 +814,7 @@ struct menuitem g_2PMissionEndscreenVMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_LESSLEFTPADDING | MENUITEMFLAG_SMALLFONT,
-		L_OPTIONS_278, // "Mission Status:"
+		gettext_noop("Mission Status:\n"), // "Mission Status:"
 		0,
 		NULL,
 	},
@@ -816,7 +822,7 @@ struct menuitem g_2PMissionEndscreenVMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_SELECTABLE_CENTRE,
-		(uintptr_t)&endscreenMenuTextMissionStatus,
+		&endscreenMenuTextMissionStatus,
 		0,
 		NULL,
 	},
@@ -824,7 +830,7 @@ struct menuitem g_2PMissionEndscreenVMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_LESSLEFTPADDING | MENUITEMFLAG_SMALLFONT,
-		L_OPTIONS_279, // "Agent Status:"
+		gettext_noop("Agent Status:\n"), // "Agent Status:"
 		0,
 		NULL,
 	},
@@ -832,7 +838,7 @@ struct menuitem g_2PMissionEndscreenVMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_SELECTABLE_CENTRE,
-		(uintptr_t)&endscreenMenuTextAgentStatus,
+		&endscreenMenuTextAgentStatus,
 		0,
 		NULL,
 	},
@@ -840,7 +846,7 @@ struct menuitem g_2PMissionEndscreenVMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_LESSLEFTPADDING | MENUITEMFLAG_SMALLFONT,
-		L_OPTIONS_280, // "Mission Time:"
+		gettext_noop("Mission Time:\n"), // "Mission Time:"
 		0,
 		NULL,
 	},
@@ -848,7 +854,7 @@ struct menuitem g_2PMissionEndscreenVMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_SELECTABLE_CENTRE,
-		(uintptr_t)&endscreenMenuTextMissionTime,
+		&endscreenMenuTextMissionTime,
 		0,
 		NULL,
 	},
@@ -856,7 +862,7 @@ struct menuitem g_2PMissionEndscreenVMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_LESSLEFTPADDING | MENUITEMFLAG_SMALLFONT,
-		L_MPWEAPONS_129, // "Difficulty:"
+		gettext_noop("Difficulty:\n"), // "Difficulty:"
 		0,
 		NULL,
 	},
@@ -864,7 +870,7 @@ struct menuitem g_2PMissionEndscreenVMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_SELECTABLE_CENTRE,
-		(uintptr_t)soloMenuTextDifficulty,
+		soloMenuTextDifficulty,
 		0,
 		NULL,
 	},
@@ -880,7 +886,7 @@ struct menuitem g_2PMissionEndscreenVMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_LESSLEFTPADDING | MENUITEMFLAG_SMALLFONT,
-		L_OPTIONS_281, // "Weapon of Choice:"
+		gettext_noop("Weapon of Choice:\n"), // "Weapon of Choice:"
 		0,
 		NULL,
 	},
@@ -888,7 +894,7 @@ struct menuitem g_2PMissionEndscreenVMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_SELECTABLE_CENTRE,
-		(uintptr_t)&mpMenuTextWeaponOfChoiceName,
+		&mpMenuTextWeaponOfChoiceName,
 		0,
 		NULL,
 	},
@@ -904,7 +910,7 @@ struct menuitem g_2PMissionEndscreenVMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		0,
-		L_OPTIONS_282, // "Kills:"
+		gettext_noop("Kills:\n"), // "Kills:"
 		(uintptr_t)&endscreenMenuTextNumKills,
 		NULL,
 	},
@@ -912,7 +918,7 @@ struct menuitem g_2PMissionEndscreenVMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		0,
-		L_OPTIONS_283, // "Accuracy:"
+		gettext_noop("Accuracy:\n"), // "Accuracy:"
 		(uintptr_t)&endscreenMenuTextAccuracy,
 		NULL,
 	},
@@ -928,7 +934,7 @@ struct menuitem g_2PMissionEndscreenVMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		0,
-		L_OPTIONS_284, // "Shot Total:"
+		gettext_noop("Shot Total:\n"), // "Shot Total:"
 		(uintptr_t)&endscreenMenuTextNumShots,
 		NULL,
 	},
@@ -936,7 +942,7 @@ struct menuitem g_2PMissionEndscreenVMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_SMALLFONT,
-		L_OPTIONS_285, // "Head Shots:"
+		gettext_noop("    Head Shots:\n"), // "Head Shots:"
 		(uintptr_t)&endscreenMenuTextNumHeadShots,
 		NULL,
 	},
@@ -944,7 +950,7 @@ struct menuitem g_2PMissionEndscreenVMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_SMALLFONT,
-		L_OPTIONS_286, // "Body Shots:"
+		gettext_noop("    Body Shots:\n"), // "Body Shots:"
 		(uintptr_t)&endscreenMenuTextNumBodyShots,
 		NULL,
 	},
@@ -952,7 +958,7 @@ struct menuitem g_2PMissionEndscreenVMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_SMALLFONT,
-		L_OPTIONS_287, // "Limb Shots:"
+		gettext_noop("    Limb Shots:\n"), // "Limb Shots:"
 		(uintptr_t)&endscreenMenuTextNumLimbShots,
 		NULL,
 	},
@@ -960,7 +966,7 @@ struct menuitem g_2PMissionEndscreenVMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_SMALLFONT,
-		L_OPTIONS_288, // "Others:"
+		gettext_noop("    Others:\n"), // "Others:"
 		(uintptr_t)&endscreenMenuTextNumOtherShots,
 		NULL,
 	},
@@ -976,7 +982,7 @@ struct menuitem g_2PMissionEndscreenVMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_CENTRE,
-		L_OPTIONS_289, // "Press START"
+		gettext_noop("Press START\n"), // "Press START"
 		0,
 		NULL,
 	},
@@ -1066,7 +1072,7 @@ struct menuitem g_MissionEndscreenMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		0,
-		L_OPTIONS_278, // "Mission Status:"
+		gettext_noop("Mission Status:\n"), // "Mission Status:"
 		(uintptr_t)&endscreenMenuTextMissionStatus,
 		NULL,
 	},
@@ -1074,7 +1080,7 @@ struct menuitem g_MissionEndscreenMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		0,
-		L_OPTIONS_279, // "Agent Status:"
+		gettext_noop("Agent Status:\n"), // "Agent Status:"
 		(uintptr_t)&endscreenMenuTextAgentStatus,
 		NULL,
 	},
@@ -1083,7 +1089,7 @@ struct menuitem g_MissionEndscreenMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_LABEL_CUSTOMCOLOUR,
-		L_OPTIONS_280, // "Mission Time:"
+		gettext_noop("Mission Time:\n"), // "Mission Time:"
 		(uintptr_t)&endscreenMenuTextMissionTime,
 		endscreenHandleCheatInfo,
 	},
@@ -1091,7 +1097,7 @@ struct menuitem g_MissionEndscreenMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		1,
 		MENUITEMFLAG_LABEL_CUSTOMCOLOUR,
-		L_MPWEAPONS_242, // "Target Time:"
+		gettext_noop("Target Time:\n"), // "Target Time:"
 		(uintptr_t)&endscreenMenuTextTargetTime,
 		endscreenHandleCheatInfo,
 	},
@@ -1099,7 +1105,7 @@ struct menuitem g_MissionEndscreenMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		0,
-		L_MPWEAPONS_129, // "Difficulty:"
+		gettext_noop("Difficulty:\n"), // "Difficulty:"
 		(uintptr_t)&soloMenuTextDifficulty,
 		NULL,
 	},
@@ -1115,7 +1121,7 @@ struct menuitem g_MissionEndscreenMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		2,
 		0,
-		L_MPWEAPONS_243, // "New Cheat Available!:"
+		gettext_noop("New Cheat Available!:\n"), // "New Cheat Available!:"
 		0,
 		endscreenHandleCheatInfo,
 	},
@@ -1123,7 +1129,7 @@ struct menuitem g_MissionEndscreenMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		3,
 		MENUITEMFLAG_SELECTABLE_CENTRE | MENUITEMFLAG_LABEL_CUSTOMCOLOUR,
-		(uintptr_t)&endscreenMenuTextTimedCheatName,
+		&endscreenMenuTextTimedCheatName,
 		0,
 		endscreenHandleCheatInfo,
 	},
@@ -1131,7 +1137,7 @@ struct menuitem g_MissionEndscreenMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		5,
 		MENUITEMFLAG_SELECTABLE_CENTRE | MENUITEMFLAG_LABEL_CUSTOMCOLOUR,
-		(uintptr_t)&endscreenMenuTextCompletionCheatName,
+		&endscreenMenuTextCompletionCheatName,
 		0,
 		endscreenHandleCheatInfo,
 	},
@@ -1147,7 +1153,7 @@ struct menuitem g_MissionEndscreenMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		0,
-		L_OPTIONS_281, // "Weapon of Choice:"
+		gettext_noop("Weapon of Choice:\n"), // "Weapon of Choice:"
 		(uintptr_t)&mpMenuTextWeaponOfChoiceName,
 		NULL,
 	},
@@ -1155,7 +1161,7 @@ struct menuitem g_MissionEndscreenMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		0,
-		L_OPTIONS_282, // "Kills:"
+		gettext_noop("Kills:\n"), // "Kills:"
 		(uintptr_t)&endscreenMenuTextNumKills,
 		NULL,
 	},
@@ -1163,7 +1169,7 @@ struct menuitem g_MissionEndscreenMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		0,
-		L_OPTIONS_283, // "Accuracy:"
+		gettext_noop("Accuracy:\n"), // "Accuracy:"
 		(uintptr_t)&endscreenMenuTextAccuracy,
 		NULL,
 	},
@@ -1179,7 +1185,7 @@ struct menuitem g_MissionEndscreenMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		0,
-		L_OPTIONS_284, // "Shot Total:"
+		gettext_noop("Shot Total:\n"), // "Shot Total:"
 		(uintptr_t)&endscreenMenuTextNumShots,
 		NULL,
 	},
@@ -1187,7 +1193,7 @@ struct menuitem g_MissionEndscreenMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		0,
-		L_OPTIONS_285, // "Head Shots:"
+		gettext_noop("    Head Shots:\n"), // "Head Shots:"
 		(uintptr_t)&endscreenMenuTextNumHeadShots,
 		NULL,
 	},
@@ -1195,7 +1201,7 @@ struct menuitem g_MissionEndscreenMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		0,
-		L_OPTIONS_286, // "Body Shots:"
+		gettext_noop("    Body Shots:\n"), // "Body Shots:"
 		(uintptr_t)&endscreenMenuTextNumBodyShots,
 		NULL,
 	},
@@ -1203,7 +1209,7 @@ struct menuitem g_MissionEndscreenMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		6,
 		0,
-		L_OPTIONS_287, // "Limb Shots:"
+		gettext_noop("    Limb Shots:\n"), // "Limb Shots:"
 		(uintptr_t)&endscreenMenuTextNumLimbShots,
 		endscreenHandleCheatInfo,
 	},
@@ -1211,7 +1217,7 @@ struct menuitem g_MissionEndscreenMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		4,
 		0,
-		L_OPTIONS_288, // "Others:"
+		gettext_noop("    Others:\n"), // "Others:"
 		(uintptr_t)&endscreenMenuTextNumOtherShots,
 		endscreenHandleCheatInfo,
 	},
@@ -1326,7 +1332,7 @@ struct menuitem g_MissionEndscreenMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_CENTRE,
-		L_OPTIONS_289, // "Press START"
+		gettext_noop("Press START\n"), // "Press START"
 		0,
 		NULL,
 	},
@@ -1393,7 +1399,7 @@ void endscreenSetCoopCompleted(void)
 
 struct menudialogdef g_SoloMissionEndscreenCompletedMenuDialog = {
 	MENUDIALOGTYPE_SUCCESS,
-	(uintptr_t)&endscreenMenuTitleStageCompleted,
+	&endscreenMenuTitleStageCompleted,
 	g_MissionEndscreenMenuItems,
 	endscreenHandle2PCompleted,
 	MENUDIALOGFLAG_DISABLEITEMSCROLL | MENUDIALOGFLAG_SMOOTHSCROLLABLE,
@@ -1402,7 +1408,7 @@ struct menudialogdef g_SoloMissionEndscreenCompletedMenuDialog = {
 
 struct menudialogdef g_SoloMissionEndscreenFailedMenuDialog = {
 	MENUDIALOGTYPE_DANGER,
-	(uintptr_t)&endscreenMenuTitleStageFailed,
+	&endscreenMenuTitleStageFailed,
 	g_MissionEndscreenMenuItems,
 	endscreenHandle2PFailed,
 	MENUDIALOGFLAG_DISABLEITEMSCROLL | MENUDIALOGFLAG_SMOOTHSCROLLABLE,
@@ -1637,7 +1643,7 @@ void endscreenPrepare(void)
 
 struct menudialogdef g_2PMissionEndscreenCompletedHMenuDialog = {
 	MENUDIALOGTYPE_SUCCESS,
-	(uintptr_t)&endscreenMenuTitleStageCompleted,
+	&endscreenMenuTitleStageCompleted,
 	g_MissionEndscreenMenuItems,
 	endscreenHandle2PCompleted,
 	MENUDIALOGFLAG_DISABLEITEMSCROLL | MENUDIALOGFLAG_SMOOTHSCROLLABLE,
@@ -1646,7 +1652,7 @@ struct menudialogdef g_2PMissionEndscreenCompletedHMenuDialog = {
 
 struct menudialogdef g_2PMissionEndscreenFailedHMenuDialog = {
 	MENUDIALOGTYPE_DANGER,
-	(uintptr_t)&endscreenMenuTitleStageFailed,
+	&endscreenMenuTitleStageFailed,
 	g_MissionEndscreenMenuItems,
 	endscreenHandle2PFailed,
 	MENUDIALOGFLAG_DISABLEITEMSCROLL | MENUDIALOGFLAG_SMOOTHSCROLLABLE,
@@ -1655,7 +1661,7 @@ struct menudialogdef g_2PMissionEndscreenFailedHMenuDialog = {
 
 struct menudialogdef g_2PMissionEndscreenCompletedVMenuDialog = {
 	MENUDIALOGTYPE_SUCCESS,
-	L_OPTIONS_276, // "Completed"
+	gettext_noop("Completed\n"), // "Completed"
 	g_2PMissionEndscreenVMenuItems,
 	endscreenHandle2PCompleted,
 	MENUDIALOGFLAG_DISABLEITEMSCROLL | MENUDIALOGFLAG_SMOOTHSCROLLABLE,
@@ -1664,7 +1670,7 @@ struct menudialogdef g_2PMissionEndscreenCompletedVMenuDialog = {
 
 struct menudialogdef g_2PMissionEndscreenFailedVMenuDialog = {
 	MENUDIALOGTYPE_DANGER,
-	L_OPTIONS_277, // "Failed"
+	gettext_noop("Failed\n"), // "Failed"
 	g_2PMissionEndscreenVMenuItems,
 	endscreenHandle2PFailed,
 	MENUDIALOGFLAG_DISABLEITEMSCROLL | MENUDIALOGFLAG_SMOOTHSCROLLABLE,

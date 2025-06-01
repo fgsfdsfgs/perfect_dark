@@ -4,7 +4,6 @@
 #include <PR/ultrasched.h>
 #include "n_libaudio.h"
 #include "constants.h"
-#include "lang.h"
 #include "pads.h"
 #include "tiles.h"
 #include "gbi.h"
@@ -3423,7 +3422,7 @@ struct menuitem {
 	u8 type;
 	u8 param;
 	u32 flags;
-	intptr_t param2;
+	char *title;
 	intptr_t param3;
 
 	union {
@@ -3434,7 +3433,7 @@ struct menuitem {
 
 struct menudialogdef {
 	u8 type;
-	uintptr_t title;
+	char *title;
 	struct menuitem *items;
 	s32 (*handler)(s32 operation, struct menudialogdef *dialogdef, union handlerdata *data);
 	u32 flags;
@@ -4148,7 +4147,7 @@ struct filelist {
 };
 
 struct challenge {
-	/*0x00*/ u16 name;
+	/*0x00*/ char* name;
 	/*0x02*/ s16 confignum;
 
 	// Bitfield xxx4 321a

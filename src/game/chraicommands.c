@@ -51,6 +51,11 @@
 #include "lib/libc/ll.h"
 #include "data.h"
 #include "types.h"
+#ifndef PLATFORM_N64
+#include <libintl.h>
+#define _(String) gettext (String)
+#define gettext_noop(String) String
+#endif
 
 /**
  * @cmd 0000
@@ -6826,17 +6831,17 @@ s16 g_SpecialQuipBank[][4] = {
 	{ 45, MP3_ROBOT_ALERT_UNDER_ATTACK,         MP3_ROBOT_ALERT_UNDER_ATTACK,           MP3_ROBOT_ALERT_UNDER_ATTACK       },
 };
 
-s16 g_QuipTexts[][4] = {
-	{  1, L_AME_083, L_AME_084, L_AME_085 }, // "How dare you disturb me!", "You will regret this intrusion, girl!", "If I were you, I'd leave...NOW!"
-	{  2, L_AME_086, L_AME_087, L_AME_086 }, // "Please don't kill me!", "Don't shoot!"
-	{  3, L_EAR_064, L_EAR_065, L_EAR_066 }, // "What are you doing in my lab?", "I haven't seen you before...", "Who the hell are you?"
-	{  4, L_EAR_067, L_EAR_068, L_EAR_069 }, // "Shut down the experiment.", "Pull the plug on that, NOW.", "Switch this thing off."
-	{  5, L_EAR_070, L_EAR_071, L_EAR_072 }, // "I'll shut it down.", "Please don't hurt me.", "Allow me to assist you."
-	{  6, L_EAR_073, L_EAR_074, L_EAR_075 }, // "My experiments!", "There the experiment is down.", "Leave this area NOW!"
-	{  7, L_EAR_076, L_EAR_077, L_EAR_078 }, // "Security!", "I'm calling security.", "Accidents will happen."
-	{  8, L_EAR_079, L_EAR_080, L_EAR_081 }, // "How did that happen?", "Looks like it's off already.", "Have you been tampering with this?"
-	{  9, L_EAR_082, L_EAR_083, L_EAR_084 }, // "Someone's broken my equipment.", "What's happened to the terminal?", "You vandal - you've broken it."
-	{ 10, L_WAX_010, L_WAX_012, L_WAX_012 }, // "How dare you disturb me!", "If I were you, I'd leave... NOW!"
+char* g_QuipTexts[][4] = {
+	{  "1", gettext_noop("How dare you disturb me!\n"), gettext_noop("You will regret this intrusion, girl!\n"), gettext_noop("If I were you, I'd leave...NOW!\n") }, // "How dare you disturb me!", "You will regret this intrusion, girl!", "If I were you, I'd leave...NOW!"
+	{  "2", gettext_noop("Please don't kill me!\n"), gettext_noop("Don't shoot!\n"), gettext_noop("Please don't kill me!\n") }, // "Please don't kill me!", "Don't shoot!"
+	{  "3", gettext_noop("What are you doing in my lab?\n"), gettext_noop("I haven't seen you before...\n"), gettext_noop("Who the hell are you?\n") }, // "What are you doing in my lab?", "I haven't seen you before...", "Who the hell are you?"
+	{  "4", gettext_noop("Shut down the experiment.\n"), gettext_noop("Pull the plug on that, NOW.\n"), gettext_noop("Switch this thing off.\n") }, // "Shut down the experiment.", "Pull the plug on that, NOW.", "Switch this thing off."
+	{  "5", gettext_noop("I'll shut it down.\n"), gettext_noop("Please don't hurt me.\n"), gettext_noop("Allow me to assist you.\n") }, // "I'll shut it down.", "Please don't hurt me.", "Allow me to assist you."
+	{  "6", gettext_noop("My experiments!\n"), gettext_noop("There, the experiment is down.\n"), gettext_noop("Leave this area NOW!\n") }, // "My experiments!", "There the experiment is down.", "Leave this area NOW!"
+	{  "7", gettext_noop("Security!\n"), gettext_noop("I'm calling security.\n"), gettext_noop("Accidents will happen.\n") }, // "Security!", "I'm calling security.", "Accidents will happen."
+	{  "8", gettext_noop("How did that happen?\n"), gettext_noop("Looks like it's off already.\n"), gettext_noop("Have you been tampering with this?\n") }, // "How did that happen?", "Looks like it's off already.", "Have you been tampering with this?"
+	{  "9", gettext_noop("Someone's broken my equipment.\n"), gettext_noop("What's happened to the terminal?\n"), gettext_noop("You vandal - you've broken it.\n") }, // "Someone's broken my equipment.", "What's happened to the terminal?", "You vandal - you've broken it."
+	{ "10", gettext_noop("How dare you disturb me!\n"), gettext_noop("If I were you, I'd leave... NOW!\n"), gettext_noop("If I were you, I'd leave... NOW!\n") }, // "How dare you disturb me!", "If I were you, I'd leave... NOW!"
 };
 
 s16 g_SkedarQuipBank[][4] = {
@@ -7017,7 +7022,7 @@ bool aiSayQuip(void)
 							column = 2;
 						}
 
-						text = langGet(g_QuipTexts[cmd[8] - 1][1 + column]);
+						text = _(g_QuipTexts[cmd[8] - 1][1 + column]);
 
 #if VERSION >= VERSION_NTSC_1_0
 						if (!sndIsFiltered(audioid))
@@ -7026,7 +7031,7 @@ bool aiSayQuip(void)
 							hudmsgCreateWithColour(text, HUDMSGTYPE_INGAMESUBTITLE, cmd[9]);
 						}
 					} else if (cmd[8]) {
-						text = langGet(g_QuipTexts[cmd[8] - 1][1 + g_Vars.chrdata->tude]);
+						text = _(g_QuipTexts[cmd[8] - 1][1 + g_Vars.chrdata->tude]);
 
 #if VERSION >= VERSION_NTSC_1_0
 						if (!sndIsFiltered(audioid))
@@ -7073,7 +7078,7 @@ bool aiSayQuip(void)
 						}
 
 						if (cmd[8]) {
-							text = langGet(g_QuipTexts[cmd[8] - 1][i]);
+							text = _(g_QuipTexts[cmd[8] - 1][i]);
 
 #if VERSION >= VERSION_NTSC_1_0
 							if (!sndIsFiltered(audioid))

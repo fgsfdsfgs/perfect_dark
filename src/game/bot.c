@@ -33,6 +33,10 @@
 #include "lib/anim.h"
 #include "data.h"
 #include "types.h"
+#ifndef PLATFORM_N64
+#include <libintl.h>
+#define _(String) gettext (String)
+#endif
 
 #define PICKUPCRITERIA_DEFAULT  0
 #define PICKUPCRITERIA_CRITICAL 1
@@ -1186,28 +1190,57 @@ void bot0f1921f8(struct chrdata *chr, f32 *move)
 
 char *botGetCommandName(s32 command)
 {
-	static u32 names[] = {
-		L_MISC_175, // "Follow"
-		L_MISC_176, // "Attack"
-		L_MISC_177, // "Defend"
-		L_MISC_178, // "Hold"
-		L_MISC_179, // "Normal"
-		L_MISC_180, // "Download"
-		L_MISC_181, // "Get Case"
-		L_MISC_182, // "Tag Box"
-		L_MISC_209, // "Save Case"
-		L_MISC_210, // "Def Hill"
-		L_MISC_211, // "Hold Hill"
-		L_MISC_212, // "Get Case"
-		L_MISC_213, // "Pop Cap"
-		L_MISC_214, // "Protect"
-	};
-
-	if (command < 0 || command >= ARRAYCOUNT(names)) {
-		return langGet(L_MISC_179); // "Normal"
+	switch (command) {
+		case 0:
+			return _("Follow\n");
+			break;
+		case 1:
+			return _("Attack\n");
+			break;
+		case 2:
+			return _("Defend\n");
+			break;
+		case 3:
+			return _("Hold\n");
+			break;
+		case 4:
+			return _("Normal\n");
+			break;
+		case 5:
+			return _("Download\n");
+			break;
+		case 6:
+			return _("Get Case\n");
+			break;
+		case 7:
+			return _("Tag Box\n");
+			break;
+		case 8:
+			return _("Save Case\n");
+			break;
+		case 9:
+			return _("Def Hill\n");
+			break;
+		case 10:
+			return _("Hold Hill\n");
+			break;
+		case 11:
+			return _("Get Case\n");
+			break;
+		case 12:
+			return _("Pop Cap\n");
+			break;
+		case 13:
+			return _("Protect\n");
+			break;
+		default:
+			return _("Unknow command\n");
+			break;
 	}
 
-	return langGet(names[command]);
+	if (command < 0) {
+		return _("Normal\n"); // "Normal"
+	}
 }
 
 void botApplyAttack(struct chrdata *chr, struct prop *prop)

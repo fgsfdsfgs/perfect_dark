@@ -19,6 +19,11 @@
 #include "lib/main.h"
 #include "data.h"
 #include "types.h"
+#ifndef PLATFORM_N64
+#include <libintl.h>
+#define _(String) gettext (String)
+#define gettext_noop(String) String
+#endif
 
 struct menudialogdef g_MpEndscreenChallengeCompletedMenuDialog;
 struct menudialogdef g_MpEndscreenIndGameOverMenuDialog;
@@ -128,13 +133,13 @@ char *mpMenuTextInGameLimit(struct menuitem *item)
 
 	switch (item->param) {
 	case 0:
-		sprintf(g_StringPointer, langGet(L_MPMENU_114), g_MpSetup.timelimit + 1);
+		sprintf(g_StringPointer, _("%d Min\n"), g_MpSetup.timelimit + 1);
 		break;
 	case 1:
-		sprintf(g_StringPointer, langGet(L_MPMENU_113), g_MpSetup.scorelimit + 1);
+		sprintf(g_StringPointer, _("%d\n"), g_MpSetup.scorelimit + 1);
 		break;
 	case 2:
-		sprintf(g_StringPointer, langGet(L_MPMENU_113), mpCalculateTeamScoreLimit() + 1);
+		sprintf(g_StringPointer, _("%d\n"), mpCalculateTeamScoreLimit() + 1);
 		break;
 	}
 
@@ -182,10 +187,10 @@ MenuItemHandlerResult menuhandlerMpPause(s32 operation, struct menuitem *item, u
 char *menutextPauseOrUnpause(s32 arg0)
 {
 	if (mpIsPaused()) {
-		return langGet(L_MPMENU_289); // "Unpause"
+		return _("Unpause\n"); // "Unpause"
 	}
 
-	return langGet(L_MPMENU_288); // "Pause"
+	return _("Pause\n"); // "Pause"
 }
 
 char *menutextMatchTime(s32 arg0)
@@ -204,7 +209,7 @@ struct menuitem g_MpEndGameMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_SELECTABLE_CENTRE | MENUITEMFLAG_LESSHEIGHT,
-		L_MPMENU_291, // "Are you sure?"
+		gettext_noop("Are you sure?\n"), // "Are you sure?"
 		0,
 		NULL,
 	},
@@ -220,7 +225,7 @@ struct menuitem g_MpEndGameMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_CLOSESDIALOG | MENUITEMFLAG_SELECTABLE_CENTRE,
-		L_MPMENU_292, // "Cancel"
+		gettext_noop("Cancel\n"), // "Cancel"
 		0,
 		NULL,
 	},
@@ -228,7 +233,7 @@ struct menuitem g_MpEndGameMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_CENTRE,
-		L_MPMENU_293, // "End Game"
+		gettext_noop("End Game\n"), // "End Game"
 		0,
 		menuhandlerMpEndGame,
 	},
@@ -237,7 +242,7 @@ struct menuitem g_MpEndGameMenuItems[] = {
 
 struct menudialogdef g_MpEndGameMenuDialog = {
 	MENUDIALOGTYPE_DANGER,
-	L_MPMENU_290, // "End Game"
+	gettext_noop("End Game\n"), // "End Game"
 	g_MpEndGameMenuItems,
 	NULL,
 	0,
@@ -249,7 +254,7 @@ struct menuitem g_MpPauseControlMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_SELECTABLE_CENTRE,
-		(uintptr_t) &mpMenuTextChallengeName,
+		&mpMenuTextChallengeName,
 		0,
 		menuhandler00178018,
 	},
@@ -258,7 +263,7 @@ struct menuitem g_MpPauseControlMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_SELECTABLE_CENTRE,
-		(uintptr_t) &mpMenuTextScenarioName,
+		&mpMenuTextScenarioName,
 		0,
 		NULL,
 	},

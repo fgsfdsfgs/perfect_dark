@@ -98,6 +98,8 @@
 #include "types.h"
 #ifndef PLATFORM_N64
 #include "video.h"
+#include <libintl.h>
+#define _(String) gettext (String)
 #endif
 
 struct sndstate *g_MiscSfxAudioHandles[3];
@@ -2269,7 +2271,7 @@ void lvTick(void)
 
 				for (i = 0; i < PLAYERCOUNT(); i++) {
 					setCurrentPlayerNum(i);
-					hudmsgCreate(langGet(L_MISC_068), HUDMSGTYPE_DEFAULT); // "One minute left."
+					hudmsgCreate(_("One minute left.\n"), HUDMSGTYPE_DEFAULT); // "One minute left."
 				}
 			}
 

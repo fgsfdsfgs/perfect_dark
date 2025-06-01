@@ -20,6 +20,10 @@
 #include "data.h"
 #include "types.h"
 #include "string.h"
+#ifndef PLATFORM_N64
+#include <libintl.h>
+#define _(String) gettext (String)
+#endif
 
 struct camerafile {
 	u8 unk00[128];
@@ -389,7 +393,23 @@ bool func0f14a194(void)
  */
 char *phGetStyleName(s32 stylenum)
 {
-	return langGet(L_MISC_429 + stylenum);
+	switch (stylenum) {
+		case 0:
+			return _("Style 1");
+			break;
+		case 1:
+			return _("Style 2");
+			break;
+		case 2:
+			return _("Style 3");
+			break;
+		case 3:
+			return _("Style 4");
+			break;
+		default :
+			return _("Unknow Style");
+			break;
+	}
 }
 
 /**
@@ -400,7 +420,23 @@ char *phGetStyleName(s32 stylenum)
  */
 char *phGetColourName(s32 colournum)
 {
-	return langGet(L_MISC_433 + colournum);
+	switch (colournum) {
+		case 0:
+			return _("Blonde");
+			break;
+		case 1:
+			return _("Black");
+			break;
+		case 2:
+			return _("Auburn");
+			break;
+		case 3:
+			return _("Blue Rinse");
+			break;
+		default :
+			return _("Unknow Color");
+			break;	
+	}
 }
 
 struct var8007f8dc *func0f14a20c(void)
