@@ -1,3 +1,4 @@
+#include <stdint.h>
 #include <ultra64.h>
 #include <stdlib.h>
 #include "constants.h"
@@ -3714,7 +3715,7 @@ struct menuitem g_CiOptionsMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_OPENSDIALOG | MENUITEMFLAG_BIGFONT | MENUITEMFLAG_LITERAL_TEXT,
-		(uintptr_t)"Extended\n",
+		(uintptr_t)"Extended\n", //OVER HERE
 		7,
 		(void *)&g_ExtendedMenuDialog,
 	},

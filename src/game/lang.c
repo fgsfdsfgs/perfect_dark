@@ -150,7 +150,7 @@ u32 langGetLangBankIndexFromStagenum(s32 stagenum)
 	u32 bank;
 
 	switch (stagenum) {
-	case STAGE_PELAGIC:       bank = LANGBANK_DAM; break;
+	/*case STAGE_PELAGIC:       bank = LANGBANK_DAM; break;
 	case STAGE_EXTRACTION:    bank = LANGBANK_ARK; break;
 	case STAGE_TEST_RUN:      bank = LANGBANK_RUN; break;
 	case STAGE_24:            bank = LANGBANK_SEVX; break;
@@ -214,7 +214,7 @@ u32 langGetLangBankIndexFromStagenum(s32 stagenum)
 	default:
 		while (true) {
 			// empty
-		}
+		}*/
 	}
 
 	return bank;
@@ -422,12 +422,6 @@ void langClearBank(s32 bank)
  */
 char *langGet(s32 textid)
 {
-	//dialogdef->items->param2 = (uintptr_t)gettext("Extended\n");
-	//dialogdef->items->param2 = (uintptr_t)"Coucou\n";
-	if(textid == L_OPTIONS_121) {
-		char *test = gettext("Cinema\n");
-		return test;
-	}
 	s32 bankindex = textid >> 9;
 	s32 textindex = textid & 0x1ff;
 	uintptr_t *bank = (uintptr_t*)g_LangBanks[bankindex];

@@ -217,7 +217,7 @@ struct menuitem g_MpEndGameMenuItems[] = {
 		MENUITEMTYPE_SEPARATOR,
 		0,
 		0,
-		0x00000082,
+		gettext_noop("_"),// previous: 0x00000082,
 		0,
 		NULL,
 	},
@@ -276,7 +276,7 @@ struct menuitem g_MpPauseControlMenuItems[] = {
 #else
 		MENUITEMFLAG_SMALLFONT,
 #endif
-		L_MPWEAPONS_162, // "Time Limit:"
+		gettext_noop("Time Limit:\n"), // "Time Limit:"
 		(uintptr_t) &mpMenuTextInGameLimit,
 		menuhandlerMpInGameLimitLabel,
 	},
@@ -288,7 +288,7 @@ struct menuitem g_MpPauseControlMenuItems[] = {
 #else
 		MENUITEMFLAG_SMALLFONT,
 #endif
-		L_MPWEAPONS_163, // "Score Limit:"
+		gettext_noop("Score Limit:\n"), // "Score Limit:"
 		(uintptr_t) &mpMenuTextInGameLimit,
 		menuhandlerMpInGameLimitLabel,
 	},
@@ -300,7 +300,7 @@ struct menuitem g_MpPauseControlMenuItems[] = {
 #else
 		MENUITEMFLAG_SMALLFONT,
 #endif
-		L_MPWEAPONS_164, // "Team Score Limit:"
+		gettext_noop("Team Score Limit:\n"), // "Team Score Limit:"
 		(uintptr_t) &mpMenuTextInGameLimit,
 		menuhandlerMpInGameLimitLabel,
 	},
@@ -308,7 +308,7 @@ struct menuitem g_MpPauseControlMenuItems[] = {
 		MENUITEMTYPE_SEPARATOR,
 		0,
 		0,
-		0x00000082,
+		gettext_noop("_"), // previous: 0x00000082,
 		0,
 		NULL,
 	},
@@ -320,7 +320,7 @@ struct menuitem g_MpPauseControlMenuItems[] = {
 #else
 		0,
 #endif
-		L_MPMENU_286, // "Game Time:"
+		gettext_noop("Game Time:\n"), // "Game Time:"
 		(uintptr_t)&menutextMatchTime,
 		NULL,
 	},
@@ -328,7 +328,7 @@ struct menuitem g_MpPauseControlMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		1,
 		MENUITEMFLAG_SELECTABLE_CENTRE,
-		(uintptr_t)&menutextPauseOrUnpause,
+		&menutextPauseOrUnpause,
 		0,
 		menuhandlerMpPause,
 	},
@@ -336,7 +336,7 @@ struct menuitem g_MpPauseControlMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_OPENSDIALOG | MENUITEMFLAG_SELECTABLE_CENTRE,
-		L_MPMENU_287, // "End Game"
+		gettext_noop("End Game\n"), // "End Game"
 		0,
 		(void *)&g_MpEndGameMenuDialog,
 	},
@@ -348,7 +348,7 @@ struct menudialogdef g_MpPauseControlMenuDialog = {
 #if VERSION >= VERSION_JPN_FINAL
 	(uintptr_t)&mpMenuTextScenarioName,
 #else
-	L_MPMENU_285, // "Control"
+	gettext_noop("Control\n"), // "Control"
 #endif
 	g_MpPauseControlMenuItems,
 	NULL,
@@ -445,7 +445,7 @@ char *mpMenuTitleStatsFor(struct menudialogdef *dialogdef)
 	struct mpchrconfig *mpchr = MPCHR(g_MpSelectedPlayersForStats[g_MpPlayerNum]);
 
 	// "Stats for %s"
-	sprintf(g_StringPointer, langGet(L_MPMENU_280), mpchr->name);
+	sprintf(g_StringPointer, _("Stats for %s"), mpchr->name);
 	return g_StringPointer;
 }
 
@@ -476,7 +476,7 @@ struct menuitem g_Mp2PMissionInventoryMenuItems[] = {
 		MENUITEMTYPE_LIST,
 		0,
 		0,
-		0x00000078,
+		gettext_noop("_"), // previous: 0x00000078,
 		0x00000042,
 		menuhandlerInventoryList,
 	},
@@ -484,7 +484,7 @@ struct menuitem g_Mp2PMissionInventoryMenuItems[] = {
 		MENUITEMTYPE_MARQUEE,
 		0,
 		MENUITEMFLAG_SMALLFONT | MENUITEMFLAG_MARQUEE_FADEBOTHSIDES,
-		(uintptr_t)&mpMenuTextWeaponDescription,
+		&mpMenuTextWeaponDescription,
 		0,
 		NULL,
 	},
@@ -493,7 +493,7 @@ struct menuitem g_Mp2PMissionInventoryMenuItems[] = {
 
 struct menudialogdef g_MpPauseInventoryMenuDialog = {
 	MENUDIALOGTYPE_DEFAULT,
-	L_MPMENU_284, // "Inventory"
+	gettext_noop("Inventory\n"), // "Inventory"
 	g_Mp2PMissionInventoryMenuItems,
 	NULL,
 	0,
@@ -502,7 +502,7 @@ struct menudialogdef g_MpPauseInventoryMenuDialog = {
 
 struct menudialogdef g_2PMissionInventoryHMenuDialog = {
 	MENUDIALOGTYPE_DEFAULT,
-	L_MPMENU_284, // "Inventory"
+	gettext_noop("Inventory\n"), // "Inventory"
 	g_Mp2PMissionInventoryMenuItems,
 	NULL,
 	0,
@@ -511,7 +511,7 @@ struct menudialogdef g_2PMissionInventoryHMenuDialog = {
 
 struct menudialogdef g_2PMissionInventoryVMenuDialog = {
 	MENUDIALOGTYPE_DEFAULT,
-	L_MPMENU_284, // "Inventory"
+	gettext_noop("Inventory\n"), // "Inventory"
 	g_Mp2PMissionInventoryMenuItems,
 	NULL,
 	0,
@@ -532,7 +532,7 @@ struct menuitem g_MpInGamePlayerStatsMenuItems[] = {
 
 struct menudialogdef g_MpPausePlayerStatsMenuDialog = {
 	MENUDIALOGTYPE_DEFAULT,
-	(uintptr_t)&mpMenuTitleStatsFor,
+	&mpMenuTitleStatsFor,
 	g_MpInGamePlayerStatsMenuItems,
 	NULL,
 	VERSION >= VERSION_JPN_FINAL ? MENUDIALOGFLAG_1000 : 0,
@@ -541,7 +541,7 @@ struct menudialogdef g_MpPausePlayerStatsMenuDialog = {
 
 struct menudialogdef g_MpEndscreenPlayerStatsMenuDialog = {
 	MENUDIALOGTYPE_DEFAULT,
-	(uintptr_t)&mpMenuTitleStatsFor,
+	&mpMenuTitleStatsFor,
 	g_MpInGamePlayerStatsMenuItems,
 	NULL,
 	VERSION >= VERSION_JPN_FINAL ? MENUDIALOGFLAG_1000 : 0,
@@ -562,7 +562,7 @@ struct menuitem g_MpPlayerRankingMenuItems[] = {
 
 struct menudialogdef g_MpPausePlayerRankingMenuDialog = {
 	MENUDIALOGTYPE_DEFAULT,
-	L_MPMENU_276, // "Player Ranking"
+	gettext_noop("Player Ranking\n"), // "Player Ranking"
 	g_MpPlayerRankingMenuItems,
 	NULL,
 	VERSION >= VERSION_JPN_FINAL ? MENUDIALOGFLAG_1000 : 0,
@@ -571,7 +571,7 @@ struct menudialogdef g_MpPausePlayerRankingMenuDialog = {
 
 struct menudialogdef g_MpEndscreenPlayerRankingMenuDialog = {
 	MENUDIALOGTYPE_DEFAULT,
-	L_MPMENU_276, // "Player Ranking"
+	gettext_noop("Player Ranking\n"), // "Player Ranking"
 	g_MpPlayerRankingMenuItems,
 	NULL,
 	VERSION >= VERSION_JPN_FINAL ? MENUDIALOGFLAG_1000 : 0,
@@ -583,7 +583,7 @@ struct menuitem g_MpTeamRankingsMenuItems[] = {
 		MENUITEMTYPE_RANKING,
 		0,
 		0,
-		0x00000001,
+		gettext_noop("_"), // previous: 0x00000001,
 		0,
 		NULL,
 	},
@@ -592,7 +592,7 @@ struct menuitem g_MpTeamRankingsMenuItems[] = {
 
 struct menudialogdef g_MpPauseTeamRankingsMenuDialog = {
 	MENUDIALOGTYPE_DEFAULT,
-	L_MPMENU_279, // "Team Ranking"
+	gettext_noop("Team Ranking\n"), // "Team Ranking"
 	g_MpTeamRankingsMenuItems,
 	NULL,
 	VERSION >= VERSION_JPN_FINAL ? MENUDIALOGFLAG_1000 : 0,
@@ -601,7 +601,7 @@ struct menudialogdef g_MpPauseTeamRankingsMenuDialog = {
 
 struct menudialogdef g_MpEndscreenTeamRankingMenuDialog = {
 	MENUDIALOGTYPE_DEFAULT,
-	L_MPMENU_279, // "Team Ranking"
+	gettext_noop("Team Ranking\n"), // "Team Ranking"
 	g_MpTeamRankingsMenuItems,
 	NULL,
 	VERSION >= VERSION_JPN_FINAL ? MENUDIALOGFLAG_1000 : 0,
@@ -610,22 +610,47 @@ struct menudialogdef g_MpEndscreenTeamRankingMenuDialog = {
 
 char *mpMenuTextPlacementWithSuffix(struct menuitem *item)
 {
-	u16 suffixes[] = {
-		L_MPMENU_264, // "1st"
-		L_MPMENU_265, // "2nd"
-		L_MPMENU_266, // "3rd"
-		L_MPMENU_267, // "4th"
-		L_MPMENU_268, // "5th"
-		L_MPMENU_269, // "6th"
-		L_MPMENU_270, // "7th"
-		L_MPMENU_271, // "8th"
-		L_MPMENU_272, // "9th"
-		L_MPMENU_273, // "10th"
-		L_MPMENU_274, // "11th"
-		L_MPMENU_275, // "12th"
-	};
-
-	return langGet(suffixes[g_PlayerConfigsArray[g_MpPlayerNum].base.placement]);
+	switch (g_PlayerConfigsArray[g_MpPlayerNum].base.placement) {
+		case 0:
+			return _("1st\n");
+			break;
+		case 1:
+			return _("2nd\n");
+			break;
+		case 2:
+			return _("3rd\n");
+			break;
+		case 3:
+			return _("4th\n");
+			break;
+		case 4:
+			return _("5th\n");
+			break;
+		case 5:
+			return _("6th\n");
+			break;
+		case 6:
+			return _("7th\n");
+			break;
+		case 7:
+			return _("8th\n");
+			break;
+		case 8:
+			return _("9th\n");
+			break;
+		case 9:
+			return _("10th\n");
+			break;
+		case 10:
+			return _("11th\n");
+			break;
+		case 11:
+			return _("12th\n");
+			break;
+		default:
+			return _("Unknown classement\n");
+			break;
+	}
 }
 
 MenuItemHandlerResult mpPlacementMenuHandler(s32 operation, struct menuitem *item, union handlerdata *data)
@@ -722,7 +747,74 @@ MenuItemHandlerResult mpPlayerTitleMenuHandler(s32 operation, struct menuitem *i
 
 char *mpMenuTextPlayerTitle(s32 arg0)
 {
-	return langGet(L_MISC_185 + g_PlayerConfigsArray[g_MpPlayerNum].title);
+	switch (g_PlayerConfigsArray[g_MpPlayerNum].title) {
+		case 0:
+			return _("Beginner:21\n");
+			break;
+		case 1:
+			return _("Trainee:20\n");
+			break;
+		case 2:
+			return _("Amateur:19\n");
+			break;
+		case 3:
+			return _("Rookie:18\n");
+			break;
+		case 4:
+			return _("Novice:17\n");
+			break;
+		case 5:
+			return _("Trooper:16\n");
+			break;
+		case 6:
+			return _("Agent:15\n");
+			break;
+		case 7:
+			return _("Star Agent:14\n");
+			break;
+		case 8:
+			return _("Special Agent:13\n");
+			break;
+		case 9:
+			return _("Expert:12\n");
+			break;
+		case 10:
+			return _("Veteran:11\n");
+			break;
+		case 11:
+			return _("Professional:10\n");
+			break;
+		case 12:
+			return _("Dangerous:9\n");
+			break;
+		case 13:
+			return _("Deadly:8\n");
+			break;
+		case 14:
+			return _("Killer:7\n");
+			break;
+		case 15:
+			return _("Assassin:6\n");
+			break;
+		case 16:
+			return _("Lethal:5\n");
+			break;
+		case 17:
+			return _("Elite:4\n");
+			break;
+		case 18:
+			return _("Invincible:3\n");
+			break;
+		case 19:
+			return _("Near Perfect:2\n");
+			break;
+		case 20:
+			return _("Perfect:1\n");
+			break;
+		default:
+			return _("Unknown rank");
+			break;
+	}
 }
 
 #if VERSION >= VERSION_NTSC_1_0
@@ -849,7 +941,7 @@ struct menuitem g_MpGameOverMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_LESSLEFTPADDING | MENUITEMFLAG_LABEL_CUSTOMCOLOUR,
-		(uintptr_t)&mpGetCurrentPlayerName,
+		&mpGetCurrentPlayerName,
 		(uintptr_t)&mpMenuTextPlacementWithSuffix,
 		mpPlacementMenuHandler,
 	},
@@ -862,7 +954,7 @@ struct menuitem g_MpGameOverMenuItems[] = {
 		0,
 #else
 		MENUITEMFLAG_LABEL_CUSTOMCOLOUR,
-		L_MPMENU_261, // "Title:"
+		gettext_noop("Title:\n"), // "Title:"
 		(uintptr_t)&mpMenuTextPlayerTitle,
 #endif
 		mpPlayerTitleMenuHandler,
@@ -879,7 +971,7 @@ struct menuitem g_MpGameOverMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_LESSLEFTPADDING | MENUITEMFLAG_SMALLFONT,
-		L_MPMENU_262, // "Weapon of Choice:"
+		gettext_noop("Weapon of Choice:\n"), // "Weapon of Choice:"
 		0,
 		NULL,
 	},
@@ -887,7 +979,7 @@ struct menuitem g_MpGameOverMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_SELECTABLE_CENTRE | MENUITEMFLAG_LABEL_ALTCOLOUR,
-		(uintptr_t)&mpMenuTextWeaponOfChoiceName,
+		&mpMenuTextWeaponOfChoiceName,
 		0,
 		NULL,
 	},
@@ -923,7 +1015,7 @@ struct menuitem g_MpGameOverMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_LESSLEFTPADDING | MENUITEMFLAG_SMALLFONT | MENUITEMFLAG_LIST_CUSTOMRENDER,
-		L_MPMENU_263, // "Awards:"
+		gettext_noop("Awards:\n"), // "Awards:"
 		0,
 		mpAwardsMenuHandler,
 	},
@@ -936,7 +1028,7 @@ struct menuitem g_MpGameOverMenuItems[] = {
 #else
 		MENUITEMFLAG_SELECTABLE_CENTRE | MENUITEMFLAG_LABEL_ALTCOLOUR,
 #endif
-		(uintptr_t)&mpMenuTextAward1,
+		&mpMenuTextAward1,
 		0,
 		NULL,
 	},
@@ -948,7 +1040,7 @@ struct menuitem g_MpGameOverMenuItems[] = {
 #else
 		MENUITEMFLAG_SELECTABLE_CENTRE | MENUITEMFLAG_LABEL_ALTCOLOUR,
 #endif
-		(uintptr_t)&mpMenuTextAward2,
+		&mpMenuTextAward2,
 		0,
 		NULL,
 	},
@@ -957,7 +1049,7 @@ struct menuitem g_MpGameOverMenuItems[] = {
 
 struct menudialogdef g_MpEndscreenIndGameOverMenuDialog = {
 	MENUDIALOGTYPE_DEFAULT,
-	L_MPMENU_260, // "Game Over"
+	gettext_noop("Game Over\n"), // "Game Over"
 	g_MpGameOverMenuItems,
 	NULL,
 	0,
@@ -966,7 +1058,7 @@ struct menudialogdef g_MpEndscreenIndGameOverMenuDialog = {
 
 struct menudialogdef g_MpEndscreenTeamGameOverMenuDialog = {
 	MENUDIALOGTYPE_DEFAULT,
-	L_MPMENU_260, // "Game Over"
+	gettext_noop("Game Over\n"), // "Game Over"
 	g_MpGameOverMenuItems,
 	NULL,
 	0,
@@ -975,7 +1067,7 @@ struct menudialogdef g_MpEndscreenTeamGameOverMenuDialog = {
 
 struct menudialogdef g_MpEndscreenChallengeCompletedMenuDialog = {
 	MENUDIALOGTYPE_SUCCESS,
-	L_MPWEAPONS_165, // "Challenge Completed!"
+	gettext_noop("Challenge Completed!\n"), // "Challenge Completed!"
 	g_MpTeamRankingsMenuItems,
 	NULL,
 	0,
@@ -984,7 +1076,7 @@ struct menudialogdef g_MpEndscreenChallengeCompletedMenuDialog = {
 
 struct menudialogdef g_MpEndscreenChallengeCheatedMenuDialog = {
 	MENUDIALOGTYPE_DANGER,
-	L_MPWEAPONS_167, // "Challenge Cheated!"
+	gettext_noop("Challenge Cheated!\n"), // "Challenge Cheated!"
 	g_MpTeamRankingsMenuItems,
 	NULL,
 	0,
@@ -993,7 +1085,7 @@ struct menudialogdef g_MpEndscreenChallengeCheatedMenuDialog = {
 
 struct menudialogdef g_MpEndscreenChallengeFailedMenuDialog = {
 	MENUDIALOGTYPE_DANGER,
-	L_MPWEAPONS_166, // "Challenge Failed!"
+	gettext_noop("Challenge Failed!\n"), // "Challenge Failed!"
 	g_MpTeamRankingsMenuItems,
 	NULL,
 	0,
@@ -1006,7 +1098,7 @@ struct menuitem g_MpEndscreenConfirmNameMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_LESSLEFTPADDING,
-		L_MPWEAPONS_250, // "Confirm player name:"
+		gettext_noop("Confirm player name:\n"), // "Confirm player name:"
 		0,
 		NULL,
 	},
@@ -1023,7 +1115,7 @@ struct menuitem g_MpEndscreenConfirmNameMenuItems[] = {
 
 struct menudialogdef g_MpEndscreenConfirmNameMenuDialog = {
 	MENUDIALOGTYPE_DEFAULT,
-	L_MPMENU_142, // "Player Name"
+	gettext_noop("Player Name\n"), // "Player Name"
 	g_MpEndscreenConfirmNameMenuItems,
 	NULL,
 	0,
@@ -1035,7 +1127,7 @@ struct menuitem g_MpEndscreenSavePlayerMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_LESSLEFTPADDING,
-		L_MPWEAPONS_247, // "Save new player and statistics?"
+		gettext_noop("Save new player\nand statistics?\n"), // "Save new player and statistics?"
 		0,
 		NULL,
 	},
@@ -1043,7 +1135,7 @@ struct menuitem g_MpEndscreenSavePlayerMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_OPENSDIALOG | MENUITEMFLAG_SELECTABLE_CLOSESDIALOG | MENUITEMFLAG_SELECTABLE_CENTRE,
-		L_MPWEAPONS_248, // "Save Now"
+		gettext_noop("Save Now\n"), // "Save Now"
 		0,
 		(void *)&g_MpEndscreenConfirmNameMenuDialog,
 	},
@@ -1051,7 +1143,7 @@ struct menuitem g_MpEndscreenSavePlayerMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_CLOSESDIALOG | MENUITEMFLAG_SELECTABLE_CENTRE,
-		L_MPWEAPONS_249, // "No Thanks!"
+		gettext_noop("No Thanks!\n"), // "No Thanks!"
 		0,
 		NULL,
 	},
@@ -1060,7 +1152,7 @@ struct menuitem g_MpEndscreenSavePlayerMenuItems[] = {
 
 struct menudialogdef g_MpEndscreenSavePlayerMenuDialog = {
 	MENUDIALOGTYPE_DEFAULT,
-	L_MPWEAPONS_246, // "Save Player"
+	gettext_noop("Save Player\n"), // "Save Player"
 	g_MpEndscreenSavePlayerMenuItems,
 	NULL,
 	MENUDIALOGFLAG_STARTSELECTS,

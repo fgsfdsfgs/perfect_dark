@@ -24,6 +24,8 @@
 #include "types.h"
 #ifndef PLATFORM_N64
 #include "input.h"
+#include <libintl.h>
+#define _(String) gettext (String)
 #define MENU_KEYBOARD_ROWS 6
 #else
 #define MENU_KEYBOARD_ROWS 5
@@ -667,7 +669,7 @@ Gfx *menuitemListRender(Gfx *gdl, struct menurendercontext *context)
 		y = context->y + context->height / 2;
 
 		// "< Empty >"
-		gdl = textRenderProjected(gdl, &x, &y, langGet(L_OPTIONS_313), chars, font, colour, context->width - left + context->x, viGetHeight(), sp128, 0);
+		gdl = textRenderProjected(gdl, &x, &y, _("< Empty >\n"), chars, font, colour, context->width - left + context->x, viGetHeight(), sp128, 0);
 	}
 
 	gdl = text0f153780(gdl);
@@ -1250,11 +1252,11 @@ Gfx *menuitemKeyboardRender(Gfx *gdl, struct menurendercontext *context)
 			y = context->y + row * 11 + 15;
 
 			if (row == 4) {
-				u16 labels[] = {
-					L_OPTIONS_314, // "DEL"
-					L_OPTIONS_315, // "CAPS"
-					L_OPTIONS_316, // "CANCEL"
-					L_OPTIONS_317, // "OK"
+				char *labels[] = {
+					_("DEL"), // "DEL"
+					_("CAPS"), // "CAPS"
+					_("CANCEL"), // "CANCEL"
+					_("OK"), // "OK"
 				};
 
 				s32 index = -1;
@@ -1283,7 +1285,7 @@ Gfx *menuitemKeyboardRender(Gfx *gdl, struct menurendercontext *context)
 						buttonwidth = 36;
 					}
 
-					textMeasure(&textheight, &textwidth, langGet(labels[index]), g_CharsHandelGothicXs, g_FontHandelGothicXs, 0);
+					textMeasure(&textheight, &textwidth, (labels[index]), g_CharsHandelGothicXs, g_FontHandelGothicXs, 0);
 					x = (buttonwidth - textwidth) / 2 + x;
 
 					// Dim the OK button if string is empty
@@ -1319,7 +1321,7 @@ Gfx *menuitemKeyboardRender(Gfx *gdl, struct menurendercontext *context)
 					}
 #endif
 
-					gdl = textRenderProjected(gdl, &x, &y, langGet(labels[index]), g_CharsHandelGothicXs, g_FontHandelGothicXs, textcolour, context->width, context->height, 0, 0);
+					gdl = textRenderProjected(gdl, &x, &y, (labels[index]), g_CharsHandelGothicXs, g_FontHandelGothicXs, textcolour, context->width, context->height, 0, 0);
 
 					if (index == 3 && menuitemKeyboardIsStringEmptyOrSpaces(data->string)) {
 						textSetWaveColours(
@@ -1811,15 +1813,15 @@ Gfx *menuitemObjectivesRenderOne(Gfx *gdl, struct menudialog *dialog, s32 index,
 	if (withstatus) {
 		switch (objectiveCheck(index)) {
 		case OBJECTIVE_INCOMPLETE:
-			spcc = langGet(L_OPTIONS_001); // "Incomplete"
+			spcc = _("Incomplete\n"); // "Incomplete"
 			spc8 = 0xffff00ff;
 			break;
 		case OBJECTIVE_COMPLETE:
-			spcc = langGet(L_OPTIONS_000); // "Complete"
+			spcc = _("Complete\n"); // "Complete"
 			spc8 = 0x00ff00ff;
 			break;
 		case OBJECTIVE_FAILED:
-			spcc = langGet(L_OPTIONS_002); // "Failed"
+			spcc = _("Failed\n"); // "Failed"
 			spc8 = 0xff4040ff;
 			break;
 		}
@@ -2776,7 +2778,7 @@ Gfx *menuitemCarouselRender(Gfx *gdl, struct menurendercontext *context)
 	// Setting it to 0x7b causes a crash.
 	// 0x7c and 0x7d don't do anything with the option value, so it's probable
 	// that the original source has a commented function call in that block.
-	if (context->item->param2 == 0x7b && context->item->handler) {
+	if (context->item->title == 0x7b && context->item->handler) {
 		union handlerdata data;
 		s32 headorbodynum = 0;
 
@@ -2786,7 +2788,7 @@ Gfx *menuitemCarouselRender(Gfx *gdl, struct menurendercontext *context)
 		gdl = func0f14f07c(gdl, headorbodynum,
 				context->x + context->width / 2 - 32, context->y,
 				context->x + context->width / 2 + 32, context->y + 64);
-	} else if ((context->item->param2 == 0x7c || context->item->param2 == 0x7d) && context->item->handler) {
+	} else if ((context->item->title == 0x7c || context->item->title == 0x7d) && context->item->handler) {
 		union handlerdata data;
 		context->item->handler(MENUOP_GETSELECTEDINDEX, context->item, &data);
 	}
@@ -3507,7 +3509,7 @@ Gfx *menuitemRankingRender(Gfx *gdl, struct menurendercontext *context)
 	s32 gap;
 	s32 i;
 
-	if (context->item->param2 == 1) {
+	if (context->item->title == 1) {
 		team = true;
 		numrows = mpGetTeamRankings(rankings);
 	} else {
@@ -3546,18 +3548,18 @@ Gfx *menuitemRankingRender(Gfx *gdl, struct menurendercontext *context)
 
 	if (!team) {
 		// "Deaths"
-		textMeasure(&textheight, &textwidth, langGet(L_MPMENU_277), g_CharsHandelGothicXs, g_FontHandelGothicXs, 0);
+		textMeasure(&textheight, &textwidth, _("Deaths\n"), g_CharsHandelGothicXs, g_FontHandelGothicXs, 0);
 		x = (context->x - textwidth) + 91;
 		y = context->y + 1;
-		gdl = textRenderProjected(gdl, &x, &y, langGet(L_MPMENU_277), g_CharsHandelGothicXs, g_FontHandelGothicXs,
+		gdl = textRenderProjected(gdl, &x, &y, _("Deaths\n"), g_CharsHandelGothicXs, g_FontHandelGothicXs,
 				textcolour, context->width, context->height, 0, 0);
 	}
 
 	// "Score"
-	textMeasure(&textheight, &textwidth, langGet(L_MPMENU_278), g_CharsHandelGothicXs, g_FontHandelGothicXs, 0);
+	textMeasure(&textheight, &textwidth, _("Score\n"), g_CharsHandelGothicXs, g_FontHandelGothicXs, 0);
 	x = (context->x - textwidth) + 120;
 	y = context->y + 1;
-	gdl = textRenderProjected(gdl, &x, &y, langGet(L_MPMENU_278), g_CharsHandelGothicXs, g_FontHandelGothicXs,
+	gdl = textRenderProjected(gdl, &x, &y, _("Score\n"), g_CharsHandelGothicXs, g_FontHandelGothicXs,
 			textcolour, context->width, context->height, 0, 0);
 	gdl = text0f153780(gdl);
 
@@ -3814,7 +3816,7 @@ Gfx *menuitemPlayerStatsRender(Gfx *gdl, struct menurendercontext *context)
 		maincolour = (colourBlend(maincolour, 0x00000000, 127) & 0xffffff00) | (maincolour & 0xff);
 	}
 
-	textMeasure(&textheight, &textwidth, langGet(L_MPMENU_281), g_CharsHandelGothicXs, g_FontHandelGothicXs, 0);
+	textMeasure(&textheight, &textwidth, _("Suicides\n"), g_CharsHandelGothicXs, g_FontHandelGothicXs, 0);
 #if VERSION >= VERSION_NTSC_1_0
 	x = context->x - textwidth + 121;
 #else
@@ -3822,7 +3824,7 @@ Gfx *menuitemPlayerStatsRender(Gfx *gdl, struct menurendercontext *context)
 #endif
 	y = context->y + 1;
 
-	gdl = textRenderProjected(gdl, &x, &y, langGet(L_MPMENU_281), g_CharsHandelGothicXs, g_FontHandelGothicXs,
+	gdl = textRenderProjected(gdl, &x, &y, _("Suicides\n"), g_CharsHandelGothicXs, g_FontHandelGothicXs,
 			maincolour, context->width, context->height, 0, 0);
 
 	// Num suicides
@@ -3867,14 +3869,14 @@ Gfx *menuitemPlayerStatsRender(Gfx *gdl, struct menurendercontext *context)
 		}
 
 		// "Deaths" heading
-		textMeasure(&textheight, &textwidth, langGet(L_MPMENU_282), g_CharsHandelGothicXs, g_FontHandelGothicXs, 0);
+		textMeasure(&textheight, &textwidth, _("Deaths\n"), g_CharsHandelGothicXs, g_FontHandelGothicXs, 0);
 		x = context->x - textwidth + 120;
 		y = context->y + ypos;
-		gdl = textRenderProjected(gdl, &x, &y, langGet(L_MPMENU_282), g_CharsHandelGothicXs, g_FontHandelGothicXs,
+		gdl = textRenderProjected(gdl, &x, &y, _("Deaths\n"), g_CharsHandelGothicXs, g_FontHandelGothicXs,
 				maincolour, context->width, context->height, 0, 0);
 
 		// "Kills" heading
-		textMeasure(&textheight, &textwidth, langGet(L_MPMENU_283), g_CharsHandelGothicXs, g_FontHandelGothicXs, 0);
+		textMeasure(&textheight, &textwidth, _("Kills\n"), g_CharsHandelGothicXs, g_FontHandelGothicXs, 0);
 
 #if VERSION >= VERSION_JPN_FINAL
 		x = context->x + 4;
@@ -3883,7 +3885,7 @@ Gfx *menuitemPlayerStatsRender(Gfx *gdl, struct menurendercontext *context)
 #endif
 
 		y = context->y + ypos;
-		gdl = textRenderProjected(gdl, &x, &y, langGet(L_MPMENU_283),  g_CharsHandelGothicXs, g_FontHandelGothicXs,
+		gdl = textRenderProjected(gdl, &x, &y, _("Kills\n"),  g_CharsHandelGothicXs, g_FontHandelGothicXs,
 				maincolour, context->width, context->height, 0, 0);
 
 		// Move ypos past heading row
@@ -4268,8 +4270,32 @@ Gfx *menuitemControllerRenderLines(Gfx *gdl, struct menurendercontext *context, 
 	return gdl;
 }
 
+// In order to get gettext work and preserve compatibility, we made an enum with previous values
+enum actions {
+	L_MPWEAPONS_194 = 21698,
+	L_MPWEAPONS_195 = 21699,
+	L_MPWEAPONS_196 = 21700,
+	L_MPWEAPONS_197 = 21701,
+	L_MPWEAPONS_198 = 21702,
+	L_MPWEAPONS_199 = 21703,
+	L_MPWEAPONS_200 = 21704,
+	L_MPWEAPONS_201 = 21705,
+	L_MPWEAPONS_202 = 21706,
+	L_MPWEAPONS_203 = 21707,
+	L_MPWEAPONS_204 = 21708,
+	L_MPWEAPONS_205 = 21709,
+	L_MPWEAPONS_206 = 21710,
+	L_MPWEAPONS_207 = 21711,
+	L_MPWEAPONS_208 = 21712,
+	L_MPWEAPONS_209 = 21713,
+	L_MPWEAPONS_210 = 21714,
+	L_MPWEAPONS_211 = 21715,
+	L_MPWEAPONS_212 = 21716,
+	L_OPTIONS_003 = 22019
+};
+
 // These are the action names, like "AIM", and "LOOK UP"
-u16 var80071354[][9] = {
+u16 actions_mode[][9] = {
 	/*0*/  { L_MPWEAPONS_194, L_MPWEAPONS_196, L_MPWEAPONS_202, L_MPWEAPONS_197, L_MPWEAPONS_203, L_MPWEAPONS_204, L_MPWEAPONS_206, L_MPWEAPONS_205, L_MPWEAPONS_210 },
 	/*1*/  { L_MPWEAPONS_194, L_MPWEAPONS_200, L_MPWEAPONS_202, L_MPWEAPONS_201, L_MPWEAPONS_203, L_MPWEAPONS_204, L_MPWEAPONS_207, L_MPWEAPONS_205, L_MPWEAPONS_210 },
 	/*2*/  { L_MPWEAPONS_203, L_MPWEAPONS_196, L_MPWEAPONS_202, L_MPWEAPONS_197, L_MPWEAPONS_205, L_MPWEAPONS_204, L_MPWEAPONS_206, L_MPWEAPONS_194, L_MPWEAPONS_210 },
@@ -4284,9 +4310,89 @@ u16 var80071354[][9] = {
 	/*11*/ { L_OPTIONS_003,   L_OPTIONS_003,   L_MPWEAPONS_212, L_OPTIONS_003,   L_MPWEAPONS_203, L_MPWEAPONS_204, L_MPWEAPONS_208, L_MPWEAPONS_205, L_OPTIONS_003   },
 };
 
+// And also wa add this wonderfull function to map id -> text
+char *getItemText(int textid)
+{
+	switch (textid) {
+		case L_MPWEAPONS_194:
+			return _("AIM");
+			break;
+
+		case L_MPWEAPONS_195:
+			return _("AIM TOGGLE");
+			break;
+
+		case L_MPWEAPONS_196:
+		case L_MPWEAPONS_199:
+			return _("LOOK UP");
+			break;
+
+		case L_MPWEAPONS_197:
+		case L_MPWEAPONS_198:
+			return _("LOOK DOWN");
+			break;
+
+		case L_MPWEAPONS_200:
+			return _("FORWARDS");
+			break;
+
+		case L_MPWEAPONS_201:
+			return _("BACKWARDS");
+			break;
+
+		case L_MPWEAPONS_202:
+			return _("STRAFE");
+			break;
+
+		case L_MPWEAPONS_203:
+			return _("WEAPON");
+			break;
+
+		case L_MPWEAPONS_204:
+			return _("ACTION/RELOAD");
+			break;
+
+		case L_MPWEAPONS_205:
+			return _("FIRE");
+			break;
+
+		case L_MPWEAPONS_206:
+			return _("WALK/TURN");
+			break;
+
+		case L_MPWEAPONS_207:
+			return _("LOOK");
+			break;
+
+		case L_MPWEAPONS_208:
+			return _("WALK/STRAFE");
+			break;
+
+		case L_MPWEAPONS_209:
+			return _("LOOK/STRAFE");
+			break;
+
+		case L_MPWEAPONS_210:
+			return _("AS C BUTTONS");
+			break;
+
+		case L_MPWEAPONS_211:
+			return _("Controller 1:");
+			break;
+
+		case L_MPWEAPONS_212:
+			return _("Controller 2:");
+			break;
+
+		case L_OPTIONS_003:
+			return _("\n");
+			break;
+	}
+}
+
 u16 menuitemControllerGetButtonAction(s32 mode, s32 buttonnum)
 {
-	u32 textid = var80071354[mode][buttonnum];
+	u32 textid = actions_mode[mode][buttonnum];
 
 	if (textid == L_MPWEAPONS_194 // "AIM"
 			&& optionsGetAimControl(g_Menus[g_MpPlayerNum].main.mpindex) == AIMCONTROL_TOGGLE) {
@@ -4322,16 +4428,16 @@ Gfx *menuitemControllerRenderText(Gfx *gdl, s32 curmode, struct menurendercontex
 	u16 textnum;
 	u32 colour;
 
-	u16 labels[] = {
-		/*0*/ L_MPWEAPONS_185, // "L/R BUTTONS:"
-		/*1*/ L_MPWEAPONS_186, // "UP C BUTTON:"
-		/*2*/ L_MPWEAPONS_187, // "LEFT/RIGHT C BUTTONS:"
-		/*3*/ L_MPWEAPONS_188, // "DOWN C BUTTON:"
-		/*4*/ L_MPWEAPONS_189, // "A BUTTON:"
-		/*5*/ L_MPWEAPONS_190, // "B BUTTON:"
-		/*6*/ L_MPWEAPONS_191, // "CONTROL STICK:"
-		/*7*/ L_MPWEAPONS_192, // "Z BUTTON:"
-		/*8*/ L_MPWEAPONS_193, // "+ CONTROL PAD:"
+	char *labels[] = {
+		/*0*/ _("L/R BUTTONS: "), // "L/R BUTTONS:"
+		/*1*/ _("UP C BUTTON: "), // "UP C BUTTON:"
+		/*2*/ _("LEFT/RIGHT C BUTTONS: "), // "LEFT/RIGHT C BUTTONS:"
+		/*3*/ _("DOWN C BUTTON: "), // "DOWN C BUTTON:"
+		/*4*/ _("A BUTTON: "), // "A BUTTON:"
+		/*5*/ _("B BUTTON: "), // "B BUTTON:"
+		/*6*/ _("CONTROL STICK: "), // "CONTROL STICK:"
+		/*7*/ _("Z BUTTON: "), // "Z BUTTON:"
+		/*8*/ _("+ CONTROL PAD: "), // "+ CONTROL PAD:"
 	};
 
 	s32 i;
@@ -4354,7 +4460,7 @@ Gfx *menuitemControllerRenderText(Gfx *gdl, s32 curmode, struct menurendercontex
 #if VERSION < VERSION_NTSC_1_0
 			ry = i * 7 + context->y + pady;
 #endif
-			gdl = textRenderProjected(gdl, &rx, &ry, langGet(labels[i]),
+			gdl = textRenderProjected(gdl, &rx, &ry, labels[i],
 					g_CharsHandelGothicXs, g_FontHandelGothicXs, labelcolour, viGetWidth(), viGetHeight(), 0, 0);
 		}
 
@@ -4389,7 +4495,7 @@ Gfx *menuitemControllerRenderText(Gfx *gdl, s32 curmode, struct menurendercontex
 			colour |= 0xffffff00;
 		}
 
-		gdl = textRenderProjected(gdl, &rx, &ry, langGet(textnum),
+		gdl = textRenderProjected(gdl, &rx, &ry, getItemText(textnum),
 				g_CharsHandelGothicXs, g_FontHandelGothicXs, colour, viGetWidth(), viGetHeight(), 0, 0);
 	}
 
@@ -4504,17 +4610,17 @@ Gfx *menuitemControllerRender(Gfx *gdl, struct menurendercontext *context)
 			g_MenuWave1Colours[dialog->type].item_unfocused);
 
 	if (g_Menus[g_MpPlayerNum].main.controlmode == CONTROLMODE_PC) {
-		sprintf(text, langGet(L_MPWEAPONS_213), // "Control Style %s %s"
+		sprintf(text, _("Control Style %s %s\n"), // "Control Style %s %s"
 				"Ext",
-				langGet(L_MPWEAPONS_215)); // "(Two-Handed)"
+				_("(Two-Handed)")); // "(Two-Handed)"
 	} else if (g_Menus[g_MpPlayerNum].main.controlmode >= CONTROLMODE_21) {
-		sprintf(text, langGet(L_MPWEAPONS_213), // "Control Style %s %s"
-				langGet(g_ControlStyleOptions[g_Menus[g_MpPlayerNum].main.controlmode]),
-				langGet(L_MPWEAPONS_215)); // "(Two-Handed)"
+		sprintf(text, _("Control Style %s %s\n"), // "Control Style %s %s"
+				g_ControlStyleOptions[g_Menus[g_MpPlayerNum].main.controlmode],
+				_("(Two-Handed)")); // "(Two-Handed)"
 	} else {
-		sprintf(text, langGet(L_MPWEAPONS_213), // "Control Style %s %s"
-				langGet(g_ControlStyleOptions[g_Menus[g_MpPlayerNum].main.controlmode]),
-				langGet(L_MPWEAPONS_214)); // "(One-Handed)"
+		sprintf(text, _("Control Style %s %s\n"), // "Control Style %s %s"
+				g_ControlStyleOptions[g_Menus[g_MpPlayerNum].main.controlmode],
+				_("(One-Handed)")); // "(One-Handed)"
 	}
 
 	x = context->x + 2;
@@ -4560,7 +4666,7 @@ Gfx *menuitemControllerRender(Gfx *gdl, struct menurendercontext *context)
 #endif
 
 		gdl = text0f153628(gdl);
-		gdl = textRenderProjected(gdl, &x, &y, langGet(L_MPWEAPONS_216), // "Hold weapon button for ..."
+		gdl = textRenderProjected(gdl, &x, &y, _("Hold Weapon button for quick-menu.\nHold Action button to toggle function.\nAction+Fire temporarily changes function.\nAim allows you to target accurately.\nAim + Down C Button crouches.\nAim + Up C Button gets up.\n"), // "Hold weapon button for ..."
 				g_CharsHandelGothicSm, g_FontHandelGothicSm, colour, viGetWidth(), viGetHeight(), 0, 0);
 		gdl = text0f153780(gdl);
 	}

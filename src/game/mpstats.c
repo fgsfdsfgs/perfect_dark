@@ -16,6 +16,10 @@
 #include "bss.h"
 #include "data.h"
 #include "types.h"
+#ifndef PLATFORM_N64
+#include <libintl.h>
+#define _(String) gettext (String)
+#endif
 
 u32 var80070590 = 0x00000000;
 
@@ -94,7 +98,7 @@ void mpstatsRecordPlayerKill(void)
 
 		// Show HUD message
 		// "Kill count: %d"
-		sprintf(text, "%s: %d\n", langGet(L_GUN_001), g_Vars.currentplayerstats->killcount);
+		sprintf(text, "%s: %d\n", _("Kill count"), g_Vars.currentplayerstats->killcount);
 		hudmsgCreate(text, HUDMSGTYPE_DEFAULT);
 
 		// Update slowest/fastest two kills
@@ -154,12 +158,12 @@ void mpstatsRecordPlayerDeath(void)
 
 	if (g_Vars.normmplayerisrunning) {
 		if (g_Vars.currentplayer->deathcount == 1) {
-			sprintf(buffer, langGet(L_GUN_002)); // "Died once"
+			sprintf(buffer, _("Died once\n")); // "Died once"
 		} else {
 			sprintf(buffer, "%s %d %s\n",
-					langGet(L_GUN_003), // "Died"
+					_("Died"), // "Died"
 					g_Vars.currentplayer->deathcount,
-					langGet(L_GUN_004)); // "times"
+					_("times")); // "times"
 		}
 
 		hudmsgCreate(buffer, HUDMSGTYPE_DEFAULT);
@@ -183,7 +187,7 @@ void mpstatsRecordPlayerSuicide(void)
 
 		// Show HUD message
 		// "Suicide count: %d"
-		sprintf(text, "%s: %d\n", langGet(L_GUN_005), mpchr->killcounts[mpindex]);
+		sprintf(text, "%s: %d\n", _("Suicide count"), mpchr->killcounts[mpindex]);
 		hudmsgCreate(text, HUDMSGTYPE_DEFAULT);
 
 		// Update slowest/fastest two kills
@@ -282,7 +286,7 @@ void mpstatsRecordDeath(s32 aplayernum, s32 vplayernum)
 
 				if (g_Vars.normmplayerisrunning && aplayernum >= 0) {
 					// "Killed by %s"
-					sprintf(text, "%s %s", langGet(L_MISC_183), g_MpAllChrConfigPtrs[aplayernum]->name);
+					sprintf(text, "%s %s", _("Killed by"), g_MpAllChrConfigPtrs[aplayernum]->name);
 					hudmsgCreate(text, HUDMSGTYPE_DEFAULT);
 				}
 
@@ -302,7 +306,7 @@ void mpstatsRecordDeath(s32 aplayernum, s32 vplayernum)
 
 			if (g_Vars.normmplayerisrunning && vplayernum >= 0) {
 				// "Killed %s"
-				sprintf(text, "%s %s", langGet(L_MISC_184), g_MpAllChrConfigPtrs[vplayernum]->name);
+				sprintf(text, "%s %s", _("Killed"), g_MpAllChrConfigPtrs[vplayernum]->name);
 				hudmsgCreate(text, HUDMSGTYPE_DEFAULT);
 			}
 

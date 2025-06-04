@@ -23,6 +23,10 @@
 #include "data.h"
 #include "types.h"
 #include "platform.h"
+#ifndef PLATFORM_N64
+#include <libintl.h>
+#define _(String) gettext (String)
+#endif
 
 struct objective *g_Objectives[MAX_OBJECTIVES];
 u32 g_ObjectiveStatuses[MAX_OBJECTIVES];
@@ -401,20 +405,20 @@ void objectivesCheckAll(void)
 					jpnstr[1] = 0x80 | (0x11 + availableindex);
 					sprintf(buffer, "%s %s: ", langGet(L_MISC_044), jpnstr); // "Objective"
 #else
-					sprintf(buffer, "%s %d: ", langGet(L_MISC_044), availableindex + 1); // "Objective"
+					sprintf(buffer, "%s %d: ", _("Objective"), availableindex + 1); // "Objective"
 #endif
 
 #if VERSION >= VERSION_NTSC_1_0
 					// NTSC 1.0 and above shows objective messages to everyone,
 					// while beta only shows them to the current player.
 					if (status == OBJECTIVE_COMPLETE) {
-						strcat(buffer, langGet(L_MISC_045)); // "Completed"
+						strcat(buffer, _("Completed\n")); // "Completed"
 						objectivesShowHudmsg(buffer, HUDMSGTYPE_OBJECTIVECOMPLETE);
 					} else if (status == OBJECTIVE_INCOMPLETE) {
-						strcat(buffer, langGet(L_MISC_046)); // "Incomplete"
+						strcat(buffer, _("Incomplete\n")); // "Incomplete"
 						objectivesShowHudmsg(buffer, HUDMSGTYPE_OBJECTIVECOMPLETE);
 					} else if (status == OBJECTIVE_FAILED) {
-						strcat(buffer, langGet(L_MISC_047)); // "Failed"
+						strcat(buffer, _("Failed\n")); // "Failed"
 						objectivesShowHudmsg(buffer, HUDMSGTYPE_OBJECTIVEFAILED);
 					}
 #else

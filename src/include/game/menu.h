@@ -29,7 +29,7 @@ void func0f0f139c(struct menuitem *item, f32 arg1);
 void func0f0f13ec(struct menuitem *item);
 void func0f0f1418(void);
 void func0f0f1494(void);
-char *menuResolveText(uintptr_t thing, void *dialogoritem);
+char *menuResolveText(char *thing, void *dialogoritem);
 char *menuResolveParam2Text(struct menuitem *item);
 char *menuResolveDialogTitle(struct menudialogdef *dialogdef);
 void menuGetItemBlocksRequired(struct menuitem *item, s32 *arg1);
