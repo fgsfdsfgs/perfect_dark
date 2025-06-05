@@ -9,11 +9,11 @@ msgstr ""
 "X-Generator: originalAssets_to_l10n.py script\n"
 
 #. L_PROPOBJ_000
-msgid "Picked up "
+msgid "Picked up \n"
 msgstr "%s obtenu.\n"
 
 #. L_PROPOBJ_001
-msgid "Double "
+msgid "Double \n"
 msgstr "%s obtenue.\n"
 
 #. L_PROPOBJ_002
@@ -25,11 +25,11 @@ msgid "Some "
 msgstr ""
 
 #. L_PROPOBJ_004
-msgid "a "
+msgid "a \n"
 msgstr "%s obtenus.\n"
 
 #. L_PROPOBJ_005
-msgid "A "
+msgid "A \n"
 msgstr "%s obtenues.\n"
 
 #. L_PROPOBJ_006
@@ -228,14 +228,6 @@ msgstr ""
 msgid "Some "
 msgstr ""
 
-#. L_PROPOBJ_058
-msgid ""
-msgstr ""
-
-#. L_PROPOBJ_059
-msgid ""
-msgstr ""
-
 #. L_PROPOBJ_060
 msgid "a "
 msgstr "un "
@@ -258,14 +250,6 @@ msgstr ""
 
 #. L_PROPOBJ_065
 msgid "The "
-msgstr ""
-
-#. L_PROPOBJ_066
-msgid ""
-msgstr ""
-
-#. L_PROPOBJ_067
-msgid ""
 msgstr ""
 
 #. L_PROPOBJ_068

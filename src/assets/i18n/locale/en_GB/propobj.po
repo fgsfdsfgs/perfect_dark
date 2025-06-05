@@ -9,35 +9,35 @@ msgstr ""
 "X-Generator: originalAssets_to_l10n.py script\n"
 
 #. L_PROPOBJ_000
-msgid "Picked up "
+msgid "Picked up \n"
 msgstr "Picked up %s.\n"
 
 #. L_PROPOBJ_001
-msgid "Double "
+msgid "Double \n"
 msgstr "Picked up %s.\n"
 
 #. L_PROPOBJ_002
-msgid "some "
+msgid "some \n"
 msgstr "Picked up %s.\n"
 
 #. L_PROPOBJ_003
-msgid "Some "
+msgid "Some \n"
 msgstr "Picked up %s.\n"
 
 #. L_PROPOBJ_004
-msgid "a "
+msgid "a \n"
 msgstr "Picked up %s.\n"
 
 #. L_PROPOBJ_005
-msgid "A "
+msgid "A \n"
 msgstr "Picked up %s.\n"
 
 #. L_PROPOBJ_006
-msgid "an "
+msgid "an \n"
 msgstr "Picked up %s.\n"
 
 #. L_PROPOBJ_007
-msgid "An "
+msgid "An \n"
 msgstr "Picked up %s.\n"
 
 #. L_PROPOBJ_008
@@ -228,14 +228,6 @@ msgstr "some "
 msgid "Some "
 msgstr "Some "
 
-#. L_PROPOBJ_058
-msgid ""
-msgstr ""
-
-#. L_PROPOBJ_059
-msgid ""
-msgstr ""
-
 #. L_PROPOBJ_060
 msgid "a "
 msgstr "a "
@@ -259,14 +251,6 @@ msgstr "the "
 #. L_PROPOBJ_065
 msgid "The "
 msgstr "The "
-
-#. L_PROPOBJ_066
-msgid ""
-msgstr ""
-
-#. L_PROPOBJ_067
-msgid ""
-msgstr ""
 
 #. L_PROPOBJ_068
 msgid "bolts"

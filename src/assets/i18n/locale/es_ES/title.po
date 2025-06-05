@@ -8,10 +8,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: originalAssets_to_l10n.py script\n"
 
-#. L_TITLE_000
-msgid ""
-msgstr ""
-
 #. L_TITLE_001
 msgid "\n"
 msgstr "\n"

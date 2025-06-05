@@ -26,6 +26,9 @@
 #include "types.h"
 #ifndef PLATFORM_N64
 #include "input.h"
+#include <libintl.h>
+#define gettext_noop(String) String
+#define _(String) gettext (String)
 #endif
 
 /**
@@ -1100,184 +1103,181 @@ void creditsResetSlides(void)
 }
 
 struct credit g_Credits[] = {
-	{ 0, RETAIN_NONE, 0, CREDITSTYLE_CORETEAM, L_TITLE_002,  L_TITLE_000 }, // "perfect dark", ""
+	{ 0, RETAIN_NONE, 0, CREDITSTYLE_CORETEAM, gettext_noop("perfect dark\n"),  gettext_noop("") }, // "perfect dark", ""
 
 	// The order of these items are randomised
-	{ 0, RETAIN_NONE, 0, CREDITSTYLE_CORETEAM, L_TITLE_003,  L_TITLE_004 }, // "beau ner chesluk", "guns and visual orgasms"
-	{ 0, RETAIN_NONE, 0, CREDITSTYLE_CORETEAM, L_TITLE_005,  L_TITLE_006 }, // "jonathan nasty mummery", "mover and shaker"
-	{ 0, RETAIN_NONE, 0, CREDITSTYLE_CORETEAM, L_TITLE_007,  L_TITLE_008 }, // "darkmark", "reality engineer"
-	{ 0, RETAIN_NONE, 0, CREDITSTYLE_CORETEAM, L_TITLE_009,  L_TITLE_010 }, // "chris tilston", "designs on the future"
-	{ 0, RETAIN_NONE, 0, CREDITSTYLE_CORETEAM, L_TITLE_011,  L_TITLE_012 }, // "chris darling", "weapons specialist"
-	{ 0, RETAIN_NONE, 0, CREDITSTYLE_CORETEAM, L_TITLE_013,  L_TITLE_014 }, // "duncan botwood", "grey area"
-	{ 0, RETAIN_NONE, 0, CREDITSTYLE_CORETEAM, L_TITLE_015,  L_TITLE_016 }, // "b jones", "bodybuilder"
-	{ 0, RETAIN_NONE, 0, CREDITSTYLE_CORETEAM, L_TITLE_017,  L_TITLE_018 }, // "steve malpass", "perfect locations and vox"
-	{ 0, RETAIN_NONE, 0, CREDITSTYLE_CORETEAM, L_TITLE_019,  L_TITLE_020 }, // "brian marshall", "-aqham-"
-	{ 0, RETAIN_NONE, 0, CREDITSTYLE_CORETEAM, L_TITLE_021,  L_TITLE_022 }, // "russel irwin", "well packed man"
-	{ 0, RETAIN_NONE, 0, CREDITSTYLE_CORETEAM, L_TITLE_023,  L_TITLE_024 }, // "jamie 'evo' williams", "manic welsh designer"
-	{ 0, RETAIN_NONE, 0, CREDITSTYLE_CORETEAM, L_TITLE_025,  L_TITLE_026 }, // "ross bury", "bionic backgrounds"
-	{ 0, RETAIN_NONE, 0, CREDITSTYLE_CORETEAM, L_TITLE_027,  L_TITLE_028 }, // "martin penny", "sound geezer"
-	{ 0, RETAIN_NONE, 0, CREDITSTYLE_CORETEAM, L_TITLE_029,  L_TITLE_030 }, // "grant kirkhope", "play that music maestro"
-	{ 0, RETAIN_NONE, 0, CREDITSTYLE_CORETEAM, L_TITLE_031,  L_TITLE_032 }, // "david clynick", "bangin hardcore choonz"
-	{ 0, RETAIN_NONE, 0, CREDITSTYLE_CORETEAM, L_TITLE_033,  L_TITLE_034 }, // "keith 'bunny' rabbette", "dinomic backgrounds"
+	{ 0, RETAIN_NONE, 0, CREDITSTYLE_CORETEAM, gettext_noop("beau ner chesluk\n"), gettext_noop("guns and visual orgasms\n") }, // "beau ner chesluk", "guns and visual orgasms"
+	{ 0, RETAIN_NONE, 0, CREDITSTYLE_CORETEAM, gettext_noop("jonathan nasty mummery\n"), gettext_noop("mover and shaker\n") }, // "jonathan nasty mummery", "mover and shaker"
+	{ 0, RETAIN_NONE, 0, CREDITSTYLE_CORETEAM, gettext_noop("darkmark\n"), gettext_noop("reality engineer\n") }, // "darkmark", "reality engineer"
+	{ 0, RETAIN_NONE, 0, CREDITSTYLE_CORETEAM, gettext_noop("chris tilston\n"), gettext_noop("designs on the future\n") }, // "chris tilston", "designs on the future"
+	{ 0, RETAIN_NONE, 0, CREDITSTYLE_CORETEAM, gettext_noop("chris darling\n"), gettext_noop("weapons specialist\n") }, // "chris darling", "weapons specialist"
+	{ 0, RETAIN_NONE, 0, CREDITSTYLE_CORETEAM, gettext_noop("duncan botwood\n"), gettext_noop("grey area\n") }, // "duncan botwood", "grey area"
+	{ 0, RETAIN_NONE, 0, CREDITSTYLE_CORETEAM, gettext_noop("b jones\n"), gettext_noop("bodybuilder\n") }, // "b jones", "bodybuilder"
+	{ 0, RETAIN_NONE, 0, CREDITSTYLE_CORETEAM, gettext_noop("steve malpass\n"), gettext_noop("perfect locations and vox\n") }, // "steve malpass", "perfect locations and vox"
+	{ 0, RETAIN_NONE, 0, CREDITSTYLE_CORETEAM, gettext_noop("brian marshall\n"), gettext_noop("-aqham-\n") }, // "brian marshall", "-aqham-"
+	{ 0, RETAIN_NONE, 0, CREDITSTYLE_CORETEAM, gettext_noop("russell irwin\n"), gettext_noop("well packed man\n") }, // "russel irwin", "well packed man"
+	{ 0, RETAIN_NONE, 0, CREDITSTYLE_CORETEAM, gettext_noop("jamie 'evo' williams\n"), gettext_noop("manic welsh designer\n") }, // "jamie 'evo' williams", "manic welsh designer"
+	{ 0, RETAIN_NONE, 0, CREDITSTYLE_CORETEAM, gettext_noop("ross bury\n"), gettext_noop("bionic backgrounds\n") }, // "ross bury", "bionic backgrounds"
+	{ 0, RETAIN_NONE, 0, CREDITSTYLE_CORETEAM, gettext_noop("martin penny\n"), gettext_noop("sound geezer\n") }, // "martin penny", "sound geezer"
+	{ 0, RETAIN_NONE, 0, CREDITSTYLE_CORETEAM, gettext_noop("grant kirkhope\n"), gettext_noop("play that music maestro\n") }, // "grant kirkhope", "play that music maestro"
+	{ 0, RETAIN_NONE, 0, CREDITSTYLE_CORETEAM, gettext_noop("david clynick\n"), gettext_noop("bangin hardkore choonz\n") }, // "david clynick", "bangin hardcore choonz"
+	{ 0, RETAIN_NONE, 0, CREDITSTYLE_CORETEAM, gettext_noop("keith 'bunny' rabbette\n"), gettext_noop("dinomic backgrounds\n") }, // "keith 'bunny' rabbette", "dinomic backgrounds"
 
 	//load next credit for same slide
 	//|               duration: 0=4s, 1=8s, 2=12s, 3=16s
 	//|               |
-	{ 1, RETAIN_OUT,  0, CREDITSTYLE_HEADING1,    L_TITLE_035, L_TITLE_000 }, // "dd snipers", ""
-	{ 1, RETAIN_NONE, 0, CREDITSTYLE_NAME1,       L_TITLE_036, L_TITLE_037 }, // "kevin bayliss", "dean smith"
-	{ 0, RETAIN_NONE, 0, CREDITSTYLE_NAME1,       L_TITLE_038, L_TITLE_001 }, // "graham smith", "\n"
+	{ 1, RETAIN_OUT,  0, CREDITSTYLE_HEADING1,   gettext_noop("dd snipers\n"), gettext_noop("") }, // "dd snipers", ""
+	{ 1, RETAIN_NONE, 0, CREDITSTYLE_NAME1,      gettext_noop("kevin bayliss\n"),gettext_noop("dean smith\n") }, // "kevin bayliss", "dean smith"
+	{ 0, RETAIN_NONE, 0, CREDITSTYLE_NAME1,      gettext_noop("graham smith\n"),gettext_noop("\n") }, // "graham smith", "\n"
 
-	{ 1, RETAIN_BOTH, 0, CREDITSTYLE_HEADING1,    L_TITLE_035, L_TITLE_000 }, // "dd snipers", ""
-	{ 1, RETAIN_NONE, 0, CREDITSTYLE_NAME1,       L_TITLE_039, L_TITLE_040 }, // "mike 'curry' currington", "tony wong"
-	{ 0, RETAIN_NONE, 0, CREDITSTYLE_NAME1,       L_TITLE_041, L_TITLE_001 }, // "simon farmer", "\n"
+	{ 1, RETAIN_BOTH, 0, CREDITSTYLE_HEADING1,   gettext_noop("dd snipers\n"), gettext_noop("") }, // "dd snipers", ""
+	{ 1, RETAIN_NONE, 0, CREDITSTYLE_NAME1,      gettext_noop("mike 'curry' currington\n"),gettext_noop("tony wong\n") }, // "mike 'curry' currington", "tony wong"
+	{ 0, RETAIN_NONE, 0, CREDITSTYLE_NAME1,      gettext_noop("simon farmer\n"),gettext_noop("\n") }, // "simon farmer", "\n"
 
-	{ 1, RETAIN_IN,   0, CREDITSTYLE_HEADING1,    L_TITLE_035, L_TITLE_000 }, // "dd snipers", ""
-	{ 1, RETAIN_NONE, 0, CREDITSTYLE_NAME1,       L_TITLE_042, L_TITLE_043 }, // "leigh loveday", "rob harrison"
-	{ 0, RETAIN_NONE, 0, CREDITSTYLE_NAME1,       L_TITLE_044, L_TITLE_001 }, // "steven hurst", "\n"
+	{ 1, RETAIN_IN,   0, CREDITSTYLE_HEADING1,   gettext_noop("dd snipers\n"), gettext_noop("") }, // "dd snipers", ""
+	{ 1, RETAIN_NONE, 0, CREDITSTYLE_NAME1,      gettext_noop("leigh loveday\n"),gettext_noop("rob harrison\n") }, // "leigh loveday", "rob harrison"
+	{ 0, RETAIN_NONE, 0, CREDITSTYLE_NAME1,      gettext_noop("steven hurst\n"),gettext_noop("\n") }, // "steven hurst", "\n"
 
-	{ 1, RETAIN_NONE, 0, CREDITSTYLE_HEADING1,    L_TITLE_045, L_TITLE_000 }, // "fearsome foursome", ""
-	{ 1, RETAIN_NONE, 0, CREDITSTYLE_NAME1,       L_TITLE_046, L_TITLE_047 }, // "phil dunne", "ricky berwick"
-	{ 0, RETAIN_NONE, 0, CREDITSTYLE_NAME1,       L_TITLE_048, L_TITLE_049 }, // "gareth glover", "jonathan ambrose"
+	{ 1, RETAIN_NONE, 0, CREDITSTYLE_HEADING1,   gettext_noop("fearsome foursome\n"), gettext_noop("") }, // "fearsome foursome", ""
+	{ 1, RETAIN_NONE, 0, CREDITSTYLE_NAME1,      gettext_noop("phil dunne\n"),gettext_noop("ricky berwick\n") }, // "phil dunne", "ricky berwick"
+	{ 0, RETAIN_NONE, 0, CREDITSTYLE_NAME1,      gettext_noop("gareth glover\n"),gettext_noop("jonathon ambrose\n") }, // "gareth glover", "jonathan ambrose"
 
-	{ 1, RETAIN_OUT,  0, CREDITSTYLE_HEADING1,    L_TITLE_050, L_TITLE_000 }, // "trent's henchmen", ""
-	{ 1, RETAIN_NONE, 0, CREDITSTYLE_NAME1,       L_TITLE_051, L_TITLE_052 }, // "lee musgrave", "johnni christensen"
-	{ 0, RETAIN_NONE, 0, CREDITSTYLE_NAME1,       L_TITLE_053, L_TITLE_001 }, // "mark betteridge", "\n"
+	{ 1, RETAIN_OUT,  0, CREDITSTYLE_HEADING1,   gettext_noop("trent's henchmen\n"), gettext_noop("") }, // "trent's henchmen", ""
+	{ 1, RETAIN_NONE, 0, CREDITSTYLE_NAME1,      gettext_noop("lee musgrave\n"),gettext_noop("johnni christensen\n") }, // "lee musgrave", "johnni christensen"
+	{ 0, RETAIN_NONE, 0, CREDITSTYLE_NAME1,      gettext_noop("mark betteridge\n"),gettext_noop("\n") }, // "mark betteridge", "\n"
 
-	{ 1, RETAIN_IN,   0, CREDITSTYLE_HEADING1,    L_TITLE_050, L_TITLE_000 }, // "trent's henchmen", ""
-	{ 1, RETAIN_NONE, 0, CREDITSTYLE_NAME1,       L_TITLE_054, L_TITLE_055 }, // "chris marlow", "robin beanland"
-	{ 0, RETAIN_NONE, 0, CREDITSTYLE_NAME1,       L_TITLE_056, L_TITLE_057 }, // "neil gallagher", "feargal plant"
+	{ 1, RETAIN_IN,   0, CREDITSTYLE_HEADING1,   gettext_noop("trent's henchmen\n"), gettext_noop("") }, // "trent's henchmen", ""
+	{ 1, RETAIN_NONE, 0, CREDITSTYLE_NAME1,      gettext_noop("chris marlow\n"),gettext_noop("robin beanland\n") }, // "chris marlow", "robin beanland"
+	{ 0, RETAIN_NONE, 0, CREDITSTYLE_NAME1,      gettext_noop("neil gallagher\n"),gettext_noop("feargal plant\n") }, // "neil gallagher", "feargal plant"
 
-	{ 1, RETAIN_OUT,  0, CREDITSTYLE_HEADING1,    L_TITLE_058, L_TITLE_000 }, // "voices in the dark", ""
-	{ 1, RETAIN_NONE, 0, CREDITSTYLE_NAME1,       L_TITLE_059, L_TITLE_060 }, // "eveline fischer", "chris sutherland"
-	{ 0, RETAIN_NONE, 0, CREDITSTYLE_NAME1,       L_TITLE_061, L_TITLE_062 }, // "chris seavor", "john silke"
+	{ 1, RETAIN_OUT,  0, CREDITSTYLE_HEADING1,   gettext_noop("voices in the dark\n"), gettext_noop("") }, // "voices in the dark", ""
+	{ 1, RETAIN_NONE, 0, CREDITSTYLE_NAME1,      gettext_noop("eveline fischer\n"),gettext_noop("chris sutherland\n") }, // "eveline fischer", "chris sutherland"
+	{ 0, RETAIN_NONE, 0, CREDITSTYLE_NAME1,      gettext_noop("chris seavor\n"),gettext_noop("john silke\n") }, // "chris seavor", "john silke"
 
-	{ 1, RETAIN_BOTH, 0, CREDITSTYLE_HEADING1,    L_TITLE_058, L_TITLE_000 }, // "voices in the dark", ""
-	{ 1, RETAIN_NONE, 0, CREDITSTYLE_NAME1,       L_TITLE_063, L_TITLE_064 }, // "ben cullum", "louise tilston"
-	{ 0, RETAIN_NONE, 0, CREDITSTYLE_NAME1,       L_TITLE_065, L_TITLE_066 }, // "alistair", "lindsay"
+	{ 1, RETAIN_BOTH, 0, CREDITSTYLE_HEADING1,   gettext_noop("voices in the dark\n"), gettext_noop("") }, // "voices in the dark", ""
+	{ 1, RETAIN_NONE, 0, CREDITSTYLE_NAME1,      gettext_noop("ben cullum\n"),gettext_noop("louise tilston\n") }, // "ben cullum", "louise tilston"
+	{ 0, RETAIN_NONE, 0, CREDITSTYLE_NAME1,      gettext_noop("alistair lindsay\n"),gettext_noop("duncan botwood\n") }, // "alistair", "lindsay"
 
-	{ 1, RETAIN_IN,   0, CREDITSTYLE_HEADING1,    L_TITLE_058, L_TITLE_000 }, // "voices in the dark", ""
-	{ 1, RETAIN_NONE, 0, CREDITSTYLE_NAME1,       L_TITLE_068, L_TITLE_067 }, // "beau chesluk", "b jones"
-	{ 0, RETAIN_NONE, 0, CREDITSTYLE_NAME1,       L_TITLE_069, L_TITLE_001 }, // "steve malpass", "\n"
+	{ 1, RETAIN_IN,   0, CREDITSTYLE_HEADING1,   gettext_noop("voices in the dark\n"), gettext_noop("") }, // "voices in the dark", ""
+	{ 1, RETAIN_NONE, 0, CREDITSTYLE_NAME1,      gettext_noop("beau chesluk\n"),gettext_noop("b jones\n") }, // "beau chesluk", "b jones"
+	{ 0, RETAIN_NONE, 0, CREDITSTYLE_NAME1,      gettext_noop("steve malpass\n"),gettext_noop("\n") }, // "steve malpass", "\n"
 
-	{ 1, RETAIN_OUT,  0, CREDITSTYLE_HEADING2,    L_TITLE_093, L_TITLE_000 }, // "rare exterminators", ""
-	{ 1, RETAIN_NONE, 0, CREDITSTYLE_NAME2,       L_TITLE_094, L_TITLE_095 }, // "huw ward", "adam munton"
-	{ 1, RETAIN_NONE, 0, CREDITSTYLE_NAME2,       L_TITLE_096, L_TITLE_097 }, // "david wong", "luke munton"
-	{ 0, RETAIN_NONE, 0, CREDITSTYLE_NAME2,       L_TITLE_098, L_TITLE_109 }, // "gary phelps", "andrew wilson"
+	{ 1, RETAIN_OUT,  0, CREDITSTYLE_HEADING2,   gettext_noop("rare exterminators\n"), gettext_noop("") }, // "rare exterminators", ""
+	{ 1, RETAIN_NONE, 0, CREDITSTYLE_NAME2,      gettext_noop("huw ward\n"),gettext_noop("adam munton\n") }, // "huw ward", "adam munton"
+	{ 1, RETAIN_NONE, 0, CREDITSTYLE_NAME2,      gettext_noop("david wong\n"),gettext_noop("luke munton\n") }, // "david wong", "luke munton"
+	{ 0, RETAIN_NONE, 0, CREDITSTYLE_NAME2,      gettext_noop("gary phelps\n"),gettext_noop("andrew wilson\n") }, // "gary phelps", "andrew wilson"
 
-	{ 1, RETAIN_BOTH, 0, CREDITSTYLE_HEADING2,    L_TITLE_093, L_TITLE_000 }, // "rare exterminators", ""
-	{ 1, RETAIN_NONE, 0, CREDITSTYLE_NAME2,       L_TITLE_099, L_TITLE_100 }, // "john silke", "matthew carter"
-	{ 1, RETAIN_NONE, 0, CREDITSTYLE_NAME2,       L_TITLE_101, L_TITLE_102 }, // "gavin price", "gareth stevenson"
-	{ 0, RETAIN_NONE, 0, CREDITSTYLE_NAME2,       L_TITLE_103, L_TITLE_001 }, // "bushbaby", "\n"
+	{ 1, RETAIN_BOTH, 0, CREDITSTYLE_HEADING2,   gettext_noop("rare exterminators\n"), gettext_noop("") }, // "rare exterminators", ""
+	{ 1, RETAIN_NONE, 0, CREDITSTYLE_NAME2,      gettext_noop("john silke\n"),gettext_noop("matthew carter\n") }, // "john silke", "matthew carter"
+	{ 1, RETAIN_NONE, 0, CREDITSTYLE_NAME2,      gettext_noop("gavin price\n"),gettext_noop("gareth stevenson\n") }, // "gavin price", "gareth stevenson"
+	{ 0, RETAIN_NONE, 0, CREDITSTYLE_NAME2,      gettext_noop("bushbaby\n"),gettext_noop("\n") }, // "bushbaby", "\n"
 
-	{ 1, RETAIN_IN,   0, CREDITSTYLE_HEADING2,    L_TITLE_093, L_TITLE_000 }, // "rare exterminators", ""
-	{ 1, RETAIN_NONE, 0, CREDITSTYLE_NAME2,       L_TITLE_104, L_TITLE_105 }, // "stephen stamper", "ross bullimore"
-	{ 1, RETAIN_NONE, 0, CREDITSTYLE_NAME2,       L_TITLE_106, L_TITLE_107 }, // "justin cook", "dale murchie"
-	{ 0, RETAIN_NONE, 0, CREDITSTYLE_NAME2,       L_TITLE_108, L_TITLE_001 }, // "roger smith", "\n"
+	{ 1, RETAIN_IN,   0, CREDITSTYLE_HEADING2,   gettext_noop("rare exterminators\n"), gettext_noop("") }, // "rare exterminators", ""
+	{ 1, RETAIN_NONE, 0, CREDITSTYLE_NAME2,      gettext_noop("stephen stamper\n"),gettext_noop("ross bullimore\n") }, // "stephen stamper", "ross bullimore"
+	{ 1, RETAIN_NONE, 0, CREDITSTYLE_NAME2,      gettext_noop("justin cook\n"),gettext_noop("dale murchie\n") }, // "justin cook", "dale murchie"
+	{ 0, RETAIN_NONE, 0, CREDITSTYLE_NAME2,      gettext_noop("roger smith\n"),gettext_noop("\n") }, // "roger smith", "\n"
 
-	{ 1, RETAIN_NONE, 0, CREDITSTYLE_HEADING2,    L_TITLE_070, L_TITLE_000 }, // "ci techs", ""
-	{ 1, RETAIN_NONE, 0, CREDITSTYLE_NAME2,       L_TITLE_071, L_TITLE_072 }, // "richard 'force 9' gale", "mark green"
-	{ 0, RETAIN_NONE, 0, CREDITSTYLE_NAME2,       L_TITLE_073, L_TITLE_074 }, // "alex zoro", "mark wilson"
+	{ 1, RETAIN_NONE, 0, CREDITSTYLE_HEADING2,   gettext_noop("ci techs\n"), gettext_noop("") }, // "ci techs", ""
+	{ 1, RETAIN_NONE, 0, CREDITSTYLE_NAME2,      gettext_noop("richard 'force 9' gale\n"),gettext_noop("mark green\n") }, // "richard 'force 9' gale", "mark green"
+	{ 0, RETAIN_NONE, 0, CREDITSTYLE_NAME2,      gettext_noop("alex zoro\n"),gettext_noop("mark wilson\n") }, // "alex zoro", "mark wilson"
 
-	{ 1, RETAIN_NONE, 0, CREDITSTYLE_HEADING2,    L_TITLE_075, L_TITLE_000 }, // "hard and wary support", ""
-	{ 1, RETAIN_NONE, 0, CREDITSTYLE_NAME2,       L_TITLE_076, L_TITLE_077 }, // "pete 'hardrom' cox", "maul 'max' mikell"
-	{ 0, RETAIN_NONE, 0, CREDITSTYLE_NAME2,       L_TITLE_078, L_TITLE_000 }, // "doug crouch", ""
+	{ 1, RETAIN_NONE, 0, CREDITSTYLE_HEADING2,   gettext_noop("hard and wary support\n"), gettext_noop("") }, // "hard and wary support", ""
+	{ 1, RETAIN_NONE, 0, CREDITSTYLE_NAME2,      gettext_noop("pete 'hardrom' cox\n"),gettext_noop("paul 'max' mikell\n") }, // "pete 'hardrom' cox", "maul 'max' mikell"
+	{ 0, RETAIN_NONE, 0, CREDITSTYLE_NAME2,      gettext_noop("doug crouch\n"), gettext_noop("") }, // "doug crouch", ""
 
-	{ 1, RETAIN_NONE, 0, CREDITSTYLE_HEADING2,    L_TITLE_083, L_TITLE_000 }, // "motion capture", ""
-	{ 1, RETAIN_NONE, 0, CREDITSTYLE_NAME2,       L_TITLE_084, L_TITLE_085 }, // "alan tippertronic", "des easen"
-	{ 0, RETAIN_NONE, 0, CREDITSTYLE_NAME2,       L_TITLE_086, L_TITLE_000 }, // "jim 'love' ballard", ""
+	{ 1, RETAIN_NONE, 0, CREDITSTYLE_HEADING2,   gettext_noop("motion capture\n"), gettext_noop("") }, // "motion capture", ""
+	{ 1, RETAIN_NONE, 0, CREDITSTYLE_NAME2,      gettext_noop("alan tippertronic\n"),gettext_noop("des easen\n") }, // "alan tippertronic", "des easen"
+	{ 0, RETAIN_NONE, 0, CREDITSTYLE_NAME2,      gettext_noop("jim 'love' ballard\n"), gettext_noop("") }, // "jim 'love' ballard", ""
 
-	{ 1, RETAIN_NONE, 0, CREDITSTYLE_HEADING2,    L_TITLE_087, L_TITLE_000 }, // "going through the motions", ""
-	{ 1, RETAIN_NONE, 0, CREDITSTYLE_NAME2,       L_TITLE_088, L_TITLE_089 }, // "duncan 'bot' botwood", "michelle tipper"
-	{ 1, RETAIN_NONE, 0, CREDITSTYLE_NAME2,       L_TITLE_090, L_TITLE_091 }, // "sue 'falling' fell", "doug 'crouch' crouch"
-	{ 0, RETAIN_NONE, 0, CREDITSTYLE_NAME2,       L_TITLE_092, L_TITLE_000 }, // "ross bury", ""
+	{ 1, RETAIN_NONE, 0, CREDITSTYLE_HEADING2,   gettext_noop("going through the motions\n"), gettext_noop("") }, // "going through the motions", ""
+	{ 1, RETAIN_NONE, 0, CREDITSTYLE_NAME2,      gettext_noop("duncan 'bot' botwood\n"),gettext_noop("michelle tipper\n") }, // "duncan 'bot' botwood", "michelle tipper"
+	{ 1, RETAIN_NONE, 0, CREDITSTYLE_NAME2,      gettext_noop("sue 'falling' fell\n"),gettext_noop("doug 'crouch' crouch\n") }, // "sue 'falling' fell", "doug 'crouch' crouch"
+	{ 0, RETAIN_NONE, 0, CREDITSTYLE_NAME2,      gettext_noop("ross bury\n"), gettext_noop("") }, // "ross bury", ""
 
-	{ 1, RETAIN_NONE, 0, CREDITSTYLE_HEADING2,    L_TITLE_118, L_TITLE_000 }, // "testing (rare miami)", ""
-	{ 0, RETAIN_NONE, 0, CREDITSTYLE_NAME2,       L_TITLE_119, L_TITLE_000 }, // "keith coll", ""
+	{ 1, RETAIN_NONE, 0, CREDITSTYLE_HEADING2,   gettext_noop("testing (rare miami)\n"), gettext_noop("") }, // "testing (rare miami)", ""
+	{ 0, RETAIN_NONE, 0, CREDITSTYLE_NAME2,      gettext_noop("keith coll\n"), gettext_noop("") }, // "keith coll", ""
 
-	{ 1, RETAIN_NONE, 0, CREDITSTYLE_HEADING1,    L_TITLE_113, L_TITLE_000 }, // "rare in the sun", ""
-	{ 1, RETAIN_NONE, 0, CREDITSTYLE_NAME1,       L_TITLE_114, L_TITLE_115 }, // "joel hochberg", ""
-	{ 0, RETAIN_NONE, 0, CREDITSTYLE_NAME1,       L_TITLE_116, L_TITLE_117 }, // "scott hochberg", ""
+	{ 1, RETAIN_NONE, 0, CREDITSTYLE_HEADING1,   gettext_noop("rare in the sun\n"), gettext_noop("") }, // "rare in the sun", ""
+	{ 1, RETAIN_NONE, 0, CREDITSTYLE_NAME1,      gettext_noop("joel hochberg\n"),gettext_noop("eileen hochberg\n") }, // "joel hochberg", ""
+	{ 0, RETAIN_NONE, 0, CREDITSTYLE_NAME1,      gettext_noop("scott hochberg\n"),gettext_noop("jerry rogowski\n") }, // "scott hochberg", ""
 
-	{ 1, RETAIN_NONE, 0, CREDITSTYLE_HEADING1,    L_TITLE_110, L_TITLE_000 }, // "dark commanders", ""
-	{ 0, RETAIN_NONE, 0, CREDITSTYLE_NAME1,       L_TITLE_111, L_TITLE_112 }, // "bis", "wombat"
+	{ 1, RETAIN_NONE, 0, CREDITSTYLE_HEADING1,   gettext_noop("dark commanders\n"), gettext_noop("") }, // "dark commanders", ""
+	{ 0, RETAIN_NONE, 0, CREDITSTYLE_NAME1,      gettext_noop("bis\n"),gettext_noop("wombat\n") }, // "bis", "wombat"
 
-	{ 1, RETAIN_OUT,  0, CREDITSTYLE_HEADING2,    L_TITLE_120, L_TITLE_000 }, // "testing (noa)", ""
-	{ 1, RETAIN_NONE, 0, CREDITSTYLE_NAME2,       L_TITLE_121, L_TITLE_122 }, // "michael kelbaugh", "tim bechtel"
-	{ 0, RETAIN_NONE, 0, CREDITSTYLE_NAME2,       L_TITLE_123, L_TITLE_124 }, // "tom hertzog", "melvin 'sherwood' forrest"
+	{ 1, RETAIN_OUT,  0, CREDITSTYLE_HEADING2,   gettext_noop("testing (noa)\n"), gettext_noop("") }, // "testing (noa)", ""
+	{ 1, RETAIN_NONE, 0, CREDITSTYLE_NAME2,      gettext_noop("michael kelbaugh\n"),gettext_noop("tim bechtel\n") }, // "michael kelbaugh", "tim bechtel"
+	{ 0, RETAIN_NONE, 0, CREDITSTYLE_NAME2,      gettext_noop("tom hertzog\n"),gettext_noop("melvin 'sherwood' forrest\n") }, // "tom hertzog", "melvin 'sherwood' forrest"
 
-	{ 1, RETAIN_IN,   0, CREDITSTYLE_HEADING2,    L_TITLE_120, L_TITLE_000 }, // "testing (noa)", ""
-	{ 1, RETAIN_NONE, 0, CREDITSTYLE_NAME2,       L_TITLE_125, L_TITLE_126 }, // "dougall campbell", "roger harrison"
-	{ 0, RETAIN_NONE, 0, CREDITSTYLE_NAME2,       L_TITLE_127, L_TITLE_001 }, // "jeff kalles", "\n"
+	{ 1, RETAIN_IN,   0, CREDITSTYLE_HEADING2,   gettext_noop("testing (noa)\n"), gettext_noop("") }, // "testing (noa)", ""
+	{ 1, RETAIN_NONE, 0, CREDITSTYLE_NAME2,      gettext_noop("dougall campbell\n"),gettext_noop("roger harrison\n") }, // "dougall campbell", "roger harrison"
+	{ 0, RETAIN_NONE, 0, CREDITSTYLE_NAME2,      gettext_noop("jeff kalles\n"),gettext_noop("\n") }, // "jeff kalles", "\n"
 
-	{ 0, RETAIN_NONE, 0, CREDITSTYLE_CORETEAM,    L_TITLE_128, L_TITLE_129 }, // "the perfect core", "-darker than you"
+	{ 0, RETAIN_NONE, 0, CREDITSTYLE_CORETEAM,   gettext_noop("the perfect core\n"),gettext_noop("-darker than you\n") }, // "the perfect core", "-darker than you"
 
-	{ 1, RETAIN_NONE, 0, CREDITSTYLE_HEADING2,    L_TITLE_130, L_TITLE_000 }, // "treehouse", ""
-	{ 1, RETAIN_NONE, 0, CREDITSTYLE_NAME2,       L_TITLE_131, L_TITLE_132 }, // "armond williams junior", "henry sterchi"
-	{ 0, RETAIN_NONE, 0, CREDITSTYLE_NAME2,       L_TITLE_133, L_TITLE_000 }, // "ed ridgeway", ""
+	{ 1, RETAIN_NONE, 0, CREDITSTYLE_HEADING2,   gettext_noop("treehouse\n"), gettext_noop("") }, // "treehouse", ""
+	{ 1, RETAIN_NONE, 0, CREDITSTYLE_NAME2,      gettext_noop("armond williams junior\n"),gettext_noop("henry sterchi\n") }, // "armond williams junior", "henry sterchi"
+	{ 0, RETAIN_NONE, 0, CREDITSTYLE_NAME2,      gettext_noop("ed ridgeway\n"), gettext_noop("") }, // "ed ridgeway", ""
 
-#if VERSION == VERSION_JPN_FINAL
-	{ 1, RETAIN_OUT,  0, CREDITSTYLE_HEADING1,    L_TITLE_184, L_TITLE_000 }, // "ncl staff", ""
-	{ 1, RETAIN_NONE, 0, CREDITSTYLE_NAME1,       L_TITLE_185, L_TITLE_186 }, // "s. miyamoto", "k. miki"
-	{ 0, RETAIN_NONE, 0, CREDITSTYLE_NAME1,       L_TITLE_187, L_TITLE_188 }, // "s. kojoh", "y. nakano"
+	// JPN
+	{ 1, RETAIN_OUT,  0, CREDITSTYLE_HEADING1,   gettext_noop("ncl staff\n"), gettext_noop("") }, // "ncl staff", ""
+	{ 1, RETAIN_NONE, 0, CREDITSTYLE_NAME1,      gettext_noop("s. miyamoto\n"), gettext_noop("s. miyamoto\n") }, // "s. miyamoto", "k. miki"
+	{ 0, RETAIN_NONE, 0, CREDITSTYLE_NAME1,      gettext_noop("s. kojoh\n"), gettext_noop("y. nakano\n") }, // "s. kojoh", "y. nakano"
 
-	{ 1, RETAIN_IN,   0, CREDITSTYLE_HEADING1,    L_TITLE_184, L_TITLE_000 }, // "ncl staff", ""
-	{ 1, RETAIN_NONE, 0, CREDITSTYLE_NAME1,       L_TITLE_189, L_TITLE_190 }, // "k.yamaguchi", "k. terasaki"
-	{ 0, RETAIN_NONE, 0, CREDITSTYLE_NAME1,       L_TITLE_191, L_TITLE_192 }, // "m. goto", "super mario club"
-#endif
+	{ 1, RETAIN_IN,   0, CREDITSTYLE_HEADING1,   gettext_noop("ncl staff\n"), gettext_noop("") }, // "ncl staff", ""
+	{ 1, RETAIN_NONE, 0, CREDITSTYLE_NAME1,      gettext_noop("k. yamaguchi\n"), gettext_noop("k. terasaki") }, // "k.yamaguchi", "k. terasaki"
+	{ 0, RETAIN_NONE, 0, CREDITSTYLE_NAME1,      gettext_noop("k. miki\n"), gettext_noop("super mario club\n") }, // "m. goto", "super mario club"
 
-#if VERSION == VERSION_PAL_FINAL
-	{ 1, RETAIN_OUT,  0, CREDITSTYLE_HEADING2,    L_TITLE_151, L_TITLE_000 }, // "testing (noe)"
-	{ 1, RETAIN_NONE, 0, CREDITSTYLE_SUPERVISOR,  L_TITLE_152, L_TITLE_153 }, // "supervisor", "kai 'jellybean' neumann"
-	{ 0, RETAIN_NONE, 0, CREDITSTYLE_SUPERVISOR,  L_TITLE_154, L_TITLE_155 }, // "deputy supervisor", "maurice 'pathfinder' tisdale"
+	// PAL
+	{ 1, RETAIN_OUT,  0, CREDITSTYLE_HEADING2,   gettext_noop("testing (noe)\n"), gettext_noop("") }, // "testing (noe)"
+	{ 1, RETAIN_NONE, 0, CREDITSTYLE_SUPERVISOR, gettext_noop("supervisor\n"),gettext_noop("kai 'jellybean' neumann\n") }, // "supervisor", "kai 'jellybean' neumann"
+	{ 0, RETAIN_NONE, 0, CREDITSTYLE_SUPERVISOR, gettext_noop("deputy supervisor\n"),gettext_noop("maurice 'pathfinder' tisdale\n") }, // "deputy supervisor", "maurice 'pathfinder' tisdale"
 
-	{ 1, RETAIN_IN,   0, CREDITSTYLE_HEADING2,    L_TITLE_151, L_TITLE_000 }, // "testing (noe)"
-	{ 1, RETAIN_NONE, 0, CREDITSTYLE_SUPERVISOR,  L_TITLE_156, L_TITLE_157 }, // "coordinators", "patrick 'capricorn' thieret"
-	{ 0, RETAIN_NONE, 0, CREDITSTYLE_NAME2,       L_TITLE_158, L_TITLE_001 }, // "andreas 'brennero' dietz", "\n"
+	{ 1, RETAIN_IN,   0, CREDITSTYLE_HEADING2,   gettext_noop("testing (noe)\n"), gettext_noop("") }, // "testing (noe)"
+	{ 1, RETAIN_NONE, 0, CREDITSTYLE_SUPERVISOR, gettext_noop("coordinators\n"),gettext_noop("patrick 'capricorn' thieret\n") }, // "coordinators", "patrick 'capricorn' thieret"
+	{ 0, RETAIN_NONE, 0, CREDITSTYLE_NAME2,      gettext_noop("andreas 'brennero' dietz\n"),gettext_noop("\n") }, // "andreas 'brennero' dietz", "\n"
 
-	{ 1, RETAIN_NONE, 0, CREDITSTYLE_HEADING2,    L_TITLE_162, L_TITLE_000 }, // "localization (french)"
-	{ 1, RETAIN_NONE, 0, CREDITSTYLE_EDITOR,      L_TITLE_159, L_TITLE_163 }, // "editor", "julien 'sexy boy' bardakoff"
-	{ 1, RETAIN_NONE, 0, CREDITSTYLE_ASSISTANT,   L_TITLE_161, L_TITLE_164 }, // "assistant editors", "jean-baptiste 'ours noir' fleury"
-	{ 0, RETAIN_NONE, 0, CREDITSTYLE_ASSISTANT,   L_TITLE_165, L_TITLE_166 }, // "nicolas 'darth lapinou' gourio", "nicolas 'el betal' robert"
+	{ 1, RETAIN_NONE, 0, CREDITSTYLE_HEADING2,   gettext_noop("localization (french)\n"), gettext_noop("") }, // "localization (french)"
+	{ 1, RETAIN_NONE, 0, CREDITSTYLE_EDITOR,     gettext_noop("editor\n"),gettext_noop("julien 'sexy boy' bardakoff\n") }, // "editor", "julien 'sexy boy' bardakoff"
+	{ 1, RETAIN_NONE, 0, CREDITSTYLE_ASSISTANT,  gettext_noop("assistant editors\n"),gettext_noop("jean-baptiste 'ours noir' fleury\n") }, // "assistant editors", "jean-baptiste 'ours noir' fleury"
+	{ 0, RETAIN_NONE, 0, CREDITSTYLE_ASSISTANT,  gettext_noop("nicolas 'darth lapinou' gourio\n"),gettext_noop("nicolas 'el betal' robert\n") }, // "nicolas 'darth lapinou' gourio", "nicolas 'el betal' robert"
 
-	{ 1, RETAIN_NONE, 0, CREDITSTYLE_HEADING2,    L_TITLE_167, L_TITLE_000 }, // "localization (german)"
-	{ 1, RETAIN_NONE, 0, CREDITSTYLE_EDITOR,      L_TITLE_159, L_TITLE_168 }, // "editor", "micky 'scorpio's movement' auer"
-	{ 0, RETAIN_NONE, 0, CREDITSTYLE_ASSISTANT,   L_TITLE_160, L_TITLE_169 }, // "assistant editor", "jan 'ian' peitzmeier"
+	{ 1, RETAIN_NONE, 0, CREDITSTYLE_HEADING2,   gettext_noop("localization (german)\n"), gettext_noop("") }, // "localization (german)"
+	{ 1, RETAIN_NONE, 0, CREDITSTYLE_EDITOR,     gettext_noop("editor\n"),gettext_noop("micky 'scorpio's movement' auer\n") }, // "editor", "micky 'scorpio's movement' auer"
+	{ 0, RETAIN_NONE, 0, CREDITSTYLE_ASSISTANT,  gettext_noop("assistant editor\n"),gettext_noop("jan 'ian' peitzmeier\n") }, // "assistant editor", "jan 'ian' peitzmeier"
 
-	{ 1, RETAIN_NONE, 0, CREDITSTYLE_HEADING2,    L_TITLE_170, L_TITLE_000 }, // "localization (italian)"
-	{ 1, RETAIN_NONE, 0, CREDITSTYLE_EDITOR,      L_TITLE_159, L_TITLE_171 }, // "editor", "elenor isbitish"
-	{ 0, RETAIN_NONE, 0, CREDITSTYLE_ASSISTANT,   L_TITLE_160, L_TITLE_172 }, // "assistant editor", "calimero tiiiun"
+	{ 1, RETAIN_NONE, 0, CREDITSTYLE_HEADING2,   gettext_noop("localization (italian)\n"), gettext_noop("") }, // "localization (italian)"
+	{ 1, RETAIN_NONE, 0, CREDITSTYLE_EDITOR,     gettext_noop("editor\n"),gettext_noop("elenor isbitish\n") }, // "editor", "elenor isbitish"
+	{ 0, RETAIN_NONE, 0, CREDITSTYLE_ASSISTANT,  gettext_noop("assistant editor\n"),gettext_noop("calimero tiiiun\n") }, // "assistant editor", "calimero tiiiun"
 
-	{ 1, RETAIN_NONE, 0, CREDITSTYLE_HEADING2,    L_TITLE_173, L_TITLE_000 }, // "localization (spanish)"
-	{ 1, RETAIN_NONE, 0, CREDITSTYLE_EDITOR,      L_TITLE_159, L_TITLE_174 }, // "editor", "antonio 'toro' greppi"
-	{ 1, RETAIN_NONE, 0, CREDITSTYLE_ASSISTANT,   L_TITLE_161, L_TITLE_175 }, // "assistant editors", "carlos 'yoshio' montilla"
-	{ 0, RETAIN_NONE, 0, CREDITSTYLE_ASSISTANT,   L_TITLE_176, L_TITLE_000 }, // "susa & natalia"
+	{ 1, RETAIN_NONE, 0, CREDITSTYLE_HEADING2,   gettext_noop("localization (spanish)\n"), gettext_noop("") }, // "localization (spanish)"
+	{ 1, RETAIN_NONE, 0, CREDITSTYLE_EDITOR,     gettext_noop("editor\n"),gettext_noop("antonio 'toro' greppi\n") }, // "editor", "antonio 'toro' greppi"
+	{ 1, RETAIN_NONE, 0, CREDITSTYLE_ASSISTANT,  gettext_noop("assistant editors\n"),gettext_noop("carlos 'yoshio' montilla\n") }, // "assistant editors", "carlos 'yoshio' montilla"
+	{ 0, RETAIN_NONE, 0, CREDITSTYLE_ASSISTANT,  gettext_noop("susa & natalia\n"), gettext_noop("") }, // "susa & natalia"
 
-	{ 1, RETAIN_NONE, 0, CREDITSTYLE_HEADING2,    L_TITLE_177, L_TITLE_000 }, // "localization"
-	{ 1, RETAIN_NONE, 0, CREDITSTYLE_EDITOR,      L_TITLE_178, L_TITLE_179 }, // "product coordinator", "andy 'fiedl' fey"
-	{ 1, RETAIN_NONE, 0, CREDITSTYLE_EDITOR,      L_TITLE_180, L_TITLE_181 }, // "product supervisor", "tanja 'personalized sarcasm' baar"
-	{ 1, RETAIN_NONE, 0, CREDITSTYLE_ASSISTANT,   L_TITLE_182, L_TITLE_183 }, // "product localization manager", "kai '0 to 100' zeh"
-#endif
+	{ 1, RETAIN_NONE, 0, CREDITSTYLE_HEADING2,   gettext_noop("localization\n"), gettext_noop("") }, // "localization"
+	{ 1, RETAIN_NONE, 0, CREDITSTYLE_EDITOR,     gettext_noop("product coordinator\n"),gettext_noop("andy 'fiedl' fey\n") }, // "product coordinator", "andy 'fiedl' fey"
+	{ 1, RETAIN_NONE, 0, CREDITSTYLE_EDITOR,     gettext_noop("product supervisor\n"),gettext_noop("tanja 'personalized sarcasm' baar\n") }, // "product supervisor", "tanja 'personalized sarcasm' baar"
+	{ 1, RETAIN_NONE, 0, CREDITSTYLE_ASSISTANT,  gettext_noop("product localization manager\n"),gettext_noop("kai '0 to 100' zeh\n") }, // "product localization manager", "kai '0 to 100' zeh"
 
-#if VERSION >= VERSION_NTSC_1_0
-	{ 1, RETAIN_NONE, 0, CREDITSTYLE_HEADING2,    L_TITLE_134, L_TITLE_000 }, // "perfect spelling", ""
-	{ 0, RETAIN_NONE, 0, CREDITSTYLE_NAME2,       L_TITLE_135, L_TITLE_000 }, // "teresa lillygren", ""
-#endif
+	// VERSION_NTSC_1_0
+	{ 1, RETAIN_NONE, 0, CREDITSTYLE_HEADING2,   gettext_noop("perfect spelling\n"), gettext_noop("") }, // "perfect spelling", ""
+	{ 0, RETAIN_NONE, 0, CREDITSTYLE_NAME2,      gettext_noop("teresa lillygren\n"), gettext_noop("") }, // "teresa lillygren", ""
 
-	{ 1, RETAIN_OUT,  0, CREDITSTYLE_HEADING1,    L_TITLE_136, L_TITLE_000 }, // "nintendo", ""
-	{ 1, RETAIN_NONE, 0, CREDITSTYLE_NAME1,       L_TITLE_137, L_TITLE_138 }, // "mr arakawa", ""
-	{ 0, RETAIN_NONE, 0, CREDITSTYLE_NAME1,       L_TITLE_139, L_TITLE_140 }, // "don james", ""
+	{ 1, RETAIN_OUT,  0, CREDITSTYLE_HEADING1,   gettext_noop("nintendo\n"), gettext_noop("") }, // "nintendo", ""
+	{ 1, RETAIN_NONE, 0, CREDITSTYLE_NAME1,      gettext_noop("mr arakawa\n"),gettext_noop("mike fukuda\n") }, // "mr arakawa", ""
+	{ 0, RETAIN_NONE, 0, CREDITSTYLE_NAME1,      gettext_noop("don james\n"),gettext_noop("michael kelbaugh\n") }, // "don james", ""
 
-	{ 1, RETAIN_IN,   0, CREDITSTYLE_HEADING1,    L_TITLE_136, L_TITLE_000 }, // "nintendo", ""
-	{ 1, RETAIN_NONE, 0, CREDITSTYLE_NAME1,       L_TITLE_141, L_TITLE_142 }, // "howard lincoln", "ken lobb"
-	{ 0, RETAIN_NONE, 0, CREDITSTYLE_NAME1,       L_TITLE_143, L_TITLE_144 }, // "jacqualee story", "gail tilden"
+	{ 1, RETAIN_IN,   0, CREDITSTYLE_HEADING1,   gettext_noop("nintendo\n"), gettext_noop("") }, // "nintendo", ""
+	{ 1, RETAIN_NONE, 0, CREDITSTYLE_NAME1,      gettext_noop("howard lincoln\n"),gettext_noop("ken lobb\n") }, // "howard lincoln", "ken lobb"
+	{ 0, RETAIN_NONE, 0, CREDITSTYLE_NAME1,      gettext_noop("jacqualee story\n"),gettext_noop("gail tilden\n") }, // "jacqualee story", "gail tilden"
 
-	{ 1, RETAIN_NONE, 1, CREDITSTYLE_RAREDESIGNS, L_TITLE_148, L_TITLE_149 }, // "rare", "designs on the future"
-	{ 1, RETAIN_NONE, 0, CREDITSTYLE_COPYRIGHT,   L_TITLE_001, L_TITLE_145 }, // "\n", "copyright rare 2000"
-	{ 0, RETAIN_NONE, 0, CREDITSTYLE_COPYRIGHT,   L_TITLE_146, L_TITLE_147 }, // "perfect dark and the pd device", "are trademarks"
+	{ 1, RETAIN_NONE, 1, CREDITSTYLE_RAREDESIGNS,gettext_noop("rare\n"),gettext_noop("designs on the future\n") }, // "rare", "designs on the future"
+	{ 1, RETAIN_NONE, 0, CREDITSTYLE_COPYRIGHT,   gettext_noop("\n"),gettext_noop("copyright rare 2000\n") }, // "\n", "copyright rare 2000"
+	{ 0, RETAIN_NONE, 0, CREDITSTYLE_COPYRIGHT,  gettext_noop("perfect dark and the pd device\n"),gettext_noop("are trademarks\n") }, // "perfect dark and the pd device", "are trademarks"
 
-	{ 0, RETAIN_NONE, 0, CREDITSTYLE_COPYRIGHT,   L_TITLE_150, L_TITLE_000 }, // "perfect dark is forever", ""
+	{ 0, RETAIN_NONE, 0, CREDITSTYLE_COPYRIGHT,  gettext_noop("perfect dark is forever\n"), gettext_noop("") }, // "perfect dark is forever", ""
 
-	{ 0, RETAIN_NONE, 0, CREDITSTYLE_TERMINATOR,  L_TITLE_000, L_TITLE_000 }, // "", ""
+	{ 0, RETAIN_NONE, 0, CREDITSTYLE_TERMINATOR,  gettext_noop(""), gettext_noop("") }, // "", ""
 };
 
 /**
@@ -1392,8 +1392,8 @@ Gfx *creditsDrawSlide(Gfx *gdl)
 			return gdl;
 		}
 
-		texts[index + 0] = langGet(credits[i]->text1);
-		texts[index + 1] = langGet(credits[i]->text2);
+		texts[index + 0] = _(credits[i]->text1);
+		texts[index + 1] = _(credits[i]->text2);
 
 		// Choose first font
 		switch (credits[i]->style) {

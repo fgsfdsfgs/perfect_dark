@@ -403,95 +403,95 @@ msgstr "Ｇ５ビル！\n"
 
 #. L_MISC_143
 msgid "A51 Infiltration"
-msgstr "Ａ５１　突破\n"
+msgstr "Ａ５１　突破"
 
 #. L_MISC_144
 msgid "A51 Infiltration X"
-msgstr "Ａ５１　突破！\n"
+msgstr "Ａ５１　突破！"
 
 #. L_MISC_145
 msgid "A51 Rescue"
-msgstr "Ａ５１　救出\n"
+msgstr "Ａ５１　救出"
 
 #. L_MISC_146
 msgid "A51 Rescue X"
-msgstr "Ａ５１　救出！\n"
+msgstr "Ａ５１　救出！"
 
 #. L_MISC_147
 msgid "A51 Escape"
-msgstr "Ａ５１　脱出\n"
+msgstr "Ａ５１　脱出"
 
 #. L_MISC_148
 msgid "A51 Escape X"
-msgstr "Ａ５１　脱出！\n"
+msgstr "Ａ５１　脱出！"
 
 #. L_MISC_149
 msgid "Air Base"
-msgstr "空軍基地\n"
+msgstr "空軍基地"
 
 #. L_MISC_150
 msgid "Air Base X"
-msgstr "空軍基地！\n"
+msgstr "空軍基地！"
 
 #. L_MISC_151
 msgid "Air Force One"
-msgstr "大統領専用機\n"
+msgstr "大統領専用機"
 
 #. L_MISC_152
 msgid "Air Force One X"
-msgstr "大統領専用機！\n"
+msgstr "大統領専用機！"
 
 #. L_MISC_153
 msgid "Crash Site"
-msgstr "墜落現場\n"
+msgstr "墜落現場"
 
 #. L_MISC_154
 msgid "Crash Site X"
-msgstr "墜落現場！\n"
+msgstr "墜落現場！"
 
 #. L_MISC_155
 msgid "Pelagic II"
-msgstr "ペラジック２\n"
+msgstr "ペラジック２"
 
 #. L_MISC_156
 msgid "Pelagic II X"
-msgstr "ペラジック２！\n"
+msgstr "ペラジック２！"
 
 #. L_MISC_157
 msgid "Deep Sea"
-msgstr "深海\n"
+msgstr "深海"
 
 #. L_MISC_158
 msgid "Deep Sea X"
-msgstr "深海！\n"
+msgstr "深海！"
 
 #. L_MISC_159
 msgid "Institute Defense"
-msgstr "協会の防衛\n"
+msgstr "協会の防衛"
 
 #. L_MISC_160
 msgid "Institute Defense X"
-msgstr "協会の防衛！\n"
+msgstr "協会の防衛！"
 
 #. L_MISC_161
 msgid "Attack Ship"
-msgstr "スケダー宇宙船\n"
+msgstr "スケダー宇宙船"
 
 #. L_MISC_162
 msgid "Attack Ship X"
-msgstr "スケダー宇宙船！\n"
+msgstr "スケダー宇宙船！"
 
 #. L_MISC_163
 msgid "Skedar Ruins"
-msgstr "スケダーの神殿\n"
+msgstr "スケダーの神殿"
 
 #. L_MISC_164
 msgid "Skedar Ruins X"
-msgstr "スケダーの神殿！\n"
+msgstr "スケダーの神殿！"
 
 #. L_MISC_165
 msgid "End Credits"
-msgstr "エンディング\n"
+msgstr "エンディング"
 
 #. L_MISC_166
 msgid "Random\n"
@@ -788,10 +788,6 @@ msgstr "Blue Rinse"
 #. L_MISC_437
 msgid "Player"
 msgstr "Player"
-
-#. L_MISC_438
-msgid ""
-msgstr ""
 
 #. L_MISC_439
 msgid "Identify\n"

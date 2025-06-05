@@ -33,6 +33,9 @@
 #include "string.h"
 #ifndef PLATFORM_N64
 #include "video.h"
+#include <libintl.h>
+#define _(String) gettext (String)
+#define gettext_noop(String) String
 #endif
 
 #ifdef PLATFORM_N64
@@ -266,7 +269,7 @@ struct legalelement {
 	s16 unused04;
 	s16 unused06;
 	s16 type;
-	u16 textid;
+	char *textid;
 #ifndef PLATFORM_N64
 	const char *textptr;
 #endif
@@ -296,31 +299,31 @@ struct legalelement g_LegalElements[] = {
 	{ 69,  433, 0, 1, LEGALELEMENTTYPE_BLUETEXTSM,  L_OPTIONS_093   }, // "rare designs on the future <<<"
 	{ 69,  343, 0, 1, LEGALELEMENTTYPE_DOLBYLOGO,   0               },
 #else
-	{ 49,  179, 1, 1, LEGALELEMENTTYPE_BLUETEXTLG,  L_OPTIONS_077 }, // "Nintendo 64 Product Identification"
+	{ 49,  179, 1, 1, LEGALELEMENTTYPE_BLUETEXTLG,  gettext_noop("Nintendo 64 Product Identification\n") }, // "Nintendo 64 Product Identification"
 	{ 49,  200, 1, 1, LEGALELEMENTTYPE_LINE,        0             },
-	{ 69,  207, 1, 1, LEGALELEMENTTYPE_BLUETEXTLG,  L_OPTIONS_078 }, // "Product ID:"
-	{ 69,  227, 1, 1, LEGALELEMENTTYPE_BLUETEXTLG,  L_OPTIONS_079 }, // "Product Code:"
-	{ 69,  247, 1, 1, LEGALELEMENTTYPE_BLUETEXTLG,  L_OPTIONS_080 }, // "Variant:"
-	{ 69,  267, 1, 1, LEGALELEMENTTYPE_BLUETEXTLG,  L_OPTIONS_081 }, // "Developer:"
-	{ 249, 207, 1, 1, LEGALELEMENTTYPE_BLUETEXTLG,  L_OPTIONS_082 }, // "Perfect Dark"
-	{ 249, 227, 1, 1, LEGALELEMENTTYPE_BLUETEXTLG,  L_OPTIONS_083 }, // "NUS-NPDE-USA"
-	{ 249, 247, 1, 1, LEGALELEMENTTYPE_BLUETEXTLG,  L_OPTIONS_084 }, // "NTSC version 8.7 final"
-	{ 249, 267, 1, 1, LEGALELEMENTTYPE_BLUETEXTLG,  L_OPTIONS_085 }, // "Rare Ltd. (twycross)"
+	{ 69,  207, 1, 1, LEGALELEMENTTYPE_BLUETEXTLG,  gettext_noop("Product ID:\n") }, // "Product ID:"
+	{ 69,  227, 1, 1, LEGALELEMENTTYPE_BLUETEXTLG,  gettext_noop("Product Code:\n") }, // "Product Code:"
+	{ 69,  247, 1, 1, LEGALELEMENTTYPE_BLUETEXTLG,  gettext_noop("Variant:\n") }, // "Variant:"
+	{ 69,  267, 1, 1, LEGALELEMENTTYPE_BLUETEXTLG,  gettext_noop("Developer:\n") }, // "Developer:"
+	{ 249, 207, 1, 1, LEGALELEMENTTYPE_BLUETEXTLG,  gettext_noop("Perfect Dark\n") }, // "Perfect Dark"
+	{ 249, 227, 1, 1, LEGALELEMENTTYPE_BLUETEXTLG,  gettext_noop("NUS-NPDE-USA\n") }, // "NUS-NPDE-USA"
+	{ 249, 247, 1, 1, LEGALELEMENTTYPE_BLUETEXTLG,  gettext_noop("NTSC version 8.7 final\n") }, // "NTSC version 8.7 final"
+	{ 249, 267, 1, 1, LEGALELEMENTTYPE_BLUETEXTLG,  gettext_noop("Rare Ltd. (twycross)\n") }, // "Rare Ltd. (twycross)"
 	{ 69,  290, 1, 1, LEGALELEMENTTYPE_LINE,        0             },
-	{ 69,  299, 0, 1, LEGALELEMENTTYPE_WHITETEXTLG, L_OPTIONS_076 }, // "N64 EXPANSION PAK"
+	{ 69,  299, 0, 1, LEGALELEMENTTYPE_WHITETEXTLG, gettext_noop("N64 EXPANSION PAK") }, // "N64 EXPANSION PAK"
 #if VERSION >= VERSION_PAL_BETA
 	{ -1,  296, 0, 1, LEGALELEMENTTYPE_WHITETEXTSM, L_OPTIONS_075 }, // "tm"
 	{ -1,  299, 0, 1, LEGALELEMENTTYPE_WHITETEXTLG, L_OPTIONS_074 }, // "NOT DETECTED"
 #else
-	{ 266, 296, 0, 1, LEGALELEMENTTYPE_WHITETEXTSM, L_OPTIONS_075 }, // "tm"
-	{ 286, 299, 0, 1, LEGALELEMENTTYPE_WHITETEXTLG, L_OPTIONS_074 }, // "NOT DETECTED"
+	{ 266, 296, 0, 1, LEGALELEMENTTYPE_WHITETEXTSM, gettext_noop("tm") }, // "tm"
+	{ 286, 299, 0, 1, LEGALELEMENTTYPE_WHITETEXTLG, gettext_noop("NOT DETECTED") }, // "NOT DETECTED"
 #endif
 	{ 69,  320, 1, 1, LEGALELEMENTTYPE_LINE,        0             },
-	{ 69,  328, 0, 1, LEGALELEMENTTYPE_BLUETEXTMD,  L_OPTIONS_087 }, // "The Rarewere Logo and Perfect Dark are ..."
-	{ 138, 343, 0, 1, LEGALELEMENTTYPE_BLUETEXTMD,  L_OPTIONS_088 }, // "Presented in Dolby Surround. Dolby and ..."
-	{ 69,  372, 0, 1, LEGALELEMENTTYPE_BLUETEXTMD,  L_OPTIONS_089 }, // "Uses Miles Sound System ..."
+	{ 69,  328, 0, 1, LEGALELEMENTTYPE_BLUETEXTMD,  gettext_noop("The Rareware Logo and Perfect Dark are trademarks of Rare Ltd.\n") }, // "The Rarewere Logo and Perfect Dark are ..."
+	{ 138, 343, 0, 1, LEGALELEMENTTYPE_BLUETEXTMD,  gettext_noop("Presented in Dolby Surround.  Dolby and the double-D\n") }, // "Presented in Dolby Surround. Dolby and ..."
+	{ 69,  372, 0, 1, LEGALELEMENTTYPE_BLUETEXTMD,  gettext_noop("Uses Miles Sound System Copyright 1991-1999 RAD Game Tools Inc.\nMPEG Layer-3 playback supplied with the Miles Sound System from\nRAD Game Tools, Inc. MPEG Layer-3 audio compression technology\nlicensed by Fraunhofer IIS and THOMSON multimedia\n") }, // "Uses Miles Sound System ..."
 	{ 69,  428, 1, 1, LEGALELEMENTTYPE_LINE,        0             },
-	{ 69,  433, 0, 1, LEGALELEMENTTYPE_BLUETEXTSM,  L_OPTIONS_093 }, // "rare designs on the future <<<"
+	{ 69,  433, 0, 1, LEGALELEMENTTYPE_BLUETEXTSM,  gettext_noop("rare designs on the future <<<\n") }, // "rare designs on the future <<<"
 	{ 69,  344, 0, 1, LEGALELEMENTTYPE_DOLBYLOGO,   0             },
 #endif
 };
@@ -368,11 +371,11 @@ Gfx *titleRenderLegal(Gfx *gdl)
 				font1 = g_CharsHandelGothicLg;
 				font2 = g_FontHandelGothicLg;
 #if !defined(PLATFORM_N64) && defined(VERSION_HASH)
-				if (elem->textid == L_OPTIONS_084) {
+				if (elem->textid == _("NTSC version 8.7 final\n")) {
 					elem->textptr = VERSION_HASH " (" VERSION_TARGET ")";
-				} else if (elem->textid == L_OPTIONS_083) {
+				} else if (elem->textid == _("NUS-NPDE-USA\n")) {
 					elem->textptr = VERSION_ROMID;
-				} else if (elem->textid == L_OPTIONS_082) {
+				} else if (elem->textid == _("Perfect Dark\n")) {
 					elem->textptr = "Perfect Dark (" VERSION_BRANCH ")";
 				}
 #endif
@@ -382,15 +385,15 @@ Gfx *titleRenderLegal(Gfx *gdl)
 				font2 = g_FontHandelGothicLg;
 				colour = 0xffffffff;
 
-				if (elem->textid == L_OPTIONS_074 || elem->textid == L_OPTIONS_073) {
+				if (elem->textid == _("NOT DETECTED") || elem->textid == _("DETECTED")) {
 #if VERSION >= VERSION_PAL_BETA
 					prevx += 10;
 #endif
 
 					if (IS4MB()) {
-						elem->textid = L_OPTIONS_074;
+						elem->textid = _("NOT DETECTED");
 					} else {
-						elem->textid = L_OPTIONS_073;
+						elem->textid = _("DETECTED");
 					}
 				}
 				break;
@@ -463,7 +466,7 @@ Gfx *titleRenderLegal(Gfx *gdl)
 #ifdef PLATFORM_N64
 #define ELEM_TEXT langGet(elem->textid)
 #else
-#define ELEM_TEXT (char *)(elem->textptr ? elem->textptr : langGet(elem->textid))
+#define ELEM_TEXT (char *)(elem->textptr ? elem->textptr : _(elem->textid))
 #endif
 #if VERSION == VERSION_JPN_FINAL
 				u32 stack;
@@ -1703,10 +1706,9 @@ void titleTickRarePresents(void)
 	}
 }
 
-Gfx *titleRenderTypewriterText(Gfx *gdl, s32 *x, s32 *y, u16 textnum, s32 timer, s32 *colourcomponent)
+Gfx *titleRenderTypewriterText(Gfx *gdl, s32 *x, s32 *y, char *text, s32 timer, s32 *colourcomponent)
 {
 	s32 lentoprint = timer / 3;
-	char *text = langGet(textnum);
 	s32 i;
 	u8 buffer[] = {'\0', '\0'};
 	s32 fulllen = strlen(text);
@@ -1756,15 +1758,15 @@ Gfx *titleRenderRarePresents(Gfx *gdl)
 	g_TitleTypewriterFinishing = false;
 
 	if (g_TitleMode == TITLEMODE_RAREPRESENTS1) {
-		gdl = titleRenderTypewriterText(gdl, &x, &y, L_OPTIONS_005, g_TitleTimer, &colourcomponent); // "earth:"
+		gdl = titleRenderTypewriterText(gdl, &x, &y, _("earth:"), g_TitleTimer, &colourcomponent); // "earth:"
 
 		if (g_TitleTimer > 70) {
 			x = viGetViewLeft() + 50;
 			y = viGetViewTop() + viGetViewHeight() - 60;
-			gdl = titleRenderTypewriterText(gdl, &x, &y, L_OPTIONS_006, g_TitleTimer - 100, &colourcomponent); // "   prehistory"
+			gdl = titleRenderTypewriterText(gdl, &x, &y, _("   prehistory"), g_TitleTimer - 100, &colourcomponent); // "   prehistory"
 		}
 	} else {
-		gdl = titleRenderTypewriterText(gdl, &x, &y, L_OPTIONS_007, g_TitleTimer - 35, &colourcomponent); // "rare presents"
+		gdl = titleRenderTypewriterText(gdl, &x, &y, _("rare presents"), g_TitleTimer - 35, &colourcomponent); // "rare presents"
 	}
 
 	gdl = text0f153780(gdl);
@@ -2353,7 +2355,7 @@ Gfx *titleRenderNoController(Gfx *gdl)
 	var80080108jf = 1;
 #else
 	// Line 1
-	text = langGet(L_OPTIONS_071); // "- no controller in controller socket 1 -"
+	text = _("- no controller in controller socket 1 -"); // "- no controller in controller socket 1 -"
 	textMeasure(&textheight, &textwidth, text, g_CharsHandelGothicLg, g_FontHandelGothicLg, 0);
 
 	x = 288 - (textwidth >> 1);
@@ -2368,7 +2370,7 @@ Gfx *titleRenderNoController(Gfx *gdl)
 	}
 
 	// Line 2
-	text = langGet(L_OPTIONS_072); // "please power off and attach a controller"
+	text = _("please power off and attach a controller"); // "please power off and attach a controller"
 	textMeasure(&textheight, &textwidth, text, g_CharsHandelGothicLg, g_FontHandelGothicLg, 0);
 
 	x = 288 - (textwidth >> 1);

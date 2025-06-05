@@ -834,10 +834,6 @@ msgstr "Blue Rinse"
 msgid "Player"
 msgstr "Spieler"
 
-#. L_MISC_438
-msgid ""
-msgstr ""
-
 #. L_MISC_439
 msgid "Identify\n"
 msgstr "Identifizieren\n"

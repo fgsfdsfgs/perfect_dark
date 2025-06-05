@@ -831,10 +831,6 @@ msgstr "Azulado"
 msgid "Player"
 msgstr "Jugador"
 
-#. L_MISC_438
-msgid ""
-msgstr ""
-
 #. L_MISC_439
 msgid "Identify\n"
 msgstr "Identificado\n"

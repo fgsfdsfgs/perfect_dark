@@ -228,14 +228,6 @@ msgstr "some "
 msgid "Some "
 msgstr "Some "
 
-#. L_PROPOBJ_058
-msgid ""
-msgstr ""
-
-#. L_PROPOBJ_059
-msgid ""
-msgstr ""
-
 #. L_PROPOBJ_060
 msgid "a "
 msgstr "a "
@@ -259,14 +251,6 @@ msgstr "the "
 #. L_PROPOBJ_065
 msgid "The "
 msgstr "The "
-
-#. L_PROPOBJ_066
-msgid ""
-msgstr ""
-
-#. L_PROPOBJ_067
-msgid ""
-msgstr ""
 
 #. L_PROPOBJ_068
 msgid "bolts"

@@ -825,10 +825,6 @@ msgstr "Rinçage bleu"
 msgid "Player"
 msgstr "Joueur"
 
-#. L_MISC_438
-msgid ""
-msgstr ""
-
 #. L_MISC_439
 msgid "Identify\n"
 msgstr "Identifier\n"

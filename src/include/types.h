@@ -3512,8 +3512,8 @@ struct credit {
 	u8 retain : 2;
 	u8 durationindex : 2;
 	u8 style;
-	u16 text1;
-	u16 text2;
+	char *text1;
+	char *text2;
 };
 
 struct sparktype {
@@ -4462,7 +4462,7 @@ struct textoverride {
 	/*0x10*/ u32 ownertext;      // eg. "Guard's\n"
 	/*0x14*/ u32 inventorytext;  // eg. "Medlab 2 key card\n"
 	/*0x18*/ u32 inventory2text; // eg. "Medlab 2 key card\n"
-	/*0x1c*/ u32 pickuptext;     // eg. "Picked up medlab 2 key card.\n"
+	/*0x1c*/ char *pickuptext;     // eg. "Picked up medlab 2 key card.\n"
 	/*0x20*/ struct textoverride *next;
 	/*0x24*/ struct defaultobj *obj;
 };
