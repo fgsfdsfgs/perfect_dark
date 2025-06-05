@@ -26,7 +26,7 @@ US_SOURCE_FILE_LOCATION = "src/assets/ntsc-final/lang"
 JPN_SOURCE_FILE_LOCATION = "src/assets/jpn-final/lang"
 
 L10N_BASE_LOCATION = "src/assets/i18n/locale"
-
+#L_TITLE_154
 poMeta = {
     'Project-Id-Version': 'Perfect Dark PC port localization',
     'POT-Creation-Date': f'{datetime.now(timezone.utc)}',
@@ -99,6 +99,15 @@ def main():
                         msg.msgstr = usItem["en"]
                         break
                 
+                if not found:
+                    msgid = item["en"]
+                    if msgid is None:
+                        skip_entry = True
+                        found = False
+                    else:
+                        msg.msgid = item["en"]
+                        msg.msgstr = item["en"]
+                        found = True
                 if not skip_entry and found:
                     us_messages.append(msg)
 
@@ -154,6 +163,35 @@ def main():
             os.makedirs(PurePath(L10N_BASE_LOCATION,"fr_FR"), exist_ok=True)
             os.makedirs(PurePath(L10N_BASE_LOCATION,"de_DE"), exist_ok=True)
             os.makedirs(PurePath(L10N_BASE_LOCATION,"es_ES"), exist_ok=True)
+
+            for entry in us_messages:
+                if(entry.msgid is None):                    
+                    entry.msgid = "<None>"
+                    us_messages.remove(entry)
+            for entry in gb_messages:
+                if(entry.msgid is None):
+                   entry.msgid = "<None>"
+                   gb_messages.remove(entry)
+            for entry in jp_messages:
+                if(entry.msgid is None):
+                    entry.msgid = "<None>"
+                    jp_messages.remove(entry)
+            for entry in it_messages:
+                if(entry.msgid is None):
+                    entry.msgid = "<None>"
+                    it_messages.remove(entry)
+            for entry in fr_messages:
+                if(entry.msgid is None):
+                    entry.msgid = "<None>"
+                    fr_messages.remove(entry)
+            for entry in de_messages:
+                if(entry.msgid is None):
+                    entry.msgid = "<None>"
+                    de_messages.remove(entry)
+            for entry in es_messages:
+                if(entry.msgid is None):
+                    entry.msgid = "<None>"
+                    es_messages.remove(entry)
 
             #us_messages.save(PurePath(L10N_BASE_LOCATION,"en_US", f"{textdomain}.po"))
             #gb_messages.save(PurePath(L10N_BASE_LOCATION,"en_GB", f"{textdomain}.po"))

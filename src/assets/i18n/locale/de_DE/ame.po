@@ -2,13 +2,13 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Perfect Dark PC port localization\n"
-"POT-Creation-Date: 2025-05-31 06:37:14.299892+00:00\n"
+"POT-Creation-Date: 2025-06-05 13:35:16.474166+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: originalAssets_to_l10n.py script\n"
 
-#. "L_AME_000"
+#. L_AME_000
 msgid ""
 "|Background - \n"
 "\n"
@@ -70,11 +70,11 @@ msgstr ""
 "\n"
 "ENDE\n"
 
-#. "L_AME_001"
+#. L_AME_001
 msgid "LUCERNE TOWER\n"
 msgstr "LUCERNE TOWER\n"
 
-#. "L_AME_002"
+#. L_AME_002
 msgid ""
 "|Background - \n"
 "\n"
@@ -128,7 +128,7 @@ msgstr ""
 "\n"
 "ENDE\n"
 
-#. "L_AME_003"
+#. L_AME_003
 msgid ""
 "|Background - \n"
 "\n"
@@ -158,27 +158,27 @@ msgstr ""
 "\n"
 "ENDE\n"
 
-#. "L_AME_004"
+#. L_AME_004
 msgid "    NULL3"
 msgstr "    NULL3"
 
-#. "L_AME_005"
+#. L_AME_005
 msgid "    NULL4"
 msgstr "    NULL4"
 
-#. "L_AME_006"
+#. L_AME_006
 msgid "    NULL5"
 msgstr "    NULL5"
 
-#. "L_AME_007"
+#. L_AME_007
 msgid "    NULL6"
 msgstr "    NULL6"
 
-#. "L_AME_008"
+#. L_AME_008
 msgid "    NULL7"
 msgstr "    NULL7"
 
-#. "L_AME_009"
+#. L_AME_009
 msgid ""
 "dataDyne\n"
 "Central Divisional HQ Chicago IL USA."
@@ -186,191 +186,191 @@ msgstr ""
 "dataDyne\n"
 " Abteilungshauptquartier Chicago IL USA."
 
-#. "L_AME_010"
+#. L_AME_010
 msgid "0230 Hours  15 AUG 2023\n"
 msgstr "0230 Uhr  15 AUG 2023\n"
 
-#. "L_AME_011"
+#. L_AME_011
 msgid "Obtain De Vries' necklace.\n"
 msgstr "Bringen Sie die De Vries' Halskette in Ihren Besitz!\n"
 
-#. "L_AME_012"
+#. L_AME_012
 msgid "Cassandra De Vries'\n"
 msgstr "Cassandra De Vries'\n"
 
-#. "L_AME_013"
+#. L_AME_013
 msgid "Necklace\n"
 msgstr "Halskette\n"
 
-#. "L_AME_014"
+#. L_AME_014
 msgid "De Vries' necklace\n"
 msgstr "De Vries' Halskette\n"
 
-#. "L_AME_015"
+#. L_AME_015
 msgid "Picked up De Vries' necklace.\n"
 msgstr "De Vries' Halskette aufgenommen\n"
 
-#. "L_AME_016"
+#. L_AME_016
 msgid "Disable internal security hub\n"
 msgstr "Blockieren Sie das Sicherheitssystem!\n"
 
-#. "L_AME_017"
+#. L_AME_017
 msgid "Obtain keycode necklace\n"
 msgstr "Finden Sie den Schlüssel!\n"
 
-#. "L_AME_018"
+#. L_AME_018
 msgid "Download project files\n"
 msgstr "Kopieren Sie die Projektdaten!\n"
 
-#. "L_AME_019"
+#. L_AME_019
 msgid "Disable external comms hub\n"
 msgstr "Blockieren Sie die externe Sicherheit!\n"
 
-#. "L_AME_020"
+#. L_AME_020
 msgid "Gain entrance to laboratory\n"
 msgstr "Verschaffen Sie sich Zutritt zum Labor!\n"
 
-#. "L_AME_021"
+#. L_AME_021
 msgid "Who are you and what are you doing here?\n"
 msgstr "Wer sind Sie, und was haben Sie hier verloren?\n"
 
-#. "L_AME_022"
+#. L_AME_022
 msgid "Look out! She's got a gun.\n"
 msgstr "Vorsicht! Sie hat eine Waffe!\n"
 
-#. "L_AME_023"
+#. L_AME_023
 msgid "You won't shoot me, foolish child!\n"
 msgstr "Du wirst nicht auf mich schießen, dummes Kind!\n"
 
-#. "L_AME_024"
+#. L_AME_024
 msgid "Don't you know who I am?\n"
 msgstr "Du weißt wohl nicht, wer ich bin.\n"
 
-#. "L_AME_025"
+#. L_AME_025
 msgid "Let's see how you deal with security.\n"
 msgstr "Mal sehen, wie du mit der Security klarkommst.\n"
 
-#. "L_AME_026"
+#. L_AME_026
 msgid "PLEASE!!!!  Don't kill me!\n"
 msgstr "BITTE!!!!  Tun Sie mir nichts!\n"
 
-#. "L_AME_027"
+#. L_AME_027
 msgid "If I were you, I'd leave... NOW!\n"
 msgstr "Wäre ich du, würde ich verschwinden... und zwar JETZT!\n"
 
-#. "L_AME_028"
+#. L_AME_028
 msgid "Badly placed ECM Mine.\n"
 msgstr "ECM-Mine wurde nicht korrekt platziert.\n"
 
-#. "L_AME_029"
+#. L_AME_029
 msgid "ECM Mine placed correctly.\n"
 msgstr "ECM-Mine wurde korrekt platziert.\n"
 
-#. "L_AME_030"
+#. L_AME_030
 msgid "MISSION FAILED - objectives incomplete.\n"
 msgstr "MISSION FEHLGESCHLAGEN - Zielerreichung unvollständig.\n"
 
-#. "L_AME_031"
+#. L_AME_031
 msgid "       MISSION SUCCESSFUL      \n"
 msgstr "       MISSION ERFOLGREICH      \n"
 
-#. "L_AME_032"
+#. L_AME_032
 msgid "CANNOT complete all objectives.\n"
 msgstr "Erreichung aller Ziele UNMÖGLICH.\n"
 
-#. "L_AME_033"
+#. L_AME_033
 msgid "Time to erase those files.\n"
 msgstr "Es ist an der Zeit, diese Daten zu löschen.\n"
 
-#. "L_AME_034"
+#. L_AME_034
 msgid "Computer executive erased.\n"
 msgstr "Festplatte gelöscht\n"
 
-#. "L_AME_035"
+#. L_AME_035
 msgid "I'll do what you want!\n"
 msgstr "Ich tue alles, was Sie verlangen!\n"
 
-#. "L_AME_036"
+#. L_AME_036
 msgid "HELP - Intruder!\n"
 msgstr "HILFE - Ein Eindringling!\n"
 
-#. "L_AME_037"
+#. L_AME_037
 msgid "You talk too much.\n"
 msgstr "Du sprichst zuviel.\n"
 
-#. "L_AME_038"
+#. L_AME_038
 msgid "HELP, HELP!\n"
 msgstr "HILFE, HILFE!\n"
 
-#. "L_AME_039"
+#. L_AME_039
 msgid "I'll do what you want...\n"
 msgstr "Ich tue alles, was Sie verlangen...\n"
 
-#. "L_AME_040"
+#. L_AME_040
 msgid "Logging on now...\n"
 msgstr "Ich logge mich jetzt ein...\n"
 
-#. "L_AME_041"
+#. L_AME_041
 msgid "Okay, I'm in...\n"
 msgstr "Okay, ich bin drin...\n"
 
-#. "L_AME_042"
+#. L_AME_042
 msgid "Goodbye, Dr. Caroll.\n"
 msgstr "Auf Wiedersehen, Dr. Caroll.\n"
 
-#. "L_AME_043"
+#. L_AME_043
 msgid "You've written your last bug, traitor!\n"
 msgstr "Du hast deinen letzten Virus geschrieben, Verräter!\n"
 
-#. "L_AME_044"
+#. L_AME_044
 msgid "File download initiated.\n"
 msgstr "Kopiervorgang gestartet\n"
 
-#. "L_AME_045"
+#. L_AME_045
 msgid "File download completed.\n"
 msgstr "Kopiervorgang abgeschlossen\n"
 
-#. "L_AME_046"
+#. L_AME_046
 msgid "ACCESS DENIED - password needed.\n"
 msgstr "ZUGRIFF VERWEIGERT - Passwort erforderlich\n"
 
-#. "L_AME_047"
+#. L_AME_047
 msgid "Door unlocked.\n"
 msgstr "Türverriegelung aufgehoben\n"
 
-#. "L_AME_048"
+#. L_AME_048
 msgid "DOH!\n"
 msgstr "HÄH!\n"
 
-#. "L_AME_049"
+#. L_AME_049
 msgid "Unable to download - Data Uplink needed.\n"
 msgstr "Kopiervorgang kann nicht gestartet werden - Data Uplink erforderlich.\n"
 
-#. "L_AME_050"
+#. L_AME_050
 msgid "LIGHTS NOW ON\n"
 msgstr "BELEUCHTUNG AKTIVIERT\n"
 
-#. "L_AME_051"
+#. L_AME_051
 msgid "LIGHTS NOW OFF\n"
 msgstr "BELEUCHTUNG DEAKTIVIERT\n"
 
-#. "L_AME_052"
+#. L_AME_052
 msgid "Erase Dr. Caroll conversation...\n"
 msgstr "Löschen Sie die Konversation mit Dr. Caroll...\n"
 
-#. "L_AME_053"
+#. L_AME_053
 msgid "Don't shoot, don't shoot!\n"
 msgstr "Nicht schießen, nicht schießen!\n"
 
-#. "L_AME_054"
+#. L_AME_054
 msgid "Critical mission object destroyed.\n"
 msgstr "Wichtiges Objekt zerstört\n"
 
-#. "L_AME_055"
+#. L_AME_055
 msgid "Unacceptable civilian casualties.\n"
 msgstr "Anzahl der zivilen Opfer ist unakzeptabel.\n"
 
-#. "L_AME_056"
+#. L_AME_056
 msgid ""
 "MISSION FAILED \n"
 " - objectives cannot be completed.\n"
@@ -378,51 +378,51 @@ msgstr ""
 "MISSION FEHLGESCHLAGEN \n"
 " - Gesamtzielerreichung unmöglich\n"
 
-#. "L_AME_057"
+#. L_AME_057
 msgid "Critical mission personnel killed.\n"
 msgstr "Wichtige Person neutralisiert\n"
 
-#. "L_AME_058"
+#. L_AME_058
 msgid "Obtain ECM Mines.\n"
 msgstr "Erlangen Sie ECM-Minen.\n"
 
-#. "L_AME_059"
+#. L_AME_059
 msgid "Dr. Caroll's\n"
 msgstr "Dr. Carolls\n"
 
-#. "L_AME_060"
+#. L_AME_060
 msgid "ECM Mine\n"
 msgstr "ECM-Mine\n"
 
-#. "L_AME_061"
+#. L_AME_061
 msgid "An ECM Mine\n"
 msgstr "Eine ECM-Mine\n"
 
-#. "L_AME_062"
+#. L_AME_062
 msgid "Picked up an ECM Mine.\n"
 msgstr "ECM-Mine aufgenommen\n"
 
-#. "L_AME_063"
+#. L_AME_063
 msgid "Obtain Data Uplink.\n"
 msgstr "Erlangen Sie das Data Uplink-Gerät.\n"
 
-#. "L_AME_064"
+#. L_AME_064
 msgid "\n"
 msgstr "\n"
 
-#. "L_AME_065"
+#. L_AME_065
 msgid "Data Uplink\n"
 msgstr "Data Uplink\n"
 
-#. "L_AME_066"
+#. L_AME_066
 msgid "A Data Uplink\n"
 msgstr "Ein Data Uplink\n"
 
-#. "L_AME_067"
+#. L_AME_067
 msgid "Picked up a Data Uplink.\n"
 msgstr "Data Uplink aufgenommen\n"
 
-#. "L_AME_068"
+#. L_AME_068
 msgid ""
 "Yes, yes, I agree. Personality is expendable\n"
 " in this case.\n"
@@ -430,7 +430,7 @@ msgstr ""
 "Ja, ja, dem stimme ich zu. Personen sind in diesem\n"
 "Fall entbehrlich.\n"
 
-#. "L_AME_069"
+#. L_AME_069
 msgid ""
 "No, I can start the process from my office\n"
 " terminal and delete the necessary files\n"
@@ -440,15 +440,15 @@ msgstr ""
 "aus initiieren und die entsprechenden Files löschen.\n"
 "Ja, das erfolgt gleichzeitig.\n"
 
-#. "L_AME_070"
+#. L_AME_070
 msgid "I'll begin at once. Goodbye.\n"
 msgstr "Ich fange sofort an. Wiederhören.\n"
 
-#. "L_AME_071"
+#. L_AME_071
 msgid "Move it!\n"
 msgstr "Beweg dich!\n"
 
-#. "L_AME_072"
+#. L_AME_072
 msgid ""
 "I've got a password problem, and you're \n"
 "the man to help me with it.\n"
@@ -456,87 +456,87 @@ msgstr ""
 "Ich habe ein Passwort-Problem, und du bist\n"
 "derjenige, der mir aus der Patsche helfen wird.\n"
 
-#. "L_AME_073"
+#. L_AME_073
 msgid "Don't shoot, don't shoot!\n"
 msgstr "Nicht schießen, nicht schießen!\n"
 
-#. "L_AME_074"
+#. L_AME_074
 msgid "Datalink broken - connection terminated.\n"
 msgstr "Datalink defekt - Verbindung terminiert\n"
 
-#. "L_AME_075"
+#. L_AME_075
 msgid "Datalink error - incomplete file download.\n"
 msgstr "Datalink Error - Kopiervorgang unvollständig\n"
 
-#. "L_AME_076"
+#. L_AME_076
 msgid "Internal security system temporarily disabled.\n"
 msgstr "Internes Sicherheitssystem temporär außer Kraft gesetzt.\n"
 
-#. "L_AME_077"
+#. L_AME_077
 msgid "External communications hub disabled.\n"
 msgstr "Externe Kommunikationssysteme außer Kraft gesetzt.\n"
 
-#. "L_AME_078"
+#. L_AME_078
 msgid "Laboratory lift located.\n"
 msgstr "Aufzug zum Labor geortet.\n"
 
-#. "L_AME_079"
+#. L_AME_079
 msgid "Security... Help me!\n"
 msgstr "Security... Hilfe!\n"
 
-#. "L_AME_080"
+#. L_AME_080
 msgid "ECM Mine needed to disable security hub.\n"
 msgstr "Um den Schaltblock zu deaktivieren, wird eine ECM-Mine benötigt.\n"
 
-#. "L_AME_081"
+#. L_AME_081
 msgid "ECM Mine needed to disable comms hub.\n"
 msgstr "Um den Schaltblock zu deaktivieren, wird eine ECM-Mine benötigt.\n"
 
-#. "L_AME_082"
+#. L_AME_082
 msgid "Dummy\n"
 msgstr "Dummy\n"
 
-#. "L_AME_083"
+#. L_AME_083
 msgid "How dare you disturb me!\n"
 msgstr "Wie kannst du es wagen, mich zu stören?\n"
 
-#. "L_AME_084"
+#. L_AME_084
 msgid "You will regret this intrusion, girl!\n"
 msgstr "Du wirst dieses Eindringen bereuen, Kleine!\n"
 
-#. "L_AME_085"
+#. L_AME_085
 msgid "If I were you, I'd leave...NOW!\n"
 msgstr "Wäre ich du, würde ich verschwinden,... und zwar JETZT!\n"
 
-#. "L_AME_086"
+#. L_AME_086
 msgid "Please don't kill me!\n"
 msgstr "Bitte tun Sie mir nichts!\n"
 
-#. "L_AME_087"
+#. L_AME_087
 msgid "Don't shoot!\n"
 msgstr "Nicht schießen!\n"
 
-#. "L_AME_088"
+#. L_AME_088
 msgid "Obtain CamSpy.\n"
 msgstr "Erlangen Sie den CamSpy.\n"
 
-#. "L_AME_089"
+#. L_AME_089
 msgid "Dr. Caroll's\n"
 msgstr "Dr. Carolls\n"
 
-#. "L_AME_090"
+#. L_AME_090
 msgid "CamSpy\n"
 msgstr "CamSpy\n"
 
-#. "L_AME_091"
+#. L_AME_091
 msgid "A CamSpy\n"
 msgstr "Ein CamSpy\n"
 
-#. "L_AME_092"
+#. L_AME_092
 msgid "Picked up a CamSpy.\n"
 msgstr "CamSpy aufgenommen\n"
 
-#. "L_AME_093"
+#. L_AME_093
 msgid ""
 "We're getting a positive reading - \n"
 "the internal comms hub is nearby.\n"
@@ -544,7 +544,7 @@ msgstr ""
 "Wir empfangen ein deutliches Signal - \n"
 "der Schaltblock für die internen Sicherheitssysteme muss in der Nähe sein.\n"
 
-#. "L_AME_094"
+#. L_AME_094
 msgid ""
 "You're on the same floor as \n"
 "Cassandra's office.\n"
@@ -552,7 +552,7 @@ msgstr ""
 "Sie befinden sich im gleichen Stockwerk wie\n"
 "Cassandras Büro.\n"
 
-#. "L_AME_095"
+#. L_AME_095
 msgid ""
 "The other hub has got to be in the \n"
 "Security Room.\n"
@@ -560,7 +560,7 @@ msgstr ""
 "Der andere Schaltblock muss im \n"
 "Security Raum sein.\n"
 
-#. "L_AME_096"
+#. L_AME_096
 msgid ""
 "The basement elevator must be around \n"
 "there somewhere.\n"
@@ -568,23 +568,23 @@ msgstr ""
 "Der Aufzug zum Keller muss hier \n"
 "irgendwo sein.\n"
 
-#. "L_AME_097"
+#. L_AME_097
 msgid "Security system is now back online.\n"
 msgstr "Das Sicherheitssystem ist wieder online.\n"
 
-#. "L_AME_098"
+#. L_AME_098
 msgid "You vandal, you've broken it!\n"
 msgstr "Du Vandale, du hast es zerstört!\n"
 
-#. "L_AME_099"
+#. L_AME_099
 msgid "2023 AD, 2214 Hours  Lucerne Tower - dataDyne HQ\n"
 msgstr "2023 AD, 2214 Uhr  Lucerne Tower - dataDyne HQ\n"
 
-#. "L_AME_100"
+#. L_AME_100
 msgid "Why the big hurry?\n"
 msgstr "Warum die Hektik?\n"
 
-#. "L_AME_101"
+#. L_AME_101
 msgid ""
 "If Dr. Caroll is not extracted tonight, \n"
 "dataDyne will put him through mind \n"
@@ -598,11 +598,11 @@ msgstr ""
 "unsere beste Chance verlieren, um herauszufinden, \n"
 "was dataDyne beabsichtigt.\n"
 
-#. "L_AME_102"
+#. L_AME_102
 msgid "Are they all expendable?\n"
 msgstr "Sind dort alle Personen entbehrlich?\n"
 
-#. "L_AME_103"
+#. L_AME_103
 msgid ""
 "Don't joke! You have to be careful, Joanna. \n"
 "Code keys will only operate while the owner \n"
@@ -616,11 +616,11 @@ msgstr ""
 "Schlüssel seinen Wert. Bewaffnete Wachen sind natürlich \n"
 "ein anderes Thema...\n"
 
-#. "L_AME_104"
+#. L_AME_104
 msgid "What's the target location?\n"
 msgstr "Wie lautet der Zielbereich?\n"
 
-#. "L_AME_105"
+#. L_AME_105
 msgid ""
 "Work your way down the building to the ground \n"
 "level. Dr. Caroll will be in a research lab \n"
@@ -630,11 +630,11 @@ msgstr ""
 "erreichen. Dr. Caroll befindet sich irgendwo in einem der \n"
 "Labors in den unterirdischen Trakten.\n"
 
-#. "L_AME_106"
+#. L_AME_106
 msgid "How will I recognize him?\n"
 msgstr "Woran erkenne ich ihn?\n"
 
-#. "L_AME_107"
+#. L_AME_107
 msgid ""
 "We don't have an image record, and we can't \n"
 "find any official files. All we have is the \n"
@@ -644,10 +644,10 @@ msgstr ""
 "auch keine offiziellen Akten finden. Alles was wir haben, \n"
 "ist sein Name. Viel Glück, Perfect Dark.\n"
 
-#. "L_AME_108"
+#. L_AME_108
 msgid "Right, I'm in...\n"
 msgstr "Ich bin jetzt drin...\n"
 
-#. "L_AME_109"
+#. L_AME_109
 msgid "I...I'm logging on now.\n"
 msgstr "Ich...Ich logge mich jetzt ein.\n"

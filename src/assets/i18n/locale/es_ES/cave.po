@@ -2,13 +2,13 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Perfect Dark PC port localization\n"
-"POT-Creation-Date: 2025-05-31 06:37:14.299892+00:00\n"
+"POT-Creation-Date: 2025-06-05 13:35:16.474166+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: originalAssets_to_l10n.py script\n"
 
-#. "L_CAVE_000"
+#. L_CAVE_000
 msgid ""
 "|Background - \n"
 "\n"
@@ -70,7 +70,7 @@ msgstr ""
 "\n"
 "FIN\n"
 
-#. "L_CAVE_001"
+#. L_CAVE_001
 msgid ""
 "PRESIDENTIAL TERMINAL \n"
 "US AIRBASE, ALASKA\n"
@@ -78,7 +78,7 @@ msgstr ""
 "TERMINAL PRESIDENCIAL \n"
 "BASE AÉREA EE.UU., ALASKA\n"
 
-#. "L_CAVE_002"
+#. L_CAVE_002
 msgid ""
 "|Background - \n"
 "\n"
@@ -132,7 +132,7 @@ msgstr ""
 "\n"
 "FIN\n"
 
-#. "L_CAVE_003"
+#. L_CAVE_003
 msgid ""
 "|Background - \n"
 "\n"
@@ -178,191 +178,191 @@ msgstr ""
 "\n"
 "FIN\n"
 
-#. "L_CAVE_004"
+#. L_CAVE_004
 msgid "\n"
 msgstr "\n"
 
-#. "L_CAVE_005"
+#. L_CAVE_005
 msgid "Obtain disguise and enter base\n"
 msgstr "Obtener el disfraz y entrar a la base\n"
 
-#. "L_CAVE_006"
+#. L_CAVE_006
 msgid "Check in equipment\n"
 msgstr "Facturar el equipo\n"
 
-#. "L_CAVE_007"
+#. L_CAVE_007
 msgid "Subvert security monitoring system\n"
 msgstr "Burlar al sistema monitor de seguridad\n"
 
-#. "L_CAVE_008"
+#. L_CAVE_008
 msgid "Obtain flight plans from safe\n"
 msgstr "Obtener planes v. de la caja fuerte\n"
 
-#. "L_CAVE_009"
+#. L_CAVE_009
 msgid "Board Air Force One\n"
 msgstr "Abordar el Air Force One\n"
 
-#. "L_CAVE_010"
+#. L_CAVE_010
 msgid "Obtain suitcase.\n"
 msgstr "Obtén la maleta.\n"
 
-#. "L_CAVE_011"
+#. L_CAVE_011
 msgid "\n"
 msgstr "\n"
 
-#. "L_CAVE_012"
+#. L_CAVE_012
 msgid "Suitcase\n"
 msgstr "Maleta\n"
 
-#. "L_CAVE_013"
+#. L_CAVE_013
 msgid "Suitcase\n"
 msgstr "Maleta\n"
 
-#. "L_CAVE_014"
+#. L_CAVE_014
 msgid "Picked up a suitcase.\n"
 msgstr "Maleta obtenida.\n"
 
-#. "L_CAVE_015"
+#. L_CAVE_015
 msgid "Obtain air stewardess uniform.\n"
 msgstr "Obtén el uniforme de azafata de vuelo.\n"
 
-#. "L_CAVE_016"
+#. L_CAVE_016
 msgid "\n"
 msgstr "\n"
 
-#. "L_CAVE_017"
+#. L_CAVE_017
 msgid "Disguise\n"
 msgstr "Disfraz\n"
 
-#. "L_CAVE_018"
+#. L_CAVE_018
 msgid "Disguise\n"
 msgstr "Disfraz\n"
 
-#. "L_CAVE_019"
+#. L_CAVE_019
 msgid "Picked up a stewardess uniform.\n"
 msgstr "Uniforme de azafata obtenido.\n"
 
-#. "L_CAVE_020"
+#. L_CAVE_020
 msgid "Obtain flight plans from safe.\n"
 msgstr "Obtén los planes de vuelo de la caja fuerte.\n"
 
-#. "L_CAVE_021"
+#. L_CAVE_021
 msgid "\n"
 msgstr "\n"
 
-#. "L_CAVE_022"
+#. L_CAVE_022
 msgid "Flight Plans\n"
 msgstr "Planes de Vuelo\n"
 
-#. "L_CAVE_023"
+#. L_CAVE_023
 msgid "Flight Plans\n"
 msgstr "Planes de Vuelo\n"
 
-#. "L_CAVE_024"
+#. L_CAVE_024
 msgid "Picked up the flight plans.\n"
 msgstr "Planes de vuelo obtenidos.\n"
 
-#. "L_CAVE_025"
+#. L_CAVE_025
 msgid "Look out - it's an intruder...\n"
 msgstr "Cuidado. Es un intruso...\n"
 
-#. "L_CAVE_026"
+#. L_CAVE_026
 msgid "Innocent civilians have been killed.\n"
 msgstr "Han muerto civiles inocentes.\n"
 
-#. "L_CAVE_027"
+#. L_CAVE_027
 msgid "Is he OK?\n"
 msgstr "¿Está bien?\n"
 
-#. "L_CAVE_028"
+#. L_CAVE_028
 msgid "I'll go and get some help.\n"
 msgstr "Iré para obtener alguna ayuda.\n"
 
-#. "L_CAVE_029"
+#. L_CAVE_029
 msgid "Good afternoon.\n"
 msgstr "Buenas tardes.\n"
 
-#. "L_CAVE_030"
+#. L_CAVE_030
 msgid "OK, you know the way from here.\n"
 msgstr "Muy bien, ya conoce el camino desde aquí.\n"
 
-#. "L_CAVE_031"
+#. L_CAVE_031
 msgid "You'll have to check that weapon in here.\n"
 msgstr "Deberás dejar ese arma aquí.\n"
 
-#. "L_CAVE_032"
+#. L_CAVE_032
 msgid "Oh, my God!\n"
 msgstr "¡Oh, Dios mío!\n"
 
-#. "L_CAVE_033"
+#. L_CAVE_033
 msgid "Weapons are not allowed in the base.\n"
 msgstr "No se permiten armas en la base.\n"
 
-#. "L_CAVE_034"
+#. L_CAVE_034
 msgid "Right, I'm calling security.\n"
 msgstr "De acuerdo, avisaré a seguridad.\n"
 
-#. "L_CAVE_035"
+#. L_CAVE_035
 msgid "System shutdown initiated...\n"
 msgstr "Cierre del sistema iniciado...\n"
 
-#. "L_CAVE_036"
+#. L_CAVE_036
 msgid "Security systems have been shut down.\n"
 msgstr "Los sistemas de seguridad han sido apagados.\n"
 
-#. "L_CAVE_037"
+#. L_CAVE_037
 msgid "Weapons have been detected.\n"
 msgstr "Se han detectado armas.\n"
 
-#. "L_CAVE_038"
+#. L_CAVE_038
 msgid "Suitcase has been deposited.\n"
 msgstr "La maleta ha sido facturada.\n"
 
-#. "L_CAVE_039"
+#. L_CAVE_039
 msgid "Suitcase has been scanned.\n"
 msgstr "La maleta ha sido escaneada.\n"
 
-#. "L_CAVE_040"
+#. L_CAVE_040
 msgid "Hey, you - this is a restricted area.\n"
 msgstr "Hey, tú: ésta es un área restringida.\n"
 
-#. "L_CAVE_041"
+#. L_CAVE_041
 msgid "Are you new around here?\n"
 msgstr "¿Eres nueva por aquí?\n"
 
-#. "L_CAVE_042"
+#. L_CAVE_042
 msgid "Hey - give me back my case.\n"
 msgstr "Hey. Devuélveme mi maleta.\n"
 
-#. "L_CAVE_043"
+#. L_CAVE_043
 msgid "You get security - I'll deal with her...\n"
 msgstr "Trae a seguridad, yo me encargo de ella...\n"
 
-#. "L_CAVE_044"
+#. L_CAVE_044
 msgid "Upstairs...there's an intruder.\n"
 msgstr "Arriba... hay un intruso.\n"
 
-#. "L_CAVE_045"
+#. L_CAVE_045
 msgid "Laser grid access denied.\n"
 msgstr "Acceso a la rejilla de láser denegado.\n"
 
-#. "L_CAVE_046"
+#. L_CAVE_046
 msgid "Laser grid system has been overloaded.\n"
 msgstr "Sistema de rejilla de láser sobrecargado.\n"
 
-#. "L_CAVE_047"
+#. L_CAVE_047
 msgid "Too many neutral casualties inflicted.\n"
 msgstr "Demasiados civiles heridos.\n"
 
-#. "L_CAVE_048"
+#. L_CAVE_048
 msgid "Stop them from getting the safe...\n"
 msgstr "Detenles antes de que abran la caja fuerte...\n"
 
-#. "L_CAVE_049"
+#. L_CAVE_049
 msgid "Disguise worn.\n"
 msgstr "Disfraz puesto.\n"
 
-#. "L_CAVE_050"
+#. L_CAVE_050
 msgid ""
 "Now's your chance! Grab the stewardess's \n"
 "bag and get her uniform.\n"
@@ -370,15 +370,15 @@ msgstr ""
 "¡Ésta es tu oportunidad! Agarra la bolsa \n"
 "de la azafata y coge su uniforme.\n"
 
-#. "L_CAVE_051"
+#. L_CAVE_051
 msgid "Use that case to conceal your equipment.\n"
 msgstr "Usa la maleta para ocultar tu equipo.\n"
 
-#. "L_CAVE_052"
+#. L_CAVE_052
 msgid "The case will get stopped unless you do something.\n"
 msgstr "La maleta será detenida a menos que hagas algo.\n"
 
-#. "L_CAVE_053"
+#. L_CAVE_053
 msgid ""
 "So that's Air Force One? ... Huh, smaller \n"
 "than I thought.\n"
@@ -386,11 +386,11 @@ msgstr ""
 "¿Así que ese es el Air Force One? ... Huh, es más \n"
 "pequeño de lo que pensaba.\n"
 
-#. "L_CAVE_054"
+#. L_CAVE_054
 msgid "Stop them - they're breaking into the safe...\n"
 msgstr "Detenlos: están accediendo a la caja fuerte...\n"
 
-#. "L_CAVE_055"
+#. L_CAVE_055
 msgid ""
 "Agent Dark in position. I can see the main entrance to the base, and I can "
 "just make out the cable car arrival point.\n"
@@ -398,7 +398,7 @@ msgstr ""
 "Agente Dark en posición. Puedo ver la entrada principal de la base, y "
 "distingo el punto de llegada del teleférico.\n"
 
-#. "L_CAVE_056"
+#. L_CAVE_056
 msgid ""
 "Excellent, Joanna. That cable car is your way in... Our observer at the "
 "lower terminus has spotted a member of the flight crew boarding a minute "
@@ -410,7 +410,7 @@ msgstr ""
 " un minuto. Está siendo escoltada por tropas de la base aérea. No debo "
 "recordarte que probablemente...\n"
 
-#. "L_CAVE_057"
+#. L_CAVE_057
 msgid ""
 "That they're probably innocent of any involvement in Trent's little scheme. "
 "And I can't shoot them even if they shoot at me. What about the NSA "
@@ -420,7 +420,7 @@ msgstr ""
 "de Trent. Y que no puedo dispararles aunque ellos me disparen a mí. ¿Qué "
 "pasa con los agentes de la ANS?\n"
 
-#. "L_CAVE_058"
+#. L_CAVE_058
 msgid ""
 "I don't know how far the conspiracy has spread through the NSA, but I'm "
 "willing to bet that the men Trent has around him here are loyal to him and "
@@ -432,7 +432,7 @@ msgstr ""
 " y a él mismo. Debes encontrar evidencias de la traición de Trent en el Air "
 "Force One y enseñárselas al Presidente.\n"
 
-#. "L_CAVE_059"
+#. L_CAVE_059
 msgid ""
 "Yes, and protect him from his abductors. Do you have any idea what Trent's "
 "plan might be yet, and what about those blonde guys?\n"
@@ -440,7 +440,7 @@ msgstr ""
 "Sí, y protegerle de sus secuestradores. ¿Tienes alguna idea sobre de qué "
 "puede tratar el plan de Trent, y qué pasa con esos chicos rubios?\n"
 
-#. "L_CAVE_060"
+#. L_CAVE_060
 msgid ""
 "Only vague suspicions, and I won't distract you with those. Good luck. "
 "Carrington out.\n"
@@ -448,30 +448,30 @@ msgstr ""
 "Sólo sospechas vagas, y no quiero distraerte ahora con eso. Buena suerte. "
 "Carrington fuera.\n"
 
-#. "L_CAVE_061"
+#. L_CAVE_061
 msgid "Lift inoperative - security system is active.\n"
 msgstr "Ascensor no operativo: sistema de seguridad activo.\n"
 
-#. "L_CAVE_062"
+#. L_CAVE_062
 msgid "Critical mission personnel disabled.\n"
 msgstr "Personal crítico de la misión eliminado.\n"
 
-#. "L_CAVE_063"
+#. L_CAVE_063
 msgid "Critical mission object destroyed.\n"
 msgstr "Objeto crítico de la misión destruido.\n"
 
-#. "L_CAVE_064"
+#. L_CAVE_064
 msgid "Entrance to base secured.\n"
 msgstr "Entrada a la base asegurada.\n"
 
-#. "L_CAVE_065"
+#. L_CAVE_065
 msgid "We're taking over!!\n"
 msgstr "¡¡Nos ocupamos nosotros!!\n"
 
-#. "L_CAVE_066"
+#. L_CAVE_066
 msgid "Hover trolley has been shut down.\n"
 msgstr "El teleférico ha sido derribado.\n"
 
-#. "L_CAVE_067"
+#. L_CAVE_067
 msgid "Equipment cannot be checked in.\n"
 msgstr "El equipo no puede ser registrado.\n"

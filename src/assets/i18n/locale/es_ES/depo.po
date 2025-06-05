@@ -2,13 +2,13 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Perfect Dark PC port localization\n"
-"POT-Creation-Date: 2025-05-31 06:37:14.299892+00:00\n"
+"POT-Creation-Date: 2025-06-05 13:35:16.474166+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: originalAssets_to_l10n.py script\n"
 
-#. "L_DEPO_000"
+#. L_DEPO_000
 msgid ""
 "|Background - \n"
 "\n"
@@ -70,11 +70,11 @@ msgstr ""
 "\n"
 "FIN\n"
 
-#. "L_DEPO_001"
+#. L_DEPO_001
 msgid "G5 BUILDING\n"
 msgstr "EDIFICIO G5\n"
 
-#. "L_DEPO_002"
+#. L_DEPO_002
 msgid ""
 "|Background - \n"
 "\n"
@@ -128,7 +128,7 @@ msgstr ""
 "\n"
 "FIN\n"
 
-#. "L_DEPO_003"
+#. L_DEPO_003
 msgid ""
 "|Background - \n"
 "\n"
@@ -174,211 +174,211 @@ msgstr ""
 "\n"
 "FIN\n"
 
-#. "L_DEPO_009"
+#. L_DEPO_009
 msgid "Disable damping field generator\n"
 msgstr "Desactivar generador de campo húmedo\n"
 
-#. "L_DEPO_010"
+#. L_DEPO_010
 msgid "Deactivate laser grid systems\n"
 msgstr "Desactivar sistemas de rejilla láser\n"
 
-#. "L_DEPO_011"
+#. L_DEPO_011
 msgid "Holograph meeting conspirators\n"
 msgstr "Holografiar reunión de conspiradores\n"
 
-#. "L_DEPO_012"
+#. L_DEPO_012
 msgid "Retrieve Dr. Caroll backup from safe\n"
 msgstr "Recuperar copia del Dr. Caroll\n"
 
-#. "L_DEPO_013"
+#. L_DEPO_013
 msgid "Exit building\n"
 msgstr "Salir del edificio\n"
 
-#. "L_DEPO_014"
+#. L_DEPO_014
 msgid "Obtain alpha key card.\n"
 msgstr "Obtén la llave magnética alfa.\n"
 
-#. "L_DEPO_015"
+#. L_DEPO_015
 msgid "Guard's\n"
 msgstr "Guarda:\n"
 
-#. "L_DEPO_016"
+#. L_DEPO_016
 msgid "Level 1 key card\n"
 msgstr "Llave de Nivel 1\n"
 
-#. "L_DEPO_017"
+#. L_DEPO_017
 msgid "Guard's key card\n"
 msgstr "Llave Magnética del Guarda\n"
 
-#. "L_DEPO_018"
+#. L_DEPO_018
 msgid "Picked up guard's key card.\n"
 msgstr "Llave Magnética del Guarda obtenida\n"
 
-#. "L_DEPO_019"
+#. L_DEPO_019
 msgid "Obtain alpha key card.\n"
 msgstr "Obtén la llave magnética alfa.\n"
 
-#. "L_DEPO_020"
+#. L_DEPO_020
 msgid "Guard's\n"
 msgstr "Guarda:\n"
 
-#. "L_DEPO_021"
+#. L_DEPO_021
 msgid "Level 2 key card\n"
 msgstr "Llave de Nivel 2\n"
 
-#. "L_DEPO_022"
+#. L_DEPO_022
 msgid "Guard's key card\n"
 msgstr "Llave Magnética del Guarda\n"
 
-#. "L_DEPO_023"
+#. L_DEPO_023
 msgid "Picked up guard's key card.\n"
 msgstr "Llave Magnética del Guarda obtenida\n"
 
-#. "L_DEPO_024"
+#. L_DEPO_024
 msgid "Mission critical object destroyed.\n"
 msgstr "Objeto crítico de la misión destruido.\n"
 
-#. "L_DEPO_025"
+#. L_DEPO_025
 msgid "Damping field generator shut down.\n"
 msgstr "Generador de campo húmedo apagado.\n"
 
-#. "L_DEPO_026"
+#. L_DEPO_026
 msgid "Generator cannot be restarted.\n"
 msgstr "El generador no puede reiniciarse.\n"
 
-#. "L_DEPO_027"
+#. L_DEPO_027
 msgid "Laser grid unit shut down.\n"
 msgstr "Unidad de rejilla láser apagada.\n"
 
-#. "L_DEPO_028"
+#. L_DEPO_028
 msgid "Laser grid unit activated.\n"
 msgstr "Unidad de rejilla láser activada.\n"
 
-#. "L_DEPO_029"
+#. L_DEPO_029
 msgid "All laser grid systems shut down.\n"
 msgstr "Todos los sistemas de rejilla láser apagados.\n"
 
-#. "L_DEPO_030"
+#. L_DEPO_030
 msgid "Obtain DAT tape.\n"
 msgstr "Obtén la cinta de Datos.\n"
 
-#. "L_DEPO_031"
+#. L_DEPO_031
 msgid "Dr. Caroll's\n"
 msgstr "Dr. Caroll:\n"
 
-#. "L_DEPO_032"
+#. L_DEPO_032
 msgid "Backup disk\n"
 msgstr "Disco de seguridad\n"
 
-#. "L_DEPO_033"
+#. L_DEPO_033
 msgid "Backup disk\n"
 msgstr "Disco de seguridad\n"
 
-#. "L_DEPO_034"
+#. L_DEPO_034
 msgid "Picked up backup disk.\n"
 msgstr "Disco de seguridad obtenido.\n"
 
-#. "L_DEPO_035"
+#. L_DEPO_035
 msgid "Door Decoder attached to access pad.\n"
 msgstr "Decodificador de puertas colocado en el acceso.\n"
 
-#. "L_DEPO_036"
+#. L_DEPO_036
 msgid "Initiating cracking routines.\n"
 msgstr "Iniciando rutinas de apertura.\n"
 
-#. "L_DEPO_037"
+#. L_DEPO_037
 msgid "Door Decoder finished - door unlocked.\n"
 msgstr "El decodificador de puertas terminó: puerta abierta.\n"
 
-#. "L_DEPO_038"
+#. L_DEPO_038
 msgid "INTRUDER ALERT - all security to the vault.\n"
 msgstr "ALERTA DE INTRUSOS: toda la seguridad a la caja.\n"
 
-#. "L_DEPO_039"
+#. L_DEPO_039
 msgid "Door Decoder placed correctly.\n"
 msgstr "Decodificador de puertas colocado correctamente.\n"
 
-#. "L_DEPO_040"
+#. L_DEPO_040
 msgid "Door Decoder incorrectly positioned.\n"
 msgstr "Decodificador de puertas colocado incorrectamente.\n"
 
-#. "L_DEPO_041"
+#. L_DEPO_041
 msgid "Conspirators have been alerted.\n"
 msgstr "Los conspiradores han sido alertados.\n"
 
-#. "L_DEPO_042"
+#. L_DEPO_042
 msgid "Alarm activated.\n"
 msgstr "Alarma activada.\n"
 
-#. "L_DEPO_043"
+#. L_DEPO_043
 msgid "Alarm deactivated.\n"
 msgstr "Alarma desactivada.\n"
 
-#. "L_DEPO_044"
+#. L_DEPO_044
 msgid "Safe door is locked.\n"
 msgstr "La puerta de la caja fuerte está cerrada.\n"
 
-#. "L_DEPO_045"
+#. L_DEPO_045
 msgid "Door Decoder attached.\n"
 msgstr "Decodificador de puertas colocado.\n"
 
-#. "L_DEPO_046"
+#. L_DEPO_046
 msgid "Obtain Door Exploder.\n"
 msgstr "Obtén el Revienta-puertas.\n"
 
-#. "L_DEPO_047"
+#. L_DEPO_047
 msgid "Dr. Caroll's\n"
 msgstr "Dr. Caroll:\n"
 
-#. "L_DEPO_048"
+#. L_DEPO_048
 msgid "Door Exploder\n"
 msgstr "Revienta-puertas\n"
 
-#. "L_DEPO_049"
+#. L_DEPO_049
 msgid "Door Exploder\n"
 msgstr "Revienta-puertas\n"
 
-#. "L_DEPO_050"
+#. L_DEPO_050
 msgid "Picked up Door Exploder.\n"
 msgstr "Revienta-puertas obtenido.\n"
 
-#. "L_DEPO_051"
+#. L_DEPO_051
 msgid "Objectives incomplete - MISSION FAILED.\n"
 msgstr "Objetivos incompletos: MISIÓN FALLADA.\n"
 
-#. "L_DEPO_052"
+#. L_DEPO_052
 msgid "MISSION SUCCESSFUL\n"
 msgstr "MISIÓN CONSEGUIDA\n"
 
-#. "L_DEPO_053"
+#. L_DEPO_053
 msgid "Communications bug placed correctly.\n"
 msgstr "'Bicho' de comunicaciones colocado correctamente.\n"
 
-#. "L_DEPO_054"
+#. L_DEPO_054
 msgid "Communications bug placed incorrectly.\n"
 msgstr "'Bicho' de comunicaciones colocado incorrectamente.\n"
 
-#. "L_DEPO_055"
+#. L_DEPO_055
 msgid "Obtain CamSpy.\n"
 msgstr "Obtén la Cámara Espía.\n"
 
-#. "L_DEPO_056"
+#. L_DEPO_056
 msgid "Dr. Caroll's\n"
 msgstr "Dr. Caroll:\n"
 
-#. "L_DEPO_057"
+#. L_DEPO_057
 msgid "CamSpy\n"
 msgstr "Cámara Espía\n"
 
-#. "L_DEPO_058"
+#. L_DEPO_058
 msgid "A CamSpy\n"
 msgstr "Una Camára Espía\n"
 
-#. "L_DEPO_059"
+#. L_DEPO_059
 msgid "Picked up a CamSpy.\n"
 msgstr "Cámara Espía obtenida.\n"
 
-#. "L_DEPO_060"
+#. L_DEPO_060
 msgid ""
 "There's no way through while those \n"
 "lasers are active.\n"
@@ -386,7 +386,7 @@ msgstr ""
 "No hay ningún camino posible mientras \n"
 "esos láseres estén activos.\n"
 
-#. "L_DEPO_061"
+#. L_DEPO_061
 msgid ""
 "That must be the meeting room up ahead. \n"
 "Time to use the CamSpy.\n"
@@ -394,7 +394,7 @@ msgstr ""
 "Eso de ahí delante debe ser la sala de reuniones. \n"
 "Hora de usar la Cámara Espía.\n"
 
-#. "L_DEPO_062"
+#. L_DEPO_062
 msgid ""
 "The safe's heavily encrypted. \n"
 "The decoder's gonna take a little longer.\n"
@@ -402,7 +402,7 @@ msgstr ""
 "La caja fuerte está fuertemente encriptada. \n"
 "El decodificador va a tomarse su tiempo.\n"
 
-#. "L_DEPO_063"
+#. L_DEPO_063
 msgid ""
 "Time to leave! Let's get to the door I set \n"
 "up earlier.\n"
@@ -410,11 +410,11 @@ msgstr ""
 "¡Hora de irse! Vamos a la puerta que creé \n"
 "antes.\n"
 
-#. "L_DEPO_064"
+#. L_DEPO_064
 msgid "Mission critical object destroyed.\n"
 msgstr "Objeto crítico de la misión destruido.\n"
 
-#. "L_DEPO_065"
+#. L_DEPO_065
 msgid ""
 "Stand back, Joanna. We'll create your escape \n"
 "route.\n"
@@ -422,31 +422,31 @@ msgstr ""
 "Aparta, Joanna. Crearemos tu ruta \n"
 "de escape.\n"
 
-#. "L_DEPO_066"
+#. L_DEPO_066
 msgid "\n"
 msgstr "\n"
 
-#. "L_DEPO_067"
+#. L_DEPO_067
 msgid "\n"
 msgstr "\n"
 
-#. "L_DEPO_068"
+#. L_DEPO_068
 msgid "Detonator\n"
 msgstr "Detonador\n"
 
-#. "L_DEPO_069"
+#. L_DEPO_069
 msgid "Detonator\n"
 msgstr "Detonador\n"
 
-#. "L_DEPO_070"
+#. L_DEPO_070
 msgid "Picked up Detonator.\n"
 msgstr "Detonador obtenido.\n"
 
-#. "L_DEPO_071"
+#. L_DEPO_071
 msgid "CamSpy has been destroyed - abort mission.\n"
 msgstr "La Cámara Espía ha sido destruida: abortar misión.\n"
 
-#. "L_DEPO_072"
+#. L_DEPO_072
 msgid ""
 "We've recovered the sapient from Carrington \n"
 "and altered its programming. It no longer \n"
@@ -458,7 +458,7 @@ msgstr ""
 "personalidad, así no podrá haber posibles \n"
 "futuros incidentes.\n"
 
-#. "L_DEPO_073"
+#. L_DEPO_073
 msgid ""
 "This will reduce its efficiency. My team will \n"
 "have to take it to the core themselves. This \n"
@@ -472,7 +472,7 @@ msgstr ""
 "que la IA podría desarrollar un problemático \n"
 "código moral.\n"
 
-#. "L_DEPO_074"
+#. L_DEPO_074
 msgid ""
 "No one could have predicted that! And I \n"
 "resent being singled out for blame! \n"
@@ -482,7 +482,7 @@ msgstr ""
 "molesta que me echen la culpa de ello! \n"
 "¿Qué pasa con él?\n"
 
-#. "L_DEPO_075"
+#. L_DEPO_075
 msgid ""
 "The President turned down your request for \n"
 "the loan of the Pelagic II?\n"
@@ -490,7 +490,7 @@ msgstr ""
 "¿El Presidente no ha admitido tu petición \n"
 "de préstamo del Pelagic II?\n"
 
-#. "L_DEPO_076"
+#. L_DEPO_076
 msgid ""
 "Could it be you overestimated your \n"
 "influence over him?\n"
@@ -498,7 +498,7 @@ msgstr ""
 "¿No podría ser que hayas sobreestimado \n"
 "tu influencia sobre él?\n"
 
-#. "L_DEPO_077"
+#. L_DEPO_077
 msgid ""
 "No! Perhaps I underestimated his resolve. \n"
 "We have a contingency plan ready to go, \n"
@@ -512,7 +512,7 @@ msgstr ""
 "llegue a la base aérea. Todo lo que necesito del \n"
 "Presidente es una muestra de tejido cutáneo.\n"
 
-#. "L_DEPO_078"
+#. L_DEPO_078
 msgid ""
 "Ha! Assuming you don't get any interference. \n"
 "If Carrington has pieced together enough of \n"
@@ -522,7 +522,7 @@ msgstr ""
 "Si Carrington ha recabado suficientes piezas de \n"
 "esto, seguro que avisará a los refuerzos.\n"
 
-#. "L_DEPO_079"
+#. L_DEPO_079
 msgid ""
 "There will be no outside help for \n"
 "Mr. Carrington. The technology you gave us \n"
@@ -534,7 +534,7 @@ msgstr ""
 "Nevada y es totalmente operativa. \n"
 "Podemos interceptar cualquier nave que usen.\n"
 
-#. "L_DEPO_080"
+#. L_DEPO_080
 msgid ""
 "Then the devices we gave you are working \n"
 "correctly? Good. Because we believe \n"
@@ -548,7 +548,7 @@ msgstr ""
 "ser destruida. Tenlo en cuenta para tus 'planes \n"
 "alternativos'.\n"
 
-#. "L_DEPO_081"
+#. L_DEPO_081
 msgid ""
 "Agent Dark reporting in! Prepare to \n"
 "receive a download of the meeting data. \n"
@@ -562,7 +562,7 @@ msgstr ""
 "del Instituto para proteger al Presidente \n"
 "antes de que vaya a Alaska.\n"
 
-#. "L_DEPO_082"
+#. L_DEPO_082
 msgid ""
 "No time for that now, Agent Dark. There's \n"
 "been a development during radio silence. \n"
@@ -584,6 +584,6 @@ msgstr ""
 "Debes prepararte para ser enviada de inmediato \n"
 "en cuanto regreses aquí. Carrington fuera.\n"
 
-#. "L_DEPO_083"
+#. L_DEPO_083
 msgid "Area 51? But what about the President?\n"
 msgstr "¿Al Área 51? ¿Pero qué pasa con el Presidente?\n"

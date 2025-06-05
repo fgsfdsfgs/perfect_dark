@@ -2,17 +2,17 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Perfect Dark PC port localization\n"
-"POT-Creation-Date: 2025-05-31 06:37:14.299892+00:00\n"
+"POT-Creation-Date: 2025-06-05 13:35:16.474166+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: originalAssets_to_l10n.py script\n"
 
-#. "L_DISH_008"
+#. L_DISH_008
 msgid "Collect Night Vision from table to begin.\n"
 msgstr "Innanzitutto prendi la Vista Notturna dal tavolo.\n"
 
-#. "L_DISH_009"
+#. L_DISH_009
 msgid ""
 "Activate the Night Vision.\n"
 "Locate the light switch.\n"
@@ -22,179 +22,179 @@ msgstr ""
 "Trova interruttore.\n"
 "Riaccendi le luci.\n"
 
-#. "L_DISH_010"
+#. L_DISH_010
 msgid "Collect Data Uplink from table to begin.\n"
 msgstr "Prendi il Connettore Dati dal tavolo.\n"
 
-#. "L_DISH_011"
+#. L_DISH_011
 msgid "Stand next to the terminal and use the Uplink.\n"
 msgstr "Avvicinati al terminale e usa il Connettore Dati.\n"
 
-#. "L_DISH_012"
+#. L_DISH_012
 msgid "You need to be holding the Data Uplink.\n"
 msgstr "Devi tenere in mano il Connettore Dati.\n"
 
-#. "L_DISH_013"
+#. L_DISH_013
 msgid "Connection established...\n"
 msgstr "Stabilito collegamento...\n"
 
-#. "L_DISH_014"
+#. L_DISH_014
 msgid "Terminal has been successfully hacked.\n"
 msgstr "Il codice del terminale è stato decifrato.\n"
 
-#. "L_DISH_015"
+#. L_DISH_015
 msgid "Connection broken - too far from PC.\n"
 msgstr "Collegamento interrotto: sei troppo lontano dal PC.\n"
 
-#. "L_DISH_016"
+#. L_DISH_016
 msgid "Collect ECM Mine from table to begin.\n"
 msgstr "Prendi la mina ECM dal tavolo.\n"
 
-#. "L_DISH_017"
+#. L_DISH_017
 msgid "Locate Hub and throw ECM Mine onto Hub.\n"
 msgstr "Trova la centralina e piazzale sopra una mina ECM.\n"
 
-#. "L_DISH_018"
+#. L_DISH_018
 msgid "ECM Mine has been placed incorrectly.\n"
 msgstr "Mina ECM in posizione errata.\n"
 
-#. "L_DISH_019"
+#. L_DISH_019
 msgid "ECM Mine has been placed correctly.\n"
 msgstr "Mina ECM piazzata correttamente.\n"
 
-#. "L_DISH_020"
+#. L_DISH_020
 msgid "Collect CamSpy from table to begin.\n"
 msgstr "Prendi la TeleSpia dal tavolo.\n"
 
-#. "L_DISH_021"
+#. L_DISH_021
 msgid "Locate Info Room PC and holograph it.\n"
 msgstr "Trova il PC sala informazioni per l'olografia.\n"
 
-#. "L_DISH_022"
+#. L_DISH_022
 msgid "Info Room PC successfully holographed.\n"
 msgstr "Olografia riuscita.\n"
 
-#. "L_DISH_023"
+#. L_DISH_023
 msgid "Lights have been reactivated.\n"
 msgstr "Riattivate le luci.\n"
 
-#. "L_DISH_024"
+#. L_DISH_024
 msgid "Collect Door Decoder from table to begin.\n"
 msgstr "Prendi il decodificatore porta dal tavolo.\n"
 
-#. "L_DISH_025"
+#. L_DISH_025
 msgid "Use Decoder on door pad to unlock it.\n"
 msgstr "Usa il decodificatore per sbloccare la porta.\n"
 
-#. "L_DISH_026"
+#. L_DISH_026
 msgid "You need to be holding the Door Decoder.\n"
 msgstr "Devi tenere in mano il decodificatore porta.\n"
 
-#. "L_DISH_027"
+#. L_DISH_027
 msgid "Decoder attached. Initiating cracking routines...\n"
 msgstr "Applicato decodificatore. Decodifica in corso...\n"
 
-#. "L_DISH_028"
+#. L_DISH_028
 msgid "Decoding complete. Door has been unlocked.\n"
 msgstr "Decodifica completata. La porta è stata sbloccata.\n"
 
-#. "L_DISH_029"
+#. L_DISH_029
 msgid "Collect Tracker from table to begin.\n"
 msgstr "Prendi il puntatore dal tavolo.\n"
 
-#. "L_DISH_030"
+#. L_DISH_030
 msgid "Locate IR Scanner using Tracker.\n"
 msgstr "Trova lo scanner a infrarossi con il puntatore.\n"
 
-#. "L_DISH_031"
+#. L_DISH_031
 msgid "IR Scanner has been successfully located.\n"
 msgstr "Trovato lo scanner a infrarossi.\n"
 
-#. "L_DISH_032"
+#. L_DISH_032
 msgid "Collect IR Scanner from table to begin.\n"
 msgstr "Prendi lo scanner a infrarossi dal tavolo.\n"
 
-#. "L_DISH_033"
+#. L_DISH_033
 msgid "Locate secret door using IR Scanner.\n"
 msgstr "Trova la porta segreta con lo scanner a infrarossi.\n"
 
-#. "L_DISH_034"
+#. L_DISH_034
 msgid "Secret door has been successfully located.\n"
 msgstr "Trovata la porta segreta.\n"
 
-#. "L_DISH_035"
+#. L_DISH_035
 msgid "Collect X-Ray Scanner from table to begin.\n"
 msgstr "Prendi lo scanner a raggi X dal tavolo.\n"
 
-#. "L_DISH_036"
+#. L_DISH_036
 msgid "Find hidden switches to shut down laser grid.\n"
 msgstr "Trova gli interruttori e disattiva le griglie laser.\n"
 
-#. "L_DISH_037"
+#. L_DISH_037
 msgid "All laser grids have been deactivated.\n"
 msgstr "Disattivate tutte le griglie laser.\n"
 
-#. "L_DISH_038"
+#. L_DISH_038
 msgid "Collect Disguise from table to begin.\n"
 msgstr "Prendi il travestimento dal tavolo.\n"
 
-#. "L_DISH_039"
+#. L_DISH_039
 msgid "Fool someone into giving you Cloaking Device.\n"
 msgstr "Convinci qualcuno a darti il dispositivo mimetico.\n"
 
-#. "L_DISH_040"
+#. L_DISH_040
 msgid "Cloaking Device successfully retrieved.\n"
 msgstr "Trovato il dispositivo mimetico.\n"
 
-#. "L_DISH_041"
+#. L_DISH_041
 msgid "Laser Grid 1 has been deactivated.\n"
 msgstr "Disattivata la griglia laser 1.\n"
 
-#. "L_DISH_042"
+#. L_DISH_042
 msgid "Laser Grid 2 has been deactivated.\n"
 msgstr "Disattivata la griglia laser 2.\n"
 
-#. "L_DISH_043"
+#. L_DISH_043
 msgid "I'm here to pick up the equipment.\n"
 msgstr "Sono qui per prendere l'attrezzatura.\n"
 
-#. "L_DISH_044"
+#. L_DISH_044
 msgid "Go away, Joanna. You're not fooling anybody!\n"
 msgstr "Vattene, Joanna. Non mi farò fregare da te!\n"
 
-#. "L_DISH_045"
+#. L_DISH_045
 msgid "Here you go. Don't drop it now.\n"
 msgstr "Ecco a te! E adesso non perderlo!\n"
 
-#. "L_DISH_046"
+#. L_DISH_046
 msgid "Cloaking Device has been secured successfully.\n"
 msgstr "Ricevuto il dispositivo mimetico.\n"
 
-#. "L_DISH_047"
+#. L_DISH_047
 msgid "You're meant to use the Disguise, remember?\n"
 msgstr "Devi usare il travestimento, ricordi?\n"
 
-#. "L_DISH_048"
+#. L_DISH_048
 msgid "You'll have to do better than that, Joanna.\n"
 msgstr "Puoi fare di meglio, Joanna.\n"
 
-#. "L_DISH_049"
+#. L_DISH_049
 msgid "Joanna, where did you spring from?\n"
 msgstr "Joanna, da dove te ne sei sbucata?\n"
 
-#. "L_DISH_050"
+#. L_DISH_050
 msgid "You have been detected by the camera.\n"
 msgstr "Sei stata scoperta dalle telecamere!\n"
 
-#. "L_DISH_051"
+#. L_DISH_051
 msgid "Collect Cloaking Device from table to begin.\n"
 msgstr "Prendi il dispositivo mimetico dal tavolo.\n"
 
-#. "L_DISH_052"
+#. L_DISH_052
 msgid "Use Cloaking Device and locate Carrington.\n"
 msgstr "Usa il dispositivo mimetico e trova Carrington.\n"
 
-#. "L_DISH_053"
+#. L_DISH_053
 msgid ""
 "I think we can safely say your training\n"
 "is now complete!\n"
@@ -202,15 +202,15 @@ msgstr ""
 "Credo proprio che il tuo addestramento\n"
 "sia completo!\n"
 
-#. "L_DISH_054"
+#. L_DISH_054
 msgid "Mission complete - Device Training passed!\n"
 msgstr "Missione compiuta - Addestramento superato!\n"
 
-#. "L_DISH_055"
+#. L_DISH_055
 msgid "Mission failed - you have been detected.\n"
 msgstr "Missione fallita - Sei stata scoperta!\n"
 
-#. "L_DISH_056"
+#. L_DISH_056
 msgid ""
 "Select the Uplink.\n"
 "- Hold A Button.\n"
@@ -222,7 +222,7 @@ msgstr ""
 "- Usa il Control Stick per cambiare selezione.\n"
 "- Scegli il Connettore Dati e rilascia A.\n"
 
-#. "L_DISH_057"
+#. L_DISH_057
 msgid ""
 "Select the CamSpy.\n"
 "- Hold A Button.\n"
@@ -234,7 +234,7 @@ msgstr ""
 "- Usa il Control Stick per cambiare selezione.\n"
 "- Scegli la TeleSpia e rilascia A.\n"
 
-#. "L_DISH_058"
+#. L_DISH_058
 msgid ""
 "Select the Night Vision.\n"
 "- Hold A Button.\n"
@@ -246,7 +246,7 @@ msgstr ""
 "- Usa il Control Stick per cambiare selezione.\n"
 "- Scegli la Vista Notturna e rilascia A.\n"
 
-#. "L_DISH_059"
+#. L_DISH_059
 msgid ""
 "Select the Door Decoder.\n"
 "- Hold A Button.\n"
@@ -258,7 +258,7 @@ msgstr ""
 "- Usa il Control Stick per cambiare selezione.\n"
 "- Scegli il decodificatore porta e rilascia A.\n"
 
-#. "L_DISH_060"
+#. L_DISH_060
 msgid ""
 "Select the X-Ray Scanner.\n"
 "- Hold A Button.\n"
@@ -270,7 +270,7 @@ msgstr ""
 "- Usa il Control Stick per cambiare selezione.\n"
 "- Scegli lo scanner a raggi X e rilascia A.\n"
 
-#. "L_DISH_061"
+#. L_DISH_061
 msgid ""
 "Select the Disguise.\n"
 "- Hold A Button.\n"
@@ -282,7 +282,7 @@ msgstr ""
 "- Usa il Control Stick per cambiare selezione.\n"
 "- Scegli il travestimento e rilascia A.\n"
 
-#. "L_DISH_062"
+#. L_DISH_062
 msgid ""
 "Select the IR Scanner.\n"
 "- Hold A Button.\n"
@@ -294,7 +294,7 @@ msgstr ""
 "- Usa il Control Stick per cambiare selezione.\n"
 "- Scegli scanner a infrarossi e rilascia A.\n"
 
-#. "L_DISH_063"
+#. L_DISH_063
 msgid ""
 "Select the Tracker.\n"
 "- Hold A Button.\n"
@@ -306,7 +306,7 @@ msgstr ""
 "- Usa il Control Stick per cambiare selezione.\n"
 "- Scegli il puntatore e rilascia A.\n"
 
-#. "L_DISH_064"
+#. L_DISH_064
 msgid ""
 "Select the Cloaking Device.\n"
 "- Hold A Button.\n"
@@ -318,7 +318,7 @@ msgstr ""
 "- Usa il Control Stick per cambiare selezione.\n"
 "- Scegli il dispositivo mimetico e rilascia A.\n"
 
-#. "L_DISH_065"
+#. L_DISH_065
 msgid ""
 "Select the ECM Mine.\n"
 "- Hold A Button.\n"
@@ -330,11 +330,11 @@ msgstr ""
 "- Usa il Control Stick per cambiare selezione.\n"
 "- Scegli la mina ECM e rilascia A.\n"
 
-#. "L_DISH_066"
+#. L_DISH_066
 msgid "Joanna, it's good to see you.\n"
 msgstr "Joanna, vedo che stai bene!\n"
 
-#. "L_DISH_067"
+#. L_DISH_067
 msgid ""
 "Come with me.\n"
 "I'll walk you round the training rooms.\n"
@@ -342,27 +342,27 @@ msgstr ""
 "Seguimi!\n"
 "Ti condurrò al reparto addestramento.\n"
 
-#. "L_DISH_068"
+#. L_DISH_068
 msgid "The information center is through this door.\n"
 msgstr "Il centro informazioni è oltre questa porta.\n"
 
-#. "L_DISH_069"
+#. L_DISH_069
 msgid "In here we have the device lab.\n"
 msgstr "Qui abbiamo il laboratorio strumentazioni.\n"
 
-#. "L_DISH_070"
+#. L_DISH_070
 msgid "This leads to the simulant training room.\n"
 msgstr "Questo porta al reparto addestramento replicanti.\n"
 
-#. "L_DISH_071"
+#. L_DISH_071
 msgid "This is the firing range, Jo.\n"
 msgstr "Questo è il poligono di tiro.\n"
 
-#. "L_DISH_072"
+#. L_DISH_072
 msgid "This corridor leads down to the hangar.\n"
 msgstr "Questo corridoio porta all'hangar.\n"
 
-#. "L_DISH_073"
+#. L_DISH_073
 msgid ""
 "HOVERCRATE\n"
 "Press B Button next to Hovcrate to grab it...\n"
@@ -370,11 +370,11 @@ msgstr ""
 "ANTIGRAVITÀ\n"
 "Premi B vicino all'Antigravità per prenderlo...\n"
 
-#. "L_DISH_074"
+#. L_DISH_074
 msgid "Press B Button when crate grabbed to release it.\n"
 msgstr "Premi B di nuovo per lasciarlo.\n"
 
-#. "L_DISH_075"
+#. L_DISH_075
 msgid ""
 "HOVERBIKE\n"
 "Double tap B Button next to Hovbike to ride it...\n"
@@ -382,11 +382,11 @@ msgstr ""
 "AEROMOTO\n"
 "Premi B due volte vicino all'Aeromoto per salire...\n"
 
-#. "L_DISH_076"
+#. L_DISH_076
 msgid "Double tap B Button when on Hovbike to dismount.\n"
 msgstr "Premi B due volte per scendere dall'aeromoto.\n"
 
-#. "L_DISH_077"
+#. L_DISH_077
 msgid ""
 "OPENING DOORS\n"
 "Press B Button next to door to open it.\n"
@@ -394,11 +394,11 @@ msgstr ""
 "PORTE\n"
 "Premi B vicino ad una porta per aprirla.\n"
 
-#. "L_DISH_078"
+#. L_DISH_078
 msgid "B Button will also activate any object nearby.\n"
 msgstr "Il pulsante B attiverà anche qualsiasi strumento lì vicino.\n"
 
-#. "L_DISH_079"
+#. L_DISH_079
 msgid ""
 "ELEVATORS\n"
 "Press B Button next to door to call elevator.\n"
@@ -406,27 +406,27 @@ msgstr ""
 "ASCENSORI\n"
 "Premi B vicino all'ascensore per chiamarlo.\n"
 
-#. "L_DISH_080"
+#. L_DISH_080
 msgid "Cannot exit while training is in progress.\n"
 msgstr "Impossibile uscire durante l'addestramento.\n"
 
-#. "L_DISH_081"
+#. L_DISH_081
 msgid "Switch Code 1 has been obtained.\n"
 msgstr "Ottenuto codice di accesso 1.\n"
 
-#. "L_DISH_082"
+#. L_DISH_082
 msgid "Switch Code 2 has been obtained.\n"
 msgstr "Ottenuto codice di accesso 2.\n"
 
-#. "L_DISH_083"
+#. L_DISH_083
 msgid "Switch Code 3 has been obtained.\n"
 msgstr "Ottenuto codice di accesso 3.\n"
 
-#. "L_DISH_084"
+#. L_DISH_084
 msgid "Switch Code 4 has been obtained.\n"
 msgstr "Ottenuto codice di accesso 4.\n"
 
-#. "L_DISH_085"
+#. L_DISH_085
 msgid ""
 "LOOK UP\n"
 "- Press Down C Button to look up at the target.\n"
@@ -434,7 +434,7 @@ msgstr ""
 "GUARDA IN SU\n"
 "- Premi C verso il basso per guardare in alto.\n"
 
-#. "L_DISH_086"
+#. L_DISH_086
 msgid ""
 "LOOK DOWN\n"
 "- Press Up C Button to look down at the target.\n"
@@ -442,39 +442,39 @@ msgstr ""
 "GUARDA IN GIÙ\n"
 "- Premi C verso l'alto per guardare in basso.\n"
 
-#. "L_DISH_087"
+#. L_DISH_087
 msgid "Holoprogram 2 has been completed successfully.\n"
 msgstr "Completato l'oloprogramma 2.\n"
 
-#. "L_DISH_088"
+#. L_DISH_088
 msgid "Holoprogram 4 has been completed successfully.\n"
 msgstr "Completato l'oloprogramma 4.\n"
 
-#. "L_DISH_089"
+#. L_DISH_089
 msgid "Holoprogram 5 has been completed successfully.\n"
 msgstr "Completato l'oloprogramma 5.\n"
 
-#. "L_DISH_090"
+#. L_DISH_090
 msgid "Guard has been successfully disarmed.\n"
 msgstr "La guardia è stata disarmata.\n"
 
-#. "L_DISH_091"
+#. L_DISH_091
 msgid "Guard has been successfully knocked out.\n"
 msgstr "La guardia è stata messa KO.\n"
 
-#. "L_DISH_092"
+#. L_DISH_092
 msgid "Disarm this live target if you can.\n"
 msgstr "Disarma quest'avversario in movimento se ci riesci.\n"
 
-#. "L_DISH_093"
+#. L_DISH_093
 msgid "Knock out this target - stealth is the key.\n"
 msgstr "Metti KO quest'avversario... ci vuole agilità!\n"
 
-#. "L_DISH_094"
+#. L_DISH_094
 msgid "And the final guard...\n"
 msgstr "Ecco l'ultima guardia...\n"
 
-#. "L_DISH_095"
+#. L_DISH_095
 msgid ""
 "DUCK\n"
 "- Hold R Button, then press Down C Button to duck.\n"
@@ -482,7 +482,7 @@ msgstr ""
 "SCHIVA\n"
 "- Tieni premuto R, poi premi C verso il basso.\n"
 
-#. "L_DISH_096"
+#. L_DISH_096
 msgid ""
 "CROUCH\n"
 "- When ducking, hold R Button, then press Down C Button to duck.\n"
@@ -490,15 +490,15 @@ msgstr ""
 "ACCUCCIATI\n"
 "- Tieni premuto R, poi premi e tieni premuto C verso il basso.\n"
 
-#. "L_DISH_097"
+#. L_DISH_097
 msgid "Holoprogram 3 has been completed successfully.\n"
 msgstr "Completato l'oloprogramma 3.\n"
 
-#. "L_DISH_098"
+#. L_DISH_098
 msgid "Activate all the switches.\n"
 msgstr "Attiva tutti gli interruttori.\n"
 
-#. "L_DISH_099"
+#. L_DISH_099
 msgid ""
 "Activate all of the wall switches.\n"
 "- Be quick, as they will quickly reset.\n"
@@ -506,7 +506,7 @@ msgstr ""
 "Attiva tutti gli interruttori a parete.\n"
 " Fai presto o saranno resettati.\n"
 
-#. "L_DISH_100"
+#. L_DISH_100
 msgid ""
 "Get the access codes by examining terminals.\n"
 "- Use the codes on the wall terminals.\n"
@@ -514,31 +514,31 @@ msgstr ""
 "Scopri i codici d'accesso esaminando i terminali.\n"
 " Usa i codici per i terminali a parete.\n"
 
-#. "L_DISH_101"
+#. L_DISH_101
 msgid "Code 1 has been obtained.\n"
 msgstr "Scoperto codice 1.\n"
 
-#. "L_DISH_102"
+#. L_DISH_102
 msgid "Code 2 has been obtained.\n"
 msgstr "Scoperto codice 2.\n"
 
-#. "L_DISH_103"
+#. L_DISH_103
 msgid "Code 3 has been obtained.\n"
 msgstr "Scoperto codice 3.\n"
 
-#. "L_DISH_104"
+#. L_DISH_104
 msgid "Code 4 has been obtained.\n"
 msgstr "Scoperto codice 4.\n"
 
-#. "L_DISH_105"
+#. L_DISH_105
 msgid "Training failed - you must face forward.\n"
 msgstr "Addestramento fallito - Devi guardare avanti.\n"
 
-#. "L_DISH_106"
+#. L_DISH_106
 msgid "Holoprogram 1 has been completed successfully.\n"
 msgstr "Completato l'oloprogramma 1.\n"
 
-#. "L_DISH_107"
+#. L_DISH_107
 msgid ""
 "Unarmed combat - knock out the target.\n"
 "- Press Z Button repeatedly to punch.\n"
@@ -546,31 +546,31 @@ msgstr ""
 "Combattimento a amni nude: stendi l'avversario.\n"
 " Premi Z ripetutamente per sferrare i colpi.\n"
 
-#. "L_DISH_108"
+#. L_DISH_108
 msgid "Now try against a moving target...\n"
 msgstr "Ora prova contro un avversario in movimento...\n"
 
-#. "L_DISH_109"
+#. L_DISH_109
 msgid "And finally against a target that fights back.\n"
 msgstr "E infine contro un avversario che contrattacca.\n"
 
-#. "L_DISH_110"
+#. L_DISH_110
 msgid "Defeat all enemies without getting hit.\n"
 msgstr "Sconfiggi tutti i nemici senza essere colpita.\n"
 
-#. "L_DISH_111"
+#. L_DISH_111
 msgid "Training failed - you have been hit.\n"
 msgstr "Addestramento fallito: sei stata colpita!\n"
 
-#. "L_DISH_112"
+#. L_DISH_112
 msgid "Holoprogram 6 has been completed successfully.\n"
 msgstr "Completato l'oloprogramma 6.\n"
 
-#. "L_DISH_113"
+#. L_DISH_113
 msgid "Holoprogram 7 has been completed successfully.\n"
 msgstr "Completato l'oloprogramma 7.\n"
 
-#. "L_DISH_114"
+#. L_DISH_114
 msgid ""
 "TERMINALS\n"
 "- Press B Button next to terminal to use it.\n"
@@ -578,42 +578,1909 @@ msgstr ""
 "TERMINALI\n"
 "- Premi B vicino al terminale per usarlo.\n"
 
-#. "L_DISH_115"
+#. L_DISH_115
 msgid "Now activate the red terminals on the wall.\n"
 msgstr "Ora attiva il terminale rosso alla parete.\n"
 
-#. "L_DISH_116"
+#. L_DISH_116
 msgid "PP7\n"
 msgstr "PP7\n"
 
-#. "L_DISH_117"
+#. L_DISH_117
 msgid "TT33\n"
 msgstr "TT33\n"
 
-#. "L_DISH_118"
+#. L_DISH_118
 msgid "Skorpion\n"
 msgstr "Skorpion\n"
 
-#. "L_DISH_119"
+#. L_DISH_119
 msgid "AK47\n"
 msgstr "AK47\n"
 
-#. "L_DISH_120"
+#. L_DISH_120
 msgid "Uzi 9mm\n"
 msgstr "Uzi 9mm\n"
 
-#. "L_DISH_121"
+#. L_DISH_121
 msgid "MP5K\n"
 msgstr "MP5K\n"
 
-#. "L_DISH_122"
+#. L_DISH_122
 msgid "M-16\n"
 msgstr "M-16\n"
 
-#. "L_DISH_123"
+#. L_DISH_123
 msgid "FNP90\n"
 msgstr "FNP90\n"
 
-#. "L_DISH_124"
+#. L_DISH_124
 msgid "Okay, Jo, I'll leave you to prepare for the mission.\n"
 msgstr "Bene, Jo, ora preparati per la missione!\n"
+
+#. L_DISH_128
+msgid ""
+"|CI File #027 -\n"
+"\n"
+"Training Status: Complete\n"
+"Training Grade: A++\n"
+"Active Status: Assigned\n"
+"\n"
+"|Profile -\n"
+"\n"
+"Highly trained but inexperienced. Reactions superb. Proficient with a variety of weapons. Very competent all-round agent. Highest recorded training scores resulted in the creation of a new class of training grade. The embodiment of the Carrington Institute's ideal agent, hence the call sign 'Perfect Dark.'\n"
+msgstr ""
+"|File CI n°027 -\n"
+"\n"
+"Stadio addestramento: Completo\n"
+"Grado addestramento: A++\n"
+"Stato attivo: Assegnato\n"
+"\n"
+"|Profilo -\n"
+"\n"
+"Addestramento avanzato ma inesperta. Reazione eccellente. Abilissima con svariate armi. Agente molto competente e versatile. Massimo punteggio di addestramento registrato nella creazione di un nuovo grado di formazione. Incarna l'agente ideale del Carrington Institute, da cui il nome 'Perfect Dark.'\n"
+
+#. L_DISH_129
+msgid "Jonathan\n"
+msgstr "Jonathan\n"
+
+#. L_DISH_130
+msgid "Human (Male)\n"
+msgstr "Umano (maschio)\n"
+
+#. L_DISH_131
+msgid "28 years 5 months\n"
+msgstr "28 anni 5 mesi\n"
+
+#. L_DISH_132
+msgid ""
+"|CI File #009 -\n"
+"\n"
+"Training Status: Complete\n"
+"Training Grade: A+\n"
+"Active Status: Undercover\n"
+"\n"
+"|Profile -\n"
+"\n"
+"Our most experienced undercover agent. Highly accurate with his chosen weapon (a Magnum Revolver). Perfectly suited to undercover missions. Less suited to out-and-out combat. Before Joanna Dark, he held the honor of having the highest recorded training scores.\n"
+msgstr ""
+"|File CI n°009 -\n"
+"\n"
+"Stadio addestramento: Completo\n"
+"Grado addestramento: A+\n"
+"Stato attivo: Segreto\n"
+"\n"
+"|Profilo -\n"
+"\n"
+"Il nostro agente segreto più capace. Molto preciso con la sua arma preferita (Magnum Revolver). Perfetto per le missioni in incognito. Meno adatto alla lotta aperta. Prima di Joanna Dark, deteneva il punteggio più alto nell'addestramento.\n"
+
+#. L_DISH_133
+msgid "Daniel Carrington\n"
+msgstr "Daniel Carrington\n"
+
+#. L_DISH_134
+msgid "Human (Male)\n"
+msgstr "Umano (maschio)\n"
+
+#. L_DISH_135
+msgid "62 years 8 months\n"
+msgstr "62 anni 8 mesi\n"
+
+#. L_DISH_136
+msgid ""
+"|CI File #000 -\n"
+"\n"
+"Training Status: N/A\n"
+"Training Grade: N/A\n"
+"Active Status: N/A\n"
+"\n"
+"|Profile -\n"
+"\n"
+"Intelligent patriarchal scientist/entrepreneur, and founder of the Carrington Institute. Plans all missions carried out by his agents and runs each operation direct from a link in his office. Strange taste in clothes.\n"
+msgstr ""
+"|File CI n°000 -\n"
+"\n"
+"Stadio addestramento: N/D\n"
+"Grado addestramento: N/D\n"
+"Stato attivo: N/D\n"
+"\n"
+"|Profilo -\n"
+"\n"
+"Intelligente scienziato/imprenditore e fondatore del Carrington Institute. Pianifica tutte le missioni che affida ai suoi agenti e esegue ogni operazione dal computer del suo ufficio. Strano gusto in fatto di abbigliamento.\n"
+
+#. L_DISH_137
+msgid "Cassandra De Vries\n"
+msgstr "Cassandra De Vries\n"
+
+#. L_DISH_138
+msgid "Human (Female)\n"
+msgstr "Umano (femmina)\n"
+
+#. L_DISH_139
+msgid "39 years ? months\n"
+msgstr "39 anni ? mesi\n"
+
+#. L_DISH_140
+msgid ""
+"|Analyst note -\n"
+"\n"
+"The head of dataDyne Corp. Addicted to power; dislikes being anybody's underling. Hates it when she loses the initiative. Is prepared to do extremely unscrupulous things in order to get ahead of her competition, to whit Daniel Carrington, whom she loathes.\n"
+msgstr ""
+"|Scheda psicanalitica -\n"
+"\n"
+"La mente della dataDyne Corp. Assetata di potere, detesta non essere il capo. Odia perdere il comando. È senza scrupoli e pronta a tutto pur di vincere la sua battaglia contro Daniel Carrington, che disprezza con tutte le sue forze.\n"
+
+#. L_DISH_141
+msgid "Trent Easton\n"
+msgstr "Trent Easton\n"
+
+#. L_DISH_142
+msgid "Human (Male)\n"
+msgstr "Umano (maschio)\n"
+
+#. L_DISH_143
+msgid "46 years ? months\n"
+msgstr "46 anni ? mesi\n"
+
+#. L_DISH_144
+msgid ""
+"|Analyst note -\n"
+"\n"
+"Head of the National Security Agency. Has a friendship of sorts with Cassandra De Vries, although it operates more like a partnership of interest. He will tend to do what Cassandra says, possibly because although he has a dominant personality, it is not as dominant as hers. Figurehead for some of the rogue elements in the NSA.\n"
+msgstr ""
+"|Scheda psicanalitica -\n"
+"\n"
+"Capo del National Security Agency, è legato a Cassandra De Vries da una strana amicizia, che sembra più che altro un'alleanza d'interesse. Tende a fare tutto ciò che dice Cassandra, forse perché, pur avendo una forte personalità, non basta a sovrastarla. Riferimento per molte teste calde dell'NSA.\n"
+
+#. L_DISH_145
+msgid "Dr. Caroll\n"
+msgstr "Dr. Caroll\n"
+
+#. L_DISH_146
+msgid "The Caroll Sapient (AI)\n"
+msgstr "Il Sapiente Caroll (AI)\n"
+
+#. L_DISH_147
+msgid "6 months\n"
+msgstr "6 mesi\n"
+
+#. L_DISH_148
+msgid ""
+"|Profile -\n"
+"\n"
+"An artificial intelligence created by the dataDyne Corp. with an emphasis on language skills and code breaking. Fortunately, he has morals, and due to his formidable level of intelligence, has guessed some of dataDyne's future plans. The voice is highly precise and educated and simulates the character of an academic.\n"
+msgstr ""
+"|Profilo -\n"
+"\n"
+"Un'intelligenza artificiale creata dalla dataDyne Corp. con spiccate abilità linguistiche e di lettura codici. Fortunatamente ha principi morali e, grazie al suo formidabile livello di intelligenza, ha fiutato alcuni piani futuri della dataDyne. Dispone di proprietà di linguaggio e di stile, tanto da sembrare un docente universitario.\n"
+
+#. L_DISH_149
+msgid "Elvis\n"
+msgstr "Elvis\n"
+
+#. L_DISH_150
+msgid "Maian (Male)\n"
+msgstr "Maian (maschio)\n"
+
+#. L_DISH_151
+msgid "320 years\n"
+msgstr "320 anni\n"
+
+#. L_DISH_152
+msgid ""
+"|Profile -\n"
+"\n"
+"An alien from the Maian race. He is a 'Protector' (bodyguard) for the Maian ambassador who travels to Earth at Daniel Carrington's request. Protectors are trained to excel in the use of an assortment of weaponry. Elvis is a terraphile, finding Earth and everything about it fascinating.\n"
+msgstr ""
+"|Profilo -\n"
+"\n"
+"Un alieno della razza Maian. È il 'difensore' (guardia del corpo) dell'ambasciatore Maian invitato sulla Terra da Daniel Carrington. I difensori sono addestrati per l'uso preciso di una vasta gamma di armi. Elvis è un terrafilo: per lui il mondo terrestre è incredibilmente affascinante.\n"
+
+#. L_DISH_153
+msgid "Mr. Blonde\n"
+msgstr "Mr Blonde\n"
+
+#. L_DISH_154
+msgid "Human (Male)\n"
+msgstr "Umano (maschio)\n"
+
+#. L_DISH_155
+msgid "Late 20's\n"
+msgstr "Va per i 30\n"
+
+#. L_DISH_156
+msgid ""
+"|Profile -\n"
+"\n"
+"A striking blonde human male. Very tall, wears white clothing, usually a raincoat. Appears to be masterminding the conspiracy in which Cassandra and Trent are involved. Little else is known.\n"
+msgstr ""
+"|Profilo -\n"
+"\n"
+"Un umano maschio con capelli biondissimi. Molto alto, sempre vestito di bianco, porta spesso un impermeabile. Sembra che orchestri il complotto in cui sono coinvolti Cassandra  e Trent. Di lui non si sa altro.\n"
+
+#. L_DISH_157
+msgid "Mr. Blonde\n"
+msgstr "Mr Blonde\n"
+
+#. L_DISH_158
+msgid "Skedar (disguised)\n"
+msgstr "Skedar (in incognito)\n"
+
+#. L_DISH_159
+msgid "unknown\n"
+msgstr "Sconosciuta\n"
+
+#. L_DISH_160
+msgid ""
+"|Updated Profile -\n"
+"\n"
+"This is a Skedar warrior lurking within a holographic projection of a striking blonde young human male in his late 20's.  The oral modulation unit gives the Skedar a precise, persuasive, and intelligent voice. It is a propaganda and manipulation tool for the Skedar, and an unusually subtle one.\n"
+msgstr ""
+"|Profilo Aggiornato -\n"
+"\n"
+"Si tratta di un guerriero Skedar che si aggira entro la proiezione olografica di un uomo biondissimo sui 30 anni. Il dispositivo di modulazione orale gli conferisce un tono di voce chiaro, piacevole e convincente. È un subdolo mezzo di propaganda per gli Skedar.\n"
+
+#. L_DISH_161
+msgid "The U.S. President\n"
+msgstr "Il Presidente degli USA\n"
+
+#. L_DISH_162
+msgid "Human (Male)\n"
+msgstr "Umano (maschio)\n"
+
+#. L_DISH_163
+msgid "50 years\n"
+msgstr "50 anni\n"
+
+#. L_DISH_164
+msgid ""
+"|Profile -\n"
+"\n"
+"A highly educated, shrewd African-American who is trying to do what is right but is surrounded by people like Trent Easton. He believes he has Trent under control after refusing the request for the loan of the Pelagic II to the dataDyne Corp. Perceived as being easily led by the majority of political commentators, which is perhaps unfair.\n"
+msgstr ""
+"|Profilo -\n"
+"\n"
+"Un afro-americano istruito e astuto che cerca di fare la cosa giusta ma è attorniato da gente come Trent Easton. Dopo aver respinto la richiesta di prestito del Pelagic II avanzata dalla dataDyne, crede di avere Trent sotto controllo. La maggioranza dei commentatori politici lo ritiene facilmente influenzabile, giudizio forse azzardato.\n"
+
+#. L_DISH_165
+msgid "Maians\n"
+msgstr "I Maian\n"
+
+#. L_DISH_166
+msgid ""
+"The Maians are the race of aliens that have come to be known on Earth as "
+"'Greys.' They have been monitoring Earth for a long time - several centuries"
+" - and are benevolent towards mankind, sensing great potential in the human "
+"race. Their contact on Earth is Daniel Carrington. A formal political "
+"contact has yet to be made.\n"
+msgstr ""
+"I Maian sono la razza di alieni noti sulla Terra come i 'Grigi'. Hanno "
+"studiato la Terra molto a lungo, per svariati secoli, e sono bendisposti "
+"verso gli umani, comprendendone il grande potenziale. Il loro contatto sulla"
+" Terra è Daniel Carrington, però manca ancora un contatto politico "
+"formale.\n"
+
+#. L_DISH_167
+msgid "Skedar Warrior\n"
+msgstr "Guerriero Skedar\n"
+
+#. L_DISH_168
+msgid ""
+"The Skedar are a warlike alien race who have fought the Maians for centuries"
+" and have only recently agreed to a ceasefire. They tend to use mechanized "
+"armatures to walk about and fight in, since they are in actual fact smaller,"
+" snakelike creatures. Very aggressive -  they have made war a religion - and"
+" are extremely devout.\n"
+msgstr ""
+"Gli Skedar sono una razza aliena bellicosa, da sempre in lotta contro i "
+"Maian. Solo di recente hanno firmato un armistizio. Lottano e si muovono in "
+"enormi armature meccanizzate, poiché non sono altro che piccole creature "
+"simili ai rettili. Sono molto aggressivi: hanno fatto della guerra la loro "
+"religione... e sono molto devoti.\n"
+
+#. L_DISH_169
+msgid "Background\n"
+msgstr "Situazione\n"
+
+#. L_DISH_170
+msgid ""
+"Millions of years ago, a huge alien ship of immense power was scuttled in the Pacific Ocean. It was equipped with an untried and vastly dangerous weapon: the weak nuclear force de-coupler, which could in theory cause the fundamental bonds between molecules to fail. So that watching eyes would believe in the destruction of the ship, a message pod was despatched to the home galaxy, and vital components of the ship's drives were destroyed in the star system it had chosen as a hiding place. For this ship was a Cetan, a massive, sentient alien creature.\n"
+"\n"
+"Another extraterrestrial race, the Maians, encountered life on Earth in 2000 BC. They saw great potential, but decided to let the primitive human race develop without their interference.\n"
+"\n"
+"The Maians encountered the Skedar near Delta Eridanus in 1650 AD (Earth date), and the resultant skirmish soon blossomed into all-out war. Only after hundreds of years of fighting did an uneasy peace develop, and even then Skedar fanatics persistently tested the boundaries of this peace with terrorist activities. Fortunately, the Maians refused to be drawn.\n"
+"\n"
+"Mankind, too, continued to be a cause of concern to the Maians, and they watched with disappointment as Earth suffered more and more crises brought on by the rise of technology and 'outside context situations.' They feared that announcing their presence would only precipitate further wars on the planet, and quietly decided to continue their observation until the race became more mature.\n"
+"\n"
+"Daniel Carrington jumped the gun in 1985 AD by contacting a Maian ship in orbit above Earth. He put forward a plan that would help both parties, resulting in accelerated contact between Humans and Maians. Having agreed that his plan was sound, and finding him to be a person of integrity, the Maians allowed Carrington to release their technology into the public domain through his considerable Research and Development holdings.\n"
+"\n"
+"Then, in 2006 AD, Skedar fanatics stumbled across the Cetan message pod. They immediately began to scout Earth in a particularly heavy-handed way, abducting people and mutilating animals in an attempt to determine the location of the lost battle cruiser. In time, their tests inevitably led them to its resting place on the bed of the Pacific Ocean; however, in order to actually reach it, they would need the help of the natives.\n"
+"\n"
+"Performing their own study of Earth, the Skedar came up with a shortlist of companies possessing the resources to help them recover the sunken ship. At the top of the list was the dataDyne Corporation. They contacted the company head, Cassandra De Vries, and presented her with a deal that sounded too good to be true - which, of course, it was. In return for helping to raise 'their' ship from the ocean floor, the Skedar promised to supply dataDyne with enough alien technology to become the biggest corporation on the face of the planet. All that dataDyne had to do was build an AI unit with language and code-breaking abilities, which was tricky, but certainly within their means. Work commenced on the project immediately.\n"
+"\n"
+"Cassandra De Vries approached NSA head Trent Easton with the details of the plan, but his attempts to get Presidential approval for the loan of a deep-sea research vessel were repeatedly turned down. There was no way that the Skedar or dataDyne could steal the vessel without triggering the wrath of the U.S. Government, so over time they settled instead on a far more sinister plan of replacing the President with a clone that they could control. Of course, this also promised extra rewards for Trent and Cassandra when the Skedar operation was consigned to history.\n"
+"\n"
+"However, they would not be given much time to gloat. The Skedar fanatics' ultimate plan was to test the weak nuclear force de-coupler on Earth before wiping the Maians out of existence, and both Cassandra and Trent remained blind to the possibility of being double-crossed, so enamored were they with the visions of power and luxury that lay ahead.\n"
+"\n"
+"But dataDyne had unwittingly created something that could see all too clearly the danger within this multilayered conspiracy: the sapient AI built to crack the core access codes of the Cetan ship. When it expressed concern over the mission for which it had been designed, Cassandra's response was to order its personality removed. Clearly, it was thinking too much. In desperation, and in a move which would make or break a great deal more than dataDyne's 'deal' with the Skedar, the sapient adopted the pseudonym Dr. Caroll and contacted the Carrington Institute with a plea for help...\n"
+msgstr ""
+"Milioni di anni fa un'enorme e potente nave aliena si inabissò nell'Oceano Pacifico. Era dotata di un'arma molto pericolosa, ma ancora sconosciuta, in grado di rompere i legami nucleari che tengono assieme le molecole. Affinché possibili occhi indiscreti credessero che la nave fosse andata distrutta, fu diffuso nella galassia da cui era partita un apposito messaggio e vari componenti del sistema di propulsione furono distrutti proprio nel sistema solare che era stato scelto come nascondiglio. In realtà questa astronave era un Cetan, una creatura possente, vigile e aliena.\n"
+"\n"
+"Un'altra razza extraterrestre, i Maian, scoprirono la vita sulla terra nel 2000 a.C. Ne videro un enorme potenziale, ma decisero di lasciare che la primitiva razza umana si sviluppasse senza la loro intrusione.\n"
+"\n"
+"I Maian incontrarono gli Skedar vicino al Delta Eridano nel 1650 d.C. (data terrestre) e le schermaglie iniziali si trasformarono presto in una guerra sanguinosa. Solo dopo centinaia di anni di lotta si arrivò ad una pace molto delicata che frange di Skedar continuavano a ledere con attacchi terroristici, a cui i Maian non capitolarono mai.\n"
+"\n"
+"Ma anche l'umanità continuava ad essere una preoccupazione per i Maian che guardavano delusi come la Terra subisse continue crisi causate dall'avvento della tecnologia e da 'agenti estranei'. Temevano che annunciare la loro presenza potesse solo scatenare altre guerre sul pianeta e così decisero di continuare pazientemente le loro osservazioni finché gli umani non si fossero dimostrati più 'maturi'.\n"
+"\n"
+"Daniel Carrington fu sicuramente 'precoce' e nel 1985 d.C. contattò una nave Maian in orbita sopra la terra, proponendo un piano vantaggioso per tutti che avrebbe accelerato i contatti tra gli umani e i Maian. Ritenendo Carrington un uomo onesto, i Maian approvarono il suo piano e acconsentirono a che egli diffondesse la loro tecnologia tramite il suo rinomato Istituto di Ricerca e Sviluppo.\n"
+"\n"
+"Ma nel 2006 d.C. alcuni estremisti Skedar rintracciarono l'antico messaggio Cetan. Cominciarono subito a perlustrare la Terra con minuzia e con ogni mezzo, rapendo persone e mutilando animali per arrivare a scoprire il luogo in cui era dispersa la nave da guerra. Col tempo riuscirono inevitabilmente a scovare il punto esatto in cui l'incrociatore riposava sul fondo del Pacifico, ma per raggiungerlo avrebbero avuto bisogno dell'aiuto degli umani.\n"
+"\n"
+"Conducendo i loro studi sulla Terra, gli Skedar compilarono una lista di aziende con le risorse necessarie per il recupero della nave. Capolista era la dataDyne Corporation. Ne contattarono il presidente, Cassandra De Vries e le proposero un accordo troppo bello per essere vero, ed ovviamente non lo era. In cambio dell'aiuto per recuperare la 'loro' nave dal fondo dell'Oceano, gli Skedar promisero di cedere alla dataDyne tutta la tecnologia aliena necessaria per diventare la più grande azienda sul pianeta. La dataDyne doveva solo costruire un automa con abilità linguistiche e di decodifica... compito sospetto, ma di sicuro alla loro altezza. I lavori cominciarono immediatamente.\n"
+"\n"
+"Cassandra De Vries riferì i dettagli del piano a Trent Easton, direttore dell'NSA, che cercò invano di ottenere l'approvazione del Presidente al prestito di un sottomarino per ricerche sul fondo oceanico. Né gli Skedar né la dataDyne avrebbero potuto rubare il sommergibile senza scatenare la furia del governo USA, quindi elaborarono un piano ben più sinistro per la sostituzione del Presidente con un clone che solo loro potessero controllare. Una volta consegnata alla storia l'operazione Skedar, Trent e Cassandra sarebbero stati ovviamente ricompensati di tanto rischio.\n"
+"\n"
+"Ma non avrebbero avuto molto tempo per esultare. Il piano finale degli estremisti Skedar era di sperimentare il separatore molecolare sulla Terra prima di eliminare i Maian, e né Cassandra né Trent si accorsero della trappola, accecati com'erano dalla brama di potere e successo.\n"
+"\n"
+"Ma la dataDyne aveva creato inconsapevolmente qualcosa che poteva ben capire il pericolo di questa intricata cospirazione: l'automa Sapiente costruito per infrangere il codice di accesso alla nave Cetan. Quando questo rivelò le sue preoccupazioni sulla missione per cui era progettato, Cassandra ordinò di manipolargli il cervello togliendogli così la personalità. Pensava decisamente troppo... Disperato, il Sapiente decise di reagire ai complotti della dataDyne e degli Skedar, e con una mossa coraggiosa adottò lo pseudomino di Dr. Caroll e contattò il Carrington Institute chiedendo aiuto...\n"
+
+#. L_DISH_171
+msgid "The Story\n"
+msgstr "La storia\n"
+
+#. L_DISH_172
+msgid ""
+"Untried agent Joanna Dark is assigned a mission involving the extraction of a scientist from the high security research area beneath the dataDyne skyscraper. Upon rendezvous, she is surprised to discover that this 'Dr. Caroll' is an AI created by dataDyne itself - but she continues with her task of escorting him/it to a place of safety. When the alarm is raised, Joanna has to fight her way up the tower to reach the helipad and the dropship which presents her only means of escape.\n"
+"\n"
+"In response to this incursion, dataDyne make Daniel Carrington a personal target and take him hostage two days later at his private villa. They demand the return of the AI - their 'property' - in exchange for his life. Unknown to them, the AI is already at the villa, where it was being questioned by Carrington on dataDyne's future plans. Joanna eventually rescues the head of the Institute but is unable to prevent dataDyne from taking back Dr. Caroll. However, Carrington has heard enough to take the drastic step of summoning a team of Maian specialists to Earth.\n"
+"\n"
+"Joanna is dispatched to Chicago to spy on a conspirators' meeting at the G5 Building, a front for the dataDyne Corp. It is here that she learns of the involvement of Trent Easton, head of the NSA, and of the strange Nordic men that appear to be in control of the whole deadly scheme. Once Trent discloses the plan to usurp the Presidential position, Jo radios the news back to base - only to find that another, more urgent task requires her attention before further action can be taken against Trent.\n"
+"\n"
+"The Maian specialists have been intercepted and brought down by the conspirators, with survivors and wreckage alike being transported to Area 51 in Nevada. Briefed to rescue any survivors and retrieve their equipment, Joanna is dropped in to link up with another Carrington Institute agent. Upon breaking into the medlab, Joanna finally discovers the Institute's secret - their allies are Maians, the alien race commonly known as Greys. The particular Maian she manages to rescue goes by the name of Elvis. He was a bodyguard for the Ambassador who had been flying in at the head of the specialist team.\n"
+"\n"
+"Having aided the remnants of the Maian delegation, Joanna can return to the matter of the President and dataDyne's designs against him. She poses as a member of the President's entourage to gain access to the air base where Air Force One is stationed, and successfully conceals herself aboard the plane. As soon as it's airborne, Trent and the cloaked Skedar make their move - but Joanna is there to stop them. She rushes the President to a safety capsule while a team of Trent's men scour the aircraft, intent on dragging the hapless politician aboard the Skedar UFO now docked to AF1 via an umbilical. Jo weakens the umbilical but is unable to break it, and ultimately Elvis makes a last-ditch attempt to sever the cord by crashing into it at high speed. All three craft plummet towards the Alaskan wilderness, and the AF1 escape pod is launched.\n"
+"\n"
+"Coming around, Jo tries to report in but finds her communications jammed by a transmission from the Skedar craft. She sets off through the snow to find the President and Elvis, encountering teams of cloaked Skedar out searching for her, the President, Elvis, and the President's belongings. She tracks one group back to the downed Skedar ship, where she discovers a clone of the President: quickly she destroys it, shuts down the jamming device and calls in the cavalry. The Skedar are thwarted once more, the President is safe, and Trent's incompetence has earned him a nasty fate at the hands of his 'allies.'\n"
+"\n"
+"But it's not over. Throwing caution to the wind, dataDyne and the Skedar steal the Government's deep-sea research vessel 'Pelagic II' and head out to the Pacific crash site. Joanna and Elvis leave to disrupt activity on board the ship and find out what lies at the heart of the grand Skedar plan. After crippling the vessel's diving operations and recalling the submersible, they head down to the ocean floor, where they get their first sight of the downed Cetan battle cruiser. A portal made by the Skedar offers them access to the ship, where they stumble across a dead Skedar warrior... Clearly the assault team didn't have it all their own way. Fighting off the remaining vengeful Skedar and avoiding the Cetans themselves, Joanna and Elvis make their way down to the core of the ship, where they find the AI that was once Dr. Caroll. They manage to restore his personality, whereupon he urges Joanna and Elvis to leave the ship so that he may destroy it for good.\n"
+"\n"
+"Later, back at the Carrington Institute, Joanna is about to leave for a Presidential reception at the White House when all hell breaks loose. The Skedar assault team survivors are venting their anger on those they deem responsible for their failure to recover the Cetan ship. Joanna dashes around the Institute, helping CI employees to reach the safety of the hangars, as the Skedar launch attacks on various parts of the building: the majority of the employees make good their escape while Joanna holds the fort, but eventually she is knocked unconscious and taken prisoner.\n"
+"\n"
+"She comes to in a holding cell on board the Skedar assault ship, with only Cassandra De Vries for company. In a shocking move, the dataDyne CEO willingly gives her life to create the distraction necessary for Joanna to break out. Battling her way through the ship, Jo eventually manages to locate and disable the docking bay shields, allowing Elvis to bring in a few friends for the long-awaited shooting party.\n"
+"\n"
+"The captured assault ship enters orbit above the Skedar Battle Shrine, which shocks Elvis as the Maians never managed to find this Skedar 'holiest of holies' throughout the long years of interracial war. If the Shrine were destroyed, Skedar morale would be dealt a fatal blow and true peace would finally replace the uneasy ceasefire. So Jo sets her sights on the Skedar leader, the high priest of the Battle Shrine, while Elvis returns to the assault ship in order to summon the Maian fleet.\n"
+"\n"
+"In the wake of the climactic battle, the temple lies devastated with Elvis calling for a lull in the bombardment so that he can find Joanna. She is alive, held under a pile of rubble by the last tenacious Skedar that caught up during the last few seconds of her escape bid. Elvis quickly offers her a gun to convince the Skedar to let go, and with the job finally done, the Skedar Shrine and morale both in ruins and the conspiracy dealt a mortal blow to the heart, the two of them depart for orbit.\n"
+msgstr ""
+"L'inesperta agente Joanna Dark è incaricata di una missione consistente nel prelevare uno scienziato dall'area ad alta sicurezza nei sotterranei della dataDyne. Quando trova il Dr. Caroll rimane sorpresa nello scoprire che si tratta di un automa creato dalla dataDyne, tuttavia resta fedele al suo incarico di portarlo al sicuro. Durante l'operazione scatta l'allarme e Joanna deve farsi strada per raggiungere sul tetto l'eliporto e la navetta di salvataggio, le uniche vie di scampo.\n"
+"\n"
+"In risposta a questa incursione, due giorni dopo la dataDyne prende in ostaggio Daniel Carrington nella sua villa; in cambio della sua vita vogliono la restituzione dell'automa di loro 'proprietà'. A loro insaputa l'automa si trova già nella villa dove Carrington lo stava interrogando sui piani futuri della dataDyne. Joanna riesce a salvare il capo dell'istituto, ma non può impedire che la dataDyne si riprenda il Dr. Caroll. Tuttavia, Carrington ha scoperto abbastanza da decidere di richiedere l'intervento di una squadra di specialisti Maian sulla Terra.\n"
+"\n"
+"Joanna è inviata a Chicago per spiare una riunione di cospiratori nell'edificio G5, una copertura della dataDyne Corporation. Qui scopre che anche Trent Easton, direttore dell'NSA, è coinvolto nella faccenda, assieme ad alcuni Scandinavi che sembrano avere il controllo della losca situazione. Quando Trent rivela il piano per il rapimento del Presidente, Joanna comunica la notizia alla base, ma scopre che un altro compito più urgente richiede il suo intervento, prima dell'affare Trent.\n"
+"\n"
+"Gli specialisti Maian sono stati intercettati e abbattuti dai cospiratori, che hanno trasportato rottami e sopravvissuti presso l'Area 51 in Nevada. Dopo essere stata istruita su come recuperare i superstiti e le loro attrezzature, a Joanna viene affiancato un altro agente del Carrington Institute. Quando irrompe nel laboratorio, Joanna riesce a scoprire il segreto dell'istituto: i loro alleati sono i Maian, la razza aliena nota come i Grigi. Il Maian che riesce a salvare si chiama Elvis, era la guardia del corpo dell'ambasciatore Maian che era stato inviato sulla Terra come capo della squadra di specialisti.\n"
+"\n"
+"Dopo aver aiutato i superstiti della delegazione Maian, Joanna può tornare a occuparsi del Presidente e dei piani della dataDyne contro di lui. Fingendo di essere un membro dell'entourage del Presidente, riesce ad accedere alla base aerea dove staziona l'Air Force One e addirittura ad imbarcarsi. Dopo il decollo, Trent e uno Skedar in incognito entrano in azione, ma Joanna è lì per fermarli. Porta il Presidente su una capsula di sicurezza, mentre una squadra degli uomini di Trent saccheggia l'aereo e trasborda i politici sull'UFO Skedar che si era agganciato all'Air Force One tramite un cordone ombelicale. Joanna danneggia il cordone ma non riesce a romperlo, allora Elvis fa un ultimo tentativo per distruggerlo lanciadovisi contro ad alta velocità. I tre velivoli precipitano in una regione sperduta dell'Alaska e dall'Air Force One viene lanciata la capsula di salvataggio.\n"
+"\n"
+"In seguito Joanna cerca di ristabilire i contatti con l'istituto, ma gli Skedar riescono ad impedire le comunicazioni. Così si incammina tra la neve alla ricerca del Presidente e di Elvis, e incontra squadre di Skedar in incognito in cerca di lei, di Elvis e del Presidente. Decide di seguire un gruppo di Skedar fino alla navicella Skedar affondata e qui scopre il clone del Presidente: riesce a distruggerlo velocemente e a disattivare il dispositivo di disturbo delle comunicazioni, infine chiama i rinforzi. Il Presidente è salvo, gli Skedar hanno fallito e ora Trent dovrà pagare cara la sua incompetenza.\n"
+"\n"
+"Ma non è finita. Ignorando qualsiasi cautela, la dataDyne e gli Skedar rubano il 'Pelagic II', il sottomarino di ricerca del Governo, e si dirigono nel punto in cui affondò la nave Cetan. Joanna e Elvis devono intralciare l'attività a bordo e così scoprono il vero senso del piano Skedar. Dopo aver paralizzato le operazioni di immersione e fatto rientrare i sommergibili, raggiungono il fondo dell'oceano dove scoprono l'incrociatore Cetan affondato. Un varco realizzato dagli Skedar li fa entrare nella nave dove inciampano nel cadavere di un guerriero Skedar... la squadra d'assalto non deve averla passata liscia. Eliminando gli aggressivi Skedar superstiti e sfuggendo ai Cetan, Joanna e Elvis arrivano al centro della nave, dove trovano l'automa una volta noto come Dr. Caroll. Dopo che sono riusciti a ristabilire la sua personalità, l'automa li convince ad abbandonare la nave in modo che lui possa distruggerla una volta per tutte.\n"
+"\n"
+"Rientrati al Carrington Institute, Joanna si appresta ad andare alla Casa Bianca per il ricevimento presidenziale quando scoppia l'inferno. I superstiti dello squadrone d'assalto Skedar si vogliono vendicare dando la caccia ai responsabili del loro fallimento nel recupero della nave Cetan. Joanna aiuta i dipendenti dell'istituto a mettersi in salvo negli hangar, mentre gli Skedar sferrano attacchi in vari punti dell'istituto: la maggioranza dei dipendenti riesce a salvarsi, ma alla fine Joanna viene stordita e fatta prigioniera.\n"
+"\n"
+"Si ritrova in una cella a bordo della nave Skedar assieme a Cassandra De Vries. In un momento drammatico, il presidente della dataDyne offre volontariamente la sua vita per creare lo scompiglio che sarà necessario a Joanna per fuggire. Facendosi strada nella nave, Joanna riesce a trovare e disattivare gli scudi anti-attracco consentendo a Elvis di portare alcuni amici per la tanto attesa sparatoria.\n"
+"\n"
+"La nave d'assalto catturata entra nell'orbita sopra il Tempio di Guerra Skedar, con grande sorpresa di Elvis poiché i Maian non sono mai riusciti a trovare questo 'luogo sacro' in tutti gli anni di guerra interraziale. Distruggere il Tempio significherebbe infliggere un duro colpo agli Skedar e la pace duratura sostituirebbe l'instabile tregua. Così Joanna si concentra sul leader Skedar, il sacerdote a capo del Tempio, mentre Elvis torna alla nave d'assalto per organizzare le flotte Maian.\n"
+"\n"
+"Dopo la furiosa battaglia, del Tempio non rimane che una rovina e Elvis interrompe il bombardamento per cercare Joanna. È viva ma tenuta in trappola sotto le macerie dagli ultimi tenaci Skedar comparsi all'ultimo momento, proprio mentre stava scappando. Elvis le passa un'arma per convincere gli Skedar a lasciarla andare e, a lavoro completato, con il Tempio Skedar raso al suolo, i due eroi possono finalmente rientrare in orbita. La razza Skedar è giunta al capolinea: il morale sotto i piedi e il complotto mandato in fumo per sempre.\n"
+
+#. L_DISH_173
+msgid "dataDyne Corporation\n"
+msgstr "dataDyne Corporation\n"
+
+#. L_DISH_174
+msgid ""
+"The monolithic corporation that dataDyne has become started off as an AI "
+"systems programming business. When it became apparent that much of their "
+"income came from their work as a defense contractor for the U.S. military, a"
+" young and forward-looking manager called Cassandra De Vries started pushing"
+" for deals with weapons manufacturers, while ignoring offers from Daniel "
+"Carrington and the Institute for collaboration on quantum computing and AI "
+"research. After the third armament company was bought by dataDyne, profits "
+"became astronomical. Within a month of the receipt of a government contract "
+"for weapons development, Cassandra De Vries was CEO. A significant portion "
+"of corporation profits were redirected into AI research, with excellent "
+"results.\n"
+msgstr ""
+"L'azienda monolitica che oggi è la dataDyne era stata originariamente creata"
+" come impresa di programmazione di sistemi di intelligenza artificiale. "
+"Tuttavia, quando emerse che la maggior parte dei profitti scaturiva dalla "
+"sua opera di difesa per conto della macchina militare statunitense, un "
+"manager giovane e intraprendente di nome Cassandra De Vries iniziò a "
+"stringere accordi con produttori di armi, ignorando le offerte di "
+"collaborazione di Daniel Carrington e del suo istituto per condurre una "
+"ricerca congiunta relativa al computo dei quanti e all'intelligenza "
+"artificiale. Dopo la fusione con la terza azienda produttrice di armi, i "
+"profitti del gruppo andarono alle stelle. Nel giro di un mese la dataDyne "
+"ottenne un appalto governativo per lo sviluppo di nuove armi sotto la guida "
+"di Cassandra De Vries. Una buona parte dei profitti del gruppo furono "
+"reinvestiti nella ricerca relativa all'intelligenza artificiale con "
+"risultati sorprendenti.\n"
+
+#. L_DISH_175
+msgid "Carrington Institute\n"
+msgstr "Carrington Institute\n"
+
+#. L_DISH_176
+msgid ""
+"Briefly dismissed as a crackpot inventor, Daniel Carrington was the first to"
+" release anti-gravity technology to the world. Revenues from this and "
+"related development helped set up the Carrington Institute, ostensibly a "
+"technology think tank situated in a remote part of the continental U.S. In "
+"actual fact, the Institute is also a training ground for agents who are sent"
+" out into the world to keep track of technological development around the "
+"globe, for reasons best known to Daniel Carrington himself.\n"
+msgstr ""
+"Deriso e considerato un inventore bizzarro, Daniel Carrington fu il primo a "
+"divulgare le tecnologia antigravitazionale. Con i proventi ottenuti da "
+"questa invenzione e altri sviluppi fondò il Carrington Institute, una fucina"
+" tecnologica situata in una sperduta località degli USA. L'istituto è anche "
+"il campo di addestramento per la formazione di agenti la cui missione è "
+"girare il mondo per tenere sotto controllo lo sviluppo tecnologico, per "
+"ragioni ben note a Daniel Carrington.\n"
+
+#. L_DISH_177
+msgid ""
+"Description\n"
+"- A tiny remote camera for stealthy exploration. Equipped for spectroscopic holography. Opens doors by projecting a human-sized pulse of heat.\n"
+"\n"
+"Training Instructions\n"
+"- Holograph the hacker's terminal next door in the Info room.\n"
+"\n"
+"Operation\n"
+"- Press the Z Button to take a holograph. Pressing the B Button will open any doors in the way. Hold down the R Button to look around.\n"
+msgstr ""
+"Description\n"
+"- Una minuscola telecamera per esplorazioni clandestine e l'olografia spettroscopica. Apre le porte emettendo impulsi di calore.\n"
+"\n"
+"Istruzioni di addestramento\n"
+"- Olografa il terminale hacker nella sala informatica a fianco.\n"
+"\n"
+"Funzionamento\n"
+"- Premi Z per l'olografia. Premi B per aprire le porte. Tieni premuto R per guardarti intorno.\n"
+
+#. L_DISH_178
+msgid ""
+"Description\n"
+"- Enhances any visible light to produce an image of the surrounding area. Also highlights life forms. Overloads in normal light conditons, 'whiting out' the display.\n"
+"\n"
+"Training Instructions\n"
+"- Head into the darkness, find the light switch, and activate it to turn the lights back on.\n"
+"\n"
+"Operation\n"
+"- Select the Night Vision from your inventory to activate it. Reselect to deactivate.\n"
+msgstr ""
+"Descrizione\n"
+"- Migliora la qualità della luce presente per visualizzare l'area circostante. Rileva le fonti di vita. Sovraccarica in condizioni di luce normale, 'annebbiando' il display.\n"
+"\n"
+"Istruzioni di addestramento\n"
+"- - Procedi al buio, trova l'interruttore e attivalo per riaccendere la luce.\n"
+"\n"
+"Funzionamento\n"
+"- Seleziona Vista Notturna dall'inventario per attivarla. Riselezionala per disattivarla.\n"
+
+#. L_DISH_179
+msgid ""
+"Description\n"
+"\n"
+"- Stand-alone code-breaking device. Attaches to the control panel and sifts through the possible combinations until the lock is opened.\n"
+"\n"
+"Training Instructions\n"
+"- Find the pad by the locked door and use the Door Decoder on it to unlock the door.\n"
+"\n"
+"Operation\n"
+"- Stand next to the door pad and press the B Button while holding the Door Decoder to use it.\n"
+msgstr ""
+"Descrizione\n"
+"\n"
+"- Sistema indipendente di decodifica. Si applica al quadro comandi e esegue tutte le combinazioni finché non trova quella esatta.\n"
+"\n"
+"Istruzioni di addestramento\n"
+"- Trova la porta chiusa e usa il decodificatore per aprirla.\n"
+"\n"
+"Funzionamento\n"
+"- Stai vicino alla porta e premi B mentre tieni il decodificatore.\n"
+
+#. L_DISH_180
+msgid ""
+"Description\n"
+"\n"
+"- Used to look through otherwise solid walls and objects. Can see things that the Night Vision and IR Scanner cannot.\n"
+"\n"
+"Training Instructions\n"
+"- With the X-Ray Scanner on, search for the two hidden switches and activate them to turn off the laser grid.\n"
+"\n"
+"Operation\n"
+"- Select the X-Ray Scanner from your inventory to activate it. Reselect to deactivate.\n"
+msgstr ""
+"Descrizione\n"
+"\n"
+"- Usato per guardare attraverso le pareti e gli oggetti. È più potente della Vista Notturna e dello scanner a infrarossi.\n"
+"\n"
+"Istruzioni di addestramento\n"
+"- Con lo scanner a raggi X cerca i due interruttori nascosti e attivali per disattivare le griglie laser.\n"
+"\n"
+"Funzionamento\n"
+"- Seleziona lo scanner a raggi X dall'inventario per attivarlo. Riselezionalo per disattivarlo.\n"
+
+#. L_DISH_181
+msgid ""
+"Description\n"
+"\n"
+"- Allay suspicion by the use of a disguise. But, always be alert for the possibility of being unmasked by a quick-witted enemy.\n"
+"\n"
+"Training Instructions\n"
+"- Grimshaw has a Cloaking Device waiting to be serviced. Head next door and 'acquire' it from him.\n"
+"\n"
+"Operation\n"
+"- To wear the disguise, simply select it from your inventory.\n"
+msgstr ""
+"Descrizione\n"
+"\n"
+"- Il travestimento serve per non destare sospetti, ma fa comunque attenzione a non farti scoprire da qualche nemico perspicace.\n"
+"\n"
+"Istruzioni di addestramento\n"
+"- Grimshaw ha un dispositivo mimetico pronto per essere usato. Vai alla porta accanto e 'compralo' da lui.\n"
+"\n"
+"Funzionamento\n"
+"- Per indossare il travestimento, selezionalo dall'inventario.\n"
+
+#. L_DISH_182
+msgid ""
+"Description\n"
+"\n"
+"- Translates thermal data into visible images. Can be used in darkness and will also reveal anomalies such as hidden doors and weak wall sections.\n"
+"\n"
+"Training Instructions\n"
+"- Turning on the IR Scanner, find the hidden door and open it.\n"
+"\n"
+"Operation\n"
+"- Select the IR Scanner from your inventory to activate it. Reselect to deactivate.\n"
+msgstr ""
+"Descrizione\n"
+"\n"
+"- Trasforma i dati termici in immagini visibili. Può essere usato al buio e rileva anomalie come porte nascoste e pareti sottili.\n"
+"\n"
+"Istruzioni di addestramento\n"
+"- Accendi lo scanner a infrarossi, trova la porta nascosta e aprila.\n"
+"\n"
+"Funzionamento\n"
+"- Seleziona lo scanner a infrarossi dall'inventario per attivarlo. Riselezionalo per disattivarlo.\n"
+
+#. L_DISH_183
+msgid ""
+"Description\n"
+"- Locates a particular object on a HUD radar map. Shows the relative bearing and distance.\n"
+"\n"
+"Training Instructions\n"
+"- Activate the Tracker and follow the radar signature to retrieve the item.\n"
+"\n"
+"Operation\n"
+"- Selecting the Tracker from your inventory will activate it. Reselect to deactivate.\n"
+msgstr ""
+"Descrizione\n"
+"- Localizza un oggetto specifico su una mappa radar HUD, mostrandone le dimensioni e la distanza.\n"
+"\n"
+"Istruzioni di addestramento\n"
+"- Attiva il Puntatore e segui il segno del radar per trovare l'oggetto.\n"
+"\n"
+"Funzionamento\n"
+"- Seleziona il Puntatore dall'inventario per attivarlo. Riselezionalo per disattivarlo.\n"
+
+#. L_DISH_184
+msgid ""
+"Description\n"
+"- Disrupts the visible spectrum of light around the wearer, creating an almost perfect chameleonlike effect. This field is disrupted when the wearer fires.\n"
+"\n"
+"Training Instructions\n"
+"- Activate the Cloaking Device and head to Carrington's office to surprise him!\n"
+"\n"
+"Operation\n"
+"- Selecting the Cloaking Device from your inventory will activate it. Reselect to deactivate.\n"
+msgstr ""
+"Descrizione\n"
+"- Distorce lo spettro visibile della luce attorno a chi lo indossa, creando un effetto camaleontico. Il campo si infrange quando chi lo indossa spara.\n"
+"\n"
+"Istruzioni di addestramento\n"
+"- Attiva il dispositivo mimetico e entra nell'ufficio di Carrington per sorprenderlo!\n"
+"\n"
+"Funzionamento\n"
+"- Seleziona il dispositivo mimetico dall'inventario per attivarlo. Riselezionalo per disattivarlo.\n"
+
+#. L_DISH_185
+msgid ""
+"Description\n"
+"- Emits a constantly shifting signal designed to jam any electronic communications device. Must be placed on the object to be effective.\n"
+"\n"
+"Training Instructions\n"
+"- Throw the ECM Mine onto the lighting hub located through the secret door.\n"
+"\n"
+"Operation\n"
+"- Press the Z Button to throw the mine. Hold down the R Button and move the Control Stick to fine-tune your aim before throwing.\n"
+msgstr ""
+"Descrizione\n"
+"- Emette un segnale in continuo movimento studiato per mandare in tilt i dispositivi elettronici di comunicazione. Funziona solo se posto sull'oggetto.\n"
+"\n"
+"Istruzioni di addestramento\n"
+"- Lancia la mina ECM sulla centralina luce dalla porta segreta.\n"
+"\n"
+"Funzionamento\n"
+"- Premi Z per lanciare la mina. Tieni premuto R e muovi il Control Stick per mirare bene prima del lancio.\n"
+
+#. L_DISH_186
+msgid ""
+"Description\n"
+"- Provides a link from the field agent to the Institute hackers back at HQ, who can then download data or crack electronic locks remotely.\n"
+"\n"
+"Training Instructions\n"
+"- Use the Data Uplink to hack the terminal in the corner, unlocking a secret door.\n"
+"\n"
+"Operation\n"
+"- Stand next to the terminal and press the B Button when holding Data Uplink.\n"
+msgstr ""
+"Descrizione\n"
+"- Crea un collegamento tra l'agente in missione e gli hacker dell'Istituto in sede,che possono così scaricare i dati o decodificare codici elettronici a distanza.\n"
+"\n"
+"Istruzioni di addestramento\n"
+"- Usa il Connettore Dati per accedere al terminale nell'angolo e aprire una porta segreta.\n"
+"\n"
+"Funzionamento\n"
+"- Vai vicino al terminale e premi B tenendo il Connettore Dati.\n"
+
+#. L_DISH_187
+msgid ""
+"FIRING\n"
+" Press Z Button to fire gun.\n"
+msgstr ""
+"SPARO\n"
+" Premi Z per far fuoco.\n"
+
+#. L_DISH_188
+msgid ""
+"AUTO RELOAD\n"
+" Release Z Button when out of ammo.\n"
+msgstr ""
+"AUTORICARICA\n"
+" Rilascia Z quando non hai più munizioni.\n"
+
+#. L_DISH_189
+msgid ""
+"MANUAL RELOAD\n"
+" Press B Button to reload early if magazine not full.\n"
+msgstr ""
+"RICARICA MANUALE\n"
+" Premi B per ricaricare prima di rimanere a secco.\n"
+
+#. L_DISH_190
+msgid "Aiming: Hold down R Button to enter Aim mode.\n"
+msgstr "MIRA: Tieni premuto R per accedere alla modalità Mira.\n"
+
+#. L_DISH_191
+msgid "Use Control Stick to move aiming sight.\n"
+msgstr "Usa il Control Stick per spostare la visuale di mira.\n"
+
+#. L_DISH_192
+msgid ""
+"AUTO FIRE\n"
+" Hold Z Button to repeatedly fire automatically.\n"
+msgstr ""
+"AUTOFUOCO\n"
+" Premi Z per fuoco continuo automatico.\n"
+
+#. L_DISH_193
+msgid ""
+"ALTER AIM\n"
+" Press Up C Button or Down C Button to move sight up/down.\n"
+msgstr ""
+"CAMBIA MIRA\n"
+" Premi C in alto o in basso per spostare la visuale in alto o in basso.\n"
+
+#. L_DISH_194
+msgid ""
+"ZOOM\n"
+" Hold R Button to enter Zoom mode.\n"
+msgstr ""
+"ZOOM\n"
+" Tieni premuto R per avviare la modalità Zoom.\n"
+
+#. L_DISH_195
+msgid ""
+"FAST FIRE\n"
+" Press Z Button quickly to fire faster.\n"
+msgstr ""
+"FUOCO RAPIDO\n"
+" Premi Z velocemente per spari rapidi.\n"
+
+#. L_DISH_196
+msgid "Carrington Institute |Base of operations\n"
+msgstr "Carrington Institute |Base operativa\n"
+
+#. L_DISH_197
+msgid "Lucerne Tower |Global headquarters\n"
+msgstr "Lucerne Tower |Quartier Generale Globale\n"
+
+#. L_DISH_198
+msgid "Laboratory Basement |Underground research labs\n"
+msgstr "Laboratorio sotterraneo |Centri di ricerca sotterranei\n"
+
+#. L_DISH_199
+msgid "Carrington Villa |Private coastal retreat\n"
+msgstr "Villa Carrington |Residenza privata sulla costa\n"
+
+#. L_DISH_200
+msgid "Chicago |Backstreets of the city\n"
+msgstr "Chicago |Sobborghi delle città\n"
+
+#. L_DISH_201
+msgid "G5 Building |dataDyne front corporation\n"
+msgstr "Edificio G5 |Sede della dataDyne\n"
+
+#. L_DISH_202
+msgid "Area 51 |Near Groom Dry Lake, Nevada\n"
+msgstr "Area 51 |Vicino al Groom Dry Lake, Nevada\n"
+
+#. L_DISH_203
+msgid "Alaskan Air Base |Brooks Range, Alaska\n"
+msgstr "Base aerea in Alaska |Brooks Range, Alaska\n"
+
+#. L_DISH_204
+msgid "Air Force One |The President's airplane\n"
+msgstr "Air Force One |L'aereo presidenziale\n"
+
+#. L_DISH_205
+msgid "Crash Site |Victoria Island 71N 118W\n"
+msgstr "Luogo del disastro |Victoria Island 71N 118W\n"
+
+#. L_DISH_206
+msgid "Pelagic II |Specialized deep-sea research ship\n"
+msgstr "Pelagic II |Sottomarino per ricerche oceaniche\n"
+
+#. L_DISH_207
+msgid "Cetan Ship |The most alien environment on Earth\n"
+msgstr "Astronave Cetan |Segno degli alieni sulla Terra\n"
+
+#. L_DISH_208
+msgid "Skedar Assault Ship |Troop carrying spacecraft\n"
+msgstr "Nave d'assalto Skedar |Astronave per trasporto truppe\n"
+
+#. L_DISH_209
+msgid "Skedar Homeworld |The planet of the Battle Shrine\n"
+msgstr "Patria Skedar |Il pianeta del Tempio di Guerra\n"
+
+#. L_DISH_210
+msgid "Jumpship |Agile troop craft\n"
+msgstr "Navetta |Agile navicella per il trasporto truppe\n"
+
+#. L_DISH_211
+msgid "HoverCrate |Gravity-negation device\n"
+msgstr "Antigravità |Dispositivo antigravità\n"
+
+#. L_DISH_212
+msgid "HoverBike |Low altitude vehicle\n"
+msgstr "Aeromoto |Veicolo per spostamenti a bassa quota\n"
+
+#. L_DISH_213
+msgid "Cleaning Hovbot |Your helpful buddy\n"
+msgstr "PuliRobot |Il tuo fedele amico\n"
+
+#. L_DISH_214
+msgid "Hovercopter |Urban AG gunship\n"
+msgstr "Cannoniera |Cannoniera urbana AG\n"
+
+#. L_DISH_215
+msgid "G5 Robot |Urban combat droid\n"
+msgstr "Robot G5 |Droide da combattimento urbano\n"
+
+#. L_DISH_216
+msgid "A51 Interceptor |Robotic air interceptor\n"
+msgstr "Intercettatore A51 |Robot intercettatore aereo\n"
+
+#. L_DISH_217
+msgid "Maian Vessel |Scout and patrol vessel\n"
+msgstr "Vascello Maian |Vascello di esplorazione e perlustrazione\n"
+
+#. L_DISH_218
+msgid "Skedar Shuttle |Alien troop dropship\n"
+msgstr "Navetta Skedar |Navicella aliena per trasporto truppe\n"
+
+#. L_DISH_219
+msgid ""
+"The Institute building comprises many different areas: offices and "
+"laboratories, workshops and hangars. It is quite isolated from the outside "
+"world, which helps keep the operations covert.\n"
+msgstr ""
+"L'edificio dell'istituto comprende svariate aree: uffici e laboratori, aule "
+"e hangar. È piuttosto isolato dall'ambiente esterno per garantire il massimo"
+" della segretezza.\n"
+
+#. L_DISH_220
+msgid ""
+"In the midst of the business district, the austere skyscraper of the "
+"dataDyne Corporation stands out from the surroundings.\n"
+msgstr ""
+"Nel bel mezzo del quartiere finanziario si erge il cupo grattacielo della "
+"dataDyne Corporation.\n"
+
+#. L_DISH_221
+msgid ""
+"These heavily guarded, well-hidden labs hold the key to dataDyne's future. "
+"Within them, techs work on top-secret projects aimed at putting dataDyne on "
+"the top of the heap.\n"
+msgstr ""
+"Questi laboratori ben protetti e nascosti conservano la chiave del futuro "
+"della dataDyne. Qui dentro alcuni ingegneri lavorano a progetti segreti "
+"mirati a garantire la supremazia della dataDyne.\n"
+
+#. L_DISH_222
+msgid ""
+"Owned by the Institute, this secluded residence is used by Daniel Carrington"
+" as a retreat from the pressures of the Institute. As well as an "
+"observatory, it has a power generator and an extensive wine cellar.\n"
+msgstr ""
+"Di proprietà dell'istituto, questa residenza appartata è usata da Daniel "
+"Carrington per sfuggire dallo stress del lavoro. Oltre ad un osservatorio "
+"dispone di generatore elettrico e di una cantina ben fornita.\n"
+
+#. L_DISH_223
+msgid ""
+"A seedy, grimy part of the city of Chicago, now closed to ground traffic. It"
+" is here that the G5 Corporation has its headquarters.\n"
+msgstr ""
+"Un quartiere piuttosto fatiscente di Chicago, immerso nel traffico. Qui si "
+"trova la sede della G5 Corporation.\n"
+
+#. L_DISH_224
+msgid ""
+"Inside the G5 Building is a meeting room protected by anti-recording "
+"safeguards. This is the safest place for dataDyne to formulate confidential "
+"plans.\n"
+msgstr ""
+"L'edificio G5 dispone di una sala riunioni segreta protetta contro "
+"registrazioni illecite. Questo è il luogo ideale per le cospirazioni e i "
+"piani segreti della dataDyne.\n"
+
+#. L_DISH_225
+msgid ""
+"This section of the extensive facility known as Area 51 is based in the "
+"foothills around Groom Dry Lake. Exterior helipads and communication towers "
+"hint at the size of the complex beneath ground level.\n"
+msgstr ""
+"Questa parte del grande complesso noto come Area 51 si trova ai piedi dei "
+"colli attorno al lago Groom Dry. Eliscali e torri di comunicazione esterni "
+"danno un'idea dell'estensione del complesso sottoterra.\n"
+
+#. L_DISH_226
+msgid ""
+"One of a series of reinforced air bases available as staging posts for Air "
+"Force One. Typically, the air base is remote, in an inhospitable region, far"
+" away from prying eyes.\n"
+msgstr ""
+"Una delle tante basi aeree disponibili per lo stazionamento dell'Air Force "
+"One. Solitamente la base aerea si trova sperduta in una regione inospitale, "
+"al sicuro da sguardi indiscreti.\n"
+
+#. L_DISH_227
+msgid ""
+"This particular Air Force One is optimized for cold climates, useful when it"
+" is based in the north of Alaska. The flight destination is Oslo, Norway.\n"
+msgstr ""
+"Quest'Air Force One è particolarmente adatto ai climi freddi, come quelli "
+"dell'Alaska del Nord. La destinazione di volo è Oslo, Norvegia.\n"
+
+#. L_DISH_228
+msgid ""
+"In the rocky snow-covered landscape of the Arctic Circle, the wreckage of "
+"the stricken plane has come to rest.\n"
+msgstr ""
+"I rottami dell'aereo colpito sono finiti nel paesaggio roccioso innevato del"
+" Circolo Polare Artico.\n"
+
+#. L_DISH_229
+msgid ""
+"Owned by the U.S. government, the Pelagic II is capable of staging deep-sea "
+"diving operations in all weather conditions. It is the only fully integrated"
+" ocean floor research vessel in the world.\n"
+msgstr ""
+"Di proprietà del governo USA, il Pelagic II può condurre operazioni "
+"subacquee in alto mare in ogni condizione climatica. È l'unico sommergibile "
+"al mondo per la ricerca sul fondo oceanico.\n"
+
+#. L_DISH_230
+msgid ""
+"A huge ship of alien construction that has lain on the ocean floor for "
+"millions of years.\n"
+msgstr ""
+"Un'enorme nave di costruzione aliena che riposa da milioni di anni sul fondo"
+" oceanico.\n"
+
+#. L_DISH_231
+msgid ""
+"An interplanetary assault ship that carries Skedar warriors to their war "
+"zones. Part of the much-reduced Skedar battle fleet.\n"
+msgstr ""
+"Una nave d'assalto interplanetaria che trasporta guerrieri Skedar verso le "
+"zone di guerra. Fa parte dell'ormai ridotta flotta Skedar.\n"
+
+#. L_DISH_232
+msgid ""
+"A highly arid planet, racked by earthquakes, sandstorms, and hurricanes. It "
+"is part of a complex solar system that includes three suns.\n"
+msgstr ""
+"Un pianeta molto arido, sconvolto da terremoti, tempeste di sabbia e "
+"uragani. Fa parte di un sistema solare complesso comprendente tre soli.\n"
+
+#. L_DISH_233
+msgid ""
+"A small, fast, highly maneuverable agent-deployment craft designed for use "
+"in urban areas. Can be either computer controlled or remote piloted. It has "
+"enough room inside for three to four agents, plus equipment.\n"
+msgstr ""
+"Una navetta da trasporto piccola, veloce e facile da manovrare, progettata "
+"per l'uso in aree urbane. Può essere comandata dal computer o pilotata a "
+"distanza. Può trasportare tre o quattro agenti con l'attrezzatura.\n"
+
+#. L_DISH_234
+msgid ""
+"An antigrav device designed to aid warehouse workers. It is attached to the "
+"side of a crate. When activated, the AG field lifts the crate and removes "
+"some of the inertia.\n"
+msgstr ""
+"Un dispositivo antigravità usato dai magazzinieri. È applicato al lato della"
+" cassa da imballaggio. Quando attivo, il campo AG innalza la cassa ed "
+"elimina parte dell'inerzia.\n"
+
+#. L_DISH_235
+msgid ""
+"A low-altitude patrol bike. Uses a small AG unit to hover, then a small but "
+"powerful turbine with vectored thrust to move and provide directional "
+"control.\n"
+msgstr ""
+"Una moto da perlustrazione a bassa quota. Si libra grazie alla piccola unità"
+" antigrevità, ma ha un potente motore per gli spostamenti rapidi "
+"direzionali.\n"
+
+#. L_DISH_236
+msgid ""
+"Keeps the place clean and tidy. Tends to have access to all areas of a "
+"building - agents are advised to leave such robots intact where possible, as"
+" they can unwittingly provide a means of ingress to sensitive zones.\n"
+msgstr ""
+"Mette in ordine e pulisce. Ha accesso a tutte le aree di un edificio: gli "
+"agenti possono avvalersi dell'aiuto di questi robot perché possono "
+"facilitare involontariamente l'ingresso a zone riservate.\n"
+
+#. L_DISH_237
+msgid ""
+"An urban patrol and suppression vehicle. Two-man crew, armed with a vulcan "
+"cannon on the nose pod, and two wingtip-mounted dumbfire missile pods. Can "
+"be taken out with sustained gunfire or, preferably, one well-aimed rocket.\n"
+msgstr ""
+"Un veicolo di soppressione e perlustrazione urbana: con equipaggio di due "
+"persone, armato di cannone sulla punta e di due missili sulle ali. Può "
+"essere eliminato con raffiche di spari o un missile ben mirato.\n"
+
+#. L_DISH_238
+msgid ""
+"A combat robot designed for urban warfare. Uses an antigrav unit to hover; "
+"heavily armed and shielded. Often used to keep out unwanted visitors, due to"
+" the 'shoot first and don't ask questions later' programming.\n"
+msgstr ""
+"Un robot da combattimento urbano. Utilizza un'unità antigravità per "
+"librarsi; ben armato e schermato. Spesso usato per tenere alla larga i "
+"curiosi grazie alla programmazione 'zitto e spara'.\n"
+
+#. L_DISH_239
+msgid ""
+"A robotic variant of the HoverBike, with more powerful AG and turbine units;"
+" it can reach Mach 2 with ease and yet can cruise for hours at walking pace."
+" Although quite well armed, it relies on maneuverability rather than "
+"shielding.\n"
+msgstr ""
+"Versione motorizzata dell'Aeromoto, con dispositivi AG e turbina più "
+"potenti; può facilmente raggiungere Mach 2 e ha un'autonomia di molte ore se"
+" procede a velocità ridotta. Anche se ben armato il suo punto forte è la "
+"manovrablità.\n"
+
+#. L_DISH_240
+msgid ""
+"Designed to carry a single Maian pilot.  A passenger would find themselves "
+"cramped - a human passenger even more so.\n"
+msgstr ""
+"Progettato per il trasporto del solo pilota Maian. Un passeggero ci starebbe"
+" stretto, soprattutto se fosse umano.\n"
+
+#. L_DISH_241
+msgid ""
+"Capable of carrying ten fully armed and armored Skedar warriors to battle. "
+"Undetectable by conventional radar. It can broadcast powerful jamming waves "
+"over a considerable area - these disrupt communications as well as detection"
+" equipment.\n"
+msgstr ""
+"Può portare al campo di battaglia dieci guerrieri Skedar armati fino ai "
+"denti. Sfugge ai radar tradizionali. Può trasmettere potenti onde di "
+"disturbo su una vasta area mandando in tilt comunicazioni e apparecchi "
+"radar.\n"
+
+#. L_DISH_242
+msgid ""
+"Description\n"
+"- A good agent notices everything around him or her.\n"
+"\n"
+"Training Instructions\n"
+"- Examine all of the objects by looking directly at them.\n"
+"\n"
+"Operation\n"
+"-Look up- Press the Down C Button\n"
+"-Look down- Press the Up C Button\n"
+"-Free Look- Hold down the R Button to enter Aim mode, and use the Control Stick to look.\n"
+msgstr ""
+"Descrizione\n"
+"- Un buon agente nota tutto ciò che lo circonda.\n"
+"\n"
+"Istruzioni di addestramento\n"
+"- Esamina tutti gli oggetti guardandoli direttamente.\n"
+"\n"
+"Funzionamento\n"
+"- Guardare su: pulsante C in basso\n"
+"- Guardare giù: pulsante C in alto\n"
+"- Guardare attorno: pulsante R per attivare la mira e Control Stick.\n"
+
+#. L_DISH_243
+msgid ""
+"Description\n"
+"- Sidestepping and strafing can get you out of trouble.\n"
+"\n"
+"Training Instructions\n"
+"- Activate all of the switches in front. Be quick, though, as each switch will reset on a time limit.\n"
+"\n"
+"Operation\n"
+"- Sidestep left- Left C Button\n"
+"- Sidestep right- Right C Button\n"
+"\n"
+msgstr ""
+"Descrizione\n"
+"- Schivando e spostandoti a destra e sinistra potrai tirarti fuori dai guai.\n"
+"\n"
+"Istruzioni di addestramento\n"
+"- Attiva tutti gli interruttori anteriori ma fai presto perché si disattivano a tempo.\n"
+"\n"
+"Funzionamento\n"
+"- Passo a sinistra: pulsante C a sinistra\n"
+"- Passo a destra: pulsante C a destra\n"
+"\n"
+
+#. L_DISH_244
+msgid ""
+"Description\n"
+"- Ducking and crouching can open up new areas for exploration.\n"
+"\n"
+"Training Instructions\n"
+"- Work your way through the obstacles using the moves available to you. Activate the switches.\n"
+"\n"
+"Operation\n"
+"- Duck- Hold the R Button, then press the Down C Button.\n"
+"- Crouch- When ducking, hold the R Button, then press the Down C Button.\n"
+"- Get up- Tap the R Button.\n"
+"\n"
+msgstr ""
+"Descrizione\n"
+"- Accucciandoti e strisciando potrai rilevare nuove aree da esplorare.\n"
+"\n"
+"Istruzioni di addestramento\n"
+"- Fatti strada tra gli ostacoli usando le mosse disponibili. Attiva gli interruttori.\n"
+"\n"
+"Funzionamento\n"
+"- Accucciarsi: pulsante R e poi pulsante C verso il basso.\n"
+"- Strisciare: quando sei accucciato, pulsante R e poi C verso il basso.\n"
+"- Alzarsi: pulsante R.\n"
+"\n"
+
+#. L_DISH_245
+msgid ""
+"Description\n"
+"- Fighting multiple opponents in hand-to-hand combat can be difficult.\n"
+"\n"
+"Training Instructions\n"
+"- Knock out all enemies without getting hit.\n"
+"\n"
+"Operation\n"
+"- Punch - Press the Z Button repeatedly when unarmed to launch a flurry of punches.\n"
+"\n"
+msgstr ""
+"Descrizione\n"
+"- Lottare a mani nude contro più avversari può essere difficile.\n"
+"\n"
+"Istruzioni di addestramento\n"
+"- Metti KO tutti i nemici senza farti colpire.\n"
+"\n"
+"Funzionamento\n"
+"- Pugno: premi  Z più volte da disarmato per lanciare una scarica di pugni.\n"
+"\n"
+
+#. L_DISH_246
+msgid ""
+"Description\n"
+"- Disarming an enemy can get you a new weapon.\n"
+"\n"
+"Training Instructions\n"
+"- Knock out/disarm all enemies without getting hit.\n"
+"\n"
+"Operation\n"
+"- Disarm - Hold the B Button, then press the Z Button to disarm an enemy.\n"
+"- Knockout Punch - Punch an unaware enemy from behind.\n"
+msgstr ""
+"Descrizione\n"
+"- Disarmando un nemico potrai impossessarti della sua arma.\n"
+"\n"
+"Istruzioni di addestramento\n"
+"- Metti KO/disarma tutti i nemici senza essere colpito.\n"
+"\n"
+"Funzionamento\n"
+"- Disarmare: tieni premuto  B e poi premi Z per disarmare il nemico.\n"
+"Pugno KO: colpisci il nemico alle spalle.\n"
+
+#. L_DISH_247
+msgid ""
+"Description\n"
+"- Fighting multiple opponents in hand-to-hand combat.\n"
+"\n"
+"Training Instructions\n"
+"- Beat all the unarmed enemies without getting hit.\n"
+"\n"
+msgstr ""
+"Descrizione\n"
+"- Lottare a mani nude contro più nemici.\n"
+"\n"
+"Istruzioni di addestramento\n"
+"- Batti tutti i nemici disarmati senza essere colpito.\n"
+"\n"
+
+#. L_DISH_248
+msgid ""
+"Description\n"
+"- Fighting multiple opponents, both armed and unarmed.\n"
+"\n"
+"Training Instructions\n"
+"- Beat all the armed enemies without getting hit.\n"
+"\n"
+msgstr ""
+"Descrizione\n"
+"- Lottare contro più nemici, sia armati che disarmati.\n"
+"\n"
+"Istruzioni di addestramento\n"
+"- Batti tutti i nemici armati senza essere colpito.\n"
+"\n"
+
+#. L_DISH_249
+msgid ""
+"For greater precision and freedom when looking around, use the Aiming "
+"mode.\n"
+msgstr ""
+"Per una maggiore precisione e libertà quando ti guardi attorno, usa la "
+"modalità Mira.\n"
+
+#. L_DISH_250
+msgid ""
+"Think about where you want to go before attempting the test. Set yourself up"
+" in a place that will require the least amount of movement between "
+"targets.\n"
+msgstr ""
+"Pensa a dove vuoi andare prima di effettuare la prova. Poniti in un punto "
+"dove dovrai spostarti il meno possibile tra gli obiettivi.\n"
+
+#. L_DISH_251
+msgid ""
+"Ducking enables you to reach places normally inaccessible to you, but "
+"remember that you move quickest when standing upright. To move through the "
+"test as fast as possible, try ducking only when you have to.\n"
+msgstr ""
+"Accucciandoti potrai raggiungere posti normalmente inaccessibili, ma ricorda"
+" che sarai più veloce in piedi. Per spostarti velocemente prova ad "
+"accucciarti solo quando è necessario.\n"
+
+#. L_DISH_252
+msgid ""
+"Attacking opponents from behind may be dishonorable, but doing so makes it "
+"easier to take them down. Only close to fighting distance when you have to, "
+"and be prepared to step back out of range when they attack you.\n"
+msgstr ""
+"Attaccare gli avversari alle spalle può essere scorretto, ma così sarà più "
+"facile eliminarli. Avvicinati all'area di lotta solo se necessario e "
+"preparati a indietreggiare e a schivarli quando ti attaccano.\n"
+
+#. L_DISH_253
+msgid ""
+"Only stay close long enough to grab the weapon. Back out of range of any "
+"retribution and use your new weapon.\n"
+msgstr ""
+"Avvicinati quel tanto che basta per prendere l'arma. Indietreggia subito per"
+" sfuggire al contrattacco e usa la tua nuova arma.\n"
+
+#. L_DISH_254
+msgid ""
+"Don't hang around and wait to get hit, move! Don't focus on one opponent; "
+"try to be aware of where all of them are. If you can't see all of them, move"
+" until you can.\n"
+msgstr ""
+"Non stare lì a prenderle: muoviti! Non concentrarti su un solo avversario: "
+"guarda dove sono gli altri. Se non riesci a vederli tutti, spostati e "
+"cercali.\n"
+
+#. L_DISH_255
+msgid ""
+"Go for the armed opponents once you are confident of your hand-to-hand "
+"skills. Back away from the disarmed enemies and use their weapons on them "
+"before they get too close to you.\n"
+msgstr ""
+"Quando sei sicuro delle tue abilità di lotta a mani nude, va in cerca "
+"dell'avversario armato. Disarmalo, indietreggia e usa l'arma su di lui prima"
+" che si avvicini troppo.\n"
+
+#. L_DISH_256
+msgid ""
+"For greater precision and freedom when looking around, use the Aiming "
+"mode.\n"
+msgstr ""
+"Per una maggiore precisione e libertà quando ti guardi attorno, usa la "
+"modalità Mira.\n"
+
+#. L_DISH_257
+msgid "Sidestepping and strafing can get you out of trouble.\n"
+msgstr ""
+"Schivando e spostandoti a destra e sinistra potrai tirarti fuori dai guai.\n"
+
+#. L_DISH_258
+msgid ""
+"Ducking enables you to reach places normally inaccessible to you, but "
+"remember that you move quickest when standing upright. To move as fast as "
+"possible, try ducking only when you have to.\n"
+msgstr ""
+"Accucciandoti potrai raggiungere posti normalmente inaccessibili, ma ricorda"
+" che sarai più veloce in piedi. Per spostarti velocemente prova ad "
+"accucciarti solo quando è necessario.\n"
+
+#. L_DISH_259
+msgid ""
+"Attacking opponents from behind may be dishonorable, but doing so makes it "
+"easier to take them down. Only close to fighting distance when you have to, "
+"and be prepared to step back out of range when they attack you.\n"
+msgstr ""
+"Attaccare gli avversari alle spalle può essere scorretto, ma così sarà più "
+"facile eliminarli. Avvicinati all'area di lotta solo se necessario e "
+"preparati a indietreggiare e a schivarli quando ti attaccano.\n"
+
+#. L_DISH_260
+msgid ""
+"Only stay close long enough to grab the weapon. Back out of range of any "
+"retribution and use your new weapon.\n"
+msgstr ""
+"Avvicinati quel tanto che basta per prendere l'arma. Indietreggia subito per"
+" sfuggire al contrattacco e usa la tua nuova arma.\n"
+
+#. L_DISH_261
+msgid ""
+"Don't hang around and wait to get hit; move! Don't focus on one opponent; "
+"try to be aware of where all of them are. If you can't see all of them, move"
+" until you can.\n"
+msgstr ""
+"Non stare lì a prenderle: muoviti! Non concentrarti su un solo avversario: "
+"guarda dove sono gli altri. Se non riesci a vederli tutti, spostati e "
+"cercali.\n"
+
+#. L_DISH_262
+msgid ""
+"Go for the armed opponents once you are confident of your hand-to-hand "
+"skills. Back away from the disarmed enemies and use their weapons on them "
+"before they get too close to you.\n"
+msgstr ""
+"Quando sei sicuro delle tue abilità di lotta a amni nude va in cerca "
+"dell'avversario armato. Disarmalo, indietreggia e usa l'arma su di lui prima"
+" che si avvicini troppo.\n"
+
+#. L_DISH_263
+msgid ""
+"Always keep the target object in view when using the Data Uplink, and stay "
+"close to prevent the connection from being severed.\n"
+msgstr ""
+"Tieni sempre d'occhio l'obiettivo quando usi il Connettore Dati e stai "
+"vicino per evitare l'interruzione del collegamento.\n"
+
+#. L_DISH_264
+msgid ""
+"Be sure the mine will land in the correct place by getting as close as you "
+"can to the target. Adjust your aim using the C Buttons or the R Button "
+"Aiming mode.\n"
+msgstr ""
+"Assicurati che la mina atterri nel punto giusto avvicinandoti il più "
+"possibile all'obiettivo. Aggiusta la mira usando i pulsanti C o R per la "
+"modalità Mira.\n"
+
+#. L_DISH_265
+msgid "The CamSpy can be difficult to control, so take your time.\n"
+msgstr "La TeleSpia può essere difficile da controllare, abbi pazienza.\n"
+
+#. L_DISH_266
+msgid "Useful in combat, but can cause problems when overloading.\n"
+msgstr "Utile nel combattimento, ma può causare problemi per sovraccarico.\n"
+
+#. L_DISH_267
+msgid ""
+"If you are having trouble attaching the Decoder, try standing closer to the "
+"target and facing it.\n"
+msgstr ""
+"Se hai problemi ad attaccare il decodificatore, prova a stare più vicino "
+"all'obiettivo.\n"
+
+#. L_DISH_268
+msgid ""
+"The Tracker only indicates direction and relative height; it doesn't display"
+" a map guiding you to the target. Pay attention to your surroundings, and be"
+" prepared to explore.\n"
+msgstr ""
+"Il Puntatore indica solo la direzione e l'altitudine; non mostra una mappa "
+"che ti possa guidare fino all'obiettivo. Fai attenzione a ciò che ti "
+"circonda e preparati ad esplorare.\n"
+
+#. L_DISH_269
+msgid ""
+"The visor narrows your peripheral vision, which can cause problems in "
+"combat. Be sure of your situation before you use it.\n"
+msgstr ""
+"La visiera riduce il campo visivo e ciò può essere un problema durante il "
+"combattimento. Assicurati che la tua posizione sia sicura.\n"
+
+#. L_DISH_270
+msgid ""
+"If you use this device at the wrong time, it could cost you your life, since"
+" it can prevent you from seeing anything beyond a certain distance. Use "
+"sparingly.\n"
+msgstr ""
+"Se usi questo dispositivo nel momento sbagliato, potrebbe risultarti fatale "
+"perché può impedirti la vista oltre una determinata distanza. Da usare "
+"oculatamente.\n"
+
+#. L_DISH_271
+msgid ""
+"A disguise is not just the clothing, it is the manner of the person wearing "
+"it. Don't behave out of character for the person you are trying to be.\n"
+msgstr ""
+"Il travestimento non consiste solo nell'abito ma anche nel comportamento "
+"personale. Devi assumere il carattere della persona di cui vuoi prendere le "
+"sembianze.\n"
+
+#. L_DISH_272
+msgid ""
+"Preserve the supply of the Cloaking Device when there is no one around to "
+"observe you.\n"
+msgstr "Usa i dispositivi mimetici quando non c'è nessuno che possa vederti.\n"
+
+#. L_DISH_273
+msgid ""
+"Always keep the target object in view when using the Data Uplink, and stay "
+"close to prevent the connection from being severed.\n"
+msgstr ""
+"Tieni sempre d'occhio il target quando usi il Connettore Dati e stai vicino "
+"per evitare l'interruzione del collegamento.\n"
+
+#. L_DISH_274
+msgid ""
+"Be sure the mine will land in the correct place by getting as close as you "
+"can to the target. Adjust your aim using the C Buttons or the R Button "
+"Aiming mode.\n"
+msgstr ""
+"Assicurati che la mina atterri nel punto giusto avvicinandoti il più "
+"possibile all'obiettivo. Aggiusta la mira usando i pulsanti C o R per la "
+"modalità Mira.\n"
+
+#. L_DISH_275
+msgid ""
+"The CamSpy is not invisible - enemies may spot it - so be careful when "
+"entering an inhabited area.  Remember that the CamSpy will remain where you "
+"left it unless you pick it up.\n"
+msgstr ""
+"La TeleSpia non è invisibile, i nemici potrebbero scoprirla: attento quando "
+"entri in un'area abitata.  Ricorda che la TeleSpia rimarrà nel punto dove "
+"l'hai lasciata a meno che tu la riprenda.\n"
+
+#. L_DISH_276
+msgid ""
+"Useful in combat, but can cause problems when overloading. Try to anticipate"
+" such situations and react before the enemy.\n"
+msgstr ""
+"Utile nel combattiemto, ma può causare problemi per sovraccarico. Evita "
+"questo inconveniente e reagisci prima del nemico.\n"
+
+#. L_DISH_277
+msgid ""
+"If you are having trouble attaching the Decoder, try standing closer to the "
+"target and facing it.\n"
+msgstr ""
+"Se hai problemi ad attaccare il decodificatore, prova a stare più vicino "
+"all'obiettivo.\n"
+
+#. L_DISH_278
+msgid ""
+"The Tracker only indicates direction and relative height; it doesn't display"
+" a map guiding you to the target. Pay attention to your surroundings, and be"
+" prepared to explore.\n"
+msgstr ""
+"Il Puntatore indica solo la direzione e l'altitudine; non mostra una mappa "
+"che ti possa guidare fino all'obiettivo. Fai attenzione a ciò che ti "
+"circonda e preparati ad esplorare.\n"
+
+#. L_DISH_279
+msgid ""
+"The visor narrows your peripheral vision, which can cause problems in "
+"combat. Be sure of your situation before you use it.\n"
+msgstr ""
+"La visiera riduce il campo visivo e ciò può essere un problema durante il "
+"combattimento. Assicurati che la tua posizione sia sicura.\n"
+
+#. L_DISH_280
+msgid ""
+"If you use this device at the wrong time, it could cost you your life, since"
+" it can prevent you from seeing anything beyond a certain distance. Use "
+"sparingly.\n"
+msgstr ""
+"Se usi questo dispositivo nel momento sbagliato, potrebbe risultarti fatale "
+"perché può impedirti la vista oltre una determinata distanza. Da usare "
+"oculatamente.\n"
+
+#. L_DISH_281
+msgid ""
+"A disguise is not just the clothing, it is the manner of the person wearing "
+"it. Don't behave out of character for the person you are trying to be.\n"
+msgstr ""
+"Il travestimento non consiste solo nell'abito ma anche nel comportamento "
+"personale. Devi assumere il carattere della persona di cui vuoi prendere le "
+"sembianze.\n"
+
+#. L_DISH_282
+msgid ""
+"Preserve the supply of the Cloaking Device when there is no one around to "
+"observe you. Avoid firing unless absolutely necessary and until you are "
+"assured of the success of your attack.\n"
+msgstr ""
+"Usa i dispositivi mimetici quando non c'è nessuno che possa vederti. Evita "
+"di sparare se non strettamente necessario finché non sei sicuro della "
+"riuscita del tuo attacco.\n"
+
+#. L_DISH_283
+msgid ""
+"The Falcon 2 is a very accurate handgun, so any error in this test is your "
+"own. The secondary mode is a pistol-whip and is, therefore, useless in a "
+"firing range.\n"
+msgstr ""
+"La Falcon 2 è una pistola molto precisa: qualsiasi errore dipende da te. La "
+"modalità secondaria è la botta col calcio, inutile nel poligono.\n"
+
+#. L_DISH_284
+msgid ""
+"To make better use of the accuracy of the Falcon 2, a scope has been "
+"attached to the pistol. As with the unmodified Falcon 2, the pistol-whip "
+"secondary mode is useless during the firing range test.\n"
+msgstr ""
+"Per sfruttare al meglio la precisione della Falcon 2, essa è dotata di un "
+"cannocchiale. Come per la Falcon 2 non modificata, la modalità secondaria è "
+"inutile durante la prova al poligono.\n"
+
+#. L_DISH_285
+msgid ""
+"The silenced version of the Falcon 2 is an excellent stealth weapon, "
+"designed to give you the advantage of surprise over your opponents. Test "
+"your accuracy to ensure you never waste your chances.\n"
+msgstr ""
+"La versione della Falcon 2 con silenziatore è eccezionale per azioni in "
+"incognito e per cogliere l'avversario di sorpresa. Assicurati della tua "
+"precisione per non rischiare di sprecare l'occasione.\n"
+
+#. L_DISH_286
+msgid ""
+"The MagSec 4 has excellent shot power at the cost of accuracy, especially "
+"when used in the 3-round burst secondary mode. The only serious drawback to "
+"the weapon is a limited magazine size.\n"
+msgstr ""
+"La Magsec 4 è dotata di un'eccezionale potenza di sparo ma non è troppo "
+"precisa, soprattuto se usata nella modalità secondaria a tre esplosioni. Il "
+"vero svantaggio dell'arma è il caricatore ridotto.\n"
+
+#. L_DISH_287
+msgid ""
+"This is a typical Skedar weapon, brutal and powerful. By sacrificing some of"
+" the magazine, the shot can be charged up to give a devastating blast. The "
+"large ammo capacity is a bonus.\n"
+msgstr ""
+"È una tipica arma Skedar, potente e brutale. Sacrificando parte del "
+"caricatore, il colpo può essere caricato in modo da essere devastante. La "
+"carica di munizioni superiore è un bonus.\n"
+
+#. L_DISH_288
+msgid ""
+"This versatile pistol gives two different delivery systems for the rounds it"
+" fires: a standard shot or an explosive round. Maian engineers managed to do"
+" this without compromising the energy usage of the weapon, though the fire "
+"rate is reduced.\n"
+msgstr ""
+"Questa versatile pistola ha due sistemi di sparo: uno standard e uno "
+"esplosivo. Gli ingegneri Maian sono riusciti a realizzarla contenendo il "
+"consumo di energia dell'arma, sebbene la gittata sia ridotta.\n"
+
+#. L_DISH_289
+msgid ""
+"The key to the DY357 is in knowing when to reload. A six-round magazine "
+"means that you must always be alert in a firefight. The weight of the "
+"handgun can be useful if you have to club someone with it.\n"
+msgstr ""
+"Con la DY357 bisogna sapere quando ricaricare: un caricatore a sei colpi ti "
+"fa stare sempre all'erta quando fai fuoco. Il peso della pistola può essere "
+"un vantaggio se si deve stendere qualcuno.\n"
+
+#. L_DISH_290
+msgid ""
+"Trent Easton is always looking for that extra edge, and this gun is no "
+"exception. The bullets are as special as the rest of the gun; they are "
+"designed to shatter inside opponents to take them down quickly.\n"
+msgstr ""
+"Trent Easton cerca sempre quel qualcosa in più e questa pistola non fa "
+"eccezione. Persino le pallottole sono speciali; sono progettate per "
+"frammentarsi nell'avversario ed eliminarlo velocemente.\n"
+
+#. L_DISH_291
+msgid ""
+"A reliable and effective submachine gun, it is not difficult to see why this"
+" is the best-selling dataDyne weapon of the past two years even if the "
+"secondary mode is not taken into account. The target designate and lock-on "
+"system is excellent, and you should familiarize yourself with the complete "
+"operation of the weapon.\n"
+msgstr ""
+"Un fucile mitragliatore affidabile e efficace: è facile capire perché sia il"
+" modello più venduto della dataDyne, anche se non è prevista la modalità "
+"secondaria. Il sistema di designazione e puntamento è eccellente e vale la "
+"pena di imparare il funzionamento completo dell'arma.\n"
+
+#. L_DISH_292
+msgid ""
+"The Cyclone submachine gun was specifically designed NOT to be accurate, "
+"though it is worth your time practicing. It can put a lot of bullets out in "
+"a short time, however, and is an excellent suppression weapon because of "
+"it.\n"
+msgstr ""
+"Il fucile mitragliatore Ciclone non è stato progettato come arma di "
+"precisione, anche se vale la pena fare pratica. Può sparare molte pallottole"
+" in poco tempo ed è quindi un'eccellente arma di soppressione.\n"
+
+#. L_DISH_293
+msgid ""
+"Maian flexibility in design has produced this submachine gun with an "
+"interesting secondary mode - a high-velocity bullet that can penetrate "
+"objects easily. The fire rate, as with the Phoenix, is reduced during the "
+"secondary mode; this is to prevent damage to the firing mechanism and "
+"barrel.\n"
+msgstr ""
+"La flessibilità Maian nel design ha prodotto questo fucile mitragliatore con"
+" un'interessante modalità secondaria: una pallottola superveloce ad alta "
+"penetrazione. Come per la Phoenix, la velocità di fuoco è ridotta nella "
+"modalità secondaria, per evitare danni al meccanismo di sparo e alla "
+"canna.\n"
+
+#. L_DISH_294
+msgid ""
+"The RC-P120 fires a special mineral bullet that, coupled with a high fire "
+"rate and a huge magazine, makes this a perfect tool to be used against the "
+"Skedar, should the need arise. The bullets can be used to fuel a prototype "
+"Cloaking Device - the training has been altered to reflect this particular "
+"characteristic.\n"
+msgstr ""
+"La RC-P120 spara una speciale pallottola minerale che, assieme all'alta "
+"velocità e al notevole caricatore, ne fa uno strumento perfetto da usare "
+"contro gli Skedar, se necessario. Le pallottole possono essere usate per "
+"alimentare un prototipo di dispositivo mimetico: l'addestramento è stato "
+"adeguarsi a tale caratteristica.\n"
+
+#. L_DISH_295
+msgid ""
+"Not only can the gun fold up to resemble a laptop PC, but it can be deployed"
+" as a sentry gun in secondary mode to cover an escape route or protect a "
+"location.\n"
+msgstr ""
+"La pistola si chiude in modo da sembrare un laptop e può essere usata come "
+"sentinella in modalità secondaria per coprire una via d'uscita o proteggere "
+"un luogo.\n"
+
+#. L_DISH_296
+msgid ""
+"This is the model that dataDyne successfully submitted to the U.S. military,"
+" though it has yet to be widely adopted. In keeping with the tendency of "
+"dataDyne to give people nasty surprises, the basic model assault rifle "
+"carries a proximity mine below the barrel. Using the secondary mode rather "
+"obviously means you have to throw the weapon away.\n"
+msgstr ""
+"Questo è il modello che la dataDyne ha fornito all'esercito USA, anche se "
+"non è ancora stato adottato ufficialmente. Poiché la dataDyne riserva sempre"
+" brutte sorprese, il fucile d'assalto di base dispone di una mina di "
+"prossimità sotto la canna. Usare la modalità secondaria significa dover poi "
+"buttar via l'arma.\n"
+
+#. L_DISH_297
+msgid ""
+"As far as we can ascertain, the secondary mode of the weapon seems to be a "
+"threat identifier, targetting mines, hidden explosive devices (such as the "
+"Dragon in secondary mode), and automatic guns. Though a powerful gun, the "
+"assault rifle's magazine is perhaps too small. \n"
+msgstr ""
+"Per quanto se ne sa, la modalità secondaria dell'arma sembra essere un "
+"rilevatore di minacce, mine guidate, esplosivi nascosti (tipo la Dragon "
+"nella modalità secondaria)e pistole automatiche. Anche se potente, il "
+"caricatore del fucile d'assalto è troppo piccolo.\n"
+
+#. L_DISH_298
+msgid ""
+"The Institute's first attempt at a support weapon, the AR34 is a fairly "
+"basic assault rifle. The secondary mode is a permanent zoom. Testing is "
+"weighted towards accuracy training.\n"
+msgstr ""
+"Il primo tentativo dell'istituto di creare un'arma di supporto è l'AR34, un "
+"semplice fucile d'assalto. La modalità secondaria è uno zoom costante. "
+"Richiede un addestramento preciso.\n"
+
+#. L_DISH_299
+msgid ""
+"The heavier variant of the Dragon, with the proximity mine removed and "
+"replaced by a small grenade launcher. Adopted by the U.S. military as a "
+"squad heavy support weapon - it is not hard to see why. Use the tests to get"
+" used to the grenade trajectory.\n"
+msgstr ""
+"La versione più pesante della Dragon, con un piccolo lanciagranate al posto "
+"della mina di prossimità. Adottato dall'esercito USA come arma pesante di "
+"supporto e a ragione! Esercitati con la traiettoria delle granate.\n"
+
+#. L_DISH_300
+msgid ""
+"Subtlety is not an option here. There are two modes, single or double blast."
+" The magazine is quite large for a shotgun, but be aware of the long reload "
+"times and plan your movements accordingly.\n"
+msgstr ""
+"La precisione è d'uopo! Ci sono due modalità: esplosione singola o doppia. "
+"Il caricatore è piuttosto capiente per un fucile a pompa, ma si devono "
+"considerare i lunghi tempi di ricarica.\n"
+
+#. L_DISH_301
+msgid ""
+"A finely engineered, silenced sniper rifle with a high-powered zoom. The "
+"only part of the operation that can interfere with the accuracy of the "
+"weapon is the sniper. Make sure you use the secondary mode to crouch down "
+"and steady your aim.\n"
+msgstr ""
+"Un fucile cecchino sofisticato, con silenziatore e zoom. L'unico elemento "
+"funzionale che riduce la precisione è il cecchino. Usa la modalità "
+"secondaria per accucciarti e prendere la mira.\n"
+
+#. L_DISH_302
+msgid ""
+"Even though the engineering techniques are beyond us, we can still "
+"appreciate the effects of the FarSight rifle. The shot is almost "
+"unstoppable, and the scope can penetrate walls to a great depth, locking on "
+"to targets if need be.\n"
+msgstr ""
+"Pur essendo tecnologicamente molto avanzato le caratteristiche del fucile "
+"TeleVista sono lampanti. Il colpo è inarrestabile e penetra nelle pareti in "
+"grande profondità, puntando e seguendo gli obiettivi se necessario.\n"
+
+#. L_DISH_303
+msgid ""
+"The primary function of the crossbow is a nonlethal drugged shot, while the "
+"secondary is an instant kill. It is a stealth weapon first and foremost, so "
+"the reloading can be time-consuming and inconvenient in a firefight.\n"
+msgstr ""
+"La prima funzione della balestra è un colpo narcotico non letale, mentre la "
+"seconda annienta all'istante. È un'arma per missioni in incognito e il "
+"caricamento richiede molto tempo, quindi non è adatta in caso di fuoco "
+"serrato.\n"
+
+#. L_DISH_304
+msgid ""
+"The tranquilizer gun is a common design, found in many medical laboratories "
+"and hospitals worldwide. It can be switched from the tranquilizer pellets to"
+" a short-range lethal dose, which uses up a lot more of the reservoir of "
+"sedative.\n"
+msgstr ""
+"La pistola sedativo è la stessa usata in molti ospedali e laboratori. Può "
+"essere caricata sia con piccole quantità di sedativo sia con dosaggi letali."
+" Il contenuto nel serbatoio cala a seconda del dosaggio.\n"
+
+#. L_DISH_305
+msgid ""
+"Try to control this weapon as best you can. It was designed for a far "
+"stronger user than a human, that much is certain. Kneeling down may help "
+"steady your aim, but not refine it. If any opponents do make it past the "
+"hail of fire, then the barrels can be used as a grinder to inflict damage.\n"
+msgstr ""
+"Cerca di controllare quest'arma al meglio. È pensata per esseri più forti "
+"degli umani, questo è chiaro. Inginocchiarsi aiuta a prendere la mira, ma "
+"non ad aggiustarla. Se l'avversario si trova nella linea del fuoco, le canne"
+" possono essere usate come un macinatore.\n"
+
+#. L_DISH_306
+msgid ""
+"A recent dataDyne product, with interesting technology inside it. The "
+"secondary mode activates a magnetic field around the bomb, providing "
+"adhesion for a limited amount of time. When a certain amount of time has "
+"passed, the field is reversed and the bomb falls from the impact point and "
+"explodes.\n"
+msgstr ""
+"Un prodotto recente della dataDyne dall'interessante tecnologia. La modalità"
+" secondaria attiva un campo magnetico attorno alla bomba, conferendo "
+"aderenza per un breve periodo, dopo di che il campo svanisce e la bomba cade"
+" dal punto d'impatto esplodendo.\n"
+
+#. L_DISH_307
+msgid ""
+"A compact, reuseable missile launcher - reloads after each shot. The "
+"secondary mode uses a variant of the lock-on system from the CMP150 "
+"submachine gun, with a single designated target. The missile travels at a "
+"slower speed as it tracks the target, so plan for this and time your shots "
+"carefully.\n"
+msgstr ""
+"Un lanciamissili compatto riutilizzabile, si ricarica dopo ogni lancio.  La "
+"modalità secondaria usa una variante del sistema di puntamento del fucile "
+"mitragliatore CMP150,con un solo bersaglio designato. Il missile viaggia a "
+"velocità ridotta mentre segue l'obiettivo: calcola bene i tempi!\n"
+
+#. L_DISH_308
+msgid ""
+"This Skedar handheld missile launcher can fire either an unguided rocket or "
+"a user-controlled remote rocket. Presumably this gave the Skedar some "
+"perverse satisfaction when the warhead camera closed on the target, but a "
+"Carrington Institute agent is beyond such things. The guided rocket speeds "
+"up automatically, but can be slowed down for greater maneuverability. "
+"Detonation occurs on contact or when the trigger is pressed.\n"
+msgstr ""
+"Questo lanciamissili Skedar può lanciare un missile non guidato o uno "
+"telecomandato. Forse gli Skedar hanno la loro soddisfazione quando la "
+"telecamera zooma sul bersaglio, ma un agente del Carrington Institute è "
+"superiore a certe cose. Il missile guidato accelera automaticamente, ma può "
+"essere rallentato per manovrarlo meglio. L'esplosione avviene a contatto o a"
+" comando.\n"
+
+#. L_DISH_309
+msgid ""
+"A finely tempered fighting knife, which is also balanced for throwing. "
+"Practice is essential to get accustomed to the range and trajectory of the "
+"thrown blade.\n"
+msgstr ""
+"Un pugnale da lotta temprato, bilanciato anche per il lancio. È necessario "
+"fare molta pratica per ottenere una traiettoria precisa della lama "
+"lanciata.\n"
+
+#. L_DISH_310
+msgid ""
+"The experimental weapons department has come up with a small but effective "
+"wrist-mounted laser with two beam settings. The primary mode fires a blast "
+"out to a considerable range, while the secondary mode provides a continual "
+"beam for as long as the trigger is pressed.\n"
+msgstr ""
+"Il reparto sperimentazione armi ha realizzato questo laser da polso, a due "
+"raggi, piccolo ma efficace. La modalità primaria ha una gittata "
+"considerevole, la secondaria spara un raggio continuo, finché il grilletto è"
+" premuto.\n"
+
+#. L_DISH_311
+msgid ""
+"The fragmentation anti-personnel grenade has four seconds from activation to"
+" detonation on the basic fuse. For your entertainment and delight, we have "
+"included a secondary mode - proximity pinball. The grenade will bounce "
+"around until the charge wears off or the proximity detector is triggered.\n"
+msgstr ""
+"La granata antiuomo a frammentazione esplode dopo quattro secondi "
+"dall'attivazione. Per perfezionare l'ordigno è stata aggiunta una modalità "
+"secondaria ping-pong. La granata salta da una parte all'altra fino ad "
+"esaurimento della carica o attivazione del rilevatore di prossimità.\n"
+
+#. L_DISH_312
+msgid ""
+"This Maian grenade plays havoc with the neurons in sentient creatures. If "
+"you wander into the blast radius, your vision will blur and you will lose "
+"your grip on whatever you're holding. The grenade can be set to go off on "
+"impact or by proximity trigger. Make sure you throw it far enough away.\n"
+msgstr ""
+"Questa granata Maian crea il caos nei neuroni delle creature coscienti. "
+"Trovandoti nel raggio di esplosione ti si annebbierà la vista e gli oggetti "
+"ti cadranno di mano. Può essere fatta esplodere a impatto o per prossimità. "
+"Lanciala abbastanza lontano da te.\n"
+
+#. L_DISH_313
+msgid ""
+"A degree of judgement is required for the effective use of timed mines, "
+"otherwise the intended target may overrun the explosion range and come after"
+" you. Hone your skills in the tests before you make a critical error in the "
+"field. The secondary function is a threat detector identical to that found "
+"on the K7 Avenger assault rifle.\n"
+msgstr ""
+"Ci vuole prudenza nell'uso di mine a orologeria, altrimenti il bersaglio può"
+" sfuggire dal raggio di esplosione e inseguirti. Fai molta pratica prima di "
+"rischiare di compiere gravi errori sul campo. La modalità secondaria è un "
+"rilevatore di minaccia come quello del fucile d'assalto K7 Vendetta.\n"
+
+#. L_DISH_314
+msgid ""
+"The key to successful placement of proximity mines is to put them where your"
+" opponent doesn't expect to encounter them. If you find yourself on the "
+"receiving end of proximity mines, use the threat detector secondary mode to "
+"make sure of your surroundings. It may be wasting your time, but if it "
+"isn't, it could save your life.\n"
+msgstr ""
+"Il segreto per un buon piazzamento della mina di prossimità è metterla dove "
+"l'avversario non se l'aspetta. Se ti trovi all'estremità di destinazione "
+"della mina di prossimità, usa il rilevatore di minaccia della modalità "
+"secondaria per proteggerti. Può sembrare una perdita di tempo, ma può "
+"salvarti la vita.\n"
+
+#. L_DISH_315
+msgid ""
+"The latest variety of remote detonated mines, essentially the same as all "
+"that have gone before. The primary mode is placing the mines, while the "
+"secondary mode is giving the detonation command. If you can't see the mine, "
+"you'll have to rely on old-fashioned guesswork and timing. \n"
+msgstr ""
+"L'ultimo modello delle mine a esplosione a distanza, sostanzialmente come le"
+" precedenti. La modalità primaria piazza la mina, mentre la secondaria dà il"
+" comando di esplosione. Se non vedi la mina, dovrai cercare di calcolare a "
+"mente il tempo. \n"
+
+#. L_DISH_316
+msgid "Holo 1 - Looking Around\n"
+msgstr "Olog. 1 - Guardati attorno\n"
+
+#. L_DISH_317
+msgid "Holo 2 - Movement 1\n"
+msgstr "Olog. 2 - Movimento 1\n"
+
+#. L_DISH_318
+msgid "Holo 3 - Movement 2\n"
+msgstr "Olog. 3 - Movimento 2\n"
+
+#. L_DISH_319
+msgid "Holo 4 - Unarmed Combat 1\n"
+msgstr "Olog. 4 - A mani nude 1\n"
+
+#. L_DISH_320
+msgid "Holo 5 - Unarmed Combat 2\n"
+msgstr "Olog. 5 - A mani nude 2\n"
+
+#. L_DISH_321
+msgid "Holo 6 - Live Combat 1\n"
+msgstr "Olog. 6 - Lotta aperta 1\n"
+
+#. L_DISH_322
+msgid "Holo 7 - Live Combat 2\n"
+msgstr "Olog. 7 - Lotta aperta 2\n"

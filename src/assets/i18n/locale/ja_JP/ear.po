@@ -2,13 +2,13 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Perfect Dark PC port localization\n"
-"POT-Creation-Date: 2025-05-31 06:37:14.299892+00:00\n"
+"POT-Creation-Date: 2025-06-05 13:35:16.474166+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: originalAssets_to_l10n.py script\n"
 
-#. "L_EAR_000"
+#. L_EAR_000
 msgid ""
 "|Background - \n"
 "\n"
@@ -70,11 +70,11 @@ msgstr ""
 "\n"
 "END\n"
 
-#. "L_EAR_001"
+#. L_EAR_001
 msgid "BASEMENT LABORATORY\n"
 msgstr "地下研究室\n"
 
-#. "L_EAR_002"
+#. L_EAR_002
 msgid ""
 "|Background - \n"
 "\n"
@@ -128,7 +128,7 @@ msgstr ""
 "\n"
 "END\n"
 
-#. "L_EAR_003"
+#. L_EAR_003
 msgid ""
 "|Background - \n"
 "\n"
@@ -166,67 +166,67 @@ msgstr ""
 "\n"
 "END\n"
 
-#. "L_EAR_009"
+#. L_EAR_009
 msgid "Locate Dr. Caroll\n"
 msgstr "ドクター・キャロルを助けよ\n"
 
-#. "L_EAR_010"
+#. L_EAR_010
 msgid "Shut down experiments\n"
 msgstr "科学者たちの実験を中断せよ\n"
 
-#. "L_EAR_011"
+#. L_EAR_011
 msgid "Start security maintenance cycle\n"
 msgstr "クリーニングロボットを起動\n"
 
-#. "L_EAR_012"
+#. L_EAR_012
 msgid "Obtain experimental technologies\n"
 msgstr "実験中のアイテムを入手せよ\n"
 
-#. "L_EAR_013"
+#. L_EAR_013
 msgid "Holograph radioactive isotope\n"
 msgstr "放射性物質の研究を調査せよ\n"
 
-#. "L_EAR_014"
+#. L_EAR_014
 msgid "Machinery scream sound Fx.\n"
 msgstr "Machinery scream sound Fx.\n"
 
-#. "L_EAR_015"
+#. L_EAR_015
 msgid "Maintenance robots activated.\n"
 msgstr "クリーニングロボットを起動した\n"
 
-#. "L_EAR_016"
+#. L_EAR_016
 msgid "Maintenance robots reprogrammed.\n"
 msgstr "クリーニングロボットのプログラム改造完了\n"
 
-#. "L_EAR_017"
+#. L_EAR_017
 msgid "Security doors unlocked.\n"
 msgstr "セキュリティ・ドアのロックが解除された\n"
 
-#. "L_EAR_018"
+#. L_EAR_018
 msgid "Maintenance cycle activated.\n"
 msgstr "メンテナンス・サイクルを起動した\n"
 
-#. "L_EAR_019"
+#. L_EAR_019
 msgid "Routine cleaning cycle activated.\n"
 msgstr "クリーニング・サイクルを起動した\n"
 
-#. "L_EAR_020"
+#. L_EAR_020
 msgid "Operation not allowed - robots busy.\n"
 msgstr "動作不能　ロボットの状態がビジーです\n"
 
-#. "L_EAR_021"
+#. L_EAR_021
 msgid "Maintenance robots deactivated.\n"
 msgstr "クリーニングロボットが停止した\n"
 
-#. "L_EAR_022"
+#. L_EAR_022
 msgid "Critical mission object destroyed.\n"
 msgstr "任務遂行に不可欠な要素が破壊された\n"
 
-#. "L_EAR_023"
+#. L_EAR_023
 msgid "Maintenance robot system offline.\n"
 msgstr "クリーニングロボットが停止した\n"
 
-#. "L_EAR_024"
+#. L_EAR_024
 msgid ""
 "MISSION FAILED \n"
 " - objectives cannot be completed.\n"
@@ -234,285 +234,285 @@ msgstr ""
 "任務失敗\n"
 "　任務を完了できません\n"
 
-#. "L_EAR_025"
+#. L_EAR_025
 msgid "Who are you?\n"
 msgstr "お前は、誰だ？\n"
 
-#. "L_EAR_026"
+#. L_EAR_026
 msgid "Unacceptable scientist casualties.\n"
 msgstr "非武装の科学者に被害が出た\n"
 
-#. "L_EAR_027"
+#. L_EAR_027
 msgid "Terminal is not active.\n"
 msgstr "端末が機能していません\n"
 
-#. "L_EAR_028"
+#. L_EAR_028
 msgid "Powering down active systems.\n"
 msgstr "システムをシャットダウンした\n"
 
-#. "L_EAR_029"
+#. L_EAR_029
 msgid "Experiment has been shut down.\n"
 msgstr "実験が中断された\n"
 
-#. "L_EAR_030"
+#. L_EAR_030
 msgid "Alarm activated.\n"
 msgstr "アラーム起動\n"
 
-#. "L_EAR_031"
+#. L_EAR_031
 msgid "Alarm deactivated.\n"
 msgstr "アラーム停止\n"
 
-#. "L_EAR_032"
+#. L_EAR_032
 msgid "Don't shoot me - I'll help you.\n"
 msgstr "撃たないで　言うことは聞くから…\n"
 
-#. "L_EAR_033"
+#. L_EAR_033
 msgid "What the hell are you doing in my lab?\n"
 msgstr "お前は、私の研究室で一体何をやっているんだ？\n"
 
-#. "L_EAR_034"
+#. L_EAR_034
 msgid "Let me help you.\n"
 msgstr "よかろう、お手伝いしよう…\n"
 
-#. "L_EAR_035"
+#. L_EAR_035
 msgid "Accidents will happen.\n"
 msgstr "すぐにイタイ目にあうぞ！\n"
 
-#. "L_EAR_036"
+#. L_EAR_036
 msgid "ACCESS DENIED - security code required.\n"
 msgstr "アクセス拒否　セキュリティ・コードが必要\n"
 
-#. "L_EAR_037"
+#. L_EAR_037
 msgid "Searching for password.\n"
 msgstr "パスワードをサーチ中…\n"
 
-#. "L_EAR_038"
+#. L_EAR_038
 msgid "."
 msgstr ""
 
-#. "L_EAR_039"
+#. L_EAR_039
 msgid "Password located - bypassing lock.\n"
 msgstr "パスワード確認：ロックを解除します\n"
 
-#. "L_EAR_040"
+#. L_EAR_040
 msgid "Contact broken - reestablish link.\n"
 msgstr "コネクションエラー：再びリンクが必要\n"
 
-#. "L_EAR_041"
+#. L_EAR_041
 msgid "Security door already unlocked.\n"
 msgstr ""
 "セキュリティ・ドアのロックは\n"
 "既に解除されています\n"
 
-#. "L_EAR_042"
+#. L_EAR_042
 msgid "Experiment already powered down.\n"
 msgstr "実験はすでに中断されています\n"
 
-#. "L_EAR_043"
+#. L_EAR_043
 msgid "Strange - the experiment's already off!\n"
 msgstr "おかしいな？　実験が中断されている\n"
 
-#. "L_EAR_044"
+#. L_EAR_044
 msgid "It appears someone has broken my PC.\n"
 msgstr "誰かがボクのＰＣを壊したみたいだ\n"
 
-#. "L_EAR_045"
+#. L_EAR_045
 msgid "Obtain Night Vision.\n"
 msgstr "Obtain Night Vision.\n"
 
-#. "L_EAR_046"
+#. L_EAR_046
 msgid "Cassandra De Vries'\n"
 msgstr "Cassandra De Vries'\n"
 
-#. "L_EAR_047"
+#. L_EAR_047
 msgid "Night Vision\n"
 msgstr "ナイトアイ\n"
 
-#. "L_EAR_048"
+#. L_EAR_048
 msgid "De Vries' briefcase\n"
 msgstr "De Vries' briefcase\n"
 
-#. "L_EAR_049"
+#. L_EAR_049
 msgid "Picked up Night Vision.\n"
 msgstr "ナイトアイを手に入れた\n"
 
-#. "L_EAR_050"
+#. L_EAR_050
 msgid "Obtain shield tech item.\n"
 msgstr "Obtain shield tech item.\n"
 
-#. "L_EAR_051"
+#. L_EAR_051
 msgid "Cassandra De Vries'\n"
 msgstr "Cassandra De Vries'\n"
 
-#. "L_EAR_052"
+#. L_EAR_052
 msgid "Shield tech item\n"
 msgstr "試作シールド\n"
 
-#. "L_EAR_053"
+#. L_EAR_053
 msgid "De Vries' briefcase\n"
 msgstr "De Vries' briefcase\n"
 
-#. "L_EAR_054"
+#. L_EAR_054
 msgid "Picked up shield tech item.\n"
 msgstr "試作シールドを手に入れた\n"
 
-#. "L_EAR_055"
+#. L_EAR_055
 msgid "Obtain Data Uplink.\n"
 msgstr "Obtain Data Uplink.\n"
 
-#. "L_EAR_056"
+#. L_EAR_056
 msgid "\n"
 msgstr "\n"
 
-#. "L_EAR_057"
+#. L_EAR_057
 msgid "Data Uplink\n"
 msgstr "データリンカ\n"
 
-#. "L_EAR_058"
+#. L_EAR_058
 msgid "A Data Uplink\n"
 msgstr "データリンカ\n"
 
-#. "L_EAR_059"
+#. L_EAR_059
 msgid "Picked up a Data Uplink.\n"
 msgstr "データリンカを手に入れた\n"
 
-#. "L_EAR_060"
+#. L_EAR_060
 msgid "Connection established.\n"
 msgstr "接続開始…\n"
 
-#. "L_EAR_061"
+#. L_EAR_061
 msgid "Maintenance hatch is now open.\n"
 msgstr "メンテナンスハッチが開いた\n"
 
-#. "L_EAR_062"
+#. L_EAR_062
 msgid "Maintenance hatch is already open.\n"
 msgstr "メンテナンスハッチは既に開いています\n"
 
-#. "L_EAR_063"
+#. L_EAR_063
 msgid "WARNING - radioactive matter detected.\n"
 msgstr "警告！！　強度の放射能が検出されています\n"
 
-#. "L_EAR_064"
+#. L_EAR_064
 msgid "What are you doing in my lab?\n"
 msgstr "おい、何をやってるんだ？\n"
 
-#. "L_EAR_065"
+#. L_EAR_065
 msgid "I haven't seen you before...\n"
 msgstr "キ、キミは見たことないぞ…\n"
 
-#. "L_EAR_066"
+#. L_EAR_066
 msgid "Who the hell are you?\n"
 msgstr "一体お前は何者だ？\n"
 
-#. "L_EAR_067"
+#. L_EAR_067
 msgid "Shut down the experiment.\n"
 msgstr "実験を中断してもらうわ。\n"
 
-#. "L_EAR_068"
+#. L_EAR_068
 msgid "Pull the plug on that, NOW.\n"
 msgstr "さっさと実験のプラグを抜きなさい！\n"
 
-#. "L_EAR_069"
+#. L_EAR_069
 msgid "Switch this thing off.\n"
 msgstr "実験のスイッチを切るのよ！\n"
 
-#. "L_EAR_070"
+#. L_EAR_070
 msgid "I'll shut it down.\n"
 msgstr "わかった、中断するよ…\n"
 
-#. "L_EAR_071"
+#. L_EAR_071
 msgid "Please don't hurt me.\n"
 msgstr "暴力はやめてくれ…\n"
 
-#. "L_EAR_072"
+#. L_EAR_072
 msgid "Allow me to assist you.\n"
 msgstr "おっしゃる通りにいたしましょう…\n"
 
-#. "L_EAR_073"
+#. L_EAR_073
 msgid "My experiments!\n"
 msgstr "私の実験が！\n"
 
-#. "L_EAR_074"
+#. L_EAR_074
 msgid "There, the experiment is down.\n"
 msgstr "ほら、実験は中断されたよ\n"
 
-#. "L_EAR_075"
+#. L_EAR_075
 msgid "Leave this area NOW!\n"
 msgstr "ここからすぐに出ていってくれ！\n"
 
-#. "L_EAR_076"
+#. L_EAR_076
 msgid "Security!\n"
 msgstr "ガードマン！\n"
 
-#. "L_EAR_077"
+#. L_EAR_077
 msgid "I'm calling security.\n"
 msgstr "警備兵を呼んでやる\n"
 
-#. "L_EAR_078"
+#. L_EAR_078
 msgid "Accidents will happen.\n"
 msgstr "イタイ目にあうぞ…\n"
 
-#. "L_EAR_079"
+#. L_EAR_079
 msgid "How did that happen?\n"
 msgstr "あれ、こんなはずは？\n"
 
-#. "L_EAR_080"
+#. L_EAR_080
 msgid "Looks like it's off already.\n"
 msgstr "もう停止されているようだ\n"
 
-#. "L_EAR_081"
+#. L_EAR_081
 msgid "Have you been tampering with this?\n"
 msgstr "これ、何か操作した？\n"
 
-#. "L_EAR_082"
+#. L_EAR_082
 msgid "Someone's broken my equipment.\n"
 msgstr "誰かがボクのＰＣを壊したみたいだ\n"
 
-#. "L_EAR_083"
+#. L_EAR_083
 msgid "What's happened to the terminal?\n"
 msgstr "あれ、端末が？\n"
 
-#. "L_EAR_084"
+#. L_EAR_084
 msgid "You vandal - you've broken it.\n"
 msgstr "このー、壊しやがって！\n"
 
-#. "L_EAR_085"
+#. L_EAR_085
 msgid "Connection broken - experiments still active.\n"
 msgstr "接続不能　実験がまだアクティブです。\n"
 
-#. "L_EAR_086"
+#. L_EAR_086
 msgid "Experimental item 1 acquired.\n"
 msgstr "実験アイテム１を入手した\n"
 
-#. "L_EAR_087"
+#. L_EAR_087
 msgid "Experimental item 2 acquired.\n"
 msgstr "実験アイテム２を入手した\n"
 
-#. "L_EAR_088"
+#. L_EAR_088
 msgid "Experimental item 3 acquired.\n"
 msgstr "実験アイテム３を入手した\n"
 
-#. "L_EAR_089"
+#. L_EAR_089
 msgid "Obtain CamSpy.\n"
 msgstr "Obtain CamSpy.\n"
 
-#. "L_EAR_090"
+#. L_EAR_090
 msgid "Dr. Caroll's\n"
 msgstr "Dr. Caroll's\n"
 
-#. "L_EAR_091"
+#. L_EAR_091
 msgid "CamSpy\n"
 msgstr "カムスパイ\n"
 
-#. "L_EAR_092"
+#. L_EAR_092
 msgid "A CamSpy\n"
 msgstr "カムスパイ\n"
 
-#. "L_EAR_093"
+#. L_EAR_093
 msgid "Picked up a CamSpy.\n"
 msgstr "カムスパイを手に入れた\n"
 
-#. "L_EAR_094"
+#. L_EAR_094
 msgid ""
 "That's the highest security sector - Dr. Caroll \n"
 "has got to be nearby.\n"
@@ -520,13 +520,13 @@ msgstr ""
 "ここは最も警備がかたいエリアだ。\n"
 "ドクター・キャロルは近くにいるに違いない。\n"
 
-#. "L_EAR_095"
+#. L_EAR_095
 msgid "Something around here's using a lot of power.\n"
 msgstr ""
 "この近くの何かが\n"
 "すごいエネルギーを使っているわ\n"
 
-#. "L_EAR_096"
+#. L_EAR_096
 msgid ""
 "Reprogram that cleaning bot - \n"
 "it'll give you a way in.\n"
@@ -534,7 +534,7 @@ msgstr ""
 "クリーニングロボットのプログラムを改造せよ。\n"
 "それで奥へと行けるはずだ。\n"
 
-#. "L_EAR_097"
+#. L_EAR_097
 msgid ""
 "Get out, Jo! The levels are too high. \n"
 "Use the CamSpy.\n"
@@ -542,35 +542,35 @@ msgstr ""
 "放射能レベルが高過ぎる。外に出ろ！\n"
 "ジョアンナ、カムスパイを使え。\n"
 
-#. "L_EAR_098"
+#. L_EAR_098
 msgid "Secret weapons compartment opened.\n"
 msgstr "秘密ウェポンのコンパートメントが開いた\n"
 
-#. "L_EAR_099"
+#. L_EAR_099
 msgid "Enemy detected - weapon cache locked.\n"
 msgstr "敵発見　武器倉庫がロックされた\n"
 
-#. "L_EAR_100"
+#. L_EAR_100
 msgid "Dr. Caroll?\n"
 msgstr "ドクター・キャロル？\n"
 
-#. "L_EAR_101"
+#. L_EAR_101
 msgid "Dr. Caroll, are you here?\n"
 msgstr "ドクター・キャロル、ここですか？\n"
 
-#. "L_EAR_102"
+#. L_EAR_102
 msgid "Well, is it safe to come out?\n"
 msgstr "もう、外に出ても大丈夫かな？\n"
 
-#. "L_EAR_103"
+#. L_EAR_103
 msgid "Yes, all clear.\n"
 msgstr "ええ、この辺の敵は全て片付けたわ。\n"
 
-#. "L_EAR_104"
+#. L_EAR_104
 msgid "Wh..what... you're...\n"
 msgstr "ちょっと、あ、あなたは…\n"
 
-#. "L_EAR_105"
+#. L_EAR_105
 msgid ""
 "Very professionally done, my dear, but there's \n"
 "no time to waste! We must leave immediately!\n"
@@ -578,7 +578,7 @@ msgstr ""
 "さすがプロの仕事は見事だな！\n"
 "すぐにここから逃げなくては！\n"
 
-#. "L_EAR_106"
+#. L_EAR_106
 msgid ""
 "Come on. I have vital information, and you \n"
 "must protect me.\n"

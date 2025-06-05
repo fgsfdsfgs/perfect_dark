@@ -2,13 +2,13 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Perfect Dark PC port localization\n"
-"POT-Creation-Date: 2025-05-31 06:37:14.299892+00:00\n"
+"POT-Creation-Date: 2025-06-05 13:35:16.474166+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: originalAssets_to_l10n.py script\n"
 
-#. "L_LEE_000"
+#. L_LEE_000
 msgid ""
 "|Background - \n"
 "\n"
@@ -76,11 +76,11 @@ msgstr ""
 "\n"
 "FINE\n"
 
-#. "L_LEE_001"
+#. L_LEE_001
 msgid "SKEDAR ASSAULT SHIP\n"
 msgstr "ASTRONAVE D'ASSALTO SKEDAR\n"
 
-#. "L_LEE_002"
+#. L_LEE_002
 msgid ""
 "|Background - \n"
 "\n"
@@ -140,7 +140,7 @@ msgstr ""
 "\n"
 "FINE\n"
 
-#. "L_LEE_003"
+#. L_LEE_003
 msgid ""
 "|Background - \n"
 "\n"
@@ -192,55 +192,55 @@ msgstr ""
 "\n"
 "FINE\n"
 
-#. "L_LEE_004"
+#. L_LEE_004
 msgid "\n"
 msgstr "\n"
 
-#. "L_LEE_005"
+#. L_LEE_005
 msgid "Disable shield system\n"
 msgstr "Disattiva il sistema scudo\n"
 
-#. "L_LEE_006"
+#. L_LEE_006
 msgid "Open hangar doors\n"
 msgstr "Apri le porte dell'hangar\n"
 
-#. "L_LEE_007"
+#. L_LEE_007
 msgid "Access navigational systems\n"
 msgstr "Accedi al sistema di navigazione\n"
 
-#. "L_LEE_008"
+#. L_LEE_008
 msgid "Sabotage engine systems\n"
 msgstr "Sabotaggio al sistema motore\n"
 
-#. "L_LEE_009"
+#. L_LEE_009
 msgid "Gain control of bridge\n"
 msgstr "Assumi il controllo del ponte\n"
 
-#. "L_LEE_010"
+#. L_LEE_010
 msgid "Ship's shields have been lowered.\n"
 msgstr "Abbassati gli scudi dell'astronave.\n"
 
-#. "L_LEE_011"
+#. L_LEE_011
 msgid "Hangar doors have been opened.\n"
 msgstr "Aperte le porte dell'hangar.\n"
 
-#. "L_LEE_012"
+#. L_LEE_012
 msgid "Elvis has been killed.\n"
 msgstr "Elvis è stato ucciso.\n"
 
-#. "L_LEE_013"
+#. L_LEE_013
 msgid "Navigational information has been retrieved.\n"
 msgstr "Recuperate informazioni di navigazione.\n"
 
-#. "L_LEE_014"
+#. L_LEE_014
 msgid "Lift has been activated.\n"
 msgstr "Attivato l'ascensore.\n"
 
-#. "L_LEE_015"
+#. L_LEE_015
 msgid "All hangar Skedar have been killed.\n"
 msgstr "Uccisi tutti gli Skedar nell'hangar.\n"
 
-#. "L_LEE_016"
+#. L_LEE_016
 msgid ""
 "Outside, Joanna. Get the shields down and \n"
 "we can help you.\n"
@@ -248,27 +248,27 @@ msgstr ""
 "Avanti, Joanna! Disattiva gli scudi \n"
 "così potremo aiutarti!\n"
 
-#. "L_LEE_017"
+#. L_LEE_017
 msgid "You've got to open the hangar doors so we can dock.\n"
 msgstr "Devi aprire le porte dell'hangar affinché possiamo attraccare!\n"
 
-#. "L_LEE_018"
+#. L_LEE_018
 msgid "Okay, we're in. I'll meet you in the hangar.\n"
 msgstr "Bene, ci siamo! Ci vediamo nell'hangar.\n"
 
-#. "L_LEE_019"
+#. L_LEE_019
 msgid "Good to see you, Joanna.\n"
 msgstr "Vedo che stai bene, Joanna!\n"
 
-#. "L_LEE_020"
+#. L_LEE_020
 msgid "Take this - you should find it useful...\n"
 msgstr "Ecco, tieni! Ti sarà utile!\n"
 
-#. "L_LEE_021"
+#. L_LEE_021
 msgid "Received AR34 assault rifle.\n"
 msgstr "Preso il fucile d'assalto AR34.\n"
 
-#. "L_LEE_022"
+#. L_LEE_022
 msgid ""
 "Time to head upwards. I'll take this lift; \n"
 "you take the other one.\n"
@@ -276,19 +276,19 @@ msgstr ""
 "È ora di salire, forza! Io prendo quest'ascensore, \n"
 "tu prendi quell'altro.\n"
 
-#. "L_LEE_023"
+#. L_LEE_023
 msgid "Engines have been disabled.\n"
 msgstr "I motori sono stati disattivati.\n"
 
-#. "L_LEE_024"
+#. L_LEE_024
 msgid "Look out, Joanna! I think we've made them angry...\n"
 msgstr "Attenta, Joanna! Mi sembrano leggermente irritati...\n"
 
-#. "L_LEE_025"
+#. L_LEE_025
 msgid "Bridge has been captured.\n"
 msgstr "Assunto controllo del ponte.\n"
 
-#. "L_LEE_026"
+#. L_LEE_026
 msgid ""
 "You go on ahead, Jo. I'll secure the perimeter. \n"
 "We'll meet up later.\n"
@@ -296,7 +296,7 @@ msgstr ""
 "Va avanti tu, Jo! Io ti copro le spalle! \n"
 "Ci vediamo dopo!\n"
 
-#. "L_LEE_027"
+#. L_LEE_027
 msgid ""
 "I've got to get those shields down to let Elvis \n"
 "in. I need all the help I can get.\n"
@@ -304,41 +304,41 @@ msgstr ""
 "Devo disattivare quegli scudi per far entrare Elvis. \n"
 "Mi serve aiuto!\n"
 
-#. "L_LEE_028"
+#. L_LEE_028
 msgid "Now only the hangar bay doors are in the way.\n"
 msgstr "Ora mi restano solo le porte dell'hangar.\n"
 
-#. "L_LEE_029"
+#. L_LEE_029
 msgid "This machine contains the Skedar star maps.\n"
 msgstr "Questa macchina contiene la mappa astronomica Skedar.\n"
 
-#. "L_LEE_030"
+#. L_LEE_030
 msgid "If we control the bridge, then the ship is ours.\n"
 msgstr ""
 "Se riusciamo a prendere il controllo del ponte, \n"
 "l'astronave sarà nostra.\n"
 
-#. "L_LEE_031"
+#. L_LEE_031
 msgid "Time to head upwards...\n"
 msgstr "È ora di salire...\n"
 
-#. "L_LEE_032"
+#. L_LEE_032
 msgid "Oohhh... I'd better not be where I think I am.\n"
 msgstr "Ops... Sono sicuramente nel posto sbagliato al momento sbagliato.\n"
 
-#. "L_LEE_033"
+#. L_LEE_033
 msgid ""
 "And it's worse than that, my dear. Just look who you've got for company.\n"
 msgstr "E c'è di peggio, immagino! Guarda un po' chi c'è qui!!!\n"
 
-#. "L_LEE_034"
+#. L_LEE_034
 msgid ""
 "You! I thought you'd managed to escape. We found no trace of you at all.\n"
 msgstr ""
 "Lei! Pensavo che fosse riuscita a squagliarsela. È sparita senza lasciare "
 "traccia!!!\n"
 
-#. "L_LEE_035"
+#. L_LEE_035
 msgid ""
 "You couldn't find me. But there was no hiding from the Skedar, as you and "
 "Mr. Carrington just discovered.\n"
@@ -346,7 +346,7 @@ msgstr ""
 "Non mi avete trovato VOI! Ma dagli Skedar non si scappa, come avrete "
 "sicuramente notato tu e Carrington!\n"
 
-#. "L_LEE_036"
+#. L_LEE_036
 msgid ""
 "This is it. Wait there! I'll make a distraction; it will give you a chance "
 "to get out. Use it or we'll both die.\n"
@@ -354,21 +354,21 @@ msgstr ""
 "Prendi questo e aspetta lì! Se riesco a distrarli, avrai la possibilità di "
 "uscire di qua! Forza, usalo o moriremo entrambe!\n"
 
-#. "L_LEE_037"
+#. L_LEE_037
 msgid "Why are you doing this, Cassandra?\n"
 msgstr "Perché lo fa, Cassandra?\n"
 
-#. "L_LEE_038"
+#. L_LEE_038
 msgid "The Skedar used me, Joanna. You are my best chance for revenge.\n"
 msgstr ""
 "Gli Skedar mi hanno usata, Joanna e tu sei la mia unica possibilità di "
 "vendetta!\n"
 
-#. "L_LEE_039"
+#. L_LEE_039
 msgid "Eeeeaaarrrrggghhh!!!\n"
 msgstr "Aaaaargh!!!\n"
 
-#. "L_LEE_040"
+#. L_LEE_040
 msgid ""
 "Wow. That's the first time I've seen another planet from space. It's "
 "beautiful.\n"
@@ -376,58 +376,58 @@ msgstr ""
 "Ehi! È la prima volta che vedo un altro pianeta dallo spazio! È "
 "fantastico!\n"
 
-#. "L_LEE_041"
+#. L_LEE_041
 msgid "Hmmmm?\n"
 msgstr "Eeeeeh?\n"
 
-#. "L_LEE_042"
+#. L_LEE_042
 msgid "I don't... I don't believe it!\n"
 msgstr "Non... non ci posso credere!\n"
 
-#. "L_LEE_043"
+#. L_LEE_043
 msgid "Elvis? What is it?\n"
 msgstr "Elvis? Che roba è?\n"
 
-#. "L_LEE_044"
+#. L_LEE_044
 msgid "Where are you going?\n"
 msgstr "Che fai? Dove vai?\n"
 
-#. "L_LEE_045"
+#. L_LEE_045
 msgid "We have to get down to the surface! Follow me!\n"
 msgstr "Dobbiamo raggiungere la superficie! Dai, vieni!\n"
 
-#. "L_LEE_046"
+#. L_LEE_046
 msgid "We have to get out of here!\n"
 msgstr "Dobbiamo uscire di qua!\n"
 
-#. "L_LEE_047"
+#. L_LEE_047
 msgid "Hangar doors locked - shields still active.\n"
 msgstr "Porte hangar bloccate - Scudi ancora attivi.\n"
 
-#. "L_LEE_048"
+#. L_LEE_048
 msgid "Critical mission object destroyed.\n"
 msgstr "Distrutto strumento essenziale alla missione.\n"
 
-#. "L_LEE_049"
+#. L_LEE_049
 msgid "Ammo depleted - consoles can't be destroyed.\n"
 msgstr "Finite le munizioni - Impossibile distruggere quadro comandi.\n"
 
-#. "L_LEE_050"
+#. L_LEE_050
 msgid "Obtain De Vries' necklace.\n"
 msgstr "Collana di De Vries.\n"
 
-#. "L_LEE_051"
+#. L_LEE_051
 msgid "Cassandra De Vries'\n"
 msgstr "Cassandra De Vries:\n"
 
-#. "L_LEE_052"
+#. L_LEE_052
 msgid "Necklace\n"
 msgstr "Collana\n"
 
-#. "L_LEE_053"
+#. L_LEE_053
 msgid "De Vries' necklace\n"
 msgstr "Collana di De Vries\n"
 
-#. "L_LEE_054"
+#. L_LEE_054
 msgid "Picked up De Vries' necklace.\n"
 msgstr "Presa collana di De Vries.\n"

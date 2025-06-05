@@ -2,13 +2,13 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Perfect Dark PC port localization\n"
-"POT-Creation-Date: 2025-05-31 06:37:14.299892+00:00\n"
+"POT-Creation-Date: 2025-06-05 13:35:16.474166+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: originalAssets_to_l10n.py script\n"
 
-#. "L_SHO_000"
+#. L_SHO_000
 msgid ""
 "|Background - \n"
 "\n"
@@ -76,11 +76,11 @@ msgstr ""
 "\n"
 "FINE\n"
 
-#. "L_SHO_001"
+#. L_SHO_001
 msgid "SKEDAR BATTLE SHRINE\n"
 msgstr "TEMPIO DI GUERRA SKEDAR\n"
 
-#. "L_SHO_002"
+#. L_SHO_002
 msgid ""
 "|Background - \n"
 "\n"
@@ -140,7 +140,7 @@ msgstr ""
 "\n"
 "FINE\n"
 
-#. "L_SHO_003"
+#. L_SHO_003
 msgid ""
 "|Background - \n"
 "\n"
@@ -192,115 +192,115 @@ msgstr ""
 "\n"
 "FINE\n"
 
-#. "L_SHO_004"
+#. L_SHO_004
 msgid "\n"
 msgstr "\n"
 
-#. "L_SHO_005"
+#. L_SHO_005
 msgid "Identify temple targets\n"
 msgstr "Identifica gli obiettivi nel tempio\n"
 
-#. "L_SHO_006"
+#. L_SHO_006
 msgid "Activate bridge\n"
 msgstr "Attiva il ponte retrattile\n"
 
-#. "L_SHO_007"
+#. L_SHO_007
 msgid "Gain access to Inner Sanctum\n"
 msgstr "Trova l'accesso al Santuario Interno\n"
 
-#. "L_SHO_008"
+#. L_SHO_008
 msgid "Destroy secret Skedar army\n"
 msgstr "Distruggi l'esercito segreto Skedar\n"
 
-#. "L_SHO_009"
+#. L_SHO_009
 msgid "Assassinate Skedar leader\n"
 msgstr "Elimina il capo degli Skedar\n"
 
-#. "L_SHO_010"
+#. L_SHO_010
 msgid "Obtain Night Vision.\n"
 msgstr "Procurati Vista Notturna.\n"
 
-#. "L_SHO_011"
+#. L_SHO_011
 msgid "\n"
 msgstr "\n"
 
-#. "L_SHO_012"
+#. L_SHO_012
 msgid "Night Vision\n"
 msgstr "Vista Notturna\n"
 
-#. "L_SHO_013"
+#. L_SHO_013
 msgid "Night Vision\n"
 msgstr "Vista Notturna\n"
 
-#. "L_SHO_014"
+#. L_SHO_014
 msgid "Picked up Night Vision.\n"
 msgstr "Presa Vista Notturna.\n"
 
-#. "L_SHO_015"
+#. L_SHO_015
 msgid "Obtain Scanner.\n"
 msgstr "Procurati scanner.\n"
 
-#. "L_SHO_016"
+#. L_SHO_016
 msgid "\n"
 msgstr "\n"
 
-#. "L_SHO_017"
+#. L_SHO_017
 msgid "Scanner\n"
 msgstr "Scanner\n"
 
-#. "L_SHO_018"
+#. L_SHO_018
 msgid "Scanner\n"
 msgstr "Scanner\n"
 
-#. "L_SHO_019"
+#. L_SHO_019
 msgid "Picked up Scanner.\n"
 msgstr "Preso scanner.\n"
 
-#. "L_SHO_020"
+#. L_SHO_020
 msgid "Obtain Target Amplifier.\n"
 msgstr "Procurati bersaglio.\n"
 
-#. "L_SHO_021"
+#. L_SHO_021
 msgid "\n"
 msgstr "\n"
 
-#. "L_SHO_022"
+#. L_SHO_022
 msgid "Target Amplifier\n"
 msgstr "Bersaglio\n"
 
-#. "L_SHO_023"
+#. L_SHO_023
 msgid "Target Amplifier\n"
 msgstr "Bersaglio\n"
 
-#. "L_SHO_024"
+#. L_SHO_024
 msgid "Picked up Target Amplifier.\n"
 msgstr "Preso bersaglio.\n"
 
-#. "L_SHO_025"
+#. L_SHO_025
 msgid "Target Amplifier placed correctly.\n"
 msgstr "Bersaglio piazzato correttamente.\n"
 
-#. "L_SHO_026"
+#. L_SHO_026
 msgid "Target Amplifier placed incorrectly.\n"
 msgstr "Bersaglio in posizione errata.\n"
 
-#. "L_SHO_027"
+#. L_SHO_027
 msgid "Generator has been reactivated.\n"
 msgstr "Il generatore è stato riattivato.\n"
 
-#. "L_SHO_028"
+#. L_SHO_028
 msgid "Skedar Inner Sanctum has been reached.\n"
 msgstr "Raggiunto Santuario Interno Skedar.\n"
 
-#. "L_SHO_029"
+#. L_SHO_029
 msgid "Skedar secret army has been defeated.\n"
 msgstr "Distrutto esercito segreto Skedar.\n"
 
-#. "L_SHO_030"
+#. L_SHO_030
 msgid "This seems to be one of the special pillars.\n"
 msgstr "Questo sembra uno degli obelischi.\n"
 
-#. "L_SHO_031"
+#. L_SHO_031
 msgid ""
 "The power's more constant in this area. \n"
 "The Inner Sanctum can't be far away.\n"
@@ -308,11 +308,11 @@ msgstr ""
 "Qui il campo energetico sembra più costante. \n"
 "Il Santuario Interno non può essere lontano.\n"
 
-#. "L_SHO_032"
+#. L_SHO_032
 msgid "OH, NO!!! A Skedar army in suspended animation!\n"
 msgstr "OH, NO!!! Un esercito Skedar in stato di morte apparente!\n"
 
-#. "L_SHO_033"
+#. L_SHO_033
 msgid ""
 "Okay, this is it... Cut off the head and the \n"
 "body will perish.\n"
@@ -320,7 +320,7 @@ msgstr ""
 "Benissimo, ecco fatto! Mozzandogli il capo \n"
 "il corpo morirà!\n"
 
-#. "L_SHO_034"
+#. L_SHO_034
 msgid ""
 "This is the Skedar fanatics' most holy place. They believe this planet is "
 "sacred ground. The Battle Shrine is located at the most holy part of this "
@@ -330,14 +330,14 @@ msgstr ""
 "questo pianeta sia SACRO ed inviolabile. Il Tempio di Guerra si trova nella "
 "parte più SACRA di questo pianeta SACRO!\n"
 
-#. "L_SHO_035"
+#. L_SHO_035
 msgid ""
 "So let me get this straight - it's holy. But there's more to it than that, "
 "isn't there?\n"
 msgstr ""
 "Fammi capire bene... Ma, allora è SACRO! Però c'è anche dell'altro, vero?\n"
 
-#. "L_SHO_036"
+#. L_SHO_036
 msgid ""
 "Yes. In all of the time that we Maians fought the Skedar, we never found "
 "this place. We knew that until it was destroyed, the war would never be "
@@ -352,7 +352,7 @@ msgstr ""
 "potevamo mai abbassare la guardia. La distruzione di questo posto implicherà"
 " una pace vera! \n"
 
-#. "L_SHO_037"
+#. L_SHO_037
 msgid ""
 "Then we have to be certain that no fanatics survive. I'll go in and take out"
 " the leader. You'll have to summon the Maian fleet to level the Shrine.\n"
@@ -361,7 +361,7 @@ msgstr ""
 "porto fuori il capo; tu chiami a raccolta la flotta Maian per radere al "
 "suolo il tempio!\n"
 
-#. "L_SHO_038"
+#. L_SHO_038
 msgid ""
 "If you're caught on the ground when the fleet gets here, you won't stand a "
 "chance.\n"
@@ -369,37 +369,37 @@ msgstr ""
 "Se ti trovi ancora in giro quando fa irruzione la flotta, non avrai più "
 "possibilità di salvezza!\n"
 
-#. "L_SHO_039"
+#. L_SHO_039
 msgid "That's a mistake I don't intend to make.\n"
 msgstr "È un errore che intendo evitare!\n"
 
-#. "L_SHO_040"
+#. L_SHO_040
 msgid "Yesss...\n"
 msgstr "Proprio così...\n"
 
-#. "L_SHO_041"
+#. L_SHO_041
 msgid "Joanna! Joanna! \n"
 msgstr "Joanna! Joanna!\n"
 
-#. "L_SHO_042"
+#. L_SHO_042
 msgid "Elvis! Elvis! Over here.\n"
 msgstr "Elvis! Elvis! Da questa parte!\n"
 
-#. "L_SHO_043"
+#. L_SHO_043
 msgid "No problem. Grab my arms - we'll get you out in no time.\n"
 msgstr ""
 "Nessun problema! Afferra il mio braccio! Ti tireremo fuori in un batter "
 "d'occhio!\n"
 
-#. "L_SHO_044"
+#. L_SHO_044
 msgid "No, quick! Give me your gun!\n"
 msgstr "No, presto! Dammi la pistola!\n"
 
-#. "L_SHO_045"
+#. L_SHO_045
 msgid "Will! You! Just! Let! Go!\n"
 msgstr "VUOI LASCIARMI ANDARE?! PER LA MISERIA?!!\n"
 
-#. "L_SHO_046"
+#. L_SHO_046
 msgid ""
 "I managed to get the fleet to stop the bombardment while I looked for you. "
 "They'll start as soon as we're clear.\n"
@@ -407,36 +407,36 @@ msgstr ""
 "La flotta ha interrotto il bombardamento per darmi il tempo di trovarti. "
 "Andranno avanti non appena saremo fuori di qui!\n"
 
-#. "L_SHO_047"
+#. L_SHO_047
 msgid "I'd have got out in time if that one hadn't grabbed my foot.\n"
 msgstr ""
 "Sarei riuscita a svignarmela in tempo, se quello non mi si fosse aggrappato "
 "al piede!\n"
 
-#. "L_SHO_048"
+#. L_SHO_048
 msgid "Of course, Joanna, of course.\n"
 msgstr "Ma certo, Joanna, naturalmente!\n"
 
-#. "L_SHO_049"
+#. L_SHO_049
 msgid "No, I would have.\n"
 msgstr "No, veramente!!!\n"
 
-#. "L_SHO_050"
+#. L_SHO_050
 msgid "I believe you.\n"
 msgstr "Sì, sì, ti credo!\n"
 
-#. "L_SHO_051"
+#. L_SHO_051
 msgid "Make your sacrifice to the God of War.\n"
 msgstr "Compi il tuo sacrificio in onore del Dio della Guerra.\n"
 
-#. "L_SHO_052"
+#. L_SHO_052
 msgid "Grenade ammo used up - can't enter Shrine.\n"
 msgstr "Granate esaurite - Impossibile entrare nel tempio.\n"
 
-#. "L_SHO_053"
+#. L_SHO_053
 msgid "Alternative entrance to Shrine created.\n"
 msgstr "Creata entrata alternativa al tempio.\n"
 
-#. "L_SHO_054"
+#. L_SHO_054
 msgid "Where are you? Are you hurt?\n"
 msgstr "Dove sei? Sei ferita?\n"

@@ -2,633 +2,633 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Perfect Dark PC port localization\n"
-"POT-Creation-Date: 2025-05-31 06:37:14.299892+00:00\n"
+"POT-Creation-Date: 2025-06-05 13:35:16.474166+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: originalAssets_to_l10n.py script\n"
 
-#. "L_GUN_000"
+#. L_GUN_000
 msgid "\n"
 msgstr "\n"
 
-#. "L_GUN_001"
+#. L_GUN_001
 msgid "Kill count"
 msgstr "Cuenta de muertes"
 
-#. "L_GUN_002"
+#. L_GUN_002
 msgid "Died once\n"
 msgstr "Muerto una vez\n"
 
-#. "L_GUN_003"
+#. L_GUN_003
 msgid "Died"
 msgstr "Muerto"
 
-#. "L_GUN_004"
+#. L_GUN_004
 msgid "times"
 msgstr "veces"
 
-#. "L_GUN_005"
+#. L_GUN_005
 msgid "Suicide count"
 msgstr "Cuenta de suicidios"
 
-#. "L_GUN_006"
+#. L_GUN_006
 msgid "Unarmed\n"
 msgstr "Desarmado\n"
 
-#. "L_GUN_007"
+#. L_GUN_007
 msgid "Falcon 2\n"
 msgstr "Falcon 2\n"
 
-#. "L_GUN_008"
+#. L_GUN_008
 msgid "Falcon 2 (silencer)\n"
 msgstr "Falcon 2 (silenc.)\n"
 
-#. "L_GUN_009"
+#. L_GUN_009
 msgid "Falcon 2 (scope)\n"
 msgstr "Falcon 2 (mirilla)\n"
 
-#. "L_GUN_010"
+#. L_GUN_010
 msgid "MagSec 4\n"
 msgstr "MagSec 4\n"
 
-#. "L_GUN_011"
+#. L_GUN_011
 msgid "Mauler\n"
 msgstr "Mauler\n"
 
-#. "L_GUN_012"
+#. L_GUN_012
 msgid "DY357 Magnum\n"
 msgstr "DY357 Magnum\n"
 
-#. "L_GUN_013"
+#. L_GUN_013
 msgid "DY357-LX\n"
 msgstr "DY357-LX\n"
 
-#. "L_GUN_014"
+#. L_GUN_014
 msgid "Phoenix\n"
 msgstr "Phoenix\n"
 
-#. "L_GUN_015"
+#. L_GUN_015
 msgid "CMP150\n"
 msgstr "CMP150\n"
 
-#. "L_GUN_016"
+#. L_GUN_016
 msgid "AR34\n"
 msgstr "AR34\n"
 
-#. "L_GUN_017"
+#. L_GUN_017
 msgid "Dragon\n"
 msgstr "Dragón\n"
 
-#. "L_GUN_018"
+#. L_GUN_018
 msgid "SuperDragon\n"
 msgstr "SuperDragón\n"
 
-#. "L_GUN_019"
+#. L_GUN_019
 msgid "K7 Avenger\n"
 msgstr "Vengador K7\n"
 
-#. "L_GUN_020"
+#. L_GUN_020
 msgid "Cyclone\n"
 msgstr "Ciclón\n"
 
-#. "L_GUN_021"
+#. L_GUN_021
 msgid "MagSec SMG\n"
 msgstr "MagSec SMG\n"
 
-#. "L_GUN_022"
+#. L_GUN_022
 msgid "RC-P120\n"
 msgstr "RC-P120\n"
 
-#. "L_GUN_023"
+#. L_GUN_023
 msgid "Callisto NTG\n"
 msgstr "Calisto NTG\n"
 
-#. "L_GUN_024"
+#. L_GUN_024
 msgid "Laptop Gun\n"
 msgstr "Arma PC\n"
 
-#. "L_GUN_025"
+#. L_GUN_025
 msgid "Shotgun\n"
 msgstr "Escopeta\n"
 
-#. "L_GUN_026"
+#. L_GUN_026
 msgid "Reaper\n"
 msgstr "Segadora\n"
 
-#. "L_GUN_027"
+#. L_GUN_027
 msgid "Rocket Launcher\n"
 msgstr "Lanzacohetes\n"
 
-#. "L_GUN_028"
+#. L_GUN_028
 msgid "Devastator\n"
 msgstr "Devastador\n"
 
-#. "L_GUN_029"
+#. L_GUN_029
 msgid "Slayer\n"
 msgstr "Slayer\n"
 
-#. "L_GUN_030"
+#. L_GUN_030
 msgid "MaianGrenade\n"
 msgstr "Granada Maian\n"
 
-#. "L_GUN_031"
+#. L_GUN_031
 msgid "FarSight XR-20\n"
 msgstr "FarSight XR-20\n"
 
-#. "L_GUN_032"
+#. L_GUN_032
 msgid "Sniper Rifle\n"
 msgstr "Rifle Fr\n"
 
-#. "L_GUN_033"
+#. L_GUN_033
 msgid "Crossbow\n"
 msgstr "Ballesta\n"
 
-#. "L_GUN_034"
+#. L_GUN_034
 msgid "Tranquilizer\n"
 msgstr "Tranquilizador\n"
 
-#. "L_GUN_035"
+#. L_GUN_035
 msgid "Combat Knife\n"
 msgstr "Cuchillo Combate\n"
 
-#. "L_GUN_036"
+#. L_GUN_036
 msgid "Grenade\n"
 msgstr "Granada\n"
 
-#. "L_GUN_037"
+#. L_GUN_037
 msgid "N-Bomb\n"
 msgstr "Bomba-N\n"
 
-#. "L_GUN_038"
+#. L_GUN_038
 msgid "Timed Mine\n"
 msgstr "Mina Tiempo\n"
 
-#. "L_GUN_039"
+#. L_GUN_039
 msgid "Proximity Mine\n"
 msgstr "Mina de Proximidad\n"
 
-#. "L_GUN_040"
+#. L_GUN_040
 msgid "Remote Mine\n"
 msgstr "Mina Remota\n"
 
-#. "L_GUN_041"
+#. L_GUN_041
 msgid "ECM Mine\n"
 msgstr "Mina ECM\n"
 
-#. "L_GUN_042"
+#. L_GUN_042
 msgid "FlashBang\n"
 msgstr "FlashBang\n"
 
-#. "L_GUN_043"
+#. L_GUN_043
 msgid "Disguise\n"
 msgstr "Disfraz\n"
 
-#. "L_GUN_044"
+#. L_GUN_044
 msgid "Rocket\n"
 msgstr "Cohete\n"
 
-#. "L_GUN_045"
+#. L_GUN_045
 msgid "Homing Rocket\n"
 msgstr "Cohete Buscador\n"
 
-#. "L_GUN_046"
+#. L_GUN_046
 msgid "Grenade Round\n"
 msgstr "Cinto de Granadas\n"
 
-#. "L_GUN_047"
+#. L_GUN_047
 msgid "Laser\n"
 msgstr "Láser\n"
 
-#. "L_GUN_048"
+#. L_GUN_048
 msgid "Bolt\n"
 msgstr "Rayo\n"
 
-#. "L_GUN_049"
+#. L_GUN_049
 msgid "Psychosis Gun\n"
 msgstr "Psicosis\n"
 
-#. "L_GUN_050"
+#. L_GUN_050
 msgid "PP9i\n"
 msgstr "PP9i\n"
 
-#. "L_GUN_051"
+#. L_GUN_051
 msgid "CC13\n"
 msgstr "CC13\n"
 
-#. "L_GUN_052"
+#. L_GUN_052
 msgid "KL01313\n"
 msgstr "KL01313\n"
 
-#. "L_GUN_053"
+#. L_GUN_053
 msgid "KF7 Special\n"
 msgstr "KF7 Especial\n"
 
-#. "L_GUN_054"
+#. L_GUN_054
 msgid "ZZT (9mm)\n"
 msgstr "ZZT (9mm)\n"
 
-#. "L_GUN_055"
+#. L_GUN_055
 msgid "DMC\n"
 msgstr "DMC\n"
 
-#. "L_GUN_056"
+#. L_GUN_056
 msgid "AR53\n"
 msgstr "AR53\n"
 
-#. "L_GUN_057"
+#. L_GUN_057
 msgid "RC-P45\n"
 msgstr "RC-P45\n"
 
-#. "L_GUN_058"
+#. L_GUN_058
 msgid "Tester\n"
 msgstr "Testeador\n"
 
-#. "L_GUN_059"
+#. L_GUN_059
 msgid "Night Vision\n"
 msgstr "Visión Nocturna\n"
 
-#. "L_GUN_060"
+#. L_GUN_060
 msgid "CamSpy\n"
 msgstr "CamSpy\n"
 
-#. "L_GUN_061"
+#. L_GUN_061
 msgid "DrugSpy\n"
 msgstr "DrugSpy\n"
 
-#. "L_GUN_062"
+#. L_GUN_062
 msgid "BombSpy\n"
 msgstr "BombSpy\n"
 
-#. "L_GUN_063"
+#. L_GUN_063
 msgid "Door Decoder\n"
 msgstr "Decodificador\n"
 
-#. "L_GUN_064"
+#. L_GUN_064
 msgid "Explosives\n"
 msgstr "Explosivos\n"
 
-#. "L_GUN_065"
+#. L_GUN_065
 msgid "X-Ray Scanner\n"
 msgstr "Escáner Rayos-X\n"
 
-#. "L_GUN_066"
+#. L_GUN_066
 msgid "Alien Medpack\n"
 msgstr "Paquete Médico\n"
 
-#. "L_GUN_067"
+#. L_GUN_067
 msgid "Suitcase\n"
 msgstr "Maleta\n"
 
-#. "L_GUN_068"
+#. L_GUN_068
 msgid "Disguise\n"
 msgstr "Disfraz\n"
 
-#. "L_GUN_069"
+#. L_GUN_069
 msgid "IR Scanner\n"
 msgstr "Escáner IR\n"
 
-#. "L_GUN_070"
+#. L_GUN_070
 msgid "R-Tracker\n"
 msgstr "Rastreador-R\n"
 
-#. "L_GUN_071"
+#. L_GUN_071
 msgid "Briefcase\n"
 msgstr "Maletín\n"
 
-#. "L_GUN_072"
+#. L_GUN_072
 msgid "Suicide Pill\n"
 msgstr "Píldora Suicidio\n"
 
-#. "L_GUN_073"
+#. L_GUN_073
 msgid "Cloaking Device\n"
 msgstr "Disp. Ocultación\n"
 
-#. "L_GUN_074"
+#. L_GUN_074
 msgid "Combat Boost\n"
 msgstr "Reforzador\n"
 
-#. "L_GUN_075"
+#. L_GUN_075
 msgid "Data Uplink\n"
 msgstr "Conector de Datos\n"
 
-#. "L_GUN_076"
+#. L_GUN_076
 msgid "Horizon Scanner\n"
 msgstr "Esc. Horizonte\n"
 
-#. "L_GUN_077"
+#. L_GUN_077
 msgid "Falcon 2 (s)\n"
 msgstr "Falcon 2 (+)\n"
 
-#. "L_GUN_078"
+#. L_GUN_078
 msgid "Falcon 2 (+)\n"
 msgstr "Falcon 2 (s)\n"
 
-#. "L_GUN_079"
+#. L_GUN_079
 msgid "FarSight\n"
 msgstr "FarSight\n"
 
-#. "L_GUN_080"
+#. L_GUN_080
 msgid "R-Launcher\n"
 msgstr "L.Cohetes\n"
 
-#. "L_GUN_081"
+#. L_GUN_081
 msgid "Proxy Mine\n"
 msgstr "Mina Prox.\n"
 
-#. "L_GUN_082"
+#. L_GUN_082
 msgid "Psychosis\n"
 msgstr "Psicosis\n"
 
-#. "L_GUN_083"
+#. L_GUN_083
 msgid "Knife\n"
 msgstr "Cuchillo\n"
 
-#. "L_GUN_084"
+#. L_GUN_084
 msgid "DY357\n"
 msgstr "DY357\n"
 
-#. "L_GUN_085"
+#. L_GUN_085
 msgid "Single Shot\n"
 msgstr "Disparo único\n"
 
-#. "L_GUN_086"
+#. L_GUN_086
 msgid "Rapid Fire\n"
 msgstr "Fuego rápido\n"
 
-#. "L_GUN_087"
+#. L_GUN_087
 msgid "Burst Fire\n"
 msgstr "Fuego en ráfaga\n"
 
-#. "L_GUN_088"
+#. L_GUN_088
 msgid "Reapage\n"
 msgstr "Cosechar\n"
 
-#. "L_GUN_089"
+#. L_GUN_089
 msgid "Shotgun Fire\n"
 msgstr "Fuego de escopeta\n"
 
-#. "L_GUN_090"
+#. L_GUN_090
 msgid "Rail-gun effect\n"
 msgstr "Efecto carrete\n"
 
-#. "L_GUN_091"
+#. L_GUN_091
 msgid "Rocket Launch\n"
 msgstr "Lanzacohetes\n"
 
-#. "L_GUN_092"
+#. L_GUN_092
 msgid "Targeted Rocket\n"
 msgstr "Cohete Dirigido\n"
 
-#. "L_GUN_093"
+#. L_GUN_093
 msgid "Fly-By-Wire Rocket\n"
 msgstr "Cohete Teledirigido\n"
 
-#. "L_GUN_094"
+#. L_GUN_094
 msgid "Pistol Whip\n"
 msgstr "Culatazo\n"
 
-#. "L_GUN_095"
+#. L_GUN_095
 msgid "Explosive Shells\n"
 msgstr "Cartuchos Explosivos\n"
 
-#. "L_GUN_096"
+#. L_GUN_096
 msgid "Guided Shots\n"
 msgstr "Disparos Guiados\n"
 
-#. "L_GUN_097"
+#. L_GUN_097
 msgid "Magazine Discharge\n"
 msgstr "Descarga de Cartuchos\n"
 
-#. "L_GUN_098"
+#. L_GUN_098
 msgid "Grenade Launcher\n"
 msgstr "Lanzagranadas\n"
 
-#. "L_GUN_099"
+#. L_GUN_099
 msgid "Wall Hugger\n"
 msgstr "Mina Lapa\n"
 
-#. "L_GUN_100"
+#. L_GUN_100
 msgid "Punch\n"
 msgstr "Puñetazo\n"
 
-#. "L_GUN_101"
+#. L_GUN_101
 msgid "Disarm\n"
 msgstr "Desarmar\n"
 
-#. "L_GUN_102"
+#. L_GUN_102
 msgid "Follow Lock-On\n"
 msgstr "Seguir Objetivo\n"
 
-#. "L_GUN_103"
+#. L_GUN_103
 msgid "Use Scope\n"
 msgstr "Usar Mirilla\n"
 
-#. "L_GUN_104"
+#. L_GUN_104
 msgid "Half Magazine Discharge\n"
 msgstr "Dispara Medio Cargador\n"
 
-#. "L_GUN_105"
+#. L_GUN_105
 msgid "Double Blast\n"
 msgstr "Disparo Doble\n"
 
-#. "L_GUN_106"
+#. L_GUN_106
 msgid "Grinder\n"
 msgstr "Trituradora\n"
 
-#. "L_GUN_107"
+#. L_GUN_107
 msgid "Sedate\n"
 msgstr "Sedante\n"
 
-#. "L_GUN_108"
+#. L_GUN_108
 msgid "Lethal Injection\n"
 msgstr "Inyección Letal\n"
 
-#. "L_GUN_109"
+#. L_GUN_109
 msgid "Knife Slash\n"
 msgstr "Cuchillada\n"
 
-#. "L_GUN_110"
+#. L_GUN_110
 msgid "Throw Poison Knife\n"
 msgstr "Cuchillo Envenenado\n"
 
-#. "L_GUN_111"
+#. L_GUN_111
 msgid "Target Locator\n"
 msgstr "Localizador Objetivos\n"
 
-#. "L_GUN_112"
+#. L_GUN_112
 msgid "Instant Kill\n"
 msgstr "Muerte Instantánea\n"
 
-#. "L_GUN_113"
+#. L_GUN_113
 msgid "Boost\n"
 msgstr "Reforzador\n"
 
-#. "L_GUN_114"
+#. L_GUN_114
 msgid "Revert\n"
 msgstr "Revertir\n"
 
-#. "L_GUN_115"
+#. L_GUN_115
 msgid "High Impact Shells\n"
 msgstr "Cartuchos Alto-Impacto\n"
 
-#. "L_GUN_116"
+#. L_GUN_116
 msgid "Cloak\n"
 msgstr "Ocultación\n"
 
-#. "L_GUN_117"
+#. L_GUN_117
 msgid "Deploy as Sentry Gun\n"
 msgstr "Dejar como Centinela\n"
 
-#. "L_GUN_118"
+#. L_GUN_118
 msgid "Proximity Self Destruct\n"
 msgstr "Autodestrucción Prox.\n"
 
-#. "L_GUN_119"
+#. L_GUN_119
 msgid "Threat Detector\n"
 msgstr "Detector de Trampas\n"
 
-#. "L_GUN_120"
+#. L_GUN_120
 msgid "Timed Explosive\n"
 msgstr "Explosivo de Tiempo\n"
 
-#. "L_GUN_121"
+#. L_GUN_121
 msgid "Proximity Explosive\n"
 msgstr "Explosivo de Proximidad\n"
 
-#. "L_GUN_122"
+#. L_GUN_122
 msgid "Remote Explosive\n"
 msgstr "Explosivo Remoto\n"
 
-#. "L_GUN_123"
+#. L_GUN_123
 msgid "Detonate\n"
 msgstr "Detonación\n"
 
-#. "L_GUN_124"
+#. L_GUN_124
 msgid "4-Second Fuse\n"
 msgstr "Fusible 4 segundos\n"
 
-#. "L_GUN_125"
+#. L_GUN_125
 msgid "Proximity Pinball\n"
 msgstr "Pinball Proximidad\n"
 
-#. "L_GUN_126"
+#. L_GUN_126
 msgid "Timed Detonation\n"
 msgstr "Detonación temporal\n"
 
-#. "L_GUN_127"
+#. L_GUN_127
 msgid "Proximity Detonation\n"
 msgstr "Detonación Proximidad\n"
 
-#. "L_GUN_128"
+#. L_GUN_128
 msgid "3-Round Burst\n"
 msgstr "Ráfaga 3 Cartuchos\n"
 
-#. "L_GUN_129"
+#. L_GUN_129
 msgid "Charge-Up Shot\n"
 msgstr "Disparo Cargado\n"
 
-#. "L_GUN_130"
+#. L_GUN_130
 msgid "Crouch\n"
 msgstr "Agacharse\n"
 
-#. "L_GUN_131"
+#. L_GUN_131
 msgid "Infect\n"
 msgstr "Infectar\n"
 
-#. "L_GUN_132"
+#. L_GUN_132
 msgid "Pulse Fire\n"
 msgstr "Disparo con Ritmo\n"
 
-#. "L_GUN_133"
+#. L_GUN_133
 msgid "Short Range Stream\n"
 msgstr "Rayo Bajo-Alcance\n"
 
-#. "L_GUN_134"
+#. L_GUN_134
 msgid "Impact Detonation\n"
 msgstr "Detonación por Impacto\n"
 
-#. "L_GUN_135"
+#. L_GUN_135
 msgid "Light Amplifier\n"
 msgstr "Amplificador de Luz\n"
 
-#. "L_GUN_136"
+#. L_GUN_136
 msgid "Mobile Camera\n"
 msgstr "Cámara Móvil\n"
 
-#. "L_GUN_137"
+#. L_GUN_137
 msgid "X-Ray Vision\n"
 msgstr "Visión de Rayos-X\n"
 
-#. "L_GUN_138"
+#. L_GUN_138
 msgid "Thermal Imager\n"
 msgstr "Imagen Termal\n"
 
-#. "L_GUN_139"
+#. L_GUN_139
 msgid "Zoom\n"
 msgstr "Zoom\n"
 
-#. "L_GUN_140"
+#. L_GUN_140
 msgid "Jamming Device\n"
 msgstr "Dispositivo de Bloqueo\n"
 
-#. "L_GUN_141"
+#. L_GUN_141
 msgid "Connect\n"
 msgstr "Conectar\n"
 
-#. "L_GUN_142"
+#. L_GUN_142
 msgid "Identify Targets\n"
 msgstr "Identificar Objetivos\n"
 
-#. "L_GUN_143"
+#. L_GUN_143
 msgid "Wear Disguise\n"
 msgstr "Llevar Disfraz\n"
 
-#. "L_GUN_144"
+#. L_GUN_144
 msgid "Place Explosives\n"
 msgstr "Colocar Explosivos\n"
 
-#. "L_GUN_145"
+#. L_GUN_145
 msgid "Telescopic Sight\n"
 msgstr "Mira Telescópica\n"
 
-#. "L_GUN_146"
+#. L_GUN_146
 msgid "Silencer\n"
 msgstr "Silenciador\n"
 
-#. "L_GUN_147"
+#. L_GUN_147
 msgid "Magazine Extension\n"
 msgstr "Extensión de Cartucho\n"
 
-#. "L_GUN_148"
+#. L_GUN_148
 msgid "Laser Sight\n"
 msgstr "Mira Láser\n"
 
-#. "L_GUN_149"
+#. L_GUN_149
 msgid "dataDyne\n"
 msgstr "dataDyne\n"
 
-#. "L_GUN_150"
+#. L_GUN_150
 msgid "Carrington\n"
 msgstr "Carrington\n"
 
-#. "L_GUN_151"
+#. L_GUN_151
 msgid "Chesluk Industries\n"
 msgstr "Industrias Chesluk\n"
 
-#. "L_GUN_152"
+#. L_GUN_152
 msgid "Skedar\n"
 msgstr "Skedar\n"
 
-#. "L_GUN_153"
+#. L_GUN_153
 msgid "Maian\n"
 msgstr "Maian\n"
 
-#. "L_GUN_154"
+#. L_GUN_154
 msgid "JonesCorp\n"
 msgstr "JonesCorp\n"
 
-#. "L_GUN_155"
+#. L_GUN_155
 msgid ""
 "Even without a weapon, you are still a worthy adversary. Use your fists to "
 "knock your opponents out or disarm them and use their weapons against "
@@ -637,7 +637,7 @@ msgstr ""
 "Incluso desarmado, eres un adversario respetable. Usa tus puños para noquear"
 " a tus oponentes o desarmarles para usar sus armas contra ellos.\n"
 
-#. "L_GUN_156"
+#. L_GUN_156
 msgid ""
 "Accurate and trustworthy, this gun is the workhorse of the Institute's "
 "operations. Use the laser sight to place bullets with deadly effect, or "
@@ -647,7 +647,7 @@ msgstr ""
 "operaciones del Instituto. Usa la mira láser para situar las balas con un "
 "efecto mortal, o golpea a los adversarios para noquearles.\n"
 
-#. "L_GUN_157"
+#. L_GUN_157
 msgid ""
 "An upgraded Falcon 2, which has the added benefit of being silent, but "
 "deadly.\n"
@@ -655,7 +655,7 @@ msgstr ""
 "Una Falcon 2 mejorada, con la ventaja añadida de que es silenciosa, pero "
 "mortal.\n"
 
-#. "L_GUN_158"
+#. L_GUN_158
 msgid ""
 "An upgraded Falcon 2, featuring a 2x magnification scope which allows you to"
 " take advantage of the Falcon's superior accuracy.\n"
@@ -663,7 +663,7 @@ msgstr ""
 "Una Falcon 2 mejorada, que cuenta con una mirilla duplicadora que te permite"
 " beneficiarte de la superior precisión de la Falcon.\n"
 
-#. "L_GUN_159"
+#. L_GUN_159
 msgid ""
 "A state-of-the-art military pistol, largely used by peacekeeping forces. It "
 "has a slight zoom capability, and boasts a 3-round burst secondary fire "
@@ -673,7 +673,7 @@ msgstr ""
 "paz. Cuenta con una ligera capacidad de zoom, y tiene un modo secundario de "
 "disparo de ráfaga de tres cartuchos.\n"
 
-#. "L_GUN_160"
+#. L_GUN_160
 msgid ""
 "If you see a Skedar coming at you, the chances are it's carrying one of "
 "these. A large magazine and a bladed barrel make the pistol a formidable "
@@ -685,7 +685,7 @@ msgstr ""
 "formidable arma de mano, pero la descarga asesina viene del modo secundario:"
 " carga el disparo para fuerza extra al coste de unos cuantos cartuchos.\n"
 
-#. "L_GUN_161"
+#. L_GUN_161
 msgid ""
 "The dataDyne DY357 is the most powerful handgun in the world. Each round has"
 " an impressive penetration factor and knocks the target back with the weight"
@@ -698,7 +698,7 @@ msgstr ""
 "importantes; se rumorea que el director de ANS, Trent Easton, tiene una "
 "variante bañada en oro.\n"
 
-#. "L_GUN_162"
+#. L_GUN_162
 msgid ""
 "The DY357-LX was custom built for NSA director Trent Easton. Besides "
 "boasting an attractive genuine tiger skin grip, this golden gun features a "
@@ -710,7 +710,7 @@ msgstr ""
 "este arma dorada incluye un cañón optimizado, lo que significa que cada bala"
 " siempre encuentra su objetivo con una fuerza mortífera.\n"
 
-#. "L_GUN_163"
+#. L_GUN_163
 msgid ""
 "The Maian standard issue sidearm. A flexible gun, the pistol fires standard "
 "shots, or explosive shots at no cost to the rest of the magazine.\n"
@@ -719,7 +719,7 @@ msgstr ""
 "dispara proyectiles estándar o proyectiles explosivos sin que afecte a la "
 "capacidad del cargador.\n"
 
-#. "L_GUN_164"
+#. L_GUN_164
 msgid ""
 "A dataDyne classic, and a bestseller, this submachine gun boasts a 32 rnd "
 "mag and a special feature - the ability to designate and lock on to targets "
@@ -733,7 +733,7 @@ msgstr ""
 "medio en uno excelente, siempre que sea inteligente para manejar el arma. "
 "Ratio de disparo normal: 900 dpm.\n"
 
-#. "L_GUN_165"
+#. L_GUN_165
 msgid ""
 "The Carrington Institute's main assault rifle. A good range and magazine "
 "size make it a useful weapon; the secondary mode enables the user to move "
@@ -744,7 +744,7 @@ msgstr ""
 "permite al usuario moverse mientras hace zoom sobre un adversario. Ratio de "
 "disparo normal: 750 dpm.\n"
 
-#. "L_GUN_166"
+#. L_GUN_166
 msgid ""
 "A standard assault rifle with an evil twist - when the secondary mode is "
 "activated, it becomes a proximity-activated mine that looks like a gun. "
@@ -754,7 +754,7 @@ msgstr ""
 "secundario, se convierte en una mina activada por proximidad que parece un "
 "arma. Ratio de disparo normal: 700 dpm.\n"
 
-#. "L_GUN_167"
+#. L_GUN_167
 msgid ""
 "A variant of the Dragon assault rifle - instead of a proximity explosive, it"
 " has a small grenade launcher. Excellent support weapon. Average fire rate: "
@@ -764,7 +764,7 @@ msgstr ""
 "proximidad, es un pequeño lanzagranadas. Es una excelente arma de apoyo. "
 "Ratio de disparo normal: 700 dpm.\n"
 
-#. "L_GUN_168"
+#. L_GUN_168
 msgid ""
 "Another piece of high-tech kit from dataDyne. Ordinarily an assault rifle "
 "with a smallish magazine and a powerful punch, it has a threat detection "
@@ -776,7 +776,7 @@ msgstr ""
 "un modo detector de trampas que muestra explosivos, armas de pared y "
 "peligros similares. Ratio de disparo normal: 950 dpm.\n"
 
-#. "L_GUN_169"
+#. L_GUN_169
 msgid ""
 "Designed for use by bodyguards, the Cyclone has been adopted by Presidential"
 " Security due to its excellent capability when used for suppression. In "
@@ -789,7 +789,7 @@ msgstr ""
 "de disparo, descargando el cargador completo en un segundo. Ratio de disparo"
 " normal: 900 dpm. Descarga a 2000 dpm.\n"
 
-#. "L_GUN_170"
+#. L_GUN_170
 msgid ""
 "The Carrington Institute secret weapon. It fires at a phenomenal rate and "
 "has a huge magazine capacity. The secondary mode is a cloaking device that "
@@ -801,7 +801,7 @@ msgstr ""
 "dispositivo de ocultación que funciona con la munición del cargador. Es un "
 "arma devastadora. Ratio de disparo normal: 1100 dpm.\n"
 
-#. "L_GUN_171"
+#. L_GUN_171
 msgid ""
 "Another example of excellent Maian firearm design. It can fire standard "
 "shots as fast as any other SMG, or it can fire high velocity rounds which "
@@ -818,7 +818,7 @@ msgstr ""
 "precisión sufre con la potencia del disparo. Ratio de disparo normal: 950 "
 "dpm., (f/s: 300 dpm).\n"
 
-#. "L_GUN_172"
+#. L_GUN_172
 msgid ""
 "A submachine gun made to look like a laptop PC. In disguised form, the gun "
 "cannot fire, but when activated, it unfolds into shape. The PC gun will not "
@@ -830,7 +830,7 @@ msgstr ""
 "permite inspecciones detalladas; puede arrancar, pero la memoria es un "
 "cuarto de lo que se supone que es. Ratio de disparo normal: 1000 dpm.\n"
 
-#. "L_GUN_173"
+#. L_GUN_173
 msgid ""
 "A dataDyne weapon manufactured for security forces. A nine-cartridge "
 "magazine combined with single or double fire modes make it a dangerous "
@@ -840,7 +840,7 @@ msgstr ""
 "nueve cartuchos combinado con modos de disparo simple o doble hacen que se "
 "trate de una peligrosa arma de cerca.\n"
 
-#. "L_GUN_174"
+#. L_GUN_174
 msgid ""
 "A truly terrifying weapon in the hands of someone strong enough to control "
 "the massive recoil; for anyone else, a highly unwieldy but effective "
@@ -851,7 +851,7 @@ msgstr ""
 "manejar pero efectiva para despejar pasillos. Ratio de disparo normal: 1800 "
 "dpm.\n"
 
-#. "L_GUN_175"
+#. L_GUN_175
 msgid ""
 "A cumbersome weapon. Fires either a standard rocket or a slower, homing "
 "rocket when locked on to the unfortunate target.\n"
@@ -859,7 +859,7 @@ msgstr ""
 "Es un arma incómoda. Dispara tanto un cohete estándar como un cohete más "
 "lento dirigido cuando se centra en el desafortunado objetivo.\n"
 
-#. "L_GUN_176"
+#. L_GUN_176
 msgid ""
 "A long range grenade delivery system manufactured by dataDyne. The secondary"
 " fire mode coats the grenades with a sticky substance; when fired, the bomb "
@@ -872,7 +872,7 @@ msgstr ""
 "o el techo. Tras unos cuantos segundos, se suelta para caer al suelo, donde "
 "detona.\n"
 
-#. "L_GUN_177"
+#. L_GUN_177
 msgid ""
 "The Skedar enjoy seeing the terror of their enemies. It seems natural that "
 "they should have a remote-controlled rocket as a secondary fire mode on "
@@ -884,7 +884,7 @@ msgstr ""
 "lanzacohetes básico, así pueden tener el placer de sentir los vanos intentos"
 " de escapar de su presa del proyectil que se acerca.\n"
 
-#. "L_GUN_178"
+#. L_GUN_178
 msgid ""
 "The FarSight rifle is a Maian hybrid of an X-ray scanning device coupled "
 "with a rifle that can shoot through solid objects. The scope can lock onto "
@@ -896,7 +896,7 @@ msgstr ""
 "mira puede centrarse en formas de vida, aunque el dispositivo no puede "
 "centrar tan rápido como se mueve el enemigo.\n"
 
-#. "L_GUN_179"
+#. L_GUN_179
 msgid ""
 "With a powerful zoom and a high velocity bullet, this Carrington Institute "
 "weapon is one of the best sniper rifles ever made. Crouch down for perfect "
@@ -906,7 +906,7 @@ msgstr ""
 "Carrington es uno de los mejores rifles de francotirador jamás hechos. "
 "Agáchate para una mayor precisión.\n"
 
-#. "L_GUN_180"
+#. L_GUN_180
 msgid ""
 "This crossbow is a short-range 'pistol' sized example, mounted on a "
 "Carrington Institute agent's wrist. It folds up to aid concealment and can "
@@ -918,7 +918,7 @@ msgstr ""
 "puede disparar hasta cinco flechas, entre los más usuales tiros sedantes o "
 "los dardos mortales.\n"
 
-#. "L_GUN_181"
+#. L_GUN_181
 msgid ""
 "A rapid-fire device, it can be used as a weapon in an emergency, but it is "
 "designed primarily as a dermal spray injector for sedative drugs. Users are "
@@ -929,7 +929,7 @@ msgstr ""
 "de sedantes. Los usuarios son advertidos que una descarga completa de la "
 "reserva de droga puede ser fatal.\n"
 
-#. "L_GUN_182"
+#. L_GUN_182
 msgid ""
 "A large and vicious combat knife. It contains a vial of poison that shatters"
 " when thrown, giving a wounded enemy at most 6 seconds to live. A dataDyne "
@@ -939,7 +939,7 @@ msgstr ""
 "veneno que se hace añicos cuando se lanza, dando al enemigo unos seis "
 "segundos de vida. Un arma que sólo podía haber sido creada por dataDyne.\n"
 
-#. "L_GUN_183"
+#. L_GUN_183
 msgid ""
 "An updated version of the trusty grenade. Can be thrown with a four-second "
 "fuse or used as a bouncing proximity bomb.\n"
@@ -947,7 +947,7 @@ msgstr ""
 "Es una versión mejorada de la fiel granada. Puede ser lanzada con un fusible"
 " de cuatro segundos, o ser usada como una bomba de proximidad que rebota.\n"
 
-#. "L_GUN_184"
+#. L_GUN_184
 msgid ""
 "A hand-held, small area effect neutron bomb. It can either detonate on "
 "impact or be set to proximity detonation.\n"
@@ -955,7 +955,7 @@ msgstr ""
 "Es una bomba de neutrones de mano que afecta a un área muy pequeña. Puede "
 "detonar por impacto o ser fijada en detonación por proximidad.\n"
 
-#. "L_GUN_185"
+#. L_GUN_185
 msgid ""
 "A mine with a short timed fuse. It has a threat detection/evaluation sensor "
 "that can be activated as a secondary mode.\n"
@@ -963,7 +963,7 @@ msgstr ""
 "Es una mina con un corto fusible de tiempo. Tiene un sensor de "
 "detección/evaluación que puede ser activado como modo secundario.\n"
 
-#. "L_GUN_186"
+#. L_GUN_186
 msgid ""
 "A mine with a proximity fuse. It has a threat detection/evaluation sensor "
 "that can be activated as a secondary mode.\n"
@@ -971,7 +971,7 @@ msgstr ""
 "Es una mina con un sensor de proximidad. Tiene un sensor de "
 "detección/evaluación que puede ser activado como modo secundario.\n"
 
-#. "L_GUN_187"
+#. L_GUN_187
 msgid ""
 "A mine that can be triggered remotely. The activate command is the secondary"
 " mode.\n"
@@ -979,7 +979,7 @@ msgstr ""
 "Es una mina que puede ser activada remotamente. El comando de activación es "
 "el modo secundario.\n"
 
-#. "L_GUN_188"
+#. L_GUN_188
 msgid ""
 "A focused white-noise jamming device, capable of simulating one of many "
 "common electrical faults in any system to which it is directly attached.\n"
@@ -988,7 +988,7 @@ msgstr ""
 "alguno de los fallos eléctricos más comunes en cualquier sistema donde sea "
 "directamente colocado.\n"
 
-#. "L_GUN_189"
+#. L_GUN_189
 msgid ""
 "The laser is wrist-mounted and deadly accurate. It can either fire long-"
 "range pulses, or it can sustain a constant, concentrated stream of energy at"
@@ -998,7 +998,7 @@ msgstr ""
 "'pulsos' de larga distancia, o puede mantener una constante y concentrada "
 "corriente de energía en corto alcance.\n"
 
-#. "L_GUN_190"
+#. L_GUN_190
 msgid ""
 "Geneered stimulants designed for combat applications. When administered, "
 "they seem to slow down the passage of time to give a reaction window.\n"
@@ -1007,7 +1007,7 @@ msgstr ""
 "administrados, parecen frenar el paso del tiempo para abrir una 'ventana de "
 "reacción'.\n"
 
-#. "L_GUN_191"
+#. L_GUN_191
 msgid ""
 "The latest of a line of 'starlight' scopes that enhance visible light to "
 "produce a clearer picture of the surrounding environment. Uses a target-"
@@ -1017,7 +1017,7 @@ msgstr ""
 "producir una imagen clara del ambiente que la rodea. Usa un algoritmo de "
 "movimiento de objetivo para mostrar posibles trampas.\n"
 
-#. "L_GUN_192"
+#. L_GUN_192
 msgid ""
 "Using the smallest application yet of anti-grav technology, this is the "
 "ultimate snooping device. It has a video/audio link with a recording "
@@ -1028,7 +1028,7 @@ msgstr ""
 "función de grabación y la posibilidad interna de holografiar "
 "espectroscópicamente.\n"
 
-#. "L_GUN_193"
+#. L_GUN_193
 msgid ""
 "A short-range scope that can see through any material - even lead - "
 "producing a simplified chromatic representation of the environment.\n"
@@ -1037,7 +1037,7 @@ msgstr ""
 "incluso el acero, produciendo una representación cromática simplificada del "
 "entorno.\n"
 
-#. "L_GUN_194"
+#. L_GUN_194
 msgid ""
 "This scope uses infra-red scanning modulated with ultrasonic data to provide"
 " not only a clearer picture of the surrounding area, but also a location of "
@@ -1049,7 +1049,7 @@ msgstr ""
 "ubicación de irregularidades estructurales. También puede localizar enemigos"
 " que empleen tecnología de ocultación u otros desconciertos ópticos.\n"
 
-#. "L_GUN_195"
+#. L_GUN_195
 msgid ""
 "Uses the light-warping qualities of an alien crystal to create a refractive "
 "field around the wearer. Functions as long as there is little kinetic "
@@ -1061,7 +1061,7 @@ msgstr ""
 "pequeñas perturbaciones kinéticas en el campo límite; el acto de disparar un"
 " arma es suficiente para causar que vuelva la visibilidad.\n"
 
-#. "L_GUN_196"
+#. L_GUN_196
 msgid ""
 "A binocular-input long range visual scanner. The visor shows a composite "
 "image of the two input sources. Also has a zoom function.\n"
@@ -1069,7 +1069,7 @@ msgstr ""
 "Es un escáner binocular de largo alcance. El visor muestra una imagen "
 "compuesta por las dos fuentes recibidas. También cuenta con función zoom.\n"
 
-#. "L_GUN_197"
+#. L_GUN_197
 msgid ""
 "Capable of remote interrogation of almost any type of stored data, which is "
 "sent directly back to the Institute computer hackers. A variant of this "
@@ -1080,7 +1080,7 @@ msgstr ""
 "variante de este dispositivo provee a los 'hackers' de conexión directa con "
 "los sistemas locales.\n"
 
-#. "L_GUN_198"
+#. L_GUN_198
 msgid ""
 "A powerful tracking device that can be customized to fit any set of "
 "parameters: people, weapons, objects, and locations are some of the "
@@ -1090,7 +1090,7 @@ msgstr ""
 "cualquier tipo de parámetros: gente, armas, objetos y lugares son algunas de"
 " las posibilidades.\n"
 
-#. "L_GUN_199"
+#. L_GUN_199
 msgid ""
 "A modified medical scanner that contains the most up-to-date record of the "
 "President's state of health and a library of past conditions and treatments."
@@ -1103,7 +1103,7 @@ msgstr ""
 " Presidente a gran distancia, incluso cuando el objetivo esté en medio de "
 "una multitud.\n"
 
-#. "L_GUN_200"
+#. L_GUN_200
 msgid ""
 "A safecracker, pure and simple. Breaks electronic encoded locks, usually in "
 "a matter of seconds, though this, of course, depends on the individual "
@@ -1113,7 +1113,7 @@ msgstr ""
 "electrónicamente, habitualmente en cuestión de segundos, aunque esto, por "
 "supuesto, depende de cada cerradura.\n"
 
-#. "L_GUN_201"
+#. L_GUN_201
 msgid ""
 "Maian medical marvel, can auto-diagnose and perform surgical procedures "
 "without the need of incisions. One drawback is that it only works on Maians;"
@@ -1124,7 +1124,7 @@ msgstr ""
 "Maian; la otra desventaja es que no tiene habilidad en el trato a los "
 "pacientes.\n"
 
-#. "L_GUN_202"
+#. L_GUN_202
 msgid ""
 "A small plastic explosive charge, complete with sealed tamper-proof timer, "
 "and embedded with teflon-coated shrapnel. Nasty.\n"
@@ -1133,7 +1133,7 @@ msgstr ""
 "temporizador sellado, e incrustada dentro de una capa de teflón con "
 "metralla. Muy desagradable.\n"
 
-#. "L_GUN_203"
+#. L_GUN_203
 msgid ""
 "As you are aware, this is a directional fusion bomb, to be placed so that "
 "the charge is directed downwards. This will obliterate the dataDyne research"
@@ -1144,7 +1144,7 @@ msgstr ""
 "laboratorios de investigación de dataDyne y causará que el resto del "
 "edificio se colapse y caiga al agujero.\n"
 
-#. "L_GUN_204"
+#. L_GUN_204
 msgid ""
 "A small bug that is attached to any part of a communication relay. It "
 "'piggybacks' the official signal, enabling the link between Institute and "
@@ -1157,7 +1157,7 @@ msgstr ""
 "para todas las posibilidades y propósitos, es parte de la localización de "
 "las comunicaciones de los objetivos.\n"
 
-#. "L_GUN_205"
+#. L_GUN_205
 msgid ""
 "The inner workings of this bug are a closely guarded secret - the self-"
 "destruct mechanism forms a large part of the device. It is speculated that "
@@ -1169,7 +1169,7 @@ msgstr ""
 "es un ejemplo de comunicación molecular cuántica, lo cual explica la "
 "fenomenal fiabilidad del dispositivo cuando se usa.\n"
 
-#. "L_GUN_206"
+#. L_GUN_206
 msgid ""
 "Uses quantum communication technology to provide supremely accurate "
 "targeting infomation to orbital weapons, helping to minimize collateral "
@@ -1181,7 +1181,7 @@ msgstr ""
 "colaterales. La misma tecnología es usada en los rastreadores del Instituto "
 "Carrington.\n"
 
-#. "L_GUN_207"
+#. L_GUN_207
 msgid ""
 "Details of the flight path and communication codes and frequencies for Air "
 "Force One - also current encryption keys.\n"
@@ -1190,7 +1190,7 @@ msgstr ""
 "frecuencias del Air Force One: incluso las claves actuales de "
 "encriptación.\n"
 
-#. "L_GUN_208"
+#. L_GUN_208
 msgid ""
 "All data pertaining to ocean floor research carried out by dataDyne on the "
 "pirated deep sea diving operations vessel Pelagic II. Contents  sonar "
@@ -1201,7 +1201,7 @@ msgstr ""
 " El contenido incluye mapeados de sónar, datos geológicos, datos del "
 "artefacto alienígena, muestras del casco, etc.\n"
 
-#. "L_GUN_209"
+#. L_GUN_209
 msgid ""
 "The last personality-state recording of the artificial intelligence, self-"
 "designated Dr. Caroll, prior to memory wipe and cerebral restructuring. Use "
@@ -1214,7 +1214,7 @@ msgstr ""
 "sólo proyecciones teóricas. Moralmente incorrupta, y por lo tanto peligrosa."
 " dataDyne I.S.C.E.O. 23/6/23\n"
 
-#. "L_GUN_210"
+#. L_GUN_210
 msgid ""
 "A chemical cocktail that warps the perceived reality of the target. Good "
 "becomes bad, bad becomes good; enemies and friends change places. Another "
@@ -1225,107 +1225,107 @@ msgstr ""
 "sus papeles. Se trata de otra de las investigaciones 'oscuras' del Área 51 "
 "de Trent Easton.\n"
 
-#. "L_GUN_211"
+#. L_GUN_211
 msgid "Not your normal outfit. Wear it to pretend not to be you.\n"
 msgstr "No es tu vestimenta habitual. Llévalo para pretender no ser tú.\n"
 
-#. "L_GUN_212"
+#. L_GUN_212
 msgid "PROXY\n"
 msgstr "PROX.\n"
 
-#. "L_GUN_213"
+#. L_GUN_213
 msgid "TIMED\n"
 msgstr "TIEMPO\n"
 
-#. "L_GUN_214"
+#. L_GUN_214
 msgid "REMOTE\n"
 msgstr "REMOTO\n"
 
-#. "L_GUN_215"
+#. L_GUN_215
 msgid "AUTOGUN\n"
 msgstr "AUTOARMA\n"
 
-#. "L_GUN_216"
+#. L_GUN_216
 msgid "IMPACT\n"
 msgstr "IMPACTO\n"
 
-#. "L_GUN_217"
+#. L_GUN_217
 msgid "Big King Rocket\n"
 msgstr "Cohete Big King\n"
 
-#. "L_GUN_218"
+#. L_GUN_218
 msgid "Data Uplink\n"
 msgstr "Conector de Datos\n"
 
-#. "L_GUN_219"
+#. L_GUN_219
 msgid "President Scanner\n"
 msgstr "Esc. Presidencial\n"
 
-#. "L_GUN_220"
+#. L_GUN_220
 msgid "AutoSurgeon\n"
 msgstr "AutoCirujano\n"
 
-#. "L_GUN_221"
+#. L_GUN_221
 msgid "Skedar Bomb\n"
 msgstr "Bomba Skedar\n"
 
-#. "L_GUN_222"
+#. L_GUN_222
 msgid "Comms Rider\n"
 msgstr "Controlador\n"
 
-#. "L_GUN_223"
+#. L_GUN_223
 msgid "Tracer Bug\n"
 msgstr "'Bicho' R.\n"
 
-#. "L_GUN_224"
+#. L_GUN_224
 msgid "Target Amplifier\n"
 msgstr "Amplificador\n"
 
-#. "L_GUN_225"
+#. L_GUN_225
 msgid "Flight Plans\n"
 msgstr "Planes de Vuelo\n"
 
-#. "L_GUN_226"
+#. L_GUN_226
 msgid "Research Tape\n"
 msgstr "Cinta Investigación\n"
 
-#. "L_GUN_227"
+#. L_GUN_227
 msgid "Backup Disk\n"
 msgstr "Copia de Seguridad\n"
 
-#. "L_GUN_228"
+#. L_GUN_228
 msgid "Key Card\n"
 msgstr "Llave Magnética\n"
 
-#. "L_GUN_229"
+#. L_GUN_229
 msgid "Briefcase\n"
 msgstr "Maletín\n"
 
-#. "L_GUN_230"
+#. L_GUN_230
 msgid "Necklace\n"
 msgstr "Collar\n"
 
-#. "L_GUN_231"
+#. L_GUN_231
 msgid "PresidentScan\n"
 msgstr "Esc. Pres.\n"
 
-#. "L_GUN_232"
+#. L_GUN_232
 msgid "Boost\n"
 msgstr "Reforzador\n"
 
-#. "L_GUN_233"
+#. L_GUN_233
 msgid "XRayScan\n"
 msgstr "Esc. R-X\n"
 
-#. "L_GUN_234"
+#. L_GUN_234
 msgid "HorizonScan\n"
 msgstr "Esc. Horiz.\n"
 
-#. "L_GUN_235"
+#. L_GUN_235
 msgid "Target Amp\n"
 msgstr "Amplific.\n"
 
-#. "L_GUN_236"
+#. L_GUN_236
 msgid ""
 "In this version of the CamSpy the recording device has been replaced by a "
 "highly powerful plastic explosive.\n"
@@ -1333,7 +1333,7 @@ msgstr ""
 "En este modelo de la Cámara Espía el dispositivo de grabación ha sido "
 "reemplazado por un poderoso explosivo plástico.\n"
 
-#. "L_GUN_237"
+#. L_GUN_237
 msgid ""
 "This version of the CamSpy uses a paralysing nerve toxin to induce near-"
 "instant catatonia in targets.\n"
@@ -1341,7 +1341,7 @@ msgstr ""
 "Este modelo de la Cámara Espía usa una toxina nerviosa paralizadora para que"
 " los blancos queden en estado catatónico.\n"
 
-#. "L_GUN_238"
+#. L_GUN_238
 msgid ""
 "Cassandra De Vries' necklace. Fitted with a proximity key tag to allow "
 "access to restricted areas. Mk3 model only functions while owner is alive. "
@@ -1351,15 +1351,15 @@ msgstr ""
 "proximidad que permite el acceso a áreas restringidas. El modelo Mk3 sólo "
 "funciona si el propietario está vivo. Clase de Seguridad AA-1 (gamma)."
 
-#. "L_GUN_239"
+#. L_GUN_239
 msgid "Cassandra De Vries' replacement necklace.  Username: %s  Password: %s\n"
 msgstr "Collar de repuesto de Cassandra De Vries.  Usuario: %s  Clave: %s\n"
 
-#. "L_GUN_240"
+#. L_GUN_240
 msgid "Shield\n"
 msgstr "Escudo\n"
 
-#. "L_GUN_241"
+#. L_GUN_241
 msgid ""
 "The shield protects the user by detecting an attack and momentarily "
 "generating a concentrated forcefield to repel the attack. The shield has a "
@@ -1374,3 +1374,51 @@ msgstr ""
 " usuario hasta cierto punto. Los escudos suelen permanecer activos cuando el"
 " usuario los lleva, aunque este escudo en particular parece no ser "
 "funcional, como un prototipo no finalizado.\n"
+
+#. L_GUN_244
+msgid "Night Vision\n"
+msgstr "V. Nocturna\n"
+
+#. L_GUN_245
+msgid "Door Decoder\n"
+msgstr "Decodif.\n"
+
+#. L_GUN_246
+msgid "Suicide Pill\n"
+msgstr "P. Suicidio\n"
+
+#. L_GUN_247
+msgid "Tranquilizer\n"
+msgstr "Tranquiliz.\n"
+
+#. L_GUN_248
+msgid "AutoSurgeon\n"
+msgstr "AutoCirujano\n"
+
+#. L_GUN_249
+msgid "Backup Disk\n"
+msgstr "Disco S.\n"
+
+#. L_GUN_250
+msgid "Disguise\n"
+msgstr "Disfraz\n"
+
+#. L_GUN_251
+msgid "Laptop Gun\n"
+msgstr "Arma PC\n"
+
+#. L_GUN_252
+msgid "Remote Mine\n"
+msgstr "Mina Remota\n"
+
+#. L_GUN_253
+msgid "Shotgun\n"
+msgstr "Escopeta\n"
+
+#. L_GUN_254
+msgid "Sniper Rifle\n"
+msgstr "Rifle Fr\n"
+
+#. L_GUN_255
+msgid "Timed Mine\n"
+msgstr "Mina Tiempo\n"

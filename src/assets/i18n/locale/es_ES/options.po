@@ -2,361 +2,365 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Perfect Dark PC port localization\n"
-"POT-Creation-Date: 2025-05-31 06:37:14.299892+00:00\n"
+"POT-Creation-Date: 2025-06-05 13:35:16.474166+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: originalAssets_to_l10n.py script\n"
 
-#. "L_OPTIONS_000"
+#. L_OPTIONS_000
 msgid "Complete\n"
 msgstr "Completado\n"
 
-#. "L_OPTIONS_001"
+#. L_OPTIONS_001
 msgid "Incomplete\n"
 msgstr "No completado\n"
 
-#. "L_OPTIONS_002"
+#. L_OPTIONS_002
 msgid "Failed\n"
 msgstr "Fallado\n"
 
-#. "L_OPTIONS_003"
+#. L_OPTIONS_003
 msgid "\n"
 msgstr "\n"
 
-#. "L_OPTIONS_005"
+#. L_OPTIONS_004
+msgid ""
+msgstr ""
+
+#. L_OPTIONS_005
 msgid "earth:"
 msgstr "tierra:"
 
-#. "L_OPTIONS_006"
+#. L_OPTIONS_006
 msgid "   prehistory"
 msgstr "   prehistoria"
 
-#. "L_OPTIONS_007"
+#. L_OPTIONS_007
 msgid "rare presents"
 msgstr "rare presenta"
 
-#. "L_OPTIONS_008"
+#. L_OPTIONS_008
 msgid "Red\n"
 msgstr "Rojo\n"
 
-#. "L_OPTIONS_009"
+#. L_OPTIONS_009
 msgid "Yellow\n"
 msgstr "Amarillo\n"
 
-#. "L_OPTIONS_010"
+#. L_OPTIONS_010
 msgid "Blue\n"
 msgstr "Azul\n"
 
-#. "L_OPTIONS_011"
+#. L_OPTIONS_011
 msgid "Magenta\n"
 msgstr "Magenta\n"
 
-#. "L_OPTIONS_012"
+#. L_OPTIONS_012
 msgid "Cyan\n"
 msgstr "Az. Claro\n"
 
-#. "L_OPTIONS_013"
+#. L_OPTIONS_013
 msgid "Orange\n"
 msgstr "Naranja\n"
 
-#. "L_OPTIONS_014"
+#. L_OPTIONS_014
 msgid "Pink\n"
 msgstr "Rosa\n"
 
-#. "L_OPTIONS_015"
+#. L_OPTIONS_015
 msgid "Brown\n"
 msgstr "Marrón\n"
 
-#. "L_OPTIONS_016"
+#. L_OPTIONS_016
 msgid "Joanna Combat\n"
 msgstr "Joanna de Combate\n"
 
-#. "L_OPTIONS_017"
+#. L_OPTIONS_017
 msgid "Joanna Trench Coat\n"
 msgstr "Joanna con Gabardina\n"
 
-#. "L_OPTIONS_018"
+#. L_OPTIONS_018
 msgid "Joanna Party Frock\n"
 msgstr "Joanna de Gala\n"
 
-#. "L_OPTIONS_019"
+#. L_OPTIONS_019
 msgid "Joanna Frock (Ripped)\n"
 msgstr "Joanna de Fiesta\n"
 
-#. "L_OPTIONS_020"
+#. L_OPTIONS_020
 msgid "Joanna Stewardess\n"
 msgstr "Joanna Azafata\n"
 
-#. "L_OPTIONS_021"
+#. L_OPTIONS_021
 msgid "Joanna Wet Suit\n"
 msgstr "Joanna Traje Isotérmico\n"
 
-#. "L_OPTIONS_022"
+#. L_OPTIONS_022
 msgid "Joanna Aqualung\n"
 msgstr "Joanna con Escafandra\n"
 
-#. "L_OPTIONS_023"
+#. L_OPTIONS_023
 msgid "Joanna Arctic\n"
 msgstr "Joanna con Traje Polar\n"
 
-#. "L_OPTIONS_024"
+#. L_OPTIONS_024
 msgid "Joanna Lab Tech.\n"
 msgstr "Joanna Científica\n"
 
-#. "L_OPTIONS_025"
+#. L_OPTIONS_025
 msgid "Elvis\n"
 msgstr "Elvis\n"
 
-#. "L_OPTIONS_026"
+#. L_OPTIONS_026
 msgid "Maian\n"
 msgstr "Maian\n"
 
-#. "L_OPTIONS_027"
+#. L_OPTIONS_027
 msgid "Daniel Carrington\n"
 msgstr "Daniel Carrington\n"
 
-#. "L_OPTIONS_028"
+#. L_OPTIONS_028
 msgid "Carrington Evening Wear\n"
 msgstr "Carrington de Gala\n"
 
-#. "L_OPTIONS_029"
+#. L_OPTIONS_029
 msgid "Mr. Blonde\n"
 msgstr "Mr. Blonde\n"
 
-#. "L_OPTIONS_030"
+#. L_OPTIONS_030
 msgid "Cassandra De Vries\n"
 msgstr "Cassandra De Vries\n"
 
-#. "L_OPTIONS_031"
+#. L_OPTIONS_031
 msgid "Trent Easton\n"
 msgstr "Trent Easton\n"
 
-#. "L_OPTIONS_032"
+#. L_OPTIONS_032
 msgid "Jonathan\n"
 msgstr "Jonathan\n"
 
-#. "L_OPTIONS_033"
+#. L_OPTIONS_033
 msgid "CI Male Lab Technician\n"
 msgstr "Técnico Masculino del IC\n"
 
-#. "L_OPTIONS_034"
+#. L_OPTIONS_034
 msgid "CI Female Lab Technician\n"
 msgstr "Técnico Femenino del IC\n"
 
-#. "L_OPTIONS_035"
+#. L_OPTIONS_035
 msgid "CI Soldier\n"
 msgstr "Soldado del IC\n"
 
-#. "L_OPTIONS_036"
+#. L_OPTIONS_036
 msgid "dataDyne Shock Trooper\n"
 msgstr "Tropa Asalto dataDyne\n"
 
-#. "L_OPTIONS_037"
+#. L_OPTIONS_037
 msgid "dataDyne Female Guard\n"
 msgstr "Guarda de dataDyne\n"
 
-#. "L_OPTIONS_038"
+#. L_OPTIONS_038
 msgid "dataDyne Security\n"
 msgstr "Seguridad de dataDyne\n"
 
-#. "L_OPTIONS_039"
+#. L_OPTIONS_039
 msgid "dataDyne Infantry\n"
 msgstr "Infantería de dataDyne\n"
 
-#. "L_OPTIONS_040"
+#. L_OPTIONS_040
 msgid "dataDyne Trooper\n"
 msgstr "Soldado de dataDyne\n"
 
-#. "L_OPTIONS_041"
+#. L_OPTIONS_041
 msgid "Secretary\n"
 msgstr "Secretaria\n"
 
-#. "L_OPTIONS_042"
+#. L_OPTIONS_042
 msgid "Office Suit\n"
 msgstr "Ropa de Oficina\n"
 
-#. "L_OPTIONS_043"
+#. L_OPTIONS_043
 msgid "Office Casual\n"
 msgstr "Ropa Normal\n"
 
-#. "L_OPTIONS_044"
+#. L_OPTIONS_044
 msgid "Negotiator\n"
 msgstr "Negociadora\n"
 
-#. "L_OPTIONS_045"
+#. L_OPTIONS_045
 msgid "dataDyne Sniper\n"
 msgstr "Francotirador dataDyne\n"
 
-#. "L_OPTIONS_046"
+#. L_OPTIONS_046
 msgid "G5 Guard\n"
 msgstr "Guarda del G5\n"
 
-#. "L_OPTIONS_047"
+#. L_OPTIONS_047
 msgid "G5 SWAT Guard\n"
 msgstr "Guarda SWAT del G5\n"
 
-#. "L_OPTIONS_048"
+#. L_OPTIONS_048
 msgid "CIA Agent\n"
 msgstr "Agente de la CIA\n"
 
-#. "L_OPTIONS_049"
+#. L_OPTIONS_049
 msgid "FBI Agent\n"
 msgstr "Agente del FBI\n"
 
-#. "L_OPTIONS_050"
+#. L_OPTIONS_050
 msgid "Area 51 Guard\n"
 msgstr "Guarda del Área 51\n"
 
-#. "L_OPTIONS_051"
+#. L_OPTIONS_051
 msgid "Area 51 Trooper\n"
 msgstr "Soldado del Área 51\n"
 
-#. "L_OPTIONS_052"
+#. L_OPTIONS_052
 msgid "Pilot\n"
 msgstr "Piloto\n"
 
-#. "L_OPTIONS_053"
+#. L_OPTIONS_053
 msgid "Overalls\n"
 msgstr "Mono de Trabajo\n"
 
-#. "L_OPTIONS_054"
+#. L_OPTIONS_054
 msgid "NSA Bodyguard\n"
 msgstr "Guardaespaldas de la ANS\n"
 
-#. "L_OPTIONS_055"
+#. L_OPTIONS_055
 msgid "Male Lab Technician\n"
 msgstr "Técnico Masculino Lab.\n"
 
-#. "L_OPTIONS_056"
+#. L_OPTIONS_056
 msgid "Female Lab Technician\n"
 msgstr "Técnico Femenino Lab.\n"
 
-#. "L_OPTIONS_057"
+#. L_OPTIONS_057
 msgid "dataDyne Lab Technician\n"
 msgstr "Técnico del Lab. dataDyne\n"
 
-#. "L_OPTIONS_058"
+#. L_OPTIONS_058
 msgid "Biotechnician\n"
 msgstr "Biotécnico\n"
 
-#. "L_OPTIONS_059"
+#. L_OPTIONS_059
 msgid "Alaskan Guard\n"
 msgstr "Guarda de Alaska\n"
 
-#. "L_OPTIONS_060"
+#. L_OPTIONS_060
 msgid "Air Force One Pilot\n"
 msgstr "Piloto del Air Force One\n"
 
-#. "L_OPTIONS_061"
+#. L_OPTIONS_061
 msgid "Steward\n"
 msgstr "Auxiliar\n"
 
-#. "L_OPTIONS_062"
+#. L_OPTIONS_062
 msgid "Stewardess\n"
 msgstr "Azafata\n"
 
-#. "L_OPTIONS_063"
+#. L_OPTIONS_063
 msgid "Head Stewardess\n"
 msgstr "Azafata Jefe\n"
 
-#. "L_OPTIONS_064"
+#. L_OPTIONS_064
 msgid "The President\n"
 msgstr "El Presidente\n"
 
-#. "L_OPTIONS_065"
+#. L_OPTIONS_065
 msgid "NSA Lackey\n"
 msgstr "Lacayo de la ANS\n"
 
-#. "L_OPTIONS_066"
+#. L_OPTIONS_066
 msgid "Presidential Security\n"
 msgstr "Seguridad Presidencial\n"
 
-#. "L_OPTIONS_067"
+#. L_OPTIONS_067
 msgid "President\"s Clone\n"
 msgstr "Clon del Presidente\n"
 
-#. "L_OPTIONS_068"
+#. L_OPTIONS_068
 msgid "Pelagic II Guard\n"
 msgstr "Guarda del Pelagic II\n"
 
-#. "L_OPTIONS_069"
+#. L_OPTIONS_069
 msgid "Maian Soldier\n"
 msgstr "Soldado Maian\n"
 
-#. "L_OPTIONS_070"
+#. L_OPTIONS_070
 msgid "Dinner Jacket\n"
 msgstr "Esmoquin\n"
 
-#. "L_OPTIONS_071"
+#. L_OPTIONS_071
 msgid "- no controller in controller socket 1 -"
 msgstr "- no hay mando conectado a la ranura 1 -"
 
-#. "L_OPTIONS_072"
+#. L_OPTIONS_072
 msgid "please power off and attach a controller"
 msgstr "por favor, apaga la consola y conecta un mando"
 
-#. "L_OPTIONS_073"
+#. L_OPTIONS_073
 msgid "DETECTED"
 msgstr "DETECTADO"
 
-#. "L_OPTIONS_074"
+#. L_OPTIONS_074
 msgid "NOT DETECTED"
 msgstr "NO DETECTADO"
 
-#. "L_OPTIONS_075"
+#. L_OPTIONS_075
 msgid "tm"
 msgstr "tm"
 
-#. "L_OPTIONS_076"
+#. L_OPTIONS_076
 msgid "N64 EXPANSION PAK"
 msgstr "N64 EXPANSION PAK"
 
-#. "L_OPTIONS_077"
+#. L_OPTIONS_077
 msgid "Nintendo 64 Product Identification\n"
 msgstr "Nintendo 64 Product Identification\n"
 
-#. "L_OPTIONS_078"
+#. L_OPTIONS_078
 msgid "Product ID:\n"
 msgstr "Product ID:\n"
 
-#. "L_OPTIONS_079"
+#. L_OPTIONS_079
 msgid "Product Code:\n"
 msgstr "Product Code:\n"
 
-#. "L_OPTIONS_080"
+#. L_OPTIONS_080
 msgid "Variant:\n"
 msgstr "Variant:\n"
 
-#. "L_OPTIONS_081"
+#. L_OPTIONS_081
 msgid "Developer:\n"
 msgstr "Developer:\n"
 
-#. "L_OPTIONS_082"
+#. L_OPTIONS_082
 msgid "Perfect Dark\n"
 msgstr "Perfect Dark\n"
 
-#. "L_OPTIONS_083"
+#. L_OPTIONS_083
 msgid "NUS-NPDE-USA\n"
 msgstr "NUS-NPDE-USA\n"
 
-#. "L_OPTIONS_084"
+#. L_OPTIONS_084
 msgid "NTSC version 8.7 final\n"
 msgstr "PAL version 8.7 final\n"
 
-#. "L_OPTIONS_085"
+#. L_OPTIONS_085
 msgid "Rare Ltd. (twycross)\n"
 msgstr "Rare Ltd. (twycross)\n"
 
-#. "L_OPTIONS_086"
+#. L_OPTIONS_086
 msgid "Copyright Rare Ltd. 2000\n"
 msgstr "Copyright Rare Ltd. 2000\n"
 
-#. "L_OPTIONS_087"
+#. L_OPTIONS_087
 msgid "The Rareware Logo and Perfect Dark are trademarks of Rare Ltd.\n"
 msgstr "The Rareware Logo and Perfect Dark are trademarks of Rare Ltd.\n"
 
-#. "L_OPTIONS_088"
+#. L_OPTIONS_088
 msgid ""
 "Presented in Dolby Surround.  Dolby and the double-D\n"
 "symbol are trademarks of Dolby Laboratories."
@@ -364,7 +368,7 @@ msgstr ""
 "Presented in Dolby Surround.  Dolby and the double-D\n"
 "symbol are trademarks of Dolby Laboratories."
 
-#. "L_OPTIONS_089"
+#. L_OPTIONS_089
 msgid ""
 "Uses Miles Sound System Copyright 1991-1999 RAD Game Tools Inc.\n"
 "MPEG Layer-3 playback supplied with the Miles Sound System from\n"
@@ -376,67 +380,79 @@ msgstr ""
 "RAD Game Tools, Inc. MPEG Layer-3 audio compression technology\n"
 "licensed by Fraunhofer IIS and THOMSON multimedia\n"
 
-#. "L_OPTIONS_093"
+#. L_OPTIONS_090
+msgid ""
+msgstr ""
+
+#. L_OPTIONS_091
+msgid ""
+msgstr ""
+
+#. L_OPTIONS_092
+msgid ""
+msgstr ""
+
+#. L_OPTIONS_093
 msgid "rare designs on the future <<<\n"
 msgstr "rare designs on the future <<<\n"
 
-#. "L_OPTIONS_094"
+#. L_OPTIONS_094
 msgid "Published by Rareware.\n"
 msgstr "Published by Rareware.\n"
 
-#. "L_OPTIONS_095"
+#. L_OPTIONS_095
 msgid "Perfect Dark\n"
 msgstr "Perfect Dark\n"
 
-#. "L_OPTIONS_096"
+#. L_OPTIONS_096
 msgid "Choose Your Reality\n"
 msgstr "Elige Tu Realidad\n"
 
-#. "L_OPTIONS_097"
+#. L_OPTIONS_097
 msgid "New...\n"
 msgstr "Nuevo...\n"
 
-#. "L_OPTIONS_098"
+#. L_OPTIONS_098
 msgid "New Agent...\n"
 msgstr "Nuevo Agente...\n"
 
-#. "L_OPTIONS_099"
+#. L_OPTIONS_099
 msgid "Game Files\n"
 msgstr "Ficheros de Juego\n"
 
-#. "L_OPTIONS_100"
+#. L_OPTIONS_100
 msgid "Copy:\n"
 msgstr "Copiar:\n"
 
-#. "L_OPTIONS_101"
+#. L_OPTIONS_101
 msgid "Delete:\n"
 msgstr "Borrar:\n"
 
-#. "L_OPTIONS_102"
+#. L_OPTIONS_102
 msgid "Delete Game Notes...\n"
 msgstr "Borrar Notas de Juego...\n"
 
-#. "L_OPTIONS_103"
+#. L_OPTIONS_103
 msgid "Single Player Agent File\n"
 msgstr "Fichero de Agente Un Jugador\n"
 
-#. "L_OPTIONS_104"
+#. L_OPTIONS_104
 msgid "Combat Simulator Settings File\n"
 msgstr "Fichero de Opciones del Simulador\n"
 
-#. "L_OPTIONS_105"
+#. L_OPTIONS_105
 msgid "Combat Simulator Player File\n"
 msgstr "Ficheros de Jugador del Simulador\n"
 
-#. "L_OPTIONS_106"
+#. L_OPTIONS_106
 msgid "PerfectHead Files\n"
 msgstr "Ficheros PerfectHead\n"
 
-#. "L_OPTIONS_107"
+#. L_OPTIONS_107
 msgid "Controller Pak Menu\n"
 msgstr "Menú Controller Pak\n"
 
-#. "L_OPTIONS_108"
+#. L_OPTIONS_108
 msgid ""
 "Use this menu to delete game notes\n"
 "from your Controller Paks.\n"
@@ -444,859 +460,859 @@ msgstr ""
 "Usa este menú para borrar notas de juego\n"
 "de tus Controller Pak.\n"
 
-#. "L_OPTIONS_109"
+#. L_OPTIONS_109
 msgid "Choose Controller Pak to Edit:\n"
 msgstr "Elige Controller Pak a Editar:\n"
 
-#. "L_OPTIONS_110"
+#. L_OPTIONS_110
 msgid "Exit\n"
 msgstr "Salir\n"
 
-#. "L_OPTIONS_111"
+#. L_OPTIONS_111
 msgid "Game Pak\n"
 msgstr "Cartucho\n"
 
-#. "L_OPTIONS_112"
+#. L_OPTIONS_112
 msgid "Controller Pak 1\n"
 msgstr "Controller Pak 1\n"
 
-#. "L_OPTIONS_113"
+#. L_OPTIONS_113
 msgid "Controller Pak 2\n"
 msgstr "Controller Pak 2\n"
 
-#. "L_OPTIONS_114"
+#. L_OPTIONS_114
 msgid "Controller Pak 3\n"
 msgstr "Controller Pak 3\n"
 
-#. "L_OPTIONS_115"
+#. L_OPTIONS_115
 msgid "Controller Pak 4\n"
 msgstr "Controller Pak 4\n"
 
-#. "L_OPTIONS_116"
+#. L_OPTIONS_116
 msgid "Perfect Menu\n"
 msgstr "Menú Perfecto\n"
 
-#. "L_OPTIONS_117"
+#. L_OPTIONS_117
 msgid "Solo Missions\n"
 msgstr "Misiones Solo\n"
 
-#. "L_OPTIONS_118"
+#. L_OPTIONS_118
 msgid "Combat Simulator\n"
 msgstr "Simulador de Combate\n"
 
-#. "L_OPTIONS_119"
+#. L_OPTIONS_119
 msgid "Co-Operative\n"
 msgstr "Co-Operativo\n"
 
-#. "L_OPTIONS_120"
+#. L_OPTIONS_120
 msgid "Counter-Operative\n"
 msgstr "Contra-Operativa\n"
 
-#. "L_OPTIONS_121"
+#. L_OPTIONS_121
 msgid "Cinema\n"
 msgstr "Películas\n"
 
-#. "L_OPTIONS_122"
+#. L_OPTIONS_122
 msgid "Mission Select\n"
 msgstr "Selecciona Misión\n"
 
-#. "L_OPTIONS_123"
+#. L_OPTIONS_123
 msgid "Mission 1\n"
 msgstr "Misión 1\n"
 
-#. "L_OPTIONS_124"
+#. L_OPTIONS_124
 msgid "Mission 2\n"
 msgstr "Misión 2\n"
 
-#. "L_OPTIONS_125"
+#. L_OPTIONS_125
 msgid "Mission 3\n"
 msgstr "Misión 3\n"
 
-#. "L_OPTIONS_126"
+#. L_OPTIONS_126
 msgid "Mission 4\n"
 msgstr "Misión 4\n"
 
-#. "L_OPTIONS_127"
+#. L_OPTIONS_127
 msgid "Mission 5\n"
 msgstr "Misión 5\n"
 
-#. "L_OPTIONS_128"
+#. L_OPTIONS_128
 msgid "Mission 6\n"
 msgstr "Misión 6\n"
 
-#. "L_OPTIONS_129"
+#. L_OPTIONS_129
 msgid "Mission 7\n"
 msgstr "Misión 7\n"
 
-#. "L_OPTIONS_130"
+#. L_OPTIONS_130
 msgid "Mission 8\n"
 msgstr "Misión 8\n"
 
-#. "L_OPTIONS_131"
+#. L_OPTIONS_131
 msgid "Mission 9\n"
 msgstr "Misión 9\n"
 
-#. "L_OPTIONS_132"
+#. L_OPTIONS_132
 msgid "Special Assignments\n"
 msgstr "Asignaciones Especiales\n"
 
-#. "L_OPTIONS_133"
+#. L_OPTIONS_133
 msgid "dataDyne Central"
 msgstr "Central dataDyne"
 
-#. "L_OPTIONS_134"
+#. L_OPTIONS_134
 msgid "- Defection"
 msgstr "- Comienzo"
 
-#. "L_OPTIONS_135"
+#. L_OPTIONS_135
 msgid "dataDyne Research"
 msgstr "Lab. dataDyne"
 
-#. "L_OPTIONS_136"
+#. L_OPTIONS_136
 msgid "- Investigation"
 msgstr "- Investigación"
 
-#. "L_OPTIONS_137"
+#. L_OPTIONS_137
 msgid "dataDyne Central"
 msgstr "Central dataDyne"
 
-#. "L_OPTIONS_138"
+#. L_OPTIONS_138
 msgid "- Extraction"
 msgstr "- Extracción"
 
-#. "L_OPTIONS_139"
+#. L_OPTIONS_139
 msgid "Carrington Villa"
 msgstr "Villa Carrington"
 
-#. "L_OPTIONS_140"
+#. L_OPTIONS_140
 msgid "- Hostage One"
 msgstr "- Rehén Uno"
 
-#. "L_OPTIONS_141"
+#. L_OPTIONS_141
 msgid "Chicago"
 msgstr "Chicago"
 
-#. "L_OPTIONS_142"
+#. L_OPTIONS_142
 msgid "- Stealth"
 msgstr "- Sigilo"
 
-#. "L_OPTIONS_143"
+#. L_OPTIONS_143
 msgid "G5 Building"
 msgstr "Edificio G5"
 
-#. "L_OPTIONS_144"
+#. L_OPTIONS_144
 msgid "- Reconnaissance"
 msgstr "- Reconocimiento"
 
-#. "L_OPTIONS_145"
+#. L_OPTIONS_145
 msgid "Area 51"
 msgstr "Área 51"
 
-#. "L_OPTIONS_146"
+#. L_OPTIONS_146
 msgid "- Infiltration"
 msgstr "- Infiltración"
 
-#. "L_OPTIONS_147"
+#. L_OPTIONS_147
 msgid "Area 51"
 msgstr "Área 51"
 
-#. "L_OPTIONS_148"
+#. L_OPTIONS_148
 msgid "- Rescue"
 msgstr "- Rescate"
 
-#. "L_OPTIONS_149"
+#. L_OPTIONS_149
 msgid "Area 51"
 msgstr "Área 51"
 
-#. "L_OPTIONS_150"
+#. L_OPTIONS_150
 msgid "- Escape"
 msgstr "- Escape"
 
-#. "L_OPTIONS_151"
+#. L_OPTIONS_151
 msgid "Air Base"
 msgstr "Base Aérea"
 
-#. "L_OPTIONS_152"
+#. L_OPTIONS_152
 msgid "- Espionage"
 msgstr "- Espionaje"
 
-#. "L_OPTIONS_153"
+#. L_OPTIONS_153
 msgid "Air Force One"
 msgstr "Air Force One"
 
-#. "L_OPTIONS_154"
+#. L_OPTIONS_154
 msgid "- Antiterrorism"
 msgstr "- Antiterrorismo"
 
-#. "L_OPTIONS_155"
+#. L_OPTIONS_155
 msgid "Crash Site"
 msgstr "Lugar del Impacto"
 
-#. "L_OPTIONS_156"
+#. L_OPTIONS_156
 msgid "- Confrontation"
 msgstr "- Confrontación"
 
-#. "L_OPTIONS_157"
+#. L_OPTIONS_157
 msgid "Pelagic II"
 msgstr "Pelagic II"
 
-#. "L_OPTIONS_158"
+#. L_OPTIONS_158
 msgid "- Exploration"
 msgstr "- Exploración"
 
-#. "L_OPTIONS_159"
+#. L_OPTIONS_159
 msgid "Deep Sea"
 msgstr "Mar Profundo"
 
-#. "L_OPTIONS_160"
+#. L_OPTIONS_160
 msgid "- Nullify Threat"
 msgstr "- Anular Amenaza"
 
-#. "L_OPTIONS_161"
+#. L_OPTIONS_161
 msgid "Carrington Institute"
 msgstr "Instituto Carrington"
 
-#. "L_OPTIONS_162"
+#. L_OPTIONS_162
 msgid "- Defense"
 msgstr "- Defensa"
 
-#. "L_OPTIONS_163"
+#. L_OPTIONS_163
 msgid "Attack Ship"
 msgstr "Nave de Ataque"
 
-#. "L_OPTIONS_164"
+#. L_OPTIONS_164
 msgid "- Covert Assault"
 msgstr "- Asalto"
 
-#. "L_OPTIONS_165"
+#. L_OPTIONS_165
 msgid "Skedar Ruins"
 msgstr "Ruinas Skedar"
 
-#. "L_OPTIONS_166"
+#. L_OPTIONS_166
 msgid "- Battle Shrine"
 msgstr "- Templo"
 
-#. "L_OPTIONS_167"
+#. L_OPTIONS_167
 msgid "Mr. Blonde's Revenge"
 msgstr "Venganza de Mr. Blonde"
 
-#. "L_OPTIONS_168"
+#. L_OPTIONS_168
 msgid "Maian SOS"
 msgstr "SOS Maian"
 
-#. "L_OPTIONS_169"
+#. L_OPTIONS_169
 msgid "Retaking the Institute"
 msgstr "Retomando el Instituto"
 
-#. "L_OPTIONS_170"
+#. L_OPTIONS_170
 msgid "WAR!"
 msgstr "¡GUERRA!"
 
-#. "L_OPTIONS_171"
+#. L_OPTIONS_171
 msgid "The Duel"
 msgstr "El Duelo"
 
-#. "L_OPTIONS_172"
+#. L_OPTIONS_172
 msgid "Status\n"
 msgstr "Estatus\n"
 
-#. "L_OPTIONS_173"
+#. L_OPTIONS_173
 msgid "Abort!\n"
 msgstr "¡Abortar!\n"
 
-#. "L_OPTIONS_174"
+#. L_OPTIONS_174
 msgid "Warning\n"
 msgstr "Cuidado\n"
 
-#. "L_OPTIONS_175"
+#. L_OPTIONS_175
 msgid "Do you want to abort the mission?\n"
 msgstr "¿Quieres abortar la misión?\n"
 
-#. "L_OPTIONS_176"
+#. L_OPTIONS_176
 msgid "Cancel\n"
 msgstr "Cancelar\n"
 
-#. "L_OPTIONS_177"
+#. L_OPTIONS_177
 msgid "Abort\n"
 msgstr "Abortar\n"
 
-#. "L_OPTIONS_178"
+#. L_OPTIONS_178
 msgid "Inventory\n"
 msgstr "Inventario\n"
 
-#. "L_OPTIONS_179"
+#. L_OPTIONS_179
 msgid "Weapons Available\n"
 msgstr "Armas Disponibles\n"
 
-#. "L_OPTIONS_180"
+#. L_OPTIONS_180
 msgid "Options\n"
 msgstr "Opciones\n"
 
-#. "L_OPTIONS_181"
+#. L_OPTIONS_181
 msgid "Audio\n"
 msgstr "Audio\n"
 
-#. "L_OPTIONS_182"
+#. L_OPTIONS_182
 msgid "Video\n"
 msgstr "Vídeo\n"
 
-#. "L_OPTIONS_183"
+#. L_OPTIONS_183
 msgid "Control\n"
 msgstr "Controles\n"
 
-#. "L_OPTIONS_184"
+#. L_OPTIONS_184
 msgid "Display\n"
 msgstr "Pantalla\n"
 
-#. "L_OPTIONS_185"
+#. L_OPTIONS_185
 msgid "Cheats\n"
 msgstr "Trucos\n"
 
-#. "L_OPTIONS_186"
+#. L_OPTIONS_186
 msgid "Save Game\n"
 msgstr "Guardar Juego\n"
 
-#. "L_OPTIONS_187"
+#. L_OPTIONS_187
 msgid "Change Agent...\n"
 msgstr "Cambiar Agente...\n"
 
-#. "L_OPTIONS_188"
+#. L_OPTIONS_188
 msgid "Warning\n"
 msgstr "Cuidado\n"
 
-#. "L_OPTIONS_189"
+#. L_OPTIONS_189
 msgid "Do you want to load another agent?\n"
 msgstr "¿Quieres cargar otro agente?\n"
 
-#. "L_OPTIONS_190"
+#. L_OPTIONS_190
 msgid "Yes\n"
 msgstr "Sí\n"
 
-#. "L_OPTIONS_191"
+#. L_OPTIONS_191
 msgid "No\n"
 msgstr "No\n"
 
-#. "L_OPTIONS_192"
+#. L_OPTIONS_192
 msgid "Control Options\n"
 msgstr "Opciones de Control\n"
 
-#. "L_OPTIONS_193"
+#. L_OPTIONS_193
 msgid "Control Player 2\n"
 msgstr "Controles Jugador 2\n"
 
-#. "L_OPTIONS_194"
+#. L_OPTIONS_194
 msgid "Control Style\n"
 msgstr "Estilo de Control\n"
 
-#. "L_OPTIONS_195"
+#. L_OPTIONS_195
 msgid "Reverse Pitch\n"
 msgstr "Control Opuesto\n"
 
-#. "L_OPTIONS_196"
+#. L_OPTIONS_196
 msgid "Look Ahead\n"
 msgstr "Mirar al Frente\n"
 
-#. "L_OPTIONS_197"
+#. L_OPTIONS_197
 msgid "Head Roll\n"
 msgstr "Giro de Cabeza\n"
 
-#. "L_OPTIONS_198"
+#. L_OPTIONS_198
 msgid "Auto-Aim\n"
 msgstr "Auto-Apuntar\n"
 
-#. "L_OPTIONS_199"
+#. L_OPTIONS_199
 msgid "Aim Control\n"
 msgstr "Control Apuntar\n"
 
-#. "L_OPTIONS_200"
+#. L_OPTIONS_200
 msgid "Back\n"
 msgstr "Volver\n"
 
-#. "L_OPTIONS_201"
+#. L_OPTIONS_201
 msgid "Hold\n"
 msgstr "Mantener\n"
 
-#. "L_OPTIONS_202"
+#. L_OPTIONS_202
 msgid "Toggle\n"
 msgstr "Cambiar\n"
 
-#. "L_OPTIONS_203"
+#. L_OPTIONS_203
 msgid "Display Options\n"
 msgstr "Opciones de Pantalla\n"
 
-#. "L_OPTIONS_204"
+#. L_OPTIONS_204
 msgid "Display Player 2\n"
 msgstr "Pantalla Jugador 2\n"
 
-#. "L_OPTIONS_205"
+#. L_OPTIONS_205
 msgid "Sight on Screen\n"
 msgstr "Mirilla en Pantalla\n"
 
-#. "L_OPTIONS_206"
+#. L_OPTIONS_206
 msgid "Always Show Target\n"
 msgstr "Siempre Muestra Objetivo\n"
 
-#. "L_OPTIONS_207"
+#. L_OPTIONS_207
 msgid "Show Zoom Range\n"
 msgstr "Mostrar Alcance del Zoom\n"
 
-#. "L_OPTIONS_208"
+#. L_OPTIONS_208
 msgid "Ammo on Screen\n"
 msgstr "Munición en Pantalla\n"
 
-#. "L_OPTIONS_209"
+#. L_OPTIONS_209
 msgid "Show Gun Function\n"
 msgstr "Mostrar Función del Arma\n"
 
-#. "L_OPTIONS_210"
+#. L_OPTIONS_210
 msgid "Paintball\n"
 msgstr "Bolas de Pintura\n"
 
-#. "L_OPTIONS_211"
+#. L_OPTIONS_211
 msgid "Subtitles\n"
 msgstr "Subtítulos\n"
 
-#. "L_OPTIONS_212"
+#. L_OPTIONS_212
 msgid "Show Mission Time\n"
 msgstr "Mostrar Tiempo de Misión\n"
 
-#. "L_OPTIONS_213"
+#. L_OPTIONS_213
 msgid "Back\n"
 msgstr "Volver\n"
 
-#. "L_OPTIONS_214"
+#. L_OPTIONS_214
 msgid "Video Options\n"
 msgstr "Opciones de Vídeo\n"
 
-#. "L_OPTIONS_215"
+#. L_OPTIONS_215
 msgid "Screen Size\n"
 msgstr "Tamaño de Pantalla\n"
 
-#. "L_OPTIONS_216"
+#. L_OPTIONS_216
 msgid "Ratio\n"
 msgstr "Ratio\n"
 
-#. "L_OPTIONS_217"
+#. L_OPTIONS_217
 msgid "Hi-Res\n"
 msgstr "Alta Resolución\n"
 
-#. "L_OPTIONS_218"
+#. L_OPTIONS_218
 msgid "2-Player Screen Split\n"
 msgstr "Pantalla Partida 2 Jugadores\n"
 
-#. "L_OPTIONS_219"
+#. L_OPTIONS_219
 msgid "Back\n"
 msgstr "Volver\n"
 
-#. "L_OPTIONS_220"
+#. L_OPTIONS_220
 msgid "Full\n"
 msgstr "Completa\n"
 
-#. "L_OPTIONS_221"
+#. L_OPTIONS_221
 msgid "Wide\n"
 msgstr "Panorámica\n"
 
-#. "L_OPTIONS_222"
+#. L_OPTIONS_222
 msgid "Cinema\n"
 msgstr "Cine\n"
 
-#. "L_OPTIONS_223"
+#. L_OPTIONS_223
 msgid "Normal\n"
 msgstr "Normal\n"
 
-#. "L_OPTIONS_224"
+#. L_OPTIONS_224
 msgid "16:9\n"
 msgstr "16:9\n"
 
-#. "L_OPTIONS_225"
+#. L_OPTIONS_225
 msgid "Horizontal\n"
 msgstr "Horizontal\n"
 
-#. "L_OPTIONS_226"
+#. L_OPTIONS_226
 msgid "Vertical\n"
 msgstr "Vertical\n"
 
-#. "L_OPTIONS_227"
+#. L_OPTIONS_227
 msgid "Audio Options\n"
 msgstr "Opciones de Audio\n"
 
-#. "L_OPTIONS_228"
+#. L_OPTIONS_228
 msgid "Sound\n"
 msgstr "Sonido\n"
 
-#. "L_OPTIONS_229"
+#. L_OPTIONS_229
 msgid "Music\n"
 msgstr "Música\n"
 
-#. "L_OPTIONS_230"
+#. L_OPTIONS_230
 msgid "Sound Mode\n"
 msgstr "Modo de Sonido\n"
 
-#. "L_OPTIONS_231"
+#. L_OPTIONS_231
 msgid "Back\n"
 msgstr "Volver\n"
 
-#. "L_OPTIONS_232"
+#. L_OPTIONS_232
 msgid "Mono"
 msgstr "Mono"
 
-#. "L_OPTIONS_233"
+#. L_OPTIONS_233
 msgid "Stereo"
 msgstr "Estéreo"
 
-#. "L_OPTIONS_234"
+#. L_OPTIONS_234
 msgid "Headphone"
 msgstr "Cascos"
 
-#. "L_OPTIONS_235"
+#. L_OPTIONS_235
 msgid "Surround"
 msgstr "Surround"
 
-#. "L_OPTIONS_236"
+#. L_OPTIONS_236
 msgid "Control\n"
 msgstr "Controles\n"
 
-#. "L_OPTIONS_237"
+#. L_OPTIONS_237
 msgid "Single\n"
 msgstr "Simple\n"
 
-#. "L_OPTIONS_238"
+#. L_OPTIONS_238
 msgid "Double\n"
 msgstr "Doble\n"
 
-#. "L_OPTIONS_239"
+#. L_OPTIONS_239
 msgid "1.1"
 msgstr "1.1"
 
-#. "L_OPTIONS_240"
+#. L_OPTIONS_240
 msgid "1.2"
 msgstr "1.2"
 
-#. "L_OPTIONS_241"
+#. L_OPTIONS_241
 msgid "1.3"
 msgstr "1.3"
 
-#. "L_OPTIONS_242"
+#. L_OPTIONS_242
 msgid "1.4"
 msgstr "1.4"
 
-#. "L_OPTIONS_243"
+#. L_OPTIONS_243
 msgid "2.1"
 msgstr "2.1"
 
-#. "L_OPTIONS_244"
+#. L_OPTIONS_244
 msgid "2.2"
 msgstr "2.2"
 
-#. "L_OPTIONS_245"
+#. L_OPTIONS_245
 msgid "2.3"
 msgstr "2.3"
 
-#. "L_OPTIONS_246"
+#. L_OPTIONS_246
 msgid "2.4"
 msgstr "2.4"
 
-#. "L_OPTIONS_247"
+#. L_OPTIONS_247
 msgid "Briefing\n"
 msgstr "Informe\n"
 
-#. "L_OPTIONS_248"
+#. L_OPTIONS_248
 msgid "Select Difficulty\n"
 msgstr "Elegir Dificultad\n"
 
-#. "L_OPTIONS_249"
+#. L_OPTIONS_249
 msgid "Difficulty\n"
 msgstr "Dificultad\n"
 
-#. "L_OPTIONS_250"
+#. L_OPTIONS_250
 msgid "Best Time\n"
 msgstr "Mejor Tiempo\n"
 
-#. "L_OPTIONS_251"
+#. L_OPTIONS_251
 msgid "Agent\n"
 msgstr "Agente\n"
 
-#. "L_OPTIONS_252"
+#. L_OPTIONS_252
 msgid "Special Agent\n"
 msgstr "Agente Especial\n"
 
-#. "L_OPTIONS_253"
+#. L_OPTIONS_253
 msgid "Perfect Agent\n"
 msgstr "Agente Perfecto\n"
 
-#. "L_OPTIONS_254"
+#. L_OPTIONS_254
 msgid "Cancel\n"
 msgstr "Cancelar\n"
 
-#. "L_OPTIONS_255"
+#. L_OPTIONS_255
 msgid "Co-Operative Options\n"
 msgstr "Opciones Modo Cooperativo\n"
 
-#. "L_OPTIONS_256"
+#. L_OPTIONS_256
 msgid "Radar On\n"
 msgstr "Radar Sí\n"
 
-#. "L_OPTIONS_257"
+#. L_OPTIONS_257
 msgid "Friendly Fire\n"
 msgstr "Fuego Amigo\n"
 
-#. "L_OPTIONS_258"
+#. L_OPTIONS_258
 msgid "Perfect Buddy\n"
 msgstr "Compañero Perfecto\n"
 
-#. "L_OPTIONS_259"
+#. L_OPTIONS_259
 msgid "Continue\n"
 msgstr "Continuar\n"
 
-#. "L_OPTIONS_260"
+#. L_OPTIONS_260
 msgid "Cancel\n"
 msgstr "Cancelar\n"
 
-#. "L_OPTIONS_261"
+#. L_OPTIONS_261
 msgid "Human"
 msgstr "Humano"
 
-#. "L_OPTIONS_262"
+#. L_OPTIONS_262
 msgid "1 Simulant"
 msgstr "1 Simulante"
 
-#. "L_OPTIONS_263"
+#. L_OPTIONS_263
 msgid "2 Simulants"
 msgstr "2 Simulantes"
 
-#. "L_OPTIONS_264"
+#. L_OPTIONS_264
 msgid "3 Simulants"
 msgstr "3 Simulantes"
 
-#. "L_OPTIONS_265"
+#. L_OPTIONS_265
 msgid "4 Simulants"
 msgstr "4 Simulantes"
 
-#. "L_OPTIONS_266"
+#. L_OPTIONS_266
 msgid "Counter-Operative Options\n"
 msgstr "Opciones Contra-Operativa\n"
 
-#. "L_OPTIONS_267"
+#. L_OPTIONS_267
 msgid "Radar On\n"
 msgstr "Radar Sí\n"
 
-#. "L_OPTIONS_268"
+#. L_OPTIONS_268
 msgid "Counter-Operative\n"
 msgstr "Contra-Operativa\n"
 
-#. "L_OPTIONS_269"
+#. L_OPTIONS_269
 msgid "Continue\n"
 msgstr "Continuar\n"
 
-#. "L_OPTIONS_270"
+#. L_OPTIONS_270
 msgid "Cancel\n"
 msgstr "Cancelar\n"
 
-#. "L_OPTIONS_271"
+#. L_OPTIONS_271
 msgid "Player 1"
 msgstr "Jugador 1"
 
-#. "L_OPTIONS_272"
+#. L_OPTIONS_272
 msgid "Player 2"
 msgstr "Jugador 2"
 
-#. "L_OPTIONS_273"
+#. L_OPTIONS_273
 msgid "Overview\n"
 msgstr "Visión General\n"
 
-#. "L_OPTIONS_274"
+#. L_OPTIONS_274
 msgid "Accept\n"
 msgstr "Aceptar\n"
 
-#. "L_OPTIONS_275"
+#. L_OPTIONS_275
 msgid "Decline\n"
 msgstr "Declinar\n"
 
-#. "L_OPTIONS_276"
+#. L_OPTIONS_276
 msgid "Completed\n"
 msgstr "Completado\n"
 
-#. "L_OPTIONS_277"
+#. L_OPTIONS_277
 msgid "Failed\n"
 msgstr "Fallado\n"
 
-#. "L_OPTIONS_278"
+#. L_OPTIONS_278
 msgid "Mission Status:\n"
 msgstr "Estatus de Misión:\n"
 
-#. "L_OPTIONS_279"
+#. L_OPTIONS_279
 msgid "Agent Status:\n"
 msgstr "Estatus de Agente:\n"
 
-#. "L_OPTIONS_280"
+#. L_OPTIONS_280
 msgid "Mission Time:\n"
 msgstr "Tiempo de Misión:\n"
 
-#. "L_OPTIONS_281"
+#. L_OPTIONS_281
 msgid "Weapon of Choice:\n"
 msgstr "Arma Preferida:\n"
 
-#. "L_OPTIONS_282"
+#. L_OPTIONS_282
 msgid "Kills:\n"
 msgstr "Muertos:\n"
 
-#. "L_OPTIONS_283"
+#. L_OPTIONS_283
 msgid "Accuracy:\n"
 msgstr "Precisión:\n"
 
-#. "L_OPTIONS_284"
+#. L_OPTIONS_284
 msgid "Shot Total:\n"
 msgstr "Total Disparos:\n"
 
-#. "L_OPTIONS_285"
+#. L_OPTIONS_285
 msgid "    Head Shots:\n"
 msgstr "    Disp. Cabeza:\n"
 
-#. "L_OPTIONS_286"
+#. L_OPTIONS_286
 msgid "    Body Shots:\n"
 msgstr "    Disp. Cuerpo:\n"
 
-#. "L_OPTIONS_287"
+#. L_OPTIONS_287
 msgid "    Limb Shots:\n"
 msgstr "    Disp. Miembros:\n"
 
-#. "L_OPTIONS_288"
+#. L_OPTIONS_288
 msgid "    Others:\n"
 msgstr "    Otros:\n"
 
-#. "L_OPTIONS_289"
+#. L_OPTIONS_289
 msgid "Press START\n"
 msgstr "Pulsa START\n"
 
-#. "L_OPTIONS_290"
+#. L_OPTIONS_290
 msgid "Deceased\n"
 msgstr "Difunto\n"
 
-#. "L_OPTIONS_291"
+#. L_OPTIONS_291
 msgid "Active\n"
 msgstr "Activo\n"
 
-#. "L_OPTIONS_292"
+#. L_OPTIONS_292
 msgid "Disavowed\n"
 msgstr "Anulado\n"
 
-#. "L_OPTIONS_293"
+#. L_OPTIONS_293
 msgid "Failed\n"
 msgstr "Fallada\n"
 
-#. "L_OPTIONS_294"
+#. L_OPTIONS_294
 msgid "Completed\n"
 msgstr "Completada\n"
 
-#. "L_OPTIONS_295"
+#. L_OPTIONS_295
 msgid "Aborted\n"
 msgstr "Abortada\n"
 
-#. "L_OPTIONS_296"
+#. L_OPTIONS_296
 msgid "Retry"
 msgstr "Reintentar"
 
-#. "L_OPTIONS_297"
+#. L_OPTIONS_297
 msgid "Next Mission"
 msgstr "Sig. Misión"
 
-#. "L_OPTIONS_298"
+#. L_OPTIONS_298
 msgid "Accept\n"
 msgstr "Aceptar\n"
 
-#. "L_OPTIONS_299"
+#. L_OPTIONS_299
 msgid "Decline\n"
 msgstr "Declinar\n"
 
-#. "L_OPTIONS_300"
+#. L_OPTIONS_300
 msgid "Objectives\n"
 msgstr "Objetivos\n"
 
-#. "L_OPTIONS_301"
+#. L_OPTIONS_301
 msgid "Press START\n"
 msgstr "Pulsa START\n"
 
-#. "L_OPTIONS_302"
+#. L_OPTIONS_302
 msgid "Small but Perfect Menu\n"
 msgstr "Menú Pequeño pero Perfecto\n"
 
-#. "L_OPTIONS_303"
+#. L_OPTIONS_303
 msgid "Combat Simulator\n"
 msgstr "Simulador de Combate\n"
 
-#. "L_OPTIONS_304"
+#. L_OPTIONS_304
 msgid "Training\n"
 msgstr "Entrenamiento\n"
 
-#. "L_OPTIONS_305"
+#. L_OPTIONS_305
 msgid "Audio/Video\n"
 msgstr "Audio/Vídeo\n"
 
-#. "L_OPTIONS_306"
+#. L_OPTIONS_306
 msgid "Change Agent\n"
 msgstr "Cambiar Agente\n"
 
-#. "L_OPTIONS_307"
+#. L_OPTIONS_307
 msgid "Audio/Visual\n"
 msgstr "Audio/Visual\n"
 
-#. "L_OPTIONS_308"
+#. L_OPTIONS_308
 msgid "Sound\n"
 msgstr "Sonido\n"
 
-#. "L_OPTIONS_309"
+#. L_OPTIONS_309
 msgid "Music\n"
 msgstr "Música\n"
 
-#. "L_OPTIONS_310"
+#. L_OPTIONS_310
 msgid "Sound Mode\n"
 msgstr "Modo de Sonido\n"
 
-#. "L_OPTIONS_311"
+#. L_OPTIONS_311
 msgid "Ratio\n"
 msgstr "Ratio\n"
 
-#. "L_OPTIONS_312"
+#. L_OPTIONS_312
 msgid "Back\n"
 msgstr "Volver\n"
 
-#. "L_OPTIONS_313"
+#. L_OPTIONS_313
 msgid "< Empty >\n"
 msgstr "< Vacío >\n"
 
-#. "L_OPTIONS_314"
+#. L_OPTIONS_314
 msgid "DEL"
 msgstr "SUPR"
 
-#. "L_OPTIONS_315"
+#. L_OPTIONS_315
 msgid "CAPS"
 msgstr "MAY."
 
-#. "L_OPTIONS_316"
+#. L_OPTIONS_316
 msgid "CANCEL"
 msgstr "SALIR"
 
-#. "L_OPTIONS_317"
+#. L_OPTIONS_317
 msgid "OK"
 msgstr "OK"
 
-#. "L_OPTIONS_318"
+#. L_OPTIONS_318
 msgid "Combat Simulator Heads\n"
 msgstr "Cabezas Simulador Combate\n"
 
-#. "L_OPTIONS_319"
+#. L_OPTIONS_319
 msgid "Mission Heads\n"
 msgstr "Cabezas de Misiones\n"
 
-#. "L_OPTIONS_320"
+#. L_OPTIONS_320
 msgid "Error\n"
 msgstr "Error\n"
 
-#. "L_OPTIONS_321"
+#. L_OPTIONS_321
 msgid "Cancel\n"
 msgstr "Cancelar\n"
 
-#. "L_OPTIONS_322"
+#. L_OPTIONS_322
 msgid ""
 "The Controller Pak\n"
 "was not found\n"
@@ -1306,23 +1322,23 @@ msgstr ""
 "no se encontró\n"
 "en ningún mando.\n"
 
-#. "L_OPTIONS_323"
+#. L_OPTIONS_323
 msgid "File was not saved.\n"
 msgstr "El fichero no ha sido salvado.\n"
 
-#. "L_OPTIONS_324"
+#. L_OPTIONS_324
 msgid "File would not load.\n"
 msgstr "El fichero no se cargará.\n"
 
-#. "L_OPTIONS_325"
+#. L_OPTIONS_325
 msgid "Could not delete the file.\n"
 msgstr "No se puede borrar el fichero.\n"
 
-#. "L_OPTIONS_326"
+#. L_OPTIONS_326
 msgid "Out of memory.\n"
 msgstr "Sin memoria.\n"
 
-#. "L_OPTIONS_327"
+#. L_OPTIONS_327
 msgid ""
 "This player is already\n"
 "loaded for this game.\n"
@@ -1330,63 +1346,63 @@ msgstr ""
 "Este jugador ya ha sido\n"
 "cargado en este juego.\n"
 
-#. "L_OPTIONS_328"
+#. L_OPTIONS_328
 msgid "has been removed.\n"
 msgstr "ha sido quitado.\n"
 
-#. "L_OPTIONS_329"
+#. L_OPTIONS_329
 msgid "Controller Pak is damaged or incorrectly inserted.\n"
 msgstr "El Controller Pak está dañado o mal insertado.\n"
 
-#. "L_OPTIONS_330"
+#. L_OPTIONS_330
 msgid "Game note delete failed.\n"
 msgstr "Falló el borrado de la Nota de Juego.\n"
 
-#. "L_OPTIONS_331"
+#. L_OPTIONS_331
 msgid "Error Loading Game\n"
 msgstr "Error Cargando\n"
 
-#. "L_OPTIONS_332"
+#. L_OPTIONS_332
 msgid "Error Saving Game\n"
 msgstr "Error Guardando\n"
 
-#. "L_OPTIONS_333"
+#. L_OPTIONS_333
 msgid "Error Loading Player\n"
 msgstr "Error Cargando\n"
 
-#. "L_OPTIONS_334"
+#. L_OPTIONS_334
 msgid "Error Saving Player\n"
 msgstr "Error Guardando\n"
 
-#. "L_OPTIONS_335"
+#. L_OPTIONS_335
 msgid "Error Loading PerfectHead\n"
 msgstr "Error Cargando\n"
 
-#. "L_OPTIONS_336"
+#. L_OPTIONS_336
 msgid "Error Saving PerfectHead\n"
 msgstr "Error Guardando\n"
 
-#. "L_OPTIONS_337"
+#. L_OPTIONS_337
 msgid "Error Reading File\n"
 msgstr "Error Leyendo\n"
 
-#. "L_OPTIONS_338"
+#. L_OPTIONS_338
 msgid "Error Writing File\n"
 msgstr "Error Escribiendo\n"
 
-#. "L_OPTIONS_339"
+#. L_OPTIONS_339
 msgid "Error\n"
 msgstr "Error\n"
 
-#. "L_OPTIONS_340"
+#. L_OPTIONS_340
 msgid "Delete Failed\n"
 msgstr "Borrar Fallado\n"
 
-#. "L_OPTIONS_341"
+#. L_OPTIONS_341
 msgid "Could not delete the file.\n"
 msgstr "No se puede borrar el fichero.\n"
 
-#. "L_OPTIONS_342"
+#. L_OPTIONS_342
 msgid ""
 "- Check that the Controller Pak is\n"
 "inserted correctly.\n"
@@ -1394,27 +1410,27 @@ msgstr ""
 "- Comprueba que el Controller Pak\n"
 "está insertado correctamente.\n"
 
-#. "L_OPTIONS_343"
+#. L_OPTIONS_343
 msgid "Cancel\n"
 msgstr "Cancelar\n"
 
-#. "L_OPTIONS_344"
+#. L_OPTIONS_344
 msgid "There is no space.\n"
 msgstr "No hay espacio.\n"
 
-#. "L_OPTIONS_345"
+#. L_OPTIONS_345
 msgid "Cool!\n"
 msgstr "¡Bien!\n"
 
-#. "L_OPTIONS_346"
+#. L_OPTIONS_346
 msgid "File Saved.\n"
 msgstr "Fichero Guardado.\n"
 
-#. "L_OPTIONS_347"
+#. L_OPTIONS_347
 msgid "OK\n"
 msgstr "Aceptar\n"
 
-#. "L_OPTIONS_348"
+#. L_OPTIONS_348
 msgid ""
 "An error occurred while\n"
 "trying to save.\n"
@@ -1422,19 +1438,19 @@ msgstr ""
 "Ha aparecido un error\n"
 "al intentar guardar.\n"
 
-#. "L_OPTIONS_349"
+#. L_OPTIONS_349
 msgid "Try Again\n"
 msgstr "Reintentar\n"
 
-#. "L_OPTIONS_350"
+#. L_OPTIONS_350
 msgid "Save Elsewhere\n"
 msgstr "Guardar en otro Sitio\n"
 
-#. "L_OPTIONS_351"
+#. L_OPTIONS_351
 msgid "Cancel\n"
 msgstr "Cancelar\n"
 
-#. "L_OPTIONS_352"
+#. L_OPTIONS_352
 msgid ""
 "An error occurred while\n"
 "trying to load.\n"
@@ -1442,35 +1458,35 @@ msgstr ""
 "Ha aparecido un error\n"
 "al intentar cargar.\n"
 
-#. "L_OPTIONS_353"
+#. L_OPTIONS_353
 msgid "Try Again\n"
 msgstr "Reintentar\n"
 
-#. "L_OPTIONS_354"
+#. L_OPTIONS_354
 msgid "Cancel\n"
 msgstr "Cancelar\n"
 
-#. "L_OPTIONS_355"
+#. L_OPTIONS_355
 msgid "Need Space For Head\n"
 msgstr "Necesitas Espacio para la Cabeza\n"
 
-#. "L_OPTIONS_356"
+#. L_OPTIONS_356
 msgid "Choose a head to load over:\n"
 msgstr "Elige una cabeza para cargar encima:\n"
 
-#. "L_OPTIONS_357"
+#. L_OPTIONS_357
 msgid "OK\n"
 msgstr "Aceptar\n"
 
-#. "L_OPTIONS_358"
+#. L_OPTIONS_358
 msgid "Cancel\n"
 msgstr "Cancelar\n"
 
-#. "L_OPTIONS_359"
+#. L_OPTIONS_359
 msgid "Save\n"
 msgstr "Guardar\n"
 
-#. "L_OPTIONS_360"
+#. L_OPTIONS_360
 msgid ""
 "Would you like to save\n"
 "your file elsewhere?\n"
@@ -1478,22 +1494,22 @@ msgstr ""
 "¿Quieres guardar tu\n"
 "fichero en otro sitio?\n"
 
-#. "L_OPTIONS_361"
+#. L_OPTIONS_361
 msgid "Yes\n"
 msgstr "Sí\n"
 
-#. "L_OPTIONS_362"
+#. L_OPTIONS_362
 msgid "No\n"
 msgstr "No\n"
 
-#. "L_OPTIONS_363"
+#. L_OPTIONS_363
 msgid ""
 "Please insert the Controller Pak containing your %s into any controller.\n"
 msgstr ""
 "Por favor, inserta el Controller Pak que contiene tu %s en cualquier "
 "mando.\n"
 
-#. "L_OPTIONS_364"
+#. L_OPTIONS_364
 msgid ""
 "Please insert the\n"
 "Controller Pak\n"
@@ -1505,67 +1521,67 @@ msgstr ""
 "donde estés salvando\n"
 "en cualquier mando.\n"
 
-#. "L_OPTIONS_365"
+#. L_OPTIONS_365
 msgid "OK\n"
 msgstr "Aceptar\n"
 
-#. "L_OPTIONS_366"
+#. L_OPTIONS_366
 msgid "Cancel\n"
 msgstr "Cancelar\n"
 
-#. "L_OPTIONS_367"
+#. L_OPTIONS_367
 msgid "Select Location\n"
 msgstr "Elige Lugar\n"
 
-#. "L_OPTIONS_368"
+#. L_OPTIONS_368
 msgid "Where\n"
 msgstr "Dónde\n"
 
-#. "L_OPTIONS_369"
+#. L_OPTIONS_369
 msgid "Spaces\n"
 msgstr "Espacios\n"
 
-#. "L_OPTIONS_370"
+#. L_OPTIONS_370
 msgid "Delete Files...\n"
 msgstr "Borrar Ficheros...\n"
 
-#. "L_OPTIONS_371"
+#. L_OPTIONS_371
 msgid "Cancel\n"
 msgstr "Cancelar\n"
 
-#. "L_OPTIONS_372"
+#. L_OPTIONS_372
 msgid "Full"
 msgstr "Completo"
 
-#. "L_OPTIONS_373"
+#. L_OPTIONS_373
 msgid "Copy File\n"
 msgstr "Copiar Fichero\n"
 
-#. "L_OPTIONS_374"
+#. L_OPTIONS_374
 msgid "Select a file to copy:\n"
 msgstr "Elige fichero a copiar:\n"
 
-#. "L_OPTIONS_375"
+#. L_OPTIONS_375
 msgid "Press B Button to exit.\n"
 msgstr "Pulsa B para salir.\n"
 
-#. "L_OPTIONS_376"
+#. L_OPTIONS_376
 msgid "Delete File\n"
 msgstr "Borrar Fichero\n"
 
-#. "L_OPTIONS_377"
+#. L_OPTIONS_377
 msgid "Select a file to delete:\n"
 msgstr "Elige fichero a borrar:\n"
 
-#. "L_OPTIONS_378"
+#. L_OPTIONS_378
 msgid "Press B Button to exit.\n"
 msgstr "Pulsa B para salir.\n"
 
-#. "L_OPTIONS_379"
+#. L_OPTIONS_379
 msgid "Warning\n"
 msgstr "Cuidado\n"
 
-#. "L_OPTIONS_380"
+#. L_OPTIONS_380
 msgid ""
 "Are you sure you want\n"
 "to delete this file?\n"
@@ -1573,19 +1589,19 @@ msgstr ""
 "¿Seguro que quieres\n"
 "borrar este fichero?\n"
 
-#. "L_OPTIONS_381"
+#. L_OPTIONS_381
 msgid "Cancel\n"
 msgstr "Cancelar\n"
 
-#. "L_OPTIONS_382"
+#. L_OPTIONS_382
 msgid "OK\n"
 msgstr "Aceptar\n"
 
-#. "L_OPTIONS_383"
+#. L_OPTIONS_383
 msgid "Delete Game Note\n"
 msgstr "Borrar Nota de Juego\n"
 
-#. "L_OPTIONS_384"
+#. L_OPTIONS_384
 msgid ""
 "Are you sure you\n"
 "want to delete\n"
@@ -1595,59 +1611,59 @@ msgstr ""
 "que quieres borrar\n"
 "esta nota de juego?\n"
 
-#. "L_OPTIONS_385"
+#. L_OPTIONS_385
 msgid "No\n"
 msgstr "No\n"
 
-#. "L_OPTIONS_386"
+#. L_OPTIONS_386
 msgid "Yes\n"
 msgstr "Sí\n"
 
-#. "L_OPTIONS_387"
+#. L_OPTIONS_387
 msgid "Game Notes\n"
 msgstr "Notas de Juego\n"
 
-#. "L_OPTIONS_388"
+#. L_OPTIONS_388
 msgid "Delete Game Notes:\n"
 msgstr "Borra Notas de Juego:\n"
 
-#. "L_OPTIONS_389"
+#. L_OPTIONS_389
 msgid "Note\n"
 msgstr "Nota\n"
 
-#. "L_OPTIONS_390"
+#. L_OPTIONS_390
 msgid "Pages\n"
 msgstr "Páginas\n"
 
-#. "L_OPTIONS_391"
+#. L_OPTIONS_391
 msgid "Press the B Button to exit.\n"
 msgstr "Pulsa B para salir.\n"
 
-#. "L_OPTIONS_392"
+#. L_OPTIONS_392
 msgid "Empty\n"
 msgstr "Vacío\n"
 
-#. "L_OPTIONS_393"
+#. L_OPTIONS_393
 msgid "--\n"
 msgstr "--\n"
 
-#. "L_OPTIONS_394"
+#. L_OPTIONS_394
 msgid "Pages Free: \n"
 msgstr "Páginas Libres: \n"
 
-#. "L_OPTIONS_395"
+#. L_OPTIONS_395
 msgid "Pages Free: %d\n"
 msgstr "Páginas Libres: %d\n"
 
-#. "L_OPTIONS_396"
+#. L_OPTIONS_396
 msgid "Pages Used: \n"
 msgstr "Páginas Usadas: \n"
 
-#. "L_OPTIONS_397"
+#. L_OPTIONS_397
 msgid "Pages Used: %d\n"
 msgstr "Páginas Usadas: %d\n"
 
-#. "L_OPTIONS_398"
+#. L_OPTIONS_398
 msgid ""
 "Perfect Dark note already exists\n"
 "on this Controller Pak.\n"
@@ -1655,7 +1671,7 @@ msgstr ""
 "Ya existe información de Perfect Dark\n"
 "en este Controller Pak.\n"
 
-#. "L_OPTIONS_399"
+#. L_OPTIONS_399
 msgid ""
 "There is enough space for\n"
 "Perfect Dark note.\n"
@@ -1663,7 +1679,7 @@ msgstr ""
 "Hay espacio suficiente para\n"
 "notas de Perfect Dark.\n"
 
-#. "L_OPTIONS_400"
+#. L_OPTIONS_400
 msgid ""
 "Controller Pak is too full to save note- 1 note\n"
 "and 28 pages required to save to Controller Pak.\n"
@@ -1671,374 +1687,374 @@ msgstr ""
 "El Controller Pak está demasiado lleno - 1 nota\n"
 "y 28 páginas son necesarias para guardar.\n"
 
-#. "L_OPTIONS_401"
+#. L_OPTIONS_401
 msgid "Enter Agent Name\n"
 msgstr "Introduce Nombre del Agente\n"
 
-#. "L_OPTIONS_402"
+#. L_OPTIONS_402
 msgid "New...\n"
 msgstr "Nuevo...\n"
 
-#. "L_OPTIONS_403"
+#. L_OPTIONS_403
 msgid "New Agent...\n"
 msgstr "Nuevo Agente...\n"
 
-#. "L_OPTIONS_404"
+#. L_OPTIONS_404
 msgid "New Recruit"
 msgstr "Nuevo Recluta"
 
-#. "L_OPTIONS_405"
+#. L_OPTIONS_405
 msgid "Mission Time:"
 msgstr "Tiempo de Misión:"
 
-#. "L_OPTIONS_406"
+#. L_OPTIONS_406
 msgid "Challenge 1"
 msgstr "Desafío 1"
 
-#. "L_OPTIONS_407"
+#. L_OPTIONS_407
 msgid "Challenge 2"
 msgstr "Desafío 2"
 
-#. "L_OPTIONS_408"
+#. L_OPTIONS_408
 msgid "Challenge 3"
 msgstr "Desafío 3"
 
-#. "L_OPTIONS_409"
+#. L_OPTIONS_409
 msgid "Challenge 4"
 msgstr "Desafío 4"
 
-#. "L_OPTIONS_410"
+#. L_OPTIONS_410
 msgid "Challenge 5"
 msgstr "Desafío 5"
 
-#. "L_OPTIONS_411"
+#. L_OPTIONS_411
 msgid "Challenge 6"
 msgstr "Desafío 6"
 
-#. "L_OPTIONS_412"
+#. L_OPTIONS_412
 msgid "Challenge 7"
 msgstr "Desafío 7"
 
-#. "L_OPTIONS_413"
+#. L_OPTIONS_413
 msgid "Challenge 8"
 msgstr "Desafío 8"
 
-#. "L_OPTIONS_414"
+#. L_OPTIONS_414
 msgid "Challenge 9"
 msgstr "Desafío 9"
 
-#. "L_OPTIONS_415"
+#. L_OPTIONS_415
 msgid "Challenge 10"
 msgstr "Desafío 10"
 
-#. "L_OPTIONS_416"
+#. L_OPTIONS_416
 msgid "Challenge 11"
 msgstr "Desafío 11"
 
-#. "L_OPTIONS_417"
+#. L_OPTIONS_417
 msgid "Challenge 12"
 msgstr "Desafío 12"
 
-#. "L_OPTIONS_418"
+#. L_OPTIONS_418
 msgid "Challenge 13"
 msgstr "Desafío 13"
 
-#. "L_OPTIONS_419"
+#. L_OPTIONS_419
 msgid "Challenge 14"
 msgstr "Desafío 14"
 
-#. "L_OPTIONS_420"
+#. L_OPTIONS_420
 msgid "Challenge 15"
 msgstr "Desafío 15"
 
-#. "L_OPTIONS_421"
+#. L_OPTIONS_421
 msgid "Challenge 16"
 msgstr "Desafío 16"
 
-#. "L_OPTIONS_422"
+#. L_OPTIONS_422
 msgid "Challenge 17"
 msgstr "Desafío 17"
 
-#. "L_OPTIONS_423"
+#. L_OPTIONS_423
 msgid "Challenge 18"
 msgstr "Desafío 18"
 
-#. "L_OPTIONS_424"
+#. L_OPTIONS_424
 msgid "Challenge 19"
 msgstr "Desafío 19"
 
-#. "L_OPTIONS_425"
+#. L_OPTIONS_425
 msgid "Challenge 20"
 msgstr "Desafío 20"
 
-#. "L_OPTIONS_426"
+#. L_OPTIONS_426
 msgid "Challenge 21"
 msgstr "Desafío 21"
 
-#. "L_OPTIONS_427"
+#. L_OPTIONS_427
 msgid "Challenge 22"
 msgstr "Desafío 22"
 
-#. "L_OPTIONS_428"
+#. L_OPTIONS_428
 msgid "Challenge 23"
 msgstr "Desafío 23"
 
-#. "L_OPTIONS_429"
+#. L_OPTIONS_429
 msgid "Challenge 24"
 msgstr "Desafío 24"
 
-#. "L_OPTIONS_430"
+#. L_OPTIONS_430
 msgid "Challenge 25"
 msgstr "Desafío 25"
 
-#. "L_OPTIONS_431"
+#. L_OPTIONS_431
 msgid "Challenge 26"
 msgstr "Desafío 26"
 
-#. "L_OPTIONS_432"
+#. L_OPTIONS_432
 msgid "Challenge 27"
 msgstr "Desafío 27"
 
-#. "L_OPTIONS_433"
+#. L_OPTIONS_433
 msgid "Challenge 28"
 msgstr "Desafío 28"
 
-#. "L_OPTIONS_434"
+#. L_OPTIONS_434
 msgid "Challenge 29"
 msgstr "Desafío 29"
 
-#. "L_OPTIONS_435"
+#. L_OPTIONS_435
 msgid "Challenge 30"
 msgstr "Desafío 30"
 
-#. "L_OPTIONS_436"
+#. L_OPTIONS_436
 msgid "Special\n"
 msgstr "Especial\n"
 
-#. "L_OPTIONS_437"
+#. L_OPTIONS_437
 msgid "Intro\n"
 msgstr "Introducción\n"
 
-#. "L_OPTIONS_438"
+#. L_OPTIONS_438
 msgid "Mission 1 - dataDyne Central\n"
 msgstr "Misión 1 - Central dataDyne\n"
 
-#. "L_OPTIONS_439"
+#. L_OPTIONS_439
 msgid "Mission 2 - Carrington Villa\n"
 msgstr "Misión 2 - Villa Carrington\n"
 
-#. "L_OPTIONS_440"
+#. L_OPTIONS_440
 msgid "Mission 3 - G5 Building\n"
 msgstr "Misión 3 - Edificio G5\n"
 
-#. "L_OPTIONS_441"
+#. L_OPTIONS_441
 msgid "Mission 4 - Area 51\n"
 msgstr "Misión 4 - Área 51\n"
 
-#. "L_OPTIONS_442"
+#. L_OPTIONS_442
 msgid "Mission 5 - Air Force One\n"
 msgstr "Misión 5 - Air Force One\n"
 
-#. "L_OPTIONS_443"
+#. L_OPTIONS_443
 msgid "Mission 6 - Pelagic II\n"
 msgstr "Misión 6 - Pelagic II\n"
 
-#. "L_OPTIONS_444"
+#. L_OPTIONS_444
 msgid "Mission 7 - Carrington Institute\n"
 msgstr "Misión 7 - Instituto Carrington\n"
 
-#. "L_OPTIONS_445"
+#. L_OPTIONS_445
 msgid "Mission 8 - Skedar Attack Ship\n"
 msgstr "Misión 8 - Nave de Ataque Skedar\n"
 
-#. "L_OPTIONS_446"
+#. L_OPTIONS_446
 msgid "Mission 9 - Skedar Ruins\n"
 msgstr "Misión 9 - Ruinas Skedar\n"
 
-#. "L_OPTIONS_447"
+#. L_OPTIONS_447
 msgid "Finale\n"
 msgstr "Final\n"
 
-#. "L_OPTIONS_448"
+#. L_OPTIONS_448
 msgid "Play All\n"
 msgstr "Mostrar Todo\n"
 
-#. "L_OPTIONS_449"
+#. L_OPTIONS_449
 msgid "Intro\n"
 msgstr "Introducción\n"
 
-#. "L_OPTIONS_450"
+#. L_OPTIONS_450
 msgid "1:1 Intro - Enter The Dark\n"
 msgstr "Intro 1:1 - En la Oscuridad\n"
 
-#. "L_OPTIONS_451"
+#. L_OPTIONS_451
 msgid "1:1 Outro - Quick Descent\n"
 msgstr "Final 1:1 - Descenso Rápido\n"
 
-#. "L_OPTIONS_452"
+#. L_OPTIONS_452
 msgid "1:2 Intro - Going Down\n"
 msgstr "Intro 1:2 - Bajando\n"
 
-#. "L_OPTIONS_453"
+#. L_OPTIONS_453
 msgid "1:2 Outro - Meet The Doctor\n"
 msgstr "Final 1:2 - El Doctor\n"
 
-#. "L_OPTIONS_454"
+#. L_OPTIONS_454
 msgid "1:3 Intro - Lights Out\n"
 msgstr "Intro 1:3 - Luces Fuera\n"
 
-#. "L_OPTIONS_455"
+#. L_OPTIONS_455
 msgid "1:3 Outro - Going Somewhere?\n"
 msgstr "Final 1:3 - ¿Dónde vas?\n"
 
-#. "L_OPTIONS_456"
+#. L_OPTIONS_456
 msgid "2:1 Intro - Negotiate This!\n"
 msgstr "Intro 2:1 - ¡Negocia esto!\n"
 
-#. "L_OPTIONS_457"
+#. L_OPTIONS_457
 msgid "2:1 Intro 2 - Life On The Line\n"
 msgstr "Intro 2 2:1 - Vida en Línea\n"
 
-#. "L_OPTIONS_458"
+#. L_OPTIONS_458
 msgid "2:1 Outro - Carrington Rescued\n"
 msgstr "Final 2:1 - Carrington Rescatado\n"
 
-#. "L_OPTIONS_459"
+#. L_OPTIONS_459
 msgid "3:1 Intro - Dark Alley\n"
 msgstr "Intro 3:1 - Callejón Oscuro\n"
 
-#. "L_OPTIONS_460"
+#. L_OPTIONS_460
 msgid "3:1 Outro - G5 Penetrated\n"
 msgstr "Final 3:1 - Entrando al G5\n"
 
-#. "L_OPTIONS_461"
+#. L_OPTIONS_461
 msgid "3:2 Intro - Guns 'n' Poses\n"
 msgstr "Intro 3:2 - Armas y Poses\n"
 
-#. "L_OPTIONS_462"
+#. L_OPTIONS_462
 msgid "3:2 Special - Conspiracy\n"
 msgstr "Especial 3:2 - Conspiración\n"
 
-#. "L_OPTIONS_463"
+#. L_OPTIONS_463
 msgid "3:2 Outro - Fire Escape\n"
 msgstr "Final 3:2 - Salida de Incendios\n"
 
-#. "L_OPTIONS_464"
+#. L_OPTIONS_464
 msgid "4:1 Intro - Video Nasty\n"
 msgstr "Intro 4:1 - Vídeos\n"
 
-#. "L_OPTIONS_465"
+#. L_OPTIONS_465
 msgid "4:1 Outro - Loose Ends\n"
 msgstr "Final 4:1 - Sin Salida\n"
 
-#. "L_OPTIONS_466"
+#. L_OPTIONS_466
 msgid "4:2 Intro - Pearls Of Wisdom\n"
 msgstr "Intro 4:2 - Perlas de Sabiduría\n"
 
-#. "L_OPTIONS_467"
+#. L_OPTIONS_467
 msgid "4:2 Outro - Under The Knife\n"
 msgstr "Final 4:2 - A Cuchillo\n"
 
-#. "L_OPTIONS_468"
+#. L_OPTIONS_468
 msgid "4:3 Intro - Gas!\n"
 msgstr "Intro 4:3 - ¡Gas!\n"
 
-#. "L_OPTIONS_469"
+#. L_OPTIONS_469
 msgid "4:3 Special - Elvis Wakes Up\n"
 msgstr "Especial 4:3 - Elvis Despierta\n"
 
-#. "L_OPTIONS_470"
+#. L_OPTIONS_470
 msgid "4:3 Outro - Escape\n"
 msgstr "Final 4:3 - Escape\n"
 
-#. "L_OPTIONS_471"
+#. L_OPTIONS_471
 msgid "5:1 Intro - High Altitude\n"
 msgstr "Intro 5:1 - Gran Altitud\n"
 
-#. "L_OPTIONS_472"
+#. L_OPTIONS_472
 msgid "5:1 Outro - Takeoff\n"
 msgstr "Final 5:1 - Despegue\n"
 
-#. "L_OPTIONS_473"
+#. L_OPTIONS_473
 msgid "5:2 Intro - Last Chance\n"
 msgstr "Intro 5:2 - Última Oportunidad\n"
 
-#. "L_OPTIONS_474"
+#. L_OPTIONS_474
 msgid "5:2 Special - Docking\n"
 msgstr "Especial 5:2 - Atraque\n"
 
-#. "L_OPTIONS_475"
+#. L_OPTIONS_475
 msgid "5:2 Outro - Out Of Options\n"
 msgstr "Final 5:2 - Sin Opciones\n"
 
-#. "L_OPTIONS_476"
+#. L_OPTIONS_476
 msgid "5:3 Intro - Red Horizons\n"
 msgstr "Intro 5:3 - Horizontes Rojos\n"
 
-#. "L_OPTIONS_477"
+#. L_OPTIONS_477
 msgid "5:3 Outro - Blonde Freak\n"
 msgstr "Final 5:3 - Maníaco Rubio\n"
 
-#. "L_OPTIONS_478"
+#. L_OPTIONS_478
 msgid "6:1 Intro - Sneak On Board\n"
 msgstr "Intro 6:1 - Sube a Bordo\n"
 
-#. "L_OPTIONS_479"
+#. L_OPTIONS_479
 msgid "6:1 Outro - Descent Into The Depths\n"
 msgstr "Final 6:1 - Descendiendo\n"
 
-#. "L_OPTIONS_480"
+#. L_OPTIONS_480
 msgid "6:2 Intro - Deeper Inside\n"
 msgstr "Intro 6:2 - Más Profundo\n"
 
-#. "L_OPTIONS_481"
+#. L_OPTIONS_481
 msgid "6:2 Special - Virus!\n"
 msgstr "Especial 6:2 - ¡Virus!\n"
 
-#. "L_OPTIONS_482"
+#. L_OPTIONS_482
 msgid "6:2 Outro - Pulling Out\n"
 msgstr "Final 6:2 - Saliendo\n"
 
-#. "L_OPTIONS_483"
+#. L_OPTIONS_483
 msgid "7:1 Intro - Victory Salute\n"
 msgstr "Intro 7:1 - Saludo Victorioso\n"
 
-#. "L_OPTIONS_484"
+#. L_OPTIONS_484
 msgid "7:1 Outro - Dash For Freedom\n"
 msgstr "Final 7:1 - Ayudando a Escapar\n"
 
-#. "L_OPTIONS_485"
+#. L_OPTIONS_485
 msgid "8:1 Intro - Snatched!\n"
 msgstr "Intro 8:1 - ¡Atrapada!\n"
 
-#. "L_OPTIONS_486"
+#. L_OPTIONS_486
 msgid "8:1 Outro - Heading For Trouble\n"
 msgstr "Final 8:1 - Buscando Problemas\n"
 
-#. "L_OPTIONS_487"
+#. L_OPTIONS_487
 msgid "9:1 Intro - Air Of Calm\n"
 msgstr "Intro 9:1 - Aire en Calma\n"
 
-#. "L_OPTIONS_488"
+#. L_OPTIONS_488
 msgid "9:1 Outro - Gotcha!\n"
 msgstr "Final 9:1 - ¡Te pillé!\n"
 
-#. "L_OPTIONS_489"
+#. L_OPTIONS_489
 msgid "End Sequence\n"
 msgstr "Secuencia Final\n"
 
-#. "L_OPTIONS_490"
+#. L_OPTIONS_490
 msgid "Cinema\n"
 msgstr "Películas\n"
 
-#. "L_OPTIONS_491"
+#. L_OPTIONS_491
 msgid "cloak %d\n"
 msgstr "Oculto %d\n"
 
-#. "L_OPTIONS_492"
+#. L_OPTIONS_492
 msgid "Pick Target\n"
 msgstr "Escoge Objetivo\n"
 
-#. "L_OPTIONS_493"
+#. L_OPTIONS_493
 msgid "Kills Score\n"
 msgstr "Puntuación\n"

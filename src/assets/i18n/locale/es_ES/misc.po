@@ -2,193 +2,193 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Perfect Dark PC port localization\n"
-"POT-Creation-Date: 2025-05-31 06:37:14.299892+00:00\n"
+"POT-Creation-Date: 2025-06-05 13:35:16.474166+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: originalAssets_to_l10n.py script\n"
 
-#. "L_MISC_041"
+#. L_MISC_041
 msgid "E R R O R\n"
 msgstr "E R R O R\n"
 
-#. "L_MISC_042"
+#. L_MISC_042
 msgid "No briefing for this mission\n"
 msgstr "No hay información para esta misión\n"
 
-#. "L_MISC_043"
+#. L_MISC_043
 msgid "\n"
 msgstr "\n"
 
-#. "L_MISC_044"
+#. L_MISC_044
 msgid "Objective"
 msgstr "Objetivo"
 
-#. "L_MISC_045"
+#. L_MISC_045
 msgid "Completed\n"
 msgstr "Completado\n"
 
-#. "L_MISC_046"
+#. L_MISC_046
 msgid "Incomplete\n"
 msgstr "Incompleto\n"
 
-#. "L_MISC_047"
+#. L_MISC_047
 msgid "Failed\n"
 msgstr "Fallado\n"
 
-#. "L_MISC_068"
+#. L_MISC_068
 msgid "One minute left.\n"
 msgstr "Queda un minuto.\n"
 
-#. "L_MISC_069"
+#. L_MISC_069
 msgid "OBJECTIVES FAILED - abort mission.\n"
 msgstr "OBJETIVOS FALLADOS - abortar misión.\n"
 
-#. "L_MISC_070"
+#. L_MISC_070
 msgid "Guard Greeting\n"
 msgstr "Saludos del Guarda\n"
 
-#. "L_MISC_071"
+#. L_MISC_071
 msgid "What's that gun?\n"
 msgstr "¿Qué arma es ésa?\n"
 
-#. "L_MISC_072"
+#. L_MISC_072
 msgid "Don't point that gun at me.\n"
 msgstr "No me apuntes con ese arma.\n"
 
-#. "L_MISC_073"
+#. L_MISC_073
 msgid "S/MPS"
 msgstr "v/mps"
 
-#. "L_MISC_074"
+#. L_MISC_074
 msgid "H/M"
 msgstr "a/m"
 
-#. "L_MISC_075"
+#. L_MISC_075
 msgid "Y/D"
 msgstr "x/°"
 
-#. "L_MISC_076"
+#. L_MISC_076
 msgid "P/D"
 msgstr "y/°"
 
-#. "L_MISC_077"
+#. L_MISC_077
 msgid "CI 2023"
 msgstr "IC 2023"
 
-#. "L_MISC_078"
+#. L_MISC_078
 msgid "YKK: 95935"
 msgstr "YKK: 95935"
 
-#. "L_MISC_079"
+#. L_MISC_079
 msgid "CAMSPY"
 msgstr "CAMSPY"
 
-#. "L_MISC_080"
+#. L_MISC_080
 msgid "MODEL 1.2"
 msgstr "MODELO 1.2"
 
-#. "L_MISC_081"
+#. L_MISC_081
 msgid "GYROSTAT"
 msgstr "GIROSTATO"
 
-#. "L_MISC_082"
+#. L_MISC_082
 msgid "Meat"
 msgstr "Muy Fácil"
 
-#. "L_MISC_083"
+#. L_MISC_083
 msgid "Easy"
 msgstr "Fácil"
 
-#. "L_MISC_084"
+#. L_MISC_084
 msgid "Normal"
 msgstr "Normal"
 
-#. "L_MISC_085"
+#. L_MISC_085
 msgid "Hard"
 msgstr "Difícil"
 
-#. "L_MISC_086"
+#. L_MISC_086
 msgid "Perfect"
 msgstr "Perfecto"
 
-#. "L_MISC_087"
+#. L_MISC_087
 msgid "Dark"
 msgstr "Oscuro"
 
-#. "L_MISC_088"
+#. L_MISC_088
 msgid "MeatSim"
 msgstr "SimMFácil"
 
-#. "L_MISC_089"
+#. L_MISC_089
 msgid "EasySim"
 msgstr "SimFácil"
 
-#. "L_MISC_090"
+#. L_MISC_090
 msgid "NormalSim"
 msgstr "SimNormal"
 
-#. "L_MISC_091"
+#. L_MISC_091
 msgid "HardSim"
 msgstr "SimDifíci"
 
-#. "L_MISC_092"
+#. L_MISC_092
 msgid "PerfectSim"
 msgstr "SimPerfec"
 
-#. "L_MISC_093"
+#. L_MISC_093
 msgid "DarkSim"
 msgstr "SimOscuro"
 
-#. "L_MISC_094"
+#. L_MISC_094
 msgid "PeaceSim"
 msgstr "SimPaz"
 
-#. "L_MISC_095"
+#. L_MISC_095
 msgid "ShieldSim"
 msgstr "SimEscudo"
 
-#. "L_MISC_096"
+#. L_MISC_096
 msgid "RocketSim"
 msgstr "SimCohete"
 
-#. "L_MISC_097"
+#. L_MISC_097
 msgid "KazeSim"
 msgstr "SimKamika"
 
-#. "L_MISC_098"
+#. L_MISC_098
 msgid "FistSim"
 msgstr "SimLucha"
 
-#. "L_MISC_099"
+#. L_MISC_099
 msgid "PreySim"
 msgstr "SimPresa"
 
-#. "L_MISC_100"
+#. L_MISC_100
 msgid "CowardSim"
 msgstr "SimCobard"
 
-#. "L_MISC_101"
+#. L_MISC_101
 msgid "JudgeSim"
 msgstr "SimJuez"
 
-#. "L_MISC_102"
+#. L_MISC_102
 msgid "FeudSim"
 msgstr "SimPelea"
 
-#. "L_MISC_103"
+#. L_MISC_103
 msgid "SpeedSim"
 msgstr "SimVeloz"
 
-#. "L_MISC_104"
+#. L_MISC_104
 msgid "TurtleSim"
 msgstr "SimTortug"
 
-#. "L_MISC_105"
+#. L_MISC_105
 msgid "VengeSim"
 msgstr "SimVengan"
 
-#. "L_MISC_106"
+#. L_MISC_106
 msgid ""
 "MeatSim:  This is the easiest of all the simulants to defeat and is, "
 "therefore, the best choice for the beginner.  It is not very intelligent, "
@@ -198,7 +198,7 @@ msgstr ""
 "mejor elección para los principiantes.  No es muy inteligente, y su tiro es "
 "bastante pobre.\n"
 
-#. "L_MISC_107"
+#. L_MISC_107
 msgid ""
 "EasySim:  This simulant has basic skills and intelligence, but it can still "
 "be dangerous.\n"
@@ -206,18 +206,18 @@ msgstr ""
 "SimFácil:  Este simulante tiene inteligencia y habilidades básicas; aún así "
 "puede ser peligroso.\n"
 
-#. "L_MISC_108"
+#. L_MISC_108
 msgid "NormalSim:  This simulant is as skilled as the average human player.\n"
 msgstr ""
 "SimNormal:  Este simulante es tan habilidoso como un jugador humano normal y"
 " corriente.\n"
 
-#. "L_MISC_109"
+#. L_MISC_109
 msgid "HardSim:  This simulant is as skilled as a good human player.\n"
 msgstr ""
 "SimDifíci:  Este simulante es tan habilidoso como un buen jugador humano.\n"
 
-#. "L_MISC_110"
+#. L_MISC_110
 msgid ""
 "PerfectSim: The ultimate adversary, the most intelligent and skilled "
 "simulant.  Most players will eventually want to use PerfectSim all the time "
@@ -227,7 +227,7 @@ msgstr ""
 "habilidoso.  La mayoría de jugadores querrán usar a SimPerfecto todo el "
 "tiempo para mejorar sus habilidades.\n"
 
-#. "L_MISC_111"
+#. L_MISC_111
 msgid ""
 "DarkSim: Prototype cyborg developed by dataDyne to counteract Carrington "
 "operatives.  Remember that this simulant, unlike all the others, is not "
@@ -238,7 +238,7 @@ msgstr ""
 " humano.  Esto significa que es capaz de hacer cosas que un humano no "
 "puede.\n"
 
-#. "L_MISC_112"
+#. L_MISC_112
 msgid ""
 "PeaceSim:  These simulants are scientists who protest the use of weapons.  "
 "They will go around the level hunting for guns that are lying around and "
@@ -250,7 +250,7 @@ msgstr ""
 "no pueda usarlas.  Por supuesto, si les disparas un poco... ¡no les "
 "importará soltarlas!\n"
 
-#. "L_MISC_113"
+#. L_MISC_113
 msgid ""
 "ShieldSim:  Always goes for maximum shield protection.  If this simulant "
 "loses any shield energy, it will go and search for a new shield.  Not much "
@@ -260,7 +260,7 @@ msgstr ""
 " pierde algo de energía de su escudo, irá en busca de uno nuevo.  ¡No tiene "
 "mucha utilidad si no hay escudos en el nivel!\n"
 
-#. "L_MISC_114"
+#. L_MISC_114
 msgid ""
 "RocketSim:  This simulant loves to see things blow up.  It prefers weapons "
 "which make big explosions over conventional handguns or automatics.  This "
@@ -271,7 +271,7 @@ msgstr ""
 "también se extiende a las armas que tienen funciones secundarias "
 "explosivas!\n"
 
-#. "L_MISC_115"
+#. L_MISC_115
 msgid ""
 "KazeSim:  This simulant will stop at nothing to destroy its target.  It is "
 "very aggressive and never keeps its distance - even if it's holding a "
@@ -282,7 +282,7 @@ msgstr ""
 " una granada!  Sé muy cuidadoso de este adversario que no tiene miedo a "
 "morir.\n"
 
-#. "L_MISC_116"
+#. L_MISC_116
 msgid ""
 "FistSim:  This simulant protests the use of weapons in a similar way to the "
 "PeaceSims.  However, it has no such reservations when it comes to unarmed "
@@ -293,7 +293,7 @@ msgstr ""
 "los SimPaz.  Aún así, no tiene reservas a la hora de combatir desarmado.  "
 "Siempre intentará usar sus puños para atacar o desarmar a su oponente.\n"
 
-#. "L_MISC_117"
+#. L_MISC_117
 msgid ""
 "PreySim:  This simulant prefers to prey on the weak in order to get easier "
 "kills.  It will look for players who have just respawned, have an inferior "
@@ -303,7 +303,7 @@ msgstr ""
 "muertes fáciles.  Buscará jugadores que acaben de salir, tengan un arma "
 "inferior, o tengan poca salud.\n"
 
-#. "L_MISC_118"
+#. L_MISC_118
 msgid ""
 "CowardSim:  This simulant does not really want to fight and will try to "
 "survive by running away.  It may sometimes attack, but only if the opponent "
@@ -314,7 +314,7 @@ msgstr ""
 "sobrevivir.  A veces atacará, pero sólo si el oponente tiene un arma "
 "inferior.  ¡Saca un arma mayor o dispárale, y saldrá corriendo!\n"
 
-#. "L_MISC_119"
+#. L_MISC_119
 msgid ""
 "JudgeSim:  This simulant has a strong sense of justice and despises the "
 "tactics of the PreySim.  It will always try to kill the winning player in "
@@ -324,7 +324,7 @@ msgstr ""
 "las tácticas del SimPresa.  Siempre intentará matar al jugador que vaya "
 "ganando para así igualar los marcadores.\n"
 
-#. "L_MISC_120"
+#. L_MISC_120
 msgid ""
 "FeudSim:  Once this simulant picks a target, that player had better watch "
 "out!  A FeudSim will pursue the player until the game is over!  Even if it "
@@ -334,7 +334,7 @@ msgstr ""
 "mucho cuidado!  ¡Un SimPelea perseguirá al jugador hasta que se acabe el "
 "juego!  Aunque muera, seguirá guardándote rencor.\n"
 
-#. "L_MISC_121"
+#. L_MISC_121
 msgid ""
 "SpeedSim:  These simulants have been trained for speed.  They can easily "
 "outrun a human player, so it's no use  running away from a SpeedSim unless "
@@ -344,7 +344,7 @@ msgstr ""
 "¡Pueden atrapar fácilmente a un humano, así que no huyas de un SimVeloz a "
 "menos que conozcas algún buen atajo!\n"
 
-#. "L_MISC_122"
+#. L_MISC_122
 msgid ""
 "TurtleSim:  This simulant wears a prototype shield generator developed by "
 "dataDyne scientists.  The generator projects a protective shield around its "
@@ -359,7 +359,7 @@ msgstr ""
 "el movimiento del portador, así que se moverá muy despacio.  Los SimTortug "
 "llevan este escudo siempre, incluso si no hay escudos en el nivel.\n"
 
-#. "L_MISC_123"
+#. L_MISC_123
 msgid ""
 "VengeSim:  Be careful if you shoot or kill a VengeSim because it always "
 "attacks the player who last killed it."
@@ -367,614 +367,618 @@ msgstr ""
 "SimVengan:  Ten cuidado de no disparar o matar a un SimVengan, ya que "
 "siempre atacará al último jugador que le haya matado."
 
-#. "L_MISC_124"
+#. L_MISC_124
 msgid "Dark Combat"
 msgstr "Combate Oscuro"
 
-#. "L_MISC_125"
+#. L_MISC_125
 msgid "Skedar Mystery"
 msgstr "Misterio Skedar"
 
-#. "L_MISC_126"
+#. L_MISC_126
 msgid "CI Operative"
 msgstr "Operativo IC"
 
-#. "L_MISC_127"
+#. L_MISC_127
 msgid "dataDyne Action"
 msgstr "Acción dataDyne"
 
-#. "L_MISC_128"
+#. L_MISC_128
 msgid "Maian Tears"
 msgstr "Lágrimas Maian"
 
-#. "L_MISC_129"
+#. L_MISC_129
 msgid "Alien Conflict"
 msgstr "Conflicto Alien"
 
-#. "L_MISC_130"
+#. L_MISC_130
 msgid "Carrington Institute"
 msgstr "Instituto Carrington"
 
-#. "L_MISC_131"
+#. L_MISC_131
 msgid "dD Central"
 msgstr "Central dD"
 
-#. "L_MISC_132"
+#. L_MISC_132
 msgid "dD Central X"
 msgstr "Central dD X"
 
-#. "L_MISC_133"
+#. L_MISC_133
 msgid "dD Research"
 msgstr "Investigación dD"
 
-#. "L_MISC_134"
+#. L_MISC_134
 msgid "dD Research X"
 msgstr "Investigación dD X"
 
-#. "L_MISC_135"
+#. L_MISC_135
 msgid "dD Extraction"
 msgstr "Extracción dD"
 
-#. "L_MISC_136"
+#. L_MISC_136
 msgid "dD Extraction X"
 msgstr "Extracción dD X"
 
-#. "L_MISC_137"
+#. L_MISC_137
 msgid "Carrington Villa"
 msgstr "Villa Carrington"
 
-#. "L_MISC_138"
+#. L_MISC_138
 msgid "Carrington Villa X"
 msgstr "Villa Carrington X"
 
-#. "L_MISC_139"
+#. L_MISC_139
 msgid "Chicago"
 msgstr "Chicago"
 
-#. "L_MISC_140"
+#. L_MISC_140
 msgid "Chicago X"
 msgstr "Chicago X"
 
-#. "L_MISC_141"
+#. L_MISC_141
 msgid "G5 Building"
 msgstr "Edificio G5"
 
-#. "L_MISC_142"
+#. L_MISC_142
 msgid "G5 Building X"
 msgstr "Edificio G5 X"
 
-#. "L_MISC_143"
+#. L_MISC_143
 msgid "A51 Infiltration"
 msgstr "Infiltración A51"
 
-#. "L_MISC_144"
+#. L_MISC_144
 msgid "A51 Infiltration X"
 msgstr "Infiltración A51 X"
 
-#. "L_MISC_145"
+#. L_MISC_145
 msgid "A51 Rescue"
 msgstr "Rescate A51"
 
-#. "L_MISC_146"
+#. L_MISC_146
 msgid "A51 Rescue X"
 msgstr "Rescate A51 X"
 
-#. "L_MISC_147"
+#. L_MISC_147
 msgid "A51 Escape"
 msgstr "Escape A51"
 
-#. "L_MISC_148"
+#. L_MISC_148
 msgid "A51 Escape X"
 msgstr "Escape A51 X"
 
-#. "L_MISC_149"
+#. L_MISC_149
 msgid "Air Base"
 msgstr "Base Aérea"
 
-#. "L_MISC_150"
+#. L_MISC_150
 msgid "Air Base X"
 msgstr "Base Aérea X"
 
-#. "L_MISC_151"
+#. L_MISC_151
 msgid "Air Force One"
 msgstr "Air Force One"
 
-#. "L_MISC_152"
+#. L_MISC_152
 msgid "Air Force One X"
 msgstr "Air Force One X"
 
-#. "L_MISC_153"
+#. L_MISC_153
 msgid "Crash Site"
 msgstr "Impacto"
 
-#. "L_MISC_154"
+#. L_MISC_154
 msgid "Crash Site X"
 msgstr "Impacto X"
 
-#. "L_MISC_155"
+#. L_MISC_155
 msgid "Pelagic II"
 msgstr "Pelagic II"
 
-#. "L_MISC_156"
+#. L_MISC_156
 msgid "Pelagic II X"
 msgstr "Pelagic II X"
 
-#. "L_MISC_157"
+#. L_MISC_157
 msgid "Deep Sea"
 msgstr "Mar Profundo"
 
-#. "L_MISC_158"
+#. L_MISC_158
 msgid "Deep Sea X"
 msgstr "Mar Profundo X"
 
-#. "L_MISC_159"
+#. L_MISC_159
 msgid "Institute Defense"
 msgstr "Defensa Instituto"
 
-#. "L_MISC_160"
+#. L_MISC_160
 msgid "Institute Defense X"
 msgstr "Defensa Instituto X"
 
-#. "L_MISC_161"
+#. L_MISC_161
 msgid "Attack Ship"
 msgstr "Acorazado"
 
-#. "L_MISC_162"
+#. L_MISC_162
 msgid "Attack Ship X"
 msgstr "Acorazado X"
 
-#. "L_MISC_163"
+#. L_MISC_163
 msgid "Skedar Ruins"
 msgstr "Ruinas Skedar"
 
-#. "L_MISC_164"
+#. L_MISC_164
 msgid "Skedar Ruins X"
 msgstr "Ruinas Skedar X"
 
-#. "L_MISC_165"
+#. L_MISC_165
 msgid "End Credits"
 msgstr "Créditos "
 
-#. "L_MISC_166"
+#. L_MISC_166
 msgid "Random\n"
 msgstr "Aleatorio\n"
 
-#. "L_MISC_167"
+#. L_MISC_167
 msgid "Select All\n"
 msgstr "Seleccionar Todo\n"
 
-#. "L_MISC_168"
+#. L_MISC_168
 msgid "Select None\n"
 msgstr "Deseleccionar Todo\n"
 
-#. "L_MISC_169"
+#. L_MISC_169
 msgid "Randomize\n"
 msgstr "Al azar\n"
 
-#. "L_MISC_170"
+#. L_MISC_170
 msgid "Weapon\n"
 msgstr "Inventario\n"
 
-#. "L_MISC_171"
+#. L_MISC_171
 msgid "Function\n"
 msgstr "Función\n"
 
-#. "L_MISC_172"
+#. L_MISC_172
 msgid "Orders\n"
 msgstr "Órdenes\n"
 
-#. "L_MISC_173"
+#. L_MISC_173
 msgid "No Weapon\n"
 msgstr "Sin Arma\n"
 
-#. "L_MISC_174"
+#. L_MISC_174
 msgid "Pick Target\n"
 msgstr "Elige Objetivo\n"
 
-#. "L_MISC_175"
+#. L_MISC_175
 msgid "Follow\n"
 msgstr "Seguir\n"
 
-#. "L_MISC_176"
+#. L_MISC_176
 msgid "Attack\n"
 msgstr "Atacar\n"
 
-#. "L_MISC_177"
+#. L_MISC_177
 msgid "Defend\n"
 msgstr "Defender\n"
 
-#. "L_MISC_178"
+#. L_MISC_178
 msgid "Hold\n"
 msgstr "Mantener\n"
 
-#. "L_MISC_179"
+#. L_MISC_179
 msgid "Normal\n"
 msgstr "Normal\n"
 
-#. "L_MISC_180"
+#. L_MISC_180
 msgid "Download\n"
 msgstr "Bajar\n"
 
-#. "L_MISC_181"
+#. L_MISC_181
 msgid "Get Case\n"
 msgstr "Obtener\n"
 
-#. "L_MISC_182"
+#. L_MISC_182
 msgid "Tag Box\n"
 msgstr "Marcar\n"
 
-#. "L_MISC_183"
+#. L_MISC_183
 msgid "Killed by"
 msgstr "Te mató"
 
-#. "L_MISC_184"
+#. L_MISC_184
 msgid "Killed"
 msgstr "Mataste a"
 
-#. "L_MISC_185"
+#. L_MISC_185
 msgid "Beginner:21\n"
 msgstr "Iniciado:21\n"
 
-#. "L_MISC_186"
+#. L_MISC_186
 msgid "Trainee:20\n"
 msgstr "Aprendiz:20\n"
 
-#. "L_MISC_187"
+#. L_MISC_187
 msgid "Amateur:19\n"
 msgstr "Amateur:19\n"
 
-#. "L_MISC_188"
+#. L_MISC_188
 msgid "Rookie:18\n"
 msgstr "Recluta:18\n"
 
-#. "L_MISC_189"
+#. L_MISC_189
 msgid "Novice:17\n"
 msgstr "Novato:17\n"
 
-#. "L_MISC_190"
+#. L_MISC_190
 msgid "Trooper:16\n"
 msgstr "Soldado:16\n"
 
-#. "L_MISC_191"
+#. L_MISC_191
 msgid "Agent:15\n"
 msgstr "Agente:15\n"
 
-#. "L_MISC_192"
+#. L_MISC_192
 msgid "Star Agent:14\n"
 msgstr "Estrella:14\n"
 
-#. "L_MISC_193"
+#. L_MISC_193
 msgid "Special Agent:13\n"
 msgstr "Especial:13\n"
 
-#. "L_MISC_194"
+#. L_MISC_194
 msgid "Expert:12\n"
 msgstr "Experto:12\n"
 
-#. "L_MISC_195"
+#. L_MISC_195
 msgid "Veteran:11\n"
 msgstr "Veterano:11\n"
 
-#. "L_MISC_196"
+#. L_MISC_196
 msgid "Professional:10\n"
 msgstr "Pro:10\n"
 
-#. "L_MISC_197"
+#. L_MISC_197
 msgid "Dangerous:9\n"
 msgstr "Peligroso:9\n"
 
-#. "L_MISC_198"
+#. L_MISC_198
 msgid "Deadly:8\n"
 msgstr "Mortal:8\n"
 
-#. "L_MISC_199"
+#. L_MISC_199
 msgid "Killer:7\n"
 msgstr "Ejecutor:7\n"
 
-#. "L_MISC_200"
+#. L_MISC_200
 msgid "Assassin:6\n"
 msgstr "Asesino:6\n"
 
-#. "L_MISC_201"
+#. L_MISC_201
 msgid "Lethal:5\n"
 msgstr "Letal:5\n"
 
-#. "L_MISC_202"
+#. L_MISC_202
 msgid "Elite:4\n"
 msgstr "Élite:4\n"
 
-#. "L_MISC_203"
+#. L_MISC_203
 msgid "Invincible:3\n"
 msgstr "Invencible:3\n"
 
-#. "L_MISC_204"
+#. L_MISC_204
 msgid "Near Perfect:2\n"
 msgstr "Completo:2\n"
 
-#. "L_MISC_205"
+#. L_MISC_205
 msgid "Perfect:1\n"
 msgstr "Perfecto:1\n"
 
-#. "L_MISC_206"
+#. L_MISC_206
 msgid "DARTAMMO"
 msgstr "DARDOS"
 
-#. "L_MISC_207"
+#. L_MISC_207
 msgid "MODEL 1.4"
 msgstr "MODELO 1.4"
 
-#. "L_MISC_208"
+#. L_MISC_208
 msgid "JM: 201172"
 msgstr "JM: 201172"
 
-#. "L_MISC_209"
+#. L_MISC_209
 msgid "Save Case\n"
 msgstr "Salvar Caja\n"
 
-#. "L_MISC_210"
+#. L_MISC_210
 msgid "Def Hill\n"
 msgstr "Defender Colina\n"
 
-#. "L_MISC_211"
+#. L_MISC_211
 msgid "Hold Hill\n"
 msgstr "Mantener Colina\n"
 
-#. "L_MISC_212"
+#. L_MISC_212
 msgid "Get Case\n"
 msgstr "Coger Maletín\n"
 
-#. "L_MISC_213"
+#. L_MISC_213
 msgid "Pop Cap\n"
 msgstr "Llevarla\n"
 
-#. "L_MISC_214"
+#. L_MISC_214
 msgid "Protect\n"
 msgstr "Proteger\n"
 
-#. "L_MISC_215"
+#. L_MISC_215
 msgid "All Simulants\n"
 msgstr "Todo Simulante\n"
 
-#. "L_MISC_216"
+#. L_MISC_216
 msgid "MODEL 1.3"
 msgstr "MODELO 1.3"
 
-#. "L_MISC_217"
+#. L_MISC_217
 msgid "BNC: 15877"
 msgstr "BNC: 15877"
 
-#. "L_MISC_218"
+#. L_MISC_218
 msgid "Not enough room to launch "
 msgstr "Sin suficiente espacio para activar "
 
-#. "L_MISC_417"
+#. L_MISC_417
 msgid "GOAL TARGETS:"
 msgstr "ACIERTOS NEC.:"
 
-#. "L_MISC_418"
+#. L_MISC_418
 msgid "GOAL SCORE:"
 msgstr "PUNTUACIÓN NEC.:"
 
-#. "L_MISC_419"
+#. L_MISC_419
 msgid "MIN ACCURACY:"
 msgstr "PRECISIÓN MIN.:"
 
-#. "L_MISC_420"
+#. L_MISC_420
 msgid "FIRE TO START\n"
 msgstr "DISPARA PARA EMPEZAR\n"
 
-#. "L_MISC_421"
+#. L_MISC_421
 msgid "GET READY!\n"
 msgstr "¡PREPARADO!\n"
 
-#. "L_MISC_422"
+#. L_MISC_422
 msgid "LIMIT:"
 msgstr "LÍMITE:"
 
-#. "L_MISC_423"
+#. L_MISC_423
 msgid "ZONE 3\n"
 msgstr "ZONA 3\n"
 
-#. "L_MISC_424"
+#. L_MISC_424
 msgid "ZONE 2\n"
 msgstr "ZONA 2\n"
 
-#. "L_MISC_425"
+#. L_MISC_425
 msgid "ZONE 1\n"
 msgstr "ZONA 1\n"
 
-#. "L_MISC_426"
+#. L_MISC_426
 msgid "BULL'S-EYE\n"
 msgstr "DIANA\n"
 
-#. "L_MISC_427"
+#. L_MISC_427
 msgid "EXPLODED\n"
 msgstr "EXPLOTADOS\n"
 
-#. "L_MISC_428"
+#. L_MISC_428
 msgid "Elvis is dead.\n"
 msgstr "Elvis ha muerto.\n"
 
-#. "L_MISC_429"
+#. L_MISC_429
 msgid "Style 1"
 msgstr "Estilo 1"
 
-#. "L_MISC_430"
+#. L_MISC_430
 msgid "Style 2"
 msgstr "Estilo 2"
 
-#. "L_MISC_431"
+#. L_MISC_431
 msgid "Style 3"
 msgstr "Estilo 3"
 
-#. "L_MISC_432"
+#. L_MISC_432
 msgid "Style 4"
 msgstr "Estilo 4"
 
-#. "L_MISC_433"
+#. L_MISC_433
 msgid "Blonde"
 msgstr "Rubio"
 
-#. "L_MISC_434"
+#. L_MISC_434
 msgid "Black"
 msgstr "Moreno"
 
-#. "L_MISC_435"
+#. L_MISC_435
 msgid "Auburn"
 msgstr "Castaño"
 
-#. "L_MISC_436"
+#. L_MISC_436
 msgid "Blue Rinse"
 msgstr "Azulado"
 
-#. "L_MISC_437"
+#. L_MISC_437
 msgid "Player"
 msgstr "Jugador"
 
-#. "L_MISC_439"
+#. L_MISC_438
+msgid ""
+msgstr ""
+
+#. L_MISC_439
 msgid "Identify\n"
 msgstr "Identificado\n"
 
-#. "L_MISC_440"
+#. L_MISC_440
 msgid "unused"
 msgstr "unused"
 
-#. "L_MISC_441"
+#. L_MISC_441
 msgid "Challenges\n"
 msgstr "Desafíos\n"
 
-#. "L_MISC_442"
+#. L_MISC_442
 msgid "Load/Preset Games\n"
 msgstr "Cargar Juegos\n"
 
-#. "L_MISC_443"
+#. L_MISC_443
 msgid "Quick Start\n"
 msgstr "Comienzo Rápido\n"
 
-#. "L_MISC_444"
+#. L_MISC_444
 msgid "Advanced Setup\n"
 msgstr "Conf. Avanzada\n"
 
-#. "L_MISC_445"
+#. L_MISC_445
 msgid "Combat Simulator\n"
 msgstr "Simulador de Combate\n"
 
-#. "L_MISC_446"
+#. L_MISC_446
 msgid "Carrington Institute\n"
 msgstr "Instituto Carrington\n"
 
-#. "L_MISC_447"
+#. L_MISC_447
 msgid "Team Score\n"
 msgstr "P. Equipo\n"
 
-#. "L_MISC_448"
+#. L_MISC_448
 msgid "Finished Setup\n"
 msgstr "Conf. Finalizada\n"
 
-#. "L_MISC_449"
+#. L_MISC_449
 msgid "Player 1 Team\n"
 msgstr "Equipo Jugador 1\n"
 
-#. "L_MISC_450"
+#. L_MISC_450
 msgid "Player 2 Team\n"
 msgstr "Equipo Jugador 2\n"
 
-#. "L_MISC_451"
+#. L_MISC_451
 msgid "Player 3 Team\n"
 msgstr "Equipo Jugador 3\n"
 
-#. "L_MISC_452"
+#. L_MISC_452
 msgid "Player 4 Team\n"
 msgstr "Equipo Jugador 4\n"
 
-#. "L_MISC_453"
+#. L_MISC_453
 msgid "Number Of Simulants\n"
 msgstr "Número de Simulantes\n"
 
-#. "L_MISC_454"
+#. L_MISC_454
 msgid "Simulants Per Team\n"
 msgstr "Simulantes por Equipo\n"
 
-#. "L_MISC_455"
+#. L_MISC_455
 msgid "Simulant Difficulty\n"
 msgstr "Nivel de Simulantes\n"
 
-#. "L_MISC_456"
+#. L_MISC_456
 msgid "Start Game\n"
 msgstr "Empezar Juego\n"
 
-#. "L_MISC_457"
+#. L_MISC_457
 msgid "Drop Out\n"
 msgstr "Abandonar\n"
 
-#. "L_MISC_458"
+#. L_MISC_458
 msgid "Player Settings\n"
 msgstr "Opciones de Jugador\n"
 
-#. "L_MISC_459"
+#. L_MISC_459
 msgid "Game Settings\n"
 msgstr "Opciones de Juego\n"
 
-#. "L_MISC_460"
+#. L_MISC_460
 msgid "Quick Go\n"
 msgstr "Salida Rápida\n"
 
-#. "L_MISC_461"
+#. L_MISC_461
 msgid "Ready!\n"
 msgstr "¡Preparado!\n"
 
-#. "L_MISC_462"
+#. L_MISC_462
 msgid "Quick Team\n"
 msgstr "Equipo Rápido\n"
 
-#. "L_MISC_463"
+#. L_MISC_463
 msgid "Players Only\n"
 msgstr "Sólo Jugadores\n"
 
-#. "L_MISC_464"
+#. L_MISC_464
 msgid "Players and Simulants\n"
 msgstr "Jugadores y Simulantes\n"
 
-#. "L_MISC_465"
+#. L_MISC_465
 msgid "Player Teams\n"
 msgstr "Equipos de Jugadores\n"
 
-#. "L_MISC_466"
+#. L_MISC_466
 msgid "Players vs. Simulants\n"
 msgstr "Jugadores contra Simulantes\n"
 
-#. "L_MISC_467"
+#. L_MISC_467
 msgid "Player-Simulant Teams\n"
 msgstr "Equipos de Jugador-Simulante\n"
 
-#. "L_MISC_468"
+#. L_MISC_468
 msgid "DRUGSPY"
 msgstr "DRUGSPY"
 
-#. "L_MISC_469"
+#. L_MISC_469
 msgid "BOMBSPY"
 msgstr "BOMBSPY"
 
-#. "L_MISC_470"
+#. L_MISC_470
 msgid "Replay Previous Mission\n"
 msgstr "Repetir Misión Previa\n"
 
-#. "L_MISC_471"
+#. L_MISC_471
 msgid "Holograph\n"
 msgstr "Holografía\n"
 
-#. "L_MISC_472"
+#. L_MISC_472
 msgid "Aggressive\n"
 msgstr "Agresivos\n"
 
-#. "L_MISC_473"
+#. L_MISC_473
 msgid "Passive\n"
 msgstr "Pasivos\n"
 
-#. "L_MISC_474"
+#. L_MISC_474
 msgid "Perfect Buddies\n"
 msgstr "Camaradas\n"
 
-#. "L_MISC_475"
+#. L_MISC_475
 msgid "Stealth\n"
 msgstr "Sigilosos\n"

@@ -2,13 +2,13 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Perfect Dark PC port localization\n"
-"POT-Creation-Date: 2025-05-31 06:37:14.299892+00:00\n"
+"POT-Creation-Date: 2025-06-05 13:35:16.474166+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: originalAssets_to_l10n.py script\n"
 
-#. "L_STAT_000"
+#. L_STAT_000
 msgid ""
 "|Background - \n"
 "\n"
@@ -46,11 +46,11 @@ msgstr ""
 "\n"
 "ENDE\n"
 
-#. "L_STAT_001"
+#. L_STAT_001
 msgid "BATTLE SHRINE\n"
 msgstr "KRIEGSSCHREIN\n"
 
-#. "L_STAT_002"
+#. L_STAT_002
 msgid ""
 "|Background - \n"
 "\n"
@@ -80,7 +80,7 @@ msgstr ""
 "\n"
 "ENDE\n"
 
-#. "L_STAT_003"
+#. L_STAT_003
 msgid ""
 "|Background - \n"
 "\n"
@@ -102,22 +102,22 @@ msgstr ""
 "\n"
 "ENDE\n"
 
-#. "L_STAT_004"
+#. L_STAT_004
 msgid "Kill Skedar King.\n"
 msgstr "Vernichten Sie den Skedar-König!\n"
 
-#. "L_STAT_005"
+#. L_STAT_005
 msgid "Kill Skedar King 2.\n"
 msgstr "Vernichten Sie den Skedar-König 2!\n"
 
-#. "L_STAT_006"
+#. L_STAT_006
 msgid "Kill Skedar King 3.\n"
 msgstr "Vernichten Sie den Skedar-König 3!\n"
 
-#. "L_STAT_007"
+#. L_STAT_007
 msgid "Maian leader has been killed.\n"
 msgstr "Der Maianische Anführer wurde eliminiert.\n"
 
-#. "L_STAT_008"
+#. L_STAT_008
 msgid "Skedar King has been killed.\n"
 msgstr "Der Skedar-König wurde eliminiert.\n"

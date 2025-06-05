@@ -2,13 +2,13 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Perfect Dark PC port localization\n"
-"POT-Creation-Date: 2025-05-31 06:37:14.299892+00:00\n"
+"POT-Creation-Date: 2025-06-05 13:35:16.474166+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: originalAssets_to_l10n.py script\n"
 
-#. "L_DAM_000"
+#. L_DAM_000
 msgid ""
 "|Background - \n"
 "\n"
@@ -70,11 +70,11 @@ msgstr ""
 "\n"
 "END\n"
 
-#. "L_DAM_001"
+#. L_DAM_001
 msgid "Cetan Ship\n"
 msgstr "Cetan Ship\n"
 
-#. "L_DAM_002"
+#. L_DAM_002
 msgid ""
 "|Background - \n"
 "\n"
@@ -128,7 +128,7 @@ msgstr ""
 "\n"
 "END\n"
 
-#. "L_DAM_003"
+#. L_DAM_003
 msgid ""
 "|Background - \n"
 "\n"
@@ -174,31 +174,31 @@ msgstr ""
 "\n"
 "END\n"
 
-#. "L_DAM_004"
+#. L_DAM_004
 msgid "\n"
 msgstr "\n"
 
-#. "L_DAM_005"
+#. L_DAM_005
 msgid "Deactivate GPS and autopilot\n"
 msgstr "Deactivate GPS and autopilot\n"
 
-#. "L_DAM_006"
+#. L_DAM_006
 msgid "Disable primary power source\n"
 msgstr "Disable primary power source\n"
 
-#. "L_DAM_007"
+#. L_DAM_007
 msgid "Secure laboratories and research data\n"
 msgstr "Secure laboratories and research data\n"
 
-#. "L_DAM_008"
+#. L_DAM_008
 msgid "Activate Moon Pool lift\n"
 msgstr "Activate Moon Pool lift\n"
 
-#. "L_DAM_009"
+#. L_DAM_009
 msgid "Rendezvous and escape with Elvis\n"
 msgstr "Rendezvous and escape with Elvis\n"
 
-#. "L_DAM_010"
+#. L_DAM_010
 msgid ""
 "Cripple the engines and the ship will \n"
 "drift... Perfect!\n"
@@ -206,11 +206,11 @@ msgstr ""
 "Cripple the engines and the ship will \n"
 "drift... Perfect!\n"
 
-#. "L_DAM_011"
+#. L_DAM_011
 msgid "This must be where the sub's controlled from.\n"
 msgstr "This must be where the sub's controlled from.\n"
 
-#. "L_DAM_012"
+#. L_DAM_012
 msgid ""
 "Without the autopilot and the GPS, the ship \n"
 "will wander off station.\n"
@@ -218,7 +218,7 @@ msgstr ""
 "Without the autopilot and the GPS, the ship \n"
 "will wander off station.\n"
 
-#. "L_DAM_013"
+#. L_DAM_013
 msgid ""
 "They'll be unable to conduct any operations \n"
 "without any power.\n"
@@ -226,79 +226,79 @@ msgstr ""
 "They'll be unable to conduct any operations \n"
 "without any power.\n"
 
-#. "L_DAM_014"
+#. L_DAM_014
 msgid "Autopilot system has been deactivated.\n"
 msgstr "Autopilot system has been deactivated.\n"
 
-#. "L_DAM_015"
+#. L_DAM_015
 msgid "GPS system has been deactivated.\n"
 msgstr "GPS system has been deactivated.\n"
 
-#. "L_DAM_016"
+#. L_DAM_016
 msgid "Critical mission object has been destroyed.\n"
 msgstr "Critical mission object has been destroyed.\n"
 
-#. "L_DAM_017"
+#. L_DAM_017
 msgid "Reactor shutdown control hatch opened.\n"
 msgstr "Reactor shutdown control hatch opened.\n"
 
-#. "L_DAM_018"
+#. L_DAM_018
 msgid "Reactor has been shut down.\n"
 msgstr "Reactor has been shut down.\n"
 
-#. "L_DAM_019"
+#. L_DAM_019
 msgid "Diving control center has been located.\n"
 msgstr "Diving control center has been located.\n"
 
-#. "L_DAM_020"
+#. L_DAM_020
 msgid "Critical mission personnel killed.\n"
 msgstr "Critical mission personnel killed.\n"
 
-#. "L_DAM_021"
+#. L_DAM_021
 msgid "Research data has been secured.\n"
 msgstr "Research data has been secured.\n"
 
-#. "L_DAM_022"
+#. L_DAM_022
 msgid "\n"
 msgstr "\n"
 
-#. "L_DAM_023"
+#. L_DAM_023
 msgid "\n"
 msgstr "\n"
 
-#. "L_DAM_024"
+#. L_DAM_024
 msgid "Research data disk\n"
 msgstr "Research data disk\n"
 
-#. "L_DAM_025"
+#. L_DAM_025
 msgid "A research data disk\n"
 msgstr "A research data disk\n"
 
-#. "L_DAM_026"
+#. L_DAM_026
 msgid "Picked up a research data disk.\n"
 msgstr "Picked up a research data disk.\n"
 
-#. "L_DAM_027"
+#. L_DAM_027
 msgid "Critical mission personnel have been killed.\n"
 msgstr "Critical mission personnel have been killed.\n"
 
-#. "L_DAM_028"
+#. L_DAM_028
 msgid "Lift door has been unlocked.\n"
 msgstr "Lift door has been unlocked.\n"
 
-#. "L_DAM_029"
+#. L_DAM_029
 msgid "Lift has been activated.\n"
 msgstr "Lift has been activated.\n"
 
-#. "L_DAM_030"
+#. L_DAM_030
 msgid "Operation denied - hangar doors still closed.\n"
 msgstr "Operation denied - hangar doors still closed.\n"
 
-#. "L_DAM_031"
+#. L_DAM_031
 msgid "Unlocking sequence has been reset.\n"
 msgstr "Unlocking sequence has been reset.\n"
 
-#. "L_DAM_032"
+#. L_DAM_032
 msgid ""
 "You go on ahead, Jo. I'll secure the perimeter. \n"
 "We'll meet up later.\n"
@@ -306,11 +306,11 @@ msgstr ""
 "You go on ahead, Jo. I'll secure the perimeter. \n"
 "We'll meet up later.\n"
 
-#. "L_DAM_033"
+#. L_DAM_033
 msgid "Elvis has been killed.\n"
 msgstr "Elvis has been killed.\n"
 
-#. "L_DAM_034"
+#. L_DAM_034
 msgid ""
 "Joanna... What took you so long? Follow me - \n"
 "let's get out of this old tub.\n"
@@ -318,23 +318,23 @@ msgstr ""
 "Joanna... What took you so long? Follow me - \n"
 "let's get out of this old tub.\n"
 
-#. "L_DAM_035"
+#. L_DAM_035
 msgid "Civilians have been killed.\n"
 msgstr "Civilians have been killed.\n"
 
-#. "L_DAM_036"
+#. L_DAM_036
 msgid "Critical mission object has been destroyed.\n"
 msgstr "Critical mission object has been destroyed.\n"
 
-#. "L_DAM_037"
+#. L_DAM_037
 msgid "Alarm has been activated.\n"
 msgstr "Alarm has been activated.\n"
 
-#. "L_DAM_038"
+#. L_DAM_038
 msgid "Alarm has been deactivated.\n"
 msgstr "Alarm has been deactivated.\n"
 
-#. "L_DAM_039"
+#. L_DAM_039
 msgid ""
 "Right. The diving operation has been disrupted on the surface. \n"
 "Time for a swim.\n"
@@ -342,34 +342,34 @@ msgstr ""
 "Right. The diving operation has been disrupted on the surface. \n"
 "Time for a swim.\n"
 
-#. "L_DAM_040"
+#. L_DAM_040
 msgid "I hope the government don't want to use this ship anytime soon.\n"
 msgstr "I hope the government don't want to use this ship anytime soon.\n"
 
-#. "L_DAM_041"
+#. L_DAM_041
 msgid "Do you think we were a little heavy-handed?\n"
 msgstr "Do you think we were a little heavy-handed?\n"
 
-#. "L_DAM_042"
+#. L_DAM_042
 msgid "Naaahhhh.\n"
 msgstr "Naaahhhh.\n"
 
-#. "L_DAM_043"
+#. L_DAM_043
 msgid "Pull the plug on that now.\n"
 msgstr "Pull the plug on that now.\n"
 
-#. "L_DAM_044"
+#. L_DAM_044
 msgid "Switch this thing off.\n"
 msgstr "Switch this thing off.\n"
 
-#. "L_DAM_045"
+#. L_DAM_045
 msgid "I'll shut it down.\n"
 msgstr "I'll shut it down.\n"
 
-#. "L_DAM_046"
+#. L_DAM_046
 msgid "Please don't hurt me.\n"
 msgstr "Please don't hurt me.\n"
 
-#. "L_DAM_047"
+#. L_DAM_047
 msgid "Die, you traitors.\n"
 msgstr "Die, you traitors.\n"

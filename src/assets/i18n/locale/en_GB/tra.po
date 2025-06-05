@@ -2,13 +2,13 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Perfect Dark PC port localization\n"
-"POT-Creation-Date: 2025-05-31 06:37:14.299892+00:00\n"
+"POT-Creation-Date: 2025-06-05 13:35:16.474166+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: originalAssets_to_l10n.py script\n"
 
-#. "L_TRA_000"
+#. L_TRA_000
 msgid ""
 "|Background - \n"
 "\n"
@@ -70,11 +70,11 @@ msgstr ""
 "\n"
 "END\n"
 
-#. "L_TRA_001"
+#. L_TRA_001
 msgid "AREA 51 - ESCAPE\n"
 msgstr "AREA 51 - ESCAPE\n"
 
-#. "L_TRA_002"
+#. L_TRA_002
 msgid ""
 "|Background - \n"
 "\n"
@@ -128,7 +128,7 @@ msgstr ""
 "\n"
 "END\n"
 
-#. "L_TRA_003"
+#. L_TRA_003
 msgid ""
 "|Background - \n"
 "\n"
@@ -174,55 +174,55 @@ msgstr ""
 "\n"
 "END\n"
 
-#. "L_TRA_004"
+#. L_TRA_004
 msgid "\n"
 msgstr "\n"
 
-#. "L_TRA_005"
+#. L_TRA_005
 msgid "\n"
 msgstr "\n"
 
-#. "L_TRA_006"
+#. L_TRA_006
 msgid "\n"
 msgstr "\n"
 
-#. "L_TRA_007"
+#. L_TRA_007
 msgid "\n"
 msgstr "\n"
 
-#. "L_TRA_008"
+#. L_TRA_008
 msgid "\n"
 msgstr "\n"
 
-#. "L_TRA_009"
+#. L_TRA_009
 msgid "Locate alien tech medpack\n"
 msgstr "Locate alien tech medpack\n"
 
-#. "L_TRA_010"
+#. L_TRA_010
 msgid "Rendezvous with CI spy\n"
 msgstr "Rendezvous with CI spy\n"
 
-#. "L_TRA_011"
+#. L_TRA_011
 msgid "Revive Maian Bodyguard\n"
 msgstr "Revive Maian Bodyguard\n"
 
-#. "L_TRA_012"
+#. L_TRA_012
 msgid "Locate secret hangar\n"
 msgstr "Locate secret hangar\n"
 
-#. "L_TRA_013"
+#. L_TRA_013
 msgid "Escape from Area 51\n"
 msgstr "Escape from Area 51\n"
 
-#. "L_TRA_014"
+#. L_TRA_014
 msgid "Joanna - this is Jonathan. You're in grave danger.\n"
 msgstr "Joanna - this is Jonathan. You're in grave danger.\n"
 
-#. "L_TRA_015"
+#. L_TRA_015
 msgid "They've flooded the area with nerve gas.\n"
 msgstr "They've flooded the area with nerve gas.\n"
 
-#. "L_TRA_016"
+#. L_TRA_016
 msgid ""
 "Get our friend to the containment lab. \n"
 "There's a hiding place there.\n"
@@ -230,11 +230,11 @@ msgstr ""
 "Get our friend to the containment lab. \n"
 "There's a hiding place there.\n"
 
-#. "L_TRA_017"
+#. L_TRA_017
 msgid "I'll contact you when you get there - good luck!\n"
 msgstr "I'll contact you when you get there - good luck!\n"
 
-#. "L_TRA_018"
+#. L_TRA_018
 msgid ""
 "Good work, Jo. We need to meet up. They're \n"
 "getting suspicious of me.\n"
@@ -242,7 +242,7 @@ msgstr ""
 "Good work, Jo. We need to meet up. They're \n"
 "getting suspicious of me.\n"
 
-#. "L_TRA_019"
+#. L_TRA_019
 msgid ""
 "Use the maintenance hatch I've opened \n"
 "in one of the containment labs. Hurry.\n"
@@ -250,103 +250,107 @@ msgstr ""
 "Use the maintenance hatch I've opened \n"
 "in one of the containment labs. Hurry.\n"
 
-#. "L_TRA_020"
+#. L_TRA_020
 msgid "Obtain alien medpack.\n"
 msgstr "Obtain alien medpack.\n"
 
-#. "L_TRA_021"
+#. L_TRA_021
 msgid "Cassandra De Vries'\n"
 msgstr "Cassandra De Vries'\n"
 
-#. "L_TRA_022"
+#. L_TRA_022
 msgid "Alien medpack\n"
 msgstr "Alien medpack\n"
 
-#. "L_TRA_024"
+#. L_TRA_023
+msgid ""
+msgstr ""
+
+#. L_TRA_024
 msgid "Picked up an alien medpack.\n"
 msgstr "Picked up an alien medpack.\n"
 
-#. "L_TRA_025"
+#. L_TRA_025
 msgid "Joanna - over here.\n"
 msgstr "Joanna - over here.\n"
 
-#. "L_TRA_026"
+#. L_TRA_026
 msgid "We need to get back to our friend.\n"
 msgstr "We need to get back to our friend.\n"
 
-#. "L_TRA_027"
+#. L_TRA_027
 msgid "Right, we're near. Cover me, Jo...\n"
 msgstr "Right, we're near. Cover me, Jo...\n"
 
-#. "L_TRA_028"
+#. L_TRA_028
 msgid "Okay - stand back.\n"
 msgstr "Okay - stand back.\n"
 
-#. "L_TRA_029"
+#. L_TRA_029
 msgid "Jonathan has been killed.\n"
 msgstr "Jonathan has been killed.\n"
 
-#. "L_TRA_030"
+#. L_TRA_030
 msgid "Elvis has been killed.\n"
 msgstr "Elvis has been killed.\n"
 
-#. "L_TRA_031"
+#. L_TRA_031
 msgid "The secret hangar has been located.\n"
 msgstr "The secret hangar has been located.\n"
 
-#. "L_TRA_032"
+#. L_TRA_032
 msgid "Okay, Jo - let's go.\n"
 msgstr "Okay, Jo - let's go.\n"
 
-#. "L_TRA_033"
+#. L_TRA_033
 msgid "Alien medpack activated.\n"
 msgstr "Alien medpack activated.\n"
 
-#. "L_TRA_034"
+#. L_TRA_034
 msgid "Alien medpack operation aborted.\n"
 msgstr "Alien medpack operation aborted.\n"
 
-#. "L_TRA_035"
+#. L_TRA_035
 msgid "Alien medpack has been administered.\n"
 msgstr "Alien medpack has been administered.\n"
 
-#. "L_TRA_036"
+#. L_TRA_036
 msgid "Mission critical object destroyed.\n"
 msgstr "Mission critical object destroyed.\n"
 
-#. "L_TRA_037"
+#. L_TRA_037
 msgid "Outer hangar door is opening.\n"
 msgstr "Outer hangar door is opening.\n"
 
-#. "L_TRA_038"
+#. L_TRA_038
 msgid "Outer hangar door is closing.\n"
 msgstr "Outer hangar door is closing.\n"
 
-#. "L_TRA_039"
+#. L_TRA_039
 msgid "Inner hangar door is opening.\n"
 msgstr "Inner hangar door is opening.\n"
 
-#. "L_TRA_040"
+#. L_TRA_040
 msgid "Inner hangar door is closing.\n"
 msgstr "Inner hangar door is closing.\n"
 
-#. "L_TRA_041"
+#. L_TRA_041
 msgid "It's the only way out of here.\n"
 msgstr "It's the only way out of here.\n"
 
-#. "L_TRA_042"
+#. L_TRA_042
 msgid "You're the only one who can fly it, Elvis, so get in.\n"
 msgstr "You're the only one who can fly it, Elvis, so get in.\n"
 
-#. "L_TRA_043"
+#. L_TRA_043
 msgid "But we can't leave you behind.\n"
 msgstr "But we can't leave you behind.\n"
 
-#. "L_TRA_044"
+#. L_TRA_044
 msgid "There must be a way out of here.\n"
 msgstr "There must be a way out of here.\n"
 
-#. "L_TRA_045"
+#. L_TRA_045
 msgid ""
 "One of us will have to stay behind and open the \n"
 "hangar doors.\n"
@@ -354,7 +358,7 @@ msgstr ""
 "One of us will have to stay behind and open the \n"
 "hangar doors.\n"
 
-#. "L_TRA_046"
+#. L_TRA_046
 msgid ""
 "I'll get out on that hoverbike. Cover me while I \n"
 "open the doors.\n"
@@ -362,43 +366,43 @@ msgstr ""
 "I'll get out on that hoverbike. Cover me while I \n"
 "open the doors.\n"
 
-#. "L_TRA_047"
+#. L_TRA_047
 msgid "Jonathan, go with Elvis. I'll see to the consoles.\n"
 msgstr "Jonathan, go with Elvis. I'll see to the consoles.\n"
 
-#. "L_TRA_048"
+#. L_TRA_048
 msgid "It's dangerous, Jo...\n"
 msgstr "It's dangerous, Jo...\n"
 
-#. "L_TRA_049"
+#. L_TRA_049
 msgid "I can handle it... Trust me.\n"
 msgstr "I can handle it... Trust me.\n"
 
-#. "L_TRA_050"
+#. L_TRA_050
 msgid "...Okay.\n"
 msgstr "...Okay.\n"
 
-#. "L_TRA_051"
+#. L_TRA_051
 msgid "Damn it, Joanna... cover me!\n"
 msgstr "Damn it, Joanna... cover me!\n"
 
-#. "L_TRA_052"
+#. L_TRA_052
 msgid "I'll cover the stairs - you take the ramp.\n"
 msgstr "I'll cover the stairs - you take the ramp.\n"
 
-#. "L_TRA_053"
+#. L_TRA_053
 msgid "The hangar doors are now open.\n"
 msgstr "The hangar doors are now open.\n"
 
-#. "L_TRA_054"
+#. L_TRA_054
 msgid "Medical containment doors unlocked.\n"
 msgstr "Medical containment doors unlocked.\n"
 
-#. "L_TRA_055"
+#. L_TRA_055
 msgid "The medpack's got to be somewhere around here.\n"
 msgstr "The medpack's got to be somewhere around here.\n"
 
-#. "L_TRA_056"
+#. L_TRA_056
 msgid ""
 "Time to hook up with Jonathan, before he gets \n"
 "into any more trouble.\n"
@@ -406,7 +410,7 @@ msgstr ""
 "Time to hook up with Jonathan, before he gets \n"
 "into any more trouble.\n"
 
-#. "L_TRA_057"
+#. L_TRA_057
 msgid ""
 "That smell... oil... I smelt that in the other \n"
 "hangars.\n"
@@ -414,7 +418,7 @@ msgstr ""
 "That smell... oil... I smelt that in the other \n"
 "hangars.\n"
 
-#. "L_TRA_058"
+#. L_TRA_058
 msgid ""
 "The jetbike should get me out before they lock \n"
 "the base down.\n"
@@ -422,19 +426,19 @@ msgstr ""
 "The jetbike should get me out before they lock \n"
 "the base down.\n"
 
-#. "L_TRA_059"
+#. L_TRA_059
 msgid "Oh, no! We have a problem. It's a single seater!\n"
 msgstr "Oh, no! We have a problem. It's a single seater!\n"
 
-#. "L_TRA_060"
+#. L_TRA_060
 msgid "Two can get in but no more.\n"
 msgstr "Two can get in but no more.\n"
 
-#. "L_TRA_061"
+#. L_TRA_061
 msgid "Plus, it's got no style, you know what I'm saying?\n"
 msgstr "Plus, it's got no style, you know what I'm saying?\n"
 
-#. "L_TRA_062"
+#. L_TRA_062
 msgid ""
 "I'm not having this. That specimen is government property and should not "
 "leave the base.\n"
@@ -442,7 +446,7 @@ msgstr ""
 "I'm not having this. That specimen is government property and should not "
 "leave the base.\n"
 
-#. "L_TRA_063"
+#. L_TRA_063
 msgid ""
 "Let's see how that overconfident thief deals with our gas defense system. "
 "She'll think twice before messing with me again!\n"
@@ -450,31 +454,31 @@ msgstr ""
 "Let's see how that overconfident thief deals with our gas defense system. "
 "She'll think twice before messing with me again!\n"
 
-#. "L_TRA_064"
+#. L_TRA_064
 msgid "What's that noise? Can't be... Gas!\n"
 msgstr "What's that noise? Can't be... Gas!\n"
 
-#. "L_TRA_065"
+#. L_TRA_065
 msgid "Noooo, that wasn't meant to happen!\n"
 msgstr "Noooo, that wasn't meant to happen!\n"
 
-#. "L_TRA_066"
+#. L_TRA_066
 msgid "Please stop! I'm not supposed to die. She... Arggghhh!\n"
 msgstr "Please stop! I'm not supposed to die. She... Arggghhh!\n"
 
-#. "L_TRA_067"
+#. L_TRA_067
 msgid "You idiot! We'd better get out of here.\n"
 msgstr "You idiot! We'd better get out of here.\n"
 
-#. "L_TRA_068"
+#. L_TRA_068
 msgid "Gasps, chokes, and wheezes.\n"
 msgstr "Gasps, chokes, and wheezes.\n"
 
-#. "L_TRA_069"
+#. L_TRA_069
 msgid "***aahh...! aahaa...! aaaaahhh!  aha.  ahh.***\n"
 msgstr "***aahh...! aahaa...! aaaaahhh!  aha.  ahh.***\n"
 
-#. "L_TRA_070"
+#. L_TRA_070
 msgid ""
 "I'm alive. I thought I'd be chopped up like the others by now. You're from "
 "the Institute, aren't you? I recognize you from before. You helped me. Thank"
@@ -484,49 +488,49 @@ msgstr ""
 "the Institute, aren't you? I recognize you from before. You helped me. Thank"
 " you.\n"
 
-#. "L_TRA_071"
+#. L_TRA_071
 msgid "You... You speak our language?\n"
 msgstr "You... You speak our language?\n"
 
-#. "L_TRA_072"
+#. L_TRA_072
 msgid "Watch her... she's sharp.\n"
 msgstr "Watch her... she's sharp.\n"
 
-#. "L_TRA_073"
+#. L_TRA_073
 msgid "Earrggghh...eerggh...\n"
 msgstr "Earrggghh...eerggh...\n"
 
-#. "L_TRA_074"
+#. L_TRA_074
 msgid "What's wrong?\n"
 msgstr "What's wrong?\n"
 
-#. "L_TRA_075"
+#. L_TRA_075
 msgid "I have a headache. And with a head this big, that's no joke.\n"
 msgstr "I have a headache. And with a head this big, that's no joke.\n"
 
-#. "L_TRA_076"
+#. L_TRA_076
 msgid ""
 "Can you walk? We must leave before they get organized and hunt us down.\n"
 msgstr ""
 "Can you walk? We must leave before they get organized and hunt us down.\n"
 
-#. "L_TRA_077"
+#. L_TRA_077
 msgid "I think so. What's your name?\n"
 msgstr "I think so. What's your name?\n"
 
-#. "L_TRA_078"
+#. L_TRA_078
 msgid "I'm Agent Dark. Or Joanna, if you prefer.\n"
 msgstr "I'm Agent Dark. Or Joanna, if you prefer.\n"
 
-#. "L_TRA_079"
+#. L_TRA_079
 msgid "Well, Joanna, I'm Protector One. But you can call me... Elvis!\n"
 msgstr "Well, Joanna, I'm Protector One. But you can call me... Elvis!\n"
 
-#. "L_TRA_080"
+#. L_TRA_080
 msgid "Console is not active.\n"
 msgstr "Console is not active.\n"
 
-#. "L_TRA_081"
+#. L_TRA_081
 msgid ""
 "What the hell do you think you're doing? \n"
 "This is supposed to be a sealed room! \n"
@@ -538,7 +542,7 @@ msgstr ""
 "Don't you know anything about autopsy \n"
 "procedures?\n"
 
-#. "L_TRA_082"
+#. L_TRA_082
 msgid ""
 "Director Easton will hear about this, \n"
 "young lady.\n"
@@ -546,7 +550,7 @@ msgstr ""
 "Director Easton will hear about this, \n"
 "young lady.\n"
 
-#. "L_TRA_083"
+#. L_TRA_083
 msgid ""
 "You can't take that! It's government property! \n"
 "This is intolerable! It's... it's... \n"
@@ -556,6 +560,6 @@ msgstr ""
 "This is intolerable! It's... it's... \n"
 "unprofessional!!\n"
 
-#. "L_TRA_084"
+#. L_TRA_084
 msgid "I don't care much for procedures!\n"
 msgstr "I don't care much for procedures!\n"

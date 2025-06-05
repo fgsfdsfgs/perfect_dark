@@ -2,13 +2,13 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Perfect Dark PC port localization\n"
-"POT-Creation-Date: 2025-05-31 06:37:14.299892+00:00\n"
+"POT-Creation-Date: 2025-06-05 13:35:16.474166+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: originalAssets_to_l10n.py script\n"
 
-#. "L_AZT_000"
+#. L_AZT_000
 msgid ""
 "|Background - \n"
 "\n"
@@ -70,11 +70,11 @@ msgstr ""
 "\n"
 "FIN\n"
 
-#. "L_AZT_001"
+#. L_AZT_001
 msgid "CRASH SITE\n"
 msgstr "LUGAR DEL IMPACTO\n"
 
-#. "L_AZT_002"
+#. L_AZT_002
 msgid ""
 "|Background - \n"
 "\n"
@@ -128,7 +128,7 @@ msgstr ""
 "\n"
 "FIN\n"
 
-#. "L_AZT_003"
+#. L_AZT_003
 msgid ""
 "|Background - \n"
 "\n"
@@ -174,148 +174,148 @@ msgstr ""
 "\n"
 "FIN\n"
 
-#. "L_AZT_004"
+#. L_AZT_004
 msgid "\n"
 msgstr "\n"
 
-#. "L_AZT_005"
+#. L_AZT_005
 msgid "Retrieve Presidential medical scanner\n"
 msgstr "Recuperar escáner médico del Presidente\n"
 
-#. "L_AZT_006"
+#. L_AZT_006
 msgid "Activate distress beacon\n"
 msgstr "Activar la señal de socorro\n"
 
-#. "L_AZT_007"
+#. L_AZT_007
 msgid "Shut down enemy jamming device\n"
 msgstr "Apagar la señal de bloqueo enemiga\n"
 
-#. "L_AZT_008"
+#. L_AZT_008
 msgid "Retire Presidential clone\n"
 msgstr "Eliminar al clon del Presidente\n"
 
-#. "L_AZT_009"
+#. L_AZT_009
 msgid "Locate and rescue President\n"
 msgstr "Localizar y rescatar al Presidente\n"
 
-#. "L_AZT_010"
+#. L_AZT_010
 msgid "There's the escape pod.\n"
 msgstr "Ahí está la cápsula de escape.\n"
 
-#. "L_AZT_011"
+#. L_AZT_011
 msgid "Maybe there's a beacon in there.\n"
 msgstr "Quizá haya un emisor dentro.\n"
 
-#. "L_AZT_012"
+#. L_AZT_012
 msgid "The jamming... It's coming from that ship.\n"
 msgstr "El bloqueo... Proviene de esa nave.\n"
 
-#. "L_AZT_013"
+#. L_AZT_013
 msgid "Elvis... He'll be able to protect the President.\n"
 msgstr "Elvis... Él será capaz de proteger al Presidente.\n"
 
-#. "L_AZT_014"
+#. L_AZT_014
 msgid "Distress beacon has been activated.\n"
 msgstr "Señal de socorro activada.\n"
 
-#. "L_AZT_015"
+#. L_AZT_015
 msgid "Critical mission object has been destroyed.\n"
 msgstr "Objeto crítico de la misión destruido.\n"
 
-#. "L_AZT_016"
+#. L_AZT_016
 msgid "Obtain Presidential Scanner.\n"
 msgstr "Obtén el Escáner del Presidente.\n"
 
-#. "L_AZT_017"
+#. L_AZT_017
 msgid "\n"
 msgstr "\n"
 
-#. "L_AZT_018"
+#. L_AZT_018
 msgid "\n"
 msgstr "\n"
 
-#. "L_AZT_019"
+#. L_AZT_019
 msgid "A Presidential Scanner\n"
 msgstr "Un Escáner Presidencial\n"
 
-#. "L_AZT_020"
+#. L_AZT_020
 msgid "Picked up a Presidential Scanner.\n"
 msgstr "Escáner Presidencial obtenido.\n"
 
-#. "L_AZT_021"
+#. L_AZT_021
 msgid "Jamming device has been shut down.\n"
 msgstr "Dispositivo de bloqueo apagado.\n"
 
-#. "L_AZT_022"
+#. L_AZT_022
 msgid "President has been killed.\n"
 msgstr "El Presidente ha muerto.\n"
 
-#. "L_AZT_023"
+#. L_AZT_023
 msgid "Presidential clone has been eliminated.\n"
 msgstr "El clon del Presidente ha sido eliminado.\n"
 
-#. "L_AZT_024"
+#. L_AZT_024
 msgid "You'll never save him now!\n"
 msgstr "¡Ahora ya no podrás salvarle!\n"
 
-#. "L_AZT_025"
+#. L_AZT_025
 msgid "President has been rescued.\n"
 msgstr "El Presidente ha sido rescatado.\n"
 
-#. "L_AZT_026"
+#. L_AZT_026
 msgid "Obtain Night Vision.\n"
 msgstr "Obtén Visión Nocturna.\n"
 
-#. "L_AZT_027"
+#. L_AZT_027
 msgid "Cassandra De Vries'\n"
 msgstr "Cassandra De Vries:\n"
 
-#. "L_AZT_028"
+#. L_AZT_028
 msgid "Night Vision\n"
 msgstr "V. Nocturna\n"
 
-#. "L_AZT_029"
+#. L_AZT_029
 msgid "Night Vision\n"
 msgstr "Visión Nocturna\n"
 
-#. "L_AZT_030"
+#. L_AZT_030
 msgid "Picked up Night Vision.\n"
 msgstr "Visón Nocturna obtenida.\n"
 
-#. "L_AZT_031"
+#. L_AZT_031
 msgid "Take this; you should find it useful!\n"
 msgstr "Toma esto, ¡lo encontrarás muy útil!\n"
 
-#. "L_AZT_032"
+#. L_AZT_032
 msgid "Ahhh... uuhhhh...\n"
 msgstr "Ahhh... uuhhhh...\n"
 
-#. "L_AZT_033"
+#. L_AZT_033
 msgid "Ahhh... uhh... owww...\n"
 msgstr "Ahhh... uhh... owww...\n"
 
-#. "L_AZT_034"
+#. L_AZT_034
 msgid "Agent Dark! Please report!\n"
 msgstr "¡Agente Dark! ¡Informe, por favor!\n"
 
-#. "L_AZT_035"
+#. L_AZT_035
 msgid "Perfect Dark, come in!\n"
 msgstr "¡Perfect Dark, responda!\n"
 
-#. "L_AZT_036"
+#. L_AZT_036
 msgid "A-agent Dark reporting in...\n"
 msgstr "A-agente Dark informando...\n"
 
-#. "L_AZT_037"
+#. L_AZT_037
 msgid "Agent Dark! Please reply!\n"
 msgstr "¡Agente Dark! ¡Por favor, responda!\n"
 
-#. "L_AZT_038"
+#. L_AZT_038
 msgid ""
 "Something's jamming my transmissions... It's coming from that other craft.\n"
 msgstr "Algo está bloqueando mis transmisiones... Proviene de esa otra nave.\n"
 
-#. "L_AZT_039"
+#. L_AZT_039
 msgid ""
 "I'd better find the jamming device and check that Elvis is okay. Not "
 "forgetting the President, of course.\n"
@@ -323,11 +323,11 @@ msgstr ""
 "Mejor encontrar el dispositivo de bloqueo y comprobar si Elvis está bien. No"
 " olvidando al Presidente, por supuesto.\n"
 
-#. "L_AZT_040"
+#. L_AZT_040
 msgid "How are you feeling, Mr. President?\n"
 msgstr "¿Cómo se siente, Sr. Presidente?\n"
 
-#. "L_AZT_041"
+#. L_AZT_041
 msgid ""
 "Better now, young lady. Today, I think, will take a while for me to get "
 "over. I can't believe Easton would do such a thing. I knew he was ambitious,"
@@ -337,12 +337,12 @@ msgstr ""
 " puedo creer que Easton hiciera algo así. Sabía que era ambicioso, sí, pero "
 "esto...\n"
 
-#. "L_AZT_042"
+#. L_AZT_042
 msgid ""
 "Just one thing, sir? What is the Pelagic II that Trent wanted so badly?\n"
 msgstr "Sólo una cosa, señor. ¿Qué es el Pelagic II que tanto ansiaba Trent?\n"
 
-#. "L_AZT_043"
+#. L_AZT_043
 msgid ""
 "It's a U.S. government deep sea research vessel, one of a kind... The only "
 "ship that can conduct a full-scale diving operation at extreme depth. Trent "
@@ -353,12 +353,12 @@ msgstr ""
 "escala a profundidad extrema. Trent quería que se lo prestara a la "
 "Corporación dataDyne, pero rehusé.\n"
 
-#. "L_AZT_044"
+#. L_AZT_044
 msgid "Trent has a lot to answer for, but I don't think we'll find him now.\n"
 msgstr ""
 "Trent tiene bastante que contestar, pero no creo que le encontremos ahora.\n"
 
-#. "L_AZT_045"
+#. L_AZT_045
 msgid ""
 "You have failed, Easton. You are a flawed device, and we need you no "
 "longer.\n"
@@ -366,10 +366,10 @@ msgstr ""
 "Has fallado, Easton. Eres un dispositivo defectuoso, y ya no te "
 "necesitamos.\n"
 
-#. "L_AZT_046"
+#. L_AZT_046
 msgid "Just try it, you Scandinavian freak!\n"
 msgstr "¡Inténtalo, mamarracho escandinavo!\n"
 
-#. "L_AZT_047"
+#. L_AZT_047
 msgid "Noooooooo!!!\n"
 msgstr "¡¡¡Noooooooo!!!\n"

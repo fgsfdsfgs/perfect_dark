@@ -2,13 +2,13 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Perfect Dark PC port localization\n"
-"POT-Creation-Date: 2025-05-31 06:37:14.299892+00:00\n"
+"POT-Creation-Date: 2025-06-05 13:35:16.474166+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: originalAssets_to_l10n.py script\n"
 
-#. "L_ELD_000"
+#. L_ELD_000
 msgid ""
 "|Background - \n"
 "\n"
@@ -70,13 +70,13 @@ msgstr ""
 "\n"
 "END\n"
 
-#. "L_ELD_001"
+#. L_ELD_001
 msgid "CARRINGTON VILLA\n"
 msgstr ""
 "キャリントンの別荘\n"
 "\n"
 
-#. "L_ELD_002"
+#. L_ELD_002
 msgid ""
 "|Background - \n"
 "\n"
@@ -130,7 +130,7 @@ msgstr ""
 "\n"
 "END\n"
 
-#. "L_ELD_003"
+#. L_ELD_003
 msgid ""
 "|Background - \n"
 "\n"
@@ -176,79 +176,79 @@ msgstr ""
 "\n"
 "END\n"
 
-#. "L_ELD_004"
+#. L_ELD_004
 msgid "\n"
 msgstr "\n"
 
-#. "L_ELD_005"
+#. L_ELD_005
 msgid "Save the negotiator\n"
 msgstr "オトリになった味方を救え\n"
 
-#. "L_ELD_006"
+#. L_ELD_006
 msgid "Eliminate rooftop snipers\n"
 msgstr "スナイパーを全て倒せ\n"
 
-#. "L_ELD_007"
+#. L_ELD_007
 msgid "Activate wind generator\n"
 msgstr "風力発電システムを回復せよ\n"
 
-#. "L_ELD_008"
+#. L_ELD_008
 msgid "Locate and eliminate dataDyne hackers\n"
 msgstr "ハッキングを阻止せよ\n"
 
-#. "L_ELD_009"
+#. L_ELD_009
 msgid "Rescue Carrington\n"
 msgstr "キャリントンを救出せよ\n"
 
-#. "L_ELD_010"
+#. L_ELD_010
 msgid "Capture dataDyne guard\n"
 msgstr "敵兵を捕らえろ\n"
 
-#. "L_ELD_011"
+#. L_ELD_011
 msgid "Negotiator has been killed.\n"
 msgstr "オトリになっていた味方が倒された\n"
 
-#. "L_ELD_012"
+#. L_ELD_012
 msgid "Snipers have been eliminated.\n"
 msgstr "スナイパーを全て倒した\n"
 
-#. "L_ELD_013"
+#. L_ELD_013
 msgid "Negotiator has escaped to safety.\n"
 msgstr "オトリになっていた味方が無事に避難した\n"
 
-#. "L_ELD_014"
+#. L_ELD_014
 msgid "Cooling systems have been activated.\n"
 msgstr "冷却システムが起動\n"
 
-#. "L_ELD_015"
+#. L_ELD_015
 msgid "Cooling systems have been deactivated.\n"
 msgstr "冷却システムがシャットダウン\n"
 
-#. "L_ELD_016"
+#. L_ELD_016
 msgid "Power systems have been activated.\n"
 msgstr "発電システムが起動\n"
 
-#. "L_ELD_017"
+#. L_ELD_017
 msgid "Power systems have been deactivated.\n"
 msgstr "発電システムがシャットダウン\n"
 
-#. "L_ELD_018"
+#. L_ELD_018
 msgid "Windmill has been reactivated.\n"
 msgstr "風車が再び動き始めた\n"
 
-#. "L_ELD_019"
+#. L_ELD_019
 msgid "Windmill has been deactivated.\n"
 msgstr "風車が止められた\n"
 
-#. "L_ELD_020"
+#. L_ELD_020
 msgid "Electricity has been restored to the villa.\n"
 msgstr "別荘に電力が回復した\n"
 
-#. "L_ELD_021"
+#. L_ELD_021
 msgid "Critical mission object has been destroyed.\n"
 msgstr "任務遂行に不可欠な要素が破壊された\n"
 
-#. "L_ELD_022"
+#. L_ELD_022
 msgid ""
 "Joanna! It's Grimshaw. We've got hackers at \n"
 "the villa! You've got to stop them\n"
@@ -257,55 +257,55 @@ msgstr ""
 "ジョアンナ、ハッカーが侵入しているぞ！\n"
 "ヤツらがデータを入手する前に倒すんだ！\n"
 
-#. "L_ELD_023"
+#. L_ELD_023
 msgid "Hackers have uploaded vital data.\n"
 msgstr "ハッカーがハッキングを完了した\n"
 
-#. "L_ELD_024"
+#. L_ELD_024
 msgid "Hackers have been eliminated.\n"
 msgstr "ハッカーを倒した\n"
 
-#. "L_ELD_025"
+#. L_ELD_025
 msgid "Carrington has been rescued.\n"
 msgstr "キャリントンの救助完了\n"
 
-#. "L_ELD_026"
+#. L_ELD_026
 msgid "All objectives not completed - mission failed.\n"
 msgstr "任務失敗　全ての任務を完了することができません\n"
 
-#. "L_ELD_027"
+#. L_ELD_027
 msgid "PC gun\n"
 msgstr "ラップトップガン\n"
 
-#. "L_ELD_028"
+#. L_ELD_028
 msgid "Sniper rifle\n"
 msgstr "Ｓライフル\n"
 
-#. "L_ELD_029"
+#. L_ELD_029
 msgid "Enemy guard has been subdued.\n"
 msgstr "敵兵を捕らえた\n"
 
-#. "L_ELD_030"
+#. L_ELD_030
 msgid "Obtain door key.\n"
 msgstr "Obtain door key.\n"
 
-#. "L_ELD_031"
+#. L_ELD_031
 msgid "Guard's\n"
 msgstr "Guard's\n"
 
-#. "L_ELD_032"
+#. L_ELD_032
 msgid "Door Key\n"
 msgstr "ドアキー\n"
 
-#. "L_ELD_033"
+#. L_ELD_033
 msgid "Door Key\n"
 msgstr "ドアキー\n"
 
-#. "L_ELD_034"
+#. L_ELD_034
 msgid "Picked up a door key.\n"
 msgstr "ドアキーを手に入れた\n"
 
-#. "L_ELD_035"
+#. L_ELD_035
 msgid ""
 "If I get the wind generator back online, \n"
 "I'll get power to the lower basement.\n"
@@ -313,17 +313,17 @@ msgstr ""
 "風力発電システムを回復すれば、\n"
 "地下への電力が供給されるんだったわね。\n"
 
-#. "L_ELD_036"
+#. L_ELD_036
 msgid ""
 "I've got to be quick, or they'll kill \n"
 "the negotiator!\n"
 msgstr "急がなきゃ、味方が倒されてしまうわ\n"
 
-#. "L_ELD_037"
+#. L_ELD_037
 msgid "Here's where they must be holding Daniel.\n"
 msgstr "きっとここにボスは監禁されているのね。\n"
 
-#. "L_ELD_038"
+#. L_ELD_038
 msgid ""
 "Those hackers have to be stopped before \n"
 "I rescue Daniel.\n"
@@ -331,7 +331,7 @@ msgstr ""
 "キャリントンを助ける前に、ハッカーどもを\n"
 "片付けなくちゃ。\n"
 
-#. "L_ELD_039"
+#. L_ELD_039
 msgid ""
 "Agent Dark Mission Log, 1846 hours. Last \n"
 "night we got a call from Cassandra de Vries. \n"
@@ -347,7 +347,7 @@ msgstr ""
 "pヤツらは、ボスを人質に取り、\n"
 "ドクター・キャロルを要求した。\n"
 
-#. "L_ELD_040"
+#. L_ELD_040
 msgid ""
 "Unfortunately, we don't have it. Daniel and \n"
 "Dr. Caroll were at the villa to discuss \n"
@@ -361,7 +361,7 @@ msgstr ""
 "pボスが別荘のどこかに彼を隠し\n"
 "まだ、ヤツらに気づかれてないようだ。\n"
 
-#. "L_ELD_041"
+#. L_ELD_041
 msgid ""
 "Hopefully our phoney negotiator ploy will \n"
 "give me a chance to surprise the dataDyne \n"
@@ -373,11 +373,11 @@ msgstr ""
 "p今回、危険にさらされているのは\n"
 "私の命だけではない…\n"
 
-#. "L_ELD_042"
+#. L_ELD_042
 msgid "Sir? Are you injured?\n"
 msgstr "ボス、ケガはないですか？\n"
 
-#. "L_ELD_043"
+#. L_ELD_043
 msgid ""
 "No, Joanna, I'm okay, but those dataDyne \n"
 "thugs made me tell them where I'd hidden \n"
@@ -389,7 +389,7 @@ msgstr ""
 "pもう少しの間\n"
 "持ちこたえられれば…\n"
 
-#. "L_ELD_044"
+#. L_ELD_044
 msgid ""
 "It's not your fault, sir. I should have \n"
 "been quicker.\n"
@@ -397,7 +397,7 @@ msgstr ""
 "ボスのせいではないわ。\n"
 "もっと早く来るべきだった。\n"
 
-#. "L_ELD_045"
+#. L_ELD_045
 msgid ""
 "Don't blame yourself, Joanna. Dr. Caroll \n"
 "told me that he expected this to happen. \n"
@@ -420,7 +420,7 @@ msgstr ""
 "p突然で悪いが、直ちに\n"
 "そこへ向かってくれ。\n"
 
-#. "L_ELD_046"
+#. L_ELD_046
 msgid ""
 "That won't be a problem, sir. So, did \n"
 "Dr. Caroll have any useful information \n"
@@ -429,7 +429,7 @@ msgstr ""
 "了解、ボス。ドクター・キャロルは\n"
 "何か役立つ情報を持っていたの？\n"
 
-#. "L_ELD_047"
+#. L_ELD_047
 msgid ""
 "Oh, yes, indeed. He certainly did, and \n"
 "I'll brief you when you're en route to \n"
@@ -447,10 +447,10 @@ msgstr ""
 "pさてと、ヤツらと対決するために\n"
 "そろそろ「フレンド」の助けが必要か…。\n"
 
-#. "L_ELD_048"
+#. L_ELD_048
 msgid "Operation denied - windmill is active.\n"
 msgstr "作業拒否　風車が動いています\n"
 
-#. "L_ELD_049"
+#. L_ELD_049
 msgid "Mission unsuccessful - enemy guard not captured.\n"
 msgstr "任務失敗　敵兵が捕らえられませんでした\n"

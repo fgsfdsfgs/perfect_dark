@@ -2,13 +2,13 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Perfect Dark PC port localization\n"
-"POT-Creation-Date: 2025-05-31 06:37:14.299892+00:00\n"
+"POT-Creation-Date: 2025-06-05 13:35:16.474166+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: originalAssets_to_l10n.py script\n"
 
-#. "L_WAX_000"
+#. L_WAX_000
 msgid ""
 "|Background - \n"
 "\n"
@@ -46,11 +46,11 @@ msgstr ""
 "\n"
 "FIN\n"
 
-#. "L_WAX_001"
+#. L_WAX_001
 msgid "LUCERNE TOWER\n"
 msgstr "EDIFICIO LUCERNE\n"
 
-#. "L_WAX_002"
+#. L_WAX_002
 msgid ""
 "|Background - \n"
 "\n"
@@ -80,7 +80,7 @@ msgstr ""
 "\n"
 "FIN\n"
 
-#. "L_WAX_003"
+#. L_WAX_003
 msgid ""
 "|Background - \n"
 "\n"
@@ -102,90 +102,90 @@ msgstr ""
 "\n"
 "FIN\n"
 
-#. "L_WAX_004"
+#. L_WAX_004
 msgid "Locate and escort Cassandra to helipad\n"
 msgstr "Buscar/guiar a Cassandra al helipuerto\n"
 
-#. "L_WAX_005"
+#. L_WAX_005
 msgid "Plant explosive device in lab lift\n"
 msgstr "Colocar explosivo en ascensor del lab.\n"
 
-#. "L_WAX_006"
+#. L_WAX_006
 msgid "Eliminate dataDyne Captain\n"
 msgstr "Eliminar al Capitán de dataDyne\n"
 
-#. "L_WAX_007"
+#. L_WAX_007
 msgid "Get the hell out of my office...\n"
 msgstr "Fuera de mi oficina...\n"
 
-#. "L_WAX_008"
+#. L_WAX_008
 msgid "Go to the helipad if you want to live.\n"
 msgstr "Ve al helipuerto si quieres vivir.\n"
 
-#. "L_WAX_009"
+#. L_WAX_009
 msgid "You won't shoot me!\n"
 msgstr "¡No me dispararás!\n"
 
-#. "L_WAX_010"
+#. L_WAX_010
 msgid "How dare you disturb me!\n"
 msgstr "¡Cómo te atreves a molestarme!\n"
 
-#. "L_WAX_011"
+#. L_WAX_011
 msgid "You will regret this intrusion, girl.\n"
 msgstr "Vas a lamentar esta intrusión, chica.\n"
 
-#. "L_WAX_012"
+#. L_WAX_012
 msgid "If I were you, I'd leave... NOW!\n"
 msgstr "Si yo fuera tú, me marcharía... ¡AHORA!\n"
 
-#. "L_WAX_013"
+#. L_WAX_013
 msgid "You won't shoot me!\n"
 msgstr "¡No me dispararás!\n"
 
-#. "L_WAX_014"
+#. L_WAX_014
 msgid "Cassandra has been immobilized.\n"
 msgstr "Cassandra ha sido inmovilizada.\n"
 
-#. "L_WAX_015"
+#. L_WAX_015
 msgid "Cassandra has been captured successfully.\n"
 msgstr "Cassandra ha sido capturada con éxito.\n"
 
-#. "L_WAX_016"
+#. L_WAX_016
 msgid "Security chief has been eliminated.\n"
 msgstr "El jefe de seguridad ha sido eliminado.\n"
 
-#. "L_WAX_017"
+#. L_WAX_017
 msgid "\n"
 msgstr "\n"
 
-#. "L_WAX_018"
+#. L_WAX_018
 msgid "\n"
 msgstr "\n"
 
-#. "L_WAX_019"
+#. L_WAX_019
 msgid "Skedar bomb\n"
 msgstr "Bomba Skedar\n"
 
-#. "L_WAX_020"
+#. L_WAX_020
 msgid "Skedar bomb\n"
 msgstr "Bomba Skedar\n"
 
-#. "L_WAX_021"
+#. L_WAX_021
 msgid "Picked up Skedar bomb.\n"
 msgstr "Bomba Skedar recogida.\n"
 
-#. "L_WAX_022"
+#. L_WAX_022
 msgid "Skedar bomb has been placed successfully.\n"
 msgstr "La Bomba Skedar ha sido colocada con éxito.\n"
 
-#. "L_WAX_023"
+#. L_WAX_023
 msgid "Skedar bomb has detonated.\n"
 msgstr "La Bomba Skedar ha sido detonada.\n"
 
-#. "L_WAX_024"
+#. L_WAX_024
 msgid "Lift doors locked - bomb cannot be placed.\n"
 msgstr "Ascensor bloqueado. La bomba no puede ser colocada.\n"
 
-#. "L_WAX_025"
+#. L_WAX_025
 msgid "Lift has been disabled.\n"
 msgstr "El ascensor ha sido desactivado.\n"

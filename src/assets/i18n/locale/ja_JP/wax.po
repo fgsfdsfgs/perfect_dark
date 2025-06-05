@@ -2,13 +2,13 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Perfect Dark PC port localization\n"
-"POT-Creation-Date: 2025-05-31 06:37:14.299892+00:00\n"
+"POT-Creation-Date: 2025-06-05 13:35:16.474166+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: originalAssets_to_l10n.py script\n"
 
-#. "L_WAX_000"
+#. L_WAX_000
 msgid ""
 "|Background - \n"
 "\n"
@@ -46,11 +46,11 @@ msgstr ""
 "\n"
 "END\n"
 
-#. "L_WAX_001"
+#. L_WAX_001
 msgid "LUCERNE TOWER\n"
 msgstr "ルサーン・タワー\n"
 
-#. "L_WAX_002"
+#. L_WAX_002
 msgid ""
 "|Background - \n"
 "\n"
@@ -80,7 +80,7 @@ msgstr ""
 "\n"
 "END\n"
 
-#. "L_WAX_003"
+#. L_WAX_003
 msgid ""
 "|Background - \n"
 "\n"
@@ -102,92 +102,92 @@ msgstr ""
 "\n"
 "END\n"
 
-#. "L_WAX_004"
+#. L_WAX_004
 msgid "Locate and escort Cassandra to helipad\n"
 msgstr "カサンドラを連行せよ\n"
 
-#. "L_WAX_005"
+#. L_WAX_005
 msgid "Plant explosive device in lab lift\n"
 msgstr "エレベーターに爆弾をセット\n"
 
-#. "L_WAX_006"
+#. L_WAX_006
 msgid "Eliminate dataDyne Captain\n"
 msgstr "ボディガードリーダーを倒せ\n"
 
-#. "L_WAX_007"
+#. L_WAX_007
 msgid "Get the hell out of my office...\n"
 msgstr "私のオフィスから出て行きなさい！\n"
 
-#. "L_WAX_008"
+#. L_WAX_008
 msgid "Go to the helipad if you want to live.\n"
 msgstr "命が惜しかったらヘリポートへすぐ行くんだ！\n"
 
-#. "L_WAX_009"
+#. L_WAX_009
 msgid "You won't shoot me!\n"
 msgstr "この私を撃てるわけがないわ。\n"
 
-#. "L_WAX_010"
+#. L_WAX_010
 msgid "How dare you disturb me!\n"
 msgstr "私に向かって何という態度なの！\n"
 
-#. "L_WAX_011"
+#. L_WAX_011
 msgid "You will regret this intrusion, girl.\n"
 msgstr "今に後悔するよ…\n"
 
-#. "L_WAX_012"
+#. L_WAX_012
 msgid "If I were you, I'd leave... NOW!\n"
 msgstr "私があなたの立場なら、すぐここを去るわね！\n"
 
-#. "L_WAX_013"
+#. L_WAX_013
 msgid "You won't shoot me!\n"
 msgstr "この私を撃てるわけがないわ。\n"
 
-#. "L_WAX_014"
+#. L_WAX_014
 msgid "Cassandra has been immobilized.\n"
 msgstr "カサンドラは動けなくなった。\n"
 
-#. "L_WAX_015"
+#. L_WAX_015
 msgid "Cassandra has been captured successfully.\n"
 msgstr "カサンドラは無事に捕獲された。\n"
 
-#. "L_WAX_016"
+#. L_WAX_016
 msgid "Security chief has been eliminated.\n"
 msgstr "ボディガードのリーダーを倒した。\n"
 
-#. "L_WAX_017"
+#. L_WAX_017
 msgid "\n"
 msgstr "\n"
 
-#. "L_WAX_018"
+#. L_WAX_018
 msgid "\n"
 msgstr "\n"
 
-#. "L_WAX_019"
+#. L_WAX_019
 msgid "Skedar bomb\n"
 msgstr "スケダー爆弾\n"
 
-#. "L_WAX_020"
+#. L_WAX_020
 msgid "Skedar bomb\n"
 msgstr "スケダー爆弾\n"
 
-#. "L_WAX_021"
+#. L_WAX_021
 msgid "Picked up Skedar bomb.\n"
 msgstr "スケダー爆弾を手に入れた。\n"
 
-#. "L_WAX_022"
+#. L_WAX_022
 msgid "Skedar bomb has been placed successfully.\n"
 msgstr "スケダー爆弾が正しくセットされた。\n"
 
-#. "L_WAX_023"
+#. L_WAX_023
 msgid "Skedar bomb has detonated.\n"
 msgstr "スケダー爆弾が爆発した。\n"
 
-#. "L_WAX_024"
+#. L_WAX_024
 msgid "Lift doors locked - bomb cannot be placed.\n"
 msgstr ""
 "エレベーターのドアがロックされています\n"
 "爆弾を取りつけることができません。\n"
 
-#. "L_WAX_025"
+#. L_WAX_025
 msgid "Lift has been disabled.\n"
 msgstr "エレベーターが不能にされた。\n"

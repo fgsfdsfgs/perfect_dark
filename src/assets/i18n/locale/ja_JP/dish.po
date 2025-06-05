@@ -2,17 +2,17 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Perfect Dark PC port localization\n"
-"POT-Creation-Date: 2025-05-31 06:37:14.299892+00:00\n"
+"POT-Creation-Date: 2025-06-05 13:35:16.474166+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: originalAssets_to_l10n.py script\n"
 
-#. "L_DISH_008"
+#. L_DISH_008
 msgid "Collect Night Vision from table to begin.\n"
 msgstr "まずテーブル上のナイトアイを取れ\n"
 
-#. "L_DISH_009"
+#. L_DISH_009
 msgid ""
 "Activate the Night Vision.\n"
 "Locate the light switch.\n"
@@ -21,179 +21,179 @@ msgstr ""
 "ナイトアイを起動\n"
 "ライトのスイッチを発見し点灯せよ\n"
 
-#. "L_DISH_010"
+#. L_DISH_010
 msgid "Collect Data Uplink from table to begin.\n"
 msgstr "まずテーブル上のデータリンカを取れ\n"
 
-#. "L_DISH_011"
+#. L_DISH_011
 msgid "Stand next to the terminal and use the Uplink.\n"
 msgstr "ＰＣの近くに立って、データリンカを起動せよ\n"
 
-#. "L_DISH_012"
+#. L_DISH_012
 msgid "You need to be holding the Data Uplink.\n"
 msgstr "データリンカを手に持っている必要あり\n"
 
-#. "L_DISH_013"
+#. L_DISH_013
 msgid "Connection established...\n"
 msgstr "接続中…\n"
 
-#. "L_DISH_014"
+#. L_DISH_014
 msgid "Terminal has been successfully hacked.\n"
 msgstr "ＰＣのハッキングに成功した\n"
 
-#. "L_DISH_015"
+#. L_DISH_015
 msgid "Connection broken - too far from PC.\n"
 msgstr "接続が解除された　ＰＣから離れ過ぎです\n"
 
-#. "L_DISH_016"
+#. L_DISH_016
 msgid "Collect ECM Mine from table to begin.\n"
 msgstr "まずテーブル上のＥＣＭマインを取れ\n"
 
-#. "L_DISH_017"
+#. L_DISH_017
 msgid "Locate Hub and throw ECM Mine onto Hub.\n"
 msgstr "集中管理装置を発見しＥＣＭマインをセットせよ\n"
 
-#. "L_DISH_018"
+#. L_DISH_018
 msgid "ECM Mine has been placed incorrectly.\n"
 msgstr "ＥＣＭマインが正しくセットされていません\n"
 
-#. "L_DISH_019"
+#. L_DISH_019
 msgid "ECM Mine has been placed correctly.\n"
 msgstr "ＥＣＭマインが正しくセットされた\n"
 
-#. "L_DISH_020"
+#. L_DISH_020
 msgid "Collect CamSpy from table to begin.\n"
 msgstr "まずテーブル上のカムスパイを取れ\n"
 
-#. "L_DISH_021"
+#. L_DISH_021
 msgid "Locate Info Room PC and holograph it.\n"
 msgstr "インフォ・ルームのＰＣを発見し、撮影せよ\n"
 
-#. "L_DISH_022"
+#. L_DISH_022
 msgid "Info Room PC successfully holographed.\n"
 msgstr "インフォ・ルームのＰＣの撮影に成功した\n"
 
-#. "L_DISH_023"
+#. L_DISH_023
 msgid "Lights have been reactivated.\n"
 msgstr "ライトが点灯された\n"
 
-#. "L_DISH_024"
+#. L_DISH_024
 msgid "Collect Door Decoder from table to begin.\n"
 msgstr "まずテーブル上のドアコーダを取れ\n"
 
-#. "L_DISH_025"
+#. L_DISH_025
 msgid "Use Decoder on door pad to unlock it.\n"
 msgstr "ドアコーダをセットしロックを解除せよ\n"
 
-#. "L_DISH_026"
+#. L_DISH_026
 msgid "You need to be holding the Door Decoder.\n"
 msgstr "ドアコーダを手に持っている必要あり\n"
 
-#. "L_DISH_027"
+#. L_DISH_027
 msgid "Decoder attached. Initiating cracking routines...\n"
 msgstr "ドアコーダセット、暗号解読開始…\n"
 
-#. "L_DISH_028"
+#. L_DISH_028
 msgid "Decoding complete. Door has been unlocked.\n"
 msgstr "暗号解読完了、ドアロック解除\n"
 
-#. "L_DISH_029"
+#. L_DISH_029
 msgid "Collect Tracker from table to begin.\n"
 msgstr "まずテーブル上のＲトラッカを取れ\n"
 
-#. "L_DISH_030"
+#. L_DISH_030
 msgid "Locate IR Scanner using Tracker.\n"
 msgstr "Ｒトラッカを使ってアイテムを発見せよ\n"
 
-#. "L_DISH_031"
+#. L_DISH_031
 msgid "IR Scanner has been successfully located.\n"
 msgstr "IRスキャンを発見した\n"
 
-#. "L_DISH_032"
+#. L_DISH_032
 msgid "Collect IR Scanner from table to begin.\n"
 msgstr "まずテーブル上のIRスキャンを取れ\n"
 
-#. "L_DISH_033"
+#. L_DISH_033
 msgid "Locate secret door using IR Scanner.\n"
 msgstr "IRスキャンを使って秘密のドアを発見せよ\n"
 
-#. "L_DISH_034"
+#. L_DISH_034
 msgid "Secret door has been successfully located.\n"
 msgstr "秘密のドアが発見された\n"
 
-#. "L_DISH_035"
+#. L_DISH_035
 msgid "Collect X-Ray Scanner from table to begin.\n"
 msgstr "まずテーブル上のＸスキャンを取れ\n"
 
-#. "L_DISH_036"
+#. L_DISH_036
 msgid "Find hidden switches to shut down laser grid.\n"
 msgstr "レーザーグリッドのスイッチを探して切れ\n"
 
-#. "L_DISH_037"
+#. L_DISH_037
 msgid "All laser grids have been deactivated.\n"
 msgstr "全てのレーザーグリッドが停止された\n"
 
-#. "L_DISH_038"
+#. L_DISH_038
 msgid "Collect Disguise from table to begin.\n"
 msgstr "まずテーブル上のユニフォームを取れ\n"
 
-#. "L_DISH_039"
+#. L_DISH_039
 msgid "Fool someone into giving you Cloaking Device.\n"
 msgstr "変装してスタッフからアイテムを受け取れ\n"
 
-#. "L_DISH_040"
+#. L_DISH_040
 msgid "Cloaking Device successfully retrieved.\n"
 msgstr "スパイクロークを入手した\n"
 
-#. "L_DISH_041"
+#. L_DISH_041
 msgid "Laser Grid 1 has been deactivated.\n"
 msgstr "レーザーグリッド１が停止された\n"
 
-#. "L_DISH_042"
+#. L_DISH_042
 msgid "Laser Grid 2 has been deactivated.\n"
 msgstr "レーザーグリッド２が停止された\n"
 
-#. "L_DISH_043"
+#. L_DISH_043
 msgid "I'm here to pick up the equipment.\n"
 msgstr "例のアイテムを受け取りにきたのですが…\n"
 
-#. "L_DISH_044"
+#. L_DISH_044
 msgid "Go away, Joanna. You're not fooling anybody!\n"
 msgstr "ジョアンナじゃないか。ダマそうってのか？\n"
 
-#. "L_DISH_045"
+#. L_DISH_045
 msgid "Here you go. Don't drop it now.\n"
 msgstr "さぁ、これだ。落とさないように。\n"
 
-#. "L_DISH_046"
+#. L_DISH_046
 msgid "Cloaking Device has been secured successfully.\n"
 msgstr "スパイクロークを入手した\n"
 
-#. "L_DISH_047"
+#. L_DISH_047
 msgid "You're meant to use the Disguise, remember?\n"
 msgstr "ユニフォームで変装するんだったのでは？\n"
 
-#. "L_DISH_048"
+#. L_DISH_048
 msgid "You'll have to do better than that, Joanna.\n"
 msgstr "ジョアンナ、不注意だぞ。\n"
 
-#. "L_DISH_049"
+#. L_DISH_049
 msgid "Joanna, where did you spring from?\n"
 msgstr "ジョアンナ、一体どこから出てきたんだ？\n"
 
-#. "L_DISH_050"
+#. L_DISH_050
 msgid "You have been detected by the camera.\n"
 msgstr "カメラに探知された\n"
 
-#. "L_DISH_051"
+#. L_DISH_051
 msgid "Collect Cloaking Device from table to begin.\n"
 msgstr "まずテーブル上のスパイクロークを取れ\n"
 
-#. "L_DISH_052"
+#. L_DISH_052
 msgid "Use Cloaking Device and locate Carrington.\n"
 msgstr "姿を消した状態でキャリントンを発見せよ\n"
 
-#. "L_DISH_053"
+#. L_DISH_053
 msgid ""
 "I think we can safely say your training\n"
 "is now complete!\n"
@@ -201,15 +201,15 @@ msgstr ""
 "これで君のトレーニングは完了だ。\n"
 "良くやったぞ、ジョアンナ！\n"
 
-#. "L_DISH_054"
+#. L_DISH_054
 msgid "Mission complete - Device Training passed!\n"
 msgstr "任務完了　デバイス・トレーニングに合格した\n"
 
-#. "L_DISH_055"
+#. L_DISH_055
 msgid "Mission failed - you have been detected.\n"
 msgstr "任務失敗\n"
 
-#. "L_DISH_056"
+#. L_DISH_056
 msgid ""
 "Select the Uplink.\n"
 "- Hold A Button.\n"
@@ -221,7 +221,7 @@ msgstr ""
 "３Ｄスティックでデータリンカを選び\n"
 "Ａボタンをはなす\n"
 
-#. "L_DISH_057"
+#. L_DISH_057
 msgid ""
 "Select the CamSpy.\n"
 "- Hold A Button.\n"
@@ -233,7 +233,7 @@ msgstr ""
 "３Ｄスティックでカムスパイを選び\n"
 "Ａボタンをはなす\n"
 
-#. "L_DISH_058"
+#. L_DISH_058
 msgid ""
 "Select the Night Vision.\n"
 "- Hold A Button.\n"
@@ -245,7 +245,7 @@ msgstr ""
 "３Ｄスティックでナイトアイを選び\n"
 "Ａボタンをはなす\n"
 
-#. "L_DISH_059"
+#. L_DISH_059
 msgid ""
 "Select the Door Decoder.\n"
 "- Hold A Button.\n"
@@ -257,7 +257,7 @@ msgstr ""
 "３Ｄスティックでドアコーダを選び\n"
 "Ａボタンをはなす\n"
 
-#. "L_DISH_060"
+#. L_DISH_060
 msgid ""
 "Select the X-Ray Scanner.\n"
 "- Hold A Button.\n"
@@ -269,7 +269,7 @@ msgstr ""
 "３ＤスティックでＸスキャンを選び\n"
 "Ａボタンをはなす\n"
 
-#. "L_DISH_061"
+#. L_DISH_061
 msgid ""
 "Select the Disguise.\n"
 "- Hold A Button.\n"
@@ -281,7 +281,7 @@ msgstr ""
 "３Ｄスティックでユニフォームを選び\n"
 "Ａボタンをはなす\n"
 
-#. "L_DISH_062"
+#. L_DISH_062
 msgid ""
 "Select the IR Scanner.\n"
 "- Hold A Button.\n"
@@ -293,7 +293,7 @@ msgstr ""
 "３ＤスティックでIRスキャンを選び\n"
 "Ａボタンをはなす\n"
 
-#. "L_DISH_063"
+#. L_DISH_063
 msgid ""
 "Select the Tracker.\n"
 "- Hold A Button.\n"
@@ -305,7 +305,7 @@ msgstr ""
 "３ＤスティックでＲトラッカを選び\n"
 "Ａボタンをはなす\n"
 
-#. "L_DISH_064"
+#. L_DISH_064
 msgid ""
 "Select the Cloaking Device.\n"
 "- Hold A Button.\n"
@@ -317,7 +317,7 @@ msgstr ""
 "３Ｄスティックでスパイクロークを選び\n"
 "Ａボタンをはなす\n"
 
-#. "L_DISH_065"
+#. L_DISH_065
 msgid ""
 "Select the ECM Mine.\n"
 "- Hold A Button.\n"
@@ -329,11 +329,11 @@ msgstr ""
 "３ＤスティックでＥＣＭマインを選び\n"
 "Ａボタンをはなす\n"
 
-#. "L_DISH_066"
+#. L_DISH_066
 msgid "Joanna, it's good to see you.\n"
 msgstr "ジョアンナ、私がキャリントンだ。\n"
 
-#. "L_DISH_067"
+#. L_DISH_067
 msgid ""
 "Come with me.\n"
 "I'll walk you round the training rooms.\n"
@@ -341,29 +341,29 @@ msgstr ""
 "来なさい。\n"
 "この建物の中を案内しよう。\n"
 
-#. "L_DISH_068"
+#. L_DISH_068
 msgid "The information center is through this door.\n"
 msgstr "インフォ・ルームはこの向こうだ。\n"
 
-#. "L_DISH_069"
+#. L_DISH_069
 msgid "In here we have the device lab.\n"
 msgstr "ここはデバイス・ラボだ。\n"
 
-#. "L_DISH_070"
+#. L_DISH_070
 msgid "This leads to the simulant training room.\n"
 msgstr ""
 "アクションとシミュラントを使った\n"
 "バトルのトレーニングルームだ。\n"
 
-#. "L_DISH_071"
+#. L_DISH_071
 msgid "This is the firing range, Jo.\n"
 msgstr "ここが射撃訓練場だよ、ジョアンナ。\n"
 
-#. "L_DISH_072"
+#. L_DISH_072
 msgid "This corridor leads down to the hangar.\n"
 msgstr "この先は格納庫へと続いている。\n"
 
-#. "L_DISH_073"
+#. L_DISH_073
 msgid ""
 "HOVERCRATE\n"
 "Press B Button next to Hovcrate to grab it...\n"
@@ -371,11 +371,11 @@ msgstr ""
 "ホバーコンテナ\n"
 "近くでＢボタンを押すとつかめる。\n"
 
-#. "L_DISH_074"
+#. L_DISH_074
 msgid "Press B Button when crate grabbed to release it.\n"
 msgstr "もう１回Ｂボタンではなすことができる。\n"
 
-#. "L_DISH_075"
+#. L_DISH_075
 msgid ""
 "HOVERBIKE\n"
 "Double tap B Button next to Hovbike to ride it...\n"
@@ -383,11 +383,11 @@ msgstr ""
 "ホバーバイク\n"
 "近くでＢボタンを２回押すと\n"
 
-#. "L_DISH_076"
+#. L_DISH_076
 msgid "Double tap B Button when on Hovbike to dismount.\n"
 msgstr "ホバーバイクの乗り／降りができる。\n"
 
-#. "L_DISH_077"
+#. L_DISH_077
 msgid ""
 "OPENING DOORS\n"
 "Press B Button next to door to open it.\n"
@@ -395,11 +395,11 @@ msgstr ""
 "ドアオープン\n"
 "近くでＢボタンを押せば、ドアが開く。\n"
 
-#. "L_DISH_078"
+#. L_DISH_078
 msgid "B Button will also activate any object nearby.\n"
 msgstr "Ｂボタンで近くのものを起動できる。\n"
 
-#. "L_DISH_079"
+#. L_DISH_079
 msgid ""
 "ELEVATORS\n"
 "Press B Button next to door to call elevator.\n"
@@ -408,27 +408,27 @@ msgstr ""
 "近くでＢボタンを押せば\n"
 "エレベーターを呼ぶことができる。\n"
 
-#. "L_DISH_080"
+#. L_DISH_080
 msgid "Cannot exit while training is in progress.\n"
 msgstr "トレーニング中は外に出ることができません\n"
 
-#. "L_DISH_081"
+#. L_DISH_081
 msgid "Switch Code 1 has been obtained.\n"
 msgstr "スイッチコード１を手に入れた\n"
 
-#. "L_DISH_082"
+#. L_DISH_082
 msgid "Switch Code 2 has been obtained.\n"
 msgstr "スイッチコード２を手に入れた\n"
 
-#. "L_DISH_083"
+#. L_DISH_083
 msgid "Switch Code 3 has been obtained.\n"
 msgstr "スイッチコード３を手に入れた\n"
 
-#. "L_DISH_084"
+#. L_DISH_084
 msgid "Switch Code 4 has been obtained.\n"
 msgstr "スイッチコード４を手に入れた\n"
 
-#. "L_DISH_085"
+#. L_DISH_085
 msgid ""
 "LOOK UP\n"
 "- Press Down C Button to look up at the target.\n"
@@ -436,7 +436,7 @@ msgstr ""
 "見上げる\n"
 "Ｃ下ボタンで、上を見ることができる。\n"
 
-#. "L_DISH_086"
+#. L_DISH_086
 msgid ""
 "LOOK DOWN\n"
 "- Press Up C Button to look down at the target.\n"
@@ -444,61 +444,61 @@ msgstr ""
 "見下ろす\n"
 "Ｃ上ボタンで、下を見ることができる。\n"
 
-#. "L_DISH_087"
+#. L_DISH_087
 msgid "Holoprogram 2 has been completed successfully.\n"
 msgstr "テスト２合格\n"
 
-#. "L_DISH_088"
+#. L_DISH_088
 msgid "Holoprogram 4 has been completed successfully.\n"
 msgstr "テスト４合格\n"
 
-#. "L_DISH_089"
+#. L_DISH_089
 msgid "Holoprogram 5 has been completed successfully.\n"
 msgstr "テスト５合格\n"
 
-#. "L_DISH_090"
+#. L_DISH_090
 msgid "Guard has been successfully disarmed.\n"
 msgstr "敵の武装解除に成功した\n"
 
-#. "L_DISH_091"
+#. L_DISH_091
 msgid "Guard has been successfully knocked out.\n"
 msgstr "敵をノックアウトした\n"
 
-#. "L_DISH_092"
+#. L_DISH_092
 msgid "Disarm this live target if you can.\n"
 msgstr "この敵を武装解除せよ\n"
 
-#. "L_DISH_093"
+#. L_DISH_093
 msgid "Knock out this target - stealth is the key.\n"
 msgstr ""
 "この敵をノックアウトせよ\n"
 "気づかれないのがポイントです\n"
 
-#. "L_DISH_094"
+#. L_DISH_094
 msgid "And the final guard...\n"
 msgstr "そして最後の敵…\n"
 
-#. "L_DISH_095"
+#. L_DISH_095
 msgid ""
 "DUCK\n"
 "- Hold R Button, then press Down C Button to duck.\n"
 msgstr "Ｒボタンを押したままでＣボタンを１度押すとしゃがむ\n"
 
-#. "L_DISH_096"
+#. L_DISH_096
 msgid ""
 "CROUCH\n"
 "- When ducking, hold R Button, then press Down C Button to duck.\n"
 msgstr "しゃがんだ状態から、Ｒボタンを押したままでＣボタンをもう１度押すと、さらに低くしゃがむ。\n"
 
-#. "L_DISH_097"
+#. L_DISH_097
 msgid "Holoprogram 3 has been completed successfully.\n"
 msgstr "テスト３合格\n"
 
-#. "L_DISH_098"
+#. L_DISH_098
 msgid "Activate all the switches.\n"
 msgstr "全てのスイッチを起動せよ\n"
 
-#. "L_DISH_099"
+#. L_DISH_099
 msgid ""
 "Activate all of the wall switches.\n"
 "- Be quick, as they will quickly reset.\n"
@@ -506,7 +506,7 @@ msgstr ""
 "壁のスイッチを全て起動せよ\n"
 "　各スイッチはすぐにリセットされるので、急いで下さい\n"
 
-#. "L_DISH_100"
+#. L_DISH_100
 msgid ""
 "Get the access codes by examining terminals.\n"
 "- Use the codes on the wall terminals.\n"
@@ -514,31 +514,31 @@ msgstr ""
 "部屋の上下にあるパネルをチェックして、アクセスコードを入手せよ。\n"
 "　入手したコードを、壁のパネルと照合せよ。\n"
 
-#. "L_DISH_101"
+#. L_DISH_101
 msgid "Code 1 has been obtained.\n"
 msgstr "コード１をチェックした\n"
 
-#. "L_DISH_102"
+#. L_DISH_102
 msgid "Code 2 has been obtained.\n"
 msgstr "コード２をチェックした\n"
 
-#. "L_DISH_103"
+#. L_DISH_103
 msgid "Code 3 has been obtained.\n"
 msgstr "コード３をチェックした\n"
 
-#. "L_DISH_104"
+#. L_DISH_104
 msgid "Code 4 has been obtained.\n"
 msgstr "コード４をチェックした\n"
 
-#. "L_DISH_105"
+#. L_DISH_105
 msgid "Training failed - you must face forward.\n"
 msgstr "トレーニング失敗　正面を向かなくてはなりません\n"
 
-#. "L_DISH_106"
+#. L_DISH_106
 msgid "Holoprogram 1 has been completed successfully.\n"
 msgstr "テスト１合格\n"
 
-#. "L_DISH_107"
+#. L_DISH_107
 msgid ""
 "Unarmed combat - knock out the target.\n"
 "- Press Z Button repeatedly to punch.\n"
@@ -546,31 +546,31 @@ msgstr ""
 "非武装バトル　ターゲットをノックアウトせよ\n"
 "Ｚトリガーを連打してパンチを繰り出して下さい\n"
 
-#. "L_DISH_108"
+#. L_DISH_108
 msgid "Now try against a moving target...\n"
 msgstr "今度は動く敵です…\n"
 
-#. "L_DISH_109"
+#. L_DISH_109
 msgid "And finally against a target that fights back.\n"
 msgstr "仕上げは反撃してくる敵です\n"
 
-#. "L_DISH_110"
+#. L_DISH_110
 msgid "Defeat all enemies without getting hit.\n"
 msgstr "攻撃を全く受けずに、全ての敵を倒せ\n"
 
-#. "L_DISH_111"
+#. L_DISH_111
 msgid "Training failed - you have been hit.\n"
 msgstr "トレーニング失敗　敵の攻撃を受けてしまった\n"
 
-#. "L_DISH_112"
+#. L_DISH_112
 msgid "Holoprogram 6 has been completed successfully.\n"
 msgstr "テスト６合格\n"
 
-#. "L_DISH_113"
+#. L_DISH_113
 msgid "Holoprogram 7 has been completed successfully.\n"
 msgstr "テスト７合格\n"
 
-#. "L_DISH_114"
+#. L_DISH_114
 msgid ""
 "TERMINALS\n"
 "- Press B Button next to terminal to use it.\n"
@@ -578,44 +578,1723 @@ msgstr ""
 "ＰＣ\n"
 "近くでＢボタンを押し、使うことができる。\n"
 
-#. "L_DISH_115"
+#. L_DISH_115
 msgid "Now activate the red terminals on the wall.\n"
 msgstr "壁の赤いパネルと照合せよ\n"
 
-#. "L_DISH_116"
+#. L_DISH_116
 msgid "PP7\n"
 msgstr "PP7\n"
 
-#. "L_DISH_117"
+#. L_DISH_117
 msgid "TT33\n"
 msgstr "TT33\n"
 
-#. "L_DISH_118"
+#. L_DISH_118
 msgid "Skorpion\n"
 msgstr "Skorpion\n"
 
-#. "L_DISH_119"
+#. L_DISH_119
 msgid "AK47\n"
 msgstr "AK47\n"
 
-#. "L_DISH_120"
+#. L_DISH_120
 msgid "Uzi 9mm\n"
 msgstr "Uzi 9mm\n"
 
-#. "L_DISH_121"
+#. L_DISH_121
 msgid "MP5K\n"
 msgstr "MP5K\n"
 
-#. "L_DISH_122"
+#. L_DISH_122
 msgid "M-16\n"
 msgstr "M-16\n"
 
-#. "L_DISH_123"
+#. L_DISH_123
 msgid "FNP90\n"
 msgstr "FNP90\n"
 
-#. "L_DISH_124"
+#. L_DISH_124
 msgid "Okay, Jo, I'll leave you to prepare for the mission.\n"
 msgstr ""
 "ＯＫ、ジョアンナ。\n"
 "後は自由にミッションへの準備を行ってくれ。\n"
+
+#. L_DISH_128
+msgid ""
+"|CI File #027 -\n"
+"\n"
+"Training Status: Complete\n"
+"Training Grade: A++\n"
+"Active Status: Assigned\n"
+"\n"
+"|Profile -\n"
+"\n"
+"Highly trained but inexperienced. Reactions superb. Proficient with a variety of weapons. Very competent all-round agent. Highest recorded training scores resulted in the creation of a new class of training grade. The embodiment of the Carrington Institute's ideal agent, hence the call sign 'Perfect Dark.'\n"
+msgstr ""
+"|ＣＩファイル＃０２７\n"
+"\n"
+"トレーニング状況：完了\n"
+"トレーニング成績：Ａ＋＋\n"
+"ステータス：初動任務遂行中\n"
+"\n"
+"|プロフィール：\n"
+"\n"
+"非常に良く訓練されているが、実戦経験はない。優れた反射神経を持ち、あらゆるウェポンを使いこなす完璧なエージェント。彼女のズバ抜けたトレーニング成績は、トレーニングクラスに新たなグレードを新設させたほどである。キャリントン協会の理想的なエージェントと呼ばれるようになった彼女は、「パーフェクト・ダーク」のコードネームを手に入れた。\n"
+
+#. L_DISH_129
+msgid "Jonathan\n"
+msgstr "ジョナサン\n"
+
+#. L_DISH_130
+msgid "Human (Male)\n"
+msgstr "人間（男性）\n"
+
+#. L_DISH_131
+msgid "28 years 5 months\n"
+msgstr "２８才\n"
+
+#. L_DISH_132
+msgid ""
+"|CI File #009 -\n"
+"\n"
+"Training Status: Complete\n"
+"Training Grade: A+\n"
+"Active Status: Undercover\n"
+"\n"
+"|Profile -\n"
+"\n"
+"Our most experienced undercover agent. Highly accurate with his chosen weapon (a Magnum Revolver). Perfectly suited to undercover missions. Less suited to out-and-out combat. Before Joanna Dark, he held the honor of having the highest recorded training scores.\n"
+msgstr ""
+"|ＣＩファイル＃００９－\n"
+"\n"
+"トレーニング状況：完了\n"
+"トレーニング成績：Ａ＋\n"
+"ステータス：潜行任務遂行中\n"
+"\n"
+"|プロフィール：\n"
+"\n"
+"協会で最も経験の多い秘密スパイ。マグナムリボルバーを使わせたら彼の右に出るものはいない。ハデな銃撃戦よりも、潜行任務を身上とする。ジョアンナに破られるまでは協会最高のトレーニング成績を保持していた。\n"
+
+#. L_DISH_133
+msgid "Daniel Carrington\n"
+msgstr "ダニエル・キャリントン\n"
+
+#. L_DISH_134
+msgid "Human (Male)\n"
+msgstr "人間（男性）\n"
+
+#. L_DISH_135
+msgid "62 years 8 months\n"
+msgstr "６２才\n"
+
+#. L_DISH_136
+msgid ""
+"|CI File #000 -\n"
+"\n"
+"Training Status: N/A\n"
+"Training Grade: N/A\n"
+"Active Status: N/A\n"
+"\n"
+"|Profile -\n"
+"\n"
+"Intelligent patriarchal scientist/entrepreneur, and founder of the Carrington Institute. Plans all missions carried out by his agents and runs each operation direct from a link in his office. Strange taste in clothes.\n"
+msgstr ""
+"|ＣＩファイル＃０００－\n"
+"\n"
+"トレーニング状況：　－－－\n"
+"トレーニング成績：　－－－\n"
+"ステータス：　－－－\n"
+"\n"
+"|プロフィール：\n"
+"\n"
+"国際的に有名な科学者／実業家で、最新テクノロジーを世界中に送り届けてきたキャリントン協会の設立者。彼のエージェントが実行する全ミッションのプランを立案し、その一部始終を彼のオフィスから直接コントロールする。服装のセンスは少しユニーク。\n"
+
+#. L_DISH_137
+msgid "Cassandra De Vries\n"
+msgstr "カサンドラ・デブリーズ\n"
+
+#. L_DISH_138
+msgid "Human (Female)\n"
+msgstr "人間（女性）\n"
+
+#. L_DISH_139
+msgid "39 years ? months\n"
+msgstr "３９才\n"
+
+#. L_DISH_140
+msgid ""
+"|Analyst note -\n"
+"\n"
+"The head of dataDyne Corp. Addicted to power; dislikes being anybody's underling. Hates it when she loses the initiative. Is prepared to do extremely unscrupulous things in order to get ahead of her competition, to whit Daniel Carrington, whom she loathes.\n"
+msgstr ""
+"|調査ファイル：\n"
+"\n"
+"データダイン社のトップ。権力に執着し、人に指図されることを極端にイヤがる。自分がリーダーシップを取っていないと気が済まないタイプ。ライバル（特に大キライなダニエル・キャリントン）に勝つためには、手段を選ばない。\n"
+
+#. L_DISH_141
+msgid "Trent Easton\n"
+msgstr "トレント・イーストン\n"
+
+#. L_DISH_142
+msgid "Human (Male)\n"
+msgstr "人間（男性）\n"
+
+#. L_DISH_143
+msgid "46 years ? months\n"
+msgstr "４６才\n"
+
+#. L_DISH_144
+msgid ""
+"|Analyst note -\n"
+"\n"
+"Head of the National Security Agency. Has a friendship of sorts with Cassandra De Vries, although it operates more like a partnership of interest. He will tend to do what Cassandra says, possibly because although he has a dominant personality, it is not as dominant as hers. Figurehead for some of the rogue elements in the NSA.\n"
+msgstr ""
+"|調査ファイル：\n"
+"\n"
+"国防省の司令官。カサンドラ・デブリーズとパートナー関係にある。といっても、互いに権力と金を追求している点でつながっているだけだが。トレントは専制的な性格だが、より専制的なカサンドラには頭が上がらないようである。彼は国防省内の闇取引的な部分を全て取りしきっている。\n"
+
+#. L_DISH_145
+msgid "Dr. Caroll\n"
+msgstr "ドクター・キャロル\n"
+
+#. L_DISH_146
+msgid "The Caroll Sapient (AI)\n"
+msgstr "人工知能（ＡＩ）\n"
+
+#. L_DISH_147
+msgid "6 months\n"
+msgstr "０．５才\n"
+
+#. L_DISH_148
+msgid ""
+"|Profile -\n"
+"\n"
+"An artificial intelligence created by the dataDyne Corp. with an emphasis on language skills and code breaking. Fortunately, he has morals, and due to his formidable level of intelligence, has guessed some of dataDyne's future plans. The voice is highly precise and educated and simulates the character of an academic.\n"
+msgstr ""
+"|プロフィール：\n"
+"\n"
+"データダイン社によって開発された人工知能で、暗号解読能力に重点が置かれている。幸運なことに、彼は「モラル」を持っていた。彼の非常に高い知能レベルは、データダイン社の未来のプランに疑問を持ち始めたのだ。彼の話し方は知的で、アカデミックなキャラクターをかもしだしている。\n"
+
+#. L_DISH_149
+msgid "Elvis\n"
+msgstr "エルビス\n"
+
+#. L_DISH_150
+msgid "Maian (Male)\n"
+msgstr "マイアン（男性）\n"
+
+#. L_DISH_151
+msgid "320 years\n"
+msgstr "３２０才\n"
+
+#. L_DISH_152
+msgid ""
+"|Profile -\n"
+"\n"
+"An alien from the Maian race. He is a 'Protector' (bodyguard) for the Maian ambassador who travels to Earth at Daniel Carrington's request. Protectors are trained to excel in the use of an assortment of weaponry. Elvis is a terraphile, finding Earth and everything about it fascinating.\n"
+msgstr ""
+"|プロフィール：\n"
+"\n"
+"マイアンという種族のエイリアン。彼はプロテクター（ボディガード）で、ダニエル・キャリントンの要請で地球を訪問していたマイアンの地球大使を護衛していた。プロテクターはあらゆるウェポンの使い手として訓練されている。エルビスは地球のファンで、地球に関するものは全てスバラシイと思っている。\n"
+
+#. L_DISH_153
+msgid "Mr. Blonde\n"
+msgstr "ミスターブロンド\n"
+
+#. L_DISH_154
+msgid "Human (Male)\n"
+msgstr "人間（男性）\n"
+
+#. L_DISH_155
+msgid "Late 20's\n"
+msgstr "２５～３０才？\n"
+
+#. L_DISH_156
+msgid ""
+"|Profile -\n"
+"\n"
+"A striking blonde human male. Very tall, wears white clothing, usually a raincoat. Appears to be masterminding the conspiracy in which Cassandra and Trent are involved. Little else is known.\n"
+msgstr ""
+"|プロフィール：\n"
+"\n"
+"やけに目立つ金髪の男。非常に背が高く、白い服（通常レインコート）を着ている。カサンドラやトレントが加担している陰謀グループのリーダー。その他のことはあまり知られていない。\n"
+
+#. L_DISH_157
+msgid "Mr. Blonde\n"
+msgstr "ミスターブロンド\n"
+
+#. L_DISH_158
+msgid "Skedar (disguised)\n"
+msgstr "スケダー（変装した状態）\n"
+
+#. L_DISH_159
+msgid "unknown\n"
+msgstr "不明\n"
+
+#. L_DISH_160
+msgid ""
+"|Updated Profile -\n"
+"\n"
+"This is a Skedar warrior lurking within a holographic projection of a striking blonde young human male in his late 20's.  The oral modulation unit gives the Skedar a precise, persuasive, and intelligent voice. It is a propaganda and manipulation tool for the Skedar, and an unusually subtle one.\n"
+msgstr ""
+"|プロフィール：\n"
+"\n"
+"金髪男のホログラム映像を持つスケダー戦士。口部分のモジュレーターユニットから、正確で説得力のある、知的なボイスを出すことができる。これによりスケダーは地球で活発に活動できるのである。\n"
+
+#. L_DISH_161
+msgid "The U.S. President\n"
+msgstr "ＵＳＡ大統領\n"
+
+#. L_DISH_162
+msgid "Human (Male)\n"
+msgstr "人間（男性）\n"
+
+#. L_DISH_163
+msgid "50 years\n"
+msgstr "５０才\n"
+
+#. L_DISH_164
+msgid ""
+"|Profile -\n"
+"\n"
+"A highly educated, shrewd African-American who is trying to do what is right but is surrounded by people like Trent Easton. He believes he has Trent under control after refusing the request for the loan of the Pelagic II to the dataDyne Corp. Perceived as being easily led by the majority of political commentators, which is perhaps unfair.\n"
+msgstr ""
+"|プロフィール：\n"
+"\n"
+"高い知性と優れた決断力を持つ、アフリカ系アメリカ人。常に自分が正しいと信じたことを行おうとするが、トレントのような人間ばかりに囲まれている。ペラジック２をデータダイン社に貸し付けることを拒んだ後でも、トレントが自分を裏切るとは全く思っていない。自分の決めた信念は貫く男である。\n"
+
+#. L_DISH_165
+msgid "Maians\n"
+msgstr "マイアン\n"
+
+#. L_DISH_166
+msgid ""
+"The Maians are the race of aliens that have come to be known on Earth as "
+"'Greys.' They have been monitoring Earth for a long time - several centuries"
+" - and are benevolent towards mankind, sensing great potential in the human "
+"race. Their contact on Earth is Daniel Carrington. A formal political "
+"contact has yet to be made.\n"
+msgstr ""
+"マイアンは、地球で「グレー」と呼ばれるエイリアンで、長年に渡って地球をモニタリングしてきた。彼らは人類に対して好意的であり、人類にはスバラシイ潜在能力があると感じている。彼らの地球上におけるコンタクト先はダニエル・キャリントンのみで、人類との正式な対面はまだ行っていない。\n"
+
+#. L_DISH_167
+msgid "Skedar Warrior\n"
+msgstr "スケダー戦士\n"
+
+#. L_DISH_168
+msgid ""
+"The Skedar are a warlike alien race who have fought the Maians for centuries"
+" and have only recently agreed to a ceasefire. They tend to use mechanized "
+"armatures to walk about and fight in, since they are in actual fact smaller,"
+" snakelike creatures. Very aggressive -  they have made war a religion - and"
+" are extremely devout.\n"
+msgstr ""
+"スケダーは好戦的なエイリアン種族である。彼らはマイアンと長年戦ってきた後で、最近になってようやく停戦に合意した。戦闘時に大きなメカアーマーを装備することが多い。なぜなら、実は彼らは小さく、ヘビのような生物だからである。彼らは非常に攻撃的で、彼らの星には「戦いの神殿」があるとも言われている。\n"
+
+#. L_DISH_169
+msgid "Background\n"
+msgstr "背景ストーリー\n"
+
+#. L_DISH_170
+msgid ""
+"Millions of years ago, a huge alien ship of immense power was scuttled in the Pacific Ocean. It was equipped with an untried and vastly dangerous weapon: the weak nuclear force de-coupler, which could in theory cause the fundamental bonds between molecules to fail. So that watching eyes would believe in the destruction of the ship, a message pod was despatched to the home galaxy, and vital components of the ship's drives were destroyed in the star system it had chosen as a hiding place. For this ship was a Cetan, a massive, sentient alien creature.\n"
+"\n"
+"Another extraterrestrial race, the Maians, encountered life on Earth in 2000 BC. They saw great potential, but decided to let the primitive human race develop without their interference.\n"
+"\n"
+"The Maians encountered the Skedar near Delta Eridanus in 1650 AD (Earth date), and the resultant skirmish soon blossomed into all-out war. Only after hundreds of years of fighting did an uneasy peace develop, and even then Skedar fanatics persistently tested the boundaries of this peace with terrorist activities. Fortunately, the Maians refused to be drawn.\n"
+"\n"
+"Mankind, too, continued to be a cause of concern to the Maians, and they watched with disappointment as Earth suffered more and more crises brought on by the rise of technology and 'outside context situations.' They feared that announcing their presence would only precipitate further wars on the planet, and quietly decided to continue their observation until the race became more mature.\n"
+"\n"
+"Daniel Carrington jumped the gun in 1985 AD by contacting a Maian ship in orbit above Earth. He put forward a plan that would help both parties, resulting in accelerated contact between Humans and Maians. Having agreed that his plan was sound, and finding him to be a person of integrity, the Maians allowed Carrington to release their technology into the public domain through his considerable Research and Development holdings.\n"
+"\n"
+"Then, in 2006 AD, Skedar fanatics stumbled across the Cetan message pod. They immediately began to scout Earth in a particularly heavy-handed way, abducting people and mutilating animals in an attempt to determine the location of the lost battle cruiser. In time, their tests inevitably led them to its resting place on the bed of the Pacific Ocean; however, in order to actually reach it, they would need the help of the natives.\n"
+"\n"
+"Performing their own study of Earth, the Skedar came up with a shortlist of companies possessing the resources to help them recover the sunken ship. At the top of the list was the dataDyne Corporation. They contacted the company head, Cassandra De Vries, and presented her with a deal that sounded too good to be true - which, of course, it was. In return for helping to raise 'their' ship from the ocean floor, the Skedar promised to supply dataDyne with enough alien technology to become the biggest corporation on the face of the planet. All that dataDyne had to do was build an AI unit with language and code-breaking abilities, which was tricky, but certainly within their means. Work commenced on the project immediately.\n"
+"\n"
+"Cassandra De Vries approached NSA head Trent Easton with the details of the plan, but his attempts to get Presidential approval for the loan of a deep-sea research vessel were repeatedly turned down. There was no way that the Skedar or dataDyne could steal the vessel without triggering the wrath of the U.S. Government, so over time they settled instead on a far more sinister plan of replacing the President with a clone that they could control. Of course, this also promised extra rewards for Trent and Cassandra when the Skedar operation was consigned to history.\n"
+"\n"
+"However, they would not be given much time to gloat. The Skedar fanatics' ultimate plan was to test the weak nuclear force de-coupler on Earth before wiping the Maians out of existence, and both Cassandra and Trent remained blind to the possibility of being double-crossed, so enamored were they with the visions of power and luxury that lay ahead.\n"
+"\n"
+"But dataDyne had unwittingly created something that could see all too clearly the danger within this multilayered conspiracy: the sapient AI built to crack the core access codes of the Cetan ship. When it expressed concern over the mission for which it had been designed, Cassandra's response was to order its personality removed. Clearly, it was thinking too much. In desperation, and in a move which would make or break a great deal more than dataDyne's 'deal' with the Skedar, the sapient adopted the pseudonym Dr. Caroll and contacted the Carrington Institute with a plea for help...\n"
+msgstr ""
+"昔、はるか昔…巨大なエイリアン船が太平洋の底に自ら沈み、その姿を隠した。今となっては、その理由はハッキリしない。その船には実験中のとてつもなく危険なウェポンが装備されていた。通称「ニュークリア・ディカプラー」と呼ばれるこの兵器は、物質の分子結合を全て無効にしてしまう、恐ろしい力を持っていたのだ。船がもはや機能していないと思わせるために、主要部品は破壊され、これらの状況を記録したメッセージポッドと共に、宇宙の彼方に隠された。この船こそセタン、古代の最強エイリアンだったのだ。\n"
+"\n"
+"時は流れてＢＣ２０００年。別の地球外生物のマイアンは地球で原始の人類を発見した。彼らは人類に大きな可能性を見出したが、あえてコンタクトはとらず、その進化過程を見守ることにした。\n"
+"\n"
+"マイアンは、地球時間で言えばＡＤ１６５０年にデルタ・エリダヌス付近で好戦的なエイリアンのスケダーと衝突、小さな戦闘はすぐに大戦争へと広がっていった。長い戦争の時を経て、一応の停戦が実現した。しかしスケダーの武闘派は境界エリアでテロ行為を繰り返してマイアンを刺激してきたが、マイアンはそれには乗らなかった。\n"
+"\n"
+"マイアンにとって、人類も頭がイタい存在となってきており、地球を失望の念を持って見ていた。人類は技術の向上と予想外の行動で、ますます危険な状況になってきていた。彼らが今人類と連絡をとれば、きっとパニックにおちいり、地球上に多くの戦争を引き起こす可能性があると思われた。したがってマイアンはもうしばらく＜人類がもっと「大人」になるまで＞連絡はとらずに見守っていくことにしたのだった。\n"
+"\n"
+"ＡＤ１９８５年にダニエル・キャリントンが地球の近くにいたマイアンのＵＦＯと連絡をとることに成功した。彼は人類とマイアンの両方にメリットのあるプランを用意し、人類とマイアンの正式な出会いを早めるよう提案した。マイアンはキャリントンのプランに同意し、彼は信用できる人物だと判断したので、彼に自分たちの技術を分け与え、彼の研究機関からそれを発表することを許可した。\n"
+"\n"
+"ＡＤ２００６年、スケダーの武闘派がセタンのメッセージポッドを発見した。彼らはすぐに、いつもの強引な方法で地球の調査を始めた。人間や動物を誘拐し、沈んだ船のあらゆる情報をそこから引き出していったのだ。こうして、またたく間にスケダーは例の船が太平洋に沈んでいることをつきとめた。しかし、実際にその船にアクセスするには、彼らにも現地生物の助けが必要であった。\n"
+"\n"
+"スケダーは自らのリサーチ結果から、自分たちに協力してくれそうな会社をリストアップした。そのリストの１番最初がデータダイン社であった。彼らは同社のトップ、カサンドラ・デブリーズに連絡を取り、ウマいことだらけのビジネスを持ちかけた。（もちろんそんなビジネスはあるはずがないのだが。）データダイン社に海底の船の調査を手伝わせるかわりに、スケダーの進んだテクノロジーを分け与えることによって、地球上で最も大きい会社にすることを保証したのだ。データダイン社がやらなければならないことは、暗号解読能力を持ったＡＩユニットをつくることであった。これは難しい作業ではあったが、彼らには可能な内容のことであった。こうしてこのプロジェクトはスタートした。\n"
+"\n"
+"カサンドラは国防省の司令官、トレント・イーストンにこの計画を持ちかけた。トレントはすぐに計画に加わったが、深海探査艇の使用許可を政府から得ようとする彼の提案は、大統領に何度も却下された。大統領を怒らせずに深海探査艇を使用することは不可能だったので、彼らはもっと過激な計画を立てた。大統領をクローンと置きかえて、彼らの好きなようにコントロールするのだ。これが成功すれば、カサンドラとトレントにはスケダーからさらなる「ボーナス」が保証された。\n"
+"\n"
+"しかし、事態はそんなにアマいものではなかった。スケダーの武闘派たちの究極の狙いは、「ニュークリア・ディカプラー」を手にすることで、入手後はそれを使ってマイアンを消し去る前に、地球を試しに破壊しようとしていたのだ。だが、カサンドラもトレントも目の前にぶら下がった「金」と「権力」への執着から、自分たちがダマされているという可能性に全く気がつかなかった。\n"
+"\n"
+"しかしデータダイン社は、たまたまではあるが、あるものを作り出していた。それは、カサンドラたちの計画が「明らかにおかしい」ことに気づくだけの知性を持っていた。それがセタンシップの暗号を解読するために作り出されたＡＩ（人工知能）だったのだ。このＡＩが、今回の計画に対する疑問をカサンドラに投げかけたとき、カサンドラは彼の人格を消し去ろうとした。彼女は、このＡＩが余計なことを考え過ぎていると判断したのだ。データダイン社が得るものよりもっと多くのものが失われようとしていることが十分わかっていたＡＩは、「ドクター・キャロル」の名を使って、キャリントン協会へと助けを求めたのであった…\n"
+
+#. L_DISH_171
+msgid "The Story\n"
+msgstr "メインストーリー\n"
+
+#. L_DISH_172
+msgid ""
+"Untried agent Joanna Dark is assigned a mission involving the extraction of a scientist from the high security research area beneath the dataDyne skyscraper. Upon rendezvous, she is surprised to discover that this 'Dr. Caroll' is an AI created by dataDyne itself - but she continues with her task of escorting him/it to a place of safety. When the alarm is raised, Joanna has to fight her way up the tower to reach the helipad and the dropship which presents her only means of escape.\n"
+"\n"
+"In response to this incursion, dataDyne make Daniel Carrington a personal target and take him hostage two days later at his private villa. They demand the return of the AI - their 'property' - in exchange for his life. Unknown to them, the AI is already at the villa, where it was being questioned by Carrington on dataDyne's future plans. Joanna eventually rescues the head of the Institute but is unable to prevent dataDyne from taking back Dr. Caroll. However, Carrington has heard enough to take the drastic step of summoning a team of Maian specialists to Earth.\n"
+"\n"
+"Joanna is dispatched to Chicago to spy on a conspirators' meeting at the G5 Building, a front for the dataDyne Corp. It is here that she learns of the involvement of Trent Easton, head of the NSA, and of the strange Nordic men that appear to be in control of the whole deadly scheme. Once Trent discloses the plan to usurp the Presidential position, Jo radios the news back to base - only to find that another, more urgent task requires her attention before further action can be taken against Trent.\n"
+"\n"
+"The Maian specialists have been intercepted and brought down by the conspirators, with survivors and wreckage alike being transported to Area 51 in Nevada. Briefed to rescue any survivors and retrieve their equipment, Joanna is dropped in to link up with another Carrington Institute agent. Upon breaking into the medlab, Joanna finally discovers the Institute's secret - their allies are Maians, the alien race commonly known as Greys. The particular Maian she manages to rescue goes by the name of Elvis. He was a bodyguard for the Ambassador who had been flying in at the head of the specialist team.\n"
+"\n"
+"Having aided the remnants of the Maian delegation, Joanna can return to the matter of the President and dataDyne's designs against him. She poses as a member of the President's entourage to gain access to the air base where Air Force One is stationed, and successfully conceals herself aboard the plane. As soon as it's airborne, Trent and the cloaked Skedar make their move - but Joanna is there to stop them. She rushes the President to a safety capsule while a team of Trent's men scour the aircraft, intent on dragging the hapless politician aboard the Skedar UFO now docked to AF1 via an umbilical. Jo weakens the umbilical but is unable to break it, and ultimately Elvis makes a last-ditch attempt to sever the cord by crashing into it at high speed. All three craft plummet towards the Alaskan wilderness, and the AF1 escape pod is launched.\n"
+"\n"
+"Coming around, Jo tries to report in but finds her communications jammed by a transmission from the Skedar craft. She sets off through the snow to find the President and Elvis, encountering teams of cloaked Skedar out searching for her, the President, Elvis, and the President's belongings. She tracks one group back to the downed Skedar ship, where she discovers a clone of the President: quickly she destroys it, shuts down the jamming device and calls in the cavalry. The Skedar are thwarted once more, the President is safe, and Trent's incompetence has earned him a nasty fate at the hands of his 'allies.'\n"
+"\n"
+"But it's not over. Throwing caution to the wind, dataDyne and the Skedar steal the Government's deep-sea research vessel 'Pelagic II' and head out to the Pacific crash site. Joanna and Elvis leave to disrupt activity on board the ship and find out what lies at the heart of the grand Skedar plan. After crippling the vessel's diving operations and recalling the submersible, they head down to the ocean floor, where they get their first sight of the downed Cetan battle cruiser. A portal made by the Skedar offers them access to the ship, where they stumble across a dead Skedar warrior... Clearly the assault team didn't have it all their own way. Fighting off the remaining vengeful Skedar and avoiding the Cetans themselves, Joanna and Elvis make their way down to the core of the ship, where they find the AI that was once Dr. Caroll. They manage to restore his personality, whereupon he urges Joanna and Elvis to leave the ship so that he may destroy it for good.\n"
+"\n"
+"Later, back at the Carrington Institute, Joanna is about to leave for a Presidential reception at the White House when all hell breaks loose. The Skedar assault team survivors are venting their anger on those they deem responsible for their failure to recover the Cetan ship. Joanna dashes around the Institute, helping CI employees to reach the safety of the hangars, as the Skedar launch attacks on various parts of the building: the majority of the employees make good their escape while Joanna holds the fort, but eventually she is knocked unconscious and taken prisoner.\n"
+"\n"
+"She comes to in a holding cell on board the Skedar assault ship, with only Cassandra De Vries for company. In a shocking move, the dataDyne CEO willingly gives her life to create the distraction necessary for Joanna to break out. Battling her way through the ship, Jo eventually manages to locate and disable the docking bay shields, allowing Elvis to bring in a few friends for the long-awaited shooting party.\n"
+"\n"
+"The captured assault ship enters orbit above the Skedar Battle Shrine, which shocks Elvis as the Maians never managed to find this Skedar 'holiest of holies' throughout the long years of interracial war. If the Shrine were destroyed, Skedar morale would be dealt a fatal blow and true peace would finally replace the uneasy ceasefire. So Jo sets her sights on the Skedar leader, the high priest of the Battle Shrine, while Elvis returns to the assault ship in order to summon the Maian fleet.\n"
+"\n"
+"In the wake of the climactic battle, the temple lies devastated with Elvis calling for a lull in the bombardment so that he can find Joanna. She is alive, held under a pile of rubble by the last tenacious Skedar that caught up during the last few seconds of her escape bid. Elvis quickly offers her a gun to convince the Skedar to let go, and with the job finally done, the Skedar Shrine and morale both in ruins and the conspiracy dealt a mortal blow to the heart, the two of them depart for orbit.\n"
+msgstr ""
+"実戦経験のない新人スパイのジョアンナ・ダークに初任務が与えられた。それは、データダイン本社ビルの地下研究エリアから、一人の科学者を救い出すというものだった。科学者を発見したとき、ジョアンナはその科学者、ドクター・キャロルとは、実はデータダインによって造られた人工知能であることを知ってショックを受ける。しかし彼女はそのままドクター・キャロルを安全なところまで護衛するべく、任務を続行した。ビル内にアラームがなり、玄関からの脱出は不可能になった。ジョアンナたちはビル屋上のヘリポートへと向かい、唯一の脱出手段である味方の輸送船に乗るべく、激しく戦わなくてはならなかった。\n"
+"\n"
+"ドクター・キャロルを奪われたデータダインはその２日後に、ダニエル・キャリントン個人を標的として反撃に出た。別荘にいた彼を人質にとったのである。彼らはキャリントンの命と引き換えに、彼らの「資産」である人工知能のドクター・キャロルを返すように要求してきた。データダインは気づいていなかったが、彼らの探しているドクター・キャロルは、実はその別荘の中にいた。キャリントンからデータダインの計画についての質問を受けているところであったのである。ジョアンナは自分のボスであるキャリントンをとうとう救出したが、ドクター・キャロルは既に連れ去られた後であった。しかしキャリントンは、彼の「フレンド」であるマイアンのスペシャリストの助けを呼ぶのに十分な情報を得たと判断したのだった。\n"
+"\n"
+"ジョアンナはすぐにシカゴへと飛んだ。データダインの手先であるといわれるＧ５コーポレーションのビルで開かれるミーティングをスパイするためだ。このミーティングを記録した結果、データダインの計画には国防省の司令官であるトレント・イーストンが加わっていること、また計画全体のリーダーであると思われる怪しい金髪男の存在が明らかになった。トレントが大統領を危険にさらす計画を明らかにするのを聞いて、ジョアンナはすぐさまそれを協会へと連絡した。しかし、トレントを止める前に、もっと緊急の任務が発生していたことを知ることになる。\n"
+"\n"
+"マイアンのスペシャリストたちの船が何物かに撃ち落とされ、死体や残がいは、ネバダのエリア５１という軍の秘密基地へと運ばれていた。生存者がいたら救出し、船の残がいも回収するようにという指令を受けて、ジョアンナは基地に侵入し、そこにいた味方のスパイと合流した。医学研究室に入ったジョアンナたちは、キャリントン協会の秘密を知ることになる。…協会の「フレンド」マイアンとは、「グレー」として知られるエイリアンだったのだ。彼女が何とか助け出したマイアンはエルビスと名を告げた。彼はマイアンのスペシャリスト部隊の先頭を飛んでいた地球大使のボディガードだったのだ。\n"
+"\n"
+"エリア５１のミッションをこなして、ジョアンナは大統領の安全を守る任務に戻ることができた。彼女はアラスカの空軍基地でスチュワーデスに変装し、大統領専用機へと乗り込んだのだった。飛行機が離陸すると、トレントと変装したスケダーたちはさっそく活動を開始した…が、そこには彼らを止めるべくジョアンナがいた。彼女は大統領を脱出カプセルへと護衛したが、その間にもトレントたちは大統領を引きずり込もうと、スケダーのＵＦＯを大統領専用機へとケーブル連結させてきた。ジョアンナはケーブルに損害を与えたが、完全に破壊することはできなかった。エルビスがやむを得ず、自分のＵＦＯをハイスピードで体当たりさせることによってケーブルを切断した。３つの機体はアラスカの雪原へと墜落して行き、大統領専用機の脱出ポッドは無事発射された。\n"
+"\n"
+"意識を取り戻すとジョアンナは協会に連絡を取ろうとしたが、スケダーのＵＦＯから出る妨害電波により通信ができなくなっていた。彼女は雪の中をエルビスと大統領を探しに行ったが、変装スケダーたちにでくわした。彼らもジョアンナやエルビスや大統領とその持ち物一式を探していたのだ。ジョアンナは墜落したスケダーのＵＦＯから１つの敵グループを追いかけていたところ、大統領のクローンを発見した。彼女はすぐさまクローンを倒し、妨害電波の装置をシャットダウンして、助けを呼んだ。スケダーの計画はまたしてもジャマされ、大統領は無事だった。トレントはその失敗により、彼の仲間の手によって、あわれな運命を歩むことになる。\n"
+"\n"
+"しかしスケダーはまだあきらめていなかった。手段を選ばない攻撃に出たスケダーたちは、政府の深海調査艇ペラジック２とその母船をシージャックして、太平洋のあるポイントへと向かった。ジョアンナとエルビスは、敵の活動を妨害するべく、母船へと乗りこんだ。そこで彼女たちは、スケダーの本当の狙いをつきとめることになる。敵の潜水作業を十分に妨害し、深海探査艇を取り返した後で、ジョアンナとエルビスは深海へと向かった。深海で彼女たちが見たものは巨大なセタンシップであった。スケダーによって造られた出入り口からセタンシップに入ることができた。そこで彼女たちはスケダー戦士の死体にでくわす。スケダーたちも、この船を思い通りにコントロールはできていないようだった。しつこいスケダーと戦い、セタンをかわしながら、ジョアンナとエルビスはコアへとたどりついた。そこにはかつてドクター・キャロルだった人工知能がいた。ジョアンナが彼の人格を復活させると、彼はジョアンナとエルビスに、すぐにセタンシップから脱出するように命じた。彼は危険な兵器を積んだこのセタンシップを、自爆することで爆破するという方法を選んだのだ。\n"
+"\n"
+"後日キャリントン協会にて、ジョアンナはホワイトハウスでのパーティへと出発する準備をしていた。突然、あたりはパニックにおちいった。スケダーの武闘派の生き残りが、セタンでの失敗の報復にキャリントン協会をおそってきたのだ。ジョアンナは格納庫の安全を確保しつつ、スタッフの救助などで建物内部を走り回った。ジョアンナが持ちこたえている間に協会のスタッフはほとんど脱出できたが、戦闘中に彼女は頭を打って気を失い、スケダーに捕らわれてしまった。\n"
+"\n"
+"気がつくと、ジョアンナはスケダー宇宙船のせまい部屋に、カサンドラと２人で監禁されていた。おどろいたことに、カサンドラは自らの命をギセイにして、ジョアンナに脱出のチャンスを与えたのだった。船内でのバトルを繰り広げた後で、ジョアンナはドッキングベイの空間シールドを不能にすることに成功した。こうしてエルビスとその仲間が中に入ることができ、全員そろってシューティング・パーティが始まったのだった。\n"
+"\n"
+"ジョアンナたちが乗っ取ったスケダーの宇宙船は、スケダーの「戦いの神殿」の上を通過していった。これにおどろいたのはエルビスだった。なぜなら、ここはスケダーの「聖地」であり、長年に渡るマイアンとスケダーの戦争中も、この場所をつきとめられなかったからだ。この神殿が破壊されれば、戦いを神聖な行為とするスケダー武闘派の教えの拠り所がなくなり、本当の平和がおとずれるであろう。ジョアンナはターゲットをスケダー武闘派のカリスマと呼ばれるキングにしぼり、エルビスはスケダー宇宙船から、マイアン軍の出動要請を出した。\n"
+"\n"
+"戦いもクライマックスを迎え、敵の神殿は破壊された。マイアン軍による爆撃に、エルビスがストップをかけた。ジョアンナがまだ戻ってきていなかったのだ。…彼女は生きていた。生き残りのしつこいスケダーに足をつかまれ、神殿の残がいの中にうもれていたのだ。エルビスはすぐにジョアンナに銃を渡し、彼女がスケダーにとどめを刺した。こうしてスケダー武闘派の拠り所であるキングと神殿を完全に破壊して、２人は宇宙船に戻っていったのだった。\n"
+
+#. L_DISH_173
+msgid "dataDyne Corporation\n"
+msgstr "データダイン\n"
+
+#. L_DISH_174
+msgid ""
+"The monolithic corporation that dataDyne has become started off as an AI "
+"systems programming business. When it became apparent that much of their "
+"income came from their work as a defense contractor for the U.S. military, a"
+" young and forward-looking manager called Cassandra De Vries started pushing"
+" for deals with weapons manufacturers, while ignoring offers from Daniel "
+"Carrington and the Institute for collaboration on quantum computing and AI "
+"research. After the third armament company was bought by dataDyne, profits "
+"became astronomical. Within a month of the receipt of a government contract "
+"for weapons development, Cassandra De Vries was CEO. A significant portion "
+"of corporation profits were redirected into AI research, with excellent "
+"results.\n"
+msgstr ""
+"データダイン社は、ＡＩシステムのプログラムビジネスからスタートした。アメリカの国防関係の仕事が最も金になることが明らかになってからは、野心的なマネージャー、カサンドラ・デブリーズが兵器関係のビジネスばかりを推し進めるようになった。ダニエル・キャリントンは、量子コンピューティングとＡＩリサーチに関する共同プロジェクトをカサンドラに持ちかけたが、彼女はそれを全く無視した。３つ目の兵器会社がデータダイン資本となって以降は、データダイン・グループの業績はケタ違いの数字になった。兵器開発の大量受注を政府から取りつけた後に、カサンドラはデータダイン社の最高責任者になった。会社の収入の大部分は再びＡＩ開発に注がれ、データダイン社はどんどん巨大になっていった。\n"
+
+#. L_DISH_175
+msgid "Carrington Institute\n"
+msgstr "キャリントン協会\n"
+
+#. L_DISH_176
+msgid ""
+"Briefly dismissed as a crackpot inventor, Daniel Carrington was the first to"
+" release anti-gravity technology to the world. Revenues from this and "
+"related development helped set up the Carrington Institute, ostensibly a "
+"technology think tank situated in a remote part of the continental U.S. In "
+"actual fact, the Institute is also a training ground for agents who are sent"
+" out into the world to keep track of technological development around the "
+"globe, for reasons best known to Daniel Carrington himself.\n"
+msgstr ""
+"変わり者の発明家として世間から見放されていたダニエル・キャリントンは、反重力テクノロジーを世界に初めて送り届ける男となった。このテクノロジーと関連の開発事業の収入でキャリントン協会を設立。同協会は、表向きはアメリカ大陸から少し離れたところに位置する科学技術シンクタンクだが、実は地球上の最先端技術の開発状況をチェックするための、スパイ養成場でもあったのだ。この目的はキャリントンのみが知っている。\n"
+
+#. L_DISH_177
+msgid ""
+"Description\n"
+"- A tiny remote camera for stealthy exploration. Equipped for spectroscopic holography. Opens doors by projecting a human-sized pulse of heat.\n"
+"\n"
+"Training Instructions\n"
+"- Holograph the hacker's terminal next door in the Info room.\n"
+"\n"
+"Operation\n"
+"- Press the Z Button to take a holograph. Pressing the B Button will open any doors in the way. Hold down the R Button to look around.\n"
+msgstr ""
+"＜デバイス説明＞\n"
+"潜入用のモバイルカメラ。\n"
+"人間の熱イメージを放射し\n"
+"ドアを開けることもできる。\n"
+"\n"
+"＜トレーニング内容＞\n"
+"となりのインフォ・ルームに\n"
+"居る、ハッカーのＰＣのホロ\n"
+"グラム画像を記録せよ。\n"
+"\n"
+"＜操作説明＞\n"
+"Ｚトリガーで画像記録。Ｂボ\n"
+"タンでドアを開き、Ｒボタン\n"
+"を押さえて周りを見回せる。\n"
+
+#. L_DISH_178
+msgid ""
+"Description\n"
+"- Enhances any visible light to produce an image of the surrounding area. Also highlights life forms. Overloads in normal light conditons, 'whiting out' the display.\n"
+"\n"
+"Training Instructions\n"
+"- Head into the darkness, find the light switch, and activate it to turn the lights back on.\n"
+"\n"
+"Operation\n"
+"- Select the Night Vision from your inventory to activate it. Reselect to deactivate.\n"
+msgstr ""
+"＜デバイス説明＞\n"
+"可視光を全て強化して、暗闇\n"
+"の中でも視覚イメージを作り\n"
+"あげる。生命反応も感知し\n"
+"それを強調して示す。\n"
+"\n"
+"＜トレーニング内容＞\n"
+"暗闇の中を進んで\n"
+"照明スイッチを点灯せよ。\n"
+"\n"
+"＜操作説明＞\n"
+"所持品の中からナイトアイ\n"
+"を選択して起動／停止する。\n"
+
+#. L_DISH_179
+msgid ""
+"Description\n"
+"\n"
+"- Stand-alone code-breaking device. Attaches to the control panel and sifts through the possible combinations until the lock is opened.\n"
+"\n"
+"Training Instructions\n"
+"- Find the pad by the locked door and use the Door Decoder on it to unlock the door.\n"
+"\n"
+"Operation\n"
+"- Stand next to the door pad and press the B Button while holding the Door Decoder to use it.\n"
+msgstr ""
+"＜デバイス説明＞\n"
+"ハンディな暗号解読機。\n"
+"ロックに直接取り付けると\n"
+"解読できるまで暗号を次々に\n"
+"切りかえて試す。\n"
+"\n"
+"＜トレーニング内容＞\n"
+"閉まったドアのロックを探し\n"
+"ドアコーダを使ってドア\n"
+"を開け。\n"
+"\n"
+"＜操作説明＞\n"
+"ドアコーダを選択し\n"
+"ロックの前でＢボタン。\n"
+
+#. L_DISH_180
+msgid ""
+"Description\n"
+"\n"
+"- Used to look through otherwise solid walls and objects. Can see things that the Night Vision and IR Scanner cannot.\n"
+"\n"
+"Training Instructions\n"
+"- With the X-Ray Scanner on, search for the two hidden switches and activate them to turn off the laser grid.\n"
+"\n"
+"Operation\n"
+"- Select the X-Ray Scanner from your inventory to activate it. Reselect to deactivate.\n"
+msgstr ""
+"＜デバイス説明＞\n"
+"壁や物体を透視できる。\n"
+"ナイトアイやIRスキャン\n"
+"では見えない物も見える。\n"
+"\n"
+"＜トレーニング内容＞\n"
+"Ｘスキャンを使って２つの\n"
+"隠れたスイッチを探し\n"
+"レーザーグリッドを消せ。\n"
+"\n"
+"＜操作説明＞\n"
+"所持品の中からＸスキャンを\n"
+"選択して起動／停止する。\n"
+
+#. L_DISH_181
+msgid ""
+"Description\n"
+"\n"
+"- Allay suspicion by the use of a disguise. But, always be alert for the possibility of being unmasked by a quick-witted enemy.\n"
+"\n"
+"Training Instructions\n"
+"- Grimshaw has a Cloaking Device waiting to be serviced. Head next door and 'acquire' it from him.\n"
+"\n"
+"Operation\n"
+"- To wear the disguise, simply select it from your inventory.\n"
+msgstr ""
+"＜デバイス説明＞\n"
+"変装でスパイへの疑惑を低減\n"
+"できるが、見破られる可能性\n"
+"もあるので要注意。\n"
+"\n"
+"＜トレーニング内容＞\n"
+"変装して、となりの部屋に居\n"
+"るスタッフからアイテムを\n"
+"入手せよ。\n"
+"\n"
+"＜操作説明＞\n"
+"所持品の中からユニフォーム\n"
+"を選択して変装する。\n"
+
+#. L_DISH_182
+msgid ""
+"Description\n"
+"\n"
+"- Translates thermal data into visible images. Can be used in darkness and will also reveal anomalies such as hidden doors and weak wall sections.\n"
+"\n"
+"Training Instructions\n"
+"- Turning on the IR Scanner, find the hidden door and open it.\n"
+"\n"
+"Operation\n"
+"- Select the IR Scanner from your inventory to activate it. Reselect to deactivate.\n"
+msgstr ""
+"＜デバイス説明＞\n"
+"熱データを映像イメージに\n"
+"変換する。暗闇の中でも使え\n"
+"隠されたドアや壁の弱い部分\n"
+"などの異常を検出する。\n"
+"\n"
+"＜トレーニング内容＞\n"
+"IRスキャンを使って秘密のドアを発見、それを開け。\n"
+"\n"
+"＜操作説明＞\n"
+"所持品からIRスキャン\n"
+"を選択して起動／停止する。\n"
+
+#. L_DISH_183
+msgid ""
+"Description\n"
+"- Locates a particular object on a HUD radar map. Shows the relative bearing and distance.\n"
+"\n"
+"Training Instructions\n"
+"- Activate the Tracker and follow the radar signature to retrieve the item.\n"
+"\n"
+"Operation\n"
+"- Selecting the Tracker from your inventory will activate it. Reselect to deactivate.\n"
+msgstr ""
+"＜デバイス説明＞\n"
+"ＨＵＤレーダーマップ上で\n"
+"特定の標的を検出し、相対的\n"
+"な方向と距離を表示する。\n"
+"\n"
+"＜トレーニング内容＞\n"
+"Ｒトラッカを起動して\n"
+"レーダーの信号を追いながら\n"
+"アイテムを回収せよ。\n"
+"\n"
+"＜操作説明＞\n"
+"所持品の中からＲトラッカ\n"
+"を選択して起動／停止する。\n"
+
+#. L_DISH_184
+msgid ""
+"Description\n"
+"- Disrupts the visible spectrum of light around the wearer, creating an almost perfect chameleonlike effect. This field is disrupted when the wearer fires.\n"
+"\n"
+"Training Instructions\n"
+"- Activate the Cloaking Device and head to Carrington's office to surprise him!\n"
+"\n"
+"Operation\n"
+"- Selecting the Cloaking Device from your inventory will activate it. Reselect to deactivate.\n"
+msgstr ""
+"＜デバイス説明＞\n"
+"目に入る光の残像をカットし\n"
+"て、一時的なカメレオン効果\n"
+"を作り出すことができる。\n"
+"\n"
+"＜トレーニング内容＞\n"
+"スパイクロークを使って\n"
+"キャリントンのオフィスに行\n"
+"き、ボスをおどろかせよう！\n"
+"\n"
+"＜操作説明＞\n"
+"所持品からスパイクロークを\n"
+"選択して起動／解除する。\n"
+
+#. L_DISH_185
+msgid ""
+"Description\n"
+"- Emits a constantly shifting signal designed to jam any electronic communications device. Must be placed on the object to be effective.\n"
+"\n"
+"Training Instructions\n"
+"- Throw the ECM Mine onto the lighting hub located through the secret door.\n"
+"\n"
+"Operation\n"
+"- Press the Z Button to throw the mine. Hold down the R Button and move the Control Stick to fine-tune your aim before throwing.\n"
+msgstr ""
+"＜デバイス説明＞\n"
+"コンスタントに変化する信号\n"
+"を放ち、あらゆる電子通信機\n"
+"器を妨害できる。\n"
+"\n"
+"＜トレーニング内容＞\n"
+"秘密のドアの向こうにある\n"
+"集中管理装置にＥＣＭマイン\n"
+"を投げて取り付けよ。\n"
+"\n"
+"＜操作説明＞\n"
+"Ｒボタン＋３Ｄスティックで\n"
+"狙いを定め、Ｚトリガーで\n"
+"投げる。\n"
+
+#. L_DISH_186
+msgid ""
+"Description\n"
+"- Provides a link from the field agent to the Institute hackers back at HQ, who can then download data or crack electronic locks remotely.\n"
+"\n"
+"Training Instructions\n"
+"- Use the Data Uplink to hack the terminal in the corner, unlocking a secret door.\n"
+"\n"
+"Operation\n"
+"- Stand next to the terminal and press the B Button when holding Data Uplink.\n"
+msgstr ""
+"＜デバイス説明＞\n"
+"現場のスパイと協会のハッ\n"
+"カーとの間でデータのやり取\n"
+"りが可能になるデバイス。\n"
+"\n"
+"＜トレーニング内容＞\n"
+"データリンカを使って\n"
+"この部屋にあるＰＣのデータ\n"
+"をハッキングし、秘密のドア\n"
+"を開け。\n"
+"\n"
+"＜操作説明＞\n"
+"データリンカを選択し\n"
+"ＰＣの前でＢボタンを押す。\n"
+
+#. L_DISH_187
+msgid ""
+"FIRING\n"
+" Press Z Button to fire gun.\n"
+msgstr "発射：Ｚトリガーでウェポン発射\n"
+
+#. L_DISH_188
+msgid ""
+"AUTO RELOAD\n"
+" Release Z Button when out of ammo.\n"
+msgstr ""
+"オートリロード\n"
+"マガジンが空になったらＺトリガーをはなす\n"
+
+#. L_DISH_189
+msgid ""
+"MANUAL RELOAD\n"
+" Press B Button to reload early if magazine not full.\n"
+msgstr ""
+"マニュアルリロード\n"
+"マガジンの弾が減ったらＢボタンでリロード\n"
+
+#. L_DISH_190
+msgid "Aiming: Hold down R Button to enter Aim mode.\n"
+msgstr ""
+"照準モード\n"
+"Ｒボタンを押したままにすると照準モードへ\n"
+
+#. L_DISH_191
+msgid "Use Control Stick to move aiming sight.\n"
+msgstr "３Ｄスティックで照準をコントロールできる\n"
+
+#. L_DISH_192
+msgid ""
+"AUTO FIRE\n"
+" Hold Z Button to repeatedly fire automatically.\n"
+msgstr ""
+"自動連射\n"
+"Ｚトリガーを押したままで自動連射\n"
+
+#. L_DISH_193
+msgid ""
+"ALTER AIM\n"
+" Press Up C Button or Down C Button to move sight up/down.\n"
+msgstr ""
+"クイック照準\n"
+"Ｃの上下ボタンで少しずつ上下が狙える\n"
+
+#. L_DISH_194
+msgid ""
+"ZOOM\n"
+" Hold R Button to enter Zoom mode.\n"
+msgstr ""
+"ズームモード\n"
+"Ｒボタンを押したままでズームモードへ\n"
+
+#. L_DISH_195
+msgid ""
+"FAST FIRE\n"
+" Press Z Button quickly to fire faster.\n"
+msgstr ""
+"クイック連射\n"
+"Ｚトリガーを素早く連打でクイック連射\n"
+
+#. L_DISH_196
+msgid "Carrington Institute |Base of operations\n"
+msgstr "キャリントン協会 |Base of operations\n"
+
+#. L_DISH_197
+msgid "Lucerne Tower |Global headquarters\n"
+msgstr "データダイン本社ビル |Global headquarters\n"
+
+#. L_DISH_198
+msgid "Laboratory Basement |Underground research labs\n"
+msgstr "地下研究室 |Underground research labs\n"
+
+#. L_DISH_199
+msgid "Carrington Villa |Private coastal retreat\n"
+msgstr "キャリントンの別荘 |Private coastal retreat\n"
+
+#. L_DISH_200
+msgid "Chicago |Backstreets of the city\n"
+msgstr "シカゴ |Backstreets of the city\n"
+
+#. L_DISH_201
+msgid "G5 Building |dataDyne front corporation\n"
+msgstr "Ｇ５ビル |dataDyne front corporation\n"
+
+#. L_DISH_202
+msgid "Area 51 |Near Groom Dry Lake, Nevada\n"
+msgstr "エリア５１ |Near Groom Dry Lake, Nevada\n"
+
+#. L_DISH_203
+msgid "Alaskan Air Base |Brooks Range, Alaska\n"
+msgstr "アラスカ空軍基地 |Brooks Range, Alaska\n"
+
+#. L_DISH_204
+msgid "Air Force One |The President's airplane\n"
+msgstr "大統領専用機 |The President's airplane\n"
+
+#. L_DISH_205
+msgid "Crash Site |Victoria Island 71N 118W\n"
+msgstr "墜落現場 |Victoria Island 71N 118W\n"
+
+#. L_DISH_206
+msgid "Pelagic II |Specialized deep-sea research ship\n"
+msgstr "ペラジック２ |Specialized deep-sea research ship\n"
+
+#. L_DISH_207
+msgid "Cetan Ship |The most alien environment on Earth\n"
+msgstr "セタンシップ |The most alien environment on Earth\n"
+
+#. L_DISH_208
+msgid "Skedar Assault Ship |Troop carrying spacecraft\n"
+msgstr "スケダー宇宙船 |Troop carrying spacecraft\n"
+
+#. L_DISH_209
+msgid "Skedar Homeworld |The planet of the Battle Shrine\n"
+msgstr "赤い惑星 |The planet of the Battle Shrine\n"
+
+#. L_DISH_210
+msgid "Jumpship |Agile troop craft\n"
+msgstr "ジャンプシップ |Agile troop craft\n"
+
+#. L_DISH_211
+msgid "HoverCrate |Gravity-negation device\n"
+msgstr "ホバーコンテナ |Gravity-negation device\n"
+
+#. L_DISH_212
+msgid "HoverBike |Low altitude vehicle\n"
+msgstr "ホバーバイク |Low altitude vehicle\n"
+
+#. L_DISH_213
+msgid "Cleaning Hovbot |Your helpful buddy\n"
+msgstr "クリーニングロボット |Your helpful buddy\n"
+
+#. L_DISH_214
+msgid "Hovercopter |Urban AG gunship\n"
+msgstr "ホバーコプター |Urban AG gunship\n"
+
+#. L_DISH_215
+msgid "G5 Robot |Urban combat droid\n"
+msgstr "Ｇ５ロボット |Urban combat droid\n"
+
+#. L_DISH_216
+msgid "A51 Interceptor |Robotic air interceptor\n"
+msgstr "Ａ５１インターセプター |Robotic air interceptor\n"
+
+#. L_DISH_217
+msgid "Maian Vessel |Scout and patrol vessel\n"
+msgstr "マイアン型ＵＦＯ |Scout and patrol vessel\n"
+
+#. L_DISH_218
+msgid "Skedar Shuttle |Alien troop dropship\n"
+msgstr "スケダー型ＵＦＯ |Alien troop dropship\n"
+
+#. L_DISH_219
+msgid ""
+"The Institute building comprises many different areas: offices and "
+"laboratories, workshops and hangars. It is quite isolated from the outside "
+"world, which helps keep the operations covert.\n"
+msgstr ""
+"協会のビルには多くのエリアがある。オフィスエリア、実験エリア、作業エリア、そして格納庫だ。外の世界からは隔離された場所にあるが、それによって極秘の任務が可能になっている。\n"
+
+#. L_DISH_220
+msgid ""
+"In the midst of the business district, the austere skyscraper of the "
+"dataDyne Corporation stands out from the surroundings.\n"
+msgstr "オフィス街の中心に立つランドマーク。データダイングループの本社ははるか遠くからでも目立って見える。\n"
+
+#. L_DISH_221
+msgid ""
+"These heavily guarded, well-hidden labs hold the key to dataDyne's future. "
+"Within them, techs work on top-secret projects aimed at putting dataDyne on "
+"the top of the heap.\n"
+msgstr ""
+"地下に隠され、きびしく警備された極秘研究エリアで、データダインの重要プロジェクトが動いていると言われる。選りすぐりの科学者たちが、データダインを勝者にするべく、日夜研究を続けているらしい。\n"
+
+#. L_DISH_222
+msgid ""
+"Owned by the Institute, this secluded residence is used by Daniel Carrington"
+" as a retreat from the pressures of the Institute. As well as an "
+"observatory, it has a power generator and an extensive wine cellar.\n"
+msgstr ""
+"キャリントン協会保有の、辺境の地にあるこの別荘は、ダニエル・キャリントンの保養地として使われている。発電システム、広大なワインセラーがある。\n"
+
+#. L_DISH_223
+msgid ""
+"A seedy, grimy part of the city of Chicago, now closed to ground traffic. It"
+" is here that the G5 Corporation has its headquarters.\n"
+msgstr "シカゴの街の、怪しく危険なエリア。\n"
+
+#. L_DISH_224
+msgid ""
+"Inside the G5 Building is a meeting room protected by anti-recording "
+"safeguards. This is the safest place for dataDyne to formulate confidential "
+"plans.\n"
+msgstr ""
+"Ｇ５ビルの内部にミーティングルームがあり、ここでは全ての録音／録画ができないようになっている。ここはデータダインの秘密のプランが全て動いている。\n"
+
+#. L_DISH_225
+msgid ""
+"This section of the extensive facility known as Area 51 is based in the "
+"foothills around Groom Dry Lake. Exterior helipads and communication towers "
+"hint at the size of the complex beneath ground level.\n"
+msgstr ""
+"エリア５１として知られる広大な秘密基地はグルームドライ・レイクの近くの山ろくにあると言われている。外にあるヘリポートとパラボラアンテナの大きさが、この地下に広がる基地の果てしない大きさを感じさせる。\n"
+
+#. L_DISH_226
+msgid ""
+"One of a series of reinforced air bases available as staging posts for Air "
+"Force One. Typically, the air base is remote, in an inhospitable region, far"
+" away from prying eyes.\n"
+msgstr ""
+"大統領専用機が立ちよれるように、警備を強化してある空軍基地の１つ。ほとんどの空軍基地は人目につかない、奥地のエリアに造られており、ここもその例外ではない。\n"
+
+#. L_DISH_227
+msgid ""
+"This particular Air Force One is optimized for cold climates, useful when it"
+" is based in the north of Alaska. The flight destination is Oslo, Norway.\n"
+msgstr "この大統領専用機は、アラスカの極低温を問題としないように、特別に設計されている。今回の行き先はノルウェーのオスロだ。\n"
+
+#. L_DISH_228
+msgid ""
+"In the rocky snow-covered landscape of the Arctic Circle, the wreckage of "
+"the stricken plane has come to rest.\n"
+msgstr "アラスカ上空の雪原に飛行機の残がいが落ちていった。\n"
+
+#. L_DISH_229
+msgid ""
+"Owned by the U.S. government, the Pelagic II is capable of staging deep-sea "
+"diving operations in all weather conditions. It is the only fully integrated"
+" ocean floor research vessel in the world.\n"
+msgstr "政府所有のペラジック２は、最深海で潜水作業が行える。世界で唯一の完全にコンピュータ制御された深海探査艇だ。\n"
+
+#. L_DISH_230
+msgid ""
+"A huge ship of alien construction that has lain on the ocean floor for "
+"millions of years.\n"
+msgstr "はるか昔から海底で眠っている巨大なエイリアンの船。\n"
+
+#. L_DISH_231
+msgid ""
+"An interplanetary assault ship that carries Skedar warriors to their war "
+"zones. Part of the much-reduced Skedar battle fleet.\n"
+msgstr "スケダー戦士たちを各惑星へと送り届ける輸送船。スケダー戦隊の一部を占める。\n"
+
+#. L_DISH_232
+msgid ""
+"A highly arid planet, racked by earthquakes, sandstorms, and hurricanes. It "
+"is part of a complex solar system that includes three suns.\n"
+msgstr "赤き砂の惑星。３つの太陽を持つはるか彼方の太陽系に位置する。\n"
+
+#. L_DISH_233
+msgid ""
+"A small, fast, highly maneuverable agent-deployment craft designed for use "
+"in urban areas. Can be either computer controlled or remote piloted. It has "
+"enough room inside for three to four agents, plus equipment.\n"
+msgstr ""
+"コンパクトで素早く、小回りがきくエージェント輸送用シャトル。大都市の中をスピーディに移動することを目的に設計されている。コンピュータで自動操縦もできるし、リモートコントロールもできる。３人から４人のエージェントと、その装備品を輸送できる。\n"
+
+#. L_DISH_234
+msgid ""
+"An antigrav device designed to aid warehouse workers. It is attached to the "
+"side of a crate. When activated, the AG field lifts the crate and removes "
+"some of the inertia.\n"
+msgstr "倉庫スタッフの作業用の反重力デバイス。コンテナの横のスイッチをいれると、反重力フィールドがコンテナを持ち上げる。\n"
+
+#. L_DISH_235
+msgid ""
+"A low-altitude patrol bike. Uses a small AG unit to hover, then a small but "
+"powerful turbine with vectored thrust to move and provide directional "
+"control.\n"
+msgstr "高度の低いパトロールバイク。小さな反重力装置を使ってホバリングし、小型の強力なモーターで推進力を得る。\n"
+
+#. L_DISH_236
+msgid ""
+"Keeps the place clean and tidy. Tends to have access to all areas of a "
+"building - agents are advised to leave such robots intact where possible, as"
+" they can unwittingly provide a means of ingress to sensitive zones.\n"
+msgstr ""
+"指定エリアをきれいに掃除する。基本的に建物全体をくまなく回っていくことが多い。エージェントたちは、基本的にはクリーニングロボットを攻撃しないように教えられている。なぜなら、極秘エリアに案内してもらえることもあるからだ。\n"
+
+#. L_DISH_237
+msgid ""
+"An urban patrol and suppression vehicle. Two-man crew, armed with a vulcan "
+"cannon on the nose pod, and two wingtip-mounted dumbfire missile pods. Can "
+"be taken out with sustained gunfire or, preferably, one well-aimed rocket.\n"
+msgstr ""
+"都市部におけるパトロール＆攻撃用ビークル。２人乗りで、ノーズパッドにバルカンキャノン、ウィングにはミサイルを装備している。銃による攻撃（正確に狙われたロケット弾がベスト）で、破壊することができる。\n"
+
+#. L_DISH_238
+msgid ""
+"A combat robot designed for urban warfare. Uses an antigrav unit to hover; "
+"heavily armed and shielded. Often used to keep out unwanted visitors, due to"
+" the 'shoot first and don't ask questions later' programming.\n"
+msgstr ""
+"都市部でのコンバット用に設計されている。反重力テクノロジーでホバリングしている。強力な武装とシールドを持つ。怪しい人物を見たら「問答無用で先制攻撃」という思考ルーチンで、どんどん攻撃してくる。\n"
+
+#. L_DISH_239
+msgid ""
+"A robotic variant of the HoverBike, with more powerful AG and turbine units;"
+" it can reach Mach 2 with ease and yet can cruise for hours at walking pace."
+" Although quite well armed, it relies on maneuverability rather than "
+"shielding.\n"
+msgstr ""
+"ホバーバイクのロボット版。より強力な反重力ユニットとモーターシステムがつき、歩行スピードから、最大マッハ２のスピードで移動することができる。武装面と操縦性には重点が置かれているが、シールドに弱点を持っている。\n"
+
+#. L_DISH_240
+msgid ""
+"Designed to carry a single Maian pilot.  A passenger would find themselves "
+"cramped - a human passenger even more so.\n"
+msgstr "マイアン１人が乗ることができる。乗組員はかなりせまく感じるだろう。人間だったら、なおさらである。\n"
+
+#. L_DISH_241
+msgid ""
+"Capable of carrying ten fully armed and armored Skedar warriors to battle. "
+"Undetectable by conventional radar. It can broadcast powerful jamming waves "
+"over a considerable area - these disrupt communications as well as detection"
+" equipment.\n"
+msgstr ""
+"１０人の武装したスケダー戦士を運ぶことができる。通常のレーダーでは探知できない。強力な妨害電波を発信することができ、通信装置やレーダーなどの機器を不能にすることができる。\n"
+
+#. L_DISH_242
+msgid ""
+"Description\n"
+"- A good agent notices everything around him or her.\n"
+"\n"
+"Training Instructions\n"
+"- Examine all of the objects by looking directly at them.\n"
+"\n"
+"Operation\n"
+"-Look up- Press the Down C Button\n"
+"-Look down- Press the Up C Button\n"
+"-Free Look- Hold down the R Button to enter Aim mode, and use the Control Stick to look.\n"
+msgstr ""
+"＜テーマ＞\n"
+"有能なエージェントは周りを常にチェックします。\n"
+"\n"
+"＜トレーニング内容＞\n"
+"まわりを見回して、パネルをチェックして下さい。\n"
+"\n"
+"＜操作説明＞\n"
+"Ｃ下ボタンで上を見て、Ｃ上ボタンで下を見る。Ｒボタンで照準モードに入り、３Ｄスティックで周りを自由に見まわすことができます。\n"
+
+#. L_DISH_243
+msgid ""
+"Description\n"
+"- Sidestepping and strafing can get you out of trouble.\n"
+"\n"
+"Training Instructions\n"
+"- Activate all of the switches in front. Be quick, though, as each switch will reset on a time limit.\n"
+"\n"
+"Operation\n"
+"- Sidestep left- Left C Button\n"
+"- Sidestep right- Right C Button\n"
+"\n"
+msgstr ""
+"＜テーマ＞\n"
+"サイドステップは、時にはピンチから救ってくれるテクニックです。\n"
+"\n"
+"＜トレーニング内容＞\n"
+"前にあるスイッチを全て起動せよ。各スイッチはすぐにリセットされるので要注意。\n"
+"\n"
+"＜トレーニング内容＞\n"
+"Ｃ左ボタン：左ステップ\n"
+"Ｃ右ボタン：右ステップ\n"
+"\n"
+
+#. L_DISH_244
+msgid ""
+"Description\n"
+"- Ducking and crouching can open up new areas for exploration.\n"
+"\n"
+"Training Instructions\n"
+"- Work your way through the obstacles using the moves available to you. Activate the switches.\n"
+"\n"
+"Operation\n"
+"- Duck- Hold the R Button, then press the Down C Button.\n"
+"- Crouch- When ducking, hold the R Button, then press the Down C Button.\n"
+"- Get up- Tap the R Button.\n"
+"\n"
+msgstr ""
+"＜テーマ＞\n"
+"しゃがむことによって、新しいエリアを探索できます。\n"
+"\n"
+"＜トレーニング内容＞\n"
+"センサーにあたらずに、スイッチを起動して下さい。\n"
+"\n"
+"＜操作説明＞\n"
+"Ｒ＋Ｃ下ボタンで２段階にしゃがむ。３Ｄスティックでしゃがんだまま歩く。Ｒボタンをクリックで起き上がる。\n"
+"\n"
+
+#. L_DISH_245
+msgid ""
+"Description\n"
+"- Fighting multiple opponents in hand-to-hand combat can be difficult.\n"
+"\n"
+"Training Instructions\n"
+"- Knock out all enemies without getting hit.\n"
+"\n"
+"Operation\n"
+"- Punch - Press the Z Button repeatedly when unarmed to launch a flurry of punches.\n"
+"\n"
+msgstr ""
+"＜テーマ＞\n"
+"複数の敵を相手に素手で戦うのは、ラクではありません。\n"
+"\n"
+"＜トレーニング内容＞\n"
+"敵から全くダメージを受けずに、全員ノックアウトせよ。\n"
+"\n"
+"＜操作説明＞\n"
+"ウェポンがない時はパンチあるのみ。Ｚトリガーを連打して下さい。\n"
+"\n"
+
+#. L_DISH_246
+msgid ""
+"Description\n"
+"- Disarming an enemy can get you a new weapon.\n"
+"\n"
+"Training Instructions\n"
+"- Knock out/disarm all enemies without getting hit.\n"
+"\n"
+"Operation\n"
+"- Disarm - Hold the B Button, then press the Z Button to disarm an enemy.\n"
+"- Knockout Punch - Punch an unaware enemy from behind.\n"
+msgstr ""
+"＜テーマ＞\n"
+"敵を武装解除すれば、敵のウェポンが手に入ります。\n"
+"\n"
+"＜トレーニング内容＞\n"
+"敵から全くダメージを受けずに、全員ノックアウト／武装解除せよ。\n"
+"\n"
+"＜操作説明＞\n"
+"後ろからのパンチは一撃で\n"
+"ノックアウトできます。\n"
+"第２武器モードを使うと敵を\n"
+"武装解除できます。\n"
+
+#. L_DISH_247
+msgid ""
+"Description\n"
+"- Fighting multiple opponents in hand-to-hand combat.\n"
+"\n"
+"Training Instructions\n"
+"- Beat all the unarmed enemies without getting hit.\n"
+"\n"
+msgstr ""
+"＜テーマ＞\n"
+"複数の敵と素手で戦って下さい。\n"
+"\n"
+"＜トレーニング内容＞\n"
+"全くダメージを受けないようにしながら、非武装の敵を全員倒せ。\n"
+"\n"
+
+#. L_DISH_248
+msgid ""
+"Description\n"
+"- Fighting multiple opponents, both armed and unarmed.\n"
+"\n"
+"Training Instructions\n"
+"- Beat all the armed enemies without getting hit.\n"
+"\n"
+msgstr ""
+"＜テーマ＞\n"
+"複数の敵と素手で戦って下さい。敵は武装タイプと非武装タイプがいます。\n"
+"\n"
+"＜トレーニング内容＞\n"
+"全くダメージを受けないようにしながら、敵を全員倒せ。\n"
+"\n"
+
+#. L_DISH_249
+msgid ""
+"For greater precision and freedom when looking around, use the Aiming "
+"mode.\n"
+msgstr "より正確に狙ったり、もっと自由に周りを見まわしたいときは、照準モードを使ってください。\n"
+
+#. L_DISH_250
+msgid ""
+"Think about where you want to go before attempting the test. Set yourself up"
+" in a place that will require the least amount of movement between "
+"targets.\n"
+msgstr ""
+"テストにチャレンジする前に、自分の行きたい場所を確認したほうがいいですね。ターゲットの間を最も早く行き来できるようなポイントからスタートする方が得策です。\n"
+
+#. L_DISH_251
+msgid ""
+"Ducking enables you to reach places normally inaccessible to you, but "
+"remember that you move quickest when standing upright. To move through the "
+"test as fast as possible, try ducking only when you have to.\n"
+msgstr ""
+"しゃがむことによって、普通では行けないようなところに行けたりするけど、立っているときの方が早く動けます。テストを行う際は、必要なところでのみしゃがむようにした方がいいわよ。\n"
+
+#. L_DISH_252
+msgid ""
+"Attacking opponents from behind may be dishonorable, but doing so makes it "
+"easier to take them down. Only close to fighting distance when you have to, "
+"and be prepared to step back out of range when they attack you.\n"
+msgstr "敵の後ろから攻撃するのはフェアじゃないかもしれないけど、これがキクわよ。ヒット＆アウェイが基本ね。\n"
+
+#. L_DISH_253
+msgid ""
+"Only stay close long enough to grab the weapon. Back out of range of any "
+"retribution and use your new weapon.\n"
+msgstr "ウェポンを奪う時は敵に近づいて、奪ったらすぐに離れて反撃をかわし、奪ったウェポンを使って下さい。\n"
+
+#. L_DISH_254
+msgid ""
+"Don't hang around and wait to get hit, move! Don't focus on one opponent; "
+"try to be aware of where all of them are. If you can't see all of them, move"
+" until you can.\n"
+msgstr ""
+"ボーとしてちゃ、やられるだけよ。動きなさい！一人に気をとられてばかりじゃなくて、全員を見るのです。全員が見えない場合は、見えるまで動いた方がいいわね。\n"
+
+#. L_DISH_255
+msgid ""
+"Go for the armed opponents once you are confident of your hand-to-hand "
+"skills. Back away from the disarmed enemies and use their weapons on them "
+"before they get too close to you.\n"
+msgstr "素手のファイトに自信がついたら、武装した敵にチャレンジしてください。武装解除した敵からすぐに離れて、手に入れたウェポンを使うのです。\n"
+
+#. L_DISH_256
+msgid ""
+"For greater precision and freedom when looking around, use the Aiming "
+"mode.\n"
+msgstr "より正確に狙ったり、もっと自由に周りを見まわしたいときは、照準モードを使ってください。\n"
+
+#. L_DISH_257
+msgid "Sidestepping and strafing can get you out of trouble.\n"
+msgstr "サイドステップは、時にはピンチから救ってくれるテクニックです。\n"
+
+#. L_DISH_258
+msgid ""
+"Ducking enables you to reach places normally inaccessible to you, but "
+"remember that you move quickest when standing upright. To move as fast as "
+"possible, try ducking only when you have to.\n"
+msgstr ""
+"しゃがむことによって、普通では行けないようなところに行けたりするけど、立っているときの方が早く動けます。テストを行う際は、必要なところでのみしゃがむようにした方がいいわよ。\n"
+
+#. L_DISH_259
+msgid ""
+"Attacking opponents from behind may be dishonorable, but doing so makes it "
+"easier to take them down. Only close to fighting distance when you have to, "
+"and be prepared to step back out of range when they attack you.\n"
+msgstr "敵の後ろから攻撃するのはフェアじゃないかもしれないけど、これがキクわよ。ヒット＆アウェイが基本ね。\n"
+
+#. L_DISH_260
+msgid ""
+"Only stay close long enough to grab the weapon. Back out of range of any "
+"retribution and use your new weapon.\n"
+msgstr "ウェポンを奪う時は敵に近づいて、奪ったらすぐに離れて反撃をかわし、奪ったウェポンを使って下さい。\n"
+
+#. L_DISH_261
+msgid ""
+"Don't hang around and wait to get hit; move! Don't focus on one opponent; "
+"try to be aware of where all of them are. If you can't see all of them, move"
+" until you can.\n"
+msgstr ""
+"ボーとしてちゃ、やられるだけよ。動きなさい！一人に気をとられてばかりじゃなくて、全員を見るのです。全員が見えない場合は、見えるまで動いた方がいいわね。\n"
+
+#. L_DISH_262
+msgid ""
+"Go for the armed opponents once you are confident of your hand-to-hand "
+"skills. Back away from the disarmed enemies and use their weapons on them "
+"before they get too close to you.\n"
+msgstr "素手のファイトに自信がついたら、武装した敵にチャレンジしてください。武装解除した敵からすぐに離れて、手に入れたウェポンを使うのです。\n"
+
+#. L_DISH_263
+msgid ""
+"Always keep the target object in view when using the Data Uplink, and stay "
+"close to prevent the connection from being severed.\n"
+msgstr "データリンカを使う際は、常にターゲットを見える範囲内に置いて、接続が途切れないようなるべく離れないで下さい。\n"
+
+#. L_DISH_264
+msgid ""
+"Be sure the mine will land in the correct place by getting as close as you "
+"can to the target. Adjust your aim using the C Buttons or the R Button "
+"Aiming mode.\n"
+msgstr ""
+"できるだけターゲットに近づいて、ＥＣＭマインが正しい場所につくよう確認して下さい。Ｒボタンの照準モードや、Ｃボタンを使って狙いを定めて下さい。\n"
+
+#. L_DISH_265
+msgid "The CamSpy can be difficult to control, so take your time.\n"
+msgstr "カムスパイの操作は難しいので、ゆっくりと…\n"
+
+#. L_DISH_266
+msgid "Useful in combat, but can cause problems when overloading.\n"
+msgstr "ナイトアイは夜間コンバットなどで役立ちますが、周りが明るくなると問題です。\n"
+
+#. L_DISH_267
+msgid ""
+"If you are having trouble attaching the Decoder, try standing closer to the "
+"target and facing it.\n"
+msgstr "ドアコーダがうまくセットできない時は、ターゲットとなるべく近く、正面に向き合うように立ってみてください。\n"
+
+#. L_DISH_268
+msgid ""
+"The Tracker only indicates direction and relative height; it doesn't display"
+" a map guiding you to the target. Pay attention to your surroundings, and be"
+" prepared to explore.\n"
+msgstr "Ｒトラッカは、相対的な方向と距離しか表示しません。ターゲットまでのマップは表示されないので、周りを良く見ながら探索して下さい。\n"
+
+#. L_DISH_269
+msgid ""
+"The visor narrows your peripheral vision, which can cause problems in "
+"combat. Be sure of your situation before you use it.\n"
+msgstr "IRスキャン装着時は視野がせまくなるので、コンバット時には不利になります。状況を考えて使って下さい。\n"
+
+#. L_DISH_270
+msgid ""
+"If you use this device at the wrong time, it could cost you your life, since"
+" it can prevent you from seeing anything beyond a certain distance. Use "
+"sparingly.\n"
+msgstr "一定距離より向こうが見えなくなるので、おかしな時に使うと自分がピンチになります。やみくもに使うのはやめましょう。\n"
+
+#. L_DISH_271
+msgid ""
+"A disguise is not just the clothing, it is the manner of the person wearing "
+"it. Don't behave out of character for the person you are trying to be.\n"
+msgstr "変装とは、単に服を着けるということだけではありません。その人物にふさわしいマナーで行動しないと、バレてしまいますよ。\n"
+
+#. L_DISH_272
+msgid ""
+"Preserve the supply of the Cloaking Device when there is no one around to "
+"observe you.\n"
+msgstr "他に誰もいないところではスパイクロークをＯＦＦにして、なるべく長く使えるようにしましょう。\n"
+
+#. L_DISH_273
+msgid ""
+"Always keep the target object in view when using the Data Uplink, and stay "
+"close to prevent the connection from being severed.\n"
+msgstr "データリンカを使う際は、常にターゲットを見える範囲内に置いて、接続が途切れないようなるべく離れないで下さい。\n"
+
+#. L_DISH_274
+msgid ""
+"Be sure the mine will land in the correct place by getting as close as you "
+"can to the target. Adjust your aim using the C Buttons or the R Button "
+"Aiming mode.\n"
+msgstr ""
+"できるだけターゲットに近づいて、ＥＣＭマインが正しい場所につくよう確認して下さい。Ｒボタンの照準モードや、Ｃボタンを使って狙いを定めて下さい。\n"
+
+#. L_DISH_275
+msgid ""
+"The CamSpy is not invisible - enemies may spot it - so be careful when "
+"entering an inhabited area.  Remember that the CamSpy will remain where you "
+"left it unless you pick it up.\n"
+msgstr ""
+"カムスパイは透明ではありません。気づかれる場合もあるので、敵のいるエリアに入るときは十分に気をつけて下さい。使用後は回収しないと、そこに残ったままです。\n"
+
+#. L_DISH_276
+msgid ""
+"Useful in combat, but can cause problems when overloading. Try to anticipate"
+" such situations and react before the enemy.\n"
+msgstr "ナイトアイは夜間コンバットなどで役立ちますが、周りが明るくなると問題です。\n"
+
+#. L_DISH_277
+msgid ""
+"If you are having trouble attaching the Decoder, try standing closer to the "
+"target and facing it.\n"
+msgstr "ドアコーダがうまくセットできない時は、ターゲットとなるべく近く、正面に向き合うように立ってみてください。\n"
+
+#. L_DISH_278
+msgid ""
+"The Tracker only indicates direction and relative height; it doesn't display"
+" a map guiding you to the target. Pay attention to your surroundings, and be"
+" prepared to explore.\n"
+msgstr "Ｒトラッカは、相対的な方向と距離しか表示しません。ターゲットまでのマップは表示されないので、周りを良く見ながら探索して下さい。\n"
+
+#. L_DISH_279
+msgid ""
+"The visor narrows your peripheral vision, which can cause problems in "
+"combat. Be sure of your situation before you use it.\n"
+msgstr "IRスキャン装着時は視野がせまくなるので、コンバット時には不利になります。状況を考えて使って下さい。\n"
+
+#. L_DISH_280
+msgid ""
+"If you use this device at the wrong time, it could cost you your life, since"
+" it can prevent you from seeing anything beyond a certain distance. Use "
+"sparingly.\n"
+msgstr "一定距離より向こうが見えなくなるので、おかしな時に使うと自分がピンチになります。やみくもに使うのはやめましょう。\n"
+
+#. L_DISH_281
+msgid ""
+"A disguise is not just the clothing, it is the manner of the person wearing "
+"it. Don't behave out of character for the person you are trying to be.\n"
+msgstr "変装とは、単に服を着けるということだけではありません。その人物にふさわしいマナーで行動しないと、バレてしまいますよ。\n"
+
+#. L_DISH_282
+msgid ""
+"Preserve the supply of the Cloaking Device when there is no one around to "
+"observe you. Avoid firing unless absolutely necessary and until you are "
+"assured of the success of your attack.\n"
+msgstr ""
+"他に誰もいないところではスパイクロークをＯＦＦにして、なるべく長く使えるようにしましょう。また絶対に必要か、もしくは絶対に勝てる自信がある時以外は、銃は使わないほうが安全です。\n"
+
+#. L_DISH_283
+msgid ""
+"The Falcon 2 is a very accurate handgun, so any error in this test is your "
+"own. The secondary mode is a pistol-whip and is, therefore, useless in a "
+"firing range.\n"
+msgstr ""
+"ファルコン２は非常に正確な短銃なので、撃ち損じは全てあなた自身の責任です。第２武器モードはグリップアタックなので、このトレーニングでは用いません。\n"
+
+#. L_DISH_284
+msgid ""
+"To make better use of the accuracy of the Falcon 2, a scope has been "
+"attached to the pistol. As with the unmodified Falcon 2, the pistol-whip "
+"secondary mode is useless during the firing range test.\n"
+msgstr ""
+"ファルコン２の正確さを十分に生かすために、スコープを取りつけたのがこのタイプです。ノーマルタイプ同様に第２武器モードはグリップアタックなので、このトレーニングでは用いません。\n"
+
+#. L_DISH_285
+msgid ""
+"The silenced version of the Falcon 2 is an excellent stealth weapon, "
+"designed to give you the advantage of surprise over your opponents. Test "
+"your accuracy to ensure you never waste your chances.\n"
+msgstr ""
+"サイレンサータイプのファルコン２は潜入作戦に最適のウェポンで、敵に気づかれないように攻撃を仕かけることができます。この利点をムダにすることのないよう、正確な射撃をトレーニングして下さい。\n"
+
+#. L_DISH_286
+msgid ""
+"The MagSec 4 has excellent shot power at the cost of accuracy, especially "
+"when used in the 3-round burst secondary mode. The only serious drawback to "
+"the weapon is a limited magazine size.\n"
+msgstr ""
+"MagSec4は正確さよりも強力な破壊力に重点を置かれたウェポンで、第２武器モードの３連射を見れば、そのスゴさは明らかです。唯一の大きな弱点は、マガジンのサイズが小さいことです。\n"
+
+#. L_DISH_287
+msgid ""
+"This is a typical Skedar weapon, brutal and powerful. By sacrificing some of"
+" the magazine, the shot can be charged up to give a devastating blast. The "
+"large ammo capacity is a bonus.\n"
+msgstr ""
+"スケダーの一般的なウェポンで、とてもパワフルに設計されています。マガジンをいくつか使用することによって、強力な破壊力を持つチャージアップを放つことができます。弾薬のキャパシティが大き目なのも利点です。\n"
+
+#. L_DISH_288
+msgid ""
+"This versatile pistol gives two different delivery systems for the rounds it"
+" fires: a standard shot or an explosive round. Maian engineers managed to do"
+" this without compromising the energy usage of the weapon, though the fire "
+"rate is reduced.\n"
+msgstr ""
+"この多才なピストルは、２つの異なった発弾システムの、シングルショットと爆弾シェルを持っています。マイアンのエンジニアたちは連射のスピードを変えることによって、同じエネルギー使用量で異なる強度のショットを可能にしました。\n"
+
+#. L_DISH_289
+msgid ""
+"The key to the DY357 is in knowing when to reload. A six-round magazine "
+"means that you must always be alert in a firefight. The weight of the "
+"handgun can be useful if you have to club someone with it.\n"
+msgstr ""
+"DY357マグナムを操る上で最も重要なことは、いつリロードするかということです。銃撃戦中に、６発入りマガジンの残り弾数のことは常に意識していなくてはなりません。このハンドガンの重さは、強力なグリップアタックを可能にしています。\n"
+
+#. L_DISH_290
+msgid ""
+"Trent Easton is always looking for that extra edge, and this gun is no "
+"exception. The bullets are as special as the rest of the gun; they are "
+"designed to shatter inside opponents to take them down quickly.\n"
+msgstr ""
+"トレント・イーストンは常に、スペシャル仕様のモノを欲しがるタイプで、この銃もその例外ではありません。この銃には特別な弾が使われており、一撃必殺のパワーを秘めています。\n"
+
+#. L_DISH_291
+msgid ""
+"A reliable and effective submachine gun, it is not difficult to see why this"
+" is the best-selling dataDyne weapon of the past two years even if the "
+"secondary mode is not taken into account. The target designate and lock-on "
+"system is excellent, and you should familiarize yourself with the complete "
+"operation of the weapon.\n"
+msgstr ""
+"信頼が置け、効率の良い設計のサブマシンガン。このウェポンが過去２年間データダイン社のベストセラーだったことがそれを証明しています。第２武器モードではターゲットをサーチしてロックオンすることができますが、このすばらしい機能は十分トレーニングしておく必要があります。\n"
+
+#. L_DISH_292
+msgid ""
+"The Cyclone submachine gun was specifically designed NOT to be accurate, "
+"though it is worth your time practicing. It can put a lot of bullets out in "
+"a short time, however, and is an excellent suppression weapon because of "
+"it.\n"
+msgstr ""
+"このサブマシンガンは、意図的に狙いが「正確でない」ように設計されていますが、トレーニングの意味は十分あります。このサイクロンは短時間に大量の弾を連射することができますが、その危険度ゆえに一般では取引が禁止されているウェポンです。\n"
+
+#. L_DISH_293
+msgid ""
+"Maian flexibility in design has produced this submachine gun with an "
+"interesting secondary mode - a high-velocity bullet that can penetrate "
+"objects easily. The fire rate, as with the Phoenix, is reduced during the "
+"secondary mode; this is to prevent damage to the firing mechanism and "
+"barrel.\n"
+msgstr ""
+"マイアンたちの自由な設計思想が、物体を貫通する力を持つハイ・インパクトを第２武器モードに備えた、このサブマシンガンを造り上げました。連射速度はフェニクス同様、第２武器モードでは落ちます。これは発射のメカニズムと銃身を損なわないためです。\n"
+
+#. L_DISH_294
+msgid ""
+"The RC-P120 fires a special mineral bullet that, coupled with a high fire "
+"rate and a huge magazine, makes this a perfect tool to be used against the "
+"Skedar, should the need arise. The bullets can be used to fuel a prototype "
+"Cloaking Device - the training has been altered to reflect this particular "
+"characteristic.\n"
+msgstr ""
+"RC-P120は特別な鉱物でできた弾に加え、高い連射性と大容量のマガジンも持っているため、スケダー対策に欠かせないと言われています。この弾は第２武器モードのスパイクローク機能のエネルギーとしても使われます。今回のトレーニングはこの特性を反映させるために、特別のものに変更されました。\n"
+
+#. L_DISH_295
+msgid ""
+"Not only can the gun fold up to resemble a laptop PC, but it can be deployed"
+" as a sentry gun in secondary mode to cover an escape route or protect a "
+"location.\n"
+msgstr ""
+"ラップトップＰＣのような形をしているだけではなく、第２武器モードの自動機銃では「見張り」役として、好きな場所にセットすることができます。脱出口にて援護させたり、ある場所を守らせたりもできるのです。\n"
+
+#. L_DISH_296
+msgid ""
+"This is the model that dataDyne successfully submitted to the U.S. military,"
+" though it has yet to be widely adopted. In keeping with the tendency of "
+"dataDyne to give people nasty surprises, the basic model assault rifle "
+"carries a proximity mine below the barrel. Using the secondary mode rather "
+"obviously means you have to throw the weapon away.\n"
+msgstr ""
+"このモデルはデータダイン社が米軍からの大量受注に成功したモデルだが、まだ広く使われてはいない。一見スタンダードタイプのライフルだが、データダイン社の製品らしく、銃身の下にセンサー爆弾を装備している。第２武器モードを使う場合は、この銃を投げ棄てなくてはならない。\n"
+
+#. L_DISH_297
+msgid ""
+"As far as we can ascertain, the secondary mode of the weapon seems to be a "
+"threat identifier, targetting mines, hidden explosive devices (such as the "
+"Dragon in secondary mode), and automatic guns. Though a powerful gun, the "
+"assault rifle's magazine is perhaps too small. \n"
+msgstr ""
+"こちらで確認したところによると、このウェポンの第２武器モードは危険物発見機能を持っており、爆弾や、隠された爆発物（第２武器モードのドラゴンなど）や、自動機銃などを探知できます。\n"
+
+#. L_DISH_298
+msgid ""
+"The Institute's first attempt at a support weapon, the AR34 is a fairly "
+"basic assault rifle. The secondary mode is a permanent zoom. Testing is "
+"weighted towards accuracy training.\n"
+msgstr ""
+"協会が手がけた最初のサブウェポンであるAR34は、かなりスタンダードな造りの近距離用ライフルで、第２武器モードは常時スコープです。今回のテストでは、射撃の正確さに重点が置かれています。\n"
+
+#. L_DISH_299
+msgid ""
+"The heavier variant of the Dragon, with the proximity mine removed and "
+"replaced by a small grenade launcher. Adopted by the U.S. military as a "
+"squad heavy support weapon - it is not hard to see why. Use the tests to get"
+" used to the grenade trajectory.\n"
+msgstr ""
+"よりヘビーになったドラゴンで、センサー爆弾部分がＧランチャに変わっています。米軍で分隊援護用のウェポンとして正式に使われているのも、うなずけるところです。今回のトレーニングでＧランチャの弾道をテストして下さい。\n"
+
+#. L_DISH_300
+msgid ""
+"Subtlety is not an option here. There are two modes, single or double blast."
+" The magazine is quite large for a shotgun, but be aware of the long reload "
+"times and plan your movements accordingly.\n"
+msgstr ""
+"このウェポンに関して細かいことは抜きです。シングルショットとダブルショットの２モードが用意されています。ショットガンにしては大き目のマガジンを持っていますが、リロードに時間がかかるので、計画性のある行動が必要です。\n"
+
+#. L_DISH_301
+msgid ""
+"A finely engineered, silenced sniper rifle with a high-powered zoom. The "
+"only part of the operation that can interfere with the accuracy of the "
+"weapon is the sniper. Make sure you use the secondary mode to crouch down "
+"and steady your aim.\n"
+msgstr ""
+"良く設計された、ハイパワーズーム機能付きの、サイレンサータイプのスナイパーライフルです。もし撃ち損じがあった場合は、間違いなく狙撃手の狙いが悪かったということになります。狙いを安定させたいときは、第２武器モードを使って「しゃがむ」と、狙いが安定します。\n"
+
+#. L_DISH_302
+msgid ""
+"Even though the engineering techniques are beyond us, we can still "
+"appreciate the effects of the FarSight rifle. The shot is almost "
+"unstoppable, and the scope can penetrate walls to a great depth, locking on "
+"to targets if need be.\n"
+msgstr ""
+"あまりにも進んだ技術が使われているので、私たちには使いにくい面もありますが、それでもこのウェポンの利点はそれを十分にカバーしています。このショットはほとんど何でも貫き、スコープは壁を透視して目標をサーチすることができ、必要あらばそれをロックオンします。\n"
+
+#. L_DISH_303
+msgid ""
+"The primary function of the crossbow is a nonlethal drugged shot, while the "
+"secondary is an instant kill. It is a stealth weapon first and foremost, so "
+"the reloading can be time-consuming and inconvenient in a firefight.\n"
+msgstr ""
+"クロスボウの主要な機能は鎮静剤のショットですが、第２武器モードは一撃必殺のキルです。クロスボウは潜入用ウェポンなので、リロードに時間がかかり、あまりコンバット向きではありません。\n"
+
+#. L_DISH_304
+msgid ""
+"The tranquilizer gun is a common design, found in many medical laboratories "
+"and hospitals worldwide. It can be switched from the tranquilizer pellets to"
+" a short-range lethal dose, which uses up a lot more of the reservoir of "
+"sedative.\n"
+msgstr ""
+"トランキライザは世界中の医療研究所などで良く見られる医療機器です。鎮静剤を１ショットずつ発射できますが、多量のショットをカプセル弾として撃つ一撃必殺のリーサル注入に切り替えることもできます。\n"
+
+#. L_DISH_305
+msgid ""
+"Try to control this weapon as best you can. It was designed for a far "
+"stronger user than a human, that much is certain. Kneeling down may help "
+"steady your aim, but not refine it. If any opponents do make it past the "
+"hail of fire, then the barrels can be used as a grinder to inflict damage.\n"
+msgstr ""
+"このウェポンは人間よりはるかに強いユーザーのために設計されたことだけは間違いないようです。ひざまずけば狙いが定めやすくなりますが、完全に正確というわけではありません。弾を使い果たしてしまった場合は、銃身をドリルとして使うことにより、相手にダメージを与えられます。\n"
+
+#. L_DISH_306
+msgid ""
+"A recent dataDyne product, with interesting technology inside it. The "
+"secondary mode activates a magnetic field around the bomb, providing "
+"adhesion for a limited amount of time. When a certain amount of time has "
+"passed, the field is reversed and the bomb falls from the impact point and "
+"explodes.\n"
+msgstr ""
+"データダイン社の最近の製品で、ユニークなテクノロジーが使われています。第２武器モードでは爆弾の周りに磁場を作りだし、一定時間の接着状態をキープします。その後は磁場が解除され、爆弾は落ちて爆発します。\n"
+
+#. L_DISH_307
+msgid ""
+"A compact, reuseable missile launcher - reloads after each shot. The "
+"secondary mode uses a variant of the lock-on system from the CMP150 "
+"submachine gun, with a single designated target. The missile travels at a "
+"slower speed as it tracks the target, so plan for this and time your shots "
+"carefully.\n"
+msgstr ""
+"コンパクトで何回でも使用可能なロケットランチャで、一発撃つ度にリロードが必要です。第２武器モードでは、CMP150と同じ系統のロックオンシステムが使われており、１つのターゲットをロックすることができます。目標を追跡する時のロケットのスピードは非常に遅いため、注意して下さい。\n"
+
+#. L_DISH_308
+msgid ""
+"This Skedar handheld missile launcher can fire either an unguided rocket or "
+"a user-controlled remote rocket. Presumably this gave the Skedar some "
+"perverse satisfaction when the warhead camera closed on the target, but a "
+"Carrington Institute agent is beyond such things. The guided rocket speeds "
+"up automatically, but can be slowed down for greater maneuverability. "
+"Detonation occurs on contact or when the trigger is pressed.\n"
+msgstr ""
+"スケダーの小型ミサイルランチャで、通常のロケットランチャと、ユーザーがリモートコントロールできる「ロケットカメラ」を撃つことができます。ロケットは自動的にスピードを上げて行きますが、スピードを落として細かくコントロールすることもできます。爆発は着弾時、もしくは引き金が引かれた時に起こります。\n"
+
+#. L_DISH_309
+msgid ""
+"A finely tempered fighting knife, which is also balanced for throwing. "
+"Practice is essential to get accustomed to the range and trajectory of the "
+"thrown blade.\n"
+msgstr "見事に研ぎすまされたコンバットナイフで、投げやすく作られています。投げたナイフの届く範囲や飛び方などには、トレーニングが必要です。\n"
+
+#. L_DISH_310
+msgid ""
+"The experimental weapons department has come up with a small but effective "
+"wrist-mounted laser with two beam settings. The primary mode fires a blast "
+"out to a considerable range, while the secondary mode provides a continual "
+"beam for as long as the trigger is pressed.\n"
+msgstr ""
+"キャリントン協会のウェポン開発部が実験的に開発した、リストに装着するタイプのレーザーで、２つのビームがセッティングできます。メインモードでは射程内にレーザーパルスを発射し、第２武器モードでは引き金を引いている間、連続したショートレンジ・ビームを発することができます。\n"
+
+#. L_DISH_311
+msgid ""
+"The fragmentation anti-personnel grenade has four seconds from activation to"
+" detonation on the basic fuse. For your entertainment and delight, we have "
+"included a secondary mode - proximity pinball. The grenade will bounce "
+"around until the charge wears off or the proximity detector is triggered.\n"
+msgstr ""
+"基本的なヒューズを使用した場合、起動から爆発まで４秒かかります。これにはユニークな第２武器モード、センサーピンボールが用意されています。このモードで、手りゅう弾はエネルギーがなくなるか、センサーが何かを感知するまでバウンドし続けます。\n"
+
+#. L_DISH_312
+msgid ""
+"This Maian grenade plays havoc with the neurons in sentient creatures. If "
+"you wander into the blast radius, your vision will blur and you will lose "
+"your grip on whatever you're holding. The grenade can be set to go off on "
+"impact or by proximity trigger. Make sure you throw it far enough away.\n"
+msgstr ""
+"マイアン手りゅう弾は生物の神経系を破壊します。爆風の範囲内に入ってしまうと、目はかすんで、持っていたものを全て落としてしまいます。この手りゅう弾は、何かに当ったときに爆発させるようにセットすることもできるし、センサーで起爆させることもできます。十分に離れてから使いましょう。\n"
+
+#. L_DISH_313
+msgid ""
+"A degree of judgement is required for the effective use of timed mines, "
+"otherwise the intended target may overrun the explosion range and come after"
+" you. Hone your skills in the tests before you make a critical error in the "
+"field. The secondary function is a threat detector identical to that found "
+"on the K7 Avenger assault rifle.\n"
+msgstr ""
+"これを使うときは、十分に考えてからセットしましょう。さもないと、狙っていた敵は爆発の範囲から外に出てしまいます。このトレーニングで使い方を学んで、実戦で失敗しないようにして下さい。第２武器モードはK7"
+" Avengerと同じく、危険物発見機能です。\n"
+
+#. L_DISH_314
+msgid ""
+"The key to successful placement of proximity mines is to put them where your"
+" opponent doesn't expect to encounter them. If you find yourself on the "
+"receiving end of proximity mines, use the threat detector secondary mode to "
+"make sure of your surroundings. It may be wasting your time, but if it "
+"isn't, it could save your life.\n"
+msgstr ""
+"センサー爆弾の上手な使い方は、敵が予想できないようなところにセットすることです。もし自分がセットされる側だった場合は、第２武器モードの危険物発見機能を使って回りをチェックして下さい。時間のムダに思えるかもしれませんが、時にはそれで命が助かることもあるのです。\n"
+
+#. L_DISH_315
+msgid ""
+"The latest variety of remote detonated mines, essentially the same as all "
+"that have gone before. The primary mode is placing the mines, while the "
+"secondary mode is giving the detonation command. If you can't see the mine, "
+"you'll have to rely on old-fashioned guesswork and timing. \n"
+msgstr ""
+"リモート系の爆弾の最新型で、基本機能は今までのものと同じです。メインモードで爆弾をセット、第２武器モードで起爆します。どこにセットしたか忘れないように！\n"
+
+#. L_DISH_316
+msgid "Holo 1 - Looking Around\n"
+msgstr "テスト１：アクション１\n"
+
+#. L_DISH_317
+msgid "Holo 2 - Movement 1\n"
+msgstr "テスト２：アクション２\n"
+
+#. L_DISH_318
+msgid "Holo 3 - Movement 2\n"
+msgstr "テスト３：アクション３\n"
+
+#. L_DISH_319
+msgid "Holo 4 - Unarmed Combat 1\n"
+msgstr "テスト４：非武装バトル１\n"
+
+#. L_DISH_320
+msgid "Holo 5 - Unarmed Combat 2\n"
+msgstr "テスト５：非武装バトル２\n"
+
+#. L_DISH_321
+msgid "Holo 6 - Live Combat 1\n"
+msgstr "テスト６：実戦形式１\n"
+
+#. L_DISH_322
+msgid "Holo 7 - Live Combat 2\n"
+msgstr "テスト７：実戦形式２\n"

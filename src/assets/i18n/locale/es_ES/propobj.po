@@ -2,204 +2,348 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Perfect Dark PC port localization\n"
-"POT-Creation-Date: 2025-05-31 06:37:14.299892+00:00\n"
+"POT-Creation-Date: 2025-06-05 13:35:16.474166+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: originalAssets_to_l10n.py script\n"
 
-#. "L_PROPOBJ_000"
-msgid "Picked up \n"
+#. L_PROPOBJ_000
+msgid "Picked up "
 msgstr "Recogiste %s.\n"
 
-#. "L_PROPOBJ_001"
-msgid "Double \n"
+#. L_PROPOBJ_001
+msgid "Double "
 msgstr "Recogiste %s.\n"
 
-#. "L_PROPOBJ_002"
-msgid "some \n"
+#. L_PROPOBJ_002
+msgid "some "
 msgstr "Recogiste %s.\n"
 
-#. "L_PROPOBJ_003"
-msgid "Some \n"
+#. L_PROPOBJ_003
+msgid "Some "
 msgstr "Recogiste %s.\n"
 
-#. "L_PROPOBJ_004"
-msgid "a \n"
+#. L_PROPOBJ_004
+msgid "a "
 msgstr "Recogiste %s.\n"
 
-#. "L_PROPOBJ_005"
-msgid "A \n"
+#. L_PROPOBJ_005
+msgid "A "
 msgstr "Recogiste %s.\n"
 
-#. "L_PROPOBJ_006"
-msgid "an \n"
+#. L_PROPOBJ_006
+msgid "an "
 msgstr "Recogiste %s.\n"
 
-#. "L_PROPOBJ_007"
-msgid "An \n"
+#. L_PROPOBJ_007
+msgid "An "
 msgstr "Recogiste %s.\n"
 
-#. "L_PROPOBJ_008"
+#. L_PROPOBJ_008
 msgid "the "
 msgstr "Doble "
 
-#. "L_PROPOBJ_009"
+#. L_PROPOBJ_009
 msgid "The "
 msgstr "munición"
 
-#. "L_PROPOBJ_010"
+#. L_PROPOBJ_010
 msgid "ammo"
 msgstr "cartucho"
 
-#. "L_PROPOBJ_011"
+#. L_PROPOBJ_011
 msgid "cartridge"
 msgstr "bala de magnum"
 
-#. "L_PROPOBJ_012"
+#. L_PROPOBJ_012
 msgid "magnum bullet"
 msgstr "balas doradas"
 
-#. "L_PROPOBJ_013"
+#. L_PROPOBJ_013
 msgid "golden bullet"
 msgstr "granada"
 
-#. "L_PROPOBJ_014"
+#. L_PROPOBJ_014
 msgid "grenade"
 msgstr "cinto de granadas"
 
-#. "L_PROPOBJ_015"
+#. L_PROPOBJ_015
 msgid "grenade round"
 msgstr "cohete"
 
-#. "L_PROPOBJ_016"
+#. L_PROPOBJ_016
 msgid "rocket"
 msgstr "cohete buscador"
 
-#. "L_PROPOBJ_017"
+#. L_PROPOBJ_017
 msgid "homing rocket"
 msgstr "mina remota"
 
-#. "L_PROPOBJ_018"
+#. L_PROPOBJ_018
 msgid "remote mine"
 msgstr "mina de proximidad"
 
-#. "L_PROPOBJ_019"
+#. L_PROPOBJ_019
 msgid "proximity mine"
 msgstr "mina de tiempo"
 
-#. "L_PROPOBJ_020"
+#. L_PROPOBJ_020
 msgid "timed mine"
 msgstr "cuchillo de combate"
 
-#. "L_PROPOBJ_021"
+#. L_PROPOBJ_021
 msgid "combat "
 msgstr "cuchillos de combate"
 
-#. "L_PROPOBJ_025"
+#. L_PROPOBJ_025
 msgid "dart"
 msgstr "dardo"
 
-#. "L_PROPOBJ_026"
+#. L_PROPOBJ_026
 msgid "N-Bomb"
 msgstr "bomba-N"
 
-#. "L_PROPOBJ_027"
+#. L_PROPOBJ_027
 msgid "sedatives"
 msgstr "sedante"
 
-#. "L_PROPOBJ_028"
+#. L_PROPOBJ_028
 msgid "explosive pen"
 msgstr "Boli Explosivo"
 
-#. "L_PROPOBJ_029"
+#. L_PROPOBJ_029
 msgid "explosive case"
 msgstr "Caja de Explosivos"
 
-#. "L_PROPOBJ_030"
+#. L_PROPOBJ_030
 msgid "flare"
 msgstr "Bengalas"
 
-#. "L_PROPOBJ_031"
+#. L_PROPOBJ_031
 msgid "piton"
 msgstr "Pitón"
 
-#. "L_PROPOBJ_032"
+#. L_PROPOBJ_032
 msgid "of dynamite"
 msgstr ""
 
-#. "L_PROPOBJ_033"
+#. L_PROPOBJ_033
 msgid "stick "
 msgstr "Cartucho de Dinamita"
 
-#. "L_PROPOBJ_034"
+#. L_PROPOBJ_034
 msgid "sticks "
 msgstr "Cartuchos de Dinamita"
 
-#. "L_PROPOBJ_035"
+#. L_PROPOBJ_035
 msgid "bug"
 msgstr "Bicho"
 
-#. "L_PROPOBJ_036"
+#. L_PROPOBJ_036
 msgid "micro camera"
 msgstr "Microcámara"
 
-#. "L_PROPOBJ_037"
+#. L_PROPOBJ_037
 msgid "GoldenEye key"
 msgstr "Llave GoldenEye"
 
-#. "L_PROPOBJ_038"
+#. L_PROPOBJ_038
 msgid "token"
 msgstr "Ficha"
 
-#. "L_PROPOBJ_039"
+#. L_PROPOBJ_039
 msgid "plastique"
 msgstr "Explosivo Plástico"
 
-#. "L_PROPOBJ_040"
+#. L_PROPOBJ_040
 msgid "Picked up a key.\n"
 msgstr "Has cogido una Llave.\n"
 
-#. "L_PROPOBJ_041"
+#. L_PROPOBJ_041
 msgid "Picked up a shield.\n"
 msgstr "Has cogido un Escudo.\n"
 
-#. "L_PROPOBJ_042"
+#. L_PROPOBJ_042
 msgid "A shield.\n"
 msgstr "Un Escudo.\n"
 
-#. "L_PROPOBJ_043"
+#. L_PROPOBJ_043
 msgid "Picked up something.\n"
 msgstr "Has cogido algo.\n"
 
-#. "L_PROPOBJ_044"
+#. L_PROPOBJ_044
 msgid "This door is locked.\n"
 msgstr "Esta puerta está cerrada.\n"
 
-#. "L_PROPOBJ_045"
+#. L_PROPOBJ_045
 msgid "bolt"
 msgstr "saeta"
 
-#. "L_PROPOBJ_046"
+#. L_PROPOBJ_046
 msgid "orb"
 msgstr "orbe"
 
-#. "L_PROPOBJ_047"
+#. L_PROPOBJ_047
 msgid "Reaper ammo"
 msgstr "munición Segadora"
 
-#. "L_PROPOBJ_048"
+#. L_PROPOBJ_048
 msgid "cloaking device"
 msgstr "disp. de ocultación"
 
-#. "L_PROPOBJ_049"
+#. L_PROPOBJ_049
 msgid "boost pill"
 msgstr "reforzador"
 
-#. "L_PROPOBJ_050"
+#. L_PROPOBJ_050
 msgid "your "
 msgstr "tu "
 
-#. "L_PROPOBJ_051"
+#. L_PROPOBJ_051
 msgid "Your "
 msgstr "Tu "
+
+#. L_PROPOBJ_052
+msgid "some "
+msgstr "algunos "
+
+#. L_PROPOBJ_053
+msgid "Some "
+msgstr "Algunos "
+
+#. L_PROPOBJ_054
+msgid "some "
+msgstr "algunas "
+
+#. L_PROPOBJ_055
+msgid "Some "
+msgstr "Algunas "
+
+#. L_PROPOBJ_056
+msgid "some "
+msgstr ""
+
+#. L_PROPOBJ_057
+msgid "Some "
+msgstr ""
+
+#. L_PROPOBJ_058
+msgid ""
+msgstr ""
+
+#. L_PROPOBJ_059
+msgid ""
+msgstr ""
+
+#. L_PROPOBJ_060
+msgid "a "
+msgstr "un "
+
+#. L_PROPOBJ_061
+msgid "A "
+msgstr "Un "
+
+#. L_PROPOBJ_062
+msgid "an "
+msgstr "una "
+
+#. L_PROPOBJ_063
+msgid "An "
+msgstr "Una "
+
+#. L_PROPOBJ_064
+msgid "the "
+msgstr "unos"
+
+#. L_PROPOBJ_065
+msgid "The "
+msgstr "Unos"
+
+#. L_PROPOBJ_066
+msgid ""
+msgstr "unas"
+
+#. L_PROPOBJ_067
+msgid ""
+msgstr "Unas"
+
+#. L_PROPOBJ_068
+msgid "bolts"
+msgstr "saetas"
+
+#. L_PROPOBJ_069
+msgid "orbs"
+msgstr "orbes"
+
+#. L_PROPOBJ_070
+msgid "Reaper ammo"
+msgstr "Munición Segadora"
+
+#. L_PROPOBJ_071
+msgid "cloaking devices"
+msgstr "disp. de ocultación"
+
+#. L_PROPOBJ_072
+msgid "boost pills"
+msgstr "reforzadores"
+
+#. L_PROPOBJ_073
+msgid "ammo"
+msgstr "Munición"
+
+#. L_PROPOBJ_074
+msgid "cartridges"
+msgstr "cartuchos"
+
+#. L_PROPOBJ_075
+msgid "magnum bullets"
+msgstr "balas de magnum"
+
+#. L_PROPOBJ_076
+msgid "golden bullets"
+msgstr "balas doradas"
+
+#. L_PROPOBJ_077
+msgid "grenades"
+msgstr "granadas"
+
+#. L_PROPOBJ_078
+msgid "grenade rounds"
+msgstr "cintos de granadas"
+
+#. L_PROPOBJ_079
+msgid "rockets"
+msgstr "cohetes"
+
+#. L_PROPOBJ_080
+msgid "homing rockets"
+msgstr "cohetes buscadores"
+
+#. L_PROPOBJ_081
+msgid "remote mines"
+msgstr "minas remotas"
+
+#. L_PROPOBJ_082
+msgid "proximity mines"
+msgstr "minas de proximidad"
+
+#. L_PROPOBJ_083
+msgid "timed mines"
+msgstr "minas de tiempo"
+
+#. L_PROPOBJ_084
+msgid "darts"
+msgstr "dardos"
+
+#. L_PROPOBJ_085
+msgid "n-bombs"
+msgstr "bombas-N"
+
+#. L_PROPOBJ_086
+msgid "sedatives"
+msgstr "sedantes"
+
+#. L_PROPOBJ_087
+msgid "tokens"
+msgstr "fichas"

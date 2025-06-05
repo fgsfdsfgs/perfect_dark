@@ -2,13 +2,13 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Perfect Dark PC port localization\n"
-"POT-Creation-Date: 2025-05-31 06:37:14.299892+00:00\n"
+"POT-Creation-Date: 2025-06-05 13:35:16.474166+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: originalAssets_to_l10n.py script\n"
 
-#. "L_ARK_000"
+#. L_ARK_000
 msgid ""
 "|Background - \n"
 "\n"
@@ -70,11 +70,11 @@ msgstr ""
 "\n"
 "END\n"
 
-#. "L_ARK_001"
+#. L_ARK_001
 msgid "LUCERNE TOWER\n"
 msgstr "LUCERNE TOWER\n"
 
-#. "L_ARK_002"
+#. L_ARK_002
 msgid ""
 "|Background - \n"
 "\n"
@@ -128,7 +128,7 @@ msgstr ""
 "\n"
 "END\n"
 
-#. "L_ARK_003"
+#. L_ARK_003
 msgid ""
 "|Background - \n"
 "\n"
@@ -174,175 +174,175 @@ msgstr ""
 "\n"
 "END\n"
 
-#. "L_ARK_009"
+#. L_ARK_009
 msgid "Access foyer elevator\n"
 msgstr "Access foyer elevator\n"
 
-#. "L_ARK_010"
+#. L_ARK_010
 msgid "Reactivate office elevator\n"
 msgstr "Reactivate office elevator\n"
 
-#. "L_ARK_011"
+#. L_ARK_011
 msgid "Destroy dataDyne hovercopter\n"
 msgstr "Destroy dataDyne hovercopter\n"
 
-#. "L_ARK_012"
+#. L_ARK_012
 msgid "Defeat Cassandra's bodyguards\n"
 msgstr "Defeat Cassandra's bodyguards\n"
 
-#. "L_ARK_013"
+#. L_ARK_013
 msgid "Rendezvous at helipad\n"
 msgstr "Rendezvous at helipad\n"
 
-#. "L_ARK_014"
+#. L_ARK_014
 msgid "Accessing elevator controls...\n"
 msgstr "Accessing elevator controls...\n"
 
-#. "L_ARK_015"
+#. L_ARK_015
 msgid "LIGHTS ARE NOW ON!\n"
 msgstr "LIGHTS ARE NOW ON!\n"
 
-#. "L_ARK_016"
+#. L_ARK_016
 msgid "Dr. Caroll has been killed!\n"
 msgstr "Dr. Caroll has been killed!\n"
 
-#. "L_ARK_017"
+#. L_ARK_017
 msgid "Dr. Caroll is under attack!\n"
 msgstr "Dr. Caroll is under attack!\n"
 
-#. "L_ARK_018"
+#. L_ARK_018
 msgid "Dr. Caroll has been damaged!\n"
 msgstr "Dr. Caroll has been damaged!\n"
 
-#. "L_ARK_019"
+#. L_ARK_019
 msgid "Too late! She's here...\n"
 msgstr "Too late! She's here...\n"
 
-#. "L_ARK_020"
+#. L_ARK_020
 msgid "You've become quite an annoyance...\n"
 msgstr "You've become quite an annoyance...\n"
 
-#. "L_ARK_021"
+#. L_ARK_021
 msgid "Good night, Ms. Dark.\n"
 msgstr "Good night, Ms. Dark.\n"
 
-#. "L_ARK_022"
+#. L_ARK_022
 msgid "LIGHTS NOW ON\n"
 msgstr "LIGHTS NOW ON\n"
 
-#. "L_ARK_023"
+#. L_ARK_023
 msgid "LIGHTS NOW OFF\n"
 msgstr "LIGHTS NOW OFF\n"
 
-#. "L_ARK_024"
+#. L_ARK_024
 msgid "MISSION FAILED\n"
 msgstr "MISSION FAILED\n"
 
-#. "L_ARK_025"
+#. L_ARK_025
 msgid "MISSION SUCCESSFUL\n"
 msgstr "MISSION SUCCESSFUL\n"
 
-#. "L_ARK_026"
+#. L_ARK_026
 msgid "Helichopper warning goes here.\n"
 msgstr "Helichopper warning goes here.\n"
 
-#. "L_ARK_027"
+#. L_ARK_027
 msgid "Obtain Night Vision.\n"
 msgstr "Obtain Night Vision.\n"
 
-#. "L_ARK_028"
+#. L_ARK_028
 msgid "Cassandra De Vries'\n"
 msgstr "Cassandra De Vries'\n"
 
-#. "L_ARK_029"
+#. L_ARK_029
 msgid "Night Vision\n"
 msgstr "Night Vision\n"
 
-#. "L_ARK_030"
+#. L_ARK_030
 msgid "Night Vision\n"
 msgstr "Night Vision\n"
 
-#. "L_ARK_031"
+#. L_ARK_031
 msgid "Picked up Night Vision.\n"
 msgstr "Picked up Night Vision.\n"
 
-#. "L_ARK_032"
+#. L_ARK_032
 msgid "We meet again, girl!\n"
 msgstr "We meet again, girl!\n"
 
-#. "L_ARK_033"
+#. L_ARK_033
 msgid "Foyer elevator accessed.\n"
 msgstr "Foyer elevator accessed.\n"
 
-#. "L_ARK_034"
+#. L_ARK_034
 msgid "Office elevator door has been unlocked.\n"
 msgstr "Office elevator door has been unlocked.\n"
 
-#. "L_ARK_035"
+#. L_ARK_035
 msgid "DataDyne Hovercopter eliminated.\n"
 msgstr "DataDyne Hovercopter eliminated.\n"
 
-#. "L_ARK_036"
+#. L_ARK_036
 msgid "Cassandra's bodyguards have been defeated.\n"
 msgstr "Cassandra's bodyguards have been defeated.\n"
 
-#. "L_ARK_037"
+#. L_ARK_037
 msgid "That's not how it goes.\n"
 msgstr "That's not how it goes.\n"
 
-#. "L_ARK_038"
+#. L_ARK_038
 msgid "Yes, it is.\n"
 msgstr "Yes, it is.\n"
 
-#. "L_ARK_039"
+#. L_ARK_039
 msgid "Give it to me - you're doing it wrong.\n"
 msgstr "Give it to me - you're doing it wrong.\n"
 
-#. "L_ARK_040"
+#. L_ARK_040
 msgid "Stop annoying me.\n"
 msgstr "Stop annoying me.\n"
 
-#. "L_ARK_041"
+#. L_ARK_041
 msgid "Will you just hurry up!\n"
 msgstr "Will you just hurry up!\n"
 
-#. "L_ARK_042"
+#. L_ARK_042
 msgid "Oh, no...too late.\n"
 msgstr "Oh, no...too late.\n"
 
-#. "L_ARK_043"
+#. L_ARK_043
 msgid "She's here...\n"
 msgstr "She's here...\n"
 
-#. "L_ARK_044"
+#. L_ARK_044
 msgid "Get her!\n"
 msgstr "Get her!\n"
 
-#. "L_ARK_045"
+#. L_ARK_045
 msgid "Critical mission object destroyed. \n"
 msgstr "Critical mission object destroyed. \n"
 
-#. "L_ARK_046"
+#. L_ARK_046
 msgid "Obtain CamSpy.\n"
 msgstr "Obtain CamSpy.\n"
 
-#. "L_ARK_047"
+#. L_ARK_047
 msgid "Dr. Caroll's\n"
 msgstr "Dr. Caroll's\n"
 
-#. "L_ARK_048"
+#. L_ARK_048
 msgid "CamSpy\n"
 msgstr "CamSpy\n"
 
-#. "L_ARK_049"
+#. L_ARK_049
 msgid "A CamSpy\n"
 msgstr "A CamSpy\n"
 
-#. "L_ARK_050"
+#. L_ARK_050
 msgid "Picked up a CamSpy.\n"
 msgstr "Picked up a CamSpy.\n"
 
-#. "L_ARK_051"
+#. L_ARK_051
 msgid ""
 "They've locked down the ground floor - \n"
 "get to the elevator!\n"
@@ -350,7 +350,7 @@ msgstr ""
 "They've locked down the ground floor - \n"
 "get to the elevator!\n"
 
-#. "L_ARK_052"
+#. L_ARK_052
 msgid ""
 "That copter needs to be taken out, or \n"
 "the jumpship'll get shot down!\n"
@@ -358,11 +358,11 @@ msgstr ""
 "That copter needs to be taken out, or \n"
 "the jumpship'll get shot down!\n"
 
-#. "L_ARK_053"
+#. L_ARK_053
 msgid "I can't leave any bodyguards standing.\n"
 msgstr "I can't leave any bodyguards standing.\n"
 
-#. "L_ARK_054"
+#. L_ARK_054
 msgid ""
 "Don't keep the jumpship waiting - \n"
 "get back to the landing pad.\n"
@@ -370,47 +370,47 @@ msgstr ""
 "Don't keep the jumpship waiting - \n"
 "get back to the landing pad.\n"
 
-#. "L_ARK_055"
+#. L_ARK_055
 msgid "Obtain alpha key card.\n"
 msgstr "Obtain alpha key card.\n"
 
-#. "L_ARK_056"
+#. L_ARK_056
 msgid "Guard's\n"
 msgstr "Guard's\n"
 
-#. "L_ARK_057"
+#. L_ARK_057
 msgid "Office key card\n"
 msgstr "Office key card\n"
 
-#. "L_ARK_058"
+#. L_ARK_058
 msgid "Office key card\n"
 msgstr "Office key card\n"
 
-#. "L_ARK_059"
+#. L_ARK_059
 msgid "Picked up Cassandra's office key card.\n"
 msgstr "Picked up Cassandra's office key card.\n"
 
-#. "L_ARK_060"
+#. L_ARK_060
 msgid "Sound the alarm - she's here!\n"
 msgstr "Sound the alarm - she's here!\n"
 
-#. "L_ARK_061"
+#. L_ARK_061
 msgid "Lights out!\n"
 msgstr "Lights out!\n"
 
-#. "L_ARK_062"
+#. L_ARK_062
 msgid "What the...?\n"
 msgstr "What the...?\n"
 
-#. "L_ARK_063"
+#. L_ARK_063
 msgid "Going somewhere?\n"
 msgstr "Going somewhere?\n"
 
-#. "L_ARK_064"
+#. L_ARK_064
 msgid "Something I can do for you, old woman?\n"
 msgstr "Something I can do for you, old woman?\n"
 
-#. "L_ARK_065"
+#. L_ARK_065
 msgid ""
 "Return our sapient immediately! You don't \n"
 "know what you're doing.\n"
@@ -418,11 +418,11 @@ msgstr ""
 "Return our sapient immediately! You don't \n"
 "know what you're doing.\n"
 
-#. "L_ARK_066"
+#. L_ARK_066
 msgid "Yes I do. I'm leaving.\n"
 msgstr "Yes I do. I'm leaving.\n"
 
-#. "L_ARK_067"
+#. L_ARK_067
 msgid ""
 "One more chance! Give it back, and you \n"
 "could come and work for me.\n"
@@ -430,11 +430,11 @@ msgstr ""
 "One more chance! Give it back, and you \n"
 "could come and work for me.\n"
 
-#. "L_ARK_068"
+#. L_ARK_068
 msgid "Sorry! Gotta shoot.\n"
 msgstr "Sorry! Gotta shoot.\n"
 
-#. "L_ARK_069"
+#. L_ARK_069
 msgid ""
 "You must get the sapient back. We cannot \n"
 "proceed without it.\n"
@@ -442,11 +442,11 @@ msgstr ""
 "You must get the sapient back. We cannot \n"
 "proceed without it.\n"
 
-#. "L_ARK_070"
+#. L_ARK_070
 msgid "I know that!\n"
 msgstr "I know that!\n"
 
-#. "L_ARK_071"
+#. L_ARK_071
 msgid ""
 "I also know who to talk to... \n"
 "Mr. Carrington.\n"
@@ -454,6 +454,6 @@ msgstr ""
 "I also know who to talk to... \n"
 "Mr. Carrington.\n"
 
-#. "L_ARK_072"
+#. L_ARK_072
 msgid "Elevator door is inactive on this floor.\n"
 msgstr "Elevator door is inactive on this floor.\n"

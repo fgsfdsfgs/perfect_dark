@@ -2,13 +2,13 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Perfect Dark PC port localization\n"
-"POT-Creation-Date: 2025-05-31 06:37:14.299892+00:00\n"
+"POT-Creation-Date: 2025-06-05 13:35:16.474166+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: originalAssets_to_l10n.py script\n"
 
-#. "L_RIT_000"
+#. L_RIT_000
 msgid ""
 "|Background - \n"
 "\n"
@@ -70,11 +70,11 @@ msgstr ""
 "\n"
 "END\n"
 
-#. "L_RIT_001"
+#. L_RIT_001
 msgid "AIR FORCE ONE\n"
 msgstr "大統領専用機\n"
 
-#. "L_RIT_002"
+#. L_RIT_002
 msgid ""
 "|Background - \n"
 "\n"
@@ -128,7 +128,7 @@ msgstr ""
 "\n"
 "END\n"
 
-#. "L_RIT_003"
+#. L_RIT_003
 msgid ""
 "|Background - \n"
 "\n"
@@ -174,141 +174,141 @@ msgstr ""
 "\n"
 "END\n"
 
-#. "L_RIT_004"
+#. L_RIT_004
 msgid "\n"
 msgstr "\n"
 
-#. "L_RIT_005"
+#. L_RIT_005
 msgid "Locate and retrieve equipment\n"
 msgstr "装備品を回収せよ\n"
 
-#. "L_RIT_006"
+#. L_RIT_006
 msgid "Locate President\n"
 msgstr "大統領を発見せよ\n"
 
-#. "L_RIT_007"
+#. L_RIT_007
 msgid "Get President to escape capsule\n"
 msgstr "大統領を脱出ポッドまで案内\n"
 
-#. "L_RIT_008"
+#. L_RIT_008
 msgid "Secure Air Force One flight path\n"
 msgstr "大統領専用機の安全を確保\n"
 
-#. "L_RIT_009"
+#. L_RIT_009
 msgid "Detach UFO from Air Force One\n"
 msgstr "敵の飛行機を切り離せ\n"
 
-#. "L_RIT_010"
+#. L_RIT_010
 msgid "Obtain Suitcase.\n"
 msgstr "Obtain Suitcase.\n"
 
-#. "L_RIT_011"
+#. L_RIT_011
 msgid "\n"
 msgstr "\n"
 
-#. "L_RIT_012"
+#. L_RIT_012
 msgid "Suitcase\n"
 msgstr "アタッシュケース\n"
 
-#. "L_RIT_013"
+#. L_RIT_013
 msgid "Suitcase\n"
 msgstr "アタッシュケース\n"
 
-#. "L_RIT_014"
+#. L_RIT_014
 msgid "Picked up a Suitcase.\n"
 msgstr "アタッシュケースを手に入れた\n"
 
-#. "L_RIT_015"
+#. L_RIT_015
 msgid "Obtain Crossbow.\n"
 msgstr "Obtain Crossbow.\n"
 
-#. "L_RIT_016"
+#. L_RIT_016
 msgid "\n"
 msgstr "\n"
 
-#. "L_RIT_017"
+#. L_RIT_017
 msgid "Crossbow\n"
 msgstr "クロスボウ\n"
 
-#. "L_RIT_018"
+#. L_RIT_018
 msgid "Crossbow\n"
 msgstr "クロスボウ\n"
 
-#. "L_RIT_019"
+#. L_RIT_019
 msgid "Picked up a Crossbow.\n"
 msgstr "クロスボウを手に入れた\n"
 
-#. "L_RIT_020"
+#. L_RIT_020
 msgid "Too many neutral casualties inflicted.\n"
 msgstr "中立の人たちが多くギセイになった\n"
 
-#. "L_RIT_021"
+#. L_RIT_021
 msgid "UFO attachment damaged.\n"
 msgstr "ＵＦＯの接続部分が破壊された\n"
 
-#. "L_RIT_022"
+#. L_RIT_022
 msgid "Unable to detach UFO.\n"
 msgstr "ＵＦＯを切り離すことができません\n"
 
-#. "L_RIT_023"
+#. L_RIT_023
 msgid "Autopilot has been activated.\n"
 msgstr "オートパイロット起動\n"
 
-#. "L_RIT_024"
+#. L_RIT_024
 msgid "Air Force One has been stabilized.\n"
 msgstr "大統領専用機が安定飛行に入った\n"
 
-#. "L_RIT_025"
+#. L_RIT_025
 msgid "Autopilot systems have been destroyed.\n"
 msgstr "オートパイロット・システムが破壊された\n"
 
-#. "L_RIT_026"
+#. L_RIT_026
 msgid "The President has been incapacitated.\n"
 msgstr "大統領が倒された\n"
 
-#. "L_RIT_027"
+#. L_RIT_027
 msgid "Pilots have been killed.\n"
 msgstr ""
 "パイロットが倒された\n"
 "\n"
 
-#. "L_RIT_028"
+#. L_RIT_028
 msgid "Pilots have been saved.\n"
 msgstr "パイロットが救助された\n"
 
-#. "L_RIT_029"
+#. L_RIT_029
 msgid "Air Force One is about to crash.\n"
 msgstr "大統領専用機は激突しようとしている\n"
 
-#. "L_RIT_030"
+#. L_RIT_030
 msgid "Obtain remote mine.\n"
 msgstr "Obtain remote mine.\n"
 
-#. "L_RIT_031"
+#. L_RIT_031
 msgid "\n"
 msgstr "\n"
 
-#. "L_RIT_032"
+#. L_RIT_032
 msgid "Remote mine\n"
 msgstr "リモート爆弾\n"
 
-#. "L_RIT_033"
+#. L_RIT_033
 msgid "Remote mine\n"
 msgstr "リモート爆弾\n"
 
-#. "L_RIT_034"
+#. L_RIT_034
 msgid "Picked up a remote mine.\n"
 msgstr "リモート爆弾を手に入れた\n"
 
-#. "L_RIT_035"
+#. L_RIT_035
 msgid "Who are you, young lady?\n"
 msgstr "君はここで何をしているのだね、お嬢さん。\n"
 
-#. "L_RIT_036"
+#. L_RIT_036
 msgid "Security, SECURITY!!\n"
 msgstr "ガードマン、ガードマン！\n"
 
-#. "L_RIT_037"
+#. L_RIT_037
 msgid ""
 "Mr. President, you're in danger. Trent is trying to \n"
 "kidnap you.\n"
@@ -316,11 +316,11 @@ msgstr ""
 "大統領、ここは危険です。トレントが\n"
 "あなたを誘拐しようとしているのですよ！\n"
 
-#. "L_RIT_038"
+#. L_RIT_038
 msgid "What the hell was that!\n"
 msgstr "一体今のは何だ！\n"
 
-#. "L_RIT_039"
+#. L_RIT_039
 msgid ""
 "We have to get you to the escape pod. \n"
 "Follow me.\n"
@@ -328,7 +328,7 @@ msgstr ""
 "私が脱出ポッドまで案内します。\n"
 "ついて来て下さい。\n"
 
-#. "L_RIT_040"
+#. L_RIT_040
 msgid ""
 "You can't make accusations like that without evidence.\n"
 " I assume that you have some?\n"
@@ -336,7 +336,7 @@ msgstr ""
 "証拠も無く他人は告発できないよ。\n"
 "何か証拠は持っているのかね？\n"
 
-#. "L_RIT_041"
+#. L_RIT_041
 msgid ""
 "This is a recording of a meeting between \n"
 "Trent and the other conspirators.\n"
@@ -344,7 +344,7 @@ msgstr ""
 "これはトレントとその一味が、\n"
 "シカゴで行ったミーティングの記録です。\n"
 
-#. "L_RIT_042"
+#. L_RIT_042
 msgid ""
 "Seems overwhelming... I'm in your hands. \n"
 "What do we do now?\n"
@@ -352,133 +352,133 @@ msgstr ""
 "何ということだ…　よし、事態は了解した。\n"
 "どうすればいいのかね？\n"
 
-#. "L_RIT_043"
+#. L_RIT_043
 msgid "Hey, that's not...\n"
 msgstr "おい、ここは…\n"
 
-#. "L_RIT_044"
+#. L_RIT_044
 msgid "It's an intruder...\n"
 msgstr "侵入者だ！\n"
 
-#. "L_RIT_045"
+#. L_RIT_045
 msgid "How the hell did you get on board?\n"
 msgstr "一体どうやってこの飛行機に乗りこんだんだ！\n"
 
-#. "L_RIT_046"
+#. L_RIT_046
 msgid "Now, let's retrieve the evidence.\n"
 msgstr "さあ、例の証拠品を回収しなくちゃね…\n"
 
-#. "L_RIT_047"
+#. L_RIT_047
 msgid ""
 "The President's room is on this \n"
 "level, Joanna.\n"
 msgstr "ジョアンナ、大統領はそのフロアーだ。\n"
 
-#. "L_RIT_048"
+#. L_RIT_048
 msgid "Something's wrong... You have to get to the cockpit!\n"
 msgstr "異常事態だ…　コクピットを調べてみてくれ！\n"
 
-#. "L_RIT_049"
+#. L_RIT_049
 msgid "Maybe a mine will detach the UFO.\n"
 msgstr "爆弾ならこのＵＦＯを切り離せるかもね。\n"
 
-#. "L_RIT_050"
+#. L_RIT_050
 msgid "\n"
 msgstr "\n"
 
-#. "L_RIT_051"
+#. L_RIT_051
 msgid "\n"
 msgstr "\n"
 
-#. "L_RIT_052"
+#. L_RIT_052
 msgid "Adrenaline pill\n"
 msgstr "アドレナリン・ピル\n"
 
-#. "L_RIT_053"
+#. L_RIT_053
 msgid "Adrenaline pill\n"
 msgstr "アドレナリン・ピル\n"
 
-#. "L_RIT_054"
+#. L_RIT_054
 msgid "Picked up an adrenaline pill.\n"
 msgstr "アドレナリン・ピルを手に入れた\n"
 
-#. "L_RIT_055"
+#. L_RIT_055
 msgid "\n"
 msgstr "\n"
 
-#. "L_RIT_056"
+#. L_RIT_056
 msgid "\n"
 msgstr "\n"
 
-#. "L_RIT_057"
+#. L_RIT_057
 msgid "Key card\n"
 msgstr "カードキー\n"
 
-#. "L_RIT_058"
+#. L_RIT_058
 msgid "Key card\n"
 msgstr "カードキー\n"
 
-#. "L_RIT_059"
+#. L_RIT_059
 msgid "Picked up a key card.\n"
 msgstr "カードキーを手に入れた\n"
 
-#. "L_RIT_060"
+#. L_RIT_060
 msgid "Cargo bay has been lowered.\n"
 msgstr "カーゴリフトが下降した\n"
 
-#. "L_RIT_061"
+#. L_RIT_061
 msgid "Cargo bay has been raised.\n"
 msgstr "カーゴリフトが上昇した\n"
 
-#. "L_RIT_062"
+#. L_RIT_062
 msgid "Mission critical object has been destroyed.\n"
 msgstr "任務遂行に不可欠な要素が破壊された\n"
 
-#. "L_RIT_063"
+#. L_RIT_063
 msgid "Access denied - lift key card required.\n"
 msgstr "アクセス拒否　カードキーが必要です\n"
 
-#. "L_RIT_064"
+#. L_RIT_064
 msgid "\n"
 msgstr "\n"
 
-#. "L_RIT_065"
+#. L_RIT_065
 msgid "\n"
 msgstr "\n"
 
-#. "L_RIT_066"
+#. L_RIT_066
 msgid "Lift key card\n"
 msgstr "リフトのカードキー\n"
 
-#. "L_RIT_067"
+#. L_RIT_067
 msgid "Lift key card\n"
 msgstr "リフトのカードキー\n"
 
-#. "L_RIT_068"
+#. L_RIT_068
 msgid "Picked up a lift key card.\n"
 msgstr "リフトのカードキーを手に入れた\n"
 
-#. "L_RIT_069"
+#. L_RIT_069
 msgid "Timed mine has been wasted.\n"
 msgstr "時限爆弾がムダに使われてしまった\n"
 
-#. "L_RIT_070"
+#. L_RIT_070
 msgid "Ha, Ha, Ha, Ha, Ha.\n"
 msgstr "ハッハッハッハ！\n"
 
-#. "L_RIT_071"
+#. L_RIT_071
 msgid "You'll never save him now.\n"
 msgstr "今や彼を救出などできるものか！\n"
 
-#. "L_RIT_072"
+#. L_RIT_072
 msgid "The President is under attack.\n"
 msgstr "大統領が攻撃されている！\n"
 
-#. "L_RIT_073"
+#. L_RIT_073
 msgid "Have you thought any more about that proposal I gave you, sir?\n"
 msgstr "大統領、例の件のお返事は？\n"
 
-#. "L_RIT_074"
+#. L_RIT_074
 msgid ""
 "My answer remains the same... I'm sorry Trent, but no. I won't loan the "
 "Pelagic II to dataDyne. Now please, can we move on to other matters?\n"
@@ -487,7 +487,7 @@ msgstr ""
 "ペラジック２は民間には貸し出さん！\n"
 "pさぁ、この話は終わりだ。\n"
 
-#. "L_RIT_075"
+#. L_RIT_075
 msgid ""
 "But this is a golden opportunity to show that America has faith in its "
 "industries and will back them...\n"
@@ -495,7 +495,7 @@ msgstr ""
 "しかし、これはチャンスですよ。\n"
 "政府の立場を一般に示し…\n"
 
-#. "L_RIT_076"
+#. L_RIT_076
 msgid ""
 "Damn it, man! I say no and I mean no! I'm not gonna change my mind on this! "
 "I need my advisors to be unbiased, and recently you've not been giving me "
@@ -508,17 +508,17 @@ msgstr ""
 "いいか！　この件、２度と話は聞かん。\n"
 "pこれがお前の最後のチャンスだ。\n"
 
-#. "L_RIT_077"
+#. L_RIT_077
 msgid "As you wish, sir.\n"
 msgstr "かしこまりました、大統領。\n"
 
-#. "L_RIT_078"
+#. L_RIT_078
 msgid "My last chance? Ha! You fool. That was yours.\n"
 msgstr ""
 "オレの最後のチャンスだと？\n"
 "バカめ、キサマのだぜ！\n"
 
-#. "L_RIT_079"
+#. L_RIT_079
 msgid ""
 "Elvis! Elvis! I can't detach that tube from the fuselage! Can you take it "
 "out?\n"
@@ -526,26 +526,26 @@ msgstr ""
 "エルビス、エルビス！　ＵＦＯを\n"
 "切り離せないわ！　なんとかして！\n"
 
-#. "L_RIT_080"
+#. L_RIT_080
 msgid "Piece of cake, Joanna. Watch this!\n"
 msgstr "ＯＫ、ジョアンナ。　見ててね！\n"
 
-#. "L_RIT_081"
+#. L_RIT_081
 msgid "Uh-oh.\n"
 msgstr "アレレ？\n"
 
-#. "L_RIT_082"
+#. L_RIT_082
 msgid "Watch what? Will you stop playing around and shoot!\n"
 msgstr ""
 "何を見てりゃいいのよ？\n"
 "さっさと撃ってよ！\n"
 
-#. "L_RIT_083"
+#. L_RIT_083
 msgid "Out of options... Joanna, brace yourself for impact!\n"
 msgstr ""
 "うーん、仕方ない…\n"
 "何かにつかまってて！\n"
 
-#. "L_RIT_084"
+#. L_RIT_084
 msgid "The pilots have stabilized Air Force One.\n"
 msgstr "パイロットは安定飛行を取り戻した。\n"

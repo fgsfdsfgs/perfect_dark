@@ -2,13 +2,13 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Perfect Dark PC port localization\n"
-"POT-Creation-Date: 2025-05-31 06:37:14.299892+00:00\n"
+"POT-Creation-Date: 2025-06-05 13:35:16.474166+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: originalAssets_to_l10n.py script\n"
 
-#. "L_SHO_000"
+#. L_SHO_000
 msgid ""
 "|Background - \n"
 "\n"
@@ -76,11 +76,11 @@ msgstr ""
 "\n"
 "END\n"
 
-#. "L_SHO_001"
+#. L_SHO_001
 msgid "SKEDAR BATTLE SHRINE\n"
 msgstr "スケダー「戦いの神殿」\n"
 
-#. "L_SHO_002"
+#. L_SHO_002
 msgid ""
 "|Background - \n"
 "\n"
@@ -140,7 +140,7 @@ msgstr ""
 "\n"
 "END\n"
 
-#. "L_SHO_003"
+#. L_SHO_003
 msgid ""
 "|Background - \n"
 "\n"
@@ -192,115 +192,115 @@ msgstr ""
 "\n"
 "END\n"
 
-#. "L_SHO_004"
+#. L_SHO_004
 msgid "\n"
 msgstr "\n"
 
-#. "L_SHO_005"
+#. L_SHO_005
 msgid "Identify temple targets\n"
 msgstr "電子マーカを取り付けよ\n"
 
-#. "L_SHO_006"
+#. L_SHO_006
 msgid "Activate bridge\n"
 msgstr "ブリッジを起動せよ\n"
 
-#. "L_SHO_007"
+#. L_SHO_007
 msgid "Gain access to Inner Sanctum\n"
 msgstr "神殿の聖なるエリアに進入\n"
 
-#. "L_SHO_008"
+#. L_SHO_008
 msgid "Destroy secret Skedar army\n"
 msgstr "エリート戦士を全て倒せ\n"
 
-#. "L_SHO_009"
+#. L_SHO_009
 msgid "Assassinate Skedar leader\n"
 msgstr "スケダーのキングを倒せ\n"
 
-#. "L_SHO_010"
+#. L_SHO_010
 msgid "Obtain Night Vision.\n"
 msgstr "Obtain Night Vision.\n"
 
-#. "L_SHO_011"
+#. L_SHO_011
 msgid "\n"
 msgstr "\n"
 
-#. "L_SHO_012"
+#. L_SHO_012
 msgid "Night Vision\n"
 msgstr "ナイトアイ\n"
 
-#. "L_SHO_013"
+#. L_SHO_013
 msgid "Night Vision\n"
 msgstr "ナイトアイ\n"
 
-#. "L_SHO_014"
+#. L_SHO_014
 msgid "Picked up Night Vision.\n"
 msgstr "ナイトアイを手に入れた\n"
 
-#. "L_SHO_015"
+#. L_SHO_015
 msgid "Obtain Scanner.\n"
 msgstr "Obtain Scanner.\n"
 
-#. "L_SHO_016"
+#. L_SHO_016
 msgid "\n"
 msgstr "\n"
 
-#. "L_SHO_017"
+#. L_SHO_017
 msgid "Scanner\n"
 msgstr "Scanner\n"
 
-#. "L_SHO_018"
+#. L_SHO_018
 msgid "Scanner\n"
 msgstr "Scanner\n"
 
-#. "L_SHO_019"
+#. L_SHO_019
 msgid "Picked up Scanner.\n"
 msgstr "Picked up Scanner.\n"
 
-#. "L_SHO_020"
+#. L_SHO_020
 msgid "Obtain Target Amplifier.\n"
 msgstr "Obtain Target Amplifier.\n"
 
-#. "L_SHO_021"
+#. L_SHO_021
 msgid "\n"
 msgstr "\n"
 
-#. "L_SHO_022"
+#. L_SHO_022
 msgid "Target Amplifier\n"
 msgstr "電子マーカ\n"
 
-#. "L_SHO_023"
+#. L_SHO_023
 msgid "Target Amplifier\n"
 msgstr "電子マーカ\n"
 
-#. "L_SHO_024"
+#. L_SHO_024
 msgid "Picked up Target Amplifier.\n"
 msgstr "Picked up Target Amplifier.\n"
 
-#. "L_SHO_025"
+#. L_SHO_025
 msgid "Target Amplifier placed correctly.\n"
 msgstr "電子マーカの取り付けＯＫ\n"
 
-#. "L_SHO_026"
+#. L_SHO_026
 msgid "Target Amplifier placed incorrectly.\n"
 msgstr "電子マーカの取り付け位置が違います\n"
 
-#. "L_SHO_027"
+#. L_SHO_027
 msgid "Generator has been reactivated.\n"
 msgstr "聖地への進入が許可された\n"
 
-#. "L_SHO_028"
+#. L_SHO_028
 msgid "Skedar Inner Sanctum has been reached.\n"
 msgstr "スケダーの聖地に進入した\n"
 
-#. "L_SHO_029"
+#. L_SHO_029
 msgid "Skedar secret army has been defeated.\n"
 msgstr "スケダーのエリート戦士を全て倒した\n"
 
-#. "L_SHO_030"
+#. L_SHO_030
 msgid "This seems to be one of the special pillars.\n"
 msgstr "これは、例の特別なオベリスクに違いないわ。\n"
 
-#. "L_SHO_031"
+#. L_SHO_031
 msgid ""
 "The power's more constant in this area. \n"
 "The Inner Sanctum can't be far away.\n"
@@ -308,17 +308,17 @@ msgstr ""
 "このエリアは何か特別なパワーを感じるわ。\n"
 "聖地は近くにありそうね。\n"
 
-#. "L_SHO_032"
+#. L_SHO_032
 msgid "OH, NO!!! A Skedar army in suspended animation!\n"
 msgstr "何これ！スケダーの培養カプセル？？\n"
 
-#. "L_SHO_033"
+#. L_SHO_033
 msgid ""
 "Okay, this is it... Cut off the head and the \n"
 "body will perish.\n"
 msgstr "ＯＫ！　こいつをブッとばせばいいわけね。\n"
 
-#. "L_SHO_034"
+#. L_SHO_034
 msgid ""
 "This is the Skedar fanatics' most holy place. They believe this planet is "
 "sacred ground. The Battle Shrine is located at the most holy part of this "
@@ -329,13 +329,13 @@ msgstr ""
 "pこの惑星の最も神聖な場所には\n"
 "「戦いの神殿」があるんだ。\n"
 
-#. "L_SHO_035"
+#. L_SHO_035
 msgid ""
 "So let me get this straight - it's holy. But there's more to it than that, "
 "isn't there?\n"
 msgstr "で、その聖地に何か重要な意味があるの？\n"
 
-#. "L_SHO_036"
+#. L_SHO_036
 msgid ""
 "Yes. In all of the time that we Maians fought the Skedar, we never found "
 "this place. We knew that until it was destroyed, the war would never be "
@@ -352,7 +352,7 @@ msgstr ""
 "pそうすれば、全宇宙に本当の\n"
 "平和が訪れるはずなんだ！\n"
 
-#. "L_SHO_037"
+#. L_SHO_037
 msgid ""
 "Then we have to be certain that no fanatics survive. I'll go in and take out"
 " the leader. You'll have to summon the Maian fleet to level the Shrine.\n"
@@ -361,7 +361,7 @@ msgstr ""
 "pあなたは、マイアン軍を呼んで\n"
 "全部ここを空爆してちょうだい。\n"
 
-#. "L_SHO_038"
+#. L_SHO_038
 msgid ""
 "If you're caught on the ground when the fleet gets here, you won't stand a "
 "chance.\n"
@@ -369,37 +369,37 @@ msgstr ""
 "でもマイアン軍が着いた時\n"
 "ユーが捕まっていたら…\n"
 
-#. "L_SHO_039"
+#. L_SHO_039
 msgid "That's a mistake I don't intend to make.\n"
 msgstr "そんなミスは犯さないわ。\n"
 
-#. "L_SHO_040"
+#. L_SHO_040
 msgid "Yesss...\n"
 msgstr "やった…\n"
 
-#. "L_SHO_041"
+#. L_SHO_041
 msgid "Joanna! Joanna! \n"
 msgstr "ジョアンナ！　ジョアンナ！\n"
 
-#. "L_SHO_042"
+#. L_SHO_042
 msgid "Elvis! Elvis! Over here.\n"
 msgstr "エルビス！　エルビス！　こっちよ！\n"
 
-#. "L_SHO_043"
+#. L_SHO_043
 msgid "No problem. Grab my arms - we'll get you out in no time.\n"
 msgstr ""
 "もう大丈夫さ。さあ手を。\n"
 "爆撃が始まる。脱出しよう。\n"
 
-#. "L_SHO_044"
+#. L_SHO_044
 msgid "No, quick! Give me your gun!\n"
 msgstr "待って！　銃をちょうだい！\n"
 
-#. "L_SHO_045"
+#. L_SHO_045
 msgid "Will! You! Just! Let! Go!\n"
 msgstr "は、な、し、・・・てよ！！\n"
 
-#. "L_SHO_046"
+#. L_SHO_046
 msgid ""
 "I managed to get the fleet to stop the bombardment while I looked for you. "
 "They'll start as soon as we're clear.\n"
@@ -407,36 +407,36 @@ msgstr ""
 "ユーを見つけるまで、爆撃を\n"
 "待っていたんだ。さあ、行こう。\n"
 
-#. "L_SHO_047"
+#. L_SHO_047
 msgid "I'd have got out in time if that one hadn't grabbed my foot.\n"
 msgstr ""
 "足をつかまれなかったら\n"
 "時間通りに脱出してたわ。\n"
 
-#. "L_SHO_048"
+#. L_SHO_048
 msgid "Of course, Joanna, of course.\n"
 msgstr "もちろんさ、ジョアンナ。\n"
 
-#. "L_SHO_049"
+#. L_SHO_049
 msgid "No, I would have.\n"
 msgstr "ちょっと～、ホントよ！\n"
 
-#. "L_SHO_050"
+#. L_SHO_050
 msgid "I believe you.\n"
 msgstr "…信じるよ。\n"
 
-#. "L_SHO_051"
+#. L_SHO_051
 msgid "Make your sacrifice to the God of War.\n"
 msgstr "「戦いの神」に何かささげよ\n"
 
-#. "L_SHO_052"
+#. L_SHO_052
 msgid "Grenade ammo used up - can't enter Shrine.\n"
 msgstr "爆発物が弾切れです　神殿に侵入できません\n"
 
-#. "L_SHO_053"
+#. L_SHO_053
 msgid "Alternative entrance to Shrine created.\n"
 msgstr "神殿へ侵入するために、もう１つの方法を発見\n"
 
-#. "L_SHO_054"
+#. L_SHO_054
 msgid "Where are you? Are you hurt?\n"
 msgstr "どこだ～い、大丈夫か～い？\n"

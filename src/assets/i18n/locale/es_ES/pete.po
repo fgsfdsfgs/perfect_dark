@@ -2,13 +2,13 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Perfect Dark PC port localization\n"
-"POT-Creation-Date: 2025-05-31 06:37:14.299892+00:00\n"
+"POT-Creation-Date: 2025-06-05 13:35:16.474166+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: originalAssets_to_l10n.py script\n"
 
-#. "L_PETE_000"
+#. L_PETE_000
 msgid ""
 "|Background - \n"
 "\n"
@@ -70,11 +70,11 @@ msgstr ""
 "\n"
 "FIN\n"
 
-#. "L_PETE_001"
+#. L_PETE_001
 msgid "CHICAGO STREETS\n"
 msgstr "CALLES DE CHICAGO\n"
 
-#. "L_PETE_002"
+#. L_PETE_002
 msgid ""
 "|Background - \n"
 "\n"
@@ -128,7 +128,7 @@ msgstr ""
 "\n"
 "FIN\n"
 
-#. "L_PETE_003"
+#. L_PETE_003
 msgid ""
 "|Background - \n"
 "\n"
@@ -174,231 +174,231 @@ msgstr ""
 "\n"
 "FIN\n"
 
-#. "L_PETE_004"
+#. L_PETE_004
 msgid "\n"
 msgstr "\n"
 
-#. "L_PETE_005"
+#. L_PETE_005
 msgid "\n"
 msgstr "\n"
 
-#. "L_PETE_006"
+#. L_PETE_006
 msgid "\n"
 msgstr "\n"
 
-#. "L_PETE_007"
+#. L_PETE_007
 msgid "\n"
 msgstr "\n"
 
-#. "L_PETE_008"
+#. L_PETE_008
 msgid "\n"
 msgstr "\n"
 
-#. "L_PETE_009"
+#. L_PETE_009
 msgid "Retrieve drop point equipment\n"
 msgstr "Recuperar el equipo\n"
 
-#. "L_PETE_010"
+#. L_PETE_010
 msgid "Attach tracer to limousine\n"
 msgstr "Colocar el rastreador en la limusina\n"
 
-#. "L_PETE_011"
+#. L_PETE_011
 msgid "Prepare escape route\n"
 msgstr "Preparar la ruta de escape\n"
 
-#. "L_PETE_012"
+#. L_PETE_012
 msgid "Acquire diversion target\n"
 msgstr "Adquirir blancos de distracción\n"
 
-#. "L_PETE_013"
+#. L_PETE_013
 msgid "Create vehicular diversion\n"
 msgstr "Crear distracción móvil\n"
 
-#. "L_PETE_014"
+#. L_PETE_014
 msgid "Gain entry to G5 building\n"
 msgstr "Entrar en el edificio G5\n"
 
-#. "L_PETE_015"
+#. L_PETE_015
 msgid "Mine placed correctly.\n"
 msgstr "Mina colocada correctamente.\n"
 
-#. "L_PETE_016"
+#. L_PETE_016
 msgid "Mine placed incorrectly.\n"
 msgstr "Mina colocada incorrectamente.\n"
 
-#. "L_PETE_017"
+#. L_PETE_017
 msgid "Virus already downloaded into NavComp.\n"
 msgstr "Virus ya implantado en el Navegador.\n"
 
-#. "L_PETE_018"
+#. L_PETE_018
 msgid "Hovcab is unresponsive - need Reprogrammer.\n"
 msgstr "El aerotaxi no responde: requiere Reprogramación.\n"
 
-#. "L_PETE_019"
+#. L_PETE_019
 msgid "Accessing hovercab navigation systems.\n"
 msgstr "Accediendo al sistema de navegación del aerotaxi.\n"
 
-#. "L_PETE_020"
+#. L_PETE_020
 msgid "Virus downloaded successfully.\n"
 msgstr "Virus descargado satisfactoriamente.\n"
 
-#. "L_PETE_021"
+#. L_PETE_021
 msgid "Hovercab navigation systems reprogrammed.\n"
 msgstr "Sistema de navegación del taxi reprogramado.\n"
 
-#. "L_PETE_022"
+#. L_PETE_022
 msgid "Connection to hovercab broken.\n"
 msgstr "Conexión con el aerotaxi perdida.\n"
 
-#. "L_PETE_023"
+#. L_PETE_023
 msgid "Tracer Bug placed correctly.\n"
 msgstr "'Bicho' Rastreador colocado correctamente.\n"
 
-#. "L_PETE_024"
+#. L_PETE_024
 msgid "Tracer Bug placed incorrectly.\n"
 msgstr "'Bicho' Rastreador colocado incorrectamente.\n"
 
-#. "L_PETE_025"
+#. L_PETE_025
 msgid "Mission critical vehicle destroyed.\n"
 msgstr "Vehículo crítico de la misión destruido.\n"
 
-#. "L_PETE_026"
+#. L_PETE_026
 msgid "MISSION FAILED\n"
 msgstr "MISIÓN FALLADA\n"
 
-#. "L_PETE_027"
+#. L_PETE_027
 msgid "MISSION SUCCESSFUL\n"
 msgstr "MISIÓN CONSEGUIDA\n"
 
-#. "L_PETE_028"
+#. L_PETE_028
 msgid "DataDyne limo has escaped.\n"
 msgstr "La limusina de dataDyne ha escapado.\n"
 
-#. "L_PETE_029"
+#. L_PETE_029
 msgid "Mission failed - unacceptable civilian casualties.\n"
 msgstr "Misión fallada: bajas civiles inaceptables.\n"
 
-#. "L_PETE_030"
+#. L_PETE_030
 msgid "Look out - she's got a gun!\n"
 msgstr "Cuidado. ¡Tiene un arma!\n"
 
-#. "L_PETE_031"
+#. L_PETE_031
 msgid "There's a maniac on the loose!\n"
 msgstr "¡Hay un maníaco suelto!\n"
 
-#. "L_PETE_032"
+#. L_PETE_032
 msgid "Intruder alert - send reinforcements.\n"
 msgstr "Alerta de Intruso: refuerzos enviados.\n"
 
-#. "L_PETE_033"
+#. L_PETE_033
 msgid "Elevator access sealed.\n"
 msgstr "Acceso del ascensor sellado.\n"
 
-#. "L_PETE_034"
+#. L_PETE_034
 msgid "Hey - what are you doing?\n"
 msgstr "¡Hey! ¿Qué haces?\n"
 
-#. "L_PETE_035"
+#. L_PETE_035
 msgid "You don't scare me.\n"
 msgstr "No me asustas.\n"
 
-#. "L_PETE_036"
+#. L_PETE_036
 msgid "Tracer Bug has been noticed.\n"
 msgstr "El 'Bicho' Rastreador ha sido descubierto.\n"
 
-#. "L_PETE_037"
+#. L_PETE_037
 msgid "Greetings, citizen.\n"
 msgstr "Bienvenido, ciudadano.\n"
 
-#. "L_PETE_038"
+#. L_PETE_038
 msgid "Obtain Remote Mine.\n"
 msgstr "Obtén la Mina Remota.\n"
 
-#. "L_PETE_039"
+#. L_PETE_039
 msgid "Dr. Caroll's\n"
 msgstr "Dr. Caroll:\n"
 
-#. "L_PETE_040"
+#. L_PETE_040
 msgid "Remote Mine\n"
 msgstr "Mina Remota\n"
 
-#. "L_PETE_041"
+#. L_PETE_041
 msgid "A Remote Mine\n"
 msgstr "Una Mina Remota\n"
 
-#. "L_PETE_042"
+#. L_PETE_042
 msgid "Picked up a Remote Mine.\n"
 msgstr "Mina Remota obtenida.\n"
 
-#. "L_PETE_043"
+#. L_PETE_043
 msgid "Obtain Tracer Bug.\n"
 msgstr "Obtén el 'Bicho' Rastreador.\n"
 
-#. "L_PETE_044"
+#. L_PETE_044
 msgid "Dr. Caroll's\n"
 msgstr "Dr. Caroll:\n"
 
-#. "L_PETE_045"
+#. L_PETE_045
 msgid "Tracer Bug\n"
 msgstr "'Bicho' R.\n"
 
-#. "L_PETE_046"
+#. L_PETE_046
 msgid "A Tracer Bug\n"
 msgstr "Un 'Bicho' Rastreador\n"
 
-#. "L_PETE_047"
+#. L_PETE_047
 msgid "Picked up a Tracer Bug.\n"
 msgstr "'Bicho' Rastreador obtenido.\n"
 
-#. "L_PETE_048"
+#. L_PETE_048
 msgid "Elevator door cannot be reopened.\n"
 msgstr "La puerta del ascensor no puede reabrirse.\n"
 
-#. "L_PETE_049"
+#. L_PETE_049
 msgid "Obtain Reprogrammer.\n"
 msgstr "Obtén el Reprogramador.\n"
 
-#. "L_PETE_050"
+#. L_PETE_050
 msgid "Dr. Caroll's\n"
 msgstr "Dr. Caroll:\n"
 
-#. "L_PETE_051"
+#. L_PETE_051
 msgid "Reprogrammer\n"
 msgstr "Reprogram.\n"
 
-#. "L_PETE_052"
+#. L_PETE_052
 msgid "A Reprogrammer\n"
 msgstr "Un Reprogramador\n"
 
-#. "L_PETE_053"
+#. L_PETE_053
 msgid "Picked up a Reprogrammer.\n"
 msgstr "Reprogramador obtenido.\n"
 
-#. "L_PETE_054"
+#. L_PETE_054
 msgid "Diversion has been created.\n"
 msgstr "Distracción en marcha.\n"
 
-#. "L_PETE_055"
+#. L_PETE_055
 msgid "Obtain Remote Mine.\n"
 msgstr "Obtén la Mina Remota.\n"
 
-#. "L_PETE_056"
+#. L_PETE_056
 msgid "Dr. Caroll's\n"
 msgstr "Dr. Caroll:\n"
 
-#. "L_PETE_057"
+#. L_PETE_057
 msgid "Falcon 2\n"
 msgstr "Falcon 2\n"
 
-#. "L_PETE_058"
+#. L_PETE_058
 msgid "A Remote Mine\n"
 msgstr "Una Mina Remota\n"
 
-#. "L_PETE_059"
+#. L_PETE_059
 msgid "Picked up a Remote Mine.\n"
 msgstr "Mina Remota obtenida.\n"
 
-#. "L_PETE_060"
+#. L_PETE_060
 msgid ""
 "The only place we could secure the \n"
 "equipment was a storm drain.\n"
@@ -406,7 +406,7 @@ msgstr ""
 "El único lugar donde pudimos asegurar \n"
 "el equipo fue en un desagüe.\n"
 
-#. "L_PETE_061"
+#. L_PETE_061
 msgid ""
 "Either of those blocked-up doors will \n"
 "do as an escape route.\n"
@@ -414,7 +414,7 @@ msgstr ""
 "Cada una de esas puertas bloqueadas \n"
 "puede ser una ruta de escape.\n"
 
-#. "L_PETE_062"
+#. L_PETE_062
 msgid ""
 "Reprogram that taxi - it's a Mark 2 \n"
 "and should be compatible.\n"
@@ -422,7 +422,7 @@ msgstr ""
 "Reprograma ese taxi: es un Mark 2 \n"
 "y debe ser compatible.\n"
 
-#. "L_PETE_063"
+#. L_PETE_063
 msgid ""
 "That car park lift is your only \n"
 "point of ingress.\n"
@@ -430,23 +430,23 @@ msgstr ""
 "Ese elevador de coches es el \n"
 "único punto de acceso.\n"
 
-#. "L_PETE_064"
+#. L_PETE_064
 msgid "EEPROM flag has been set.\n"
 msgstr "EEPROM flag has been set.\n"
 
-#. "L_PETE_065"
+#. L_PETE_065
 msgid "EEPROM flag has been cleared.\n"
 msgstr "EEPROM flag has been cleared.\n"
 
-#. "L_PETE_066"
+#. L_PETE_066
 msgid "An alternative diversion has been created!\n"
 msgstr "¡Una distracción alternativa ha sido creada!\n"
 
-#. "L_PETE_067"
+#. L_PETE_067
 msgid "Tracer Bug has been spotted.\n"
 msgstr "El 'Bicho' Rastreador ha sido descubierto.\n"
 
-#. "L_PETE_068"
+#. L_PETE_068
 msgid ""
 "We suspect the G5 Corporation is just a \n"
 "front for dataDyne and whoever else is \n"
@@ -464,7 +464,7 @@ msgstr ""
 "van a discutir. Una vez salgas, la ayuda \n"
 "que solicité estará esperando.\n"
 
-#. "L_PETE_069"
+#. L_PETE_069
 msgid ""
 "Just who is this help you keep \n"
 "referring to?\n"
@@ -472,7 +472,7 @@ msgstr ""
 "¿Pero a qué ayuda te estás \n"
 "refiriendo?\n"
 
-#. "L_PETE_070"
+#. L_PETE_070
 msgid ""
 "Not now, Joanna. Time for radio silence. \n"
 "Good luck!\n"
@@ -480,10 +480,10 @@ msgstr ""
 "Ahora no, Joanna. Mantén la radio en silencio. \n"
 "¡Buena suerte!\n"
 
-#. "L_PETE_071"
+#. L_PETE_071
 msgid "Thanks a lot.\n"
 msgstr "Muchas gracias.\n"
 
-#. "L_PETE_072"
+#. L_PETE_072
 msgid "Remote Mine has been wasted.\n"
 msgstr "La Mina Remota ha sido desperdiciada.\n"

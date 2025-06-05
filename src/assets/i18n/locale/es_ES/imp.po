@@ -2,13 +2,13 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Perfect Dark PC port localization\n"
-"POT-Creation-Date: 2025-05-31 06:37:14.299892+00:00\n"
+"POT-Creation-Date: 2025-06-05 13:35:16.474166+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: originalAssets_to_l10n.py script\n"
 
-#. "L_IMP_000"
+#. L_IMP_000
 msgid ""
 "|Background - \n"
 "\n"
@@ -70,11 +70,11 @@ msgstr ""
 "\n"
 "FIN\n"
 
-#. "L_IMP_001"
+#. L_IMP_001
 msgid "CARRINGTON INSTITUTE\n"
 msgstr "INSTITUTO CARRINGTON\n"
 
-#. "L_IMP_002"
+#. L_IMP_002
 msgid ""
 "|Background - \n"
 "\n"
@@ -128,7 +128,7 @@ msgstr ""
 "\n"
 "FIN\n"
 
-#. "L_IMP_003"
+#. L_IMP_003
 msgid ""
 "|Background - \n"
 "\n"
@@ -174,91 +174,91 @@ msgstr ""
 "\n"
 "FIN\n"
 
-#. "L_IMP_004"
+#. L_IMP_004
 msgid "\n"
 msgstr "\n"
 
-#. "L_IMP_005"
+#. L_IMP_005
 msgid "Reactivate automatic defenses\n"
 msgstr "Reactivar defensas automáticas\n"
 
-#. "L_IMP_006"
+#. L_IMP_006
 msgid "Release hostages\n"
 msgstr "Liberar a los rehenes\n"
 
-#. "L_IMP_007"
+#. L_IMP_007
 msgid "Retrieve experimental weapon\n"
 msgstr "Recuperar arma experimental\n"
 
-#. "L_IMP_008"
+#. L_IMP_008
 msgid "Destroy sensitive information\n"
 msgstr "Destruir información sensible\n"
 
-#. "L_IMP_009"
+#. L_IMP_009
 msgid "Deactivate bomb\n"
 msgstr "Desactivar bomba\n"
 
-#. "L_IMP_010"
+#. L_IMP_010
 msgid "Obtain sensitive info.\n"
 msgstr "Obtén información sensible.\n"
 
-#. "L_IMP_011"
+#. L_IMP_011
 msgid "Guard's\n"
 msgstr "Guarda:\n"
 
-#. "L_IMP_012"
+#. L_IMP_012
 msgid "Sensitive info\n"
 msgstr "Información sensible\n"
 
-#. "L_IMP_013"
+#. L_IMP_013
 msgid "Sensitive info\n"
 msgstr "Información sensible\n"
 
-#. "L_IMP_014"
+#. L_IMP_014
 msgid "Picked up sensitive info.\n"
 msgstr "Información sensible obtenida.\n"
 
-#. "L_IMP_015"
+#. L_IMP_015
 msgid "Automatic gun activated.\n"
 msgstr "Arma automática activada.\n"
 
-#. "L_IMP_016"
+#. L_IMP_016
 msgid "Too many hostages killed.\n"
 msgstr "Demasiados rehenes muertos.\n"
 
-#. "L_IMP_017"
+#. L_IMP_017
 msgid "Hostages have been saved.\n"
 msgstr "Los rehenes han sido salvados.\n"
 
-#. "L_IMP_018"
+#. L_IMP_018
 msgid "Sensitive information has been destroyed.\n"
 msgstr "La información sensible ha sido destruida.\n"
 
-#. "L_IMP_019"
+#. L_IMP_019
 msgid "Carrington has been killed.\n"
 msgstr "Carrington ha muerto.\n"
 
-#. "L_IMP_020"
+#. L_IMP_020
 msgid "Joanna - we're under attack.\n"
 msgstr "Joanna, nos atacan.\n"
 
-#. "L_IMP_021"
+#. L_IMP_021
 msgid "Get the guns back on line - hurry.\n"
 msgstr "Activa las armas, deprisa.\n"
 
-#. "L_IMP_022"
+#. L_IMP_022
 msgid "The Skedar have taken hostages.\n"
 msgstr "Los Skedar han tomado rehenes.\n"
 
-#. "L_IMP_023"
+#. L_IMP_023
 msgid "Get up to the offices and save them.\n"
 msgstr "Sube a las oficinas y sálvalos.\n"
 
-#. "L_IMP_024"
+#. L_IMP_024
 msgid "They're using a new form of shield technology.\n"
 msgstr "Están usando una nueva forma de tecnología de escudo.\n"
 
-#. "L_IMP_025"
+#. L_IMP_025
 msgid ""
 "Foster was working on a new weapon which may \n"
 "be useful.\n"
@@ -266,51 +266,51 @@ msgstr ""
 "Foster estaba trabajando en una nueva arma que \n"
 "podría ser útil.\n"
 
-#. "L_IMP_026"
+#. L_IMP_026
 msgid "Damn it. My office... If they get access...\n"
 msgstr "Maldición. Mi oficina... Si logran acceder...\n"
 
-#. "L_IMP_027"
+#. L_IMP_027
 msgid "Get there first, Jo, and destroy the files.\n"
 msgstr "Ve allí primero, Joanna, y destruye los ficheros.\n"
 
-#. "L_IMP_028"
+#. L_IMP_028
 msgid "Things are desperate. They've planted a bomb.\n"
 msgstr "Las cosas van muy mal. Han puesto una bomba.\n"
 
-#. "L_IMP_029"
+#. L_IMP_029
 msgid "Find it and get it out of the building.\n"
 msgstr "Encuéntrala y sácala del edificio.\n"
 
-#. "L_IMP_030"
+#. L_IMP_030
 msgid "Access denied - authorization failure.\n"
 msgstr "Acceso denegado: autorización fallida.\n"
 
-#. "L_IMP_031"
+#. L_IMP_031
 msgid "Emergency overrides have been engaged.\n"
 msgstr "Las medidas de emergencia se han activado.\n"
 
-#. "L_IMP_032"
+#. L_IMP_032
 msgid "Well done, Joanna. We're nearly clear...\n"
 msgstr "Bien hecho, Joanna. Estamos casi a salvo...\n"
 
-#. "L_IMP_033"
+#. L_IMP_033
 msgid "The last dropship is waiting for you. Hurry.\n"
 msgstr "La última nave te está esperando. Deprisa.\n"
 
-#. "L_IMP_034"
+#. L_IMP_034
 msgid "Critical mission object has been destroyed.\n"
 msgstr "Objeto crítico de la misión destruido.\n"
 
-#. "L_IMP_035"
+#. L_IMP_035
 msgid "The autodefenses will really help me out.\n"
 msgstr "Las autodefensas me ayudarán de veras.\n"
 
-#. "L_IMP_036"
+#. L_IMP_036
 msgid "So this is what Foster was working on.\n"
 msgstr "Así que esto es en lo que Foster estaba trabajando.\n"
 
-#. "L_IMP_037"
+#. L_IMP_037
 msgid ""
 "I'll have to go carefully... The hostages are \n"
 "counting on me.\n"
@@ -318,7 +318,7 @@ msgstr ""
 "Debo de ir con cuidado... Los prisioneros \n"
 "cuentan conmigo.\n"
 
-#. "L_IMP_038"
+#. L_IMP_038
 msgid ""
 "Well, at least I won't know if I'm doing \n"
 "anything wrong.\n"
@@ -326,15 +326,15 @@ msgstr ""
 "Bien, al menos no sabré si estoy \n"
 "haciendo algo mal.\n"
 
-#. "L_IMP_039"
+#. L_IMP_039
 msgid "The bomb has been detonated...\n"
 msgstr "La bomba ha sido detonada...\n"
 
-#. "L_IMP_040"
+#. L_IMP_040
 msgid "You have been given a Devastator.\n"
 msgstr "Has obtenido un Devastador.\n"
 
-#. "L_IMP_041"
+#. L_IMP_041
 msgid ""
 "All ready, Joanna? We can't keep the Maian delegation waiting. Or the "
 "President, of course.\n"
@@ -342,7 +342,7 @@ msgstr ""
 "¿Preparada, Joanna? No podemos hacer esperar a la delegación Maian. Ni al "
 "Presidente, por supuesto.\n"
 
-#. "L_IMP_042"
+#. L_IMP_042
 msgid ""
 "Am I ready? What do you mean? I was ready half an hour ago. It was you "
 "holding us up!\n"
@@ -350,7 +350,7 @@ msgstr ""
 "¿Preparada? ¿Qué quieres decir? Llevo preparada desde hace media hora. \n"
 "¡Tú nos has entretenido!\n"
 
-#. "L_IMP_043"
+#. L_IMP_043
 msgid ""
 "But you know how it is, Joanna... I had to make sure my hair was just right,"
 " and then there was the suit...\n"
@@ -358,11 +358,11 @@ msgstr ""
 "Pero ya sabes cómo va, Joanna... Tengo que estar seguro de que mi pelo está "
 "bien, y también estaba el traje...\n"
 
-#. "L_IMP_044"
+#. L_IMP_044
 msgid "They should keep you away from mirrors. Nervous?\n"
 msgstr "Deberían alejarte de los espejos. ¿Nervioso?\n"
 
-#. "L_IMP_045"
+#. L_IMP_045
 msgid ""
 "Very. I've waited for this moment for so many years. Contact, friendly "
 "contact, between Humans and Maians is what the Institute was founded for. "
@@ -373,15 +373,15 @@ msgstr ""
 "amigable, entre Humanos y Maian es para lo que se fundó el Instituto. Y en "
 "unos minutos estaremos en la Casa Blanca, y ocurrirá finalmente...\n"
 
-#. "L_IMP_046"
+#. L_IMP_046
 msgid "Where did that come from?\n"
 msgstr "¿De dónde proviene ese ruido?\n"
 
-#. "L_IMP_047"
+#. L_IMP_047
 msgid "It was up on ground level...\n"
 msgstr "Parece la planta baja...\n"
 
-#. "L_IMP_048"
+#. L_IMP_048
 msgid ""
 "Looks like someone doesn't know when to quit. We've got to get everyone "
 "out!\n"
@@ -389,54 +389,54 @@ msgstr ""
 "Parece que alguien no sabe cuándo retirarse. ¡Tenemos que sacar a todo el "
 "mundo fuera!\n"
 
-#. "L_IMP_049"
+#. L_IMP_049
 msgid "Get clear! I'll hold them off... You can come back and get me later!\n"
 msgstr "¡Largo! Les mantendré alejados... ¡Puedes volver y recogerme luego!\n"
 
-#. "L_IMP_050"
+#. L_IMP_050
 msgid "At least, I hope you can.\n"
 msgstr "Al menos, espero que puedas.\n"
 
-#. "L_IMP_051"
+#. L_IMP_051
 msgid "You need the Data Uplink.\n"
 msgstr "Necesitas el Conector de Datos.\n"
 
-#. "L_IMP_052"
+#. L_IMP_052
 msgid "Connection has been made.\n"
 msgstr "Se ha realizado la conexión.\n"
 
-#. "L_IMP_053"
+#. L_IMP_053
 msgid "Bypassing security systems.\n"
 msgstr "Saltando sistemas de seguridad.\n"
 
-#. "L_IMP_054"
+#. L_IMP_054
 msgid "Virus has been downloaded successfully.\n"
 msgstr "El virus ha sido descargado con éxito.\n"
 
-#. "L_IMP_055"
+#. L_IMP_055
 msgid "Ship's engines have been activated.\n"
 msgstr "Los motores de la nave han sido activados.\n"
 
-#. "L_IMP_056"
+#. L_IMP_056
 msgid "Connection to ship has been broken.\n"
 msgstr "La conexión con la nave se ha cortado.\n"
 
-#. "L_IMP_057"
+#. L_IMP_057
 msgid "Obtain Data Uplink.\n"
 msgstr "Obtén el Conector de Datos.\n"
 
-#. "L_IMP_058"
+#. L_IMP_058
 msgid "\n"
 msgstr "\n"
 
-#. "L_IMP_059"
+#. L_IMP_059
 msgid "Data Uplink\n"
 msgstr "C. Datos\n"
 
-#. "L_IMP_060"
+#. L_IMP_060
 msgid "A Data Uplink\n"
 msgstr "Un Conector de Datos\n"
 
-#. "L_IMP_061"
+#. L_IMP_061
 msgid "Picked up a Data Uplink.\n"
 msgstr "Conector de Datos obtenido.\n"

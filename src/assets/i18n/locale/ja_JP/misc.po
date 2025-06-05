@@ -2,214 +2,214 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Perfect Dark PC port localization\n"
-"POT-Creation-Date: 2025-05-31 06:37:14.299892+00:00\n"
+"POT-Creation-Date: 2025-06-05 13:35:16.474166+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: originalAssets_to_l10n.py script\n"
 
-#. "L_MISC_041"
+#. L_MISC_041
 msgid "E R R O R\n"
 msgstr "エラー\n"
 
-#. "L_MISC_042"
+#. L_MISC_042
 msgid "No briefing for this mission\n"
 msgstr "ミッション情報はありません\n"
 
-#. "L_MISC_043"
+#. L_MISC_043
 msgid "\n"
 msgstr "\n"
 
-#. "L_MISC_044"
+#. L_MISC_044
 msgid "Objective"
 msgstr "任務 "
 
-#. "L_MISC_045"
+#. L_MISC_045
 msgid "Completed\n"
 msgstr " 完了\n"
 
-#. "L_MISC_046"
+#. L_MISC_046
 msgid "Incomplete\n"
 msgstr " 未完了\n"
 
-#. "L_MISC_047"
+#. L_MISC_047
 msgid "Failed\n"
 msgstr " 失敗\n"
 
-#. "L_MISC_068"
+#. L_MISC_068
 msgid "One minute left.\n"
 msgstr "あと１分\n"
 
-#. "L_MISC_069"
+#. L_MISC_069
 msgid "OBJECTIVES FAILED - abort mission.\n"
 msgstr "続行不能　任務を放棄してください\n"
 
-#. "L_MISC_070"
+#. L_MISC_070
 msgid "Guard Greeting\n"
 msgstr "やあ。\n"
 
-#. "L_MISC_071"
+#. L_MISC_071
 msgid "What's that gun?\n"
 msgstr "何だ、その銃は？\n"
 
-#. "L_MISC_072"
+#. L_MISC_072
 msgid "Don't point that gun at me.\n"
 msgstr "銃をこっちに向けるんじゃない！\n"
 
-#. "L_MISC_073"
+#. L_MISC_073
 msgid "S/MPS"
 msgstr "S/MPS"
 
-#. "L_MISC_074"
+#. L_MISC_074
 msgid "H/M"
 msgstr "H/M"
 
-#. "L_MISC_075"
+#. L_MISC_075
 msgid "Y/D"
 msgstr "Y/D"
 
-#. "L_MISC_076"
+#. L_MISC_076
 msgid "P/D"
 msgstr "P/D"
 
-#. "L_MISC_077"
+#. L_MISC_077
 msgid "CI 2023"
 msgstr "CI 2023"
 
-#. "L_MISC_078"
+#. L_MISC_078
 msgid "YKK: 95935"
 msgstr "YKK: 95935"
 
-#. "L_MISC_079"
+#. L_MISC_079
 msgid "CAMSPY"
 msgstr "CAMSPY"
 
-#. "L_MISC_080"
+#. L_MISC_080
 msgid "MODEL 1.2"
 msgstr "MODEL 1.2"
 
-#. "L_MISC_081"
+#. L_MISC_081
 msgid "GYROSTAT"
 msgstr "GYROSTAT"
 
-#. "L_MISC_082"
+#. L_MISC_082
 msgid "Meat"
 msgstr "新人"
 
-#. "L_MISC_083"
+#. L_MISC_083
 msgid "Easy"
 msgstr "弱"
 
-#. "L_MISC_084"
+#. L_MISC_084
 msgid "Normal"
 msgstr "並"
 
-#. "L_MISC_085"
+#. L_MISC_085
 msgid "Hard"
 msgstr "強"
 
-#. "L_MISC_086"
+#. L_MISC_086
 msgid "Perfect"
 msgstr "激"
 
-#. "L_MISC_087"
+#. L_MISC_087
 msgid "Dark"
 msgstr "闇"
 
-#. "L_MISC_088"
+#. L_MISC_088
 msgid "MeatSim"
 msgstr "新人タイプ"
 
-#. "L_MISC_089"
+#. L_MISC_089
 msgid "EasySim"
 msgstr "弱タイプ"
 
-#. "L_MISC_090"
+#. L_MISC_090
 msgid "NormalSim"
 msgstr "並タイプ"
 
-#. "L_MISC_091"
+#. L_MISC_091
 msgid "HardSim"
 msgstr "強タイプ"
 
-#. "L_MISC_092"
+#. L_MISC_092
 msgid "PerfectSim"
 msgstr "激タイプ"
 
-#. "L_MISC_093"
+#. L_MISC_093
 msgid "DarkSim"
 msgstr "闇タイプ"
 
-#. "L_MISC_094"
+#. L_MISC_094
 msgid "PeaceSim"
 msgstr "平和タイプ"
 
-#. "L_MISC_095"
+#. L_MISC_095
 msgid "ShieldSim"
 msgstr "防御タイプ"
 
-#. "L_MISC_096"
+#. L_MISC_096
 msgid "RocketSim"
 msgstr "爆発タイプ"
 
-#. "L_MISC_097"
+#. L_MISC_097
 msgid "KazeSim"
 msgstr "神風タイプ"
 
-#. "L_MISC_098"
+#. L_MISC_098
 msgid "FistSim"
 msgstr "素手タイプ"
 
-#. "L_MISC_099"
+#. L_MISC_099
 msgid "PreySim"
 msgstr "悪役タイプ"
 
-#. "L_MISC_100"
+#. L_MISC_100
 msgid "CowardSim"
 msgstr "軟弱タイプ"
 
-#. "L_MISC_101"
+#. L_MISC_101
 msgid "JudgeSim"
 msgstr "正統タイプ"
 
-#. "L_MISC_102"
+#. L_MISC_102
 msgid "FeudSim"
 msgstr "執念タイプ"
 
-#. "L_MISC_103"
+#. L_MISC_103
 msgid "SpeedSim"
 msgstr "高速タイプ"
 
-#. "L_MISC_104"
+#. L_MISC_104
 msgid "TurtleSim"
 msgstr "低速タイプ"
 
-#. "L_MISC_105"
+#. L_MISC_105
 msgid "VengeSim"
 msgstr "反撃タイプ"
 
-#. "L_MISC_106"
+#. L_MISC_106
 msgid ""
 "MeatSim:  This is the easiest of all the simulants to defeat and is, "
 "therefore, the best choice for the beginner.  It is not very intelligent, "
 "and its shooting skills are very poor.\n"
 msgstr "新人タイプ：全シミュラントの中で最も弱いので、ビギナーに最適。思考レベルは非常に悪く、射撃能力も非常に悪い。\n"
 
-#. "L_MISC_107"
+#. L_MISC_107
 msgid ""
 "EasySim:  This simulant has basic skills and intelligence, but it can still "
 "be dangerous.\n"
 msgstr "弱タイプ：基本的なアクション／思考レベルしか持たないが、時に手強い。\n"
 
-#. "L_MISC_108"
+#. L_MISC_108
 msgid "NormalSim:  This simulant is as skilled as the average human player.\n"
 msgstr "並タイプ：並の人間プレイヤーと同じくらいの実力。\n"
 
-#. "L_MISC_109"
+#. L_MISC_109
 msgid "HardSim:  This simulant is as skilled as a good human player.\n"
 msgstr "強タイプ：上級の人間プレイヤーと同じくらいの実力。\n"
 
-#. "L_MISC_110"
+#. L_MISC_110
 msgid ""
 "PerfectSim: The ultimate adversary, the most intelligent and skilled "
 "simulant.  Most players will eventually want to use PerfectSim all the time "
@@ -217,7 +217,7 @@ msgid ""
 msgstr ""
 "激タイプ：究極の敵。最もアクション／思考レベルが高いシミュラント。レベルアップしたプレイヤーは、いずれこのシミュラントとしか戦いたくなくなることであろう。\n"
 
-#. "L_MISC_111"
+#. L_MISC_111
 msgid ""
 "DarkSim: Prototype cyborg developed by dataDyne to counteract Carrington "
 "operatives.  Remember that this simulant, unlike all the others, is not "
@@ -225,7 +225,7 @@ msgid ""
 msgstr ""
 "闇タイプ：データダイン社がキャリントン協会のエージェントに対抗するために開発したプロトタイプのサイボーグ。他のシミュラントと異なり、人間がベースとなっていないので、人間では不可能な動きをする。\n"
 
-#. "L_MISC_112"
+#. L_MISC_112
 msgid ""
 "PeaceSim:  These simulants are scientists who protest the use of weapons.  "
 "They will go around the level hunting for guns that are lying around and "
@@ -234,7 +234,7 @@ msgid ""
 msgstr ""
 "平和タイプ：ウェポンの使用に反対する科学者たちのシミュラント。ステージ中でウェポンを探し歩き、見つけたウェポンはキープしてプレイヤーがゲットできないようにする。このシミュラントを撃てば、持っていたウェポンをいくつか落とすかも！\n"
 
-#. "L_MISC_113"
+#. L_MISC_113
 msgid ""
 "ShieldSim:  Always goes for maximum shield protection.  If this simulant "
 "loses any shield energy, it will go and search for a new shield.  Not much "
@@ -242,7 +242,7 @@ msgid ""
 msgstr ""
 "防御タイプ：常にシールドを最強にしたがるシミュラント。シールドを失うと、すぐに新しいシールドを探しにかかる。そのステージにシールドが無ければ全く無意味！\n"
 
-#. "L_MISC_114"
+#. L_MISC_114
 msgid ""
 "RocketSim:  This simulant loves to see things blow up.  It prefers weapons "
 "which make big explosions over conventional handguns or automatics.  This "
@@ -250,7 +250,7 @@ msgid ""
 msgstr ""
 "爆発タイプ：このシミュラントは通常のピストルや自動小銃よりも、大きな爆発を起こすウェポンを好む。これには爆発系の第２武器モードを持つウェポンもふくまれる。\n"
 
-#. "L_MISC_115"
+#. L_MISC_115
 msgid ""
 "KazeSim:  This simulant will stop at nothing to destroy its target.  It is "
 "very aggressive and never keeps its distance - even if it's holding a "
@@ -258,7 +258,7 @@ msgid ""
 msgstr ""
 "神風タイプ：このシミュラントは、ターゲットを破壊すること以外は何も考えていない。非常に攻撃的で、間合いなどは考えない。倒されることを全く恐れないので要注意！\n"
 
-#. "L_MISC_116"
+#. L_MISC_116
 msgid ""
 "FistSim:  This simulant protests the use of weapons in a similar way to the "
 "PeaceSims.  However, it has no such reservations when it comes to unarmed "
@@ -267,7 +267,7 @@ msgid ""
 msgstr ""
 "素手タイプ：このシミュラントも平和タイプ同様、ウェポンの使用に反対している。しかし非武装コンバットになると、話が別のようだ。常に素手でのファイトか、武装解除をしかけてくる。\n"
 
-#. "L_MISC_117"
+#. L_MISC_117
 msgid ""
 "PreySim:  This simulant prefers to prey on the weak in order to get easier "
 "kills.  It will look for players who have just respawned, have an inferior "
@@ -275,7 +275,7 @@ msgid ""
 msgstr ""
 "悪役タイプ：このシミュラントは「弱いものいじめ」が大好き。再出現したばかりのプレイヤーや、弱いウェポンを持っていたり体力が減っているプレイヤーを狙ってくる。\n"
 
-#. "L_MISC_118"
+#. L_MISC_118
 msgid ""
 "CowardSim:  This simulant does not really want to fight and will try to "
 "survive by running away.  It may sometimes attack, but only if the opponent "
@@ -284,7 +284,7 @@ msgid ""
 msgstr ""
 "軟弱タイプ：このシミュラントは本当は戦いたくないらしく、逃げて生き残ろうとする。相手が弱そうなときだけ攻撃してくるが、いい銃を出すか撃つかすると、逃げ出すだろう！\n"
 
-#. "L_MISC_119"
+#. L_MISC_119
 msgid ""
 "JudgeSim:  This simulant has a strong sense of justice and despises the "
 "tactics of the PreySim.  It will always try to kill the winning player in "
@@ -292,7 +292,7 @@ msgid ""
 msgstr ""
 "正統タイプ：このシミュラントは、悪役タイプの戦い方を見下している。正統タイプらしく、得点の多い相手を倒しに行く。自分の得点については、よりＵＰしようとする。\n"
 
-#. "L_MISC_120"
+#. L_MISC_120
 msgid ""
 "FeudSim:  Once this simulant picks a target, that player had better watch "
 "out!  A FeudSim will pursue the player until the game is over!  Even if it "
@@ -300,7 +300,7 @@ msgid ""
 msgstr ""
 "執念タイプ：このシミュラントが一度ターゲットを決めると、ゲームが終わるまでずっと執念で追いかけてくるのでご用心！倒されたところでターゲットは変わらない。\n"
 
-#. "L_MISC_121"
+#. L_MISC_121
 msgid ""
 "SpeedSim:  These simulants have been trained for speed.  They can easily "
 "outrun a human player, so it's no use  running away from a SpeedSim unless "
@@ -308,7 +308,7 @@ msgid ""
 msgstr ""
 "高速タイプ：このシミュラントはスピードトレーニングを積んでいる。プレイヤーにすぐ追いついてしまうので近道でも知っていない限り、走って逃げてもムダ。\n"
 
-#. "L_MISC_122"
+#. L_MISC_122
 msgid ""
 "TurtleSim:  This simulant wears a prototype shield generator developed by "
 "dataDyne scientists.  The generator projects a protective shield around its "
@@ -319,620 +319,624 @@ msgid ""
 msgstr ""
 "低速タイプ：このシミュラントはデータダイン社によって開発された、プロトタイプのシールドジェネレーターを装備している。このジェネレーターはユーザーの周りに、通常の倍の強さを持つシールドを放出する。しかし同時に、ユーザーの動きをスローにもしてしまうのだ。低速タイプはステージ上にシールドが無い場合でも、このジェネレーターを最初から装備している。\n"
 
-#. "L_MISC_123"
+#. L_MISC_123
 msgid ""
 "VengeSim:  Be careful if you shoot or kill a VengeSim because it always "
 "attacks the player who last killed it."
-msgstr "反撃タイプ：反撃タイプのシミュラントを撃ったり倒したりするとメンドーだ。こいつは前回自分を倒した相手のみを攻撃してくる。"
+msgstr "反撃タイプ：反撃タイプのシミュラントを撃ったり倒したりするとメンドーだ。こいつは前回自分を倒した相手のみを攻撃してくる。\n"
 
-#. "L_MISC_124"
+#. L_MISC_124
 msgid "Dark Combat"
-msgstr "ダークコンバット"
+msgstr "ダークコンバット\n"
 
-#. "L_MISC_125"
+#. L_MISC_125
 msgid "Skedar Mystery"
-msgstr "スケダー"
+msgstr "スケダー\n"
 
-#. "L_MISC_126"
+#. L_MISC_126
 msgid "CI Operative"
-msgstr "ＣＩエージェント"
+msgstr "ＣＩエージェント\n"
 
-#. "L_MISC_127"
+#. L_MISC_127
 msgid "dataDyne Action"
-msgstr "データダイン"
+msgstr "データダイン\n"
 
-#. "L_MISC_128"
+#. L_MISC_128
 msgid "Maian Tears"
-msgstr "マイアンの悲しみ"
+msgstr "マイアンの悲しみ\n"
 
-#. "L_MISC_129"
+#. L_MISC_129
 msgid "Alien Conflict"
-msgstr "エイリアンの対立"
+msgstr "エイリアンの対立\n"
 
-#. "L_MISC_130"
+#. L_MISC_130
 msgid "Carrington Institute"
-msgstr "キャリントン協会"
+msgstr "キャリントン協会\n"
 
-#. "L_MISC_131"
+#. L_MISC_131
 msgid "dD Central"
-msgstr "ｄＤセントラル"
+msgstr "ｄＤセントラル\n"
 
-#. "L_MISC_132"
+#. L_MISC_132
 msgid "dD Central X"
-msgstr "ｄＤセントラル！"
+msgstr "ｄＤセントラル！\n"
 
-#. "L_MISC_133"
+#. L_MISC_133
 msgid "dD Research"
-msgstr "ｄＤリサーチ"
+msgstr "ｄＤリサーチ\n"
 
-#. "L_MISC_134"
+#. L_MISC_134
 msgid "dD Research X"
-msgstr "ｄＤリサーチ！"
+msgstr "ｄＤリサーチ！\n"
 
-#. "L_MISC_135"
+#. L_MISC_135
 msgid "dD Extraction"
-msgstr "ｄＤエスケイプ"
+msgstr "ｄＤエスケイプ\n"
 
-#. "L_MISC_136"
+#. L_MISC_136
 msgid "dD Extraction X"
-msgstr "ｄＤエスケイプ！"
+msgstr "ｄＤエスケイプ！\n"
 
-#. "L_MISC_137"
+#. L_MISC_137
 msgid "Carrington Villa"
-msgstr "別荘"
+msgstr "別荘\n"
 
-#. "L_MISC_138"
+#. L_MISC_138
 msgid "Carrington Villa X"
-msgstr "別荘！"
+msgstr "別荘！\n"
 
-#. "L_MISC_139"
+#. L_MISC_139
 msgid "Chicago"
-msgstr "シカゴ"
+msgstr "シカゴ\n"
 
-#. "L_MISC_140"
+#. L_MISC_140
 msgid "Chicago X"
-msgstr "シカゴ！"
+msgstr "シカゴ！\n"
 
-#. "L_MISC_141"
+#. L_MISC_141
 msgid "G5 Building"
-msgstr "Ｇ５ビル"
+msgstr "Ｇ５ビル\n"
 
-#. "L_MISC_142"
+#. L_MISC_142
 msgid "G5 Building X"
-msgstr "Ｇ５ビル！"
+msgstr "Ｇ５ビル！\n"
 
-#. "L_MISC_143"
+#. L_MISC_143
 msgid "A51 Infiltration"
-msgstr "Ａ５１　突破"
+msgstr "Ａ５１　突破\n"
 
-#. "L_MISC_144"
+#. L_MISC_144
 msgid "A51 Infiltration X"
-msgstr "Ａ５１　突破！"
+msgstr "Ａ５１　突破！\n"
 
-#. "L_MISC_145"
+#. L_MISC_145
 msgid "A51 Rescue"
-msgstr "Ａ５１　救出"
+msgstr "Ａ５１　救出\n"
 
-#. "L_MISC_146"
+#. L_MISC_146
 msgid "A51 Rescue X"
-msgstr "Ａ５１　救出！"
+msgstr "Ａ５１　救出！\n"
 
-#. "L_MISC_147"
+#. L_MISC_147
 msgid "A51 Escape"
-msgstr "Ａ５１　脱出"
+msgstr "Ａ５１　脱出\n"
 
-#. "L_MISC_148"
+#. L_MISC_148
 msgid "A51 Escape X"
-msgstr "Ａ５１　脱出！"
+msgstr "Ａ５１　脱出！\n"
 
-#. "L_MISC_149"
+#. L_MISC_149
 msgid "Air Base"
-msgstr "空軍基地"
+msgstr "空軍基地\n"
 
-#. "L_MISC_150"
+#. L_MISC_150
 msgid "Air Base X"
-msgstr "空軍基地！"
+msgstr "空軍基地！\n"
 
-#. "L_MISC_151"
+#. L_MISC_151
 msgid "Air Force One"
-msgstr "大統領専用機"
+msgstr "大統領専用機\n"
 
-#. "L_MISC_152"
+#. L_MISC_152
 msgid "Air Force One X"
-msgstr "大統領専用機！"
+msgstr "大統領専用機！\n"
 
-#. "L_MISC_153"
+#. L_MISC_153
 msgid "Crash Site"
-msgstr "墜落現場"
+msgstr "墜落現場\n"
 
-#. "L_MISC_154"
+#. L_MISC_154
 msgid "Crash Site X"
-msgstr "墜落現場！"
+msgstr "墜落現場！\n"
 
-#. "L_MISC_155"
+#. L_MISC_155
 msgid "Pelagic II"
-msgstr "ペラジック２"
+msgstr "ペラジック２\n"
 
-#. "L_MISC_156"
+#. L_MISC_156
 msgid "Pelagic II X"
-msgstr "ペラジック２！"
+msgstr "ペラジック２！\n"
 
-#. "L_MISC_157"
+#. L_MISC_157
 msgid "Deep Sea"
-msgstr "深海"
+msgstr "深海\n"
 
-#. "L_MISC_158"
+#. L_MISC_158
 msgid "Deep Sea X"
-msgstr "深海！"
+msgstr "深海！\n"
 
-#. "L_MISC_159"
+#. L_MISC_159
 msgid "Institute Defense"
-msgstr "協会の防衛"
+msgstr "協会の防衛\n"
 
-#. "L_MISC_160"
+#. L_MISC_160
 msgid "Institute Defense X"
-msgstr "協会の防衛！"
+msgstr "協会の防衛！\n"
 
-#. "L_MISC_161"
+#. L_MISC_161
 msgid "Attack Ship"
-msgstr "スケダー宇宙船"
+msgstr "スケダー宇宙船\n"
 
-#. "L_MISC_162"
+#. L_MISC_162
 msgid "Attack Ship X"
-msgstr "スケダー宇宙船！"
+msgstr "スケダー宇宙船！\n"
 
-#. "L_MISC_163"
+#. L_MISC_163
 msgid "Skedar Ruins"
-msgstr "スケダーの神殿"
+msgstr "スケダーの神殿\n"
 
-#. "L_MISC_164"
+#. L_MISC_164
 msgid "Skedar Ruins X"
-msgstr "スケダーの神殿！"
+msgstr "スケダーの神殿！\n"
 
-#. "L_MISC_165"
+#. L_MISC_165
 msgid "End Credits"
-msgstr "エンディング"
+msgstr "エンディング\n"
 
-#. "L_MISC_166"
+#. L_MISC_166
 msgid "Random\n"
 msgstr "ランダム\n"
 
-#. "L_MISC_167"
+#. L_MISC_167
 msgid "Select All\n"
 msgstr "全て選択\n"
 
-#. "L_MISC_168"
+#. L_MISC_168
 msgid "Select None\n"
 msgstr "選択しない\n"
 
-#. "L_MISC_169"
+#. L_MISC_169
 msgid "Randomize\n"
 msgstr "ランダム\n"
 
-#. "L_MISC_170"
+#. L_MISC_170
 msgid "Weapon\n"
 msgstr "ウェポン\n"
 
-#. "L_MISC_171"
+#. L_MISC_171
 msgid "Function\n"
 msgstr "武器モード\n"
 
-#. "L_MISC_172"
+#. L_MISC_172
 msgid "Orders\n"
 msgstr "命令\n"
 
-#. "L_MISC_173"
+#. L_MISC_173
 msgid "No Weapon\n"
 msgstr "素手\n"
 
-#. "L_MISC_174"
+#. L_MISC_174
 msgid "Pick Target\n"
 msgstr "ターゲット選択\n"
 
-#. "L_MISC_175"
+#. L_MISC_175
 msgid "Follow\n"
 msgstr "守れ＋追え\n"
 
-#. "L_MISC_176"
+#. L_MISC_176
 msgid "Attack\n"
 msgstr "戦え\n"
 
-#. "L_MISC_177"
+#. L_MISC_177
 msgid "Defend\n"
 msgstr "待機＋追え\n"
 
-#. "L_MISC_178"
+#. L_MISC_178
 msgid "Hold\n"
 msgstr "待機\n"
 
-#. "L_MISC_179"
+#. L_MISC_179
 msgid "Normal\n"
 msgstr "フリー\n"
 
-#. "L_MISC_180"
+#. L_MISC_180
 msgid "Download\n"
 msgstr "ハッキング\n"
 
-#. "L_MISC_181"
+#. L_MISC_181
 msgid "Get Case\n"
 msgstr "ゲット\n"
 
-#. "L_MISC_182"
+#. L_MISC_182
 msgid "Tag Box\n"
 msgstr "ＢＯＸ\n"
 
-#. "L_MISC_183"
+#. L_MISC_183
 msgid "Killed by"
 msgstr "加害者："
 
-#. "L_MISC_184"
+#. L_MISC_184
 msgid "Killed"
 msgstr "倒した："
 
-#. "L_MISC_185"
+#. L_MISC_185
 msgid "Beginner:21\n"
 msgstr "ビギナー 21\n"
 
-#. "L_MISC_186"
+#. L_MISC_186
 msgid "Trainee:20\n"
 msgstr "トレーニー 20\n"
 
-#. "L_MISC_187"
+#. L_MISC_187
 msgid "Amateur:19\n"
 msgstr "アマチュア 19\n"
 
-#. "L_MISC_188"
+#. L_MISC_188
 msgid "Rookie:18\n"
 msgstr "ルーキー 18\n"
 
-#. "L_MISC_189"
+#. L_MISC_189
 msgid "Novice:17\n"
 msgstr "ノービス 17\n"
 
-#. "L_MISC_190"
+#. L_MISC_190
 msgid "Trooper:16\n"
 msgstr "ソルジャー 16\n"
 
-#. "L_MISC_191"
+#. L_MISC_191
 msgid "Agent:15\n"
 msgstr "エージェント 15\n"
 
-#. "L_MISC_192"
+#. L_MISC_192
 msgid "Star Agent:14\n"
 msgstr "特エージェント 14\n"
 
-#. "L_MISC_193"
+#. L_MISC_193
 msgid "Special Agent:13\n"
 msgstr "超エージェント 13\n"
 
-#. "L_MISC_194"
+#. L_MISC_194
 msgid "Expert:12\n"
 msgstr "エキスパート 12\n"
 
-#. "L_MISC_195"
+#. L_MISC_195
 msgid "Veteran:11\n"
 msgstr "ベテラン 11\n"
 
-#. "L_MISC_196"
+#. L_MISC_196
 msgid "Professional:10\n"
 msgstr "プロ 10\n"
 
-#. "L_MISC_197"
+#. L_MISC_197
 msgid "Dangerous:9\n"
 msgstr "デンジャラス 9\n"
 
-#. "L_MISC_198"
+#. L_MISC_198
 msgid "Deadly:8\n"
 msgstr "シューター 8\n"
 
-#. "L_MISC_199"
+#. L_MISC_199
 msgid "Killer:7\n"
 msgstr "ハンター 7\n"
 
-#. "L_MISC_200"
+#. L_MISC_200
 msgid "Assassin:6\n"
 msgstr "ヒットマン 6\n"
 
-#. "L_MISC_201"
+#. L_MISC_201
 msgid "Lethal:5\n"
 msgstr "リーサル 5\n"
 
-#. "L_MISC_202"
+#. L_MISC_202
 msgid "Elite:4\n"
 msgstr "エリート 4\n"
 
-#. "L_MISC_203"
+#. L_MISC_203
 msgid "Invincible:3\n"
 msgstr "ウルトラ 3\n"
 
-#. "L_MISC_204"
+#. L_MISC_204
 msgid "Near Perfect:2\n"
 msgstr "準パーフェクト 2\n"
 
-#. "L_MISC_205"
+#. L_MISC_205
 msgid "Perfect:1\n"
 msgstr "パーフェクト 1\n"
 
-#. "L_MISC_206"
+#. L_MISC_206
 msgid "DARTAMMO"
 msgstr "DARTAMMO"
 
-#. "L_MISC_207"
+#. L_MISC_207
 msgid "MODEL 1.4"
 msgstr "MODEL 1.4"
 
-#. "L_MISC_208"
+#. L_MISC_208
 msgid "JM: 201172"
 msgstr "JM: 201172"
 
-#. "L_MISC_209"
+#. L_MISC_209
 msgid "Save Case\n"
 msgstr "自陣を守れ\n"
 
-#. "L_MISC_210"
+#. L_MISC_210
 msgid "Def Hill\n"
 msgstr "陣で戦え\n"
 
-#. "L_MISC_211"
+#. L_MISC_211
 msgid "Hold Hill\n"
 msgstr "陣をキープ\n"
 
-#. "L_MISC_212"
+#. L_MISC_212
 msgid "Get Case\n"
 msgstr "ゲット\n"
 
-#. "L_MISC_213"
+#. L_MISC_213
 msgid "Pop Cap\n"
 msgstr "オニを倒せ\n"
 
-#. "L_MISC_214"
+#. L_MISC_214
 msgid "Protect\n"
 msgstr "守れ\n"
 
-#. "L_MISC_215"
+#. L_MISC_215
 msgid "All Simulants\n"
 msgstr "全シミュラント\n"
 
-#. "L_MISC_216"
+#. L_MISC_216
 msgid "MODEL 1.3"
 msgstr "MODEL 1.3"
 
-#. "L_MISC_217"
+#. L_MISC_217
 msgid "BNC: 15877"
 msgstr "BNC: 15877"
 
-#. "L_MISC_218"
-msgid "Not enough room to launch \n"
+#. L_MISC_218
+msgid "Not enough room to launch "
 msgstr "この場所にはセットできません。\n"
 
-#. "L_MISC_417"
+#. L_MISC_417
 msgid "GOAL TARGETS:"
 msgstr "ターゲット "
 
-#. "L_MISC_418"
+#. L_MISC_418
 msgid "GOAL SCORE:"
 msgstr "得点 "
 
-#. "L_MISC_419"
+#. L_MISC_419
 msgid "MIN ACCURACY:"
 msgstr "最低命中率 "
 
-#. "L_MISC_420"
+#. L_MISC_420
 msgid "FIRE TO START\n"
 msgstr "発射するとスタート\n"
 
-#. "L_MISC_421"
+#. L_MISC_421
 msgid "GET READY!\n"
 msgstr "発射用意！\n"
 
-#. "L_MISC_422"
+#. L_MISC_422
 msgid "LIMIT:"
 msgstr "制限時間 "
 
-#. "L_MISC_423"
+#. L_MISC_423
 msgid "ZONE 3\n"
 msgstr "ゾーン３\n"
 
-#. "L_MISC_424"
+#. L_MISC_424
 msgid "ZONE 2\n"
 msgstr "ゾーン２\n"
 
-#. "L_MISC_425"
+#. L_MISC_425
 msgid "ZONE 1\n"
 msgstr "ゾーン１\n"
 
-#. "L_MISC_426"
+#. L_MISC_426
 msgid "BULL'S-EYE\n"
 msgstr "センター\n"
 
-#. "L_MISC_427"
+#. L_MISC_427
 msgid "EXPLODED\n"
 msgstr "爆破\n"
 
-#. "L_MISC_428"
+#. L_MISC_428
 msgid "Elvis is dead.\n"
 msgstr "エルビスが倒れた\n"
 
-#. "L_MISC_429"
+#. L_MISC_429
 msgid "Style 1"
 msgstr "Style 1"
 
-#. "L_MISC_430"
+#. L_MISC_430
 msgid "Style 2"
 msgstr "Style 2"
 
-#. "L_MISC_431"
+#. L_MISC_431
 msgid "Style 3"
 msgstr "Style 3"
 
-#. "L_MISC_432"
+#. L_MISC_432
 msgid "Style 4"
 msgstr "Style 4"
 
-#. "L_MISC_433"
+#. L_MISC_433
 msgid "Blonde"
 msgstr "Blonde"
 
-#. "L_MISC_434"
+#. L_MISC_434
 msgid "Black"
 msgstr "Black"
 
-#. "L_MISC_435"
+#. L_MISC_435
 msgid "Auburn"
 msgstr "Auburn"
 
-#. "L_MISC_436"
+#. L_MISC_436
 msgid "Blue Rinse"
 msgstr "Blue Rinse"
 
-#. "L_MISC_437"
+#. L_MISC_437
 msgid "Player"
 msgstr "Player"
 
-#. "L_MISC_439"
+#. L_MISC_438
+msgid ""
+msgstr ""
+
+#. L_MISC_439
 msgid "Identify\n"
-msgstr " \n"
+msgstr "\n"
 
-#. "L_MISC_440"
+#. L_MISC_440
 msgid "unused"
-msgstr "未使用"
+msgstr "未使用\n"
 
-#. "L_MISC_441"
+#. L_MISC_441
 msgid "Challenges\n"
 msgstr "チャレンジ\n"
 
-#. "L_MISC_442"
+#. L_MISC_442
 msgid "Load/Preset Games\n"
 msgstr "ゲーム設定のロード\n"
 
-#. "L_MISC_443"
+#. L_MISC_443
 msgid "Quick Start\n"
 msgstr "クイックスタート\n"
 
-#. "L_MISC_444"
+#. L_MISC_444
 msgid "Advanced Setup\n"
 msgstr "ゲーム設定（詳細）\n"
 
-#. "L_MISC_445"
+#. L_MISC_445
 msgid "Combat Simulator\n"
 msgstr "コンバットシミュレータ\n"
 
-#. "L_MISC_446"
+#. L_MISC_446
 msgid "Carrington Institute\n"
 msgstr "キャリントン協会\n"
 
-#. "L_MISC_447"
+#. L_MISC_447
 msgid "Team Score\n"
 msgstr "合計得点\n"
 
-#. "L_MISC_448"
+#. L_MISC_448
 msgid "Finished Setup\n"
 msgstr "セットアップ完了\n"
 
-#. "L_MISC_449"
+#. L_MISC_449
 msgid "Player 1 Team\n"
 msgstr "プレイヤー１　チーム\n"
 
-#. "L_MISC_450"
+#. L_MISC_450
 msgid "Player 2 Team\n"
 msgstr "プレイヤー２　チーム\n"
 
-#. "L_MISC_451"
+#. L_MISC_451
 msgid "Player 3 Team\n"
 msgstr "プレイヤー３　チーム\n"
 
-#. "L_MISC_452"
+#. L_MISC_452
 msgid "Player 4 Team\n"
 msgstr "プレイヤー４　チーム\n"
 
-#. "L_MISC_453"
+#. L_MISC_453
 msgid "Number Of Simulants\n"
 msgstr "シミュラントの人数\n"
 
-#. "L_MISC_454"
+#. L_MISC_454
 msgid "Simulants Per Team\n"
 msgstr "１チームのシミュラント数\n"
 
-#. "L_MISC_455"
+#. L_MISC_455
 msgid "Simulant Difficulty\n"
 msgstr "シミュラントのタイプ\n"
 
-#. "L_MISC_456"
+#. L_MISC_456
 msgid "Start Game\n"
 msgstr "ゲーム開始\n"
 
-#. "L_MISC_457"
+#. L_MISC_457
 msgid "Drop Out\n"
 msgstr "ゲームを抜ける\n"
 
-#. "L_MISC_458"
+#. L_MISC_458
 msgid "Player Settings\n"
 msgstr "個人設定\n"
 
-#. "L_MISC_459"
+#. L_MISC_459
 msgid "Game Settings\n"
 msgstr "ゲーム設定\n"
 
-#. "L_MISC_460"
+#. L_MISC_460
 msgid "Quick Go\n"
 msgstr "クイックＧＯ\n"
 
-#. "L_MISC_461"
+#. L_MISC_461
 msgid "Ready!\n"
 msgstr "準備完了！\n"
 
-#. "L_MISC_462"
+#. L_MISC_462
 msgid "Quick Team\n"
 msgstr "クイックチーム\n"
 
-#. "L_MISC_463"
+#. L_MISC_463
 msgid "Players Only\n"
 msgstr "プレイヤーのみ\n"
 
-#. "L_MISC_464"
+#. L_MISC_464
 msgid "Players and Simulants\n"
 msgstr "シミュラントとの個人戦\n"
 
-#. "L_MISC_465"
+#. L_MISC_465
 msgid "Player Teams\n"
 msgstr "プレイヤーのみのチーム戦\n"
 
-#. "L_MISC_466"
+#. L_MISC_466
 msgid "Players vs. Simulants\n"
 msgstr "プレイヤー対シミュラント\n"
 
-#. "L_MISC_467"
+#. L_MISC_467
 msgid "Player-Simulant Teams\n"
 msgstr "味方シミュラント有り\n"
 
-#. "L_MISC_468"
+#. L_MISC_468
 msgid "DRUGSPY"
 msgstr "DR.SPY"
 
-#. "L_MISC_469"
+#. L_MISC_469
 msgid "BOMBSPY"
 msgstr "BOMBSPY"
 
-#. "L_MISC_470"
+#. L_MISC_470
 msgid "Replay Previous Mission\n"
 msgstr "もう１度プレイする\n"
 
-#. "L_MISC_471"
+#. L_MISC_471
 msgid "Holograph\n"
 msgstr "ホログラム\n"
 
-#. "L_MISC_472"
+#. L_MISC_472
 msgid "Aggressive\n"
 msgstr "恐れるな\n"
 
-#. "L_MISC_473"
+#. L_MISC_473
 msgid "Passive\n"
 msgstr "ひかえめに\n"
 
-#. "L_MISC_474"
+#. L_MISC_474
 msgid "Perfect Buddies\n"
 msgstr "協力者コマンド\n"
 
-#. "L_MISC_475"
+#. L_MISC_475
 msgid "Stealth\n"
 msgstr "隠れろ\n"
