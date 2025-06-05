@@ -36,6 +36,10 @@
 #include "lib/collision.h"
 #include "data.h"
 #include "types.h"
+#ifndef PLATFORM_N64
+#include <libintl.h>
+#define _(String) gettext (String)
+#endif
 
 s32 g_SetupCurMpLocation;
 
@@ -1255,7 +1259,7 @@ void setupLoadBriefing(s32 stagenum, u8 *buffer, s32 bufferlen, struct briefing 
 				briefing->objectivenames[i] = 0;
 			}
 
-			briefing->briefingtextnum = L_MISC_042; // "No briefing for this mission"
+			briefing->briefingtextnum = _("No briefing for this mission\n"); // "No briefing for this mission"
 
 			obj = start;
 
@@ -1483,7 +1487,7 @@ void setupCreateProps(s32 stagenum)
 		g_Briefing.objectivedifficulties[j] = 0;
 	}
 
-	g_Briefing.briefingtextnum = L_MISC_042; // "No briefing for this mission"
+	g_Briefing.briefingtextnum = _("No briefing for this mission\n"); // "No briefing for this mission"
 
 	if (stagenum < STAGE_TITLE) {
 		if (g_StageSetup.padfiledata) {

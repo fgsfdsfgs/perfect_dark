@@ -215,7 +215,7 @@ struct menuitem g_AmPickTargetMenuItems[] = {
 		MENUITEMTYPE_LIST,
 		0,
 		MENUITEMFLAG_LIST_CUSTOMRENDER,
-		0x0000005a,
+		"", // previous: 0x0000005a,
 		0,
 		amPickTargetMenuList,
 	},

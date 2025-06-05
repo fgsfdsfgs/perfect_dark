@@ -1,3 +1,7 @@
+#ifndef PLATFORM_N64
+#define _(String) gettext (String)
+#define gettext_noop(String) String
+#endif
 /**
  * Pop a Cap
  *
@@ -12,7 +16,7 @@ struct menuitem g_PacOptionsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		0,
 		MENUITEMFLAG_LOCKABLEMINOR,
-		L_MPMENU_222, // "One-Hit Kills"
+		gettext_noop("One-Hit Kills\n"), // "One-Hit Kills"
 		MPOPTION_ONEHITKILLS,
 		menuhandlerMpOneHitKills,
 	},
@@ -20,7 +24,7 @@ struct menuitem g_PacOptionsMenuItems[] = {
 		MENUITEMTYPE_DROPDOWN,
 		0,
 		MENUITEMFLAG_LOCKABLEMINOR,
-		L_MPMENU_223, // "Slow Motion"
+		gettext_noop("Slow Motion\n"), // "Slow Motion"
 		0,
 		menuhandlerMpSlowMotion,
 	},
@@ -28,7 +32,7 @@ struct menuitem g_PacOptionsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		0,
 		MENUITEMFLAG_LOCKABLEMINOR,
-		L_MPMENU_224, // "Fast Movement"
+		gettext_noop("Fast Movement\n"), // "Fast Movement"
 		MPOPTION_FASTMOVEMENT,
 		menuhandlerMpCheckboxOption,
 	},
@@ -36,7 +40,7 @@ struct menuitem g_PacOptionsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		0,
 		MENUITEMFLAG_LOCKABLEMINOR,
-		L_MPMENU_225, // "Display Team"
+		gettext_noop("Display Team\n"), // "Display Team"
 		MPOPTION_DISPLAYTEAM,
 		menuhandlerMpDisplayTeam,
 	},
@@ -44,7 +48,7 @@ struct menuitem g_PacOptionsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		0,
 		MENUITEMFLAG_LOCKABLEMINOR,
-		L_MPMENU_226, // "No Radar"
+		gettext_noop("No Radar\n"), // "No Radar"
 		MPOPTION_NORADAR,
 		menuhandlerMpCheckboxOption,
 	},
@@ -52,7 +56,7 @@ struct menuitem g_PacOptionsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		0,
 		MENUITEMFLAG_LOCKABLEMINOR,
-		L_MPMENU_227, // "No Auto-Aim"
+		gettext_noop("No Auto-Aim\n"), // "No Auto-Aim"
 		MPOPTION_NOAUTOAIM,
 		menuhandlerMpCheckboxOption,
 	},
@@ -61,7 +65,7 @@ struct menuitem g_PacOptionsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		0,
 		MENUITEMFLAG_LOCKABLEMINOR | MENUITEMFLAG_LITERAL_TEXT,
-		(uintptr_t)"Start Armed",
+		gettext_noop("Start Armed\n"),
 		MPOPTION_SPAWNWITHWEAPON,
 		menuhandlerMpCheckboxOption,
 	},
@@ -69,7 +73,7 @@ struct menuitem g_PacOptionsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		0,
 		MENUITEMFLAG_LOCKABLEMINOR | MENUITEMFLAG_LITERAL_TEXT,
-		(uintptr_t)"No Drug Blur",
+		gettext_noop("No Drug Blur\n"),
 		MPOPTION_NODRUGBLUR,
 		menuhandlerMpCheckboxOption,
 	},
@@ -77,7 +81,7 @@ struct menuitem g_PacOptionsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		0,
 		MENUITEMFLAG_LOCKABLEMINOR,
-		L_OPTIONS_257, // "Friendly Fire"
+		gettext_noop("Friendly Fire\n"), // "Friendly Fire"
 		MPOPTION_FRIENDLYFIRE,
 		menuhandlerMpDisplayTeam,
 	},
@@ -85,7 +89,7 @@ struct menuitem g_PacOptionsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		0,
 		MENUITEMFLAG_LOCKABLEMINOR | MENUITEMFLAG_LITERAL_TEXT,
-		(uintptr_t)"No Player on Radar",
+		gettext_noop("No Player on Radar\n"),
 		MPOPTION_NOPLAYERONRADAR,
 		menuhandlerMpCheckboxOption,
 	},
@@ -94,7 +98,7 @@ struct menuitem g_PacOptionsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		0,
 		MENUITEMFLAG_LOCKABLEMINOR,
-		L_OPTIONS_493, // "Kills Score"
+		gettext_noop("Kills Score\n"), // "Kills Score"
 		MPOPTION_KILLSSCORE,
 		menuhandlerMpCheckboxOption,
 	},
@@ -110,7 +114,7 @@ struct menuitem g_PacOptionsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		0,
 		MENUITEMFLAG_LOCKABLEMINOR,
-		L_MPMENU_230, // "Highlight Target"
+		gettext_noop("Highlight Target\n"), // "Highlight Target"
 		MPOPTION_PAC_HIGHLIGHTTARGET,
 		menuhandlerMpCheckboxOption,
 	},
@@ -118,7 +122,7 @@ struct menuitem g_PacOptionsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		0,
 		MENUITEMFLAG_LOCKABLEMINOR,
-		L_MPMENU_238, // "Show on Radar"
+		gettext_noop("Show on Radar\n"), // "Show on Radar"
 		MPOPTION_PAC_SHOWONRADAR,
 		menuhandlerMpCheckboxOption,
 	},
@@ -134,7 +138,7 @@ struct menuitem g_PacOptionsMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_CLOSESDIALOG,
-		L_MPMENU_239, // "Back"
+		gettext_noop("Back\n"), // "Back"
 		0,
 		NULL,
 	},
@@ -143,7 +147,7 @@ struct menuitem g_PacOptionsMenuItems[] = {
 
 struct menudialogdef g_PacOptionsMenuDialog = {
 	MENUDIALOGTYPE_DEFAULT,
-	L_MPMENU_218, // "Pop a Cap Options"
+	gettext_noop("Pop a Cap Options\n"), // "Pop a Cap Options"
 	g_PacOptionsMenuItems,
 	mpOptionsMenuDialog,
 	MENUDIALOGFLAG_MPLOCKABLE,
@@ -241,18 +245,18 @@ void pacApplyNextVictim(void)
 
 	for (i = 0; i < PLAYERCOUNT(); i++) {
 		if (vplayernum == i) {
-			sprintf(text, langGet(L_MPWEAPONS_013)); // "You are the victim!"
+			sprintf(text, _("You are the victim!\n")); // "You are the victim!"
 		} else if (scenarioChrsAreSameTeam(vplayernum, i)) {
 #if VERSION >= VERSION_JPN_FINAL
-			sprintf(text, langGet(L_MPWEAPONS_014), scenarioRemoveLineBreaks(g_MpAllChrConfigPtrs[vplayernum]->name, 0)); // "Protect %s!"
+			sprintf(text, _("Protect %s!\n"), scenarioRemoveLineBreaks(g_MpAllChrConfigPtrs[vplayernum]->name, 0)); // "Protect %s!"
 #else
-			sprintf(text, langGet(L_MPWEAPONS_014), g_MpAllChrConfigPtrs[vplayernum]->name); // "Protect %s!"
+			sprintf(text, _("Protect %s!\n"), g_MpAllChrConfigPtrs[vplayernum]->name); // "Protect %s!"
 #endif
 		} else {
 #if VERSION >= VERSION_JPN_FINAL
-			sprintf(text, langGet(L_MPWEAPONS_015), scenarioRemoveLineBreaks(g_MpAllChrConfigPtrs[vplayernum]->name, 0)); // "Get %s!"
+			sprintf(text, _("Get %s!\n"), scenarioRemoveLineBreaks(g_MpAllChrConfigPtrs[vplayernum]->name, 0)); // "Get %s!"
 #else
-			sprintf(text, langGet(L_MPWEAPONS_015), g_MpAllChrConfigPtrs[vplayernum]->name); // "Get %s!"
+			sprintf(text, _("Get %s!\n"), g_MpAllChrConfigPtrs[vplayernum]->name); // "Get %s!"
 #endif
 		}
 
@@ -268,13 +272,13 @@ void pacHandleDeath(s32 aplayernum, s32 vplayernum)
 		if (aplayernum != vplayernum) {
 			if (aplayernum >= 0) {
 				if (scenarioChrsAreSameTeam(aplayernum, vplayernum)) {
-					scenarioCreateHudmsg(aplayernum, langGet(L_MPWEAPONS_008)); // "You're supposed to look"
-					scenarioCreateHudmsg(aplayernum, langGet(L_MPWEAPONS_009)); // "after your friends!"
+					scenarioCreateHudmsg(aplayernum, _("You're supposed to look\n")); // "You're supposed to look"
+					scenarioCreateHudmsg(aplayernum, _("after your friends!\n")); // "after your friends!"
 				} else {
 					data->killcounts[aplayernum]++;
-					scenarioCreateHudmsg(aplayernum, langGet(L_MPWEAPONS_010)); // "Well done!"
-					scenarioCreateHudmsg(aplayernum, langGet(L_MPWEAPONS_011)); // "You popped a cap!"
-					scenarioCreateHudmsg(aplayernum, langGet(L_MPWEAPONS_012)); // "Have 2 Points..."
+					scenarioCreateHudmsg(aplayernum, _("Well done!\n")); // "Well done!"
+					scenarioCreateHudmsg(aplayernum, _("You popped a cap!\n")); // "You popped a cap!"
+					scenarioCreateHudmsg(aplayernum, _("Have 2 Points...\n")); // "Have 2 Points..."
 				}
 			}
 
@@ -308,7 +312,7 @@ void pacTick(void)
 			if (data->age240 > (u32)TICKS(240 * 60)) {
 				data->age240 = 0;
 				data->survivalcounts[data->victims[data->victimindex]]++;
-				scenarioCreateHudmsg(data->victims[data->victimindex], langGet(L_MPWEAPONS_007)); // "Have a point for living!"
+				scenarioCreateHudmsg(data->victims[data->victimindex], _("Have a point for living!\n")); // "Have a point for living!"
 			}
 		}
 	}

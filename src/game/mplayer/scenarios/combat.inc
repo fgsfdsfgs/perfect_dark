@@ -1,3 +1,6 @@
+#ifndef PLATFORM_N64
+#define gettext_noop(String) String
+#endif
 /**
  * Combat
  *
@@ -11,7 +14,7 @@ struct menuitem g_MpCombatOptionsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		0,
 		MENUITEMFLAG_LOCKABLEMINOR,
-		L_MPMENU_222, // "One-Hit Kills"
+		gettext_noop("One-Hit Kills\n"), // "One-Hit Kills"
 		MPOPTION_ONEHITKILLS,
 		menuhandlerMpOneHitKills,
 	},
@@ -19,7 +22,7 @@ struct menuitem g_MpCombatOptionsMenuItems[] = {
 		MENUITEMTYPE_DROPDOWN,
 		0,
 		MENUITEMFLAG_LOCKABLEMINOR,
-		L_MPMENU_223, // "Slow Motion"
+		gettext_noop("Slow Motion\n"), // "Slow Motion"
 		0,
 		menuhandlerMpSlowMotion,
 	},
@@ -27,7 +30,7 @@ struct menuitem g_MpCombatOptionsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		0,
 		MENUITEMFLAG_LOCKABLEMINOR,
-		L_MPMENU_224, // "Fast Movement"
+		gettext_noop("Fast Movement\n"), // "Fast Movement"
 		MPOPTION_FASTMOVEMENT,
 		menuhandlerMpCheckboxOption,
 	},
@@ -35,7 +38,7 @@ struct menuitem g_MpCombatOptionsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		0,
 		MENUITEMFLAG_LOCKABLEMINOR,
-		L_MPMENU_225, // "Display Team"
+		gettext_noop("Display Team\n"), // "Display Team"
 		MPOPTION_DISPLAYTEAM,
 		menuhandlerMpDisplayTeam,
 	},
@@ -43,7 +46,7 @@ struct menuitem g_MpCombatOptionsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		0,
 		MENUITEMFLAG_LOCKABLEMINOR,
-		L_MPMENU_226, // "No Radar"
+		gettext_noop("No Radar\n"), // "No Radar"
 		MPOPTION_NORADAR,
 		menuhandlerMpCheckboxOption,
 	},
@@ -51,7 +54,7 @@ struct menuitem g_MpCombatOptionsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		0,
 		MENUITEMFLAG_LOCKABLEMINOR,
-		L_MPMENU_227, // "No Auto-Aim"
+		gettext_noop("No Auto-Aim\n"), // "No Auto-Aim"
 		MPOPTION_NOAUTOAIM,
 		menuhandlerMpCheckboxOption,
 	},
@@ -60,7 +63,7 @@ struct menuitem g_MpCombatOptionsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		0,
 		MENUITEMFLAG_LOCKABLEMINOR | MENUITEMFLAG_LITERAL_TEXT,
-		(uintptr_t)"Start Armed",
+		gettext_noop("Start Armed\n"),
 		MPOPTION_SPAWNWITHWEAPON,
 		menuhandlerMpCheckboxOption,
 	},
@@ -68,7 +71,7 @@ struct menuitem g_MpCombatOptionsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		0,
 		MENUITEMFLAG_LOCKABLEMINOR | MENUITEMFLAG_LITERAL_TEXT,
-		(uintptr_t)"No Drug Blur",
+		gettext_noop("No Drug Blur\n"),
 		MPOPTION_NODRUGBLUR,
 		menuhandlerMpCheckboxOption,
 	},
@@ -76,7 +79,7 @@ struct menuitem g_MpCombatOptionsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		0,
 		MENUITEMFLAG_LOCKABLEMINOR,
-		L_OPTIONS_257, // "Friendly Fire"
+		gettext_noop("Friendly Fire\n"), // "Friendly Fire"
 		MPOPTION_FRIENDLYFIRE,
 		menuhandlerMpDisplayTeam,
 	},
@@ -84,7 +87,7 @@ struct menuitem g_MpCombatOptionsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		0,
 		MENUITEMFLAG_LOCKABLEMINOR | MENUITEMFLAG_LITERAL_TEXT,
-		(uintptr_t)"No Player on Radar",
+		gettext_noop("No Player on Radar\n"),
 		MPOPTION_NOPLAYERONRADAR,
 		menuhandlerMpCheckboxOption,
 	},
@@ -101,7 +104,7 @@ struct menuitem g_MpCombatOptionsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		0,
 		MENUITEMFLAG_LOCKABLEMINOR,
-		L_MPMENU_228, // "No Player Highlight"
+		gettext_noop("No Player Highlight\n"), // "No Player Highlight"
 		MPOPTION_NOPLAYERHIGHLIGHT,
 		menuhandlerMpCheckboxOption,
 	},
@@ -109,7 +112,7 @@ struct menuitem g_MpCombatOptionsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		0,
 		MENUITEMFLAG_LOCKABLEMINOR,
-		L_MPMENU_229, // "No Pickup Highlight"
+		gettext_noop("No Pickup Highlight\n"), // "No Pickup Highlight"
 		MPOPTION_NOPICKUPHIGHLIGHT,
 		menuhandlerMpCheckboxOption,
 	},
@@ -125,7 +128,7 @@ struct menuitem g_MpCombatOptionsMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_CLOSESDIALOG,
-		L_MPMENU_239, // "Back"
+		gettext_noop("Back\n"), // "Back"
 		0,
 		NULL,
 	},
@@ -134,7 +137,7 @@ struct menuitem g_MpCombatOptionsMenuItems[] = {
 
 struct menudialogdef g_MpCombatOptionsMenuDialog = {
 	MENUDIALOGTYPE_DEFAULT,
-	L_MPMENU_215, // "Combat Options"
+	gettext_noop("Combat Options\n"), // "Combat Options"
 	g_MpCombatOptionsMenuItems,
 	mpOptionsMenuDialog,
 	MENUDIALOGFLAG_MPLOCKABLE,

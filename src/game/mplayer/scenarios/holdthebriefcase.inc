@@ -1,3 +1,6 @@
+#ifndef PLATFORM_N64
+#define gettext_noop(String) String
+#endif
 /**
  * Hold the Briefcase
  *
@@ -14,7 +17,7 @@ struct menuitem g_HtbOptionsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		0,
 		MENUITEMFLAG_LOCKABLEMINOR,
-		L_MPMENU_222, // "One-Hit Kills"
+		gettext_noop("One-Hit Kills\n"), // "One-Hit Kills"
 		MPOPTION_ONEHITKILLS,
 		menuhandlerMpOneHitKills,
 	},
@@ -22,7 +25,7 @@ struct menuitem g_HtbOptionsMenuItems[] = {
 		MENUITEMTYPE_DROPDOWN,
 		0,
 		MENUITEMFLAG_LOCKABLEMINOR,
-		L_MPMENU_223, // "Slow Motion"
+		gettext_noop("Slow Motion\n"), // "Slow Motion"
 		0,
 		menuhandlerMpSlowMotion,
 	},
@@ -30,7 +33,7 @@ struct menuitem g_HtbOptionsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		0,
 		MENUITEMFLAG_LOCKABLEMINOR,
-		L_MPMENU_224, // "Fast Movement"
+		gettext_noop("Fast Movement\n"), // "Fast Movement"
 		MPOPTION_FASTMOVEMENT,
 		menuhandlerMpCheckboxOption,
 	},
@@ -38,7 +41,7 @@ struct menuitem g_HtbOptionsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		0,
 		MENUITEMFLAG_LOCKABLEMINOR,
-		L_MPMENU_225, // "Display Team"
+		gettext_noop("Display Team\n"), // "Display Team"
 		MPOPTION_DISPLAYTEAM,
 		menuhandlerMpDisplayTeam,
 	},
@@ -46,7 +49,7 @@ struct menuitem g_HtbOptionsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		0,
 		MENUITEMFLAG_LOCKABLEMINOR,
-		L_MPMENU_226, // "No Radar"
+		gettext_noop("No Radar\n"), // "No Radar"
 		MPOPTION_NORADAR,
 		menuhandlerMpCheckboxOption,
 	},
@@ -54,7 +57,7 @@ struct menuitem g_HtbOptionsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		0,
 		MENUITEMFLAG_LOCKABLEMINOR,
-		L_MPMENU_227, // "No Auto-Aim"
+		gettext_noop("No Auto-Aim\n"), // "No Auto-Aim"
 		MPOPTION_NOAUTOAIM,
 		menuhandlerMpCheckboxOption,
 	},
@@ -63,7 +66,7 @@ struct menuitem g_HtbOptionsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		0,
 		MENUITEMFLAG_LOCKABLEMINOR | MENUITEMFLAG_LITERAL_TEXT,
-		(uintptr_t)"Start Armed",
+		gettext_noop("Start Armed\n"),
 		MPOPTION_SPAWNWITHWEAPON,
 		menuhandlerMpCheckboxOption,
 	},
@@ -71,7 +74,7 @@ struct menuitem g_HtbOptionsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		0,
 		MENUITEMFLAG_LOCKABLEMINOR | MENUITEMFLAG_LITERAL_TEXT,
-		(uintptr_t)"No Drug Blur",
+		gettext_noop("No Drug Blur\n"),
 		MPOPTION_NODRUGBLUR,
 		menuhandlerMpCheckboxOption,
 	},
@@ -79,7 +82,7 @@ struct menuitem g_HtbOptionsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		0,
 		MENUITEMFLAG_LOCKABLEMINOR,
-		L_OPTIONS_257, // "Friendly Fire"
+		gettext_noop("Friendly Fire\n"), // "Friendly Fire"
 		MPOPTION_FRIENDLYFIRE,
 		menuhandlerMpDisplayTeam,
 	},
@@ -87,7 +90,7 @@ struct menuitem g_HtbOptionsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		0,
 		MENUITEMFLAG_LOCKABLEMINOR | MENUITEMFLAG_LITERAL_TEXT,
-		(uintptr_t)"No Player on Radar",
+		gettext_noop("No Player on Radar\n"),
 		MPOPTION_NOPLAYERONRADAR,
 		menuhandlerMpCheckboxOption,
 	},
@@ -96,7 +99,7 @@ struct menuitem g_HtbOptionsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		0,
 		MENUITEMFLAG_LOCKABLEMINOR,
-		L_OPTIONS_493, // "Kills Score"
+		gettext_noop("Kills Score\n"), // "Kills Score"
 		MPOPTION_KILLSSCORE,
 		menuhandlerMpCheckboxOption,
 	},
@@ -112,7 +115,7 @@ struct menuitem g_HtbOptionsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		0,
 		MENUITEMFLAG_LOCKABLEMINOR,
-		L_MPMENU_237, // "Highlight Briefcase"
+		gettext_noop("Highlight Briefcase\n"), // "Highlight Briefcase"
 		MPOPTION_HTB_HIGHLIGHTBRIEFCASE,
 		menuhandlerMpCheckboxOption,
 	},
@@ -120,7 +123,7 @@ struct menuitem g_HtbOptionsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		0,
 		MENUITEMFLAG_LOCKABLEMINOR,
-		L_MPMENU_238, // "Show on Radar"
+		gettext_noop("Show on Radar\n"), // "Show on Radar"
 		MPOPTION_HTB_SHOWONRADAR,
 		menuhandlerMpCheckboxOption,
 	},
@@ -136,7 +139,7 @@ struct menuitem g_HtbOptionsMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_CLOSESDIALOG,
-		L_MPMENU_239, // "Back"
+		gettext_noop("Back\n"), // "Back"
 		0,
 		NULL,
 	},
@@ -145,7 +148,7 @@ struct menuitem g_HtbOptionsMenuItems[] = {
 
 struct menudialogdef g_HtbOptionsMenuDialog = {
 	MENUDIALOGTYPE_DEFAULT,
-	L_MPMENU_216, // "Briefcase Options"
+	gettext_noop("Briefcase Options\n"), // "Briefcase Options"
 	g_HtbOptionsMenuItems,
 	mpOptionsMenuDialog,
 	MENUDIALOGFLAG_MPLOCKABLE,
@@ -404,9 +407,9 @@ void htbTickChr(struct chrdata *chr)
 				sndStart(var80095200, SFX_MP_SCOREPOINT, NULL, -1, -1, -1, -1, -1);
 				g_MpAllChrConfigPtrs[g_Vars.currentplayernum]->numpoints++;
 #if VERSION >= VERSION_JPN_FINAL
-				hudmsgCreateWithFlags(langGet(L_MPWEAPONS_024), HUDMSGTYPE_MPSCENARIO, HUDMSGFLAG_ONLYIFALIVE | HUDMSGFLAG_NOWRAP); // "1 Point!"
+				hudmsgCreateWithFlags(_("1 Point!\n"), HUDMSGTYPE_MPSCENARIO, HUDMSGFLAG_ONLYIFALIVE | HUDMSGFLAG_NOWRAP); // "1 Point!"
 #else
-				hudmsgCreateWithFlags(langGet(L_MPWEAPONS_024), HUDMSGTYPE_MPSCENARIO, HUDMSGFLAG_ONLYIFALIVE); // "1 Point!"
+				hudmsgCreateWithFlags(_("1 Point!\n"), HUDMSGTYPE_MPSCENARIO, HUDMSGFLAG_ONLYIFALIVE); // "1 Point!"
 #endif
 				g_Vars.currentplayerstats->tokenheldtime = 0;
 			}

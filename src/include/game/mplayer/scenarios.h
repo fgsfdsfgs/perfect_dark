@@ -8,8 +8,8 @@ extern struct menudialogdef g_MpScenarioMenuDialog;
 extern struct menudialogdef g_MpQuickTeamScenarioMenuDialog;
 
 struct mpscenariooverview {
-	u16 name;
-	u16 shortname;
+	char *name;
+	char *shortname;
 	u8 requirefeature;
 	u8 teamonly;
 };

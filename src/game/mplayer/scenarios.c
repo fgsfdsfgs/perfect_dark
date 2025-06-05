@@ -1,3 +1,4 @@
+#include <stdint.h>
 #include <ultra64.h>
 #include "constants.h"
 #include "game/chraction.h"
@@ -36,6 +37,11 @@
 #include "lib/collision.h"
 #include "data.h"
 #include "types.h"
+#ifndef PLATFORM_N64
+#include <libintl.h>
+#define _(String) gettext (String)
+#define gettext_noop(String) String
+#endif
 
 /**
  * There are six multiplayer scenarios:
@@ -124,10 +130,10 @@ MenuItemHandlerResult menuhandlerMpOneHitKills(s32 operation, struct menuitem *i
 
 MenuItemHandlerResult menuhandlerMpSlowMotion(s32 operation, struct menuitem *item, union handlerdata *data)
 {
-	u16 labels[] = {
-		L_MPMENU_240, // "Off"
-		L_MPMENU_241, // "On"
-		L_MPMENU_242, // "Smart"
+	char *labels[] = {
+		_("Off\n"), // "Off"
+		_("On\n"), // "On"
+		_("Smart\n"), // "Smart"
 	};
 
 	switch (operation) {
@@ -141,7 +147,7 @@ MenuItemHandlerResult menuhandlerMpSlowMotion(s32 operation, struct menuitem *it
 		data->dropdown.value = 3;
 		break;
 	case MENUOP_GETOPTIONTEXT:
-		return (uintptr_t)langGet(labels[data->dropdown.value]);
+		return (uintptr_t)labels[data->dropdown.value];
 	case MENUOP_SET:
 		g_MpSetup.options &= ~(MPOPTION_SLOWMOTION_ON | MPOPTION_SLOWMOTION_SMART);
 
@@ -253,12 +259,12 @@ struct mpscenario g_MpScenarios[] = {
 
 struct mpscenariooverview g_MpScenarioOverviews[] = {
 	// name, short name, require feature, team only
-	{ L_MPMENU_246, L_MPMENU_253, 0,                      false }, // "Combat", "Combat"
-	{ L_MPMENU_247, L_MPMENU_254, MPFEATURE_SCENARIO_HTB, false }, // "Hold the Briefcase", "Briefcase"
-	{ L_MPMENU_248, L_MPMENU_255, MPFEATURE_SCENARIO_HTM, false }, // "Hacker Central", "Hacker"
-	{ L_MPMENU_249, L_MPMENU_256, MPFEATURE_SCENARIO_PAC, false }, // "Pop a Cap", "Pop"
-	{ L_MPMENU_250, L_MPMENU_257, MPFEATURE_SCENARIO_KOH, true  }, // "King of the Hill", "Hill"
-	{ L_MPMENU_251, L_MPMENU_258, MPFEATURE_SCENARIO_CTC, true  }, // "Capture the Case", "Capture"
+	{ gettext_noop("Combat"), gettext_noop("Combat"), 0,                      false }, // "Combat", "Combat"
+	{ gettext_noop("Hold the Briefcase"), gettext_noop("Briefcase"), MPFEATURE_SCENARIO_HTB, false }, // "Hold the Briefcase", "Briefcase"
+	{ gettext_noop("Hacker Central"), gettext_noop("Hacker"), MPFEATURE_SCENARIO_HTM, false }, // "Hacker Central", "Hacker"
+	{ gettext_noop("Pop a Cap"), gettext_noop("Pop"), MPFEATURE_SCENARIO_PAC, false }, // "Pop a Cap", "Pop"
+	{ gettext_noop("King of the Hill"), gettext_noop("Hill"), MPFEATURE_SCENARIO_KOH, true  }, // "King of the Hill", "Hill"
+	{ gettext_noop("Capture the Case"), gettext_noop("Capture"), MPFEATURE_SCENARIO_CTC, true  }, // "Capture the Case", "Capture"
 };
 
 /**
@@ -290,26 +296,26 @@ MenuDialogHandlerResult mpOptionsMenuDialog(s32 operation, struct menudialogdef 
 
 char *mpMenuTextScenarioShortName(struct menuitem *item)
 {
-	sprintf(g_StringPointer, "%s\n", langGet(g_MpScenarioOverviews[g_MpSetup.scenario].shortname));
+	sprintf(g_StringPointer, "%s\n", _(g_MpScenarioOverviews[g_MpSetup.scenario].shortname));
 	return g_StringPointer;
 }
 
 char *mpMenuTextScenarioName(struct menuitem *item)
 {
-	sprintf(g_StringPointer, "%s\n", langGet(g_MpScenarioOverviews[g_MpSetup.scenario].name));
+	sprintf(g_StringPointer, "%s\n", _(g_MpScenarioOverviews[g_MpSetup.scenario].name));
 	return g_StringPointer;
 }
 
 struct scenariogroup {
 	s32 startindex;
-	u16 textid;
+	char *textid;
 };
 
 MenuItemHandlerResult scenarioScenarioMenuHandler(s32 operation, struct menuitem *item, union handlerdata *data)
 {
 	struct scenariogroup groups[] = {
-		{ 0, L_MPMENU_244 }, // "Free for All!"
-		{ 4, L_MPMENU_245 }, // "-Teamwork-"
+		{ 0, _("Free for All!\n") }, // "Free for All!"
+		{ 4, _("-Teamwork-\n") }, // "-Teamwork-"
 	};
 
 	s32 i;
@@ -338,7 +344,7 @@ MenuItemHandlerResult scenarioScenarioMenuHandler(s32 operation, struct menuitem
 			if (challengeIsFeatureUnlocked(g_MpScenarioOverviews[i].requirefeature)
 					&& (teamgame || g_MpScenarioOverviews[i].teamonly == false)) {
 				if (count == data->list.value) {
-					return (uintptr_t)langGet(g_MpScenarioOverviews[i].name);
+					return (uintptr_t)_(g_MpScenarioOverviews[i].name); // TODO - Lang: Fix it (probably)
 				}
 
 				count++;
@@ -383,7 +389,7 @@ MenuItemHandlerResult scenarioScenarioMenuHandler(s32 operation, struct menuitem
 		}
 		break;
 	case MENUOP_GETOPTGROUPTEXT:
-		return (uintptr_t)langGet(groups[data->list.value].textid);
+		return (uintptr_t)_(groups[data->list.value].textid); // TODO - Lang: Fix it (probably)
 	case MENUOP_GETGROUPSTARTINDEX:
 		for (i = 0; i < groups[data->list.value].startindex; i++) {
 			if (challengeIsFeatureUnlocked(g_MpScenarioOverviews[i].requirefeature)
@@ -499,7 +505,7 @@ void scenarioCreateMatchStartHudmsgs(void)
 #endif
 	}
 
-	sprintf(scenarioname, "%s\n", langGet(g_MpScenarioOverviews[g_MpSetup.scenario].name));
+	sprintf(scenarioname, "%s\n", _(g_MpScenarioOverviews[g_MpSetup.scenario].name));
 
 	for (i = 0; i < g_MpNumChrs; i++) {
 		if (g_MpAllChrPtrs[i]->aibot == NULL) {
@@ -945,7 +951,7 @@ struct menuitem g_MpScenarioMenuItems[] = {
 		MENUITEMTYPE_LIST,
 		0,
 		MENUITEMFLAG_LIST_WIDE | MENUITEMFLAG_LOCKABLEMINOR,
-		0x00000078,
+		"",// previous: 0x00000078,
 		0x0000004d,
 		scenarioScenarioMenuHandler,
 	},
@@ -954,7 +960,7 @@ struct menuitem g_MpScenarioMenuItems[] = {
 
 struct menudialogdef g_MpScenarioMenuDialog = {
 	MENUDIALOGTYPE_DEFAULT,
-	L_MPMENU_243, // "Scenario"
+	gettext_noop("Scenario\n"), // "Scenario"
 	g_MpScenarioMenuItems,
 	NULL,
 	MENUDIALOGFLAG_CLOSEONSELECT | MENUDIALOGFLAG_MPLOCKABLE,
@@ -966,7 +972,7 @@ struct menuitem g_MpQuickTeamScenarioMenuItems[] = {
 		MENUITEMTYPE_LIST,
 		1,
 		MENUITEMFLAG_LIST_WIDE | MENUITEMFLAG_LOCKABLEMINOR,
-		0x00000078,
+		"", // previous: 0x00000078,
 		0x0000004d,
 		scenarioScenarioMenuHandler,
 	},
@@ -975,7 +981,7 @@ struct menuitem g_MpQuickTeamScenarioMenuItems[] = {
 
 struct menudialogdef g_MpQuickTeamScenarioMenuDialog = {
 	MENUDIALOGTYPE_DEFAULT,
-	L_MPMENU_243, // "Scenario"
+	gettext_noop("Scenario\n"), // "Scenario"
 	g_MpQuickTeamScenarioMenuItems,
 	NULL,
 	MENUDIALOGFLAG_CLOSEONSELECT | MENUDIALOGFLAG_MPLOCKABLE,
@@ -1120,7 +1126,7 @@ s32 scenarioPickUpBriefcase(struct chrdata *chr, struct prop *prop)
 		sprintf(text1, langGet(L_MPWEAPONS_000_2), mpchr->name, bgunGetShortName(WEAPON_BRIEFCASE2));
 #else
 		// "%shas the\n%s"
-		sprintf(text1, langGet(L_MPWEAPONS_000), mpchr->name, bgunGetShortName(WEAPON_BRIEFCASE2));
+		sprintf(text1, _("%shas the\n%s\n"), mpchr->name, bgunGetShortName(WEAPON_BRIEFCASE2));
 #endif
 
 		prevplayernum = g_Vars.currentplayernum;
@@ -1197,13 +1203,13 @@ s32 scenarioPickUpBriefcase(struct chrdata *chr, struct prop *prop)
 				sprintf(text3, langGet(L_MPWEAPONS_006), mpchr->name, g_BossFile.teamnames[i]);
 #else
 				// "You captured the %s%s"
-				sprintf(text1, langGet(L_MPWEAPONS_004), g_BossFile.teamnames[i], bgunGetShortName(WEAPON_BRIEFCASE2));
+				sprintf(text1, _("You captured\nthe %s%s\n"), g_BossFile.teamnames[i], bgunGetShortName(WEAPON_BRIEFCASE2));
 
 				// "%scaptured our %s"
-				sprintf(text2, langGet(L_MPWEAPONS_005), mpchr->name, bgunGetShortName(WEAPON_BRIEFCASE2));
+				sprintf(text2, _("%scaptured our\n%s\n"), mpchr->name, bgunGetShortName(WEAPON_BRIEFCASE2));
 
 				// "%scaptured the %s%s"
-				sprintf(text3, langGet(L_MPWEAPONS_006), mpchr->name, g_BossFile.teamnames[i], bgunGetShortName(WEAPON_BRIEFCASE2));
+				sprintf(text3, _("%scaptured\nthe %s%s\n"), mpchr->name, g_BossFile.teamnames[i], bgunGetShortName(WEAPON_BRIEFCASE2));
 #endif
 
 				prevplayernum = g_Vars.currentplayernum;
@@ -1273,13 +1279,13 @@ s32 scenarioPickUpBriefcase(struct chrdata *chr, struct prop *prop)
 				sprintf(text3, langGet(L_MPWEAPONS_003), g_BossFile.teamnames[weapon->team]);
 #else
 				// "%shas the %s%s"
-				sprintf(text1, langGet(L_MPWEAPONS_001), mpchr->name, g_BossFile.teamnames[weapon->team], bgunGetShortName(WEAPON_BRIEFCASE2));
+				sprintf(text1, _("%shas the %s%s"), mpchr->name, g_BossFile.teamnames[weapon->team], bgunGetShortName(WEAPON_BRIEFCASE2));
 
 				// "%shas our %s"
-				sprintf(text2, langGet(L_MPWEAPONS_002), mpchr->name, bgunGetShortName(WEAPON_BRIEFCASE2));
+				sprintf(text2, _("%shas our\n%s\n"), mpchr->name, bgunGetShortName(WEAPON_BRIEFCASE2));
 
 				// "Got the %s%s"
-				sprintf(text3, langGet(L_MPWEAPONS_003), g_BossFile.teamnames[weapon->team], bgunGetShortName(WEAPON_BRIEFCASE2));
+				sprintf(text3, _("Got the %s%s\n"), g_BossFile.teamnames[weapon->team], bgunGetShortName(WEAPON_BRIEFCASE2));
 #endif
 
 				prevplayernum = g_Vars.currentplayernum;
@@ -1415,7 +1421,7 @@ s32 scenarioPickUpUplink(struct chrdata *chr, struct prop *prop)
 		sprintf(message, langGet(L_MPWEAPONS_000), mpchr->name);
 #else
 		// "%shas the\n%s"
-		sprintf(message, langGet(L_MPWEAPONS_000), mpchr->name, bgunGetShortName(WEAPON_DATAUPLINK));
+		sprintf(message, _("%shas the\n%s\n"), mpchr->name, bgunGetShortName(WEAPON_DATAUPLINK));
 #endif
 		playernum = g_Vars.currentplayernum;
 

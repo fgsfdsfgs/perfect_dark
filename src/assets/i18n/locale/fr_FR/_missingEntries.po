@@ -9,3 +9,15 @@ msgstr ""
 
 msgid "Language\n"
 msgstr "Langue\n"
+
+msgid "Start Armed\n"
+msgstr "Commencer armé\n"
+
+msgid "No Drug Blur\n"
+msgstr "Pas d'effet de flou\n"
+
+msgid "No Player on Radar\n"
+msgstr "Pas de joueurs sur le radar\n"
+
+msgid "%shas the %s%s"
+msgstr "%shas the %s%s"

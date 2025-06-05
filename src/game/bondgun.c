@@ -1,3 +1,4 @@
+#include <stdint.h>
 #include <ultra64.h>
 #include "constants.h"
 #include "../lib/naudio/n_sndp.h"
@@ -57,6 +58,8 @@
 #include "game/stagetable.h"
 #include "video.h"
 #include "platform.h"
+#include <libintl.h>
+#define _(String) gettext (String)
 #endif
 
 #define GUNLOADSTATE_FLUX     0
@@ -6016,7 +6019,7 @@ char *bgunGetName(s32 weaponnum)
 	struct weapon *weapon = g_Weapons[weaponnum];
 
 	if (weapon) {
-		return langGet(weapon->name);
+		return _(weapon->name);
 	}
 
 	return "** error\n";
@@ -6027,7 +6030,7 @@ u16 bgunGetNameId(s32 weaponnum)
 	struct weapon *weapon = g_Weapons[weaponnum];
 
 	if (weapon) {
-		return weapon->name;
+		return (uintptr_t)weapon->name; // TODO - Lang: Fix it
 	}
 
 	return 0;
@@ -6038,7 +6041,7 @@ char *bgunGetShortName(s32 weaponnum)
 	struct weapon *weapon = g_Weapons[weaponnum];
 
 	if (weapon) {
-		return langGet(weapon->shortname);
+		return _(weapon->shortname);
 	}
 
 	return "** error\n";

@@ -1740,7 +1740,7 @@ struct objective { // objtype 0x17
 struct briefingobj { // objtype 0x23
 	u32 unk00;
 	u32 type;
-	u32 text;
+	char *text;
 	struct briefingobj *next;
 };
 
@@ -3051,8 +3051,8 @@ struct weapon {
 	/*0x38*/ f32 sway;
 	/*0x3c*/ struct gunviscmd *gunviscmds;
 	/*0x40*/ struct modelpartvisibility *partvisibility;
-	/*0x44*/ u16 shortname;
-	/*0x46*/ u16 name;
+	/*0x44*/ char *shortname;
+	/*0x46*/ char *name;
 	/*0x48*/ u16 manufacturer;
 	/*0x4a*/ u16 description;
 	/*0x4c*/ u32 flags;
@@ -4325,7 +4325,7 @@ struct activemenu {
 };
 
 struct briefing {
-	u16 briefingtextnum;
+	char *briefingtextnum;
 	u16 objectivenames[6]; // index 0 is the briefing, and the rest are objectives
 	u16 objectivedifficulties[6]; // index 0 is unused
 	u16 langbank;

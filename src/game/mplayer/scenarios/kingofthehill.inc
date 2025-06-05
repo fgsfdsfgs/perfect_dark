@@ -1,3 +1,7 @@
+#ifndef PLATFORM_N64
+#define _(String) gettext (String)
+#define gettext_noop(String) String
+#endif
 /**
  * King of the Hill
  *
@@ -23,7 +27,7 @@ MenuItemHandlerResult menuhandlerMpHillTime(s32 operation, struct menuitem *item
 		g_Vars.mphilltime = (u8)data->slider.value;
 		break;
 	case MENUOP_GETSLIDERLABEL:
-		sprintf(data->slider.label, langGet(L_MPWEAPONS_023), data->slider.value + 10); // "%ds/Point"
+		sprintf(data->slider.label, _("%ds/Point\n"), data->slider.value + 10); // "%ds/Point"
 		break;
 	}
 
@@ -35,7 +39,7 @@ struct menuitem g_KohOptionsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		0,
 		MENUITEMFLAG_LOCKABLEMINOR,
-		L_MPMENU_222, // "One-Hit Kills"
+		gettext_noop("One-Hit Kills\n"), // "One-Hit Kills"
 		MPOPTION_ONEHITKILLS,
 		menuhandlerMpOneHitKills,
 	},
@@ -43,7 +47,7 @@ struct menuitem g_KohOptionsMenuItems[] = {
 		MENUITEMTYPE_DROPDOWN,
 		0,
 		MENUITEMFLAG_LOCKABLEMINOR,
-		L_MPMENU_223, // "Slow Motion"
+		gettext_noop("Slow Motion\n"), // "Slow Motion"
 		0,
 		menuhandlerMpSlowMotion,
 	},
@@ -51,7 +55,7 @@ struct menuitem g_KohOptionsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		0,
 		MENUITEMFLAG_LOCKABLEMINOR,
-		L_MPMENU_224, // "Fast Movement"
+		gettext_noop("Fast Movement\n"), // "Fast Movement"
 		MPOPTION_FASTMOVEMENT,
 		menuhandlerMpCheckboxOption,
 	},
@@ -59,7 +63,7 @@ struct menuitem g_KohOptionsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		0,
 		MENUITEMFLAG_LOCKABLEMINOR,
-		L_MPMENU_225, // "Display Team"
+		gettext_noop("Display Team\n"), // "Display Team"
 		MPOPTION_DISPLAYTEAM,
 		menuhandlerMpDisplayTeam,
 	},
@@ -67,7 +71,7 @@ struct menuitem g_KohOptionsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		0,
 		MENUITEMFLAG_LOCKABLEMINOR,
-		L_MPMENU_226, // "No Radar"
+		gettext_noop("No Radar\n"), // "No Radar"
 		MPOPTION_NORADAR,
 		menuhandlerMpCheckboxOption,
 	},
@@ -75,7 +79,7 @@ struct menuitem g_KohOptionsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		0,
 		MENUITEMFLAG_LOCKABLEMINOR,
-		L_MPMENU_227, // "No Auto-Aim"
+		gettext_noop("No Auto-Aim\n"), // "No Auto-Aim"
 		MPOPTION_NOAUTOAIM,
 		menuhandlerMpCheckboxOption,
 	},
@@ -84,7 +88,7 @@ struct menuitem g_KohOptionsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		0,
 		MENUITEMFLAG_LOCKABLEMINOR | MENUITEMFLAG_LITERAL_TEXT,
-		(uintptr_t)"Start Armed",
+		gettext_noop("Start Armed\n"),
 		MPOPTION_SPAWNWITHWEAPON,
 		menuhandlerMpCheckboxOption,
 	},
@@ -92,7 +96,7 @@ struct menuitem g_KohOptionsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		0,
 		MENUITEMFLAG_LOCKABLEMINOR | MENUITEMFLAG_LITERAL_TEXT,
-		(uintptr_t)"No Drug Blur",
+		gettext_noop("No Drug Blur\n"),
 		MPOPTION_NODRUGBLUR,
 		menuhandlerMpCheckboxOption,
 	},
@@ -100,7 +104,7 @@ struct menuitem g_KohOptionsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		0,
 		MENUITEMFLAG_LOCKABLEMINOR,
-		L_OPTIONS_257, // "Friendly Fire"
+		gettext_noop("Friendly Fire\n"), // "Friendly Fire"
 		MPOPTION_FRIENDLYFIRE,
 		menuhandlerMpDisplayTeam,
 	},
@@ -108,7 +112,7 @@ struct menuitem g_KohOptionsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		0,
 		MENUITEMFLAG_LOCKABLEMINOR | MENUITEMFLAG_LITERAL_TEXT,
-		(uintptr_t)"No Player on Radar",
+		gettext_noop("No Player on Radar\n"),
 		MPOPTION_NOPLAYERONRADAR,
 		menuhandlerMpCheckboxOption,
 	},
@@ -117,7 +121,7 @@ struct menuitem g_KohOptionsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		0,
 		MENUITEMFLAG_LOCKABLEMINOR,
-		L_OPTIONS_493, // "Kills Score"
+		gettext_noop("Kills Score\n"), // "Kills Score"
 		MPOPTION_KILLSSCORE,
 		menuhandlerMpCheckboxOption,
 	},
@@ -133,7 +137,7 @@ struct menuitem g_KohOptionsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		0,
 		MENUITEMFLAG_LOCKABLEMINOR,
-		L_MPMENU_233, // "Hill on Radar"
+		gettext_noop("Hill on Radar\n"), // "Hill on Radar"
 		MPOPTION_KOH_HILLONRADAR,
 		menuhandlerMpCheckboxOption,
 	},
@@ -141,7 +145,7 @@ struct menuitem g_KohOptionsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		0,
 		MENUITEMFLAG_LOCKABLEMINOR,
-		L_MPMENU_234, // "Mobile Hill"
+		gettext_noop("Mobile Hill\n"), // "Mobile Hill"
 		MPOPTION_KOH_MOBILEHILL,
 		menuhandlerMpCheckboxOption,
 	},
@@ -149,7 +153,7 @@ struct menuitem g_KohOptionsMenuItems[] = {
 		MENUITEMTYPE_SLIDER,
 		0,
 		MENUITEMFLAG_LOCKABLEMINOR,
-		L_MPMENU_235, // "Time"
+		gettext_noop("Time\n"), // "Time"
 		0x0000006e,
 		menuhandlerMpHillTime,
 	},
@@ -165,7 +169,7 @@ struct menuitem g_KohOptionsMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_CLOSESDIALOG,
-		L_MPMENU_239, // "Back"
+		gettext_noop("Back\n"), // "Back"
 		0,
 		NULL,
 	},
@@ -174,7 +178,7 @@ struct menuitem g_KohOptionsMenuItems[] = {
 
 struct menudialogdef g_KohOptionsMenuDialog = {
 	MENUDIALOGTYPE_DEFAULT,
-	L_MPMENU_219, // "Hill Options"
+	gettext_noop("Hill Options\n"), // "Hill Options"
 	g_KohOptionsMenuItems,
 	mpOptionsMenuDialog,
 	MENUDIALOGFLAG_MPLOCKABLE,
@@ -452,9 +456,9 @@ void kohTick(void)
 
 				// "%has captured the Hill!"
 #if VERSION >= VERSION_JPN_FINAL
-				sprintf(text, langGet(L_MPWEAPONS_022), scenarioRemoveLineBreaks(g_BossFile.teamnames[hillteam], 0));
+				sprintf(text, _("%shas captured\nthe Hill!\n"), scenarioRemoveLineBreaks(g_BossFile.teamnames[hillteam], 0));
 #else
-				sprintf(text, langGet(L_MPWEAPONS_022), &g_BossFile.teamnames[hillteam]);
+				sprintf(text, _("%shas captured\nthe Hill!\n"), &g_BossFile.teamnames[hillteam]);
 #endif
 
 				prevplayernum2 = g_Vars.currentplayernum;
@@ -467,14 +471,14 @@ void kohTick(void)
 #if VERSION >= VERSION_JPN_FINAL
 					if (radarGetTeamIndex(chr->team) == g_ScenarioData.koh.occupiedteam) {
 						// "We have the Hill!"
-						hudmsgCreateWithFlags(langGet(L_MPWEAPONS_021), HUDMSGTYPE_MPSCENARIO, HUDMSGFLAG_ONLYIFALIVE | HUDMSGFLAG_NOWRAP);
+						hudmsgCreateWithFlags(_("We have\nthe Hill!\n"), HUDMSGTYPE_MPSCENARIO, HUDMSGFLAG_ONLYIFALIVE | HUDMSGFLAG_NOWRAP);
 					} else {
 						hudmsgCreateWithFlags(text, HUDMSGTYPE_MPSCENARIO, HUDMSGFLAG_ONLYIFALIVE | HUDMSGFLAG_NOWRAP);
 					}
 #else
 					if (radarGetTeamIndex(chr->team) == g_ScenarioData.koh.occupiedteam) {
 						// "We have the Hill!"
-						hudmsgCreateWithFlags(langGet(L_MPWEAPONS_021), HUDMSGTYPE_MPSCENARIO, HUDMSGFLAG_ONLYIFALIVE);
+						hudmsgCreateWithFlags(_("We have\nthe Hill!\n"), HUDMSGTYPE_MPSCENARIO, HUDMSGFLAG_ONLYIFALIVE);
 					} else {
 						hudmsgCreateWithFlags(text, HUDMSGTYPE_MPSCENARIO, HUDMSGFLAG_ONLYIFALIVE);
 					}
@@ -515,9 +519,9 @@ void kohTick(void)
 
 								// "King of the Hill!"
 #if VERSION >= VERSION_JPN_FINAL
-								hudmsgCreateWithFlags(langGet(L_MPWEAPONS_020), HUDMSGTYPE_MPSCENARIO, HUDMSGFLAG_ONLYIFALIVE | HUDMSGFLAG_NOWRAP);
+								hudmsgCreateWithFlags(_("King of\nthe Hill!\n"), HUDMSGTYPE_MPSCENARIO, HUDMSGFLAG_ONLYIFALIVE | HUDMSGFLAG_NOWRAP);
 #else
-								hudmsgCreateWithFlags(langGet(L_MPWEAPONS_020), HUDMSGTYPE_MPSCENARIO, HUDMSGFLAG_ONLYIFALIVE);
+								hudmsgCreateWithFlags(_("King of\nthe Hill!\n"), HUDMSGTYPE_MPSCENARIO, HUDMSGFLAG_ONLYIFALIVE);
 #endif
 							}
 						}
