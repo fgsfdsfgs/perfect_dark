@@ -14,6 +14,11 @@
 #include "data.h"
 #include "string.h"
 #include "types.h"
+#ifndef PLATFORM_N64
+#include <libintl.h>
+#define _(String) gettext (String)
+#define gettext_noop(String) String
+#endif
 
 u32 g_CheatsActiveBank0;
 u32 g_CheatsActiveBank1;
@@ -28,80 +33,80 @@ struct menudialogdef g_CheatsBuddiesMenuDialog;
 #define s
 
 struct cheat g_Cheats[] = {
-	{ L_MPWEAPONS_075, TIME(2 m,  3 s),   SOLOSTAGEINDEX_EXTRACTION,     DIFF_A,  CHEATFLAG_TIMED | CHEATFLAG_TRANSFERPAK      }, // Hurricane Fists
+	{ gettext_noop("Hurricane Fists\n"), TIME(2 m,  3 s),   SOLOSTAGEINDEX_EXTRACTION,     DIFF_A,  CHEATFLAG_TIMED | CHEATFLAG_TRANSFERPAK      }, // Hurricane Fists
 #if VERSION >= VERSION_NTSC_1_0
-	{ L_MPWEAPONS_076, TIME(1 m, 40 s),   SOLOSTAGEINDEX_G5BUILDING,     DIFF_A,  CHEATFLAG_TIMED | CHEATFLAG_TRANSFERPAK      }, // Cloaking Device
+	{ gettext_noop("Cloaking Device\n"), TIME(1 m, 40 s),   SOLOSTAGEINDEX_G5BUILDING,     DIFF_A,  CHEATFLAG_TIMED | CHEATFLAG_TRANSFERPAK      }, // Cloaking Device
 #else
 	{ L_MPWEAPONS_076, TIME(0 m, 59 s),   SOLOSTAGEINDEX_G5BUILDING,     DIFF_A,  CHEATFLAG_TIMED | CHEATFLAG_TRANSFERPAK      }, // Cloaking Device
 #endif
-	{ L_MPWEAPONS_077, TIME(3 m, 50 s),   SOLOSTAGEINDEX_ESCAPE,         DIFF_A,  CHEATFLAG_TIMED                              }, // Invincible
+	{ gettext_noop("Invincible\n"), TIME(3 m, 50 s),   SOLOSTAGEINDEX_ESCAPE,         DIFF_A,  CHEATFLAG_TIMED                              }, // Invincible
 #if VERSION >= VERSION_NTSC_1_0
-	{ L_MPWEAPONS_078, TIME(5 m, 31 s),   SOLOSTAGEINDEX_SKEDARRUINS,    DIFF_PA, CHEATFLAG_TIMED | CHEATFLAG_TRANSFERPAK      }, // All Guns in Solo
-	{ L_MPWEAPONS_079, TIME(7 m,  7 s),   SOLOSTAGEINDEX_PELAGIC,        DIFF_SA, CHEATFLAG_TIMED                              }, // Unlimited Ammo
-	{ L_MPWEAPONS_080, TIME(3 m, 11 s),   SOLOSTAGEINDEX_AIRBASE,        DIFF_SA, CHEATFLAG_TIMED                              }, // Unlimited Ammo, No Reloads
+	{ gettext_noop("All Guns in Solo\n"), TIME(5 m, 31 s),   SOLOSTAGEINDEX_SKEDARRUINS,    DIFF_PA, CHEATFLAG_TIMED | CHEATFLAG_TRANSFERPAK      }, // All Guns in Solo
+	{ gettext_noop("Unlimited Ammo\n"), TIME(7 m,  7 s),   SOLOSTAGEINDEX_PELAGIC,        DIFF_SA, CHEATFLAG_TIMED                              }, // Unlimited Ammo
+	{ gettext_noop("Unlimited Ammo, No Reloads\n"), TIME(3 m, 11 s),   SOLOSTAGEINDEX_AIRBASE,        DIFF_SA, CHEATFLAG_TIMED                              }, // Unlimited Ammo, No Reloads
 #else
 	{ L_MPWEAPONS_078, TIME(4 m,  7 s),   SOLOSTAGEINDEX_SKEDARRUINS,    DIFF_PA, CHEATFLAG_TIMED | CHEATFLAG_TRANSFERPAK      }, // All Guns in Solo
 	{ L_MPWEAPONS_079, TIME(5 m, 50 s),   SOLOSTAGEINDEX_PELAGIC,        DIFF_SA, CHEATFLAG_TIMED                              }, // Unlimited Ammo
 	{ L_MPWEAPONS_080, TIME(2 m, 59 s),   SOLOSTAGEINDEX_AIRBASE,        DIFF_SA, CHEATFLAG_TIMED                              }, // Unlimited Ammo, No Reloads
 #endif
-	{ L_MPWEAPONS_081, 0,                 SOLOSTAGEINDEX_INVESTIGATION,  DIFF_A,  CHEATFLAG_COMPLETION                         }, // Slo-mo Single Player
-	{ L_MPWEAPONS_082, 0,                 SOLOSTAGEINDEX_CHICAGO,        DIFF_A,  CHEATFLAG_COMPLETION                         }, // DK Mode
-	{ L_MPWEAPONS_083, TIME(2 m, 50 s),   SOLOSTAGEINDEX_CRASHSITE,      DIFF_A,  CHEATFLAG_TIMED                              }, // Trent's Magnum
+	{ gettext_noop("Slo-mo Single Player\n"), 0,                 SOLOSTAGEINDEX_INVESTIGATION,  DIFF_A,  CHEATFLAG_COMPLETION                         }, // Slo-mo Single Player
+	{ gettext_noop("DK Mode\n"), 0,                 SOLOSTAGEINDEX_CHICAGO,        DIFF_A,  CHEATFLAG_COMPLETION                         }, // DK Mode
+	{ gettext_noop("Trent's Magnum\n"), TIME(2 m, 50 s),   SOLOSTAGEINDEX_CRASHSITE,      DIFF_A,  CHEATFLAG_TIMED                              }, // Trent's Magnum
 #if VERSION >= VERSION_NTSC_1_0
-	{ L_MPWEAPONS_084, TIME(7 m, 27 s),   SOLOSTAGEINDEX_DEEPSEA,        DIFF_PA, CHEATFLAG_TIMED                              }, // FarSight
+	{ gettext_noop("FarSight\n"), TIME(7 m, 27 s),   SOLOSTAGEINDEX_DEEPSEA,        DIFF_PA, CHEATFLAG_TIMED                              }, // FarSight
 #else
 	{ L_MPWEAPONS_084, TIME(5 m, 13 s),   SOLOSTAGEINDEX_DEEPSEA,        DIFF_PA, CHEATFLAG_TIMED                              }, // FarSight
 #endif
-	{ L_MPWEAPONS_085, 0,                 SOLOSTAGEINDEX_G5BUILDING,     DIFF_A,  CHEATFLAG_COMPLETION                         }, // Small Jo
-	{ L_MPWEAPONS_086, 0,                 SOLOSTAGEINDEX_INFILTRATION,   DIFF_A,  CHEATFLAG_COMPLETION                         }, // Small Characters
-	{ L_MPWEAPONS_087, 0,                 SOLOSTAGEINDEX_DEFENSE,        DIFF_A,  CHEATFLAG_COMPLETION                         }, // Enemy Shields
-	{ L_MPWEAPONS_088, 0,                 SOLOSTAGEINDEX_DEEPSEA,        DIFF_A,  CHEATFLAG_COMPLETION                         }, // Jo Shield
+	{ gettext_noop("Small Jo\n"), 0,                 SOLOSTAGEINDEX_G5BUILDING,     DIFF_A,  CHEATFLAG_COMPLETION                         }, // Small Jo
+	{ gettext_noop("Small Characters\n"), 0,                 SOLOSTAGEINDEX_INFILTRATION,   DIFF_A,  CHEATFLAG_COMPLETION                         }, // Small Characters
+	{ gettext_noop("Enemy Shields\n"), 0,                 SOLOSTAGEINDEX_DEFENSE,        DIFF_A,  CHEATFLAG_COMPLETION                         }, // Enemy Shields
+	{ gettext_noop("Jo Shield\n"), 0,                 SOLOSTAGEINDEX_DEEPSEA,        DIFF_A,  CHEATFLAG_COMPLETION                         }, // Jo Shield
 #if VERSION >= VERSION_NTSC_1_0
-	{ L_MPWEAPONS_089, TIME(1 m, 45 s),   SOLOSTAGEINDEX_DEFENSE,        DIFF_A,  CHEATFLAG_TIMED                              }, // Super Shield
+	{ gettext_noop("Super Shield\n"), TIME(1 m, 45 s),   SOLOSTAGEINDEX_DEFENSE,        DIFF_A,  CHEATFLAG_TIMED                              }, // Super Shield
 #else
 	{ L_MPWEAPONS_089, TIME(1 m, 12 s),   SOLOSTAGEINDEX_DEFENSE,        DIFF_A,  CHEATFLAG_TIMED                              }, // Super Shield
 #endif
-	{ L_MPWEAPONS_090, 0,                 SOLOSTAGEINDEX_DEFECTION,      DIFF_A,  CHEATFLAG_COMPLETION                         }, // Classic Sight
-	{ L_MPWEAPONS_091, 0,                 SOLOSTAGEINDEX_AIRBASE,        DIFF_A,  CHEATFLAG_COMPLETION                         }, // Team Heads Only
+	{ gettext_noop("Classic Sight\n"), 0,                 SOLOSTAGEINDEX_DEFECTION,      DIFF_A,  CHEATFLAG_COMPLETION                         }, // Classic Sight
+	{ gettext_noop("Team Heads Only\n"), 0,                 SOLOSTAGEINDEX_AIRBASE,        DIFF_A,  CHEATFLAG_COMPLETION                         }, // Team Heads Only
 #if VERSION >= VERSION_NTSC_1_0
-	{ L_MPWEAPONS_092, TIME(7 m, 59 s),   SOLOSTAGEINDEX_RESCUE,         DIFF_PA, CHEATFLAG_TIMED                              }, // Play as Elvis
+	{ gettext_noop("Play as Elvis\n"), TIME(7 m, 59 s),   SOLOSTAGEINDEX_RESCUE,         DIFF_PA, CHEATFLAG_TIMED                              }, // Play as Elvis
 #else
 	{ L_MPWEAPONS_092, TIME(7 m,  0 s),   SOLOSTAGEINDEX_RESCUE,         DIFF_PA, CHEATFLAG_TIMED                              }, // Play as Elvis
 #endif
-	{ L_MPWEAPONS_093, 0,                 SOLOSTAGEINDEX_PELAGIC,        DIFF_A,  CHEATFLAG_COMPLETION                         }, // Enemy Rockets
+	{ gettext_noop("Enemy Rockets\n"), 0,                 SOLOSTAGEINDEX_PELAGIC,        DIFF_A,  CHEATFLAG_COMPLETION                         }, // Enemy Rockets
 #if VERSION >= VERSION_NTSC_1_0
-	{ L_MPWEAPONS_094, TIME(3 m, 55 s),   SOLOSTAGEINDEX_AIRFORCEONE,    DIFF_PA, CHEATFLAG_TIMED                              }, // Unlimited Ammo - Laptop Sentry Gun
+	{ gettext_noop("Unlimited Ammo - Laptop Sentry Gun\n"), TIME(3 m, 55 s),   SOLOSTAGEINDEX_AIRFORCEONE,    DIFF_PA, CHEATFLAG_TIMED                              }, // Unlimited Ammo - Laptop Sentry Gun
 #else
 	{ L_MPWEAPONS_094, TIME(2 m, 59 s),   SOLOSTAGEINDEX_AIRFORCEONE,    DIFF_PA, CHEATFLAG_TIMED                              }, // Unlimited Ammo - Laptop Sentry Gun
 #endif
-	{ L_MPWEAPONS_095, TIME(1 m, 30 s),   SOLOSTAGEINDEX_DEFECTION,      DIFF_SA, CHEATFLAG_TIMED                              }, // Marquis of Queensbury Rules
-	{ L_MPWEAPONS_096, 0,                 SOLOSTAGEINDEX_CRASHSITE,      DIFF_A,  CHEATFLAG_COMPLETION                         }, // Perfect Darkness
-	{ L_MPWEAPONS_097, TIME(6 m, 30 s),   SOLOSTAGEINDEX_INVESTIGATION,  DIFF_PA, CHEATFLAG_TIMED                              }, // Pugilist
-	{ L_MPWEAPONS_098, TIME(5 m,  0 s),   SOLOSTAGEINDEX_INFILTRATION,   DIFF_SA, CHEATFLAG_TIMED                              }, // Hotshot
-	{ L_MPWEAPONS_099, TIME(2 m, 30 s),   SOLOSTAGEINDEX_VILLA,          DIFF_SA, CHEATFLAG_TIMED                              }, // Hit and Run
-	{ L_MPWEAPONS_100, TIME(5 m, 17 s),   SOLOSTAGEINDEX_ATTACKSHIP,     DIFF_SA, CHEATFLAG_TIMED                              }, // Alien
-	{ L_MPWEAPONS_101, 0,                 SOLOSTAGEINDEX_SKEDARRUINS,    DIFF_A,  CHEATFLAG_COMPLETION | CHEATFLAG_TRANSFERPAK }, // R-Tracker/Weapon Cache Locations
-	{ L_MPWEAPONS_102, 0,                 SOLOSTAGEINDEX_EXTRACTION,     DIFF_A,  CHEATFLAG_COMPLETION                         }, // Rocket Launcher
-	{ L_MPWEAPONS_103, 0,                 SOLOSTAGEINDEX_VILLA,          DIFF_A,  CHEATFLAG_COMPLETION                         }, // Sniper Rifle
-	{ L_MPWEAPONS_104, 0,                 SOLOSTAGEINDEX_RESCUE,         DIFF_A,  CHEATFLAG_COMPLETION                         }, // X-Ray Scanner
-	{ L_MPWEAPONS_105, 0,                 SOLOSTAGEINDEX_ESCAPE,         DIFF_A,  CHEATFLAG_COMPLETION                         }, // SuperDragon
-	{ L_MPWEAPONS_106, 0,                 SOLOSTAGEINDEX_AIRFORCEONE,    DIFF_A,  CHEATFLAG_COMPLETION                         }, // Laptop Gun
-	{ L_MPWEAPONS_107, 0,                 SOLOSTAGEINDEX_ATTACKSHIP,     DIFF_A,  CHEATFLAG_COMPLETION                         }, // Phoenix
+	{ gettext_noop("Marquis of Queensbury Rules\n"), TIME(1 m, 30 s),   SOLOSTAGEINDEX_DEFECTION,      DIFF_SA, CHEATFLAG_TIMED                              }, // Marquis of Queensbury Rules
+	{ gettext_noop("Perfect Darkness\n"), 0,                 SOLOSTAGEINDEX_CRASHSITE,      DIFF_A,  CHEATFLAG_COMPLETION                         }, // Perfect Darkness
+	{ gettext_noop("Pugilist\n"), TIME(6 m, 30 s),   SOLOSTAGEINDEX_INVESTIGATION,  DIFF_PA, CHEATFLAG_TIMED                              }, // Pugilist
+	{ gettext_noop("Hotshot\n"), TIME(5 m,  0 s),   SOLOSTAGEINDEX_INFILTRATION,   DIFF_SA, CHEATFLAG_TIMED                              }, // Hotshot
+	{ gettext_noop("Hit and Run\n"), TIME(2 m, 30 s),   SOLOSTAGEINDEX_VILLA,          DIFF_SA, CHEATFLAG_TIMED                              }, // Hit and Run
+	{ gettext_noop("Alien\n"), TIME(5 m, 17 s),   SOLOSTAGEINDEX_ATTACKSHIP,     DIFF_SA, CHEATFLAG_TIMED                              }, // Alien
+	{ gettext_noop("R-Tracker/Weapon Cache Locations\n"), 0,                 SOLOSTAGEINDEX_SKEDARRUINS,    DIFF_A,  CHEATFLAG_COMPLETION | CHEATFLAG_TRANSFERPAK }, // R-Tracker/Weapon Cache Locations
+	{ gettext_noop("Rocket Launcher\n"), 0,                 SOLOSTAGEINDEX_EXTRACTION,     DIFF_A,  CHEATFLAG_COMPLETION                         }, // Rocket Launcher
+	{ gettext_noop("Sniper Rifle\n"), 0,                 SOLOSTAGEINDEX_VILLA,          DIFF_A,  CHEATFLAG_COMPLETION                         }, // Sniper Rifle
+	{ gettext_noop("X-Ray Scanner\n"), 0,                 SOLOSTAGEINDEX_RESCUE,         DIFF_A,  CHEATFLAG_COMPLETION                         }, // X-Ray Scanner
+	{ gettext_noop("SuperDragon\n"), 0,                 SOLOSTAGEINDEX_ESCAPE,         DIFF_A,  CHEATFLAG_COMPLETION                         }, // SuperDragon
+	{ gettext_noop("Laptop Gun\n"), 0,                 SOLOSTAGEINDEX_AIRFORCEONE,    DIFF_A,  CHEATFLAG_COMPLETION                         }, // Laptop Gun
+	{ gettext_noop("Phoenix\n"), 0,                 SOLOSTAGEINDEX_ATTACKSHIP,     DIFF_A,  CHEATFLAG_COMPLETION                         }, // Phoenix
 #if VERSION >= VERSION_NTSC_1_0
-	{ L_MPWEAPONS_108, TIME(2 m,  0 s),   SOLOSTAGEINDEX_CHICAGO,        DIFF_PA, CHEATFLAG_TIMED                              }, // Psychosis Gun
+	{ gettext_noop("Psychosis Gun\n"), TIME(2 m,  0 s),   SOLOSTAGEINDEX_CHICAGO,        DIFF_PA, CHEATFLAG_TIMED                              }, // Psychosis Gun
 #else
 	{ L_MPWEAPONS_108, TIME(1 m, 44 s),   SOLOSTAGEINDEX_CHICAGO,        DIFF_PA, CHEATFLAG_TIMED                              }, // Psychosis Gun
 #endif
-	{ L_MPWEAPONS_109, WEAPON_PP9I,       0,                             0,       CHEATFLAG_FIRINGRANGE                        }, // PP9i
-	{ L_MPWEAPONS_110, WEAPON_CC13,       0,                             0,       CHEATFLAG_FIRINGRANGE                        }, // CC13
-	{ L_MPWEAPONS_111, WEAPON_KL01313,    0,                             0,       CHEATFLAG_FIRINGRANGE                        }, // KL01313
-	{ L_MPWEAPONS_112, WEAPON_KF7SPECIAL, 0,                             0,       CHEATFLAG_FIRINGRANGE                        }, // KF7 Special
-	{ L_MPWEAPONS_113, WEAPON_ZZT,        0,                             0,       CHEATFLAG_FIRINGRANGE                        }, // ZZT (9mm)
-	{ L_MPWEAPONS_114, WEAPON_DMC,        0,                             0,       CHEATFLAG_FIRINGRANGE                        }, // DMC
-	{ L_MPWEAPONS_115, WEAPON_AR53,       0,                             0,       CHEATFLAG_FIRINGRANGE                        }, // AR53
-	{ L_MPWEAPONS_116, WEAPON_RCP45,      0,                             0,       CHEATFLAG_FIRINGRANGE                        }, // RC-P45
+	{ gettext_noop("PP9i\n"), WEAPON_PP9I,       0,                             0,       CHEATFLAG_FIRINGRANGE                        }, // PP9i
+	{ gettext_noop("CC13\n"), WEAPON_CC13,       0,                             0,       CHEATFLAG_FIRINGRANGE                        }, // CC13
+	{ gettext_noop("KL01313\n"), WEAPON_KL01313,    0,                             0,       CHEATFLAG_FIRINGRANGE                        }, // KL01313
+	{ gettext_noop("KF7 Special\n"), WEAPON_KF7SPECIAL, 0,                             0,       CHEATFLAG_FIRINGRANGE                        }, // KF7 Special
+	{ gettext_noop("ZZT (9mm)\n"), WEAPON_ZZT,        0,                             0,       CHEATFLAG_FIRINGRANGE                        }, // ZZT (9mm)
+	{ gettext_noop("DMC\n"), WEAPON_DMC,        0,                             0,       CHEATFLAG_FIRINGRANGE                        }, // DMC
+	{ gettext_noop("AR53\n"), WEAPON_AR53,       0,                             0,       CHEATFLAG_FIRINGRANGE                        }, // AR53
+	{ gettext_noop("RC-P45\n"), WEAPON_RCP45,      0,                             0,       CHEATFLAG_FIRINGRANGE                        }, // RC-P45
 #ifndef PLATFORM_N64
-	{ L_MPWEAPONS_215, 0,                 SOLOSTAGEINDEX_EXTRACTION,     DIFF_A,  CHEATFLAG_COMPLETION                         }, // Dual wield all guns
+	{ gettext_noop("(Two-Handed)"), 0,                 SOLOSTAGEINDEX_EXTRACTION,     DIFF_A,  CHEATFLAG_COMPLETION                         }, // Dual wield all guns
 #endif
 };
 
@@ -392,10 +397,10 @@ MenuItemHandlerResult cheatMenuHandleBuddyCheckbox(s32 operation, struct menuite
 char *cheatGetNameIfUnlocked(struct menuitem *item)
 {
 	if (cheatIsUnlocked(item->param)) {
-		return langGet(g_Cheats[item->param].nametextid);
+		return _(g_Cheats[item->param].nametextid);
 	}
 
-	return langGet(L_MPWEAPONS_074); // "----------"
+	return _("----------\n"); // "----------"
 }
 
 MenuDialogHandlerResult cheatMenuHandleDialog(s32 operation, struct menudialogdef *dialogdef, union handlerdata *data)
@@ -448,7 +453,7 @@ struct menuitem g_CheatsWarningMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		0,
-		L_MPMENU_479, // "If you activate any cheats, then you will be unable to progress further in the game while those cheats are active."
+		gettext_noop("If you activate any cheats, then you\nwill be unable to progress further in the game\nwhile those cheats are active.\n"), // "If you activate any cheats, then you will be unable to progress further in the game while those cheats are active."
 		0,
 		NULL,
 	},
@@ -456,7 +461,7 @@ struct menuitem g_CheatsWarningMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_CLOSESDIALOG | MENUITEMFLAG_SELECTABLE_CENTRE,
-		L_MPMENU_480, // "OK"
+		gettext_noop("OK\n"), // "OK"
 		0,
 		NULL,
 	},
@@ -464,7 +469,7 @@ struct menuitem g_CheatsWarningMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_CLOSESDIALOG | MENUITEMFLAG_SELECTABLE_CENTRE,
-		L_MPMENU_481, // "Cancel"
+		gettext_noop("Cancel\n"), // "Cancel"
 		0,
 		NULL,
 	},
@@ -473,7 +478,7 @@ struct menuitem g_CheatsWarningMenuItems[] = {
 
 struct menudialogdef g_CheatsWarningMenuDialog = {
 	MENUDIALOGTYPE_SUCCESS,
-	L_MPMENU_478, // "Warning"
+	gettext_noop("Warning\n"), // "Warning"
 	g_CheatsWarningMenuItems,
 	NULL,
 	0,
@@ -670,16 +675,16 @@ char *cheatGetMarquee(struct menuitem *arg0)
 		if (g_Menus[g_MpPlayerNum].curdialog->definition == &g_CheatsBuddiesMenuDialog
 				&& g_Menus[g_MpPlayerNum].curdialog->focuseditem == &g_CheatsBuddiesMenuItems[0]) {
 			// Velvet
-			sprintf(g_CheatMarqueeString, "%s: %s", langGet(L_MPWEAPONS_143), langGet(L_MPWEAPONS_117)); // "Buddy Available", "Velvet Dark"
+			sprintf(g_CheatMarqueeString, "%s: %s", _("Buddy Available"), _("Velvet Dark\n")); // "Buddy Available", "Velvet Dark"
 		} else if (cheatIsUnlocked(cheat_id)) {
 			// Show cheat name
 			sprintf(g_CheatMarqueeString, "%s: %s\n",
-					g_Menus[g_MpPlayerNum].curdialog->definition == &g_CheatsBuddiesMenuDialog ? langGet(L_MPWEAPONS_143) : langGet(L_MPWEAPONS_136), // "Buddy Available", "Cheat available"
-					langGet(g_Cheats[cheat_id].nametextid)
+					g_Menus[g_MpPlayerNum].curdialog->definition == &g_CheatsBuddiesMenuDialog ? _("Buddy Available") : _("Cheat available"), // "Buddy Available", "Cheat available"
+					_(g_Cheats[cheat_id].nametextid)
 			);
 		} else {
 			// Locked
-			strcpy(cheatname, langGet(g_Cheats[cheat_id].nametextid));
+			strcpy(cheatname, _(g_Cheats[cheat_id].nametextid));
 			ptr = cheatname;
 
 			while (*ptr != '\n') {
@@ -690,15 +695,15 @@ char *cheatGetMarquee(struct menuitem *arg0)
 
 			if (g_Cheats[cheat_id].flags & CHEATFLAG_COMPLETION) {
 				sprintf(g_CheatMarqueeString, "%s %s: %s %s %s",
-						langGet(L_MPWEAPONS_137), // "Complete"
-						langGet(g_SoloStages[g_Cheats[cheat_id].stage_index].name1),
-						langGet(g_SoloStages[g_Cheats[cheat_id].stage_index].name2),
-						langGet(L_MPWEAPONS_138), // "for cheat:"
+						_("Complete"), // "Complete"
+						_(g_SoloStages[g_Cheats[cheat_id].stage_index].name1),
+						_(g_SoloStages[g_Cheats[cheat_id].stage_index].name2),
+						_("for cheat:"), // "for cheat:"
 						&cheatname
 				);
 			} else {
 				// Timed
-				strcpy(difficultyname, langGet(L_OPTIONS_251 + g_Cheats[cheat_id].difficulty));
+				strcpy(difficultyname, _("Agent\n" + g_Cheats[cheat_id].difficulty));
 				ptr = difficultyname;
 
 				while (*ptr != '\n') {
@@ -708,21 +713,21 @@ char *cheatGetMarquee(struct menuitem *arg0)
 				*ptr = '\0';
 
 				sprintf(g_CheatMarqueeString, "%s %s: %s %s %s %s %d:%02d %s %s",
-						langGet(L_MPWEAPONS_137), // "Complete"
-						langGet(g_SoloStages[g_Cheats[cheat_id].stage_index].name1),
-						langGet(g_SoloStages[g_Cheats[cheat_id].stage_index].name2),
-						langGet(L_MPWEAPONS_139), // "on"
+						_("Complete"), // "Complete"
+						_(g_SoloStages[g_Cheats[cheat_id].stage_index].name1),
+						_(g_SoloStages[g_Cheats[cheat_id].stage_index].name2),
+						_("on"), // "on"
 						&difficultyname,
-						langGet(L_MPWEAPONS_140), // "in under"
+						_("in under"), // "in under"
 						g_Cheats[cheat_id].time / 60,
 						g_Cheats[cheat_id].time % 60,
-						langGet(L_MPWEAPONS_138), // "for cheat:"
+						_("for cheat:"), // "for cheat:"
 						&cheatname
 				);
 			}
 
 			if (g_Cheats[cheat_id].flags & CHEATFLAG_TRANSFERPAK) {
-				strcat(g_CheatMarqueeString, langGet(L_MPWEAPONS_141)); // " or insert Game Boy ..."
+				strcat(g_CheatMarqueeString, _(" or insert Game Boy (r) Perfect Dark into Transfer Pak (tm), connect Transfer Pak to any controller, then exit and enter menu")); // " or insert Game Boy ..."
 			}
 
 			strcat(g_CheatMarqueeString, "\n");
@@ -802,7 +807,7 @@ char *cheatGetMarquee(struct menuitem *arg0)
 #endif
 
 	// No cheat selected
-	return langGet(L_MPWEAPONS_142); // "Select cheat for information"
+	return _("Select cheat for information\n"); // "Select cheat for information"
 }
 
 MenuItemHandlerResult cheatMenuHandleTurnOffAllCheats(s32 operation, struct menuitem *item, union handlerdata *data)
@@ -858,7 +863,7 @@ s32 cheatGetTime(s32 cheat_id)
 #if VERSION >= VERSION_NTSC_1_0
 char *cheatGetName(s32 cheat_id)
 {
-	return langGet(g_Cheats[cheat_id].nametextid);
+	return _(g_Cheats[cheat_id].nametextid);
 }
 #endif
 
@@ -877,7 +882,7 @@ struct menuitem g_CheatsConfirmUnlockMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_LITERAL_TEXT,
-		(uintptr_t)"Are you sure?\n\nThis will overwrite any progress\nsaved to the current profile.\n",
+		gettext_noop("Are you sure?\n\nThis will overwrite any progress\nsaved to the current profile.\n"),
 		0,
 		NULL,
 	},
@@ -885,7 +890,7 @@ struct menuitem g_CheatsConfirmUnlockMenuItems[] = {
 		MENUITEMTYPE_SEPARATOR,
 		0,
 		0,
-		0x00000082,
+		"",// previous: 0x00000082,
 		0,
 		NULL,
 	},
@@ -893,7 +898,7 @@ struct menuitem g_CheatsConfirmUnlockMenuItems[] = {
 		MENUITEMTYPE_MARQUEE,
 		0,
 		MENUITEMFLAG_SMALLFONT | MENUITEMFLAG_MARQUEE_FADEBOTHSIDES | MENUITEMFLAG_LITERAL_TEXT,
-		(uintptr_t)"Unlocks all cheats, weapons, missions, challenges and combat simulator items.\n",
+		gettext_noop("Unlocks all cheats, weapons, missions, challenges and combat simulator items.\n"),
 		0,
 		NULL,
 	},
@@ -901,7 +906,7 @@ struct menuitem g_CheatsConfirmUnlockMenuItems[] = {
 		MENUITEMTYPE_SEPARATOR,
 		0,
 		0,
-		0x00000082,
+		"",// previous: 0x00000082,
 		0,
 		NULL,
 	},
@@ -909,7 +914,7 @@ struct menuitem g_CheatsConfirmUnlockMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_CENTRE | MENUITEMFLAG_SELECTABLE_CLOSESDIALOG,
-		L_OPTIONS_191, // "No"
+		gettext_noop("No\n"), // "No"
 		0,
 		NULL,
 	},
@@ -917,7 +922,7 @@ struct menuitem g_CheatsConfirmUnlockMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_CENTRE | MENUITEMFLAG_SELECTABLE_CLOSESDIALOG,
-		L_OPTIONS_190, // "Yes"
+		gettext_noop("Yes\n"), // "Yes"
 		0,
 		menuhandlerUnlockEverything,
 	},
@@ -926,7 +931,7 @@ struct menuitem g_CheatsConfirmUnlockMenuItems[] = {
 
 struct menudialogdef g_CheatsConfirmUnlockMenuDialog = {
 	MENUDIALOGTYPE_DANGER,
-	L_OPTIONS_188, // "Warning"
+	gettext_noop("Warning\n"), // "Warning"
 	g_CheatsConfirmUnlockMenuItems,
 	NULL,
 	0,
@@ -940,7 +945,7 @@ struct menuitem g_CheatsFunMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_DKMODE,
 		0,
-		(uintptr_t)&cheatGetNameIfUnlocked,
+		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
 	},
@@ -948,7 +953,7 @@ struct menuitem g_CheatsFunMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_SMALLJO,
 		0,
-		(uintptr_t)&cheatGetNameIfUnlocked,
+		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
 	},
@@ -956,7 +961,7 @@ struct menuitem g_CheatsFunMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_SMALLCHARACTERS,
 		0,
-		(uintptr_t)&cheatGetNameIfUnlocked,
+		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
 	},
@@ -964,7 +969,7 @@ struct menuitem g_CheatsFunMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_TEAMHEADSONLY,
 		0,
-		(uintptr_t)&cheatGetNameIfUnlocked,
+		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
 	},
@@ -972,7 +977,7 @@ struct menuitem g_CheatsFunMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_PLAYASELVIS,
 		0,
-		(uintptr_t)&cheatGetNameIfUnlocked,
+		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
 	},
@@ -980,7 +985,7 @@ struct menuitem g_CheatsFunMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_SLOMO,
 		0,
-		(uintptr_t)&cheatGetNameIfUnlocked,
+		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
 	},
@@ -988,7 +993,7 @@ struct menuitem g_CheatsFunMenuItems[] = {
 		MENUITEMTYPE_SEPARATOR,
 		0,
 		0,
-		0x00000096,
+		"",// previous: 0x00000096,
 		0,
 		NULL,
 	},
@@ -996,7 +1001,7 @@ struct menuitem g_CheatsFunMenuItems[] = {
 		MENUITEMTYPE_MARQUEE,
 		0,
 		MENUITEMFLAG_SMALLFONT | MENUITEMFLAG_MARQUEE_FADEBOTHSIDES,
-		(uintptr_t)&cheatGetMarquee,
+		&cheatGetMarquee,
 		0,
 		NULL,
 	},
@@ -1004,7 +1009,7 @@ struct menuitem g_CheatsFunMenuItems[] = {
 		MENUITEMTYPE_SEPARATOR,
 		0,
 		0,
-		0x00000096,
+		"",// previous: 0x00000096,
 		0,
 		NULL,
 	},
@@ -1012,7 +1017,7 @@ struct menuitem g_CheatsFunMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_CLOSESDIALOG | MENUITEMFLAG_SELECTABLE_CENTRE,
-		L_MPMENU_477, // "Done"
+		gettext_noop("Done\n"), // "Done"
 		0,
 		NULL,
 	},
@@ -1021,7 +1026,7 @@ struct menuitem g_CheatsFunMenuItems[] = {
 
 struct menudialogdef g_CheatsFunMenuDialog = {
 	MENUDIALOGTYPE_DEFAULT,
-	L_MPWEAPONS_118, // "Fun"
+	gettext_noop("Fun\n"), // "Fun"
 	g_CheatsFunMenuItems,
 	cheatMenuHandleDialog,
 	0,
@@ -1033,7 +1038,7 @@ struct menuitem g_CheatsGameplayMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_INVINCIBLE,
 		0,
-		(uintptr_t)&cheatGetNameIfUnlocked,
+		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
 	},
@@ -1041,7 +1046,7 @@ struct menuitem g_CheatsGameplayMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_CLOAKINGDEVICE,
 		0,
-		(uintptr_t)&cheatGetNameIfUnlocked,
+		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
 	},
@@ -1049,7 +1054,7 @@ struct menuitem g_CheatsGameplayMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_MARQUIS,
 		0,
-		(uintptr_t)&cheatGetNameIfUnlocked,
+		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
 	},
@@ -1057,7 +1062,7 @@ struct menuitem g_CheatsGameplayMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_JOSHIELD,
 		0,
-		(uintptr_t)&cheatGetNameIfUnlocked,
+		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
 	},
@@ -1065,7 +1070,7 @@ struct menuitem g_CheatsGameplayMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_SUPERSHIELD,
 		0,
-		(uintptr_t)&cheatGetNameIfUnlocked,
+		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
 	},
@@ -1073,7 +1078,7 @@ struct menuitem g_CheatsGameplayMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_ENEMYSHIELDS,
 		0,
-		(uintptr_t)&cheatGetNameIfUnlocked,
+		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
 	},
@@ -1081,7 +1086,7 @@ struct menuitem g_CheatsGameplayMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_ENEMYROCKETS,
 		0,
-		(uintptr_t)&cheatGetNameIfUnlocked,
+		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
 	},
@@ -1089,7 +1094,7 @@ struct menuitem g_CheatsGameplayMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_PERFECTDARKNESS,
 		0,
-		(uintptr_t)&cheatGetNameIfUnlocked,
+		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
 	},
@@ -1098,7 +1103,7 @@ struct menuitem g_CheatsGameplayMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_DUALWIELDALLGUNS,
 		0,
-		(uintptr_t)&cheatGetNameIfUnlocked,
+		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
 	},
@@ -1107,7 +1112,7 @@ struct menuitem g_CheatsGameplayMenuItems[] = {
 		MENUITEMTYPE_SEPARATOR,
 		0,
 		0,
-		0x00000096,
+		"",// previous: 0x00000096,
 		0,
 		NULL,
 	},
@@ -1115,7 +1120,7 @@ struct menuitem g_CheatsGameplayMenuItems[] = {
 		MENUITEMTYPE_MARQUEE,
 		0,
 		MENUITEMFLAG_SMALLFONT | MENUITEMFLAG_MARQUEE_FADEBOTHSIDES,
-		(uintptr_t)&cheatGetMarquee,
+		&cheatGetMarquee,
 		0,
 		NULL,
 	},
@@ -1123,7 +1128,7 @@ struct menuitem g_CheatsGameplayMenuItems[] = {
 		MENUITEMTYPE_SEPARATOR,
 		0,
 		0,
-		0x00000096,
+		"",// previous: 0x00000096,
 		0,
 		NULL,
 	},
@@ -1131,7 +1136,7 @@ struct menuitem g_CheatsGameplayMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_CLOSESDIALOG | MENUITEMFLAG_SELECTABLE_CENTRE,
-		L_MPMENU_477, // "Done"
+		gettext_noop("Done\n"), // "Done"
 		0,
 		NULL,
 	},
@@ -1140,7 +1145,7 @@ struct menuitem g_CheatsGameplayMenuItems[] = {
 
 struct menudialogdef g_CheatsGameplayMenuDialog = {
 	MENUDIALOGTYPE_DEFAULT,
-	L_MPWEAPONS_119, // "Gameplay"
+	gettext_noop("Gameplay\n"), // "Gameplay"
 	g_CheatsGameplayMenuItems,
 	cheatMenuHandleDialog,
 	0,
@@ -1152,7 +1157,7 @@ struct menuitem g_CheatsSoloWeaponsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_ROCKETLAUNCHER,
 		0,
-		(uintptr_t)&cheatGetNameIfUnlocked,
+		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
 	},
@@ -1160,7 +1165,7 @@ struct menuitem g_CheatsSoloWeaponsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_SNIPERRIFLE,
 		0,
-		(uintptr_t)&cheatGetNameIfUnlocked,
+		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
 	},
@@ -1168,7 +1173,7 @@ struct menuitem g_CheatsSoloWeaponsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_SUPERDRAGON,
 		0,
-		(uintptr_t)&cheatGetNameIfUnlocked,
+		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
 	},
@@ -1176,7 +1181,7 @@ struct menuitem g_CheatsSoloWeaponsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_LAPTOPGUN,
 		0,
-		(uintptr_t)&cheatGetNameIfUnlocked,
+		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
 	},
@@ -1184,7 +1189,7 @@ struct menuitem g_CheatsSoloWeaponsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_PHOENIX,
 		0,
-		(uintptr_t)&cheatGetNameIfUnlocked,
+		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
 	},
@@ -1192,7 +1197,7 @@ struct menuitem g_CheatsSoloWeaponsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_PSYCHOSISGUN,
 		0,
-		(uintptr_t)&cheatGetNameIfUnlocked,
+		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
 	},
@@ -1200,7 +1205,7 @@ struct menuitem g_CheatsSoloWeaponsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_TRENTSMAGNUM,
 		0,
-		(uintptr_t)&cheatGetNameIfUnlocked,
+		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
 	},
@@ -1208,7 +1213,7 @@ struct menuitem g_CheatsSoloWeaponsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_FARSIGHT,
 		0,
-		(uintptr_t)&cheatGetNameIfUnlocked,
+		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
 	},
@@ -1216,7 +1221,7 @@ struct menuitem g_CheatsSoloWeaponsMenuItems[] = {
 		MENUITEMTYPE_SEPARATOR,
 		0,
 		0,
-		0x00000096,
+		"",// previous: 0x00000096,
 		0,
 		NULL,
 	},
@@ -1224,7 +1229,7 @@ struct menuitem g_CheatsSoloWeaponsMenuItems[] = {
 		MENUITEMTYPE_MARQUEE,
 		0,
 		MENUITEMFLAG_SMALLFONT | MENUITEMFLAG_MARQUEE_FADEBOTHSIDES,
-		(uintptr_t)&cheatGetMarquee,
+		&cheatGetMarquee,
 		0,
 		NULL,
 	},
@@ -1232,7 +1237,7 @@ struct menuitem g_CheatsSoloWeaponsMenuItems[] = {
 		MENUITEMTYPE_SEPARATOR,
 		0,
 		0,
-		0x00000096,
+		"",// previous: 0x00000096,
 		0,
 		NULL,
 	},
@@ -1240,7 +1245,7 @@ struct menuitem g_CheatsSoloWeaponsMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_CLOSESDIALOG | MENUITEMFLAG_SELECTABLE_CENTRE,
-		L_MPMENU_477, // "Done"
+		gettext_noop("Done\n"), // "Done"
 		0,
 		NULL,
 	},
@@ -1249,7 +1254,7 @@ struct menuitem g_CheatsSoloWeaponsMenuItems[] = {
 
 struct menudialogdef g_CheatsSoloWeaponsMenuDialog = {
 	MENUDIALOGTYPE_DEFAULT,
-	L_MPWEAPONS_122, // "Weapons for Jo in Solo"
+	gettext_noop("Weapons for Jo in Solo\n"), // "Weapons for Jo in Solo"
 	g_CheatsSoloWeaponsMenuItems,
 	cheatMenuHandleDialog,
 	0,
@@ -1261,7 +1266,7 @@ struct menuitem g_CheatsClassicWeaponsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_PP9I,
 		0,
-		(uintptr_t)&cheatGetNameIfUnlocked,
+		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
 	},
@@ -1269,7 +1274,7 @@ struct menuitem g_CheatsClassicWeaponsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_CC13,
 		0,
-		(uintptr_t)&cheatGetNameIfUnlocked,
+		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
 	},
@@ -1277,7 +1282,7 @@ struct menuitem g_CheatsClassicWeaponsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_KL01313,
 		0,
-		(uintptr_t)&cheatGetNameIfUnlocked,
+		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
 	},
@@ -1285,7 +1290,7 @@ struct menuitem g_CheatsClassicWeaponsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_KF7SPECIAL,
 		0,
-		(uintptr_t)&cheatGetNameIfUnlocked,
+		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
 	},
@@ -1293,7 +1298,7 @@ struct menuitem g_CheatsClassicWeaponsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_ZZT,
 		0,
-		(uintptr_t)&cheatGetNameIfUnlocked,
+		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
 	},
@@ -1301,7 +1306,7 @@ struct menuitem g_CheatsClassicWeaponsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_DMC,
 		0,
-		(uintptr_t)&cheatGetNameIfUnlocked,
+		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
 	},
@@ -1309,7 +1314,7 @@ struct menuitem g_CheatsClassicWeaponsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_AR53,
 		0,
-		(uintptr_t)&cheatGetNameIfUnlocked,
+		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
 	},
@@ -1317,7 +1322,7 @@ struct menuitem g_CheatsClassicWeaponsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_RCP45,
 		0,
-		(uintptr_t)&cheatGetNameIfUnlocked,
+		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
 	},
@@ -1325,7 +1330,7 @@ struct menuitem g_CheatsClassicWeaponsMenuItems[] = {
 		MENUITEMTYPE_SEPARATOR,
 		0,
 		0,
-		0x000000c8,
+		"",// previous: 0x000000c8,
 		0,
 		NULL,
 	},
@@ -1333,7 +1338,7 @@ struct menuitem g_CheatsClassicWeaponsMenuItems[] = {
 		MENUITEMTYPE_MARQUEE,
 		0,
 		MENUITEMFLAG_SMALLFONT | MENUITEMFLAG_MARQUEE_FADEBOTHSIDES,
-		L_MPWEAPONS_144, // "Win Golds on the firing range to enable classic guns."
+		gettext_noop("Win Golds on the firing range to enable classic guns.\n"), // "Win Golds on the firing range to enable classic guns."
 		0,
 		NULL,
 	},
@@ -1341,7 +1346,7 @@ struct menuitem g_CheatsClassicWeaponsMenuItems[] = {
 		MENUITEMTYPE_SEPARATOR,
 		0,
 		0,
-		0x000000c8,
+		"",// previosu: 0x000000c8,
 		0,
 		NULL,
 	},
@@ -1349,7 +1354,7 @@ struct menuitem g_CheatsClassicWeaponsMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_CLOSESDIALOG | MENUITEMFLAG_SELECTABLE_CENTRE,
-		L_MPMENU_477, // "Done"
+		gettext_noop("Done\n"), // "Done"
 		0,
 		NULL,
 	},
@@ -1358,7 +1363,7 @@ struct menuitem g_CheatsClassicWeaponsMenuItems[] = {
 
 struct menudialogdef g_CheatsClassicWeaponsMenuDialog = {
 	MENUDIALOGTYPE_DEFAULT,
-	L_MPWEAPONS_123, // "Classic Weapons for Jo in Solo"
+	gettext_noop("Classic Weapons for Jo in Solo\n"), // "Classic Weapons for Jo in Solo"
 	g_CheatsClassicWeaponsMenuItems,
 	cheatMenuHandleDialog,
 	0,
@@ -1370,7 +1375,7 @@ struct menuitem g_CheatsWeaponsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_CLASSICSIGHT,
 		0,
-		(uintptr_t)&cheatGetNameIfUnlocked,
+		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
 	},
@@ -1378,7 +1383,7 @@ struct menuitem g_CheatsWeaponsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_UNLIMITEDAMMOLAPTOP,
 		0,
-		(uintptr_t)&cheatGetNameIfUnlocked,
+		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
 	},
@@ -1386,7 +1391,7 @@ struct menuitem g_CheatsWeaponsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_HURRICANEFISTS,
 		0,
-		(uintptr_t)&cheatGetNameIfUnlocked,
+		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
 	},
@@ -1394,7 +1399,7 @@ struct menuitem g_CheatsWeaponsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_UNLIMITEDAMMO,
 		0,
-		(uintptr_t)&cheatGetNameIfUnlocked,
+		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
 	},
@@ -1402,7 +1407,7 @@ struct menuitem g_CheatsWeaponsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_UNLIMITEDAMMONORELOADS,
 		0,
-		(uintptr_t)&cheatGetNameIfUnlocked,
+		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
 	},
@@ -1410,7 +1415,7 @@ struct menuitem g_CheatsWeaponsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_XRAYSCANNER,
 		0,
-		(uintptr_t)&cheatGetNameIfUnlocked,
+		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
 	},
@@ -1418,7 +1423,7 @@ struct menuitem g_CheatsWeaponsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_RTRACKER,
 		0,
-		(uintptr_t)&cheatGetNameIfUnlocked,
+		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
 	},
@@ -1426,7 +1431,7 @@ struct menuitem g_CheatsWeaponsMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_ALLGUNS,
 		0,
-		(uintptr_t)&cheatGetNameIfUnlocked,
+		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
 	},
@@ -1434,7 +1439,7 @@ struct menuitem g_CheatsWeaponsMenuItems[] = {
 		MENUITEMTYPE_SEPARATOR,
 		0,
 		0,
-		0x00000096,
+		"", // previous: 0x00000096,
 		0,
 		NULL,
 	},
@@ -1442,7 +1447,7 @@ struct menuitem g_CheatsWeaponsMenuItems[] = {
 		MENUITEMTYPE_MARQUEE,
 		0,
 		MENUITEMFLAG_SMALLFONT | MENUITEMFLAG_MARQUEE_FADEBOTHSIDES,
-		(uintptr_t)&cheatGetMarquee,
+		&cheatGetMarquee,
 		0,
 		NULL,
 	},
@@ -1450,7 +1455,7 @@ struct menuitem g_CheatsWeaponsMenuItems[] = {
 		MENUITEMTYPE_SEPARATOR,
 		0,
 		0,
-		0x00000096,
+		"", // previous: 0x00000096,
 		0,
 		NULL,
 	},
@@ -1458,7 +1463,7 @@ struct menuitem g_CheatsWeaponsMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_CLOSESDIALOG | MENUITEMFLAG_SELECTABLE_CENTRE,
-		L_MPMENU_477, // "Done"
+		gettext_noop("Done\n"), // "Done"
 		0,
 		NULL,
 	},
@@ -1467,7 +1472,7 @@ struct menuitem g_CheatsWeaponsMenuItems[] = {
 
 struct menudialogdef g_CheatsWeaponsMenuDialog = {
 	MENUDIALOGTYPE_DEFAULT,
-	L_MPWEAPONS_120, // "Weapons"
+	gettext_noop("Weapons\n"), // "Weapons"
 	g_CheatsWeaponsMenuItems,
 	cheatMenuHandleDialog,
 	0,
@@ -1479,7 +1484,7 @@ struct menuitem g_CheatsBuddiesMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		0,
 		0,
-		L_MPWEAPONS_117, // "Velvet Dark"
+		gettext_noop("Velvet Dark\n"), // "Velvet Dark"
 		0,
 		cheatMenuHandleBuddyCheckbox,
 	},
@@ -1487,7 +1492,7 @@ struct menuitem g_CheatsBuddiesMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_PUGILIST,
 		0,
-		(uintptr_t)&cheatGetNameIfUnlocked,
+		&cheatGetNameIfUnlocked,
 		0,
 		cheatMenuHandleBuddyCheckbox,
 	},
@@ -1495,7 +1500,7 @@ struct menuitem g_CheatsBuddiesMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_HOTSHOT,
 		0,
-		(uintptr_t)&cheatGetNameIfUnlocked,
+		&cheatGetNameIfUnlocked,
 		0,
 		cheatMenuHandleBuddyCheckbox,
 	},
@@ -1503,7 +1508,7 @@ struct menuitem g_CheatsBuddiesMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_HITANDRUN,
 		0,
-		(uintptr_t)&cheatGetNameIfUnlocked,
+		&cheatGetNameIfUnlocked,
 		0,
 		cheatMenuHandleBuddyCheckbox,
 	},
@@ -1511,7 +1516,7 @@ struct menuitem g_CheatsBuddiesMenuItems[] = {
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_ALIEN,
 		0,
-		(uintptr_t)&cheatGetNameIfUnlocked,
+		&cheatGetNameIfUnlocked,
 		0,
 		cheatMenuHandleBuddyCheckbox,
 	},
@@ -1519,7 +1524,7 @@ struct menuitem g_CheatsBuddiesMenuItems[] = {
 		MENUITEMTYPE_SEPARATOR,
 		0,
 		0,
-		0x00000096,
+		"",// previous: 0x00000096,
 		0,
 		NULL,
 	},
@@ -1527,7 +1532,7 @@ struct menuitem g_CheatsBuddiesMenuItems[] = {
 		MENUITEMTYPE_MARQUEE,
 		0,
 		MENUITEMFLAG_SMALLFONT | MENUITEMFLAG_MARQUEE_FADEBOTHSIDES,
-		(uintptr_t)&cheatGetMarquee,
+		&cheatGetMarquee,
 		0,
 		NULL,
 	},
@@ -1535,7 +1540,7 @@ struct menuitem g_CheatsBuddiesMenuItems[] = {
 		MENUITEMTYPE_SEPARATOR,
 		0,
 		0,
-		0x00000096,
+		"",// previous: 0x00000096,
 		0,
 		NULL,
 	},
@@ -1543,7 +1548,7 @@ struct menuitem g_CheatsBuddiesMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_CLOSESDIALOG | MENUITEMFLAG_SELECTABLE_CENTRE,
-		L_MPMENU_477, // "Done"
+		gettext_noop("Done\n"), // "Done"
 		0,
 		NULL,
 	},
@@ -1552,7 +1557,7 @@ struct menuitem g_CheatsBuddiesMenuItems[] = {
 
 struct menudialogdef g_CheatsBuddiesMenuDialog = {
 	MENUDIALOGTYPE_DEFAULT,
-	L_MPWEAPONS_121, // "Buddies"
+	gettext_noop("Buddies\n"), // "Buddies"
 	g_CheatsBuddiesMenuItems,
 	cheatMenuHandleDialog,
 	0,
@@ -1564,7 +1569,7 @@ struct menuitem g_CheatsMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_OPENSDIALOG,
-		L_MPWEAPONS_118, // "Fun"
+		gettext_noop("Fun\n"), // "Fun"
 		0,
 		(void *)&g_CheatsFunMenuDialog,
 	},
@@ -1572,7 +1577,7 @@ struct menuitem g_CheatsMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_OPENSDIALOG,
-		L_MPWEAPONS_119, // "Gameplay"
+		gettext_noop("Gameplay\n"), // "Gameplay"
 		0,
 		(void *)&g_CheatsGameplayMenuDialog,
 	},
@@ -1580,7 +1585,7 @@ struct menuitem g_CheatsMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_OPENSDIALOG,
-		L_MPWEAPONS_122, // "Weapons for Jo in Solo"
+		gettext_noop("Weapons for Jo in Solo\n"), // "Weapons for Jo in Solo"
 		0,
 		(void *)&g_CheatsSoloWeaponsMenuDialog,
 	},
@@ -1588,7 +1593,7 @@ struct menuitem g_CheatsMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_OPENSDIALOG,
-		L_MPWEAPONS_123, // "Classic Weapons for Jo in Solo"
+		gettext_noop("Classic Weapons for Jo in Solo\n"), // "Classic Weapons for Jo in Solo"
 		0,
 		(void *)&g_CheatsClassicWeaponsMenuDialog,
 	},
@@ -1596,7 +1601,7 @@ struct menuitem g_CheatsMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_OPENSDIALOG,
-		L_MPWEAPONS_120, // "Weapons"
+		gettext_noop("Weapons\n"), // "Weapons"
 		0,
 		(void *)&g_CheatsWeaponsMenuDialog,
 	},
@@ -1604,7 +1609,7 @@ struct menuitem g_CheatsMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_OPENSDIALOG,
-		L_MPWEAPONS_121, // "Buddies"
+		gettext_noop("Buddies\n"), // "Buddies"
 		0,
 		(void *)&g_CheatsBuddiesMenuDialog,
 	},
@@ -1612,7 +1617,7 @@ struct menuitem g_CheatsMenuItems[] = {
 		MENUITEMTYPE_SEPARATOR,
 		0,
 		0,
-		0x00000096,
+		"",// previous: 0x00000096,
 		0,
 		NULL,
 	},
@@ -1620,7 +1625,7 @@ struct menuitem g_CheatsMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		0,
-		L_MPWEAPONS_217, // "Turn off all Cheats"
+		gettext_noop("Turn off all Cheats\n"), // "Turn off all Cheats"
 		0,
 		cheatMenuHandleTurnOffAllCheats,
 	},
@@ -1629,7 +1634,7 @@ struct menuitem g_CheatsMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_LITERAL_TEXT | MENUITEMFLAG_SELECTABLE_OPENSDIALOG,
-		(uintptr_t)"Unlock Everything\n",
+		gettext_noop("Unlock Everything\n"),
 		0,
 		(void *)&g_CheatsConfirmUnlockMenuDialog,
 	},
@@ -1638,7 +1643,7 @@ struct menuitem g_CheatsMenuItems[] = {
 		MENUITEMTYPE_SEPARATOR,
 		0,
 		0,
-		0x00000096,
+		"",// previous: 0x00000096,
 		0,
 		NULL,
 	},
@@ -1646,7 +1651,7 @@ struct menuitem g_CheatsMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_CLOSESDIALOG | MENUITEMFLAG_SELECTABLE_CENTRE,
-		L_MPMENU_477, // "Done"
+		gettext_noop("Done\n"), // "Done"
 		0,
 		NULL,
 	},
@@ -1655,7 +1660,7 @@ struct menuitem g_CheatsMenuItems[] = {
 
 struct menudialogdef g_CheatsMenuDialog = {
 	MENUDIALOGTYPE_DEFAULT,
-	L_MPMENU_476, // "Cheats"
+	gettext_noop("Cheats\n"), // "Cheats"
 	g_CheatsMenuItems,
 	cheatMenuHandleDialog,
 	0,

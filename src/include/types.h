@@ -3066,7 +3066,7 @@ struct cutscene {
 };
 
 struct cheat {
-	u16 nametextid;
+	char *nametextid;
 	u16 time;
 	u8 stage_index;
 	u8 difficulty;
@@ -3156,9 +3156,9 @@ struct mptrack {
 struct solostage {
 	/*0x00*/ u32 stagenum;
 	/*0x04*/ u8 unk04;
-	/*0x06*/ u16 name1; // "dataDyne Central"
-	/*0x08*/ u16 name2; // " - Defection"
-	/*0x0a*/ u16 name3; // "dataDyne Defection"
+	/*0x06*/ char *name1; // "dataDyne Central"
+	/*0x08*/ char *name2; // " - Defection"
+	/*0x0a*/ char *name3; // "dataDyne Defection"
 };
 
 struct stagemusic {

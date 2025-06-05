@@ -22,6 +22,8 @@
 #ifndef PLATFORM_N64
 #include <math.h>
 #include "video.h"
+#include <libintl.h>
+#define _(String) gettext (String)
 
 #define SIGHT_COLOUR ((PLAYER_EXTCFG().crosshairhealth >= CROSSHAIR_HEALTH_ON_GREEN) ? sightGetCrosshairHealthColor(g_Vars.currentplayer->bondhealth, g_Vars.currentplayer->prop->chr->cshield * 0.125f) : PLAYER_EXTCFG().crosshaircolour)
 #define SIGHT_SCALE PLAYER_EXTCFG().crosshairsize
@@ -413,7 +415,7 @@ s32 sightCalculateBoxBound(s32 targetx, s32 viewleft, s32 timeelapsed, s32 timee
  * 6 to label it as "5"
  * 7 or above to treat textid as a proper language text ID.
  */
-Gfx *sightDrawTargetBox(Gfx *gdl, struct trackedprop *trackedprop, s32 textid, s32 time)
+Gfx *sightDrawTargetBox(Gfx *gdl, struct trackedprop *trackedprop, char *textid, s32 time)
 {
 	s32 viewleft = viGetViewLeft() / g_ScaleX;
 	s32 viewtop = viGetViewTop();
@@ -476,7 +478,7 @@ Gfx *sightDrawTargetBox(Gfx *gdl, struct trackedprop *trackedprop, s32 textid, s
 
 		gdl = text0f153838(gdl);
 
-		if (textid != 0 && textonscreen) {
+		if (textid != 0 && textonscreen) { // TODO - Lang: Fix it
 			s32 x = boxright + 3;
 			s32 y = boxtop + 3;
 
@@ -484,15 +486,15 @@ Gfx *sightDrawTargetBox(Gfx *gdl, struct trackedprop *trackedprop, s32 textid, s
 				char label[] = {'1', '\n', '\0'};
 
 				// textid 1 writes '0'
-				label[0] = textid + 0x2f;
+				//label[0] = textid + 0x2f;
 
 				gdl = textRender(gdl, &x, &y, label, g_CharsNumeric, g_FontNumeric, 0x00ff00a0, 0x000000a0, viGetWidth(), viGetHeight(), 0, 0);
 			} else {
-				char *text = langGet(textid);
+				//char *text = langGet(textid);
 #if VERSION >= VERSION_JPN_FINAL
 				gdl = func0f1574d0jf(gdl, &x, &y, text, g_CharsHandelGothicXs, g_FontHandelGothicXs, 0x00ff00a0, 0x000000a0, viGetWidth(), viGetHeight(), 0, 0);
 #else
-				gdl = textRender(gdl, &x, &y, text, g_CharsHandelGothicXs, g_FontHandelGothicXs, 0x00ff00a0, 0x000000a0, viGetWidth(), viGetHeight(), 0, 0);
+				gdl = textRender(gdl, &x, &y, textid, g_CharsHandelGothicXs, g_FontHandelGothicXs, 0x00ff00a0, 0x000000a0, viGetWidth(), viGetHeight(), 0, 0);
 #endif
 			}
 		}
@@ -790,7 +792,7 @@ Gfx *sightDrawDefault(Gfx *gdl, bool sighton, f32 crossx, f32 crossy)
 						g_CharsHandelGothicXs, g_FontHandelGothicXs, 0x00ff00a0, 0x000000a0,
 						viGetWidth(), viGetHeight(), 0, 0);
 #else
-				gdl = textRender(gdl, &textx, &texty, langGet(L_MISC_439),
+				gdl = textRender(gdl, &textx, &texty, _("Identify\n"),
 						g_CharsHandelGothicXs, g_FontHandelGothicXs, 0x00ff00a0, 0x000000a0,
 						viGetWidth(), viGetHeight(), 0, 0);
 #endif
@@ -798,8 +800,8 @@ Gfx *sightDrawDefault(Gfx *gdl, bool sighton, f32 crossx, f32 crossy)
 
 			gdl = sightDrawAimer(gdl, x, y, radius, cornergap, colour);
 
-			if (g_Vars.currentplayer->lookingatprop.prop) {
-				gdl = sightDrawTargetBox(gdl, &g_Vars.currentplayer->lookingatprop, 1, g_Vars.currentplayer->targetset[0]);
+			if (g_Vars.currentplayer->lookingatprop.prop) { // TODO - Lang: Fix it
+				gdl = sightDrawTargetBox(gdl, &g_Vars.currentplayer->lookingatprop, "1", g_Vars.currentplayer->targetset[0]);
 			}
 		}
 		break;
@@ -835,7 +837,7 @@ Gfx *sightDrawDefault(Gfx *gdl, bool sighton, f32 crossx, f32 crossy)
 				if (g_Vars.currentplayer->sighttracktype == SIGHTTRACKTYPE_THREATDETECTOR) {
 					struct defaultobj *obj = trackedprop->prop->obj;
 					struct weaponobj *weapon;
-					u32 textid = 0;
+					char *textid = "";
 
 					// @dangerous: There is no check here to see if the prop
 					// type is obj. However, it's likely that only objs can be
@@ -843,7 +845,7 @@ Gfx *sightDrawDefault(Gfx *gdl, bool sighton, f32 crossx, f32 crossy)
 					// probably OK.
 					if (obj && obj->type == OBJTYPE_AUTOGUN
 							&& (obj->flags2 & (OBJFLAG2_AICANNOTUSE | OBJFLAG2_AUTOGUN_MALFUNCTIONING1)) == 0) {
-						textid = L_GUN_215; // "AUTOGUN"
+						textid = _("AUTOGUN\n"); // "AUTOGUN"
 					}
 
 					weapon = trackedprop->prop->weapon;
@@ -852,33 +854,33 @@ Gfx *sightDrawDefault(Gfx *gdl, bool sighton, f32 crossx, f32 crossy)
 						switch (weapon->weaponnum) {
 						case WEAPON_GRENADE:
 							// "PROXY" and "TIMED"
-							textid = (weapon->gunfunc == FUNC_SECONDARY) ? L_GUN_212 : L_GUN_213;
+							textid = (weapon->gunfunc == FUNC_SECONDARY) ? _("PROXY\n") : _("TIMED\n");
 							break;
 						case WEAPON_NBOMB:
 							// "PROXY" and "IMPACT"
-							textid = (weapon->gunfunc == FUNC_SECONDARY) ? L_GUN_212 : L_GUN_216;
+							textid = (weapon->gunfunc == FUNC_SECONDARY) ? _("PROXY\n") : _("IMPACT\n");
 							break;
 						case WEAPON_TIMEDMINE:
-							textid = L_GUN_213; // "TIMED"
+							textid = _("TIMED\n"); // "TIMED"
 							break;
 						case WEAPON_PROXIMITYMINE:
-							textid = L_GUN_212; // "PROXY"
+							textid = _("PROXY\n"); // "PROXY"
 							break;
 						case WEAPON_REMOTEMINE:
-							textid = L_GUN_214; // "REMOTE"
+							textid = _("REMOTE\n"); // "REMOTE"
 							break;
 						case WEAPON_DRAGON:
 							if (weapon->gunfunc == FUNC_SECONDARY) {
-								textid = L_GUN_212; // "PROXY"
+								textid = _("PROXY\n"); // "PROXY"
 							}
 							break;
 						}
 					}
 
 					gdl = sightDrawTargetBox(gdl, trackedprop, textid, g_Vars.currentplayer->targetset[i]);
-				} else {
+				} else { // TODO - Lang: Fix it
 					// CMP150-tracked prop
-					gdl = sightDrawTargetBox(gdl, trackedprop, i + 2, g_Vars.currentplayer->targetset[i]);
+					//gdl = sightDrawTargetBox(gdl, trackedprop, i + 2, g_Vars.currentplayer->targetset[i]);
 				}
 			}
 		}

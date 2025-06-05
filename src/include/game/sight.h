@@ -11,7 +11,7 @@ s32 sightFindFreeTargetIndex(s32 max);
 void func0f0d7364(void);
 void sightTick(bool sighton);
 s32 sightCalculateBoxBound(s32 arg0, s32 arg1, s32 arg2, s32 arg3);
-Gfx *sightDrawTargetBox(Gfx *gdl, struct trackedprop *trackedprop, s32 textid, s32 time);
+Gfx *sightDrawTargetBox(Gfx *gdl, struct trackedprop *trackedprop, char *textid, s32 time);
 Gfx *sightDrawAimer(Gfx *gdl, s32 x, s32 y, s32 radius, s32 cornergap, u32 colour);
 Gfx *sightDrawDelayedAimer(Gfx *gdl, s32 x, s32 y, s32 radius, s32 cornergap, u32 colour);
 Gfx *sightDrawDefault(Gfx *gdl, bool sighton, f32 crossx, f32 crossy);

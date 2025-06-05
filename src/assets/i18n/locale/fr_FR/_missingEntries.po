@@ -21,3 +21,12 @@ msgstr "Pas de joueurs sur le radar\n"
 
 msgid "%shas the %s%s"
 msgstr "%shas the %s%s"
+
+msgid "Are you sure?\n\nThis will overwrite any progress\nsaved to the current profile.\n"
+msgstr "Are you sure?\n\nThis will overwrite any progress\nsaved to the current profile.\n"
+
+msgid "Unlocks all cheats, weapons, missions, challenges and combat simulator items.\n"
+msgstr "Unlocks all cheats, weapons, missions, challenges and combat simulator items.\n"
+
+msgid "Unlock Everything\n"
+msgstr "Unlock Everything\n"
