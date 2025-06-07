@@ -88,6 +88,581 @@ msgstr "Overwrite\n"
 msgid "Name Conflicts\n"
 msgstr "Name Conflicts\n"
 
+#: port/src/optionsmenu.c:37
+msgid "Player 1\n"
+msgstr "Player 1\n"
+
+#: port/src/optionsmenu.c:45
+msgid "Player 2\n"
+msgstr "Player 2\n"
+
+#: port/src/optionsmenu.c:53
+msgid "Player 3\n"
+msgstr "Player 3\n"
+
+#: port/src/optionsmenu.c:61
+msgid "Player 4\n"
+msgstr "Player 4\n"
+
+#: port/src/optionsmenu.c:77
+#: port/src/optionsmenu.c:381
+#: port/src/optionsmenu.c:485
+#: port/src/optionsmenu.c:680
+#: port/src/optionsmenu.c:1161
+#: port/src/optionsmenu.c:1211
+#: port/src/optionsmenu.c:1481
+#: port/src/optionsmenu.c:1566
+#: port/src/optionsmenu.c:1733
+#: port/src/optionsmenu.c:1918
+msgid "Back\n"
+msgstr "Back\n"
+
+#: port/src/optionsmenu.c:86
+msgid "Select Player"
+msgstr "Select Player"
+
+#: port/src/optionsmenu.c:133
+msgid "Always Off"
+msgstr "Always Off"
+
+#: port/src/optionsmenu.c:134
+msgid "Always On"
+msgstr "Always On"
+
+#: port/src/optionsmenu.c:135
+msgid "Auto"
+msgstr "Auto"
+
+#: port/src/optionsmenu.c:293
+msgid "Mouse Enabled"
+msgstr "Mouse Enabled"
+
+#: port/src/optionsmenu.c:301
+msgid "Mouse Aim Lock"
+msgstr "Mouse Aim Lock"
+
+#: port/src/optionsmenu.c:309
+msgid "Mouse Lock Mode"
+msgstr "Mouse Lock Mode"
+
+#: port/src/optionsmenu.c:317
+msgid "Mouse Menu Navigation"
+msgstr "Mouse Menu Navigation"
+
+#: port/src/optionsmenu.c:333
+msgid "Mouse Speed X"
+msgstr "Mouse Speed X"
+
+#: port/src/optionsmenu.c:341
+msgid "Mouse Speed Y"
+msgstr "Mouse Speed Y"
+
+#: port/src/optionsmenu.c:349
+msgid "Crosshair Speed X"
+msgstr "Crosshair Speed X"
+
+#: port/src/optionsmenu.c:357
+msgid "Crosshair Speed Y"
+msgstr "Crosshair Speed Y"
+
+#: port/src/optionsmenu.c:365
+msgid "Radial Menu Speed"
+msgstr "Radial Menu Speed"
+
+#: port/src/optionsmenu.c:390
+msgid "Extended Mouse Options"
+msgstr "Extended Mouse Options"
+
+#: port/src/optionsmenu.c:405
+msgid "LStick Scale X"
+msgstr "LStick Scale X"
+
+#: port/src/optionsmenu.c:413
+msgid "LStick Scale Y"
+msgstr "LStick Scale Y"
+
+#: port/src/optionsmenu.c:421
+msgid "RStick Scale X"
+msgstr "RStick Scale X"
+
+#: port/src/optionsmenu.c:429
+msgid "RStick Scale Y"
+msgstr "RStick Scale Y"
+
+#: port/src/optionsmenu.c:445
+msgid "LStick Deadzone X"
+msgstr "LStick Deadzone X"
+
+#: port/src/optionsmenu.c:453
+msgid "LStick Deadzone Y"
+msgstr "LStick Deadzone Y"
+
+#: port/src/optionsmenu.c:461
+msgid "RStick Deadzone X"
+msgstr "RStick Deadzone X"
+
+#: port/src/optionsmenu.c:469
+msgid "RStick Deadzone Y"
+msgstr "RStick Deadzone Y"
+
+#: port/src/optionsmenu.c:530
+msgid "Analog Stick Settings"
+msgstr "Analog Stick Settings"
+
+#: port/src/optionsmenu.c:632
+msgid "Controller"
+msgstr "Controller"
+
+#: port/src/optionsmenu.c:640
+msgid "Analog Movement"
+msgstr "Analog Movement"
+
+#: port/src/optionsmenu.c:648
+msgid "Swap Sticks"
+msgstr "Swap Sticks"
+
+#: port/src/optionsmenu.c:656
+msgid "Stick Settings...\n"
+msgstr "Stick Settings...\n"
+
+#: port/src/optionsmenu.c:664
+msgid "Vibration"
+msgstr "Vibration"
+
+#: port/src/optionsmenu.c:687
+msgid "Player 1 Controller Options"
+msgstr "Player 1 Controller Options"
+
+#: port/src/optionsmenu.c:713
+msgid "Borderless"
+msgstr "Borderless"
+
+#: port/src/optionsmenu.c:714
+msgid "Exclusive"
+msgstr "Exclusive"
+
+#: port/src/optionsmenu.c:750
+msgid "Adaptive"
+msgstr "Adaptive"
+
+#: port/src/optionsmenu.c:751
+#: port/src/optionsmenu.c:801
+#: port/src/optionsmenu.c:1399
+msgid "Off"
+msgstr "Off"
+
+#: port/src/optionsmenu.c:752
+msgid "On"
+msgstr "On"
+
+#: port/src/optionsmenu.c:802
+msgid "2x (MSAA)"
+msgstr "2x (MSAA)"
+
+#: port/src/optionsmenu.c:803
+msgid "4x (MSAA)"
+msgstr "4x (MSAA)"
+
+#: port/src/optionsmenu.c:804
+msgid "8x (MSAA)"
+msgstr "8x (MSAA)"
+
+#: port/src/optionsmenu.c:805
+msgid "16x (MSAA)"
+msgstr "16x (MSAA)"
+
+#: port/src/optionsmenu.c:870
+msgid "Nearest"
+msgstr "Nearest"
+
+#: port/src/optionsmenu.c:871
+msgid "Bilinear"
+msgstr "Bilinear"
+
+#: port/src/optionsmenu.c:872
+msgid "Three Point"
+msgstr "Three Point"
+
+#: port/src/optionsmenu.c:959
+msgid "None"
+msgstr "None"
+
+#: port/src/optionsmenu.c:960
+msgid "4:3"
+msgstr "4:3"
+
+#: port/src/optionsmenu.c:961
+msgid "Wide"
+msgstr "Wide"
+
+#: port/src/optionsmenu.c:1009
+msgid "Full Screen"
+msgstr "Full Screen"
+
+#: port/src/optionsmenu.c:1017
+msgid "Full Screen Mode"
+msgstr "Full Screen Mode"
+
+#: port/src/optionsmenu.c:1025
+msgid "Resolution"
+msgstr "Resolution"
+
+#: port/src/optionsmenu.c:1033
+msgid "Center Window"
+msgstr "Center Window"
+
+#: port/src/optionsmenu.c:1041
+msgid "Anti-aliasing"
+msgstr "Anti-aliasing"
+
+#: port/src/optionsmenu.c:1057
+msgid "Vsync"
+msgstr "Vsync"
+
+#: port/src/optionsmenu.c:1065
+msgid "Framerate Limit"
+msgstr "Framerate Limit"
+
+#: port/src/optionsmenu.c:1073
+msgid "Uncap Tickrate"
+msgstr "Uncap Tickrate"
+
+#: port/src/optionsmenu.c:1081
+msgid "Display FPS"
+msgstr "Display FPS"
+
+#: port/src/optionsmenu.c:1097
+msgid "Texture Filtering"
+msgstr "Texture Filtering"
+
+#: port/src/optionsmenu.c:1105
+msgid "GUI Texture Filtering"
+msgstr "GUI Texture Filtering"
+
+#: port/src/optionsmenu.c:1113
+msgid "Detail Textures"
+msgstr "Detail Textures"
+
+#: port/src/optionsmenu.c:1129
+msgid "HUD Centering"
+msgstr "HUD Centering"
+
+#: port/src/optionsmenu.c:1137
+msgid "GE64-style Muzzle Flashes"
+msgstr "GE64-style Muzzle Flashes"
+
+#: port/src/optionsmenu.c:1145
+msgid "Explosion Shake"
+msgstr "Explosion Shake"
+
+#: port/src/optionsmenu.c:1170
+msgid "Extended Video Options"
+msgstr "Extended Video Options"
+
+#: port/src/optionsmenu.c:1195
+msgid "Disable MP Death Music"
+msgstr "Disable MP Death Music"
+
+#: port/src/optionsmenu.c:1220
+msgid "Extended Audio Options"
+msgstr "Extended Audio Options"
+
+#: port/src/optionsmenu.c:1245
+msgid "Hold"
+msgstr "Hold"
+
+#: port/src/optionsmenu.c:1246
+msgid "Analog"
+msgstr "Analog"
+
+#: port/src/optionsmenu.c:1247
+msgid "Toggle"
+msgstr "Toggle"
+
+#: port/src/optionsmenu.c:1248
+msgid "Toggle + Analog"
+msgstr "Toggle + Analog"
+
+#: port/src/optionsmenu.c:1400
+msgid "On (Green)"
+msgstr "On (Green)"
+
+#: port/src/optionsmenu.c:1401
+msgid "On (White)"
+msgstr "On (White)"
+
+#: port/src/optionsmenu.c:1425
+msgid "Red"
+msgstr "Red"
+
+#: port/src/optionsmenu.c:1433
+msgid "Green"
+msgstr "Green"
+
+#: port/src/optionsmenu.c:1441
+msgid "Blue"
+msgstr "Blue"
+
+#: port/src/optionsmenu.c:1449
+msgid "Alpha"
+msgstr "Alpha"
+
+#: port/src/optionsmenu.c:1490
+msgid "Crosshair Colour"
+msgstr "Crosshair Colour"
+
+#: port/src/optionsmenu.c:1502
+msgid "Crouch Mode"
+msgstr "Crouch Mode"
+
+#: port/src/optionsmenu.c:1510
+msgid "Vert FOV"
+msgstr "Vert FOV"
+
+#: port/src/optionsmenu.c:1518
+msgid "Crosshair Sway"
+msgstr "Crosshair Sway"
+
+#: port/src/optionsmenu.c:1526
+msgid "Crosshair Size"
+msgstr "Crosshair Size"
+
+#: port/src/optionsmenu.c:1534
+msgid "Crosshair Colour\n"
+msgstr "Crosshair Colour\n"
+
+#: port/src/optionsmenu.c:1542
+msgid "Crosshair Colour by Health"
+msgstr "Crosshair Colour by Health"
+
+#: port/src/optionsmenu.c:1550
+msgid "Use Key Reloads"
+msgstr "Use Key Reloads"
+
+#: port/src/optionsmenu.c:1590
+msgid "\n"
+msgstr "\n"
+
+#: port/src/optionsmenu.c:1606
+msgid "Press new key or button...\n"
+msgstr "Press new key or button...\n"
+
+#: port/src/optionsmenu.c:1614
+msgid "ESC to cancel, DEL to remove binding\n"
+msgstr "ESC to cancel, DEL to remove binding\n"
+
+#: port/src/optionsmenu.c:1623
+msgid "Bind"
+msgstr "Bind"
+
+#: port/src/optionsmenu.c:1637
+msgid "Fire [ZT]\n"
+msgstr "Fire [ZT]\n"
+
+#: port/src/optionsmenu.c:1637
+msgid "N64 Z Trigger\n"
+msgstr "N64 Z Trigger\n"
+
+#: port/src/optionsmenu.c:1638
+msgid "Fire Mode [LT]\n"
+msgstr "Fire Mode [LT]\n"
+
+#: port/src/optionsmenu.c:1638
+msgid "N64 L Trigger\n"
+msgstr "N64 L Trigger\n"
+
+#: port/src/optionsmenu.c:1639
+msgid "Aim Mode [RT]\n"
+msgstr "Aim Mode [RT]\n"
+
+#: port/src/optionsmenu.c:1639
+msgid "N64 R Trigger\n"
+msgstr "N64 R Trigger\n"
+
+#: port/src/optionsmenu.c:1640
+msgid "Use / Accept [A]\n"
+msgstr "Use / Accept [A]\n"
+
+#: port/src/optionsmenu.c:1640
+msgid "N64 A Button\n"
+msgstr "N64 A Button\n"
+
+#: port/src/optionsmenu.c:1641
+msgid "Use / Cancel [B]\n"
+msgstr "Use / Cancel [B]\n"
+
+#: port/src/optionsmenu.c:1641
+msgid "N64 B Button\n"
+msgstr "N64 B Button\n"
+
+#: port/src/optionsmenu.c:1642
+msgid "Pause Menu [ST]\n"
+msgstr "Pause Menu [ST]\n"
+
+#: port/src/optionsmenu.c:1642
+msgid "N64 Start\n"
+msgstr "N64 Start\n"
+
+#: port/src/optionsmenu.c:1643
+msgid "D-Pad Up [DU]\n"
+msgstr "D-Pad Up [DU]\n"
+
+#: port/src/optionsmenu.c:1643
+msgid "N64 D-Pad Up\n"
+msgstr "N64 D-Pad Up\n"
+
+#: port/src/optionsmenu.c:1644
+msgid "D-Pad Right [DR]\n"
+msgstr "D-Pad Right [DR]\n"
+
+#: port/src/optionsmenu.c:1644
+msgid "N64 D-Pad Right\n"
+msgstr "N64 D-Pad Right\n"
+
+#: port/src/optionsmenu.c:1645
+msgid "Prev Weapon [DL]\n"
+msgstr "Prev Weapon [DL]\n"
+
+#: port/src/optionsmenu.c:1645
+msgid "N64 D-Pad Left\n"
+msgstr "N64 D-Pad Left\n"
+
+#: port/src/optionsmenu.c:1646
+msgid "Radial Menu [DD]\n"
+msgstr "Radial Menu [DD]\n"
+
+#: port/src/optionsmenu.c:1646
+msgid "N64 D-Pad Down\n"
+msgstr "N64 D-Pad Down\n"
+
+#: port/src/optionsmenu.c:1647
+msgid "Forward [CU]\n"
+msgstr "Forward [CU]\n"
+
+#: port/src/optionsmenu.c:1647
+msgid "N64 C-Up\n"
+msgstr "N64 C-Up\n"
+
+#: port/src/optionsmenu.c:1648
+msgid "Backward [CD]\n"
+msgstr "Backward [CD]\n"
+
+#: port/src/optionsmenu.c:1648
+msgid "N64 C-Down\n"
+msgstr "N64 C-Down\n"
+
+#: port/src/optionsmenu.c:1649
+msgid "Strafe Right [CR]\n"
+msgstr "Strafe Right [CR]\n"
+
+#: port/src/optionsmenu.c:1649
+msgid "N64 C-Right\n"
+msgstr "N64 C-Right\n"
+
+#: port/src/optionsmenu.c:1650
+msgid "Strafe Left [CL]\n"
+msgstr "Strafe Left [CL]\n"
+
+#: port/src/optionsmenu.c:1650
+msgid "N64 C-Left\n"
+msgstr "N64 C-Left\n"
+
+#: port/src/optionsmenu.c:1651
+msgid "Reload [X]\n"
+msgstr "Reload [X]\n"
+
+#: port/src/optionsmenu.c:1651
+msgid "N64 Ext X\n"
+msgstr "N64 Ext X\n"
+
+#: port/src/optionsmenu.c:1652
+msgid "Next Weapon [Y]\n"
+msgstr "Next Weapon [Y]\n"
+
+#: port/src/optionsmenu.c:1652
+msgid "N64 Ext Y\n"
+msgstr "N64 Ext Y\n"
+
+#: port/src/optionsmenu.c:1653
+msgid "Cycle Crouch [+]\n"
+msgstr "Cycle Crouch [+]\n"
+
+#: port/src/optionsmenu.c:1653
+msgid "N64 Ext 8000\n"
+msgstr "N64 Ext 8000\n"
+
+#: port/src/optionsmenu.c:1654
+msgid "Half Crouch [+]\n"
+msgstr "Half Crouch [+]\n"
+
+#: port/src/optionsmenu.c:1654
+msgid "N64 Ext 4000\n"
+msgstr "N64 Ext 4000\n"
+
+#: port/src/optionsmenu.c:1655
+msgid "Full Crouch [+]\n"
+msgstr "Full Crouch [+]\n"
+
+#: port/src/optionsmenu.c:1655
+msgid "N64 Ext 2000\n"
+msgstr "N64 Ext 2000\n"
+
+#: port/src/optionsmenu.c:1656
+msgid "UI Accept [+]\n"
+msgstr "UI Accept [+]\n"
+
+#: port/src/optionsmenu.c:1656
+msgid "EXT UI Accept\n"
+msgstr "EXT UI Accept\n"
+
+#: port/src/optionsmenu.c:1657
+msgid "UI Cancel [+]\n"
+msgstr "UI Cancel [+]\n"
+
+#: port/src/optionsmenu.c:1657
+msgid "EXT UI Cancel\n"
+msgstr "EXT UI Cancel\n"
+
+#: port/src/optionsmenu.c:1709
+msgid "Reset to PC Defaults\n"
+msgstr "Reset to PC Defaults\n"
+
+#: port/src/optionsmenu.c:1717
+msgid "Reset to N64 Defaults\n"
+msgstr "Reset to N64 Defaults\n"
+
+#: port/src/optionsmenu.c:1820
+msgid "Player 1 Bindings"
+msgstr "Player 1 Bindings"
+
+#: port/src/optionsmenu.c:1862
+msgid "Video\n"
+msgstr "Video\n"
+
+#: port/src/optionsmenu.c:1870
+msgid "Audio\n"
+msgstr "Audio\n"
+
+#: port/src/optionsmenu.c:1878
+msgid "Mouse\n"
+msgstr "Mouse\n"
+
+#: port/src/optionsmenu.c:1886
+msgid "Controller\n"
+msgstr "Controller\n"
+
+#: port/src/optionsmenu.c:1894
+msgid "Game\n"
+msgstr "Game\n"
+
+#: port/src/optionsmenu.c:1902
+msgid "Key Bindings\n"
+msgstr "Key Bindings\n"
+
+#: port/src/optionsmenu.c:1927
+msgid "Extended Options"
+msgstr "Extended Options"
+
 #. "M_TITLE_151"
 msgid "testing (noe)\n"
 msgstr "testing (noe)\n"

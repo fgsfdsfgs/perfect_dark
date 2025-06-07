@@ -2923,7 +2923,7 @@ struct gunviscmd {
 
 struct weaponfunc {
 	/*0x00*/ s32 type;
-	/*0x04*/ u16 name;
+	/*0x04*/ char *name;
 	/*0x06*/ u8 unk06; // not used
 	/*0x07*/ s8 ammoindex; // -1 = no ammo, 0 or 1 = index into weapon->ammos[]
 	/*0x08*/ struct noisesettings *noisesettings;
@@ -3053,8 +3053,8 @@ struct weapon {
 	/*0x40*/ struct modelpartvisibility *partvisibility;
 	/*0x44*/ char *shortname;
 	/*0x46*/ char *name;
-	/*0x48*/ u16 manufacturer;
-	/*0x4a*/ u16 description;
+	/*0x48*/ char *manufacturer;
+	/*0x4a*/ char *description;
 	/*0x4c*/ u32 flags;
 };
 

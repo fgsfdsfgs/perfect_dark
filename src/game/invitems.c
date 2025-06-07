@@ -5,6 +5,10 @@
 #include "stagesetup.h"
 #include "data.h"
 #include "types.h"
+#ifndef PLATFORM_N64
+#include <libintl.h>
+#define gettext_noop(String) String
+#endif
 
 /**
  * Noise settings
@@ -149,7 +153,7 @@ struct invaimsettings invaimsettings_heavy = {
 
 struct weaponfunc_shootsingle invfunc_00011160 = {
 	INVENTORYFUNCTYPE_SHOOT_SINGLE,
-	L_GUN_085, // name
+	gettext_noop("Single Shot\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_default,
@@ -196,10 +200,10 @@ struct weapon invitem_hammer = {
 	1, // sway
 	NULL, // gunviscmds
 	NULL, // part visibility
-	L_GUN_000, // short name
-	L_GUN_000, // name
-	L_GUN_000, // manufacturer
-	L_GUN_000, // description
+	gettext_noop("\n"), // short name
+	gettext_noop("\n"), // name
+	gettext_noop("\n"), // manufacturer
+	gettext_noop("\n"), // description
 	WEAPONFLAG_ONEHANDED | WEAPONFLAG_AICANUSE | WEAPONFLAG_00000040 | WEAPONFLAG_TRACKTIMEUSED | WEAPONFLAG_DUALWIELD,
 };
 
@@ -222,10 +226,10 @@ struct weapon invitem_nothing = {
 	1, // sway
 	NULL, // gunviscmds
 	NULL, // part visibility
-	L_GUN_000, // short name
-	L_GUN_000, // name
-	L_GUN_000, // manufacturer
-	L_GUN_000, // description
+	gettext_noop("\n"), // short name
+	gettext_noop("\n"), // name
+	gettext_noop("\n"), // manufacturer
+	gettext_noop("\n"), // description
 	WEAPONFLAG_DUALWIELD,
 };
 
@@ -264,7 +268,7 @@ struct guncmd invanim_punch[] = {
 
 struct weaponfunc_melee invfunc_unarmed_punch = {
 	INVENTORYFUNCTYPE_MELEE,
-	L_GUN_100, // name
+	gettext_noop("Punch\n"), // name
 	0, // unused
 	-1, // ammoindex
 	&invnoisesettings_silent,
@@ -288,7 +292,7 @@ struct weaponfunc_melee invfunc_unarmed_punch = {
 
 struct weaponfunc_melee invfunc_unarmed_disarm = {
 	INVENTORYFUNCTYPE_MELEE,
-	L_GUN_101, // name
+	gettext_noop("Disarm\n"), // name
 	0, // unused
 	-1, // ammoindex
 	&invnoisesettings_silent,
@@ -328,10 +332,10 @@ struct weapon invitem_unarmed = {
 	1, // sway
 	NULL, // gunviscmds
 	NULL, // part visibility
-	L_GUN_006, // short name
-	L_GUN_006, // name
-	L_GUN_000, // manufacturer
-	L_GUN_155, // description
+	gettext_noop("Unarmed\n"), // short name
+	gettext_noop("Unarmed\n"), // name
+	gettext_noop("\n"), // manufacturer
+	gettext_noop(""), // description
 	WEAPONFLAG_ONEHANDED | WEAPONFLAG_AICANUSE | WEAPONFLAG_00000040 | WEAPONFLAG_TRACKTIMEUSED | WEAPONFLAG_00002000 | WEAPONFLAG_HIDEMENUMODEL | WEAPONFLAG_UNDROPPABLE,
 };
 
@@ -484,7 +488,7 @@ struct guncmd invanim_falcon2_shoot[] = {
 
 struct weaponfunc_shootsingle invfunc_falcon2_singleshot = {
 	INVENTORYFUNCTYPE_SHOOT_SINGLE,
-	L_GUN_085, // name
+	gettext_noop("Single Shot\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_default,
@@ -506,7 +510,7 @@ struct weaponfunc_shootsingle invfunc_falcon2_singleshot = {
 
 struct weaponfunc_shootsingle invfunc_falcon2silenced_singleshot = {
 	INVENTORYFUNCTYPE_SHOOT_SINGLE,
-	L_GUN_085, // name
+	gettext_noop("Single Shot\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_silenced,
@@ -528,7 +532,7 @@ struct weaponfunc_shootsingle invfunc_falcon2silenced_singleshot = {
 
 struct weaponfunc_melee invfunc_falcon2_pistolwhip = {
 	INVENTORYFUNCTYPE_MELEE,
-	L_GUN_094, // name
+	gettext_noop("Pistol Whip\n"), // name
 	0, // unused
 	-1, // ammoindex
 	&invnoisesettings_silent,
@@ -585,13 +589,13 @@ struct weapon invitem_falcon2 = {
 	gunviscmds_falcon2, // gunviscmds
 	invpartvisibility_falcon2, // part visibility
 #if VERSION == VERSION_JPN_FINAL
-	L_GUN_257, // short name
+	gettext_noop("L_GUN_257"), // short name
 #else
-	L_GUN_007, // short name
+	gettext_noop("Falcon 2\n"), // short name
 #endif
-	L_GUN_007, // name
-	L_GUN_150, // manufacturer
-	L_GUN_156, // description
+	gettext_noop("Falcon 2\n"), // name
+	gettext_noop("Carrington\n"), // manufacturer
+	gettext_noop(""), // description
 	WEAPONFLAG_00000004 | WEAPONFLAG_ONEHANDED | WEAPONFLAG_AICANUSE | WEAPONFLAG_DUALFLIP | WEAPONFLAG_00000040 | WEAPONFLAG_TRACKTIMEUSED | WEAPONFLAG_00000400 | WEAPONFLAG_DUALWIELD | WEAPONFLAG_00002000 | WEAPONFLAG_00008000 | WEAPONFLAG_HASHANDS | WEAPONFLAG_GANGSTA,
 };
 
@@ -613,10 +617,10 @@ struct weapon invitem_falcon2scope = {
 	1, // sway
 	gunviscmds_falcon2scope, // gunviscmds
 	invpartvisibility_falcon2scope, // part visibility
-	L_GUN_077, // short name
-	L_GUN_009, // name
-	L_GUN_150, // manufacturer
-	L_GUN_158, // description
+	gettext_noop("Falcon 2 (s)\n"), // short name
+	gettext_noop("Falcon 2 (scope)\n"), // name
+	gettext_noop("Carrington\n"), // manufacturer
+	gettext_noop(""), // description
 	WEAPONFLAG_00000004 | WEAPONFLAG_ONEHANDED | WEAPONFLAG_AICANUSE | WEAPONFLAG_DUALFLIP | WEAPONFLAG_00000040 | WEAPONFLAG_TRACKTIMEUSED | WEAPONFLAG_00000400 | WEAPONFLAG_DUALWIELD | WEAPONFLAG_00002000 | WEAPONFLAG_00008000 | WEAPONFLAG_HASHANDS,
 };
 
@@ -638,10 +642,10 @@ struct weapon invitem_falcon2silencer = {
 	1, // sway
 	gunviscmds_falcon2silencer, // gunviscmds
 	invpartvisibility_falcon2silencer, // part visibility
-	L_GUN_078, // short name
-	L_GUN_008, // name
-	L_GUN_150, // manufacturer
-	L_GUN_157, // description
+	gettext_noop("Falcon 2 (+)\n"), // short name
+	gettext_noop("Falcon 2 (silencer)\n"), // name
+	gettext_noop("Carrington\n"), // manufacturer
+	gettext_noop(""), // description
 	WEAPONFLAG_00000004 | WEAPONFLAG_ONEHANDED | WEAPONFLAG_AICANUSE | WEAPONFLAG_DUALFLIP | WEAPONFLAG_00000040 | WEAPONFLAG_TRACKTIMEUSED | WEAPONFLAG_00000400 | WEAPONFLAG_DUALWIELD | WEAPONFLAG_00002000 | WEAPONFLAG_00008000 | WEAPONFLAG_HASHANDS | WEAPONFLAG_GANGSTA,
 };
 
@@ -726,7 +730,7 @@ struct invaimsettings invaimsettings_magsec4 = {
 
 struct weaponfunc_shootsingle invfunc_magsec_singleshot = {
 	INVENTORYFUNCTYPE_SHOOT_SINGLE,
-	L_GUN_085, // name
+	gettext_noop("Single Shot\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_default,
@@ -748,7 +752,7 @@ struct weaponfunc_shootsingle invfunc_magsec_singleshot = {
 
 struct weaponfunc_shootsingle invfunc_magsec_burst = {
 	INVENTORYFUNCTYPE_SHOOT_SINGLE,
-	L_GUN_128, // name
+	gettext_noop("3-Round Burst\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_default,
@@ -794,10 +798,10 @@ struct weapon invitem_magsec = {
 	1, // sway
 	gunviscmds_magsec, // gunviscmds
 	invpartvisibility_magsec, // part visibility
-	L_GUN_010, // short name
-	L_GUN_010, // name
-	L_GUN_151, // manufacturer
-	L_GUN_159, // description
+	gettext_noop("MagSec 4\n"), // short name
+	gettext_noop("MagSec 4\n"), // name
+	gettext_noop("Chesluk Industries\n"), // manufacturer
+	gettext_noop(""), // description
 	WEAPONFLAG_00000004 | WEAPONFLAG_ONEHANDED | WEAPONFLAG_AICANUSE | WEAPONFLAG_DUALFLIP | WEAPONFLAG_00000040 | WEAPONFLAG_TRACKTIMEUSED | WEAPONFLAG_00000400 | WEAPONFLAG_DUALWIELD | WEAPONFLAG_00002000 | WEAPONFLAG_00004000 | WEAPONFLAG_HASHANDS | WEAPONFLAG_GANGSTA,
 };
 
@@ -893,7 +897,7 @@ struct guncmd invanim_dy357_pistolwhip[] = {
 
 struct weaponfunc_shootsingle invfunc_dy357_singleshot = {
 	INVENTORYFUNCTYPE_SHOOT_SINGLE,
-	L_GUN_085, // name
+	gettext_noop("Single Shot\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_loud,
@@ -915,7 +919,7 @@ struct weaponfunc_shootsingle invfunc_dy357_singleshot = {
 
 struct weaponfunc_shootsingle invfunc_dy357lx_singleshot = {
 	INVENTORYFUNCTYPE_SHOOT_SINGLE,
-	L_GUN_085, // name
+	gettext_noop("Single Shot\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_loud,
@@ -937,7 +941,7 @@ struct weaponfunc_shootsingle invfunc_dy357lx_singleshot = {
 
 struct weaponfunc_melee invfunc_dy357_pistolwhip = {
 	INVENTORYFUNCTYPE_MELEE,
-	L_GUN_094, // name
+	gettext_noop("Pistol Whip\n"), // name
 	0, // unused
 	-1, // ammoindex
 	&invnoisesettings_silent,
@@ -985,10 +989,10 @@ struct weapon invitem_dy357 = {
 	1, // sway
 	gunviscmds_magnum, // gunviscmds
 	invpartvisibility_dy357, // part visibility
-	L_GUN_084, // short name
-	L_GUN_012, // name
-	L_GUN_149, // manufacturer
-	L_GUN_161, // description
+	gettext_noop("DY357\n"), // short name
+	gettext_noop("DY357 Magnum\n"), // name
+	gettext_noop("dataDyne\n"), // manufacturer
+	gettext_noop(""), // description
 	WEAPONFLAG_00000004 | WEAPONFLAG_ONEHANDED | WEAPONFLAG_AICANUSE | WEAPONFLAG_DUALFLIP | WEAPONFLAG_00000040 | WEAPONFLAG_TRACKTIMEUSED | WEAPONFLAG_00000400 | WEAPONFLAG_DUALWIELD | WEAPONFLAG_00002000 | WEAPONFLAG_00004000 | WEAPONFLAG_00008000 | WEAPONFLAG_HASHANDS,
 };
 
@@ -1010,10 +1014,10 @@ struct weapon invitem_dy357lx = {
 	1, // sway
 	gunviscmds_magnum, // gunviscmds
 	invpartvisibility_dy357, // part visibility
-	L_GUN_013, // short name
-	L_GUN_013, // name
-	L_GUN_149, // manufacturer
-	L_GUN_162, // description
+	gettext_noop("DY357-LX\n"), // short name
+	gettext_noop("DY357-LX\n"), // name
+	gettext_noop("dataDyne\n"), // manufacturer
+	gettext_noop(""), // description
 	WEAPONFLAG_00000004 | WEAPONFLAG_ONEHANDED | WEAPONFLAG_AICANUSE | WEAPONFLAG_DUALFLIP | WEAPONFLAG_00000040 | WEAPONFLAG_TRACKTIMEUSED | WEAPONFLAG_00000400 | WEAPONFLAG_DUALWIELD | WEAPONFLAG_00002000 | WEAPONFLAG_00004000 | WEAPONFLAG_00008000 | WEAPONFLAG_HASHANDS,
 };
 
@@ -1062,7 +1066,7 @@ struct guncmd invanim_phoenix_shoot[] = {
 
 struct weaponfunc_shootsingle invfunc_phoenix_singleshot = {
 	INVENTORYFUNCTYPE_SHOOT_SINGLE,
-	L_GUN_085, // name
+	gettext_noop("Single Shot\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_default,
@@ -1084,7 +1088,7 @@ struct weaponfunc_shootsingle invfunc_phoenix_singleshot = {
 
 struct weaponfunc_shootsingle invfunc_phoenix_explosiveshells = {
 	INVENTORYFUNCTYPE_SHOOT_SINGLE,
-	L_GUN_095, // name
+	gettext_noop("Explosive Shells\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_default,
@@ -1130,10 +1134,10 @@ struct weapon invitem_phoenix = {
 	1, // sway
 	gunviscmds_phoenix, // gunviscmds
 	invpartvisibility_phoenix, // part visibility
-	L_GUN_014, // short name
-	L_GUN_014, // name
-	L_GUN_153, // manufacturer
-	L_GUN_163, // description
+	gettext_noop("Phoenix\n"), // short name
+	gettext_noop("Phoenix\n"), // name
+	gettext_noop("Maian\n"), // manufacturer
+	gettext_noop(""), // description
 	WEAPONFLAG_00000004 | WEAPONFLAG_ONEHANDED | WEAPONFLAG_AICANUSE | WEAPONFLAG_DUALFLIP | WEAPONFLAG_00000040 | WEAPONFLAG_TRACKTIMEUSED | WEAPONFLAG_00000400 | WEAPONFLAG_DUALWIELD | WEAPONFLAG_00002000 | WEAPONFLAG_00004000 | WEAPONFLAG_00008000 | WEAPONFLAG_HASHANDS | WEAPONFLAG_GANGSTA,
 };
 
@@ -1202,7 +1206,7 @@ struct guncmd invanim_unused_8007c0bc[] = {
 
 struct weaponfunc_shootsingle invfunc_mauler_singleshot = {
 	INVENTORYFUNCTYPE_SHOOT_SINGLE,
-	L_GUN_085, // name
+	gettext_noop("Single Shot\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_loud,
@@ -1224,7 +1228,7 @@ struct weaponfunc_shootsingle invfunc_mauler_singleshot = {
 
 struct weaponfunc_shootsingle invfunc_mauler_chargeshot = {
 	INVENTORYFUNCTYPE_SHOOT_SINGLE,
-	L_GUN_129, // name
+	gettext_noop("Charge-Up Shot\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_loud,
@@ -1270,10 +1274,10 @@ struct weapon invitem_mauler = {
 	1, // sway
 	gunviscmds_mauler, // gunviscmds
 	invpartvisibility_mauler, // part visibility
-	L_GUN_011, // short name
-	L_GUN_011, // name
-	L_GUN_152, // manufacturer
-	L_GUN_160, // description
+	gettext_noop("Mauler\n"), // short name
+	gettext_noop("Mauler\n"), // name
+	gettext_noop("Skedar\n"), // manufacturer
+	gettext_noop(""), // description
 	WEAPONFLAG_ONEHANDED | WEAPONFLAG_AICANUSE | WEAPONFLAG_DUALFLIP | WEAPONFLAG_00000040 | WEAPONFLAG_TRACKTIMEUSED | WEAPONFLAG_00000400 | WEAPONFLAG_DUALWIELD | WEAPONFLAG_00002000 | WEAPONFLAG_00004000 | WEAPONFLAG_HASHANDS,
 };
 
@@ -1357,7 +1361,7 @@ struct invaimsettings invaimsettings_cmp150 = {
 
 struct weaponfunc_shootauto invfunc_cmp150_rapidfire = {
 	INVENTORYFUNCTYPE_SHOOT_AUTOMATIC,
-	L_GUN_086, // name
+	gettext_noop("Rapid Fire\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_loud,
@@ -1385,7 +1389,7 @@ struct weaponfunc_shootauto invfunc_cmp150_rapidfire = {
 
 struct weaponfunc_shootauto invfunc_cmp150_followlockon = {
 	INVENTORYFUNCTYPE_SHOOT_AUTOMATIC,
-	L_GUN_102, // name
+	gettext_noop("Follow Lock-On\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_loud,
@@ -1437,10 +1441,10 @@ struct weapon invitem_cmp150 = {
 	1, // sway
 	gunviscmds_cmp150, // gunviscmds
 	invpartvisibility_cmp150, // part visibility
-	L_GUN_015, // short name
-	L_GUN_015, // name
-	L_GUN_149, // manufacturer
-	L_GUN_164, // description
+	gettext_noop("CMP150\n"), // short name
+	gettext_noop("CMP150\n"), // name
+	gettext_noop("dataDyne\n"), // manufacturer
+	gettext_noop(""), // description
 	WEAPONFLAG_ONEHANDED | WEAPONFLAG_AICANUSE | WEAPONFLAG_DUALFLIP | WEAPONFLAG_00000040 | WEAPONFLAG_TRACKTIMEUSED | WEAPONFLAG_00000400 | WEAPONFLAG_DUALWIELD | WEAPONFLAG_00002000 | WEAPONFLAG_00004000 | WEAPONFLAG_00008000 | WEAPONFLAG_HASHANDS | WEAPONFLAG_04000000 | WEAPONFLAG_AIMTRACK,
 };
 
@@ -1485,7 +1489,7 @@ struct guncmd invanim_cyclone_shoot[] = {
 
 struct weaponfunc_shootauto invfunc_cyclone_rapidfire = {
 	INVENTORYFUNCTYPE_SHOOT_AUTOMATIC,
-	L_GUN_086, // name
+	gettext_noop("Rapid Fire\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_louder,
@@ -1513,7 +1517,7 @@ struct weaponfunc_shootauto invfunc_cyclone_rapidfire = {
 
 struct weaponfunc_shootauto invfunc_cyclone_magazinedischarge = {
 	INVENTORYFUNCTYPE_SHOOT_AUTOMATIC,
-	L_GUN_097, // name
+	gettext_noop("Magazine Discharge\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_louder,
@@ -1565,10 +1569,10 @@ struct weapon invitem_cyclone = {
 	1, // sway
 	gunviscmds_cyclone, // gunviscmds
 	invpartvisibility_cyclone, // part visibility
-	L_GUN_020, // short name
-	L_GUN_020, // name
-	L_GUN_151, // manufacturer
-	L_GUN_169, // description
+	gettext_noop("Cyclone\n"), // short name
+	gettext_noop("Cyclone\n"), // name
+	gettext_noop("Chesluk Industries\n"), // manufacturer
+	gettext_noop(""), // description
 	WEAPONFLAG_ONEHANDED | WEAPONFLAG_AICANUSE | WEAPONFLAG_DUALFLIP | WEAPONFLAG_00000040 | WEAPONFLAG_TRACKTIMEUSED | WEAPONFLAG_00000400 | WEAPONFLAG_DUALWIELD | WEAPONFLAG_00002000 | WEAPONFLAG_00004000 | WEAPONFLAG_HASHANDS,
 };
 
@@ -1605,7 +1609,7 @@ struct gunviscmd gunviscmds_rcp120[] = {
 
 struct weaponfunc_shootauto invfunc_rcp120_rapidfire = {
 	INVENTORYFUNCTYPE_SHOOT_AUTOMATIC,
-	L_GUN_086, // name
+	gettext_noop("Rapid Fire\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_default,
@@ -1633,7 +1637,7 @@ struct weaponfunc_shootauto invfunc_rcp120_rapidfire = {
 
 struct weaponfunc_special invfunc_rcp120_cloak = {
 	INVENTORYFUNCTYPE_SPECIAL,
-	L_GUN_116, // name
+	gettext_noop("Cloak\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_silent,
@@ -1670,10 +1674,10 @@ struct weapon invitem_rcp120 = {
 	1, // sway
 	gunviscmds_rcp120, // gunviscmds
 	invpartvisibility_rcp120, // part visibility
-	L_GUN_022, // short name
-	L_GUN_022, // name
-	L_GUN_151, // manufacturer
-	L_GUN_170, // description
+	gettext_noop("RC-P120\n"), // short name
+	gettext_noop("RC-P120\n"), // name
+	gettext_noop("Chesluk Industries\n"), // manufacturer
+	gettext_noop(""), // description
 	WEAPONFLAG_AICANUSE | WEAPONFLAG_DUALFLIP | WEAPONFLAG_00000040 | WEAPONFLAG_TRACKTIMEUSED | WEAPONFLAG_00000400 | WEAPONFLAG_00002000 | WEAPONFLAG_00004000 | WEAPONFLAG_00008000 | WEAPONFLAG_HASHANDS | WEAPONFLAG_DETERMINER_S_AN | WEAPONFLAG_DETERMINER_F_AN,
 };
 
@@ -1705,7 +1709,7 @@ struct gunviscmd gunviscmds_callisto[] = {
 
 struct weaponfunc_shootauto invfunc_callisto_rapidfire = {
 	INVENTORYFUNCTYPE_SHOOT_AUTOMATIC,
-	L_GUN_086, // name
+	gettext_noop("Rapid Fire\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_default,
@@ -1733,7 +1737,7 @@ struct weaponfunc_shootauto invfunc_callisto_rapidfire = {
 
 struct weaponfunc_shootauto invfunc_callisto_highimpactshells = {
 	INVENTORYFUNCTYPE_SHOOT_AUTOMATIC,
-	L_GUN_115, // name
+	gettext_noop("High Impact Shells\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_default,
@@ -1785,10 +1789,10 @@ struct weapon invitem_callisto = {
 	1, // sway
 	gunviscmds_callisto, // gunviscmds
 	invpartvisibility_callisto, // part visibility
-	L_GUN_023, // short name
-	L_GUN_023, // name
-	L_GUN_153, // manufacturer
-	L_GUN_171, // description
+	gettext_noop("Callisto NTG\n"), // short name
+	gettext_noop("Callisto NTG\n"), // name
+	gettext_noop("Maian\n"), // manufacturer
+	gettext_noop(""), // description
 	WEAPONFLAG_AICANUSE | WEAPONFLAG_DUALFLIP | WEAPONFLAG_00000040 | WEAPONFLAG_TRACKTIMEUSED | WEAPONFLAG_00000400 | WEAPONFLAG_00002000 | WEAPONFLAG_00004000 | WEAPONFLAG_00008000 | WEAPONFLAG_HASHANDS,
 };
 
@@ -1822,7 +1826,7 @@ struct guncmd invanim_dragon_reload[] = {
 
 struct weaponfunc_shootauto invfunc_dragon_rapidfire = {
 	INVENTORYFUNCTYPE_SHOOT_AUTOMATIC,
-	L_GUN_086, // name
+	gettext_noop("Rapid Fire\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_louder,
@@ -1850,7 +1854,7 @@ struct weaponfunc_shootauto invfunc_dragon_rapidfire = {
 
 struct weaponfunc_throw invfunc_dragon_selfdestruct = {
 	INVENTORYFUNCTYPE_THROW,
-	L_GUN_118, // name
+	gettext_noop("Proximity Self Destruct\n"), // name
 	0, // unused
 	-1, // ammoindex
 	&invnoisesettings_silent,
@@ -1888,10 +1892,10 @@ struct weapon invitem_dragon = {
 	1, // sway
 	gunviscmds_dragon, // gunviscmds
 	invpartvisibility_dragon, // part visibility
-	L_GUN_017, // short name
-	L_GUN_017, // name
-	L_GUN_149, // manufacturer
-	L_GUN_166, // description
+	gettext_noop("Dragon\n"), // short name
+	gettext_noop("Dragon\n"), // name
+	gettext_noop("dataDyne\n"), // manufacturer
+	gettext_noop(""), // description
 	WEAPONFLAG_AICANUSE | WEAPONFLAG_00000040 | WEAPONFLAG_TRACKTIMEUSED | WEAPONFLAG_00000400 | WEAPONFLAG_00002000 | WEAPONFLAG_00004000 | WEAPONFLAG_HASHANDS | WEAPONFLAG_04000000,
 };
 
@@ -1956,7 +1960,7 @@ struct guncmd invanim_superdragon_sectopri[] = {
 
 struct weaponfunc_shootauto invfunc_superdragon_rapidfire = {
 	INVENTORYFUNCTYPE_SHOOT_AUTOMATIC,
-	L_GUN_086, // name
+	gettext_noop("Rapid Fire\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_louder,
@@ -1984,7 +1988,7 @@ struct weaponfunc_shootauto invfunc_superdragon_rapidfire = {
 
 struct weaponfunc_shootprojectile invfunc_superdragon_grenadelauncher = {
 	INVENTORYFUNCTYPE_SHOOT_PROJECTILE,
-	L_GUN_098, // name
+	gettext_noop("Grenade Launcher\n"), // name
 	0, // unused
 	1, // ammoindex
 	&invnoisesettings_loudest,
@@ -2047,10 +2051,10 @@ struct weapon invitem_superdragon = {
 	1, // sway
 	gunviscmds_superdragon, // gunviscmds
 	invpartvisibility_superdragon, // part visibility
-	L_GUN_018, // short name
-	L_GUN_018, // name
-	L_GUN_149, // manufacturer
-	L_GUN_167, // description
+	gettext_noop("SuperDragon\n"), // short name
+	gettext_noop("SuperDragon\n"), // name
+	gettext_noop("dataDyne\n"), // manufacturer
+	gettext_noop(""), // description
 	WEAPONFLAG_AICANUSE | WEAPONFLAG_00000040 | WEAPONFLAG_TRACKTIMEUSED | WEAPONFLAG_00000400 | WEAPONFLAG_00002000 | WEAPONFLAG_00004000 | WEAPONFLAG_HASHANDS,
 };
 
@@ -2095,7 +2099,7 @@ struct invaimsettings invaimsettings_ar34 = {
 
 struct weaponfunc_shootauto invfunc_ar34_burstfire = {
 	INVENTORYFUNCTYPE_SHOOT_AUTOMATIC,
-	L_GUN_087, // name
+	gettext_noop("Burst Fire\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_louder,
@@ -2123,7 +2127,7 @@ struct weaponfunc_shootauto invfunc_ar34_burstfire = {
 
 struct weaponfunc_shootauto invfunc_ar34_usescope = {
 	INVENTORYFUNCTYPE_SHOOT_AUTOMATIC,
-	L_GUN_103, // name
+	gettext_noop("Use Scope\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_louder,
@@ -2175,10 +2179,10 @@ struct weapon invitem_ar34 = {
 	1, // sway
 	gunviscmds_ar34, // gunviscmds
 	invpartvisibility_ar34, // part visibility
-	L_GUN_016, // short name
-	L_GUN_016, // name
-	L_GUN_000, // manufacturer
-	L_GUN_165, // description
+	gettext_noop("AR34\n"), // short name
+	gettext_noop("AR34\n"), // name
+	gettext_noop("\n"), // manufacturer
+	gettext_noop(""), // description
 	WEAPONFLAG_AICANUSE | WEAPONFLAG_00000040 | WEAPONFLAG_TRACKTIMEUSED | WEAPONFLAG_00000400 | WEAPONFLAG_00002000 | WEAPONFLAG_00004000 | WEAPONFLAG_HASHANDS | WEAPONFLAG_DETERMINER_S_AN | WEAPONFLAG_DETERMINER_F_AN | WEAPONFLAG_04000000,
 };
 
@@ -2237,7 +2241,7 @@ struct invaimsettings invaimsettings_k7avenger = {
 
 struct weaponfunc_shootauto invfunc_k7avenger_burstfire = {
 	INVENTORYFUNCTYPE_SHOOT_AUTOMATIC,
-	L_GUN_087, // name
+	gettext_noop("Burst Fire\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_louder,
@@ -2265,7 +2269,7 @@ struct weaponfunc_shootauto invfunc_k7avenger_burstfire = {
 
 struct weaponfunc_shootauto invfunc_k7avenger_threatdetector = {
 	INVENTORYFUNCTYPE_SHOOT_AUTOMATIC,
-	L_GUN_119, // name
+	gettext_noop("Threat Detector\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_louder,
@@ -2317,10 +2321,10 @@ struct weapon invitem_k7avenger = {
 	1, // sway
 	gunviscmds_k7avenger, // gunviscmds
 	invpartvisibility_k7avenger, // part visibility
-	L_GUN_019, // short name
-	L_GUN_019, // name
-	L_GUN_149, // manufacturer
-	L_GUN_168, // description
+	gettext_noop("K7 Avenger\n"), // short name
+	gettext_noop("K7 Avenger\n"), // name
+	gettext_noop("dataDyne\n"), // manufacturer
+	gettext_noop(""), // description
 #if VERSION >= VERSION_NTSC_1_0
 	WEAPONFLAG_AICANUSE | WEAPONFLAG_00000040 | WEAPONFLAG_TRACKTIMEUSED | WEAPONFLAG_00000400 | WEAPONFLAG_00002000 | WEAPONFLAG_HASHANDS,
 #else
@@ -2390,7 +2394,7 @@ struct guncmd invanim_laptopgun_unequip[] = {
 
 struct weaponfunc_shootauto invfunc_laptopgun_burstfire = {
 	INVENTORYFUNCTYPE_SHOOT_AUTOMATIC,
-	L_GUN_087, // name
+	gettext_noop("Burst Fire\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_loud,
@@ -2418,7 +2422,7 @@ struct weaponfunc_shootauto invfunc_laptopgun_burstfire = {
 
 struct weaponfunc_throw invfunc_laptopgun_deploy = {
 	INVENTORYFUNCTYPE_THROW,
-	L_GUN_117, // name
+	gettext_noop("Deploy as Sentry Gun\n"), // name
 	0, // unused
 	-1, // ammoindex
 	&invnoisesettings_silent,
@@ -2457,13 +2461,13 @@ struct weapon invitem_laptopgun = {
 	gunviscmds_laptopgun, // gunviscmds
 	invpartvisibility_laptopgun, // part visibility
 #if VERSION >= VERSION_PAL_FINAL
-	L_GUN_251, // short name
+	gettext_noop("Laptop Gun\n"), // short name
 #else
-	L_GUN_024, // short name
+	gettext_noop("Laptop Gun\n"), // short name
 #endif
-	L_GUN_024, // name
-	L_GUN_150, // manufacturer
-	L_GUN_172, // description
+	gettext_noop("Laptop Gun\n"), // name
+	gettext_noop("Carrington\n"), // manufacturer
+	gettext_noop(""), // description
 	WEAPONFLAG_AICANUSE | WEAPONFLAG_00000040 | WEAPONFLAG_TRACKTIMEUSED | WEAPONFLAG_00000400 | WEAPONFLAG_00002000 | WEAPONFLAG_00008000 | WEAPONFLAG_HASHANDS | WEAPONFLAG_04000000,
 };
 
@@ -2505,7 +2509,7 @@ struct guncmd invanim_shotgun_doubleshot[] = {
 
 struct weaponfunc_shootsingle invfunc_shotgun_single = {
 	INVENTORYFUNCTYPE_SHOOT_SINGLE,
-	L_GUN_089, // name
+	gettext_noop("Shotgun Fire\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_loudest,
@@ -2527,7 +2531,7 @@ struct weaponfunc_shootsingle invfunc_shotgun_single = {
 
 struct weaponfunc_shootsingle invfunc_shotgun_double = {
 	INVENTORYFUNCTYPE_SHOOT_SINGLE,
-	L_GUN_105, // name
+	gettext_noop("Double Blast\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_loudest,
@@ -2574,13 +2578,13 @@ struct weapon invitem_shotgun = {
 	gunviscmds_shotgun, // gunviscmds
 	invpartvisibility_shotgun, // part visibility
 #if VERSION >= VERSION_PAL_FINAL
-	L_GUN_253, // short name
+	gettext_noop("Shotgun\n"), // short name
 #else
-	L_GUN_025, // short name
+	gettext_noop("Shotgun\n"), // short name
 #endif
-	L_GUN_025, // name
-	L_GUN_149, // manufacturer
-	L_GUN_173, // description
+	gettext_noop("Shotgun\n"), // name
+	gettext_noop("dataDyne\n"), // manufacturer
+	gettext_noop(""), // description
 	WEAPONFLAG_AICANUSE | WEAPONFLAG_00000040 | WEAPONFLAG_TRACKTIMEUSED | WEAPONFLAG_00000400 | WEAPONFLAG_00002000 | WEAPONFLAG_00004000 | WEAPONFLAG_HASHANDS,
 };
 
@@ -2630,7 +2634,7 @@ struct guncmd invanim_reaper_unequip[] = {
 
 struct weaponfunc_shootauto invfunc_reaper_shoot = {
 	INVENTORYFUNCTYPE_SHOOT_AUTOMATIC,
-	L_GUN_088, // name
+	gettext_noop("Reapage\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_reaper,
@@ -2658,7 +2662,7 @@ struct weaponfunc_shootauto invfunc_reaper_shoot = {
 
 struct weaponfunc_melee invfunc_reaper_grind = {
 	INVENTORYFUNCTYPE_MELEE,
-	L_GUN_106, // name
+	gettext_noop("Grinder\n"), // name
 	0, // unused
 	-1, // ammoindex
 	&invnoisesettings_default,
@@ -2706,10 +2710,10 @@ struct weapon invitem_reaper = {
 	1, // sway
 	gunviscmds_reaper, // gunviscmds
 	invpartvisibility_reaper, // part visibility
-	L_GUN_026, // short name
-	L_GUN_026, // name
-	L_GUN_152, // manufacturer
-	L_GUN_174, // description
+	gettext_noop("Reaper\n"), // short name
+	gettext_noop("Reaper\n"), // name
+	gettext_noop("Skedar\n"), // manufacturer
+	gettext_noop(""), // description
 	WEAPONFLAG_AICANUSE | WEAPONFLAG_00000040 | WEAPONFLAG_TRACKTIMEUSED | WEAPONFLAG_00000400 | WEAPONFLAG_00002000 | WEAPONFLAG_HASHANDS,
 };
 
@@ -2758,7 +2762,7 @@ struct invaimsettings invaimsettings_rocketlauncher = {
 
 struct weaponfunc_shootprojectile invfunc_rockerlauncher_shoot = {
 	INVENTORYFUNCTYPE_SHOOT_PROJECTILE,
-	L_GUN_091, // name
+	gettext_noop("Rocket Launch\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_loudest,
@@ -2789,7 +2793,7 @@ struct weaponfunc_shootprojectile invfunc_rockerlauncher_shoot = {
 
 struct weaponfunc_shootprojectile invfunc_rocketlauncher_homing = {
 	INVENTORYFUNCTYPE_SHOOT_PROJECTILE,
-	L_GUN_092, // name
+	gettext_noop("Targeted Rocket\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_loudest,
@@ -2844,10 +2848,10 @@ struct weapon invitem_rocketlauncher = {
 	1, // sway
 	gunviscmds_rocketlauncher, // gunviscmds
 	invpartvisibility_rocketlauncher, // part visibility
-	L_GUN_080, // short name
-	L_GUN_027, // name
-	L_GUN_149, // manufacturer
-	L_GUN_175, // description
+	gettext_noop("R-Launcher\n"), // short name
+	gettext_noop("Rocket Launcher\n"), // name
+	gettext_noop("dataDyne\n"), // manufacturer
+	gettext_noop(""), // description
 	WEAPONFLAG_AICANUSE | WEAPONFLAG_00000040 | WEAPONFLAG_TRACKTIMEUSED | WEAPONFLAG_00002000 | WEAPONFLAG_00004000 | WEAPONFLAG_HASHANDS | WEAPONFLAG_AIMTRACK,
 };
 
@@ -2868,7 +2872,7 @@ struct guncmd invanim_slayer_reload[] = {
 
 struct weaponfunc_shootprojectile invfunc_slayer_shoot = {
 	INVENTORYFUNCTYPE_SHOOT_PROJECTILE,
-	L_GUN_091, // name
+	gettext_noop("Rocket Launch\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_loudest,
@@ -2899,7 +2903,7 @@ struct weaponfunc_shootprojectile invfunc_slayer_shoot = {
 
 struct weaponfunc_shootprojectile invfunc_slayer_flybywire = {
 	INVENTORYFUNCTYPE_SHOOT_PROJECTILE,
-	L_GUN_093, // name
+	gettext_noop("Fly-By-Wire Rocket\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_loudest,
@@ -2954,10 +2958,10 @@ struct weapon invitem_slayer = {
 	1, // sway
 	NULL, // gunviscmds
 	NULL, // part visibility
-	L_GUN_029, // short name
-	L_GUN_029, // name
-	L_GUN_152, // manufacturer
-	L_GUN_177, // description
+	gettext_noop("Slayer\n"), // short name
+	gettext_noop("Slayer\n"), // name
+	gettext_noop("Skedar\n"), // manufacturer
+	gettext_noop(""), // description
 	WEAPONFLAG_AICANUSE | WEAPONFLAG_DUALFLIP | WEAPONFLAG_00000040 | WEAPONFLAG_TRACKTIMEUSED | WEAPONFLAG_00002000 | WEAPONFLAG_00004000 | WEAPONFLAG_HASHANDS | WEAPONFLAG_02000000,
 };
 
@@ -2988,7 +2992,7 @@ struct guncmd invanim_devastator_reload[] = {
 
 struct weaponfunc_shootprojectile invfunc_devastator_shoot = {
 	INVENTORYFUNCTYPE_SHOOT_PROJECTILE,
-	L_GUN_098, // name
+	gettext_noop("Grenade Launcher\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_loudest,
@@ -3019,7 +3023,7 @@ struct weaponfunc_shootprojectile invfunc_devastator_shoot = {
 
 struct weaponfunc_shootprojectile invfunc_devastator_wallhugger = {
 	INVENTORYFUNCTYPE_SHOOT_PROJECTILE,
-	L_GUN_099, // name
+	gettext_noop("Wall Hugger\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_loudest,
@@ -3079,16 +3083,16 @@ struct weapon invitem_devastator = {
 	1, // sway
 	NULL, // gunviscmds
 	invpartvisibility_devastator, // part visibility
-	L_GUN_028, // short name
-	L_GUN_028, // name
-	L_GUN_149, // manufacturer
-	L_GUN_176, // description
+	gettext_noop("Devastator\n"), // short name
+	gettext_noop("Devastator\n"), // name
+	gettext_noop("dataDyne\n"), // manufacturer
+	gettext_noop(""), // description
 	WEAPONFLAG_AICANUSE | WEAPONFLAG_00000040 | WEAPONFLAG_TRACKTIMEUSED | WEAPONFLAG_00002000 | WEAPONFLAG_00004000 | WEAPONFLAG_HASHANDS,
 };
 
 struct weaponfunc invfunc_mine_threatdetector = {
 	INVENTORYFUNCTYPE_NONE,
-	L_GUN_119, // name
+	gettext_noop("Threat Detector\n"), // name
 	0, // unused
 	-1, // ammoindex
 	&invnoisesettings_silent,
@@ -3115,7 +3119,7 @@ struct guncmd invanim_mine_throw[] = {
 
 struct weaponfunc_throw invfunc_timedmine_throw = {
 	INVENTORYFUNCTYPE_THROW,
-	L_GUN_120, // name
+	gettext_noop("Timed Explosive\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_silent,
@@ -3154,13 +3158,13 @@ struct weapon invitem_timedmine = {
 	NULL, // gunviscmds
 	NULL, // part visibility
 #if VERSION >= VERSION_PAL_FINAL
-	L_GUN_255, // short name
+	gettext_noop("Timed Mine\n"), // short name
 #else
-	L_GUN_038, // short name
+	gettext_noop("Timed Mine\n"), // short name
 #endif
-	L_GUN_038, // name
-	L_GUN_000, // manufacturer
-	L_GUN_185, // description
+	gettext_noop("Timed Mine\n"), // name
+	gettext_noop("\n"), // manufacturer
+	gettext_noop(""), // description
 	WEAPONFLAG_THROWABLE | WEAPONFLAG_ONEHANDED | WEAPONFLAG_AICANUSE | WEAPONFLAG_00000040 | WEAPONFLAG_TRACKTIMEUSED | WEAPONFLAG_00002000 | WEAPONFLAG_HASHANDS,
 };
 
@@ -3191,7 +3195,7 @@ struct guncmd invanim_remotemine_throw[] = {
 
 struct weaponfunc_throw invfunc_remotemine_throw = {
 	INVENTORYFUNCTYPE_THROW,
-	L_GUN_122, // name
+	gettext_noop("Remote Explosive\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_silent,
@@ -3205,7 +3209,7 @@ struct weaponfunc_throw invfunc_remotemine_throw = {
 
 struct weaponfunc_special invfunc_remotemine_detonate = {
 	INVENTORYFUNCTYPE_SPECIAL,
-	L_GUN_123, // name
+	gettext_noop("Detonate\n"), // name
 	0, // unused
 	-1, // ammoindex
 	&invnoisesettings_silent,
@@ -3248,19 +3252,19 @@ struct weapon invitem_remotemine = {
 	gunviscmds_remotemine,
 	invpartvisibility_remotemine, // part visibility
 #if VERSION >= VERSION_PAL_FINAL
-	L_GUN_252, // short name
+	gettext_noop("Remote Mine\n"), // short name
 #else
-	L_GUN_040, // short name
+	gettext_noop("Remote Mine\n"), // short name
 #endif
-	L_GUN_040, // name
-	L_GUN_000, // manufacturer
-	L_GUN_187, // description
+	gettext_noop("Remote Mine\n"), // name
+	gettext_noop("\n"), // manufacturer
+	gettext_noop(""), // description
 	WEAPONFLAG_THROWABLE | WEAPONFLAG_ONEHANDED | WEAPONFLAG_AICANUSE | WEAPONFLAG_00000040 | WEAPONFLAG_TRACKTIMEUSED | WEAPONFLAG_00002000 | WEAPONFLAG_HASHANDS,
 };
 
 struct weaponfunc_throw invfunc_proxymine_throw = {
 	INVENTORYFUNCTYPE_THROW,
-	L_GUN_121, // name
+	gettext_noop("Proximity Explosive\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_silent,
@@ -3298,10 +3302,10 @@ struct weapon invitem_proximitymine = {
 	1, // sway
 	NULL, // gunviscmds
 	NULL, // part visibility
-	L_GUN_081, // short name
-	L_GUN_039, // name
-	L_GUN_000, // manufacturer
-	L_GUN_186, // description
+	gettext_noop("Proxy Mine\n"), // short name
+	gettext_noop("Proximity Mine\n"), // name
+	gettext_noop("\n"), // manufacturer
+	gettext_noop(""), // description
 	WEAPONFLAG_THROWABLE | WEAPONFLAG_ONEHANDED | WEAPONFLAG_AICANUSE | WEAPONFLAG_00000040 | WEAPONFLAG_TRACKTIMEUSED | WEAPONFLAG_00002000 | WEAPONFLAG_HASHANDS,
 };
 
@@ -3323,7 +3327,7 @@ struct guncmd invanim_ecmmine_throw[] = {
 
 struct weaponfunc_throw invfunc_ecmmine_throw = {
 	INVENTORYFUNCTYPE_THROW,
-	L_GUN_140, // name
+	gettext_noop("Jamming Device\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_silent,
@@ -3362,13 +3366,13 @@ struct weapon invitem_ecmmine = {
 	NULL, // gunviscmds
 	NULL, // part visibility
 #if VERSION >= VERSION_JPN_FINAL
-	L_GUN_256, // short name
+	gettext_noop("L_GUN_256"), // short name
 #else
-	L_GUN_041, // short name
+	gettext_noop("ECM Mine\n"), // short name
 #endif
-	L_GUN_041, // name
-	L_GUN_000, // manufacturer
-	L_GUN_188, // description
+	gettext_noop("ECM Mine\n"), // name
+	gettext_noop("\n"), // manufacturer
+	gettext_noop(""), // description
 	WEAPONFLAG_THROWABLE | WEAPONFLAG_ONEHANDED | WEAPONFLAG_AICANUSE | WEAPONFLAG_00000040 | WEAPONFLAG_00002000 | WEAPONFLAG_HASHANDS | WEAPONFLAG_DETERMINER_S_AN | WEAPONFLAG_DETERMINER_F_AN | WEAPONFLAG_UNDROPPABLE,
 };
 
@@ -3392,10 +3396,10 @@ struct weapon invitem_unused_8007dd88 = {
 	1, // sway
 	NULL, // gunviscmds
 	NULL, // part visibility
-	L_GUN_038, // short name
-	L_GUN_038, // name
-	L_GUN_000, // manufacturer
-	L_GUN_000, // description
+	gettext_noop("Timed Mine\n"), // short name
+	gettext_noop("Timed Mine\n"), // name
+	gettext_noop("\n"), // manufacturer
+	gettext_noop("\n"), // description
 	WEAPONFLAG_ONEHANDED | WEAPONFLAG_00000040 | WEAPONFLAG_UNDROPPABLE,
 };
 
@@ -3420,7 +3424,7 @@ struct guncmd invanim_grenade_equip[] = {
 
 struct weaponfunc_throw invfunc_grenade_throw = {
 	INVENTORYFUNCTYPE_THROW,
-	L_GUN_124, // name
+	gettext_noop("4-Second Fuse\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_silent,
@@ -3434,7 +3438,7 @@ struct weaponfunc_throw invfunc_grenade_throw = {
 
 struct weaponfunc_throw invfunc_grenade_pinball = {
 	INVENTORYFUNCTYPE_THROW,
-	L_GUN_125, // name
+	gettext_noop("Proximity Pinball\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_silent,
@@ -3472,16 +3476,16 @@ struct weapon invitem_grenade = {
 	1, // sway
 	gunviscmds_grenade, // gunviscmds
 	NULL, // part visibility
-	L_GUN_036, // short name
-	L_GUN_036, // name
-	L_GUN_000, // manufacturer
-	L_GUN_183, // description
+	gettext_noop("Grenade\n"), // short name
+	gettext_noop("Grenade\n"), // name
+	gettext_noop("\n"), // manufacturer
+	gettext_noop(""), // description
 	WEAPONFLAG_THROWABLE | WEAPONFLAG_00000004 | WEAPONFLAG_ONEHANDED | WEAPONFLAG_AICANUSE | WEAPONFLAG_00000040 | WEAPONFLAG_TRACKTIMEUSED | WEAPONFLAG_00000400 | WEAPONFLAG_00002000 | WEAPONFLAG_00008000 | WEAPONFLAG_HASHANDS,
 };
 
 struct weaponfunc_throw invfunc_nbomb_throw = {
 	INVENTORYFUNCTYPE_THROW,
-	L_GUN_134, // name
+	gettext_noop("Impact Detonation\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_silent,
@@ -3495,7 +3499,7 @@ struct weaponfunc_throw invfunc_nbomb_throw = {
 
 struct weaponfunc_throw invfunc_nbomb_proxy = {
 	INVENTORYFUNCTYPE_THROW,
-	L_GUN_127, // name
+	gettext_noop("Proximity Detonation\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_silent,
@@ -3533,10 +3537,10 @@ struct weapon invitem_nbomb = {
 	1, // sway
 	gunviscmds_grenade, // gunviscmds
 	NULL, // part visibility
-	L_GUN_037, // short name
-	L_GUN_037, // name
-	L_GUN_000, // manufacturer
-	L_GUN_184, // description
+	gettext_noop("N-Bomb\n"), // short name
+	gettext_noop("N-Bomb\n"), // name
+	gettext_noop("\n"), // manufacturer
+	gettext_noop(""), // description
 	WEAPONFLAG_THROWABLE | WEAPONFLAG_00000004 | WEAPONFLAG_ONEHANDED | WEAPONFLAG_AICANUSE | WEAPONFLAG_00000040 | WEAPONFLAG_TRACKTIMEUSED | WEAPONFLAG_00000400 | WEAPONFLAG_00002000 | WEAPONFLAG_00008000 | WEAPONFLAG_HASHANDS | WEAPONFLAG_DETERMINER_S_AN | WEAPONFLAG_DETERMINER_F_AN,
 };
 
@@ -3573,7 +3577,7 @@ struct invaimsettings invaimsettings_farsight = {
 
 struct weaponfunc_shootsingle invfunc_farsight_shoot = {
 	INVENTORYFUNCTYPE_SHOOT_SINGLE,
-	L_GUN_090, // name
+	gettext_noop("Rail-gun effect\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_louder,
@@ -3595,7 +3599,7 @@ struct weaponfunc_shootsingle invfunc_farsight_shoot = {
 
 struct weaponfunc_shootsingle invfunc_farsight_targetlocator = {
 	INVENTORYFUNCTYPE_SHOOT_SINGLE,
-	L_GUN_111, // name
+	gettext_noop("Target Locator\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_louder,
@@ -3646,10 +3650,10 @@ struct weapon invitem_farsight = {
 	1, // sway
 	gunviscmds_farsight, // gunviscmds
 	invpartvisibility_farsight, // part visibility
-	L_GUN_079, // short name
-	L_GUN_031, // name
-	L_GUN_000, // manufacturer
-	L_GUN_178, // description
+	gettext_noop("FarSight\n"), // short name
+	gettext_noop("FarSight XR-20\n"), // name
+	gettext_noop("\n"), // manufacturer
+	gettext_noop(""), // description
 	WEAPONFLAG_AICANUSE | WEAPONFLAG_00000040 | WEAPONFLAG_TRACKTIMEUSED | WEAPONFLAG_00000400 | WEAPONFLAG_00002000 | WEAPONFLAG_00004000 | WEAPONFLAG_HASHANDS,
 };
 
@@ -3697,7 +3701,7 @@ struct guncmd invanim_crosbow_equip[] = {
 
 struct weaponfunc_shootprojectile invfunc_crossbow_lethal = {
 	INVENTORYFUNCTYPE_SHOOT_PROJECTILE,
-	L_GUN_112, // name
+	gettext_noop("Instant Kill\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_silenced,
@@ -3728,7 +3732,7 @@ struct weaponfunc_shootprojectile invfunc_crossbow_lethal = {
 
 struct weaponfunc_shootprojectile invfunc_crossbow_shoot = {
 	INVENTORYFUNCTYPE_SHOOT_PROJECTILE,
-	L_GUN_107, // name
+	gettext_noop("Sedate\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_silenced,
@@ -3790,10 +3794,10 @@ struct weapon invitem_crossbow = {
 	1, // sway
 	gunviscmds_crossbow, // gunviscmds
 	invpartvisibility_crossbow, // part visibility
-	L_GUN_033, // short name
-	L_GUN_033, // name
-	L_GUN_000, // manufacturer
-	L_GUN_180, // description
+	gettext_noop("Crossbow\n"), // short name
+	gettext_noop("Crossbow\n"), // name
+	gettext_noop("\n"), // manufacturer
+	gettext_noop(""), // description
 	WEAPONFLAG_ONEHANDED | WEAPONFLAG_AICANUSE | WEAPONFLAG_00000040 | WEAPONFLAG_TRACKTIMEUSED | WEAPONFLAG_00000400 | WEAPONFLAG_00002000 | WEAPONFLAG_HASHANDS,
 };
 
@@ -3838,7 +3842,7 @@ struct guncmd invanim_tranquilizer_reload[] = {
 
 struct weaponfunc_shootsingle invfunc_tranquilizer_shoot = {
 	INVENTORYFUNCTYPE_SHOOT_SINGLE,
-	L_GUN_107, // name
+	gettext_noop("Sedate\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_silenced,
@@ -3860,7 +3864,7 @@ struct weaponfunc_shootsingle invfunc_tranquilizer_shoot = {
 
 struct weaponfunc_melee invfunc_tranquilizer_lethal = {
 	INVENTORYFUNCTYPE_MELEE,
-	L_GUN_108, // name
+	gettext_noop("Lethal Injection\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_silenced,
@@ -3916,13 +3920,13 @@ struct weapon invitem_tranquilizer = {
 	gunviscmds_tranquilizer, // gunviscmds
 	invpartvisibility_tranquilizer, // part visibility
 #if VERSION >= VERSION_PAL_FINAL
-	L_GUN_247, // short name
+	gettext_noop("Tranquilizer\n"), // short name
 #else
-	L_GUN_034, // short name
+	gettext_noop("Tranquilizer\n"), // short name
 #endif
-	L_GUN_034, // name
-	L_GUN_000, // manufacturer
-	L_GUN_181, // description
+	gettext_noop("Tranquilizer\n"), // name
+	gettext_noop("\n"), // manufacturer
+	gettext_noop(""), // description
 	WEAPONFLAG_00000004 | WEAPONFLAG_ONEHANDED | WEAPONFLAG_AICANUSE | WEAPONFLAG_00000040 | WEAPONFLAG_TRACKTIMEUSED | WEAPONFLAG_00000400 | WEAPONFLAG_00002000 | WEAPONFLAG_00004000 | WEAPONFLAG_00008000 | WEAPONFLAG_HASHANDS,
 };
 
@@ -3936,7 +3940,7 @@ struct inventory_ammo invammo_psychosisgun = {
 
 struct weaponfunc_shootsingle invfunc_psychosisgun_shoot = {
 	INVENTORYFUNCTYPE_SHOOT_SINGLE,
-	L_GUN_131, // name
+	gettext_noop("Infect\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_silenced,
@@ -3974,10 +3978,10 @@ struct weapon invitem_psychosisgun = {
 	1, // sway
 	gunviscmds_tranquilizer, // gunviscmds
 	invpartvisibility_tranquilizer, // part visibility
-	L_GUN_082, // short name
-	L_GUN_049, // name
-	L_GUN_000, // manufacturer
-	L_GUN_210, // description
+	gettext_noop("Psychosis\n"), // short name
+	gettext_noop("Psychosis Gun\n"), // name
+	gettext_noop("\n"), // manufacturer
+	gettext_noop(""), // description
 	WEAPONFLAG_00000004 | WEAPONFLAG_ONEHANDED | WEAPONFLAG_AICANUSE | WEAPONFLAG_00000040 | WEAPONFLAG_TRACKTIMEUSED | WEAPONFLAG_00000400 | WEAPONFLAG_00002000 | WEAPONFLAG_00004000 | WEAPONFLAG_00008000 | WEAPONFLAG_HASHANDS,
 };
 
@@ -4023,7 +4027,7 @@ struct invaimsettings invaimsettings_sniperrifle = {
 
 struct weaponfunc_shootsingle invfunc_sniperrifle_singleshot = {
 	INVENTORYFUNCTYPE_SHOOT_SINGLE,
-	L_GUN_085, // name
+	gettext_noop("Single Shot\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_sniper,
@@ -4045,7 +4049,7 @@ struct weaponfunc_shootsingle invfunc_sniperrifle_singleshot = {
 
 struct weaponfunc_special invfunc_sniperrifle_crouch = {
 	INVENTORYFUNCTYPE_SPECIAL,
-	L_GUN_130, // name
+	gettext_noop("Crouch\n"), // name
 	0, // unused
 	-1, // ammoindex
 	&invnoisesettings_silent,
@@ -4088,13 +4092,13 @@ struct weapon invitem_sniperrifle = {
 	gunviscmds_sniperrifle, // gunviscmds
 	invpartvisibility_sniperrifle, // part visibility
 #if VERSION >= VERSION_PAL_FINAL
-	L_GUN_254, // short name
+	gettext_noop("Sniper Rifle\n"), // short name
 #else
-	L_GUN_032, // short name
+	gettext_noop("Sniper Rifle\n"), // short name
 #endif
-	L_GUN_032, // name
-	L_GUN_000, // manufacturer
-	L_GUN_179, // description
+	gettext_noop("Sniper Rifle\n"), // name
+	gettext_noop("\n"), // manufacturer
+	gettext_noop(""), // description
 	WEAPONFLAG_AICANUSE | WEAPONFLAG_00000040 | WEAPONFLAG_TRACKTIMEUSED | WEAPONFLAG_00000400 | WEAPONFLAG_00002000 | WEAPONFLAG_00004000 | WEAPONFLAG_HASHANDS,
 };
 
@@ -4110,7 +4114,7 @@ struct guncmd invanim_laser_unequip[] = {
 
 struct weaponfunc_shootsingle invfunc_laser_pulse = {
 	INVENTORYFUNCTYPE_SHOOT_SINGLE,
-	L_GUN_132, // name
+	gettext_noop("Pulse Fire\n"), // name
 	0, // unused
 	-1, // ammoindex
 	&invnoisesettings_default,
@@ -4132,7 +4136,7 @@ struct weaponfunc_shootsingle invfunc_laser_pulse = {
 
 struct weaponfunc_shootauto invfunc_laser_stream = {
 	INVENTORYFUNCTYPE_SHOOT_AUTOMATIC,
-	L_GUN_133, // name
+	gettext_noop("Short Range Stream\n"), // name
 	0, // unused
 	-1, // ammoindex
 	&invnoisesettings_silent,
@@ -4176,10 +4180,10 @@ struct weapon invitem_laser = {
 	1, // sway
 	NULL, // gunviscmds
 	NULL, // part visibility
-	L_GUN_047, // short name
-	L_GUN_047, // name
-	L_GUN_150, // manufacturer
-	L_GUN_189, // description
+	gettext_noop("Laser\n"), // short name
+	gettext_noop("Laser\n"), // name
+	gettext_noop("Carrington\n"), // manufacturer
+	gettext_noop(""), // description
 	WEAPONFLAG_ONEHANDED | WEAPONFLAG_AICANUSE | WEAPONFLAG_DUALFLIP | WEAPONFLAG_00000040 | WEAPONFLAG_TRACKTIMEUSED | WEAPONFLAG_00000400 | WEAPONFLAG_00002000 | WEAPONFLAG_00008000 | WEAPONFLAG_HASHANDS | WEAPONFLAG_DONTCOUNTSHOTS | WEAPONFLAG_04000000,
 };
 
@@ -4201,7 +4205,7 @@ struct guncmd invanim_pp9i_shoot[] = {
 
 struct weaponfunc_shootsingle invfunc_pp9i_shoot = {
 	INVENTORYFUNCTYPE_SHOOT_SINGLE,
-	L_GUN_085, // name
+	gettext_noop("Single Shot\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_default,
@@ -4247,10 +4251,10 @@ struct weapon invitem_pp9i = {
 	1, // sway
 	gunviscmds_classicpistol, // gunviscmds
 	invpartvisibility_classic, // part visibility
-	L_GUN_050, // short name
-	L_GUN_050, // name
-	L_GUN_000, // manufacturer
-	L_GUN_000, // description
+	gettext_noop("PP9i\n"), // short name
+	gettext_noop("PP9i\n"), // name
+	gettext_noop("\n"), // manufacturer
+	gettext_noop("\n"), // description
 	WEAPONFLAG_00000004 | WEAPONFLAG_ONEHANDED | WEAPONFLAG_AICANUSE | WEAPONFLAG_DUALFLIP | WEAPONFLAG_00000040 | WEAPONFLAG_TRACKTIMEUSED | WEAPONFLAG_00000400 | WEAPONFLAG_DUALWIELD | WEAPONFLAG_00002000 | WEAPONFLAG_00004000 | WEAPONFLAG_00008000 | WEAPONFLAG_HASHANDS | WEAPONFLAG_GANGSTA,
 };
 
@@ -4262,7 +4266,7 @@ struct guncmd invanim_cc13_shoot[] = {
 
 struct weaponfunc_shootsingle invfunc_cc13_shoot = {
 	INVENTORYFUNCTYPE_SHOOT_SINGLE,
-	L_GUN_085, // name
+	gettext_noop("Single Shot\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_default,
@@ -4308,16 +4312,16 @@ struct weapon invitem_cc13 = {
 	1, // sway
 	gunviscmds_classicpistol, // gunviscmds
 	invpartvisibility_classic, // part visibility
-	L_GUN_051, // short name
-	L_GUN_051, // name
-	L_GUN_000, // manufacturer
-	L_GUN_000, // description
+	gettext_noop("CC13\n"), // short name
+	gettext_noop("CC13\n"), // name
+	gettext_noop("\n"), // manufacturer
+	gettext_noop("\n"), // description
 	WEAPONFLAG_00000004 | WEAPONFLAG_ONEHANDED | WEAPONFLAG_AICANUSE | WEAPONFLAG_DUALFLIP | WEAPONFLAG_00000040 | WEAPONFLAG_TRACKTIMEUSED | WEAPONFLAG_00000400 | WEAPONFLAG_DUALWIELD | WEAPONFLAG_00002000 | WEAPONFLAG_00004000 | WEAPONFLAG_00008000 | WEAPONFLAG_HASHANDS | WEAPONFLAG_GANGSTA,
 };
 
 struct weaponfunc_shootauto invfunc_kl01313_shoot = {
 	INVENTORYFUNCTYPE_SHOOT_AUTOMATIC,
-	L_GUN_086, // name
+	gettext_noop("Rapid Fire\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_default,
@@ -4369,16 +4373,16 @@ struct weapon invitem_kl01313 = {
 	1, // sway
 	NULL, // gunviscmds
 	invpartvisibility_classic, // part visibility
-	L_GUN_052, // short name
-	L_GUN_052, // name
-	L_GUN_000, // manufacturer
-	L_GUN_000, // description
+	gettext_noop("KL01313\n"), // short name
+	gettext_noop("KL01313\n"), // name
+	gettext_noop("\n"), // manufacturer
+	gettext_noop("\n"), // description
 	WEAPONFLAG_00000004 | WEAPONFLAG_ONEHANDED | WEAPONFLAG_AICANUSE | WEAPONFLAG_DUALFLIP | WEAPONFLAG_00000040 | WEAPONFLAG_TRACKTIMEUSED | WEAPONFLAG_00000400 | WEAPONFLAG_DUALWIELD | WEAPONFLAG_00008000,
 };
 
 struct weaponfunc_shootauto invfunc_kf7special_shoot = {
 	INVENTORYFUNCTYPE_SHOOT_AUTOMATIC,
-	L_GUN_087, // name
+	gettext_noop("Burst Fire\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_default,
@@ -4430,16 +4434,16 @@ struct weapon invitem_kf7special = {
 	1, // sway
 	NULL, // gunviscmds
 	invpartvisibility_classic, // part visibility
-	L_GUN_053, // short name
-	L_GUN_053, // name
-	L_GUN_000, // manufacturer
-	L_GUN_000, // description
+	gettext_noop("KF7 Special\n"), // short name
+	gettext_noop("KF7 Special\n"), // name
+	gettext_noop("\n"), // manufacturer
+	gettext_noop("\n"), // description
 	WEAPONFLAG_00000004 | WEAPONFLAG_ONEHANDED | WEAPONFLAG_AICANUSE | WEAPONFLAG_DUALFLIP | WEAPONFLAG_00000040 | WEAPONFLAG_TRACKTIMEUSED | WEAPONFLAG_00000400 | WEAPONFLAG_DUALWIELD | WEAPONFLAG_00008000,
 };
 
 struct weaponfunc_shootauto invfunc_zzt9mm_shoot = {
 	INVENTORYFUNCTYPE_SHOOT_AUTOMATIC,
-	L_GUN_086, // name
+	gettext_noop("Rapid Fire\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_default,
@@ -4491,16 +4495,16 @@ struct weapon invitem_zzt9mm = {
 	1, // sway
 	NULL, // gunviscmds
 	invpartvisibility_classic, // part visibility
-	L_GUN_054, // short name
-	L_GUN_054, // name
-	L_GUN_000, // manufacturer
-	L_GUN_000, // description
+	gettext_noop("ZZT (9mm)\n"), // short name
+	gettext_noop("ZZT (9mm)\n"), // name
+	gettext_noop("\n"), // manufacturer
+	gettext_noop("\n"), // description
 	WEAPONFLAG_00000004 | WEAPONFLAG_ONEHANDED | WEAPONFLAG_AICANUSE | WEAPONFLAG_DUALFLIP | WEAPONFLAG_00000040 | WEAPONFLAG_TRACKTIMEUSED | WEAPONFLAG_00000400 | WEAPONFLAG_DUALWIELD | WEAPONFLAG_00008000,
 };
 
 struct weaponfunc_shootauto invfunc_dmc_shoot = {
 	INVENTORYFUNCTYPE_SHOOT_AUTOMATIC,
-	L_GUN_086, // name
+	gettext_noop("Rapid Fire\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_default,
@@ -4552,16 +4556,16 @@ struct weapon invitem_dmc = {
 	1, // sway
 	NULL, // gunviscmds
 	invpartvisibility_classic, // part visibility
-	L_GUN_055, // short name
-	L_GUN_055, // name
-	L_GUN_000, // manufacturer
-	L_GUN_000, // description
+	gettext_noop("DMC\n"), // short name
+	gettext_noop("DMC\n"), // name
+	gettext_noop("\n"), // manufacturer
+	gettext_noop("\n"), // description
 	WEAPONFLAG_00000004 | WEAPONFLAG_ONEHANDED | WEAPONFLAG_AICANUSE | WEAPONFLAG_DUALFLIP | WEAPONFLAG_00000040 | WEAPONFLAG_TRACKTIMEUSED | WEAPONFLAG_00000400 | WEAPONFLAG_DUALWIELD | WEAPONFLAG_00008000,
 };
 
 struct weaponfunc_shootauto invfunc_ar53_shoot = {
 	INVENTORYFUNCTYPE_SHOOT_AUTOMATIC,
-	L_GUN_087, // name
+	gettext_noop("Burst Fire\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_default,
@@ -4613,16 +4617,16 @@ struct weapon invitem_ar53 = {
 	1, // sway
 	NULL, // gunviscmds
 	invpartvisibility_classic, // part visibility
-	L_GUN_056, // short name
-	L_GUN_056, // name
-	L_GUN_000, // manufacturer
-	L_GUN_000, // description
+	gettext_noop("AR53\n"), // short name
+	gettext_noop("AR53\n"), // name
+	gettext_noop("\n"), // manufacturer
+	gettext_noop("\n"), // description
 	WEAPONFLAG_00000004 | WEAPONFLAG_ONEHANDED | WEAPONFLAG_AICANUSE | WEAPONFLAG_DUALFLIP | WEAPONFLAG_00000040 | WEAPONFLAG_TRACKTIMEUSED | WEAPONFLAG_00000400 | WEAPONFLAG_DUALWIELD | WEAPONFLAG_00008000 | WEAPONFLAG_DETERMINER_S_AN | WEAPONFLAG_DETERMINER_F_AN,
 };
 
 struct weaponfunc_shootauto invfunc_rcp45_shoot = {
 	INVENTORYFUNCTYPE_SHOOT_AUTOMATIC,
-	L_GUN_086, // name
+	gettext_noop("Rapid Fire\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_default,
@@ -4674,16 +4678,16 @@ struct weapon invitem_rcp45 = {
 	1, // sway
 	NULL, // gunviscmds
 	invpartvisibility_classic, // part visibility
-	L_GUN_057, // short name
-	L_GUN_057, // name
-	L_GUN_000, // manufacturer
-	L_GUN_000, // description
+	gettext_noop("RC-P45\n"), // short name
+	gettext_noop("RC-P45\n"), // name
+	gettext_noop("\n"), // manufacturer
+	gettext_noop("\n"), // description
 	WEAPONFLAG_00000004 | WEAPONFLAG_ONEHANDED | WEAPONFLAG_AICANUSE | WEAPONFLAG_DUALFLIP | WEAPONFLAG_00000040 | WEAPONFLAG_TRACKTIMEUSED | WEAPONFLAG_00000400 | WEAPONFLAG_DUALWIELD | WEAPONFLAG_00008000 | WEAPONFLAG_DETERMINER_S_AN | WEAPONFLAG_DETERMINER_F_AN,
 };
 
 struct weaponfunc invfunc_briefcase_use = {
 	INVENTORYFUNCTYPE_NONE,
-	L_GUN_000, // name
+	gettext_noop("\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_silent,
@@ -4714,16 +4718,16 @@ struct weapon invitem_briefcase2 = {
 	1, // sway
 	NULL, // gunviscmds
 	NULL, // part visibility
-	L_GUN_071, // short name
-	L_GUN_071, // name
-	L_GUN_000, // manufacturer
-	L_GUN_000, // description
+	gettext_noop("Briefcase\n"), // short name
+	gettext_noop("Briefcase\n"), // name
+	gettext_noop("\n"), // manufacturer
+	gettext_noop("\n"), // description
 	WEAPONFLAG_ONEHANDED | WEAPONFLAG_00000800 | WEAPONFLAG_HIDEMENUMODEL | WEAPONFLAG_DONTCOUNTSHOTS | WEAPONFLAG_DETERMINER_S_THE | WEAPONFLAG_DETERMINER_F_THE,
 };
 
 struct weaponfunc_shootauto invfunc_choppergun_rapidfire = {
 	INVENTORYFUNCTYPE_SHOOT_AUTOMATIC,
-	L_GUN_086, // name
+	gettext_noop("Rapid Fire\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_default,
@@ -4775,16 +4779,16 @@ struct weapon invitem_choppergun = {
 	1, // sway
 	NULL, // gunviscmds
 	NULL, // part visibility
-	L_GUN_000, // short name
-	L_GUN_000, // name
-	L_GUN_000, // manufacturer
-	L_GUN_000, // description
+	gettext_noop("\n"), // short name
+	gettext_noop("\n"), // name
+	gettext_noop("\n"), // manufacturer
+	gettext_noop("\n"), // description
 	WEAPONFLAG_AICANUSE | WEAPONFLAG_00000040 | WEAPONFLAG_TRACKTIMEUSED | WEAPONFLAG_DUALWIELD,
 };
 
 struct weaponfunc_shootauto invfunc_watchlaser_rapidfire = {
 	INVENTORYFUNCTYPE_SHOOT_AUTOMATIC,
-	L_GUN_086, // name
+	gettext_noop("Rapid Fire\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_default,
@@ -4836,10 +4840,10 @@ struct weapon invitem_watchlaser = {
 	1, // sway
 	NULL, // gunviscmds
 	NULL, // part visibility
-	L_GUN_000, // short name
-	L_GUN_000, // name
-	L_GUN_000, // manufacturer
-	L_GUN_000, // description
+	gettext_noop("\n"), // short name
+	gettext_noop("\n"), // name
+	gettext_noop("\n"), // manufacturer
+	gettext_noop("\n"), // description
 	WEAPONFLAG_AICANUSE | WEAPONFLAG_00000040 | WEAPONFLAG_TRACKTIMEUSED | WEAPONFLAG_DUALWIELD,
 };
 
@@ -4901,7 +4905,7 @@ struct guncmd invanim_combatknife_reload[] = {
 
 struct weaponfunc_melee invfunc_combatknife_slash = {
 	INVENTORYFUNCTYPE_MELEE,
-	L_GUN_109, // name
+	gettext_noop("Knife Slash\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_silent,
@@ -4925,7 +4929,7 @@ struct weaponfunc_melee invfunc_combatknife_slash = {
 
 struct weaponfunc_throw invfunc_combatknife_throw = {
 	INVENTORYFUNCTYPE_THROW,
-	L_GUN_110, // name
+	gettext_noop("Throw Poison Knife\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_silent,
@@ -4963,16 +4967,16 @@ struct weapon invitem_combatknife = {
 	1, // sway
 	gunviscmds_knife, // gunviscmds
 	NULL, // part visibility
-	L_GUN_083, // short name
-	L_GUN_035, // name
-	L_GUN_000, // manufacturer
-	L_GUN_182, // description
+	gettext_noop("Knife\n"), // short name
+	gettext_noop("Combat Knife\n"), // name
+	gettext_noop("\n"), // manufacturer
+	gettext_noop(""), // description
 	WEAPONFLAG_THROWABLE | WEAPONFLAG_ONEHANDED | WEAPONFLAG_AICANUSE | WEAPONFLAG_DUALFLIP | WEAPONFLAG_00000040 | WEAPONFLAG_TRACKTIMEUSED | WEAPONFLAG_00000400 | WEAPONFLAG_DUALWIELD | WEAPONFLAG_00002000 | WEAPONFLAG_00004000 | WEAPONFLAG_00008000 | WEAPONFLAG_HASHANDS | WEAPONFLAG_04000000,
 };
 
 struct weaponfunc_throw invfunc_bug_throw = {
 	INVENTORYFUNCTYPE_THROW,
-	L_GUN_000, // name
+	gettext_noop("\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_silent,
@@ -4986,7 +4990,7 @@ struct weaponfunc_throw invfunc_bug_throw = {
 
 struct weaponfunc_throw invfunc_targetamplifier_throw = {
 	INVENTORYFUNCTYPE_THROW,
-	L_GUN_000, // name
+	gettext_noop("\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_silent,
@@ -5024,10 +5028,10 @@ struct weapon invitem_commsrider = {
 	1, // sway
 	NULL, // gunviscmds
 	NULL, // part visibility
-	L_GUN_222, // short name
-	L_GUN_222, // name
-	L_GUN_000, // manufacturer
-	L_GUN_204, // description
+	gettext_noop("Comms Rider\n"), // short name
+	gettext_noop("Comms Rider\n"), // name
+	gettext_noop("\n"), // manufacturer
+	gettext_noop(""), // description
 	WEAPONFLAG_ONEHANDED | WEAPONFLAG_AICANUSE | WEAPONFLAG_UNDROPPABLE,
 };
 
@@ -5049,10 +5053,10 @@ struct weapon invitem_tracerbug = {
 	1, // sway
 	NULL, // gunviscmds
 	NULL, // part visibility
-	L_GUN_223, // short name
-	L_GUN_223, // name
-	L_GUN_000, // manufacturer
-	L_GUN_205, // description
+	gettext_noop("Tracer Bug\n"), // short name
+	gettext_noop("Tracer Bug\n"), // name
+	gettext_noop("\n"), // manufacturer
+	gettext_noop(""), // description
 	WEAPONFLAG_ONEHANDED | WEAPONFLAG_AICANUSE | WEAPONFLAG_UNDROPPABLE,
 };
 
@@ -5074,16 +5078,16 @@ struct weapon invitem_targetamplifier = {
 	1, // sway
 	NULL, // gunviscmds
 	NULL, // part visibility
-	L_GUN_235, // short name
-	L_GUN_224, // name
-	L_GUN_000, // manufacturer
-	L_GUN_206, // description
+	gettext_noop("Target Amp\n"), // short name
+	gettext_noop("Target Amplifier\n"), // name
+	gettext_noop("\n"), // manufacturer
+	gettext_noop(""), // description
 	WEAPONFLAG_ONEHANDED | WEAPONFLAG_AICANUSE | WEAPONFLAG_UNDROPPABLE,
 };
 
 struct weaponfunc_device invfunc_nightvision_primary = {
 	INVENTORYFUNCTYPE_DEVICE,
-	L_GUN_135, // name
+	gettext_noop("Light Amplifier\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_silent,
@@ -5111,19 +5115,19 @@ struct weapon invitem_nightvision = {
 	NULL, // gunviscmds
 	NULL, // part visibility
 #if VERSION >= VERSION_PAL_FINAL
-	L_GUN_244, // short name
+	gettext_noop("Night Vision\n"), // short name
 #else
-	L_GUN_059, // short name
+	gettext_noop("Night Vision\n"), // short name
 #endif
-	L_GUN_059, // name
-	L_GUN_000, // manufacturer
-	L_GUN_191, // description
+	gettext_noop("Night Vision\n"), // name
+	gettext_noop("\n"), // manufacturer
+	gettext_noop(""), // description
 	WEAPONFLAG_ONEHANDED | WEAPONFLAG_AICANUSE | WEAPONFLAG_00000080 | WEAPONFLAG_UNDROPPABLE,
 };
 
 struct weaponfunc invfunc_horizonscanner_primary = {
 	INVENTORYFUNCTYPE_NONE,
-	L_GUN_139, // name
+	gettext_noop("Zoom\n"), // name
 	0, // unused
 	-1, // ammoindex
 	&invnoisesettings_silent,
@@ -5161,16 +5165,16 @@ struct weapon invitem_horizonscanner = {
 	1, // sway
 	NULL, // gunviscmds
 	NULL, // part visibility
-	L_GUN_234, // short name
-	L_GUN_076, // name
-	L_GUN_000, // manufacturer
-	L_GUN_196, // description
+	gettext_noop("HorizonScan\n"), // short name
+	gettext_noop("Horizon Scanner\n"), // name
+	gettext_noop("\n"), // manufacturer
+	gettext_noop(""), // description
 	WEAPONFLAG_ONEHANDED | WEAPONFLAG_AICANUSE | WEAPONFLAG_00000040 | WEAPONFLAG_DETERMINER_S_AN | WEAPONFLAG_DETERMINER_F_AN | WEAPONFLAG_UNDROPPABLE,
 };
 
 struct weaponfunc_device invfunc_cloak_primary = {
 	INVENTORYFUNCTYPE_DEVICE,
-	L_GUN_116, // name
+	gettext_noop("Cloak\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_silent,
@@ -5205,16 +5209,16 @@ struct weapon invitem_cloakingdevice = {
 	1, // sway
 	NULL, // gunviscmds
 	NULL, // part visibility
-	L_GUN_073, // short name
-	L_GUN_073, // name
-	L_GUN_000, // manufacturer
-	L_GUN_195, // description
+	gettext_noop("Cloaking Device\n"), // short name
+	gettext_noop("Cloaking Device\n"), // name
+	gettext_noop("\n"), // manufacturer
+	gettext_noop(""), // description
 	WEAPONFLAG_ONEHANDED | WEAPONFLAG_AICANUSE | WEAPONFLAG_04000000,
 };
 
 struct weaponfunc_special invfunc_combatboost_boost = {
 	INVENTORYFUNCTYPE_SPECIAL,
-	L_GUN_113, // name
+	gettext_noop("Boost\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_silent,
@@ -5227,7 +5231,7 @@ struct weaponfunc_special invfunc_combatboost_boost = {
 
 struct weaponfunc_special invfunc_combatboost_revert = {
 	INVENTORYFUNCTYPE_SPECIAL,
-	L_GUN_114, // name
+	gettext_noop("Revert\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_silent,
@@ -5264,16 +5268,16 @@ struct weapon invitem_combatboost = {
 	1, // sway
 	NULL, // gunviscmds
 	NULL, // part visibility
-	L_GUN_232, // short name
-	L_GUN_074, // name
-	L_GUN_000, // manufacturer
-	L_GUN_190, // description
+	gettext_noop("Boost\n"), // short name
+	gettext_noop("Combat Boost\n"), // name
+	gettext_noop("\n"), // manufacturer
+	gettext_noop(""), // description
 	WEAPONFLAG_ONEHANDED | WEAPONFLAG_AICANUSE | WEAPONFLAG_04000000 | WEAPONFLAG_DETERMINER_S_SOME | WEAPONFLAG_DETERMINER_F_SOME,
 };
 
 struct weaponfunc_device invfunc_suicidepill_primary = {
 	INVENTORYFUNCTYPE_DEVICE,
-	L_GUN_000, // name
+	gettext_noop("\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_silent,
@@ -5301,19 +5305,19 @@ struct weapon invitem_suicidepill = {
 	NULL, // gunviscmds
 	NULL, // part visibility
 #if VERSION >= VERSION_PAL_FINAL
-	L_GUN_246, // short name
+	gettext_noop("Suicide Pill\n"), // short name
 #else
-	L_GUN_072, // short name
+	gettext_noop("Suicide Pill\n"), // short name
 #endif
-	L_GUN_072, // name
-	L_GUN_000, // manufacturer
-	L_GUN_000, // description
+	gettext_noop("Suicide Pill\n"), // name
+	gettext_noop("\n"), // manufacturer
+	gettext_noop("\n"), // description
 	WEAPONFLAG_AICANUSE | WEAPONFLAG_UNDROPPABLE,
 };
 
 struct weaponfunc_device invfunc_irscanner_primary = {
 	INVENTORYFUNCTYPE_DEVICE,
-	L_GUN_138, // name
+	gettext_noop("Thermal Imager\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_silent,
@@ -5340,16 +5344,16 @@ struct weapon invitem_irscanner = {
 	1, // sway
 	NULL, // gunviscmds
 	NULL, // part visibility
-	L_GUN_069, // short name
-	L_GUN_069, // name
-	L_GUN_000, // manufacturer
-	L_GUN_194, // description
+	gettext_noop("IR Scanner\n"), // short name
+	gettext_noop("IR Scanner\n"), // name
+	gettext_noop("\n"), // manufacturer
+	gettext_noop(""), // description
 	WEAPONFLAG_ONEHANDED | WEAPONFLAG_AICANUSE | WEAPONFLAG_00000040 | WEAPONFLAG_UNDROPPABLE,
 };
 
 struct weaponfunc invfunc_disguise_primary = {
 	INVENTORYFUNCTYPE_NONE,
-	L_GUN_143, // name
+	gettext_noop("Wear Disguise\n"), // name
 	0, // unused
 	-1, // ammoindex
 	&invnoisesettings_silent,
@@ -5376,13 +5380,13 @@ struct weapon invitem_disguise40 = {
 	NULL, // gunviscmds
 	NULL, // part visibility
 #if VERSION >= VERSION_PAL_FINAL
-	L_GUN_250, // short name
+	gettext_noop("Disguise\n"), // short name
 #else
-	L_GUN_043, // short name
+	gettext_noop("Disguise\n"), // short name
 #endif
-	L_GUN_043, // name
-	L_GUN_000, // manufacturer
-	L_GUN_211, // description
+	gettext_noop("Disguise\n"), // name
+	gettext_noop("\n"), // manufacturer
+	gettext_noop("Not your normal outfit. Wear it to pretend not to be you.\n"), // description
 	WEAPONFLAG_ONEHANDED | WEAPONFLAG_AICANUSE | WEAPONFLAG_UNDROPPABLE | WEAPONFLAG_FIRETOACTIVATE,
 };
 
@@ -5405,19 +5409,19 @@ struct weapon invitem_disguise41 = {
 	NULL, // gunviscmds
 	NULL, // part visibility
 #if VERSION >= VERSION_PAL_FINAL
-	L_GUN_250, // short name
+	gettext_noop("Disguise\n"), // short name
 #else
-	L_GUN_043, // short name
+	gettext_noop("Disguise\n"), // short name
 #endif
-	L_GUN_043, // name
-	L_GUN_000, // manufacturer
-	L_GUN_211, // description
+	gettext_noop("Disguise\n"), // name
+	gettext_noop("\n"), // manufacturer
+	gettext_noop("Not your normal outfit. Wear it to pretend not to be you.\n"), // description
 	WEAPONFLAG_ONEHANDED | WEAPONFLAG_AICANUSE | WEAPONFLAG_UNDROPPABLE | WEAPONFLAG_FIRETOACTIVATE,
 };
 
 struct weaponfunc_device invfunc_camspy_deploy = {
 	INVENTORYFUNCTYPE_DEVICE,
-	L_GUN_136, // name
+	gettext_noop("Mobile Camera\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_silent,
@@ -5444,16 +5448,16 @@ struct weapon invitem_camspy = {
 	1, // sway
 	NULL, // gunviscmds
 	NULL, // part visibility
-	L_GUN_060, // short name
-	L_GUN_060, // name
-	L_GUN_000, // manufacturer
-	L_GUN_192, // description
+	gettext_noop("CamSpy\n"), // short name
+	gettext_noop("CamSpy\n"), // name
+	gettext_noop("\n"), // manufacturer
+	gettext_noop(""), // description
 	WEAPONFLAG_ONEHANDED | WEAPONFLAG_AICANUSE | WEAPONFLAG_DUALWIELD | WEAPONFLAG_UNDROPPABLE,
 };
 
 struct weaponfunc_device invfunc_rtracker_primary = {
 	INVENTORYFUNCTYPE_DEVICE,
-	L_GUN_142, // name
+	gettext_noop("Identify Targets\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_silent,
@@ -5480,16 +5484,16 @@ struct weapon invitem_rtracker = {
 	1, // sway
 	NULL, // gunviscmds
 	NULL, // part visibility
-	L_GUN_070, // short name
-	L_GUN_070, // name
-	L_GUN_000, // manufacturer
-	L_GUN_198, // description
+	gettext_noop("R-Tracker\n"), // short name
+	gettext_noop("R-Tracker\n"), // name
+	gettext_noop("\n"), // manufacturer
+	gettext_noop(""), // description
 	WEAPONFLAG_ONEHANDED | WEAPONFLAG_AICANUSE | WEAPONFLAG_DUALWIELD | WEAPONFLAG_UNDROPPABLE,
 };
 
 struct weaponfunc_device invfunc_xray_primary = {
 	INVENTORYFUNCTYPE_DEVICE,
-	L_GUN_137, // name
+	gettext_noop("X-Ray Vision\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_silent,
@@ -5516,10 +5520,10 @@ struct weapon invitem_xrayscanner = {
 	1, // sway
 	NULL, // gunviscmds
 	NULL, // part visibility
-	L_GUN_233, // short name
-	L_GUN_065, // name
-	L_GUN_000, // manufacturer
-	L_GUN_193, // description
+	gettext_noop("XRayScan\n"), // short name
+	gettext_noop("X-Ray Scanner\n"), // name
+	gettext_noop("\n"), // manufacturer
+	gettext_noop(""), // description
 #if VERSION >= VERSION_NTSC_1_0
 	WEAPONFLAG_ONEHANDED | WEAPONFLAG_AICANUSE | WEAPONFLAG_00000040 | WEAPONFLAG_DETERMINER_S_AN | WEAPONFLAG_DETERMINER_F_AN | WEAPONFLAG_UNDROPPABLE,
 #else
@@ -5545,7 +5549,7 @@ struct guncmd invanim_unused_8007f794[] = {
 
 struct weaponfunc_special invfunc_datauplink_primary = {
 	INVENTORYFUNCTYPE_SPECIAL,
-	L_GUN_141, // name
+	gettext_noop("Connect\n"), // name
 	0, // unused
 	-1, // ammoindex
 	&invnoisesettings_silent,
@@ -5575,13 +5579,13 @@ struct weapon invitem_datauplink = {
 	NULL, // gunviscmds
 	NULL, // part visibility
 #if VERSION >= VERSION_PAL_FINAL
-	L_GUN_243, // short name
+	gettext_noop("L_GUN_243"), // short name
 #else
-	L_GUN_075, // short name
+	gettext_noop("Data Uplink\n"), // short name
 #endif
-	L_GUN_075, // name
-	L_GUN_000, // manufacturer
-	L_GUN_197, // description
+	gettext_noop("Data Uplink\n"), // name
+	gettext_noop("\n"), // manufacturer
+	gettext_noop(""), // description
 	WEAPONFLAG_ONEHANDED | WEAPONFLAG_00000040 | WEAPONFLAG_00002000 | WEAPONFLAG_HASHANDS | WEAPONFLAG_UNDROPPABLE | WEAPONFLAG_FIRETOACTIVATE,
 };
 
@@ -5605,13 +5609,13 @@ struct weapon invitem_doordecoder = {
 	NULL, // gunviscmds
 	NULL, // part visibility
 #if VERSION >= VERSION_PAL_FINAL
-	L_GUN_245, // short name
+	gettext_noop("Door Decoder\n"), // short name
 #else
-	L_GUN_063, // short name
+	gettext_noop("Door Decoder\n"), // short name
 #endif
-	L_GUN_063, // name
-	L_GUN_000, // manufacturer
-	L_GUN_200, // description
+	gettext_noop("Door Decoder\n"), // name
+	gettext_noop("\n"), // manufacturer
+	gettext_noop(""), // description
 	WEAPONFLAG_ONEHANDED | WEAPONFLAG_UNDROPPABLE | WEAPONFLAG_FIRETOACTIVATE,
 };
 
@@ -5634,10 +5638,10 @@ struct weapon invitem_rocket = {
 	1, // sway
 	NULL, // gunviscmds
 	NULL, // part visibility
-	L_GUN_044, // short name
-	L_GUN_044, // name
-	L_GUN_000, // manufacturer
-	L_GUN_000, // description
+	gettext_noop("Rocket\n"), // short name
+	gettext_noop("Rocket\n"), // name
+	gettext_noop("\n"), // manufacturer
+	gettext_noop("\n"), // description
 	0, // flags
 };
 
@@ -5660,10 +5664,10 @@ struct weapon invitem_homingrocket = {
 	1, // sway
 	NULL, // gunviscmds
 	NULL, // part visibility
-	L_GUN_045, // short name
-	L_GUN_045, // name
-	L_GUN_000, // manufacturer
-	L_GUN_000, // description
+	gettext_noop("Homing Rocket\n"), // short name
+	gettext_noop("Homing Rocket\n"), // name
+	gettext_noop("\n"), // manufacturer
+	gettext_noop("\n"), // description
 	0, // flags
 };
 
@@ -5685,10 +5689,10 @@ struct weapon invitem_grenaderound = {
 	1, // sway
 	NULL, // gunviscmds
 	NULL, // part visibility
-	L_GUN_046, // short name
-	L_GUN_046, // name
-	L_GUN_000, // manufacturer
-	L_GUN_000, // description
+	gettext_noop("Grenade Round\n"), // short name
+	gettext_noop("Grenade Round\n"), // name
+	gettext_noop("\n"), // manufacturer
+	gettext_noop("\n"), // description
 	0, // flags
 };
 
@@ -5710,16 +5714,16 @@ struct weapon invitem_bolt = {
 	1, // sway
 	NULL, // gunviscmds
 	NULL, // part visibility
-	L_GUN_048, // short name
-	L_GUN_048, // name
-	L_GUN_000, // manufacturer
-	L_GUN_000, // description
+	gettext_noop("Bolt\n"), // short name
+	gettext_noop("Bolt\n"), // name
+	gettext_noop("\n"), // manufacturer
+	gettext_noop("\n"), // description
 	0, // flags
 };
 
 struct weaponfunc_special invfunc_unused_8006f9a4 = {
 	INVENTORYFUNCTYPE_SPECIAL,
-	L_GUN_144, // "Place Explosives"
+	gettext_noop("Place Explosives\n"), // "Place Explosives"
 	0, // unused
 	-1, // ammoindex
 	&invnoisesettings_silent,
@@ -5750,13 +5754,13 @@ struct weapon invitem_skedarbomb = {
 	NULL, // gunviscmds
 	NULL, // part visibility
 #if VERSION >= VERSION_JPN_FINAL
-	L_GUN_259, // short name
+	gettext_noop("L_GUN_259"), // short name
 #else
-	L_GUN_221, // short name
+	gettext_noop("Skedar Bomb\n"), // short name
 #endif
-	L_GUN_221, // name
-	L_GUN_000, // manufacturer
-	L_GUN_203, // description
+	gettext_noop("Skedar Bomb\n"), // name
+	gettext_noop("\n"), // manufacturer
+	gettext_noop(""), // description
 	WEAPONFLAG_FIRETOACTIVATE,
 };
 
@@ -5779,16 +5783,16 @@ struct weapon invitem_explosives = {
 	1, // sway
 	NULL, // gunviscmds
 	NULL, // part visibility
-	L_GUN_064, // short name
-	L_GUN_064, // name
-	L_GUN_000, // manufacturer
-	L_GUN_202, // description
+	gettext_noop("Explosives\n"), // short name
+	gettext_noop("Explosives\n"), // name
+	gettext_noop("\n"), // manufacturer
+	gettext_noop(""), // description
 	WEAPONFLAG_FIRETOACTIVATE,
 };
 
 struct weaponfunc_device invfunc_presidentscanner_primary = {
 	INVENTORYFUNCTYPE_DEVICE,
-	L_GUN_142, // name
+	gettext_noop("Identify Targets\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_silent,
@@ -5815,10 +5819,10 @@ struct weapon invitem_presidentscanner = {
 	1, // sway
 	NULL, // gunviscmds
 	NULL, // part visibility
-	L_GUN_231, // short name
-	L_GUN_219, // name
-	L_GUN_000, // manufacturer
-	L_GUN_199, // description
+	gettext_noop("PresidentScan\n"), // short name
+	gettext_noop("President Scanner\n"), // name
+	gettext_noop("\n"), // manufacturer
+	gettext_noop(""), // description
 	WEAPONFLAG_ONEHANDED | WEAPONFLAG_AICANUSE | WEAPONFLAG_DUALWIELD | WEAPONFLAG_UNDROPPABLE,
 };
 
@@ -5842,13 +5846,13 @@ struct weapon invitem_autosurgeon = {
 	NULL, // gunviscmds
 	NULL, // part visibility
 #if VERSION >= VERSION_PAL_FINAL
-	L_GUN_248, // short name
+	gettext_noop("AutoSurgeon\n"), // short name
 #else
-	L_GUN_220, // short name
+	gettext_noop("AutoSurgeon\n"), // short name
 #endif
-	L_GUN_220, // name
-	L_GUN_000, // manufacturer
-	L_GUN_201, // description
+	gettext_noop("AutoSurgeon\n"), // name
+	gettext_noop("\n"), // manufacturer
+	gettext_noop(""), // description
 	WEAPONFLAG_UNDROPPABLE | WEAPONFLAG_FIRETOACTIVATE,
 };
 
@@ -5871,10 +5875,10 @@ struct weapon invitem_flightplans = {
 	1, // sway
 	NULL, // gunviscmds
 	NULL, // part visibility
-	L_GUN_225, // short name
-	L_GUN_225, // name
-	L_GUN_000, // manufacturer
-	L_GUN_207, // description
+	gettext_noop("Flight Plans\n"), // short name
+	gettext_noop("Flight Plans\n"), // name
+	gettext_noop("\n"), // manufacturer
+	gettext_noop(""), // description
 	WEAPONFLAG_UNDROPPABLE,
 };
 
@@ -5897,10 +5901,10 @@ struct weapon invitem_researchtape = {
 	1, // sway
 	NULL, // gunviscmds
 	NULL, // part visibility
-	L_GUN_226, // short name
-	L_GUN_226, // name
-	L_GUN_000, // manufacturer
-	L_GUN_208, // description
+	gettext_noop("Research Tape\n"), // short name
+	gettext_noop("Research Tape\n"), // name
+	gettext_noop("\n"), // manufacturer
+	gettext_noop(""), // description
 	WEAPONFLAG_UNDROPPABLE,
 };
 
@@ -5924,13 +5928,13 @@ struct weapon invitem_backupdisk = {
 	NULL, // gunviscmds
 	NULL, // part visibility
 #if VERSION >= VERSION_PAL_FINAL
-	L_GUN_249, // short name
+	gettext_noop("Backup Disk\n"), // short name
 #else
-	L_GUN_227, // short name
+	gettext_noop("Backup Disk\n"), // short name
 #endif
-	L_GUN_227, // name
-	L_GUN_000, // manufacturer
-	L_GUN_209, // description
+	gettext_noop("Backup Disk\n"), // name
+	gettext_noop("\n"), // manufacturer
+	gettext_noop(""), // description
 	WEAPONFLAG_UNDROPPABLE,
 };
 
@@ -5953,10 +5957,10 @@ struct weapon invitem_briefcase = {
 	1, // sway
 	NULL, // gunviscmds
 	NULL, // part visibility
-	L_GUN_229, // short name
-	L_GUN_229, // name
-	L_GUN_000, // manufacturer
-	L_GUN_000, // description
+	gettext_noop("Briefcase\n"), // short name
+	gettext_noop("Briefcase\n"), // name
+	gettext_noop("\n"), // manufacturer
+	gettext_noop("\n"), // description
 	WEAPONFLAG_HIDEMENUMODEL | WEAPONFLAG_UNDROPPABLE,
 };
 
@@ -5980,13 +5984,13 @@ struct weapon invitem_suitcase = {
 	NULL, // gunviscmds
 	NULL, // part visibility
 #if VERSION >= VERSION_JPN_FINAL
-	L_GUN_258, // short name
+	gettext_noop("L_GUN_258"), // short name
 #else
-	L_GUN_067, // short name
+	gettext_noop("Suitcase\n"), // short name
 #endif
-	L_GUN_067, // name
-	L_GUN_000, // manufacturer
-	L_GUN_000, // description
+	gettext_noop("Suitcase\n"), // name
+	gettext_noop("\n"), // manufacturer
+	gettext_noop("\n"), // description
 	WEAPONFLAG_UNDROPPABLE | WEAPONFLAG_FIRETOACTIVATE,
 };
 
@@ -6009,10 +6013,10 @@ struct weapon invitem_necklace = {
 	1, // sway
 	NULL, // gunviscmds
 	NULL, // part visibility
-	L_GUN_230, // short name
-	L_GUN_230, // name
-	L_GUN_000, // manufacturer
-	L_GUN_238, // description
+	gettext_noop("Necklace\n"), // short name
+	gettext_noop("Necklace\n"), // name
+	gettext_noop("\n"), // manufacturer
+	gettext_noop(""), // description
 	WEAPONFLAG_UNDROPPABLE,
 };
 
@@ -6036,10 +6040,10 @@ struct weapon invitem_shieldtechitem = {
 	1, // sway
 	NULL, // gunviscmds
 	NULL, // part visibility
-	L_GUN_240, // short name
-	L_GUN_240, // name
-	L_GUN_000, // manufacturer
-	L_GUN_241, // description
+	gettext_noop("Shield\n"), // short name
+	gettext_noop("Shield\n"), // name
+	gettext_noop("\n"), // manufacturer
+	gettext_noop(""), // description
 	WEAPONFLAG_UNDROPPABLE,
 };
 #endif
@@ -6063,16 +6067,16 @@ struct weapon invitem_keycard = {
 	1, // sway
 	NULL, // gunviscmds
 	NULL, // part visibility
-	L_GUN_228, // short name
-	L_GUN_228, // name
-	L_GUN_000, // manufacturer
-	L_GUN_000, // description
+	gettext_noop("Key Card\n"), // short name
+	gettext_noop("Key Card\n"), // name
+	gettext_noop("\n"), // manufacturer
+	gettext_noop("\n"), // description
 	WEAPONFLAG_UNDROPPABLE,
 };
 
 struct weaponfunc_shootprojectile invfunc_rocketlauncher34_primary = {
 	INVENTORYFUNCTYPE_SHOOT_PROJECTILE,
-	L_GUN_000, // name
+	gettext_noop("\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_loudest,
@@ -6127,10 +6131,10 @@ struct weapon invitem_rocketlauncher_34 = {
 	1, // sway
 	NULL, // gunviscmds
 	NULL, // part visibility
-	L_GUN_080, // short name
-	L_GUN_027, // name
-	L_GUN_000, // manufacturer
-	L_GUN_000, // description
+	gettext_noop("R-Launcher\n"), // short name
+	gettext_noop("Rocket Launcher\n"), // name
+	gettext_noop("\n"), // manufacturer
+	gettext_noop("\n"), // description
 	WEAPONFLAG_AICANUSE | WEAPONFLAG_00000040 | WEAPONFLAG_00002000 | WEAPONFLAG_00004000 | WEAPONFLAG_HASHANDS | WEAPONFLAG_AIMTRACK,
 };
 
@@ -6141,7 +6145,7 @@ struct guncmd invanim_tester_shoot[] = {
 
 struct weaponfunc_shootsingle invfunc_tester_primary = {
 	INVENTORYFUNCTYPE_SHOOT_SINGLE,
-	L_GUN_000, // name
+	gettext_noop("\n"), // name
 	0, // unused
 	0, // ammoindex
 	&invnoisesettings_default,
@@ -6187,10 +6191,10 @@ struct weapon invitem_tester = {
 	1, // sway
 	NULL, // gunviscmds
 	NULL, // part visibility
-	L_GUN_058, // short name
-	L_GUN_058, // name
-	L_GUN_000, // manufacturer
-	L_GUN_000, // description
+	gettext_noop("Tester\n"), // short name
+	gettext_noop("Tester\n"), // name
+	gettext_noop("\n"), // manufacturer
+	gettext_noop("\n"), // description
 	WEAPONFLAG_00000004 | WEAPONFLAG_ONEHANDED | WEAPONFLAG_AICANUSE | WEAPONFLAG_DUALFLIP | WEAPONFLAG_00000040 | WEAPONFLAG_00000400 | WEAPONFLAG_00002000 | WEAPONFLAG_00008000,
 };
 
