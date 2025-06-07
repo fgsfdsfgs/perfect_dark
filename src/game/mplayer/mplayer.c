@@ -31,6 +31,11 @@
 #include "fs.h"
 #include "system.h"
 #include "mpsetups.h"
+#ifndef PLATFORM_N64
+#include <libintl.h>
+#define _(String) gettext (String)
+#define gettext_noop(String) String
+#endif
 
 // bss
 struct chrdata *g_MpAllChrPtrs[MAX_MPCHRS];
@@ -482,7 +487,7 @@ void mpPlayerSetDefaults(s32 playernum, bool autonames)
 
 	if (autonames) {
 		// "Player 1" etc
-		sprintf(g_PlayerConfigsArray[playernum].base.name, "%s %d\n", langGet(L_MISC_437), playernum + 1);
+		sprintf(g_PlayerConfigsArray[playernum].base.name, "%s %d\n", _("Player"), playernum + 1);
 	} else {
 		g_PlayerConfigsArray[playernum].base.name[0] = '\0';
 	}
@@ -618,7 +623,7 @@ void mpGetTeamsWithDefaultName(u8 *mask)
 	*mask = 0;
 
 	for (i = 0; i < ARRAYCOUNT(g_BossFile.teamnames); i++) {
-		if (strcmp(g_BossFile.teamnames[i], langGet(L_OPTIONS_008 + i)) == 0) {
+		if (strcmp(g_BossFile.teamnames[i], langGet(gettext_noop("Red\n") + i)) == 0) {
 			*mask |= 1 << i;
 		}
 	}
@@ -632,11 +637,22 @@ void mpSetTeamNamesToDefault(u8 mask)
 
 	for (i = 0; i < ARRAYCOUNT(g_BossFile.teamnames); i++) {
 		if (mask & (1 << i)) {
-			strcpy(g_BossFile.teamnames[i], langGet(L_OPTIONS_008 + i));
+			strcpy(g_BossFile.teamnames[i], langGet(gettext_noop("Red\n") + i));
 		}
 	}
 }
 #endif
+
+static char *teamsNameArray[] = {
+	gettext_noop("Red\n"),
+	gettext_noop("Yellow\n"),
+	gettext_noop("Blue\n"),
+	gettext_noop("Magenta\n"),
+	gettext_noop("Cyan\n"),
+	gettext_noop("Orange\n"),
+	gettext_noop("Pink\n"),
+	gettext_noop("Brown\n")
+};
 
 void mpSetDefaultNamesIfEmpty(void)
 {
@@ -644,20 +660,20 @@ void mpSetDefaultNamesIfEmpty(void)
 
 	// Setup file name
 	if (g_MpSetup.name[0] == '\0') {
-		strcpy(g_MpSetup.name, langGet(L_MISC_438)); // empty string
+		strcpy(g_MpSetup.name, ""); // empty string
 	}
 
 	// Team names
 	for (i = 0; i < ARRAYCOUNT(g_BossFile.teamnames); i++) {
 		if (g_BossFile.teamnames[i][0] == '\0') {
-			strcpy(g_BossFile.teamnames[i], langGet(L_OPTIONS_008 + i)); // "Red", "Yellow" etc
+			strcpy(g_BossFile.teamnames[i], _(teamsNameArray[i])); // "Red", "Yellow" etc
 		}
 	}
 
 	// Player names
 	for (i = 0; i < MAX_PLAYERS; i++) {
 		if (g_PlayerConfigsArray[i].base.name[0] == '\0') {
-			sprintf(g_PlayerConfigsArray[i].base.name, "%s %d\n", langGet(L_MISC_437), i + 1); // "Player 1" etc
+			sprintf(g_PlayerConfigsArray[i].base.name, "%s %d\n", _("Player"), i + 1); // "Player 1" etc
 		}
 	}
 }
@@ -970,15 +986,15 @@ char *mpGetWeaponLabel(s32 weaponnum)
 		if (challengeIsFeatureUnlocked(g_MpWeapons[i].unlockfeature)) {
 			if (weaponnum == 0) {
 				if (g_MpWeapons[i].weaponnum == WEAPON_NONE) {
-					return langGet(L_MPWEAPONS_058); // "Nothing"
+					return _("Nothing\n"); // "Nothing"
 				}
 
 				if (g_MpWeapons[i].weaponnum == WEAPON_MPSHIELD) {
-					return langGet(L_MPWEAPONS_059); // "Shield"
+					return _("Shield\n"); // "Shield"
 				}
 
 				if (g_MpWeapons[i].weaponnum == WEAPON_DISABLED) {
-					return langGet(L_MPWEAPONS_060); // "Disabled"
+					return _("Disabled\n"); // "Disabled"
 				}
 
 				return bgunGetName(g_MpWeapons[i].weaponnum);
@@ -1118,18 +1134,18 @@ char *mpGetWeaponSetName(s32 index)
 	index = func0f188f9c(index);
 
 	if (index < 0 || index >= ARRAYCOUNT(g_MpWeaponSets) + 2) {
-		return langGet(L_MPWEAPONS_041); // "Custom"
+		return _("Custom\n"); // "Custom"
 	}
 
 	if (index == ARRAYCOUNT(g_MpWeaponSets) + 1) {
-		return langGet(L_MPWEAPONS_042); // "Random"
+		return _("Random\n"); // "Random"
 	}
 
 	if (index == ARRAYCOUNT(g_MpWeaponSets)) {
-		return langGet(L_MPWEAPONS_043); // "Random Five"
+		return _("Random Five\n"); // "Random Five"
 	}
 
-	return langGet(g_MpWeaponSets[index].name);
+	return _(g_MpWeaponSets[index].name);
 }
 
 void func0f18913c(void)
@@ -1347,7 +1363,7 @@ Gfx *mpRenderModalText(Gfx *gdl)
 
 		gdl = text0f153628(gdl);
 
-		strcpy(text, langGet(L_MPWEAPONS_040)); // "Paused"
+		strcpy(text, _("Paused\n")); // "Paused"
 
 		x = viGetViewLeft() + viGetViewWidth() / 2;
 
@@ -1396,7 +1412,7 @@ Gfx *mpRenderModalText(Gfx *gdl)
 		// Render "Press START" text
 		gdl = text0f153628(gdl);
 
-		strcpy(text, langGet(L_MPWEAPONS_039));
+		strcpy(text, _("Press START\n"));
 
 		x = viGetViewLeft() + viGetViewWidth() / 2;
 
@@ -1579,44 +1595,44 @@ s32 mpFindMinFloat(s32 numplayers, f32 val0, f32 val1, f32 val2, f32 val3)
 }
 
 struct mpweaponset g_MpWeaponSets[12] = {
-	{ /*0x00*/ L_MPWEAPONS_055, { WEAPON_FALCON2,          WEAPON_MAGSEC4,     WEAPON_PHOENIX,     WEAPON_MAULER,         WEAPON_MPSHIELD, WEAPON_DISABLED }, { MPFEATURE_WEAPON_PHOENIX,         MPFEATURE_WEAPON_MAULER,     0,                              0                       }, WEAPON_FALCON2,     WEAPON_MAGSEC4,     WEAPON_FALCON2,   WEAPON_DY357MAGNUM,    WEAPON_MPSHIELD, WEAPON_DISABLED }, // Pistols
-	{ /*0x01*/ L_MPWEAPONS_054, { WEAPON_FALCON2,          WEAPON_CMP150,      WEAPON_LAPTOPGUN,   WEAPON_AR34,           WEAPON_MPSHIELD, WEAPON_DISABLED }, { MPFEATURE_WEAPON_LAPTOPGUN,       0,                           0,                              0                       }, WEAPON_FALCON2,     WEAPON_CMP150,      WEAPON_DRAGON,    WEAPON_AR34,           WEAPON_MPSHIELD, WEAPON_DISABLED }, // Automatics
-	{ /*0x02*/ L_MPWEAPONS_053, { WEAPON_MAGSEC4,          WEAPON_DY357MAGNUM, WEAPON_SHOTGUN,     WEAPON_RCP120,         WEAPON_MPSHIELD, WEAPON_DISABLED }, { MPFEATURE_WEAPON_SHOTGUN,         MPFEATURE_WEAPON_RCP120,     0,                              0                       }, WEAPON_MAGSEC4,     WEAPON_DY357MAGNUM, WEAPON_DRAGON,    WEAPON_AR34,           WEAPON_MPSHIELD, WEAPON_DISABLED }, // Power
-	{ /*0x03*/ L_MPWEAPONS_052, { WEAPON_PHOENIX,          WEAPON_CYCLONE,     WEAPON_CALLISTO,    WEAPON_FARSIGHT,       WEAPON_MPSHIELD, WEAPON_DISABLED }, { MPFEATURE_WEAPON_FARSIGHT,        MPFEATURE_WEAPON_CALLISTO,   0,                              0                       }, WEAPON_DISABLED,    WEAPON_DISABLED,    WEAPON_DISABLED,  WEAPON_DISABLED,       WEAPON_DISABLED, WEAPON_DISABLED }, // FarSight
-	{ /*0x04*/ L_MPWEAPONS_051, { WEAPON_FALCON2,          WEAPON_CMP150,      WEAPON_DRAGON,      WEAPON_TRANQUILIZER,   WEAPON_MPSHIELD, WEAPON_DISABLED }, { MPFEATURE_WEAPON_TRANQUILIZER,    0,                           0,                              0                       }, WEAPON_DISABLED,    WEAPON_DISABLED,    WEAPON_DISABLED,  WEAPON_DISABLED,       WEAPON_DISABLED, WEAPON_DISABLED }, // Tranquilizer
-	{ /*0x05*/ L_MPWEAPONS_050, { WEAPON_MAULER,           WEAPON_K7AVENGER,   WEAPON_REAPER,      WEAPON_SUPERDRAGON,    WEAPON_MPSHIELD, WEAPON_DISABLED }, { MPFEATURE_WEAPON_SUPERDRAGON,     MPFEATURE_WEAPON_MAULER,     MPFEATURE_WEAPON_K7AVENGER,     MPFEATURE_WEAPON_REAPER }, WEAPON_DISABLED,    WEAPON_DISABLED,    WEAPON_DISABLED,  WEAPON_DISABLED,       WEAPON_DISABLED, WEAPON_DISABLED }, // Heavy
-	{ /*0x06*/ L_MPWEAPONS_049, { WEAPON_FALCON2_SILENCER, WEAPON_GRENADE,     WEAPON_CMP150,      WEAPON_DY357LX,        WEAPON_MPSHIELD, WEAPON_DISABLED }, { MPFEATURE_WEAPON_FALCON2SILENCED, MPFEATURE_WEAPON_DY357LX,    0,                              0                       }, WEAPON_DISABLED,    WEAPON_DISABLED,    WEAPON_DISABLED,  WEAPON_DISABLED,       WEAPON_DISABLED, WEAPON_DISABLED }, // Golden Magnum
-	{ /*0x07*/ L_MPWEAPONS_048, { WEAPON_DEVASTATOR,       WEAPON_DEVASTATOR,  WEAPON_SUPERDRAGON, WEAPON_SUPERDRAGON,    WEAPON_MPSHIELD, WEAPON_DISABLED }, { MPFEATURE_WEAPON_SUPERDRAGON,     MPFEATURE_WEAPON_DEVASTATOR, 0,                              0                       }, WEAPON_DISABLED,    WEAPON_DISABLED,    WEAPON_DISABLED,  WEAPON_DISABLED,       WEAPON_DISABLED, WEAPON_DISABLED }, // Explosive
-	{ /*0x08*/ L_MPWEAPONS_047, { WEAPON_MAGSEC4,          WEAPON_CMP150,      WEAPON_AR34,        WEAPON_DEVASTATOR,     WEAPON_MPSHIELD, WEAPON_DISABLED }, { MPFEATURE_WEAPON_DEVASTATOR,      0,                           0,                              0                       }, WEAPON_DISABLED,    WEAPON_DISABLED,    WEAPON_DISABLED,  WEAPON_DISABLED,       WEAPON_DISABLED, WEAPON_DISABLED }, // Grenade Launcher
-	{ /*0x09*/ L_MPWEAPONS_046, { WEAPON_MAULER,           WEAPON_CYCLONE,     WEAPON_DRAGON,      WEAPON_ROCKETLAUNCHER, WEAPON_MPSHIELD, WEAPON_DISABLED }, { MPFEATURE_WEAPON_MAULER,          0,                           0,                              0                       }, WEAPON_FALCON2,     WEAPON_CYCLONE,     WEAPON_DRAGON,    WEAPON_ROCKETLAUNCHER, WEAPON_MPSHIELD, WEAPON_DISABLED }, // Rocket Launcher
-	{ /*0x0a*/ L_MPWEAPONS_045, { WEAPON_MAGSEC4,          WEAPON_LAPTOPGUN,   WEAPON_K7AVENGER,   WEAPON_PROXIMITYMINE,  WEAPON_MPSHIELD, WEAPON_DISABLED }, { MPFEATURE_WEAPON_LAPTOPGUN,       MPFEATURE_WEAPON_K7AVENGER,  MPFEATURE_WEAPON_PROXIMITYMINE, 0                       }, WEAPON_DISABLED,    WEAPON_DISABLED,    WEAPON_DISABLED,  WEAPON_DISABLED,       WEAPON_DISABLED, WEAPON_DISABLED }, // Proximity Mine
+	{ /*0x00*/ gettext_noop("Pistols\n"), { WEAPON_FALCON2,          WEAPON_MAGSEC4,     WEAPON_PHOENIX,     WEAPON_MAULER,         WEAPON_MPSHIELD, WEAPON_DISABLED }, { MPFEATURE_WEAPON_PHOENIX,         MPFEATURE_WEAPON_MAULER,     0,                              0                       }, WEAPON_FALCON2,     WEAPON_MAGSEC4,     WEAPON_FALCON2,   WEAPON_DY357MAGNUM,    WEAPON_MPSHIELD, WEAPON_DISABLED }, // Pistols
+	{ /*0x01*/ gettext_noop("Automatics\n"), { WEAPON_FALCON2,          WEAPON_CMP150,      WEAPON_LAPTOPGUN,   WEAPON_AR34,           WEAPON_MPSHIELD, WEAPON_DISABLED }, { MPFEATURE_WEAPON_LAPTOPGUN,       0,                           0,                              0                       }, WEAPON_FALCON2,     WEAPON_CMP150,      WEAPON_DRAGON,    WEAPON_AR34,           WEAPON_MPSHIELD, WEAPON_DISABLED }, // Automatics
+	{ /*0x02*/ gettext_noop("Power\n"), { WEAPON_MAGSEC4,          WEAPON_DY357MAGNUM, WEAPON_SHOTGUN,     WEAPON_RCP120,         WEAPON_MPSHIELD, WEAPON_DISABLED }, { MPFEATURE_WEAPON_SHOTGUN,         MPFEATURE_WEAPON_RCP120,     0,                              0                       }, WEAPON_MAGSEC4,     WEAPON_DY357MAGNUM, WEAPON_DRAGON,    WEAPON_AR34,           WEAPON_MPSHIELD, WEAPON_DISABLED }, // Power
+	{ /*0x03*/ gettext_noop("FarSight\n"), { WEAPON_PHOENIX,          WEAPON_CYCLONE,     WEAPON_CALLISTO,    WEAPON_FARSIGHT,       WEAPON_MPSHIELD, WEAPON_DISABLED }, { MPFEATURE_WEAPON_FARSIGHT,        MPFEATURE_WEAPON_CALLISTO,   0,                              0                       }, WEAPON_DISABLED,    WEAPON_DISABLED,    WEAPON_DISABLED,  WEAPON_DISABLED,       WEAPON_DISABLED, WEAPON_DISABLED }, // FarSight
+	{ /*0x04*/ gettext_noop("Tranquilizer\n"), { WEAPON_FALCON2,          WEAPON_CMP150,      WEAPON_DRAGON,      WEAPON_TRANQUILIZER,   WEAPON_MPSHIELD, WEAPON_DISABLED }, { MPFEATURE_WEAPON_TRANQUILIZER,    0,                           0,                              0                       }, WEAPON_DISABLED,    WEAPON_DISABLED,    WEAPON_DISABLED,  WEAPON_DISABLED,       WEAPON_DISABLED, WEAPON_DISABLED }, // Tranquilizer
+	{ /*0x05*/ gettext_noop("Heavy\n"), { WEAPON_MAULER,           WEAPON_K7AVENGER,   WEAPON_REAPER,      WEAPON_SUPERDRAGON,    WEAPON_MPSHIELD, WEAPON_DISABLED }, { MPFEATURE_WEAPON_SUPERDRAGON,     MPFEATURE_WEAPON_MAULER,     MPFEATURE_WEAPON_K7AVENGER,     MPFEATURE_WEAPON_REAPER }, WEAPON_DISABLED,    WEAPON_DISABLED,    WEAPON_DISABLED,  WEAPON_DISABLED,       WEAPON_DISABLED, WEAPON_DISABLED }, // Heavy
+	{ /*0x06*/ gettext_noop("Golden Magnum\n"), { WEAPON_FALCON2_SILENCER, WEAPON_GRENADE,     WEAPON_CMP150,      WEAPON_DY357LX,        WEAPON_MPSHIELD, WEAPON_DISABLED }, { MPFEATURE_WEAPON_FALCON2SILENCED, MPFEATURE_WEAPON_DY357LX,    0,                              0                       }, WEAPON_DISABLED,    WEAPON_DISABLED,    WEAPON_DISABLED,  WEAPON_DISABLED,       WEAPON_DISABLED, WEAPON_DISABLED }, // Golden Magnum
+	{ /*0x07*/ gettext_noop("Explosive\n"), { WEAPON_DEVASTATOR,       WEAPON_DEVASTATOR,  WEAPON_SUPERDRAGON, WEAPON_SUPERDRAGON,    WEAPON_MPSHIELD, WEAPON_DISABLED }, { MPFEATURE_WEAPON_SUPERDRAGON,     MPFEATURE_WEAPON_DEVASTATOR, 0,                              0                       }, WEAPON_DISABLED,    WEAPON_DISABLED,    WEAPON_DISABLED,  WEAPON_DISABLED,       WEAPON_DISABLED, WEAPON_DISABLED }, // Explosive
+	{ /*0x08*/ gettext_noop("Grenade Launcher\n"), { WEAPON_MAGSEC4,          WEAPON_CMP150,      WEAPON_AR34,        WEAPON_DEVASTATOR,     WEAPON_MPSHIELD, WEAPON_DISABLED }, { MPFEATURE_WEAPON_DEVASTATOR,      0,                           0,                              0                       }, WEAPON_DISABLED,    WEAPON_DISABLED,    WEAPON_DISABLED,  WEAPON_DISABLED,       WEAPON_DISABLED, WEAPON_DISABLED }, // Grenade Launcher
+	{ /*0x09*/ gettext_noop("Rocket Launcher\n"), { WEAPON_MAULER,           WEAPON_CYCLONE,     WEAPON_DRAGON,      WEAPON_ROCKETLAUNCHER, WEAPON_MPSHIELD, WEAPON_DISABLED }, { MPFEATURE_WEAPON_MAULER,          0,                           0,                              0                       }, WEAPON_FALCON2,     WEAPON_CYCLONE,     WEAPON_DRAGON,    WEAPON_ROCKETLAUNCHER, WEAPON_MPSHIELD, WEAPON_DISABLED }, // Rocket Launcher
+	{ /*0x0a*/ gettext_noop("Proximity Mine\n"), { WEAPON_MAGSEC4,          WEAPON_LAPTOPGUN,   WEAPON_K7AVENGER,   WEAPON_PROXIMITYMINE,  WEAPON_MPSHIELD, WEAPON_DISABLED }, { MPFEATURE_WEAPON_LAPTOPGUN,       MPFEATURE_WEAPON_K7AVENGER,  MPFEATURE_WEAPON_PROXIMITYMINE, 0                       }, WEAPON_DISABLED,    WEAPON_DISABLED,    WEAPON_DISABLED,  WEAPON_DISABLED,       WEAPON_DISABLED, WEAPON_DISABLED }, // Proximity Mine
 #if (VERSION == VERSION_JPN_FINAL) && defined(PLATFORM_N64)
-	{ /*0x0b*/ L_MPWEAPONS_044, { WEAPON_TIMEDMINE,        WEAPON_CROSSBOW,    WEAPON_TIMEDMINE,   WEAPON_CROSSBOW,       WEAPON_MPSHIELD, WEAPON_DISABLED }, { MPFEATURE_WEAPON_CROSSBOW,        0,                           0,                              0                       }, WEAPON_TIMEDMINE,   WEAPON_TIMEDMINE,   WEAPON_TIMEDMINE, WEAPON_TIMEDMINE,      WEAPON_MPSHIELD, WEAPON_DISABLED }, // Close Combat
+	{ /*0x0b*/ gettext_noop("Close Combat\n"), { WEAPON_TIMEDMINE,        WEAPON_CROSSBOW,    WEAPON_TIMEDMINE,   WEAPON_CROSSBOW,       WEAPON_MPSHIELD, WEAPON_DISABLED }, { MPFEATURE_WEAPON_CROSSBOW,        0,                           0,                              0                       }, WEAPON_TIMEDMINE,   WEAPON_TIMEDMINE,   WEAPON_TIMEDMINE, WEAPON_TIMEDMINE,      WEAPON_MPSHIELD, WEAPON_DISABLED }, // Close Combat
 #else
-	{ /*0x0b*/ L_MPWEAPONS_044, { WEAPON_COMBATKNIFE,      WEAPON_COMBATKNIFE, WEAPON_TIMEDMINE,   WEAPON_CROSSBOW,       WEAPON_MPSHIELD, WEAPON_DISABLED }, { MPFEATURE_WEAPON_CROSSBOW,        0,                           0,                              0                       }, WEAPON_COMBATKNIFE, WEAPON_COMBATKNIFE, WEAPON_TIMEDMINE, WEAPON_TIMEDMINE,      WEAPON_MPSHIELD, WEAPON_DISABLED }, // Close Combat
+	{ /*0x0b*/ gettext_noop("Close Combat\n"), { WEAPON_COMBATKNIFE,      WEAPON_COMBATKNIFE, WEAPON_TIMEDMINE,   WEAPON_CROSSBOW,       WEAPON_MPSHIELD, WEAPON_DISABLED }, { MPFEATURE_WEAPON_CROSSBOW,        0,                           0,                              0                       }, WEAPON_COMBATKNIFE, WEAPON_COMBATKNIFE, WEAPON_TIMEDMINE, WEAPON_TIMEDMINE,      WEAPON_MPSHIELD, WEAPON_DISABLED }, // Close Combat
 #endif
 };
 
 s32 g_MpWeaponSetNum = 0x00000000;
 
-u16 g_AwardNames[] = {
-	L_MPMENU_000, // "Most Suicidal"
-	L_MPMENU_001, // "Who Needs Ammo?"
-	L_MPMENU_002, // "Least Shielded"
-	L_MPMENU_003, // "Best Protected"
-	L_MPMENU_004, // "Marksmanship"
-	L_MPMENU_005, // "Most Professional"
-	L_MPMENU_006, // "Most Deadly"
-	L_MPMENU_007, // "Most Harmless"
-	L_MPMENU_008, // "Most Cowardly"
-	L_MPMENU_009, // "Most Frantic"
-	L_MPMENU_010, // "Most Honorable"
-	L_MPMENU_011, // "Most Dishonourable"
-	L_MPMENU_012, // "Shortest Life"
-	L_MPMENU_013, // "Longest Life"
-	L_MPMENU_014, // "Double Kill"
-	L_MPMENU_015, // "Triple Kill"
-	L_MPMENU_016, // "Quad Kill"
+char *g_AwardNames[] = {
+	gettext_noop("Most Suicidal\n"), // "Most Suicidal"
+	gettext_noop("Who Needs Ammo?"), // "Who Needs Ammo?"
+	gettext_noop("Least Shielded"), // "Least Shielded"
+	gettext_noop("Best Protected"), // "Best Protected"
+	gettext_noop("Marksmanship"), // "Marksmanship"
+	gettext_noop("Most Professional"), // "Most Professional"
+	gettext_noop("Most Deadly"), // "Most Deadly"
+	gettext_noop("Most Harmless"), // "Most Harmless"
+	gettext_noop("Most Cowardly"), // "Most Cowardly"
+	gettext_noop("Most Frantic"), // "Most Frantic"
+	gettext_noop("Most Honorable"), // "Most Honorable"
+	gettext_noop("Most Dishonourable"), // "Most Dishonourable"
+	gettext_noop("Shortest Life"), // "Shortest Life"
+	gettext_noop("Longest Life"), // "Longest Life"
+	gettext_noop("Double Kill"), // "Double Kill"
+	gettext_noop("Triple Kill"), // "Triple Kill"
+	gettext_noop("Quad Kill"), // "Quad Kill"
 };
 
 void mpCalculatePlayerTitle(struct mpplayerconfig *mpplayer)
@@ -1897,89 +1913,89 @@ u32 g_BotHeads[] = {
 
 struct botprofile g_BotProfiles[] = {
 	// type,           difficulty,      name,       body,                 require feature
-	{ BOTTYPE_GENERAL, BOTDIFF_MEAT,    L_MISC_088, MPBODY_DD_GUARD,      0                         },
-	{ BOTTYPE_GENERAL, BOTDIFF_EASY,    L_MISC_089, MPBODY_DD_SECGUARD,   0                         },
-	{ BOTTYPE_GENERAL, BOTDIFF_NORMAL,  L_MISC_090, MPBODY_DD_SHOCK_INF,  0                         },
-	{ BOTTYPE_GENERAL, BOTDIFF_HARD,    L_MISC_091, MPBODY_DDSHOCK,       MPFEATURE_BOTDIFF_HARD    },
-	{ BOTTYPE_GENERAL, BOTDIFF_PERFECT, L_MISC_092, MPBODY_STRIPES,       MPFEATURE_BOTDIFF_PERFECT },
-	{ BOTTYPE_GENERAL, BOTDIFF_DARK,    L_MISC_093, MPBODY_MOORE,         MPFEATURE_BOTDIFF_DARK    },
-	{ BOTTYPE_PEACE,   BOTDIFF_NORMAL,  L_MISC_094, MPBODY_DD_LABTECH,    0                         },
-	{ BOTTYPE_SHIELD,  BOTDIFF_NORMAL,  L_MISC_095, MPBODY_G5_SWAT_GUARD, 0                         },
-	{ BOTTYPE_ROCKET,  BOTDIFF_NORMAL,  L_MISC_096, MPBODY_G5_GUARD,      0                         },
-	{ BOTTYPE_KAZE,    BOTDIFF_NORMAL,  L_MISC_097, MPBODY_PRES_SECURITY, 0                         },
-	{ BOTTYPE_FIST,    BOTDIFF_NORMAL,  L_MISC_098, MPBODY_PELAGIC_GUARD, 0                         },
-	{ BOTTYPE_PREY,    BOTDIFF_NORMAL,  L_MISC_099, MPBODY_DDSHOCK,       0                         },
-	{ BOTTYPE_COWARD,  BOTDIFF_NORMAL,  L_MISC_100, MPBODY_PRESIDENT,     0                         },
-	{ BOTTYPE_JUDGE,   BOTDIFF_NORMAL,  L_MISC_101, MPBODY_STEWARD,       0                         },
-	{ BOTTYPE_FEUD,    BOTDIFF_NORMAL,  L_MISC_102, MPBODY_NSA_LACKEY,    0                         },
-	{ BOTTYPE_SPEED,   BOTDIFF_NORMAL,  L_MISC_103, MPBODY_MRBLONDE,      0                         },
-	{ BOTTYPE_TURTLE,  BOTDIFF_NORMAL,  L_MISC_104, MPBODY_CARRINGTON,    0                         },
-	{ BOTTYPE_VENGE,   BOTDIFF_NORMAL,  L_MISC_105, MPBODY_ALASKAN_GUARD, 0                         },
+	{ BOTTYPE_GENERAL, BOTDIFF_MEAT,    gettext_noop("MeatSim"), MPBODY_DD_GUARD,      0                         },
+	{ BOTTYPE_GENERAL, BOTDIFF_EASY,    gettext_noop("EasySim"), MPBODY_DD_SECGUARD,   0                         },
+	{ BOTTYPE_GENERAL, BOTDIFF_NORMAL,  gettext_noop("NormalSim"), MPBODY_DD_SHOCK_INF,  0                         },
+	{ BOTTYPE_GENERAL, BOTDIFF_HARD,    gettext_noop("HardSim"), MPBODY_DDSHOCK,       MPFEATURE_BOTDIFF_HARD    },
+	{ BOTTYPE_GENERAL, BOTDIFF_PERFECT, gettext_noop("PerfectSim"), MPBODY_STRIPES,       MPFEATURE_BOTDIFF_PERFECT },
+	{ BOTTYPE_GENERAL, BOTDIFF_DARK,    gettext_noop("DarkSim"), MPBODY_MOORE,         MPFEATURE_BOTDIFF_DARK    },
+	{ BOTTYPE_PEACE,   BOTDIFF_NORMAL,  gettext_noop("PeaceSim"), MPBODY_DD_LABTECH,    0                         },
+	{ BOTTYPE_SHIELD,  BOTDIFF_NORMAL,  gettext_noop("ShieldSim"), MPBODY_G5_SWAT_GUARD, 0                         },
+	{ BOTTYPE_ROCKET,  BOTDIFF_NORMAL,  gettext_noop("RocketSim"), MPBODY_G5_GUARD,      0                         },
+	{ BOTTYPE_KAZE,    BOTDIFF_NORMAL,  gettext_noop("KazeSim"), MPBODY_PRES_SECURITY, 0                         },
+	{ BOTTYPE_FIST,    BOTDIFF_NORMAL,  gettext_noop("FistSim"), MPBODY_PELAGIC_GUARD, 0                         },
+	{ BOTTYPE_PREY,    BOTDIFF_NORMAL,  gettext_noop("PreySim"), MPBODY_DDSHOCK,       0                         },
+	{ BOTTYPE_COWARD,  BOTDIFF_NORMAL,  gettext_noop("CowardSim"), MPBODY_PRESIDENT,     0                         },
+	{ BOTTYPE_JUDGE,   BOTDIFF_NORMAL,  gettext_noop("JudgeSim"), MPBODY_STEWARD,       0                         },
+	{ BOTTYPE_FEUD,    BOTDIFF_NORMAL,  gettext_noop("FeudSim"), MPBODY_NSA_LACKEY,    0                         },
+	{ BOTTYPE_SPEED,   BOTDIFF_NORMAL,  gettext_noop("SpeedSim"), MPBODY_MRBLONDE,      0                         },
+	{ BOTTYPE_TURTLE,  BOTDIFF_NORMAL,  gettext_noop("TurtleSim"), MPBODY_CARRINGTON,    0                         },
+	{ BOTTYPE_VENGE,   BOTDIFF_NORMAL,  gettext_noop("VengeSim"), MPBODY_ALASKAN_GUARD, 0                         },
 };
 
 struct mpbody g_MpBodies[] = {
 	// global body ID,                name,            head,             require feature
-	/*0x00*/ { BODY_DARK_COMBAT,      L_OPTIONS_016,   HEAD_DARK_COMBAT, 0                          },
-	/*0x01*/ { BODY_DARK_TRENCH,      L_OPTIONS_017,   HEAD_DARK_COMBAT, MPFEATURE_CHR_JOTRENCH     },
-	/*0x02*/ { BODY_DARK_FROCK,       L_OPTIONS_018,   HEAD_DARK_FROCK,  MPFEATURE_CHR_CI           },
-	/*0x03*/ { BODY_DARK_RIPPED,      L_OPTIONS_019,   HEAD_DARK_FROCK,  MPFEATURE_CHR_CI           },
-	/*0x04*/ { BODY_DARK_AF1,         L_OPTIONS_020,   HEAD_DARK_COMBAT, MPFEATURE_CHR_AF1          },
-	/*0x05*/ { BODY_DARK_LEATHER,     L_MPWEAPONS_156, HEAD_DARK_COMBAT, MPFEATURE_CHR_G5           },
-	/*0x06*/ { BODY_DARK_NEGOTIATOR,  L_MPWEAPONS_157, HEAD_DARK_COMBAT, MPFEATURE_CHR_VILLACHRS    },
-	/*0x07*/ { BODY_DARKWET,          L_OPTIONS_021,   HEAD_DARKAQUA,    MPFEATURE_CHR_PELAGIC      },
-	/*0x08*/ { BODY_DARKAQUALUNG,     L_OPTIONS_022,   HEAD_DARKAQUA,    MPFEATURE_CHR_PELAGIC      },
-	/*0x09*/ { BODY_DARKSNOW,         L_OPTIONS_023,   HEAD_DARK_SNOW,   MPFEATURE_CHR_DARKSNOW     },
-	/*0x0a*/ { BODY_DARKLAB,          L_OPTIONS_024,   HEAD_DARK_COMBAT, MPFEATURE_CHR_INFILTRATION },
-	/*0x0b*/ { BODY_THEKING,          L_OPTIONS_025,   HEAD_ELVIS,       MPFEATURE_CHR_ELVIS        },
-	/*0x0c*/ { BODY_ELVIS1,           L_OPTIONS_026,   HEAD_ELVIS,       MPFEATURE_CHR_ELVIS        },
-	/*0x0d*/ { BODY_ELVISWAISTCOAT,   L_MPWEAPONS_158, HEAD_ELVIS,       MPFEATURE_CHR_ELVIS        },
-	/*0x0e*/ { BODY_CARRINGTON,       L_OPTIONS_027,   HEAD_CARRINGTON,  0                          },
-	/*0x0f*/ { BODY_CARREVENINGSUIT,  L_OPTIONS_028,   HEAD_CARRINGTON,  MPFEATURE_CHR_CI           },
-	/*0x10*/ { BODY_MRBLONDE,         L_OPTIONS_029,   HEAD_MRBLONDE,    MPFEATURE_CHR_MRBLONDE     },
-	/*0x11*/ { BODY_CASSANDRA,        L_OPTIONS_030,   HEAD_CASSANDRA,   0                          },
-	/*0x12*/ { BODY_TRENT,            L_OPTIONS_031,   HEAD_TRENT,       MPFEATURE_CHR_TRENT        },
-	/*0x13*/ { BODY_JONATHAN,         L_OPTIONS_032,   HEAD_JONATHAN,    MPFEATURE_CHR_JONATHAN     },
-	/*0x14*/ { BODY_CILABTECH,        L_OPTIONS_033,   1000,             0                          },
-	/*0x15*/ { BODY_CIFEMTECH,        L_OPTIONS_034,   1000,             0                          },
-	/*0x16*/ { BODY_CISOLDIER,        L_OPTIONS_035,   1000,             0                          },
-	/*0x17*/ { BODY_DDSHOCK,          L_OPTIONS_036,   HEAD_DDSHOCK,     0                          },
-	/*0x18*/ { BODY_FEM_GUARD,        L_OPTIONS_037,   1000,             MPFEATURE_CHR_FEMGUARD     },
-	/*0x19*/ { BODY_DD_SECGUARD,      L_OPTIONS_038,   1000,             0                          },
-	/*0x1a*/ { BODY_DD_GUARD,         L_OPTIONS_039,   1000,             0                          },
-	/*0x1b*/ { BODY_DD_SHOCK_INF,     L_OPTIONS_040,   1000,             0                          },
-	/*0x1c*/ { BODY_SECRETARY,        L_OPTIONS_041,   1000,             0                          },
-	/*0x1d*/ { BODY_OFFICEWORKER,     L_OPTIONS_042,   1000,             MPFEATURE_CHR_OFFICEWORKER },
-	/*0x1e*/ { BODY_OFFICEWORKER2,    L_OPTIONS_043,   1000,             MPFEATURE_CHR_OFFICEWORKER },
-	/*0x1f*/ { BODY_NEGOTIATOR,       L_OPTIONS_044,   1000,             MPFEATURE_CHR_VILLACHRS    },
-	/*0x20*/ { BODY_DDSNIPER,         L_OPTIONS_045,   HEAD_DDSNIPER,    MPFEATURE_CHR_VILLACHRS    },
-	/*0x21*/ { BODY_G5_GUARD,         L_OPTIONS_046,   1000,             MPFEATURE_CHR_G5           },
-	/*0x22*/ { BODY_G5_SWAT_GUARD,    L_OPTIONS_047,   1000,             MPFEATURE_CHR_G5           },
-	/*0x23*/ { BODY_CIAGUY,           L_OPTIONS_048,   1000,             MPFEATURE_CHR_CIAFBI       },
-	/*0x24*/ { BODY_FBIGUY,           L_OPTIONS_049,   1000,             MPFEATURE_CHR_CIAFBI       },
-	/*0x25*/ { BODY_AREA51GUARD,      L_OPTIONS_050,   1000,             MPFEATURE_CHR_INFILTRATION },
-	/*0x26*/ { BODY_A51TROOPER,       L_OPTIONS_051,   1000,             MPFEATURE_CHR_INFILTRATION },
-	/*0x27*/ { BODY_A51AIRMAN,        L_OPTIONS_052,   1000,             MPFEATURE_CHR_INFILTRATION },
-	/*0x28*/ { BODY_OVERALL,          L_OPTIONS_053,   1000,             MPFEATURE_CHR_INFILTRATION },
-	/*0x29*/ { BODY_STRIPES,          L_OPTIONS_054,   1000,             MPFEATURE_CHR_STRIPES      },
-	/*0x2a*/ { BODY_LABTECH,          L_OPTIONS_055,   1000,             MPFEATURE_CHR_LABTECH      },
-	/*0x2b*/ { BODY_FEMLABTECH,       L_OPTIONS_056,   1000,             MPFEATURE_CHR_LABTECH      },
-	/*0x2c*/ { BODY_DD_LABTECH,       L_OPTIONS_057,   1000,             MPFEATURE_CHR_LABTECH      },
-	/*0x2d*/ { BODY_BIOTECH,          L_OPTIONS_058,   HEAD_BIOTECH,     MPFEATURE_CHR_BIOTECH      },
-	/*0x2e*/ { BODY_ALASKAN_GUARD,    L_OPTIONS_059,   1000,             MPFEATURE_CHR_ALASKANGUARD },
-	/*0x2f*/ { BODY_PILOTAF1,         L_OPTIONS_060,   1000,             MPFEATURE_CHR_AF1          },
-	/*0x30*/ { BODY_STEWARD,          L_OPTIONS_061,   1000,             MPFEATURE_CHR_AF1          },
-	/*0x31*/ { BODY_STEWARDESS,       L_OPTIONS_062,   1000,             MPFEATURE_CHR_AF1          },
-	/*0x32*/ { BODY_STEWARDESS_COAT,  L_OPTIONS_063,   1000,             MPFEATURE_CHR_AF1          },
-	/*0x33*/ { BODY_PRESIDENT,        L_OPTIONS_064,   HEAD_PRESIDENT,   MPFEATURE_CHR_CI           },
-	/*0x34*/ { BODY_NSA_LACKEY,       L_OPTIONS_065,   1000,             MPFEATURE_CHR_NSALACKEY    },
-	/*0x35*/ { BODY_PRES_SECURITY,    L_OPTIONS_066,   1000,             MPFEATURE_CHR_PRESSECURITY },
-	/*0x36*/ { BODY_PRESIDENT_CLONE2, L_OPTIONS_067,   HEAD_PRESIDENT,   MPFEATURE_CHR_PRESCLONE    },
-	/*0x37*/ { BODY_PELAGIC_GUARD,    L_OPTIONS_068,   1000,             MPFEATURE_CHR_PELAGIC      },
-	/*0x38*/ { BODY_MAIAN_SOLDIER,    L_OPTIONS_069,   HEAD_MAIAN_S,     MPFEATURE_CHR_ELVIS        },
-	/*0x39*/ { BODY_CONNERY,          L_OPTIONS_070,   1000,             MPFEATURE_8BOTS            },
-	/*0x3a*/ { BODY_MOORE,            L_OPTIONS_070,   1000,             MPFEATURE_8BOTS            },
-	/*0x3b*/ { BODY_DALTON,           L_OPTIONS_070,   1000,             MPFEATURE_8BOTS            },
-	/*0x3c*/ { BODY_DJBOND,           L_OPTIONS_070,   1000,             MPFEATURE_8BOTS            },
+	/*0x00*/ { BODY_DARK_COMBAT,      gettext_noop("Joanna Combat\n"),   HEAD_DARK_COMBAT, 0                          },
+	/*0x01*/ { BODY_DARK_TRENCH,      gettext_noop("Joanna Trench Coat\n"),   HEAD_DARK_COMBAT, MPFEATURE_CHR_JOTRENCH     },
+	/*0x02*/ { BODY_DARK_FROCK,       gettext_noop("Joanna Party Frock\n"),   HEAD_DARK_FROCK,  MPFEATURE_CHR_CI           },
+	/*0x03*/ { BODY_DARK_RIPPED,      gettext_noop("Joanna Frock (Ripped)\n"),   HEAD_DARK_FROCK,  MPFEATURE_CHR_CI           },
+	/*0x04*/ { BODY_DARK_AF1,         gettext_noop("Joanna Stewardess\n"),   HEAD_DARK_COMBAT, MPFEATURE_CHR_AF1          },
+	/*0x05*/ { BODY_DARK_LEATHER,     gettext_noop("Joanna Leather\n"), HEAD_DARK_COMBAT, MPFEATURE_CHR_G5           },
+	/*0x06*/ { BODY_DARK_NEGOTIATOR,  gettext_noop("Joanna Negotiator\n"), HEAD_DARK_COMBAT, MPFEATURE_CHR_VILLACHRS    },
+	/*0x07*/ { BODY_DARKWET,          gettext_noop("Joanna Wet Suit\n"),   HEAD_DARKAQUA,    MPFEATURE_CHR_PELAGIC      },
+	/*0x08*/ { BODY_DARKAQUALUNG,     gettext_noop("Joanna Aqualung\n"),   HEAD_DARKAQUA,    MPFEATURE_CHR_PELAGIC      },
+	/*0x09*/ { BODY_DARKSNOW,         gettext_noop("Joanna Arctic\n"),   HEAD_DARK_SNOW,   MPFEATURE_CHR_DARKSNOW     },
+	/*0x0a*/ { BODY_DARKLAB,          gettext_noop("Joanna Lab Tech.\n"),   HEAD_DARK_COMBAT, MPFEATURE_CHR_INFILTRATION },
+	/*0x0b*/ { BODY_THEKING,          gettext_noop("Elvis\n"),   HEAD_ELVIS,       MPFEATURE_CHR_ELVIS        },
+	/*0x0c*/ { BODY_ELVIS1,           gettext_noop("Maian\n"),   HEAD_ELVIS,       MPFEATURE_CHR_ELVIS        },
+	/*0x0d*/ { BODY_ELVISWAISTCOAT,   gettext_noop("Elvis (Waistcoat)\n"), HEAD_ELVIS,       MPFEATURE_CHR_ELVIS        },
+	/*0x0e*/ { BODY_CARRINGTON,       gettext_noop("Daniel Carrington\n"),   HEAD_CARRINGTON,  0                          },
+	/*0x0f*/ { BODY_CARREVENINGSUIT,  gettext_noop("Carrington Evening Wear\n"),   HEAD_CARRINGTON,  MPFEATURE_CHR_CI           },
+	/*0x10*/ { BODY_MRBLONDE,         gettext_noop("Mr. Blonde\n"),   HEAD_MRBLONDE,    MPFEATURE_CHR_MRBLONDE     },
+	/*0x11*/ { BODY_CASSANDRA,        gettext_noop("Cassandra De Vries\n"),   HEAD_CASSANDRA,   0                          },
+	/*0x12*/ { BODY_TRENT,            gettext_noop("Trent Easton\n"),   HEAD_TRENT,       MPFEATURE_CHR_TRENT        },
+	/*0x13*/ { BODY_JONATHAN,         gettext_noop("Jonathan\n"),   HEAD_JONATHAN,    MPFEATURE_CHR_JONATHAN     },
+	/*0x14*/ { BODY_CILABTECH,        gettext_noop("CI Male Lab Technician\n"),   1000,             0                          },
+	/*0x15*/ { BODY_CIFEMTECH,        gettext_noop("CI Female Lab Technician\n"),   1000,             0                          },
+	/*0x16*/ { BODY_CISOLDIER,        gettext_noop("CI Soldier\n"),   1000,             0                          },
+	/*0x17*/ { BODY_DDSHOCK,          gettext_noop("dataDyne Shock Trooper\n"),   HEAD_DDSHOCK,     0                          },
+	/*0x18*/ { BODY_FEM_GUARD,        gettext_noop("dataDyne Female Guard\n"),   1000,             MPFEATURE_CHR_FEMGUARD     },
+	/*0x19*/ { BODY_DD_SECGUARD,      gettext_noop("dataDyne Security\n"),   1000,             0                          },
+	/*0x1a*/ { BODY_DD_GUARD,         gettext_noop("dataDyne Infantry\n"),   1000,             0                          },
+	/*0x1b*/ { BODY_DD_SHOCK_INF,     gettext_noop("dataDyne Trooper\n"),   1000,             0                          },
+	/*0x1c*/ { BODY_SECRETARY,        gettext_noop("Secretary\n"),   1000,             0                          },
+	/*0x1d*/ { BODY_OFFICEWORKER,     gettext_noop("Office Suit\n"),   1000,             MPFEATURE_CHR_OFFICEWORKER },
+	/*0x1e*/ { BODY_OFFICEWORKER2,    gettext_noop("Office Casual\n"),   1000,             MPFEATURE_CHR_OFFICEWORKER },
+	/*0x1f*/ { BODY_NEGOTIATOR,       gettext_noop("Negotiator\n"),   1000,             MPFEATURE_CHR_VILLACHRS    },
+	/*0x20*/ { BODY_DDSNIPER,         gettext_noop("dataDyne Sniper\n"),   HEAD_DDSNIPER,    MPFEATURE_CHR_VILLACHRS    },
+	/*0x21*/ { BODY_G5_GUARD,         gettext_noop("G5 Guard\n"),   1000,             MPFEATURE_CHR_G5           },
+	/*0x22*/ { BODY_G5_SWAT_GUARD,    gettext_noop("G5 SWAT Guard\n"),   1000,             MPFEATURE_CHR_G5           },
+	/*0x23*/ { BODY_CIAGUY,           gettext_noop("CIA Agent\n"),   1000,             MPFEATURE_CHR_CIAFBI       },
+	/*0x24*/ { BODY_FBIGUY,           gettext_noop("FBI Agent\n"),   1000,             MPFEATURE_CHR_CIAFBI       },
+	/*0x25*/ { BODY_AREA51GUARD,      gettext_noop("Area 51 Guard\n"),   1000,             MPFEATURE_CHR_INFILTRATION },
+	/*0x26*/ { BODY_A51TROOPER,       gettext_noop("Area 51 Trooper\n"),   1000,             MPFEATURE_CHR_INFILTRATION },
+	/*0x27*/ { BODY_A51AIRMAN,        gettext_noop("Pilot\n"),   1000,             MPFEATURE_CHR_INFILTRATION },
+	/*0x28*/ { BODY_OVERALL,          gettext_noop("Overalls\n"),   1000,             MPFEATURE_CHR_INFILTRATION },
+	/*0x29*/ { BODY_STRIPES,          gettext_noop("NSA Bodyguard\n"),   1000,             MPFEATURE_CHR_STRIPES      },
+	/*0x2a*/ { BODY_LABTECH,          gettext_noop("Male Lab Technician\n"),   1000,             MPFEATURE_CHR_LABTECH      },
+	/*0x2b*/ { BODY_FEMLABTECH,       gettext_noop("Female Lab Technician\n"),   1000,             MPFEATURE_CHR_LABTECH      },
+	/*0x2c*/ { BODY_DD_LABTECH,       gettext_noop("dataDyne Lab Technician\n"),   1000,             MPFEATURE_CHR_LABTECH      },
+	/*0x2d*/ { BODY_BIOTECH,          gettext_noop("Biotechnician\n"),   HEAD_BIOTECH,     MPFEATURE_CHR_BIOTECH      },
+	/*0x2e*/ { BODY_ALASKAN_GUARD,    gettext_noop("Alaskan Guard\n"),   1000,             MPFEATURE_CHR_ALASKANGUARD },
+	/*0x2f*/ { BODY_PILOTAF1,         gettext_noop("Air Force One Pilot\n"),   1000,             MPFEATURE_CHR_AF1          },
+	/*0x30*/ { BODY_STEWARD,          gettext_noop("Steward\n"),   1000,             MPFEATURE_CHR_AF1          },
+	/*0x31*/ { BODY_STEWARDESS,       gettext_noop("Stewardess\n"),   1000,             MPFEATURE_CHR_AF1          },
+	/*0x32*/ { BODY_STEWARDESS_COAT,  gettext_noop("Head Stewardess\n"),   1000,             MPFEATURE_CHR_AF1          },
+	/*0x33*/ { BODY_PRESIDENT,        gettext_noop("The President\n"),   HEAD_PRESIDENT,   MPFEATURE_CHR_CI           },
+	/*0x34*/ { BODY_NSA_LACKEY,       gettext_noop("NSA Lackey\n"),   1000,             MPFEATURE_CHR_NSALACKEY    },
+	/*0x35*/ { BODY_PRES_SECURITY,    gettext_noop("Presidential Security\n"),   1000,             MPFEATURE_CHR_PRESSECURITY },
+	/*0x36*/ { BODY_PRESIDENT_CLONE2, gettext_noop("President\"s Clone\n"),   HEAD_PRESIDENT,   MPFEATURE_CHR_PRESCLONE    },
+	/*0x37*/ { BODY_PELAGIC_GUARD,    gettext_noop("Pelagic II Guard\n"),   1000,             MPFEATURE_CHR_PELAGIC      },
+	/*0x38*/ { BODY_MAIAN_SOLDIER,    gettext_noop("Maian Soldier\n"),   HEAD_MAIAN_S,     MPFEATURE_CHR_ELVIS        },
+	/*0x39*/ { BODY_CONNERY,          gettext_noop("Dinner Jacket\n"),   1000,             MPFEATURE_8BOTS            },
+	/*0x3a*/ { BODY_MOORE,            gettext_noop("Dinner Jacket\n"),   1000,             MPFEATURE_8BOTS            },
+	/*0x3b*/ { BODY_DALTON,           gettext_noop("Dinner Jacket\n"),   1000,             MPFEATURE_8BOTS            },
+	/*0x3c*/ { BODY_DJBOND,           gettext_noop("Dinner Jacket\n"),   1000,             MPFEATURE_8BOTS            },
 };
 
 u32 g_MpMaleHeads[] = {
@@ -2376,7 +2392,7 @@ void mpCalculateAwards(void)
 		while (numdone == 0) {
 			if (metrics[i].awards & (1 << awardindex)) {
 				metrics[i].awards &= ~(1 << awardindex);
-				g_Vars.players[i]->award1 = langGet(g_AwardNames[awardindex]);
+				g_Vars.players[i]->award1 = g_AwardNames[awardindex];
 				numdone = 1;
 			}
 
@@ -2392,7 +2408,7 @@ void mpCalculateAwards(void)
 
 			if (metrics[i].awards & (1 << awardindex)) {
 				metrics[i].awards &= ~(1 << awardindex);
-				g_Vars.players[i]->award2 = langGet(g_AwardNames[awardindex]);
+				g_Vars.players[i]->award2 = g_AwardNames[awardindex];
 				numdone = 2;
 			}
 
@@ -2626,7 +2642,7 @@ char *mpGetBodyName(u8 mpbodynum)
 		mpbodynum = 0;
 	}
 
-	return langGet(g_MpBodies[mpbodynum].name);
+	return g_MpBodies[mpbodynum].name;
 }
 
 u8 mpGetBodyRequiredFeature(u8 mpbodynum)
@@ -2772,52 +2788,52 @@ void mpCalculateLockIfLastWinnerOrLoser(void)
 
 struct mptrack g_MpTracks[] = {
 	// Audio ID, duration, name, unlock after stage
-	/*0x00*/ { MUSIC_DARK_COMBAT,     160, L_MISC_124, -1 }, // "Dark Combat"
-	/*0x01*/ { MUSIC_SKEDAR_MYSTERY,  170, L_MISC_125, -1 }, // "Skedar Mystery"
-	/*0x02*/ { MUSIC_CI_OPERATIVE,    170, L_MISC_126, -1 }, // "CI Operative"
-	/*0x03*/ { MUSIC_DATADYNE_ACTION, 180, L_MISC_127, -1 }, // "dataDyne Action"
-	/*0x04*/ { MUSIC_MAIAN_TEARS,     200, L_MISC_128, -1 }, // "Maian Tears"
-	/*0x05*/ { MUSIC_ALIEN_CONFLICT,  197, L_MISC_129, -1 }, // "Alien Conflict"
-	/*0x06*/ { MUSIC_CI,              120, L_MISC_130, -1 }, // "Carrington Institute"
-	/*0x07*/ { MUSIC_DEFECTION,       120, L_MISC_131, SOLOSTAGEINDEX_DEFECTION }, // "dD Central"
-	/*0x08*/ { MUSIC_DEFECTION_X,     120, L_MISC_132, SOLOSTAGEINDEX_DEFECTION }, // "dD Central X"
-	/*0x09*/ { MUSIC_INVESTIGATION,   120, L_MISC_133, SOLOSTAGEINDEX_INVESTIGATION }, // "dD Research"
-	/*0x0a*/ { MUSIC_INVESTIGATION_X, 120, L_MISC_134, SOLOSTAGEINDEX_INVESTIGATION }, // "dD Research X"
-	/*0x0b*/ { MUSIC_EXTRACTION,      120, L_MISC_135, SOLOSTAGEINDEX_EXTRACTION }, // "dD Extraction"
-	/*0x0c*/ { MUSIC_EXTRACTION_X,    120, L_MISC_136, SOLOSTAGEINDEX_EXTRACTION }, // "dD Extraction X"
-	/*0x0d*/ { MUSIC_VILLA,           120, L_MISC_137, SOLOSTAGEINDEX_VILLA }, // "Carrington Villa"
-	/*0x0e*/ { MUSIC_VILLA_X,         120, L_MISC_138, SOLOSTAGEINDEX_VILLA }, // "Carrington Villa X"
-	/*0x0f*/ { MUSIC_CHICAGO,         120, L_MISC_139, SOLOSTAGEINDEX_CHICAGO }, // "Chicago"
-	/*0x10*/ { MUSIC_CHICAGO_X,       120, L_MISC_140, SOLOSTAGEINDEX_CHICAGO }, // "Chicago X"
-	/*0x11*/ { MUSIC_G5,              120, L_MISC_141, SOLOSTAGEINDEX_G5BUILDING }, // "G5 Building"
-	/*0x12*/ { MUSIC_G5_X,            120, L_MISC_142, SOLOSTAGEINDEX_G5BUILDING }, // "G5 Building X"
-	/*0x13*/ { MUSIC_INFILTRATION,    120, L_MISC_143, SOLOSTAGEINDEX_INFILTRATION }, // "A51 Infiltration"
-	/*0x14*/ { MUSIC_INFILTRATION_X,  120, L_MISC_144, SOLOSTAGEINDEX_INFILTRATION }, // "A51 Infiltration X"
-	/*0x15*/ { MUSIC_RESCUE,          120, L_MISC_145, SOLOSTAGEINDEX_RESCUE }, // "A51 Rescue"
-	/*0x16*/ { MUSIC_RESCUE_X,        120, L_MISC_146, SOLOSTAGEINDEX_RESCUE }, // "A51 Rescue X"
-	/*0x17*/ { MUSIC_ESCAPE,          120, L_MISC_147, SOLOSTAGEINDEX_ESCAPE }, // "A51 Escape"
-	/*0x18*/ { MUSIC_ESCAPE_X,        120, L_MISC_148, SOLOSTAGEINDEX_ESCAPE }, // "A51 Escape X"
-	/*0x19*/ { MUSIC_AIRBASE,         120, L_MISC_149, SOLOSTAGEINDEX_AIRBASE }, // "Air Base"
-	/*0x1a*/ { MUSIC_AIRBASE_X,       120, L_MISC_150, SOLOSTAGEINDEX_AIRBASE }, // "Air Base X"
-	/*0x1b*/ { MUSIC_AIRFORCEONE,     120, L_MISC_151, SOLOSTAGEINDEX_AIRFORCEONE }, // "Air Force One"
-	/*0x1c*/ { MUSIC_AIRFORCEONE_X,   120, L_MISC_152, SOLOSTAGEINDEX_AIRFORCEONE }, // "Air Force One X"
-	/*0x1d*/ { MUSIC_CRASHSITE,       120, L_MISC_153, SOLOSTAGEINDEX_CRASHSITE }, // "Crash Site"
-	/*0x1e*/ { MUSIC_CRASHSITE_X,     120, L_MISC_154, SOLOSTAGEINDEX_CRASHSITE }, // "Crash Site X"
-	/*0x1f*/ { MUSIC_PELAGIC,         120, L_MISC_155, SOLOSTAGEINDEX_PELAGIC }, // "Pelagic II"
-	/*0x20*/ { MUSIC_PELAGIC_X,       120, L_MISC_156, SOLOSTAGEINDEX_PELAGIC }, // "Pelagic II X"
-	/*0x21*/ { MUSIC_DEEPSEA,         120, L_MISC_157, SOLOSTAGEINDEX_DEEPSEA }, // "Deep Sea"
-	/*0x22*/ { MUSIC_DEEPSEA_X,       120, L_MISC_158, SOLOSTAGEINDEX_DEEPSEA }, // "Deep Sea X"
-	/*0x23*/ { MUSIC_DEFENSE,         120, L_MISC_159, SOLOSTAGEINDEX_DEFENSE }, // "Institute Defense"
-	/*0x24*/ { MUSIC_DEFENSE_X,       120, L_MISC_160, SOLOSTAGEINDEX_DEFENSE }, // "Institute Defense X"
-	/*0x25*/ { MUSIC_ATTACKSHIP,      120, L_MISC_161, SOLOSTAGEINDEX_ATTACKSHIP }, // "Attack Ship"
-	/*0x26*/ { MUSIC_ATTACKSHIP_X,    120, L_MISC_162, SOLOSTAGEINDEX_ATTACKSHIP }, // "Attack Ship X"
-	/*0x27*/ { MUSIC_SKEDARRUINS,     120, L_MISC_163, SOLOSTAGEINDEX_SKEDARRUINS }, // "Skedar Ruins"
-	/*0x28*/ { MUSIC_SKEDARRUINS_X,   120, L_MISC_164, SOLOSTAGEINDEX_SKEDARRUINS }, // "Skedar Ruins X"
-	/*0x29*/ { MUSIC_CREDITS,         120, L_MISC_165, SOLOSTAGEINDEX_SKEDARRUINS }, // "End Credits"
+	/*0x00*/ { MUSIC_DARK_COMBAT,     160, gettext_noop("Dark Combat"), -1 }, // "Dark Combat"
+	/*0x01*/ { MUSIC_SKEDAR_MYSTERY,  170, gettext_noop("Skedar Mystery"), -1 }, // "Skedar Mystery"
+	/*0x02*/ { MUSIC_CI_OPERATIVE,    170, gettext_noop("CI Operative"), -1 }, // "CI Operative"
+	/*0x03*/ { MUSIC_DATADYNE_ACTION, 180, gettext_noop("dataDyne Action"), -1 }, // "dataDyne Action"
+	/*0x04*/ { MUSIC_MAIAN_TEARS,     200, gettext_noop("Maian Tears"), -1 }, // "Maian Tears"
+	/*0x05*/ { MUSIC_ALIEN_CONFLICT,  197, gettext_noop("Alien Conflict"), -1 }, // "Alien Conflict"
+	/*0x06*/ { MUSIC_CI,              120, gettext_noop("Carrington Institute"), -1 }, // "Carrington Institute"
+	/*0x07*/ { MUSIC_DEFECTION,       120, gettext_noop("dD Central"), SOLOSTAGEINDEX_DEFECTION }, // "dD Central"
+	/*0x08*/ { MUSIC_DEFECTION_X,     120, gettext_noop("dD Central X"), SOLOSTAGEINDEX_DEFECTION }, // "dD Central X"
+	/*0x09*/ { MUSIC_INVESTIGATION,   120, gettext_noop("dD Research"), SOLOSTAGEINDEX_INVESTIGATION }, // "dD Research"
+	/*0x0a*/ { MUSIC_INVESTIGATION_X, 120, gettext_noop("dD Research X"), SOLOSTAGEINDEX_INVESTIGATION }, // "dD Research X"
+	/*0x0b*/ { MUSIC_EXTRACTION,      120, gettext_noop("dD Extraction"), SOLOSTAGEINDEX_EXTRACTION }, // "dD Extraction"
+	/*0x0c*/ { MUSIC_EXTRACTION_X,    120, gettext_noop("dD Extraction X"), SOLOSTAGEINDEX_EXTRACTION }, // "dD Extraction X"
+	/*0x0d*/ { MUSIC_VILLA,           120, gettext_noop("Carrington Villa"), SOLOSTAGEINDEX_VILLA }, // "Carrington Villa"
+	/*0x0e*/ { MUSIC_VILLA_X,         120, gettext_noop("Carrington Villa X"), SOLOSTAGEINDEX_VILLA }, // "Carrington Villa X"
+	/*0x0f*/ { MUSIC_CHICAGO,         120, gettext_noop("Chicago"), SOLOSTAGEINDEX_CHICAGO }, // "Chicago"
+	/*0x10*/ { MUSIC_CHICAGO_X,       120, gettext_noop("Chicago X"), SOLOSTAGEINDEX_CHICAGO }, // "Chicago X"
+	/*0x11*/ { MUSIC_G5,              120, gettext_noop("G5 Building"), SOLOSTAGEINDEX_G5BUILDING }, // "G5 Building"
+	/*0x12*/ { MUSIC_G5_X,            120, gettext_noop("G5 Building X"), SOLOSTAGEINDEX_G5BUILDING }, // "G5 Building X"
+	/*0x13*/ { MUSIC_INFILTRATION,    120, gettext_noop("A51 Infiltration"), SOLOSTAGEINDEX_INFILTRATION }, // "A51 Infiltration"
+	/*0x14*/ { MUSIC_INFILTRATION_X,  120, gettext_noop("A51 Infiltration X"), SOLOSTAGEINDEX_INFILTRATION }, // "A51 Infiltration X"
+	/*0x15*/ { MUSIC_RESCUE,          120, gettext_noop("A51 Rescue"), SOLOSTAGEINDEX_RESCUE }, // "A51 Rescue"
+	/*0x16*/ { MUSIC_RESCUE_X,        120, gettext_noop("A51 Rescue X"), SOLOSTAGEINDEX_RESCUE }, // "A51 Rescue X"
+	/*0x17*/ { MUSIC_ESCAPE,          120, gettext_noop("A51 Escape"), SOLOSTAGEINDEX_ESCAPE }, // "A51 Escape"
+	/*0x18*/ { MUSIC_ESCAPE_X,        120, gettext_noop("A51 Escape X"), SOLOSTAGEINDEX_ESCAPE }, // "A51 Escape X"
+	/*0x19*/ { MUSIC_AIRBASE,         120, gettext_noop("Air Base"), SOLOSTAGEINDEX_AIRBASE }, // "Air Base"
+	/*0x1a*/ { MUSIC_AIRBASE_X,       120, gettext_noop("Air Base X"), SOLOSTAGEINDEX_AIRBASE }, // "Air Base X"
+	/*0x1b*/ { MUSIC_AIRFORCEONE,     120, gettext_noop("Air Force One"), SOLOSTAGEINDEX_AIRFORCEONE }, // "Air Force One"
+	/*0x1c*/ { MUSIC_AIRFORCEONE_X,   120, gettext_noop("Air Force One X"), SOLOSTAGEINDEX_AIRFORCEONE }, // "Air Force One X"
+	/*0x1d*/ { MUSIC_CRASHSITE,       120, gettext_noop("Crash Site"), SOLOSTAGEINDEX_CRASHSITE }, // "Crash Site"
+	/*0x1e*/ { MUSIC_CRASHSITE_X,     120, gettext_noop("Crash Site X"), SOLOSTAGEINDEX_CRASHSITE }, // "Crash Site X"
+	/*0x1f*/ { MUSIC_PELAGIC,         120, gettext_noop("Pelagic II"), SOLOSTAGEINDEX_PELAGIC }, // "Pelagic II"
+	/*0x20*/ { MUSIC_PELAGIC_X,       120, gettext_noop("Pelagic II X"), SOLOSTAGEINDEX_PELAGIC }, // "Pelagic II X"
+	/*0x21*/ { MUSIC_DEEPSEA,         120, gettext_noop("Deep Sea"), SOLOSTAGEINDEX_DEEPSEA }, // "Deep Sea"
+	/*0x22*/ { MUSIC_DEEPSEA_X,       120, gettext_noop("Deep Sea X"), SOLOSTAGEINDEX_DEEPSEA }, // "Deep Sea X"
+	/*0x23*/ { MUSIC_DEFENSE,         120, gettext_noop("Institute Defense"), SOLOSTAGEINDEX_DEFENSE }, // "Institute Defense"
+	/*0x24*/ { MUSIC_DEFENSE_X,       120, gettext_noop("Institute Defense X"), SOLOSTAGEINDEX_DEFENSE }, // "Institute Defense X"
+	/*0x25*/ { MUSIC_ATTACKSHIP,      120, gettext_noop("Attack Ship"), SOLOSTAGEINDEX_ATTACKSHIP }, // "Attack Ship"
+	/*0x26*/ { MUSIC_ATTACKSHIP_X,    120, gettext_noop("Attack Ship X"), SOLOSTAGEINDEX_ATTACKSHIP }, // "Attack Ship X"
+	/*0x27*/ { MUSIC_SKEDARRUINS,     120, gettext_noop("Skedar Ruins"), SOLOSTAGEINDEX_SKEDARRUINS }, // "Skedar Ruins"
+	/*0x28*/ { MUSIC_SKEDARRUINS_X,   120, gettext_noop("Skedar Ruins X"), SOLOSTAGEINDEX_SKEDARRUINS }, // "Skedar Ruins X"
+	/*0x29*/ { MUSIC_CREDITS,         120, gettext_noop("End Credits"), SOLOSTAGEINDEX_SKEDARRUINS }, // "End Credits"
 #if VERSION < VERSION_PAL_BETA
-	/*0x2a*/ { MUSIC_SKEDARRUINS_KING,120, L_MISC_261, SOLOSTAGEINDEX_SKEDARRUINS }, // "Skedar Warrior" (Skedar Leader)
+	/*0x2a*/ { MUSIC_SKEDARRUINS_KING,120, gettext_noop("L_MISC_261"), SOLOSTAGEINDEX_SKEDARRUINS }, // "Skedar Warrior" (Skedar Leader)
 #else
-	/*0x2a*/ { MUSIC_SKEDARRUINS_KING,120, L_MISC_041, SOLOSTAGEINDEX_SKEDARRUINS }, // "E R R O R" (can't find a good approximation for Skedar Leader)
+	/*0x2a*/ { MUSIC_SKEDARRUINS_KING,120, gettext_noop("E R R O R\n"), SOLOSTAGEINDEX_SKEDARRUINS }, // "E R R O R" (can't find a good approximation for Skedar Leader)
 #endif
 };
 
@@ -2889,7 +2905,7 @@ char *mpGetTrackName(s32 slotindex)
 {
 	s32 tracknum = mpGetTrackNumAtSlotIndex(slotindex);
 
-	return langGet(g_MpTracks[tracknum].name);
+	return g_MpTracks[tracknum].name;
 }
 
 void mpSetUsingMultipleTunes(bool enable)
@@ -3343,11 +3359,11 @@ void mpGenerateBotNames(void)
 				if (counts[profilenum] >= 0) {
 					// Multiple bots using this profile - append the number
 					counts[profilenum]++;
-					sprintf(name, "%s:%d\n", langGet(g_BotProfiles[profilenum].name), counts[profilenum]);
+					sprintf(name, "%s:%d\n", g_BotProfiles[profilenum].name, counts[profilenum]);
 					strcpy(g_BotConfigsArray[i - 4].base.name, name);
 				} else {
 					// One bots using this profile - just use the profile name
-					sprintf(name, "%s\n", langGet(g_BotProfiles[profilenum].name));
+					sprintf(name, "%s\n", g_BotProfiles[profilenum].name);
 					strcpy(g_BotConfigsArray[i - 4].base.name, name);
 				}
 			}
@@ -3736,20 +3752,20 @@ s32 mpplayerfileLoad(s32 playernum, s32 device, s32 fileid, u16 deviceserial)
 }
 
 struct mppreset g_MpPresets[] = {
-	{ L_MPWEAPONS_025, MPCONFIG_NOSHIELD   }, // "No Shield"
-	{ L_MPWEAPONS_026, MPCONFIG_AUTOMATICS }, // "Automatics"
-	{ L_MPWEAPONS_027, MPCONFIG_ROCKETS    }, // "Rocket Launcher"
-	{ L_MPWEAPONS_028, MPCONFIG_SIMULANTS  }, // "Simulants"
-	{ L_MPWEAPONS_029, MPCONFIG_SKEDARKING }, // "King of the Hill"
-	{ L_MPWEAPONS_030, MPCONFIG_FARSIGHT   }, // "Complex FarSight"
-	{ L_MPWEAPONS_031, MPCONFIG_BRIEFCASE  }, // "Hold the Briefcase"
-	{ L_MPWEAPONS_032, MPCONFIG_PISTOLS    }, // "Pistol One-Hit Kills"
-	{ L_MPWEAPONS_033, MPCONFIG_FLAGS      }, // "Capture the Case"
-	{ L_MPWEAPONS_034, MPCONFIG_CLOAKING   }, // "Cloaking"
-	{ L_MPWEAPONS_035, MPCONFIG_TEMPLE     }, // "Temple Explosives"
-	{ L_MPWEAPONS_036, MPCONFIG_SLAYER     }, // "Slayer"
-	{ L_MPWEAPONS_037, MPCONFIG_DRUGGUN    }, // "Tranquilizr"
-	{ L_MPWEAPONS_038, MPCONFIG_SLOWMO     }, // "Slow Motion"
+	{ gettext_noop("No Shield\n"), MPCONFIG_NOSHIELD   }, // "No Shield"
+	{ gettext_noop("Automatics\n"), MPCONFIG_AUTOMATICS }, // "Automatics"
+	{ gettext_noop("Rocket Launcher\n"), MPCONFIG_ROCKETS    }, // "Rocket Launcher"
+	{ gettext_noop("Simulants\n"), MPCONFIG_SIMULANTS  }, // "Simulants"
+	{ gettext_noop("King of the Hill\n"), MPCONFIG_SKEDARKING }, // "King of the Hill"
+	{ gettext_noop("Complex FarSight\n"), MPCONFIG_FARSIGHT   }, // "Complex FarSight"
+	{ gettext_noop("Hold the Briefcase\n"), MPCONFIG_BRIEFCASE  }, // "Hold the Briefcase"
+	{ gettext_noop("Pistol One-Hit Kills\n"), MPCONFIG_PISTOLS    }, // "Pistol One-Hit Kills"
+	{ gettext_noop("Capture the Case\n"), MPCONFIG_FLAGS      }, // "Capture the Case"
+	{ gettext_noop("Cloaking\n"), MPCONFIG_CLOAKING   }, // "Cloaking"
+	{ gettext_noop("Temple Explosives\n"), MPCONFIG_TEMPLE     }, // "Temple Explosives"
+	{ gettext_noop("Slayer\n"), MPCONFIG_SLAYER     }, // "Slayer"
+	{ gettext_noop("Tranquilizer\n"), MPCONFIG_DRUGGUN    }, // "Tranquilizr"
+	{ gettext_noop("Slow Motion\n"), MPCONFIG_SLOWMO     }, // "Slow Motion"
 };
 
 s32 mpGetNumPresets(void)
@@ -3792,7 +3808,7 @@ char *mpGetPresetNameBySlot(s32 slot)
 	for (i = 0; i < ARRAYCOUNT(g_MpPresets); i++) {
 		if (mpIsPresetUnlocked(i)) {
 			if (slot == 0) {
-				return langGet(g_MpPresets[i].name);
+				return g_MpPresets[i].name;
 			}
 
 			slot--;
@@ -3859,7 +3875,7 @@ void mpApplyConfig(struct mpconfigfull *config)
 #if VERSION >= VERSION_NTSC_1_0
 		if (IS4MB()) {
 			// "ShockSim:%d"
-			sprintf(g_BotConfigsArray[i].base.name, langGet(L_MPWEAPONS_241), i + 1);
+			sprintf(g_BotConfigsArray[i].base.name, _("ShockSim:%d\n"), i + 1);
 		} else {
 			strcpy(g_BotConfigsArray[i].base.name, config->strings.aibotnames[i]);
 		}

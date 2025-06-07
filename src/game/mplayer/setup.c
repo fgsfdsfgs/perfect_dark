@@ -27,6 +27,11 @@
 #include "system.h"
 #include "input.h"
 #include "mpsetups.h"
+#ifndef PLATFORM_N64
+#include <libintl.h>
+#define _(String) gettext (String)
+#define gettext_noop(String) String
+#endif
 
 struct menuitem g_MpCharacterMenuItems[];
 struct menudialogdef g_MpAddSimulantMenuDialog;
@@ -185,7 +190,7 @@ MenuItemHandlerResult mpArenaMenuHandler(s32 operation, struct menuitem *item, u
 		for (i = 0; i < ARRAYCOUNT(g_MpArenas); i++) {
 			if (challengeIsFeatureUnlocked(g_MpArenas[i].requirefeature)) {
 				if (count == data->list.value) {
-					return (uintptr_t)langGet(g_MpArenas[i].name);
+					return (uintptr_t)_(g_MpArenas[i].name);
 				}
 
 				count++;
@@ -234,7 +239,7 @@ MenuItemHandlerResult mpArenaMenuHandler(s32 operation, struct menuitem *item, u
 				&& count > 0) {
 			count++;
 		}
-		return (uintptr_t)langGet(groups[count].name);
+		return (uintptr_t)_(groups[count].name);
 	case MENUOP_GETGROUPSTARTINDEX:
 		groupindex = data->list.value;
 
@@ -259,11 +264,11 @@ MenuItemHandlerResult mpArenaMenuHandler(s32 operation, struct menuitem *item, u
 
 MenuItemHandlerResult menuhandlerMpControlStyle(s32 operation, struct menuitem *item, union handlerdata *data)
 {
-	u16 labels[] = {
-		L_OPTIONS_239, // "1.1"
-		L_OPTIONS_240, // "1.2"
-		L_OPTIONS_241, // "1.3"
-		L_OPTIONS_242, // "1.4"
+	char *labels[] = {
+		_("1.1"), // "1.1"
+		_("1.2"), // "1.2"
+		_("1.3"), // "1.3"
+		_("1.4"), // "1.4"
 	};
 
 	switch (operation) {
@@ -271,7 +276,7 @@ MenuItemHandlerResult menuhandlerMpControlStyle(s32 operation, struct menuitem *
 		data->dropdown.value = 5;
 		break;
 	case MENUOP_GETOPTIONTEXT:
-		return (intptr_t) ((data->dropdown.value == 4) ? "Ext" : langGet(labels[data->dropdown.value]));
+		return (intptr_t) ((data->dropdown.value == 4) ? _("Ext") : labels[data->dropdown.value]);
 	case MENUOP_SET:
 		optionsSetControlMode(g_MpPlayerNum, (data->dropdown.value == 4 ? CONTROLMODE_PC : data->dropdown.value));
 #ifndef PLATFORM_N64
@@ -370,13 +375,13 @@ MenuItemHandlerResult menuhandlerMpControlCheckbox(s32 operation, struct menuite
 
 MenuItemHandlerResult menuhandlerMpAimControl(s32 operation, struct menuitem *item, union handlerdata *data)
 {
-	u16 labels[] = {
+	char *labels[] = {
 #if VERSION >= VERSION_PAL_FINAL
 		L_MPWEAPONS_276, // "Hold"
 		L_MPWEAPONS_277, // "Toggle"
 #else
-		L_MPMENU_213, // "Hold"
-		L_MPMENU_214, // "Toggle"
+		_("Hold\n"), // "Hold"
+		_("Toggle\n"), // "Toggle"
 #endif
 	};
 
@@ -385,7 +390,7 @@ MenuItemHandlerResult menuhandlerMpAimControl(s32 operation, struct menuitem *it
 		data->dropdown.value = 2;
 		break;
 	case MENUOP_GETOPTIONTEXT:
-		return (uintptr_t) langGet(labels[data->dropdown.value]);
+		return (uintptr_t) labels[data->dropdown.value];
 	case MENUOP_SET:
 		optionsSetAimControl(g_MpPlayerNum, data->dropdown.value);
 		break;
@@ -1028,7 +1033,7 @@ MenuItemHandlerResult mpMedalMenuHandler(s32 operation, struct menuitem *item, u
 char *mpMenuTitleStatsForPlayerName(struct menudialogdef *dialogdef)
 {
 	// "Stats for %s"
-	sprintf(g_StringPointer, langGet(L_MPMENU_145), g_PlayerConfigsArray[g_MpPlayerNum].base.name);
+	sprintf(g_StringPointer, _("Stats for %s\n"), g_PlayerConfigsArray[g_MpPlayerNum].base.name);
 	return g_StringPointer;
 }
 
@@ -1094,7 +1099,7 @@ struct menuitem g_MpSaveSetupNameMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_LITERAL_TEXT | MENUITEMFLAG_LESSLEFTPADDING,
-		(uintptr_t)"Enter the setup name:\n",
+		gettext_noop("Enter the setup name:\n"),
 		0,
 		NULL,
 	},
@@ -1142,7 +1147,7 @@ struct menuitem g_MpSaveSetupExistsMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_LESSLEFTPADDING | MENUITEMFLAG_LITERAL_TEXT,
-		(uintptr_t)"Save over your\noriginal setup?\n",
+		gettext_noop("Save over your\noriginal setup?\n"),
 		0,
 		NULL,
 	},

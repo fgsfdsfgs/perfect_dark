@@ -3115,7 +3115,7 @@ struct stagetableentry {
 };
 
 struct mpweaponset {
-	/*0x00*/ u16 name;
+	/*0x00*/ char *name;
 	/*0x02*/ u8 slots[NUM_MPWEAPONSLOTS];
 	/*0x08*/ u8 requirefeatures[4];
 	/*0x0c*/ u8 unk0c;
@@ -3134,14 +3134,14 @@ struct mphead {
 struct botprofile {
 	/*0x00*/ u8 type;
 	/*0x01*/ u8 difficulty;
-	/*0x02*/ s16 name;
+	/*0x02*/ char *name;
 	/*0x04*/ s16 body;
 	/*0x06*/ u8 requirefeature;
 };
 
 struct mpbody {
 	s16 bodynum;
-	s16 name;
+	char *name;
 	s16 headnum;
 	u8 requirefeature;
 };
@@ -3149,7 +3149,7 @@ struct mpbody {
 struct mptrack {
 	u16 musicnum : 7;
 	u16 duration : 9;
-	s16 name;
+	char *name;
 	s16 unlockstage;
 };
 
@@ -4120,7 +4120,7 @@ struct savebuffer {
 struct mparena {
 	s16 stagenum;
 	u8 requirefeature;
-	u16 name;
+	char *name;
 };
 
 struct filelistfile {
@@ -4354,7 +4354,7 @@ struct criteria_holograph {
 };
 
 struct mppreset {
-	u16 name;
+	char *name;
 	u32 confignum;
 	u8 requirefeatures[16]; // Doesn't seem to be used? All values are zero
 };
