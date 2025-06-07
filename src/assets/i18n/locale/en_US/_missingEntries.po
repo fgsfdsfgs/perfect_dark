@@ -1,0 +1,133 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Perfect Dark PC port localization\n"
+"POT-Creation-Date: 2025-06-04 11:25:00.000000+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Start Armed\n"
+msgstr "Start Armed\n"
+
+msgid "No Drug Blur\n"
+msgstr "No Drug Blur\n"
+
+msgid "No Player on Radar\n"
+msgstr "No Player on Radar\n"
+
+msgid "%shas the %s%s"
+msgstr "%shas the %s%s"
+
+msgid "Are you sure?\n\nThis will overwrite any progress\nsaved to the current profile.\n"
+msgstr "Are you sure?\n\nThis will overwrite any progress\nsaved to the current profile.\n"
+
+msgid "Unlocks all cheats, weapons, missions, challenges and combat simulator items.\n"
+msgstr "Unlocks all cheats, weapons, missions, challenges and combat simulator items.\n"
+
+msgid "Unlock Everything\n"
+msgstr "Unlock Everything\n"
+
+#: port/src/mpsetups.c: 135
+msgid "Enter the setup name:\n"
+msgstr "Enter the setup name:\n"
+
+#: port/src/mpsetups.c: 154
+msgid "Setup Name:\n"
+msgstr "Setup Name:\n"
+
+#: port/src/mpsetups.c: 165
+msgid "Delete Setup?\n"
+msgstr "Delete Setup?\n"
+
+#: port/src/mpsetups.c: 190
+msgid "Delete Setup\n"
+msgstr "Delete Setup\n"
+
+#: port/src/mpsetups.c: 223
+msgid "Import Settings\n"
+msgstr "Import Settings\n"
+
+#: port/src/mpsetups.c: 231
+msgid "Export Settings\n"
+msgstr "Export Settings\n"
+
+#: port/src/mpsetups.c: 240
+msgid "Import/Export\n"
+msgstr "Import/Export\n"
+
+#: port/src/mpsetups.c: 263
+msgid "Manage Settings\n"
+msgstr "Manage Settings\n"
+
+#: port/src/mpsetups.c: 275
+msgid "Rename\n"
+msgstr "Rename\n"
+
+#: port/src/mpsetups.c: 283
+msgid "Delete\n"
+msgstr "Delete\n"
+
+#: port/src/mpsetups.c: 316
+msgid "Manage Setup\n"
+msgstr "Manage Setup\n"
+
+#: port/src/mpsetups.c: 328
+msgid "How to resolve setups\nwith the same name?\n"
+msgstr "How to resolve setups\nwith the same name?\n"
+
+#: port/src/mpsetups.c: 336
+msgid "Add\n"
+msgstr "Add\n"
+
+#: port/src/mpsetups.c: 344
+msgid "Overwrite\n"
+msgstr "Overwrite\n"
+
+#: port/src/mpsetups.c: 353
+msgid "Name Conflicts\n"
+msgstr "Name Conflicts\n"
+
+#. "M_TITLE_151"
+msgid "testing (noe)\n"
+msgstr "testing (noe)\n"
+
+#. "L_TITLE_184"
+msgid "ncl staff\n"
+msgstr "ncl staff\n"
+
+#. "L_TITLE_185"
+msgid "s. miyamoto\n"
+msgstr "s. miyamoto\n"
+
+#. "L_TITLE_186"
+msgid "k. miki\n"
+msgstr "k. miki\n"
+
+#. "L_TITLE_187"
+msgid "s. kojoh\n"
+msgstr "s. kojoh\n"
+
+#. "L_TITLE_188"
+msgid "y. nakano\n"
+msgstr "y. nakano\n"
+
+#. "L_TITLE_189"
+msgid "k. yamaguchi\n"
+msgstr "k. yamaguchi\n"
+
+#. "L_TITLE_190"
+msgid "k. terasaki"
+msgstr "k. terasaki"
+
+#. "L_TITLE_191"
+msgid "m. goto\n"
+msgstr "m. goto\n"
+
+#. "L_TITLE_192"
+msgid "super mario club\n"
+msgstr "super mario club\n"
+
+#. "L_MPWEAPONS_261"
+msgid "Choose your language:"
+msgstr "Choose your language:"

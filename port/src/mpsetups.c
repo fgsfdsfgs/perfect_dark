@@ -10,6 +10,11 @@
 #include "fs.h"
 #include "system.h"
 #include "mpsetups.h"
+#ifndef PLATFORM_N64
+#include <libintl.h>
+#define _(String) gettext (String)
+#define gettext_noop(String) String
+#endif
 
 /*
 MP Setup File Format
@@ -67,7 +72,7 @@ static struct menuitem g_StatusOkMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_LITERAL_TEXT | MENUITEMFLAG_LESSLEFTPADDING,
-		(uintptr_t)g_StatusText,
+		g_StatusText,
 		0,
 		NULL,
 	},
@@ -75,7 +80,7 @@ static struct menuitem g_StatusOkMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_CLOSESDIALOG | MENUITEMFLAG_SELECTABLE_CENTRE,
-		L_OPTIONS_347, // "OK"
+		gettext_noop("OK\n"), // "OK"
 		0,
 		NULL,
 	},
@@ -84,7 +89,7 @@ static struct menuitem g_StatusOkMenuItems[] = {
 
 static struct menudialogdef g_StatusOkDialog = {
 	MENUDIALOGTYPE_SUCCESS,
-	L_OPTIONS_345, // "Cool!"
+	gettext_noop("Cool!\n"), // "Cool!"
 	g_StatusOkMenuItems,
 	NULL,
 	MENUDIALOGFLAG_DISABLEBANNER,
@@ -96,7 +101,7 @@ static struct menuitem g_StatusErrorMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_LITERAL_TEXT | MENUITEMFLAG_LESSLEFTPADDING,
-		(uintptr_t)g_StatusText,
+		g_StatusText,
 		0,
 		NULL,
 	},
@@ -104,7 +109,7 @@ static struct menuitem g_StatusErrorMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_CLOSESDIALOG | MENUITEMFLAG_SELECTABLE_CENTRE,
-		L_OPTIONS_347, // "OK"
+		gettext_noop("OK\n"), // "OK"
 		0,
 		NULL,
 	},
@@ -114,7 +119,7 @@ static struct menuitem g_StatusErrorMenuItems[] = {
 /* public */
 struct menudialogdef g_StatusErrorDialog = {
 		MENUDIALOGTYPE_DANGER,
-		L_OPTIONS_277, // "Failed"
+		gettext_noop("Failed\n"), // "Failed"
 		g_StatusErrorMenuItems,
 		NULL,
 		MENUDIALOGFLAG_DISABLEBANNER,
@@ -127,7 +132,7 @@ static struct menuitem g_RenameSetupItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_LITERAL_TEXT | MENUITEMFLAG_LESSLEFTPADDING,
-		(uintptr_t)"Enter the setup name:\n",
+		gettext_noop("Enter the setup name:\n"),
 		0,
 		NULL,
 	},
@@ -145,7 +150,7 @@ static struct menuitem g_RenameSetupItems[] = {
 
 static struct menudialogdef g_RenameSetupDialog = {
 		MENUDIALOGTYPE_DEFAULT,
-		(uintptr_t)"Setup Name:\n",
+		gettext_noop("Setup Name:\n"),
 		g_RenameSetupItems,
 		NULL,
 		MENUDIALOGFLAG_LITERAL_TEXT,
@@ -157,7 +162,7 @@ static struct menuitem g_DeleteSetupItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_LITERAL_TEXT | MENUITEMFLAG_LESSLEFTPADDING,
-		(uintptr_t)"Delete Setup?\n",
+		gettext_noop("Delete Setup?\n"),
 		0,
 		NULL,
 	},
@@ -165,7 +170,7 @@ static struct menuitem g_DeleteSetupItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_CLOSESDIALOG | MENUITEMFLAG_SELECTABLE_CENTRE,
-		L_OPTIONS_385, // "No"
+		gettext_noop("No\n"), // "No"
 		0,
 		NULL,
 	},
@@ -173,7 +178,7 @@ static struct menuitem g_DeleteSetupItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_CENTRE,
-		L_OPTIONS_386, // "Yes"
+		gettext_noop("Yes\n"), // "Yes"
 		0,
 		menuhandlerDeleteSetup,
 	},
@@ -182,7 +187,7 @@ static struct menuitem g_DeleteSetupItems[] = {
 
 static struct menudialogdef g_DeleteSetupDialog = {
 		MENUDIALOGTYPE_DANGER,
-		(uintptr_t)"Delete Setup\n",
+		gettext_noop("Delete Setup\n"),
 		g_DeleteSetupItems,
 		NULL,
 		MENUDIALOGFLAG_LITERAL_TEXT,
@@ -194,7 +199,7 @@ static struct menuitem g_ImportExportItems[] = {
 		MENUITEMTYPE_LIST,
 		0,
 		MENUITEMFLAG_LOCKABLEMINOR | MENUITEMFLAG_LABEL_CUSTOMCOLOUR,
-		140,
+		"?",// previous: 140,
 		0x0000004d,
 		menuhandlerImportOrExportSettings,
 	},
@@ -203,7 +208,7 @@ static struct menuitem g_ImportExportItems[] = {
 
 static struct menudialogdef g_ImportExportDialog = {
 	MENUDIALOGTYPE_DEFAULT,
-	(uintptr_t) g_TitleImportExportDialog,
+	g_TitleImportExportDialog,
 	g_ImportExportItems,
 	NULL,
 	MENUDIALOGFLAG_LITERAL_TEXT,
@@ -215,7 +220,7 @@ static struct menuitem g_ManageImportExportItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		MPSETUP_OP_IMPORT,
 		MENUITEMFLAG_LITERAL_TEXT,
-		(uintptr_t)"Import Settings\n",
+		gettext_noop("Import Settings\n"),
 		0,
 		menuhandlerOpenImportExportDialog,
 	},
@@ -223,7 +228,7 @@ static struct menuitem g_ManageImportExportItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		MPSETUP_OP_EXPORT,
 		MENUITEMFLAG_LITERAL_TEXT,
-		(uintptr_t)"Export Settings\n",
+		gettext_noop("Export Settings\n"),
 		0,
 		menuhandlerOpenImportExportDialog,
 	},
@@ -232,7 +237,7 @@ static struct menuitem g_ManageImportExportItems[] = {
 
 static struct menudialogdef g_ManageImportExportDialog = {
 	MENUDIALOGTYPE_DEFAULT,
-	(uintptr_t) "Import/Export\n",
+	gettext_noop("Import/Export\n"),
 	g_ManageImportExportItems,
 	NULL,
 	MENUDIALOGFLAG_LITERAL_TEXT,
@@ -244,7 +249,7 @@ static struct menuitem g_MpManageSettingsListItems[] = {
 		MENUITEMTYPE_LIST,
 		0,
 		MENUITEMFLAG_LABEL_CUSTOMCOLOUR,
-		160,
+		"?",// previous: 160,
 		0x00000042,
 		menuhandlerSelectSetupHandler,
 	},
@@ -255,7 +260,7 @@ static struct menuitem g_MpManageSettingsListItems[] = {
 /* public */
 struct menudialogdef g_ManageSettingsDialog = {
 	MENUDIALOGTYPE_DEFAULT,
-	(uintptr_t) "Manage Settings\n",
+	gettext_noop("Manage Settings\n"),
 	g_MpManageSettingsListItems,
 	NULL,
 	MENUDIALOGFLAG_LITERAL_TEXT,
@@ -267,7 +272,7 @@ static struct menuitem g_ManageSetupItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_LITERAL_TEXT,
-		(uintptr_t)"Rename\n",
+		gettext_noop("Rename\n"),
 		0,
 		menuhandlerSetupRename,
 	},
@@ -275,7 +280,7 @@ static struct menuitem g_ManageSetupItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_LITERAL_TEXT,
-		(uintptr_t)"Delete\n",
+		gettext_noop("Delete\n"),
 		0,
 		menuhandlerSetupDelete,
 	},
@@ -283,7 +288,7 @@ static struct menuitem g_ManageSetupItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_LITERAL_TEXT,
-		(uintptr_t)g_LabelSetDefault,
+		g_LabelSetDefault,
 		0,
 		menuhandlerSetupSetDefault,
 	},
@@ -299,7 +304,7 @@ static struct menuitem g_ManageSetupItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_CLOSESDIALOG,
-		L_OPTIONS_213, // "Back"
+		gettext_noop("Back\n"), // "Back"
 		0,
 		NULL,
 	},
@@ -308,7 +313,7 @@ static struct menuitem g_ManageSetupItems[] = {
 
 static struct menudialogdef g_ManageSetupDialog = {
 	MENUDIALOGTYPE_DEFAULT,
-	(uintptr_t)"Manage Setup",
+	gettext_noop("Manage Setup"),
 	g_ManageSetupItems,
 	NULL,
 	MENUDIALOGFLAG_LITERAL_TEXT,
@@ -320,7 +325,7 @@ static struct menuitem g_ImportOverrideItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_LITERAL_TEXT | MENUITEMFLAG_LESSLEFTPADDING,
-		(uintptr_t) "How to resolve setups\nwith the same name?\n",
+		gettext_noop("How to resolve setups\nwith the same name?\n"),
 		0,
 		NULL,
 	},
@@ -328,7 +333,7 @@ static struct menuitem g_ImportOverrideItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		MPSETUP_IMPORT_ADD,
 		MENUITEMFLAG_LITERAL_TEXT | MENUITEMFLAG_SELECTABLE_CLOSESDIALOG,
-		(uintptr_t) "Add\n",
+		gettext_noop("Add\n"),
 		0,
 		menuhandlerImportAction,
 	},
@@ -336,7 +341,7 @@ static struct menuitem g_ImportOverrideItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		MPSETUP_IMPORT_OVERWRITE,
 		MENUITEMFLAG_LITERAL_TEXT | MENUITEMFLAG_SELECTABLE_CLOSESDIALOG,
-		(uintptr_t) "Overwrite\n",
+		gettext_noop("Overwrite\n"),
 		0,
 		menuhandlerImportAction,
 	},
@@ -345,7 +350,7 @@ static struct menuitem g_ImportOverrideItems[] = {
 
 static struct menudialogdef g_ImportOverrideDialog = {
 	MENUDIALOGTYPE_DEFAULT,
-	(uintptr_t)"Name Conflicts\n",
+	gettext_noop("Name Conflicts\n"),
 	g_ImportOverrideItems,
 	NULL,
 	MENUDIALOGFLAG_LITERAL_TEXT,

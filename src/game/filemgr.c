@@ -1,3 +1,4 @@
+#include <stdint.h>
 #include <ultra64.h>
 #include "constants.h"
 #include "game/filelist.h"
@@ -19,6 +20,11 @@
 #include "lib/str.h"
 #include "data.h"
 #include "types.h"
+#ifndef PLATFORM_N64
+#include <libintl.h>
+#define _(String) gettext (String)
+#define gettext_noop(String) String
+#endif
 
 // bss
 struct fileguid g_FilemgrFileToCopy;
@@ -61,7 +67,6 @@ struct menudialogdef g_FilemgrDuplicateNameMenuDialog;
 struct menudialogdef g_FilemgrRenameMenuDialog;
 #endif
 
-#if PAL
 MenuItemHandlerResult filemgrHandleSetLanguage(s32 operation, struct menuitem *item, union handlerdata *data)
 {
 	if (operation == MENUOP_SET) {
@@ -72,13 +77,13 @@ MenuItemHandlerResult filemgrHandleSetLanguage(s32 operation, struct menuitem *i
 
 	return 0;
 }
-
+// TODO - Lang: Fix it; make that things dynamic
 struct menuitem g_ChooseLanguageMenuItems[] = {
 	{
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_LESSLEFTPADDING | MENUITEMFLAG_DARKERBG,
-		L_MPWEAPONS_261, // "Choose your language:"
+		gettext_noop("Choose your language:"), // "Choose your language:"
 		0,
 		0,
 	},
@@ -94,7 +99,7 @@ struct menuitem g_ChooseLanguageMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		LANGUAGE_PAL_EN,
 		MENUITEMFLAG_SELECTABLE_CENTRE,
-		L_MPWEAPONS_262, // "English"
+		gettext_noop("English\n"), // "English"
 		0,
 		filemgrHandleSetLanguage,
 	},
@@ -102,7 +107,7 @@ struct menuitem g_ChooseLanguageMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		LANGUAGE_PAL_FR,
 		MENUITEMFLAG_SELECTABLE_CENTRE,
-		L_MPWEAPONS_263, // "French"
+		gettext_noop("French\n"), // "French"
 		0,
 		filemgrHandleSetLanguage,
 	},
@@ -110,7 +115,7 @@ struct menuitem g_ChooseLanguageMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		LANGUAGE_PAL_DE,
 		MENUITEMFLAG_SELECTABLE_CENTRE,
-		L_MPWEAPONS_264, // "German"
+		gettext_noop("German\n"), // "German"
 		0,
 		filemgrHandleSetLanguage,
 	},
@@ -118,7 +123,7 @@ struct menuitem g_ChooseLanguageMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		LANGUAGE_PAL_IT,
 		MENUITEMFLAG_SELECTABLE_CENTRE,
-		L_MPWEAPONS_265, // "Italian"
+		gettext_noop("Italian\n"), // "Italian"
 		0,
 		filemgrHandleSetLanguage,
 	},
@@ -126,7 +131,7 @@ struct menuitem g_ChooseLanguageMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		LANGUAGE_PAL_ES,
 		MENUITEMFLAG_SELECTABLE_CENTRE,
-		L_MPWEAPONS_266, // "Spanish"
+		gettext_noop("Spanish\n"), // "Spanish"
 		0,
 		filemgrHandleSetLanguage,
 	},
@@ -135,29 +140,28 @@ struct menuitem g_ChooseLanguageMenuItems[] = {
 
 struct menudialogdef g_ChooseLanguageMenuDialog = {
 	MENUDIALOGTYPE_DEFAULT,
-	L_OPTIONS_095,
+	gettext_noop("Perfect Dark\n"),
 	g_ChooseLanguageMenuItems,
 	NULL,
 	MENUDIALOGFLAG_IGNOREBACK,
 	NULL,
 };
-#endif
 
 char *filemgrGetDeviceName(s32 index)
 {
-	u16 names[] = {
-		L_OPTIONS_112, // "Controller Pak 1"
-		L_OPTIONS_113, // "Controller Pak 2"
-		L_OPTIONS_114, // "Controller Pak 3"
-		L_OPTIONS_115, // "Controller Pak 4"
-		L_OPTIONS_111, // "Game Pak"
+	char *names[] = {
+		_("Controller Pak 1\n"), // "Controller Pak 1"
+		_("Controller Pak 2\n"), // "Controller Pak 2"
+		_("Controller Pak 3\n"), // "Controller Pak 3"
+		_("Controller Pak 4\n"), // "Controller Pak 4"
+		_("Game Pak\n"), // "Game Pak"
 #if VERSION >= VERSION_NTSC_1_0
-		L_MPWEAPONS_229, // "Controller Pak Not Found"
+		_("Controller Pak Not Found\n"), // "Controller Pak Not Found"
 #endif
 	};
 
 	if (index < ARRAYCOUNT(names)) {
-		return langGet(names[index]);
+		return names[index];
 	}
 
 	return NULL;
@@ -283,19 +287,19 @@ void filemgrSetFileToDelete(struct filelistfile *file, s32 filetype)
 
 char *filemgrMenuTextFailReason(struct menuitem *item)
 {
-	static u16 reasons[] = {
-		L_OPTIONS_322, // "The Controller Pak was not found in any controller."
-		L_OPTIONS_323, // "File was not saved."
-		L_OPTIONS_324, // "File would not load."
-		L_OPTIONS_325, // "Could not delete the file."
-		L_OPTIONS_326, // "Out of memory."
-		L_OPTIONS_327, // "This player is already loaded for this game."
-		L_OPTIONS_328, // "has been removed."
-		L_OPTIONS_329, // "Controller Pak is damaged or incorrectly inserted."
-		L_OPTIONS_330, // "Game note delete failed."
+	static char *reasons[] = {
+		gettext_noop("The Controller Pak\nwas not found\nin any controller.\n"), // "The Controller Pak was not found in any controller."
+		gettext_noop("File was not saved.\n"), // "File was not saved."
+		gettext_noop("File would not load.\n"), // "File would not load."
+		gettext_noop("Could not delete the file.\n"), // "Could not delete the file."
+		gettext_noop("Out of memory.\n"), // "Out of memory."
+		gettext_noop("This player is already\nloaded for this game.\n"), // "This player is already loaded for this game."
+		gettext_noop("has been removed.\n"), // "has been removed."
+		gettext_noop("Controller Pak is damaged or incorrectly inserted.\n"), // "Controller Pak is damaged or incorrectly inserted."
+		gettext_noop("Game note delete failed.\n"), // "Game note delete failed."
 	};
 
-	return langGet(reasons[g_Menus[g_MpPlayerNum].fm.errnum]);
+	return _(reasons[g_Menus[g_MpPlayerNum].fm.errnum]);
 }
 
 /**
@@ -375,7 +379,7 @@ struct menuitem g_FilemgrErrorMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_LESSLEFTPADDING,
-		(uintptr_t) &filemgrMenuTextDeviceNameForError,
+		&filemgrMenuTextDeviceNameForError,
 		0,
 		filemgrDeviceNameForErrorMenuHandler,
 	},
@@ -383,7 +387,7 @@ struct menuitem g_FilemgrErrorMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_LESSLEFTPADDING,
-		(uintptr_t) &filemgrMenuTextFailReason,
+		&filemgrMenuTextFailReason,
 		0,
 		NULL,
 	},
@@ -391,7 +395,7 @@ struct menuitem g_FilemgrErrorMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_CLOSESDIALOG | MENUITEMFLAG_SELECTABLE_CENTRE,
-		L_OPTIONS_321, // "Cancel"
+		gettext_noop("Cancel\n"), // "Cancel"
 		0,
 		NULL,
 	},
@@ -400,7 +404,7 @@ struct menuitem g_FilemgrErrorMenuItems[] = {
 
 struct menudialogdef g_FilemgrErrorMenuDialog = {
 	MENUDIALOGTYPE_DANGER,
-	L_OPTIONS_320, // "Error"
+	gettext_noop("Error\n"), // "Error"
 	g_FilemgrErrorMenuItems,
 	NULL,
 	MENUDIALOGFLAG_DISABLEBANNER,
@@ -411,14 +415,14 @@ struct menudialogdef g_FilemgrErrorMenuDialog = {
  * For a file listing, iterate the devices until the one at optionindex is found.
  * Depending on operation, return the device name or index of the first file.
  */
-uintptr_t filemgrGetDeviceNameOrStartIndex(s32 listnum, s32 operation, s32 optionindex)
+uintptr_t filemgrGetDeviceNameOrStartIndex(s32 listnum, s32 operation, s32 optionindex) // TODO - Lang: Fix it, return value
 {
-	u16 names[] = {
-		L_OPTIONS_111, // "Game Pak"
-		L_OPTIONS_112, // "Controller Pak 1"
-		L_OPTIONS_113, // "Controller Pak 2"
-		L_OPTIONS_114, // "Controller Pak 3"
-		L_OPTIONS_115, // "Controller Pak 4"
+	char *names[] = {
+		_("Game Pak\n"), // "Game Pak"
+		_("Controller Pak 1\n"), // "Controller Pak 1"
+		_("Controller Pak 2\n"), // "Controller Pak 2"
+		_("Controller Pak 3\n"), // "Controller Pak 3"
+		_("Controller Pak 4\n"), // "Controller Pak 4"
 	};
 
 	s32 i;
@@ -428,7 +432,7 @@ uintptr_t filemgrGetDeviceNameOrStartIndex(s32 listnum, s32 operation, s32 optio
 		if (g_FileLists[listnum]->devicestartindexes[i] != -1) {
 			if (remaining == 0) {
 				if (operation == MENUOP_GETOPTGROUPTEXT) {
-					return (uintptr_t)langGet(names[i]);
+					return (uintptr_t)names[i];
 				}
 
 				return g_FileLists[listnum]->devicestartindexes[i];
@@ -443,52 +447,52 @@ uintptr_t filemgrGetDeviceNameOrStartIndex(s32 listnum, s32 operation, s32 optio
 
 char *filemgrMenuTextErrorTitle(struct menuitem *item)
 {
-	u16 messages[] = {
-		L_OPTIONS_331, // "Error Loading Game"
-		L_OPTIONS_332, // "Error Saving Game"
-		L_OPTIONS_333, // "Error Loading Player"
-		L_OPTIONS_334, // "Error Saving Player"
-		L_OPTIONS_335, // "Error Loading PerfectHead"
-		L_OPTIONS_336, // "Error Saving PerfectHead"
-		L_OPTIONS_337, // "Error Reading File"
-		L_OPTIONS_338, // "Error Writing File"
-		L_OPTIONS_339, // "Error"
+	char *messages[] = {
+		_("Error Loading Game\n"), // "Error Loading Game"
+		_("Error Saving Game\n"), // "Error Saving Game"
+		_("Error Loading Player\n"), // "Error Loading Player"
+		_("Error Saving Player\n"), // "Error Saving Player"
+		_("Error Loading PerfectHead\n"), // "Error Loading PerfectHead"
+		_("Error Saving PerfectHead\n"), // "Error Saving PerfectHead"
+		_("Error Reading File\n"), // "Error Reading File"
+		_("Error Writing File\n"), // "Error Writing File"
+		_("Error\n"), // "Error"
 	};
 
 	switch (g_Menus[g_MpPlayerNum].fm.fileop) {
 	case FILEOP_LOAD_GAME:
 	case FILEOP_LOAD_MPSETUP:
-		return langGet(messages[0]);
+		return messages[0];
 	case FILEOP_SAVE_GAME_000:
 	case FILEOP_SAVE_GAME_001:
 	case FILEOP_SAVE_GAME_002:
 	case FILEOP_SAVE_MPSETUP:
-		return langGet(messages[1]);
+		return messages[1];
 	case FILEOP_LOAD_MPPLAYER:
-		return langGet(messages[2]);
+		return messages[2];
 	case FILEOP_SAVE_MPPLAYER:
-		return langGet(messages[3]);
+		return messages[3];
 	case FILEOP_READ_GAME:
 	case FILEOP_READ_MPSETUP:
 	case FILEOP_READ_MPPLAYER:
-		return langGet(messages[6]);
+		return messages[6];
 	case FILEOP_WRITE_GAME:
 	case FILEOP_WRITE_MPSETUP:
 	case FILEOP_WRITE_MPPLAYER:
-		return langGet(messages[7]);
+		return messages[7];
 	}
 
-	return langGet(messages[8]);
+	return messages[8];
 }
 
 #if VERSION >= VERSION_NTSC_1_0
 char *filemgrMenuTextFileType(struct menuitem *item)
 {
-	u16 names[] = {
-		L_OPTIONS_103, // "Single Player Agent File"
-		L_OPTIONS_104, // "Combat Simulator Settings File"
-		L_OPTIONS_105, // "Combat Simulator Player File"
-		L_OPTIONS_106, // "PerfectHead Files"
+	char *names[] = {
+		_("Single Player Agent File\n"), // "Single Player Agent File"
+		_("Combat Simulator Settings File\n"), // "Combat Simulator Settings File"
+		_("Combat Simulator Player File\n"), // "Combat Simulator Player File"
+		_("PerfectHead Files\n"), // "PerfectHead Files"
 	};
 
 	switch (g_Menus[g_MpPlayerNum].fm.fileop) {
@@ -498,15 +502,15 @@ char *filemgrMenuTextFileType(struct menuitem *item)
 	case FILEOP_WRITE_GAME:
 	case FILEOP_LOAD_GAME:
 	case FILEOP_READ_GAME:
-		return langGet(names[0]);
+		return names[0];
 	case FILEOP_SAVE_MPPLAYER:
 	case FILEOP_WRITE_MPPLAYER:
 	case FILEOP_LOAD_MPPLAYER:
 	case FILEOP_READ_MPPLAYER:
-		return langGet(names[2]);
+		return names[2];
 	}
 
-	return langGet(names[0]);
+	return names[0];
 }
 #endif
 
@@ -730,7 +734,7 @@ char *filemgrMenuTextInsertOriginalPak(struct menuitem *item)
 	}
 
 	// "Please insert the Controller Pak containing your %s into any controller."
-	sprintf(fullbuffer, langGet(L_OPTIONS_363), namebuffer);
+	sprintf(fullbuffer, _("Please insert the Controller Pak containing your %s into any controller.\n"), namebuffer);
 
 	textWrap(120, fullbuffer, g_StringPointer, g_CharsHandelGothicSm, g_FontHandelGothicSm);
 
@@ -1012,7 +1016,7 @@ struct menuitem g_FilemgrFileSavedMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_LESSLEFTPADDING,
-		L_OPTIONS_346, // "File Saved."
+		gettext_noop("File Saved.\n"), // "File Saved."
 		0,
 		NULL,
 	},
@@ -1020,7 +1024,7 @@ struct menuitem g_FilemgrFileSavedMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_CLOSESDIALOG | MENUITEMFLAG_SELECTABLE_CENTRE,
-		L_OPTIONS_347, // "OK"
+		gettext_noop("OK\n"), // "OK"
 		0,
 		NULL,
 	},
@@ -1029,7 +1033,7 @@ struct menuitem g_FilemgrFileSavedMenuItems[] = {
 
 struct menudialogdef g_FilemgrFileSavedMenuDialog = {
 	MENUDIALOGTYPE_SUCCESS,
-	L_OPTIONS_345, // "Cool!"
+	gettext_noop("Cool!\n"), // "Cool!"
 	g_FilemgrFileSavedMenuItems,
 	NULL,
 	MENUDIALOGFLAG_DISABLEBANNER,
@@ -1041,7 +1045,7 @@ struct menuitem g_FilemgrSaveErrorMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_LESSLEFTPADDING,
-		(uintptr_t) &filemgrMenuTextDeviceName,
+		&filemgrMenuTextDeviceName,
 		0,
 		filemgrDeviceNameMenuHandler,
 	},
@@ -1049,7 +1053,7 @@ struct menuitem g_FilemgrSaveErrorMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_LESSLEFTPADDING,
-		L_OPTIONS_348, // "An error occurred while trying to save."
+		gettext_noop("An error occurred while\ntrying to save.\n"), // "An error occurred while trying to save."
 		0,
 		NULL,
 	},
@@ -1057,7 +1061,7 @@ struct menuitem g_FilemgrSaveErrorMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_CENTRE,
-		L_OPTIONS_349, // "Try Again"
+		gettext_noop("Try Again\n"), // "Try Again"
 		0,
 		filemgrRetrySaveMenuHandler,
 	},
@@ -1065,7 +1069,7 @@ struct menuitem g_FilemgrSaveErrorMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_CENTRE,
-		L_OPTIONS_350, // "Save Elsewhere"
+		gettext_noop("Save Elsewhere\n"), // "Save Elsewhere"
 		0,
 		filemgrSaveElsewhereYesMenuHandler,
 	},
@@ -1073,7 +1077,7 @@ struct menuitem g_FilemgrSaveErrorMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_CENTRE,
-		L_OPTIONS_351, // "Cancel"
+		gettext_noop("Cancel\n"), // "Cancel"
 		0,
 		filemgrCancelSave2MenuHandler,
 	},
@@ -1082,7 +1086,7 @@ struct menuitem g_FilemgrSaveErrorMenuItems[] = {
 
 struct menudialogdef g_FilemgrSaveErrorMenuDialog = {
 	MENUDIALOGTYPE_DANGER,
-	(uintptr_t) &filemgrMenuTextErrorTitle,
+	&filemgrMenuTextErrorTitle,
 	g_FilemgrSaveErrorMenuItems,
 	NULL,
 	MENUDIALOGFLAG_IGNOREBACK | MENUDIALOGFLAG_DISABLEBANNER,
@@ -1094,7 +1098,7 @@ struct menuitem g_FilemgrFileLostMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_LESSLEFTPADDING,
-		(uintptr_t) &filemgrMenuTextDeviceName,
+		&filemgrMenuTextDeviceName,
 		0,
 		filemgrDeviceNameMenuHandler,
 	},
@@ -1103,7 +1107,7 @@ struct menuitem g_FilemgrFileLostMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_LESSLEFTPADDING,
-		L_MPWEAPONS_251, // "The saved file has been erased due to corruption or damage."
+		gettext_noop("The saved file has\nbeen erased due\nto corruption\nor damage.\n"), // "The saved file has been erased due to corruption or damage."
 		0,
 		NULL,
 	},
@@ -1129,7 +1133,7 @@ struct menuitem g_FilemgrFileLostMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_CENTRE,
-		L_OPTIONS_354, // "Cancel"
+		gettext_noop("Cancel\n"), // "Cancel"
 		0,
 		filemgrAcknowledgeFileLostMenuHandler,
 	},
@@ -1138,7 +1142,7 @@ struct menuitem g_FilemgrFileLostMenuItems[] = {
 
 struct menudialogdef g_FilemgrFileLostMenuDialog = {
 	MENUDIALOGTYPE_DANGER,
-	(uintptr_t) &filemgrMenuTextErrorTitle,
+	&filemgrMenuTextErrorTitle,
 	g_FilemgrFileLostMenuItems,
 	NULL,
 	MENUDIALOGFLAG_IGNOREBACK | MENUDIALOGFLAG_DISABLEBANNER,
@@ -1150,7 +1154,7 @@ struct menuitem g_FilemgrSaveElsewhereMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_LESSLEFTPADDING,
-		L_OPTIONS_360, // "Would you like to save your file elsewhere?"
+		gettext_noop("Would you like to save\nyour file elsewhere?\n"), // "Would you like to save your file elsewhere?"
 		0,
 		NULL,
 	},
@@ -1158,7 +1162,7 @@ struct menuitem g_FilemgrSaveElsewhereMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_CENTRE,
-		L_OPTIONS_361, // "Yes"
+		gettext_noop("Yes\n"), // "Yes"
 		0,
 		filemgrSaveElsewhereYesMenuHandler,
 	},
@@ -1166,7 +1170,7 @@ struct menuitem g_FilemgrSaveElsewhereMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_CENTRE,
-		L_OPTIONS_362, // "No"
+		gettext_noop("No\n"), // "No"
 		0,
 		filemgrCancelSave2MenuHandler,
 	},
@@ -1175,7 +1179,7 @@ struct menuitem g_FilemgrSaveElsewhereMenuItems[] = {
 
 struct menudialogdef g_FilemgrSaveElsewhereMenuDialog = {
 	MENUDIALOGTYPE_DANGER,
-	L_OPTIONS_359, // "Save"
+	gettext_noop("Save\n"), // "Save"
 	g_FilemgrSaveElsewhereMenuItems,
 	NULL,
 	MENUDIALOGFLAG_IGNOREBACK | MENUDIALOGFLAG_DISABLEBANNER,
@@ -1188,7 +1192,7 @@ struct menuitem g_PakNotOriginalMenuItems[] = {
 		0,
 		MENUITEMFLAG_LESSLEFTPADDING,
 #if VERSION >= VERSION_NTSC_1_0
-		(uintptr_t) &filemgrMenuTextInsertOriginalPak,
+		&filemgrMenuTextInsertOriginalPak,
 #else
 		L_OPTIONS_363, // "Please insert the Controller Pak containing your %s into any controller."
 #endif
@@ -1199,7 +1203,7 @@ struct menuitem g_PakNotOriginalMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_CENTRE,
-		L_OPTIONS_365, // "OK"
+		gettext_noop("OK\n"), // "OK"
 		0,
 		filemgrReinsertedOkMenuHandler,
 	},
@@ -1207,7 +1211,7 @@ struct menuitem g_PakNotOriginalMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_CENTRE,
-		L_OPTIONS_366, // "Cancel"
+		gettext_noop("Cancel\n"), // "Cancel"
 		0,
 		filemgrReinsertedCancelMenuHandler,
 	},
@@ -1216,7 +1220,7 @@ struct menuitem g_PakNotOriginalMenuItems[] = {
 
 struct menudialogdef g_PakNotOriginalMenuDialog = {
 	MENUDIALOGTYPE_DANGER,
-	(uintptr_t) &filemgrMenuTextErrorTitle,
+	&filemgrMenuTextErrorTitle,
 	g_PakNotOriginalMenuItems,
 	filemgrInsertOriginalPakMenuDialog,
 	MENUDIALOGFLAG_IGNOREBACK | MENUDIALOGFLAG_DISABLEBANNER,
@@ -1567,7 +1571,7 @@ struct menuitem g_FilemgrRenameMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_LESSLEFTPADDING,
-		L_MPWEAPONS_239, // "Enter new file name:"
+		gettext_noop("Enter new file name:\n"), // "Enter new file name:"
 		0,
 		NULL,
 	},
@@ -1584,7 +1588,7 @@ struct menuitem g_FilemgrRenameMenuItems[] = {
 
 struct menudialogdef g_FilemgrRenameMenuDialog = {
 	MENUDIALOGTYPE_DEFAULT,
-	L_MPWEAPONS_238, // "Change File Name"
+	gettext_noop("Change File Name\n"), // "Change File Name"
 	g_FilemgrRenameMenuItems,
 	NULL,
 	MENUDIALOGFLAG_DISABLEBANNER,
@@ -1598,7 +1602,7 @@ struct menuitem g_FilemgrDuplicateMenuMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_LESSLEFTPADDING | MENUITEMFLAG_SELECTABLE_CENTRE,
-		(uintptr_t) &filemgrMenuTextDeviceNameContainingDuplicateFile,
+		&filemgrMenuTextDeviceNameContainingDuplicateFile,
 		0,
 		NULL,
 	},
@@ -1606,7 +1610,7 @@ struct menuitem g_FilemgrDuplicateMenuMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_LESSLEFTPADDING | MENUITEMFLAG_SELECTABLE_CENTRE | MENUITEMFLAG_LESSHEIGHT,
-		L_MPWEAPONS_233, // "already contains"
+		gettext_noop("already contains\n"), // "already contains"
 		0,
 		NULL,
 	},
@@ -1614,7 +1618,7 @@ struct menuitem g_FilemgrDuplicateMenuMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_LESSLEFTPADDING | MENUITEMFLAG_SELECTABLE_CENTRE | MENUITEMFLAG_LESSHEIGHT,
-		L_MPWEAPONS_234, // "a file named"
+		gettext_noop("a file named\n"), // "a file named"
 		0,
 		NULL,
 	},
@@ -1622,7 +1626,7 @@ struct menuitem g_FilemgrDuplicateMenuMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_LESSLEFTPADDING | MENUITEMFLAG_SELECTABLE_CENTRE | MENUITEMFLAG_LESSHEIGHT,
-		(uintptr_t) &filemgrMenuTextDuplicateFileName,
+		&filemgrMenuTextDuplicateFileName,
 		0,
 		NULL,
 	},
@@ -1630,7 +1634,7 @@ struct menuitem g_FilemgrDuplicateMenuMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		0,
-		L_MPWEAPONS_235, // "Rename File"
+		gettext_noop("Rename File\n"), // "Rename File"
 		0,
 		filemgrDuplicateRenameMenuHandler,
 	},
@@ -1638,7 +1642,7 @@ struct menuitem g_FilemgrDuplicateMenuMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_CLOSESDIALOG,
-		L_MPWEAPONS_236, // "Change Location"
+		gettext_noop("Change Location\n"), // "Change Location"
 		0,
 		NULL,
 	},
@@ -1646,7 +1650,7 @@ struct menuitem g_FilemgrDuplicateMenuMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		0,
-		L_MPWEAPONS_237, // "Cancel"
+		gettext_noop("Cancel\n"), // "Cancel"
 		0,
 		filemgrDuplicateCancelMenuHandler,
 	},
@@ -1655,7 +1659,7 @@ struct menuitem g_FilemgrDuplicateMenuMenuItems[] = {
 
 struct menudialogdef g_FilemgrDuplicateNameMenuDialog = {
 	MENUDIALOGTYPE_DEFAULT,
-	L_MPWEAPONS_232, // "Duplicate File Name"
+	gettext_noop("Duplicate File Name\n"), // "Duplicate File Name"
 	g_FilemgrDuplicateMenuMenuItems,
 	NULL,
 	MENUDIALOGFLAG_DISABLEBANNER,
@@ -1665,13 +1669,13 @@ struct menudialogdef g_FilemgrDuplicateNameMenuDialog = {
 
 char *filemgrMenuTextLocationName2(struct menuitem *item)
 {
-	u16 names[] = {
-		L_OPTIONS_112, // "Controller Pak 1"
-		L_OPTIONS_113, // "Controller Pak 2"
-		L_OPTIONS_114, // "Controller Pak 3"
-		L_OPTIONS_115, // "Controller Pak 4"
-		L_OPTIONS_111, // "Game Pak"
-		L_OPTIONS_004, // ""
+	char *names[] = {
+		_("Controller Pak 1\n"), // "Controller Pak 1"
+		_("Controller Pak 2\n"), // "Controller Pak 2"
+		_("Controller Pak 3\n"), // "Controller Pak 3"
+		_("Controller Pak 4\n"), // "Controller Pak 4"
+		_("Game Pak\n"), // "Game Pak"
+		"", // ""
 	};
 
 	if (g_FileLists[g_Menus[g_MpPlayerNum].fm.listnum] == NULL) {
@@ -1680,7 +1684,7 @@ char *filemgrMenuTextLocationName2(struct menuitem *item)
 
 #if VERSION >= VERSION_NTSC_1_0
 	if (g_FileLists[g_Menus[g_MpPlayerNum].fm.listnum]->spacesfree[item->param] < 0) {
-		return langGet(names[5]);
+		return names[5];
 	}
 #else
 	if (g_FileLists[g_Menus[g_MpPlayerNum].fm.listnum]->spacesfree[item->param] <= 0) {
@@ -1688,7 +1692,7 @@ char *filemgrMenuTextLocationName2(struct menuitem *item)
 	}
 #endif
 
-	return langGet(names[item->param]);
+	return names[item->param];
 }
 
 char *filemgrMenuTextSaveLocationSpaces(struct menuitem *item)
@@ -1706,7 +1710,7 @@ char *filemgrMenuTextSaveLocationSpaces(struct menuitem *item)
 	}
 
 	if (spacesfree == 0) {
-		return langGet(L_OPTIONS_372); // "Full"
+		return _("Full"); // "Full"
 	}
 
 	sprintf(g_StringPointer, "%d", spacesfree);
@@ -1884,10 +1888,10 @@ MenuItemHandlerResult filemgrConfirmDeleteMenuHandler(s32 operation, struct menu
 char *filemgrMenuTextFileInUseDescription(struct menuitem *item)
 {
 	if (menuIsDialogOpen(&g_FilemgrCopyMenuDialog)) {
-		return langGet(L_MPWEAPONS_240); // "The file you are copying cannot be deleted."
+		return _("The file you are copying\ncannot be deleted.\n"); // "The file you are copying cannot be deleted."
 	}
 
-	return langGet(L_MPWEAPONS_160); // "Cannot delete file as it is being used."
+	return _("Cannot delete file as\nit is being used.\n"); // "Cannot delete file as it is being used."
 }
 #endif
 
@@ -2245,8 +2249,8 @@ MenuItemHandlerResult pakGameNoteListMenuHandler(s32 operation, struct menuitem 
 			sprintf(extbuffer, "%s\n", tmpext);
 			sprintf(pagesbuffer, "%d\n", note->file_size / 256);
 		} else {
-			sprintf(generalbuffer, langGet(L_OPTIONS_392)); // "Empty"
-			sprintf(pagesbuffer, langGet(L_OPTIONS_393)); // "--"
+			sprintf(generalbuffer, _("Empty\n")); // "Empty"
+			sprintf(pagesbuffer, _("--\n")); // "--"
 			sprintf(extbuffer, "", tmpname, tmpext);
 		}
 
@@ -2320,9 +2324,9 @@ MenuDialogHandlerResult pakGameNotesMenuDialog(s32 operation, struct menudialogd
 char *pakMenuTextPagesFree(struct menuitem *item)
 {
 	if (g_EditingPak == NULL) {
-		sprintf(g_StringPointer, langGet(L_OPTIONS_394)); // "Pages Free: "
+		sprintf(g_StringPointer, _("Pages Free: \n")); // "Pages Free: "
 	} else {
-		sprintf(g_StringPointer, langGet(L_OPTIONS_395), g_EditingPak->pagesfree); // "Pages Free: %d"
+		sprintf(g_StringPointer, _("Pages Free: %d\n"), g_EditingPak->pagesfree); // "Pages Free: %d"
 	}
 
 	return g_StringPointer;
@@ -2331,9 +2335,9 @@ char *pakMenuTextPagesFree(struct menuitem *item)
 char *pakMenuTextPagesUsed(struct menuitem *item)
 {
 	if (g_EditingPak == NULL) {
-		sprintf(g_StringPointer2, langGet(L_OPTIONS_396)); // "Pages Used: "
+		sprintf(g_StringPointer2, _("Pages Used: \n")); // "Pages Used: "
 	} else {
-		sprintf(g_StringPointer2, langGet(L_OPTIONS_397), g_EditingPak->pagesused); // "Pages Used: %d"
+		sprintf(g_StringPointer2, _("Pages Used: %d\n"), g_EditingPak->pagesused); // "Pages Used: %d"
 	}
 
 	return g_StringPointer2;
@@ -2346,7 +2350,7 @@ char *pakMenuTextStatusMessage(struct menuitem *item)
 	s32 i;
 
 	if (g_EditingPak == NULL) {
-		return langGet(L_OPTIONS_398); // "Perfect Dark note already exists on this Controller Pak."
+		return _("Perfect Dark note already exists\non this Controller Pak.\n"); // "Perfect Dark note already exists on this Controller Pak."
 	}
 
 	for (i = 0; i < ARRAYCOUNT(g_EditingPak->notes); i++) {
@@ -2361,14 +2365,14 @@ char *pakMenuTextStatusMessage(struct menuitem *item)
 	}
 
 	if (haspdnote) {
-		return langGet(L_OPTIONS_398); // "Perfect Dark note already exists on this Controller Pak."
+		return _("Perfect Dark note already exists\non this Controller Pak.\n"); // "Perfect Dark note already exists on this Controller Pak."
 	}
 
 	if (g_EditingPak->pagesfree < 28 || !hasemptynote) {
-		return langGet(L_OPTIONS_400); // "Controller Pak is too full to save note- 1 note and 28 pages required to save to Controller Pak."
+		return _("Controller Pak is too full to save note- 1 note\nand 28 pages required to save to Controller Pak.\n"); // "Controller Pak is too full to save note- 1 note and 28 pages required to save to Controller Pak."
 	}
 
-	return langGet(L_OPTIONS_399); // "There is enough space for Perfect Dark note."
+	return _("There is enough space for\nPerfect Dark note.\n"); // "There is enough space for Perfect Dark note."
 }
 
 /**
@@ -2658,7 +2662,7 @@ MenuItemHandlerResult filemgrChooseAgentListMenuHandler(s32 operation, struct me
 
 		if (data->list.unk04 == g_FileLists[0]->numfiles) {
 			// "New Agent..."
-			gdl = textRenderProjected(gdl, &x, &y, langGet(L_OPTIONS_403),
+			gdl = textRenderProjected(gdl, &x, &y, _("New Agent...\n"),
 					g_CharsHandelGothicMd, g_FontHandelGothicMd, renderdata->colour, viGetWidth(), viGetHeight(), 0, 0);
 		} else if (file) {
 			// Render file name
@@ -2671,11 +2675,11 @@ MenuItemHandlerResult filemgrChooseAgentListMenuHandler(s32 operation, struct me
 
 			if (stage > 0) {
 				sprintf(buffer, "%s %s",
-						langGet(g_SoloStages[stage - 1].name1),
-						langGet(g_SoloStages[stage - 1].name2));
+						_(g_SoloStages[stage - 1].name1),
+						_(g_SoloStages[stage - 1].name2));
 			} else {
 				// "New Recruit"
-				strcpy(buffer, langGet(L_OPTIONS_404));
+				strcpy(buffer, _("New Recruit"));
 			}
 
 			strcat(buffer, "\n");
@@ -2692,10 +2696,10 @@ MenuItemHandlerResult filemgrChooseAgentListMenuHandler(s32 operation, struct me
 
 			if (days > 0) {
 				// "Mission Time:"
-				sprintf(buffer, "%s %d:%02d:%02d", langGet(L_OPTIONS_405), days, hours, minutes);
+				sprintf(buffer, "%s %d:%02d:%02d", _("Mission Time:"), days, hours, minutes);
 			} else {
 				// "Mission Time:"
-				sprintf(buffer, "%s %02d:%02d", langGet(L_OPTIONS_405), hours, minutes);
+				sprintf(buffer, "%s %02d:%02d", _("Mission Time:"), hours, minutes);
 			}
 
 			// Useless - textwidth and textheight are not used
@@ -2739,8 +2743,8 @@ MenuItemHandlerResult filemgrChooseAgentListMenuHandler(s32 operation, struct me
 		data->list.value = g_FileLists[0]->numdevices + 1;
 		break;
 	case MENUOP_GETOPTGROUPTEXT:
-		if (data->list.value >= g_FileLists[0]->numdevices) {
-			return (uintptr_t) langGet(L_OPTIONS_402); // "New..."
+		if (data->list.value >= g_FileLists[0]->numdevices) {// TODO - Lang: Fix it, return value
+			return (uintptr_t)_("New...\n"); // "New..."
 		}
 		return filemgrGetDeviceNameOrStartIndex(0, operation, data->list.value);
 	case MENUOP_GETGROUPSTARTINDEX:
@@ -2769,7 +2773,7 @@ MenuDialogHandlerResult filemgrMainMenuDialog(s32 operation, struct menudialogde
 		// Set MP player names to "Player 1" through 4 if blank
 		for (i = 0; i < MAX_PLAYERS; i++) {
 			if (g_PlayerConfigsArray[i].base.name[0] == '\0') {
-				sprintf(g_PlayerConfigsArray[i].base.name, "%s %d\n", langGet(L_MISC_437), i + 1);
+				sprintf(g_PlayerConfigsArray[i].base.name, "%s %d\n", _("Player"), i + 1);
 			}
 		}
 		break;
@@ -2817,8 +2821,8 @@ struct menuitem g_FilemgrSelectLocationMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_LESSLEFTPADDING,
-		L_OPTIONS_368, // "Where"
-		L_OPTIONS_369, // "Spaces"
+		gettext_noop("Where\n"), // "Where"
+		0,// gettext_noop("Spaces\n"), // "Spaces" TODO - Lang: Fix it
 		NULL,
 	},
 	{
@@ -2833,7 +2837,7 @@ struct menuitem g_FilemgrSelectLocationMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		SAVEDEVICE_GAMEPAK,
 		0,
-		(uintptr_t)&filemgrMenuTextLocationName2,
+		&filemgrMenuTextLocationName2,
 		(uintptr_t)&filemgrMenuTextSaveLocationSpaces,
 		filemgrSelectLocationMenuHandler,
 	},
@@ -2841,7 +2845,7 @@ struct menuitem g_FilemgrSelectLocationMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		SAVEDEVICE_CONTROLLERPAK1,
 		0,
-		(uintptr_t)&filemgrMenuTextLocationName2,
+		&filemgrMenuTextLocationName2,
 		(uintptr_t)&filemgrMenuTextSaveLocationSpaces,
 		filemgrSelectLocationMenuHandler,
 	},
@@ -2849,7 +2853,7 @@ struct menuitem g_FilemgrSelectLocationMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		SAVEDEVICE_CONTROLLERPAK2,
 		0,
-		(uintptr_t)&filemgrMenuTextLocationName2,
+		&filemgrMenuTextLocationName2,
 		(uintptr_t)&filemgrMenuTextSaveLocationSpaces,
 		filemgrSelectLocationMenuHandler,
 	},
@@ -2857,7 +2861,7 @@ struct menuitem g_FilemgrSelectLocationMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		SAVEDEVICE_CONTROLLERPAK3,
 		0,
-		(uintptr_t)&filemgrMenuTextLocationName2,
+		&filemgrMenuTextLocationName2,
 		(uintptr_t)&filemgrMenuTextSaveLocationSpaces,
 		filemgrSelectLocationMenuHandler,
 	},
@@ -2865,7 +2869,7 @@ struct menuitem g_FilemgrSelectLocationMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		SAVEDEVICE_CONTROLLERPAK4,
 		0,
-		(uintptr_t)&filemgrMenuTextLocationName2,
+		&filemgrMenuTextLocationName2,
 		(uintptr_t)&filemgrMenuTextSaveLocationSpaces,
 		filemgrSelectLocationMenuHandler,
 	},
@@ -2881,7 +2885,7 @@ struct menuitem g_FilemgrSelectLocationMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		0,
-		L_OPTIONS_370, // "Delete Files..."
+		gettext_noop("Delete Files...\n"), // "Delete Files..."
 		0,
 		filemgrDeleteFilesForSaveMenuHandler,
 	},
@@ -2889,7 +2893,7 @@ struct menuitem g_FilemgrSelectLocationMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		0,
-		L_OPTIONS_371, // "Cancel"
+		gettext_noop("Cancel\n"), // "Cancel"
 		0,
 		filemgrCancelSaveMenuHandler,
 	},
@@ -2898,7 +2902,7 @@ struct menuitem g_FilemgrSelectLocationMenuItems[] = {
 
 struct menudialogdef g_FilemgrSelectLocationMenuDialog = {
 	MENUDIALOGTYPE_DEFAULT,
-	L_OPTIONS_367, // "Select Location"
+	gettext_noop("Select Location\n"), // "Select Location"
 	g_FilemgrSelectLocationMenuItems,
 	NULL,
 	MENUDIALOGFLAG_DISABLEBANNER,
@@ -2910,7 +2914,7 @@ struct menuitem g_FilemgrConfirmDeleteMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_LESSLEFTPADDING | MENUITEMFLAG_SELECTABLE_CENTRE,
-		(uintptr_t)&filemgrMenuTextDeleteFileName,
+		&filemgrMenuTextDeleteFileName,
 		0,
 		filemgrFileNameMenuHandler,
 	},
@@ -2918,7 +2922,7 @@ struct menuitem g_FilemgrConfirmDeleteMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_LESSLEFTPADDING | MENUITEMFLAG_SELECTABLE_CENTRE | MENUITEMFLAG_SMALLFONT,
-		(uintptr_t)&filemgrMenuTextDeviceName,
+		&filemgrMenuTextDeviceName,
 		0,
 		filemgrDeviceNameMenuHandler,
 	},
@@ -2926,7 +2930,7 @@ struct menuitem g_FilemgrConfirmDeleteMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_LESSLEFTPADDING,
-		L_OPTIONS_380, // "Are you sure you want to delete this file?"
+		gettext_noop("Are you sure you want\nto delete this file?\n"), // "Are you sure you want to delete this file?"
 		0,
 		NULL,
 	},
@@ -2934,7 +2938,7 @@ struct menuitem g_FilemgrConfirmDeleteMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_CLOSESDIALOG | MENUITEMFLAG_SELECTABLE_CENTRE,
-		L_OPTIONS_381, // "Cancel"
+		gettext_noop("Cancel\n"), // "Cancel"
 		0,
 		NULL,
 	},
@@ -2942,7 +2946,7 @@ struct menuitem g_FilemgrConfirmDeleteMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_CENTRE,
-		L_OPTIONS_382, // "OK"
+		gettext_noop("OK\n"), // "OK"
 		0,
 		filemgrConfirmDeleteMenuHandler,
 	},
@@ -2951,7 +2955,7 @@ struct menuitem g_FilemgrConfirmDeleteMenuItems[] = {
 
 struct menudialogdef g_FilemgrConfirmDeleteMenuDialog = {
 	MENUDIALOGTYPE_DANGER,
-	L_OPTIONS_379, // "Warning"
+	gettext_noop("Warning\n"), // "Warning"
 	g_FilemgrConfirmDeleteMenuItems,
 	NULL,
 	MENUDIALOGFLAG_DISABLEBANNER,
@@ -2963,7 +2967,7 @@ struct menuitem g_FilemgrFileInUseMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_LESSLEFTPADDING | MENUITEMFLAG_SELECTABLE_CENTRE,
-		(uintptr_t)&filemgrMenuTextDeleteFileName,
+		&filemgrMenuTextDeleteFileName,
 		0,
 		filemgrFileNameMenuHandler,
 	},
@@ -2971,7 +2975,7 @@ struct menuitem g_FilemgrFileInUseMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_LESSLEFTPADDING | MENUITEMFLAG_SELECTABLE_CENTRE | MENUITEMFLAG_SMALLFONT,
-		(uintptr_t)&filemgrMenuTextDeviceName,
+		&filemgrMenuTextDeviceName,
 		0,
 		filemgrDeviceNameMenuHandler,
 	},
@@ -2980,7 +2984,7 @@ struct menuitem g_FilemgrFileInUseMenuItems[] = {
 		0,
 		MENUITEMFLAG_LESSLEFTPADDING,
 #if VERSION >= VERSION_NTSC_1_0
-		(uintptr_t)&filemgrMenuTextFileInUseDescription,
+		&filemgrMenuTextFileInUseDescription,
 #else
 		0x54a0,
 #endif
@@ -2991,7 +2995,7 @@ struct menuitem g_FilemgrFileInUseMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_CLOSESDIALOG | MENUITEMFLAG_SELECTABLE_CENTRE,
-		L_MPWEAPONS_161, // "Cancel"
+		gettext_noop("Cancel\n"), // "Cancel"
 		0,
 		NULL,
 	},
@@ -3000,7 +3004,7 @@ struct menuitem g_FilemgrFileInUseMenuItems[] = {
 
 struct menudialogdef g_FilemgrFileInUseMenuDialog = {
 	MENUDIALOGTYPE_DANGER,
-	L_MPWEAPONS_159, // "Error"
+	gettext_noop("Error\n"), // "Error"
 	g_FilemgrFileInUseMenuItems,
 	NULL,
 	MENUDIALOGFLAG_DISABLEBANNER,
@@ -3012,7 +3016,7 @@ struct menuitem g_FilemgrDeleteMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_LESSLEFTPADDING | MENUITEMFLAG_DARKERBG,
-		L_OPTIONS_377, // "Select a file to delete:"
+		gettext_noop("Select a file to delete:\n"), // "Select a file to delete:"
 		0,
 		NULL,
 	},
@@ -3028,7 +3032,7 @@ struct menuitem g_FilemgrDeleteMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_LESSLEFTPADDING | MENUITEMFLAG_SELECTABLE_CENTRE | MENUITEMFLAG_DARKERBG,
-		L_OPTIONS_378, // "Press B Button to exit."
+		gettext_noop("Press B Button to exit.\n"), // "Press B Button to exit."
 		0,
 		NULL,
 	},
@@ -3037,7 +3041,7 @@ struct menuitem g_FilemgrDeleteMenuItems[] = {
 
 struct menudialogdef g_FilemgrDeleteMenuDialog = {
 	MENUDIALOGTYPE_DEFAULT,
-	L_OPTIONS_376, // "Delete File"
+	gettext_noop("Delete File\n"), // "Delete File"
 	g_FilemgrDeleteMenuItems,
 	filemgrCopyOrDeleteListMenuDialog,
 	0,
@@ -3049,7 +3053,7 @@ struct menuitem g_FilemgrCopyMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_LESSLEFTPADDING | MENUITEMFLAG_DARKERBG,
-		L_OPTIONS_374, // "Select a file to copy:"
+		gettext_noop("Select a file to copy:\n"), // "Select a file to copy:"
 		0,
 		NULL,
 	},
@@ -3065,7 +3069,7 @@ struct menuitem g_FilemgrCopyMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_LESSLEFTPADDING | MENUITEMFLAG_SELECTABLE_CENTRE | MENUITEMFLAG_DARKERBG,
-		L_OPTIONS_375, // "Press B Button to exit."
+		gettext_noop("Press B Button to exit.\n"), // "Press B Button to exit."
 		0,
 		NULL,
 	},
@@ -3074,7 +3078,7 @@ struct menuitem g_FilemgrCopyMenuItems[] = {
 
 struct menudialogdef g_FilemgrCopyMenuDialog = {
 	MENUDIALOGTYPE_DEFAULT,
-	L_OPTIONS_373, // "Copy File"
+	gettext_noop("Copy File\n"), // "Copy File"
 	g_FilemgrCopyMenuItems,
 	filemgrCopyOrDeleteListMenuDialog,
 	0,
@@ -3088,7 +3092,7 @@ struct menuitem g_PakDeleteNoteMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_LESSLEFTPADDING,
-		L_OPTIONS_384, // "Are you sure you want to delete this game note?"
+		gettext_noop("Are you sure you\nwant to delete\nthis game note?\n"), // "Are you sure you want to delete this game note?"
 		0,
 		NULL,
 	},
@@ -3096,7 +3100,7 @@ struct menuitem g_PakDeleteNoteMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_CLOSESDIALOG | MENUITEMFLAG_SELECTABLE_CENTRE,
-		L_OPTIONS_385, // "No"
+		gettext_noop("No\n"), // "No"
 		0,
 		NULL,
 	},
@@ -3104,7 +3108,7 @@ struct menuitem g_PakDeleteNoteMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_CENTRE,
-		L_OPTIONS_386, // "Yes"
+		gettext_noop("Yes\n"), // "Yes"
 		0,
 		pakDeleteGameNoteMenuHandler,
 	},
@@ -3113,7 +3117,7 @@ struct menuitem g_PakDeleteNoteMenuItems[] = {
 
 struct menudialogdef g_PakDeleteNoteMenuDialog = {
 	MENUDIALOGTYPE_DANGER,
-	L_OPTIONS_383, // "Delete Game Note"
+	gettext_noop("Delete Game Note\n"), // "Delete Game Note"
 	g_PakDeleteNoteMenuItems,
 	NULL,
 	0,
@@ -3125,7 +3129,7 @@ struct menuitem g_PakGameNotesMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_LESSLEFTPADDING,
-		L_OPTIONS_388, // "Delete Game Notes:"
+		gettext_noop("Delete Game Notes:\n"), // "Delete Game Notes:"
 		(uintptr_t)&pakMenuTextEditingPakName,
 		NULL,
 	},
@@ -3133,7 +3137,7 @@ struct menuitem g_PakGameNotesMenuItems[] = {
 		MENUITEMTYPE_SEPARATOR,
 		0,
 		0,
-		0x0000010e,
+		"", // previous: 0x0000010e,
 		0,
 		NULL,
 	},
@@ -3141,15 +3145,15 @@ struct menuitem g_PakGameNotesMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_LESSLEFTPADDING,
-		L_OPTIONS_389, // "Note"
-		L_OPTIONS_390, // "Pages"
+		gettext_noop("Note\n"), // "Note"
+		(uintptr_t)gettext_noop("Pages\n"), // "Pages" TODO - Lang: Fix it
 		NULL,
 	},
 	{
 		MENUITEMTYPE_LIST,
 		0,
 		MENUITEMFLAG_LIST_CUSTOMRENDER,
-		0x000000c8,
+		"",// previous: 0x000000c8,
 		0x0000006e,
 		pakGameNoteListMenuHandler,
 	},
@@ -3157,7 +3161,7 @@ struct menuitem g_PakGameNotesMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_LESSLEFTPADDING,
-		(uintptr_t)&pakMenuTextPagesFree,
+		&pakMenuTextPagesFree,
 		(uintptr_t)&pakMenuTextPagesUsed,
 		NULL,
 	},
@@ -3165,7 +3169,7 @@ struct menuitem g_PakGameNotesMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_LESSLEFTPADDING,
-		(uintptr_t)&pakMenuTextStatusMessage,
+		&pakMenuTextStatusMessage,
 		0,
 		NULL,
 	},
@@ -3173,7 +3177,7 @@ struct menuitem g_PakGameNotesMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_LESSLEFTPADDING | MENUITEMFLAG_SELECTABLE_CENTRE,
-		L_OPTIONS_391, // "Press the B Button to exit."
+		gettext_noop("Press the B Button to exit.\n"), // "Press the B Button to exit."
 		0,
 		NULL,
 	},
@@ -3182,7 +3186,7 @@ struct menuitem g_PakGameNotesMenuItems[] = {
 
 struct menudialogdef g_PakGameNotesMenuDialog = {
 	MENUDIALOGTYPE_DEFAULT,
-	L_OPTIONS_387, // "Game Notes"
+	gettext_noop("Game Notes\n"), // "Game Notes"
 	g_PakGameNotesMenuItems,
 	pakGameNotesMenuDialog,
 	0,
@@ -3194,7 +3198,7 @@ struct menuitem g_PakChoosePakMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_LESSLEFTPADDING,
-		L_OPTIONS_108, // "Use this menu to delete game notes from your Controller Paks."
+		gettext_noop("Use this menu to delete game notes\nfrom your Controller Paks.\n"), // "Use this menu to delete game notes from your Controller Paks."
 		0,
 		NULL,
 	},
@@ -3210,7 +3214,7 @@ struct menuitem g_PakChoosePakMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_LESSLEFTPADDING,
-		L_OPTIONS_109, // "Choose Controller Pak to Edit:"
+		gettext_noop("Choose Controller Pak to Edit:\n"), // "Choose Controller Pak to Edit:"
 		0,
 		NULL,
 	},
@@ -3218,7 +3222,7 @@ struct menuitem g_PakChoosePakMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		0,
-		L_OPTIONS_112, // "Controller Pak 1"
+		gettext_noop("Controller Pak 1\n"), // "Controller Pak 1"
 		0,
 		pakSelectionMenuHandler,
 	},
@@ -3226,7 +3230,7 @@ struct menuitem g_PakChoosePakMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		1,
 		0,
-		L_OPTIONS_113, // "Controller Pak 2"
+		gettext_noop("Controller Pak 2\n"), // "Controller Pak 2"
 		0,
 		pakSelectionMenuHandler,
 	},
@@ -3234,7 +3238,7 @@ struct menuitem g_PakChoosePakMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		2,
 		0,
-		L_OPTIONS_114, // "Controller Pak 3"
+		gettext_noop("Controller Pak 3\n"), // "Controller Pak 3"
 		0,
 		pakSelectionMenuHandler,
 	},
@@ -3242,7 +3246,7 @@ struct menuitem g_PakChoosePakMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		3,
 		0,
-		L_OPTIONS_115, // "Controller Pak 4"
+		gettext_noop("Controller Pak 4\n"), // "Controller Pak 4"
 		0,
 		pakSelectionMenuHandler,
 	},
@@ -3258,7 +3262,7 @@ struct menuitem g_PakChoosePakMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_CLOSESDIALOG | MENUITEMFLAG_SELECTABLE_CENTRE,
-		L_OPTIONS_110, // "Exit"
+		gettext_noop("Exit\n"), // "Exit"
 		0,
 		NULL,
 	},
@@ -3267,7 +3271,7 @@ struct menuitem g_PakChoosePakMenuItems[] = {
 
 struct menudialogdef g_PakChoosePakMenuDialog = {
 	MENUDIALOGTYPE_DEFAULT,
-	L_OPTIONS_107, // "Controller Pak Menu"
+	gettext_noop("Controller Pak Menu\n"), // "Controller Pak Menu"
 	g_PakChoosePakMenuItems,
 	pakChoosePakMenuDialog,
 	0,
@@ -3279,7 +3283,7 @@ struct menuitem g_FilemgrOperationsMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_LESSLEFTPADDING | MENUITEMFLAG_DARKERBG,
-		L_OPTIONS_100, // "Copy:"
+		gettext_noop("Copy:\n"), // "Copy:"
 		0,
 		NULL,
 	},
@@ -3287,7 +3291,7 @@ struct menuitem g_FilemgrOperationsMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		FILETYPE_GAME,
 		0,
-		L_OPTIONS_103, // "Single Player Agent File"
+		gettext_noop("Single Player Agent File\n"), // "Single Player Agent File"
 		0,
 		filemgrOpenCopyFileMenuHandler,
 	},
@@ -3295,7 +3299,7 @@ struct menuitem g_FilemgrOperationsMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		FILETYPE_MPPLAYER,
 		0,
-		L_OPTIONS_105, // "Combat Simulator Player File"
+		gettext_noop("Combat Simulator Player File\n"), // "Combat Simulator Player File"
 		0,
 		filemgrOpenCopyFileMenuHandler,
 	},
@@ -3311,7 +3315,7 @@ struct menuitem g_FilemgrOperationsMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_LESSLEFTPADDING | MENUITEMFLAG_DARKERBG,
-		L_OPTIONS_101, // "Delete:"
+		gettext_noop("Delete:\n"), // "Delete:"
 		0,
 		NULL,
 	},
@@ -3319,7 +3323,7 @@ struct menuitem g_FilemgrOperationsMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		FILETYPE_GAME,
 		0,
-		L_OPTIONS_103, // "Single Player Agent File"
+		gettext_noop("Single Player Agent File\n"), // "Single Player Agent File"
 		0,
 		filemgrOpenDeleteFileMenuHandler,
 	},
@@ -3327,7 +3331,7 @@ struct menuitem g_FilemgrOperationsMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		FILETYPE_MPPLAYER,
 		0,
-		L_OPTIONS_105, // "Combat Simulator Player File"
+		gettext_noop("Combat Simulator Player File\n"), // "Combat Simulator Player File"
 		0,
 		filemgrOpenDeleteFileMenuHandler,
 	},
@@ -3343,7 +3347,7 @@ struct menuitem g_FilemgrOperationsMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_OPENSDIALOG,
-		L_OPTIONS_102, // "Delete Game Notes..."
+		gettext_noop("Delete Game Notes...\n"), // "Delete Game Notes..."
 		0,
 		(void *)&g_PakChoosePakMenuDialog,
 	},
@@ -3352,7 +3356,7 @@ struct menuitem g_FilemgrOperationsMenuItems[] = {
 
 struct menudialogdef g_FilemgrOperationsMenuDialog = {
 	MENUDIALOGTYPE_DEFAULT,
-	L_OPTIONS_099, // "Game Files"
+	gettext_noop("Game Files\n"), // "Game Files"
 	g_FilemgrOperationsMenuItems,
 	NULL,
 	MENUDIALOGFLAG_IGNOREBACK,
@@ -3373,7 +3377,7 @@ struct menuitem g_FilemgrEnterNameMenuItems[] = {
 
 struct menudialogdef g_FilemgrEnterNameMenuDialog = {
 	MENUDIALOGTYPE_DEFAULT,
-	L_OPTIONS_401, // "Enter Agent Name"
+	gettext_noop("Enter Agent Name\n"), // "Enter Agent Name"
 	g_FilemgrEnterNameMenuItems,
 	NULL,
 	0,
@@ -3385,7 +3389,7 @@ struct menuitem g_FilemgrFileSelectMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_LESSLEFTPADDING | MENUITEMFLAG_DARKERBG,
-		L_OPTIONS_096, // "Choose Your Reality"
+		gettext_noop("Choose Your Reality\n"), // "Choose Your Reality"
 		0,
 		NULL,
 	},
@@ -3393,7 +3397,7 @@ struct menuitem g_FilemgrFileSelectMenuItems[] = {
 		MENUITEMTYPE_LIST,
 		0,
 		MENUITEMFLAG_LIST_CUSTOMRENDER,
-		0x000000f5,
+		"",// previous: 0x000000f5,
 		0,
 		filemgrChooseAgentListMenuHandler,
 	},
@@ -3402,7 +3406,7 @@ struct menuitem g_FilemgrFileSelectMenuItems[] = {
 
 struct menudialogdef g_FilemgrFileSelectMenuDialog = {
 	MENUDIALOGTYPE_DEFAULT,
-	L_OPTIONS_095, // "Perfect Dark"
+	gettext_noop("Perfect Dark\n"), // "Perfect Dark"
 	g_FilemgrFileSelectMenuItems,
 	filemgrMainMenuDialog,
 	MENUDIALOGFLAG_IGNOREBACK,
