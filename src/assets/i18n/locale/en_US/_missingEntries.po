@@ -248,6 +248,7 @@ msgstr "Adaptive"
 #: port/src/optionsmenu.c:751
 #: port/src/optionsmenu.c:801
 #: port/src/optionsmenu.c:1399
+#: port/src/setup.c:1354
 msgid "Off"
 msgstr "Off"
 
@@ -663,28 +664,88 @@ msgstr "Key Bindings\n"
 msgid "Extended Options"
 msgstr "Extended Options"
 
-#: port/src/mainmenu.c:108
+#: src/mainmenu.c:108
 msgid "Ext"
 msgstr "Ext"
 
-#: port/src/mainmenu.c:114
+#: src/mainmenu.c:114
 msgid "Port"
 msgstr "Port"
 
-#: port/src/mainmenu.c:3451
+#: src/mainmenu.c:3451
 msgid "Are you sure you want to exit?\n"
 msgstr "Are you sure you want to exit?\n"
 
-#: port/src/mainmenu.c:3531
-#: port/src/mainmenu.c:3577
-#: port/src/mainmenu.c:3643
-#: port/src/mainmenu.c:3721
+#: src/mainmenu.c:3531
+#: src/mainmenu.c:3577
+#: src/mainmenu.c:3643
+#: src/mainmenu.c:3721
 msgid "Extended\n"
 msgstr "Extended\n"
 
-#: port/src/mainmenu.c:4957
+#: src/mainmenu.c:4957
 msgid "Exit Game"
 msgstr "Exit Game"
+
+#: src/game/mplayer/setup.c:1102
+msgid "Enter the setup name:\n"
+msgstr "Enter the setup name:\n"
+
+#: src/game/mplayer/setup.c:1150
+msgid "Save over your\noriginal setup?\n"
+msgstr "Save over your\noriginal setup?\n"
+
+#: src/game/mplayer/setup.c:1202
+msgid "Select Dark"
+msgstr "Select Dark"
+
+#: src/game/mplayer/setup.c:1203
+msgid "Select Classic"
+msgstr "Select Classic"
+
+#: src/game/mplayer/setup.c:1204
+msgid "Select All"
+msgstr "Select All"
+
+#: src/game/mplayer/setup.c:1205
+msgid "Select None"
+msgstr "Select None"
+
+#: src/game/mplayer/setup.c:1327
+msgid "Select Weapons"
+msgstr "Select Weapons"
+
+#: src/game/mplayer/setup.c:1355
+msgid "Start"
+msgstr "Start"
+
+#: src/game/mplayer/setup.c:1356
+msgid "End"
+msgstr "End"
+
+#: src/game/mplayer/setup.c:1410
+msgid "Select Weapons\n"
+msgstr "Select Weapons\n"
+
+#: src/game/mplayer/setup.c:1418
+msgid "Auto Random\n"
+msgstr "Auto Random\n"
+
+#: src/game/mplayer/setup.c:1418
+msgid "Custom"
+msgstr "Custom"
+
+#: src/game/mplayer/setup.c:2669
+msgid "Menu Alt: Toggle Presets\n"
+msgstr "Menu Alt: Toggle Presets\n"
+
+#: src/game/mplayer/setup.c:3377
+msgid "Copy Simulant\n"
+msgstr "Copy Simulant\n"
+
+#: src/game/mplayer/setup.c:5808
+msgid "Manage Settings\n"
+msgstr "Manage Settings\n"
 
 #. "M_TITLE_151"
 msgid "testing (noe)\n"
