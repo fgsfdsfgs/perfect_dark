@@ -663,6 +663,29 @@ msgstr "Key Bindings\n"
 msgid "Extended Options"
 msgstr "Extended Options"
 
+#: port/src/mainmenu.c:108
+msgid "Ext"
+msgstr "Ext"
+
+#: port/src/mainmenu.c:114
+msgid "Port"
+msgstr "Port"
+
+#: port/src/mainmenu.c:3451
+msgid "Are you sure you want to exit?\n"
+msgstr "Are you sure you want to exit?\n"
+
+#: port/src/mainmenu.c:3531
+#: port/src/mainmenu.c:3577
+#: port/src/mainmenu.c:3643
+#: port/src/mainmenu.c:3721
+msgid "Extended\n"
+msgstr "Extended\n"
+
+#: port/src/mainmenu.c:4957
+msgid "Exit Game"
+msgstr "Exit Game"
+
 #. "M_TITLE_151"
 msgid "testing (noe)\n"
 msgstr "testing (noe)\n"

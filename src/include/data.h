@@ -279,7 +279,7 @@ extern char g_StringPointer2[];
 #endif
 extern s32 g_MpPlayerNum;
 extern u32 g_MpNumJoined;
-extern u16 g_ControlStyleOptions[];
+extern char *g_ControlStyleOptions[];
 extern struct menudialogdef g_PreAndPostMissionBriefingMenuDialog;
 extern struct solostage g_SoloStages[];
 extern struct menudialogdef g_SoloMissionControlStyleMenuDialog;

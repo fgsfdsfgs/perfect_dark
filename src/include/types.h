@@ -3062,7 +3062,7 @@ struct cutscene {
 	s16 stage;
 	s16 mission;
 	u32 scene;
-	u16 name;
+	char *name;
 };
 
 struct cheat {
@@ -5200,7 +5200,7 @@ struct healthdamagetype {
 
 struct optiongroup {
 	s32 offset;
-	u16 name;
+	char *name;
 };
 
 struct musicevent {

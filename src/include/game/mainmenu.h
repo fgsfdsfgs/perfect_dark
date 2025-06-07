@@ -4,7 +4,7 @@
 #include "data.h"
 #include "types.h"
 
-extern u16 g_ControlStyleOptions[];
+extern char *g_ControlStyleOptions[];
 
 extern struct menudialogdef g_AcceptMissionMenuDialog;
 extern struct menudialogdef g_PreAndPostMissionBriefingMenuDialog;
