@@ -308,7 +308,7 @@ MenuItemHandlerResult menuhandlerLanguage(s32 operation, struct menuitem *item, 
 		return (uintptr_t) labels[data->dropdown.value];
 	case MENUOP_SET:
 		g_Vars.language = data->dropdown.value;
-		langSetEuropean(g_Vars.language);
+		//langSetEuropean(g_Vars.language);
 		g_Vars.modifiedfiles |= MODFILE_GAME | MODFILE_BOSS;
 		break;
 	case MENUOP_GETSELECTEDINDEX:

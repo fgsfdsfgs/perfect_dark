@@ -2,13 +2,13 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Perfect Dark PC port localization\n"
-"POT-Creation-Date: 2025-05-31 06:37:14.299892+00:00\n"
+"POT-Creation-Date: 2025-06-05 13:35:16.474166+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: originalAssets_to_l10n.py script\n"
 
-#. "L_SEV_000"
+#. L_SEV_000
 msgid ""
 "|Background - \n"
 "\n"
@@ -46,11 +46,11 @@ msgstr ""
 "\n"
 "FIN\n"
 
-#. "L_SEV_001"
+#. L_SEV_001
 msgid "AREA 51, NEVADA, EARTH\n"
 msgstr "SECTEUR 51, NEVADA, TERRE\n"
 
-#. "L_SEV_002"
+#. L_SEV_002
 msgid ""
 "|Background - \n"
 "\n"
@@ -80,7 +80,7 @@ msgstr ""
 "\n"
 "FIN\n"
 
-#. "L_SEV_003"
+#. L_SEV_003
 msgid ""
 "|Background - \n"
 "\n"
@@ -102,38 +102,38 @@ msgstr ""
 "\n"
 "FIN\n"
 
-#. "L_SEV_004"
+#. L_SEV_004
 msgid "Sabotage enemy medical experiment\n"
 msgstr "Saboter labo de tests\n"
 
-#. "L_SEV_005"
+#. L_SEV_005
 msgid "Destroy captured Maian saucer\n"
 msgstr "Détruire vaisseau maian capturé\n"
 
-#. "L_SEV_006"
+#. L_SEV_006
 msgid "Activate distress signal\n"
 msgstr "Activer le signal de détresse\n"
 
-#. "L_SEV_007"
+#. L_SEV_007
 msgid "Medical experiment has been sabotaged.\n"
 msgstr "Labo de tests saboté.\n"
 
-#. "L_SEV_008"
+#. L_SEV_008
 msgid "Captured Maian saucer has been destroyed.\n"
 msgstr "Vaisseau maian capturé détruit.\n"
 
-#. "L_SEV_009"
+#. L_SEV_009
 msgid "Distress signal has been sent.\n"
 msgstr "Signal de détresse activé.\n"
 
-#. "L_SEV_010"
+#. L_SEV_010
 msgid "Critical mission object has been destroyed.\n"
 msgstr "Objet crucial détruit.\n"
 
-#. "L_SEV_011"
+#. L_SEV_011
 msgid "Mission failed - cannot escape from medlab.\n"
 msgstr "Mission échouée - impossible de quitter labo de tests.\n"
 
-#. "L_SEV_012"
+#. L_SEV_012
 msgid "Alternative escape route found.\n"
 msgstr "Voie de sortie alternative activée.\n"

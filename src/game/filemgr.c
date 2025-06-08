@@ -71,7 +71,7 @@ MenuItemHandlerResult filemgrHandleSetLanguage(s32 operation, struct menuitem *i
 {
 	if (operation == MENUOP_SET) {
 		g_Vars.language = item->param;
-		langSetEuropean(g_Vars.language);
+		//langSetEuropean(g_Vars.language);
 		menuPopDialog();
 	}
 

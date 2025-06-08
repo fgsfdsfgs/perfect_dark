@@ -509,9 +509,9 @@ char *menuResolveText(char *thing, void *dialogoritem)
 	}
 
 	// Text ID
-	if (thing < 0x5a00) {
+	//if (thing < 0x5a00) {
 		return _(thing);
-	}
+	//}
 
 #ifdef PLATFORM_N64 // unreliable otherwise, the above check should be enough?
 	if (thing > (uintptr_t)func0f1a78b0) {

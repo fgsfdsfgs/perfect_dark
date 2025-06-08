@@ -2,13 +2,13 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Perfect Dark PC port localization\n"
-"POT-Creation-Date: 2025-05-31 06:37:14.299892+00:00\n"
+"POT-Creation-Date: 2025-06-05 13:35:16.474166+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: originalAssets_to_l10n.py script\n"
 
-#. "L_ELD_000"
+#. L_ELD_000
 msgid ""
 "|Background - \n"
 "\n"
@@ -70,11 +70,11 @@ msgstr ""
 "\n"
 "FIN\n"
 
-#. "L_ELD_001"
+#. L_ELD_001
 msgid "CARRINGTON VILLA\n"
 msgstr "VILLA CARRINGTON\n"
 
-#. "L_ELD_002"
+#. L_ELD_002
 msgid ""
 "|Background - \n"
 "\n"
@@ -128,7 +128,7 @@ msgstr ""
 "\n"
 "FIN\n"
 
-#. "L_ELD_003"
+#. L_ELD_003
 msgid ""
 "|Background - \n"
 "\n"
@@ -174,79 +174,79 @@ msgstr ""
 "\n"
 "FIN\n"
 
-#. "L_ELD_004"
+#. L_ELD_004
 msgid "\n"
 msgstr "\n"
 
-#. "L_ELD_005"
+#. L_ELD_005
 msgid "Save the negotiator\n"
 msgstr "Sauver la négociatrice\n"
 
-#. "L_ELD_006"
+#. L_ELD_006
 msgid "Eliminate rooftop snipers\n"
 msgstr "Eliminer les snipers du toit\n"
 
-#. "L_ELD_007"
+#. L_ELD_007
 msgid "Activate wind generator\n"
 msgstr "Activer l'éolienne\n"
 
-#. "L_ELD_008"
+#. L_ELD_008
 msgid "Locate and eliminate dataDyne hackers\n"
 msgstr "Trouver et neutraliser les pirates\n"
 
-#. "L_ELD_009"
+#. L_ELD_009
 msgid "Rescue Carrington\n"
 msgstr "Sauver Carrington\n"
 
-#. "L_ELD_010"
+#. L_ELD_010
 msgid "Capture dataDyne guard\n"
 msgstr "Capturer un garde ennemi\n"
 
-#. "L_ELD_011"
+#. L_ELD_011
 msgid "Negotiator has been killed.\n"
 msgstr "Négociatrice abattue.\n"
 
-#. "L_ELD_012"
+#. L_ELD_012
 msgid "Snipers have been eliminated.\n"
 msgstr "Snipers éliminés.\n"
 
-#. "L_ELD_013"
+#. L_ELD_013
 msgid "Negotiator has escaped to safety.\n"
 msgstr "Négociatrice en sécurité.\n"
 
-#. "L_ELD_014"
+#. L_ELD_014
 msgid "Cooling systems have been activated.\n"
 msgstr "Refroidisseurs activés.\n"
 
-#. "L_ELD_015"
+#. L_ELD_015
 msgid "Cooling systems have been deactivated.\n"
 msgstr "Refroidisseurs désactivés.\n"
 
-#. "L_ELD_016"
+#. L_ELD_016
 msgid "Power systems have been activated.\n"
 msgstr "Générateurs activés.\n"
 
-#. "L_ELD_017"
+#. L_ELD_017
 msgid "Power systems have been deactivated.\n"
 msgstr "Générateurs désactivés.\n"
 
-#. "L_ELD_018"
+#. L_ELD_018
 msgid "Windmill has been reactivated.\n"
 msgstr "Eolienne réactivée.\n"
 
-#. "L_ELD_019"
+#. L_ELD_019
 msgid "Windmill has been deactivated.\n"
 msgstr "Eolienne désactivée.\n"
 
-#. "L_ELD_020"
+#. L_ELD_020
 msgid "Electricity has been restored to the villa.\n"
 msgstr "Courant rétabli dans la villa.\n"
 
-#. "L_ELD_021"
+#. L_ELD_021
 msgid "Critical mission object has been destroyed.\n"
 msgstr "Objet crucial détruit.\n"
 
-#. "L_ELD_022"
+#. L_ELD_022
 msgid ""
 "Joanna! It's Grimshaw. We've got hackers at \n"
 "the villa! You've got to stop them\n"
@@ -256,55 +256,55 @@ msgstr ""
 "la villa! Arrêtez-les avant\n"
 " qu'ils ne piratent nos fichiers!\n"
 
-#. "L_ELD_023"
+#. L_ELD_023
 msgid "Hackers have uploaded vital data.\n"
 msgstr "Les hackers ont copié les fichiers vitaux.\n"
 
-#. "L_ELD_024"
+#. L_ELD_024
 msgid "Hackers have been eliminated.\n"
 msgstr "Hackers éliminés.\n"
 
-#. "L_ELD_025"
+#. L_ELD_025
 msgid "Carrington has been rescued.\n"
 msgstr "Carrington sauvé.\n"
 
-#. "L_ELD_026"
+#. L_ELD_026
 msgid "All objectives not completed - mission failed.\n"
 msgstr "Objectifs incomplets - mission échouée.\n"
 
-#. "L_ELD_027"
+#. L_ELD_027
 msgid "PC gun\n"
 msgstr "PC gun\n"
 
-#. "L_ELD_028"
+#. L_ELD_028
 msgid "Sniper rifle\n"
 msgstr "Fusil sniper\n"
 
-#. "L_ELD_029"
+#. L_ELD_029
 msgid "Enemy guard has been subdued.\n"
 msgstr "Garde ennemi enlevé.\n"
 
-#. "L_ELD_030"
+#. L_ELD_030
 msgid "Obtain door key.\n"
 msgstr "Obtenir clé de porte.\n"
 
-#. "L_ELD_031"
+#. L_ELD_031
 msgid "Guard's\n"
 msgstr "Garde: \n"
 
-#. "L_ELD_032"
+#. L_ELD_032
 msgid "Door Key\n"
 msgstr "Clé de porte\n"
 
-#. "L_ELD_033"
+#. L_ELD_033
 msgid "Door Key\n"
 msgstr "Clé de porte\n"
 
-#. "L_ELD_034"
+#. L_ELD_034
 msgid "Picked up a door key.\n"
 msgstr "Clé de porte obtenue.\n"
 
-#. "L_ELD_035"
+#. L_ELD_035
 msgid ""
 "If I get the wind generator back online, \n"
 "I'll get power to the lower basement.\n"
@@ -312,7 +312,7 @@ msgstr ""
 "Si je réactive l'éolienne, je pourrai \n"
 "rétablir le courant dans le sous-sol.\n"
 
-#. "L_ELD_036"
+#. L_ELD_036
 msgid ""
 "I've got to be quick, or they'll kill \n"
 "the negotiator!\n"
@@ -320,11 +320,11 @@ msgstr ""
 "Je dois faire vite ou ils tueront la \n"
 "négociatrice!\n"
 
-#. "L_ELD_037"
+#. L_ELD_037
 msgid "Here's where they must be holding Daniel.\n"
 msgstr "Ils doivent garder Daniel ici.\n"
 
-#. "L_ELD_038"
+#. L_ELD_038
 msgid ""
 "Those hackers have to be stopped before \n"
 "I rescue Daniel.\n"
@@ -332,7 +332,7 @@ msgstr ""
 "Je dois arrêter les hackers avant de \n"
 "sauver Daniel.\n"
 
-#. "L_ELD_039"
+#. L_ELD_039
 msgid ""
 "Agent Dark Mission Log, 1846 hours. Last \n"
 "night we got a call from Cassandra de Vries. \n"
@@ -347,7 +347,7 @@ msgstr ""
 "en otage dans sa villa privée sur la côte, \n"
 "et épargnera sa vie en échange de l'IA.\n"
 
-#. "L_ELD_040"
+#. L_ELD_040
 msgid ""
 "Unfortunately, we don't have it. Daniel and \n"
 "Dr. Caroll were at the villa to discuss \n"
@@ -363,7 +363,7 @@ msgstr ""
 "villa lors de l'arrivée des troupes de la \n"
 "dataDyne.\n"
 
-#. "L_ELD_041"
+#. L_ELD_041
 msgid ""
 "Hopefully our phoney negotiator ploy will \n"
 "give me a chance to surprise the dataDyne \n"
@@ -375,11 +375,11 @@ msgstr ""
 "soldats de la dataDyne. Cette fois il ne \n"
 "s'agit pas que de ma propre vie.\n"
 
-#. "L_ELD_042"
+#. L_ELD_042
 msgid "Sir? Are you injured?\n"
 msgstr "Monsieur? Etes-vous blessé?\n"
 
-#. "L_ELD_043"
+#. L_ELD_043
 msgid ""
 "No, Joanna, I'm okay, but those dataDyne \n"
 "thugs made me tell them where I'd hidden \n"
@@ -391,7 +391,7 @@ msgstr ""
 "où se trouvait le Dr. Caroll. Si seulement \n"
 "j'avais pu tenir une minute de plus...\n"
 
-#. "L_ELD_044"
+#. L_ELD_044
 msgid ""
 "It's not your fault, sir. I should have \n"
 "been quicker.\n"
@@ -399,7 +399,7 @@ msgstr ""
 "Ce n'est pas de votre faute. J'aurais dû \n"
 "faire plus vite.\n"
 
-#. "L_ELD_045"
+#. L_ELD_045
 msgid ""
 "Don't blame yourself, Joanna. Dr. Caroll \n"
 "told me that he expected this to happen. \n"
@@ -422,7 +422,7 @@ msgstr ""
 "rendre, bien qu'il ne vous reste que \n"
 "peu de temps pour vous préparer.\n"
 
-#. "L_ELD_046"
+#. L_ELD_046
 msgid ""
 "That won't be a problem, sir. So, did \n"
 "Dr. Caroll have any useful information \n"
@@ -432,7 +432,7 @@ msgstr ""
 "a-t-il pu vous révéler des informations \n"
 "importantes?\n"
 
-#. "L_ELD_047"
+#. L_ELD_047
 msgid ""
 "Oh, yes, indeed. He certainly did, and \n"
 "I'll brief you when you're en route to \n"
@@ -452,10 +452,10 @@ msgstr ""
 "enfin temps que j'appelle certains amis \n"
 "pour s'occuper de la dataDyne.\n"
 
-#. "L_ELD_048"
+#. L_ELD_048
 msgid "Operation denied - windmill is active.\n"
 msgstr "Opération refusée - éolienne active.\n"
 
-#. "L_ELD_049"
+#. L_ELD_049
 msgid "Mission unsuccessful - enemy guard not captured.\n"
 msgstr "Mission échouée - garde ennemi non capturé.\n"

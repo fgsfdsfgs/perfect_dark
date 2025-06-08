@@ -604,7 +604,7 @@ static u32 convertProps(u8* dst, u8* src)
 
 				convertDefaultObjHdr((struct defaultobj*)dstobj, cmd);
 				PD_CONV_VAL(dstobj->type, srcobj->type);
-				PD_CONV_VAL(dstobj->text, srcobj->text);
+				//PD_CONV_VAL(dstobj->text, srcobj->text); //TODO - Lang: Fix it
 				PD_CONV_PTR(dstobj->next, srcobj->ptr_next, struct briefingobj*);
 
 				dst += sizeof(struct briefingobj);
@@ -622,7 +622,7 @@ static u32 convertProps(u8* dst, u8* src)
 				PD_CONV_VAL(dstobj->ownertext, srcobj->ownertext);
 				PD_CONV_VAL(dstobj->inventorytext, srcobj->inventorytext);
 				PD_CONV_VAL(dstobj->inventory2text, srcobj->inventory2text);
-				PD_CONV_VAL(dstobj->pickuptext, srcobj->pickuptext);
+				//PD_CONV_VAL(dstobj->pickuptext, srcobj->pickuptext); //TODO - Lang: Fix it
 				PD_CONV_PTR(dstobj->next, srcobj->ptr_next, struct textoverride*);
 				PD_CONV_PTR(dstobj->obj, srcobj->ptr_obj, struct defaultobj*);
 
