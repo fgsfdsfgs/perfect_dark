@@ -3017,7 +3017,7 @@ char *menuitemScrollableGetText(u32 type)
 	case DESCRIPTION_DEVICETIP2:     return dtGetTip2();
 	}
 
-	return langGet(g_Briefing.briefingtextnum);
+	return _(g_Briefing.briefingtextnum);
 }
 
 /**

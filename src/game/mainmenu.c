@@ -4912,7 +4912,7 @@ struct menuitem g_MainMenuMenuItems[] = {
 	{
 		MENUITEMTYPE_SELECTABLE,
 		0,
-		MENUITEMFLAG_BIGFONT,
+		MENUITEMFLAG_BIGFONT | MENUITEMFLAG_HANDLER_TEXT,
 		&mainMenuTextLabel,
 		0x00000002,
 		menuhandlerMainMenuSoloMissions,
@@ -4920,7 +4920,7 @@ struct menuitem g_MainMenuMenuItems[] = {
 	{
 		MENUITEMTYPE_SELECTABLE,
 		1,
-		MENUITEMFLAG_BIGFONT,
+		MENUITEMFLAG_BIGFONT | MENUITEMFLAG_HANDLER_TEXT,
 		&mainMenuTextLabel,
 		0x00000003,
 		menuhandlerMainMenuCombatSimulator,
@@ -4928,7 +4928,7 @@ struct menuitem g_MainMenuMenuItems[] = {
 	{
 		MENUITEMTYPE_SELECTABLE,
 		2,
-		MENUITEMFLAG_BIGFONT,
+		MENUITEMFLAG_BIGFONT | MENUITEMFLAG_HANDLER_TEXT,
 		&mainMenuTextLabel,
 		0x00000004,
 		menuhandlerMainMenuCooperative,
@@ -4936,7 +4936,7 @@ struct menuitem g_MainMenuMenuItems[] = {
 	{
 		MENUITEMTYPE_SELECTABLE,
 		3,
-		MENUITEMFLAG_BIGFONT,
+		MENUITEMFLAG_BIGFONT | MENUITEMFLAG_HANDLER_TEXT,
 		&mainMenuTextLabel,
 		0x00000005,
 		menuhandlerMainMenuCounterOperative,

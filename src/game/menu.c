@@ -501,8 +501,6 @@ void func0f0f1494(void)
 
 char *menuResolveText(char *thing, void *dialogoritem)
 {
-	char *(*handler)(void *dialogoritem) = (void *)thing;
-
 	// Null/zero
 	if (thing == 0) {
 		return NULL;
@@ -521,6 +519,15 @@ char *menuResolveText(char *thing, void *dialogoritem)
 		return NULL;
 	}
 #endif
+}
+
+char *menuResolveHandlerText(char *thing, void *dialogoritem)
+{
+	char *(*handler)(void *dialogoritem) = (void *)thing;
+
+	if (thing == 0) {
+		return NULL;
+	}
 
 	// Function pointer
 	if (handler) {
@@ -534,7 +541,10 @@ char *menuResolveParam2Text(struct menuitem *item)
 {
 #ifndef PLATFORM_N64
 	if (item->flags & MENUITEMFLAG_LITERAL_TEXT) {
-		return (const char *)item->title;
+		return item->title;
+	}
+	if (item->flags & MENUITEMFLAG_HANDLER_TEXT) {
+		return menuResolveHandlerText(item->title, item);
 	}
 #endif
 	return menuResolveText(item->title, item);
@@ -544,7 +554,7 @@ char *menuResolveDialogTitle(struct menudialogdef *dialogdef)
 {
 #ifndef PLATFORM_N64
 	if (dialogdef->flags & MENUDIALOGFLAG_LITERAL_TEXT) {
-		return (const char *)dialogdef->title;
+		return dialogdef->title;
 	}
 #endif
 	return menuResolveText(dialogdef->title, dialogdef);

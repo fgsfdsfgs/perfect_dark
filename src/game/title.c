@@ -371,11 +371,11 @@ Gfx *titleRenderLegal(Gfx *gdl)
 				font1 = g_CharsHandelGothicLg;
 				font2 = g_FontHandelGothicLg;
 #if !defined(PLATFORM_N64) && defined(VERSION_HASH)
-				if (elem->textid == _("NTSC version 8.7 final\n")) {
+				if (_(elem->textid) == _("NTSC version 8.7 final\n")) {
 					elem->textptr = VERSION_HASH " (" VERSION_TARGET ")";
-				} else if (elem->textid == _("NUS-NPDE-USA\n")) {
+				} else if (_(elem->textid) == _("NUS-NPDE-USA\n")) {
 					elem->textptr = VERSION_ROMID;
-				} else if (elem->textid == _("Perfect Dark\n")) {
+				} else if (_(elem->textid) == _("Perfect Dark\n")) {
 					elem->textptr = "Perfect Dark (" VERSION_BRANCH ")";
 				}
 #endif
@@ -385,7 +385,7 @@ Gfx *titleRenderLegal(Gfx *gdl)
 				font2 = g_FontHandelGothicLg;
 				colour = 0xffffffff;
 
-				if (elem->textid == _("NOT DETECTED") || elem->textid == _("DETECTED")) {
+				if (_(elem->textid) == _("NOT DETECTED") || _(elem->textid) == _("DETECTED")) {
 #if VERSION >= VERSION_PAL_BETA
 					prevx += 10;
 #endif
