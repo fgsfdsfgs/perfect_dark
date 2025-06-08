@@ -4630,22 +4630,22 @@ struct vimode {
 };
 
 struct miscbio {
-	u32 name;
-	u32 description;
+	char *name;
+	char *description;
 };
 
 struct hangarbio {
-	u32 name;
-	u32 description;
+	char *name;
+	char *description;
 	u32 unk08;
 	u32 unk0c;
 };
 
 struct chrbio {
-	u32 name;
-	u32 race;
-	u32 age;
-	u32 description;
+	char *name;
+	char *race;
+	char *age;
+	char *description;
 };
 
 struct ranking {

@@ -36,6 +36,11 @@
 #include "lib/mtx.h"
 #include "data.h"
 #include "types.h"
+#ifndef PLATFORM_N64
+#include <libintl.h>
+#define _(String) gettext (String)
+#define gettext_noop(String) String
+#endif
 
 #define FRSCRIPTINDEX_WEAPONS 0x00
 #define FRSCRIPTINDEX_TARGETS 0x22
@@ -1203,39 +1208,39 @@ char *frGetWeaponDescription(void)
 	case WEAPON_PROXIMITYMINE:    return langGet(L_DISH_314);
 	case WEAPON_REMOTEMINE:       return langGet(L_DISH_315);
 #else
-	case WEAPON_FALCON2:          return langGet(L_MISC_377);
-	case WEAPON_FALCON2_SCOPE:    return langGet(L_MISC_378);
-	case WEAPON_FALCON2_SILENCER: return langGet(L_MISC_379);
-	case WEAPON_MAGSEC4:          return langGet(L_MISC_380);
-	case WEAPON_MAULER:           return langGet(L_MISC_381);
-	case WEAPON_PHOENIX:          return langGet(L_MISC_382);
-	case WEAPON_DY357MAGNUM:      return langGet(L_MISC_383);
-	case WEAPON_DY357LX:          return langGet(L_MISC_384);
-	case WEAPON_CMP150:           return langGet(L_MISC_385);
-	case WEAPON_CYCLONE:          return langGet(L_MISC_386);
-	case WEAPON_CALLISTO:         return langGet(L_MISC_387);
-	case WEAPON_RCP120:           return langGet(L_MISC_388);
-	case WEAPON_LAPTOPGUN:        return langGet(L_MISC_389);
-	case WEAPON_DRAGON:           return langGet(L_MISC_390);
-	case WEAPON_K7AVENGER:        return langGet(L_MISC_391);
-	case WEAPON_AR34:             return langGet(L_MISC_392);
-	case WEAPON_SUPERDRAGON:      return langGet(L_MISC_393);
-	case WEAPON_SHOTGUN:          return langGet(L_MISC_394);
-	case WEAPON_SNIPERRIFLE:      return langGet(L_MISC_395);
-	case WEAPON_FARSIGHT:         return langGet(L_MISC_396);
-	case WEAPON_CROSSBOW:         return langGet(L_MISC_397);
-	case WEAPON_TRANQUILIZER:     return langGet(L_MISC_398);
-	case WEAPON_REAPER:           return langGet(L_MISC_399);
-	case WEAPON_DEVASTATOR:       return langGet(L_MISC_400);
-	case WEAPON_ROCKETLAUNCHER:   return langGet(L_MISC_401);
-	case WEAPON_SLAYER:           return langGet(L_MISC_402);
-	case WEAPON_COMBATKNIFE:      return langGet(L_MISC_403);
-	case WEAPON_LASER:            return langGet(L_MISC_404);
-	case WEAPON_GRENADE:          return langGet(L_MISC_405);
-	case WEAPON_NBOMB:            return langGet(L_MISC_406);
-	case WEAPON_TIMEDMINE:        return langGet(L_MISC_407);
-	case WEAPON_PROXIMITYMINE:    return langGet(L_MISC_408);
-	case WEAPON_REMOTEMINE:       return langGet(L_MISC_409);
+	case WEAPON_FALCON2:          return _("The Falcon 2 is a very accurate handgun, so any error in this test is your own. The secondary mode is a pistol-whip and is, therefore, useless in a firing range.\n");
+	case WEAPON_FALCON2_SCOPE:    return _("To make better use of the accuracy of the Falcon 2, a scope has been attached to the pistol. As with the unmodified Falcon 2, the pistol-whip secondary mode is useless during the firing range test.\n");
+	case WEAPON_FALCON2_SILENCER: return _("The silenced version of the Falcon 2 is an excellent stealth weapon, designed to give you the advantage of surprise over your opponents. Test your accuracy to ensure you never waste your chances.\n");
+	case WEAPON_MAGSEC4:          return _("The MagSec 4 has excellent shot power at the cost of accuracy, especially when used in the 3-round burst secondary mode. The only serious drawback to the weapon is a limited magazine size.\n");
+	case WEAPON_MAULER:           return _("This is a typical Skedar weapon, brutal and powerful. By sacrificing some of the magazine, the shot can be charged up to give a devastating blast. The large ammo capacity is a bonus.\n");
+	case WEAPON_PHOENIX:          return _("This versatile pistol gives two different delivery systems for the rounds it fires: a standard shot or an explosive round. Maian engineers managed to do this without compromising the energy usage of the weapon, though the fire rate is reduced.\n");
+	case WEAPON_DY357MAGNUM:      return _("The key to the DY357 is in knowing when to reload. A six-round magazine means that you must always be alert in a firefight. The weight of the handgun can be useful if you have to club someone with it.\n");
+	case WEAPON_DY357LX:          return _("Trent Easton is always looking for that extra edge, and this gun is no exception. The bullets are as special as the rest of the gun; they are designed to shatter inside opponents to take them down quickly.\n");
+	case WEAPON_CMP150:           return _("A reliable and effective submachine gun, it is not difficult to see why this is the best-selling dataDyne weapon of the past two years even if the secondary mode is not taken into account. The target designate and lock-on system is excellent, and you should familiarize yourself with the complete operation of the weapon.\n");
+	case WEAPON_CYCLONE:          return _("The Cyclone submachine gun was specifically designed NOT to be accurate, though it is worth your time practicing. It can put a lot of bullets out in a short time, however, and is an excellent suppression weapon because of it.\n");
+	case WEAPON_CALLISTO:         return _("Maian flexibility in design has produced this submachine gun with an interesting secondary mode - a high-velocity bullet that can penetrate objects easily. The fire rate, as with the Phoenix, is reduced during the secondary mode; this is to prevent damage to the firing mechanism and barrel.\n");
+	case WEAPON_RCP120:           return _("The RC-P120 fires a special mineral bullet that, coupled with a high fire rate and a huge magazine, makes this a perfect tool to be used against the Skedar, should the need arise. The bullets can be used to fuel a prototype Cloaking Device - the training has been altered to reflect this particular characteristic.\n");
+	case WEAPON_LAPTOPGUN:        return _("Not only can the gun fold up to resemble a laptop PC, but it can be deployed as a sentry gun in secondary mode to cover an escape route or protect a location.\n");
+	case WEAPON_DRAGON:           return _("This is the model that dataDyne successfully submitted to the U.S. military, though it has yet to be widely adopted. In keeping with the tendency of dataDyne to give people nasty surprises, the basic model assault rifle carries a proximity mine below the barrel. Using the secondary mode rather obviously means you have to throw the weapon away.\n");
+	case WEAPON_K7AVENGER:        return _("As far as we can ascertain, the secondary mode of the weapon seems to be a threat identifier, targetting mines, hidden explosive devices (such as the Dragon in secondary mode), and automatic guns. Though a powerful gun, the assault rifle's magazine is perhaps too small. \n");
+	case WEAPON_AR34:             return _("The Institute's first attempt at a support weapon, the AR34 is a fairly basic assault rifle. The secondary mode is a permanent zoom. Testing is weighted towards accuracy training.\n");
+	case WEAPON_SUPERDRAGON:      return _("The heavier variant of the Dragon, with the proximity mine removed and replaced by a small grenade launcher. Adopted by the U.S. military as a squad heavy support weapon - it is not hard to see why. Use the tests to get used to the grenade trajectory.\n");
+	case WEAPON_SHOTGUN:          return _("Subtlety is not an option here. There are two modes, single or double blast. The magazine is quite large for a shotgun, but be aware of the long reload times and plan your movements accordingly.\n");
+	case WEAPON_SNIPERRIFLE:      return _("A finely engineered, silenced sniper rifle with a high-powered zoom. The only part of the operation that can interfere with the accuracy of the weapon is the sniper. Make sure you use the secondary mode to crouch down and steady your aim.\n");
+	case WEAPON_FARSIGHT:         return _("Even though the engineering techniques are beyond us, we can still appreciate the effects of the FarSight rifle. The shot is almost unstoppable, and the scope can penetrate walls to a great depth, locking on to targets if need be.\n");
+	case WEAPON_CROSSBOW:         return _("The primary function of the crossbow is a nonlethal drugged shot, while the secondary is an instant kill. It is a stealth weapon first and foremost, so the reloading can be time-consuming and inconvenient in a firefight.\n");
+	case WEAPON_TRANQUILIZER:     return _("The tranquilizer gun is a common design, found in many medical laboratories and hospitals worldwide. It can be switched from the tranquilizer pellets to a short-range lethal dose, which uses up a lot more of the reservoir of sedative.\n");
+	case WEAPON_REAPER:           return _("Try to control this weapon as best you can. It was designed for a far stronger user than a human, that much is certain. Kneeling down may help steady your aim, but not refine it. If any opponents do make it past the hail of fire, then the barrels can be used as a grinder to inflict damage.\n");
+	case WEAPON_DEVASTATOR:       return _("A recent dataDyne product, with interesting technology inside it. The secondary mode activates a magnetic field around the bomb, providing adhesion for a limited amount of time. When a certain amount of time has passed, the field is reversed and the bomb falls from the impact point and explodes.\n");
+	case WEAPON_ROCKETLAUNCHER:   return _("A compact, reuseable missile launcher - reloads after each shot. The secondary mode uses a variant of the lock-on system from the CMP150 submachine gun, with a single designated target. The missile travels at a slower speed as it tracks the target, so plan for this and time your shots carefully.\n");
+	case WEAPON_SLAYER:           return _("This Skedar handheld missile launcher can fire either an unguided rocket or a user-controlled remote rocket. Presumably this gave the Skedar some perverse satisfaction when the warhead camera closed on the target, but a Carrington Institute agent is beyond such things. The guided rocket speeds up automatically, but can be slowed down for greater maneuverability. Detonation occurs on contact or when the trigger is pressed.\n");
+	case WEAPON_COMBATKNIFE:      return _("A finely tempered fighting knife, which is also balanced for throwing. Practice is essential to get accustomed to the range and trajectory of the thrown blade.\n");
+	case WEAPON_LASER:            return _("The experimental weapons department has come up with a small but effective wrist-mounted laser with two beam settings. The primary mode fires a blast out to a considerable range, while the secondary mode provides a continual beam for as long as the trigger is pressed.\n");
+	case WEAPON_GRENADE:          return _("The fragmentation anti-personnel grenade has four seconds from activation to detonation on the basic fuse. For your entertainment and delight, we have included a secondary mode - proximity pinball. The grenade will bounce around until the charge wears off or the proximity detector is triggered.\n");
+	case WEAPON_NBOMB:            return _("This Maian grenade plays havoc with the neurons in sentient creatures. If you wander into the blast radius, your vision will blur and you will lose your grip on whatever you're holding. The grenade can be set to go off on impact or by proximity trigger. Make sure you throw it far enough away.\n");
+	case WEAPON_TIMEDMINE:        return _("A degree of judgement is required for the effective use of timed mines, otherwise the intended target may overrun the explosion range and come after you. Hone your skills in the tests before you make a critical error in the field. The secondary function is a threat detector identical to that found on the K7 Avenger assault rifle.\n");
+	case WEAPON_PROXIMITYMINE:    return _("The key to successful placement of proximity mines is to put them where your opponent doesn't expect to encounter them. If you find yourself on the receiving end of proximity mines, use the threat detector secondary mode to make sure of your surroundings. It may be wasting your time, but if it isn't, it could save your life.\n");
+	case WEAPON_REMOTEMINE:       return _("The latest variety of remote detonated mines, essentially the same as all that have gone before. The primary mode is placing the mines, while the secondary mode is giving the detonation command. If you can't see the mine, you'll have to rely on old-fashioned guesswork and timing. \n");
 #endif
 	}
 
@@ -2370,16 +2375,16 @@ struct chrbio *ciGetChrBioByBodynum(u32 bodynum)
 		/*8*/ { L_DISH_157, L_DISH_158, L_DISH_159, L_DISH_160 }, // Mr. Blonde (repeat)
 		/*9*/ { L_DISH_161, L_DISH_162, L_DISH_163, L_DISH_164 }, // The U.S. President
 #else
-		/*0*/ { L_MISC_219, L_MISC_220, L_MISC_221, L_MISC_222 }, // Joanna Dark
-		/*1*/ { L_MISC_223, L_MISC_224, L_MISC_225, L_MISC_226 }, // Jonathan
-		/*2*/ { L_MISC_227, L_MISC_228, L_MISC_229, L_MISC_230 }, // Daniel Carrington
-		/*3*/ { L_MISC_231, L_MISC_232, L_MISC_233, L_MISC_234 }, // Cassandra De Vries
-		/*4*/ { L_MISC_235, L_MISC_236, L_MISC_237, L_MISC_238 }, // Trent Easton
-		/*5*/ { L_MISC_239, L_MISC_240, L_MISC_241, L_MISC_242 }, // Dr. Caroll
-		/*6*/ { L_MISC_243, L_MISC_244, L_MISC_245, L_MISC_246 }, // Elvis
-		/*7*/ { L_MISC_247, L_MISC_248, L_MISC_249, L_MISC_250 }, // Mr. Blonde
-		/*8*/ { L_MISC_251, L_MISC_252, L_MISC_253, L_MISC_254 }, // Mr. Blonde (repeat)
-		/*9*/ { L_MISC_255, L_MISC_256, L_MISC_257, L_MISC_258 }, // The U.S. President
+		/*0*/ { gettext_noop("Joanna Dark\n"), gettext_noop("Human (Female)\n"), gettext_noop("23 years 2 months\n"), gettext_noop("|CI File #027 -\n\nTraining Status: Complete\nTraining Grade: A++\nActive Status: Assigned\n\n|Profile -\n\nHighly trained but inexperienced. Reactions superb. Proficient with a variety of weapons. Very competent all-round agent. Highest recorded training scores resulted in the creation of a new class of training grade. The embodiment of the Carrington Institute's ideal agent, hence the call sign 'Perfect Dark.'\n") }, // Joanna Dark
+		/*1*/ { gettext_noop("Jonathan\n"), gettext_noop("Human (Male)\n"), gettext_noop("28 years 5 months\n"), gettext_noop("|CI File #009 -\n\nTraining Status: Complete\nTraining Grade: A+\nActive Status: Undercover\n\n|Profile -\n\nOur most experienced undercover agent. Highly accurate with his chosen weapon (a Magnum Revolver). Perfectly suited to undercover missions. Less suited to out-and-out combat. Before Joanna Dark, he held the honor of having the highest recorded training scores.\n") }, // Jonathan
+		/*2*/ { gettext_noop("Daniel Carrington\n"), gettext_noop("Human (Male)\n"), gettext_noop("62 years 8 months\n"), gettext_noop("|CI File #000 -\n\nTraining Status: N/A\nTraining Grade: N/A\nActive Status: N/A\n\n|Profile -\n\nIntelligent patriarchal scientist/entrepreneur, and founder of the Carrington Institute. Plans all missions carried out by his agents and runs each operation direct from a link in his office. Strange taste in clothes.\n") }, // Daniel Carrington
+		/*3*/ { gettext_noop("Cassandra De Vries\n"), gettext_noop("Human (Female)\n"), gettext_noop("39 years ? months\n"), gettext_noop("|Analyst note -\n\nThe head of dataDyne Corp. Addicted to power; dislikes being anybody's underling. Hates it when she loses the initiative. Is prepared to do extremely unscrupulous things in order to get ahead of her competition, to whit Daniel Carrington, whom she loathes.\n") }, // Cassandra De Vries
+		/*4*/ { gettext_noop("Trent Easton\n"), gettext_noop("Human (Male)\n"), gettext_noop("46 years ? months\n"), gettext_noop("|Analyst note -\n\nHead of the National Security Agency. Has a friendship of sorts with Cassandra De Vries, although it operates more like a partnership of interest. He will tend to do what Cassandra says, possibly because although he has a dominant personality, it is not as dominant as hers. Figurehead for some of the rogue elements in the NSA.\n") }, // Trent Easton
+		/*5*/ { gettext_noop("Dr. Caroll\n"), gettext_noop("The Caroll Sapient (AI)\n"), gettext_noop("6 months\n"), gettext_noop("|Profile -\n\nAn artificial intelligence created by the dataDyne Corp. with an emphasis on language skills and code breaking. Fortunately, he has morals, and due to his formidable level of intelligence, has guessed some of dataDyne's future plans. The voice is highly precise and educated and simulates the character of an academic.\n") }, // Dr. Caroll
+		/*6*/ { gettext_noop("Elvis\n"), gettext_noop("Maian (Male)\n"), gettext_noop("320 years\n"), gettext_noop("|Profile -\n\nAn alien from the Maian race. He is a 'Protector' (bodyguard) for the Maian ambassador who travels to Earth at Daniel Carrington's request. Protectors are trained to excel in the use of an assortment of weaponry. Elvis is a terraphile, finding Earth and everything about it fascinating.\n") }, // Elvis
+		/*7*/ { gettext_noop("Mr. Blonde\n"), gettext_noop("Human (Male)\n"), gettext_noop("Late 20's\n"), gettext_noop("|Profile -\n\nA striking blonde human male. Very tall, wears white clothing, usually a raincoat. Appears to be masterminding the conspiracy in which Cassandra and Trent are involved. Little else is known.\n") }, // Mr. Blonde
+		/*8*/ { gettext_noop("Mr. Blonde\n"), gettext_noop("Skedar (disguised)\n"), gettext_noop("unknown\n"), gettext_noop("|Updated Profile -\n\nThis is a Skedar warrior lurking within a holographic projection of a striking blonde young human male in his late 20's.  The oral modulation unit gives the Skedar a precise, persuasive, and intelligent voice. It is a propaganda and manipulation tool for the Skedar, and an unusually subtle one.\n") }, // Mr. Blonde (repeat)
+		/*9*/ { gettext_noop("The U.S. President\n"), gettext_noop("Human (Male)\n"), gettext_noop("50 years\n"), gettext_noop("|Profile -\n\nA highly educated, shrewd African-American who is trying to do what is right but is surrounded by people like Trent Easton. He believes he has Trent under control after refusing the request for the loan of the Pelagic II to the dataDyne Corp. Perceived as being easily led by the majority of political commentators, which is perhaps unfair.\n") }, // The U.S. President
 #endif
 	};
 
@@ -2413,7 +2418,7 @@ struct chrbio *ciGetChrBioByBodynum(u32 bodynum)
 char *ciGetChrBioDescription(void)
 {
 	struct chrbio *bio = ciGetChrBioByBodynum(ciGetChrBioBodynumBySlot(g_ChrBioSlot));
-	return langGet(bio->description);
+	return _(bio->description);
 }
 
 s32 ciGetNumUnlockedChrBios(void)
@@ -2461,10 +2466,10 @@ struct miscbio *ciGetMiscBio(s32 index)
 		{ L_DISH_169, L_DISH_170 },
 		{ L_DISH_171, L_DISH_172 },
 #else
-		{ L_MISC_259, L_MISC_260 },
-		{ L_MISC_261, L_MISC_262 },
-		{ L_MISC_263, L_MISC_264 },
-		{ L_MISC_265, L_MISC_266 },
+		{ gettext_noop("Maians\n"), gettext_noop("The Maians are the race of aliens that have come to be known on Earth as 'Greys.' They have been monitoring Earth for a long time - several centuries - and are benevolent towards mankind, sensing great potential in the human race. Their contact on Earth is Daniel Carrington. A formal political contact has yet to be made.\n") },
+		{ gettext_noop("Skedar Warrior\n"), gettext_noop("The Skedar are a warlike alien race who have fought the Maians for centuries and have only recently agreed to a ceasefire. They tend to use mechanized armatures to walk about and fight in, since they are in actual fact smaller, snakelike creatures. Very aggressive -  they have made war a religion - and are extremely devout.\n") },
+		{ gettext_noop("Background\n"), gettext_noop("Millions of years ago, a huge alien ship of immense power was scuttled in the Pacific Ocean. It was equipped with an untried and vastly dangerous weapon: the weak nuclear force de-coupler, which could in theory cause the fundamental bonds between molecules to fail. So that watching eyes would believe in the destruction of the ship, a message pod was despatched to the home galaxy, and vital components of the ship's drives were destroyed in the star system it had chosen as a hiding place. For this ship was a Cetan, a massive, sentient alien creature.\n\nAnother extraterrestrial race, the Maians, encountered life on Earth in 2000 BC. They saw great potential, but decided to let the primitive human race develop without their interference.\n\nThe Maians encountered the Skedar near Delta Eridanus in 1650 AD (Earth date), and the resultant skirmish soon blossomed into all-out war. Only after hundreds of years of fighting did an uneasy peace develop, and even then Skedar fanatics persistently tested the boundaries of this peace with terrorist activities. Fortunately, the Maians refused to be drawn.\n\nMankind, too, continued to be a cause of concern to the Maians, and they watched with disappointment as Earth suffered more and more crises brought on by the rise of technology and 'outside context situations.' They feared that announcing their presence would only precipitate further wars on the planet, and quietly decided to continue their observation until the race became more mature.\n\nDaniel Carrington jumped the gun in 1985 AD by contacting a Maian ship in orbit above Earth. He put forward a plan that would help both parties, resulting in accelerated contact between Humans and Maians. Having agreed that his plan was sound, and finding him to be a person of integrity, the Maians allowed Carrington to release their technology into the public domain through his considerable Research and Development holdings.\n\nThen, in 2006 AD, Skedar fanatics stumbled across the Cetan message pod. They immediately began to scout Earth in a particularly heavy-handed way, abducting people and mutilating animals in an attempt to determine the location of the lost battle cruiser. In time, their tests inevitably led them to its resting place on the bed of the Pacific Ocean; however, in order to actually reach it, they would need the help of the natives.\n\nPerforming their own study of Earth, the Skedar came up with a shortlist of companies possessing the resources to help them recover the sunken ship. At the top of the list was the dataDyne Corporation. They contacted the company head, Cassandra De Vries, and presented her with a deal that sounded too good to be true - which, of course, it was. In return for helping to raise 'their' ship from the ocean floor, the Skedar promised to supply dataDyne with enough alien technology to become the biggest corporation on the face of the planet. All that dataDyne had to do was build an AI unit with language and code-breaking abilities, which was tricky, but certainly within their means. Work commenced on the project immediately.\n\nCassandra De Vries approached NSA head Trent Easton with the details of the plan, but his attempts to get Presidential approval for the loan of a deep-sea research vessel were repeatedly turned down. There was no way that the Skedar or dataDyne could steal the vessel without triggering the wrath of the U.S. Government, so over time they settled instead on a far more sinister plan of replacing the President with a clone that they could control. Of course, this also promised extra rewards for Trent and Cassandra when the Skedar operation was consigned to history.\n\nHowever, they would not be given much time to gloat. The Skedar fanatics' ultimate plan was to test the weak nuclear force de-coupler on Earth before wiping the Maians out of existence, and both Cassandra and Trent remained blind to the possibility of being double-crossed, so enamored were they with the visions of power and luxury that lay ahead.\n\nBut dataDyne had unwittingly created something that could see all too clearly the danger within this multilayered conspiracy: the sapient AI built to crack the core access codes of the Cetan ship. When it expressed concern over the mission for which it had been designed, Cassandra's response was to order its personality removed. Clearly, it was thinking too much. In desperation, and in a move which would make or break a great deal more than dataDyne's 'deal' with the Skedar, the sapient adopted the pseudonym Dr. Caroll and contacted the Carrington Institute with a plea for help...\n") },
+		{ gettext_noop("The Story\n"), gettext_noop("Untried agent Joanna Dark is assigned a mission involving the extraction of a scientist from the high security research area beneath the dataDyne skyscraper. Upon rendezvous, she is surprised to discover that this 'Dr. Caroll' is an AI created by dataDyne itself - but she continues with her task of escorting him/it to a place of safety. When the alarm is raised, Joanna has to fight her way up the tower to reach the helipad and the dropship which presents her only means of escape.\n\nIn response to this incursion, dataDyne make Daniel Carrington a personal target and take him hostage two days later at his private villa. They demand the return of the AI - their 'property' - in exchange for his life. Unknown to them, the AI is already at the villa, where it was being questioned by Carrington on dataDyne's future plans. Joanna eventually rescues the head of the Institute but is unable to prevent dataDyne from taking back Dr. Caroll. However, Carrington has heard enough to take the drastic step of summoning a team of Maian specialists to Earth.\n\nJoanna is dispatched to Chicago to spy on a conspirators' meeting at the G5 Building, a front for the dataDyne Corp. It is here that she learns of the involvement of Trent Easton, head of the NSA, and of the strange Nordic men that appear to be in control of the whole deadly scheme. Once Trent discloses the plan to usurp the Presidential position, Jo radios the news back to base - only to find that another, more urgent task requires her attention before further action can be taken against Trent.\n\nThe Maian specialists have been intercepted and brought down by the conspirators, with survivors and wreckage alike being transported to Area 51 in Nevada. Briefed to rescue any survivors and retrieve their equipment, Joanna is dropped in to link up with another Carrington Institute agent. Upon breaking into the medlab, Joanna finally discovers the Institute's secret - their allies are Maians, the alien race commonly known as Greys. The particular Maian she manages to rescue goes by the name of Elvis. He was a bodyguard for the Ambassador who had been flying in at the head of the specialist team.\n\nHaving aided the remnants of the Maian delegation, Joanna can return to the matter of the President and dataDyne's designs against him. She poses as a member of the President's entourage to gain access to the air base where Air Force One is stationed, and successfully conceals herself aboard the plane. As soon as it's airborne, Trent and the cloaked Skedar make their move - but Joanna is there to stop them. She rushes the President to a safety capsule while a team of Trent's men scour the aircraft, intent on dragging the hapless politician aboard the Skedar UFO now docked to AF1 via an umbilical. Jo weakens the umbilical but is unable to break it, and ultimately Elvis makes a last-ditch attempt to sever the cord by crashing into it at high speed. All three craft plummet towards the Alaskan wilderness, and the AF1 escape pod is launched.\n\nComing around, Jo tries to report in but finds her communications jammed by a transmission from the Skedar craft. She sets off through the snow to find the President and Elvis, encountering teams of cloaked Skedar out searching for her, the President, Elvis, and the President's belongings. She tracks one group back to the downed Skedar ship, where she discovers a clone of the President: quickly she destroys it, shuts down the jamming device and calls in the cavalry. The Skedar are thwarted once more, the President is safe, and Trent's incompetence has earned him a nasty fate at the hands of his 'allies.'\n\nBut it's not over. Throwing caution to the wind, dataDyne and the Skedar steal the Government's deep-sea research vessel 'Pelagic II' and head out to the Pacific crash site. Joanna and Elvis leave to disrupt activity on board the ship and find out what lies at the heart of the grand Skedar plan. After crippling the vessel's diving operations and recalling the submersible, they head down to the ocean floor, where they get their first sight of the downed Cetan battle cruiser. A portal made by the Skedar offers them access to the ship, where they stumble across a dead Skedar warrior... Clearly the assault team didn't have it all their own way. Fighting off the remaining vengeful Skedar and avoiding the Cetans themselves, Joanna and Elvis make their way down to the core of the ship, where they find the AI that was once Dr. Caroll. They manage to restore his personality, whereupon he urges Joanna and Elvis to leave the ship so that he may destroy it for good.\n\nLater, back at the Carrington Institute, Joanna is about to leave for a Presidential reception at the White House when all hell breaks loose. The Skedar assault team survivors are venting their anger on those they deem responsible for their failure to recover the Cetan ship. Joanna dashes around the Institute, helping CI employees to reach the safety of the hangars, as the Skedar launch attacks on various parts of the building: the majority of the employees make good their escape while Joanna holds the fort, but eventually she is knocked unconscious and taken prisoner.\n\nShe comes to in a holding cell on board the Skedar assault ship, with only Cassandra De Vries for company. In a shocking move, the dataDyne CEO willingly gives her life to create the distraction necessary for Joanna to break out. Battling her way through the ship, Jo eventually manages to locate and disable the docking bay shields, allowing Elvis to bring in a few friends for the long-awaited shooting party.\n\nThe captured assault ship enters orbit above the Skedar Battle Shrine, which shocks Elvis as the Maians never managed to find this Skedar 'holiest of holies' throughout the long years of interracial war. If the Shrine were destroyed, Skedar morale would be dealt a fatal blow and true peace would finally replace the uneasy ceasefire. So Jo sets her sights on the Skedar leader, the high priest of the Battle Shrine, while Elvis returns to the assault ship in order to summon the Maian fleet.\n\nIn the wake of the climactic battle, the temple lies devastated with Elvis calling for a lull in the bombardment so that he can find Joanna. She is alive, held under a pile of rubble by the last tenacious Skedar that caught up during the last few seconds of her escape bid. Elvis quickly offers her a gun to convince the Skedar to let go, and with the job finally done, the Skedar Shrine and morale both in ruins and the conspiracy dealt a mortal blow to the heart, the two of them depart for orbit.\n") },
 #endif
 	};
 
@@ -2530,7 +2535,7 @@ char *ciGetMiscBioDescription(void)
 	s32 index = ciGetMiscBioIndexBySlot(g_ChrBioSlot - ciGetNumUnlockedChrBios());
 	struct miscbio *bio = ciGetMiscBio(index);
 
-	return langGet(bio->description);
+	return _(bio->description);
 }
 
 bool ciIsHangarBioAVehicle(s32 index)
@@ -2572,29 +2577,29 @@ struct hangarbio *ciGetHangarBio(s32 index)
 		{ L_DISH_217, L_DISH_240 }, // Maian Vessel
 		{ L_DISH_218, L_DISH_241 }, // Skedar Shuttle
 #else
-		{ L_MISC_290, L_MISC_313 }, // Carrington Institute
-		{ L_MISC_291, L_MISC_314 }, // Lucerne Tower
-		{ L_MISC_292, L_MISC_315 }, // Laboratory Basement
-		{ L_MISC_293, L_MISC_316 }, // Carrington Villa
-		{ L_MISC_294, L_MISC_317 }, // Chicago
-		{ L_MISC_295, L_MISC_318 }, // G5 Building
-		{ L_MISC_296, L_MISC_319 }, // Area 51
-		{ L_MISC_297, L_MISC_320 }, // Alaskan Air Base
-		{ L_MISC_298, L_MISC_321 }, // Air Force One
-		{ L_MISC_299, L_MISC_322 }, // Crash Site
-		{ L_MISC_300, L_MISC_323 }, // Pelagic II
-		{ L_MISC_301, L_MISC_324 }, // Cetan Ship
-		{ L_MISC_302, L_MISC_325 }, // Skedar Assault Ship
-		{ L_MISC_303, L_MISC_326 }, // Skedar Homeworld
-		{ L_MISC_304, L_MISC_327 }, // Jumpship
-		{ L_MISC_305, L_MISC_328 }, // HoverCrate
-		{ L_MISC_306, L_MISC_329 }, // HoverBike
-		{ L_MISC_307, L_MISC_330 }, // Cleaning Hovbot
-		{ L_MISC_308, L_MISC_331 }, // Hovercopter
-		{ L_MISC_309, L_MISC_332 }, // G5 Robot
-		{ L_MISC_310, L_MISC_333 }, // A51 Interceptor
-		{ L_MISC_311, L_MISC_334 }, // Maian Vessel
-		{ L_MISC_312, L_MISC_335 }, // Skedar Shuttle
+		{ gettext_noop("Carrington Institute|Base of operations\n"), gettext_noop("The Institute building comprises many different areas: offices and laboratories, workshops and hangars. It is quite isolated from the outside world, which helps keep the operations covert.\n") }, // Carrington Institute
+		{ gettext_noop("Lucerne Tower|Global headquarters\n"), gettext_noop("In the midst of the business district, the austere skyscraper of the dataDyne Corporation stands out from the surroundings.\n") }, // Lucerne Tower
+		{ gettext_noop("Laboratory Basement|Underground research labs\n"), gettext_noop("These heavily guarded, well-hidden labs hold the key to dataDyne's future. Within them, techs work on top-secret projects aimed at putting dataDyne on the top of the heap.\n") }, // Laboratory Basement
+		{ gettext_noop("Carrington Villa|Private coastal retreat\n"), gettext_noop("Owned by the Institute, this secluded residence is used by Daniel Carrington as a retreat from the pressures of the Institute. As well as an observatory, it has a power generator and an extensive wine cellar.\n") }, // Carrington Villa
+		{ gettext_noop("Chicago|Backstreets of the city\n"), gettext_noop("A seedy, grimy part of the city of Chicago, now closed to ground traffic. It is here that the G5 Corporation has its headquarters.\n") }, // Chicago
+		{ gettext_noop("G5 Building|dataDyne front corporation\n"), gettext_noop("Inside the G5 Building is a meeting room protected by anti-recording safeguards. This is the safest place for dataDyne to formulate confidential plans.\n") }, // G5 Building
+		{ gettext_noop("Area 51|Near Groom Dry Lake, Nevada\n"), gettext_noop("This section of the extensive facility known as Area 51 is based in the foothills around Groom Dry Lake. Exterior helipads and communication towers hint at the size of the complex beneath ground level.\n") }, // Area 51
+		{ gettext_noop("Alaskan Air Base|Brooks Range, Alaska\n"), gettext_noop("One of a series of reinforced air bases available as staging posts for Air Force One. Typically, the air base is remote, in an inhospitable region, far away from prying eyes.\n") }, // Alaskan Air Base
+		{ gettext_noop("Air Force One|The President's airplane\n"), gettext_noop("This particular Air Force One is optimized for cold climates, useful when it is based in the north of Alaska. The flight destination is Oslo, Norway.\n") }, // Air Force One
+		{ gettext_noop("Crash Site|Victoria Island 71N 118W\n"), gettext_noop("In the rocky snow-covered landscape of the Arctic Circle, the wreckage of the stricken plane has come to rest.\n") }, // Crash Site
+		{ gettext_noop("Pelagic II|Specialized deep-sea research ship\n"), gettext_noop("Owned by the U.S. government, the Pelagic II is capable of staging deep-sea diving operations in all weather conditions. It is the only fully integrated ocean floor research vessel in the world.\n") }, // Pelagic II
+		{ gettext_noop("Cetan Ship|The most alien environment on Earth\n"), gettext_noop("A huge ship of alien construction that has lain on the ocean floor for millions of years.\n") }, // Cetan Ship
+		{ gettext_noop("Skedar Assault Ship|Troop carrying spacecraft\n"), gettext_noop("An interplanetary assault ship that carries Skedar warriors to their war zones. Part of the much-reduced Skedar battle fleet.\n") }, // Skedar Assault Ship
+		{ gettext_noop("Skedar Homeworld|The planet of the Battle Shrine\n"), gettext_noop("A highly arid planet, racked by earthquakes, sandstorms, and hurricanes. It is part of a complex solar system that includes three suns.\n") }, // Skedar Homeworld
+		{ gettext_noop("Jumpship|Agile troop craft\n"), gettext_noop("A small, fast, highly maneuverable agent-deployment craft designed for use in urban areas. Can be either computer controlled or remote piloted. It has enough room inside for three to four agents, plus equipment.\n") }, // Jumpship
+		{ gettext_noop("HoverCrate|Gravity-negation device\n"), gettext_noop("An antigrav device designed to aid warehouse workers. It is attached to the side of a crate. When activated, the AG field lifts the crate and removes some of the inertia.\n") }, // HoverCrate
+		{ gettext_noop("HoverBike|Low altitude vehicle\n"), gettext_noop("A low-altitude patrol bike. Uses a small AG unit to hover, then a small but powerful turbine with vectored thrust to move and provide directional control.\n") }, // HoverBike
+		{ gettext_noop("Cleaning Hovbot|Your helpful buddy\n"), gettext_noop("Keeps the place clean and tidy. Tends to have access to all areas of a building - agents are advised to leave such robots intact where possible, as they can unwittingly provide a means of ingress to sensitive zones.\n") }, // Cleaning Hovbot
+		{ gettext_noop("Hovercopter|Urban AG gunship\n"), gettext_noop("An urban patrol and suppression vehicle. Two-man crew, armed with a vulcan cannon on the nose pod, and two wingtip-mounted dumbfire missile pods. Can be taken out with sustained gunfire or, preferably, one well-aimed rocket.\n") }, // Hovercopter
+		{ gettext_noop("G5 Robot|Urban combat droid\n"), gettext_noop("A combat robot designed for urban warfare. Uses an antigrav unit to hover; heavily armed and shielded. Often used to keep out unwanted visitors, due to the 'shoot first and don't ask questions later' programming.\n") }, // G5 Robot
+		{ gettext_noop("A51 Interceptor|Robotic air interceptor\n"), gettext_noop("A robotic variant of the HoverBike, with more powerful AG and turbine units; it can reach Mach 2 with ease and yet can cruise for hours at walking pace. Although quite well armed, it relies on maneuverability rather than shielding.\n") }, // A51 Interceptor
+		{ gettext_noop("Maian Vessel|Scout and patrol vessel\n"), gettext_noop("Designed to carry a single Maian pilot.  A passenger would find themselves cramped - a human passenger even more so.\n") }, // Maian Vessel
+		{ gettext_noop("Skedar Shuttle|Alien troop dropship\n"), gettext_noop("Capable of carrying ten fully armed and armored Skedar warriors to battle. Undetectable by conventional radar. It can broadcast powerful jamming waves over a considerable area - these disrupt communications as well as detection equipment.\n") }, // Skedar Shuttle
 #endif
 	};
 
@@ -2747,7 +2752,7 @@ s32 ciGetHangarBioIndexBySlot(s32 slot)
 char *ciGetHangarBioDescription(void)
 {
 	struct hangarbio *bio = ciGetHangarBio(ciGetHangarBioIndexBySlot(g_HangarBioSlot));
-	return langGet(bio->description);
+	return _(bio->description);
 }
 
 struct trainingdata *dtGetData(void)
@@ -2975,7 +2980,7 @@ u32 ciGetStageFlagByDeviceIndex(u32 deviceindex)
 
 char *dtGetDescription(void)
 {
-	u32 texts[] = {
+	char *texts[] = {
 #if VERSION >= VERSION_PAL_BETA
 		/*0*/ L_DISH_186, // Data uplink
 		/*1*/ L_DISH_185, // ECM mine
@@ -2988,25 +2993,25 @@ char *dtGetDescription(void)
 		/*8*/ L_DISH_181, // Disguise
 		/*9*/ L_DISH_184, // Cloak
 #else
-		/*0*/ L_MISC_280, // Data uplink
-		/*1*/ L_MISC_279, // ECM mine
-		/*2*/ L_MISC_271, // CamSpy
-		/*3*/ L_MISC_272, // Night vision
-		/*4*/ L_MISC_273, // Door decoder
-		/*5*/ L_MISC_277, // R-tracker
-		/*6*/ L_MISC_276, // IR scanner
-		/*7*/ L_MISC_274, // X-ray scanner
-		/*8*/ L_MISC_275, // Disguise
-		/*9*/ L_MISC_278, // Cloak
+		/*0*/ _("Description\n- Provides a link from the field agent to the Institute hackers back at HQ, who can then download data or crack electronic locks remotely.\n\nTraining Instructions\n- Use the Data Uplink to hack the terminal in the corner, unlocking a secret door.\n\nOperation\n- Stand next to the terminal and press the B Button when holding Data Uplink.\n"), // Data uplink
+		/*1*/ _("Description\n- Emits a constantly shifting signal designed to jam any electronic communications device. Must be placed on the object to be effective.\n\nTraining Instructions\n- Throw the ECM Mine onto the lighting hub located through the secret door.\n\nOperation\n- Press the Z Button to throw the mine. Hold down the R Button and move the Control Stick to fine-tune your aim before throwing.\n"), // ECM mine
+		/*2*/ _("Description\n- A tiny remote camera for stealthy exploration. Equipped for spectroscopic holography. Opens doors by projecting a human-sized pulse of heat.\n\nTraining Instructions\n- Holograph the hacker's terminal next door in the Info room.\n\nOperation\n- Press the Z Button to take a holograph. Pressing the B Button will open any doors in the way. Hold down the R Button to look around.\n"), // CamSpy
+		/*3*/ _("Description\n- Enhances any visible light to produce an image of the surrounding area. Also highlights life forms. Overloads in normal light conditons, 'whiting out' the display.\n\nTraining Instructions\n- Head into the darkness, find the light switch, and activate it to turn the lights back on.\n\nOperation\n- Select the Night Vision from your inventory to activate it. Reselect to deactivate.\n"), // Night vision
+		/*4*/ _("Description\n\n- Stand-alone code-breaking device. Attaches to the control panel and sifts through the possible combinations until the lock is opened.\n\nTraining Instructions\n- Find the pad by the locked door and use the Door Decoder on it to unlock the door.\n\nOperation\n- Stand next to the door pad and press the B Button while holding the Door Decoder to use it.\n"), // Door decoder
+		/*5*/ _("Description\n- Locates a particular object on a HUD radar map. Shows the relative bearing and distance.\n\nTraining Instructions\n- Activate the Tracker and follow the radar signature to retrieve the item.\n\nOperation\n- Selecting the Tracker from your inventory will activate it. Reselect to deactivate.\n"), // R-tracker
+		/*6*/ _("Description\n\n- Translates thermal data into visible images. Can be used in darkness and will also reveal anomalies such as hidden doors and weak wall sections.\n\nTraining Instructions\n- Turning on the IR Scanner, find the hidden door and open it.\n\nOperation\n- Select the IR Scanner from your inventory to activate it. Reselect to deactivate.\n"), // IR scanner
+		/*7*/ _("Description\n\n- Used to look through otherwise solid walls and objects. Can see things that the Night Vision and IR Scanner cannot.\n\nTraining Instructions\n- With the X-Ray Scanner on, search for the two hidden switches and activate them to turn off the laser grid.\n\nOperation\n- Select the X-Ray Scanner from your inventory to activate it. Reselect to deactivate.\n"), // X-ray scanner
+		/*8*/ _("Description\n\n- Allay suspicion by the use of a disguise. But, always be alert for the possibility of being unmasked by a quick-witted enemy.\n\nTraining Instructions\n- Grimshaw has a Cloaking Device waiting to be serviced. Head next door and 'acquire' it from him.\n\nOperation\n- To wear the disguise, simply select it from your inventory.\n"), // Disguise
+		/*9*/ _("Description\n- Disrupts the visible spectrum of light around the wearer, creating an almost perfect chameleonlike effect. This field is disrupted when the wearer fires.\n\nTraining Instructions\n- Activate the Cloaking Device and head to Carrington's office to surprise him!\n\nOperation\n- Selecting the Cloaking Device from your inventory will activate it. Reselect to deactivate.\n"), // Cloak
 #endif
 	};
 
-	return langGet(texts[dtGetIndexBySlot(g_DtSlot)]);
+	return texts[dtGetIndexBySlot(g_DtSlot)];
 }
 
 char *dtGetTip1(void)
 {
-	u32 texts[] = {
+	char *texts[] = {
 #if VERSION >= VERSION_PAL_BETA
 		/*0*/ L_DISH_263,
 		/*1*/ L_DISH_264,
@@ -3019,25 +3024,25 @@ char *dtGetTip1(void)
 		/*8*/ L_DISH_271,
 		/*9*/ L_DISH_272,
 #else
-		/*0*/ L_MISC_357,
-		/*1*/ L_MISC_358,
-		/*2*/ L_MISC_359,
-		/*3*/ L_MISC_360,
-		/*4*/ L_MISC_361,
-		/*5*/ L_MISC_362,
-		/*6*/ L_MISC_363,
-		/*7*/ L_MISC_364,
-		/*8*/ L_MISC_365,
-		/*9*/ L_MISC_366,
+		/*0*/ _("Always keep the target object in view when using the Data Uplink, and stay close to prevent the connection from being severed.\n"),
+		/*1*/ _("Be sure the mine will land in the correct place by getting as close as you can to the target. Adjust your aim using the C Buttons or the R Button Aiming mode.\n"),
+		/*2*/ _("The CamSpy can be difficult to control, so take your time.\n"),
+		/*3*/ _("Useful in combat, but can cause problems when overloading.\n"),
+		/*4*/ _("If you are having trouble attaching the Decoder, try standing closer to the target and facing it.\n"),
+		/*5*/ _("The Tracker only indicates direction and relative height; it doesn't display a map guiding you to the target. Pay attention to your surroundings, and be prepared to explore.\n"),
+		/*6*/ _("The visor narrows your peripheral vision, which can cause problems in combat. Be sure of your situation before you use it.\n"),
+		/*7*/ _("If you use this device at the wrong time, it could cost you your life, since it can prevent you from seeing anything beyond a certain distance. Use sparingly.\n"),
+		/*8*/ _("A disguise is not just the clothing, it is the manner of the person wearing it. Don't behave out of character for the person you are trying to be.\n"),
+		/*9*/ _("Preserve the supply of the Cloaking Device when there is no one around to observe you.\n"),
 #endif
 	};
 
-	return langGet(texts[dtGetIndexBySlot(g_DtSlot)]);
+	return texts[dtGetIndexBySlot(g_DtSlot)];
 }
 
 char *dtGetTip2(void)
 {
-	u32 texts[] = {
+	char *texts[] = {
 #if VERSION >= VERSION_PAL_BETA
 		/*0*/ L_DISH_273,
 		/*1*/ L_DISH_274,
@@ -3050,20 +3055,20 @@ char *dtGetTip2(void)
 		/*8*/ L_DISH_281,
 		/*9*/ L_DISH_282,
 #else
-		/*0*/ L_MISC_367,
-		/*1*/ L_MISC_368,
-		/*2*/ L_MISC_369,
-		/*3*/ L_MISC_370,
-		/*4*/ L_MISC_371,
-		/*5*/ L_MISC_372,
-		/*6*/ L_MISC_373,
-		/*7*/ L_MISC_374,
-		/*8*/ L_MISC_375,
-		/*9*/ L_MISC_376,
+		/*0*/ _("Always keep the target object in view when using the Data Uplink, and stay close to prevent the connection from being severed.\n"),
+		/*1*/ _("Be sure the mine will land in the correct place by getting as close as you can to the target. Adjust your aim using the C Buttons or the R Button Aiming mode.\n"),
+		/*2*/ _("The CamSpy is not invisible - enemies may spot it - so be careful when entering an inhabited area.  Remember that the CamSpy will remain where you left it unless you pick it up.\n"),
+		/*3*/ _("Useful in combat, but can cause problems when overloading. Try to anticipate such situations and react before the enemy.\n"),
+		/*4*/ _("If you are having trouble attaching the Decoder, try standing closer to the target and facing it.\n"),
+		/*5*/ _("The Tracker only indicates direction and relative height; it doesn't display a map guiding you to the target. Pay attention to your surroundings, and be prepared to explore.\n"),
+		/*6*/ _("The visor narrows your peripheral vision, which can cause problems in combat. Be sure of your situation before you use it.\n"),
+		/*7*/ _("If you use this device at the wrong time, it could cost you your life, since it can prevent you from seeing anything beyond a certain distance. Use sparingly.\n"),
+		/*8*/ _("A disguise is not just the clothing, it is the manner of the person wearing it. Don't behave out of character for the person you are trying to be.\n"),
+		/*9*/ _("Preserve the supply of the Cloaking Device when there is no one around to observe you. Avoid firing unless absolutely necessary and until you are assured of the success of your attack.\n"),
 #endif
 	};
 
-	return langGet(texts[dtGetIndexBySlot(g_DtSlot)]);
+	return texts[dtGetIndexBySlot(g_DtSlot)];
 }
 
 struct trainingdata *getHoloTrainingData(void)
@@ -3248,7 +3253,7 @@ s32 htGetIndexBySlot(s32 slot)
 
 char *htGetName(s32 index)
 {
-	u32 texts[] = {
+	char *texts[] = {
 #if VERSION >= VERSION_PAL_BETA
 		L_DISH_316, // "Holo 1 - Looking Around"
 		L_DISH_317, // "Holo 2 - Movement 1"
@@ -3258,17 +3263,17 @@ char *htGetName(s32 index)
 		L_DISH_321, // "Holo 6 - Live Combat 1"
 		L_DISH_322, // "Holo 7 - Live Combat 2"
 #else
-		L_MISC_410, // "Holo 1 - Looking Around"
-		L_MISC_411, // "Holo 2 - Movement 1"
-		L_MISC_412, // "Holo 3 - Movement 2"
-		L_MISC_413, // "Holo 4 - Unarmed Combat 1"
-		L_MISC_414, // "Holo 5 - Unarmed Combat 2"
-		L_MISC_415, // "Holo 6 - Live Combat 1"
-		L_MISC_416, // "Holo 7 - Live Combat 2"
+		_("Holo 1 - Looking Around\n"), // "Holo 1 - Looking Around"
+		_("Holo 2 - Movement 1\n"), // "Holo 2 - Movement 1"
+		_("Holo 3 - Movement 2\n"), // "Holo 3 - Movement 2"
+		_("Holo 4 - Unarmed Combat 1\n"), // "Holo 4 - Unarmed Combat 1"
+		_("Holo 5 - Unarmed Combat 2\n"), // "Holo 5 - Unarmed Combat 2"
+		_("Holo 6 - Live Combat 1\n"), // "Holo 6 - Live Combat 1"
+		_("Holo 7 - Live Combat 2\n"), // "Holo 7 - Live Combat 2"
 #endif
 	};
 
-	return langGet(texts[index]);
+	return texts[index];
 }
 
 u32 func0f1a25c0(s32 index)
@@ -3289,7 +3294,7 @@ u32 func0f1a25c0(s32 index)
 
 char *htGetDescription(void)
 {
-	u32 texts[] = {
+	char *texts[] = {
 #if VERSION >= VERSION_PAL_BETA
 		L_DISH_242,
 		L_DISH_243,
@@ -3299,22 +3304,22 @@ char *htGetDescription(void)
 		L_DISH_247,
 		L_DISH_248,
 #else
-		L_MISC_336,
-		L_MISC_337,
-		L_MISC_338,
-		L_MISC_339,
-		L_MISC_340,
-		L_MISC_341,
-		L_MISC_342,
+		_("Description\n- A good agent notices everything around him or her.\n\nTraining Instructions\n- Examine all of the objects by looking directly at them.\n\nOperation\n-Look up- Press the Down C Button\n-Look down- Press the Up C Button\n-Free Look- Hold down the R Button to enter Aim mode, and use the Control Stick to look.\n"),
+		_("Description\n- Sidestepping and strafing can get you out of trouble.\n\nTraining Instructions\n- Activate all of the switches in front. Be quick, though, as each switch will reset on a time limit.\n\nOperation\n- Sidestep left- Left C Button\n- Sidestep right- Right C Button\n\n"),
+		_("Description\n- Ducking and crouching can open up new areas for exploration.\n\nTraining Instructions\n- Work your way through the obstacles using the moves available to you. Activate the switches.\n\nOperation\n- Duck- Hold the R Button, then press the Down C Button.\n- Crouch- When ducking, hold the R Button, then press the Down C Button.\n- Get up- Tap the R Button.\n\n"),
+		_("Description\n- Fighting multiple opponents in hand-to-hand combat can be difficult.\n\nTraining Instructions\n- Knock out all enemies without getting hit.\n\nOperation\n- Punch - Press the Z Button repeatedly when unarmed to launch a flurry of punches.\n\n"),
+		_("Description\n- Disarming an enemy can get you a new weapon.\n\nTraining Instructions\n- Knock out/disarm all enemies without getting hit.\n\nOperation\n- Disarm - Hold the B Button, then press the Z Button to disarm an enemy.\n- Knockout Punch - Punch an unaware enemy from behind.\n"),
+		_("Description\n- Fighting multiple opponents in hand-to-hand combat.\n\nTraining Instructions\n- Beat all the unarmed enemies without getting hit.\n\n"),
+		_("Description\n- Fighting multiple opponents, both armed and unarmed.\n\nTraining Instructions\n- Beat all the armed enemies without getting hit.\n\n"),
 #endif
 	};
 
-	return langGet(texts[htGetIndexBySlot(var80088bb4)]);
+	return texts[htGetIndexBySlot(var80088bb4)];
 }
 
 char *htGetTip1(void)
 {
-	u32 texts[] = {
+	char *texts[] = {
 #if VERSION >= VERSION_PAL_BETA
 		L_DISH_249, // "For greater precision..."
 		L_DISH_250, // "Think about where you want to go..."
@@ -3324,22 +3329,22 @@ char *htGetTip1(void)
 		L_DISH_254, // "Don't hang around and wait..."
 		L_DISH_255, // "Go for the armed opponents..."
 #else
-		L_MISC_343, // "For greater precision..."
-		L_MISC_344, // "Think about where you want to go..."
-		L_MISC_345, // "Ducking enables you to..."
-		L_MISC_346, // "Attacking opponents from behind..."
-		L_MISC_347, // "Only stay close long enough..."
-		L_MISC_348, // "Don't hang around and wait..."
-		L_MISC_349, // "Go for the armed opponents..."
+		_("For greater precision and freedom when looking around, use the Aiming mode.\n"), // "For greater precision..."
+		_("Think about where you want to go before attempting the test. Set yourself up in a place that will require the least amount of movement between targets.\n"), // "Think about where you want to go..."
+		_("Ducking enables you to reach places normally inaccessible to you, but remember that you move quickest when standing upright. To move through the test as fast as possible, try ducking only when you have to.\n"), // "Ducking enables you to..."
+		_("Attacking opponents from behind may be dishonorable, but doing so makes it easier to take them down. Only close to fighting distance when you have to, and be prepared to step back out of range when they attack you.\n"), // "Attacking opponents from behind..."
+		_("Only stay close long enough to grab the weapon. Back out of range of any retribution and use your new weapon.\n"), // "Only stay close long enough..."
+		_("Don't hang around and wait to get hit, move! Don't focus on one opponent; try to be aware of where all of them are. If you can't see all of them, move until you can.\n"), // "Don't hang around and wait..."
+		_("Go for the armed opponents once you are confident of your hand-to-hand skills. Back away from the disarmed enemies and use their weapons on them before they get too close to you.\n"), // "Go for the armed opponents..."
 #endif
 	};
 
-	return langGet(texts[htGetIndexBySlot(var80088bb4)]);
+	return texts[htGetIndexBySlot(var80088bb4)];
 }
 
 char *htGetTip2(void)
 {
-	u32 texts[] = {
+	char *texts[] = {
 #if VERSION >= VERSION_PAL_BETA
 		L_DISH_256, // "For greater precision..."
 		L_DISH_257, // "Sidestepping and strafing..."
@@ -3349,30 +3354,30 @@ char *htGetTip2(void)
 		L_DISH_261, // "Don't hang around and wait..."
 		L_DISH_262, // "Go for the armed opponents..."
 #else
-		L_MISC_350, // "For greater precision..."
-		L_MISC_351, // "Sidestepping and strafing..."
-		L_MISC_352, // "Ducking enables you to..."
-		L_MISC_353, // "Attacking opponents from behind..."
-		L_MISC_354, // "Only stay close long enough..."
-		L_MISC_355, // "Don't hang around and wait..."
-		L_MISC_356, // "Go for the armed opponents..."
+		_("For greater precision and freedom when looking around, use the Aiming mode.\n"), // "For greater precision..."
+		_("Sidestepping and strafing can get you out of trouble.\n"), // "Sidestepping and strafing..."
+		_("Ducking enables you to reach places normally inaccessible to you, but remember that you move quickest when standing upright. To move as fast as possible, try ducking only when you have to.\n"), // "Ducking enables you to..."
+		_("Attacking opponents from behind may be dishonorable, but doing so makes it easier to take them down. Only close to fighting distance when you have to, and be prepared to step back out of range when they attack you.\n"), // "Attacking opponents from behind..."
+		_("Only stay close long enough to grab the weapon. Back out of range of any retribution and use your new weapon.\n"), // "Only stay close long enough..."
+		_("Don't hang around and wait to get hit; move! Don't focus on one opponent; try to be aware of where all of them are. If you can't see all of them, move until you can.\n"), // "Don't hang around and wait..."
+		_("Go for the armed opponents once you are confident of your hand-to-hand skills. Back away from the disarmed enemies and use their weapons on them before they get too close to you.\n"), // "Go for the armed opponents..."
 #endif
 	};
 
-	return langGet(texts[htGetIndexBySlot(var80088bb4)]);
+	return texts[htGetIndexBySlot(var80088bb4)];
 }
 
 #if VERSION >= VERSION_JPN_FINAL
 void frGetGoalTargetsText(char *buffer, char *buffer2)
 {
-	sprintf(buffer, "%s", langGet(L_MISC_417));
+	sprintf(buffer, "%s", langGet(gettext_noop("GOAL TARGETS:")));
 	sprintf(buffer2, "%d\n", g_FrData.goaltargets);
 }
 #else
 void frGetGoalTargetsText(char *buffer)
 {
 	// "GOAL TARGETS:"
-	sprintf(buffer, "%s %d\n", langGet(L_MISC_417), g_FrData.goaltargets);
+	sprintf(buffer, "%s %d\n", _("GOAL TARGETS:"), g_FrData.goaltargets);
 }
 #endif
 
@@ -3390,7 +3395,7 @@ void frGetScoreValue(char *buffer)
 void frGetGoalScoreText(char *buffer1, char *buffer2)
 {
 	if (g_FrData.goalscore) {
-		sprintf(buffer1, "%s", langGet(L_MISC_418));
+		sprintf(buffer1, "%s", _("GOAL SCORE:"));
 		sprintf(buffer2, "%d\n", g_FrData.goalscore);
 	} else {
 		sprintf(buffer1, "");
@@ -3402,7 +3407,7 @@ void frGetGoalScoreText(char *buffer)
 {
 	if (g_FrData.goalscore) {
 		// "GOAL SCORE:"
-		sprintf(buffer, "%s %d\n", langGet(L_MISC_418), g_FrData.goalscore);
+		sprintf(buffer, "%s %d\n", _("GOAL SCORE:"), g_FrData.goalscore);
 	} else {
 		sprintf(buffer, "");
 	}
@@ -3433,7 +3438,7 @@ f32 frGetAccuracy(char *buffer)
 #if VERSION >= VERSION_JPN_FINAL
 bool frGetMinAccuracy(char *buffer1, f32 accuracy, char *buffer2)
 {
-	sprintf(buffer1, "%s", langGet(L_MISC_419));
+	sprintf(buffer1, "%s", _("MIN ACCURACY:"));
 	sprintf(buffer2, "%d%%\n", g_FrData.goalaccuracy);
 
 	return accuracy < g_FrData.goalaccuracy;
@@ -3442,7 +3447,7 @@ bool frGetMinAccuracy(char *buffer1, f32 accuracy, char *buffer2)
 bool frGetMinAccuracy(char *buffer, f32 accuracy)
 {
 	// "MIN ACCURACY:"
-	sprintf(buffer, "%s %d%%\n", langGet(L_MISC_419), g_FrData.goalaccuracy);
+	sprintf(buffer, "%s %d%%\n", _("MIN ACCURACY:"), g_FrData.goalaccuracy);
 
 	return accuracy < g_FrData.goalaccuracy;
 }
@@ -3498,12 +3503,12 @@ bool frGetHudMiddleSubtext(char *buffer1, char *buffer2)
 	sprintf(buffer2, "");
 
 	if (g_FrData.timetaken < TICKS(-180)) {
-		sprintf(buffer1, "%s", langGet(L_MISC_420)); // "FIRE TO START"
+		sprintf(buffer1, "%s", _("FIRE TO START\n")); // "FIRE TO START"
 		return false;
 	}
 
 	if (g_FrData.timetaken < 0) {
-		sprintf(buffer1, "%s", langGet(L_MISC_421)); // "GET READY!"
+		sprintf(buffer1, "%s", _("GET READY!\n")); // "GET READY!"
 		return true;
 	}
 
@@ -3521,7 +3526,7 @@ bool frGetHudMiddleSubtext(char *buffer1, char *buffer2)
 		}
 	}
 
-	sprintf(buffer1, "%s", langGet(L_MISC_422)); // "LIMIT:"
+	sprintf(buffer1, "%s", _("LIMIT:")); // "LIMIT:"
 	sprintf(buffer2, "%02d:%02d\n", mins, secs);
 	return true;
 }
@@ -3532,12 +3537,12 @@ bool frGetHudMiddleSubtext(char *buffer)
 	s32 mins;
 
 	if (g_FrData.timetaken < TICKS(-180)) {
-		sprintf(buffer, "%s", langGet(L_MISC_420)); // "FIRE TO START"
+		sprintf(buffer, "%s", _("FIRE TO START\n")); // "FIRE TO START"
 		return false;
 	}
 
 	if (g_FrData.timetaken < 0) {
-		sprintf(buffer, "%s", langGet(L_MISC_421)); // "GET READY!"
+		sprintf(buffer, "%s", _("GET READY!\n")); // "GET READY!"
 		return true;
 	}
 
@@ -3555,7 +3560,7 @@ bool frGetHudMiddleSubtext(char *buffer)
 		}
 	}
 
-	sprintf(buffer, "%s %02d:%02d\n", langGet(L_MISC_422), mins, secs); // "LIMIT:"
+	sprintf(buffer, "%s %02d:%02d\n", _("LIMIT:"), mins, secs); // "LIMIT:"
 	return true;
 }
 #endif
@@ -3564,11 +3569,11 @@ bool frGetHudMiddleSubtext(char *buffer)
 bool frGetFeedback(char *scorebuffer, char *zonebuffer, char *extrabuffer)
 {
 	u32 texts[] = {
-		L_MISC_423, // "ZONE 3"
-		L_MISC_424, // "ZONE 2"
-		L_MISC_425, // "ZONE 1"
-		L_MISC_426, // "BULL'S-EYE"
-		L_MISC_427, // "EXPLODED"
+		gettext_noop("ZONE 3\n"), // "ZONE 3"
+		gettext_noop("ZONE 2\n"), // "ZONE 2"
+		gettext_noop("ZONE 1\n"), // "ZONE 1"
+		gettext_noop("BULL'S-EYE\n"), // "BULL'S-EYE"
+		gettext_noop("EXPLODED\n"), // "EXPLODED"
 	};
 
 	sprintf(extrabuffer, "");
@@ -3615,12 +3620,12 @@ bool frGetFeedback(char *scorebuffer, char *zonebuffer, char *extrabuffer)
 #else
 bool frGetFeedback(char *scorebuffer, char *zonebuffer)
 {
-	u32 texts[] = {
-		L_MISC_423, // "ZONE 3"
-		L_MISC_424, // "ZONE 2"
-		L_MISC_425, // "ZONE 1"
-		L_MISC_426, // "BULL'S-EYE"
-		L_MISC_427, // "EXPLODED"
+	char *texts[] = {
+		_("ZONE 3\n"), // "ZONE 3"
+		_("ZONE 2\n"), // "ZONE 2"
+		_("ZONE 1\n"), // "ZONE 1"
+		_("BULL'S-EYE\n"), // "BULL'S-EYE"
+		_("EXPLODED\n"), // "EXPLODED"
 	};
 
 	if (g_FrData.feedbackzone) {
@@ -3640,19 +3645,19 @@ bool frGetFeedback(char *scorebuffer, char *zonebuffer)
 
 		switch (g_FrData.feedbackzone) {
 		case FRZONE_RING3:
-			sprintf(zonebuffer, "%s", langGet(texts[0]));
+			sprintf(zonebuffer, "%s", texts[0]);
 			return true;
 		case FRZONE_RING2:
-			sprintf(zonebuffer, "%s", langGet(texts[1]));
+			sprintf(zonebuffer, "%s", texts[1]);
 			return true;
 		case FRZONE_RING1:
-			sprintf(zonebuffer, "%s", langGet(texts[2]));
+			sprintf(zonebuffer, "%s", texts[2]);
 			return true;
 		case FRZONE_BULLSEYE:
-			sprintf(zonebuffer, "%s", langGet(texts[3]));
+			sprintf(zonebuffer, "%s", texts[3]);
 			return true;
 		case FRZONE_EXPLODE:
-			sprintf(zonebuffer, "%s", langGet(texts[4]));
+			sprintf(zonebuffer, "%s", texts[4]);
 			return true;
 		}
 

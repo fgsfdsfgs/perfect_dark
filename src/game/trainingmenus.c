@@ -1,3 +1,4 @@
+#include <stdint.h>
 #include <ultra64.h>
 #include "constants.h"
 #include "game/chraction.h"
@@ -24,6 +25,9 @@
 #include "types.h"
 #ifndef PLATFORM_N64
 #include "video.h"
+#include <libintl.h>
+#define _(String) gettext (String)
+#define gettext_noop(String) String
 #endif
 
 #define NUM_BIO_LOCATIONS 14
@@ -264,10 +268,10 @@ MenuDialogHandlerResult frTrainingStatsMenuDialog(s32 operation, struct menudial
  */
 MenuItemHandlerResult frDifficultyDropdownMenuHandler(s32 operation, struct menuitem *item, union handlerdata *data)
 {
-	u16 names[] = {
-		L_MPMENU_439, // "Bronze"
-		L_MPMENU_440, // "Silver"
-		L_MPMENU_441, // "Gold"
+	char *names[] = {
+		_("Bronze\n"), // "Bronze"
+		_("Silver\n"), // "Silver"
+		_("Gold\n"), // "Gold"
 	};
 
 	switch (operation) {
@@ -279,7 +283,7 @@ MenuItemHandlerResult frDifficultyDropdownMenuHandler(s32 operation, struct menu
 		}
 		break;
 	case MENUOP_GETOPTIONTEXT:
-		return (uintptr_t) langGet(names[data->dropdown.value]);
+		return (uintptr_t) names[data->dropdown.value];
 	case MENUOP_SET:
 		frSetDifficulty(data->dropdown.value);
 		menuPushDialog(&g_FrTrainingInfoPreGameMenuDialog);
@@ -319,7 +323,7 @@ char *frPrimaryFunctionMenuText(struct menuitem *item)
 	struct weaponfunc *func = weaponGetFunctionById(frGetWeaponBySlot(frGetSlot()), FUNC_PRIMARY);
 
 	if (func) {
-		return langGet(func->name);
+		return _(func->name);
 	}
 
 	return "\n";
@@ -330,7 +334,7 @@ char *frSecondaryFunctionMenuText(struct menuitem *item)
 	struct weaponfunc *func = weaponGetFunctionById(frGetWeaponBySlot(frGetSlot()), FUNC_SECONDARY);
 
 	if (func) {
-		return langGet(func->name);
+		return _(func->name);
 	}
 
 	return "\n";
@@ -338,30 +342,30 @@ char *frSecondaryFunctionMenuText(struct menuitem *item)
 
 char *frMenuTextFailReason(struct menuitem *item)
 {
-	u16 reasons[] = {
-		L_MPMENU_456, // "Not Failed"
-		L_MPMENU_457, // "Out of Ammo"
-		L_MPMENU_458, // "Time Over"
-		L_MPMENU_459, // "Score Unattainable"
-		L_MPMENU_460, // "Too Inaccurate"
+	char *reasons[] = {
+		_("Not Failed\n"), // "Not Failed"
+		_("Out of Ammo\n"), // "Out of Ammo"
+		_("Time Over\n"), // "Time Over"
+		_("Score Unattainable\n"), // "Score Unattainable"
+		_("Too Inaccurate\n"), // "Too Inaccurate"
 	};
 
 	struct frdata *frdata = frGetData();
 
-	return langGet(reasons[frdata->failreason]);
+	return reasons[frdata->failreason];
 }
 
 char *frMenuTextDifficultyName(struct menuitem *item)
 {
-	u16 names[] = {
-		L_MPMENU_439, // "Bronze"
-		L_MPMENU_440, // "Silver"
-		L_MPMENU_441, // "Gold"
+	char *names[] = {
+		_("Bronze\n"), // "Bronze"
+		_("Silver\n"), // "Silver"
+		_("Gold\n"), // "Gold"
 	};
 
 	struct frdata *frdata = frGetData();
 
-	return langGet(names[frdata->difficulty]);
+	return names[frdata->difficulty];
 }
 
 char *frMenuTextTimeTakenValue(struct menuitem *item)
@@ -441,7 +445,7 @@ char *frMenuTextGoalScoreLabel(struct menuitem *item)
 	struct frdata *frdata = frGetData();
 
 	if (frdata->goalscore > 0) {
-		sprintf(g_StringPointer, "%s", langGet(L_MPMENU_475)); // "Goal Score:"
+		sprintf(g_StringPointer, "%s", _("Goal Score:\n")); // "Goal Score:"
 		return g_StringPointer;
 	}
 
@@ -465,9 +469,9 @@ char *frMenuTextMinAccuracyOrTargetsLabel(struct menuitem *item)
 	struct frdata *frdata = frGetData();
 
 	if (frdata->goalaccuracy > 0) {
-		sprintf(g_StringPointer, "%s", langGet(L_MPMENU_473)); // "Min Accuracy:"
+		sprintf(g_StringPointer, "%s", _("Min Accuracy:\n")); // "Min Accuracy:"
 	} else if (frdata->goaltargets != 255) {
-		sprintf(g_StringPointer, "%s", langGet(L_MPMENU_474)); // "Goal Targets:"
+		sprintf(g_StringPointer, "%s", _("Goal Targets:\n")); // "Goal Targets:"
 	} else {
 		return NULL;
 	}
@@ -495,7 +499,7 @@ char *frMenuTextTimeLimitLabel(struct menuitem *item)
 	struct frdata *frdata = frGetData();
 
 	if (frdata->timelimit != 255) {
-		sprintf(g_StringPointer, "%s", langGet(L_MPMENU_472)); // "Time Limit:"
+		sprintf(g_StringPointer, "%s", _("Time Limit:\n")); // "Time Limit:"
 	} else {
 		return NULL;
 	}
@@ -533,7 +537,7 @@ char *frMenuTextAmmoLimitLabel(struct menuitem *item)
 	struct frdata *frdata = frGetData();
 
 	if (frdata->ammolimit != 255) {
-		sprintf(g_StringPointer, "%s", langGet(L_MPMENU_471)); // "Ammo Limit:"
+		sprintf(g_StringPointer, "%s", _("Ammo Limit:\n")); // "Ammo Limit:"
 	} else {
 		return NULL;
 	}
@@ -698,7 +702,7 @@ MenuItemHandlerResult frScoringMenuHandler(s32 operation, struct menuitem *item,
 		gdl = textRenderProjected(gdl, &x, &y, text, g_CharsHandelGothicSm, g_FontHandelGothicSm, COLOUR(), viGetWidth(), viGetHeight(), 0, 0);
 
 		// "Bull's-eye"
-		sprintf(text, langGet(L_MPMENU_461));
+		sprintf(text, _("Bull's-eye\n"));
 		x = renderdata->x + 122;
 		y = renderdata->y + 14;
 		gdl = text0f153858(gdl, &x, &y, &textheight, &textwidth);
@@ -720,7 +724,7 @@ MenuItemHandlerResult frScoringMenuHandler(s32 operation, struct menuitem *item,
 		gdl = textRenderProjected(gdl, &x, &y, text, g_CharsHandelGothicSm, g_FontHandelGothicSm, COLOUR(), viGetWidth(), viGetHeight(), 0, 0);
 
 		// "Zone 1"
-		sprintf(text, langGet(L_MPMENU_462));
+		sprintf(text, _("Zone 1\n"));
 		x = renderdata->x + 122;
 		y = renderdata->y + (VERSION == VERSION_JPN_FINAL ? 26 : 25);
 		gdl = text0f153858(gdl, &x, &y, &textheight, &textwidth);
@@ -742,7 +746,7 @@ MenuItemHandlerResult frScoringMenuHandler(s32 operation, struct menuitem *item,
 		gdl = textRenderProjected(gdl, &x, &y, text, g_CharsHandelGothicSm, g_FontHandelGothicSm, COLOUR(), viGetWidth(), viGetHeight(), 0, 0);
 
 		// "Zone 2"
-		sprintf(text, langGet(L_MPMENU_463));
+		sprintf(text, _("Zone 2\n"));
 		x = renderdata->x + 122;
 		y = renderdata->y + (VERSION == VERSION_JPN_FINAL ? 38 : 36);
 		gdl = text0f153858(gdl, &x, &y, &textheight, &textwidth);
@@ -765,7 +769,7 @@ MenuItemHandlerResult frScoringMenuHandler(s32 operation, struct menuitem *item,
 
 		// "Zone 3"
 		// Note: developers forgot to remove last argument when copy/pasting
-		sprintf(text, langGet(L_MPMENU_464), frdata->numhitsring3);
+		sprintf(text, _("Zone 3\n"), frdata->numhitsring3);
 		x = renderdata->x + 122;
 		y = renderdata->y + (VERSION == VERSION_JPN_FINAL ? 50 : 47);
 		gdl = text0f153858(gdl, &x, &y, &textheight, &textwidth);
@@ -780,7 +784,7 @@ MenuItemHandlerResult frScoringMenuHandler(s32 operation, struct menuitem *item,
 		gdl = textRenderProjected(gdl, &x, &y, text, g_CharsHandelGothicSm, g_FontHandelGothicSm, COLOUR(), viGetWidth(), viGetHeight(), 0, 0);
 
 		// "Hit total"
-		sprintf(text, langGet(L_MPMENU_465));
+		sprintf(text, _("Hit total\n"));
 		x = renderdata->x + 133;
 		y = renderdata->y + 63;
 
@@ -807,35 +811,35 @@ MenuItemHandlerResult frScoringMenuHandler(s32 operation, struct menuitem *item,
 		gdl = textRenderProjected(gdl, &x, &y, text, g_CharsHandelGothicSm, g_FontHandelGothicSm, COLOUR(), viGetWidth(), viGetHeight(), 0, 0);
 
 		// "Scoring"
-		sprintf(text, langGet(L_MPMENU_466));
+		sprintf(text, _("Scoring\n"));
 		x = renderdata->x + 83;
 		y = renderdata->y + 1;
 		gdl = text0f153858(gdl, &x, &y, &textheight, &textwidth);
 		gdl = textRenderProjected(gdl, &x, &y, text, g_CharsHandelGothicSm, g_FontHandelGothicSm, COLOUR(), viGetWidth(), viGetHeight(), 0, 0);
 
 		// "10"
-		sprintf(text, langGet(L_MPMENU_467));
+		sprintf(text, _("10\n"));
 		x = renderdata->x + 38;
 		y = renderdata->y + 35;
 		gdl = text0f153858(gdl, &x, &y, &textheight, &textwidth);
 		gdl = textRenderProjected(gdl, &x, &y, text, g_CharsNumeric, g_FontNumeric, COLOURWHITE(), viGetWidth(), viGetHeight(), 0, 0);
 
 		// "5"
-		sprintf(text, langGet(L_MPMENU_468));
+		sprintf(text, _("5\n"));
 		x = renderdata->x + 32;
 		y = renderdata->y + 26;
 		gdl = text0f153858(gdl, &x, &y, &textheight, &textwidth);
 		gdl = textRenderProjected(gdl, &x, &y, text, g_CharsNumeric, g_FontNumeric, COLOURWHITE(), viGetWidth(), viGetHeight(), 0, 0);
 
 		// "2"
-		sprintf(text, langGet(L_MPMENU_469));
+		sprintf(text, _("2\n"));
 		x = renderdata->x + 24;
 		y = renderdata->y + 16;
 		gdl = text0f153858(gdl, &x, &y, &textheight, &textwidth);
 		gdl = textRenderProjected(gdl, &x, &y, text, g_CharsNumeric, g_FontNumeric, COLOURWHITE(), viGetWidth(), viGetHeight(), 0, 0);
 
 		// "1"
-		sprintf(text, langGet(L_MPMENU_470));
+		sprintf(text, _("1\n"));
 		x = renderdata->x + 14;
 		y = renderdata->y + 4;
 		gdl = text0f153858(gdl, &x, &y, &textheight, &textwidth);
@@ -902,32 +906,32 @@ struct menuitem g_FrDifficultyMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_00000002 | MENUITEMFLAG_LESSLEFTPADDING,
-		L_MPMENU_444, // "Select Difficulty:"
-		L_MPMENU_445, // ""
+		gettext_noop("Select Difficulty:\n"), // "Select Difficulty:"
+		0, // ""
 		NULL,
 	},
 	{
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_CENTRE,
-		L_MPMENU_439, // "Bronze"
-		L_OPTIONS_003, // ""
+		gettext_noop("Bronze\n"), // "Bronze"
+		0, // ""
 		frDifficultyMenuHandler,
 	},
 	{
 		MENUITEMTYPE_SELECTABLE,
 		1,
 		MENUITEMFLAG_SELECTABLE_CENTRE,
-		L_MPMENU_440, // "Silver"
-		L_OPTIONS_003, // ""
+		gettext_noop("Silver\n"), // "Silver"
+		0, // ""
 		frDifficultyMenuHandler,
 	},
 	{
 		MENUITEMTYPE_SELECTABLE,
 		2,
 		MENUITEMFLAG_SELECTABLE_CENTRE,
-		L_MPMENU_441, // "Gold"
-		L_OPTIONS_003, // ""
+		gettext_noop("Gold\n"), // "Gold"
+		0, // ""
 		frDifficultyMenuHandler,
 	},
 	{
@@ -942,7 +946,7 @@ struct menuitem g_FrDifficultyMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_CLOSESDIALOG | MENUITEMFLAG_SELECTABLE_CENTRE,
-		L_MPMENU_429, // "Cancel"
+		gettext_noop("Cancel\n"), // "Cancel"
 		0,
 		NULL,
 	},
@@ -951,7 +955,7 @@ struct menuitem g_FrDifficultyMenuItems[] = {
 
 struct menudialogdef g_FrDifficultyMenuDialog = {
 	MENUDIALOGTYPE_DEFAULT,
-	L_MPMENU_442, // "Difficulty"
+	gettext_noop("Difficulty\n"), // "Difficulty"
 	g_FrDifficultyMenuItems,
 	NULL,
 	MENUDIALOGFLAG_DISABLERESIZE,
@@ -963,7 +967,7 @@ struct menuitem g_FrWeaponListMenuItems[] = {
 		MENUITEMTYPE_LIST,
 		0,
 		MENUITEMFLAG_SELECTABLE_CLOSESDIALOG | MENUITEMFLAG_LIST_CUSTOMRENDER,
-		0x000000aa,
+		"", // previous 0x000000aa,
 		0,
 		frWeaponListMenuHandler,
 	},
@@ -972,7 +976,7 @@ struct menuitem g_FrWeaponListMenuItems[] = {
 
 struct menudialogdef g_FrWeaponListMenuDialog = {
 	MENUDIALOGTYPE_DEFAULT,
-	L_MPMENU_446, // "Weapon"
+	gettext_noop("Weapon\n"), // "Weapon"
 	g_FrWeaponListMenuItems,
 	NULL,
 	MENUDIALOGFLAG_DISABLERESIZE,
@@ -984,7 +988,7 @@ struct menuitem g_FrTrainingInfoInGameMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_00000002,
-		L_MPMENU_443, // "Difficulty:"
+		gettext_noop("Difficulty:\n"), // "Difficulty:"
 		(uintptr_t)&frMenuTextDifficultyName,
 		NULL,
 	},
@@ -992,7 +996,7 @@ struct menuitem g_FrTrainingInfoInGameMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_00000002,
-		(uintptr_t)&frMenuTextGoalScoreLabel,
+		&frMenuTextGoalScoreLabel,
 		(uintptr_t)&frMenuTextGoalScoreValue,
 		NULL,
 	},
@@ -1000,7 +1004,7 @@ struct menuitem g_FrTrainingInfoInGameMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_00000002,
-		(uintptr_t)&frMenuTextMinAccuracyOrTargetsLabel,
+		&frMenuTextMinAccuracyOrTargetsLabel,
 		(uintptr_t)&frMenuTextMinAccuracyOrTargetsValue,
 		NULL,
 	},
@@ -1008,7 +1012,7 @@ struct menuitem g_FrTrainingInfoInGameMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_00000002,
-		(uintptr_t)&frMenuTextTimeLimitLabel,
+		&frMenuTextTimeLimitLabel,
 		(uintptr_t)&frMenuTextTimeLimitValue,
 		NULL,
 	},
@@ -1016,7 +1020,7 @@ struct menuitem g_FrTrainingInfoInGameMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_00000002,
-		(uintptr_t)&frMenuTextAmmoLimitLabel,
+		&frMenuTextAmmoLimitLabel,
 		(uintptr_t)&frMenuTextAmmoLimitValue,
 		NULL,
 	},
@@ -1032,7 +1036,7 @@ struct menuitem g_FrTrainingInfoInGameMenuItems[] = {
 		MENUITEMTYPE_SCROLLABLE,
 		DESCRIPTION_FRWEAPON,
 		MENUITEMFLAG_DARKERBG,
-		0x0000010e,
+		"", //previous: 0x0000010e,
 		PAL ? 0x69 : 0x5f,
 		NULL,
 	},
@@ -1048,16 +1052,16 @@ struct menuitem g_FrTrainingInfoInGameMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_CLOSESDIALOG | MENUITEMFLAG_SELECTABLE_CENTRE,
-		L_OPTIONS_003, // ""
-		L_MPMENU_428, // "Resume"
+		"", // ""
+		(uintptr_t)gettext_noop("Resume\n"), // "Resume" //TODO - Lang: Fix it
 		frDetailsOkMenuHandler,
 	},
 	{
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_CLOSESDIALOG | MENUITEMFLAG_SELECTABLE_CENTRE,
-		L_OPTIONS_003, // ""
-		L_MPMENU_430, // "Abort"
+		"", // ""
+		(uintptr_t)gettext_noop("Abort\n"), // "Abort" //TODO - Lang: Fix it
 		frAbortMenuHandler,
 	},
 	{ MENUITEMTYPE_END },
@@ -1065,7 +1069,7 @@ struct menuitem g_FrTrainingInfoInGameMenuItems[] = {
 
 struct menudialogdef g_FrTrainingInfoInGameMenuDialog = {
 	MENUDIALOGTYPE_DEFAULT,
-	L_MPMENU_447, // "Training Info"
+	gettext_noop("Training Info\n"), // "Training Info"
 	g_FrTrainingInfoInGameMenuItems,
 	frTrainingInfoMenuDialog,
 	MENUDIALOGFLAG_0002 | MENUDIALOGFLAG_DISABLERESIZE | MENUDIALOGFLAG_0400,
@@ -1077,7 +1081,7 @@ struct menuitem g_FrTrainingInfoPreGameMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_00000002,
-		L_MPMENU_443, // "Difficulty:"
+		gettext_noop("Difficulty:\n"), // "Difficulty:"
 		(uintptr_t)&frMenuTextDifficultyName,
 		NULL,
 	},
@@ -1085,7 +1089,7 @@ struct menuitem g_FrTrainingInfoPreGameMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_00000002,
-		(uintptr_t)&frMenuTextGoalScoreLabel,
+		&frMenuTextGoalScoreLabel,
 		(uintptr_t)&frMenuTextGoalScoreValue,
 		NULL,
 	},
@@ -1093,7 +1097,7 @@ struct menuitem g_FrTrainingInfoPreGameMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_00000002,
-		(uintptr_t)&frMenuTextMinAccuracyOrTargetsLabel,
+		&frMenuTextMinAccuracyOrTargetsLabel,
 		(uintptr_t)&frMenuTextMinAccuracyOrTargetsValue,
 		NULL,
 	},
@@ -1101,7 +1105,7 @@ struct menuitem g_FrTrainingInfoPreGameMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_00000002,
-		(uintptr_t)&frMenuTextTimeLimitLabel,
+		&frMenuTextTimeLimitLabel,
 		(uintptr_t)&frMenuTextTimeLimitValue,
 		NULL,
 	},
@@ -1109,7 +1113,7 @@ struct menuitem g_FrTrainingInfoPreGameMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_00000002,
-		(uintptr_t)&frMenuTextAmmoLimitLabel,
+		&frMenuTextAmmoLimitLabel,
 		(uintptr_t)&frMenuTextAmmoLimitValue,
 		NULL,
 	},
@@ -1125,7 +1129,7 @@ struct menuitem g_FrTrainingInfoPreGameMenuItems[] = {
 		MENUITEMTYPE_SCROLLABLE,
 		DESCRIPTION_FRWEAPON,
 		MENUITEMFLAG_DARKERBG,
-		0x0000010e,
+		"", // previous: 0x0000010e,
 		PAL ? 0x69 : 0x5f,
 		NULL,
 	},
@@ -1141,16 +1145,16 @@ struct menuitem g_FrTrainingInfoPreGameMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_CLOSESDIALOG | MENUITEMFLAG_SELECTABLE_CENTRE,
-		L_OPTIONS_003, // ""
-		L_MPMENU_427, // "Ok"
+		"", // ""
+		(uintptr_t)gettext_noop("Ok\n"), // "Ok" //TODO - Lang: Fix it
 		frDetailsOkMenuHandler,
 	},
 	{
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_CLOSESDIALOG | MENUITEMFLAG_SELECTABLE_CENTRE,
-		L_OPTIONS_003, // ""
-		L_MPMENU_429, // "Cancel"
+		"", // ""
+		(uintptr_t)gettext_noop("Cancel\n"), // "Cancel" //TODO - Lang: Fix it
 		frAbortMenuHandler,
 	},
 	{ MENUITEMTYPE_END },
@@ -1158,7 +1162,7 @@ struct menuitem g_FrTrainingInfoPreGameMenuItems[] = {
 
 struct menudialogdef g_FrTrainingInfoPreGameMenuDialog = {
 	MENUDIALOGTYPE_DEFAULT,
-	L_MPMENU_447, // "Training Info"
+	gettext_noop("Training Info\n"), // "Training Info"
 	g_FrTrainingInfoPreGameMenuItems,
 	frTrainingInfoMenuDialog,
 	MENUDIALOGFLAG_0002 | MENUDIALOGFLAG_DISABLERESIZE | MENUDIALOGFLAG_0400,
@@ -1170,7 +1174,7 @@ struct menuitem g_FrCompletedMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_SELECTABLE_CENTRE,
-		L_MPMENU_449, // "Completed!"
+		gettext_noop("Completed!\n"), // "Completed!"
 		0,
 		NULL,
 	},
@@ -1188,7 +1192,7 @@ struct menuitem g_FrCompletedMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_00000002,
-		L_MPMENU_450, // "Score:"
+		gettext_noop("Score:\n"), // "Score:"
 		(uintptr_t)&frMenuTextScoreValue,
 		NULL,
 	},
@@ -1196,7 +1200,7 @@ struct menuitem g_FrCompletedMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_00000002,
-		L_MPMENU_451, // "Targets Destroyed:"
+		gettext_noop("Targets Destroyed:\n"), // "Targets Destroyed:"
 		(uintptr_t)&frMenuTextTargetsDestroyedValue,
 		NULL,
 	},
@@ -1212,7 +1216,7 @@ struct menuitem g_FrCompletedMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_00000002,
-		L_MPMENU_452, // "Difficulty:"
+		gettext_noop("Difficulty:\n"), // "Difficulty:"
 		(uintptr_t)&frMenuTextDifficultyName,
 		NULL,
 	},
@@ -1220,7 +1224,7 @@ struct menuitem g_FrCompletedMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_00000002,
-		L_MPMENU_453, // "Time Taken:"
+		gettext_noop("Time Taken:\n"), // "Time Taken:"
 		(uintptr_t)&frMenuTextTimeTakenValue,
 		NULL,
 	},
@@ -1236,7 +1240,7 @@ struct menuitem g_FrCompletedMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_00000002,
-		L_MPMENU_454, // "Weapon:"
+		gettext_noop("Weapon:\n"), // "Weapon:"
 		(uintptr_t)&frMenuTextWeaponName,
 		NULL,
 	},
@@ -1244,7 +1248,7 @@ struct menuitem g_FrCompletedMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_00000002,
-		L_MPMENU_455, // "Accuracy:"
+		gettext_noop("Accuracy:\n"), // "Accuracy:"
 		(uintptr_t)&frMenuTextAccuracyValue,
 		NULL,
 	},
@@ -1260,7 +1264,7 @@ struct menuitem g_FrCompletedMenuItems[] = {
 		MENUITEMTYPE_MODEL,
 		0,
 		MENUITEMFLAG_00000002 | MENUITEMFLAG_LIST_CUSTOMRENDER,
-		0x000000d2,
+		"", // previous 0x000000d2,
 		0x00000050,
 		frScoringMenuHandler,
 	},
@@ -1269,7 +1273,7 @@ struct menuitem g_FrCompletedMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_CENTRE,
-		L_MPWEAPONS_252, // "Continue"
+		gettext_noop("Continue\n"), // "Continue"
 		0,
 		menuhandlerFrFailedContinue,
 	},
@@ -1279,7 +1283,7 @@ struct menuitem g_FrCompletedMenuItems[] = {
 
 struct menudialogdef g_FrCompletedMenuDialog = {
 	MENUDIALOGTYPE_SUCCESS,
-	L_MPMENU_448, // "Training Stats"
+	gettext_noop("Training Stats\n"), // "Training Stats"
 	g_FrCompletedMenuItems,
 	frTrainingStatsMenuDialog,
 #if VERSION >= VERSION_NTSC_1_0
@@ -1296,7 +1300,7 @@ struct menuitem g_FrFailedMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_SELECTABLE_CENTRE,
-		(uintptr_t)&frMenuTextFailReason,
+		&frMenuTextFailReason,
 		0,
 		NULL,
 	},
@@ -1314,7 +1318,7 @@ struct menuitem g_FrFailedMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_00000002,
-		L_MPMENU_450, // "Score:"
+		gettext_noop("Score:\n"), // "Score:"
 		(uintptr_t)&frMenuTextScoreValue,
 		NULL,
 	},
@@ -1322,7 +1326,7 @@ struct menuitem g_FrFailedMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_00000002,
-		L_MPMENU_451, // "Targets Destroyed:"
+		gettext_noop("Targets Destroyed:\n"), // "Targets Destroyed:"
 		(uintptr_t)&frMenuTextTargetsDestroyedValue,
 		NULL,
 	},
@@ -1338,7 +1342,7 @@ struct menuitem g_FrFailedMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_00000002,
-		L_MPMENU_452, // "Difficulty:"
+		gettext_noop("Difficulty:\n"), // "Difficulty:"
 		(uintptr_t)&frMenuTextDifficultyName,
 		NULL,
 	},
@@ -1346,7 +1350,7 @@ struct menuitem g_FrFailedMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_00000002,
-		L_MPMENU_453, // "Time Taken:"
+		gettext_noop("Time Taken:\n"), // "Time Taken:"
 		(uintptr_t)&frMenuTextTimeTakenValue,
 		NULL,
 	},
@@ -1362,7 +1366,7 @@ struct menuitem g_FrFailedMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_00000002,
-		L_MPMENU_454, // "Weapon:"
+		gettext_noop("Weapon:\n"), // "Weapon:"
 		(uintptr_t)&frMenuTextWeaponName,
 		NULL,
 	},
@@ -1370,7 +1374,7 @@ struct menuitem g_FrFailedMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_00000002,
-		L_MPMENU_455, // "Accuracy:"
+		gettext_noop("Accuracy:\n"), // "Accuracy:"
 		(uintptr_t)&frMenuTextAccuracyValue,
 		NULL,
 	},
@@ -1386,7 +1390,7 @@ struct menuitem g_FrFailedMenuItems[] = {
 		MENUITEMTYPE_MODEL,
 		0,
 		MENUITEMFLAG_00000002 | MENUITEMFLAG_LIST_CUSTOMRENDER,
-		0x000000d2,
+		"", // previous 0x000000d2,
 		0x00000050,
 		frScoringMenuHandler,
 	},
@@ -1395,7 +1399,7 @@ struct menuitem g_FrFailedMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_CENTRE,
-		L_MPWEAPONS_252, // "Continue"
+		gettext_noop("Continue\n"), // "Continue"
 		0,
 		menuhandlerFrFailedContinue,
 	},
@@ -1405,7 +1409,7 @@ struct menuitem g_FrFailedMenuItems[] = {
 
 struct menudialogdef g_FrFailedMenuDialog = {
 	MENUDIALOGTYPE_DANGER,
-	L_MPMENU_448, // "Training Stats"
+	gettext_noop("Training Stats\n"), // "Training Stats"
 	g_FrFailedMenuItems,
 	frTrainingStatsMenuDialog,
 #if VERSION >= VERSION_NTSC_1_0
@@ -1420,8 +1424,8 @@ struct menudialogdef g_FrFailedMenuDialog = {
 MenuItemHandlerResult ciOfficeInformationMenuHandler(s32 operation, struct menuitem *item, union handlerdata *data)
 {
 	struct optiongroup groups[2] = {
-		{ 0, L_MPMENU_421 }, // "Character Profiles"
-		{ 0, L_MPMENU_422 }, // "Other Information"
+		{ 0, _("Character Profiles\n") }, // "Character Profiles"
+		{ 0, _("Other Information\n") }, // "Other Information"
 	};
 
 	s32 numunlockedchrbios = ciGetNumUnlockedChrBios();
@@ -1438,10 +1442,10 @@ MenuItemHandlerResult ciOfficeInformationMenuHandler(s32 operation, struct menui
 	case MENUOP_GETOPTIONTEXT:
 		if (data->list.value < numunlockedchrbios) {
 			chrbio = ciGetChrBioByBodynum(ciGetChrBioBodynumBySlot(data->list.value));
-			return (uintptr_t) langGet(chrbio->name);
+			return (uintptr_t) _(chrbio->name);
 		} else {
 			miscbio = ciGetMiscBio(ciGetMiscBioIndexBySlot(data->list.value - numunlockedchrbios));
-			return (uintptr_t) langGet(miscbio->name);
+			return (uintptr_t) _(miscbio->name);
 		}
 		break;
 	case MENUOP_SET:
@@ -1459,7 +1463,7 @@ MenuItemHandlerResult ciOfficeInformationMenuHandler(s32 operation, struct menui
 		data->list.value = 2;
 		break;
 	case MENUOP_GETOPTGROUPTEXT:
-		return (uintptr_t) langGet(groups[data->list.value].name);
+		return (uintptr_t) groups[data->list.value].name;
 	case MENUOP_GETGROUPSTARTINDEX:
 		data->list.groupstartindex = data->list.value == 0 ? 0 : numunlockedchrbios;
 		break;
@@ -1473,7 +1477,7 @@ struct menuitem g_BioListMenuItems[] = {
 		MENUITEMTYPE_LIST,
 		0,
 		MENUITEMFLAG_SELECTABLE_CLOSESDIALOG,
-		0x000000c8,
+		"", // previous 0x000000c8,
 		0,
 		ciOfficeInformationMenuHandler,
 	},
@@ -1482,7 +1486,7 @@ struct menuitem g_BioListMenuItems[] = {
 
 struct menudialogdef g_BioListMenuDialog = {
 	MENUDIALOGTYPE_DEFAULT,
-	L_MPMENU_418, // "Information"
+	gettext_noop("Information\n"), // "Information"
 	g_BioListMenuItems,
 	NULL,
 	0,
@@ -1494,7 +1498,7 @@ struct menuitem g_NowSafeMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_SELECTABLE_CENTRE,
-		L_MPMENU_437, // "It is now safe to turn off your computer."
+		gettext_noop("It is now safe to turn off your computer.\n"), // "It is now safe to turn off your computer."
 		0,
 		NULL,
 	},
@@ -1510,7 +1514,7 @@ struct menuitem g_NowSafeMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_CLOSESDIALOG,
-		L_MPMENU_438, // "Cancel"
+		gettext_noop("Cancel\n"), // "Cancel"
 		0,
 		NULL,
 	},
@@ -1519,7 +1523,7 @@ struct menuitem g_NowSafeMenuItems[] = {
 
 struct menudialogdef g_NowSafeMenuDialog = {
 	MENUDIALOGTYPE_DEFAULT,
-	L_MPMENU_436, // "Cheats"
+	gettext_noop("Cheats\n"), // "Cheats"
 	g_NowSafeMenuItems,
 	NULL,
 	MENUDIALOGFLAG_DISABLERESIZE,
@@ -1693,7 +1697,7 @@ MenuDialogHandlerResult ciCharacterProfileMenuDialog(s32 operation, struct menud
 char *ciMenuTextChrBioName(struct menuitem *item)
 {
 	struct chrbio *bio = ciGetChrBioByBodynum(ciGetChrBioBodynumBySlot(g_ChrBioSlot));
-	sprintf(g_StringPointer, "%s\n", langGet(bio->name));
+	sprintf(g_StringPointer, "%s\n", _(bio->name));
 
 	return g_StringPointer;
 }
@@ -1701,7 +1705,7 @@ char *ciMenuTextChrBioName(struct menuitem *item)
 char *ciMenuTextChrBioAge(struct menuitem *item)
 {
 	struct chrbio *bio = ciGetChrBioByBodynum(ciGetChrBioBodynumBySlot(g_ChrBioSlot));
-	sprintf(g_StringPointer, "%s\n", langGet(bio->age));
+	sprintf(g_StringPointer, "%s\n", _(bio->age));
 
 	return g_StringPointer;
 }
@@ -1709,7 +1713,7 @@ char *ciMenuTextChrBioAge(struct menuitem *item)
 char *ciMenuTextChrBioRace(struct menuitem *item)
 {
 	struct chrbio *bio = ciGetChrBioByBodynum(ciGetChrBioBodynumBySlot(g_ChrBioSlot));
-	sprintf(g_StringPointer, "%s\n", langGet(bio->race));
+	sprintf(g_StringPointer, "%s\n", _(bio->race));
 
 	return g_StringPointer;
 }
@@ -1718,7 +1722,7 @@ char *ciMenuTextMiscBioName(struct menuitem *item)
 {
 	struct miscbio *bio = ciGetMiscBio(ciGetMiscBioIndexBySlot(g_ChrBioSlot - ciGetNumUnlockedChrBios()));
 
-	sprintf(g_StringPointer, "%s\n", langGet(bio->name));
+	sprintf(g_StringPointer, "%s\n", _(bio->name));
 
 	return g_StringPointer;
 }
@@ -1784,7 +1788,7 @@ struct menuitem g_BioProfileMenuItems[] = {
 		MENUITEMTYPE_MODEL,
 		0,
 		MENUITEMFLAG_00000002,
-		0x00000046,
+		"", // previous: 0x00000046,
 		0x00000096,
 		NULL,
 	},
@@ -1792,7 +1796,7 @@ struct menuitem g_BioProfileMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_NEWCOLUMN | MENUITEMFLAG_00000002,
-		L_MPMENU_432, // "Name:"
+		gettext_noop("Name:\n"), // "Name:"
 		(uintptr_t)&ciMenuTextChrBioName,
 		NULL,
 	},
@@ -1800,7 +1804,7 @@ struct menuitem g_BioProfileMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_00000002,
-		L_MPMENU_433, // "Age:"
+		gettext_noop("Age:\n"), // "Age:"
 		(uintptr_t)&ciMenuTextChrBioAge,
 		NULL,
 	},
@@ -1808,7 +1812,7 @@ struct menuitem g_BioProfileMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_00000002,
-		L_MPMENU_434, // "Race:"
+		gettext_noop("Race:\n"), // "Race:"
 		(uintptr_t)&ciMenuTextChrBioRace,
 		NULL,
 	},
@@ -1824,7 +1828,7 @@ struct menuitem g_BioProfileMenuItems[] = {
 		MENUITEMTYPE_SCROLLABLE,
 		DESCRIPTION_CHRBIO,
 		0,
-		0x000000b4,
+		"",// previous: 0x000000b4,
 		0x00000064,
 		NULL,
 	},
@@ -1840,7 +1844,7 @@ struct menuitem g_BioProfileMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_00000002 | MENUITEMFLAG_SELECTABLE_CENTRE,
-		L_MPMENU_435, // "Press the B Button to go back."
+		gettext_noop("Press the B Button to go back.\n"), // "Press the B Button to go back."
 		0,
 		NULL,
 	},
@@ -1849,7 +1853,7 @@ struct menuitem g_BioProfileMenuItems[] = {
 
 struct menudialogdef g_BioProfileMenuDialog = {
 	MENUDIALOGTYPE_DEFAULT,
-	L_MPMENU_431, // "Character Profile"
+	gettext_noop("Character Profile\n"), // "Character Profile"
 	g_BioProfileMenuItems,
 	ciCharacterProfileMenuDialog,
 	MENUDIALOGFLAG_0002,
@@ -1861,7 +1865,7 @@ struct menuitem g_BioTextMenuItems[] = {
 		MENUITEMTYPE_SCROLLABLE,
 		DESCRIPTION_MISCBIO,
 		0,
-		0x000000c8,
+		"", // previous 0x000000c8,
 		0x00000096,
 		NULL,
 	},
@@ -1877,7 +1881,7 @@ struct menuitem g_BioTextMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_00000002 | MENUITEMFLAG_SELECTABLE_CENTRE,
-		L_MPMENU_414, // "Press the B Button to go back."
+		gettext_noop("Press the B Button to go back.\n"), // "Press the B Button to go back."
 		0,
 		NULL,
 	},
@@ -1886,7 +1890,7 @@ struct menuitem g_BioTextMenuItems[] = {
 
 struct menudialogdef g_BioTextMenuDialog = {
 	MENUDIALOGTYPE_DEFAULT,
-	(uintptr_t)&ciMenuTextMiscBioName,
+	&ciMenuTextMiscBioName,
 	g_BioTextMenuItems,
 	NULL,
 	MENUDIALOGFLAG_DISABLERESIZE,
@@ -1898,7 +1902,7 @@ struct menuitem g_DtListMenuItems[] = {
 		MENUITEMTYPE_LIST,
 		0,
 		MENUITEMFLAG_SELECTABLE_CLOSESDIALOG,
-		0x000000a0,
+		"", // previous 0x000000a0,
 		0,
 		dtDeviceListMenuHandler,
 	},
@@ -1907,7 +1911,7 @@ struct menuitem g_DtListMenuItems[] = {
 
 struct menudialogdef g_DtListMenuDialog = {
 	MENUDIALOGTYPE_DEFAULT,
-	L_MPMENU_417, // "Device List"
+	gettext_noop("Device List\n"), // "Device List"
 	g_DtListMenuItems,
 	NULL,
 	0,
@@ -2031,10 +2035,10 @@ char *dtMenuTextOkOrResume(struct menuitem *item)
 	struct trainingdata *data = dtGetData();
 
 	if (data->intraining) {
-		return langGet(L_MPMENU_428); // "Resume"
+		return _("Resume\n"); // "Resume"
 	}
 
-	return langGet(L_MPMENU_427); // "Ok"
+	return _("Ok"); // "Ok"
 }
 
 char *dtMenuTextCancelOrAbort(struct menuitem *item)
@@ -2042,10 +2046,10 @@ char *dtMenuTextCancelOrAbort(struct menuitem *item)
 	struct trainingdata *data = dtGetData();
 
 	if (data->intraining) {
-		return langGet(L_MPMENU_430); // "Abort"
+		return _("Abort\n"); // "Abort"
 	}
 
-	return langGet(L_MPMENU_429); // "Cancel"
+	return _("Cancel\n"); // "Cancel"
 }
 
 char *dtMenuTextTimeTakenValue(struct menuitem *item)
@@ -2149,10 +2153,10 @@ char *htMenuTextOkOrResume(struct menuitem *item)
 	struct trainingdata *data = getHoloTrainingData();
 
 	if (data->intraining) {
-		return langGet(L_MPMENU_428); // "Resume"
+		return _("Resume\n"); // "Resume"
 	}
 
-	return langGet(L_MPMENU_427); // "Ok"
+	return _("Ok\n"); // "Ok"
 }
 
 char *htMenuTextCancelOrAbort(struct menuitem *item)
@@ -2160,10 +2164,10 @@ char *htMenuTextCancelOrAbort(struct menuitem *item)
 	struct trainingdata *data = getHoloTrainingData();
 
 	if (data->intraining) {
-		return langGet(L_MPMENU_430); // "Abort"
+		return _("Abort\n"); // "Abort"
 	}
 
-	return langGet(L_MPMENU_429); // "Cancel"
+	return _("Cancel\n"); // "Cancel"
 }
 
 char *htMenuTextTimeTakenValue(struct menuitem *item)
@@ -2201,7 +2205,7 @@ char *bioMenuTextName(struct menuitem *item)
 {
 	struct hangarbio *bio = ciGetHangarBio(ciGetHangarBioIndexBySlot(g_HangarBioSlot));
 
-	return langGet(bio->name);
+	return _(bio->name);
 }
 
 /**
@@ -2212,7 +2216,7 @@ char *ciMenuTextHangarBioSubheading(struct menuitem *item)
 {
 	s32 index = 0;
 	struct hangarbio *bio = ciGetHangarBio(ciGetHangarBioIndexBySlot(g_HangarBioSlot));
-	char *name = langGet(bio->name);
+	char *name = _(bio->name);
 
 	while (name[index] != '|') {
 		index++;
@@ -2228,7 +2232,7 @@ struct menuitem g_DtDetailsMenuItems[] = {
 		MENUITEMTYPE_SCROLLABLE,
 		DESCRIPTION_DEVICETRAINING,
 		0,
-		0x000000aa,
+		"", // previous 0x000000aa,
 		PAL ? 0xd6 : 0xbe,
 		NULL,
 	},
@@ -2236,7 +2240,7 @@ struct menuitem g_DtDetailsMenuItems[] = {
 		MENUITEMTYPE_MODEL,
 		0,
 		MENUITEMFLAG_NEWCOLUMN | MENUITEMFLAG_00000002,
-		0x0000008c,
+		"", // previous: 0x0000008c,
 		PAL ? 0xb4 : 0x9c,
 		NULL,
 	},
@@ -2252,7 +2256,7 @@ struct menuitem g_DtDetailsMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_CLOSESDIALOG,
-		(uintptr_t)&dtMenuTextOkOrResume,
+		&dtMenuTextOkOrResume,
 		0,
 		menuhandlerDtOkOrResume,
 	},
@@ -2260,7 +2264,7 @@ struct menuitem g_DtDetailsMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_CLOSESDIALOG,
-		(uintptr_t)&dtMenuTextCancelOrAbort,
+		&dtMenuTextCancelOrAbort,
 		0,
 		menuhandler001a6514,
 	},
@@ -2269,7 +2273,7 @@ struct menuitem g_DtDetailsMenuItems[] = {
 
 struct menudialogdef g_DtDetailsMenuDialog = {
 	MENUDIALOGTYPE_DEFAULT,
-	(uintptr_t)&dtMenuTextName,
+	&dtMenuTextName,
 	g_DtDetailsMenuItems,
 	dtTrainingDetailsMenuDialog,
 	MENUDIALOGFLAG_0002 | MENUDIALOGFLAG_STARTSELECTS | MENUDIALOGFLAG_DISABLERESIZE,
@@ -2281,7 +2285,7 @@ struct menuitem g_DtFailedMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_00000002 | MENUITEMFLAG_LESSLEFTPADDING | MENUITEMFLAG_SELECTABLE_CENTRE,
-		L_MPMENU_426, // "Failed!"
+		gettext_noop("Failed!\n"), // "Failed!"
 		0,
 		NULL,
 	},
@@ -2297,7 +2301,7 @@ struct menuitem g_DtFailedMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_00000002,
-		L_MPMENU_424, // "Time Taken:"
+		gettext_noop("Time Taken:\n"), // "Time Taken:"
 		(uintptr_t)&dtMenuTextTimeTakenValue,
 		NULL,
 	},
@@ -2313,7 +2317,7 @@ struct menuitem g_DtFailedMenuItems[] = {
 		MENUITEMTYPE_SCROLLABLE,
 		DESCRIPTION_DEVICETIP1,
 		0,
-		0x00000082,
+		"", // previous: 0x00000082,
 		PAL ? 110 : 100,
 		NULL,
 	},
@@ -2322,7 +2326,7 @@ struct menuitem g_DtFailedMenuItems[] = {
 
 struct menudialogdef g_DtFailedMenuDialog = {
 	MENUDIALOGTYPE_DANGER,
-	L_MPMENU_423, // "Training Stats"
+	gettext_noop("Training Stats\n"), // "Training Stats"
 	g_DtFailedMenuItems,
 	menudialogDeviceTrainingResults,
 	MENUDIALOGFLAG_DISABLERESIZE,
@@ -2334,7 +2338,7 @@ struct menuitem g_DtCompletedMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_00000002 | MENUITEMFLAG_LESSLEFTPADDING | MENUITEMFLAG_SELECTABLE_CENTRE,
-		L_MPMENU_425, // "Completed!"
+		gettext_noop("Completed!\n"), // "Completed!"
 		0,
 		NULL,
 	},
@@ -2350,7 +2354,7 @@ struct menuitem g_DtCompletedMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_00000002,
-		L_MPMENU_424, // "Time Taken:"
+		gettext_noop("Time Taken:\n"), // "Time Taken:"
 		(uintptr_t)&dtMenuTextTimeTakenValue,
 		NULL,
 	},
@@ -2366,7 +2370,7 @@ struct menuitem g_DtCompletedMenuItems[] = {
 		MENUITEMTYPE_SCROLLABLE,
 		DESCRIPTION_DEVICETIP2,
 		0,
-		0x00000082,
+		"", // previous: 0x00000082,
 		PAL ? 110 : 100,
 		NULL,
 	},
@@ -2375,7 +2379,7 @@ struct menuitem g_DtCompletedMenuItems[] = {
 
 struct menudialogdef g_DtCompletedMenuDialog = {
 	MENUDIALOGTYPE_SUCCESS,
-	L_MPMENU_423, // "Training Stats"
+	gettext_noop("Training Stats\n"), // "Training Stats"
 	g_DtCompletedMenuItems,
 	menudialogDeviceTrainingResults,
 	MENUDIALOGFLAG_DISABLERESIZE,
@@ -2387,7 +2391,7 @@ struct menuitem g_HtListMenuItems[] = {
 		MENUITEMTYPE_LIST,
 		0,
 		MENUITEMFLAG_SELECTABLE_CLOSESDIALOG,
-		0x000000a0,
+		"", // previous 0x000000a0,
 		0,
 		htHoloListMenuHandler,
 	},
@@ -2396,7 +2400,7 @@ struct menuitem g_HtListMenuItems[] = {
 
 struct menudialogdef g_HtListMenuDialog = {
 	MENUDIALOGTYPE_DEFAULT,
-	L_MPMENU_416, // "Holotraining"
+	gettext_noop("Holotraining\n"), // "Holotraining"
 	g_HtListMenuItems,
 	NULL,
 	0,
@@ -2408,7 +2412,7 @@ struct menuitem g_HtDetailsMenuItems[] = {
 		MENUITEMTYPE_SCROLLABLE,
 		DESCRIPTION_HOLOTRAINING,
 		0,
-		0x000000aa,
+		"", // previous 0x000000aa,
 		0x000000be,
 		NULL,
 	},
@@ -2416,7 +2420,7 @@ struct menuitem g_HtDetailsMenuItems[] = {
 		MENUITEMTYPE_MODEL,
 		0,
 		MENUITEMFLAG_NEWCOLUMN | MENUITEMFLAG_00000002,
-		0x0000008c,
+		"", // previous: 0x0000008c,
 		0x0000009c,
 		NULL,
 	},
@@ -2432,7 +2436,7 @@ struct menuitem g_HtDetailsMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_CLOSESDIALOG,
-		(uintptr_t)&htMenuTextOkOrResume,
+		&htMenuTextOkOrResume,
 		0,
 		menuhandler001a6a34,
 	},
@@ -2440,7 +2444,7 @@ struct menuitem g_HtDetailsMenuItems[] = {
 		MENUITEMTYPE_SELECTABLE,
 		0,
 		MENUITEMFLAG_SELECTABLE_CLOSESDIALOG,
-		(uintptr_t)&htMenuTextCancelOrAbort,
+		&htMenuTextCancelOrAbort,
 		0,
 		menuhandler001a6a70,
 	},
@@ -2449,7 +2453,7 @@ struct menuitem g_HtDetailsMenuItems[] = {
 
 struct menudialogdef g_HtDetailsMenuDialog = {
 	MENUDIALOGTYPE_DEFAULT,
-	(uintptr_t)&htMenuTextName,
+	&htMenuTextName,
 	g_HtDetailsMenuItems,
 	menudialog001a6aa4,
 	MENUDIALOGFLAG_0002 | MENUDIALOGFLAG_STARTSELECTS | MENUDIALOGFLAG_DISABLERESIZE,
@@ -2461,7 +2465,7 @@ struct menuitem g_HtFailedMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_00000002 | MENUITEMFLAG_LESSLEFTPADDING | MENUITEMFLAG_SELECTABLE_CENTRE,
-		L_MPMENU_426, // "Failed!"
+		gettext_noop("Failed!\n"), // "Failed!"
 		0,
 		NULL,
 	},
@@ -2477,7 +2481,7 @@ struct menuitem g_HtFailedMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_00000002,
-		L_MPMENU_424, // "Time Taken:"
+		gettext_noop("Time Taken:\n"), // "Time Taken:"
 		(uintptr_t)&htMenuTextTimeTakenValue,
 		NULL,
 	},
@@ -2493,7 +2497,7 @@ struct menuitem g_HtFailedMenuItems[] = {
 		MENUITEMTYPE_SCROLLABLE,
 		DESCRIPTION_HOLOTIP1,
 		0,
-		0x00000082,
+		"", // previous: 0x00000082,
 #if VERSION >= VERSION_JPN_FINAL
 		120,
 #elif PAL
@@ -2508,7 +2512,7 @@ struct menuitem g_HtFailedMenuItems[] = {
 
 struct menudialogdef g_HtFailedMenuDialog = {
 	MENUDIALOGTYPE_DANGER,
-	L_MPMENU_423, // "Training Stats"
+	gettext_noop("Training Stats\n"), // "Training Stats"
 	g_HtFailedMenuItems,
 	menudialogFiringRangeResults,
 	MENUDIALOGFLAG_DISABLERESIZE,
@@ -2520,7 +2524,7 @@ struct menuitem g_HtCompletedMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_00000002 | MENUITEMFLAG_LESSLEFTPADDING | MENUITEMFLAG_SELECTABLE_CENTRE,
-		L_MPMENU_425, // "Completed!"
+		gettext_noop("Completed!\n"), // "Completed!"
 		0,
 		NULL,
 	},
@@ -2536,7 +2540,7 @@ struct menuitem g_HtCompletedMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_00000002,
-		L_MPMENU_424, // "Time Taken:"
+		gettext_noop("Time Taken:\n"), // "Time Taken:"
 		(uintptr_t)&htMenuTextTimeTakenValue,
 		NULL,
 	},
@@ -2552,7 +2556,7 @@ struct menuitem g_HtCompletedMenuItems[] = {
 		MENUITEMTYPE_SCROLLABLE,
 		DESCRIPTION_HOLOTIP2,
 		0,
-		0x00000082,
+		"", // previous: 0x00000082,
 #if VERSION >= VERSION_JPN_FINAL
 		120,
 #elif PAL
@@ -2567,7 +2571,7 @@ struct menuitem g_HtCompletedMenuItems[] = {
 
 struct menudialogdef g_HtCompletedMenuDialog = {
 	MENUDIALOGTYPE_SUCCESS,
-	L_MPMENU_423, // "Training Stats"
+	gettext_noop("Training Stats\n"), // "Training Stats"
 	g_HtCompletedMenuItems,
 	menudialogFiringRangeResults,
 	MENUDIALOGFLAG_DISABLERESIZE,
@@ -2577,8 +2581,8 @@ struct menudialogdef g_HtCompletedMenuDialog = {
 MenuItemHandlerResult ciHangarInformationMenuHandler(s32 operation, struct menuitem *item, union handlerdata *data)
 {
 	struct optiongroup groups[2] = {
-		{ 0, L_MPMENU_419 }, // "Locations"
-		{ 0, L_MPMENU_420 }, // "Vehicles"
+		{ 0, _("Locations\n") }, // "Locations"
+		{ 0, _("Vehicles\n") }, // "Vehicles"
 	};
 
 	s32 bioindex;
@@ -2592,7 +2596,7 @@ MenuItemHandlerResult ciHangarInformationMenuHandler(s32 operation, struct menui
 		break;
 	case MENUOP_GETOPTIONTEXT:
 		bio = ciGetHangarBio(ciGetHangarBioIndexBySlot(data->list.value));
-		return (uintptr_t) langGet(bio->name);
+		return (uintptr_t) _(bio->name);
 	case MENUOP_SET:
 		g_HangarBioSlot = data->list.value;
 		bioindex = ciGetHangarBioIndexBySlot(g_HangarBioSlot);
@@ -2610,7 +2614,7 @@ MenuItemHandlerResult ciHangarInformationMenuHandler(s32 operation, struct menui
 		data->list.value = 2;
 		break;
 	case MENUOP_GETOPTGROUPTEXT:
-		return (uintptr_t) langGet(groups[data->list.value].name);
+		return (uintptr_t) groups[data->list.value].name;
 	case MENUOP_GETGROUPSTARTINDEX:
 		data->list.groupstartindex = data->list.value == 0 ? 0 : groups[1].offset;
 		break;
@@ -2659,7 +2663,8 @@ MenuItemHandlerResult ciHangarTitleMenuHandler(s32 operation, struct menuitem *i
 			leftmargin = -1;
 		} else {
 			// Vehicle bio
-			leftmargin = item->param2 / 2;
+			//leftmargin = item->title / 2; // TODO - Lang: Fix it
+			leftmargin = 1;
 		}
 
 		gdl = text0f153628(gdl);
@@ -2812,7 +2817,7 @@ struct menuitem g_HangarDetailsMenuItems[] = {
 		MENUITEMTYPE_MODEL,
 		0,
 		MENUITEMFLAG_00000002 | MENUITEMFLAG_LIST_CUSTOMRENDER,
-		0x00000104,
+		"", // previous: 0x00000104,
 		0x0000002c,
 		ciHangarTitleMenuHandler,
 	},
@@ -2828,7 +2833,7 @@ struct menuitem g_HangarDetailsMenuItems[] = {
 		MENUITEMTYPE_SCROLLABLE,
 		DESCRIPTION_HANGARBIO,
 		0,
-		0x00000104,
+		"", // previous: 0x00000104,
 		0x0000005a,
 		NULL,
 	},
@@ -2844,7 +2849,7 @@ struct menuitem g_HangarDetailsMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_00000002 | MENUITEMFLAG_SELECTABLE_CENTRE,
-		L_MPMENU_414, // "Press the B Button to go back."
+		gettext_noop("Press the B Button to go back.\n"), // "Press the B Button to go back."
 		0,
 		NULL,
 	},
@@ -2856,7 +2861,7 @@ struct menuitem g_HangarVehicleHolographMenuItems[] = {
 		MENUITEMTYPE_MODEL,
 		0,
 		MENUITEMFLAG_00000002,
-		0x00000104,
+		"", // previous: 0x00000104,
 		0x0000006e,
 		NULL,
 	},
@@ -2872,7 +2877,7 @@ struct menuitem g_HangarVehicleHolographMenuItems[] = {
 		MENUITEMTYPE_LABEL,
 		0,
 		MENUITEMFLAG_00000002 | MENUITEMFLAG_SELECTABLE_CENTRE,
-		L_MPMENU_414, // "Press the B Button to go back."
+		gettext_noop("Press the B Button to go back.\n"), // "Press the B Button to go back."
 		0,
 		NULL,
 	},
@@ -2881,7 +2886,7 @@ struct menuitem g_HangarVehicleHolographMenuItems[] = {
 
 struct menudialogdef g_HangarVehicleHolographMenuDialog = {
 	MENUDIALOGTYPE_DEFAULT,
-	L_MISC_471, // "Holograph"
+	gettext_noop("Holograph\n"), // "Holograph"
 	g_HangarVehicleHolographMenuItems,
 	ciHangarHolographMenuDialog,
 	MENUDIALOGFLAG_0002 | MENUDIALOGFLAG_DISABLERESIZE,
@@ -2890,7 +2895,7 @@ struct menudialogdef g_HangarVehicleHolographMenuDialog = {
 
 struct menudialogdef g_HangarVehicleDetailsMenuDialog = {
 	MENUDIALOGTYPE_DEFAULT,
-	(uintptr_t)&bioMenuTextName,
+	&bioMenuTextName,
 	g_HangarDetailsMenuItems,
 	NULL,
 	MENUDIALOGFLAG_0002 | MENUDIALOGFLAG_DISABLERESIZE,
@@ -2899,7 +2904,7 @@ struct menudialogdef g_HangarVehicleDetailsMenuDialog = {
 
 struct menudialogdef g_HangarLocationDetailsMenuDialog = {
 	MENUDIALOGTYPE_DEFAULT,
-	(uintptr_t)&bioMenuTextName,
+	&bioMenuTextName,
 	g_HangarDetailsMenuItems,
 	NULL,
 	MENUDIALOGFLAG_0002 | MENUDIALOGFLAG_DISABLERESIZE,
@@ -2911,7 +2916,7 @@ struct menuitem g_HangarListMenuItems[] = {
 		MENUITEMTYPE_LIST,
 		0,
 		MENUITEMFLAG_SELECTABLE_CLOSESDIALOG,
-		0x000000a0,
+		"", // previous 0x000000a0,
 		0,
 		ciHangarInformationMenuHandler,
 	},
@@ -2920,7 +2925,7 @@ struct menuitem g_HangarListMenuItems[] = {
 
 struct menudialogdef g_HangarListMenuDialog = {
 	MENUDIALOGTYPE_DEFAULT,
-	L_MPMENU_415, // "Hangar Information"
+	gettext_noop("Hangar Information\n"), // "Hangar Information"
 	g_HangarListMenuItems,
 	NULL,
 	0,
