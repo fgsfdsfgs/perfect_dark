@@ -14,7 +14,7 @@ msgid ""
 "%s"
 msgstr ""
 "%s obtient:\n"
-"Récepteur\n"
+"Récepteur"
 
 #. L_MPWEAPONS_000_2
 msgid ""
@@ -36,7 +36,7 @@ msgid ""
 "%s"
 msgstr ""
 "%sa notre\n"
-"Mallette\n"
+"Mallette"
 
 #. L_MPWEAPONS_003
 msgid "Got the %s%s"
@@ -48,7 +48,7 @@ msgid ""
 "the %s%s"
 msgstr ""
 "Vous capturez:\n"
-"Mallette %s\n"
+"Mallette %s"
 
 #. L_MPWEAPONS_005
 msgid ""
@@ -56,7 +56,7 @@ msgid ""
 "%s"
 msgstr ""
 "%s capture notre\n"
-"Mallette\n"
+"Mallette"
 
 #. L_MPWEAPONS_006
 msgid ""
@@ -64,7 +64,7 @@ msgid ""
 "the %s%s"
 msgstr ""
 "%s capture:\n"
-"Mallette %s\n"
+"Mallette %s"
 
 #. L_MPWEAPONS_007
 msgid "Have a point for living!\n"

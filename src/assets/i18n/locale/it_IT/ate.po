@@ -95,7 +95,6 @@ msgstr ""
 "Sconfiggi la simulazione di Jonathan Dark che al momento detiene il record nel punteggio delle prove. Il replicante ha buone capacità di combattimento ed è in grado di mettere in difficoltà anche combattenti affermati.\n"
 "\n"
 "FINE\n"
-" "
 
 #. L_ATE_003
 msgid ""
@@ -126,7 +125,6 @@ msgstr ""
 "Sconfiggi la simulazione della guardia dataDyne. Il replicante dispone di mediocri capacità in lotta, ma non deve assolutamente essere sottovalutato.\n"
 "\n"
 "FINE\n"
-" "
 
 #. L_ATE_004
 msgid "Defeat dataDyne guard\n"

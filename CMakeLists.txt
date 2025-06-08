@@ -265,7 +265,7 @@ else ()
 endif ()
 
 find_program(GETTEXT_MSGCAT_EXECUTABLE msgcat)
-find_program(GETTEXT_MSGCOMM_EXECUTABLE msgcomm)
+find_program(GETTEXT_MSGUNIQ_EXECUTABLE msguniq)
 find_program(GETTEXT_MSGFMT_EXECUTABLE msgfmt)
 
 # Platform-specific extra libs
@@ -355,14 +355,16 @@ set(PO_DIR "${CMAKE_SOURCE_DIR}/src/generated/${ROMID}/i18n/locale")
 set(MO_DIR "${CMAKE_BINARY_DIR}/locale")
 
 file(MAKE_DIRECTORY ${PO_DIR})
+file(MAKE_DIRECTORY "${PO_DIR}/uniq")
 
 file(GLOB PO_LANGS LIST_DIRECTORIES true ${CMAKE_SOURCE_DIR}/src/assets/i18n/locale/*)
 message(TRACE " PO_LANGS: ${PO_LANGS}")
 
 # po file concatenation
-if (GETTEXT_MSGCAT_EXECUTABLE AND GETTEXT_MSGCOMM_EXECUTABLE)
+if (GETTEXT_MSGCAT_EXECUTABLE AND GETTEXT_MSGUNIQ_EXECUTABLE)
 
     message(DEBUG " msgcat: ${GETTEXT_MSGCAT_EXECUTABLE}")
+    message(DEBUG " msguniq: ${GETTEXT_MSGCUNIQ_EXECUTABLE}")
 
     add_custom_target(
         po-cat
@@ -372,44 +374,52 @@ if (GETTEXT_MSGCAT_EXECUTABLE AND GETTEXT_MSGCOMM_EXECUTABLE)
     foreach(lang IN LISTS PO_LANGS)
         file(GLOB PO_FILES ${lang}/*.po)
         get_filename_component(lang_name ${lang} NAME)
+
+        file(MAKE_DIRECTORY "${PO_DIR}/uniq/${lang_name}")
+        
         message(TRACE " PO_FILES: ${PO_FILES}")
-
         message(STATUS " Adding msguniq for: ${lang_name}")
-        #foreach(f IN LISTS PO_FILES)
-        #  message(TRACE " Single PO file: ${f}")
-        #  add_custom_command(
-        #      TARGET po-cat
-        #      PRE_BUILD
-        #      COMMAND
-        #          ${GETTEXT_MSGCUNIQ_EXECUTABLE} ${f} --output-file=${f}
-        #      COMMENT "po-msguniq: ${lang_name}"
-        #  )
-        #endforeach()
 
-        add_custom_command(
-            TARGET po-cat
-            PRE_BUILD
-            COMMAND
-                ${GETTEXT_MSGCOMM_EXECUTABLE} ${PO_FILES} --output-file=${PO_DIR}/${lang_name}.po
-            COMMENT "po-cat: ${lang_name}"
-        )
+        foreach(f IN LISTS PO_FILES)
+          message(TRACE " Single PO file: ${f}")
 
-        message(STATUS " Adding msgcat for: ${lang_name}")
+          get_filename_component(file_name ${f} NAME)
+          add_custom_command(
+              TARGET po-cat
+              PRE_BUILD
+              COMMAND
+                  ${GETTEXT_MSGCUNIQ_EXECUTABLE} ${f} --output-file=${PO_DIR}/uniq/${lang_name}/${file_name}
+              COMMENT "po-msguniq: ${lang_name}"
+          )
+        endforeach()
+
         #add_custom_command(
         #    TARGET po-cat
         #    PRE_BUILD
         #    COMMAND
-        #        ${GETTEXT_MSGCAT_EXECUTABLE} ${PO_FILES} --use-first --output-file=${PO_DIR}/${lang_name}.po
+        #        #${GETTEXT_MSGCOMM_EXECUTABLE} ${PO_FILES} --output-file=${PO_DIR}/${lang_name}.po
         #    COMMENT "po-cat: ${lang_name}"
         #)
+
+        message(STATUS " Adding msgcat for: ${lang_name}")
+        file(GLOB UNIQ_PO_FILES ${PO_DIR}/uniq/${lang_name}/*.po)
+        message(TRACE " PO_FILES: ${UNIQ_PO_FILES}")
+        message(STATUS "${PO_DIR}/${lang_name}.po")
+        add_custom_command(
+            TARGET po-cat
+            PRE_BUILD
+            COMMAND
+                ${GETTEXT_MSGCAT_EXECUTABLE} ${UNIQ_PO_FILES} --use-first --output-file=${PO_DIR}/${lang_name}.po
+            COMMENT "po-cat: ${lang_name}"
+        )
         endforeach()
 
-endif (GETTEXT_MSGCAT_EXECUTABLE AND GETTEXT_MSGCOMM_EXECUTABLE)
+endif (GETTEXT_MSGCAT_EXECUTABLE AND GETTEXT_MSGUNIQ_EXECUTABLE)
 
 # mo file generation
 if (GETTEXT_MSGFMT_EXECUTABLE)
 
-    message(DEBUG " msgmerge: ${GETTEXT_MSGFMT_EXECUTABLE}")
+    message(DEBUG " msgfmt: ${GETTEXT_MSGFMT_EXECUTABLE}")
     message(TRACE " PO_LANGS: ${PO_LANGS}")
 
     add_custom_target(

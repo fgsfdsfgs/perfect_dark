@@ -14,7 +14,7 @@ msgid ""
 "%s"
 msgstr ""
 "%shas the\n"
-"Data Uplink\n"
+"Data Uplink"
 
 #. L_MPWEAPONS_000_2
 msgid ""
@@ -34,11 +34,11 @@ msgid ""
 "%s"
 msgstr ""
 "%shas our\n"
-"Briefcase\n"
+"Briefcase"
 
 #. L_MPWEAPONS_003
 msgid "Got the %s%s"
-msgstr "Got the %s Briefcase\n"
+msgstr "Got the %s Briefcase"
 
 #. L_MPWEAPONS_004
 msgid ""
@@ -46,7 +46,7 @@ msgid ""
 "the %s%s"
 msgstr ""
 "You captured\n"
-"the %s Briefcase\n"
+"the %s Briefcase"
 
 #. L_MPWEAPONS_005
 msgid ""
@@ -54,7 +54,7 @@ msgid ""
 "%s"
 msgstr ""
 "%scaptured our\n"
-"Briefcase\n"
+"Briefcase"
 
 #. L_MPWEAPONS_006
 msgid ""
@@ -62,7 +62,7 @@ msgid ""
 "the %s%s"
 msgstr ""
 "%scaptured\n"
-"the %s Briefcase\n"
+"the %s Briefcase"
 
 #. L_MPWEAPONS_007
 msgid "Have a point for living!\n"

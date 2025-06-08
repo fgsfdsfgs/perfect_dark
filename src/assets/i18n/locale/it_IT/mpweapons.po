@@ -14,7 +14,7 @@ msgid ""
 "%s"
 msgstr ""
 "%sha il\n"
-"Connettore Dati\n"
+"Connettore Dati"
 
 #. L_MPWEAPONS_000_2
 msgid ""
@@ -34,11 +34,11 @@ msgid ""
 "%s"
 msgstr ""
 "%sha la nostra\n"
-"cartella\n"
+"cartella"
 
 #. L_MPWEAPONS_003
 msgid "Got the %s%s"
-msgstr "Presa la cartella di %s\n"
+msgstr "Presa la cartella di %s"
 
 #. L_MPWEAPONS_004
 msgid ""
@@ -46,7 +46,7 @@ msgid ""
 "the %s%s"
 msgstr ""
 "Hai preso la\n"
-"cartella di %s\n"
+"cartella di %s"
 
 #. L_MPWEAPONS_005
 msgid ""
@@ -54,7 +54,7 @@ msgid ""
 "%s"
 msgstr ""
 "%s ha preso la nostra\n"
-"cartella\n"
+"cartella"
 
 #. L_MPWEAPONS_006
 msgid ""
@@ -62,7 +62,7 @@ msgid ""
 "the %s%s"
 msgstr ""
 "%s ha preso la\n"
-"cartella di %s\n"
+"cartella di %s"
 
 #. L_MPWEAPONS_007
 msgid "Have a point for living!\n"

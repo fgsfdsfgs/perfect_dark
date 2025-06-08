@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "%s は\n"
 "デ-タリンカを\n"
-"手に入れた\n"
+"手に入れた"
 
 #. L_MPWEAPONS_000_2
 msgid ""
@@ -42,14 +42,14 @@ msgstr ""
 "%s は\n"
 "我々の\n"
 "アタッシュを\n"
-"手に入れた\n"
+"手に入れた"
 
 #. L_MPWEAPONS_003
 msgid "Got the %s%s"
 msgstr ""
 "%s の\n"
 "アタッシュを\n"
-"手に入れた\n"
+"手に入れた"
 
 #. L_MPWEAPONS_004
 msgid ""
@@ -58,7 +58,7 @@ msgid ""
 msgstr ""
 "%s の\n"
 "アタッシュで\n"
-"３ポイント！\n"
+"３ポイント！"
 
 #. L_MPWEAPONS_005
 msgid ""
@@ -68,7 +68,7 @@ msgstr ""
 "%s は\n"
 "我々の\n"
 "アタッシュで\n"
-"３ポイント！\n"
+"３ポイント！"
 
 #. L_MPWEAPONS_006
 msgid ""
@@ -78,7 +78,7 @@ msgstr ""
 "%s は\n"
 "%s の\n"
 "アタッシュで\n"
-"３ポイント！\n"
+"３ポイント！"
 
 #. L_MPWEAPONS_007
 msgid "Have a point for living!\n"

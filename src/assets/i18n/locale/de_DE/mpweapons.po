@@ -14,7 +14,7 @@ msgid ""
 "%s"
 msgstr ""
 "%shat den\n"
-"Data Uplink\n"
+"Data Uplink"
 
 #. L_MPWEAPONS_000_2
 msgid ""
@@ -34,11 +34,11 @@ msgid ""
 "%s"
 msgstr ""
 "%shat unseren\n"
-"Aktenkoffer\n"
+"Aktenkoffer"
 
 #. L_MPWEAPONS_003
 msgid "Got the %s%s"
-msgstr "Aktenkoffer von %s geschnappt\n"
+msgstr "Aktenkoffer von %s geschnappt"
 
 #. L_MPWEAPONS_004
 msgid ""
@@ -46,7 +46,7 @@ msgid ""
 "the %s%s"
 msgstr ""
 "Sie haben den\n"
-"Aktenkoffer von %s geschnappt.\n"
+"Aktenkoffer von %s geschnappt."
 
 #. L_MPWEAPONS_005
 msgid ""
@@ -54,7 +54,7 @@ msgid ""
 "%s"
 msgstr ""
 "%shat unseren\n"
-"Aktenkoffer geschnappt.\n"
+"Aktenkoffer geschnappt."
 
 #. L_MPWEAPONS_006
 msgid ""
@@ -62,7 +62,7 @@ msgid ""
 "the %s%s"
 msgstr ""
 "%shat den\n"
-"Aktenkoffer von %s geschnappt.\n"
+"Aktenkoffer von %s geschnappt."
 
 #. L_MPWEAPONS_007
 msgid "Have a point for living!\n"

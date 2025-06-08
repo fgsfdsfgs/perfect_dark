@@ -775,7 +775,7 @@ msgstr "ファイル名の入力\n"
 msgid ""
 "Enter a name for your\n"
 "game setup file:\n"
-msgstr "ゲーム設定のファイル\\205\\hbc81\\hb882\\hf682工\\hc581\\hcc87\\hcc81\\hc481\\hbb0a"
+msgstr "ゲーム設定のファイル\\205\\hbc81\\hb882\\hf682工\\hc581\\hcc87\\hcc81\\hc481\\hbb0a\n"
 
 #. L_MPMENU_190
 msgid "Confirm\n"
@@ -1073,7 +1073,7 @@ msgstr "ゲームオーバー\n"
 
 #. L_MPMENU_261
 msgid "Title:\n"
-msgstr "\n"
+msgstr " \n"
 
 #. L_MPMENU_262
 msgid "Weapon of Choice:\n"

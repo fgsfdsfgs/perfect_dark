@@ -323,83 +323,83 @@ msgstr ""
 msgid ""
 "VengeSim:  Be careful if you shoot or kill a VengeSim because it always "
 "attacks the player who last killed it."
-msgstr "反撃タイプ：反撃タイプのシミュラントを撃ったり倒したりするとメンドーだ。こいつは前回自分を倒した相手のみを攻撃してくる。\n"
+msgstr "反撃タイプ：反撃タイプのシミュラントを撃ったり倒したりするとメンドーだ。こいつは前回自分を倒した相手のみを攻撃してくる。"
 
 #. L_MISC_124
 msgid "Dark Combat"
-msgstr "ダークコンバット\n"
+msgstr "ダークコンバット"
 
 #. L_MISC_125
 msgid "Skedar Mystery"
-msgstr "スケダー\n"
+msgstr "スケダー"
 
 #. L_MISC_126
 msgid "CI Operative"
-msgstr "ＣＩエージェント\n"
+msgstr "ＣＩエージェント"
 
 #. L_MISC_127
 msgid "dataDyne Action"
-msgstr "データダイン\n"
+msgstr "データダイン"
 
 #. L_MISC_128
 msgid "Maian Tears"
-msgstr "マイアンの悲しみ\n"
+msgstr "マイアンの悲しみ"
 
 #. L_MISC_129
 msgid "Alien Conflict"
-msgstr "エイリアンの対立\n"
+msgstr "エイリアンの対立"
 
 #. L_MISC_130
 msgid "Carrington Institute"
-msgstr "キャリントン協会\n"
+msgstr "キャリントン協会"
 
 #. L_MISC_131
 msgid "dD Central"
-msgstr "ｄＤセントラル\n"
+msgstr "ｄＤセントラル"
 
 #. L_MISC_132
 msgid "dD Central X"
-msgstr "ｄＤセントラル！\n"
+msgstr "ｄＤセントラル！"
 
 #. L_MISC_133
 msgid "dD Research"
-msgstr "ｄＤリサーチ\n"
+msgstr "ｄＤリサーチ"
 
 #. L_MISC_134
 msgid "dD Research X"
-msgstr "ｄＤリサーチ！\n"
+msgstr "ｄＤリサーチ！"
 
 #. L_MISC_135
 msgid "dD Extraction"
-msgstr "ｄＤエスケイプ\n"
+msgstr "ｄＤエスケイプ"
 
 #. L_MISC_136
 msgid "dD Extraction X"
-msgstr "ｄＤエスケイプ！\n"
+msgstr "ｄＤエスケイプ！"
 
 #. L_MISC_137
 msgid "Carrington Villa"
-msgstr "別荘\n"
+msgstr "別荘"
 
 #. L_MISC_138
 msgid "Carrington Villa X"
-msgstr "別荘！\n"
+msgstr "別荘！"
 
 #. L_MISC_139
 msgid "Chicago"
-msgstr "シカゴ\n"
+msgstr "シカゴ"
 
 #. L_MISC_140
 msgid "Chicago X"
-msgstr "シカゴ！\n"
+msgstr "シカゴ！"
 
 #. L_MISC_141
 msgid "G5 Building"
-msgstr "Ｇ５ビル\n"
+msgstr "Ｇ５ビル"
 
 #. L_MISC_142
 msgid "G5 Building X"
-msgstr "Ｇ５ビル！\n"
+msgstr "Ｇ５ビル！"
 
 #. L_MISC_143
 msgid "A51 Infiltration"
@@ -703,7 +703,7 @@ msgstr "BNC: 15877"
 
 #. L_MISC_218
 msgid "Not enough room to launch "
-msgstr "この場所にはセットできません。\n"
+msgstr "この場所にはセットできません。"
 
 #. L_MISC_417
 msgid "GOAL TARGETS:"
@@ -791,11 +791,11 @@ msgstr "Player"
 
 #. L_MISC_439
 msgid "Identify\n"
-msgstr "\n"
+msgstr " \n"
 
 #. L_MISC_440
 msgid "unused"
-msgstr "未使用\n"
+msgstr "未使用"
 
 #. L_MISC_441
 msgid "Challenges\n"

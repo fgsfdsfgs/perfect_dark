@@ -1959,7 +1959,6 @@ msgid ""
 msgstr ""
 "Finché i trucchi sono attivi,\n"
 "non potrai progredire nel gioco\n"
-"."
 
 #. L_MPMENU_480
 msgid "OK\n"

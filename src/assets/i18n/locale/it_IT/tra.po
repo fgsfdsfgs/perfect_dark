@@ -493,7 +493,7 @@ msgstr "Parli... Parli la nostra lingua?\n"
 
 #. L_TRA_072
 msgid "Watch her... she's sharp.\n"
-msgstr "Però... è sveglia!!!"
+msgstr "Però... è sveglia!!!\n"
 
 #. L_TRA_073
 msgid "Earrggghh...eerggh...\n"
