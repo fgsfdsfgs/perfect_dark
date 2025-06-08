@@ -747,6 +747,719 @@ msgstr "Copy Simulant\n"
 msgid "Manage Settings\n"
 msgstr "Manage Settings\n"
 
+#: src/game/training.c:2378
+msgid "Joanna Dark\n"
+msgstr ""
+
+#: src/game/training.c:2378
+#: src/game/training.c:2381
+msgid "Human (Female)\n"
+msgstr ""
+
+#: src/game/training.c:2378
+msgid "23 years 2 months\n"
+msgstr ""
+
+#: src/game/training.c:2378
+msgid ""
+"|CI File #027 -\n"
+"\n"
+"Training Status: Complete\n"
+"Training Grade: A++\n"
+"Active Status: Assigned\n"
+"\n"
+"|Profile -\n"
+"\n"
+"Highly trained but inexperienced. Reactions superb. Proficient with a "
+"variety of weapons. Very competent all-round agent. Highest recorded "
+"training scores resulted in the creation of a new class of training grade. "
+"The embodiment of the Carrington Institute's ideal agent, hence the call "
+"sign 'Perfect Dark.'\n"
+msgstr ""
+
+#: src/game/training.c:2379
+msgid "Jonathan\n"
+msgstr ""
+
+#: src/game/training.c:2379
+#: src/game/training.c:2380
+#: src/game/training.c:2382
+#: src/game/training.c:2385
+#: src/game/training.c:2387
+msgid "Human (Male)\n"
+msgstr ""
+
+#: src/game/training.c:2379
+msgid "28 years 5 months\n"
+msgstr ""
+
+#: src/game/training.c:2379
+msgid ""
+"|CI File #009 -\n"
+"\n"
+"Training Status: Complete\n"
+"Training Grade: A+\n"
+"Active Status: Undercover\n"
+"\n"
+"|Profile -\n"
+"\n"
+"Our most experienced undercover agent. Highly accurate with his chosen "
+"weapon (a Magnum Revolver). Perfectly suited to undercover missions. Less "
+"suited to out-and-out combat. Before Joanna Dark, he held the honor of "
+"having the highest recorded training scores.\n"
+msgstr ""
+
+#: src/game/training.c:2380
+msgid "Daniel Carrington\n"
+msgstr ""
+
+#: src/game/training.c:2380
+msgid "62 years 8 months\n"
+msgstr ""
+
+#: src/game/training.c:2380
+msgid ""
+"|CI File #000 -\n"
+"\n"
+"Training Status: N/A\n"
+"Training Grade: N/A\n"
+"Active Status: N/A\n"
+"\n"
+"|Profile -\n"
+"\n"
+"Intelligent patriarchal scientist/entrepreneur, and founder of the "
+"Carrington Institute. Plans all missions carried out by his agents and runs "
+"each operation direct from a link in his office. Strange taste in clothes.\n"
+msgstr ""
+
+#: src/game/training.c:2381
+msgid "Cassandra De Vries\n"
+msgstr ""
+
+#: src/game/training.c:2381
+msgid "39 years ? months\n"
+msgstr ""
+
+#: src/game/training.c:2381
+msgid ""
+"|Analyst note -\n"
+"\n"
+"The head of dataDyne Corp. Addicted to power; dislikes being anybody's "
+"underling. Hates it when she loses the initiative. Is prepared to do "
+"extremely unscrupulous things in order to get ahead of her competition, to "
+"whit Daniel Carrington, whom she loathes.\n"
+msgstr ""
+
+#: src/game/training.c:2382
+msgid "Trent Easton\n"
+msgstr ""
+
+#: src/game/training.c:2382
+msgid "46 years ? months\n"
+msgstr ""
+
+#: src/game/training.c:2382
+msgid ""
+"|Analyst note -\n"
+"\n"
+"Head of the National Security Agency. Has a friendship of sorts with "
+"Cassandra De Vries, although it operates more like a partnership of "
+"interest. He will tend to do what Cassandra says, possibly because although "
+"he has a dominant personality, it is not as dominant as hers. Figurehead for "
+"some of the rogue elements in the NSA.\n"
+msgstr ""
+
+#: src/game/training.c:2383
+msgid "Dr. Caroll\n"
+msgstr ""
+
+#: src/game/training.c:2383
+msgid "The Caroll Sapient (AI)\n"
+msgstr ""
+
+#: src/game/training.c:2383
+msgid "6 months\n"
+msgstr ""
+
+#: src/game/training.c:2383
+msgid ""
+"|Profile -\n"
+"\n"
+"An artificial intelligence created by the dataDyne Corp. with an emphasis on "
+"language skills and code breaking. Fortunately, he has morals, and due to "
+"his formidable level of intelligence, has guessed some of dataDyne's future "
+"plans. The voice is highly precise and educated and simulates the character "
+"of an academic.\n"
+msgstr ""
+
+#: src/game/training.c:2384
+msgid "Elvis\n"
+msgstr ""
+
+#: src/game/training.c:2384
+msgid "Maian (Male)\n"
+msgstr ""
+
+#: src/game/training.c:2384
+msgid "320 years\n"
+msgstr ""
+
+#: src/game/training.c:2384
+msgid ""
+"|Profile -\n"
+"\n"
+"An alien from the Maian race. He is a 'Protector' (bodyguard) for the Maian "
+"ambassador who travels to Earth at Daniel Carrington's request. Protectors "
+"are trained to excel in the use of an assortment of weaponry. Elvis is a "
+"terraphile, finding Earth and everything about it fascinating.\n"
+msgstr ""
+
+#: src/game/training.c:2385
+#: src/game/training.c:2386
+msgid "Mr. Blonde\n"
+msgstr ""
+
+#: src/game/training.c:2385
+msgid "Late 20's\n"
+msgstr ""
+
+#: src/game/training.c:2385
+msgid ""
+"|Profile -\n"
+"\n"
+"A striking blonde human male. Very tall, wears white clothing, usually a "
+"raincoat. Appears to be masterminding the conspiracy in which Cassandra and "
+"Trent are involved. Little else is known.\n"
+msgstr ""
+
+#: src/game/training.c:2386
+msgid "Skedar (disguised)\n"
+msgstr ""
+
+#: src/game/training.c:2386
+msgid "unknown\n"
+msgstr ""
+
+#: src/game/training.c:2386
+msgid ""
+"|Updated Profile -\n"
+"\n"
+"This is a Skedar warrior lurking within a holographic projection of a "
+"striking blonde young human male in his late 20's.  The oral modulation unit "
+"gives the Skedar a precise, persuasive, and intelligent voice. It is a "
+"propaganda and manipulation tool for the Skedar, and an unusually subtle "
+"one.\n"
+msgstr ""
+
+#: src/game/training.c:2387
+msgid "The U.S. President\n"
+msgstr ""
+
+#: src/game/training.c:2387
+msgid "50 years\n"
+msgstr ""
+
+#: src/game/training.c:2387
+msgid ""
+"|Profile -\n"
+"\n"
+"A highly educated, shrewd African-American who is trying to do what is right "
+"but is surrounded by people like Trent Easton. He believes he has Trent "
+"under control after refusing the request for the loan of the Pelagic II to "
+"the dataDyne Corp. Perceived as being easily led by the majority of "
+"political commentators, which is perhaps unfair.\n"
+msgstr ""
+
+#: src/game/training.c:2469
+msgid "Maians\n"
+msgstr ""
+
+#: src/game/training.c:2469
+msgid ""
+"The Maians are the race of aliens that have come to be known on Earth as "
+"'Greys.' They have been monitoring Earth for a long time - several centuries "
+"- and are benevolent towards mankind, sensing great potential in the human "
+"race. Their contact on Earth is Daniel Carrington. A formal political "
+"contact has yet to be made.\n"
+msgstr ""
+
+#: src/game/training.c:2470
+msgid "Skedar Warrior\n"
+msgstr ""
+
+#: src/game/training.c:2470
+msgid ""
+"The Skedar are a warlike alien race who have fought the Maians for centuries "
+"and have only recently agreed to a ceasefire. They tend to use mechanized "
+"armatures to walk about and fight in, since they are in actual fact smaller, "
+"snakelike creatures. Very aggressive -  they have made war a religion - and "
+"are extremely devout.\n"
+msgstr ""
+
+#: src/game/training.c:2471
+msgid "Background\n"
+msgstr ""
+
+#: src/game/training.c:2471
+msgid ""
+"Millions of years ago, a huge alien ship of immense power was scuttled in "
+"the Pacific Ocean. It was equipped with an untried and vastly dangerous "
+"weapon: the weak nuclear force de-coupler, which could in theory cause the "
+"fundamental bonds between molecules to fail. So that watching eyes would "
+"believe in the destruction of the ship, a message pod was despatched to the "
+"home galaxy, and vital components of the ship's drives were destroyed in the "
+"star system it had chosen as a hiding place. For this ship was a Cetan, a "
+"massive, sentient alien creature.\n"
+"\n"
+"Another extraterrestrial race, the Maians, encountered life on Earth in 2000 "
+"BC. They saw great potential, but decided to let the primitive human race "
+"develop without their interference.\n"
+"\n"
+"The Maians encountered the Skedar near Delta Eridanus in 1650 AD (Earth "
+"date), and the resultant skirmish soon blossomed into all-out war. Only "
+"after hundreds of years of fighting did an uneasy peace develop, and even "
+"then Skedar fanatics persistently tested the boundaries of this peace with "
+"terrorist activities. Fortunately, the Maians refused to be drawn.\n"
+"\n"
+"Mankind, too, continued to be a cause of concern to the Maians, and they "
+"watched with disappointment as Earth suffered more and more crises brought "
+"on by the rise of technology and 'outside context situations.' They feared "
+"that announcing their presence would only precipitate further wars on the "
+"planet, and quietly decided to continue their observation until the race "
+"became more mature.\n"
+"\n"
+"Daniel Carrington jumped the gun in 1985 AD by contacting a Maian ship in "
+"orbit above Earth. He put forward a plan that would help both parties, "
+"resulting in accelerated contact between Humans and Maians. Having agreed "
+"that his plan was sound, and finding him to be a person of integrity, the "
+"Maians allowed Carrington to release their technology into the public domain "
+"through his considerable Research and Development holdings.\n"
+"\n"
+"Then, in 2006 AD, Skedar fanatics stumbled across the Cetan message pod. "
+"They immediately began to scout Earth in a particularly heavy-handed way, "
+"abducting people and mutilating animals in an attempt to determine the "
+"location of the lost battle cruiser. In time, their tests inevitably led "
+"them to its resting place on the bed of the Pacific Ocean; however, in order "
+"to actually reach it, they would need the help of the natives.\n"
+"\n"
+"Performing their own study of Earth, the Skedar came up with a shortlist of "
+"companies possessing the resources to help them recover the sunken ship. At "
+"the top of the list was the dataDyne Corporation. They contacted the company "
+"head, Cassandra De Vries, and presented her with a deal that sounded too "
+"good to be true - which, of course, it was. In return for helping to raise "
+"'their' ship from the ocean floor, the Skedar promised to supply dataDyne "
+"with enough alien technology to become the biggest corporation on the face "
+"of the planet. All that dataDyne had to do was build an AI unit with "
+"language and code-breaking abilities, which was tricky, but certainly within "
+"their means. Work commenced on the project immediately.\n"
+"\n"
+"Cassandra De Vries approached NSA head Trent Easton with the details of the "
+"plan, but his attempts to get Presidential approval for the loan of a deep-"
+"sea research vessel were repeatedly turned down. There was no way that the "
+"Skedar or dataDyne could steal the vessel without triggering the wrath of "
+"the U.S. Government, so over time they settled instead on a far more "
+"sinister plan of replacing the President with a clone that they could "
+"control. Of course, this also promised extra rewards for Trent and Cassandra "
+"when the Skedar operation was consigned to history.\n"
+"\n"
+"However, they would not be given much time to gloat. The Skedar fanatics' "
+"ultimate plan was to test the weak nuclear force de-coupler on Earth before "
+"wiping the Maians out of existence, and both Cassandra and Trent remained "
+"blind to the possibility of being double-crossed, so enamored were they with "
+"the visions of power and luxury that lay ahead.\n"
+"\n"
+"But dataDyne had unwittingly created something that could see all too "
+"clearly the danger within this multilayered conspiracy: the sapient AI built "
+"to crack the core access codes of the Cetan ship. When it expressed concern "
+"over the mission for which it had been designed, Cassandra's response was to "
+"order its personality removed. Clearly, it was thinking too much. In "
+"desperation, and in a move which would make or break a great deal more than "
+"dataDyne's 'deal' with the Skedar, the sapient adopted the pseudonym Dr. "
+"Caroll and contacted the Carrington Institute with a plea for help...\n"
+msgstr ""
+
+#: src/game/training.c:2472
+msgid "The Story\n"
+msgstr ""
+
+#: src/game/training.c:2472
+msgid ""
+"Untried agent Joanna Dark is assigned a mission involving the extraction of "
+"a scientist from the high security research area beneath the dataDyne "
+"skyscraper. Upon rendezvous, she is surprised to discover that this 'Dr. "
+"Caroll' is an AI created by dataDyne itself - but she continues with her "
+"task of escorting him/it to a place of safety. When the alarm is raised, "
+"Joanna has to fight her way up the tower to reach the helipad and the "
+"dropship which presents her only means of escape.\n"
+"\n"
+"In response to this incursion, dataDyne make Daniel Carrington a personal "
+"target and take him hostage two days later at his private villa. They demand "
+"the return of the AI - their 'property' - in exchange for his life. Unknown "
+"to them, the AI is already at the villa, where it was being questioned by "
+"Carrington on dataDyne's future plans. Joanna eventually rescues the head of "
+"the Institute but is unable to prevent dataDyne from taking back Dr. Caroll. "
+"However, Carrington has heard enough to take the drastic step of summoning a "
+"team of Maian specialists to Earth.\n"
+"\n"
+"Joanna is dispatched to Chicago to spy on a conspirators' meeting at the G5 "
+"Building, a front for the dataDyne Corp. It is here that she learns of the "
+"involvement of Trent Easton, head of the NSA, and of the strange Nordic men "
+"that appear to be in control of the whole deadly scheme. Once Trent "
+"discloses the plan to usurp the Presidential position, Jo radios the news "
+"back to base - only to find that another, more urgent task requires her "
+"attention before further action can be taken against Trent.\n"
+"\n"
+"The Maian specialists have been intercepted and brought down by the "
+"conspirators, with survivors and wreckage alike being transported to Area 51 "
+"in Nevada. Briefed to rescue any survivors and retrieve their equipment, "
+"Joanna is dropped in to link up with another Carrington Institute agent. "
+"Upon breaking into the medlab, Joanna finally discovers the Institute's "
+"secret - their allies are Maians, the alien race commonly known as Greys. "
+"The particular Maian she manages to rescue goes by the name of Elvis. He was "
+"a bodyguard for the Ambassador who had been flying in at the head of the "
+"specialist team.\n"
+"\n"
+"Having aided the remnants of the Maian delegation, Joanna can return to the "
+"matter of the President and dataDyne's designs against him. She poses as a "
+"member of the President's entourage to gain access to the air base where Air "
+"Force One is stationed, and successfully conceals herself aboard the plane. "
+"As soon as it's airborne, Trent and the cloaked Skedar make their move - but "
+"Joanna is there to stop them. She rushes the President to a safety capsule "
+"while a team of Trent's men scour the aircraft, intent on dragging the "
+"hapless politician aboard the Skedar UFO now docked to AF1 via an umbilical. "
+"Jo weakens the umbilical but is unable to break it, and ultimately Elvis "
+"makes a last-ditch attempt to sever the cord by crashing into it at high "
+"speed. All three craft plummet towards the Alaskan wilderness, and the AF1 "
+"escape pod is launched.\n"
+"\n"
+"Coming around, Jo tries to report in but finds her communications jammed by "
+"a transmission from the Skedar craft. She sets off through the snow to find "
+"the President and Elvis, encountering teams of cloaked Skedar out searching "
+"for her, the President, Elvis, and the President's belongings. She tracks "
+"one group back to the downed Skedar ship, where she discovers a clone of the "
+"President: quickly she destroys it, shuts down the jamming device and calls "
+"in the cavalry. The Skedar are thwarted once more, the President is safe, "
+"and Trent's incompetence has earned him a nasty fate at the hands of his "
+"'allies.'\n"
+"\n"
+"But it's not over. Throwing caution to the wind, dataDyne and the Skedar "
+"steal the Government's deep-sea research vessel 'Pelagic II' and head out to "
+"the Pacific crash site. Joanna and Elvis leave to disrupt activity on board "
+"the ship and find out what lies at the heart of the grand Skedar plan. After "
+"crippling the vessel's diving operations and recalling the submersible, they "
+"head down to the ocean floor, where they get their first sight of the downed "
+"Cetan battle cruiser. A portal made by the Skedar offers them access to the "
+"ship, where they stumble across a dead Skedar warrior... Clearly the assault "
+"team didn't have it all their own way. Fighting off the remaining vengeful "
+"Skedar and avoiding the Cetans themselves, Joanna and Elvis make their way "
+"down to the core of the ship, where they find the AI that was once Dr. "
+"Caroll. They manage to restore his personality, whereupon he urges Joanna "
+"and Elvis to leave the ship so that he may destroy it for good.\n"
+"\n"
+"Later, back at the Carrington Institute, Joanna is about to leave for a "
+"Presidential reception at the White House when all hell breaks loose. The "
+"Skedar assault team survivors are venting their anger on those they deem "
+"responsible for their failure to recover the Cetan ship. Joanna dashes "
+"around the Institute, helping CI employees to reach the safety of the "
+"hangars, as the Skedar launch attacks on various parts of the building: the "
+"majority of the employees make good their escape while Joanna holds the "
+"fort, but eventually she is knocked unconscious and taken prisoner.\n"
+"\n"
+"She comes to in a holding cell on board the Skedar assault ship, with only "
+"Cassandra De Vries for company. In a shocking move, the dataDyne CEO "
+"willingly gives her life to create the distraction necessary for Joanna to "
+"break out. Battling her way through the ship, Jo eventually manages to "
+"locate and disable the docking bay shields, allowing Elvis to bring in a few "
+"friends for the long-awaited shooting party.\n"
+"\n"
+"The captured assault ship enters orbit above the Skedar Battle Shrine, which "
+"shocks Elvis as the Maians never managed to find this Skedar 'holiest of "
+"holies' throughout the long years of interracial war. If the Shrine were "
+"destroyed, Skedar morale would be dealt a fatal blow and true peace would "
+"finally replace the uneasy ceasefire. So Jo sets her sights on the Skedar "
+"leader, the high priest of the Battle Shrine, while Elvis returns to the "
+"assault ship in order to summon the Maian fleet.\n"
+"\n"
+"In the wake of the climactic battle, the temple lies devastated with Elvis "
+"calling for a lull in the bombardment so that he can find Joanna. She is "
+"alive, held under a pile of rubble by the last tenacious Skedar that caught "
+"up during the last few seconds of her escape bid. Elvis quickly offers her a "
+"gun to convince the Skedar to let go, and with the job finally done, the "
+"Skedar Shrine and morale both in ruins and the conspiracy dealt a mortal "
+"blow to the heart, the two of them depart for orbit.\n"
+msgstr ""
+
+#: src/game/training.c:2580
+msgid "Carrington Institute|Base of operations\n"
+msgstr ""
+
+#: src/game/training.c:2580
+msgid ""
+"The Institute building comprises many different areas: offices and "
+"laboratories, workshops and hangars. It is quite isolated from the outside "
+"world, which helps keep the operations covert.\n"
+msgstr ""
+
+#: src/game/training.c:2581
+msgid "Lucerne Tower|Global headquarters\n"
+msgstr ""
+
+#: src/game/training.c:2581
+msgid ""
+"In the midst of the business district, the austere skyscraper of the "
+"dataDyne Corporation stands out from the surroundings.\n"
+msgstr ""
+
+#: src/game/training.c:2582
+msgid "Laboratory Basement|Underground research labs\n"
+msgstr ""
+
+#: src/game/training.c:2582
+msgid ""
+"These heavily guarded, well-hidden labs hold the key to dataDyne's future. "
+"Within them, techs work on top-secret projects aimed at putting dataDyne on "
+"the top of the heap.\n"
+msgstr ""
+
+#: src/game/training.c:2583
+msgid "Carrington Villa|Private coastal retreat\n"
+msgstr ""
+
+#: src/game/training.c:2583
+msgid ""
+"Owned by the Institute, this secluded residence is used by Daniel Carrington "
+"as a retreat from the pressures of the Institute. As well as an observatory, "
+"it has a power generator and an extensive wine cellar.\n"
+msgstr ""
+
+#: src/game/training.c:2584
+msgid "Chicago|Backstreets of the city\n"
+msgstr ""
+
+#: src/game/training.c:2584
+msgid ""
+"A seedy, grimy part of the city of Chicago, now closed to ground traffic. It "
+"is here that the G5 Corporation has its headquarters.\n"
+msgstr ""
+
+#: src/game/training.c:2585
+msgid "G5 Building|dataDyne front corporation\n"
+msgstr ""
+
+#: src/game/training.c:2585
+msgid ""
+"Inside the G5 Building is a meeting room protected by anti-recording "
+"safeguards. This is the safest place for dataDyne to formulate confidential "
+"plans.\n"
+msgstr ""
+
+#: src/game/training.c:2586
+msgid "Area 51|Near Groom Dry Lake, Nevada\n"
+msgstr ""
+
+#: src/game/training.c:2586
+msgid ""
+"This section of the extensive facility known as Area 51 is based in the "
+"foothills around Groom Dry Lake. Exterior helipads and communication towers "
+"hint at the size of the complex beneath ground level.\n"
+msgstr ""
+
+#: src/game/training.c:2587
+msgid "Alaskan Air Base|Brooks Range, Alaska\n"
+msgstr ""
+
+#: src/game/training.c:2587
+msgid ""
+"One of a series of reinforced air bases available as staging posts for Air "
+"Force One. Typically, the air base is remote, in an inhospitable region, far "
+"away from prying eyes.\n"
+msgstr ""
+
+#: src/game/training.c:2588
+msgid "Air Force One|The President's airplane\n"
+msgstr ""
+
+#: src/game/training.c:2588
+msgid ""
+"This particular Air Force One is optimized for cold climates, useful when it "
+"is based in the north of Alaska. The flight destination is Oslo, Norway.\n"
+msgstr ""
+
+#: src/game/training.c:2589
+msgid "Crash Site|Victoria Island 71N 118W\n"
+msgstr ""
+
+#: src/game/training.c:2589
+msgid ""
+"In the rocky snow-covered landscape of the Arctic Circle, the wreckage of "
+"the stricken plane has come to rest.\n"
+msgstr ""
+
+#: src/game/training.c:2590
+msgid "Pelagic II|Specialized deep-sea research ship\n"
+msgstr ""
+
+#: src/game/training.c:2590
+msgid ""
+"Owned by the U.S. government, the Pelagic II is capable of staging deep-sea "
+"diving operations in all weather conditions. It is the only fully integrated "
+"ocean floor research vessel in the world.\n"
+msgstr ""
+
+#: src/game/training.c:2591
+msgid "Cetan Ship|The most alien environment on Earth\n"
+msgstr ""
+
+#: src/game/training.c:2591
+msgid ""
+"A huge ship of alien construction that has lain on the ocean floor for "
+"millions of years.\n"
+msgstr ""
+
+#: src/game/training.c:2592
+msgid "Skedar Assault Ship|Troop carrying spacecraft\n"
+msgstr ""
+
+#: src/game/training.c:2592
+msgid ""
+"An interplanetary assault ship that carries Skedar warriors to their war "
+"zones. Part of the much-reduced Skedar battle fleet.\n"
+msgstr ""
+
+#: src/game/training.c:2593
+msgid "Skedar Homeworld|The planet of the Battle Shrine\n"
+msgstr ""
+
+#: src/game/training.c:2593
+msgid ""
+"A highly arid planet, racked by earthquakes, sandstorms, and hurricanes. It "
+"is part of a complex solar system that includes three suns.\n"
+msgstr ""
+
+#: src/game/training.c:2594
+msgid "Jumpship|Agile troop craft\n"
+msgstr ""
+
+#: src/game/training.c:2594
+msgid ""
+"A small, fast, highly maneuverable agent-deployment craft designed for use "
+"in urban areas. Can be either computer controlled or remote piloted. It has "
+"enough room inside for three to four agents, plus equipment.\n"
+msgstr ""
+
+#: src/game/training.c:2595
+msgid "HoverCrate|Gravity-negation device\n"
+msgstr ""
+
+#: src/game/training.c:2595
+msgid ""
+"An antigrav device designed to aid warehouse workers. It is attached to the "
+"side of a crate. When activated, the AG field lifts the crate and removes "
+"some of the inertia.\n"
+msgstr ""
+
+#: src/game/training.c:2596
+msgid "HoverBike|Low altitude vehicle\n"
+msgstr ""
+
+#: src/game/training.c:2596
+msgid ""
+"A low-altitude patrol bike. Uses a small AG unit to hover, then a small but "
+"powerful turbine with vectored thrust to move and provide directional "
+"control.\n"
+msgstr ""
+
+#: src/game/training.c:2597
+msgid "Cleaning Hovbot|Your helpful buddy\n"
+msgstr ""
+
+#: src/game/training.c:2597
+msgid ""
+"Keeps the place clean and tidy. Tends to have access to all areas of a "
+"building - agents are advised to leave such robots intact where possible, as "
+"they can unwittingly provide a means of ingress to sensitive zones.\n"
+msgstr ""
+
+#: src/game/training.c:2598
+msgid "Hovercopter|Urban AG gunship\n"
+msgstr ""
+
+#: src/game/training.c:2598
+msgid ""
+"An urban patrol and suppression vehicle. Two-man crew, armed with a vulcan "
+"cannon on the nose pod, and two wingtip-mounted dumbfire missile pods. Can "
+"be taken out with sustained gunfire or, preferably, one well-aimed rocket.\n"
+msgstr ""
+
+#: src/game/training.c:2599
+msgid "G5 Robot|Urban combat droid\n"
+msgstr ""
+
+#: src/game/training.c:2599
+msgid ""
+"A combat robot designed for urban warfare. Uses an antigrav unit to hover; "
+"heavily armed and shielded. Often used to keep out unwanted visitors, due to "
+"the 'shoot first and don't ask questions later' programming.\n"
+msgstr ""
+
+#: src/game/training.c:2600
+msgid "A51 Interceptor|Robotic air interceptor\n"
+msgstr ""
+
+#: src/game/training.c:2600
+msgid ""
+"A robotic variant of the HoverBike, with more powerful AG and turbine units; "
+"it can reach Mach 2 with ease and yet can cruise for hours at walking pace. "
+"Although quite well armed, it relies on maneuverability rather than "
+"shielding.\n"
+msgstr ""
+
+#: src/game/training.c:2601
+msgid "Maian Vessel|Scout and patrol vessel\n"
+msgstr ""
+
+#: src/game/training.c:2601
+msgid ""
+"Designed to carry a single Maian pilot.  A passenger would find themselves "
+"cramped - a human passenger even more so.\n"
+msgstr ""
+
+#: src/game/training.c:2602
+msgid "Skedar Shuttle|Alien troop dropship\n"
+msgstr ""
+
+#: src/game/training.c:2602
+msgid ""
+"Capable of carrying ten fully armed and armored Skedar warriors to battle. "
+"Undetectable by conventional radar. It can broadcast powerful jamming waves "
+"over a considerable area - these disrupt communications as well as detection "
+"equipment.\n"
+msgstr ""
+
+#: src/game/training.c:3373
+msgid "GOAL TARGETS:"
+msgstr ""
+
+#: src/game/training.c:3572
+msgid "ZONE 3\n"
+msgstr ""
+
+#: src/game/training.c:3573
+msgid "ZONE 2\n"
+msgstr ""
+
+#: src/game/training.c:3574
+msgid "ZONE 1\n"
+msgstr ""
+
+#: src/game/training.c:3575
+msgid "BULL'S-EYE\n"
+msgstr ""
+
+#: src/game/training.c:3576
+msgid "EXPLODED\n"
+msgstr ""
+
 #. "M_TITLE_151"
 msgid "testing (noe)\n"
 msgstr "testing (noe)\n"
