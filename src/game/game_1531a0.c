@@ -267,7 +267,7 @@ void textLoadFont(u8 *romstart, u8 *romend, struct font **fontptr, struct fontch
 }
 
 void textReset(void)
-{
+{	
 	extern u8 EXT_SEG _fontbankgothicSegmentRomStart,     EXT_SEG _fontbankgothicSegmentRomEnd;
 	extern u8 EXT_SEG _fontzurichSegmentRomStart,         EXT_SEG _fontzurichSegmentRomEnd;
 	extern u8 EXT_SEG _fonttahomaSegmentRomStart,         EXT_SEG _fonttahomaSegmentRomEnd;
@@ -2127,7 +2127,7 @@ Gfx *textRenderProjected(Gfx *gdl, s32 *x, s32 *y, char *text, struct fontchar *
 	g_Blend.colour04 = colour;
 	g_Blend.colour44 = colour;
 
-#if VERSION >= VERSION_PAL_BETA || true
+#if VERSION >= VERSION_PAL_BETA //TODO - Lang: Fix it
 	if (text != NULL) {
 		while (*text != '\0') {
 			if (*text == ' ') {
@@ -2172,6 +2172,30 @@ Gfx *textRenderProjected(Gfx *gdl, s32 *x, s32 *y, char *text, struct fontchar *
 				}
 
 				*x = savedx;
+			#ifndef PLATFORM_N64
+			// Handling UTF-8
+			} else if(*text < 0x80) { // Single byte; Classic ASCII
+				gdl = text0f15568c(gdl, x, y, &chars[*text - 0x21], &chars[prevchar - 0x21], font, savedx, savedy, width, height, arg9);
+				prevchar = *text;
+				text++;
+			} else if ((*text & 0xE0) == 0xC0) { // 2 bytes
+				s32 codepoint = ((*text & 0x1F) << 6) | (text[1] & 0x3F);				
+				//prevchar = *text;
+				text +=2;
+			} else if ((*text & 0xF0) == 0xE0) { // 3 bytes
+				s32 codepoint = ((*text & 0x0F) << 12) | ((text[1] & 0x3F) << 6) | (text[2] & 0x3F);
+				//prevchar = *text;
+				text += 3;
+			} else if ((*text & 0xF8) == 0xF0) { // 4 bytes
+				s32 codepoint = ((*text & 0x07) << 18) | ((text[1]  & 0x3F) << 12) | ((text[2] & 0x3F) << 6) | (text[3] & 0x3F);
+				//prevchar = *text;
+				text += 4;
+			} else { // Invalid UTF-8
+				//CRASH();
+				text++;
+			}
+			//gdl = text0f15568c(gdl, x, y, &chars[*text - 0x21], &chars[prevchar - 0x21], font, savedx, savedy, width, height, arg9);
+			#else
 			} else if (*text < 0x80 || 1) {
 				gdl = text0f15568c(gdl, x, y, &chars[*text - 0x21], &chars[prevchar - 0x21], font, savedx, savedy, width, height, arg9);
 				prevchar = *text;
@@ -2196,6 +2220,7 @@ Gfx *textRenderProjected(Gfx *gdl, s32 *x, s32 *y, char *text, struct fontchar *
 
 				text += 2;
 			}
+			#endif
 		}
 	}
 #endif
@@ -2398,7 +2423,7 @@ Gfx *textRender(Gfx *gdl, s32 *x, s32 *y, char *text,
 	g_Blend.colour04 = arg6;
 	g_Blend.colour44 = arg6;
 
-#if VERSION >= VERSION_PAL_BETA || true
+#if VERSION >= VERSION_PAL_BETA // TODO - Lang: Fix it
 	while (*text != '\0') {
 		if (*text == ' ') {
 			*x += var8007fad0 * 5;
@@ -2430,7 +2455,30 @@ Gfx *textRender(Gfx *gdl, s32 *x, s32 *y, char *text,
 			*y += lineheight;
 			prevchar = 'H';
 			text++;
-		} else if (*text < 0x80) {
+		#ifndef PLATFORM_N64
+		// Handling UTF-8
+		} else if(*text < 0x80) { // Single byte; Classic ASCII	
+			gdl = textRenderChar(gdl, x, y, &chars[*text - 0x21], &chars[prevchar - 0x21],
+					font, savedx, savedy, width * var8007fad0, height, arg10);
+			//prevchar = *text;
+			text++;
+		} else if ((*text & 0xE0) == 0xC0) { // 2 bytes
+			s32 codepoint = ((*text & 0x1F) << 6) | (text[1] & 0x3F);
+			//prevchar = *text;
+			text +=2;
+		} else if ((*text & 0xF0) == 0xE0) { // 3 bytes
+			s32 codepoint = ((*text & 0x0F) << 12) | ((text[1] & 0x3F) << 6) | (text[2] & 0x3F);
+			prevchar = *text;
+			text += 3;
+		} else if ((*text & 0xF8) == 0xF0) { // 4 bytes
+			s32 codepoint = ((*text & 0x07) << 18) | ((text[1]  & 0x3F) << 12) | ((text[2] & 0x3F) << 6) | (text[3] & 0x3F);
+			//prevchar = *text;
+			text += 4;
+		} else { // Invalid UTF-8
+				CRASH();
+		}
+		#else
+		} else if (*text < 0x80) { // TODO - Lang: Fix it (compatible with UTF-8)
 			gdl = textRenderChar(gdl, x, y, &chars[*text - 0x21], &chars[prevchar - 0x21],
 					font, savedx, savedy, width * var8007fad0, height, arg10);
 			prevchar = *text;
@@ -2455,6 +2503,7 @@ Gfx *textRender(Gfx *gdl, s32 *x, s32 *y, char *text,
 
 			text += 2;
 		}
+		#endif
 	}
 #endif
 

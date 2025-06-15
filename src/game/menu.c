@@ -653,11 +653,12 @@ void menuCalculateItemSize(struct menuitem *item, s16 *width, s16 *height, struc
 #endif
 		break;
 	case MENUITEMTYPE_LIST:
-		if (item->title > 0) { // TODO - Lang: Fix it
+		/*if (item->title > 0) { // TODO - Lang: Fix it
 			//*width = item->title;
 			*width = strlen(item->title);
 		} else {
-			*width = 80;
+			*width = 80;*/
+		*width = strlen(_(item->title));
 
 #if VERSION >= VERSION_NTSC_1_0
 			if ((item->flags & MENUITEMFLAG_LIST_WIDE) != 0) {
@@ -668,7 +669,7 @@ void menuCalculateItemSize(struct menuitem *item, s16 *width, s16 *height, struc
 				*width = 180;
 			}
 #endif
-		}
+		//}
 
 #if VERSION >= VERSION_JPN_FINAL
 		*height = item->param3 > 0 ? item->param3 : 112;

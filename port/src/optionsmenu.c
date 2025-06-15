@@ -1666,7 +1666,7 @@ static MenuItemHandlerResult menuhandlerResetBindsN64(s32 operation, struct menu
 	{ \
 		MENUITEMTYPE_DROPDOWN, \
 		0, \
-		0, \
+		MENUITEMFLAG_HANDLER_TEXT, \
 		menutextBind, \
 		0, \
 		menuhandlerBind, \

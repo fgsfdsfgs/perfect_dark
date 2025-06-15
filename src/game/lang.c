@@ -407,7 +407,7 @@ void langLoadToAddr(s32 bank, u8 *dst, s32 size)
 
 void langClearBank(s32 bank)
 {
-	g_LangBanks[bank] = NULL;
+	//g_LangBanks[bank] = NULL;
 }
 
 /**

@@ -944,7 +944,7 @@ struct menuitem g_CheatsFunMenuItems[] = {
 	{
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_DKMODE,
-		0,
+		MENUITEMFLAG_HANDLER_TEXT,
 		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
@@ -952,7 +952,7 @@ struct menuitem g_CheatsFunMenuItems[] = {
 	{
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_SMALLJO,
-		0,
+		MENUITEMFLAG_HANDLER_TEXT,
 		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
@@ -960,7 +960,7 @@ struct menuitem g_CheatsFunMenuItems[] = {
 	{
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_SMALLCHARACTERS,
-		0,
+		MENUITEMFLAG_HANDLER_TEXT,
 		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
@@ -968,7 +968,7 @@ struct menuitem g_CheatsFunMenuItems[] = {
 	{
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_TEAMHEADSONLY,
-		0,
+		MENUITEMFLAG_HANDLER_TEXT,
 		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
@@ -976,7 +976,7 @@ struct menuitem g_CheatsFunMenuItems[] = {
 	{
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_PLAYASELVIS,
-		0,
+		MENUITEMFLAG_HANDLER_TEXT,
 		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
@@ -984,7 +984,7 @@ struct menuitem g_CheatsFunMenuItems[] = {
 	{
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_SLOMO,
-		0,
+		MENUITEMFLAG_HANDLER_TEXT,
 		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
@@ -992,7 +992,7 @@ struct menuitem g_CheatsFunMenuItems[] = {
 	{
 		MENUITEMTYPE_SEPARATOR,
 		0,
-		0,
+		MENUITEMFLAG_HANDLER_TEXT,
 		"",// previous: 0x00000096,
 		0,
 		NULL,
@@ -1000,7 +1000,7 @@ struct menuitem g_CheatsFunMenuItems[] = {
 	{
 		MENUITEMTYPE_MARQUEE,
 		0,
-		MENUITEMFLAG_SMALLFONT | MENUITEMFLAG_MARQUEE_FADEBOTHSIDES,
+		MENUITEMFLAG_SMALLFONT | MENUITEMFLAG_MARQUEE_FADEBOTHSIDES | MENUITEMFLAG_HANDLER_TEXT,
 		&cheatGetMarquee,
 		0,
 		NULL,
@@ -1037,7 +1037,7 @@ struct menuitem g_CheatsGameplayMenuItems[] = {
 	{
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_INVINCIBLE,
-		0,
+		MENUITEMFLAG_HANDLER_TEXT,
 		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
@@ -1045,7 +1045,7 @@ struct menuitem g_CheatsGameplayMenuItems[] = {
 	{
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_CLOAKINGDEVICE,
-		0,
+		MENUITEMFLAG_HANDLER_TEXT,
 		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
@@ -1053,7 +1053,7 @@ struct menuitem g_CheatsGameplayMenuItems[] = {
 	{
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_MARQUIS,
-		0,
+		MENUITEMFLAG_HANDLER_TEXT,
 		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
@@ -1061,7 +1061,7 @@ struct menuitem g_CheatsGameplayMenuItems[] = {
 	{
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_JOSHIELD,
-		0,
+		MENUITEMFLAG_HANDLER_TEXT,
 		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
@@ -1069,7 +1069,7 @@ struct menuitem g_CheatsGameplayMenuItems[] = {
 	{
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_SUPERSHIELD,
-		0,
+		MENUITEMFLAG_HANDLER_TEXT,
 		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
@@ -1077,7 +1077,7 @@ struct menuitem g_CheatsGameplayMenuItems[] = {
 	{
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_ENEMYSHIELDS,
-		0,
+		MENUITEMFLAG_HANDLER_TEXT,
 		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
@@ -1085,7 +1085,7 @@ struct menuitem g_CheatsGameplayMenuItems[] = {
 	{
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_ENEMYROCKETS,
-		0,
+		MENUITEMFLAG_HANDLER_TEXT,
 		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
@@ -1093,7 +1093,7 @@ struct menuitem g_CheatsGameplayMenuItems[] = {
 	{
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_PERFECTDARKNESS,
-		0,
+		MENUITEMFLAG_HANDLER_TEXT,
 		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
@@ -1102,7 +1102,7 @@ struct menuitem g_CheatsGameplayMenuItems[] = {
 	{
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_DUALWIELDALLGUNS,
-		0,
+		MENUITEMFLAG_HANDLER_TEXT,
 		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
@@ -1119,7 +1119,7 @@ struct menuitem g_CheatsGameplayMenuItems[] = {
 	{
 		MENUITEMTYPE_MARQUEE,
 		0,
-		MENUITEMFLAG_SMALLFONT | MENUITEMFLAG_MARQUEE_FADEBOTHSIDES,
+		MENUITEMFLAG_SMALLFONT | MENUITEMFLAG_MARQUEE_FADEBOTHSIDES | MENUITEMFLAG_HANDLER_TEXT,
 		&cheatGetMarquee,
 		0,
 		NULL,
@@ -1156,7 +1156,7 @@ struct menuitem g_CheatsSoloWeaponsMenuItems[] = {
 	{
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_ROCKETLAUNCHER,
-		0,
+		MENUITEMFLAG_HANDLER_TEXT,
 		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
@@ -1164,7 +1164,7 @@ struct menuitem g_CheatsSoloWeaponsMenuItems[] = {
 	{
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_SNIPERRIFLE,
-		0,
+		MENUITEMFLAG_HANDLER_TEXT,
 		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
@@ -1172,7 +1172,7 @@ struct menuitem g_CheatsSoloWeaponsMenuItems[] = {
 	{
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_SUPERDRAGON,
-		0,
+		MENUITEMFLAG_HANDLER_TEXT,
 		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
@@ -1180,7 +1180,7 @@ struct menuitem g_CheatsSoloWeaponsMenuItems[] = {
 	{
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_LAPTOPGUN,
-		0,
+		MENUITEMFLAG_HANDLER_TEXT,
 		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
@@ -1188,7 +1188,7 @@ struct menuitem g_CheatsSoloWeaponsMenuItems[] = {
 	{
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_PHOENIX,
-		0,
+		MENUITEMFLAG_HANDLER_TEXT,
 		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
@@ -1196,7 +1196,7 @@ struct menuitem g_CheatsSoloWeaponsMenuItems[] = {
 	{
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_PSYCHOSISGUN,
-		0,
+		MENUITEMFLAG_HANDLER_TEXT,
 		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
@@ -1204,7 +1204,7 @@ struct menuitem g_CheatsSoloWeaponsMenuItems[] = {
 	{
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_TRENTSMAGNUM,
-		0,
+		MENUITEMFLAG_HANDLER_TEXT,
 		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
@@ -1212,7 +1212,7 @@ struct menuitem g_CheatsSoloWeaponsMenuItems[] = {
 	{
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_FARSIGHT,
-		0,
+		MENUITEMFLAG_HANDLER_TEXT,
 		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
@@ -1265,7 +1265,7 @@ struct menuitem g_CheatsClassicWeaponsMenuItems[] = {
 	{
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_PP9I,
-		0,
+		MENUITEMFLAG_HANDLER_TEXT,
 		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
@@ -1273,7 +1273,7 @@ struct menuitem g_CheatsClassicWeaponsMenuItems[] = {
 	{
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_CC13,
-		0,
+		MENUITEMFLAG_HANDLER_TEXT,
 		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
@@ -1281,7 +1281,7 @@ struct menuitem g_CheatsClassicWeaponsMenuItems[] = {
 	{
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_KL01313,
-		0,
+		MENUITEMFLAG_HANDLER_TEXT,
 		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
@@ -1289,7 +1289,7 @@ struct menuitem g_CheatsClassicWeaponsMenuItems[] = {
 	{
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_KF7SPECIAL,
-		0,
+		MENUITEMFLAG_HANDLER_TEXT,
 		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
@@ -1297,7 +1297,7 @@ struct menuitem g_CheatsClassicWeaponsMenuItems[] = {
 	{
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_ZZT,
-		0,
+		MENUITEMFLAG_HANDLER_TEXT,
 		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
@@ -1305,7 +1305,7 @@ struct menuitem g_CheatsClassicWeaponsMenuItems[] = {
 	{
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_DMC,
-		0,
+		MENUITEMFLAG_HANDLER_TEXT,
 		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
@@ -1313,7 +1313,7 @@ struct menuitem g_CheatsClassicWeaponsMenuItems[] = {
 	{
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_AR53,
-		0,
+		MENUITEMFLAG_HANDLER_TEXT,
 		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
@@ -1321,7 +1321,7 @@ struct menuitem g_CheatsClassicWeaponsMenuItems[] = {
 	{
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_RCP45,
-		0,
+		MENUITEMFLAG_HANDLER_TEXT,
 		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
@@ -1374,7 +1374,7 @@ struct menuitem g_CheatsWeaponsMenuItems[] = {
 	{
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_CLASSICSIGHT,
-		0,
+		MENUITEMFLAG_HANDLER_TEXT,
 		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
@@ -1382,7 +1382,7 @@ struct menuitem g_CheatsWeaponsMenuItems[] = {
 	{
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_UNLIMITEDAMMOLAPTOP,
-		0,
+		MENUITEMFLAG_HANDLER_TEXT,
 		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
@@ -1390,7 +1390,7 @@ struct menuitem g_CheatsWeaponsMenuItems[] = {
 	{
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_HURRICANEFISTS,
-		0,
+		MENUITEMFLAG_HANDLER_TEXT,
 		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
@@ -1398,7 +1398,7 @@ struct menuitem g_CheatsWeaponsMenuItems[] = {
 	{
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_UNLIMITEDAMMO,
-		0,
+		MENUITEMFLAG_HANDLER_TEXT,
 		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
@@ -1406,7 +1406,7 @@ struct menuitem g_CheatsWeaponsMenuItems[] = {
 	{
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_UNLIMITEDAMMONORELOADS,
-		0,
+		MENUITEMFLAG_HANDLER_TEXT,
 		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
@@ -1414,7 +1414,7 @@ struct menuitem g_CheatsWeaponsMenuItems[] = {
 	{
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_XRAYSCANNER,
-		0,
+		MENUITEMFLAG_HANDLER_TEXT,
 		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
@@ -1422,7 +1422,7 @@ struct menuitem g_CheatsWeaponsMenuItems[] = {
 	{
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_RTRACKER,
-		0,
+		MENUITEMFLAG_HANDLER_TEXT,
 		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
@@ -1430,7 +1430,7 @@ struct menuitem g_CheatsWeaponsMenuItems[] = {
 	{
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_ALLGUNS,
-		0,
+		MENUITEMFLAG_HANDLER_TEXT,
 		&cheatGetNameIfUnlocked,
 		0,
 		cheatCheckboxMenuHandler,
@@ -1491,7 +1491,7 @@ struct menuitem g_CheatsBuddiesMenuItems[] = {
 	{
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_PUGILIST,
-		0,
+		MENUITEMFLAG_HANDLER_TEXT,
 		&cheatGetNameIfUnlocked,
 		0,
 		cheatMenuHandleBuddyCheckbox,
@@ -1499,7 +1499,7 @@ struct menuitem g_CheatsBuddiesMenuItems[] = {
 	{
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_HOTSHOT,
-		0,
+		MENUITEMFLAG_HANDLER_TEXT,
 		&cheatGetNameIfUnlocked,
 		0,
 		cheatMenuHandleBuddyCheckbox,
@@ -1507,7 +1507,7 @@ struct menuitem g_CheatsBuddiesMenuItems[] = {
 	{
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_HITANDRUN,
-		0,
+		MENUITEMFLAG_HANDLER_TEXT,
 		&cheatGetNameIfUnlocked,
 		0,
 		cheatMenuHandleBuddyCheckbox,
@@ -1515,7 +1515,7 @@ struct menuitem g_CheatsBuddiesMenuItems[] = {
 	{
 		MENUITEMTYPE_CHECKBOX,
 		CHEAT_ALIEN,
-		0,
+		MENUITEMFLAG_HANDLER_TEXT,
 		&cheatGetNameIfUnlocked,
 		0,
 		cheatMenuHandleBuddyCheckbox,

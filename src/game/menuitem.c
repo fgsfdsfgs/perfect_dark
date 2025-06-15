@@ -2385,7 +2385,7 @@ Gfx *menuitemSelectableRender(Gfx *gdl, struct menurendercontext *context)
 
 	if ((context->item->flags & (MENUITEMFLAG_LABEL_HASRIGHTTEXT | MENUITEMFLAG_BIGFONT)) == 0) {
 		// Right side text
-		text = menuResolveText(context->item->param3, context->item);
+		text = menuResolveHandlerText(context->item->param3, context->item);
 
 		// This is not how you check if a string is empty...
 		if (text != NULL && text != "") {
@@ -2470,7 +2470,7 @@ Gfx *menuitemSliderRender(Gfx *gdl, struct menurendercontext *context)
 	}
 
 	label = menuResolveParam2Text(context->item);
-	markerx = context->x + context->width + slidervalue * 75 / context->item->param3 - 82;
+	markerx = context->x + context->width + slidervalue * 75 / (context->item->param3 == 0 ? 1:context->item->param3) - 82;
 
 	colour = MIXCOLOUR(context->dialog, item_unfocused);
 
