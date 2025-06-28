@@ -472,7 +472,7 @@ void amGetSlotDetails(s32 slot, u32 *flags, char *label)
 				}
 
 				if (prifunc) {
-					strcpy(label, langGet(prifunc->name));
+					strcpy(label, _(prifunc->name));
 				}
 			} else {
 				if (!prifunc || FUNCISSEC()) {
@@ -480,7 +480,7 @@ void amGetSlotDetails(s32 slot, u32 *flags, char *label)
 				}
 
 				if (secfunc) {
-					strcpy(label, langGet(secfunc->name));
+					strcpy(label, _(secfunc->name));
 				}
 			}
 		}

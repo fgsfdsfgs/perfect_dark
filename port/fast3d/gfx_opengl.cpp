@@ -2,6 +2,8 @@
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <ft2build.h>
+#include FT_FREETYPE_H
 
 #include <map>
 #include <unordered_map>
@@ -62,6 +64,10 @@ static char gl_glsl_version_str[16] = "130";
 static GLenum gl_mirror_clamp = GL_MIRROR_CLAMP_TO_EDGE;
 static bool gl_es = false;
 static bool gl_core_profile = false;
+
+static FT_Library library = NULL;
+FT_Face face = NULL;
+FT_GlyphSlot slot = NULL;
 
 static int gfx_opengl_get_max_texture_size() {
     GLint max_texture_size;
@@ -1014,6 +1020,76 @@ static void gfx_opengl_init(void) {
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
     framebuffers.resize(1); // for the default screen buffer
+
+    // FreeType init
+    FT_Error error;
+    error = FT_Init_FreeType(&library);
+    if (error) {
+        sysFatalError("FreeType init error\n");
+    }
+
+    // Loading font
+    error = FT_New_Face(library, "/usr/share/fonts/opentype/unifont/unifont.otf", 0, &face);
+    if (error) {
+        sysFatalError("Error while loading font\n");
+        FT_Done_FreeType(library);
+    }
+
+    error = FT_Select_Charmap(face, FT_ENCODING_UNICODE);
+    if (error) {
+        sysFatalError("Font does not support FT_ENCODING_UNICODE\n");
+  }
+
+    // Setting up size
+    FT_Set_Pixel_Sizes(face, 0, 10);
+    slot = face->glyph;
+}
+
+static std::map<int, GlyphTexture> Characters;
+
+static GlyphTexture gfx_opengl_render_text(int codepoint) {
+
+    unsigned char* pixels = 0;
+
+    if(Characters.contains(codepoint)) {
+        return Characters[codepoint];
+    }
+    else {
+        FT_UInt  glyph_index;
+        FT_Error error;
+
+        glyph_index = FT_Get_Char_Index(face, codepoint);
+        error = FT_Load_Glyph(face, glyph_index, FT_LOAD_RENDER);
+        FT_Bitmap *bitmap = &face->glyph->bitmap;
+
+        // N64 multiple of 8
+        int width_8 = (bitmap->width +7) & ~7;
+        int height_8 = (bitmap->rows +7) & ~7;
+
+        uint16_t *ia = (uint16_t*)malloc(width_8 * height_8 * sizeof(uint16_t));
+        if(!ia) {
+            //Error
+        }
+        memset(ia, 0, sizeof(uint16_t));
+        for (int y = 0; y < bitmap->rows; y++) {
+            for (int x = 0; x < bitmap->width; x++) {
+                uint16_t g = bitmap->buffer[y * bitmap->pitch + x];
+                ia[y*width_8 + x] = (g << 8) | g;
+            }
+        }
+
+        GlyphTexture tex = {
+            .ia = ia,
+            .width = width_8,
+            .height = height_8,
+            .top = face->glyph->bitmap_top,
+            .left = face->glyph->bitmap_left,
+            .advance = (int)face->glyph->advance.x >> 6
+        };
+
+        Characters.insert(std::pair<int, GlyphTexture>(codepoint, tex));
+        return tex;
+    }
 }
 
 static void gfx_opengl_on_resize(void) {
@@ -1279,5 +1355,6 @@ struct GfxRenderingAPI gfx_opengl_api = {
     gfx_opengl_select_texture_fb,
     gfx_opengl_delete_texture,
     gfx_opengl_set_texture_filter,
-    gfx_opengl_get_texture_filter
+    gfx_opengl_get_texture_filter,
+    gfx_opengl_render_text
 };

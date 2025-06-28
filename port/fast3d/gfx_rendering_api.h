@@ -12,6 +12,15 @@ struct GfxClipParameters {
     bool invert_y;
 };
 
+typedef struct {
+    uint16_t *ia;  // ID handle of the glyph texture
+    int width;       // Size of glyph
+    int height;
+    int top;    // Offset from baseline to left/top of glyph
+    int left;
+    int advance;    // Offset to advance to next glyph
+} GlyphTexture;
+
 enum FilteringMode { FILTER_NONE, FILTER_LINEAR, FILTER_THREE_POINT };
 
 struct GfxRenderingAPI {
@@ -52,6 +61,7 @@ struct GfxRenderingAPI {
     void (*delete_texture)(uint32_t texID);
     void (*set_texture_filter)(enum FilteringMode mode);
     enum FilteringMode (*get_texture_filter)(void);
+    GlyphTexture (*gfx_opengl_render_text)(int);
 };
 
 #endif

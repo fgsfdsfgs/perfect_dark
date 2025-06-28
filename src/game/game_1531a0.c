@@ -1,3 +1,4 @@
+#include <stdint.h>
 #include <ultra64.h>
 #include "constants.h"
 #include "game/game_006900.h"
@@ -12,8 +13,13 @@
 #include "lib/main.h"
 #include "lib/memp.h"
 #include "data.h"
+#include "os_convert.h"
 #include "types.h"
 #include "platform.h"
+#include "../fast3d/gfx_opengl.h"
+#include "ultratypes.h"
+#include <ft2build.h>
+#include FT_FREETYPE_H
 
 #define SPACE_WIDTH 5
 
@@ -104,6 +110,8 @@ struct fontchar *g_CharsHandelGothicMd = NULL;
 struct font *g_FontHandelGothicLg = NULL;
 struct fontchar *g_CharsHandelGothicLg = NULL;
 
+static struct GfxRenderingAPI *renderingAPI;
+
 u32 var8007fb24 = 0x00000000;
 u32 var8007fb28 = 0x00000000;
 u32 var8007fb2c = 0x00000000;
@@ -130,7 +138,7 @@ u16 var800801d8jf[] = {
 };
 #endif
 
-bool var8007fb9c = false;
+int var8007fb9c = false;
 s32 var8007fba0 = 0;
 s32 var8007fba4 = -1;
 u32 var8007fba8 = 0x00000000;
@@ -158,7 +166,7 @@ void text0f1531a8(s32 arg0)
 	var8007fac4 = -arg0;
 }
 
-void textSetRotation90(bool rotated)
+void textSetRotation90(int rotated)
 {
 	g_TextRotated90 = rotated;
 }
@@ -173,7 +181,7 @@ void text0f1531d0(s32 arg0)
 	var8007fad4 = arg0;
 }
 
-void text0f1531dc(bool arg0)
+void text0f1531dc(int arg0)
 {
 	if (arg0) {
 		var8007fad0 = 2;
@@ -186,7 +194,7 @@ void text0f1531dc(bool arg0)
 #endif
 }
 
-void textLoadFont(u8 *romstart, u8 *romend, struct font **fontptr, struct fontchar **charsptr, bool monospace)
+void textLoadFont(u8 *romstart, u8 *romend, struct font **fontptr, struct fontchar **charsptr, int monospace)
 {
 	extern u8 EXT_SEG _fonthandelgothicsmSegmentRomStart;
 	extern u8 EXT_SEG _fonthandelgothicxsSegmentRomStart;
@@ -267,7 +275,7 @@ void textLoadFont(u8 *romstart, u8 *romend, struct font **fontptr, struct fontch
 }
 
 void textReset(void)
-{	
+{
 	extern u8 EXT_SEG _fontbankgothicSegmentRomStart,     EXT_SEG _fontbankgothicSegmentRomEnd;
 	extern u8 EXT_SEG _fontzurichSegmentRomStart,         EXT_SEG _fontzurichSegmentRomEnd;
 	extern u8 EXT_SEG _fonttahomaSegmentRomStart,         EXT_SEG _fonttahomaSegmentRomEnd;
@@ -618,7 +626,7 @@ void textResetBlends(void)
 	g_Blend.types = 0;
 }
 
-bool textHasDiagonalBlend(void)
+int textHasDiagonalBlend(void)
 {
 	return (g_Blend.types & BLENDTYPE_DIAGONAL)
 		&& (g_Blend.diagmode == DIAGMODE_FADEIN || g_Blend.diagmode == DIAGMODE_FADEOUT);
@@ -1868,9 +1876,11 @@ Gfx *text0f15568c(Gfx *gdl, s32 *x, s32 *y, struct fontchar *curchar, struct fon
 				&& savedy + height >= curchar->baseline + sp90
 				&& *x >= savedx
 				&& curchar->baseline + sp90 + curchar->height >= savedy) {
-			gDPSetTextureImage(gdl++, G_IM_FMT_CI, G_IM_SIZ_16b, 1, curchar->pixeldata);
+			gDPSetTile(gdl++, G_IM_FMT_IA, G_IM_SIZ_16b, (curchar->width / 4), 0, G_TX_RENDERTILE, 0, G_TX_NOMIRROR | G_TX_WRAP, G_TX_NOMASK, G_TX_NOLOD, G_TX_NOMIRROR | G_TX_WRAP, G_TX_NOMASK, G_TX_NOLOD);
+			gDPSetTileSize(gdl++, G_TX_RENDERTILE, 0, 0, (curchar->width - 1) << 2, (curchar->height - 1) << 2);
+			gDPSetTextureImage(gdl++, G_IM_FMT_IA, G_IM_SIZ_16b, curchar->width, curchar->pixeldata);
 			gDPLoadSync(gdl++);
-			gDPLoadBlock(gdl++, G_TX_LOADTILE, 0, 0, ((curchar->height * 8 + 17) >> 1) - 1, 2048);
+			gDPLoadBlock(gdl++, G_TX_LOADTILE, 0, 0, curchar->width * curchar->height - 1, CALC_DXT(curchar->width, G_IM_SIZ_16b_BYTES));
 			gDPPipeSync(gdl++);
 
 			if (g_Blend.types) {
@@ -1894,7 +1904,7 @@ Gfx *text0f15568c(Gfx *gdl, s32 *x, s32 *y, struct fontchar *curchar, struct fon
 									1024,
 									65536 - 1024 / var8007fad0);
 						} else {
-							gSPTextureRectangle(gdl++,
+							/*gSPTextureRectangle(gdl++,
 									*x * 4 + var8007fadc,
 									(sp90 + curchar->baseline) * 4 + var8007fae0,
 									(*x + curchar->width * var8007fad0) * 4 + var8007fadc,
@@ -1903,7 +1913,17 @@ Gfx *text0f15568c(Gfx *gdl, s32 *x, s32 *y, struct fontchar *curchar, struct fon
 									var8007fae4 + 32,
 									var8007fae8 + 32,
 									1024 / var8007fad0,
-									1024);
+									1024);*/
+							gSPTextureRectangle(gdl++,
+									*x * 4 + var8007fadc,
+									(sp90 + curchar->baseline) * 4 + var8007fae0,
+									(*x + curchar->width * var8007fad0) * 4 + var8007fadc,
+									(sp90 + curchar->baseline + curchar->height) * 4 + var8007fae0,
+									G_TX_RENDERTILE,
+									0 << 5,
+									0 << 5,
+									1 << 10,
+									1 << 10);
 
 							if (var8007fb9c) {
 								text0f153b6c(*y + arg10);
@@ -1979,6 +1999,25 @@ void text0f156030(u32 colour)
 	var800a463c = colour;
 }
 
+void utf8_decode(const char *text, u32 *codepoint, u8 *size) {
+	if(*text < 0x80) { // Single byte; Classic ASCII
+		*codepoint = text[0];
+		*size = 1;
+	} else if ((text[0] & 0xE0) == 0xC0) { // 2 bytes
+		*codepoint = ((text[0] & 0x1F) << 6) | (text[1] & 0x3F);
+		*size = 2;
+	} else if ((text[0] & 0xF0) == 0xE0) { // 3 bytes
+		*codepoint = ((text[0] & 0x0F) << 12) | ((text[1] & 0x3F) << 6) | (text[2] & 0x3F);
+		*size = 3;
+	} else if ((text[0] & 0xF8) == 0xF0) { // 4 bytes
+		*codepoint = ((text[0] & 0x07) << 18) | ((text[1]  & 0x3F) << 12) | ((text[2] & 0x3F) << 6) | (text[3] & 0x3F);
+		*size = 4;
+	} else { // Invalid UTF-8
+		*codepoint = 0xFFFD;
+		*size = 1; // skip byte
+	}
+}
+
 Gfx *textRenderProjected(Gfx *gdl, s32 *x, s32 *y, char *text, struct fontchar *chars, struct font *font,
 		s32 colour, s32 width, s32 height, s32 arg9, s32 lineheight)
 {
@@ -1995,7 +2034,6 @@ Gfx *textRenderProjected(Gfx *gdl, s32 *x, s32 *y, char *text, struct fontchar *
 	s32 savedtypes;
 #endif
 	f32 alpha;
-
 	static u32 sbrd = 0x00000000;
 
 	spb0 = var8007fad0;
@@ -2119,8 +2157,8 @@ Gfx *textRenderProjected(Gfx *gdl, s32 *x, s32 *y, char *text, struct fontchar *
 
 	gDPLoadSync(gdl++);
 	gDPLoadTLUTCmd(gdl++, 6, 15);
-	gDPSetTile(gdl++, G_IM_FMT_CI, G_IM_SIZ_4b, 1, 0x0000, G_TX_RENDERTILE, 0, G_TX_NOMIRROR | G_TX_WRAP, G_TX_NOMASK, G_TX_NOLOD, G_TX_NOMIRROR | G_TX_WRAP, G_TX_NOMASK, G_TX_NOLOD);
-	gDPSetTileSize(gdl++, G_TX_RENDERTILE, 0, 0, 0x007c, 0x007c);
+	//gDPSetTile(gdl++, G_IM_FMT_CI, G_IM_SIZ_4b, 1, 0x0000, G_TX_RENDERTILE, 0, G_TX_NOMIRROR | G_TX_WRAP, G_TX_NOMASK, G_TX_NOLOD, G_TX_NOMIRROR | G_TX_WRAP, G_TX_NOMASK, G_TX_NOLOD);
+	//gDPSetTileSize(gdl++, G_TX_RENDERTILE, 0, 0, 0x007c, 0x007c);
 	gDPSetPrimColorViaWord(gdl++, 0, 0, colour);
 	gDPPipeSync(gdl++);
 
@@ -2156,6 +2194,8 @@ Gfx *textRenderProjected(Gfx *gdl, s32 *x, s32 *y, char *text, struct fontchar *
 	}
 #else
 	if (text != NULL) {
+		u8 curCharSize;
+		u32 codepoint;
 		while (*text != '\0') {
 			if (*text == ' ') {
 				prevchar = 'H';
@@ -2172,55 +2212,22 @@ Gfx *textRenderProjected(Gfx *gdl, s32 *x, s32 *y, char *text, struct fontchar *
 				}
 
 				*x = savedx;
-			#ifndef PLATFORM_N64
+			}
+			else {
+#ifndef PLATFORM_N64
 			// Handling UTF-8
-			} else if(*text < 0x80) { // Single byte; Classic ASCII
-				gdl = text0f15568c(gdl, x, y, &chars[*text - 0x21], &chars[prevchar - 0x21], font, savedx, savedy, width, height, arg9);
-				prevchar = *text;
-				text++;
-			} else if ((*text & 0xE0) == 0xC0) { // 2 bytes
-				s32 codepoint = ((*text & 0x1F) << 6) | (text[1] & 0x3F);				
-				//prevchar = *text;
-				text +=2;
-			} else if ((*text & 0xF0) == 0xE0) { // 3 bytes
-				s32 codepoint = ((*text & 0x0F) << 12) | ((text[1] & 0x3F) << 6) | (text[2] & 0x3F);
-				//prevchar = *text;
-				text += 3;
-			} else if ((*text & 0xF8) == 0xF0) { // 4 bytes
-				s32 codepoint = ((*text & 0x07) << 18) | ((text[1]  & 0x3F) << 12) | ((text[2] & 0x3F) << 6) | (text[3] & 0x3F);
-				//prevchar = *text;
-				text += 4;
-			} else { // Invalid UTF-8
-				//CRASH();
-				text++;
-			}
-			//gdl = text0f15568c(gdl, x, y, &chars[*text - 0x21], &chars[prevchar - 0x21], font, savedx, savedy, width, height, arg9);
-			#else
-			} else if (*text < 0x80 || 1) {
-				gdl = text0f15568c(gdl, x, y, &chars[*text - 0x21], &chars[prevchar - 0x21], font, savedx, savedy, width, height, arg9);
-				prevchar = *text;
-				text++;
-			} else {
-				u16 codepoint = ((*text & 0x7f) << 7) | (text[1] & 0x7f);
-				struct fontchar tmpchar = {0, 0, 12, 11};
-
-				if (codepoint & 0x2000) {
-					tmpchar.width = 15;
-					tmpchar.height = 16;
-				}
-
-				if ((codepoint & 0x1fff) >= 0x3c8) {
-					codepoint = 2;
-				}
-
-				tmpchar.index = codepoint + 0x80;
-				tmpchar.pixeldata = (void *)langGetJpnCharPixels(codepoint);
-
-				gdl = text0f15568c(gdl, x, y, &tmpchar, &tmpchar, font, savedx, savedy, width, height, arg9);
-
-				text += 2;
-			}
-			#endif
+			utf8_decode(text, &codepoint, &curCharSize);
+			struct fontchar tmpchar = {0, 0, 0, 0};
+			renderingAPI = &gfx_opengl_api;
+			GlyphTexture g = gfx_opengl_api.gfx_opengl_render_text(codepoint);
+			tmpchar.index = codepoint;
+			tmpchar.width = g.width;
+			tmpchar.height = g.height;
+			tmpchar.pixeldata = g.ia;
+			gdl = text0f15568c(gdl, x, y, &tmpchar, &tmpchar, font, savedx, savedy, width, height, arg9);
+			text += curCharSize;
+		}
+#endif
 		}
 	}
 #endif
@@ -2282,10 +2289,11 @@ Gfx *textRenderChar(Gfx *gdl, s32 *x, s32 *y, struct fontchar *char1, struct fon
 			gdl = text0f1566cc(gdl, *x / g_ScaleX, *y + arg10);
 		}
 #endif
-
-		gDPSetTextureImage(gdl++, G_IM_FMT_CI, G_IM_SIZ_16b, 1, char1->pixeldata);
+		gDPSetTile(gdl++, G_IM_FMT_IA, G_IM_SIZ_16b, (char1->width / 4), 0, G_TX_RENDERTILE, 0, G_TX_NOMIRROR | G_TX_WRAP, G_TX_NOMASK, G_TX_NOLOD, G_TX_NOMIRROR | G_TX_WRAP, G_TX_NOMASK, G_TX_NOLOD);
+		gDPSetTileSize(gdl++, G_TX_RENDERTILE, 0, 0, (char1->width - 1) << 2, (char1->height - 1) << 2);
+		gDPSetTextureImage(gdl++, G_IM_FMT_IA, G_IM_SIZ_16b, char1->width, OS_K0_TO_PHYSICAL(char1->pixeldata));
 		gDPLoadSync(gdl++);
-		gDPLoadBlock(gdl++, G_TX_LOADTILE, 0, 0, ((char1->height * 8 + 17) >> 1) - 1, 2048);
+		gDPLoadBlock(gdl++, G_TX_LOADTILE, 0, 0, char1->width * char1->height -1, CALC_DXT(char1->width, G_IM_SIZ_16b_BYTES));
 		gDPPipeSync(gdl++);
 
 		gdl = text0f156a24(gdl, *x - var8007fad0, sp38 - 1, char1, arg6, arg7 - 1, arg8, arg9);
@@ -2423,7 +2431,7 @@ Gfx *textRender(Gfx *gdl, s32 *x, s32 *y, char *text,
 	g_Blend.colour04 = arg6;
 	g_Blend.colour44 = arg6;
 
-#if VERSION >= VERSION_PAL_BETA // TODO - Lang: Fix it
+#if VERSION >= VERSION_PAL_BETA
 	while (*text != '\0') {
 		if (*text == ' ') {
 			*x += var8007fad0 * 5;
@@ -2438,10 +2446,43 @@ Gfx *textRender(Gfx *gdl, s32 *x, s32 *y, char *text,
 			struct fontchar *sp78;
 			struct fontchar *sp74;
 
-			textMapCodeUnitToChar(&text, &sp78, &sp74, chars, ((u8*)&prevchar));
+			textMapCodeUnitToChar(&text, &sp78, &sp74, chars, &prevchar);
 
 			gdl = textRenderChar(gdl, x, y, sp78, sp74,
 					font, savedx, savedy, width * var8007fad0, height, arg10);
+		}
+	}
+#else
+#ifndef PLATFORM_N64
+	u8 curCharSize;
+	u32 codepoint;
+	while (*text != '\0') {
+		if (*text == ' ') {
+			*x += var8007fad0 * 5;
+			prevchar = 'H';
+			text++;
+		} else if (*text == '\n') {
+			*x = savedx;
+			*y += lineheight;
+			prevchar = 'H';
+			text++;
+		} else {
+			utf8_decode(text, &codepoint, &curCharSize);
+			if(curCharSize == 0) { // Invalid UTF-8 encoding, skip character
+				text ++;
+			}
+			else {
+				struct fontchar tmpchar = {0, 0, 0, 0};
+				renderingAPI = &gfx_opengl_api;
+				GlyphTexture g = gfx_opengl_api.gfx_opengl_render_text((int)*text);
+				tmpchar.index = (int)*text;
+				tmpchar.width = g.width;
+				tmpchar.height = g.height;
+				tmpchar.pixeldata = g.ia;
+				gdl = textRenderChar(gdl, x, y, &tmpchar, &tmpchar,
+					font, savedx, savedy, width * var8007fad0, height, arg10);
+				text += curCharSize;
+			}
 		}
 	}
 #else
@@ -2455,30 +2496,7 @@ Gfx *textRender(Gfx *gdl, s32 *x, s32 *y, char *text,
 			*y += lineheight;
 			prevchar = 'H';
 			text++;
-		#ifndef PLATFORM_N64
-		// Handling UTF-8
-		} else if(*text < 0x80) { // Single byte; Classic ASCII	
-			gdl = textRenderChar(gdl, x, y, &chars[*text - 0x21], &chars[prevchar - 0x21],
-					font, savedx, savedy, width * var8007fad0, height, arg10);
-			//prevchar = *text;
-			text++;
-		} else if ((*text & 0xE0) == 0xC0) { // 2 bytes
-			s32 codepoint = ((*text & 0x1F) << 6) | (text[1] & 0x3F);
-			//prevchar = *text;
-			text +=2;
-		} else if ((*text & 0xF0) == 0xE0) { // 3 bytes
-			s32 codepoint = ((*text & 0x0F) << 12) | ((text[1] & 0x3F) << 6) | (text[2] & 0x3F);
-			prevchar = *text;
-			text += 3;
-		} else if ((*text & 0xF8) == 0xF0) { // 4 bytes
-			s32 codepoint = ((*text & 0x07) << 18) | ((text[1]  & 0x3F) << 12) | ((text[2] & 0x3F) << 6) | (text[3] & 0x3F);
-			//prevchar = *text;
-			text += 4;
-		} else { // Invalid UTF-8
-				CRASH();
-		}
-		#else
-		} else if (*text < 0x80) { // TODO - Lang: Fix it (compatible with UTF-8)
+		} else if (*text < 0x80) {
 			gdl = textRenderChar(gdl, x, y, &chars[*text - 0x21], &chars[prevchar - 0x21],
 					font, savedx, savedy, width * var8007fad0, height, arg10);
 			prevchar = *text;
@@ -2503,8 +2521,8 @@ Gfx *textRender(Gfx *gdl, s32 *x, s32 *y, char *text,
 
 			text += 2;
 		}
-		#endif
 	}
+#endif
 #endif
 
 	gDPPipeSync(gdl++);

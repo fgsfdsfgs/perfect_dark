@@ -5571,7 +5571,7 @@ struct fontchar {
 #else
 	s32 kerningindex;
 #endif
-	u8 *pixeldata;
+	uint16_t *pixeldata;
 };
 
 struct font {
