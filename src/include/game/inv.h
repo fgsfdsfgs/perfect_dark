@@ -44,7 +44,7 @@ struct invitem *invGetItemByIndex(s32 index);
 struct textoverride *invGetTextOverrideForObj(struct defaultobj *obj);
 struct textoverride *invGetTextOverrideForWeapon(s32 weaponnum);
 s32 invGetWeaponNumByIndex(s32 index);
-u16 invGetNameIdByIndex(s32 index);
+char *invGetNameIdByIndex(s32 index);
 char *invGetNameByIndex(s32 index);
 char *invGetShortNameByIndex(s32 index);
 void invInsertTextOverride(struct textoverride *override);

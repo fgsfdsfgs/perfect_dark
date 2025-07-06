@@ -10,6 +10,11 @@
 #include "lib/main.h"
 #include "data.h"
 #include "types.h"
+#ifndef PLATFORM_N64
+#include <libintl.h>
+#define _(String) gettext (String)
+#define gettext_noop(String) String
+#endif
 
 void invClear(void)
 {
@@ -975,7 +980,7 @@ s32 invGetWeaponNumByIndex(s32 index)
 	return 0;
 }
 
-u16 invGetNameIdByIndex(s32 index)
+char *invGetNameIdByIndex(s32 index)
 {
 	struct invitem *item = invGetItemByIndex(index);
 	s32 weaponnum = 0;
@@ -988,7 +993,7 @@ u16 invGetNameIdByIndex(s32 index)
 
 			if (override) {
 				if (override->inventorytext) {
-					return override->inventorytext;
+					return _(override->inventorytext);
 				}
 
 				weaponnum = override->weapon;
@@ -998,24 +1003,24 @@ u16 invGetNameIdByIndex(s32 index)
 			override = invGetTextOverrideForWeapon(weaponnum);
 
 			if (override && override->inventorytext) {
-				return override->inventorytext;
+				return _(override->inventorytext);
 			}
 		}
 	} else {
 		if (g_Vars.currentplayer->equipallguns) {
 			if (index < WEAPON_PSYCHOSISGUN - currentStageForbidsSlayer()) {
 				index++;
-				return bgunGetNameId(invAddOneIfCantHaveSlayer(index));
+				return bgunGetName(invAddOneIfCantHaveSlayer(index));
 			}
 		}
 	}
 
-	return bgunGetNameId(weaponnum);
+	return bgunGetName(weaponnum);
 }
 
 char *invGetNameByIndex(s32 index)
 {
-	return langGet(invGetNameIdByIndex(index));
+	return invGetNameIdByIndex(index);
 }
 
 char *invGetShortNameByIndex(s32 index)
@@ -1032,7 +1037,7 @@ char *invGetShortNameByIndex(s32 index)
 			if (override) {
 #if VERSION < VERSION_JPN_FINAL
 				if (override->inventorytext) {
-					return langGet(override->inventorytext);
+					return _(override->inventorytext);
 				}
 #endif
 
@@ -1044,7 +1049,7 @@ char *invGetShortNameByIndex(s32 index)
 			override = invGetTextOverrideForWeapon(weaponnum);
 
 			if (override && override->inventorytext) {
-				return langGet(override->inventorytext);
+				return _(override->inventorytext);
 			}
 #endif
 		}
@@ -1094,7 +1099,7 @@ char *invGetPickupTextByObj(struct defaultobj *obj)
 	struct textoverride *override = invGetTextOverrideForObj(obj);
 
 	if (override && override->pickuptext) {
-		return langGet(override->pickuptext);
+		return _(override->pickuptext);
 	}
 
 	return NULL;
@@ -1105,7 +1110,7 @@ char *invGetPickupTextByWeaponNum(s32 weaponnum)
 	struct textoverride *override = invGetTextOverrideForWeapon(weaponnum);
 
 	if (override && override->pickuptext) {
-		return langGet(override->pickuptext);
+		return _(override->pickuptext);
 	}
 
 	return NULL;

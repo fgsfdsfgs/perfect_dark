@@ -1111,13 +1111,13 @@ static GlyphTexture gfx_opengl_render_char(int codepoint, int category, FT_UInt 
             }
         }
 
-        GlyphTexture retTex = {
+        retTex = {
             .ia = ia,
             .width = width_8,
             .height = height_8,
             .top = font_faces[category]->glyph->bitmap_top,
             .left = font_faces[category]->glyph->bitmap_left,
-            .advance = (int)font_faces[category]->glyph->advance.x >> 6,
+            .advance = font_faces[category]->glyph->advance.x >> 6,
             .glyph_index = glyph_index,
         };
 

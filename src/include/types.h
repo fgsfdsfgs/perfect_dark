@@ -4458,10 +4458,10 @@ struct textoverride {
 	/*0x00*/ u32 unk00;
 	/*0x04*/ s32 objoffset;
 	/*0x08*/ s32 weapon;
-	/*0x0c*/ u32 obtaintext;     // eg. "Obtain medlab 2 keycard\n"
-	/*0x10*/ u32 ownertext;      // eg. "Guard's\n"
-	/*0x14*/ u32 inventorytext;  // eg. "Medlab 2 key card\n"
-	/*0x18*/ u32 inventory2text; // eg. "Medlab 2 key card\n"
+	/*0x0c*/ char *obtaintext;     // eg. "Obtain medlab 2 keycard\n"
+	/*0x10*/ char *ownertext;      // eg. "Guard's\n"
+	/*0x14*/ char *inventorytext;  // eg. "Medlab 2 key card\n"
+	/*0x18*/ char *inventory2text; // eg. "Medlab 2 key card\n"
 	/*0x1c*/ char *pickuptext;     // eg. "Picked up medlab 2 key card.\n"
 	/*0x20*/ struct textoverride *next;
 	/*0x24*/ struct defaultobj *obj;

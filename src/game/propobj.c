@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <ultra64.h>
 #include "constants.h"
 #include "game/bondmove.h"
@@ -80,9 +81,14 @@
 #ifndef PLATFORM_N64
 #include <libintl.h>
 #define _(String) gettext (String)
+#define gettext_noop(String) String
 #endif
 
 void rng2SetSeed(u32 seed);
+struct map {
+	s32 id;
+	char *text;
+};
 
 struct weaponobj *g_Proxies[30];
 f32 g_GasReleaseTimerMax240;
@@ -138,6 +144,29 @@ s32 g_LastPadEffectIndex = -1;
 struct autogunobj *g_ThrownLaptops = NULL;
 struct beam *g_ThrownLaptopBeams = NULL;
 s32 g_MaxThrownLaptops = 0;
+
+struct map ammoMap[] = {
+ {AMMOTYPE_KNIFE, gettext_noop("knife")},
+ {AMMOTYPE_CROSSBOW, gettext_noop("bolt")},
+ {AMMOTYPE_SHOTGUN, gettext_noop("cartridge")},
+ {AMMOTYPE_FARSIGHT, gettext_noop("orb")},
+ {AMMOTYPE_GRENADE, gettext_noop("grenade")},
+ {AMMOTYPE_ROCKET, gettext_noop("rocket")},
+ {AMMOTYPE_MAGNUM, gettext_noop("magnum bullet")},
+ {AMMOTYPE_DEVASTATOR, gettext_noop("grenade round")},
+ {AMMOTYPE_REMOTE_MINE, gettext_noop("remote mine")},
+ {AMMOTYPE_PROXY_MINE, gettext_noop("proximity mine")},
+ {AMMOTYPE_TIMED_MINE, gettext_noop("timed mine")},
+ {AMMOTYPE_REAPER, gettext_noop("Reaper ammo")},
+ {AMMOTYPE_HOMINGROCKET, gettext_noop("homing rocket")},
+ {AMMOTYPE_DART, gettext_noop("dart")},
+ {AMMOTYPE_NBOMB, gettext_noop("N-Bomb")},
+ {AMMOTYPE_SEDATIVE, gettext_noop("sedatives")},
+ {AMMOTYPE_PSYCHOSIS, gettext_noop("sedatives")},
+ {AMMOTYPE_CLOAK, gettext_noop("cloaking device")},
+ {AMMOTYPE_BOOST, gettext_noop("boost pill")},
+ {999, gettext_noop("ammo"})
+};
 
 /**
  * Attempt to call a lift from the given door.
@@ -16340,7 +16369,7 @@ void ammotypeGetPickedUpText(char *dst)
 }
 #endif
 
-struct nameinfo {
+/*struct nameinfo {
 	s32 id;
 	char *text;
 	u8 flags[5];
@@ -16359,7 +16388,7 @@ struct nameinfo *func0f087888pf(s32 id, struct nameinfo *info)
 	}
 
 	return NULL;
-}
+}*/
 
 #define DETERMINER_A     1
 #define DETERMINER_AN    2
@@ -16371,7 +16400,7 @@ struct nameinfo *func0f087888pf(s32 id, struct nameinfo *info)
 #define DETERMINER_8     8
 #define DETERMINER_YOUR  9
 
-struct nameinfo var8006a944pf[] = {
+/*struct nameinfo var8006a944pf[] = {
 #if VERSION >= VERSION_PAL_FINAL
 	{ 999,                   L_PROPOBJ_009, L_PROPOBJ_073, { DETERMINER_A,        DETERMINER_A,     DETERMINER_SOME6,    0,                   DETERMINER_SOME7    } },
 #else
@@ -16401,9 +16430,9 @@ struct nameinfo var8006a944pf[] = {
 	{ AMMOTYPE_CLOAK,        "L_PROPOBJ_048, L_PROPOBJ_071", { DETERMINER_A | 0x80, DETERMINER_A,     DETERMINER_A | 0x80, DETERMINER_A | 0x80, DETERMINER_A | 0x80 } },
 	{ AMMOTYPE_BOOST,        "L_PROPOBJ_049, L_PROPOBJ_072", { DETERMINER_A,        DETERMINER_A,     DETERMINER_AN,       DETERMINER_A,        DETERMINER_AN       } },
 	{ 0 },
-};
+};*/
 
-struct nameinfo var8006aa94pf[] = {
+/*struct nameinfo var8006aa94pf[] = {
 	{ WEAPON_FALCON2,          "L_GUN_007, 0",         { DETERMINER_A,     DETERMINER_A,     DETERMINER_A,     DETERMINER_AN,    DETERMINER_AN    } },
 	{ WEAPON_FALCON2_SILENCER, "L_GUN_008, 0",         { DETERMINER_A,     DETERMINER_A,     DETERMINER_A,     DETERMINER_AN,    DETERMINER_AN    } },
 	{ WEAPON_FALCON2_SCOPE,    "L_GUN_009, 0",         { DETERMINER_A,     DETERMINER_A,     DETERMINER_A,     DETERMINER_AN,    DETERMINER_AN    } },
@@ -16491,11 +16520,20 @@ struct nameinfo var8006aa94pf[] = {
 	{ WEAPON_BRIEFCASE2,       "L_GUN_071, 0",         { DETERMINER_THE,   DETERMINER_A,     DETERMINER_AN,    DETERMINER_A,     DETERMINER_AN    } },
 	{ WEAPON_SKROCKET,         "L_GUN_044, 0",         { DETERMINER_A,     DETERMINER_A,     DETERMINER_AN,    DETERMINER_A,     DETERMINER_AN    } },
 	{ 0 },
-};
+};*/
 
 // TODO - Lang: Fix it (revamp plural)
-void func0f0878c8pf(char *dst, s32 id, bool plural, bool full, bool dual, struct nameinfo *table)
+/*void func0f0878c8pf(char *dst, s32 id, bool plural, bool full, bool dual, struct nameinfo *table)
 {
+	/*if (dual) {
+		sprintf(dst, "%s%s.\n", _("Double "), buffer); // "Double"
+	} else if (!full) {
+		//sprintf(dst, _("Picked up %s.\n" + index), buffer); // "Picked up %s.\n"
+		sprintf(dst, _("Picked up %s.\n"), buffer); // "Picked up %s.\n"
+	} else {
+		sprintf(dst, "%s.\n", buffer);
+	}
+	
 	struct nameinfo *info;
 	u8 *ptr;
 	s32 languageid = 0;
@@ -16517,6 +16555,15 @@ void func0f0878c8pf(char *dst, s32 id, bool plural, bool full, bool dual, struct
 
 	info = func0f087888pf(id, table);
 
+	if (dual) {
+		sprintf(dst, "%s%s.\n", _("Double "), table->text); // "Double"
+	} else if (!full) {
+		//sprintf(dst, _("Picked up %s.\n" + index), buffer); // "Picked up %s.\n"
+		sprintf(dst, _("Picked up %s.\n"), table->text); // "Picked up %s.\n"
+	} else {
+		sprintf(dst, "%s.\n", table->text);
+	}
+	return;
 	if (info != NULL) {
 		u8 determiner = info->flags[languageid] & 0x7f;
 		u8 buffer[100];
@@ -16609,7 +16656,7 @@ void func0f0878c8pf(char *dst, s32 id, bool plural, bool full, bool dual, struct
 			case DETERMINER_YOUR:
 				determinertextid = full ? L_PROPOBJ_051 : L_PROPOBJ_050; // "Your", "your"
 				index = 1;
-				break;*/
+				break;
 			}
 
 			if (!full && languageid == LANGUAGE_PAL_DE) {
@@ -16649,14 +16696,15 @@ void func0f0878c8pf(char *dst, s32 id, bool plural, bool full, bool dual, struct
 			if (dual) {
 				sprintf(dst, "%s%s.\n", _("Double "), buffer); // "Double"
 			} else if (!full) {
-				sprintf(dst, _("Picked up %s.\n" + index), buffer); // "Picked up %s.\n"
+				//sprintf(dst, _("Picked up %s.\n" + index), buffer); // "Picked up %s.\n"
+				sprintf(dst, _("Picked up %s.\n"), buffer); // "Picked up %s.\n"
 			} else {
 				sprintf(dst, "%s.\n", buffer);
 			}
 #endif
 		}
 	}
-}
+}*/
 
 /*#if VERSION < VERSION_PAL_BETA
 void ammotypeGetDeterminer(char *dst, s32 ammotype, s32 qty)
@@ -16909,6 +16957,19 @@ void weaponPlayPickupSound(s32 weaponnum)
 	sndStart(var80095200, sound, NULL, -1, -1, -1, -1, -1);
 }
 
+char *ammoGetText(s32 id)
+{
+	struct map *info = ammoMap;
+	while (info->id) {
+			if (info->id == id) {
+				return _(info->text);
+			}
+			info++;
+		}
+
+	return NULL;
+}
+
 void ammotypeGetPickupMessage(char *dst, s32 ammotype, s32 qty)
 {
 	s32 playercount = PLAYERCOUNT();
@@ -16917,41 +16978,11 @@ void ammotypeGetPickupMessage(char *dst, s32 ammotype, s32 qty)
 
 	*dst = '\0';
 
-#if VERSION >= VERSION_JPN_FINAL
 	if (ammotype == AMMOTYPE_PISTOL || ammotype == AMMOTYPE_SMG || ammotype == AMMOTYPE_RIFLE) {
 		ammotype = 999;
 	}
 
-	func0f0878c8pf(dst, ammotype, qty > 1, !full, 0, var8006a944pf);
-#else 
-	if (g_Jpn) {
-		strcat(dst, "\n");
-	} else {
-		if (ammotype == AMMOTYPE_PISTOL || ammotype == AMMOTYPE_SMG || ammotype == AMMOTYPE_RIFLE) {
-			ammotype = 999;
-		}
-
-		func0f0878c8pf(dst, ammotype, qty > 1, !full, 0, var8006a944pf);
-	}
-//#else
-	/*if (g_Jpn) {
-		ammotypeGetPickupName(dst, ammotype, qty);
-
-		if (full) {
-			ammotypeGetPickedUpText(dst);
-		}
-
-		strcat(dst, "\n");
-	} else {
-		if (full) {
-			ammotypeGetPickedUpText(dst); // "Picked up"
-		}
-
-		ammotypeGetDeterminer(dst, ammotype, qty); // "a", "an", "some" or "the"
-		ammotypeGetPickupName(dst, ammotype, qty); // name of ammo type
-		strcat(dst, ".\n");
-	}*/
-#endif
+	sprintf(dst, ngettext("Picked up a %s", "Picked up some %s", qty), ammoGetText(ammotype));
 }
 
 void currentPlayerQueuePickupAmmoHudmsg(s32 ammotype, s32 pickupqty)
@@ -17112,7 +17143,7 @@ void weaponGetPickupText(char *buffer, s32 weaponnum, bool dual)
 		}
 	}
 
-	func0f0878c8pf(buffer, weaponnum, 0, !full, dual, var8006aa94pf);
+	//func0f0878c8pf(buffer, weaponnum, 0, !full, dual, var8006aa94pf);
 /*#else
 	s32 playercount = PLAYERCOUNT();
 	s32 full = playercount <= 2

@@ -19,7 +19,7 @@ typedef struct {
     int height;
     int top;    // Offset from baseline to left/top of glyph
     int left;
-    int advance;    // Offset to advance to next glyph
+    FT_Long advance;    // Offset to advance to next glyph
     FT_UInt glyph_index;
     int kerning;
 } GlyphTexture;

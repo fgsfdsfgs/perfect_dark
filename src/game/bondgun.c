@@ -6030,7 +6030,7 @@ u16 bgunGetNameId(s32 weaponnum)
 	struct weapon *weapon = g_Weapons[weaponnum];
 
 	if (weapon) {
-		return (uintptr_t)weapon->name; // TODO - Lang: Fix it
+		return (uintptr_t)weapon->name;
 	}
 
 	return 0;
@@ -12896,8 +12896,8 @@ Gfx *bgunDrawHud(Gfx *gdl)
 #else
 		func = weaponGetFunctionById(hand->gset.weaponnum, hand->gset.weaponfunc);
 #endif
-		nameid = invGetNameIdByIndex(invGetCurrentIndex());
-		str = langGet(nameid);
+		nameid = invGetCurrentIndex();
+		str = invGetNameIdByIndex(nameid);
 
 		if (ctrl->curgunstr != nameid) {
 			ctrl->guntypetimer = 0;
