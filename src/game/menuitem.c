@@ -197,7 +197,7 @@ Gfx *menuitemListRenderHeader(Gfx *gdl, s16 x1, s16 y1, s16 width, s16 arg4, s16
 
 	textSetWaveColours(g_MenuWave2Colours[dialog->type].listgroup_headerfg, g_MenuWave1Colours[dialog->type].listgroup_headerfg);
 
-	gdl = textRenderProjected(gdl, &x, &y, text, g_CharsHandelGothicSm, g_FontHandelGothicSm, colour, width, height, 0, 0);
+	gdl = textRenderProjected(gdl, &x, &y, text, FONT_SMALL, colour, width, height, 0, 0);
 
 	return gdl;
 }
@@ -625,7 +625,7 @@ Gfx *menuitemListRender(Gfx *gdl, struct menurendercontext *context)
 							sp15c.list.unk04 = savedunk04;
 						}
 
-						gdl = textRenderProjected(gdl, &x, &y, text2, chars, font, colour, context->width - left + context->x, height, sp128, 0);
+						gdl = textRenderProjected(gdl, &x, &y, text2, FONT_SMALL, colour, context->width - left + context->x, height, sp128, 0);
 
 						// Consider a checkbox
 						spb8.list.value = optionindex;
@@ -669,7 +669,7 @@ Gfx *menuitemListRender(Gfx *gdl, struct menurendercontext *context)
 		y = context->y + context->height / 2;
 
 		// "< Empty >"
-		gdl = textRenderProjected(gdl, &x, &y, _("< Empty >\n"), chars, font, colour, context->width - left + context->x, viGetHeight(), sp128, 0);
+		gdl = textRenderProjected(gdl, &x, &y, _("< Empty >\n"), FONT_SMALL, colour, context->width - left + context->x, viGetHeight(), sp128, 0);
 	}
 
 	gdl = text0f153780(gdl);
@@ -912,7 +912,7 @@ Gfx *menuitemDropdownRender(Gfx *gdl, struct menurendercontext *context)
 
 	x = context->x + 10;
 	y = context->y + 2;
-	gdl = textRenderProjected(gdl, &x, &y, text, g_CharsHandelGothicSm, g_FontHandelGothicSm, colour, context->width, context->height, 0, 0);
+	gdl = textRenderProjected(gdl, &x, &y, text, FONT_SMALL, colour, context->width, context->height, 0, 0);
 
 	if (context->dialog->unk6e) {
 		x = context->x + 80;
@@ -936,10 +936,10 @@ Gfx *menuitemDropdownRender(Gfx *gdl, struct menurendercontext *context)
 		data.list.unk04 = 0;
 		text = (char *)context->item->handler(MENUOP_GETOPTIONTEXT, context->item, &data);
 
-		textMeasure(&textheight, &textwidth, text, g_CharsHandelGothicSm, g_FontHandelGothicSm, 0);
+		textMeasure(&textheight, &textwidth, text, FONT_SMALL, 0);
 
 		x = context->x + context->width - textwidth - 10;
-		gdl = textRenderProjected(gdl, &x, &y, text, g_CharsHandelGothicSm, g_FontHandelGothicSm, colour, context->width, context->height, 0, 0);
+		gdl = textRenderProjected(gdl, &x, &y, text, FONT_SMALL, colour, context->width, context->height, 0, 0);
 	}
 
 	gdl = text0f153780(gdl);
@@ -1045,7 +1045,7 @@ Gfx *menuitemDropdownOverlay(Gfx *gdl, s16 x, s16 y, s16 x2, s16 y2, struct menu
 		for (i = 0; i != numoptions; i++) {
 			handlerdata.dropdown.value = i;
 			text = (char *)item->handler(MENUOP_GETOPTIONTEXT, item, &handlerdata);
-			textMeasure(&textheight, &textwidth, text, g_CharsHandelGothicSm, g_FontHandelGothicSm, 0);
+			textMeasure(&textheight, &textwidth, text, FONT_SMALL, 0);
 			textwidth += 6;
 
 			if (textwidth > context.width) {
@@ -1159,7 +1159,7 @@ Gfx *menuitemKeyboardRender(Gfx *gdl, struct menurendercontext *context)
 	y = context->y + 2;
 
 	gdl = text0f153628(gdl);
-	gdl = textRenderProjected(gdl, &x, &y, data->string, g_CharsHandelGothicSm, g_FontHandelGothicSm, 0xffffffff, context->width, context->height, 0, 0);
+	gdl = textRenderProjected(gdl, &x, &y, data->string, FONT_SMALL, 0xffffffff, context->width, context->height, 0, 0);
 	gdl = text0f153780(gdl);
 
 	// Render cursor
@@ -1285,7 +1285,7 @@ Gfx *menuitemKeyboardRender(Gfx *gdl, struct menurendercontext *context)
 						buttonwidth = 36;
 					}
 
-					textMeasure(&textheight, &textwidth, (labels[index]), g_CharsHandelGothicXs, g_FontHandelGothicXs, 0);
+					textMeasure(&textheight, &textwidth, (labels[index]), FONT_XS, 0);
 					x = (buttonwidth - textwidth) / 2 + x;
 
 					// Dim the OK button if string is empty
@@ -1321,7 +1321,7 @@ Gfx *menuitemKeyboardRender(Gfx *gdl, struct menurendercontext *context)
 					}
 #endif
 
-					gdl = textRenderProjected(gdl, &x, &y, (labels[index]), g_CharsHandelGothicXs, g_FontHandelGothicXs, textcolour, context->width, context->height, 0, 0);
+					gdl = textRenderProjected(gdl, &x, &y, (labels[index]), FONT_XS, textcolour, context->width, context->height, 0, 0);
 
 					if (index == 3 && menuitemKeyboardIsStringEmptyOrSpaces(data->string)) {
 						textSetWaveColours(
@@ -1341,9 +1341,9 @@ Gfx *menuitemKeyboardRender(Gfx *gdl, struct menurendercontext *context)
 						kbtext = (char *)"TYPE WITH KEYBOARD";
 					}
 					++y;
-					textMeasure(&textheight, &textwidth, kbtext, g_CharsHandelGothicXs, g_FontHandelGothicXs, 0);
+					textMeasure(&textheight, &textwidth, kbtext, FONT_XS, 0);
 					x = context->x + (context->width - textwidth) / 2;
-					gdl = textRenderProjected(gdl, &x, &y, kbtext, g_CharsHandelGothicXs, g_FontHandelGothicXs, textcolour, context->width, context->height, 0, 0);
+					gdl = textRenderProjected(gdl, &x, &y, kbtext, FONT_XS, textcolour, context->width, context->height, 0, 0);
 				}
 #endif
 			} else {
@@ -1355,9 +1355,9 @@ Gfx *menuitemKeyboardRender(Gfx *gdl, struct menurendercontext *context)
 					label[0] += 32;
 				}
 
-				textMeasure(&textheight, &textwidth, label, g_CharsHandelGothicSm, g_FontHandelGothicSm, 0);
+				textMeasure(&textheight, &textwidth, label, FONT_SMALL, 0);
 				x = (12 - textwidth) / 2 + x;
-				gdl = textRenderProjected(gdl, &x, &y, label, g_CharsHandelGothicSm, g_FontHandelGothicSm, textcolour, context->width, context->height, 0, 0);
+				gdl = textRenderProjected(gdl, &x, &y, label, FONT_SMALL, textcolour, context->width, context->height, 0, 0);
 			}
 		}
 	}
@@ -1640,7 +1640,7 @@ bool menuitemKeyboardTick(struct menuitem *item, struct menuinputs *inputs, u32 
 						i++;
 					}
 
-					textMeasure(&textheight, &textwidth, kb->string, g_CharsHandelGothicSm, g_FontHandelGothicSm, 0);
+					textMeasure(&textheight, &textwidth, kb->string, FONT_SMALL, 0);
 
 					if (item->param3 == 0 && textwidth > 58) {
 						delete = true;
@@ -1796,18 +1796,18 @@ Gfx *menuitemObjectivesRenderOne(Gfx *gdl, struct menudialog *dialog, s32 index,
 	// Render objective number
 	gdl = text0f153628(gdl);
 	sprintf(buffer, "%d: ", position);
-	textMeasure(&textheight, &textwidth, buffer, g_CharsHandelGothicSm, g_FontHandelGothicSm, 0);
+	textMeasure(&textheight, &textwidth, buffer, FONT_SMALL, 0);
 	x = objx - textwidth + 25;
-	gdl = textRenderProjected(gdl, &x, &y, buffer, g_CharsHandelGothicSm, g_FontHandelGothicSm, sp12c, width, height, 0, 0);
+	gdl = textRenderProjected(gdl, &x, &y, buffer, FONT_SMALL, sp12c, width, height, 0, 0);
 
 	x = objx + 25;
 
 	if (narrow) {
-		textWrap(85, sp120, buffer, g_CharsHandelGothicXs, g_FontHandelGothicXs);
-		gdl = textRenderProjected(gdl, &x, &y, buffer, g_CharsHandelGothicXs, g_FontHandelGothicXs, sp12c, width, height, 0, 0);
+		textWrap(85, sp120, buffer, FONT_XS);
+		gdl = textRenderProjected(gdl, &x, &y, buffer, FONT_XS, sp12c, width, height, 0, 0);
 	} else {
 		sprintf(buffer, "%s", sp120);
-		gdl = textRenderProjected(gdl, &x, &y, buffer, g_CharsHandelGothicSm, g_FontHandelGothicSm, sp12c, width, height, 0, 0);
+		gdl = textRenderProjected(gdl, &x, &y, buffer, FONT_SMALL, sp12c, width, height, 0, 0);
 	}
 
 	if (withstatus) {
@@ -1830,7 +1830,7 @@ Gfx *menuitemObjectivesRenderOne(Gfx *gdl, struct menudialog *dialog, s32 index,
 			spc8 = g_MenuColours[0].item_unfocused;
 		}
 
-		textMeasure(&textheight, &textwidth, spcc, g_CharsHandelGothicXs, g_FontHandelGothicXs, 0);
+		textMeasure(&textheight, &textwidth, spcc, FONT_XS, 0);
 
 		if (var800711e8 != 0) {
 			spc8 = var800711e8;
@@ -1844,13 +1844,13 @@ Gfx *menuitemObjectivesRenderOne(Gfx *gdl, struct menudialog *dialog, s32 index,
 		y = objy + spbc + 9;
 #endif
 
-		gdl = textRenderProjected(gdl, &x, &y, spcc, g_CharsHandelGothicXs, g_FontHandelGothicXs, spc8, width, height, 0, 0);
+		gdl = textRenderProjected(gdl, &x, &y, spcc, FONT_XS, spc8, width, height, 0, 0);
 
 #if VERSION != VERSION_JPN_FINAL
 		x = objx + width - textwidth - 10;
 		y = objy + spbc + 9;
 
-		gdl = textRenderProjected(gdl, &x, &y, spcc, g_CharsHandelGothicXs, g_FontHandelGothicXs, spc8 & 0xffffff7f, width, height, 0, 0);
+		gdl = textRenderProjected(gdl, &x, &y, spcc, FONT_XS, spc8 & 0xffffff7f, width, height, 0, 0);
 #endif
 
 		x = objx + width - textwidth - 13;
@@ -1900,7 +1900,7 @@ Gfx *menuitemObjectivesRenderOne(Gfx *gdl, struct menudialog *dialog, s32 index,
 		sp78 = objy + 8;
 		sp74 = y + 1;
 
-		textMeasure(&textheight, &textwidth, sp120, g_CharsHandelGothicSm, g_FontHandelGothicSm, 0);
+		textMeasure(&textheight, &textwidth, sp120, FONT_SMALL, 0);
 
 #if VERSION >= VERSION_JPN_FINAL
 		sp74 -= 2;
@@ -2013,6 +2013,7 @@ Gfx *menuitemLabelRender(Gfx *gdl, struct menurendercontext *context)
 	u8 savedvalue = var8007fb9c;
 	struct fontchar *font1 = g_CharsHandelGothicSm;
 	struct font *font2 = g_FontHandelGothicSm;
+	enum Font_Category cat = FONT_SMALL;
 
 	x = context->x + 10;
 	y = context->y + 2;
@@ -2032,6 +2033,7 @@ Gfx *menuitemLabelRender(Gfx *gdl, struct menurendercontext *context)
 		font1 = g_CharsHandelGothicXs;
 		font2 = g_FontHandelGothicXs;
 		y -= 2;
+		cat = FONT_XS;
 	}
 #endif
 
@@ -2039,7 +2041,7 @@ Gfx *menuitemLabelRender(Gfx *gdl, struct menurendercontext *context)
 		// Center
 		s32 textheight;
 		s32 textwidth;
-		textMeasure(&textheight, &textwidth, text, font1, font2, 0);
+		textMeasure(&textheight, &textwidth, text, cat, 0);
 		x = context->x + (context->width - textwidth) / 2;
 	}
 
@@ -2130,11 +2132,11 @@ Gfx *menuitemLabelRender(Gfx *gdl, struct menurendercontext *context)
 
 	gdl = text0f153628(gdl);
 	gdl = textRenderProjected(gdl, &x, &y, text,
-			font1, font2, colour1, context->width, context->height, 0, 0);
+			cat, colour1, context->width, context->height, 0, 0);
 
 	if ((context->item->flags & MENUITEMFLAG_LABEL_HASRIGHTTEXT) == 0) {
 		// Right side text
-		text = menuResolveText(context->item->param3, context->item);
+		text = menuResolveText((char*)context->item->param3, context->item); //TODO - Lang: Check it
 
 		// This is not how you check if a string is empty...
 		if (text != NULL && text != "") {
@@ -2149,7 +2151,7 @@ Gfx *menuitemLabelRender(Gfx *gdl, struct menurendercontext *context)
 			}
 #endif
 
-			textMeasure(&textheight, &textwidth, text, font1, font2, 0);
+			textMeasure(&textheight, &textwidth, text, cat, 0);
 			x = context->x + context->width - textwidth - 10;
 
 			if (context->item->flags & MENUITEMFLAG_LESSLEFTPADDING) {
@@ -2157,7 +2159,7 @@ Gfx *menuitemLabelRender(Gfx *gdl, struct menurendercontext *context)
 			}
 
 			gdl = textRenderProjected(gdl, &x, &y, text,
-					font1, font2, colour2, context->width, context->height, 0, 0);
+					cat, colour2, context->width, context->height, 0, 0);
 		}
 	}
 
@@ -2244,7 +2246,7 @@ Gfx *menuitemMeterRender(Gfx *gdl, struct menurendercontext *context)
 		gdl = text0f153628(gdl);
 		x = context->x;
 		y = context->y - 1;
-		gdl = textRenderProjected(gdl, &x, &y, text, g_CharsHandelGothicXs, g_FontHandelGothicXs,
+		gdl = textRenderProjected(gdl, &x, &y, text, FONT_XS,
 				colour2 & 0xffffff7f, context->width, context->height, 0, 0);
 		gdl = text0f153780(gdl);
 	}
@@ -2291,6 +2293,7 @@ Gfx *menuitemSelectableRender(Gfx *gdl, struct menurendercontext *context)
 	s32 y = context->y + 2;
 	struct fontchar *font1 = g_CharsHandelGothicSm;
 	struct font *font2 = g_FontHandelGothicSm;
+	enum Font_Category cat = FONT_SMALL;
 
 	if (context->item->flags & MENUITEMFLAG_LESSLEFTPADDING) {
 		x -= 6;
@@ -2299,6 +2302,7 @@ Gfx *menuitemSelectableRender(Gfx *gdl, struct menurendercontext *context)
 	if (context->item->flags & MENUITEMFLAG_BIGFONT) {
 		font1 = g_CharsHandelGothicMd;
 		font2 = g_FontHandelGothicMd;
+		cat = FONT_MEDIUM;
 	}
 
 	text = menuResolveParam2Text(context->item);
@@ -2370,7 +2374,7 @@ Gfx *menuitemSelectableRender(Gfx *gdl, struct menurendercontext *context)
 		// Center text
 		s32 textheight;
 		s32 textwidth;
-		textMeasure(&textheight, &textwidth, text, font1, font2, 0);
+		textMeasure(&textheight, &textwidth, text, cat, 0);
 		x = context->x + (context->width - textwidth) / 2;
 	}
 
@@ -2380,12 +2384,12 @@ Gfx *menuitemSelectableRender(Gfx *gdl, struct menurendercontext *context)
 	}
 
 	gdl = text0f153628(gdl);
-	gdl = textRenderProjected(gdl, &x, &y, text, font1, font2,
+	gdl = textRenderProjected(gdl, &x, &y, text, cat,
 			leftcolour, context->width, context->height, 0, 0);
 
 	if ((context->item->flags & (MENUITEMFLAG_LABEL_HASRIGHTTEXT | MENUITEMFLAG_BIGFONT)) == 0) {
 		// Right side text
-		text = menuResolveHandlerText(context->item->param3, context->item);
+		text = menuResolveHandlerText((char*)context->item->param3, context->item); // TODO - Lang: check it
 
 		// This is not how you check if a string is empty...
 		if (text != NULL && text != "") {
@@ -2393,10 +2397,10 @@ Gfx *menuitemSelectableRender(Gfx *gdl, struct menurendercontext *context)
 			s32 textwidth;
 
 			y = context->y + 2;
-			textMeasure(&textheight, &textwidth, text, font1, font2, 0);
+			textMeasure(&textheight, &textwidth, text, cat, 0);
 			x = context->x + context->width - textwidth - 10;
 
-			gdl = textRenderProjected(gdl, &x, &y, text, font1, font2,
+			gdl = textRenderProjected(gdl, &x, &y, text, cat,
 					rightcolour, context->width, context->height, 0, 0);
 		}
 	}
@@ -2525,7 +2529,7 @@ Gfx *menuitemSliderRender(Gfx *gdl, struct menurendercontext *context)
 	}
 
 	gdl = text0f153628(gdl);
-	gdl = textRenderProjected(gdl, &x, &y, label, g_CharsHandelGothicSm, g_FontHandelGothicSm, colour, context->width, context->height, 0, 0);
+	gdl = textRenderProjected(gdl, &x, &y, label, FONT_SMALL, colour, context->width, context->height, 0, 0);
 
 	if ((context->item->flags & MENUITEMFLAG_SLIDER_HIDEVALUE) == 0) {
 		strcpy(buffer, "");
@@ -2538,7 +2542,7 @@ Gfx *menuitemSliderRender(Gfx *gdl, struct menurendercontext *context)
 			context->item->handler(MENUOP_GETSLIDERLABEL, context->item, &data);
 		}
 
-		textMeasure(&textheight, &textwidth, buffer, g_CharsHandelGothicSm, g_FontHandelGothicSm, 0);
+		textMeasure(&textheight, &textwidth, buffer, FONT_SMALL, 0);
 
 		x = context->x + context->width - textwidth - 7;
 		y = context->y + 2;
@@ -2552,7 +2556,7 @@ Gfx *menuitemSliderRender(Gfx *gdl, struct menurendercontext *context)
 		textSetWaveColours(g_MenuWave2Colours[context->dialog->type].item_unfocused, g_MenuWave1Colours[context->dialog->type].item_unfocused);
 
 		colour = (colour & 0xffffff00) | ((colour & 0xff) >> 1);
-		gdl = textRenderProjected(gdl, &x, &y, buffer, g_CharsHandelGothicSm, g_FontHandelGothicSm, colour, context->width, context->height, 0, 0);
+		gdl = textRenderProjected(gdl, &x, &y, buffer, FONT_SMALL, colour, context->width, context->height, 0, 0);
 	}
 
 	gdl = text0f153780(gdl);
@@ -2863,10 +2867,12 @@ Gfx *menuitemCheckboxRender(Gfx *gdl, struct menurendercontext *context)
 	u32 fillcolour = 0xff002faf;
 	struct font *font2 = g_FontHandelGothicSm;
 	struct fontchar *font1 = g_CharsHandelGothicSm;
+	enum Font_Category cat = FONT_SMALL;
 
 	if (context->item->flags & MENUITEMFLAG_SMALLFONT) {
 		font2 = g_FontHandelGothicXs;
 		font1 = g_CharsHandelGothicXs;
+		cat = FONT_XS;
 	}
 
 	x = context->x;
@@ -2967,7 +2973,7 @@ Gfx *menuitemCheckboxRender(Gfx *gdl, struct menurendercontext *context)
 
 	x = context->x + 10;
 	y = context->y + 2;
-	gdl = textRenderProjected(gdl, &x, &y, text, font1, font2,
+	gdl = textRenderProjected(gdl, &x, &y, text, cat,
 			maincolour, context->width, context->height, 0, 0);
 
 	return text0f153780(gdl);
@@ -3056,7 +3062,7 @@ Gfx *menuitemScrollableRender(Gfx *gdl, struct menurendercontext *context)
 	}
 
 	if (rawtext) {
-		textWrap(context->width - paddingright, rawtext, alltext, g_CharsHandelGothicSm, g_FontHandelGothicSm);
+		textWrap(context->width - paddingright, rawtext, alltext, FONT_SMALL);
 	}
 
 	inptr = alltext;
@@ -3122,20 +3128,20 @@ Gfx *menuitemScrollableRender(Gfx *gdl, struct menurendercontext *context)
 	// Heading text shadow
 	x = context->x + 3;
 	y = context->y + 3;
-	gdl = textRenderProjected(gdl, &x, &y, headingtext, g_CharsHandelGothicSm, g_FontHandelGothicSm,
+	gdl = textRenderProjected(gdl, &x, &y, headingtext, FONT_SMALL,
 			0x000000ff, context->width - 4, context->height - 4, -data->scrolloffset, 0);
 
 	// Heading text (red)
 	x = context->x + 2;
 	y = context->y + 2;
-	gdl = textRenderProjected(gdl, &x, &y, headingtext, g_CharsHandelGothicSm, g_FontHandelGothicSm,
+	gdl = textRenderProjected(gdl, &x, &y, headingtext, FONT_SMALL,
 			0xff4444ff, context->width - 4, context->height - 4, -data->scrolloffset, 0);
 
 	// Body text
 	x = menuIsScrollableUnscrollable(context->item) ? context->x + 5 : context->x + 12;
 	y = context->y + 2;
 
-	gdl = textRenderProjected(gdl, &x, &y, bodytext, g_CharsHandelGothicSm, g_FontHandelGothicSm,
+	gdl = textRenderProjected(gdl, &x, &y, bodytext, FONT_SMALL,
 			colour, context->width - 4, context->height - 1, -data->scrolloffset, 0);
 
 	return text0f153780(gdl);
@@ -3177,10 +3183,10 @@ bool menuitemScrollableTick(struct menuitem *item, struct menudialog *dialog, st
 		rawtext = menuitemScrollableGetText(item->param);
 
 		if (rawtext) {
-			textWrap(width, rawtext, wrapped, g_CharsHandelGothicSm, g_FontHandelGothicSm);
+			textWrap(width, rawtext, wrapped, FONT_SMALL);
 		}
 
-		textMeasure(&height, &width, wrapped, g_CharsHandelGothicSm, g_FontHandelGothicSm, 0);
+		textMeasure(&height, &width, wrapped, FONT_SMALL, 0);
 
 		data->scrollable.maxscrolloffset = height - rowheight + 5;
 
@@ -3261,6 +3267,7 @@ Gfx *menuitemMarqueeRender(Gfx *gdl, struct menurendercontext *context)
 	bool hasmore;
 	struct font *font2;
 	struct fontchar *font1;
+	enum Font_Category cat;
 	s32 zero;
 
 #if VERSION == VERSION_JPN_FINAL
@@ -3269,6 +3276,7 @@ Gfx *menuitemMarqueeRender(Gfx *gdl, struct menurendercontext *context)
 #else
 	font2 = g_FontHandelGothicSm;
 	font1 = g_CharsHandelGothicSm;
+	cat = FONT_SMALL;
 #endif
 	zero = 0;
 
@@ -3276,6 +3284,7 @@ Gfx *menuitemMarqueeRender(Gfx *gdl, struct menurendercontext *context)
 	if (context->item->flags & MENUITEMFLAG_SMALLFONT) {
 		font2 = g_FontHandelGothicXs;
 		font1 = g_CharsHandelGothicXs;
+		cat = FONT_XS;
 	}
 #endif
 
@@ -3322,7 +3331,7 @@ Gfx *menuitemMarqueeRender(Gfx *gdl, struct menurendercontext *context)
 			}
 #endif
 
-			textMeasure(&textheight, &textwidth, string, font1, font2, 0);
+			textMeasure(&textheight, &textwidth, string, cat, 0);
 
 			if (x + textwidth > context->x) {
 				hasmore = false;
@@ -3408,7 +3417,7 @@ Gfx *menuitemMarqueeRender(Gfx *gdl, struct menurendercontext *context)
 	}
 
 	gdl = text0f153628(gdl);
-	gdl = textRenderProjected(gdl, &x, &y, &text[i], font1, font2, colour,
+	gdl = textRenderProjected(gdl, &x, &y, &text[i], cat, colour,
 			context->width + context->x - x, context->height, 0, 0);
 	gdl = text0f153780(gdl);
 	gdl = menuApplyScissor(gdl);
@@ -3429,6 +3438,7 @@ bool menuitemMarqueeTick(struct menuitem *item, union menuitemdata *data)
 	s32 textwidth;
 	struct fontchar *font1;
 	struct font *font2;
+	enum Font_Category cat;
 	s32 increment;
 	u16 texthash = 0;
 	char *text = menuResolveParam2Text(item);
@@ -3440,10 +3450,12 @@ bool menuitemMarqueeTick(struct menuitem *item, union menuitemdata *data)
 #else
 	font2 = g_FontHandelGothicSm;
 	font1 = g_CharsHandelGothicSm;
+	cat = FONT_SMALL;
 
 	if (item->flags & MENUITEMFLAG_SMALLFONT) {
 		font2 = g_FontHandelGothicXs;
 		font1 = g_CharsHandelGothicXs;
+		cat = FONT_XS;
 	}
 #endif
 
@@ -3463,7 +3475,7 @@ bool menuitemMarqueeTick(struct menuitem *item, union menuitemdata *data)
 		data->marquee.texthash = texthash;
 	}
 
-	textMeasure(&textheight, &textwidth, text, font1, font2, 0);
+	textMeasure(&textheight, &textwidth, text, cat, 0);
 	limit = data->marquee.viewwidth + textwidth;
 	increment = g_Vars.diffframe60 / 2;
 
@@ -3548,18 +3560,18 @@ Gfx *menuitemRankingRender(Gfx *gdl, struct menurendercontext *context)
 
 	if (!team) {
 		// "Deaths"
-		textMeasure(&textheight, &textwidth, _("Deaths\n"), g_CharsHandelGothicXs, g_FontHandelGothicXs, 0);
+		textMeasure(&textheight, &textwidth, _("Deaths\n"), FONT_XS, 0);
 		x = (context->x - textwidth) + 91;
 		y = context->y + 1;
-		gdl = textRenderProjected(gdl, &x, &y, _("Deaths\n"), g_CharsHandelGothicXs, g_FontHandelGothicXs,
+		gdl = textRenderProjected(gdl, &x, &y, _("Deaths\n"), FONT_XS,
 				textcolour, context->width, context->height, 0, 0);
 	}
 
 	// "Score"
-	textMeasure(&textheight, &textwidth, _("Score\n"), g_CharsHandelGothicXs, g_FontHandelGothicXs, 0);
+	textMeasure(&textheight, &textwidth, _("Score\n"), FONT_XS, 0);
 	x = (context->x - textwidth) + 120;
 	y = context->y + 1;
-	gdl = textRenderProjected(gdl, &x, &y, _("Score\n"), g_CharsHandelGothicXs, g_FontHandelGothicXs,
+	gdl = textRenderProjected(gdl, &x, &y, _("Score\n"), FONT_XS,
 			textcolour, context->width, context->height, 0, 0);
 	gdl = text0f153780(gdl);
 
@@ -3683,38 +3695,38 @@ Gfx *menuitemRankingRender(Gfx *gdl, struct menurendercontext *context)
 
 		if (team) {
 			gdl = textRenderProjected(gdl, &x, &y, g_BossFile.teamnames[ranking->teamnum],
-					g_CharsHandelGothicSm, g_FontHandelGothicSm, textcolour, context->width, context->height, 0, 0);
+					FONT_SMALL, textcolour, context->width, context->height, 0, 0);
 		} else {
 			gdl = textRenderProjected(gdl, &x, &y, ranking->mpchr->name,
-					g_CharsHandelGothicSm, g_FontHandelGothicSm, textcolour, context->width, context->height, 0, 0);
+					FONT_SMALL, textcolour, context->width, context->height, 0, 0);
 		}
 
 		if (!team) {
 			// Deaths value (red)
 			textcolour = colourBlend(0xcf0000ff, 0xff4040ff, weight);
 			sprintf(valuebuffer, "%d\n", ranking->mpchr->numdeaths);
-			textMeasure(&textheight, &textwidth, valuebuffer, g_CharsHandelGothicSm, g_FontHandelGothicSm, 0);
+			textMeasure(&textheight, &textwidth, valuebuffer, FONT_SMALL, 0);
 			x = context->x - textwidth + 91;
 #if VERSION >= VERSION_JPN_FINAL
 			y = context->y + i * 13 - data->scrolloffset + 18;
 #else
 			y = context->y + i * 10 - data->scrolloffset + 14;
 #endif
-			gdl = textRenderProjected(gdl, &x, &y, valuebuffer, g_CharsHandelGothicSm, g_FontHandelGothicSm,
+			gdl = textRenderProjected(gdl, &x, &y, valuebuffer, FONT_SMALL,
 					textcolour, context->width, context->height, 0, 0);
 		}
 
 		// Score value (green)
 		textcolour = colourBlend(0x009f00ff, 0x00ff00ff, weight);
 		sprintf(valuebuffer, "%d\n", ranking->score);
-		textMeasure(&textheight, &textwidth, valuebuffer, g_CharsHandelGothicSm, g_FontHandelGothicSm, 0);
+		textMeasure(&textheight, &textwidth, valuebuffer, FONT_SMALL, 0);
 		x = context->x - textwidth + 120;
 #if VERSION >= VERSION_JPN_FINAL
 		y = context->y + i * 13 - data->scrolloffset + 18;
 #else
 		y = context->y + i * 10 - data->scrolloffset + 14;
 #endif
-		gdl = textRenderProjected(gdl, &x, &y, valuebuffer, g_CharsHandelGothicSm, g_FontHandelGothicSm,
+		gdl = textRenderProjected(gdl, &x, &y, valuebuffer, FONT_SMALL,
 				textcolour, context->width, context->height, 0, 0);
 	}
 
@@ -3799,7 +3811,7 @@ Gfx *menuitemPlayerStatsRender(Gfx *gdl, struct menurendercontext *context)
 	x = context->x + 2;
 	y = context->y + 1;
 
-	gdl = textRenderProjected(gdl, &x, &y, mpchr->name, g_CharsHandelGothicSm, g_FontHandelGothicSm,
+	gdl = textRenderProjected(gdl, &x, &y, mpchr->name, FONT_SMALL,
 			selectioncolour, context->width, context->height, 0, 0);
 
 	// "Suicides" heading
@@ -3816,7 +3828,7 @@ Gfx *menuitemPlayerStatsRender(Gfx *gdl, struct menurendercontext *context)
 		maincolour = (colourBlend(maincolour, 0x00000000, 127) & 0xffffff00) | (maincolour & 0xff);
 	}
 
-	textMeasure(&textheight, &textwidth, _("Suicides\n"), g_CharsHandelGothicXs, g_FontHandelGothicXs, 0);
+	textMeasure(&textheight, &textwidth, _("Suicides\n"), FONT_XS, 0);
 #if VERSION >= VERSION_NTSC_1_0
 	x = context->x - textwidth + 121;
 #else
@@ -3824,7 +3836,7 @@ Gfx *menuitemPlayerStatsRender(Gfx *gdl, struct menurendercontext *context)
 #endif
 	y = context->y + 1;
 
-	gdl = textRenderProjected(gdl, &x, &y, _("Suicides\n"), g_CharsHandelGothicXs, g_FontHandelGothicXs,
+	gdl = textRenderProjected(gdl, &x, &y, _("Suicides\n"), FONT_XS,
 			maincolour, context->width, context->height, 0, 0);
 
 	// Num suicides
@@ -3832,7 +3844,7 @@ Gfx *menuitemPlayerStatsRender(Gfx *gdl, struct menurendercontext *context)
 	x = context->x - textwidth + 119;
 #endif
 	sprintf(buffer, "%d\n", mpchr->killcounts[playernum]);
-	textMeasure(&textheight, &textwidth, buffer, g_CharsHandelGothicSm, g_FontHandelGothicSm, 0);
+	textMeasure(&textheight, &textwidth, buffer, FONT_SMALL, 0);
 #if VERSION >= VERSION_NTSC_1_0
 	x -= textwidth;
 #else
@@ -3844,7 +3856,7 @@ Gfx *menuitemPlayerStatsRender(Gfx *gdl, struct menurendercontext *context)
 	y++;
 #endif
 
-	gdl = textRenderProjected(gdl, &x, &y, buffer, g_CharsHandelGothicSm, g_FontHandelGothicSm,
+	gdl = textRenderProjected(gdl, &x, &y, buffer, FONT_SMALL,
 			0xffff00ff, context->width, context->height, 0, 0);
 
 	// Move ypos past top row
@@ -3869,14 +3881,14 @@ Gfx *menuitemPlayerStatsRender(Gfx *gdl, struct menurendercontext *context)
 		}
 
 		// "Deaths" heading
-		textMeasure(&textheight, &textwidth, _("Deaths\n"), g_CharsHandelGothicXs, g_FontHandelGothicXs, 0);
+		textMeasure(&textheight, &textwidth, _("Deaths\n"), FONT_XS, 0);
 		x = context->x - textwidth + 120;
 		y = context->y + ypos;
-		gdl = textRenderProjected(gdl, &x, &y, _("Deaths\n"), g_CharsHandelGothicXs, g_FontHandelGothicXs,
+		gdl = textRenderProjected(gdl, &x, &y, _("Deaths\n"), FONT_XS,
 				maincolour, context->width, context->height, 0, 0);
 
 		// "Kills" heading
-		textMeasure(&textheight, &textwidth, _("Kills\n"), g_CharsHandelGothicXs, g_FontHandelGothicXs, 0);
+		textMeasure(&textheight, &textwidth, _("Kills\n"), FONT_XS, 0);
 
 #if VERSION >= VERSION_JPN_FINAL
 		x = context->x + 4;
@@ -3885,7 +3897,7 @@ Gfx *menuitemPlayerStatsRender(Gfx *gdl, struct menurendercontext *context)
 #endif
 
 		y = context->y + ypos;
-		gdl = textRenderProjected(gdl, &x, &y, _("Kills\n"),  g_CharsHandelGothicXs, g_FontHandelGothicXs,
+		gdl = textRenderProjected(gdl, &x, &y, _("Kills\n"),  FONT_XS,
 				maincolour, context->width, context->height, 0, 0);
 
 		// Move ypos past heading row
@@ -3978,20 +3990,20 @@ Gfx *menuitemPlayerStatsRender(Gfx *gdl, struct menurendercontext *context)
 					// Name
 					x = context->x + 29;
 					y = context->y + ypos;
-					gdl = textRenderProjected(gdl, &x, &y, loopmpchr->name, g_CharsHandelGothicSm, g_FontHandelGothicSm,
+					gdl = textRenderProjected(gdl, &x, &y, loopmpchr->name, FONT_SMALL,
 							0x00ffffff, context->width, context->height, 0, 0);
 
 					// Num deaths
 					sprintf(buffer, "%d\n", loopmpchr->killcounts[playernum]);
-					textMeasure(&textheight, &textwidth, buffer, g_CharsHandelGothicSm, g_FontHandelGothicSm, 0);
+					textMeasure(&textheight, &textwidth, buffer, FONT_SMALL, 0);
 					x = context->x - textwidth + 120;
 					y = context->y + ypos;
-					gdl = textRenderProjected(gdl, &x, &y, buffer, g_CharsHandelGothicSm, g_FontHandelGothicSm,
+					gdl = textRenderProjected(gdl, &x, &y, buffer, FONT_SMALL,
 							0xff4040ff, context->width, context->height, 0, 0);
 
 					// Num kills
 					sprintf(buffer, "%d\n", mpchr->killcounts[i]);
-					textMeasure(&textheight, &textwidth, buffer, g_CharsHandelGothicSm, g_FontHandelGothicSm, 0);
+					textMeasure(&textheight, &textwidth, buffer, FONT_SMALL, 0);
 
 #if VERSION == VERSION_JPN_FINAL
 					x = context->x + 4;
@@ -4000,7 +4012,7 @@ Gfx *menuitemPlayerStatsRender(Gfx *gdl, struct menurendercontext *context)
 #endif
 
 					y = context->y + ypos;
-					gdl = textRenderProjected(gdl, &x, &y, buffer, g_CharsHandelGothicSm, g_FontHandelGothicSm,
+					gdl = textRenderProjected(gdl, &x, &y, buffer, FONT_SMALL,
 							0x00ff00ff, context->width, context->height, 0, 0);
 
 #if VERSION == VERSION_JPN_FINAL
@@ -4461,7 +4473,7 @@ Gfx *menuitemControllerRenderText(Gfx *gdl, s32 curmode, struct menurendercontex
 			ry = i * 7 + context->y + pady;
 #endif
 			gdl = textRenderProjected(gdl, &rx, &ry, labels[i],
-					g_CharsHandelGothicXs, g_FontHandelGothicXs, labelcolour, viGetWidth(), viGetHeight(), 0, 0);
+					FONT_XS, labelcolour, viGetWidth(), viGetHeight(), 0, 0);
 		}
 
 		textnum = menuitemControllerGetButtonAction(curmode, i);
@@ -4496,7 +4508,7 @@ Gfx *menuitemControllerRenderText(Gfx *gdl, s32 curmode, struct menurendercontex
 		}
 
 		gdl = textRenderProjected(gdl, &rx, &ry, getItemText(textnum),
-				g_CharsHandelGothicXs, g_FontHandelGothicXs, colour, viGetWidth(), viGetHeight(), 0, 0);
+				FONT_XS, colour, viGetWidth(), viGetHeight(), 0, 0);
 	}
 
 	return text0f153780(gdl);
@@ -4626,7 +4638,7 @@ Gfx *menuitemControllerRender(Gfx *gdl, struct menurendercontext *context)
 	x = context->x + 2;
 	y = context->y + 2;
 	gdl = textRenderProjected(gdl, &x, &y, text,
-			g_CharsHandelGothicSm, g_FontHandelGothicSm, colour, viGetWidth(), viGetHeight(), 0, 0);
+			FONT_SMALL, colour, viGetWidth(), viGetHeight(), 0, 0);
 	gdl = text0f153780(gdl);
 
 	textcolour = colourBlend(colour, colour & 0xffffff00, textalpha);
@@ -4644,7 +4656,7 @@ Gfx *menuitemControllerRender(Gfx *gdl, struct menurendercontext *context)
 				"Only change to another control scheme\n"
 				"if you want to use original N64 controls.\n\n"
 				"See Extended Key Bindings for more info.",
-				g_CharsHandelGothicSm, g_FontHandelGothicSm, colour, viGetWidth(), viGetHeight(), 0, 0);
+				FONT_SMALL, colour, viGetWidth(), viGetHeight(), 0, 0);
 		gdl = text0f153780(gdl);
 	} else if (g_Menus[g_MpPlayerNum].main.controlmode >= CONTROLMODE_21) {
 		gdl = menuitemControllerRenderPad(gdl, context, 0, VERSION == VERSION_JPN_FINAL ? -4 : 12,
@@ -4667,7 +4679,7 @@ Gfx *menuitemControllerRender(Gfx *gdl, struct menurendercontext *context)
 
 		gdl = text0f153628(gdl);
 		gdl = textRenderProjected(gdl, &x, &y, _("Hold Weapon button for quick-menu.\nHold Action button to toggle function.\nAction+Fire temporarily changes function.\nAim allows you to target accurately.\nAim + Down C Button crouches.\nAim + Up C Button gets up.\n"), // "Hold weapon button for ..."
-				g_CharsHandelGothicSm, g_FontHandelGothicSm, colour, viGetWidth(), viGetHeight(), 0, 0);
+				FONT_SMALL, colour, viGetWidth(), viGetHeight(), 0, 0);
 		gdl = text0f153780(gdl);
 	}
 

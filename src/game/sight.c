@@ -488,13 +488,13 @@ Gfx *sightDrawTargetBox(Gfx *gdl, struct trackedprop *trackedprop, char *textid,
 				// textid 1 writes '0'
 				//label[0] = textid + 0x2f;
 
-				gdl = textRender(gdl, &x, &y, label, g_CharsNumeric, g_FontNumeric, 0x00ff00a0, 0x000000a0, viGetWidth(), viGetHeight(), 0, 0);
+				gdl = textRender(gdl, &x, &y, label, FONT_NUMERIC, 0x00ff00a0, 0x000000a0, viGetWidth(), viGetHeight(), 0, 0);
 			} else {
 				//char *text = langGet(textid);
 #if VERSION >= VERSION_JPN_FINAL
 				gdl = func0f1574d0jf(gdl, &x, &y, text, g_CharsHandelGothicXs, g_FontHandelGothicXs, 0x00ff00a0, 0x000000a0, viGetWidth(), viGetHeight(), 0, 0);
 #else
-				gdl = textRender(gdl, &x, &y, textid, g_CharsHandelGothicXs, g_FontHandelGothicXs, 0x00ff00a0, 0x000000a0, viGetWidth(), viGetHeight(), 0, 0);
+				gdl = textRender(gdl, &x, &y, textid, FONT_XS, 0x00ff00a0, 0x000000a0, viGetWidth(), viGetHeight(), 0, 0);
 #endif
 			}
 		}
@@ -793,7 +793,7 @@ Gfx *sightDrawDefault(Gfx *gdl, bool sighton, f32 crossx, f32 crossy)
 						viGetWidth(), viGetHeight(), 0, 0);
 #else
 				gdl = textRender(gdl, &textx, &texty, _("Identify\n"),
-						g_CharsHandelGothicXs, g_FontHandelGothicXs, 0x00ff00a0, 0x000000a0,
+						FONT_XS, 0x00ff00a0, 0x000000a0,
 						viGetWidth(), viGetHeight(), 0, 0);
 #endif
 			}

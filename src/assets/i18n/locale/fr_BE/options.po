@@ -314,7 +314,8 @@ msgstr "N64 EXPANSION PAK"
 
 #. L_OPTIONS_077
 msgid "Nintendo 64 Product Identification\n"
-msgstr "Identification Produit Nintendo 64\n"
+msgstr "Je test les é les 漢字 les الاختبار et 💞\n"
+# msgstr "Identification Produit Nintendo 64\n"
 
 #. L_OPTIONS_078
 msgid "Product ID:\n"
@@ -378,7 +379,7 @@ msgstr ""
 
 #. L_OPTIONS_093
 msgid "rare designs on the future <<<\n"
-msgstr "Coucou\n"
+msgstr "rare designs on the future <<<\n"
 
 #. L_OPTIONS_094
 msgid "Published by Rareware.\n"
@@ -478,7 +479,7 @@ msgstr "Menu Perfect\n"
 
 #. L_OPTIONS_117
 msgid "Solo Missions\n"
-msgstr "Missions Solo\n"
+msgstr "UTF-8 é 漢字  الاختبار  💞\n"
 
 #. L_OPTIONS_118
 msgid "Combat Simulator\n"

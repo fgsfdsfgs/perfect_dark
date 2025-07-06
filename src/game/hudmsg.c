@@ -52,29 +52,29 @@ struct sndstate *var800736b0nb = NULL;
 #endif
 
 struct hudmsgtype g_HudmsgTypes[] = {
-	/* 0*/ { 1, 1, 0, &g_CharsHandelGothicSm, &g_FontHandelGothicSm, 0x00ff0000, 0x000000a0, HUDMSGALIGN_LEFT,    HUDMSGALIGN_BOTTOM,        0, 0, 80  },
-	/* 1*/ { 0, 1, 0, &g_CharsHandelGothicMd, &g_FontHandelGothicMd, 0x00ff0000, 0x000000a0, HUDMSGALIGN_XMIDDLE, HUDMSGALIGN_YMIDDLE,       0, 0, 120 },
+	/* 0*/ { 1, 1, 0, FONT_SMALL, 0x00ff0000, 0x000000a0, HUDMSGALIGN_LEFT,    HUDMSGALIGN_BOTTOM,        0, 0, 80  },
+	/* 1*/ { 0, 1, 0, FONT_MEDIUM, 0x00ff0000, 0x000000a0, HUDMSGALIGN_XMIDDLE, HUDMSGALIGN_YMIDDLE,       0, 0, 120 },
 #if VERSION == VERSION_JPN_FINAL
-	/* 2*/ { 0, 0, 1, &g_CharsHandelGothicMd, &g_FontHandelGothicMd, 0xff999900, 0xffffffa0, HUDMSGALIGN_XMIDDLE, HUDMSGALIGN_YMIDDLE,       0, 0, 120 },
+	/* 2*/ { 0, 0, 1, FONT_MEDIUM, 0xff999900, 0xffffffa0, HUDMSGALIGN_XMIDDLE, HUDMSGALIGN_YMIDDLE,       0, 0, 120 },
 #else
-	/* 2*/ { 0, 0, 1, &g_CharsHandelGothicMd, &g_FontHandelGothicMd, 0xff000000, 0xffffffa0, HUDMSGALIGN_XMIDDLE, HUDMSGALIGN_YMIDDLE,       0, 0, 120 },
+	/* 2*/ { 0, 0, 1, FONT_MEDIUM, 0xff000000, 0xffffffa0, HUDMSGALIGN_XMIDDLE, HUDMSGALIGN_YMIDDLE,       0, 0, 120 },
 #endif
-	/* 3*/ { 0, 1, 0, &g_CharsHandelGothicMd, &g_FontHandelGothicMd, 0x00ff0000, 0x000000a0, HUDMSGALIGN_LEFT,    HUDMSGALIGN_BOTTOM,        0, 0, 120 },
-	/* 4*/ { 1, 1, 0, &g_CharsHandelGothicSm, &g_FontHandelGothicSm, 0x00ffc000, 0x000000a0, HUDMSGALIGN_LEFT,    HUDMSGALIGN_BOTTOM,        0, 0, 40  },
-	/* 5*/ { 0, 0, 0, &g_CharsHandelGothicMd, &g_FontHandelGothicMd, 0x00ff0000, 0x000000a0, HUDMSGALIGN_LEFT,    HUDMSGALIGN_TOP,           0, 0, 120 },
-	/* 6*/ { 1, 0, 0, &g_CharsHandelGothicSm, &g_FontHandelGothicSm, 0x00ff0000, 0x000000a0, HUDMSGALIGN_XMIDDLE, HUDMSGALIGN_TOP,           0, 0, 120 },
-	/* 7*/ { 1, 1, 0, &g_CharsHandelGothicSm, &g_FontHandelGothicSm, 0x00ff0000, 0x000000a0, HUDMSGALIGN_XMIDDLE, HUDMSGALIGN_TOP,           0, 0, -1  },
-	/* 8*/ { 1, 1, 0, &g_CharsHandelGothicSm, &g_FontHandelGothicSm, 0x00ffc000, 0x000000a0, HUDMSGALIGN_XMIDDLE, HUDMSGALIGN_BOTTOM,        0, 0, 500 },
+	/* 3*/ { 0, 1, 0, FONT_MEDIUM, 0x00ff0000, 0x000000a0, HUDMSGALIGN_LEFT,    HUDMSGALIGN_BOTTOM,        0, 0, 120 },
+	/* 4*/ { 1, 1, 0, FONT_SMALL, 0x00ffc000, 0x000000a0, HUDMSGALIGN_LEFT,    HUDMSGALIGN_BOTTOM,        0, 0, 40  },
+	/* 5*/ { 0, 0, 0, FONT_MEDIUM, 0x00ff0000, 0x000000a0, HUDMSGALIGN_LEFT,    HUDMSGALIGN_TOP,           0, 0, 120 },
+	/* 6*/ { 1, 0, 0, FONT_SMALL, 0x00ff0000, 0x000000a0, HUDMSGALIGN_XMIDDLE, HUDMSGALIGN_TOP,           0, 0, 120 },
+	/* 7*/ { 1, 1, 0, FONT_SMALL, 0x00ff0000, 0x000000a0, HUDMSGALIGN_XMIDDLE, HUDMSGALIGN_TOP,           0, 0, -1  },
+	/* 8*/ { 1, 1, 0, FONT_SMALL, 0x00ffc000, 0x000000a0, HUDMSGALIGN_XMIDDLE, HUDMSGALIGN_BOTTOM,        0, 0, 500 },
 #if VERSION == VERSION_JPN_FINAL
-	/* 9*/ { 1, 1, 0, &g_CharsHandelGothicSm, &g_FontHandelGothicSm, 0x00ff0000, 0x000000a0, HUDMSGALIGN_LEFT,    HUDMSGALIGN_BOTTOM,        0, 0, 120 },
+	/* 9*/ { 1, 1, 0, FONT_SMALL, 0x00ff0000, 0x000000a0, HUDMSGALIGN_LEFT,    HUDMSGALIGN_BOTTOM,        0, 0, 120 },
 #else
-	/* 9*/ { 1, 1, 0, &g_CharsHandelGothicXs, &g_FontHandelGothicXs, 0x00ff0000, 0x000000a0, HUDMSGALIGN_LEFT,    HUDMSGALIGN_BOTTOM,        0, 0, 120 },
+	/* 9*/ { 1, 1, 0, FONT_XS, 0x00ff0000, 0x000000a0, HUDMSGALIGN_LEFT,    HUDMSGALIGN_BOTTOM,        0, 0, 120 },
 #endif
-	/*10*/ { 1, 1, 0, &g_CharsHandelGothicSm, &g_FontHandelGothicSm, 0x00ff0000, 0x000000a0, HUDMSGALIGN_LEFT,    HUDMSGALIGN_BOTTOM,        0, 0, 240 },
+	/*10*/ { 1, 1, 0, FONT_SMALL, 0x00ff0000, 0x000000a0, HUDMSGALIGN_LEFT,    HUDMSGALIGN_BOTTOM,        0, 0, 240 },
 #if VERSION >= VERSION_NTSC_1_0
-	/*11*/ { 0, 0, 0, &g_CharsHandelGothicSm, &g_FontHandelGothicSm, 0x00ff0000, 0x000000a0, HUDMSGALIGN_XMIDDLE, HUDMSGALIGN_BELOWVIEWPORT, 0, 0, 120 },
+	/*11*/ { 0, 0, 0, FONT_SMALL, 0x00ff0000, 0x000000a0, HUDMSGALIGN_XMIDDLE, HUDMSGALIGN_BELOWVIEWPORT, 0, 0, 120 },
 #else
-	/*11*/ { 1, 0, 0, &g_CharsHandelGothicSm, &g_FontHandelGothicSm, 0x00ff0000, 0x000000a0, HUDMSGALIGN_XMIDDLE, HUDMSGALIGN_BELOWVIEWPORT, 0, 0, 120 },
+	/*11*/ { 1, 0, 0, FONT_SMALL, 0x00ff0000, 0x000000a0, HUDMSGALIGN_XMIDDLE, HUDMSGALIGN_BELOWVIEWPORT, 0, 0, 120 },
 #endif
 };
 
@@ -195,7 +195,7 @@ Gfx *hudmsgRenderMissionTimer(Gfx *gdl, u32 alpha)
 	}
 #endif
 
-	gdl = textRender(gdl, &x, &y, buffer, g_CharsNumeric, g_FontNumeric, textcolour, 0x000000a0, viGetWidth(), viGetHeight_hack(), 0, 0);
+	gdl = textRender(gdl, &x, &y, buffer, FONT_NUMERIC, textcolour, 0x000000a0, viGetWidth(), viGetHeight_hack(), 0, 0);
 
 #ifndef PLATFORM_N64
 	gSPClearExtraGeometryModeEXT(gdl++, G_ASPECT_MODE_EXT);
@@ -274,7 +274,7 @@ Gfx *hudmsgRenderZoomRange(Gfx *gdl, u32 alpha)
 	}
 
 	sprintf(text, "%s%s%4.2fX", "", "", curzoom);
-	textMeasure(&textheight, &textwidth, text, g_CharsNumeric, g_FontNumeric, 0);
+	textMeasure(&textheight, &textwidth, text, FONT_NUMERIC, 0);
 
 	x = viewleft + viewhalfwidth - textwidth - 5;
 	y = texty;
@@ -288,11 +288,11 @@ Gfx *hudmsgRenderZoomRange(Gfx *gdl, u32 alpha)
 #endif
 
 	gdl = text0f1538e4(gdl, &x, &y, &x2, &y2);
-	gdl = textRender(gdl, &x, &y, text, g_CharsNumeric, g_FontNumeric, colour, 0x000000a0, viGetWidth(), viGetHeight(), 0, 0);
+	gdl = textRender(gdl, &x, &y, text, FONT_NUMERIC, colour, 0x000000a0, viGetWidth(), viGetHeight(), 0, 0);
 
 	// Divider
 	sprintf(text, "/");
-	textMeasure(&textheight, &textwidth, text, g_CharsNumeric, g_FontNumeric, 0);
+	textMeasure(&textheight, &textwidth, text, FONT_NUMERIC, 0);
 
 	x = viewleft + viewhalfwidth - (textwidth >> 1);
 	y = texty;
@@ -300,11 +300,11 @@ Gfx *hudmsgRenderZoomRange(Gfx *gdl, u32 alpha)
 	y2 = y + textheight;
 
 	gdl = text0f1538e4(gdl, &x, &y, &x2, &y2);
-	gdl = textRender(gdl, &x, &y, text, g_CharsNumeric, g_FontNumeric, colour, 0x000000a0, viGetWidth(), viGetHeight(), 0, 0);
+	gdl = textRender(gdl, &x, &y, text, FONT_NUMERIC, colour, 0x000000a0, viGetWidth(), viGetHeight(), 0, 0);
 
 	// Right side - max zoom level
 	sprintf(text, "%s%s%4.2fX", "", "", maxzoom);
-	textMeasure(&textheight, &textwidth, text, g_CharsNumeric, g_FontNumeric, 0);
+	textMeasure(&textheight, &textwidth, text, FONT_NUMERIC, 0);
 
 	x = viewleft + viewhalfwidth + 5;
 	y = texty;
@@ -312,7 +312,7 @@ Gfx *hudmsgRenderZoomRange(Gfx *gdl, u32 alpha)
 	y2 = y + textheight;
 
 	gdl = text0f1538e4(gdl, &x, &y, &x2, &y2);
-	gdl = textRender(gdl, &x, &y, text, g_CharsNumeric, g_FontNumeric, colour, 0x000000a0, viGetWidth(), viGetHeight(), 0, 0);
+	gdl = textRender(gdl, &x, &y, text, FONT_NUMERIC, colour, 0x000000a0, viGetWidth(), viGetHeight(), 0, 0);
 
 #ifndef PLATFORM_N64
 	gSPClearExtraGeometryModeEXT(gdl++, G_ASPECT_CENTER_EXT);
@@ -487,10 +487,9 @@ void hudmsgCreate(char *text, s32 type)
 			g_HudmsgTypes[type].unk00,
 			g_HudmsgTypes[type].unk01,
 			g_HudmsgTypes[type].unk02,
-			g_HudmsgTypes[type].unk04,
-			g_HudmsgTypes[type].unk08,
+			g_HudmsgTypes[type].category,
 			g_HudmsgTypes[type].colour,
-			g_HudmsgTypes[type].unk10,
+			g_HudmsgTypes[type].shadowcolour,
 			g_HudmsgTypes[type].alignh,
 			g_HudmsgTypes[type].unk16,
 			g_HudmsgTypes[type].alignv,
@@ -504,10 +503,9 @@ void hudmsgCreateWithFlags(char *text, s32 type, u32 flags)
 			g_HudmsgTypes[type].unk00,
 			g_HudmsgTypes[type].unk01,
 			g_HudmsgTypes[type].unk02,
-			g_HudmsgTypes[type].unk04,
-			g_HudmsgTypes[type].unk08,
+			g_HudmsgTypes[type].category,
 			g_HudmsgTypes[type].colour,
-			g_HudmsgTypes[type].unk10,
+			g_HudmsgTypes[type].shadowcolour,
 			g_HudmsgTypes[type].alignh,
 			g_HudmsgTypes[type].unk16,
 			g_HudmsgTypes[type].alignv,
@@ -523,10 +521,9 @@ void hudmsgCreateWithColour(char *text, s32 type, u8 colournum)
 			g_HudmsgTypes[type].unk00,
 			g_HudmsgTypes[type].unk01,
 			g_HudmsgTypes[type].unk02,
-			g_HudmsgTypes[type].unk04,
-			g_HudmsgTypes[type].unk08,
+			g_HudmsgTypes[type].category,
 			g_HudmsgTypes[type].colour,
-			g_HudmsgTypes[type].unk10,
+			g_HudmsgTypes[type].shadowcolour,
 			g_HudmsgTypes[type].alignh,
 			g_HudmsgTypes[type].unk16,
 			g_HudmsgTypes[type].alignv,
@@ -540,10 +537,9 @@ void hudmsgCreateWithDuration(char *text, s32 type, struct hudmsgtype *config, s
 			config->unk00,
 			config->unk01,
 			config->unk02,
-			config->unk04,
-			config->unk08,
+			config->category,
 			config->colour,
-			config->unk10,
+			config->shadowcolour,
 			config->alignh,
 			config->unk16,
 			config->alignv,
@@ -756,7 +752,7 @@ void hudmsgCreateAsSubtitle(char *srctext, s32 type, u8 colourindex, s32 audioch
 			prewrap[accumlen + msglen + 1] = '\0';
 
 			// Apply text wrapping to prewrap
-			textWrap(wrapwidth, prewrap, postwrap, g_CharsHandelGothicSm, g_FontHandelGothicSm);
+			textWrap(wrapwidth, prewrap, postwrap, FONT_SMALL);
 
 			// Next, count the number of lines in the wrapped message.
 			// If it's more than two, send the accumulator out as a hudmsg and
@@ -822,7 +818,7 @@ void hudmsgCreateAsSubtitle(char *srctext, s32 type, u8 colourindex, s32 audioch
 #endif
 	} else {
 		hudmsgCreateFromArgs(srctext, type, config->unk00, config->unk01, config->unk02,
-				config->unk04, config->unk08, config->colour, config->unk10, config->alignh,
+				config->category, config->colour, config->shadowcolour, config->alignh,
 				config->unk16, config->alignv, config->unk18, audiochannelnum, 0);
 	}
 }
@@ -833,8 +829,8 @@ void hudmsgCreateFromArgsWithoutFlags(char *text, s32 type, s32 conf00, s32 conf
 			conf00,
 			conf01,
 			conf02,
-			conf04,
-			conf08,
+			//conf04, TODO - LANG: Fix it
+			FONT_MEDIUM,
 			textcolour,
 			shadowcolour,
 			alignh,
@@ -967,7 +963,7 @@ void hudmsgCalculatePosition(struct hudmessage *msg)
 }
 
 void hudmsgCreateFromArgs(char *text, s32 type, s32 conf00, s32 conf01, s32 conf02,
-		struct fontchar **conf04, struct font **conf08,
+		enum Font_Category category,
 		u32 textcolour, u32 glowcolour,
 		u32 alignh, s32 conf16, u32 alignv, s32 conf18, s32 arg14, u32 flags)
 {
@@ -1049,7 +1045,8 @@ void hudmsgCreateFromArgs(char *text, s32 type, s32 conf00, s32 conf01, s32 conf
 			xmarginaextra = 0;
 			msg = &g_HudMessages[index];
 			wrapwidth = hudmsg0f0ddb1c(&xmarginaextra, conf16);
-			textMeasure(&textheight, &textwidth, text, *conf04, *conf08, 0);
+			textMeasure(&textheight, &textwidth, text, category, 0);
+			//textMeasure(&textheight, &textwidth, text, *conf04, *conf08, 0); TODO - Lang: Fix it
 
 #if VERSION >= VERSION_JPN_FINAL
 			if (textwidth > wrapwidth && (flags & HUDMSGFLAG_NOWRAP) == 0)
@@ -1071,8 +1068,10 @@ void hudmsgCreateFromArgs(char *text, s32 type, s32 conf00, s32 conf01, s32 conf
 				stacktext[writeindex++] = '\n';
 				stacktext[writeindex++] = '\0';
 
-				textWrap(wrapwidth, stacktext, msg->text, *conf04, *conf08);
-				textMeasure(&textheight, &textwidth, msg->text, *conf04, *conf08, 0);
+				textWrap(wrapwidth, stacktext, msg->text, category);
+				//textWrap(wrapwidth, stacktext, msg->text, *conf04, *conf08); TODO - Lang: Fix it
+				textMeasure(&textheight, &textwidth, msg->text, category, 0);
+				//textMeasure(&textheight, &textwidth, msg->text, *conf04, *conf08, 0); TODO - Lang: Fix it
 			} else {
 				strncpy(msg->text, text, 399);
 				msg->text[399] = '\0';
@@ -1087,8 +1086,7 @@ void hudmsgCreateFromArgs(char *text, s32 type, s32 conf00, s32 conf01, s32 conf
 			msg->boxed = conf00;
 			msg->allowfadein = conf01;
 			msg->flash = conf02;
-			msg->font1 = *conf04;
-			msg->font2 = *conf08;
+			msg->category = category;
 			msg->textcolour = textcolour;
 			msg->glowcolour = glowcolour;
 			msg->alignh = alignh;
@@ -1517,7 +1515,7 @@ Gfx *hudmsgsRender(Gfx *gdl)
 #endif
 
 					if (spc0 > 0) {
-						gdl = textRenderProjected(gdl, &x, &y, msg->text, msg->font1, msg->font2, textcolour, viGetWidth(), viGetHeight(), 0, 0);
+						gdl = textRenderProjected(gdl, &x, &y, msg->text, msg->category, textcolour, viGetWidth(), viGetHeight(), 0, 0);
 					}
 				} else {
 					gdl = text0f153a34(gdl, x, y, x + msg->width, y + msg->height, 0);
@@ -1525,7 +1523,7 @@ Gfx *hudmsgsRender(Gfx *gdl)
 #if VERSION >= VERSION_JPN_FINAL
 					gdl = func0f1574d0jf(gdl, &x, &y, msg->text, msg->font1, msg->font2, textcolour, glowcolour, viGetWidth(), viGetHeight(), 0, 0);
 #else
-					gdl = textRender(gdl, &x, &y, msg->text, msg->font1, msg->font2, textcolour, glowcolour, viGetWidth(), viGetHeight(), 0, 0);
+					gdl = textRender(gdl, &x, &y, msg->text, msg->category, textcolour, glowcolour, viGetWidth(), viGetHeight(), 0, 0);
 #endif
 				}
 
@@ -1551,14 +1549,14 @@ Gfx *hudmsgsRender(Gfx *gdl)
 				gdl = hudmsgRenderBox(gdl, x - 3, y - 3, x + msg->width + 2, y + msg->height + 2, 1.0f, bordercolour, 1.0f);
 #endif
 
-				gdl = textRenderProjected(gdl, &x, &y, msg->text, msg->font1, msg->font2, textcolour, viGetWidth(), viGetHeight(), 0, 0);
+				gdl = textRenderProjected(gdl, &x, &y, msg->text, msg->category, textcolour, viGetWidth(), viGetHeight(), 0, 0);
 			} else {
 				gdl = text0f153a34(gdl, x, y, x + msg->width, y + msg->height, 0);
 
 #if VERSION >= VERSION_JPN_FINAL
 				gdl = func0f1574d0jf(gdl, &x, &y, msg->text, msg->font1, msg->font2, textcolour, glowcolour, viGetWidth(), viGetHeight(), 0, 0);
 #else
-				gdl = textRender(gdl, &x, &y, msg->text, msg->font1, msg->font2, textcolour, glowcolour, viGetWidth(), viGetHeight(), 0, 0);
+				gdl = textRender(gdl, &x, &y, msg->text, msg->category, textcolour, glowcolour, viGetWidth(), viGetHeight(), 0, 0);
 #endif
 			}
 			if (msg->alignv == 6) {
@@ -1601,7 +1599,7 @@ Gfx *hudmsgsRender(Gfx *gdl)
 #endif
 
 					if (spa8 < 1.0f) {
-						gdl = textRenderProjected(gdl, &x, &y, msg->text, msg->font1, msg->font2, textcolour, viGetWidth(), viGetHeight(), 0, 0);
+						gdl = textRenderProjected(gdl, &x, &y, msg->text, msg->category, textcolour, viGetWidth(), viGetHeight(), 0, 0);
 					}
 				} else {
 					gdl = text0f153a34(gdl, x, y, x + msg->width, y + msg->height, 0);
@@ -1609,7 +1607,7 @@ Gfx *hudmsgsRender(Gfx *gdl)
 #if VERSION >= VERSION_JPN_FINAL
 					gdl = func0f1574d0jf(gdl, &x, &y, msg->text, msg->font1, msg->font2, textcolour, glowcolour, viGetWidth(), viGetHeight(), 0, 0);
 #else
-					gdl = textRender(gdl, &x, &y, msg->text, msg->font1, msg->font2, textcolour, glowcolour, viGetWidth(), viGetHeight(), 0, 0);
+					gdl = textRender(gdl, &x, &y, msg->text, msg->category, textcolour, glowcolour, viGetWidth(), viGetHeight(), 0, 0);
 #endif
 				}
 

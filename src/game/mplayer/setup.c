@@ -743,7 +743,7 @@ MenuItemHandlerResult mpChallengesListHandler(s32 operation, struct menuitem *it
 		name = challengeGetName2(g_MpPlayerNum, challengeindex);
 
 		gdl = textRenderProjected(gdl, &x, &y, name,
-				g_CharsHandelGothicSm, g_FontHandelGothicSm, renderdata->colour,
+				FONT_SMALL, renderdata->colour,
 				viGetWidth(), viGetHeight(), 0, 0);
 
 		gdl = text0f153780(gdl);
@@ -4818,7 +4818,7 @@ MenuItemHandlerResult mpChallengesListMenuHandler(s32 operation, struct menuitem
 		y = renderdata->y + 1;
 
 		gdl = text0f153628(gdl);
-		gdl = textRenderProjected(gdl, &x, &y, challengeGetNameBySlot(data->type19.unk04), g_CharsHandelGothicSm, g_FontHandelGothicSm, renderdata->colour, viGetWidth(), viGetHeight(), 0, 0);
+		gdl = textRenderProjected(gdl, &x, &y, challengeGetNameBySlot(data->type19.unk04), FONT_SMALL, renderdata->colour, viGetWidth(), viGetHeight(), 0, 0);
 		gdl = text0f153780(gdl);
 
 		gDPPipeSync(gdl++);

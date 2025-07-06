@@ -461,7 +461,7 @@ Gfx *htbRenderHud(Gfx *gdl)
 #endif
 
 		gdl = text0f153628(gdl);
-		textMeasure(&textheight, &textwidth, text, g_CharsHandelGothicXs, g_FontHandelGothicXs, 0);
+		textMeasure(&textheight, &textwidth, text, FONT_XS, 0);
 
 		x -= textwidth / 2;
 		textwidth += x;
@@ -469,10 +469,10 @@ Gfx *htbRenderHud(Gfx *gdl)
 
 #if VERSION >= VERSION_NTSC_1_0
 		gdl = text0f153990(gdl, x, y, textwidth, textheight);
-		gdl = textRender(gdl, &x, &y, text, g_CharsNumeric, g_FontNumeric, 0x00ff00a0, 0xa0, viGetWidth(), viGetHeight(), 0, 0);
+		gdl = textRender(gdl, &x, &y, text, FONT_NUMERIC, 0x00ff00a0, 0xa0, viGetWidth(), viGetHeight(), 0, 0);
 #else
 		gdl = text0f153858(gdl, &x, &y, &textwidth, &textheight);
-		gdl = textRender(gdl, &x, &y, text, g_CharsNumeric, g_FontNumeric, 0x00ff00a0, 0x88, viGetWidth(), viGetHeight(), 0, 0);
+		gdl = textRender(gdl, &x, &y, text, FONT_NUMERIC, 0x00ff00a0, 0x88, viGetWidth(), viGetHeight(), 0, 0);
 #endif
 
 		gdl = text0f153780(gdl);

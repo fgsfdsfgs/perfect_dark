@@ -2366,7 +2366,7 @@ struct gunctrl {
 	/*0x15e9*/ s8 lastmag;
 	/*0x15ea*/ u8 gunmemowner;
 	/*0x15eb*/ s8 gunlocktimer;
-	/*0x15ec*/ u16 curfnstr;
+	/*0x15ec*/ char *curfnstr;
 	/*0x15ee*/ u8 fnstrtimer;
 	/*0x15ef*/ u8 guntypetimer;
 	/*0x15f0*/ u8 guntypefader;
@@ -4659,20 +4659,72 @@ struct ranking {
 	s32 score;
 };
 
+//struct hudmsgtype {
+//	/*0x00*/ u8 unk00;
+//	/*0x01*/ u8 unk01;
+//	/*0x02*/ u8 unk02;
+//	/*0x04*/ struct fontchar **unk04;
+//	/*0x08*/ struct font **unk08;
+//	/*0x0c*/ u32 colour;
+//	/*0x10*/ u32 unk10;
+//	/*0x14*/ u8 alignh;
+//	/*0x15*/ u8 alignv;
+//	/*0x16*/ s16 unk16;
+//	/*0x18*/ s16 unk18;
+//	/*0x1c*/ s32 duration;
+//};
+
+enum Font_Category {
+    FONT_NUMERIC = 0, // For numbers (very small)
+    FONT_XS = 1,
+    FONT_SMALL = 2, // Menu item & co
+    FONT_MEDIUM = 3, // Menu Title, Credits
+    FONT_LARGE = 4 // Rarely used, erros
+};
+
 struct hudmsgtype {
 	/*0x00*/ u8 unk00;
 	/*0x01*/ u8 unk01;
 	/*0x02*/ u8 unk02;
-	/*0x04*/ struct fontchar **unk04;
-	/*0x08*/ struct font **unk08;
+	/*0x08*/ enum Font_Category category;
 	/*0x0c*/ u32 colour;
-	/*0x10*/ u32 unk10;
+	/*0x10*/ u32 shadowcolour;
 	/*0x14*/ u8 alignh;
 	/*0x15*/ u8 alignv;
 	/*0x16*/ s16 unk16;
 	/*0x18*/ s16 unk18;
 	/*0x1c*/ s32 duration;
 };
+
+//struct hudmessage {
+//	/*0x000*/ u8 state;
+//	/*0x001*/ u8 boxed;
+//	/*0x002*/ u8 allowfadein;
+//	/*0x003*/ u8 flash;
+//	/*0x004*/ u8 opacity;
+//	/*0x006*/ u16 timer;
+//	/*0x008*/ struct fontchar *font1;
+//	/*0x00c*/ struct font *font2;
+//	/*0x010*/ u32 textcolour;
+//	/*0x014*/ u32 glowcolour;
+//	/*0x018*/ u16 x;
+//	/*0x01a*/ u16 y;
+//	/*0x01c*/ u16 width;
+//	/*0x01e*/ u16 height;
+//	/*0x020*/ char text[400];
+//	/*0x1b0*/ s32 channelnum;
+//	/*0x1b4*/ u32 type;
+//	/*0x1b8*/ s32 id;
+//	/*0x1bc*/ s32 showduration;
+//	/*0x1c0*/ s32 playernum;
+//	/*0x1c4*/ u32 flags;
+//	/*0x1c8*/ u8 alignh;
+//	/*0x1c9*/ u8 alignv;
+//	/*0x1cc*/ u32 xmarginextra;
+//	/*0x1d0*/ u32 xmargin;
+//	/*0x1d4*/ u32 ymargin;
+//	/*0x1d8*/ u32 hash;
+//};
 
 struct hudmessage {
 	/*0x000*/ u8 state;
@@ -4681,8 +4733,7 @@ struct hudmessage {
 	/*0x003*/ u8 flash;
 	/*0x004*/ u8 opacity;
 	/*0x006*/ u16 timer;
-	/*0x008*/ struct fontchar *font1;
-	/*0x00c*/ struct font *font2;
+			  enum Font_Category category;
 	/*0x010*/ u32 textcolour;
 	/*0x014*/ u32 glowcolour;
 	/*0x018*/ u16 x;

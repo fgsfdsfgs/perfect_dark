@@ -10,6 +10,7 @@
 #include "game/menu.h"
 #include "game/inv.h"
 #include "game/game_1531a0.h"
+#include "../fast3d/gfx_rendering_api.h"
 #include "game/file.h"
 #include "game/bot.h"
 #include "game/botcmd.h"
@@ -35,6 +36,7 @@
 struct activemenu g_AmMenus[MAX_PLAYERS];
 struct fontchar *g_AmFont1;
 struct font *g_AmFont2;
+enum Font_Category cat;
 s32 g_AmIndex;
 
 struct menudialogdef g_AmPickTargetMenuDialog;
@@ -181,7 +183,7 @@ MenuItemHandlerResult amPickTargetMenuList(s32 operation, struct menuitem *item,
 			y = renderdata->y + 1;
 
 			gdl = text0f153628(gdl);
-			gdl = textRenderProjected(gdl, &x, &y, g_MpAllChrConfigPtrs[chrindex]->name, g_CharsHandelGothicSm, g_FontHandelGothicSm, colour, viGetWidth(), viGetHeight(), 0, 0);
+			gdl = textRenderProjected(gdl, &x, &y, g_MpAllChrConfigPtrs[chrindex]->name, FONT_SMALL, colour, viGetWidth(), viGetHeight(), 0, 0);
 			gdl = text0f153780(gdl);
 			return (uintptr_t)gdl;
 		}
@@ -556,9 +558,11 @@ void amReset(void)
 	if (PLAYERCOUNT() >= 2) {
 		g_AmFont1 = g_CharsHandelGothicXs;
 		g_AmFont2 = g_FontHandelGothicXs;
+		cat = FONT_XS;
 	} else {
 		g_AmFont1 = g_CharsHandelGothicSm;
 		g_AmFont2 = g_FontHandelGothicSm;
+		cat = FONT_SMALL;
 	}
 #endif
 
@@ -576,7 +580,7 @@ s16 amCalculateSlotWidth(void)
 
 	for (i = 0; i < ARRAYCOUNT(g_AmBotCommands); i++) {
 		amGetSlotDetails(i, &flags, text);
-		textMeasure(&textheight, &textwidth, text, g_AmFont1, g_AmFont2, 0);
+		textMeasure(&textheight, &textwidth, text, cat, 0);
 
 		if (textwidth > max) {
 			max = textwidth;
@@ -955,11 +959,11 @@ Gfx *amRenderText(Gfx *gdl, char *text, u32 colour, s16 left, s16 top)
 	s32 textwidth;
 	s32 textheight;
 
-	textMeasure(&textheight, &textwidth, text, g_AmFont1, g_AmFont2, 0);
+	textMeasure(&textheight, &textwidth, text, cat, 0);
 
 	x = left - (textwidth / 2);
 	y = top - 4;
-	gdl = textRenderProjected(gdl, &x, &y, text, g_AmFont1, g_AmFont2, colour, SCREEN_320, SCREEN_240, 0, 0);
+	gdl = textRenderProjected(gdl, &x, &y, text, FONT_SMALL, colour, SCREEN_320, SCREEN_240, 0, 0);
 
 	return gdl;
 }
@@ -1013,7 +1017,7 @@ Gfx *amRenderAibotInfo(Gfx *gdl, s32 buddynum)
 			weaponname = bgunGetShortName(weaponnum);
 		}
 
-		textMeasure(&textheight, &textwidth, aibotname, g_AmFont1, g_AmFont2, 0);
+		textMeasure(&textheight, &textwidth, aibotname, cat, 0);
 
 		x = viGetViewLeft() / g_ScaleX
 			+ (s32)(viGetViewWidth() / g_ScaleX * 0.5f)
@@ -1038,11 +1042,11 @@ Gfx *amRenderAibotInfo(Gfx *gdl, s32 buddynum)
 
 		y += (PLAYERCOUNT() >= 2) ? 0 : (s32)(textheight * 1.1f);
 #else
-		gdl = textRender(gdl, &x, &y, aibotname, g_AmFont1, g_AmFont2, -1,
+		gdl = textRender(gdl, &x, &y, aibotname, cat, -1,
 				0x000000ff, SCREEN_320, SCREEN_240, 0, 0);
 
 		y += (PLAYERCOUNT() >= 2) ? 0 : (s32)(textheight * 1.1f);
-		textMeasure(&textheight, &textwidth, weaponname, g_AmFont1, g_AmFont2, 0);
+		textMeasure(&textheight, &textwidth, weaponname, cat, 0);
 
 		x = viGetViewLeft() / g_ScaleX
 			+ (s32)(viGetViewWidth() / g_ScaleX * 0.5f)
@@ -1055,7 +1059,7 @@ Gfx *amRenderAibotInfo(Gfx *gdl, s32 buddynum)
 		}
 #endif
 
-		gdl = textRender(gdl, &x, &y, weaponname, g_AmFont1, g_AmFont2, -1,
+		gdl = textRender(gdl, &x, &y, weaponname, cat, -1,
 				0x000000ff, SCREEN_320, SCREEN_240, 0, 0);
 #endif
 
@@ -1063,7 +1067,7 @@ Gfx *amRenderAibotInfo(Gfx *gdl, s32 buddynum)
 	} else {
 		char *title = _("All Simulants\n"); // "All Simulants"
 
-		textMeasure(&textheight, &textwidth, title, g_AmFont1, g_AmFont2, 0);
+		textMeasure(&textheight, &textwidth, title, cat, 0);
 
 		x = viGetViewLeft() / g_ScaleX
 			+ (s32)(viGetViewWidth() / g_ScaleX * 0.5f)
@@ -1086,7 +1090,7 @@ Gfx *amRenderAibotInfo(Gfx *gdl, s32 buddynum)
 		gdl = func0f1574d0jf(gdl, &x, &y, title, g_AmFont1, g_AmFont2, -1,
 				0x000000ff, SCREEN_320, SCREEN_240, 0, 0);
 #else
-		gdl = textRender(gdl, &x, &y, title, g_AmFont1, g_AmFont2, -1,
+		gdl = textRender(gdl, &x, &y, title, cat, -1,
 				0x000000ff, SCREEN_320, SCREEN_240, 0, 0);
 #endif
 	}
@@ -1523,7 +1527,7 @@ Gfx *amRender(Gfx *gdl)
 					u32 flags;
 
 					amGetSlotDetails(4, &flags, text);
-					textMeasure(&textheight, &textwidth, text, g_AmFont1, g_AmFont2, 0);
+					textMeasure(&textheight, &textwidth, text, cat, 0);
 
 					halfwidth = textwidth / 2 + 2;
 				}

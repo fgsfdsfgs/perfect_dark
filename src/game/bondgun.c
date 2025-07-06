@@ -12380,7 +12380,7 @@ Gfx *bgunDrawHudString(Gfx *gdl, char *text, s32 x, bool halign, s32 y, s32 vali
 #if VERSION >= VERSION_JPN_FINAL
 	textMeasure(&textheight, &textwidth, text, g_CharsNumeric, g_FontNumeric, -1);
 #else
-	textMeasure(&textheight, &textwidth, text, g_CharsNumeric, g_FontNumeric, 0);
+	textMeasure(&textheight, &textwidth, text, FONT_NUMERIC, 0);
 #endif
 
 	if (halign == HUDHALIGN_LEFT) { // left
@@ -12406,7 +12406,7 @@ Gfx *bgunDrawHudString(Gfx *gdl, char *text, s32 x, bool halign, s32 y, s32 vali
 	}
 
 	gdl = text0f153858(gdl, &x1, &y1, &x2, &y2);
-	gdl = textRender(gdl, &x1, &y1, text, g_CharsNumeric, g_FontNumeric, colour, 0x000000a0, viGetWidth(), viGetHeight(), 0, 0);
+	gdl = textRender(gdl, &x1, &y1, text, FONT_NUMERIC, colour, 0x000000a0, viGetWidth(), viGetHeight(), 0, 0);
 
 	return gdl;
 }
@@ -12915,7 +12915,7 @@ Gfx *bgunDrawHud(Gfx *gdl)
 				ctrl->guntypetimer += (u16) g_Vars.lvupdate60;
 			}
 
-			textMeasure(&textheight, &textwidth, str, g_CharsHandelGothicXs, g_FontHandelGothicXs, 0);
+			textMeasure(&textheight, &textwidth, str, FONT_XS, 0);
 			textwidth += 2;
 
 			if (textwidth > ctrl->guntypetimer * 3) {
@@ -12947,12 +12947,12 @@ Gfx *bgunDrawHud(Gfx *gdl)
 			gdl = text0f153838(gdl);
 			textSetWaveBlend(g_20SecIntervalFrac * 50.0f, 0, 50);
 			textSetWaveColours(0xffffffff, 0xffffffff);
-			gdl = textRenderProjected(gdl, &x, &y, str, g_CharsHandelGothicXs, g_FontHandelGothicXs, colour, textwidth, 1000, 0, 0);
+			gdl = textRenderProjected(gdl, &x, &y, str, FONT_XS, colour, textwidth, 1000, 0, 0);
 			textResetBlends();
 		}
 
 		if (func) {
-			langGet(func->name);
+			_(func->name);
 
 			colour = 0xff5555ff;
 
@@ -12961,7 +12961,7 @@ Gfx *bgunDrawHud(Gfx *gdl)
 				ctrl->curfnstr = func->name;
 			}
 
-			str = langGet(ctrl->curfnstr);
+			str = _(ctrl->curfnstr);
 
 			if (ctrl->fnstrtimer < 255) {
 				if (ctrl->fnstrtimer + g_Vars.lvupdate60 > 255) {
@@ -12988,7 +12988,7 @@ Gfx *bgunDrawHud(Gfx *gdl)
 				}
 #endif
 
-				textMeasure(&textheight, &textwidth, str, g_CharsHandelGothicXs, g_FontHandelGothicXs, 0);
+				textMeasure(&textheight, &textwidth, str, FONT_XS, 0);
 				textwidth += 2;
 
 				if (textwidth > ctrl->fnstrtimer * 3) {
@@ -13017,7 +13017,7 @@ Gfx *bgunDrawHud(Gfx *gdl)
 				textSetWaveColours(0xffffffff, 0xffffffff);
 
 				gdl = textRenderProjected(gdl, &x, &y, str,
-						g_CharsHandelGothicXs, g_FontHandelGothicXs, colour, textwidth,
+						FONT_XS, colour, textwidth,
 						1000, 0, 0);
 
 				textResetBlends();

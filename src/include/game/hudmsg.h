@@ -21,7 +21,7 @@ void hudmsgCreateWithDuration(char *text, s32 type, struct hudmsgtype *config, s
 void hudmsgCreateAsSubtitle(char *text, s32 type, u8 colourindex, s32 audiochannelnum);
 void hudmsgCalculatePosition(struct hudmessage *msg);
 void hudmsgCreateFromArgs(char *text, s32 type, s32 conf00, s32 conf01, s32 conf02,
-		struct fontchar **conf04, struct font **conf08,
+		enum Font_Category category,
 		u32 textcolour, u32 shadowcolour,
 		u32 alignh, s32 conf16, u32 alignv, s32 conf18, s32 arg14, u32 flags);
 void hudmsgsTick(void);

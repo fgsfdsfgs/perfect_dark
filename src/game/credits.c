@@ -15,6 +15,7 @@
 #include "game/lv.h"
 #include "game/music.h"
 #include "game/lang.h"
+#include "types.h"
 #include "bss.h"
 #include "lib/joy.h"
 #include "lib/main.h"
@@ -1379,6 +1380,7 @@ Gfx *creditsDrawSlide(Gfx *gdl)
 	bool settled;
 	f32 age;
 	f32 mult = 1.0f;
+	enum Font_Category cat;
 
 	// Iterate the credits on this slide and populate the arrays
 	for (i = 0; i < g_CreditsData->numthisslide; i++) {
@@ -1405,6 +1407,7 @@ Gfx *creditsDrawSlide(Gfx *gdl)
 		case CREDITSTYLE_RAREDESIGNS:
 			chars[index + 0] = g_CharsHandelGothicLg;
 			fonts[index + 0] = g_FontHandelGothicLg;
+			cat = FONT_LARGE;
 			break;
 		case CREDITSTYLE_ASSISTANT:
 		case CREDITSTYLE_UNUSED_06:
@@ -1415,10 +1418,12 @@ Gfx *creditsDrawSlide(Gfx *gdl)
 #endif
 			chars[index + 0] = g_CharsHandelGothicMd;
 			fonts[index + 0] = g_FontHandelGothicMd;
+			cat = FONT_MEDIUM;
 			break;
 		default:
 			chars[index + 0] = g_CharsHandelGothicSm;
 			fonts[index + 0] = g_FontHandelGothicSm;
+			cat = FONT_SMALL;
 			break;
 		}
 
@@ -1427,15 +1432,18 @@ Gfx *creditsDrawSlide(Gfx *gdl)
 		case CREDITSTYLE_UNUSED_06:
 			chars[index + 1] = g_CharsHandelGothicSm;
 			fonts[index + 1] = g_FontHandelGothicSm;
+			cat = FONT_SMALL;
 			break;
 		case CREDITSTYLE_CORETEAM:
 		case CREDITSTYLE_RAREDESIGNS:
 			chars[index + 1] = g_CharsHandelGothicMd;
 			fonts[index + 1] = g_FontHandelGothicMd;
+			cat = FONT_MEDIUM;
 			break;
 		default:
 			chars[index + 1] = chars[index + 0];
 			fonts[index + 1] = fonts[index + 0];
+			cat = FONT_MEDIUM;
 			break;
 		}
 
@@ -1452,8 +1460,8 @@ Gfx *creditsDrawSlide(Gfx *gdl)
 		textMeasure(&textheights[index + 0], &textwidths[index + 0], texts[index + 0], chars[index + 0], fonts[index + 0], -1);
 		textMeasure(&textheights[index + 1], &textwidths[index + 1], texts[index + 1], chars[index + 1], fonts[index + 1], -1);
 #else
-		textMeasure(&textheights[index + 0], &textwidths[index + 0], texts[index + 0], chars[index + 0], fonts[index + 0], 0);
-		textMeasure(&textheights[index + 1], &textwidths[index + 1], texts[index + 1], chars[index + 1], fonts[index + 1], 0);
+		textMeasure(&textheights[index + 0], &textwidths[index + 0], texts[index + 0], cat, 0);
+		textMeasure(&textheights[index + 1], &textwidths[index + 1], texts[index + 1], cat, 0);
 #endif
 
 		// Choose first position

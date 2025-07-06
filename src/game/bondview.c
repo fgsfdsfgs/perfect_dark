@@ -1146,7 +1146,7 @@ Gfx *bviewDrawEyespyMetrics(Gfx *gdl)
 	// "S/MPS"
 	sprintf(text, "%s %s%5.2f", _("S/MPS"), "", movedist * 0.6f);
 	savedy = viewtop + 14;
-	textMeasure(&textheight, &textwidth, text, g_CharsHandelGothicXs, g_FontHandelGothicXs, 0);
+	textMeasure(&textheight, &textwidth, text, FONT_XS, 0);
 	x = viewleft + 25 * scale;
 	y = savedy;
 	x2 = x + textwidth; \
@@ -1154,67 +1154,67 @@ Gfx *bviewDrawEyespyMetrics(Gfx *gdl)
 	gdl = text0f153858(gdl, &x, &y, &x2, &y2);
 
 #if VERSION >= VERSION_JPN_FINAL
-	gdl = func0f1574d0jf(gdl, &x, &y, text, g_CharsHandelGothicXs, g_FontHandelGothicXs,
+	gdl = func0f1574d0jf(gdl, &x, &y, text, FONT_XS,
 			colourtextbright, colourglow, viGetWidth(), viGetHeight(), 0, 0);
 #else
-	gdl = textRender(gdl, &x, &y, text, g_CharsHandelGothicXs, g_FontHandelGothicXs,
+	gdl = textRender(gdl, &x, &y, text, FONT_XS,
 			colourtextbright, colourglow, viGetWidth(), viGetHeight(), 0, 0);
 #endif
 
 	// "H/M"
 	sprintf(text, "%s %s%4.2f", _("H/M"), "", g_Vars.currentplayer->eyespy->height * 0.01f);
 	savedy += 9;
-	textMeasure(&textheight, &textwidth, text, g_CharsHandelGothicXs, g_FontHandelGothicXs, 0);
+	textMeasure(&textheight, &textwidth, text, FONT_XS, 0);
 	x = viewleft + 25 * scale;
 	y = savedy;
 	x2 = x + textwidth; \
 	y2 = y + textheight; \
 	gdl = text0f153858(gdl, &x, &y, &x2, &y2);
 #if VERSION >= VERSION_JPN_FINAL
-	gdl = func0f1574d0jf(gdl, &x, &y, text, g_CharsHandelGothicXs, g_FontHandelGothicXs,
+	gdl = func0f1574d0jf(gdl, &x, &y, text, FONT_XS,
 			colourtextbright, colourglow, viGetWidth(), viGetHeight(), 0, 0);
 #else
-	gdl = textRender(gdl, &x, &y, text, g_CharsHandelGothicXs, g_FontHandelGothicXs,
+	gdl = textRender(gdl, &x, &y, text, FONT_XS,
 			colourtextbright, colourglow, viGetWidth(), viGetHeight(), 0, 0);
 #endif
 
 	// "Y/D"
 	sprintf(text, "%s %d", _("Y/D"), (s32)g_Vars.currentplayer->eyespy->theta);
 	savedy += 9;
-	textMeasure(&textheight, &textwidth, text, g_CharsHandelGothicXs, g_FontHandelGothicXs, 0);
+	textMeasure(&textheight, &textwidth, text, FONT_XS, 0);
 	x = viewleft + 25 * scale;
 	y = savedy;
 	x2 = x + textwidth; \
 	y2 = y + textheight; \
 	gdl = text0f153858(gdl, &x, &y, &x2, &y2);
 #if VERSION >= VERSION_JPN_FINAL
-	gdl = func0f1574d0jf(gdl, &x, &y, text, g_CharsHandelGothicXs, g_FontHandelGothicXs,
+	gdl = func0f1574d0jf(gdl, &x, &y, text, FONT_XS,
 			colourtextbright, colourglow, viGetWidth(), viGetHeight(), 0, 0);
 #else
-	gdl = textRender(gdl, &x, &y, text, g_CharsHandelGothicXs, g_FontHandelGothicXs,
+	gdl = textRender(gdl, &x, &y, text, FONT_XS,
 			colourtextbright, colourglow, viGetWidth(), viGetHeight(), 0, 0);
 #endif
 
 	// "P/D"
 	sprintf(text, "%s %d", _("P/D"), (s32)g_Vars.currentplayer->eyespy->verta);
 	savedy += 9;
-	textMeasure(&textheight, &textwidth, text, g_CharsHandelGothicXs, g_FontHandelGothicXs, 0);
+	textMeasure(&textheight, &textwidth, text, FONT_XS, 0);
 	x = viewleft + 25 * scale;
 	y = savedy;
 	x2 = x + textwidth; \
 	y2 = y + textheight; \
 	gdl = text0f153858(gdl, &x, &y, &x2, &y2);
 #if VERSION >= VERSION_JPN_FINAL
-	gdl = func0f1574d0jf(gdl, &x, &y, text, g_CharsHandelGothicXs, g_FontHandelGothicXs,
+	gdl = func0f1574d0jf(gdl, &x, &y, text, FONT_XS,
 			colourtextbright, colourglow, viGetWidth(), viGetHeight(), 0, 0);
 #else
-	gdl = textRender(gdl, &x, &y, text, g_CharsHandelGothicXs, g_FontHandelGothicXs,
+	gdl = textRender(gdl, &x, &y, text, FONT_XS,
 			colourtextbright, colourglow, viGetWidth(), viGetHeight(), 0, 0);
 #endif
 
 	// "CI 2023"
 	sprintf(text, "%s", _("CI 2023"));
-	textMeasure(&textheight, &textwidth, text, g_CharsHandelGothicXs, g_FontHandelGothicXs, 0);
+	textMeasure(&textheight, &textwidth, text, FONT_XS, 0);
 
 #if VERSION >= VERSION_NTSC_1_0
 	x = (vsplit ? -3 : 0) + viewleft + 25 * scale + 5;
@@ -1227,10 +1227,10 @@ Gfx *bviewDrawEyespyMetrics(Gfx *gdl)
 	y2 = y + textheight; \
 	gdl = text0f153858(gdl, &x, &y, &x2, &y2);
 #if VERSION >= VERSION_JPN_FINAL
-	gdl = func0f1574d0jf(gdl, &x, &y, text, g_CharsHandelGothicXs, g_FontHandelGothicXs,
+	gdl = func0f1574d0jf(gdl, &x, &y, text, FONT_XS,
 			colourtextdull, colourglow, viGetWidth(), viGetHeight(), 0, 0);
 #else
-	gdl = textRender(gdl, &x, &y, text, g_CharsHandelGothicXs, g_FontHandelGothicXs,
+	gdl = textRender(gdl, &x, &y, text, FONT_XS,
 			colourtextdull, colourglow, viGetWidth(), viGetHeight(), 0, 0);
 #endif
 
@@ -1242,7 +1242,7 @@ Gfx *bviewDrawEyespyMetrics(Gfx *gdl)
 		sprintf(text, "%s", _("BNC: 15877")); // "BNC: 15877"
 	}
 
-	textMeasure(&textheight, &textwidth, text, g_CharsHandelGothicXs, g_FontHandelGothicXs, 0);
+	textMeasure(&textheight, &textwidth, text, FONT_XS, 0);
 
 #if VERSION >= VERSION_NTSC_1_0
 	x = viewleft + 25 * scale + (vsplit ? -3 : 0) + 5;
@@ -1256,17 +1256,17 @@ Gfx *bviewDrawEyespyMetrics(Gfx *gdl)
 	y2 = y + textheight; \
 	gdl = text0f153858(gdl, &x, &y, &x2, &y2);
 #if VERSION >= VERSION_JPN_FINAL
-	gdl = func0f1574d0jf(gdl, &x, &y, text, g_CharsHandelGothicXs, g_FontHandelGothicXs,
+	gdl = func0f1574d0jf(gdl, &x, &y, text, FONT_XS,
 			colourtextdull, colourglow, viGetWidth(), viGetHeight(), 0, 0);
 #else
-	gdl = textRender(gdl, &x, &y, text, g_CharsHandelGothicXs, g_FontHandelGothicXs,
+	gdl = textRender(gdl, &x, &y, text, FONT_XS,
 			colourtextdull, colourglow, viGetWidth(), viGetHeight(), 0, 0);
 #endif
 
 	if (g_Vars.currentplayer->eyespy->mode == EYESPYMODE_CAMSPY) {
 		// "CAMSPY"
 		sprintf(text, "   %s", _("CAMSPY"));
-		textMeasure(&textheight, &textwidth, text, g_CharsHandelGothicXs, g_FontHandelGothicXs, 0);
+		textMeasure(&textheight, &textwidth, text, FONT_XS, 0);
 
 #if VERSION >= VERSION_PAL_FINAL
 		x = viewright - textwidth - 27;
@@ -1282,16 +1282,16 @@ Gfx *bviewDrawEyespyMetrics(Gfx *gdl)
 		y2 = y + textheight; \
 		gdl = text0f153858(gdl, &x, &y, &x2, &y2);
 #if VERSION >= VERSION_JPN_FINAL
-		gdl = func0f1574d0jf(gdl, &x, &y, text, g_CharsHandelGothicXs, g_FontHandelGothicXs,
+		gdl = func0f1574d0jf(gdl, &x, &y, text, FONT_XS,
 				colourtextdull, colourglow, viGetWidth(), viGetHeight(), 0, 0);
 #else
-		gdl = textRender(gdl, &x, &y, text, g_CharsHandelGothicXs, g_FontHandelGothicXs,
+		gdl = textRender(gdl, &x, &y, text, FONT_XS,
 				colourtextdull, colourglow, viGetWidth(), viGetHeight(), 0, 0);
 #endif
 	} else if (g_Vars.currentplayer->eyespy->mode == EYESPYMODE_DRUGSPY) {
 		// "DRUGSPY"
 		sprintf(text, "   %s", _("DRUGSPY"));
-		textMeasure(&textheight, &textwidth, text, g_CharsHandelGothicXs, g_FontHandelGothicXs, 0);
+		textMeasure(&textheight, &textwidth, text, FONT_XS, 0);
 
 #if VERSION >= VERSION_PAL_FINAL
 		x = viewright - textwidth - 27;
@@ -1307,16 +1307,16 @@ Gfx *bviewDrawEyespyMetrics(Gfx *gdl)
 		y2 = y + textheight; \
 		gdl = text0f153858(gdl, &x, &y, &x2, &y2);
 #if VERSION >= VERSION_JPN_FINAL
-		gdl = func0f1574d0jf(gdl, &x, &y, text, g_CharsHandelGothicXs, g_FontHandelGothicXs,
+		gdl = func0f1574d0jf(gdl, &x, &y, text, FONT_XS,
 				colourtextdull, colourglow, viGetWidth(), viGetHeight(), 0, 0);
 #else
-		gdl = textRender(gdl, &x, &y, text, g_CharsHandelGothicXs, g_FontHandelGothicXs,
+		gdl = textRender(gdl, &x, &y, text, FONT_XS,
 				colourtextdull, colourglow, viGetWidth(), viGetHeight(), 0, 0);
 #endif
 	} else {
 		// "BOMBSPY"
 		sprintf(text, "   %s", _("BOMBSPY"));
-		textMeasure(&textheight, &textwidth, text, g_CharsHandelGothicXs, g_FontHandelGothicXs, 0);
+		textMeasure(&textheight, &textwidth, text, FONT_XS, 0);
 
 #if VERSION >= VERSION_PAL_FINAL
 		x = viewright - textwidth - 27;
@@ -1332,10 +1332,10 @@ Gfx *bviewDrawEyespyMetrics(Gfx *gdl)
 		y2 = y + textheight; \
 		gdl = text0f153858(gdl, &x, &y, &x2, &y2);
 #if VERSION >= VERSION_JPN_FINAL
-		gdl = func0f1574d0jf(gdl, &x, &y, text, g_CharsHandelGothicXs, g_FontHandelGothicXs,
+		gdl = func0f1574d0jf(gdl, &x, &y, text, FONT_XS,
 				colourtextdull, colourglow, viGetWidth(), viGetHeight(), 0, 0);
 #else
-		gdl = textRender(gdl, &x, &y, text, g_CharsHandelGothicXs, g_FontHandelGothicXs,
+		gdl = textRender(gdl, &x, &y, text, FONT_XS,
 				colourtextdull, colourglow, viGetWidth(), viGetHeight(), 0, 0);
 #endif
 	}
@@ -1349,7 +1349,7 @@ Gfx *bviewDrawEyespyMetrics(Gfx *gdl)
 		sprintf(text, "%s", _("MODEL 1.3")); // "MODEL 1.3"
 	}
 
-	textMeasure(&textheight, &textwidth, text, g_CharsHandelGothicXs, g_FontHandelGothicXs, 0);
+	textMeasure(&textheight, &textwidth, text, FONT_XS, 0);
 #if VERSION >= VERSION_PAL_FINAL
 	x = (vsplit ? 3 : 0) + viewright - textwidth - 27;
 	y = (vsplit ? -11 : 0) + viewtop + 34;
@@ -1364,10 +1364,10 @@ Gfx *bviewDrawEyespyMetrics(Gfx *gdl)
 	y2 = y + textheight; \
 	gdl = text0f153858(gdl, &x, &y, &x2, &y2);
 #if VERSION >= VERSION_JPN_FINAL
-	gdl = func0f1574d0jf(gdl, &x, &y, text, g_CharsHandelGothicXs, g_FontHandelGothicXs,
+	gdl = func0f1574d0jf(gdl, &x, &y, text, FONT_XS,
 			colourtextdull, colourglow, viGetWidth(), viGetHeight(), 0, 0);
 #else
-	gdl = textRender(gdl, &x, &y, text, g_CharsHandelGothicXs, g_FontHandelGothicXs,
+	gdl = textRender(gdl, &x, &y, text, FONT_XS,
 			colourtextdull, colourglow, viGetWidth(), viGetHeight(), 0, 0);
 #endif
 
@@ -1379,7 +1379,7 @@ Gfx *bviewDrawEyespyMetrics(Gfx *gdl)
 		sprintf(text, "%s", _("DARTAMMO")); // "DARTAMMO"
 	}
 
-	textMeasure(&textheight, &textwidth, text, g_CharsHandelGothicXs, g_FontHandelGothicXs, 0);
+	textMeasure(&textheight, &textwidth, text, FONT_XS, 0);
 #if VERSION >= VERSION_PAL_FINAL
 	x = viewright - textwidth - 27;
 	y = (vsplit ? -2 : 0) + viewbottom - 12;
@@ -1395,10 +1395,10 @@ Gfx *bviewDrawEyespyMetrics(Gfx *gdl)
 	y2 = y + textheight; \
 	gdl = text0f153858(gdl, &x, &y, &x2, &y2);
 #if VERSION >= VERSION_JPN_FINAL
-	gdl = func0f1574d0jf(gdl, &x, &y, text, g_CharsHandelGothicXs, g_FontHandelGothicXs,
+	gdl = func0f1574d0jf(gdl, &x, &y, text, FONT_XS,
 			colourtextdull, colourglow, viGetWidth(), viGetHeight(), 0, 0);
 #else
-	gdl = textRender(gdl, &x, &y, text, g_CharsHandelGothicXs, g_FontHandelGothicXs,
+	gdl = textRender(gdl, &x, &y, text, FONT_XS,
 			colourtextdull, colourglow, viGetWidth(), viGetHeight(), 0, 0);
 #endif
 
@@ -2651,7 +2651,7 @@ Gfx *bviewDrawHorizonScanner(Gfx *gdl)
 
 	y = lenstop - 7;
 	gdl = textRenderProjected(gdl, &x, &y, arrows,
-			g_CharsHandelGothicXs, g_FontHandelGothicXs, 0xffffff7f, viGetWidth(), viGetHeight(), 0, 0);
+			FONT_XS, 0xffffff7f, viGetWidth(), viGetHeight(), 0, 0);
 
 	// Product name
 #if VERSION >= VERSION_NTSC_1_0
@@ -2664,17 +2664,17 @@ Gfx *bviewDrawHorizonScanner(Gfx *gdl)
 	strcat(nametext, " SCANNER\n");
 
 	gdl = textRenderProjected(gdl, &x, &y, nametext,
-			g_CharsHandelGothicXs, g_FontHandelGothicXs, 0xffffff7f, viGetWidth(), viGetHeight(), 0, 0);
+			FONT_XS, 0xffffff7f, viGetWidth(), viGetHeight(), 0, 0);
 #else
 	gdl = textRenderProjected(gdl, &x, &y, " JMBC WIDE BAND SCANNER\n",
-			g_CharsHandelGothicXs, g_FontHandelGothicXs, 0xffffff7f, viGetWidth(), viGetHeight(), 0, 0);
+			FONT_XS, 0xffffff7f, viGetWidth(), viGetHeight(), 0, 0);
 #endif
 
 	// Hertz
 	x = viewleft + 75 * scale;
 	y = lenstop + lensheight + 1;
 	gdl = textRenderProjected(gdl, &x, &y, hertztext,
-			g_CharsHandelGothicXs, g_FontHandelGothicXs, 0xffffff7f, viGetWidth(), viGetHeight(), 0, 0);
+			FONT_XS, 0xffffff7f, viGetWidth(), viGetHeight(), 0, 0);
 
 	// Zoom level
 	if (vsplit) {
@@ -2686,7 +2686,7 @@ Gfx *bviewDrawHorizonScanner(Gfx *gdl)
 	}
 
 	gdl = textRenderProjected(gdl, &x, &y, zoomtext,
-			g_CharsHandelGothicXs, g_FontHandelGothicXs, 0xffffff7f, viGetWidth(), viGetHeight(), 0, 0);
+			FONT_XS, 0xffffff7f, viGetWidth(), viGetHeight(), 0, 0);
 
 	// Direction
 	if (vsplit) {
@@ -2698,7 +2698,7 @@ Gfx *bviewDrawHorizonScanner(Gfx *gdl)
 	}
 
 	gdl = textRenderProjected(gdl, &x, &y, directiontext,
-			g_CharsHandelGothicXs, g_FontHandelGothicXs, 0xffffff7f, viGetWidth(), viGetHeight(), 0, 0);
+			FONT_XS, 0xffffff7f, viGetWidth(), viGetHeight(), 0, 0);
 	gdl = text0f153780(gdl);
 
 	gDPPipeSync(gdl++);

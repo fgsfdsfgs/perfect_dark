@@ -1388,7 +1388,7 @@ Gfx *mpRenderModalText(Gfx *gdl)
 		// Use smaller fonts
 		textMeasure(&textheight, &textwidth, text, g_CharsHandelGothicSm, g_FontHandelGothicSm, 0);
 #else
-		textMeasure(&textheight, &textwidth, text, g_CharsHandelGothicMd, g_FontHandelGothicMd, 0);
+		textMeasure(&textheight, &textwidth, text, FONT_MEDIUM, 0);
 #endif
 		x -= textwidth / 2;
 
@@ -1397,7 +1397,7 @@ Gfx *mpRenderModalText(Gfx *gdl)
 #elif PAL
 		gdl = textRender(gdl, &x, &y, text, g_CharsHandelGothicSm, g_FontHandelGothicSm, (red << 24) | 0x00ff00ff, 0x000000ff, viGetWidth(), viGetWidth(), 0, 0);
 #else
-		gdl = textRender(gdl, &x, &y, text, g_CharsHandelGothicMd, g_FontHandelGothicMd, (red << 24) | 0x00ff00ff, 0x000000ff, viGetWidth(), viGetWidth(), 0, 0);
+		gdl = textRender(gdl, &x, &y, text, FONT_MEDIUM, (red << 24) | 0x00ff00ff, 0x000000ff, viGetWidth(), viGetWidth(), 0, 0);
 #endif
 
 		gdl = text0f153780(gdl);
@@ -1422,13 +1422,13 @@ Gfx *mpRenderModalText(Gfx *gdl)
 
 		y = viGetViewTop() + viGetViewHeight() / 2;
 
-		textMeasure(&textheight, &textwidth, text, g_CharsHandelGothicSm, g_FontHandelGothicSm, 0);
+		textMeasure(&textheight, &textwidth, text, FONT_SMALL, 0);
 		x -= textwidth / 2;
 
 #if VERSION >= VERSION_JPN_FINAL
 		gdl = func0f1574d0jf(gdl, &x, &y, text, g_CharsHandelGothicSm, g_FontHandelGothicSm, 0xff0000ff, 0x000000ff, viGetWidth(), viGetWidth(), 0, 0);
 #else
-		gdl = textRender(gdl, &x, &y, text, g_CharsHandelGothicSm, g_FontHandelGothicSm, 0xff0000ff, 0x000000ff, viGetWidth(), viGetWidth(), 0, 0);
+		gdl = textRender(gdl, &x, &y, text, FONT_SMALL, 0xff0000ff, 0x000000ff, viGetWidth(), viGetWidth(), 0, 0);
 #endif
 
 		if (g_Vars.currentplayer->deadtimer > 0) {
@@ -1441,14 +1441,14 @@ Gfx *mpRenderModalText(Gfx *gdl)
 #endif
 			sprintf(text, "%d\n", (g_Vars.currentplayer->deadtimer + TICKS(60) - 1) / TICKS(60));
 
-			textMeasure(&textheight, &textwidth, text, g_CharsHandelGothicSm, g_FontHandelGothicSm, 0);
+			textMeasure(&textheight, &textwidth, text, FONT_SMALL, 0);
 			x = countdownx - textwidth / 2;
 			y = countdowny;
 
 #if VERSION >= VERSION_JPN_FINAL
 			gdl = func0f1574d0jf(gdl, &x, &y, text, g_CharsHandelGothicSm, g_FontHandelGothicSm, 0xff0000ff, 0x000000ff, viGetWidth(), viGetWidth(), 0, 0);
 #else
-			gdl = textRender(gdl, &x, &y, text, g_CharsHandelGothicSm, g_FontHandelGothicSm, 0xff0000ff, 0x000000ff, viGetWidth(), viGetWidth(), 0, 0);
+			gdl = textRender(gdl, &x, &y, text, FONT_SMALL, 0xff0000ff, 0x000000ff, viGetWidth(), viGetWidth(), 0, 0);
 #endif
 		}
 

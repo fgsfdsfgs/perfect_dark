@@ -17,6 +17,7 @@
 #include "types.h"
 #include "platform.h"
 #include "../fast3d/gfx_opengl.h"
+#include "../fast3d/gfx_rendering_api.h"
 #include "ultratypes.h"
 #include <ft2build.h>
 #include FT_FREETYPE_H
@@ -196,6 +197,7 @@ void text0f1531dc(int arg0)
 
 void textLoadFont(u8 *romstart, u8 *romend, struct font **fontptr, struct fontchar **charsptr, int monospace)
 {
+	return;
 	extern u8 EXT_SEG _fonthandelgothicsmSegmentRomStart;
 	extern u8 EXT_SEG _fonthandelgothicxsSegmentRomStart;
 	extern u8 EXT_SEG _fonthandelgothicmdSegmentRomStart;
@@ -276,6 +278,7 @@ void textLoadFont(u8 *romstart, u8 *romend, struct font **fontptr, struct fontch
 
 void textReset(void)
 {
+	return;/*
 	extern u8 EXT_SEG _fontbankgothicSegmentRomStart,     EXT_SEG _fontbankgothicSegmentRomEnd;
 	extern u8 EXT_SEG _fontzurichSegmentRomStart,         EXT_SEG _fontzurichSegmentRomEnd;
 	extern u8 EXT_SEG _fonttahomaSegmentRomStart,         EXT_SEG _fonttahomaSegmentRomEnd;
@@ -381,7 +384,7 @@ void textReset(void)
 			textLoadFont(REF_SEG _fonthandelgothiclgSegmentRomStart, REF_SEG _fonthandelgothiclgSegmentRomEnd, &g_FontHandelGothicLg, &g_CharsHandelGothicLg, false);
 		}
 #endif
-	}
+	}*/
 }
 
 Gfx *text0f153628(Gfx *gdl)
@@ -1604,7 +1607,7 @@ Gfx *text0f1552d4(Gfx *gdl, f32 x, f32 y, f32 widthscale, f32 heightscale,
 	}
 #endif
 
-	textMeasure(&textheight, &textwidth, text, chars, font, 0);
+	textMeasure(&textheight, &textwidth, text, FONT_MEDIUM, 0);
 
 	ptr = &x;
 	fx = *ptr - (widthscale - 1.0f) * textwidth * 0.5f * hdir;
@@ -1867,7 +1870,8 @@ Gfx *text0f15568c(Gfx *gdl, s32 *x, s32 *y, struct fontchar *curchar, struct fon
 	}
 
 	sp90 = *y + arg10;
-	tmp = var8007fac4 + font->kerning[prevchar->kerningindex * 13 + curchar->kerningindex];
+	tmp = var8007fac4 + curchar->kerningindex;
+	tmp = 0;
 	*x -= (tmp - 1) * xscale;
 	width *= xscale;
 
@@ -1920,10 +1924,10 @@ Gfx *text0f15568c(Gfx *gdl, s32 *x, s32 *y, struct fontchar *curchar, struct fon
 									(*x + curchar->width * var8007fad0) * 4 + var8007fadc,
 									(sp90 + curchar->baseline + curchar->height) * 4 + var8007fae0,
 									G_TX_RENDERTILE,
-									0 << 5,
-									0 << 5,
-									1 << 10,
-									1 << 10);
+									0,
+									0,
+									1024,
+									1024);
 
 							if (var8007fb9c) {
 								text0f153b6c(*y + arg10);
@@ -2018,12 +2022,12 @@ void utf8_decode(const char *text, u32 *codepoint, u8 *size) {
 	}
 }
 
-Gfx *textRenderProjected(Gfx *gdl, s32 *x, s32 *y, char *text, struct fontchar *chars, struct font *font,
+Gfx *textRenderProjected(Gfx *gdl, s32 *x, s32 *y, char *text, enum Font_Category category,
 		s32 colour, s32 width, s32 height, s32 arg9, s32 lineheight)
 {
 	s32 savedx;
 	s32 savedy;
-	u8 prevchar;
+	//u8 prevchar;
 	s32 spb0;
 	u32 colour2;
 	u32 tmpcolour;
@@ -2107,7 +2111,7 @@ Gfx *textRenderProjected(Gfx *gdl, s32 *x, s32 *y, char *text, struct fontchar *
 			tmpcolour = sbrd;
 		}
 
-		gdl = textRender(gdl, &newx, &newy, text, chars, font, colour2, tmpcolour, width, height, arg9, lineheight);
+		gdl = textRender(gdl, &newx, &newy, text, category, colour2, tmpcolour, width, height, arg9, lineheight);
 #endif
 	}
 
@@ -2127,7 +2131,7 @@ Gfx *textRenderProjected(Gfx *gdl, s32 *x, s32 *y, char *text, struct fontchar *
 
 	savedx = *x;
 	savedy = *y;
-	prevchar = 'H';
+	//prevchar = 'H';
 
 #if VERSION >= VERSION_JPN_FINAL
 	if (lineheight == -1) {
@@ -2137,7 +2141,8 @@ Gfx *textRenderProjected(Gfx *gdl, s32 *x, s32 *y, char *text, struct fontchar *
 	}
 #else
 	if (lineheight == 0) {
-		lineheight = chars['['].height + chars['['].baseline;
+		//lineheight = chars['['].height + chars['['].baseline;
+		lineheight = 14;
 	}
 
 	if (g_Jpn && lineheight < 14) {
@@ -2196,13 +2201,15 @@ Gfx *textRenderProjected(Gfx *gdl, s32 *x, s32 *y, char *text, struct fontchar *
 	if (text != NULL) {
 		u8 curCharSize;
 		u32 codepoint;
+		struct fontchar curchar = {0, 0, 0, 0};
+		struct fontchar prevchar = {0, 0, 0, 0};
 		while (*text != '\0') {
 			if (*text == ' ') {
-				prevchar = 'H';
+				//prevchar = 'H';
 				*x += spb0 * 5;
 				text++;
 			} else if (*text == '\n') {
-				prevchar = 'H';
+				//prevchar = 'H';
 				text++;
 
 				if (var8007fad4 >= 0 && savedx == *x) {
@@ -2217,14 +2224,18 @@ Gfx *textRenderProjected(Gfx *gdl, s32 *x, s32 *y, char *text, struct fontchar *
 #ifndef PLATFORM_N64
 			// Handling UTF-8
 			utf8_decode(text, &codepoint, &curCharSize);
-			struct fontchar tmpchar = {0, 0, 0, 0};
 			renderingAPI = &gfx_opengl_api;
-			GlyphTexture g = gfx_opengl_api.gfx_opengl_render_text(codepoint);
-			tmpchar.index = codepoint;
-			tmpchar.width = g.width;
-			tmpchar.height = g.height;
-			tmpchar.pixeldata = g.ia;
-			gdl = text0f15568c(gdl, x, y, &tmpchar, &tmpchar, font, savedx, savedy, width, height, arg9);
+			GlyphTexture g = gfx_opengl_api.gfx_opengl_render_char(codepoint, category, prevchar.index);
+			curchar.index = codepoint;
+			curchar.width = g.width;
+			curchar.height = g.height;
+			curchar.pixeldata = g.ia;
+			curchar.kerningindex = g.kerning;
+			if(!prevchar.index)
+			{
+				prevchar = curchar;
+			}
+			gdl = text0f15568c(gdl, x, y, &curchar, &prevchar, NULL, savedx, savedy, width, height, arg9);
 			text += curCharSize;
 		}
 #endif
@@ -2270,7 +2281,8 @@ Gfx *textRenderChar(Gfx *gdl, s32 *x, s32 *y, struct fontchar *char1, struct fon
 
 	sp38 = *y + arg10;
 
-	tmp = font->kerning[char2->kerningindex * 13 + char1->kerningindex] + var8007fac4;
+	//tmp = font->kerning[char2->kerningindex * 13 + char1->kerningindex] + var8007fac4;
+	tmp = char1->kerningindex + var8007fac4;
 	*x -= (tmp - 1) * var8007fad0;
 
 	if (*x > 0
@@ -2366,7 +2378,7 @@ Gfx *text0f156a24(Gfx *gdl, s32 x, s32 y, struct fontchar *char1, s32 arg4, s32 
 }
 
 Gfx *textRender(Gfx *gdl, s32 *x, s32 *y, char *text,
-		struct fontchar *chars, struct font *font, u32 arg6, u32 colour,
+		enum Font_Category category, u32 arg6, u32 colour,
 		s32 width, s32 height, u32 arg10, s32 lineheight)
 {
 	s32 savedx;
@@ -2374,14 +2386,14 @@ Gfx *textRender(Gfx *gdl, s32 *x, s32 *y, char *text,
 #if VERSION >= VERSION_PAL_BETA
 	u8 prevchar;
 #else
-	s32 prevchar;
+	//s32 prevchar;
 #endif
 
 	*x *= g_ScaleX;
 
 	savedx = *x;
 	savedy = *y;
-	prevchar = 'H';
+	//prevchar = 'H';
 
 #if VERSION >= VERSION_JPN_FINAL
 	if (lineheight == -1) {
@@ -2391,7 +2403,8 @@ Gfx *textRender(Gfx *gdl, s32 *x, s32 *y, char *text,
 	}
 #else
 	if (lineheight == 0) {
-		lineheight = chars['['].height + chars['['].baseline;
+		//lineheight = chars['['].height + chars['['].baseline;
+		lineheight = 14; 
 	}
 
 	if (g_Jpn && lineheight < 14) {
@@ -2456,15 +2469,17 @@ Gfx *textRender(Gfx *gdl, s32 *x, s32 *y, char *text,
 #ifndef PLATFORM_N64
 	u8 curCharSize;
 	u32 codepoint;
+	struct fontchar curchar = {0, 0, 0, 0};
+	struct fontchar prevchar = {0, 0, 0, 0};
 	while (*text != '\0') {
 		if (*text == ' ') {
 			*x += var8007fad0 * 5;
-			prevchar = 'H';
+			//prevchar = 'H';
 			text++;
 		} else if (*text == '\n') {
 			*x = savedx;
 			*y += lineheight;
-			prevchar = 'H';
+			//prevchar = 'H';
 			text++;
 		} else {
 			utf8_decode(text, &codepoint, &curCharSize);
@@ -2472,15 +2487,20 @@ Gfx *textRender(Gfx *gdl, s32 *x, s32 *y, char *text,
 				text ++;
 			}
 			else {
-				struct fontchar tmpchar = {0, 0, 0, 0};
+				utf8_decode(text, &codepoint, &curCharSize);
 				renderingAPI = &gfx_opengl_api;
-				GlyphTexture g = gfx_opengl_api.gfx_opengl_render_text((int)*text);
-				tmpchar.index = (int)*text;
-				tmpchar.width = g.width;
-				tmpchar.height = g.height;
-				tmpchar.pixeldata = g.ia;
-				gdl = textRenderChar(gdl, x, y, &tmpchar, &tmpchar,
-					font, savedx, savedy, width * var8007fad0, height, arg10);
+				GlyphTexture g = gfx_opengl_api.gfx_opengl_render_char(codepoint, category, prevchar.index);
+				curchar.index = codepoint;
+				curchar.width = g.width;
+				curchar.height = g.height;
+				curchar.pixeldata = g.ia;
+				curchar.kerningindex = g.kerning;
+				if(!prevchar.index)
+				{
+					prevchar = curchar;
+				}
+				gdl = textRenderChar(gdl, x, y, &curchar, &prevchar,
+					NULL, savedx, savedy, width * var8007fad0, height, arg10);
 				text += curCharSize;
 			}
 		}
@@ -2700,10 +2720,48 @@ glabel textMeasure
 );
 #else
 // Mismatch: Regalloc
-void textMeasure(s32 *textheight, s32 *textwidth, char *text, struct fontchar *font1, struct font *font2, s32 lineheight)
+void textMeasure(s32 *textheight, s32 *textwidth, const char *text, enum Font_Category category, s32 lineheight)
 {
-	char prevchar;
-	char thischar;
+	s32 lineHeight = 8; // arbitrary line height
+    s32 maxW = 0; 
+	s32 curW = 0;
+	s32 totalH = 0;
+    uint32_t prevGlyphIndex = 0;
+
+    while (*text) {
+        if (*text == ' ') {
+            curW += SPACE_WIDTH; // arbitrary space
+            text++;
+        }
+        else if (*text == '\n') {
+            maxW = MAX(maxW, curW);
+            curW = 0;
+            totalH += lineHeight;
+            prevGlyphIndex = 0;
+            text++;
+        }
+        else {
+            uint32_t codepoint;
+			u8 size = 0;
+            utf8_decode(text, &codepoint, &size);
+            text += size;
+
+			renderingAPI = &gfx_opengl_api;
+			GlyphTexture g = gfx_opengl_api.gfx_opengl_render_char(codepoint, category, prevGlyphIndex);
+
+            // avance effective = advance - kerning
+            curW += g.advance - g.kerning;
+            prevGlyphIndex = g.glyph_index;
+        }
+    }
+
+    maxW = MAX(maxW, curW);
+    *textwidth  = maxW;
+    *textheight = totalH + lineHeight;
+	return;
+
+	/*char prevchar;
+	char thischar;*/
 	s32 longest;
 #if VERSION == VERSION_JPN_FINAL
 	s32 overlap = 0;
@@ -2713,8 +2771,8 @@ void textMeasure(s32 *textheight, s32 *textwidth, char *text, struct fontchar *f
 #endif
 	s32 tmp;
 
-	prevchar = 'H';
-	thischar = '\0';
+	//prevchar = 'H';
+	//thischar = '\0';
 	longest = 0;
 	*textheight = 0;
 	*textwidth = 0;
@@ -2727,7 +2785,8 @@ void textMeasure(s32 *textheight, s32 *textwidth, char *text, struct fontchar *f
 	}
 #else
 	if (lineheight == 0) {
-		lineheight = font1['['].baseline + font1['['].height;
+		//lineheight = font1['['].baseline + font1['['].height;
+		lineheight = 14;
 	}
 
 	if (g_Jpn && lineheight < 14) {
@@ -2736,6 +2795,10 @@ void textMeasure(s32 *textheight, s32 *textwidth, char *text, struct fontchar *f
 #endif
 
 	if (text) {
+		u8 curCharSize;
+		u32 codepoint;
+		struct fontchar curchar = {0, 0, 0, 0};
+		struct fontchar prevchar = {0, 0, 0, 0};
 		while (*text != '\0') {
 			if (*text == ' ') {
 				// Space
@@ -2743,7 +2806,7 @@ void textMeasure(s32 *textheight, s32 *textwidth, char *text, struct fontchar *f
 					*textwidth += 5;
 				}
 
-				prevchar = 'H';
+				//prevchar = 'H';
 				text++;
 			} else if (*text == '\n') {
 				// Line break
@@ -2789,7 +2852,7 @@ void textMeasure(s32 *textheight, s32 *textwidth, char *text, struct fontchar *f
 				tmp = font2->kerning[sp4c->kerningindex * 13 + sp50->kerningindex] + var8007fac4 - 1;
 				*textwidth = *textwidth + sp50->width - tmp;
 #else
-				if (*text < 0x80) {
+				/*if (*text < 0x80) {
 					// Normal single-byte character
 					thischar = *text;
 					tmp = font2->kerning[font1[prevchar - 0x21].kerningindex * 13 + font1[thischar - 0x21].kerningindex] + var8007fac4 - 1;
@@ -2807,7 +2870,23 @@ void textMeasure(s32 *textheight, s32 *textwidth, char *text, struct fontchar *f
 					tmp = font2->kerning[0] + var8007fac4 - 1;
 					*textwidth = *textwidth - tmp + 15;
 					text += 2;
+				}*/
+				// Handling UTF-8
+				utf8_decode(text, &codepoint, &curCharSize);
+				renderingAPI = &gfx_opengl_api;
+				GlyphTexture g = gfx_opengl_api.gfx_opengl_render_char(codepoint, FONT_NUMERIC, prevchar.index);
+				curchar.index = codepoint;
+				curchar.width = g.width;
+				curchar.height = g.height;
+				curchar.pixeldata = g.ia;
+				curchar.kerningindex = g.kerning;
+				if(!prevchar.index)
+				{
+					prevchar = curchar;
 				}
+				tmp = prevchar.kerningindex + curchar.kerningindex + var8007fac4 - 1;
+				*textwidth = curchar.width + *textwidth - tmp;
+				text += curCharSize;
 #endif
 			}
 		}
@@ -3171,8 +3250,60 @@ glabel textWrap
 /*  f157bf4:	27bd00b8 */ 	addiu	$sp,$sp,0xb8
 );
 #else
-void textWrap(s32 wrapwidth, char *src, char *dst, struct fontchar *chars, struct font *font)
+void textWrap(s32 wrapwidth, const char *src, char *dst, enum Font_Category category)
 {
+	const int INDENT = g_WrapIndentCount * SPACE_WIDTH; // arbitrary space
+    int curW = 0;
+    char word[64];
+
+    while (*src) {
+        // 1. word extraction or empty if '\n'
+        int len = 0;
+		/*int codepoint = 0;
+		u8 size = 0;
+		while(codepoint != 20)
+		{
+			utf8_decode(src, &codepoint, &size);
+			len ++;
+			src ++;
+		}*/
+
+		//nextWord(&src, word, sizeof(word));
+        if (*src == '\n' || len == 0) {
+            *dst++ = '\n';
+            memset(dst, ' ', g_WrapIndentCount);
+            dst += g_WrapIndentCount;
+            curW = INDENT;
+            src++; 
+            continue;
+        }
+
+        // 2. word length
+        s32 h, w;
+        textMeasure(&h, &w, word, category, 0);
+
+        // 3. line break if too long
+        if (curW + w > wrapwidth && curW > INDENT) {
+            *dst++ = '\n';
+            memset(dst, ' ', g_WrapIndentCount);
+            dst += g_WrapIndentCount;
+            curW = INDENT;
+        }
+
+        // 4. word copy with space
+        memcpy(dst, word, len);
+        dst += len;
+        curW += w;
+
+        if (*src == ' ') {
+            *dst++ = ' ';
+            curW += SPACE_WIDTH;
+            src++;
+        }
+    }
+
+    *dst = '\0';
+	return;
 #if VERSION >= VERSION_JPN_FINAL
 	// JPN mismatch: Regalloc for sp94
 	s32 curlinewidth = 0; // b4
@@ -3396,7 +3527,7 @@ void textWrap(s32 wrapwidth, char *src, char *dst, struct fontchar *chars, struc
 
 		while (*src > ' ') {
 			curword[wordlen] = *src;
-			v1 += chars[*src - 0x21].width;
+			//v1 += chars[*src - 0x21].width;
 			src++;
 			wordlen++;
 
@@ -3406,7 +3537,7 @@ void textWrap(s32 wrapwidth, char *src, char *dst, struct fontchar *chars, struc
 			{
 				if (curword[wordlen - 1] >= 0x80) {
 					curword[wordlen] = *src;
-					v1 += chars[*src - 0x21].width;
+					//v1 += chars[*src - 0x21].width;
 					src++;
 					wordlen++;
 				}
@@ -3415,7 +3546,7 @@ void textWrap(s32 wrapwidth, char *src, char *dst, struct fontchar *chars, struc
 
 		curword[wordlen] = '\0';
 
-		textMeasure(&wordheight, &wordwidth, curword, chars, font, 0);
+		//textMeasure(&wordheight, &wordwidth, curword, chars, font, 0);
 
 		curlinewidth += wordwidth;
 

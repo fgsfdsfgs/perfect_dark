@@ -45,12 +45,12 @@ Gfx *text0f1552d4(Gfx *gdl, f32 x, f32 y, f32 widthscale, f32 heightscale, char 
 Gfx *text0f15568c(Gfx *gdl, s32 *x, s32 *y, struct fontchar *curchar, struct fontchar *prevchar, struct font *font, s32 savedx, s32 savedy, s32 width, s32 height, s32 arg10);
 void text0f156024(s32 arg0);
 void text0f156030(u32 colour);
-Gfx *textRenderProjected(Gfx *gdl, s32 *x, s32 *y, char *text, struct fontchar *chars, struct font *font, s32 colour, s32 width, s32 height, s32 arg9, s32 lineheight);
+Gfx *textRenderProjected(Gfx *gdl, s32 *x, s32 *y, char *text, enum Font_Category category, s32 colour, s32 width, s32 height, s32 arg9, s32 lineheight);
 Gfx *text0f1566cc(Gfx *gdl, u32 arg1, u32 arg2);
 Gfx *text0f156a24(Gfx *gdl, s32 x, s32 y, struct fontchar *char1, s32 arg4, s32 arg5, s32 arg6, s32 arg7);
-Gfx *textRender(Gfx *gdl, s32 *x, s32 *y, char *text, struct fontchar *font1, struct font *font2, u32 arg6, u32 colour, s32 width, s32 height, u32 arg10, s32 arg11);
-void textMeasure(s32 *textheight, s32 *textwidth, char *text, struct fontchar *font1, struct font *font2, s32 lineheight);
-void textWrap(s32 width, char *in, char *out, struct fontchar *font1, struct font *font2);
+Gfx *textRender(Gfx *gdl, s32 *x, s32 *y, char *text, enum Font_Category category, u32 arg6, u32 colour, s32 width, s32 height, u32 arg10, s32 arg11);
+void textMeasure(s32 *textheight, s32 *textwidth, const char *text, enum Font_Category category, s32 lineheight);
+void textWrap(s32 width, const char *in, char *out, enum Font_Category category);
 
 Gfx *func0f1574d0jf(Gfx *gdl, s32 *x, s32 *y, char *text, struct fontchar *font1, struct font *font2, s32 colour, u32 colour2, s32 width, s32 height, s32 arg9, u32 arg10);
 

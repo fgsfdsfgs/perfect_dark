@@ -1,3 +1,4 @@
+#include "system.h"
 #include <stdint.h>
 #include <stdbool.h>
 #include <stdio.h>
@@ -23,6 +24,14 @@
 #include "gfx_pc.h"
 
 using namespace std;
+
+enum Font_Category {
+    FONT_NUMERIC = 0, // For numbers (very small)
+    FONT_XS = 1,
+    FONT_SMALL = 2,   // Menu item & co
+    FONT_MEDIUM = 3,  // Menu Title, Credits
+    FONT_LARGE = 4    // Rarely used, erros
+};
 
 struct ShaderProgram {
     GLuint opengl_program_id;
@@ -66,8 +75,12 @@ static bool gl_es = false;
 static bool gl_core_profile = false;
 
 static FT_Library library = NULL;
-FT_Face face = NULL;
-FT_GlyphSlot slot = NULL;
+static FT_Face font_faces[5] = {};
+static FT_GlyphSlot font_slots[5] = {};
+static std::map<int, GlyphTexture> characters[5] = {};
+//static std::map<int, GlyphTexture> Characters;
+/*FT_Face face = NULL;
+FT_GlyphSlot slot = NULL;*/
 
 static int gfx_opengl_get_max_texture_size() {
     GLint max_texture_size;
@@ -1028,39 +1041,59 @@ static void gfx_opengl_init(void) {
         sysFatalError("FreeType init error\n");
     }
 
-    // Loading font
-    error = FT_New_Face(library, "/usr/share/fonts/opentype/unifont/unifont.otf", 0, &face);
-    if (error) {
-        sysFatalError("Error while loading font\n");
-        FT_Done_FreeType(library);
+    // Loading fonts
+    for(int i = FONT_NUMERIC; i <= FONT_LARGE; i++) {
+        error = FT_New_Face(library, "/usr/share/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf", 0, &font_faces[i]);
+        if (error) {
+            sysFatalError("Error while loading font\n");
+            FT_Done_FreeType(library);
+        }
+
+        error = FT_Select_Charmap(font_faces[i], FT_ENCODING_UNICODE);
+        if (error) {
+            sysFatalError("Font does not support FT_ENCODING_UNICODE\n");
+        }
+
+        // Setting up size
+        int size = 0;
+        switch (i) {
+            case FONT_NUMERIC:
+                size = 8;
+                break;
+            case FONT_XS:
+                size = 10;
+                break;
+            case FONT_SMALL:
+                size = 11;
+                break;
+            case FONT_MEDIUM:
+                size = 12;
+                break;
+            case FONT_LARGE:
+                size = 14;
+                break;
+            default:
+                sysFatalError("Unknow font type") ;               
+        }
+        FT_Set_Pixel_Sizes(font_faces[i], 0, size);
+        font_slots[i] = font_faces[i]->glyph;
     }
-
-    error = FT_Select_Charmap(face, FT_ENCODING_UNICODE);
-    if (error) {
-        sysFatalError("Font does not support FT_ENCODING_UNICODE\n");
-  }
-
-    // Setting up size
-    FT_Set_Pixel_Sizes(face, 0, 10);
-    slot = face->glyph;
 }
 
-static std::map<int, GlyphTexture> Characters;
+static GlyphTexture gfx_opengl_render_char(int codepoint, int category, FT_UInt previous_glyph_index) {
 
-static GlyphTexture gfx_opengl_render_text(int codepoint) {
+    GlyphTexture retTex;
 
-    unsigned char* pixels = 0;
-
-    if(Characters.contains(codepoint)) {
-        return Characters[codepoint];
+    if(characters[category].contains(codepoint)) {
+        retTex = characters[category][codepoint];
     }
     else {
         FT_UInt  glyph_index;
         FT_Error error;
 
-        glyph_index = FT_Get_Char_Index(face, codepoint);
-        error = FT_Load_Glyph(face, glyph_index, FT_LOAD_RENDER);
-        FT_Bitmap *bitmap = &face->glyph->bitmap;
+        glyph_index = FT_Get_Char_Index(font_faces[category], codepoint);
+        error = FT_Load_Glyph(font_faces[category], glyph_index, FT_LOAD_RENDER);
+        FT_Bitmap *bitmap = &font_faces[category]->glyph->bitmap;
 
         // N64 multiple of 8
         int width_8 = (bitmap->width +7) & ~7;
@@ -1078,18 +1111,29 @@ static GlyphTexture gfx_opengl_render_text(int codepoint) {
             }
         }
 
-        GlyphTexture tex = {
+        GlyphTexture retTex = {
             .ia = ia,
             .width = width_8,
             .height = height_8,
-            .top = face->glyph->bitmap_top,
-            .left = face->glyph->bitmap_left,
-            .advance = (int)face->glyph->advance.x >> 6
+            .top = font_faces[category]->glyph->bitmap_top,
+            .left = font_faces[category]->glyph->bitmap_left,
+            .advance = (int)font_faces[category]->glyph->advance.x >> 6,
+            .glyph_index = glyph_index,
         };
 
-        Characters.insert(std::pair<int, GlyphTexture>(codepoint, tex));
-        return tex;
+        characters[category].insert(std::pair<int, GlyphTexture>(codepoint, retTex));
     }
+
+    if(previous_glyph_index && FT_HAS_KERNING(font_faces[category])) {
+        FT_Vector kern;
+        FT_Get_Kerning(font_faces[category], previous_glyph_index, retTex.glyph_index,
+                       FT_KERNING_DEFAULT, &kern);
+        retTex.kerning = kern.x >> 6;
+    } else {
+        retTex.kerning = 0;
+    }
+
+    return retTex;
 }
 
 static void gfx_opengl_on_resize(void) {
@@ -1356,5 +1400,5 @@ struct GfxRenderingAPI gfx_opengl_api = {
     gfx_opengl_delete_texture,
     gfx_opengl_set_texture_filter,
     gfx_opengl_get_texture_filter,
-    gfx_opengl_render_text
+    gfx_opengl_render_char
 };

@@ -736,7 +736,7 @@ char *filemgrMenuTextInsertOriginalPak(struct menuitem *item)
 	// "Please insert the Controller Pak containing your %s into any controller."
 	sprintf(fullbuffer, _("Please insert the Controller Pak containing your %s into any controller.\n"), namebuffer);
 
-	textWrap(120, fullbuffer, g_StringPointer, g_CharsHandelGothicSm, g_FontHandelGothicSm);
+	textWrap(120, fullbuffer, g_StringPointer, FONT_SMALL);
 
 	return g_StringPointer;
 }
@@ -2047,7 +2047,7 @@ MenuItemHandlerResult filemgrFileToCopyOrDeleteListMenuHandler(s32 operation, st
 
 				if (file) {
 					filemgrGetSelectName(text, file, g_Menus[g_MpPlayerNum].fm.filetypeplusone - 1);
-					gdl = textRenderProjected(gdl, &x, &y, text, g_CharsHandelGothicSm, g_FontHandelGothicSm,
+					gdl = textRenderProjected(gdl, &x, &y, text, FONT_SMALL,
 							colour, viGetWidth(), viGetHeight(), 0, 1);
 					y = renderdata->y + 12;
 					x = renderdata->x + 2;
@@ -2235,7 +2235,7 @@ MenuItemHandlerResult pakGameNoteListMenuHandler(s32 operation, struct menuitem 
 		sprintf(generalbuffer, "%d:\n", data->list.unk04 + 1);
 		x = renderdata->x + 4;
 		y = renderdata->y + 1;
-		gdl = textRenderProjected(gdl, &x, &y, generalbuffer, g_CharsHandelGothicSm, g_FontHandelGothicSm,
+		gdl = textRenderProjected(gdl, &x, &y, generalbuffer, FONT_SMALL,
 				renderdata->colour, viGetWidth(), viGetHeight(), 0, 1);
 
 		// Prepare buffers for remaining text
@@ -2257,21 +2257,21 @@ MenuItemHandlerResult pakGameNoteListMenuHandler(s32 operation, struct menuitem 
 		// Render note name
 		x = renderdata->x + 20;
 		y = renderdata->y + 1;
-		gdl = textRenderProjected(gdl, &x, &y, generalbuffer, g_CharsHandelGothicSm, g_FontHandelGothicSm,
+		gdl = textRenderProjected(gdl, &x, &y, generalbuffer, FONT_SMALL,
 				renderdata->colour, viGetWidth(), viGetHeight(), 0, 1);
 
 		// Render ext character (for when a game has multiple notes)
 		x = renderdata->x + (VERSION == VERSION_JPN_FINAL ? 220 : 190);
 		y = renderdata->y + 1;
-		gdl = textRenderProjected(gdl, &x, &y, extbuffer, g_CharsHandelGothicSm, g_FontHandelGothicSm,
+		gdl = textRenderProjected(gdl, &x, &y, extbuffer, FONT_SMALL,
 				renderdata->colour, viGetWidth(), viGetHeight(), 0, 1);
 
 		// Render number of pages
-		textMeasure(&textheight, &textwidth, pagesbuffer, g_CharsHandelGothicSm, g_FontHandelGothicSm, 0);
+		textMeasure(&textheight, &textwidth, pagesbuffer, FONT_SMALL, 0);
 
 		x = renderdata->x + renderdata->width - textwidth - 6;
 		y = renderdata->y + 1;
-		gdl = textRenderProjected(gdl, &x, &y, pagesbuffer, g_CharsHandelGothicSm, g_FontHandelGothicSm,
+		gdl = textRenderProjected(gdl, &x, &y, pagesbuffer, FONT_SMALL,
 				renderdata->colour, viGetWidth(), viGetHeight(), 0, 1);
 
 		return (uintptr_t) gdl;
@@ -2663,11 +2663,11 @@ MenuItemHandlerResult filemgrChooseAgentListMenuHandler(s32 operation, struct me
 		if (data->list.unk04 == g_FileLists[0]->numfiles) {
 			// "New Agent..."
 			gdl = textRenderProjected(gdl, &x, &y, _("New Agent...\n"),
-					g_CharsHandelGothicMd, g_FontHandelGothicMd, renderdata->colour, viGetWidth(), viGetHeight(), 0, 0);
+					FONT_MEDIUM, renderdata->colour, viGetWidth(), viGetHeight(), 0, 0);
 		} else if (file) {
 			// Render file name
 			gdl = textRenderProjected(gdl, &x, &y, name,
-					g_CharsHandelGothicMd, g_FontHandelGothicMd, renderdata->colour, viGetWidth(), viGetHeight(), 0, 1);
+					FONT_MEDIUM, renderdata->colour, viGetWidth(), viGetHeight(), 0, 1);
 
 			// Prepare and render stage name
 			y = renderdata->y + (VERSION == VERSION_JPN_FINAL ? 16 : 18);
@@ -2684,7 +2684,7 @@ MenuItemHandlerResult filemgrChooseAgentListMenuHandler(s32 operation, struct me
 
 			strcat(buffer, "\n");
 			gdl = textRenderProjected(gdl, &x, &y, buffer,
-					g_CharsHandelGothicSm, g_FontHandelGothicSm, renderdata->colour, viGetWidth(), viGetHeight(), 0, 0);
+					FONT_SMALL, renderdata->colour, viGetWidth(), viGetHeight(), 0, 0);
 
 			// Prepare and render mission time
 			x = renderdata->x + 62;
@@ -2704,20 +2704,20 @@ MenuItemHandlerResult filemgrChooseAgentListMenuHandler(s32 operation, struct me
 
 			// Useless - textwidth and textheight are not used
 #if VERSION >= VERSION_JPN_FINAL
-			textMeasure(&textheight, &textwidth, buffer, g_CharsHandelGothicSm, g_FontHandelGothicSm, -1);
+			textMeasure(&textheight, &textwidth, buffer, FONT_SMALL, -1);
 #else
-			textMeasure(&textheight, &textwidth, buffer, g_CharsHandelGothicSm, g_FontHandelGothicSm, 0);
+			textMeasure(&textheight, &textwidth, buffer, FONT_SMALL, 0);
 #endif
 
 			gdl = textRenderProjected(gdl, &x, &y, buffer,
-					g_CharsHandelGothicSm, g_FontHandelGothicSm, renderdata->colour, viGetWidth(), viGetHeight(), 0, 0);
+					FONT_SMALL, renderdata->colour, viGetWidth(), viGetHeight(), 0, 0);
 
 			// Render seconds part of mission time (uses a smaller font)
 			y += (VERSION == VERSION_JPN_FINAL) ? 3 : 1;
 			x++;
 			sprintf(buffer, ".%02d", seconds);
 			gdl = textRenderProjected(gdl, &x, &y, buffer,
-					g_CharsHandelGothicXs, g_FontHandelGothicXs, renderdata->colour, viGetWidth(), viGetHeight(), 0, 0);
+					FONT_XS, renderdata->colour, viGetWidth(), viGetHeight(), 0, 0);
 		}
 		gdl = text0f153780(gdl);
 		return (uintptr_t) gdl;

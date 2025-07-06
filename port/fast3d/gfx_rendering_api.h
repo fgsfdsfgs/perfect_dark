@@ -1,6 +1,7 @@
 #ifndef GFX_RENDERING_API_H
 #define GFX_RENDERING_API_H
 
+#include <freetype/fttypes.h>
 #include <stddef.h>
 #include <stdint.h>
 #include <stdbool.h>
@@ -19,9 +20,19 @@ typedef struct {
     int top;    // Offset from baseline to left/top of glyph
     int left;
     int advance;    // Offset to advance to next glyph
+    FT_UInt glyph_index;
+    int kerning;
 } GlyphTexture;
 
 enum FilteringMode { FILTER_NONE, FILTER_LINEAR, FILTER_THREE_POINT };
+
+/*enum Font_Category {
+    FONT_NUMERIC = 0, // For numbers (very small)
+    FONT_XS = 1,
+    FONT_SMALL = 2, // Menu item & co
+    FONT_MEDIUM = 3, // Menu Title, Credits
+    FONT_LARGE = 4 // Rarely used, erros
+};*/
 
 struct GfxRenderingAPI {
     const char* (*get_name)(void);
@@ -61,7 +72,7 @@ struct GfxRenderingAPI {
     void (*delete_texture)(uint32_t texID);
     void (*set_texture_filter)(enum FilteringMode mode);
     enum FilteringMode (*get_texture_filter)(void);
-    GlyphTexture (*gfx_opengl_render_text)(int);
+    GlyphTexture (*gfx_opengl_render_char)(int, int, FT_UInt);
 };
 
 #endif

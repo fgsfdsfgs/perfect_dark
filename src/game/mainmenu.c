@@ -2102,13 +2102,13 @@ MenuItemHandlerResult menuhandlerMissionList(s32 operation, struct menuitem *ite
 		strcpy(text, _(g_SoloStages[stageindex].name1));
 		strcat(text, "\n");
 
-		gdl = textRenderProjected(gdl, &x, &y, text, g_CharsHandelGothicMd, g_FontHandelGothicMd,
+		gdl = textRenderProjected(gdl, &x, &y, text, FONT_MEDIUM,
 				renderdata->colour, viGetWidth(), viGetHeight(), 0, 0);
 
 		// Draw last part of name
 		strcpy(text, _(g_SoloStages[stageindex].name2));
 
-		gdl = textRenderProjected(gdl, &x, &y, text, g_CharsHandelGothicSm, g_FontHandelGothicSm,
+		gdl = textRenderProjected(gdl, &x, &y, text, FONT_MEDIUM,
 				renderdata->colour, viGetWidth(), viGetHeight(), 0, 0);
 
 		gdl = text0f153780(gdl);

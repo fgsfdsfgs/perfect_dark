@@ -322,6 +322,7 @@ Gfx *menuRenderBanner(Gfx *gdl, s32 x1, s32 y1, s32 x2, s32 y2, bool big, s32 ms
 	s32 bannerbottom;
 	struct fontchar *chars;
 	struct font *font;
+	enum Font_Category cat;
 
 	static char *msgs[] = {
 		gettext_noop("Searching for Camera!\n"), // "Searching for Camera!"
@@ -337,8 +338,9 @@ Gfx *menuRenderBanner(Gfx *gdl, s32 x1, s32 y1, s32 x2, s32 y2, bool big, s32 ms
 		gettext_noop("Auto Camera Adjustment\n"), // "Auto Camera Adjustment"
 	};
 
-	chars = g_CharsHandelGothicSm;
-	font = g_FontHandelGothicSm;
+	//chars = g_CharsHandelGothicSm;
+	//font = g_FontHandelGothicSm;
+	cat = FONT_SMALL;
 
 	if (big) {
 #if VERSION >= VERSION_PAL_BETA
@@ -347,8 +349,9 @@ Gfx *menuRenderBanner(Gfx *gdl, s32 x1, s32 y1, s32 x2, s32 y2, bool big, s32 ms
 			font = g_FontHandelGothicMd;
 		}
 #else
-		chars = g_CharsHandelGothicMd;
-		font = g_FontHandelGothicMd;
+		//chars = g_CharsHandelGothicMd;
+		//font = g_FontHandelGothicMd;
+		cat = FONT_MEDIUM;
 #endif
 	}
 
@@ -360,10 +363,10 @@ Gfx *menuRenderBanner(Gfx *gdl, s32 x1, s32 y1, s32 x2, s32 y2, bool big, s32 ms
 
 	y = (y1 + y2) / 2;
 
-	textMeasure(&textheight, &textwidth, _(msgs[msgnum]), chars, font, 0);
+	textMeasure(&textheight, &textwidth, _(msgs[msgnum]), cat, 0);
 
 	// "Please Wait..."
-	textMeasure(&waitheight, &waitwidth, _("Please Wait...\n"), chars, font, 0);
+	textMeasure(&waitheight, &waitwidth, _("Please Wait...\n"), cat, 0);
 
 #if VERSION >= VERSION_NTSC_1_0 && VERSION < VERSION_JPN_FINAL
 	if (msgs[msgnum] == _("Checking Controller Pak\n")) { // "Checking Controller Pak"
@@ -399,25 +402,25 @@ Gfx *menuRenderBanner(Gfx *gdl, s32 x1, s32 y1, s32 x2, s32 y2, bool big, s32 ms
 	x = midx - textwidth / 2 + 2;
 	y += 2;
 	gdl = textRenderProjected(gdl, &x, &y, _(msgs[msgnum]),
-			chars, font, 0x000000ff, viGetWidth(), viGetWidth(), 0, 0);
+			cat, 0x000000ff, viGetWidth(), viGetWidth(), 0, 0);
 
 	// Render "Please Wait..." shadow
 	x = midx - waitwidth / 2 + 2;
 	y += 3;
 	gdl = textRenderProjected(gdl, &x, &y, _("Please Wait...\n"),
-			chars, font, 0x000000ff, viGetWidth(), viGetWidth(), 0, 0);
+			cat, 0x000000ff, viGetWidth(), viGetWidth(), 0, 0);
 
 	// Render the selected message proper
 	x = midx - textwidth / 2;
 	y = texttop;
 	gdl = textRenderProjected(gdl, &x, &y, _(msgs[msgnum]),
-			chars, font, 0xbfbfffff, viGetWidth(), viGetWidth(), 0, 0);
+			cat, 0xbfbfffff, viGetWidth(), viGetWidth(), 0, 0);
 
 	// Render "Please Wait..." proper
 	x = midx - waitwidth / 2;
 	y += 3;
 	gdl = textRenderProjected(gdl, &x, &y, _("Please Wait...\n"),
-			chars, font, 0xbfbfffff, viGetWidth(), viGetWidth(), 0, 0);
+			cat, 0xbfbfffff, viGetWidth(), viGetWidth(), 0, 0);
 
 #if VERSION >= VERSION_NTSC_1_0 && VERSION < VERSION_JPN_FINAL
 	if (msgs[msgnum] == _("Checking Controller Pak\n")) { // "Checking Controller Pak"
@@ -425,7 +428,7 @@ Gfx *menuRenderBanner(Gfx *gdl, s32 x1, s32 y1, s32 x2, s32 y2, bool big, s32 ms
 		y = texttop - 1;
 		x = textwidth / 2 + midx - 7;
 		gdl = textRenderProjected(gdl, &x, &y, "TM",
-				g_CharsHandelGothicXs, g_FontHandelGothicXs, 0xbfbfffff, viGetWidth(), viGetWidth(), 0, 0);
+				FONT_XS, 0xbfbfffff, viGetWidth(), viGetWidth(), 0, 0);
 	}
 #endif
 
@@ -609,6 +612,7 @@ void menuCalculateItemSize(struct menuitem *item, s16 *width, s16 *height, struc
 	union handlerdata handlerdata2;
 	char *text2;
 	s32 numobjectives;
+	enum Font_Category cat = FONT_MEDIUM;
 
 	// Check if item's handler handles MENUOP_CHECKHIDDEN
 	if (item->handler && (item->flags & MENUITEMFLAG_SELECTABLE_OPENSDIALOG) == 0) {
@@ -688,7 +692,7 @@ void menuCalculateItemSize(struct menuitem *item, s16 *width, s16 *height, struc
 			textheight = 0;
 
 			if (text != NULL) {
-				textMeasure(&textheight, &textwidth, text, g_CharsHandelGothicSm, g_FontHandelGothicSm, 0);
+				textMeasure(&textheight, &textwidth, text, FONT_SMALL, 0);
 			}
 
 			*width = textwidth + 20;
@@ -699,7 +703,7 @@ void menuCalculateItemSize(struct menuitem *item, s16 *width, s16 *height, struc
 				item->handler(MENUOP_GETSELECTEDINDEX, item, &handlerdata2);
 				handlerdata2.dropdown.unk04 = 0;
 				text2 = (char *)item->handler(MENUOP_GETOPTIONTEXT, item, &handlerdata2);
-				textMeasure(&textheight, &textwidth, text2, g_CharsHandelGothicSm, g_FontHandelGothicSm, 0);
+				textMeasure(&textheight, &textwidth, text2, FONT_SMALL, 0);
 
 #if VERSION >= VERSION_PAL_FINAL
 				if ((item->flags & MENUITEMFLAG_ADJUSTWIDTH) == 0) {
@@ -749,7 +753,7 @@ void menuCalculateItemSize(struct menuitem *item, s16 *width, s16 *height, struc
 			*width = 0;
 			*height = 0;
 		} else {
-			textMeasure(&textheight, &textwidth, text, chars, font, 0);
+			textMeasure(&textheight, &textwidth, text, FONT_XS, 0);
 			*width = (s16)textwidth + 34;
 		}
 		*height = VERSION == VERSION_JPN_FINAL ? 14 : 12;
@@ -792,18 +796,20 @@ void menuCalculateItemSize(struct menuitem *item, s16 *width, s16 *height, struc
 		if (item->flags & MENUITEMFLAG_SMALLFONT) {
 			chars = g_CharsHandelGothicXs;
 			font = g_FontHandelGothicXs;
+			cat = FONT_XS;
 		}
 
 		if (item->flags & MENUITEMFLAG_BIGFONT) {
 			chars = g_CharsHandelGothicMd;
 			font = g_FontHandelGothicMd;
+			cat = FONT_MEDIUM;
 		}
 
 		if (strcmp(text, "") == 0) {
 			*height = 0;
 			*width = *height;
 		} else {
-			textMeasure(&textheight, &textwidth, text, chars, font, 0);
+			textMeasure(&textheight, &textwidth, text, cat, 0);
 			*width = (s16)textwidth + 8;
 
 			if ((item->flags & (MENUITEMFLAG_LESSLEFTPADDING | MENUITEMFLAG_ADJUSTWIDTH)) == 0) {
@@ -831,7 +837,7 @@ void menuCalculateItemSize(struct menuitem *item, s16 *width, s16 *height, struc
 
 				// @bug: This is not how you check for an empty string
 				if (text != NULL && text != "") {
-					textMeasure(&textheight, &textwidth, text, chars, font, 0);
+					textMeasure(&textheight, &textwidth, text, cat, 0);
 					*width += textwidth + 5;
 
 					if (item->flags & MENUITEMFLAG_ADJUSTWIDTH) {
@@ -1123,7 +1129,7 @@ void dialogCalculateContentSize(struct menudialogdef *dialogdef, struct menudial
 	// Calculate and consider the title width.
 	// Some of the multiplayer dialogs have a player number
 	// in the top right, so extra space is considered for those.
-	textMeasure(&textheight, &textwidth, menuResolveDialogTitle(dialog->definition), g_CharsHandelGothicSm, g_FontHandelGothicSm, 0);
+	textMeasure(&textheight, &textwidth, menuResolveDialogTitle(dialog->definition), FONT_SMALL, 0);
 
 	titleextra = 8;
 
@@ -2780,13 +2786,13 @@ Gfx *dialogRender(Gfx *gdl, struct menudialog *dialog, struct menu *menu, bool l
 			x = dialogleft + 3;
 			y = dialogtop + 3;
 
-			gdl = textRenderProjected(gdl, &x, &y, title, g_CharsHandelGothicSm, g_FontHandelGothicSm, colour1 & 0xff, dialogwidth, viGetHeight(), 0, 0);
+			gdl = textRenderProjected(gdl, &x, &y, title, FONT_SMALL, colour1 & 0xff, dialogwidth, viGetHeight(), 0, 0);
 
 			// Title proper
 			x = dialogleft + 2;
 			y = dialogtop + 2;
 
-			gdl = textRenderProjected(gdl, &x, &y, title, g_CharsHandelGothicSm, g_FontHandelGothicSm, colour1, dialogwidth, viGetHeight(), 0, 0);
+			gdl = textRenderProjected(gdl, &x, &y, title, FONT_SMALL, colour1, dialogwidth, viGetHeight(), 0, 0);
 
 			// In MP dialogs, render the player number in the top right
 			if (g_MenuData.root == MENUROOT_MPSETUP
@@ -2796,7 +2802,7 @@ Gfx *dialogRender(Gfx *gdl, struct menudialog *dialog, struct menu *menu, bool l
 				x = dialogright - 9;
 				y = dialogtop + 2;
 
-				gdl = textRenderProjected(gdl, &x, &y, sp154[g_MpPlayerNum], g_CharsHandelGothicSm, g_FontHandelGothicSm, colour1, dialogwidth, viGetHeight(), 0, 0);
+				gdl = textRenderProjected(gdl, &x, &y, sp154[g_MpPlayerNum], FONT_SMALL, colour1, dialogwidth, viGetHeight(), 0, 0);
 			}
 		}
 
@@ -3175,7 +3181,7 @@ Gfx *dialogRender(Gfx *gdl, struct menudialog *dialog, struct menu *menu, bool l
 
 				title = menuResolveDialogTitle(layer->siblings[previndex]->definition);
 
-				textMeasure(&textheight, &textwidth, title, g_CharsHandelGothicXs, g_FontHandelGothicXs, 0);
+				textMeasure(&textheight, &textwidth, title, FONT_XS, 0);
 
 				x = dialogleft - 2;
 				y = (dialogtop + dialogbottom) / 2 - textwidth - 3;
@@ -3185,7 +3191,7 @@ Gfx *dialogRender(Gfx *gdl, struct menudialog *dialog, struct menu *menu, bool l
 					x -= 3;
 				}
 
-				gdl = textRenderProjected(gdl, &y, &x, title, g_CharsHandelGothicXs, g_FontHandelGothicXs, 0xffffffff, dialogwidth, viGetHeight(), 0, 0);
+				gdl = textRenderProjected(gdl, &y, &x, title, FONT_XS, 0xffffffff, dialogwidth, viGetHeight(), 0, 0);
 
 				// Right/next title
 				nextindex = layer->cursibling + 1;
@@ -3196,7 +3202,7 @@ Gfx *dialogRender(Gfx *gdl, struct menudialog *dialog, struct menu *menu, bool l
 
 				title = menuResolveDialogTitle(layer->siblings[nextindex]->definition);
 
-				textMeasure(&textheight, &textwidth, title, g_CharsHandelGothicXs, g_FontHandelGothicXs, 0);
+				textMeasure(&textheight, &textwidth, title, FONT_XS, 0);
 
 #if VERSION == VERSION_JPN_FINAL
 				x = dialogright + 13;
@@ -3210,7 +3216,7 @@ Gfx *dialogRender(Gfx *gdl, struct menudialog *dialog, struct menu *menu, bool l
 					x += 3;
 				}
 
-				gdl = textRenderProjected(gdl, &y, &x, title, g_CharsHandelGothicXs, g_FontHandelGothicXs, -1, dialogwidth, viGetHeight(), 0, 0);
+				gdl = textRenderProjected(gdl, &y, &x, title, FONT_XS, -1, dialogwidth, viGetHeight(), 0, 0);
 				gdl = text0f153780(gdl);
 
 				textSetRotation90(false);
@@ -5636,7 +5642,7 @@ Gfx *menuRender(Gfx *gdl)
 				}
 
 				if (renderit) {
-					textMeasure(&textheight, &textwidth, text, g_CharsHandelGothicSm, g_FontHandelGothicSm, 0);
+					textMeasure(&textheight, &textwidth, text, FONT_SMALL, 0);
 
 					// Check which controllers are connected
 					// and update the alpha of the label
@@ -5688,7 +5694,7 @@ Gfx *menuRender(Gfx *gdl)
 							x = viewleft + 2;
 						}
 
-						gdl = textRenderProjected(gdl, &x, &y, text, g_CharsHandelGothicSm, g_FontHandelGothicSm, g_MenuData.playerjoinalpha[i] | 0x5070ff00, viGetWidth(), viGetHeight(), 0, 0);
+						gdl = textRenderProjected(gdl, &x, &y, text, FONT_SMALL, g_MenuData.playerjoinalpha[i] | 0x5070ff00, viGetWidth(), viGetHeight(), 0, 0);
 
 						if (g_Vars.mpsetupmenu == MPSETUPMENU_GENERAL && g_Vars.waitingtojoin[i]) {
 							// "Ready!"
@@ -5706,7 +5712,7 @@ Gfx *menuRender(Gfx *gdl)
 							colour = colourBlend(0x00ffff00, 0xffffff00, weight) | g_MenuData.playerjoinalpha[i];
 						}
 
-						gdl = textRenderProjected(gdl, &x, &y, text, g_CharsHandelGothicSm, g_FontHandelGothicSm, colour, viGetWidth(), viGetHeight(), 0, 0);
+						gdl = textRenderProjected(gdl, &x, &y, text, FONT_SMALL, colour, viGetWidth(), viGetHeight(), 0, 0);
 					}
 				}
 			}
