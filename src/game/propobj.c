@@ -146,26 +146,115 @@ struct beam *g_ThrownLaptopBeams = NULL;
 s32 g_MaxThrownLaptops = 0;
 
 struct map ammoMap[] = {
- {AMMOTYPE_KNIFE, gettext_noop("knife")},
- {AMMOTYPE_CROSSBOW, gettext_noop("bolt")},
- {AMMOTYPE_SHOTGUN, gettext_noop("cartridge")},
- {AMMOTYPE_FARSIGHT, gettext_noop("orb")},
- {AMMOTYPE_GRENADE, gettext_noop("grenade")},
- {AMMOTYPE_ROCKET, gettext_noop("rocket")},
- {AMMOTYPE_MAGNUM, gettext_noop("magnum bullet")},
- {AMMOTYPE_DEVASTATOR, gettext_noop("grenade round")},
- {AMMOTYPE_REMOTE_MINE, gettext_noop("remote mine")},
- {AMMOTYPE_PROXY_MINE, gettext_noop("proximity mine")},
- {AMMOTYPE_TIMED_MINE, gettext_noop("timed mine")},
- {AMMOTYPE_REAPER, gettext_noop("Reaper ammo")},
+ {AMMOTYPE_KNIFE,         gettext_noop("combat knife")},
+ {AMMOTYPE_CROSSBOW,      gettext_noop("bolt")},
+ {AMMOTYPE_SHOTGUN,       gettext_noop("cartridge")},
+ {AMMOTYPE_FARSIGHT,      gettext_noop("orb")},
+ {AMMOTYPE_GRENADE,       gettext_noop("grenade")},
+ {AMMOTYPE_ROCKET,        gettext_noop("rocket")},
+ {AMMOTYPE_MAGNUM,        gettext_noop("magnum bullet")},
+ {AMMOTYPE_DEVASTATOR,    gettext_noop("grenade round")},
+ {AMMOTYPE_REMOTE_MINE,   gettext_noop("remote mine")},
+ {AMMOTYPE_PROXY_MINE,    gettext_noop("proximity mine")},
+ {AMMOTYPE_TIMED_MINE,   gettext_noop("timed mine")},
+ {AMMOTYPE_REAPER,       gettext_noop("Reaper ammo")},
  {AMMOTYPE_HOMINGROCKET, gettext_noop("homing rocket")},
- {AMMOTYPE_DART, gettext_noop("dart")},
- {AMMOTYPE_NBOMB, gettext_noop("N-Bomb")},
- {AMMOTYPE_SEDATIVE, gettext_noop("sedatives")},
- {AMMOTYPE_PSYCHOSIS, gettext_noop("sedatives")},
- {AMMOTYPE_CLOAK, gettext_noop("cloaking device")},
- {AMMOTYPE_BOOST, gettext_noop("boost pill")},
- {999, gettext_noop("ammo"})
+ {AMMOTYPE_DART,         gettext_noop("dart")},
+ {AMMOTYPE_NBOMB,        gettext_noop("N-Bomb")},
+ {AMMOTYPE_SEDATIVE,     gettext_noop("sedatives")},
+ {AMMOTYPE_PSYCHOSIS,    gettext_noop("sedatives")},
+ {AMMOTYPE_CLOAK,        gettext_noop("cloaking device")},
+ {AMMOTYPE_BOOST,        gettext_noop("boost pill")},
+ {999,                   gettext_noop("ammo"})
+};
+
+struct map weaponMap[] = {
+	{ WEAPON_FALCON2,           "Falcon 2"},
+	{ WEAPON_FALCON2_SILENCER,  "Falcon 2 (silencer)"},
+	{ WEAPON_FALCON2_SCOPE,     "Falcon 2 (scope)"},
+	{ WEAPON_MAGSEC4,           "MagSec 4"},
+	{ WEAPON_MAULER,            "Mauler"},
+	{ WEAPON_PHOENIX,           "Phoenix"},
+	{ WEAPON_DY357MAGNUM,       "DY357 Magnum"},
+	{ WEAPON_DY357LX,           "DY357-LX"},
+	{ WEAPON_CMP150,            "CMP150"},
+	{ WEAPON_CYCLONE,           "Cyclone"},
+	{ WEAPON_CALLISTO,         "Callisto NTG"},
+	{ WEAPON_RCP120,           "RC-P120"},
+	{ WEAPON_LAPTOPGUN,        "Laptop Gun"},
+	{ WEAPON_DRAGON,           "Dragon"},
+	{ WEAPON_K7AVENGER,        "K7 Avenger"},
+	{ WEAPON_AR34,             "AR34"},
+	{ WEAPON_SUPERDRAGON,      "SuperDragon"},
+	{ WEAPON_SHOTGUN,          "Shotgun"},
+	{ WEAPON_REAPER,           "Reaper"},
+	{ WEAPON_SNIPERRIFLE,      "Sniper Rifle"},
+	{ WEAPON_FARSIGHT,         "FarSight XR-20"},
+	{ WEAPON_DEVASTATOR,       "Devastator"},
+	{ WEAPON_ROCKETLAUNCHER,   "Rocket Launcher"},
+	{ WEAPON_SLAYER,           "Slayer"},
+	{ WEAPON_COMBATKNIFE,      "Combat Knife"},
+	{ WEAPON_CROSSBOW,         "Crossbow"},
+	{ WEAPON_TRANQUILIZER,     "Tranquilizer"},
+	{ WEAPON_LASER,            "Laser"},
+	{ WEAPON_GRENADE,          "Grenade"},
+	{ WEAPON_NBOMB,            "N-Bomb"},
+	{ WEAPON_TIMEDMINE,        "Timed Mine"},
+	{ WEAPON_PROXIMITYMINE,    "Proximity Mine"},
+	{ WEAPON_REMOTEMINE,       "Remote Mine"},
+	{ WEAPON_COMBATBOOST,      "Combat Boost"},
+	{ WEAPON_PP9I,             "PP9i"},
+	{ WEAPON_CC13,             "CC13"},
+	{ WEAPON_KL01313,          "KL01313"},
+	{ WEAPON_KF7SPECIAL,       "KF7 Special"},
+	{ WEAPON_ZZT,              "ZZT (9mm)"},
+	{ WEAPON_DMC,              "DMC"},
+	{ WEAPON_AR53,             "AR53"},
+	{ WEAPON_RCP45,            "RC-P45"},
+	{ WEAPON_PSYCHOSISGUN,     "Psychosis Gun"},
+	{ WEAPON_NIGHTVISION,      "Night Vision"},
+	{ WEAPON_EYESPY,           "CamSpy"},
+	{ 998,                     "DrugSpy"},
+	{ 997,                     "BombSpy"},
+	{ WEAPON_XRAYSCANNER,      "L_GUN_065"},
+	{ WEAPON_IRSCANNER,        "L_GUN_069"},
+	{ WEAPON_CLOAKINGDEVICE,   "L_GUN_073"},
+	{ WEAPON_HORIZONSCANNER,   "L_GUN_076"},
+	{ WEAPON_ECMMINE,          "L_GUN_041"},
+	{ WEAPON_DATAUPLINK,       "L_GUN_075"},
+	{ WEAPON_RTRACKER,         "L_GUN_070"},
+	{ WEAPON_PRESIDENTSCANNER, "L_GUN_219"},
+	{ WEAPON_DOORDECODER,      "L_GUN_063"},
+	{ WEAPON_AUTOSURGEON,      "L_GUN_220"},
+	{ WEAPON_EXPLOSIVES,       "L_GUN_064"},
+	{ WEAPON_SKEDARBOMB,       "L_GUN_221"},
+	{ WEAPON_COMMSRIDER,       "L_GUN_222"},
+	{ WEAPON_TRACERBUG,        "L_GUN_223"},
+	{ WEAPON_TARGETAMPLIFIER,  "L_GUN_224"},
+	{ WEAPON_DISGUISE40,       "L_GUN_043"},
+	{ WEAPON_DISGUISE41,       "L_GUN_043"},
+	{ WEAPON_FLIGHTPLANS,      "L_GUN_225"},
+	{ WEAPON_RESEARCHTAPE,     "L_GUN_226"},
+	{ WEAPON_BACKUPDISK,       "L_GUN_227"},
+	{ WEAPON_KEYCARD45,        "L_GUN_228"},
+	{ WEAPON_KEYCARD46,        "L_GUN_228"},
+	{ WEAPON_KEYCARD47,        "L_GUN_228"},
+	{ WEAPON_KEYCARD48,        "L_GUN_228"},
+	{ WEAPON_KEYCARD49,        "L_GUN_228"},
+	{ WEAPON_KEYCARD4A,        "L_GUN_228"},
+	{ WEAPON_KEYCARD4B,        "L_GUN_228"},
+	{ WEAPON_KEYCARD4C,        "L_GUN_228"},
+	{ WEAPON_SUITCASE,         "L_GUN_067"},
+	{ WEAPON_BRIEFCASE,        "L_GUN_229"},
+	{ WEAPON_SHIELDTECHITEM,   "L_GUN_240"},
+	{ WEAPON_NECKLACE,         "L_GUN_230"},
+	{ WEAPON_SUICIDEPILL,      "L_GUN_072"},
+	{ WEAPON_ROCKET,           "L_GUN_044"},
+	{ WEAPON_HOMINGROCKET,     "L_GUN_045"},
+	{ WEAPON_GRENADEROUND,     "L_GUN_046"},
+	{ WEAPON_BOLT,             "L_GUN_048"},
+	{ WEAPON_BRIEFCASE2,       "L_GUN_071"},
+	{ WEAPON_SKROCKET,         "L_GUN_044"},
 };
 
 /**
@@ -16970,6 +17059,19 @@ char *ammoGetText(s32 id)
 	return NULL;
 }
 
+char *weaponGetText(s32 id)
+{
+	struct map *info = weaponMap;
+	while (info->id) {
+			if (info->id == id) {
+				return _(info->text);
+			}
+			info++;
+		}
+
+	return NULL;
+}
+
 void ammotypeGetPickupMessage(char *dst, s32 ammotype, s32 qty)
 {
 	s32 playercount = PLAYERCOUNT();
@@ -17141,6 +17243,12 @@ void weaponGetPickupText(char *buffer, s32 weaponnum, bool dual)
 				|| stageGetIndex(g_Vars.stagenum) == STAGEINDEX_CHICAGO) {
 			weaponnum = 997;
 		}
+	}
+
+	if (dual) {
+		sprintf(buffer, "Double %s", weaponGetText(weaponnum));
+	} else {
+		sprintf(buffer, "%s", weaponGetText(weaponnum));
 	}
 
 	//func0f0878c8pf(buffer, weaponnum, 0, !full, dual, var8006aa94pf);

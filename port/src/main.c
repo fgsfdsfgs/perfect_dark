@@ -1,5 +1,4 @@
 #include <stdlib.h>
-#include <stdio.h>
 #include <PR/ultratypes.h>
 #include <PR/ultrasched.h>
 #include <PR/os_message.h>

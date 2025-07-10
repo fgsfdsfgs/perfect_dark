@@ -7,7 +7,6 @@
 #include FT_FREETYPE_H
 
 #include <map>
-#include <unordered_map>
 #include <vector>
 
 #include <SDL.h>
@@ -1103,7 +1102,7 @@ static GlyphTexture gfx_opengl_render_char(int codepoint, int category, FT_UInt 
         if(!ia) {
             //Error
         }
-        memset(ia, 0, sizeof(uint16_t));
+        memset(ia, 0, width_8 * height_8 * sizeof(uint16_t));
         for (int y = 0; y < bitmap->rows; y++) {
             for (int x = 0; x < bitmap->width; x++) {
                 uint16_t g = bitmap->buffer[y * bitmap->pitch + x];
@@ -1116,6 +1115,7 @@ static GlyphTexture gfx_opengl_render_char(int codepoint, int category, FT_UInt 
             .width = width_8,
             .height = height_8,
             .top = font_faces[category]->glyph->bitmap_top,
+            //.top = (int)font_faces[category]->glyph->metrics.horiBearingY,
             .left = font_faces[category]->glyph->bitmap_left,
             .advance = font_faces[category]->glyph->advance.x >> 6,
             .glyph_index = glyph_index,

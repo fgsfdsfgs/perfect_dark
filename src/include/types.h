@@ -7,6 +7,7 @@
 #include "pads.h"
 #include "tiles.h"
 #include "gbi.h"
+#include "ultratypes.h"
 #ifndef PLATFORM_N64
 #include "platform.h"
 #endif
@@ -5617,6 +5618,7 @@ struct fontchar {
 	s8 baseline;
 	u8 height;
 	u8 width;
+	long advance;
 #if VERSION == VERSION_JPN_FINAL
 	s16 kerningindex;
 #else

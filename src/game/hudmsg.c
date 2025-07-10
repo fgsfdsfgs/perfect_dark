@@ -829,7 +829,6 @@ void hudmsgCreateFromArgsWithoutFlags(char *text, s32 type, s32 conf00, s32 conf
 			conf00,
 			conf01,
 			conf02,
-			//conf04, TODO - LANG: Fix it
 			FONT_MEDIUM,
 			textcolour,
 			shadowcolour,
@@ -1045,8 +1044,7 @@ void hudmsgCreateFromArgs(char *text, s32 type, s32 conf00, s32 conf01, s32 conf
 			xmarginaextra = 0;
 			msg = &g_HudMessages[index];
 			wrapwidth = hudmsg0f0ddb1c(&xmarginaextra, conf16);
-			textMeasure(&textheight, &textwidth, text, category, 0);
-			//textMeasure(&textheight, &textwidth, text, *conf04, *conf08, 0); TODO - Lang: Fix it
+			textMeasure(&textheight, &textwidth, text, category, 0);			
 
 #if VERSION >= VERSION_JPN_FINAL
 			if (textwidth > wrapwidth && (flags & HUDMSGFLAG_NOWRAP) == 0)
@@ -1068,10 +1066,8 @@ void hudmsgCreateFromArgs(char *text, s32 type, s32 conf00, s32 conf01, s32 conf
 				stacktext[writeindex++] = '\n';
 				stacktext[writeindex++] = '\0';
 
-				textWrap(wrapwidth, stacktext, msg->text, category);
-				//textWrap(wrapwidth, stacktext, msg->text, *conf04, *conf08); TODO - Lang: Fix it
+				textWrap(wrapwidth, stacktext, msg->text, category);				
 				textMeasure(&textheight, &textwidth, msg->text, category, 0);
-				//textMeasure(&textheight, &textwidth, msg->text, *conf04, *conf08, 0); TODO - Lang: Fix it
 			} else {
 				strncpy(msg->text, text, 399);
 				msg->text[399] = '\0';

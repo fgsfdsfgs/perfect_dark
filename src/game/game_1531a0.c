@@ -1871,7 +1871,6 @@ Gfx *text0f15568c(Gfx *gdl, s32 *x, s32 *y, struct fontchar *curchar, struct fon
 
 	sp90 = *y + arg10;
 	tmp = var8007fac4 + curchar->kerningindex;
-	tmp = 0;
 	*x -= (tmp - 1) * xscale;
 	width *= xscale;
 
@@ -1986,7 +1985,8 @@ Gfx *text0f15568c(Gfx *gdl, s32 *x, s32 *y, struct fontchar *curchar, struct fon
 	}
 #endif
 
-	*x += curchar->width * xscale;
+	//*x += curchar->width * xscale;
+	*x += (curchar->advance + curchar->kerningindex) * xscale;
 
 	return gdl;
 }
@@ -2170,7 +2170,7 @@ Gfx *textRenderProjected(Gfx *gdl, s32 *x, s32 *y, char *text, enum Font_Categor
 	g_Blend.colour04 = colour;
 	g_Blend.colour44 = colour;
 
-#if VERSION >= VERSION_PAL_BETA //TODO - Lang: Fix it
+#if VERSION >= VERSION_PAL_BETA // Can be removed
 	if (text != NULL) {
 		while (*text != '\0') {
 			if (*text == ' ') {
@@ -2226,11 +2226,13 @@ Gfx *textRenderProjected(Gfx *gdl, s32 *x, s32 *y, char *text, enum Font_Categor
 			utf8_decode(text, &codepoint, &curCharSize);
 			renderingAPI = &gfx_opengl_api;
 			GlyphTexture g = gfx_opengl_api.gfx_opengl_render_char(codepoint, category, prevchar.index);
-			curchar.index = codepoint;
+			curchar.index = g.glyph_index;
 			curchar.width = g.width;
 			curchar.height = g.height;
 			curchar.pixeldata = g.ia;
+			//curchar.baseline = g.top;
 			curchar.kerningindex = g.kerning;
+			curchar.advance = g.advance;
 			if(!prevchar.index)
 			{
 				prevchar = curchar;
@@ -2311,7 +2313,7 @@ Gfx *textRenderChar(Gfx *gdl, s32 *x, s32 *y, struct fontchar *char1, struct fon
 		gdl = text0f156a24(gdl, *x - var8007fad0, sp38 - 1, char1, arg6, arg7 - 1, arg8, arg9);
 	}
 
-	*x += char1->width * var8007fad0;
+	*x += char1->advance * var8007fad0;
 
 	return gdl;
 }
@@ -2495,6 +2497,7 @@ Gfx *textRender(Gfx *gdl, s32 *x, s32 *y, char *text,
 				curchar.height = g.height;
 				curchar.pixeldata = g.ia;
 				curchar.kerningindex = g.kerning;
+				curchar.advance = g.advance;
 				if(!prevchar.index)
 				{
 					prevchar = curchar;

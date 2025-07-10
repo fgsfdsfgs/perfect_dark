@@ -2642,7 +2642,7 @@ char *mpGetBodyName(u8 mpbodynum)
 		mpbodynum = 0;
 	}
 
-	return g_MpBodies[mpbodynum].name;
+	return _(g_MpBodies[mpbodynum].name);
 }
 
 u8 mpGetBodyRequiredFeature(u8 mpbodynum)
