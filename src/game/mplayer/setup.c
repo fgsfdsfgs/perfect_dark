@@ -4321,7 +4321,7 @@ char *mpMenuTextTeamName(struct menuitem *item)
 MenuItemHandlerResult menuhandlerMpTeamNameSlot(s32 operation, struct menuitem *item, union handlerdata *data)
 {
 	if (operation == MENUOP_SET) {
-		g_Menus[g_MpPlayerNum].mpsetup.slotindex = (uintptr_t)item->title - 0x5608; //TODO - Lang: Fix it, will crash :D
+		g_Menus[g_MpPlayerNum].mpsetup.slotindex = (uintptr_t)item->param; //- 0x5608; //TODO - Lang: Fix it, will crash :D
 		menuPushDialog(&g_MpChangeTeamNameMenuDialog);
 	}
 
@@ -4496,7 +4496,7 @@ struct menuitem g_MpTeamNamesMenuItems[] = {
 	},
 	{
 		MENUITEMTYPE_SELECTABLE,
-		0,
+		1,
 		MENUITEMFLAG_LOCKABLEMINOR,
 		gettext_noop("Yellow\n"), // "Yellow"
 		(uintptr_t)&mpMenuTextTeamName,
@@ -4504,7 +4504,7 @@ struct menuitem g_MpTeamNamesMenuItems[] = {
 	},
 	{
 		MENUITEMTYPE_SELECTABLE,
-		0,
+		2,
 		MENUITEMFLAG_LOCKABLEMINOR,
 		gettext_noop("Blue\n"), // "Blue"
 		(uintptr_t)&mpMenuTextTeamName,
@@ -4512,7 +4512,7 @@ struct menuitem g_MpTeamNamesMenuItems[] = {
 	},
 	{
 		MENUITEMTYPE_SELECTABLE,
-		0,
+		3,
 		MENUITEMFLAG_LOCKABLEMINOR,
 		gettext_noop("Magenta\n"), // "Magenta"
 		(uintptr_t)&mpMenuTextTeamName,
@@ -4520,7 +4520,7 @@ struct menuitem g_MpTeamNamesMenuItems[] = {
 	},
 	{
 		MENUITEMTYPE_SELECTABLE,
-		0,
+		4,
 		MENUITEMFLAG_LOCKABLEMINOR,
 		gettext_noop("Cyan\n"), // "Cyan"
 		(uintptr_t)&mpMenuTextTeamName,
@@ -4528,7 +4528,7 @@ struct menuitem g_MpTeamNamesMenuItems[] = {
 	},
 	{
 		MENUITEMTYPE_SELECTABLE,
-		0,
+		5,
 		MENUITEMFLAG_LOCKABLEMINOR,
 		gettext_noop("Orange\n"), // "Orange"
 		(uintptr_t)&mpMenuTextTeamName,
@@ -4536,7 +4536,7 @@ struct menuitem g_MpTeamNamesMenuItems[] = {
 	},
 	{
 		MENUITEMTYPE_SELECTABLE,
-		0,
+		6,
 		MENUITEMFLAG_LOCKABLEMINOR,
 		gettext_noop("Pink\n"), // "Pink"
 		(uintptr_t)&mpMenuTextTeamName,
@@ -4544,7 +4544,7 @@ struct menuitem g_MpTeamNamesMenuItems[] = {
 	},
 	{
 		MENUITEMTYPE_SELECTABLE,
-		0,
+		7,
 		MENUITEMFLAG_LOCKABLEMINOR,
 		gettext_noop("Brown\n"), // "Brown"
 		(uintptr_t)&mpMenuTextTeamName,
@@ -4552,7 +4552,7 @@ struct menuitem g_MpTeamNamesMenuItems[] = {
 	},
 	{
 		MENUITEMTYPE_SEPARATOR,
-		0,
+		8,
 		0,
 		0,
 		0,
@@ -4560,7 +4560,7 @@ struct menuitem g_MpTeamNamesMenuItems[] = {
 	},
 	{
 		MENUITEMTYPE_SELECTABLE,
-		0,
+		9,
 		MENUITEMFLAG_SELECTABLE_CLOSESDIALOG,
 		gettext_noop("Back\n"), // "Back"
 		0,
@@ -5657,7 +5657,7 @@ struct menuitem g_MpPlayerSetup234MenuItems[] = {
 	{
 		MENUITEMTYPE_SELECTABLE,
 		0,
-		0,
+		MENUITEMFLAG_HANDLER_TEXT,
 		&mpMenuTextSavePlayerOrCopy,
 		0,
 		menuhandlerMpSavePlayer,
