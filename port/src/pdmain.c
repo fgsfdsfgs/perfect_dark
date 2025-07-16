@@ -573,6 +573,7 @@ void mainTick(void)
 		}
 
 		rdpCreateTask(gdlstart, gdl, 0, (uintptr_t) &msg);
+		schedUpdatePendingArtifacts();
 		memaPrint();
 		profileSetMarker(PROFILE_MAINTICK_END);
 	}

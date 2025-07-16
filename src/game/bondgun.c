@@ -10956,9 +10956,7 @@ void bgunRender(Gfx **gdlptr)
 		return;
 	}
 
-#ifdef PLATFORM_N64 // TODO
 	gdl = zbufSaveArtifactDepths(gdl);
-#endif
 	gdl = viPrepareZbuf(gdl);
 	gdl = vi0000b1d0(gdl);
 

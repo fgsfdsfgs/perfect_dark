@@ -21,6 +21,7 @@
 #include "lib/lib_17ce0.h"
 #include "game/player.h"
 #include "game/prop.h"
+#include "stdio.h"
 #endif
 
 /**
@@ -449,6 +450,9 @@ void artifactsCalculateGlaresForRoom(s32 roomnum)
 									artifact->type = ARTIFACTTYPE_GLARE;
 									artifact->screenx = xi;
 									artifact->screeny = yi;
+									printf("initialized artifact at (%u, %u) expected %u\n", xi, yi, artifact->expecteddepth);
+									printf("  artifact %u %u\n", artifact->screenx, artifact->screeny);
+									fflush(stdout);
 								}
 							}
 						}

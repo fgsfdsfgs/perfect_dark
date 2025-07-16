@@ -985,9 +985,7 @@ Gfx *bgRenderScene(Gfx *gdl)
 	s16 roomorder[60];
 	RoomNum roomnums[60];
 
-#ifdef PLATFORM_N64
 	g_NumRoomsWithGlares = 0;
-#endif
 
 	if (g_Vars.currentplayer->visionmode == VISIONMODE_XRAY) {
 		gdl = bgRenderSceneInXray(gdl);
@@ -1209,7 +1207,6 @@ Gfx *bgRenderScene(Gfx *gdl)
 			gdl = propsRender(gdl, thing->roomnum, RENDERPASS_XLU, roomnumsbyprop);
 		}
 
-#ifdef PLATFORM_N64 // on PC we do this earlier, before prop matrices turn into garbage
 		if (!g_Vars.mplayerisrunning) {
 			artifactsCalculateGlaresForRoom(thing->roomnum);
 
@@ -1217,7 +1214,6 @@ Gfx *bgRenderScene(Gfx *gdl)
 				g_GlareRooms[g_NumRoomsWithGlares++] = thing->roomnum;
 			}
 		}
-#endif
 	}
 
 #if VERSION < VERSION_NTSC_1_0

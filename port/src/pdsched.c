@@ -25,6 +25,7 @@
 #include "audio.h"
 #include "input.h"
 #include "mixer.h"
+#include "stdio.h"
 
 /*
  * private typedefs and defines
@@ -374,6 +375,34 @@ void schedResetArtifacts(void)
 
 void schedUpdatePendingArtifacts(void)
 {
+	struct artifact *artifacts = schedGetPendingArtifacts();
+	s32 i;
+
+	for (i = 0; i < MAX_ARTIFACTS; i++) {
+		struct artifact *artifact = &artifacts[i];
+
+		if (artifact->type != ARTIFACTTYPE_FREE) {
+			u16 *currdepthptr = artifact->zbufptr;
+			u16 currdepth = *currdepthptr;
+
+			if (g_SchedSpecialArtifactIndexes[g_SchedPendingArtifactsIndex] == 1) {
+				u16 *prevdepthptr = artifact->depthptr;
+				u16 prevdepth = *prevdepthptr;
+
+				if (currdepth < prevdepth) {
+					artifact->actualdepth = currdepth;
+				} else {
+					artifact->actualdepth = prevdepth;
+				}
+				printf("artifact[%d] (%u, %u) expected %u actual %u\n", i, artifact->screenx, artifact->screeny, artifact->expecteddepth, artifact->actualdepth);
+				fflush(stdout);
+			} else {
+				artifact->actualdepth = currdepth;
+			}
+		}
+	}
+
+
 	g_SchedSpecialArtifactIndexes[g_SchedPendingArtifactsIndex] = 0;
 	schedIncrementPendingArtifacts();
 }
