@@ -386,7 +386,7 @@ void schedUpdatePendingArtifacts(void)
 			u16 currdepth = *currdepthptr;
 
 			if (g_SchedSpecialArtifactIndexes[g_SchedPendingArtifactsIndex] == 1) {
-				u16 *prevdepthptr = artifact->depthptr;
+				u16 *prevdepthptr = artifact->zbufptr; // stopgap to prevent segfault while implementing opengl buffer
 				u16 prevdepth = *prevdepthptr;
 
 				if (currdepth < prevdepth) {

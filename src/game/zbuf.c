@@ -200,6 +200,7 @@ Gfx *zbufSaveArtifactDepths(Gfx *gdl)
 	samples = zbufGetArtifactsCfb(g_SchedWriteArtifactsIndex);
 	g_SchedSpecialArtifactIndexes[g_SchedWriteArtifactsIndex] = 1;
 
+#ifdef PLATFORM_N64
 	gDPPipeSync(gdl++);
 	gDPSetColorImage(gdl++, G_IM_FMT_RGBA, G_IM_SIZ_16b, viGetBufWidth(), OS_PHYSICAL_TO_K0(samples));
 	gDPSetScissor(gdl++, G_SC_NON_INTERLACE, 0, 0, SCREEN_320, SCREEN_240);
@@ -260,6 +261,9 @@ Gfx *zbufSaveArtifactDepths(Gfx *gdl)
 	gDPSetColorDither(gdl++, G_CD_BAYER);
 
 	if (samples);
+#else
+	// opengl framebuffer
+#endif
 
 	return gdl;
 }
