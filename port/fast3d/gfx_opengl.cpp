@@ -1181,7 +1181,7 @@ void gfx_opengl_select_texture_fb(int fb_id) {
     current_textures_linear_filter[0] = true;
 }
 
-void gfx_opengl_copy_framebuffer(int fb_dst, int fb_src, int left, int top, bool flip_y, bool use_back) {
+void gfx_opengl_copy_framebuffer(int fb_dst, int fb_src, int left, int top, bool flip_y, bool use_back, bool depth) {
     if (!gfx_framebuffers_enabled || fb_dst >= (int)framebuffers.size() || fb_src >= (int)framebuffers.size()) {
         return;
     }
@@ -1227,7 +1227,8 @@ void gfx_opengl_copy_framebuffer(int fb_dst, int fb_src, int left, int top, bool
         glReadBuffer(GL_COLOR_ATTACHMENT0);
     }
 
-    glBlitFramebuffer(srcX0, srcY0, srcX1, srcY1, dstX0, dstY0, dstX1, dstY1, GL_COLOR_BUFFER_BIT, GL_NEAREST);
+    glBlitFramebuffer(srcX0, srcY0, srcX1, srcY1, dstX0, dstY0, dstX1, dstY1,
+		      depth ? GL_DEPTH_BUFFER_BIT : GL_COLOR_BUFFER_BIT, GL_NEAREST);
 
     glBindFramebuffer(GL_FRAMEBUFFER, framebuffers[current_framebuffer].fbo);
 

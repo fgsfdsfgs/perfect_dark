@@ -2469,7 +2469,7 @@ static void gfx_run_dl(Gfx* cmd) {
                 }
                 break;
             case G_COPYFB_EXT:
-                gfx_copy_framebuffer(C0(11, 11), C0(0, 11), (int16_t)C1(16, 16), (int16_t)C1(0, 16), C0(22, 1));
+                gfx_copy_framebuffer(C0(11, 11), C0(0, 11), (int16_t)C1(16, 16), (int16_t)C1(0, 16), C0(22, 1), false);
                 break;
             case G_RDPSETOTHERMODE:
                 gfx_dp_set_other_mode(C0(0, 24), cmd->words.w1);
@@ -2739,7 +2739,7 @@ extern "C" void gfx_set_framebuffer(int fb, float noise_scale) {
     active_fb = framebuffers.find(fb);
 }
 
-extern "C" void gfx_copy_framebuffer(int fb_dst, int fb_src, int left, int top, int use_back) {
+extern "C" void gfx_copy_framebuffer(int fb_dst, int fb_src, int left, int top, int use_back, int depth) {
     const bool is_main_fb = (fb_src == 0);
 
     if (is_main_fb) {
@@ -2756,7 +2756,7 @@ extern "C" void gfx_copy_framebuffer(int fb_dst, int fb_src, int left, int top, 
         }
     }
 
-    gfx_rapi->copy_framebuffer(fb_dst, fb_src, left, top, is_main_fb, (bool)use_back);
+    gfx_rapi->copy_framebuffer(fb_dst, fb_src, left, top, is_main_fb, (bool)use_back, (bool)depth);
 }
 
 extern "C" void gfx_reset_framebuffer(void) {
