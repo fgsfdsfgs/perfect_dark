@@ -22,6 +22,7 @@
 #include "game/player.h"
 #include "game/prop.h"
 #include "stdio.h"
+#include "video.h"
 #endif
 
 /**
@@ -452,15 +453,14 @@ void artifactsCalculateGlaresForRoom(s32 roomnum)
 									artifact->screenx = xi;
 									artifact->screeny = yi;
 #else
-									artifact->screenx = (1.0f + spdc[0] * f20) * (videoGetWidth() * 0.5f);
-									artifact->screeny = (1.0f + spdc[1] * f20) * (videoGetHeight() * 0.5f);
-		                                                        //artifact->screenx = (f32)xi * videoGetHeight() / viewheight;
-		                                                        //artifact->screeny = (viewwidth - (f32)yi) * videoGetWidth() / viewwidth;
+		                                                        artifact->screenx = (f32)xi / videoGetNativeWidth() * videoGetWidth();
+		                                                        artifact->screeny = (1.0f - (f32)yi / videoGetNativeHeight()) * videoGetHeight();
 		                                                        artifact->zbufptr = &g_ZbufPtr1[videoGetWidth() * artifact->screeny + artifact->screenx];
 									artifact->light = &roomlights[i];
 									artifact->type = ARTIFACTTYPE_GLARE;
 #endif
-									printf("initialized artifact at (%u, %u) expected %u\n", xi, yi, artifact->expecteddepth);
+									printf("initialized artifact native (%u, %u) screen (%d, %d) expected %u\n", xi, yi,
+									       artifact->screenx, artifact->screeny, artifact->expecteddepth);
 									printf("  artifact %u %u\n", artifact->screenx, artifact->screeny);
 									fflush(stdout);
 								}
