@@ -10956,8 +10956,8 @@ void bgunRender(Gfx **gdlptr)
 		return;
 	}
 
-	gdl = zbufSaveArtifactDepths(gdl);
-	gdl = viPrepareZbuf(gdl);
+	//gdl = zbufSaveArtifactDepths(gdl); // TODO: re-enable
+	//gdl = viPrepareZbuf(gdl); // TODO: re-enable
 	gdl = vi0000b1d0(gdl);
 
 	gDPSetScissor(gdl++, G_SC_NON_INTERLACE, viGetViewLeft(), viGetViewTop(),

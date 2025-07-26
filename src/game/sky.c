@@ -2519,10 +2519,14 @@ void skyCreateSunArtifact(struct artifact *artifact, s32 x, s32 y)
 		sunpos.y = env->suns[i].pos[1];
 		sunpos.z = env->suns[i].pos[2];
 		artifact->visiblelos = artifactTestLos(&sunpos, &zero, x, y) * 0xfffc;
-#endif
+		artifact->screenx = (f32)x * videoGetHeight() / viewheight;
+		artifact->screeny = (viewwidth - (f32)y) * videoGetWidth() / viewwidth;
+		artifact->zbufptr = &g_ZbufPtr1[videoGetWidth() * artifact->screeny + artifact->screenx];
+#else
 		artifact->zbufptr = &g_ZbufPtr1[(s32)camGetScreenWidth() * y + x];
 		artifact->screenx = x;
 		artifact->screeny = y;
+#endif
 		artifact->type = ARTIFACTTYPE_CIRCLE;
 	}
 }

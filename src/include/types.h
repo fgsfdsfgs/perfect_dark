@@ -3496,9 +3496,11 @@ struct artifact {
 	u16 type;
 	u16 actualdepth;
 	u16 expecteddepth;
-	u16 *zbufptr;
 #ifndef PLATFORM_N64
 	u16 visiblelos;
+	f32 *zbufptr;
+#else
+	u16 *zbufptr;
 #endif
 	union {
 		u16 *depthptr;

@@ -17,8 +17,14 @@ u16 g_ArtifactsCfb0[0x180];
 u16 g_ArtifactsCfb1[0x180];
 u16 g_ArtifactsCfb2[0x180];
 
+#ifdef PLATFORM_N64
 u16 *g_ZbufPtr1 = NULL;
 u16 *g_ZbufPtr2 = NULL;
+#else
+#include "glad.h"
+f32 *g_ZbufPtr1 = NULL; // remove
+f32 *g_ZbufPtr2 = NULL;
+#endif
 
 void *zbufGetAllocation(void)
 {
@@ -27,6 +33,9 @@ void *zbufGetAllocation(void)
 
 void zbufReset(s32 stagenum)
 {
+#ifndef PLATFORM_N64
+	free(g_ZbufPtr1); // remove
+#endif
 	g_ZbufPtr1 = NULL;
 	g_ZbufPtr2 = NULL;
 
@@ -50,6 +59,7 @@ void zbufReset(s32 stagenum)
  */
 void zbufAllocate(void)
 {
+#ifdef PLATFORM_N64
 	if (IS4MB()) {
 		g_ZbufWidth = MAX(320, FBALLOC_WIDTH_LO);
 
@@ -70,6 +80,11 @@ void zbufAllocate(void)
 
 	g_ZbufPtr1 = mempAlloc(g_ZbufWidth * g_ZbufHeight * sizeof(u16) + 0x40, MEMPOOL_STAGE);
 	g_ZbufPtr1 = (void *) (((uintptr_t) g_ZbufPtr1 + 0x3f) & ~0x3f);
+#else
+	g_ZbufWidth = videoGetWidth(); // remove
+	g_ZbufHeight = videoGetHeight();
+	g_ZbufPtr1 = malloc(g_ZbufWidth * g_ZbufHeight * sizeof(f32));
+#endif
 	g_ZbufPtr2 = g_ZbufPtr1;
 }
 
@@ -97,6 +112,7 @@ void zbufSwap(void)
  */
 Gfx *zbufConfigureRdp(Gfx *gdl)
 {
+#ifdef PLATFORM_N64
 	u32 subamount;
 	uintptr_t addr;
 
@@ -116,7 +132,9 @@ Gfx *zbufConfigureRdp(Gfx *gdl)
 
 	gDPPipeSync(gdl++);
 	gDPSetDepthImage(gdl++, addr);
-
+#else
+	glReadPixels(0, 0, g_ZbufWidth, g_ZbufHeight, GL_DEPTH_COMPONENT, GL_FLOAT, g_ZbufPtr2); // remove
+#endif
 	return gdl;
 }
 

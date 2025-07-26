@@ -445,11 +445,21 @@ void artifactsCalculateGlaresForRoom(s32 roomnum)
 									 * to the right using >> 2
 									 */
 									artifact->expecteddepth = floatToN64Depth(f0) >> 2;
+#ifdef PLATFORM_N64
 									artifact->zbufptr = &g_ZbufPtr1[viGetWidth() * yi + xi];
 									artifact->light = &roomlights[i];
 									artifact->type = ARTIFACTTYPE_GLARE;
 									artifact->screenx = xi;
 									artifact->screeny = yi;
+#else
+									artifact->screenx = (1.0f + spdc[0] * f20) * (videoGetWidth() * 0.5f);
+									artifact->screeny = (1.0f + spdc[1] * f20) * (videoGetHeight() * 0.5f);
+		                                                        //artifact->screenx = (f32)xi * videoGetHeight() / viewheight;
+		                                                        //artifact->screeny = (viewwidth - (f32)yi) * videoGetWidth() / viewwidth;
+		                                                        artifact->zbufptr = &g_ZbufPtr1[videoGetWidth() * artifact->screeny + artifact->screenx];
+									artifact->light = &roomlights[i];
+									artifact->type = ARTIFACTTYPE_GLARE;
+#endif
 									printf("initialized artifact at (%u, %u) expected %u\n", xi, yi, artifact->expecteddepth);
 									printf("  artifact %u %u\n", artifact->screenx, artifact->screeny);
 									fflush(stdout);
@@ -614,6 +624,11 @@ Gfx *artifactsRenderGlaresForRoom(Gfx *gdl, s32 roomnum)
 						numgood++;
 					}
 #else
+					artifacts[k].actualdepth = (floatToN64Depth(
+						32704.0f * (*artifacts[k].zbufptr)) & 0xfffc) >> 2;
+				        printf("\nglare[%d] (x %d, y %d) expected %d actual %d",
+					       k, artifacts[k].screenx, artifacts[k].screeny, artifacts[k].expecteddepth, artifacts[k].actualdepth);
+					fflush(stdout);
 					numgood += artifacts[k].visiblelos;
 #endif
 
