@@ -283,7 +283,11 @@ Gfx *zbufSaveArtifactDepths(Gfx *gdl)
 	if (samples);
 #else
 	g_SchedSpecialArtifactIndexes[g_SchedWriteArtifactsIndex] = 1;
-	videoCopyFramebuffer(g_SavedDepthFb, 0, 0, 0, 1);
+	//videoCopyFramebuffer(g_SavedDepthFb, 0, 0, 0, 1);
+	printf("Saving to framebuffer %d\n", g_SavedDepthFb);
+        glBindFramebuffer(GL_DRAW_FRAMEBUFFER, g_SavedDepthFb);
+        glBlitFramebuffer(0, 0, videoGetWidth(), videoGetHeight(), 0, 0, videoGetWidth(), videoGetHeight(), GL_DEPTH_BUFFER_BIT, GL_NEAREST);
+        glBindFramebuffer(GL_FRAMEBUFFER, 0);
 #endif
 
 	return gdl;

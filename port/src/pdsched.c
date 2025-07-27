@@ -383,6 +383,7 @@ void schedUpdatePendingArtifacts(void)
 	struct artifact *artifacts = schedGetPendingArtifacts();
 	s32 i;
         f32 *current_depths = NULL;
+        f32 *saved_depths = NULL;
 
 	for (i = 0; i < MAX_ARTIFACTS; i++) {
 
@@ -402,8 +403,19 @@ void schedUpdatePendingArtifacts(void)
 
 			if (g_SchedSpecialArtifactIndexes[g_SchedPendingArtifactsIndex] == 1) {
 
-				f32 previous_depth = current_depth;
-				if (previous_depth < current_depth) current_depth = previous_depth;
+			        // Get the saved depth value for this pixel prior to drawing the weapon
+			        if (saved_depths == NULL) {
+					saved_depths = (f32 *)malloc(videoGetWidth() * videoGetHeight() * sizeof(f32));
+					glBindFramebuffer(GL_READ_FRAMEBUFFER, g_SavedDepthFb);
+					glReadPixels(0, 0, videoGetWidth(), videoGetHeight(), GL_DEPTH_COMPONENT, GL_FLOAT, saved_depths);
+					glBindFramebuffer(GL_READ_FRAMEBUFFER, 0);
+			        }
+			        f32 saved_depth = saved_depths[pixel];
+
+				printf("pdsched saved depth %.3f\n", saved_depth);
+				// Update the current depth with the saved value when
+				// the saved value is closer to the near viewing plane.
+				if (saved_depth < current_depth) current_depth = saved_depth;
 
 			}
 
@@ -420,6 +432,7 @@ void schedUpdatePendingArtifacts(void)
 	schedIncrementPendingArtifacts();
 
 	free(current_depths);
+	free(saved_depths);
 }
 
 void schedConsiderScreenshot(void)
