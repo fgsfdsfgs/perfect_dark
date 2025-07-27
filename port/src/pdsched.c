@@ -380,33 +380,35 @@ void schedUpdatePendingArtifacts(void)
 {
 	struct artifact *artifacts = schedGetPendingArtifacts();
 	s32 i;
-        f32 *currdepthptr = NULL;
+        f32 *current_depths = NULL;
 
 	for (i = 0; i < MAX_ARTIFACTS; i++) {
 
 		struct artifact *artifact = &artifacts[i];
 
 		if (artifact->type != ARTIFACTTYPE_FREE) {
+                        // Get the pixel index for this artifact
+			u32 pixel = videoGetWidth() * artifact->screeny + artifact->screenx;
 
-			// Get the current on-screen depth value from the OpenGL depth buffer.
-			// This value will be a floating number from 0 (near plane) to 1 (far plane).
-	                if (currdepthptr == NULL) {
-				currdepthptr = (f32 *)malloc(videoGetWidth() * videoGetHeight() * sizeof(f32));
-				glReadPixels(0, 0, videoGetWidth(), videoGetHeight(), GL_DEPTH_COMPONENT, GL_FLOAT, currdepthptr);
+			// Get the current depth value for this pixel from the OpenGL depth buffer.
+			// This value will be a floating point number from 0 (near plane) to 1 (far plane).
+	                if (current_depths == NULL) {
+				current_depths = (f32 *)malloc(videoGetWidth() * videoGetHeight() * sizeof(f32));
+				glReadPixels(0, 0, videoGetWidth(), videoGetHeight(), GL_DEPTH_COMPONENT, GL_FLOAT, current_depths);
 			}
-			f32 currdepth = currdepthptr[videoGetWidth() * artifact->screeny + artifact->screenx];
+			f32 current_depth = current_depths[pixel];
 
 			if (g_SchedSpecialArtifactIndexes[g_SchedPendingArtifactsIndex] == 1) {
 
-				f32 prevdepth = currdepth;
-				if (prevdepth < currdepth) currdepth = prevdepth;
+				f32 previous_depth = current_depth;
+				if (previous_depth < current_depth) current_depth = previous_depth;
 
 			}
 
 			// Convert floating point depth to the integer depth value used
 			// to determine whether artifacts are visible in this game.
-			artifact->actualdepth = (floatToN64Depth(32704.0f * currdepth) & 0xfffc) >> 2;
-		        printf("pdsched artifact[%d] (%u, %u) expected %u actual %u %.3f\n", i, artifact->screenx, artifact->screeny, artifact->expecteddepth, artifact->actualdepth, currdepth);
+			artifact->actualdepth = (floatToN64Depth(32704.0f * current_depth) & 0xfffc) >> 2;
+		        printf("pdsched artifact[%d] (%u, %u) expected %u actual %u %.3f\n", i, artifact->screenx, artifact->screeny, artifact->expecteddepth, artifact->actualdepth, current_depth);
 			fflush(stdout);
 
 		}
@@ -415,7 +417,7 @@ void schedUpdatePendingArtifacts(void)
 	g_SchedSpecialArtifactIndexes[g_SchedPendingArtifactsIndex] = 0;
 	schedIncrementPendingArtifacts();
 
-	free(currdepthptr);
+	free(current_depths);
 }
 
 void schedConsiderScreenshot(void)
