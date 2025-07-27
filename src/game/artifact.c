@@ -459,10 +459,10 @@ void artifactsCalculateGlaresForRoom(s32 roomnum)
 									artifact->light = &roomlights[i];
 									artifact->type = ARTIFACTTYPE_GLARE;
 #endif
-									printf("initialized artifact native (%u, %u) screen (%d, %d) expected %u\n", xi, yi,
-									       artifact->screenx, artifact->screeny, artifact->expecteddepth);
-									printf("  artifact %u %u\n", artifact->screenx, artifact->screeny);
-									fflush(stdout);
+									//printf("initialized artifact native (%u, %u) screen (%d, %d) expected %u\n", xi, yi,
+									//       artifact->screenx, artifact->screeny, artifact->expecteddepth);
+									//printf("  artifact %u %u\n", artifact->screenx, artifact->screeny);
+									//fflush(stdout);
 								}
 							}
 						}

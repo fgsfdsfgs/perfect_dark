@@ -381,63 +381,62 @@ void schedResetArtifacts(void)
 void schedUpdatePendingArtifacts(void)
 {
 	struct artifact *artifacts = schedGetPendingArtifacts();
+        static f32 *current_depths = NULL;
+        static f32 *saved_depths = NULL;
+	static s32 width = 0, height = 0;
 	s32 i;
-        f32 *current_depths = NULL;
-        f32 *saved_depths = NULL;
+        
+	// Allocate memory for arrays whenever screen dimensions change
+	if ((width != videoGetWidth()) || (height != videoGetHeight())) {
+		width = videoGetWidth();
+		height = videoGetHeight();
+		
+		free(current_depths);
+		free(saved_depths);
+
+		current_depths = (f32 *)malloc(videoGetWidth() * videoGetHeight() * sizeof(f32));
+		saved_depths = (f32 *)malloc(videoGetWidth() * videoGetHeight() * sizeof(f32));
+        }
+	
+	// Retrieve current Z depth values rendered on-screen
+	glReadPixels(0, 0, width, height, GL_DEPTH_COMPONENT, GL_FLOAT, current_depths);
+	
+	// Retreive saved Z depth values when requested.
+	if (g_SchedSpecialArtifactIndexes[g_SchedPendingArtifactsIndex] == 1) {
+		glBindFramebuffer(GL_READ_FRAMEBUFFER, g_SavedDepthFb);
+		glReadPixels(0, 0, videoGetWidth(), videoGetHeight(), GL_DEPTH_COMPONENT, GL_FLOAT, saved_depths);
+		glBindFramebuffer(GL_READ_FRAMEBUFFER, 0);
+	}
+	// Note: Depth values are saved before rendering the player's weapon.
+	// This is because the weapon render sequence clears the on-screen
+	// depth values to avoid Z fighting between the weapon muzzle
+	// and the rendered background, particularly walls and floors.
 
 	for (i = 0; i < MAX_ARTIFACTS; i++) {
 
 		struct artifact *artifact = &artifacts[i];
 
 		if (artifact->type != ARTIFACTTYPE_FREE) {
-                        // Get the pixel index for this artifact
-			u32 pixel = videoGetWidth() * artifact->screeny + artifact->screenx;
 
-			// Get the current depth value for this pixel from the OpenGL depth buffer.
+			// Get the current depth value for this artifact's pixel from the OpenGL depth buffer.
 			// This value will be a floating point number from 0 (near plane) to 1 (far plane).
-	                if (current_depths == NULL) {
-				current_depths = (f32 *)malloc(videoGetWidth() * videoGetHeight() * sizeof(f32));
-				glReadPixels(0, 0, videoGetWidth(), videoGetHeight(), GL_DEPTH_COMPONENT, GL_FLOAT, current_depths);
-			}
+			u32 pixel = videoGetWidth() * artifact->screeny + artifact->screenx;
 			f32 current_depth = current_depths[pixel];
 
 			if (g_SchedSpecialArtifactIndexes[g_SchedPendingArtifactsIndex] == 1) {
-			
 				u32 pixel_flip = videoGetWidth() * (videoGetHeight() - 1 - artifact->screeny) + artifact->screenx;
-
-			        // Get the saved depth value for this pixel prior to drawing the weapon
-			        if (saved_depths == NULL) {
-					saved_depths = (f32 *)malloc(videoGetWidth() * videoGetHeight() * sizeof(f32));
-					glBindFramebuffer(GL_READ_FRAMEBUFFER, g_SavedDepthFb);
-					glReadPixels(0, 0, videoGetWidth(), videoGetHeight(), GL_DEPTH_COMPONENT, GL_FLOAT, saved_depths);
-					glBindFramebuffer(GL_READ_FRAMEBUFFER, 0);
-			        }
-				//printf("pixel %d (%d, %d), flipped %d (%d, %d)\n",
-				//       pixel, artifact->screenx, artifact->screeny,
-				//       pixel_flip, artifact->screenx, videoGetHeight() - 1 - artifact->screeny);
 			        f32 saved_depth = saved_depths[pixel_flip];
 
-				//printf("pdsched saved depth %.3f, current depth %.3f\n", saved_depth, current_depth);
-				// Update the current depth with the saved value when
-				// the saved value is closer to the near viewing plane.
-				if (saved_depth < current_depth) current_depth = saved_depth;
-
+				if (saved_depth < current_depth)
+					current_depth = saved_depth;
 			}
 
 			// Convert floating point depth to the integer depth value used by N64
 			artifact->actualdepth = floatToN64Depth(32704.0f * current_depth);
-			//artifact->actualdepth = (floatToN64Depth(32704.0f * current_depth) & 0xfffc) >> 2;
-		        //printf("pdsched artifact[%d] (%u, %u) expected %u actual %u %.3f\n", i, artifact->screenx, artifact->screeny, artifact->expecteddepth, artifact->actualdepth, current_depth);
-			//fflush(stdout);
-
 		}
 	}
-
 	g_SchedSpecialArtifactIndexes[g_SchedPendingArtifactsIndex] = 0;
 	schedIncrementPendingArtifacts();
-
-	free(current_depths);
-	free(saved_depths);
 }
 
 void schedConsiderScreenshot(void)
