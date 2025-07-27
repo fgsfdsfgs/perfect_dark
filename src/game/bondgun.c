@@ -10956,7 +10956,7 @@ void bgunRender(Gfx **gdlptr)
 		return;
 	}
 
-	//gdl = zbufSaveArtifactDepths(gdl); // TODO: re-enable
+	gdl = zbufSaveArtifactDepths(gdl); // TODO: re-enable
 	//gdl = viPrepareZbuf(gdl); // TODO: re-enable
 	gdl = vi0000b1d0(gdl);
 

@@ -106,6 +106,7 @@ OSScMsg g_SchedRspMsg = {OS_SC_RSP_MSG};
 bool g_SchedIsFirstTask = true;
 
 s32 g_PrevFrameFb = -1;
+s32 g_SavedDepthFb = -1;
 s32 g_BlurFb = -1;
 s32 g_BlurFbCapTimer = -1;
 bool g_BlurFbDirty = true;
@@ -186,6 +187,7 @@ void osCreateScheduler(OSSched *sc, OSThread *thread, u8 mode, u32 numFields)
 	schedInitCrashLastRendered();
 
 	g_PrevFrameFb = videoCreateFramebuffer(0, 0, false, true);
+	g_SavedDepthFb = videoCreateFramebuffer(0, 0, false, true);
 	g_BlurFb = videoCreateFramebuffer(0, 0, false, true);
 }
 
@@ -431,7 +433,7 @@ void schedConsiderScreenshot(void)
 	}
 
 	if (g_BlurFbCapTimer == 0) {
-		videoCopyFramebuffer(g_BlurFb, 0, -1, -1);
+		videoCopyFramebuffer(g_BlurFb, 0, -1, -1, 0);
 		g_BlurFbCapTimer = -1;
 		g_BlurFbDirty = false;
 	} else if (g_BlurFbCapTimer > 0) {

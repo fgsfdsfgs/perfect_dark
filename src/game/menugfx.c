@@ -130,7 +130,7 @@ void menugfxCreateBlur(void)
 		g_MenuScreenFb = videoCreateFramebuffer(0, 0, false, true);
 	}
 	// copy full viewport and downscale to 40x30
-	videoCopyFramebuffer(g_MenuBlurFb, 0, -1, -1);
+	videoCopyFramebuffer(g_MenuBlurFb, 0, -1, -1, 0);
 	// we'll generate a blurred version later
 	g_MenuBlurDone = false;
 #endif

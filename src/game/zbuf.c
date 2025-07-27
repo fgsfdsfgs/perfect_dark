@@ -207,11 +207,10 @@ u16 *zbufGetArtifactsCfb(s32 index)
  */
 Gfx *zbufSaveArtifactDepths(Gfx *gdl)
 {
+#ifdef PLATFORM_N64
 	struct artifact *artifacts = schedGetWriteArtifacts();
 	u32 stack;
-#ifdef PLATFORM_N64
 	u16 *zbuf = g_ZbufPtr1;
-#endif
 	u32 numsamples = 0;
 	u16 *samples;
 	u16 *thissample;
@@ -222,7 +221,6 @@ Gfx *zbufSaveArtifactDepths(Gfx *gdl)
 	samples = zbufGetArtifactsCfb(g_SchedWriteArtifactsIndex);
 	g_SchedSpecialArtifactIndexes[g_SchedWriteArtifactsIndex] = 1;
 
-#ifdef PLATFORM_N64
 	gDPPipeSync(gdl++);
 	gDPSetColorImage(gdl++, G_IM_FMT_RGBA, G_IM_SIZ_16b, viGetBufWidth(), OS_PHYSICAL_TO_K0(samples));
 	gDPSetScissor(gdl++, G_SC_NON_INTERLACE, 0, 0, SCREEN_320, SCREEN_240);
@@ -284,7 +282,8 @@ Gfx *zbufSaveArtifactDepths(Gfx *gdl)
 
 	if (samples);
 #else
-	// opengl framebuffer
+	g_SchedSpecialArtifactIndexes[g_SchedWriteArtifactsIndex] = 1;
+	videoCopyFramebuffer(g_SavedDepthFb, 0, 0, 0, 1);
 #endif
 
 	return gdl;

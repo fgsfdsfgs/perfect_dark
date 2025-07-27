@@ -499,10 +499,10 @@ void videoResizeFramebuffer(s32 target, u32 w, u32 h, s32 upscale, s32 autoresiz
 	gfx_resize_framebuffer(target, w, h, upscale, autoresize);
 }
 
-void videoCopyFramebuffer(s32 dst, s32 src, s32 left, s32 top)
+void videoCopyFramebuffer(s32 dst, s32 src, s32 left, s32 top, s32 depth)
 {
 	// assume immediate copies always read the front buffer
-	gfx_copy_framebuffer(dst, src, left, top, false, false);
+	gfx_copy_framebuffer(dst, src, left, top, false, depth);
 }
 
 void videoResetTextureCache(void)
