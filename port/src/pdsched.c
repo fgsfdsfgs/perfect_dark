@@ -418,14 +418,18 @@ void schedUpdatePendingArtifacts(void)
 
 		if (artifact->type != ARTIFACTTYPE_FREE) {
 
+			// Scale native N64 coordinates to current screen resolution
+		        u16 x = (f32)(artifact->screenx) * videoGetWidth() / videoGetNativeWidth();
+		        u16 y = (f32)(artifact->screeny) * videoGetHeight() / videoGetNativeHeight();
+
 			// Get the current depth value for this artifact's pixel from the OpenGL depth buffer.
 			// This value will be a floating point number from 0 (near plane) to 1 (far plane).
-			u32 pixel = videoGetWidth() * artifact->screeny + artifact->screenx;
-			f32 current_depth = current_depths[pixel];
+			u32 pixel_flip = videoGetWidth() * (videoGetHeight() - 1 - y) + x; // flip y when working with main buffer since OpenGL starts in lower left
+			f32 current_depth = current_depths[pixel_flip];
 
 			if (g_SchedSpecialArtifactIndexes[g_SchedPendingArtifactsIndex] == 1) {
-				u32 pixel_flip = videoGetWidth() * (videoGetHeight() - 1 - artifact->screeny) + artifact->screenx;
-			        f32 saved_depth = saved_depths[pixel_flip];
+			        u32 pixel = videoGetWidth() * y + x;
+			        f32 saved_depth = saved_depths[pixel];
 
 				if (saved_depth < current_depth)
 					current_depth = saved_depth;

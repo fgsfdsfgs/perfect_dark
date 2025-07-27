@@ -449,13 +449,8 @@ void artifactsCalculateGlaresForRoom(s32 roomnum)
 									artifact->zbufptr = &g_ZbufPtr1[viGetWidth() * yi + xi];
 									artifact->light = &roomlights[i];
 									artifact->type = ARTIFACTTYPE_GLARE;
-#ifdef PLATFORM_N64
 									artifact->screenx = xi;
 									artifact->screeny = yi;
-#else
-		                                                        artifact->screenx = (f32)xi / videoGetNativeWidth() * videoGetWidth();
-		                                                        artifact->screeny = (1.0f - (f32)(yi + 1) / videoGetNativeHeight()) * videoGetHeight();
-#endif
 									//printf("initialized artifact native (%u, %u) screen (%d, %d) expected %u\n", xi, yi,
 									//       artifact->screenx, artifact->screeny, artifact->expecteddepth);
 									//printf("  artifact %u %u\n", artifact->screenx, artifact->screeny);
