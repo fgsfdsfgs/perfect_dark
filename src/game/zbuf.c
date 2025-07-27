@@ -20,13 +20,6 @@ u16 g_ArtifactsCfb2[0x180];
 u16 *g_ZbufPtr1 = NULL;
 u16 *g_ZbufPtr2 = NULL;
 
-#ifndef PLATFORM_N64
-#include "glad.h"
-#include "video.h"
-#include "stdlib.h"
-#include "gbiex.h"
-#endif
-
 void *zbufGetAllocation(void)
 {
 	return g_ZbufPtr1;
@@ -123,6 +116,7 @@ Gfx *zbufConfigureRdp(Gfx *gdl)
 
 	gDPPipeSync(gdl++);
 	gDPSetDepthImage(gdl++, addr);
+
 	return gdl;
 }
 
@@ -268,8 +262,10 @@ Gfx *zbufSaveArtifactDepths(Gfx *gdl)
 
 	if (samples);
 #else
+	// Set scheduler flag so it knows we're saving depth information
 	g_SchedSpecialArtifactIndexes[g_SchedWriteArtifactsIndex] = 1;
-        gDPCopyFramebufferEXT(gdl++, g_SavedDepthFb, 0, 0, 0, 0, 1); // need to add depth copy option, could use viGetBackBuffer() to return back buffer fb pointer and dereference it
+	// Copy the current depth buffer to a framebuffer for safe keeping
+        gDPCopyFramebufferEXT(gdl++, g_SavedDepthFb, 0, 0, 0, 0, 1);
 #endif
 	return gdl;
 }
