@@ -624,9 +624,9 @@ Gfx *artifactsRenderGlaresForRoom(Gfx *gdl, s32 roomnum)
 						numgood++;
 					}
 #else
-					artifacts[k].actualdepth = (floatToN64Depth(
-						32704.0f * (*artifacts[k].zbufptr)) & 0xfffc) >> 2;
-				        printf("\nglare[%d] (x %d, y %d) expected %d actual %d",
+					//artifacts[k].actualdepth = (floatToN64Depth(
+					//	32704.0f * (*artifacts[k].zbufptr)) & 0xfffc) >> 2;
+				        printf("glare[%d] (x %d, y %d) expected %d actual %d\n",
 					       k, artifacts[k].screenx, artifacts[k].screeny, artifacts[k].expecteddepth, artifacts[k].actualdepth);
 					fflush(stdout);
 					numgood += artifacts[k].visiblelos;
