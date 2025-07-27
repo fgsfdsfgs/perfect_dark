@@ -17,16 +17,14 @@ u16 g_ArtifactsCfb0[0x180];
 u16 g_ArtifactsCfb1[0x180];
 u16 g_ArtifactsCfb2[0x180];
 
-#ifdef PLATFORM_N64
 u16 *g_ZbufPtr1 = NULL;
 u16 *g_ZbufPtr2 = NULL;
-#else
+
+#ifndef PLATFORM_N64
 #include "glad.h"
 #include "video.h"
 #include "stdlib.h"
 #include "gbiex.h"
-f32 *g_ZbufPtr1 = NULL; // remove
-f32 *g_ZbufPtr2 = NULL;
 #endif
 
 void *zbufGetAllocation(void)
@@ -36,9 +34,6 @@ void *zbufGetAllocation(void)
 
 void zbufReset(s32 stagenum)
 {
-#ifndef PLATFORM_N64
-	free(g_ZbufPtr1); // remove
-#endif
 	g_ZbufPtr1 = NULL;
 	g_ZbufPtr2 = NULL;
 
@@ -62,7 +57,6 @@ void zbufReset(s32 stagenum)
  */
 void zbufAllocate(void)
 {
-#ifdef PLATFORM_N64
 	if (IS4MB()) {
 		g_ZbufWidth = MAX(320, FBALLOC_WIDTH_LO);
 
@@ -83,11 +77,6 @@ void zbufAllocate(void)
 
 	g_ZbufPtr1 = mempAlloc(g_ZbufWidth * g_ZbufHeight * sizeof(u16) + 0x40, MEMPOOL_STAGE);
 	g_ZbufPtr1 = (void *) (((uintptr_t) g_ZbufPtr1 + 0x3f) & ~0x3f);
-#else
-	g_ZbufWidth = videoGetWidth(); // remove
-	g_ZbufHeight = videoGetHeight();
-	g_ZbufPtr1 = malloc(g_ZbufWidth * g_ZbufHeight * sizeof(f32));
-#endif
 	g_ZbufPtr2 = g_ZbufPtr1;
 }
 
@@ -115,7 +104,6 @@ void zbufSwap(void)
  */
 Gfx *zbufConfigureRdp(Gfx *gdl)
 {
-#ifdef PLATFORM_N64
 	u32 subamount;
 	uintptr_t addr;
 
@@ -135,9 +123,6 @@ Gfx *zbufConfigureRdp(Gfx *gdl)
 
 	gDPPipeSync(gdl++);
 	gDPSetDepthImage(gdl++, addr);
-#else
-	//glReadPixels(0, 0, g_ZbufWidth, g_ZbufHeight, GL_DEPTH_COMPONENT, GL_FLOAT, g_ZbufPtr2); // remove
-#endif
 	return gdl;
 }
 
@@ -285,13 +270,6 @@ Gfx *zbufSaveArtifactDepths(Gfx *gdl)
 #else
 	g_SchedSpecialArtifactIndexes[g_SchedWriteArtifactsIndex] = 1;
         gDPCopyFramebufferEXT(gdl++, g_SavedDepthFb, 0, 0, 0, 0, 1); // need to add depth copy option, could use viGetBackBuffer() to return back buffer fb pointer and dereference it
-	/*
-	//videoCopyFramebuffer(g_SavedDepthFb, 0, 0, 0, 1); // Note: this will flip y when copying from main framebuffer
-	printf("Saving to framebuffer %d\n", g_SavedDepthFb);
-        glBindFramebuffer(GL_DRAW_FRAMEBUFFER, g_SavedDepthFb);
-        glBlitFramebuffer(0, 0, videoGetWidth(), videoGetHeight(), 0, 0, videoGetWidth(), videoGetHeight(), GL_DEPTH_BUFFER_BIT, GL_NEAREST);
-        glBindFramebuffer(GL_FRAMEBUFFER, 0);*/
 #endif
-
 	return gdl;
 }

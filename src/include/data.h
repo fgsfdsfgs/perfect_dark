@@ -455,11 +455,7 @@ extern bool g_Jpn;
 extern s32 g_LanguageId;
 #endif
 extern struct surfacetype *g_SurfaceTypes[15];
-#ifdef PLATFORM_N64
 extern u16 *g_ZbufPtr1;
-#else
-extern f32 *g_ZbufPtr1;
-#endif
 extern f32 var800845d4;
 extern struct coord var800845dc;
 extern struct menudialogdef g_2PMissionInventoryHMenuDialog;
