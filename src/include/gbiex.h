@@ -221,14 +221,14 @@
 #define gDPSetFramebufferTextureEXT(pkt, f, s, w, i) \
     gSetImage(pkt, G_SETTIMG_FB_EXT, f, s, w, i)
 
-#define gDPCopyFramebufferEXT(pkt, dst, src, uls, ult, back)   \
-{                                                              \
-    Gfx *_g = (Gfx *)(pkt);                                    \
-                                                               \
-    _g->words.w0 = _SHIFTL(G_COPYFB_EXT, 24, 8)                \
-        | _SHIFTL(dst, 11, 11) | _SHIFTL(src, 0, 11) |         \
-          _SHIFTL(back, 22, 1);                                \
-    _g->words.w1 = _SHIFTL(uls, 16, 16) | _SHIFTL(ult, 0, 16); \
+#define gDPCopyFramebufferEXT(pkt, dst, src, uls, ult, back, depth)   \
+{                                                                     \
+    Gfx *_g0 = (Gfx *)(pkt);                                          \
+                                                                      \
+    _g0->words.w0 = _SHIFTL(G_COPYFB_EXT, 24, 8)                      \
+        | _SHIFTL(dst, 11, 11) | _SHIFTL(src, 0, 11) |                \
+          _SHIFTL(back, 22, 1) | _SHIFTL(depth, 23, 1);               \
+    _g0->words.w1 = _SHIFTL(uls, 16, 16) | _SHIFTL(ult, 0, 16);       \
 }
 
 #define gDPInvalTexCacheEXT(pkt, addr)                 \

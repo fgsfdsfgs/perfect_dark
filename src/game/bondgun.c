@@ -10957,6 +10957,7 @@ void bgunRender(Gfx **gdlptr)
 	}
 
 	gdl = zbufSaveArtifactDepths(gdl); // TODO: re-enable
+        //printf("clearing to draw weapon\n");
 	//gdl = viPrepareZbuf(gdl); // TODO: re-enable
 	gdl = vi0000b1d0(gdl);
 

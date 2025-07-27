@@ -6426,7 +6426,7 @@ Gfx *chrRenderCloak(Gfx *gdl, struct prop *chrprop, struct prop *thisprop)
 						gDPPipeSync(gdl++);
 						gSPTextureRectangle(gdl++, 0, 0, 60, 60, G_TX_RENDERTILE, 0, 0, 4096, 1024);
 #else
-						gDPCopyFramebufferEXT(gdl++, var8009ccc0[index], 0, uls, ult, G_ON);
+						gDPCopyFramebufferEXT(gdl++, var8009ccc0[index], 0, uls, ult, G_ON, 0);
 						gDPSetTile(gdl++, G_IM_FMT_RGBA, G_IM_SIZ_16b,
 							((((lrs - uls + 1) * G_IM_SIZ_16b_BYTES)+7)>>3), 0, 0, 0,
 							G_TX_NOMIRROR | G_TX_WRAP, 4, G_TX_NOLOD,

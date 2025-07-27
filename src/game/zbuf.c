@@ -24,6 +24,7 @@ u16 *g_ZbufPtr2 = NULL;
 #include "glad.h"
 #include "video.h"
 #include "stdlib.h"
+#include "gbiex.h"
 f32 *g_ZbufPtr1 = NULL; // remove
 f32 *g_ZbufPtr2 = NULL;
 #endif
@@ -283,11 +284,13 @@ Gfx *zbufSaveArtifactDepths(Gfx *gdl)
 	if (samples);
 #else
 	g_SchedSpecialArtifactIndexes[g_SchedWriteArtifactsIndex] = 1;
-	//videoCopyFramebuffer(g_SavedDepthFb, 0, 0, 0, 1);
+        gDPCopyFramebufferEXT(gdl++, g_SavedDepthFb, 0, 0, 0, 0, 1); // need to add depth copy option, could use viGetBackBuffer() to return back buffer fb pointer and dereference it
+	/*
+	//videoCopyFramebuffer(g_SavedDepthFb, 0, 0, 0, 1); // Note: this will flip y when copying from main framebuffer
 	printf("Saving to framebuffer %d\n", g_SavedDepthFb);
         glBindFramebuffer(GL_DRAW_FRAMEBUFFER, g_SavedDepthFb);
         glBlitFramebuffer(0, 0, videoGetWidth(), videoGetHeight(), 0, 0, videoGetWidth(), videoGetHeight(), GL_DEPTH_BUFFER_BIT, GL_NEAREST);
-        glBindFramebuffer(GL_FRAMEBUFFER, 0);
+        glBindFramebuffer(GL_FRAMEBUFFER, 0);*/
 #endif
 
 	return gdl;

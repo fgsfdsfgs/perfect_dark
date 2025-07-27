@@ -731,7 +731,7 @@ Gfx *bviewDrawFisheye(Gfx *gdl, u32 colour, u32 alpha, s32 shuttertime60, s8 sta
 #ifndef PLATFORM_N64
 	// make a copy of the current back buffer contents that we will be using as a texture
 	gDPFlushEXT(gdl++);
-	gDPCopyFramebufferEXT(gdl++, g_PrevFrameFb, 0, 0, 0, G_ON);
+	gDPCopyFramebufferEXT(gdl++, g_PrevFrameFb, 0, 0, 0, G_ON, 0);
 	gDPSetFramebufferTextureEXT(gdl++, 0, 0, 0, g_PrevFrameFb);
 #endif
 
@@ -2713,7 +2713,7 @@ Gfx *bviewDrawHorizonScanner(Gfx *gdl)
 	}
 	// make a copy of what we have drawn so far and use it as a texture
 	gDPFlushEXT(gdl++);
-	gDPCopyFramebufferEXT(gdl++, g_PrevFrameFb, 0, 0, 0, G_ON);
+	gDPCopyFramebufferEXT(gdl++, g_PrevFrameFb, 0, 0, 0, G_ON, 0);
 	gDPSetFramebufferTextureEXT(gdl++, 0, 0, 0, g_PrevFrameFb);
 #endif
 
