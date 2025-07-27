@@ -609,7 +609,7 @@ Gfx *artifactsRenderGlaresForRoom(Gfx *gdl, s32 roomnum)
 				}
 
 				for (k = i; k < i + count; k++) {
-#ifdef PLATFORM_N64
+//#ifdef PLATFORM_N64
 					u16 expecteddepth;
 					actualdepth = (artifacts[k].actualdepth & 0xfffc) >> 2;
 					expecteddepth = artifacts[k].expecteddepth;
@@ -623,14 +623,15 @@ Gfx *artifactsRenderGlaresForRoom(Gfx *gdl, s32 roomnum)
 					if (difference <= tolerance) {
 						numgood++;
 					}
-#else
+//#else
 					//artifacts[k].actualdepth = (floatToN64Depth(
 					//	32704.0f * (*artifacts[k].zbufptr)) & 0xfffc) >> 2;
 				        printf("glare[%d] (x %d, y %d) expected %d actual %d\n",
-					       k, artifacts[k].screenx, artifacts[k].screeny, artifacts[k].expecteddepth, artifacts[k].actualdepth);
+					       k, artifacts[k].screenx, artifacts[k].screeny, expecteddepth, actualdepth);
+//					       k, artifacts[k].screenx, artifacts[k].screeny, artifacts[k].expecteddepth, artifacts[k].actualdepth);
 					fflush(stdout);
-					numgood += artifacts[k].visiblelos;
-#endif
+//					numgood += artifacts[k].visiblelos;
+//#endif
 
 					artifacts[k].type = ARTIFACTTYPE_FREE;
 				}

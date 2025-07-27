@@ -402,6 +402,8 @@ void schedUpdatePendingArtifacts(void)
 			f32 current_depth = current_depths[pixel];
 
 			if (g_SchedSpecialArtifactIndexes[g_SchedPendingArtifactsIndex] == 1) {
+			
+				u32 pixel_flip = videoGetWidth() * (videoGetHeight() - 1 - artifact->screeny) + artifact->screenx;
 
 			        // Get the saved depth value for this pixel prior to drawing the weapon
 			        if (saved_depths == NULL) {
@@ -410,20 +412,23 @@ void schedUpdatePendingArtifacts(void)
 					glReadPixels(0, 0, videoGetWidth(), videoGetHeight(), GL_DEPTH_COMPONENT, GL_FLOAT, saved_depths);
 					glBindFramebuffer(GL_READ_FRAMEBUFFER, 0);
 			        }
-			        f32 saved_depth = saved_depths[pixel];
+				//printf("pixel %d (%d, %d), flipped %d (%d, %d)\n",
+				//       pixel, artifact->screenx, artifact->screeny,
+				//       pixel_flip, artifact->screenx, videoGetHeight() - 1 - artifact->screeny);
+			        f32 saved_depth = saved_depths[pixel_flip];
 
-				printf("pdsched saved depth %.3f\n", saved_depth);
+				//printf("pdsched saved depth %.3f, current depth %.3f\n", saved_depth, current_depth);
 				// Update the current depth with the saved value when
 				// the saved value is closer to the near viewing plane.
 				if (saved_depth < current_depth) current_depth = saved_depth;
 
 			}
 
-			// Convert floating point depth to the integer depth value used
-			// to determine whether artifacts are visible in this game.
-			artifact->actualdepth = (floatToN64Depth(32704.0f * current_depth) & 0xfffc) >> 2;
-		        printf("pdsched artifact[%d] (%u, %u) expected %u actual %u %.3f\n", i, artifact->screenx, artifact->screeny, artifact->expecteddepth, artifact->actualdepth, current_depth);
-			fflush(stdout);
+			// Convert floating point depth to the integer depth value used by N64
+			artifact->actualdepth = floatToN64Depth(32704.0f * current_depth);
+			//artifact->actualdepth = (floatToN64Depth(32704.0f * current_depth) & 0xfffc) >> 2;
+		        //printf("pdsched artifact[%d] (%u, %u) expected %u actual %u %.3f\n", i, artifact->screenx, artifact->screeny, artifact->expecteddepth, artifact->actualdepth, current_depth);
+			//fflush(stdout);
 
 		}
 	}
