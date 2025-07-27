@@ -454,7 +454,7 @@ void artifactsCalculateGlaresForRoom(s32 roomnum)
 									artifact->screeny = yi;
 #else
 		                                                        artifact->screenx = (f32)xi / videoGetNativeWidth() * videoGetWidth();
-		                                                        artifact->screeny = (1.0f - (f32)yi / videoGetNativeHeight()) * videoGetHeight();
+		                                                        artifact->screeny = (1.0f - (f32)(yi + 1) / videoGetNativeHeight()) * videoGetHeight();
 		                                                        artifact->zbufptr = &g_ZbufPtr1[videoGetWidth() * artifact->screeny + artifact->screenx];
 									artifact->light = &roomlights[i];
 									artifact->type = ARTIFACTTYPE_GLARE;

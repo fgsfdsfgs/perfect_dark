@@ -22,6 +22,8 @@ u16 *g_ZbufPtr1 = NULL;
 u16 *g_ZbufPtr2 = NULL;
 #else
 #include "glad.h"
+#include "video.h"
+#include "stdlib.h"
 f32 *g_ZbufPtr1 = NULL; // remove
 f32 *g_ZbufPtr2 = NULL;
 #endif
@@ -133,7 +135,7 @@ Gfx *zbufConfigureRdp(Gfx *gdl)
 	gDPPipeSync(gdl++);
 	gDPSetDepthImage(gdl++, addr);
 #else
-	glReadPixels(0, 0, g_ZbufWidth, g_ZbufHeight, GL_DEPTH_COMPONENT, GL_FLOAT, g_ZbufPtr2); // remove
+	//glReadPixels(0, 0, g_ZbufWidth, g_ZbufHeight, GL_DEPTH_COMPONENT, GL_FLOAT, g_ZbufPtr2); // remove
 #endif
 	return gdl;
 }
@@ -207,7 +209,9 @@ Gfx *zbufSaveArtifactDepths(Gfx *gdl)
 {
 	struct artifact *artifacts = schedGetWriteArtifacts();
 	u32 stack;
+#ifdef PLATFORM_N64
 	u16 *zbuf = g_ZbufPtr1;
+#endif
 	u32 numsamples = 0;
 	u16 *samples;
 	u16 *thissample;

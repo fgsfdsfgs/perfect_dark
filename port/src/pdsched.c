@@ -26,6 +26,8 @@
 #include "input.h"
 #include "mixer.h"
 #include "stdio.h"
+#include "glad.h"
+#include "stdlib.h"
 
 /*
  * private typedefs and defines
@@ -378,30 +380,33 @@ void schedUpdatePendingArtifacts(void)
 	struct artifact *artifacts = schedGetPendingArtifacts();
 	s32 i;
 
+	if (g_ZbufPtr1 == NULL)
+	    g_ZbufPtr1 = malloc(videoGetWidth() * videoGetHeight() * sizeof(f32));
+	glReadPixels(0, 0, videoGetWidth(), videoGetHeight(), GL_DEPTH_COMPONENT, GL_FLOAT, g_ZbufPtr1); // remove
+
 	for (i = 0; i < MAX_ARTIFACTS; i++) {
 		struct artifact *artifact = &artifacts[i];
 
 		if (artifact->type != ARTIFACTTYPE_FREE) {
-			u16 *currdepthptr = artifact->zbufptr;
-			u16 currdepth = *currdepthptr;
+			f32 *currdepthptr = artifact->zbufptr;
+			f32 currdepth = *currdepthptr;
 
 			if (g_SchedSpecialArtifactIndexes[g_SchedPendingArtifactsIndex] == 1) {
-				u16 *prevdepthptr = artifact->zbufptr; // stopgap to prevent segfault while implementing opengl buffer
-				u16 prevdepth = *prevdepthptr;
+				f32 *prevdepthptr = artifact->zbufptr; // stopgap to prevent segfault while implementing opengl buffer
+				f32 prevdepth = *prevdepthptr;
 
 				if (currdepth < prevdepth) {
 					artifact->actualdepth = currdepth;
 				} else {
 					artifact->actualdepth = prevdepth;
 				}
-				printf("artifact[%d] (%u, %u) expected %u actual %u\n", i, artifact->screenx, artifact->screeny, artifact->expecteddepth, artifact->actualdepth);
+				printf("artifact[%d] (%u, %u) expected %u actual %.3f\n", i, artifact->screenx, artifact->screeny, artifact->expecteddepth, currdepth);
 				fflush(stdout);
 			} else {
 				artifact->actualdepth = currdepth;
 			}
 		}
 	}
-
 
 	g_SchedSpecialArtifactIndexes[g_SchedPendingArtifactsIndex] = 0;
 	schedIncrementPendingArtifacts();
