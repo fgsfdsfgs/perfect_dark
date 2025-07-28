@@ -27,7 +27,6 @@
 #include "input.h"
 #include "mixer.h"
 #include "stdio.h"
-#include "glad.h"
 #include "stdlib.h"
 
 /*
