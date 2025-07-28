@@ -377,12 +377,34 @@ void schedResetArtifacts(void)
 	g_SchedPendingArtifactsIndex = 0;
 }
 
+/**
+ * Schedule updates to pending artifacts following the end of
+ * the render pipeline.
+ *
+ * In PD, this method exists to update the on-screen depth values used to
+ * determine whether light glares are visible. This is needed because
+ * depth values are cleared when rendering the weapon on-screen to avoid
+ * Z fighting issues between the muzzle and walls/floors. As a result,
+ * the rendered framebuffer only contains depth values from the player
+ * weapon. All other locations on-screen are set to the maximum depth value.
+ *
+ * The function zbufSaveArtifactDepths() is used to save depth values from
+ * the rendered background (walls, floors, props, etc) in the g_SaveDepthFb
+ * framebuffer prior to rendering the weapon. These depths are retrieved
+ * here and compared against the on-screen depth to determine the actual
+ * depth value for each artifact.
+ *
+ * The values of g_SchedSpecialArtifactIndexes are used to determine if
+ * g_SaveDepthFb was populated during the rendering pass. It will be 1
+ * in cases where we save depth values before drawing the weapon.
+ * Otherwise it will be 0.
+ */
 void schedUpdatePendingArtifacts(void)
 {
 	struct artifact *artifacts = schedGetPendingArtifacts();
         static f32 *current_depths = NULL;
         static f32 *saved_depths = NULL;
-	static s32 width = 0, height = 0;
+	static s32 width = -1, height = -1;
 	s32 i;
         
 	// Allocate memory for arrays whenever screen dimensions change
@@ -400,7 +422,7 @@ void schedUpdatePendingArtifacts(void)
 	// Retrieve current Z depth values rendered on-screen
 	videoReadDepthImage(0, current_depths);
 	
-	// Retreive saved Z depth values when requested.
+	// Retrieve saved Z depth values when requested.
 	if (g_SchedSpecialArtifactIndexes[g_SchedPendingArtifactsIndex] == 1)
 	        videoReadDepthImage(g_SavedDepthFb, saved_depths);
 
@@ -410,22 +432,21 @@ void schedUpdatePendingArtifacts(void)
 
 		if (artifact->type != ARTIFACTTYPE_FREE) {
 
-			// Scale native N64 coordinates to current screen resolution
-		        u16 x = (f32)(artifact->screenx) * videoGetWidth() / videoGetNativeWidth();
-		        u16 y = (f32)(artifact->screeny) * videoGetHeight() / videoGetNativeHeight();
+			// Get the artifact's pixel within the depth buffer
+			u32 pixel = videoGetWidth() * artifact->screeny + artifact->screenx;
 
-			// Get the current depth value for this artifact's pixel from the OpenGL depth buffer.
+			// Get the current depth value for this artifact's pixel from the on-screen depth buffer.
 			// This value will be a floating point number from 0 (near plane) to 1 (far plane).
-			u32 pixel = videoGetWidth() * y + x;
 			f32 current_depth = current_depths[pixel];
 
+			// When available, update the current depth using the saved depth
 			if (g_SchedSpecialArtifactIndexes[g_SchedPendingArtifactsIndex] == 1) {
 			        f32 saved_depth = saved_depths[pixel];
 				if (saved_depth < current_depth)
 					current_depth = saved_depth;
 			}
 
-			// Convert floating point depth to the integer depth value used by N64
+			// Convert floating point value to the integer depth used by N64
 			artifact->actualdepth = floatToN64Depth(32704.0f * current_depth);
 		}
 	}
