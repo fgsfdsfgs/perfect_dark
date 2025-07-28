@@ -449,12 +449,25 @@ void artifactsCalculateGlaresForRoom(s32 roomnum)
 									artifact->zbufptr = &g_ZbufPtr1[viGetWidth() * yi + xi];
 									artifact->light = &roomlights[i];
 									artifact->type = ARTIFACTTYPE_GLARE;
+#ifdef PLATFORM_N64
 									artifact->screenx = xi;
 									artifact->screeny = yi;
-									//printf("initialized artifact native (%u, %u) screen (%d, %d) expected %u\n", xi, yi,
-									//       artifact->screenx, artifact->screeny, artifact->expecteddepth);
-									//printf("  artifact %u %u\n", artifact->screenx, artifact->screeny);
-									//fflush(stdout);
+#else
+									/**
+									 * on PC we need to match the N64 screen position of the artifact
+									 * to the rendered video width and height. This ensures
+									 * we select the correct pixel when retrieving depth values.
+									 */
+									f32 x_scaled = (viewleft + (1.0f + spdc[0] * f20) * viewwidth * 0.5f) * videoGetWidth() / videoGetNativeWidth();
+									f32 y_scaled = (viewtop + (1.0f - spdc[1] * f20) * viewheight * 0.5f) * videoGetHeight() / videoGetNativeHeight();
+									/**
+									 * Note: We effectively re-compute xi, yi as floating point values
+									 * because trying to scale xi, yi directly results in rounding errors
+									 * that lead to selecting the wrong pixel.
+									 */
+									artifact->screenx = x_scaled > 0 ? x_scaled : 0;
+									artifact->screeny = y_scaled > 0 ? y_scaled : 0;
+#endif
 								}
 							}
 						}
