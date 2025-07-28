@@ -399,18 +399,11 @@ void schedUpdatePendingArtifacts(void)
         }
 	
 	// Retrieve current Z depth values rendered on-screen
-	glReadPixels(0, 0, width, height, GL_DEPTH_COMPONENT, GL_FLOAT, current_depths);
+	videoReadDepthImage(0, current_depths);
 	
 	// Retreive saved Z depth values when requested.
-	if (g_SchedSpecialArtifactIndexes[g_SchedPendingArtifactsIndex] == 1) {
-		glBindFramebuffer(GL_READ_FRAMEBUFFER, g_SavedDepthFb);
-		glReadPixels(0, 0, videoGetWidth(), videoGetHeight(), GL_DEPTH_COMPONENT, GL_FLOAT, saved_depths);
-		glBindFramebuffer(GL_READ_FRAMEBUFFER, 0);
-	}
-	// Note: Depth values are saved before rendering the player's weapon.
-	// This is because the weapon render sequence clears the on-screen
-	// depth values to avoid Z fighting between the weapon muzzle
-	// and the rendered background, particularly walls and floors.
+	if (g_SchedSpecialArtifactIndexes[g_SchedPendingArtifactsIndex] == 1)
+	        videoReadDepthImage(g_SavedDepthFb, saved_depths);
 
 	for (i = 0; i < MAX_ARTIFACTS; i++) {
 
@@ -424,13 +417,11 @@ void schedUpdatePendingArtifacts(void)
 
 			// Get the current depth value for this artifact's pixel from the OpenGL depth buffer.
 			// This value will be a floating point number from 0 (near plane) to 1 (far plane).
-			u32 pixel_flip = videoGetWidth() * (videoGetHeight() - 1 - y) + x; // flip y when working with main buffer since OpenGL starts in lower left
-			f32 current_depth = current_depths[pixel_flip];
+			u32 pixel = videoGetWidth() * y + x;
+			f32 current_depth = current_depths[pixel];
 
 			if (g_SchedSpecialArtifactIndexes[g_SchedPendingArtifactsIndex] == 1) {
-			        u32 pixel = videoGetWidth() * y + x;
 			        f32 saved_depth = saved_depths[pixel];
-
 				if (saved_depth < current_depth)
 					current_depth = saved_depth;
 			}

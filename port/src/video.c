@@ -520,6 +520,11 @@ void videoShutdown(void)
 	free(vidModes);
 }
 
+void videoReadDepthImage(s32 src, f32 *img)
+{
+	gfx_read_depth_image(src, img);
+}
+
 PD_CONSTRUCTOR static void videoConfigInit(void)
 {
 	configRegisterInt("Video.DefaultFullscreen", &vidFullscreen, 0, 1);

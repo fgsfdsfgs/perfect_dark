@@ -75,4 +75,6 @@ void videoFreeCachedTexture(const void *texptr);
 
 void videoShutdown(void);
 
+void videoReadDepthImage(s32 src, f32 *img);
+
 #endif

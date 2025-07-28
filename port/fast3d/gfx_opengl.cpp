@@ -1245,6 +1245,29 @@ FilteringMode gfx_opengl_get_texture_filter(void) {
     return current_filter_mode;
 }
 
+void gfx_opengl_read_depth_image(int fb_src, float *img, bool flip_y) {
+
+    const Framebuffer& src = framebuffers[fb_src];
+
+    glBindFramebuffer(GL_READ_FRAMEBUFFER, src.fbo);
+    glReadPixels(0, 0, src.width, src.height, GL_DEPTH_COMPONENT, GL_FLOAT, img);
+    glBindFramebuffer(GL_FRAMEBUFFER, framebuffers[current_framebuffer].fbo);
+
+    if (flip_y) {
+	int i_last_row = src.width * (src.height - 1);
+	int row_size = src.width * sizeof(float);
+	float *row = (float *)malloc(row_size);
+
+	// Symmetrically flip the image over the Y axis
+        for (int i = 0; i < 0.5 * src.width * src.height; i += src.width) {
+		memcpy(row, img + i, row_size);                  // Temporary copy of row starting at i
+		memcpy(img + i, img + i_last_row - i, row_size); // Overwrite row starting at i with flipped row
+		memcpy(img + i_last_row - i, row, row_size);     // Move copy to the flipped row
+	}
+        free(row);
+    }
+}
+
 struct GfxRenderingAPI gfx_opengl_api = { 
     gfx_opengl_get_name,
     gfx_opengl_get_max_texture_size,
@@ -1280,5 +1303,6 @@ struct GfxRenderingAPI gfx_opengl_api = {
     gfx_opengl_select_texture_fb,
     gfx_opengl_delete_texture,
     gfx_opengl_set_texture_filter,
-    gfx_opengl_get_texture_filter
+    gfx_opengl_get_texture_filter,
+    gfx_opengl_read_depth_image
 };

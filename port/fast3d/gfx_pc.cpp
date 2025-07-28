@@ -2763,3 +2763,8 @@ extern "C" void gfx_reset_framebuffer(void) {
     gfx_rapi->start_draw_to_framebuffer(0, (float)gfx_current_dimensions.height / SCREEN_HEIGHT);
     active_fb = framebuffers.end();
 }
+
+extern "C" void gfx_read_depth_image(int fb_src, float *img) {
+    const bool is_main_fb = (fb_src == 0);
+    gfx_rapi->read_depth_image(fb_src, img, is_main_fb);
+}
