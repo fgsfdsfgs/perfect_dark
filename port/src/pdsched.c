@@ -401,11 +401,11 @@ void schedResetArtifacts(void)
 void schedUpdatePendingArtifacts(void)
 {
 	struct artifact *artifacts = schedGetPendingArtifacts();
-        static f32 *current_depths = NULL;
-        static f32 *saved_depths = NULL;
+	static f32 *current_depths = NULL;
+	static f32 *saved_depths = NULL;
 	static s32 width = -1, height = -1;
 	s32 i;
-        
+
 	// Allocate memory for arrays whenever screen dimensions change
 	if ((width != videoGetWidth()) || (height != videoGetHeight())) {
 		width = videoGetWidth();
@@ -416,7 +416,7 @@ void schedUpdatePendingArtifacts(void)
 
 		current_depths = (f32 *)malloc(videoGetWidth() * videoGetHeight() * sizeof(f32));
 		saved_depths = (f32 *)malloc(videoGetWidth() * videoGetHeight() * sizeof(f32));
-        }
+	}
 	
 	// Retrieve current Z depth values rendered on-screen
 	videoReadDepthImage(0, current_depths);
@@ -440,7 +440,7 @@ void schedUpdatePendingArtifacts(void)
 
 			// When available, update the current depth using the saved depth
 			if (g_SchedSpecialArtifactIndexes[g_SchedPendingArtifactsIndex] == 1) {
-			        f32 saved_depth = saved_depths[pixel];
+				f32 saved_depth = saved_depths[pixel];
 				if (saved_depth < current_depth)
 					current_depth = saved_depth;
 			}
