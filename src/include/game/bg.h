@@ -102,8 +102,5 @@ s32 bgFindPortalBetweenPositions(struct coord *pos1, struct coord *pos2);
 bool bgIsBboxOverlapping(struct coord *arg0, struct coord *arg1, struct coord *arg2, struct coord *arg3);
 void bgCalculatePortalBbox(s32 portalnum, struct coord *bbmin, struct coord *bbmax);
 void bgFindEnteredRooms(struct coord *bbmin, struct coord *upper, RoomNum *rooms, s32 maxlen, bool arg4);
-#ifndef PLATFORM_N64
-void bgCalculateGlaresForVisibleRooms(void);
-#endif
 
 #endif
