@@ -21,7 +21,6 @@
 #include "lib/lib_17ce0.h"
 #include "game/player.h"
 #include "game/prop.h"
-#include "stdio.h"
 #include "video.h"
 #endif
 
@@ -461,9 +460,9 @@ void artifactsCalculateGlaresForRoom(s32 roomnum)
 									f32 x_scaled = (viewleft + (1.0f + spdc[0] * f20) * viewwidth * 0.5f) * videoGetWidth() / videoGetNativeWidth();
 									f32 y_scaled = (viewtop + (1.0f - spdc[1] * f20) * viewheight * 0.5f) * videoGetHeight() / videoGetNativeHeight();
 									/**
-									 * Note: We effectively re-compute xi, yi as floating point values
-									 * because trying to scale xi, yi directly results in rounding errors
-									 * that lead to selecting the wrong pixel.
+									 * note: we recompute xi, yi as floating point values
+									 * because trying to scale xi, yi directly results in
+									 * rounding errors that lead to selecting the wrong pixel.
 									 */
 									artifact->screenx = x_scaled > 0 ? x_scaled : 0;
 									artifact->screeny = y_scaled > 0 ? y_scaled : 0;
@@ -614,7 +613,6 @@ Gfx *artifactsRenderGlaresForRoom(Gfx *gdl, s32 roomnum)
 				}
 
 				for (k = i; k < i + count; k++) {
-//#ifdef PLATFORM_N64
 					u16 expecteddepth;
 					actualdepth = (artifacts[k].actualdepth & 0xfffc) >> 2;
 					expecteddepth = artifacts[k].expecteddepth;
@@ -628,15 +626,6 @@ Gfx *artifactsRenderGlaresForRoom(Gfx *gdl, s32 roomnum)
 					if (difference <= tolerance) {
 						numgood++;
 					}
-//#else
-					//artifacts[k].actualdepth = (floatToN64Depth(
-					//	32704.0f * (*artifacts[k].zbufptr)) & 0xfffc) >> 2;
-				        printf("glare[%d] (x %d, y %d) expected %d actual %d\n",
-					       k, artifacts[k].screenx, artifacts[k].screeny, expecteddepth, actualdepth);
-//					       k, artifacts[k].screenx, artifacts[k].screeny, artifacts[k].expecteddepth, artifacts[k].actualdepth);
-					fflush(stdout);
-//					numgood += artifacts[k].visiblelos;
-//#endif
 
 					artifacts[k].type = ARTIFACTTYPE_FREE;
 				}
