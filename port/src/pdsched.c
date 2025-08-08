@@ -184,6 +184,8 @@ void osCreateScheduler(OSSched *sc, OSThread *thread, u8 mode, u32 numFields)
 	osViSetEvent(&sc->interruptQ, (OSMesg)VIDEO_MSG, numFields);
 	schedInitCrashLastRendered();
 
+        schedInitArtifacts();
+
 	g_PrevFrameFb = videoCreateFramebuffer(0, 0, false, true);
 	g_SavedDepthFb = videoCreateFramebuffer(0, 0, false, true);
 	g_BlurFb = videoCreateFramebuffer(0, 0, false, true);
@@ -302,6 +304,8 @@ void schedEndFrame(OSSched *sc)
 	schedAudioFrame(sc);
 	schedRenderCrashPeriodically(sc->frameCount);
 	videoEndFrame();
+
+	schedUpdatePendingArtifacts();
 
 	if (g_MainIsBooting == 0) {
 		schedConsiderScreenshot();
