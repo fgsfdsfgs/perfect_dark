@@ -28,7 +28,7 @@
 
 s16 var8009cb00;
 s32 var8009cb04;
-struct nbomb g_Nbombs[6];
+struct nbomb g_Nbombs[MAX_EXPLOSIONS];
 u32 var8009cbf8;
 
 bool g_NbombsActive = false;
@@ -673,7 +673,7 @@ Gfx *nbombsRender(Gfx *gdl)
 	return gdl;
 }
 
-void nbombCreateStorm(struct coord *pos, struct prop *ownerprop)
+void nbombCreateStorm(struct prop *prop, struct prop *ownerprop)
 {
 	u32 stack;
 	s32 oldest240;
@@ -704,9 +704,15 @@ void nbombCreateStorm(struct coord *pos, struct prop *ownerprop)
 
 	nbombReset(&g_Nbombs[index]);
 
-	g_Nbombs[index].pos.x = pos->x;
-	g_Nbombs[index].pos.y = pos->y;
-	g_Nbombs[index].pos.z = pos->z;
+	if ((prop->obj->hidden & (OBJHFLAG_EMBEDDED | OBJHFLAG_PROJECTILE | OBJHFLAG_00020000)) == OBJHFLAG_00020000) {
+		g_Nbombs[index].pos.x = prop->parent->pos.x;
+		g_Nbombs[index].pos.y = prop->parent->pos.y;
+		g_Nbombs[index].pos.z = prop->parent->pos.z;	
+	} else {
+		g_Nbombs[index].pos.x = prop->pos.x;
+		g_Nbombs[index].pos.y = prop->pos.y;
+		g_Nbombs[index].pos.z = prop->pos.z;
+	}
 	g_Nbombs[index].age240 = 0;
 	g_Nbombs[index].ownerprop = ownerprop;
 

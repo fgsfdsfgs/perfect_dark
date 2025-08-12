@@ -134,6 +134,9 @@ s32 g_LastPadEffectIndex = -1;
 struct autogunobj *g_ThrownLaptops = NULL;
 struct beam *g_ThrownLaptopBeams = NULL;
 s32 g_MaxThrownLaptops = 0;
+#ifndef PLATFORM_N64
+s32 g_NbombsExplosive = false;
+#endif
 
 /**
  * Attempt to call a lift from the given door.
@@ -4381,7 +4384,7 @@ void weaponTick(struct prop *prop)
 					}
 				}
 
-				nbombCreateStorm_hack(&prop->pos, ownerprop, prop);
+				nbombCreateStorm_hack(prop, ownerprop, prop);
 				propUnsetDangerous(prop);
 
 				obj->hidden |= OBJHFLAG_DELETING;
@@ -4539,7 +4542,7 @@ void weaponTick(struct prop *prop)
 					}
 				}
 
-				nbombCreateStorm_hack(&prop->pos, ownerprop, prop);
+				nbombCreateStorm_hack(prop, ownerprop, prop);
 				propUnsetDangerous(prop);
 
 				obj->hidden |= OBJHFLAG_DELETING;
@@ -15412,6 +15415,7 @@ void objDamage(struct defaultobj *obj, f32 damage, struct coord *pos, s32 weapon
 					|| weapon->weaponnum == WEAPON_ROCKET
 					|| weapon->weaponnum == WEAPON_HOMINGROCKET
 					|| weapon->weaponnum == WEAPON_GRENADEROUND
+					|| (weapon->weaponnum == WEAPON_NBOMB && g_NbombsExplosive)
 					|| (weapon->weaponnum == WEAPON_DRAGON && weapon->gunfunc == FUNC_SECONDARY)) {
 				// Homing rockets are immune to remote mines? Or maybe they just
 				// don't explode because the mine is exploding anyway

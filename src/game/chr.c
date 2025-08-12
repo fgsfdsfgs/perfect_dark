@@ -4690,7 +4690,8 @@ void chrHit(struct shotdata *shotdata, struct hit *hit)
 						|| weapon->weaponnum == WEAPON_HOMINGROCKET
 						|| weapon->weaponnum == WEAPON_TIMEDMINE
 						|| weapon->weaponnum == WEAPON_REMOTEMINE
-						|| weapon->weaponnum == WEAPON_PROXIMITYMINE) {
+						|| weapon->weaponnum == WEAPON_PROXIMITYMINE
+						|| (weapon->weaponnum == WEAPON_NBOMB && g_NbombsExplosive)) {
 					objSetDropped(hit->prop, DROPTYPE_DEFAULT);
 					chr->hidden |= CHRHFLAG_DROPPINGITEM;
 					objDamage(&weapon->base, gsetGetDamage(&shotdata->gset), &sp98, shotdata->gset.weaponnum, g_Vars.currentplayernum);

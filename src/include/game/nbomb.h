@@ -14,7 +14,7 @@ void nbombInflictDamage(struct nbomb *nbomb);
 void nbombTick(struct nbomb *nbomb);
 void nbombsTick(void);
 Gfx *nbombsRender(Gfx *gdl);
-void nbombCreateStorm(struct coord *pos, struct prop *ownerprop);
+void nbombCreateStorm(struct prop *prop, struct prop *ownerprop);
 f32 gasGetDoorFrac(s32 tagnum);
 Gfx *nbombRenderOverlay(Gfx *gdl);
 Gfx *gasRender(Gfx *gdl);
