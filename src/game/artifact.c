@@ -456,16 +456,19 @@ void artifactsCalculateGlaresForRoom(s32 roomnum)
 									 * on PC we need to match the screen position of the artifact to the
 									 * rendered video width/height instead of the native N64 width/height.
 									 * This ensures we select the correct pixel when retrieving depth values.
+									 * Adding 0.5f ensures the subsequent conversion to an integer rounds
+									 * to the nearest pixel (i.e. 0.2f becomes 0, 0.8f becomes 1).
 									 */
-									f32 x_scaled = (viewleft + (1.0f + spdc[0] * f20) * viewwidth * 0.5f) * videoGetWidth() / videoGetNativeWidth();
-									f32 y_scaled = (viewtop + (1.0f - spdc[1] * f20) * viewheight * 0.5f) * videoGetHeight() / videoGetNativeHeight();
+									f32 x_scaled = (viewleft + (1.0f + spdc[0] * f20) * viewwidth * 0.5f) * videoGetWidth() / videoGetNativeWidth() + 0.5f;
+									f32 y_scaled = (viewtop + (1.0f - spdc[1] * f20) * viewheight * 0.5f) * videoGetHeight() / videoGetNativeHeight() + 0.5f;
 									/**
 									 * note: we recompute xi, yi as floating point values
 									 * because trying to scale xi, yi directly results in
 									 * rounding errors that select the wrong pixel.
 									 */
-									artifact->screenx = x_scaled > 0 ? x_scaled : 0;
-									artifact->screeny = y_scaled > 0 ? y_scaled : 0;
+									artifact->screenx = (u16)(x_scaled > 0 ? x_scaled : 0) % videoGetWidth();
+									artifact->screeny = (u16)(y_scaled > 0 ? y_scaled : 0) % videoGetHeight();
+
 #endif
 								}
 							}
