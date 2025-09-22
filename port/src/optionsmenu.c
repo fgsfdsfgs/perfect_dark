@@ -1291,6 +1291,22 @@ static MenuItemHandlerResult menuhandlerCrosshairSway(s32 operation, struct menu
 	return 0;
 }
 
+static MenuItemHandlerResult menuhandlerCrosshairEdgeBoundary(s32 operation, struct menuitem* item, union handlerdata *data)
+{
+	switch (operation) {
+	case MENUOP_GETSLIDER:
+		data->slider.value = (s32)(g_PlayerExtCfg[g_ExtMenuPlayer].crosshairedgeboundary * 10.f + 0.5f);
+		break;
+	case MENUOP_SET:
+		g_PlayerExtCfg[g_ExtMenuPlayer].crosshairedgeboundary = (f32)data->slider.value / 10.f;
+		break;
+	case MENUOP_GETSLIDERLABEL:
+		sprintf(data->slider.label, "%d", (s32)data->slider.value);
+		break;
+	}
+	return 0;
+}
+
 static MenuItemHandlerResult menuhandlerCrosshairR(s32 operation, struct menuitem* item, union handlerdata* data)
 {
 	u32 newColor;
@@ -1511,6 +1527,14 @@ struct menuitem g_ExtendedGameMenuItems[] = {
 		(uintptr_t)"Crosshair Sway",
 		20,
 		menuhandlerCrosshairSway,
+	},
+	{
+		MENUITEMTYPE_SLIDER,
+		0,
+		MENUITEMFLAG_LITERAL_TEXT | MENUITEMFLAG_SLIDER_WIDE,
+		(uintptr_t)"Crosshair Edge Deadzone",
+		10,
+		menuhandlerCrosshairEdgeBoundary,
 	},
 	{
 		MENUITEMTYPE_SLIDER,

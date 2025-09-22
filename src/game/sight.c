@@ -1349,12 +1349,17 @@ Gfx *sightDrawZoom(Gfx *gdl, bool sighton, f32 crossx, f32 crossy)
 			viewbottom += 1;
 			viewtop += 1;
 		}
+		// Align box correctly for widescreen
+		const f32 leftx = sightGetAdjustedX(viewleft + marginleft);
+		const f32 rightx = sightGetAdjustedX(viewright - marginright);
+		#define BOXLEFT   leftx
+		#define BOXRIGHT  rightx
+#else
+		#define BOXLEFT   (viewleft + marginleft)
+		#define BOXRIGHT  (viewright - marginright)
 #endif
-
-#define BOXLEFT   (viewleft + marginleft)
-#define BOXRIGHT  (viewright - marginright)
-#define BOXBOTTOM (viewbottom - marginbottom)
-#define BOXTOP    (viewtop + margintop)
+		#define BOXBOTTOM (viewbottom - marginbottom)
+		#define BOXTOP    (viewtop + margintop)
 
 		if (cornerwidth > BOXRIGHT - BOXLEFT) {
 			cornerwidth = BOXRIGHT - BOXLEFT;

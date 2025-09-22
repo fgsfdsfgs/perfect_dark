@@ -108,8 +108,8 @@ static void gfx_sdl_init(const struct GfxWindowInitSettings *set) {
     int posY = set->y;
     int display_in_use = SDL_GetWindowDisplayIndex(wnd);
     if (display_in_use < 0) { // Fallback to default if out of bounds
-        posX = 100;
-        posY = 100;
+        posX = SDL_WINDOWPOS_UNDEFINED;
+        posY = SDL_WINDOWPOS_UNDEFINED;
     }
 
     if (set->centered) {

@@ -45,7 +45,6 @@ static s32 vidFramerateLimit = 0;
 static s32 vidDisplayFPS = 0;
 static f32 vidDisplayFPSInterval = 1.f;
 static f32 vidAvgFPS = 0;
-static f64 vidLastRenderTime;
 
 static s32 vidNumModes = 1;
 static displaymode vidModeDefault;
@@ -139,23 +138,17 @@ void videoEndFrame(void)
 	const f64 flipTime = wmAPI->get_time();
 	accumDelta += flipTime - endTime;
 	endTime = flipTime;
-	vidLastRenderTime = endTime - startTime;
 
 	if (endTime >= fpsTime) {
 		char tmp[128];
 		vidAvgFPS = fpsNumFrames ? ((f64)fpsNumFrames / accumDelta) : 0.f;
 		fpsNumFrames = 0;
 		accumDelta = 0.0;
-		snprintf(tmp, sizeof(tmp), "fps %4.1f frt %lf frm %u", vidAvgFPS, vidLastRenderTime, frames);
-		wmAPI->set_window_title(tmp);
 		fpsTime = endTime + vidDisplayFPSInterval;
 	}
 }
 
-f64 videoGetLastRenderTime(void)
-{
-	return vidLastRenderTime;
-}
+
 
 f32 videoGetAverageFPS(void)
 {

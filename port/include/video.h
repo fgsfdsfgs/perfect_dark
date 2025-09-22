@@ -49,7 +49,6 @@ s32 videoGetDisplayFPS(void);
 s32 videoGetMSAA(void);
 
 f32 videoGetAverageFPS(void);
-f64 videoGetLastRenderTime(void);
 
 void videoSetWindowOffset(s32 x, s32 y);
 void videoSetFullscreen(s32 fs);
