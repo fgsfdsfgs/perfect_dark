@@ -2469,7 +2469,7 @@ static void gfx_run_dl(Gfx* cmd) {
                 }
                 break;
             case G_COPYFB_EXT:
-		gfx_copy_framebuffer(C0(11, 11), C0(0, 11), (int16_t)C1(16, 16), (int16_t)C1(0, 16), C0(22, 1), C0(23, 1));
+                gfx_copy_framebuffer(C0(11, 11), C0(0, 11), (int16_t)C1(16, 16), (int16_t)C1(0, 16), C0(22, 1), C0(23, 1));
                 break;
             case G_RDPSETOTHERMODE:
                 gfx_dp_set_other_mode(C0(0, 24), cmd->words.w1);

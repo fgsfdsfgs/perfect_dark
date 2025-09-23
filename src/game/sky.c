@@ -2510,28 +2510,20 @@ void skyCreateSunArtifact(struct artifact *artifact, s32 x, s32 y)
 	s32 viewheight = viGetViewHeight();
 
 	if (x >= viewleft && x < viewleft + viewwidth && y >= viewtop && y < viewtop + viewheight) {
-		const s32 i = (artifact - schedGetWriteArtifacts()) >> 3;
-		struct coord zero = { 0.f };
-		struct environment *env = envGetCurrent();
-		struct coord sunpos;
-		sunpos.x = env->suns[i].pos[0];
-		sunpos.y = env->suns[i].pos[1];
-		sunpos.z = env->suns[i].pos[2];
-		artifact->visiblelos = artifactTestLos(&sunpos, &zero, x, y) * 0xfffc;
 		artifact->zbufptr = &g_ZbufPtr1[(s32)camGetScreenWidth() * y + x];
 #ifdef PLATFORM_N64
 		artifact->screenx = x;
 		artifact->screeny = y;
 #else
-                /**
-	         * on PC we need to match the screen position of the artifact to the
-	         * rendered video width/height instead of the native N64 width/height.
-	         * This ensures we select the correct pixel when retrieving depth values.
-	         *
-	         * Note: it would be better to scale floating point x/y but we only have
-	         * access to integer values here. Should be Ok since the sun is far away
-	         * so it doesn't need to be super precise.
-	         */
+		/**
+		* on PC we need to match the screen position of the artifact to the
+		* rendered video width/height instead of the native N64 width/height.
+		* This ensures we select the correct pixel when retrieving depth values.
+		*
+		* Note: it would be better to scale floating point x/y but we only have
+		* access to integer values here. Should be Ok since the sun is far away
+		* so it doesn't need to be super precise.
+		*/
 		artifact->screenx = x * videoGetWidth() / videoGetNativeWidth();
 		artifact->screeny = y * videoGetHeight() / videoGetNativeHeight();
 #endif
@@ -2548,17 +2540,17 @@ f32 skyGetArtifactGroupIntensityFrac(struct artifact *artifacts)
 		const u16 test = artifacts[i].actualdepth;
 		if (artifacts[i].type == ARTIFACTTYPE_CIRCLE &&
 #ifdef PLATFORM_N64
-                    /**
-                     * the N64 appears to have a special value of 0xfffc
-                     * for points in the sky box outside the rendered geometry.
-                     */
-                    test == 0xfffc) {
+			/**
+			* N64 appears to have a special value of 0xfffc for
+			* points in the sky box outside the rendered geometry.
+			*/
+			test == 0xfffc) {
 #else
-                    /**
-                     * on PC the maximum allowed depth value for the sky box is 1.0f,
-                     * which becomes 0xf800 when converted to the N64 integer depth.
-                     */
-                    test == 0xf800) {
+			/**
+			* on PC the maximum allowed depth value for the sky box is 1.0f,
+			* which becomes 0xf800 when converted to the N64 integer depth.
+			*/
+			test == 0xf800) {
 #endif
 			sum += 0.125f;
 		}

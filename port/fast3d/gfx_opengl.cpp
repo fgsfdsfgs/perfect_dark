@@ -1228,7 +1228,7 @@ void gfx_opengl_copy_framebuffer(int fb_dst, int fb_src, int left, int top, bool
     }
 
     glBlitFramebuffer(srcX0, srcY0, srcX1, srcY1, dstX0, dstY0, dstX1, dstY1,
-		      depth ? GL_DEPTH_BUFFER_BIT : GL_COLOR_BUFFER_BIT, GL_NEAREST);
+                      depth ? GL_DEPTH_BUFFER_BIT : GL_COLOR_BUFFER_BIT, GL_NEAREST);
 
     glBindFramebuffer(GL_FRAMEBUFFER, framebuffers[current_framebuffer].fbo);
 
@@ -1254,16 +1254,16 @@ void gfx_opengl_read_depth_image(int fb_src, float *img, bool flip_y) {
     glBindFramebuffer(GL_FRAMEBUFFER, framebuffers[current_framebuffer].fbo);
 
     if (flip_y) {
-	int i_last_row = src.width * (src.height - 1);
-	int row_size = src.width * sizeof(float);
-	float *row = (float *)malloc(row_size);
+        int i_last_row = src.width * (src.height - 1);
+        int row_size = src.width * sizeof(float);
+        float *row = (float *)malloc(row_size);
 
-	// Symmetrically flip the image over the Y axis
+        // Symmetrically flip the image over the Y axis
         for (int i = 0; i < 0.5 * src.width * src.height; i += src.width) {
-		memcpy(row, img + i, row_size);                  // Temporary copy of row starting at i
-		memcpy(img + i, img + i_last_row - i, row_size); // Overwrite row starting at i with flipped row
-		memcpy(img + i_last_row - i, row, row_size);     // Move copy to the flipped row
-	}
+            memcpy(row, img + i, row_size);                  // Temporary copy of row starting at i
+            memcpy(img + i, img + i_last_row - i, row_size); // Overwrite row starting at i with flipped row
+            memcpy(img + i_last_row - i, row, row_size);     // Move copy to the flipped row
+        }
         free(row);
     }
 }

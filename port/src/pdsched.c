@@ -184,7 +184,7 @@ void osCreateScheduler(OSSched *sc, OSThread *thread, u8 mode, u32 numFields)
 	osViSetEvent(&sc->interruptQ, (OSMesg)VIDEO_MSG, numFields);
 	schedInitCrashLastRendered();
 
-        schedInitArtifacts();
+	schedInitArtifacts();
 
 	g_PrevFrameFb = videoCreateFramebuffer(0, 0, false, true);
 	g_SavedDepthFb = videoCreateFramebuffer(0, 0, false, true);
@@ -414,20 +414,20 @@ void schedUpdatePendingArtifacts(void)
 	if ((width != videoGetWidth()) || (height != videoGetHeight())) {
 		width = videoGetWidth();
 		height = videoGetHeight();
-		
+
 		free(current_depths);
 		free(saved_depths);
 
 		current_depths = (f32 *)malloc(videoGetWidth() * videoGetHeight() * sizeof(f32));
 		saved_depths = (f32 *)malloc(videoGetWidth() * videoGetHeight() * sizeof(f32));
 	}
-	
+
 	// Retrieve current Z depth values rendered on-screen
 	videoReadDepthImage(0, current_depths);
-	
+
 	// Retrieve saved Z depth values when requested.
 	if (g_SchedSpecialArtifactIndexes[g_SchedPendingArtifactsIndex] == 1)
-	        videoReadDepthImage(g_SavedDepthFb, saved_depths);
+		videoReadDepthImage(g_SavedDepthFb, saved_depths);
 
 	for (i = 0; i < MAX_ARTIFACTS; i++) {
 
