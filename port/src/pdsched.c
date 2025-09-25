@@ -424,6 +424,7 @@ void schedUpdatePendingArtifacts(void)
 
 	// Retrieve current Z depth values rendered on-screen
 	videoReadDepthImage(0, current_depths);
+	// Note: OpenGL on-screen pixels will be flipped around Y-axis relative to N64
 
 	// Retrieve saved Z depth values when requested.
 	if (g_SchedSpecialArtifactIndexes[g_SchedPendingArtifactsIndex] == 1)
@@ -435,16 +436,13 @@ void schedUpdatePendingArtifacts(void)
 
 		if (artifact->type != ARTIFACTTYPE_FREE) {
 
-			// Get the artifact's pixel within the depth buffer
-			u32 pixel = videoGetWidth() * artifact->screeny + artifact->screenx;
-
 			// Get the current depth value for this artifact's pixel from the on-screen depth buffer.
 			// This value will be a floating point number from 0 (near plane) to 1 (far plane).
-			f32 current_depth = current_depths[pixel];
+			f32 current_depth = current_depths[videoGetWidth() * (videoGetHeight() - 1 - artifact->screeny) + artifact->screenx];
 
 			// When available, update the current depth using the saved depth
 			if (g_SchedSpecialArtifactIndexes[g_SchedPendingArtifactsIndex] == 1) {
-				f32 saved_depth = saved_depths[pixel];
+				f32 saved_depth = saved_depths[videoGetWidth() * artifact->screeny + artifact->screenx];
 				if (saved_depth < current_depth)
 					current_depth = saved_depth;
 			}

@@ -2765,6 +2765,6 @@ extern "C" void gfx_reset_framebuffer(void) {
 }
 
 extern "C" void gfx_read_depth_image(int fb_src, float *img) {
-    const bool is_main_fb = (fb_src == 0);
-    gfx_rapi->read_depth_image(fb_src, img, is_main_fb);
+    //const bool is_main_fb = (fb_src == 0);
+    gfx_rapi->read_depth_image(fb_src, img, false); // force flip_y = false since it's too slow for high framerate displays
 }
