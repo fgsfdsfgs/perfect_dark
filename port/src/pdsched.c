@@ -104,7 +104,8 @@ OSScMsg g_SchedRspMsg = {OS_SC_RSP_MSG};
 bool g_SchedIsFirstTask = true;
 
 s32 g_PrevFrameFb = -1;
-s32 g_SavedDepthFb = -1;
+s32 g_SavedDepthFb[3] = {-1, -1, -1};
+s32 g_CurrentDepthFb[3] = {-1, -1, -1};
 s32 g_BlurFb = -1;
 s32 g_BlurFbCapTimer = -1;
 bool g_BlurFbDirty = true;
@@ -187,7 +188,10 @@ void osCreateScheduler(OSSched *sc, OSThread *thread, u8 mode, u32 numFields)
 	schedInitArtifacts();
 
 	g_PrevFrameFb = videoCreateFramebuffer(0, 0, false, true);
-	g_SavedDepthFb = videoCreateFramebuffer(0, 0, false, true);
+        for (int i=0; i<3; i++) {
+	    g_SavedDepthFb[i] = videoCreateFramebuffer(0, 0, false, true);
+	    g_CurrentDepthFb[i] = videoCreateFramebuffer(0, 0, false, true);
+        }
 	g_BlurFb = videoCreateFramebuffer(0, 0, false, true);
 }
 
@@ -423,29 +427,35 @@ void schedUpdatePendingArtifacts(void)
 	}
 
 	// Retrieve current Z depth values rendered on-screen
-	videoReadDepthImage(0, current_depths);
-	// Note: OpenGL on-screen pixels will be flipped around Y-axis relative to N64
+	videoReadDepthImage(g_CurrentDepthFb[g_SchedPendingArtifactsIndex], current_depths);
+	//printf("read scene depth %d\n", g_SchedPendingArtifactsIndex);
 
 	// Retrieve saved Z depth values when requested.
 	if (g_SchedSpecialArtifactIndexes[g_SchedPendingArtifactsIndex] == 1)
-		videoReadDepthImage(g_SavedDepthFb, saved_depths);
+	        videoReadDepthImage(g_SavedDepthFb[g_SchedPendingArtifactsIndex], saved_depths);
 
 	for (i = 0; i < MAX_ARTIFACTS; i++) {
 
 		struct artifact *artifact = &artifacts[i];
+		u32 pixel = videoGetWidth() * artifact->screeny + artifact->screenx;
 
 		if (artifact->type != ARTIFACTTYPE_FREE) {
 
 			// Get the current depth value for this artifact's pixel from the on-screen depth buffer.
 			// This value will be a floating point number from 0 (near plane) to 1 (far plane).
-			f32 current_depth = current_depths[videoGetWidth() * (videoGetHeight() - 1 - artifact->screeny) + artifact->screenx];
+			f32 current_depth = current_depths[pixel];
 
 			// When available, update the current depth using the saved depth
 			if (g_SchedSpecialArtifactIndexes[g_SchedPendingArtifactsIndex] == 1) {
-				f32 saved_depth = saved_depths[videoGetWidth() * artifact->screeny + artifact->screenx];
+				f32 saved_depth = saved_depths[pixel];
+                                //printf("pdsched[%d] (%u, %u) current depth %.3f, saved depth %.3f\n",
+                                //       i, artifact->screenx, artifact->screeny, current_depth, saved_depth);
 				if (saved_depth < current_depth)
 					current_depth = saved_depth;
-			}
+			} else {
+                            //printf("pdsched[%d] (%u, %u) current depth %.3f, saved depth X.XXX\n",
+                            //          i, artifact->screenx, artifact->screeny, current_depth);
+                        }
 
 			// Convert floating point value to the integer depth used by N64
 			artifact->actualdepth = floatToN64Depth(32704.0f * current_depth);
