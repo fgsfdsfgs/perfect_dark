@@ -271,7 +271,7 @@ Gfx *zbufSaveArtifactDepths(Gfx *gdl)
 	gDPFlushEXT(gdl++);
 	// Copy the current depth buffer to a framebuffer for safe keeping
 	//printf("saving scene depth %d\n", g_SchedWriteArtifactsIndex);
-	gDPCopyFramebufferEXT(gdl++, g_SavedDepthFb[g_SchedWriteArtifactsIndex], 0, 0, 0, G_ON, 1);
+	gDPCopyFramebufferEXT(gdl++, g_SavedDepthFb[g_SchedDepthIndex], 0, 0, 0, G_ON, 1);
 #endif
 	return gdl;
 }

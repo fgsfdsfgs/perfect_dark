@@ -1787,7 +1787,7 @@ Gfx *lvRender(Gfx *gdl)
 		gdl = lvRenderFPS(gdl);
 	}
 	//printf("current depth %d\n", g_SchedWriteArtifactsIndex);
-	gDPCopyFramebufferEXT(gdl++, g_CurrentDepthFb[g_SchedWriteArtifactsIndex], 0, 0, 0, G_ON, 1);
+	gDPCopyFramebufferEXT(gdl++, g_CurrentDepthFb[g_SchedDepthIndex], 0, 0, 0, G_ON, 1);
 #endif
 
 #if VERSION < VERSION_NTSC_1_0

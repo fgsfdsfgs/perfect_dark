@@ -82,6 +82,7 @@ u8 g_SchedSpecialArtifactIndexes[3];
 s32 g_SchedWriteArtifactsIndex;
 s32 g_SchedFrontArtifactsIndex;
 s32 g_SchedPendingArtifactsIndex;
+s32 g_SchedDepthIndex = 0;
 
 bool g_SchedCrashedUnexpectedly = false;
 bool g_SchedCrashEnable1 = false;
@@ -104,8 +105,8 @@ OSScMsg g_SchedRspMsg = {OS_SC_RSP_MSG};
 bool g_SchedIsFirstTask = true;
 
 s32 g_PrevFrameFb = -1;
-s32 g_SavedDepthFb[3] = {-1, -1, -1};
-s32 g_CurrentDepthFb[3] = {-1, -1, -1};
+s32 g_SavedDepthFb[2] = {-1, -1};
+s32 g_CurrentDepthFb[2] = {-1, -1};
 s32 g_BlurFb = -1;
 s32 g_BlurFbCapTimer = -1;
 bool g_BlurFbDirty = true;
@@ -188,7 +189,7 @@ void osCreateScheduler(OSSched *sc, OSThread *thread, u8 mode, u32 numFields)
 	schedInitArtifacts();
 
 	g_PrevFrameFb = videoCreateFramebuffer(0, 0, false, true);
-        for (int i=0; i<3; i++) {
+        for (int i = 0; i < 2; i++) {
 	    g_SavedDepthFb[i] = videoCreateFramebuffer(0, 0, false, true);
 	    g_CurrentDepthFb[i] = videoCreateFramebuffer(0, 0, false, true);
         }
@@ -319,6 +320,11 @@ void schedEndFrame(OSSched *sc)
 	__scUpdateViMode();
 }
 
+void schedIncrementDepthIndex(void)
+{
+	g_SchedDepthIndex = (g_SchedDepthIndex + 1) % 2;
+}
+
 void schedInitArtifacts(void)
 {
 	s32 i;
@@ -427,12 +433,12 @@ void schedUpdatePendingArtifacts(void)
 	}
 
 	// Retrieve current Z depth values rendered on-screen
-	videoReadDepthImage(g_CurrentDepthFb[g_SchedPendingArtifactsIndex], current_depths);
+	videoReadDepthImage(g_CurrentDepthFb[g_SchedDepthIndex], current_depths);
 	//printf("read scene depth %d\n", g_SchedPendingArtifactsIndex);
 
 	// Retrieve saved Z depth values when requested.
 	if (g_SchedSpecialArtifactIndexes[g_SchedPendingArtifactsIndex] == 1)
-	        videoReadDepthImage(g_SavedDepthFb[g_SchedPendingArtifactsIndex], saved_depths);
+	        videoReadDepthImage(g_SavedDepthFb[g_SchedDepthIndex], saved_depths);
 
 	for (i = 0; i < MAX_ARTIFACTS; i++) {
 
@@ -463,6 +469,7 @@ void schedUpdatePendingArtifacts(void)
 	}
 	g_SchedSpecialArtifactIndexes[g_SchedPendingArtifactsIndex] = 0;
 	schedIncrementPendingArtifacts();
+	schedIncrementDepthIndex();
 }
 
 void schedConsiderScreenshot(void)
