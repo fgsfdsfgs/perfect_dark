@@ -115,6 +115,9 @@ bool g_BlurFbDirty = true;
 u32 g_SavedDepthPbo[2] = {0, 0};
 u32 g_CurrentDepthPbo[2] = {0, 0};
 
+u32 tmp_SavedDepthFb[2] = {4, 6};
+u32 tmp_CurrentDepthFb[2] = {5, 7};
+
 u32 createDepthPbo(void)
 {
 	u32 pbo;
@@ -442,20 +445,29 @@ void schedUpdatePendingArtifacts(void)
 		width = videoGetWidth();
 		height = videoGetHeight();
 
-		free(current_depths);
-		free(saved_depths);
+		//free(current_depths);
+		//free(saved_depths);
 
-		current_depths = (f32 *)malloc(videoGetWidth() * videoGetHeight() * sizeof(f32));
-		saved_depths = (f32 *)malloc(videoGetWidth() * videoGetHeight() * sizeof(f32));
+		//current_depths = (f32 *)malloc(videoGetWidth() * videoGetHeight() * sizeof(f32));
+		//saved_depths = (f32 *)malloc(videoGetWidth() * videoGetHeight() * sizeof(f32));
 	}
 
 	// Retrieve current Z depth values rendered on-screen
-	videoReadDepthImage(g_CurrentDepthFb[g_SchedDepthIndex], current_depths);
+	//videoReadDepthImage(g_CurrentDepthFb[g_SchedDepthIndex], current_depths);
+	glBindFramebuffer(GL_READ_FRAMEBUFFER, tmp_CurrentDepthFb[g_SchedDepthIndex]);
+	glBindBuffer(GL_PIXEL_PACK_BUFFER, g_CurrentDepthPbo[g_SchedDepthIndex]);
+	glReadPixels(0, 0, videoGetWidth(), videoGetHeight(), GL_DEPTH_COMPONENT, GL_FLOAT, 0);
+	current_depths = (f32 *)glMapBuffer(GL_PIXEL_PACK_BUFFER, GL_READ_ONLY);
 	//printf("read scene depth %d\n", g_SchedPendingArtifactsIndex);
 
 	// Retrieve saved Z depth values when requested.
-	if (g_SchedSpecialArtifactIndexes[g_SchedPendingArtifactsIndex] == 1)
-	        videoReadDepthImage(g_SavedDepthFb[g_SchedDepthIndex], saved_depths);
+	if (g_SchedSpecialArtifactIndexes[g_SchedPendingArtifactsIndex] == 1) {
+	        //videoReadDepthImage(g_SavedDepthFb[g_SchedDepthIndex], saved_depths);
+		glBindFramebuffer(GL_READ_FRAMEBUFFER, tmp_SavedDepthFb[g_SchedDepthIndex]);
+		glBindBuffer(GL_PIXEL_PACK_BUFFER, g_SavedDepthPbo[g_SchedDepthIndex]);
+		glReadPixels(0, 0, videoGetWidth(), videoGetHeight(), GL_DEPTH_COMPONENT, GL_FLOAT, 0);
+		saved_depths = (f32 *)glMapBuffer(GL_PIXEL_PACK_BUFFER, GL_READ_ONLY);
+	}
 
 	for (i = 0; i < MAX_ARTIFACTS; i++) {
 
@@ -484,9 +496,19 @@ void schedUpdatePendingArtifacts(void)
 			artifact->actualdepth = floatToN64Depth(32704.0f * current_depth);
 		}
 	}
-	g_SchedSpecialArtifactIndexes[g_SchedPendingArtifactsIndex] = 0;
+	if (g_SchedSpecialArtifactIndexes[g_SchedPendingArtifactsIndex] == 1) {
+		g_SchedSpecialArtifactIndexes[g_SchedPendingArtifactsIndex] = 0;
+		glBindBuffer(GL_PIXEL_PACK_BUFFER, g_SavedDepthPbo[g_SchedDepthIndex]);
+		glUnmapBuffer(GL_PIXEL_PACK_BUFFER);
+        }
 	schedIncrementPendingArtifacts();
 	schedIncrementDepthIndex();
+
+	glBindBuffer(GL_PIXEL_PACK_BUFFER, g_CurrentDepthPbo[g_SchedDepthIndex]);
+	glUnmapBuffer(GL_PIXEL_PACK_BUFFER);
+
+	glBindFramebuffer(GL_FRAMEBUFFER, 0);
+	glBindBuffer(GL_PIXEL_PACK_BUFFER, 0);
 }
 
 void schedConsiderScreenshot(void)
