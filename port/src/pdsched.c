@@ -1,3 +1,4 @@
+#include "glad.h" // remove after debugging
 #include <PR/ultratypes.h>
 #include <PR/ultrasched.h>
 #include "lib/boot.h"
@@ -111,6 +112,20 @@ s32 g_BlurFb = -1;
 s32 g_BlurFbCapTimer = -1;
 bool g_BlurFbDirty = true;
 
+u32 g_SavedDepthPbo[2] = {0, 0};
+u32 g_CurrentDepthPbo[2] = {0, 0};
+
+u32 createDepthPbo(void)
+{
+	u32 pbo;
+	glGenBuffers(1, &pbo);
+	glBindBuffer(GL_PIXEL_PACK_BUFFER, pbo);
+	glBufferData(GL_PIXEL_PACK_BUFFER, videoGetWidth() * videoGetHeight() * sizeof(float), 0, GL_STREAM_READ);
+	glBindBuffer(GL_PIXEL_PACK_BUFFER, 0);
+
+	return pbo;
+}
+
 void schedSetCrashEnable1(bool enable)
 {
 	g_SchedCrashEnable1 = enable;
@@ -189,10 +204,12 @@ void osCreateScheduler(OSSched *sc, OSThread *thread, u8 mode, u32 numFields)
 	schedInitArtifacts();
 
 	g_PrevFrameFb = videoCreateFramebuffer(0, 0, false, true);
-        for (int i = 0; i < 2; i++) {
-	    g_SavedDepthFb[i] = videoCreateFramebuffer(0, 0, false, true);
-	    g_CurrentDepthFb[i] = videoCreateFramebuffer(0, 0, false, true);
-        }
+	for (int i = 0; i < 2; i++) {
+		g_SavedDepthFb[i] = videoCreateFramebuffer(0, 0, false, true);
+		g_SavedDepthPbo[i] = createDepthPbo();
+		g_CurrentDepthFb[i] = videoCreateFramebuffer(0, 0, false, true);
+		g_CurrentDepthPbo[i] = createDepthPbo();
+	}
 	g_BlurFb = videoCreateFramebuffer(0, 0, false, true);
 }
 
