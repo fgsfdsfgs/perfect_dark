@@ -434,38 +434,44 @@ void schedResetArtifacts(void)
  */
 void schedUpdatePendingArtifacts(void)
 {
-	struct artifact *artifacts = schedGetPendingArtifacts();
+	struct artifact *artifacts = NULL;
 	static f32 *current_depths = NULL;
 	static f32 *saved_depths = NULL;
-	static s32 width = -1, height = -1;
 	s32 i;
 
-	// Allocate memory for arrays whenever screen dimensions change
-	if ((width != videoGetWidth()) || (height != videoGetHeight())) {
-		width = videoGetWidth();
-		height = videoGetHeight();
-
-		//free(current_depths);
-		//free(saved_depths);
-
-		//current_depths = (f32 *)malloc(videoGetWidth() * videoGetHeight() * sizeof(f32));
-		//saved_depths = (f32 *)malloc(videoGetWidth() * videoGetHeight() * sizeof(f32));
-	}
+        //////////////////////////////////////
+        // begin transfer of current values //
+        //////////////////////////////////////
 
 	// Retrieve current Z depth values rendered on-screen
-	//videoReadDepthImage(g_CurrentDepthFb[g_SchedDepthIndex], current_depths);
 	glBindFramebuffer(GL_READ_FRAMEBUFFER, tmp_CurrentDepthFb[g_SchedDepthIndex]);
 	glBindBuffer(GL_PIXEL_PACK_BUFFER, g_CurrentDepthPbo[g_SchedDepthIndex]);
 	glReadPixels(0, 0, videoGetWidth(), videoGetHeight(), GL_DEPTH_COMPONENT, GL_FLOAT, 0);
-	current_depths = (f32 *)glMapBuffer(GL_PIXEL_PACK_BUFFER, GL_READ_ONLY);
-	//printf("read scene depth %d\n", g_SchedPendingArtifactsIndex);
 
 	// Retrieve saved Z depth values when requested.
 	if (g_SchedSpecialArtifactIndexes[g_SchedPendingArtifactsIndex] == 1) {
-	        //videoReadDepthImage(g_SavedDepthFb[g_SchedDepthIndex], saved_depths);
 		glBindFramebuffer(GL_READ_FRAMEBUFFER, tmp_SavedDepthFb[g_SchedDepthIndex]);
 		glBindBuffer(GL_PIXEL_PACK_BUFFER, g_SavedDepthPbo[g_SchedDepthIndex]);
 		glReadPixels(0, 0, videoGetWidth(), videoGetHeight(), GL_DEPTH_COMPONENT, GL_FLOAT, 0);
+	}
+
+        /////////////////////////////////////////
+        // now read values from previous frame //
+        /////////////////////////////////////////
+
+        s32 prev_SchedPendingArtifactsIndex = g_SchedPendingArtifactsIndex ? g_SchedPendingArtifactsIndex - 1 : 2;
+        u32 prev_SavedDepthPbo = g_SavedDepthPbo[!g_SchedDepthIndex];
+        u32 prev_CurrentDepthPbo = g_CurrentDepthPbo[!g_SchedDepthIndex];
+
+	artifacts = g_ArtifactLists[prev_SchedPendingArtifactsIndex];
+
+	// Retrieve current Z depth values rendered on-screen
+	glBindBuffer(GL_PIXEL_PACK_BUFFER, prev_CurrentDepthPbo);
+	current_depths = (f32 *)glMapBuffer(GL_PIXEL_PACK_BUFFER, GL_READ_ONLY);
+
+	// Retrieve saved Z depth values when requested.
+	if (g_SchedSpecialArtifactIndexes[prev_SchedPendingArtifactsIndex] == 1) {
+		glBindBuffer(GL_PIXEL_PACK_BUFFER, prev_SavedDepthPbo);
 		saved_depths = (f32 *)glMapBuffer(GL_PIXEL_PACK_BUFFER, GL_READ_ONLY);
 	}
 
@@ -481,7 +487,7 @@ void schedUpdatePendingArtifacts(void)
 			f32 current_depth = current_depths[pixel];
 
 			// When available, update the current depth using the saved depth
-			if (g_SchedSpecialArtifactIndexes[g_SchedPendingArtifactsIndex] == 1) {
+			if (g_SchedSpecialArtifactIndexes[prev_SchedPendingArtifactsIndex] == 1) {
 				f32 saved_depth = saved_depths[pixel];
                                 //printf("pdsched[%d] (%u, %u) current depth %.3f, saved depth %.3f\n",
                                 //       i, artifact->screenx, artifact->screeny, current_depth, saved_depth);
@@ -496,15 +502,15 @@ void schedUpdatePendingArtifacts(void)
 			artifact->actualdepth = floatToN64Depth(32704.0f * current_depth);
 		}
 	}
-	if (g_SchedSpecialArtifactIndexes[g_SchedPendingArtifactsIndex] == 1) {
-		g_SchedSpecialArtifactIndexes[g_SchedPendingArtifactsIndex] = 0;
-		glBindBuffer(GL_PIXEL_PACK_BUFFER, g_SavedDepthPbo[g_SchedDepthIndex]);
+	if (g_SchedSpecialArtifactIndexes[prev_SchedPendingArtifactsIndex] == 1) {
+		g_SchedSpecialArtifactIndexes[prev_SchedPendingArtifactsIndex] = 0;
+		glBindBuffer(GL_PIXEL_PACK_BUFFER, prev_SavedDepthPbo);
 		glUnmapBuffer(GL_PIXEL_PACK_BUFFER);
         }
 	schedIncrementPendingArtifacts();
 	schedIncrementDepthIndex();
 
-	glBindBuffer(GL_PIXEL_PACK_BUFFER, g_CurrentDepthPbo[g_SchedDepthIndex]);
+	glBindBuffer(GL_PIXEL_PACK_BUFFER, prev_CurrentDepthPbo);
 	glUnmapBuffer(GL_PIXEL_PACK_BUFFER);
 
 	glBindFramebuffer(GL_FRAMEBUFFER, 0);
