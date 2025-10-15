@@ -513,9 +513,9 @@ void videoShutdown(void)
 	free(vidModes);
 }
 
-f32 *videoMapPixelbuffer(s32 src)
+f32 *videoMapPixelbuffer(s32 src, u32 *width, u32 *height)
 {
-	return gfx_map_pixelbuffer(src);
+	return gfx_map_pixelbuffer(src, width, height);
 }
 
 void videoUnmapPixelbuffer(s32 src)

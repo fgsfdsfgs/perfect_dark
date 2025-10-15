@@ -2764,12 +2764,12 @@ extern "C" void gfx_reset_framebuffer(void) {
     active_fb = framebuffers.end();
 }
 
-extern "C" float *gfx_map_pixelbuffer(int pb_src) {
-    return gfx_rapi->map_pixelbuffer(pb_src);
+extern "C" float *gfx_map_pixelbuffer(int fb_src, uint32_t *width, uint32_t *height) {
+    return gfx_rapi->map_pixelbuffer(fb_src, width, height);
 }
 
-extern "C" void gfx_unmap_pixelbuffer(int pb_src) {
-    gfx_rapi->unmap_pixelbuffer(pb_src);
+extern "C" void gfx_unmap_pixelbuffer(int fb_src) {
+    gfx_rapi->unmap_pixelbuffer(fb_src);
 }
 
 extern "C" void gfx_sync_depth(int fb_src) {

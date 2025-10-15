@@ -53,7 +53,7 @@ void gfx_set_framebuffer(int fb, float noise_scale) ;
 void gfx_reset_framebuffer(void);
 void gfx_copy_framebuffer(int fb_dst, int fb_src, int left, int top, int use_back, int depth);
 void gfx_sync_depth(int fb_src);
-float *gfx_map_pixelbuffer(int fb_src);
+float *gfx_map_pixelbuffer(int fb_src, uint32_t *width, uint32_t *height);
 void gfx_unmap_pixelbuffer(int fb_src);
 
 #endif

@@ -426,6 +426,7 @@ void schedUpdatePendingArtifacts(void)
 	static f32 *current_depths = NULL;
 	static f32 *saved_depths = NULL;
 	s32 i;
+	u32 width, height;
 
 	// Synchronize the GPU depth buffers for this frame into memory
 	// accessible to the CPU. This process is asynchronous and finishes
@@ -438,11 +439,10 @@ void schedUpdatePendingArtifacts(void)
 
 	// Retrieve the GPU depth buffers from the previous frame since
 	// the depth buffers should be available to the CPU now.
-	current_depths = videoMapPixelbuffer(g_CurrentDepthFb[!g_SchedDepthIndex]);
-
+	current_depths = videoMapPixelbuffer(g_CurrentDepthFb[!g_SchedDepthIndex], &width, &height);
 	s32 prev_SchedPendingArtifactsIndex = g_SchedPendingArtifactsIndex ? g_SchedPendingArtifactsIndex - 1 : 2;
 	if (g_SchedSpecialArtifactIndexes[prev_SchedPendingArtifactsIndex] == 1) {
-		saved_depths = videoMapPixelbuffer(g_SavedDepthFb[!g_SchedDepthIndex]);
+		saved_depths = videoMapPixelbuffer(g_SavedDepthFb[!g_SchedDepthIndex], NULL, NULL);
 	}
 
 	// Compute N64 integer depth values for light artifacts in
@@ -451,7 +451,7 @@ void schedUpdatePendingArtifacts(void)
 	for (i = 0; i < MAX_ARTIFACTS; i++) {
 
 		struct artifact *artifact = &artifacts[i];
-		u32 pixel = videoGetWidth() * artifact->screeny + artifact->screenx;
+		u32 pixel = width * artifact->screeny + artifact->screenx;
 
 		if (artifact->type != ARTIFACTTYPE_FREE) {
 

@@ -1278,9 +1278,14 @@ void gfx_opengl_sync_depth(int fb_src) {
     glBindFramebuffer(GL_FRAMEBUFFER, framebuffers[current_framebuffer].fbo);
 }
 
-float *gfx_opengl_map_pixelbuffer(int fb_src) {
+float *gfx_opengl_map_pixelbuffer(int fb_src, uint32_t *width, uint32_t *height) {
     if (pixelbuffers.contains(fb_src)) {
-        glBindBuffer(GL_PIXEL_PACK_BUFFER, pixelbuffers[fb_src].pbo);
+        const Pixelbuffer& p = pixelbuffers[fb_src];
+        if (width) {
+            *width = p.width;
+            *height = p.height;
+        }
+        glBindBuffer(GL_PIXEL_PACK_BUFFER, p.pbo);
         return (float *)glMapBuffer(GL_PIXEL_PACK_BUFFER, GL_READ_ONLY);
     }
     return NULL;
