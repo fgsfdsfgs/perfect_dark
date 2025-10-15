@@ -75,9 +75,9 @@ void videoFreeCachedTexture(const void *texptr);
 void videoShutdown(void);
 
 s32 videoCreatePixelbuffer();
-f32 *videoMapPixelbuffer(s32 pb);
-void videoUnmapPixelbuffer(s32 pb);
-void videoSyncDepth(s32 fb, s32 pb);
+f32 *videoMapPixelbuffer(s32 src);
+void videoUnmapPixelbuffer(s32 src);
+void videoSyncDepth(s32 src);
 void videoReadDepthImage(s32 src, f32 *img);
 
 #endif

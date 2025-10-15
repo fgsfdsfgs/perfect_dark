@@ -1268,7 +1268,7 @@ static int gfx_opengl_create_pixelbuffer() {
     return i;
 }
 
-void gfx_opengl_sync_depth(int fb_src, int pb_src) {
+void gfx_opengl_sync_depth(int fb_src) {
 
     const Framebuffer& src = framebuffers[fb_src];
 
@@ -1280,7 +1280,6 @@ void gfx_opengl_sync_depth(int fb_src, int pb_src) {
     }
 
     Pixelbuffer& p = pixelbuffers[fb_src];
-    printf("syncing depth from fb (%d, %u) to pbo (%d, %u)\n", fb_src, src.fbo, pb_src, p.pbo);
 
     glBindFramebuffer(GL_READ_FRAMEBUFFER, src.fbo);
     glBindBuffer(GL_PIXEL_PACK_BUFFER, p.pbo);
@@ -1290,7 +1289,6 @@ void gfx_opengl_sync_depth(int fb_src, int pb_src) {
         p.width = src.width;
         p.height = src.height;
         glBufferData(GL_PIXEL_PACK_BUFFER, p.width * p.height * sizeof(float), 0, GL_STREAM_READ);
-        printf("updating pixel buffer %u to size %u x %u\n", p.pbo, p.width, p.height);
     }
 
     glReadPixels(0, 0, src.width, src.height, GL_DEPTH_COMPONENT, GL_FLOAT, 0);
@@ -1298,19 +1296,17 @@ void gfx_opengl_sync_depth(int fb_src, int pb_src) {
     glBindFramebuffer(GL_FRAMEBUFFER, framebuffers[current_framebuffer].fbo);
 }
 
-float *gfx_opengl_map_pixelbuffer(int pb_src) {
-    if (pixelbuffers.contains(pb_src)) {
-        glBindBuffer(GL_PIXEL_PACK_BUFFER, pixelbuffers[pb_src].pbo);
-        printf("reading pbo %u\n", pixelbuffers[pb_src].pbo);
+float *gfx_opengl_map_pixelbuffer(int fb_src) {
+    if (pixelbuffers.contains(fb_src)) {
+        glBindBuffer(GL_PIXEL_PACK_BUFFER, pixelbuffers[fb_src].pbo);
         return (float *)glMapBuffer(GL_PIXEL_PACK_BUFFER, GL_READ_ONLY);
     }
-    printf("bad map for %d\n", pb_src);
     return NULL;
 }
 
-void gfx_opengl_unmap_pixelbuffer(int pb_src) {
-    if (pixelbuffers.contains(pb_src)) {
-        glBindBuffer(GL_PIXEL_PACK_BUFFER, pixelbuffers[pb_src].pbo);
+void gfx_opengl_unmap_pixelbuffer(int fb_src) {
+    if (pixelbuffers.contains(fb_src)) {
+        glBindBuffer(GL_PIXEL_PACK_BUFFER, pixelbuffers[fb_src].pbo);
         glUnmapBuffer(GL_PIXEL_PACK_BUFFER);
     }
 }

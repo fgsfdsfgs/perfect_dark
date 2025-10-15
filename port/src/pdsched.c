@@ -449,11 +449,11 @@ void schedUpdatePendingArtifacts(void)
         //////////////////////////////////////
 
 	// Retrieve current Z depth values rendered on-screen
-        videoSyncDepth(g_CurrentDepthFb[g_SchedDepthIndex], g_CurrentDepthPbo[g_SchedDepthIndex]);
+        videoSyncDepth(g_CurrentDepthFb[g_SchedDepthIndex]);
 
 	// Retrieve saved Z depth values when requested.
 	if (g_SchedSpecialArtifactIndexes[g_SchedPendingArtifactsIndex] == 1) {
-                videoSyncDepth(g_SavedDepthFb[g_SchedDepthIndex], g_SavedDepthPbo[g_SchedDepthIndex]);
+                videoSyncDepth(g_SavedDepthFb[g_SchedDepthIndex]);
 	}
 
         /////////////////////////////////////////

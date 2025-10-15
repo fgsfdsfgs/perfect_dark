@@ -2776,8 +2776,8 @@ extern "C" void gfx_unmap_pixelbuffer(int pb_src) {
     gfx_rapi->unmap_pixelbuffer(pb_src);
 }
 
-extern "C" void gfx_sync_depth(int fb_src, int pb_src) {
-    gfx_rapi->sync_depth(fb_src, pb_src);
+extern "C" void gfx_sync_depth(int fb_src) {
+    gfx_rapi->sync_depth(fb_src);
 }
 
 extern "C" void gfx_read_depth_image(int fb_src, float *img) {

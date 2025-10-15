@@ -518,19 +518,19 @@ s32 videoCreatePixelbuffer()
 	return gfx_create_pixelbuffer();
 }
 
-f32 *videoMapPixelbuffer(s32 pb)
+f32 *videoMapPixelbuffer(s32 src)
 {
-	return gfx_map_pixelbuffer(pb);
+	return gfx_map_pixelbuffer(src);
 }
 
-void videoUnmapPixelbuffer(s32 pb)
+void videoUnmapPixelbuffer(s32 src)
 {
-	gfx_unmap_pixelbuffer(pb);
+	gfx_unmap_pixelbuffer(src);
 }
 
-void videoSyncDepth(s32 fb, s32 pb)
+void videoSyncDepth(s32 src)
 {
-	gfx_sync_depth(fb, pb);
+	gfx_sync_depth(src);
 }
 
 void videoReadDepthImage(s32 src, f32 *img)
