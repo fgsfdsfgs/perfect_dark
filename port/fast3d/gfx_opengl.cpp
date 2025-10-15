@@ -1261,7 +1261,6 @@ static int gfx_opengl_create_pixelbuffer() {
     glGenBuffers(1, &pixelbuffers[i].pbo);
     printf("generated pbo %u\n", pixelbuffers[i].pbo);
     glBindBuffer(GL_PIXEL_PACK_BUFFER, pixelbuffers[i].pbo);
-    glBufferData(GL_PIXEL_PACK_BUFFER, 1920 * 1080 * sizeof(float), 0, GL_STREAM_READ);
     glBindBuffer(GL_PIXEL_PACK_BUFFER, 0);
 
     return i;
@@ -1273,15 +1272,16 @@ void gfx_opengl_sync_depth(int fb_src, int pb_src) {
     Pixelbuffer& p = pixelbuffers[pb_src];
     printf("syncing depth from fb (%d, %u) to pbo (%d, %u)\n", fb_src, src.fbo, pb_src, p.pbo);
 
+    glBindFramebuffer(GL_READ_FRAMEBUFFER, src.fbo);
+    glBindBuffer(GL_PIXEL_PACK_BUFFER, p.pbo);
+
     if (p.width != src.width || p.height != src.height) {
         p.width = src.width;
         p.height = src.height;
-        //glBufferData(GL_PIXEL_PACK_BUFFER, p.width * p.height * sizeof(float), 0, GL_STREAM_READ);
+        glBufferData(GL_PIXEL_PACK_BUFFER, p.width * p.height * sizeof(float), 0, GL_STREAM_READ);
         printf("updating pixel buffer to size %u x %u\n", p.width, p.height);
     }
 
-    glBindFramebuffer(GL_READ_FRAMEBUFFER, src.fbo);
-    glBindBuffer(GL_PIXEL_PACK_BUFFER, p.pbo);
     glReadPixels(0, 0, src.width, src.height, GL_DEPTH_COMPONENT, GL_FLOAT, 0);
     glBindBuffer(GL_PIXEL_PACK_BUFFER, 0);
     glBindFramebuffer(GL_FRAMEBUFFER, framebuffers[current_framebuffer].fbo);
