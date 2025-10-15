@@ -68,7 +68,6 @@ static GLenum gl_mirror_clamp = GL_MIRROR_CLAMP_TO_EDGE;
 static bool gl_es = false;
 static bool gl_core_profile = false;
 
-//static std::vector<Pixelbuffer> pixelbuffers;
 static std::map<int, struct Pixelbuffer> pixelbuffers;
 
 static int gfx_opengl_get_max_texture_size() {
@@ -1252,24 +1251,7 @@ FilteringMode gfx_opengl_get_texture_filter(void) {
     return current_filter_mode;
 }
 
-static int gfx_opengl_create_pixelbuffer() {
-    size_t i = pixelbuffers.size();
-/*
-    pixelbuffers.resize(i + 1);
-
-    pixelbuffers[i].width = 0;
-    pixelbuffers[i].height = 0;
-
-    glGenBuffers(1, &pixelbuffers[i].pbo);
-    printf("generated pbo %u\n", pixelbuffers[i].pbo);
-    glBindBuffer(GL_PIXEL_PACK_BUFFER, pixelbuffers[i].pbo);
-    glBindBuffer(GL_PIXEL_PACK_BUFFER, 0);
-*/
-    return i;
-}
-
 void gfx_opengl_sync_depth(int fb_src) {
-
     const Framebuffer& src = framebuffers[fb_src];
 
     // dynamically create pixel buffers as needed,
@@ -1311,29 +1293,6 @@ void gfx_opengl_unmap_pixelbuffer(int fb_src) {
     }
 }
 
-void gfx_opengl_read_depth_image(int fb_src, float *img, bool flip_y) {
-
-    const Framebuffer& src = framebuffers[fb_src];
-
-    glBindFramebuffer(GL_READ_FRAMEBUFFER, src.fbo);
-    glReadPixels(0, 0, src.width, src.height, GL_DEPTH_COMPONENT, GL_FLOAT, img);
-    glBindFramebuffer(GL_FRAMEBUFFER, framebuffers[current_framebuffer].fbo);
-
-    if (flip_y) {
-        int i_last_row = src.width * (src.height - 1);
-        int row_size = src.width * sizeof(float);
-        float *row = (float *)malloc(row_size);
-
-        // Symmetrically flip the image over the Y axis
-        for (int i = 0; i < 0.5 * src.width * src.height; i += src.width) {
-            memcpy(row, img + i, row_size);                  // Temporary copy of row starting at i
-            memcpy(img + i, img + i_last_row - i, row_size); // Overwrite row starting at i with flipped row
-            memcpy(img + i_last_row - i, row, row_size);     // Move copy to the flipped row
-        }
-        free(row);
-    }
-}
-
 struct GfxRenderingAPI gfx_opengl_api = { 
     gfx_opengl_get_name,
     gfx_opengl_get_max_texture_size,
@@ -1370,9 +1329,7 @@ struct GfxRenderingAPI gfx_opengl_api = {
     gfx_opengl_delete_texture,
     gfx_opengl_set_texture_filter,
     gfx_opengl_get_texture_filter,
-    gfx_opengl_create_pixelbuffer,
     gfx_opengl_sync_depth,
     gfx_opengl_map_pixelbuffer,
     gfx_opengl_unmap_pixelbuffer,
-    gfx_opengl_read_depth_image
 };
