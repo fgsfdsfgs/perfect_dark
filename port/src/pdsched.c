@@ -213,9 +213,9 @@ void osCreateScheduler(OSSched *sc, OSThread *thread, u8 mode, u32 numFields)
 	g_PrevFrameFb = videoCreateFramebuffer(0, 0, false, true);
 	for (int i = 0; i < 2; i++) {
 		g_SavedDepthFb[i] = videoCreateFramebuffer(0, 0, false, true);
-		g_SavedDepthPbo[i] = videoCreatePixelbuffer();
+		//g_SavedDepthPbo[i] = videoCreatePixelbuffer();
 		g_CurrentDepthFb[i] = videoCreateFramebuffer(0, 0, false, true);
-		g_CurrentDepthPbo[i] = videoCreatePixelbuffer();
+		//g_CurrentDepthPbo[i] = videoCreatePixelbuffer();
 	}
         //exit(0);
 	g_BlurFb = videoCreateFramebuffer(0, 0, false, true);
@@ -464,11 +464,11 @@ void schedUpdatePendingArtifacts(void)
 	artifacts = g_ArtifactLists[prev_SchedPendingArtifactsIndex];
 
 	// Retrieve current Z depth values rendered on-screen
-        current_depths = videoMapPixelbuffer(g_CurrentDepthPbo[!g_SchedDepthIndex]);
+        current_depths = videoMapPixelbuffer(g_CurrentDepthFb[!g_SchedDepthIndex]);
 
 	// Retrieve saved Z depth values when requested.
 	if (g_SchedSpecialArtifactIndexes[prev_SchedPendingArtifactsIndex] == 1) {
-		saved_depths = videoMapPixelbuffer(g_SavedDepthPbo[!g_SchedDepthIndex]);
+		saved_depths = videoMapPixelbuffer(g_SavedDepthFb[!g_SchedDepthIndex]);
 	}
 
 	for (i = 0; i < MAX_ARTIFACTS; i++) {
@@ -500,9 +500,9 @@ void schedUpdatePendingArtifacts(void)
 	}
 	if (g_SchedSpecialArtifactIndexes[prev_SchedPendingArtifactsIndex] == 1) {
 		g_SchedSpecialArtifactIndexes[prev_SchedPendingArtifactsIndex] = 0;
-		videoUnmapPixelbuffer(g_SavedDepthPbo[!g_SchedDepthIndex]);
+		videoUnmapPixelbuffer(g_SavedDepthFb[!g_SchedDepthIndex]);
         }
-        videoUnmapPixelbuffer(g_CurrentDepthPbo[!g_SchedDepthIndex]);
+        videoUnmapPixelbuffer(g_CurrentDepthFb[!g_SchedDepthIndex]);
 
 	schedIncrementPendingArtifacts();
 	schedIncrementDepthIndex();

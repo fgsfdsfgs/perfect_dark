@@ -68,7 +68,8 @@ static GLenum gl_mirror_clamp = GL_MIRROR_CLAMP_TO_EDGE;
 static bool gl_es = false;
 static bool gl_core_profile = false;
 
-static std::vector<Pixelbuffer> pixelbuffers;
+//static std::vector<Pixelbuffer> pixelbuffers;
+static std::map<int, struct Pixelbuffer> pixelbuffers;
 
 static int gfx_opengl_get_max_texture_size() {
     GLint max_texture_size;
@@ -1253,6 +1254,7 @@ FilteringMode gfx_opengl_get_texture_filter(void) {
 
 static int gfx_opengl_create_pixelbuffer() {
     size_t i = pixelbuffers.size();
+/*
     pixelbuffers.resize(i + 1);
 
     pixelbuffers[i].width = 0;
@@ -1262,24 +1264,33 @@ static int gfx_opengl_create_pixelbuffer() {
     printf("generated pbo %u\n", pixelbuffers[i].pbo);
     glBindBuffer(GL_PIXEL_PACK_BUFFER, pixelbuffers[i].pbo);
     glBindBuffer(GL_PIXEL_PACK_BUFFER, 0);
-
+*/
     return i;
 }
 
 void gfx_opengl_sync_depth(int fb_src, int pb_src) {
 
     const Framebuffer& src = framebuffers[fb_src];
-    Pixelbuffer& p = pixelbuffers[pb_src];
+
+    // dynamically create pixel buffers as needed,
+    // map them to the framebuffer id for easy lookup
+    if (pixelbuffers.contains(fb_src) == false) {
+        glGenBuffers(1, &pixelbuffers[fb_src].pbo);
+        pixelbuffers[fb_src].width = pixelbuffers[fb_src].height = 0;
+    }
+
+    Pixelbuffer& p = pixelbuffers[fb_src];
     printf("syncing depth from fb (%d, %u) to pbo (%d, %u)\n", fb_src, src.fbo, pb_src, p.pbo);
 
     glBindFramebuffer(GL_READ_FRAMEBUFFER, src.fbo);
     glBindBuffer(GL_PIXEL_PACK_BUFFER, p.pbo);
 
+    // match framebuffer and pixel buffer sizes
     if (p.width != src.width || p.height != src.height) {
         p.width = src.width;
         p.height = src.height;
         glBufferData(GL_PIXEL_PACK_BUFFER, p.width * p.height * sizeof(float), 0, GL_STREAM_READ);
-        printf("updating pixel buffer to size %u x %u\n", p.width, p.height);
+        printf("updating pixel buffer %u to size %u x %u\n", p.pbo, p.width, p.height);
     }
 
     glReadPixels(0, 0, src.width, src.height, GL_DEPTH_COMPONENT, GL_FLOAT, 0);
@@ -1288,16 +1299,20 @@ void gfx_opengl_sync_depth(int fb_src, int pb_src) {
 }
 
 float *gfx_opengl_map_pixelbuffer(int pb_src) {
-    const Pixelbuffer& src = pixelbuffers[pb_src];
-    glBindBuffer(GL_PIXEL_PACK_BUFFER, src.pbo);
-    printf("reading pbo (%d, %u)\n", pb_src, src.pbo);
-    return (float *)glMapBuffer(GL_PIXEL_PACK_BUFFER, GL_READ_ONLY);
+    if (pixelbuffers.contains(pb_src)) {
+        glBindBuffer(GL_PIXEL_PACK_BUFFER, pixelbuffers[pb_src].pbo);
+        printf("reading pbo %u\n", pixelbuffers[pb_src].pbo);
+        return (float *)glMapBuffer(GL_PIXEL_PACK_BUFFER, GL_READ_ONLY);
+    }
+    printf("bad map for %d\n", pb_src);
+    return NULL;
 }
 
 void gfx_opengl_unmap_pixelbuffer(int pb_src) {
-    const Pixelbuffer& src = pixelbuffers[pb_src];
-    glBindBuffer(GL_PIXEL_PACK_BUFFER, src.pbo);
-    glUnmapBuffer(GL_PIXEL_PACK_BUFFER);
+    if (pixelbuffers.contains(pb_src)) {
+        glBindBuffer(GL_PIXEL_PACK_BUFFER, pixelbuffers[pb_src].pbo);
+        glUnmapBuffer(GL_PIXEL_PACK_BUFFER);
+    }
 }
 
 void gfx_opengl_read_depth_image(int fb_src, float *img, bool flip_y) {
