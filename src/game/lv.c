@@ -1786,7 +1786,6 @@ Gfx *lvRender(Gfx *gdl)
 	if (videoGetDisplayFPS()) {
 		gdl = lvRenderFPS(gdl);
 	}
-	//printf("current depth %d\n", g_SchedWriteArtifactsIndex);
 	gDPCopyFramebufferEXT(gdl++, g_CurrentDepthFb[g_SchedDepthIndex], 0, 0, 0, G_ON, 1);
 #endif
 
