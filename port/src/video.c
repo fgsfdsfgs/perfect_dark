@@ -513,6 +513,26 @@ void videoShutdown(void)
 	free(vidModes);
 }
 
+s32 videoCreatePixelbuffer()
+{
+	return gfx_create_pixelbuffer();
+}
+
+f32 *videoMapPixelbuffer(s32 pb)
+{
+	return gfx_map_pixelbuffer(pb);
+}
+
+void videoUnmapPixelbuffer(s32 pb)
+{
+	gfx_unmap_pixelbuffer(pb);
+}
+
+void videoSyncDepth(s32 fb, s32 pb)
+{
+	gfx_sync_depth(fb, pb);
+}
+
 void videoReadDepthImage(s32 src, f32 *img)
 {
 	gfx_read_depth_image(src, img);

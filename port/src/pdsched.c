@@ -1,4 +1,4 @@
-#include "glad.h" // remove after debugging
+//#include "glad.h" // remove after debugging
 #include <PR/ultratypes.h>
 #include <PR/ultrasched.h>
 #include "lib/boot.h"
@@ -118,6 +118,10 @@ u32 g_CurrentDepthPbo[2] = {0, 0};
 u32 tmp_SavedDepthFb[2] = {4, 6};
 u32 tmp_CurrentDepthFb[2] = {5, 7};
 
+u32 tmp_SavedDepthPbo[2] = {2, 4};
+u32 tmp_CurrentDepthPbo[2] = {3, 5};
+
+/*
 u32 createDepthPbo(void)
 {
 	u32 pbo;
@@ -127,7 +131,7 @@ u32 createDepthPbo(void)
 	glBindBuffer(GL_PIXEL_PACK_BUFFER, 0);
 
 	return pbo;
-}
+}*/
 
 void schedSetCrashEnable1(bool enable)
 {
@@ -209,10 +213,11 @@ void osCreateScheduler(OSSched *sc, OSThread *thread, u8 mode, u32 numFields)
 	g_PrevFrameFb = videoCreateFramebuffer(0, 0, false, true);
 	for (int i = 0; i < 2; i++) {
 		g_SavedDepthFb[i] = videoCreateFramebuffer(0, 0, false, true);
-		g_SavedDepthPbo[i] = createDepthPbo();
+		g_SavedDepthPbo[i] = videoCreatePixelbuffer();
 		g_CurrentDepthFb[i] = videoCreateFramebuffer(0, 0, false, true);
-		g_CurrentDepthPbo[i] = createDepthPbo();
+		g_CurrentDepthPbo[i] = videoCreatePixelbuffer();
 	}
+        //exit(0);
 	g_BlurFb = videoCreateFramebuffer(0, 0, false, true);
 }
 
@@ -444,15 +449,11 @@ void schedUpdatePendingArtifacts(void)
         //////////////////////////////////////
 
 	// Retrieve current Z depth values rendered on-screen
-	glBindFramebuffer(GL_READ_FRAMEBUFFER, tmp_CurrentDepthFb[g_SchedDepthIndex]);
-	glBindBuffer(GL_PIXEL_PACK_BUFFER, g_CurrentDepthPbo[g_SchedDepthIndex]);
-	glReadPixels(0, 0, videoGetWidth(), videoGetHeight(), GL_DEPTH_COMPONENT, GL_FLOAT, 0);
+        videoSyncDepth(g_CurrentDepthFb[g_SchedDepthIndex], g_CurrentDepthPbo[g_SchedDepthIndex]);
 
 	// Retrieve saved Z depth values when requested.
 	if (g_SchedSpecialArtifactIndexes[g_SchedPendingArtifactsIndex] == 1) {
-		glBindFramebuffer(GL_READ_FRAMEBUFFER, tmp_SavedDepthFb[g_SchedDepthIndex]);
-		glBindBuffer(GL_PIXEL_PACK_BUFFER, g_SavedDepthPbo[g_SchedDepthIndex]);
-		glReadPixels(0, 0, videoGetWidth(), videoGetHeight(), GL_DEPTH_COMPONENT, GL_FLOAT, 0);
+                videoSyncDepth(g_SavedDepthFb[g_SchedDepthIndex], g_SavedDepthPbo[g_SchedDepthIndex]);
 	}
 
         /////////////////////////////////////////
@@ -460,19 +461,14 @@ void schedUpdatePendingArtifacts(void)
         /////////////////////////////////////////
 
         s32 prev_SchedPendingArtifactsIndex = g_SchedPendingArtifactsIndex ? g_SchedPendingArtifactsIndex - 1 : 2;
-        u32 prev_SavedDepthPbo = g_SavedDepthPbo[!g_SchedDepthIndex];
-        u32 prev_CurrentDepthPbo = g_CurrentDepthPbo[!g_SchedDepthIndex];
-
 	artifacts = g_ArtifactLists[prev_SchedPendingArtifactsIndex];
 
 	// Retrieve current Z depth values rendered on-screen
-	glBindBuffer(GL_PIXEL_PACK_BUFFER, prev_CurrentDepthPbo);
-	current_depths = (f32 *)glMapBuffer(GL_PIXEL_PACK_BUFFER, GL_READ_ONLY);
+        current_depths = videoMapPixelbuffer(g_CurrentDepthPbo[!g_SchedDepthIndex]);
 
 	// Retrieve saved Z depth values when requested.
 	if (g_SchedSpecialArtifactIndexes[prev_SchedPendingArtifactsIndex] == 1) {
-		glBindBuffer(GL_PIXEL_PACK_BUFFER, prev_SavedDepthPbo);
-		saved_depths = (f32 *)glMapBuffer(GL_PIXEL_PACK_BUFFER, GL_READ_ONLY);
+		saved_depths = videoMapPixelbuffer(g_SavedDepthPbo[!g_SchedDepthIndex]);
 	}
 
 	for (i = 0; i < MAX_ARTIFACTS; i++) {
@@ -504,17 +500,12 @@ void schedUpdatePendingArtifacts(void)
 	}
 	if (g_SchedSpecialArtifactIndexes[prev_SchedPendingArtifactsIndex] == 1) {
 		g_SchedSpecialArtifactIndexes[prev_SchedPendingArtifactsIndex] = 0;
-		glBindBuffer(GL_PIXEL_PACK_BUFFER, prev_SavedDepthPbo);
-		glUnmapBuffer(GL_PIXEL_PACK_BUFFER);
+		videoUnmapPixelbuffer(g_SavedDepthPbo[!g_SchedDepthIndex]);
         }
+        videoUnmapPixelbuffer(g_CurrentDepthPbo[!g_SchedDepthIndex]);
+
 	schedIncrementPendingArtifacts();
 	schedIncrementDepthIndex();
-
-	glBindBuffer(GL_PIXEL_PACK_BUFFER, prev_CurrentDepthPbo);
-	glUnmapBuffer(GL_PIXEL_PACK_BUFFER);
-
-	glBindFramebuffer(GL_FRAMEBUFFER, 0);
-	glBindBuffer(GL_PIXEL_PACK_BUFFER, 0);
 }
 
 void schedConsiderScreenshot(void)
