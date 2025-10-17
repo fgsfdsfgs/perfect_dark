@@ -191,11 +191,8 @@ void osCreateScheduler(OSSched *sc, OSThread *thread, u8 mode, u32 numFields)
 	g_PrevFrameFb = videoCreateFramebuffer(0, 0, false, true);
 	for (int i = 0; i < 2; i++) {
 		g_SavedDepthFb[i] = videoCreateFramebuffer(0, 0, false, true);
-		//g_SavedDepthPbo[i] = videoCreatePixelbuffer();
 		g_CurrentDepthFb[i] = videoCreateFramebuffer(0, 0, false, true);
-		//g_CurrentDepthPbo[i] = videoCreatePixelbuffer();
 	}
-        //exit(0);
 	g_BlurFb = videoCreateFramebuffer(0, 0, false, true);
 }
 

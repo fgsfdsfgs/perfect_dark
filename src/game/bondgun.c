@@ -11186,7 +11186,6 @@ void bgunRender(Gfx **gdlptr)
 	gdl = zbufConfigureRdp(gdl);
 	gdl = vi0000b1d0(gdl);
 
-
 	gDPSetScissor(gdl++, G_SC_NON_INTERLACE, viGetViewLeft(), viGetViewTop(),
 			viGetViewLeft() + viGetViewWidth(), viGetViewTop() + viGetViewHeight());
 
