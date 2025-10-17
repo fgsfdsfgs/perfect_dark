@@ -26,7 +26,6 @@
 #include "audio.h"
 #include "input.h"
 #include "mixer.h"
-#include "stdlib.h"
 
 /*
  * private typedefs and defines
