@@ -437,6 +437,7 @@ void schedUpdatePendingArtifacts(void)
 	// Retrieve the GPU depth buffers from the previous frame since
 	// the depth buffers should be available to the CPU now.
 	current_depths = videoMapPixelbuffer(g_CurrentDepthFb[!g_SchedDepthIndex], &width, &height);
+
 	s32 prev_SchedPendingArtifactsIndex = g_SchedPendingArtifactsIndex ? g_SchedPendingArtifactsIndex - 1 : 2;
 	if (g_SchedSpecialArtifactIndexes[prev_SchedPendingArtifactsIndex] == 1) {
 		saved_depths = videoMapPixelbuffer(g_SavedDepthFb[!g_SchedDepthIndex], NULL, NULL);
