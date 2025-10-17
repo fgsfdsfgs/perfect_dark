@@ -513,9 +513,19 @@ void videoShutdown(void)
 	free(vidModes);
 }
 
-void videoReadDepthImage(s32 src, f32 *img)
+f32 *videoMapPixelbuffer(s32 src, u32 *width, u32 *height)
 {
-	gfx_read_depth_image(src, img);
+	return gfx_map_pixelbuffer(src, width, height);
+}
+
+void videoUnmapPixelbuffer(s32 src)
+{
+	gfx_unmap_pixelbuffer(src);
+}
+
+void videoSyncDepth(s32 src)
+{
+	gfx_sync_depth(src);
 }
 
 PD_CONSTRUCTOR static void videoConfigInit(void)

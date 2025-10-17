@@ -52,7 +52,9 @@ struct GfxRenderingAPI {
     void (*delete_texture)(uint32_t texID);
     void (*set_texture_filter)(enum FilteringMode mode);
     enum FilteringMode (*get_texture_filter)(void);
-    void (*read_depth_image)(int fb_src, float *img, bool flip_y);
+    void (*sync_depth)(int fb_src);
+    float* (*map_pixelbuffer)(int fb_src, uint32_t *width, uint32_t *height);
+    void (*unmap_pixelbuffer)(int fb_src);
 };
 
 #endif

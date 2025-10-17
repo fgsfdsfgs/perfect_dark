@@ -2764,7 +2764,14 @@ extern "C" void gfx_reset_framebuffer(void) {
     active_fb = framebuffers.end();
 }
 
-extern "C" void gfx_read_depth_image(int fb_src, float *img) {
-    //const bool is_main_fb = (fb_src == 0);
-    gfx_rapi->read_depth_image(fb_src, img, false); // force flip_y = false since it's too slow for high framerate displays
+extern "C" float *gfx_map_pixelbuffer(int fb_src, uint32_t *width, uint32_t *height) {
+    return gfx_rapi->map_pixelbuffer(fb_src, width, height);
+}
+
+extern "C" void gfx_unmap_pixelbuffer(int fb_src) {
+    gfx_rapi->unmap_pixelbuffer(fb_src);
+}
+
+extern "C" void gfx_sync_depth(int fb_src) {
+    gfx_rapi->sync_depth(fb_src);
 }

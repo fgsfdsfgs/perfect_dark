@@ -82,6 +82,7 @@ u8 g_SchedSpecialArtifactIndexes[3];
 s32 g_SchedWriteArtifactsIndex;
 s32 g_SchedFrontArtifactsIndex;
 s32 g_SchedPendingArtifactsIndex;
+s32 g_SchedDepthIndex = 0;
 
 bool g_SchedCrashedUnexpectedly = false;
 bool g_SchedCrashEnable1 = false;
@@ -104,7 +105,8 @@ OSScMsg g_SchedRspMsg = {OS_SC_RSP_MSG};
 bool g_SchedIsFirstTask = true;
 
 s32 g_PrevFrameFb = -1;
-s32 g_SavedDepthFb = -1;
+s32 g_SavedDepthFb[2] = {-1, -1};
+s32 g_CurrentDepthFb[2] = {-1, -1};
 s32 g_BlurFb = -1;
 s32 g_BlurFbCapTimer = -1;
 bool g_BlurFbDirty = true;
@@ -187,7 +189,10 @@ void osCreateScheduler(OSSched *sc, OSThread *thread, u8 mode, u32 numFields)
 	schedInitArtifacts();
 
 	g_PrevFrameFb = videoCreateFramebuffer(0, 0, false, true);
-	g_SavedDepthFb = videoCreateFramebuffer(0, 0, false, true);
+	for (int i = 0; i < 2; i++) {
+		g_SavedDepthFb[i] = videoCreateFramebuffer(0, 0, false, true);
+		g_CurrentDepthFb[i] = videoCreateFramebuffer(0, 0, false, true);
+	}
 	g_BlurFb = videoCreateFramebuffer(0, 0, false, true);
 }
 
@@ -315,6 +320,11 @@ void schedEndFrame(OSSched *sc)
 	__scUpdateViMode();
 }
 
+void schedIncrementDepthIndex(void)
+{
+	g_SchedDepthIndex = (g_SchedDepthIndex + 1) % 2;
+}
+
 void schedInitArtifacts(void)
 {
 	s32 i;
@@ -392,10 +402,15 @@ void schedResetArtifacts(void)
  * weapon. All other locations on-screen are set to the maximum depth value.
  *
  * The function zbufSaveArtifactDepths() is used to save depth values from
- * the rendered background (walls, floors, props, etc) in the g_SaveDepthFb
- * framebuffer prior to rendering the weapon. These depths are retrieved
- * here and compared against the on-screen depth to determine the actual
- * depth value for each artifact.
+ * the rendered background (walls, floors, props, etc) into the active
+ * g_SaveDepthFb framebuffer prior to rendering the weapon.
+ *
+ * On PC a second, non-active g_SaveDepthFb framebuffer is used to
+ * synchronize depth values in the background of the next frame.
+ * This is done to avoid stalling the render pipeline while transferring
+ * depth values from the GPU to the CPU. The index g_SchedDepthIndex
+ * selects the active framebuffer for the current frame
+ * while !g_SchedDepthIndex corresponds to the previous frame.
  *
  * The values of g_SchedSpecialArtifactIndexes are used to determine if
  * g_SaveDepthFb was populated during the rendering pass. It will be 1
@@ -404,45 +419,46 @@ void schedResetArtifacts(void)
  */
 void schedUpdatePendingArtifacts(void)
 {
-	struct artifact *artifacts = schedGetPendingArtifacts();
+	struct artifact *artifacts = NULL;
 	static f32 *current_depths = NULL;
 	static f32 *saved_depths = NULL;
-	static s32 width = -1, height = -1;
 	s32 i;
+	u32 width, height;
 
-	// Allocate memory for arrays whenever screen dimensions change
-	if ((width != videoGetWidth()) || (height != videoGetHeight())) {
-		width = videoGetWidth();
-		height = videoGetHeight();
+	// Synchronize the GPU depth buffers for this frame into memory
+	// accessible to the CPU. This process is asynchronous and finishes
+	// in the background of the next frame to avoid stalling the pipeline.
+	videoSyncDepth(g_CurrentDepthFb[g_SchedDepthIndex]);
 
-		free(current_depths);
-		free(saved_depths);
-
-		current_depths = (f32 *)malloc(videoGetWidth() * videoGetHeight() * sizeof(f32));
-		saved_depths = (f32 *)malloc(videoGetWidth() * videoGetHeight() * sizeof(f32));
+	if (g_SchedSpecialArtifactIndexes[g_SchedPendingArtifactsIndex] == 1) {
+		videoSyncDepth(g_SavedDepthFb[g_SchedDepthIndex]);
 	}
 
-	// Retrieve current Z depth values rendered on-screen
-	videoReadDepthImage(0, current_depths);
-	// Note: OpenGL on-screen pixels will be flipped around Y-axis relative to N64
+	// Retrieve the GPU depth buffers from the previous frame since
+	// the depth buffers should be available to the CPU now.
+	current_depths = videoMapPixelbuffer(g_CurrentDepthFb[!g_SchedDepthIndex], &width, &height);
+	s32 prev_SchedPendingArtifactsIndex = g_SchedPendingArtifactsIndex ? g_SchedPendingArtifactsIndex - 1 : 2;
+	if (g_SchedSpecialArtifactIndexes[prev_SchedPendingArtifactsIndex] == 1) {
+		saved_depths = videoMapPixelbuffer(g_SavedDepthFb[!g_SchedDepthIndex], NULL, NULL);
+	}
 
-	// Retrieve saved Z depth values when requested.
-	if (g_SchedSpecialArtifactIndexes[g_SchedPendingArtifactsIndex] == 1)
-		videoReadDepthImage(g_SavedDepthFb, saved_depths);
-
+	// Compute N64 integer depth values for light artifacts in
+	// the previous frame using retrieved depth values
+	artifacts = g_ArtifactLists[prev_SchedPendingArtifactsIndex];
 	for (i = 0; i < MAX_ARTIFACTS; i++) {
 
 		struct artifact *artifact = &artifacts[i];
+		u32 pixel = width * artifact->screeny + artifact->screenx;
 
 		if (artifact->type != ARTIFACTTYPE_FREE) {
 
 			// Get the current depth value for this artifact's pixel from the on-screen depth buffer.
 			// This value will be a floating point number from 0 (near plane) to 1 (far plane).
-			f32 current_depth = current_depths[videoGetWidth() * (videoGetHeight() - 1 - artifact->screeny) + artifact->screenx];
+			f32 current_depth = current_depths[pixel];
 
 			// When available, update the current depth using the saved depth
-			if (g_SchedSpecialArtifactIndexes[g_SchedPendingArtifactsIndex] == 1) {
-				f32 saved_depth = saved_depths[videoGetWidth() * artifact->screeny + artifact->screenx];
+			if (g_SchedSpecialArtifactIndexes[prev_SchedPendingArtifactsIndex] == 1) {
+				f32 saved_depth = saved_depths[pixel];
 				if (saved_depth < current_depth)
 					current_depth = saved_depth;
 			}
@@ -451,8 +467,14 @@ void schedUpdatePendingArtifacts(void)
 			artifact->actualdepth = floatToN64Depth(32704.0f * current_depth);
 		}
 	}
-	g_SchedSpecialArtifactIndexes[g_SchedPendingArtifactsIndex] = 0;
+	if (g_SchedSpecialArtifactIndexes[prev_SchedPendingArtifactsIndex] == 1) {
+		g_SchedSpecialArtifactIndexes[prev_SchedPendingArtifactsIndex] = 0;
+		videoUnmapPixelbuffer(g_SavedDepthFb[!g_SchedDepthIndex]);
+	}
+	videoUnmapPixelbuffer(g_CurrentDepthFb[!g_SchedDepthIndex]);
+
 	schedIncrementPendingArtifacts();
+	schedIncrementDepthIndex();
 }
 
 void schedConsiderScreenshot(void)

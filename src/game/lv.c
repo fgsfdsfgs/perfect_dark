@@ -1786,6 +1786,7 @@ Gfx *lvRender(Gfx *gdl)
 	if (videoGetDisplayFPS()) {
 		gdl = lvRenderFPS(gdl);
 	}
+	gDPCopyFramebufferEXT(gdl++, g_CurrentDepthFb[g_SchedDepthIndex], 0, 0, 0, G_ON, 1);
 #endif
 
 #if VERSION < VERSION_NTSC_1_0
