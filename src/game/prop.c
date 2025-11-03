@@ -1040,6 +1040,12 @@ bool shotTestLos(struct coord *gunpos2d, struct coord *gundir2d, struct coord *g
 
 	// Check for BG hits first
 	for (i = 0; rooms[i] != -1; i++) {
+		if (g_Vars.stagenum == 51 && rooms[i] == 100) {
+			// skip BG test during final cutscene of the dataDyne Research
+			// level since the camera clips through the wall, which will
+			// incorrectly remove lights when Dr Carroll first appears.
+			continue;
+		}
 		if (bgTestHitInRoom(&shotdata.gunpos3d, endpos3d, rooms[i], &sp664)) {
 			// check if it's far enough away from the end point
 			if (fabsf(sp664.pos.x - endpos3d->x) >= 0.1f ||
