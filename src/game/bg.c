@@ -136,6 +136,25 @@ s32 g_BgNumRoomLoadCandidates = 0;
 u16 g_BgFrameCount = 0xfffe;
 s32 g_BgNumPortalCameraCacheItems = 0;
 
+#ifndef PLATFORM_N64
+
+void bgAdjustLightPosition(s32 roomnum, s32 lightnum, s16 dx, s16 dy, s16 dz)
+{
+	s32 i;
+	struct light *roomlights;
+
+	bgLoadRoom(roomnum);
+	roomlights = (struct light *)&g_BgLightsFileData[g_Rooms[roomnum].gfxdata->lightsindex * 0x22];
+
+	for (i = 0; i < 4; i++) {
+		roomlights[lightnum].bbox[i].x += dx;
+		roomlights[lightnum].bbox[i].y += dy;
+		roomlights[lightnum].bbox[i].z += dz;
+	}
+}
+
+#endif
+
 void bgUnpausePropsInRoom(u32 roomnum, bool tintedglassonly)
 {
 	struct prop *prop;
@@ -2058,6 +2077,28 @@ void bgBuildTables(s32 stagenum)
 
 #if VERSION < VERSION_NTSC_1_0
 	bgBuildReferenceLightSums();
+#endif
+
+#ifndef PLATFORM_N64
+	switch (stagenum) {
+		case STAGE_INVESTIGATION:
+			bgAdjustLightPosition(21, 0,  0, -1,  0);
+			bgAdjustLightPosition(46, 0,  0, -1,  0);
+			bgAdjustLightPosition(47, 0,  0, -1,  0);
+			bgAdjustLightPosition(52, 0,  0, -1,  0);
+			bgAdjustLightPosition(53, 0,  0, -1,  0);
+			bgAdjustLightPosition(62, 0,  0, -1,  0);
+			bgAdjustLightPosition(71, 0,  0, -1,  0);
+			bgAdjustLightPosition(73, 0,  0, -1,  0);
+			bgAdjustLightPosition(74, 0,  0, -1,  0);
+			bgAdjustLightPosition(75, 0,  0, -1,  0);
+			bgAdjustLightPosition(76, 0,  0, -1,  0);
+			bgAdjustLightPosition(77, 0,  0, -1,  0);
+			bgAdjustLightPosition(98, 0,  0, -1,  0);
+			bgAdjustLightPosition(80, 3, -1,  0, +1);
+		default:
+			break;
+	}
 #endif
 }
 
