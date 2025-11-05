@@ -2095,7 +2095,7 @@ void bgBuildTables(s32 stagenum)
 			bgAdjustLightPosition(76, 0,  0, -1,  0);
 			bgAdjustLightPosition(77, 0,  0, -1,  0);
 			bgAdjustLightPosition(98, 0,  0, -1,  0);
-			bgAdjustLightPosition(80, 3, -1,  0, +1);
+			bgAdjustLightPosition(80, 3, -1,  0,  0);
 		default:
 			break;
 	}
