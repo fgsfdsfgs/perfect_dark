@@ -204,7 +204,7 @@ s32 texInflateZlib(u8 *src, u8 *dst, bool hasloddata, s32 numlods, struct texpoo
 		if (lod == 0) {
 			pool->rightpos->width = width;
 			pool->rightpos->height = height;
-			pool->rightpos->unk0a = numcolours - 1;
+			pool->rightpos->numcolors = numcolours - 1;
 			pool->rightpos->gbiformat = g_TexFormatGbiMappings[format];
 			pool->rightpos->depth = g_TexFormatDepths[format];
 			pool->rightpos->lutmodeindex = g_TexFormatLutModes[format] >> G_MDSFT_TEXTLUT;
@@ -300,6 +300,12 @@ s32 texInflateZlib(u8 *src, u8 *dst, bool hasloddata, s32 numlods, struct texpoo
 		}
 	}
 
+	// make sure the colors start at an even addr
+	if (totalbytesout & 1)
+		totalbytesout++;
+
+	pool->rightpos->tlutoffset = totalbytesout;
+
 	for (i = 0; i < numcolours; i++) {
 		dst[totalbytesout + 0] = palette[i] >> 8;
 		dst[totalbytesout + 1] = palette[i] & 0xff;
@@ -314,7 +320,7 @@ s32 texInflateZlib(u8 *src, u8 *dst, bool hasloddata, s32 numlods, struct texpoo
 		dst[totalbytesout + 0] = dst[totalbytesout - 2];
 		dst[totalbytesout + 1] = dst[totalbytesout - 1];
 		totalbytesout += 2;
-		pool->rightpos->unk0a++;
+		pool->rightpos->numcolors++;
 	}
 
 	totalbytesout = (totalbytesout + 7) & ~7;
@@ -343,15 +349,11 @@ s32 texAlignIndices(u8 *src, s32 width, s32 height, s32 format, u8 *dst)
 
 	for (y = 0; y < height; y++) {
 		for (x = 0; x < width; x += indicesperbyte) {
-			*outptr = *src;
-			outptr++;
-			src++;
+			*outptr++ = *src++;
 		}
-
-		outptr = (u8 *)(((uintptr_t)outptr + 7) & ~7);
 	}
 
-	return outptr - dst;
+	return ALIGN(width, 2) * height / indicesperbyte;
 }
 
 s32 texGetAverageRed(u16 colour1, u16 colour2, u16 colour3, u16 colour4)
@@ -451,8 +453,7 @@ s32 texShrinkPaletted(u8 *src, u8 *dst, s32 srcwidth, s32 srcheight, s32 format,
 {
 	s32 j;
 	s32 i;
-	s32 alignedsrcwidth;
-	s32 aligneddstwidth;
+	s32 newdstwidth;
 	s32 dstheight = (srcheight + 1) >> 1;
 	u16 colour1;
 	u16 colour2;
@@ -472,13 +473,11 @@ s32 texShrinkPaletted(u8 *src, u8 *dst, s32 srcwidth, s32 srcheight, s32 format,
 	switch (format) {
 	case TEXFORMAT_RGBA16_CI8:
 	case TEXFORMAT_IA16_CI8:
-		aligneddstwidth = (((srcwidth + 1) >> 1) + 7) & 0xff8;
-		alignedsrcwidth = (srcwidth + 7) & 0xff8;
+		newdstwidth = (srcwidth + 1) >> 1;
 		break;
 	case TEXFORMAT_RGBA16_CI4:
 	case TEXFORMAT_IA16_CI4:
-		aligneddstwidth = (((srcwidth + 1) >> 1) + 15) & 0xff0;
-		alignedsrcwidth = (srcwidth + 15) & 0xff0;
+		newdstwidth = (srcwidth + 1) >> 1;
 		break;
 	}
 
@@ -499,9 +498,9 @@ s32 texShrinkPaletted(u8 *src, u8 *dst, s32 srcwidth, s32 srcheight, s32 format,
 	switch (format) {
 	case TEXFORMAT_RGBA16_CI8:
 		for (i = 0; i < srcheight; i += 2) {
-			nextrow = i + 1 < srcheight ? alignedsrcwidth : 0;
+			nextrow = i + 1 < srcheight ? srcwidth : 0;
 
-			for (j = 0; j < alignedsrcwidth; j += 2) {
+			for (j = 0; j < srcwidth; j += 2) {
 				nextcol = j + 1 < srcwidth ? j + 1 : j;
 
 				colour1 = palette[src8[j]];
@@ -517,16 +516,16 @@ s32 texShrinkPaletted(u8 *src, u8 *dst, s32 srcwidth, s32 srcheight, s32 format,
 				dst8[j >> 1] = texFindClosestColourIndexRGBA(palette32, numcolours, r, g, b, a);
 			}
 
-			dst8 += aligneddstwidth;
-			src8 += alignedsrcwidth * 2;
+			dst8 += newdstwidth;
+			src8 += srcwidth * 2;
 		}
 
-		return dstheight * aligneddstwidth;
+		return dstheight * newdstwidth;
 	case TEXFORMAT_IA16_CI8:
 		for (i = 0; i < srcheight; i += 2) {
-			nextrow = i + 1 < srcheight ? alignedsrcwidth : 0;
+			nextrow = i + 1 < srcheight ? srcwidth : 0;
 
-			for (j = 0; j < alignedsrcwidth; j += 2) {
+			for (j = 0; j < srcwidth; j += 2) {
 				nextcol = j + 1 < srcwidth ? j + 1 : j;
 
 				colour1 = palette[src8[j]];
@@ -540,16 +539,16 @@ s32 texShrinkPaletted(u8 *src, u8 *dst, s32 srcwidth, s32 srcheight, s32 format,
 				dst8[j >> 1] = texFindClosestColourIndexIA(palette, numcolours, c, a);
 			}
 
-			dst8 += aligneddstwidth;
-			src8 += alignedsrcwidth * 2;
+			dst8 += newdstwidth;
+			src8 += srcwidth * 2;
 		}
 
-		return dstheight * aligneddstwidth;
+		return dstheight * newdstwidth;
 	case TEXFORMAT_RGBA16_CI4:
 		for (i = 0; i < srcheight; i += 2) {
-			nextrow = i + 1 < srcheight ? alignedsrcwidth >> 1 : 0;
+			nextrow = i + 1 < srcheight ? srcwidth >> 1 : 0;
 
-			for (j = 0; j < alignedsrcwidth; j += 4) {
+			for (j = 0; j < srcwidth; j += 4) {
 				colour1 = palette[(src8[j >> 1] >> 4) & 0xf];
 				colour2 = palette[src8[j >> 1] >> ((j + 1 < srcwidth ? 0 : 4)) & 0xf];
 				colour3 = palette[(src8[nextrow + (j >> 1)] >> 4) & 0xf];
@@ -575,24 +574,20 @@ s32 texShrinkPaletted(u8 *src, u8 *dst, s32 srcwidth, s32 srcheight, s32 format,
 				dst8[j >> 2] |= texFindClosestColourIndexRGBA(palette32, numcolours, r, g, b, a) & 0xff;
 			}
 
-			dst8 += aligneddstwidth >> 1;
-			src8 += alignedsrcwidth;
+			dst8 += newdstwidth >> 1;
+			src8 += srcwidth;
 		}
 
-		return (aligneddstwidth >> 1) * dstheight;
+		return (newdstwidth >> 1) * dstheight;
 	case TEXFORMAT_IA16_CI4:
 		for (i = 0; i < srcheight; i += 2) {
-			nextrow = i + 1 < srcheight ? alignedsrcwidth >> 1 : 0;
+			nextrow = i + 1 < srcheight ? srcwidth >> 1 : 0;
 
-			for (j = 0; j < alignedsrcwidth; j += 4) {
-				// @bug: The brackets are wrong in colour2 and colour4 which
-				// causes the index shift to be part of the ternary condition.
-				// It's done correctly in TEXFORMAT_RGBA16_CI4 (above).
-				// This buggy calculation is repeated further below.
+			for (j = 0; j < srcwidth; j += 4) {
 				colour1 = palette[(src8[j >> 1] >> 4) & 0xf];
-				colour2 = palette[(src8[j >> 1] >> (j + 1 < srcwidth) ? 0 : 4) & 0xf];
+				colour2 = palette[src8[j >> 1] >> ((j + 1 < srcwidth) ? 0 : 4) & 0xf];
 				colour3 = palette[(src8[nextrow + (j >> 1)] >> 4) & 0xf];
-				colour4 = palette[(src8[nextrow + (j >> 1)] >> (j + 1 < srcwidth) ? 0 : 4) & 0xf];
+				colour4 = palette[src8[nextrow + (j >> 1)] >> ((j + 1 < srcwidth) ? 0 : 4) & 0xf];
 
 				c = ((((colour1 >> 8) & 0xff) + ((colour2 >> 8) & 0xff) + ((colour3 >> 8) & 0xff) + ((colour4 >> 8) & 0xff)) >> 2) & 0xff;
 				a = ((((colour1 >> 0) & 0xff) + ((colour2 >> 0) & 0xff) + ((colour3 >> 0) & 0xff) + ((colour4 >> 0) & 0xff) + 1) >> 2) & 0xff;
@@ -600,9 +595,9 @@ s32 texShrinkPaletted(u8 *src, u8 *dst, s32 srcwidth, s32 srcheight, s32 format,
 				dst8[j >> 2] = texFindClosestColourIndexIA(palette, numcolours, c, a) << 4;
 
 				colour1 = palette[(src8[(j + 2) >> 1] >> 4) & 0xf];
-				colour2 = palette[(src8[(j + 2) >> 1] >> (j + 3 < srcwidth) ? 0 : 4) & 0xf];
+				colour2 = palette[(src8[(j + 2) >> 1] >> (j + 3 < srcwidth ? 0 : 4)) & 0xf];
 				colour3 = palette[(src8[nextrow + ((j + 2) >> 1)] >> 4) & 0xf];
-				colour4 = palette[(src8[nextrow + ((j + 2) >> 1)] >> (j + 3 < srcwidth) ? 0 : 4) & 0xf];
+				colour4 = palette[(src8[nextrow + ((j + 2) >> 1)] >> (j + 3 < srcwidth ? 0 : 4)) & 0xf];
 
 				c = ((((colour1 >> 8) & 0xff) + ((colour2 >> 8) & 0xff) + ((colour3 >> 8) & 0xff) + ((colour4 >> 8) & 0xff)) >> 2) & 0xff;
 				a = ((((colour1 >> 0) & 0xff) + ((colour2 >> 0) & 0xff) + ((colour3 >> 0) & 0xff) + ((colour4 >> 0) & 0xff) + 1) >> 2) & 0xff;
@@ -610,11 +605,11 @@ s32 texShrinkPaletted(u8 *src, u8 *dst, s32 srcwidth, s32 srcheight, s32 format,
 				dst8[j >> 2] |= texFindClosestColourIndexIA(palette, numcolours, c, a) & 0xff;
 			}
 
-			dst8 += aligneddstwidth >> 1;
-			src8 += alignedsrcwidth;
+			dst8 += newdstwidth >> 1;
+			src8 += srcwidth;
 		}
 
-		return (aligneddstwidth >> 1) * dstheight;
+		return (newdstwidth >> 1) * dstheight;
 	}
 
 	return 0;
@@ -817,7 +812,6 @@ s32 texInflateNonZlib(u8 *src, u8 *dst, bool hasloddata, s32 numlods, struct tex
 			texSwizzle(&dst[totalbytesout], width, height, format);
 		}
 
-		imagebytesout = (imagebytesout + 7) & ~7;
 		totalbytesout += imagebytesout;
 
 		if (g_TexAccumNumBits == 0) {
@@ -1567,10 +1561,10 @@ s32 texChannelsToPixels(u8 *src, s32 width, s32 height, u8 *dst, s32 format)
 				pos++;
 			}
 
-			dst32 += (width + 3) & 0xffc;
+			dst32 += width;
 		}
 
-		return ((width + 3) & 0xffc) * height * 4;
+		return width * height * 4;
 	case TEXFORMAT_RGB24:
 		for (y = 0; y < height; y++) {
 			for (x = 0; x < width; x++) {
@@ -1578,10 +1572,10 @@ s32 texChannelsToPixels(u8 *src, s32 width, s32 height, u8 *dst, s32 format)
 				pos++;
 			}
 
-			dst32 += (width + 3) & 0xffc;
+			dst32 += width;
 		}
 
-		return ((width + 3) & 0xffc) * height * 4;
+		return width * height * 4;
 	case TEXFORMAT_RGBA16:
 		for (y = 0; y < height; y++) {
 			for (x = 0; x < width; x++) {
@@ -1589,10 +1583,10 @@ s32 texChannelsToPixels(u8 *src, s32 width, s32 height, u8 *dst, s32 format)
 				pos++;
 			}
 
-			dst16 += (width + 3) & 0xffc;
+			dst16 += width;
 		}
 
-		return ((width + 3) & 0xffc) * height * 2;
+		return width * height * 2;
 	case TEXFORMAT_IA16:
 		for (y = 0; y < height; y++) {
 			for (x = 0; x < width; x++) {
@@ -1600,10 +1594,10 @@ s32 texChannelsToPixels(u8 *src, s32 width, s32 height, u8 *dst, s32 format)
 				pos++;
 			}
 
-			dst16 += (width + 3) & 0xffc;
+			dst16 += width;
 		}
 
-		return ((width + 3) & 0xffc) * height * 2;
+		return width * height * 2;
 	case TEXFORMAT_RGB15:
 		for (y = 0; y < height; y++) {
 			for (x = 0; x < width; x++) {
@@ -1611,10 +1605,10 @@ s32 texChannelsToPixels(u8 *src, s32 width, s32 height, u8 *dst, s32 format)
 				pos++;
 			}
 
-			dst16 += (width + 3) & 0xffc;
+			dst16 += width;
 		}
 
-		return ((width + 3) & 0xffc) * height * 2;
+		return width * height * 2;
 	case TEXFORMAT_IA8:
 		for (y = 0; y < height; y++) {
 			if ((width + 7) & 0xff8);
@@ -1624,10 +1618,10 @@ s32 texChannelsToPixels(u8 *src, s32 width, s32 height, u8 *dst, s32 format)
 				pos++;
 			}
 
-			dst8 += (width + 7) & 0xff8;
+			dst8 += width;
 		}
 
-		return ((width + 7) & 0xff8) * height;
+		return width * height;
 	case TEXFORMAT_I8:
 		for (y = 0; y < height; y++) {
 			for (x = 0; x < width; x++) {
@@ -1635,10 +1629,10 @@ s32 texChannelsToPixels(u8 *src, s32 width, s32 height, u8 *dst, s32 format)
 				pos++;
 			}
 
-			dst8 += (width + 7) & 0xff8;
+			dst8 += width;
 		}
 
-		return ((width + 7) & 0xff8) * height;
+		return width * height;
 	case TEXFORMAT_IA4:
 		for (y = 0; y < height; y++) {
 			if ((width + 15) & 0xff0);
@@ -1652,10 +1646,10 @@ s32 texChannelsToPixels(u8 *src, s32 width, s32 height, u8 *dst, s32 format)
 				pos--;
 			}
 
-			dst8 += (width + 15) & 0xff0;
+			dst8 += width;
 		}
 
-		return (((width + 15) & 0xff0) >> 1) * height;
+		return width * height / 2;
 	case TEXFORMAT_I4:
 		for (y = 0; y < height; y++) {
 			for (x = 0; x < width; x += 2) {
@@ -1667,10 +1661,10 @@ s32 texChannelsToPixels(u8 *src, s32 width, s32 height, u8 *dst, s32 format)
 				pos--;
 			}
 
-			dst8 += ((width + 15) & 0xff0) >> 1;
+			dst8 += width / 2;
 		}
 
-		return (((width + 15) & 0xff0) >> 1) * height;
+		return width * height / 2;
 	}
 
 	return 0;
@@ -1709,20 +1703,20 @@ s32 texInflateLookup(s32 width, s32 height, u8 *dst, u8 *lookup, s32 numcolours,
 				dst32[x] = lookup32[texReadBits(bitspercolour)];
 			}
 
-			dst32 += (width + 3) & 0xffc;
+			dst32 += width;
 		}
 
-		return ((width + 3) & 0xffc) * height * 4;
+		return width * height * 4;
 	case TEXFORMAT_RGB24:
 		for (y = 0; y < height; y++) {
 			for (x = 0; x < width; x++) {
 				dst32[x] = lookup32[texReadBits(bitspercolour)] << 8;
 			}
 
-			dst32 += (width + 3) & 0xffc;
+			dst32 += width;
 		}
 
-		return ((width + 3) & 0xffc) * height * 4;
+		return width * height * 4;
 	case TEXFORMAT_RGBA16:
 	case TEXFORMAT_IA16:
 		for (y = 0; y < height; y++) {
@@ -1730,20 +1724,20 @@ s32 texInflateLookup(s32 width, s32 height, u8 *dst, u8 *lookup, s32 numcolours,
 				dst16[x] = lookup16[texReadBits(bitspercolour)];
 			}
 
-			dst16 += (width + 3) & 0xffc;
+			dst16 += width;
 		}
 
-		return ((width + 3) & 0xffc) * height * 2;
+		return width * height * 2;
 	case TEXFORMAT_RGB15:
 		for (y = 0; y < height; y++) {
 			for (x = 0; x < width; x++) {
 				dst16[x] = lookup16[texReadBits(bitspercolour)] << 1 | 1;
 			}
 
-			dst16 += (width + 3) & 0xffc;
+			dst16 += width;
 		}
 
-		return ((width + 3) & 0xffc) * height * 2;
+		return width * height * 2;
 	case TEXFORMAT_IA8:
 	case TEXFORMAT_I8:
 		for (y = 0; y < height; y++) {
@@ -1751,10 +1745,10 @@ s32 texInflateLookup(s32 width, s32 height, u8 *dst, u8 *lookup, s32 numcolours,
 				dst8[x] = lookup16[texReadBits(bitspercolour)];
 			}
 
-			dst8 += (width + 7) & 0xff8;
+			dst8 += width;
 		}
 
-		return ((width + 7) & 0xff8) * height;
+		return width * height;
 	case TEXFORMAT_IA4:
 	case TEXFORMAT_I4:
 		for (y = 0; y < height; y++) {
@@ -1766,10 +1760,10 @@ s32 texInflateLookup(s32 width, s32 height, u8 *dst, u8 *lookup, s32 numcolours,
 				}
 			}
 
-			dst8 += ((width + 15) & 0xff0) >> 1;
+			dst8 += width / 2;
 		}
 
-		return (((width + 15) & 0xff0) >> 1) * height;
+		return width * height / 2;
 	}
 
 	return 0;
@@ -1813,12 +1807,12 @@ s32 texInflateLookupFromBuffer(u8 *src, s32 width, s32 height, u8 *dst, u8 *look
 				}
 			}
 
-			dst32 += (width + 3) & 0xffc;
+			dst32 += width;
 			src8 += width;
 			src16 += width;
 		}
 
-		return ((width + 3) & 0xffc) * height * 4;
+		return width * height * 4;
 	case TEXFORMAT_RGB24:
 		for (y = 0; y < height; y++) {
 			for (x = 0; x < width; x++) {
@@ -1829,12 +1823,12 @@ s32 texInflateLookupFromBuffer(u8 *src, s32 width, s32 height, u8 *dst, u8 *look
 				}
 			}
 
-			dst32 += (width + 3) & 0xffc;
+			dst32 += width;
 			src8 += width;
 			src16 += width;
 		}
 
-		return ((width + 3) & 0xffc) * height * 4;
+		return width * height * 4;
 	case TEXFORMAT_RGBA16:
 	case TEXFORMAT_IA16:
 		for (y = 0; y < height; y++) {
@@ -1846,12 +1840,12 @@ s32 texInflateLookupFromBuffer(u8 *src, s32 width, s32 height, u8 *dst, u8 *look
 				}
 			}
 
-			dst16 += (width + 3) & 0xffc;
+			dst16 += width;
 			src8 += width;
 			src16 += width;
 		}
 
-		return ((width + 3) & 0xffc) * height * 2;
+		return width * height * 2;
 	case TEXFORMAT_RGB15:
 		for (y = 0; y < height; y++) {
 			for (x = 0; x < width; x++) {
@@ -1862,17 +1856,15 @@ s32 texInflateLookupFromBuffer(u8 *src, s32 width, s32 height, u8 *dst, u8 *look
 				}
 			}
 
-			dst16 += (width + 3) & 0xffc;
+			dst16 += width;
 			src8 += width;
 			src16 += width;
 		}
 
-		return ((width + 3) & 0xffc) * height * 2;
+		return width * height * 2;
 	case TEXFORMAT_IA8:
 	case TEXFORMAT_I8:
 		for (y = 0; y < height; y++) {
-			if ((width + 7) & 0xff8);
-
 			for (x = 0; x < width; x++) {
 				if (numcolours <= 256) {
 					dst8[x] = lookup16[src8[x]];
@@ -1881,12 +1873,12 @@ s32 texInflateLookupFromBuffer(u8 *src, s32 width, s32 height, u8 *dst, u8 *look
 				}
 			}
 
-			dst8 += (width + 7) & 0xff8;
+			dst8 += width;
 			src8 += width;
 			src16 += width;
 		}
 
-		return ((width + 7) & 0xff8) * height;
+		return width * height;
 	case TEXFORMAT_IA4:
 	case TEXFORMAT_I4:
 		for (y = 0; y < height; y++) {
@@ -1898,12 +1890,12 @@ s32 texInflateLookupFromBuffer(u8 *src, s32 width, s32 height, u8 *dst, u8 *look
 				}
 			}
 
-			dst8 += ((width + 15) & 0xff0) >> 1;
+			dst8 += width / 2;
 			src8 += width;
 			src16 += width;
 		}
 
-		return (((width + 15) & 0xff0) >> 1) * height;
+		return width * height / 2;
 	}
 
 	return 0;

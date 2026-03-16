@@ -6041,7 +6041,7 @@ struct tex {
 	/*0x04*/ u8 *data;
 	/*0x08*/ u8 width;
 	/*0x09*/ u8 height;
-	/*0x0a*/ u8 unk0a;
+	/*0x0a*/ u8 numcolors;
 	/*0x0b*/ u8 numlods : 3;
 	/*0x0b*/ u8 gbiformat : 3;
 	/*0x0b*/ u8 depth : 2;
@@ -6052,6 +6052,7 @@ struct tex {
 	/*0x0c*/ u32 next : 24;
 #else
 	/*0x0c*/ uintptr_t next;
+	         u16 tlutoffset;
 #endif
 };
 

@@ -498,6 +498,8 @@ Gfx *texWriteLoadToTmemAddr(Gfx *gdl, struct tex *tex, s32 tmemoffset)
 
 	texGetDepthAndSize(tex, &depth, &len);
 
+	gDPSetTextureInfoEXT(gdl++, G_TEXTYPE_GENERAL, 0, tex->texturenum, 0);
+
 	if (tex->lutmodeindex == 0) {
 		gDPSetTextureImage(gdl++, tex->gbiformat, depth, 1, tex->data);
 
@@ -541,15 +543,8 @@ Gfx *texWriteLoadToTmemAddr(Gfx *gdl, struct tex *tex, s32 tmemoffset)
 			gDPLoadBlock(gdl++, 5, 0, 0, len - 1, 0);
 		}
 
-		{
-			s32 tmp = len;
-			s32 a2 = (u32)(0x3ff - tex->unk0a) < len ? (u32)(0x3ff - tex->unk0a) : 0;
-
-			tmp -= a2;
-
-			gDPLoadSync(gdl++);
-			gDPLoadTLUT06(gdl++, tmp, a2, tex->unk0a + tmp, a2);
-		}
+		gDPLoadSync(gdl++);
+		gDPLoadTLUT07(gdl++, tex->tlutoffset, tex->numcolors + 1);
 	}
 
 	return gdl;
@@ -601,66 +596,6 @@ Gfx *texWriteTileLods(Gfx *gdl, struct tex *tex, s32 smode, s32 tmode, s32 offse
 		}
 
 		tmemoffset += bytes;
-	}
-
-	return gdl;
-}
-
-Gfx *texWriteLoadToTmemZero(Gfx *gdl, struct tex *tex)
-{
-	s32 depth;
-	s32 len;
-
-	texGetDepthAndSize(tex, &depth, &len);
-
-	if (tex->lutmodeindex == 0) {
-		gDPSetTextureImage(gdl++, tex->gbiformat, depth, 1, tex->data);
-
-		if (!g_TexPipeSynced) {
-			gDPPipeSync(gdl++);
-			g_TexPipeSynced = true;
-		}
-
-		if (depth == G_IM_SIZ_16b) {
-			gDPLoadSync(gdl++);
-			gDPLoadBlock(gdl++, G_TX_LOADTILE, 0, 0, len - 1, 0);
-		} else {
-			if (texTrySetTileState(5, 0, depth, 0, 0, 0, 0, 0, 0, 0, 0)) {
-				gDPSetTile(gdl++, G_IM_FMT_RGBA, depth, 0, 0x0000, 5, 0, G_TX_NOMIRROR | G_TX_WRAP, G_TX_NOMASK, G_TX_NOLOD, G_TX_NOMIRROR | G_TX_WRAP, G_TX_NOMASK, G_TX_NOLOD);
-			}
-
-			gDPLoadSync(gdl++);
-			gDPLoadBlock(gdl++, 5, 0, 0, len - 1, 0);
-		}
-	} else {
-		gDPSetTextureImage(gdl++, tex->gbiformat, depth, 1, tex->data);
-
-		if (!g_TexPipeSynced) {
-			gDPPipeSync(gdl++);
-			g_TexPipeSynced = true;
-		}
-
-		if (depth == G_IM_SIZ_16b) {
-			gDPLoadSync(gdl++);
-			gDPLoadBlock(gdl++, G_TX_LOADTILE, 0, 0, len - 1, 0);
-		} else {
-			if (texTrySetTileState(5, 0, depth, 0, 0, 0, 0, 0, 0, 0, 0)) {
-				gDPSetTile(gdl++, G_IM_FMT_RGBA, depth, 0, 0x0000, 5, 0, G_TX_NOMIRROR | G_TX_WRAP, G_TX_NOMASK, G_TX_NOLOD, G_TX_NOMIRROR | G_TX_WRAP, G_TX_NOMASK, G_TX_NOLOD);
-			}
-
-			gDPLoadSync(gdl++);
-			gDPLoadBlock(gdl++, 5, 0, 0, len - 1, 0);
-		}
-
-		{
-			s32 tmp = len;
-			s32 a2 = (u32)(0x3ff - tex->unk0a) < len ? (u32)(0x3ff - tex->unk0a) : 0;
-
-			tmp -= a2;
-
-			gDPLoadSync(gdl++);
-			gDPLoadTLUT06(gdl++, tmp, a2, tex->unk0a + tmp, a2);
-		}
 	}
 
 	return gdl;
@@ -734,7 +669,7 @@ Gfx *texHandleType1(Gfx *gdl, struct tex *tex1, s32 smode, s32 tmode, s32 offset
 	s32 size = texGetSizeInBytes(tex2, 0);
 	s32 tile = 0;
 
-	gdl = texWriteLoadToTmemZero(gdl, tex2);
+	gdl = texWriteLoadToTmemAddr(gdl, tex2, 0);
 	gDPTileSync(gdl++);
 	gdl = texWriteLoadToTmemAddr(gdl, tex1, size);
 
@@ -790,7 +725,7 @@ Gfx *texHandleType0(Gfx *gdl, struct tex *tex, s32 smode, s32 tmode, s32 offset,
 
 Gfx *texHandleType4(Gfx *gdl, struct tex *tex, s32 smode, s32 tmode, s32 offset)
 {
-	gdl = texWriteLoadToTmemZero(gdl, tex);
+	gdl = texWriteLoadToTmemAddr(gdl, tex, 0);
 	gdl = texWriteTile(gdl, tex, smode, tmode, offset, 0);
 
 	gDPPipeSync(gdl++);
@@ -801,7 +736,7 @@ Gfx *texHandleType4(Gfx *gdl, struct tex *tex, s32 smode, s32 tmode, s32 offset)
 
 Gfx *texHandleType3(Gfx *gdl, struct tex *tex, s32 smode, s32 tmode, s32 offset)
 {
-	gdl = texWriteLoadToTmemZero(gdl, tex);
+	gdl = texWriteLoadToTmemAddr(gdl, tex, 0);
 	gdl = texWriteTile(gdl, tex, smode, tmode, offset, 0);
 	gdl = texWriteTile(gdl, tex, smode, tmode, offset, 1);
 

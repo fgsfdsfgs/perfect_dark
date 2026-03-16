@@ -1,6 +1,7 @@
 #include <ultra64.h>
 #include "data.h"
 #include "textureconfig.h"
+#include "gbiex.h"
 #include "types.h"
 
 Gfx g_TcGdl1[] = {
@@ -11,6 +12,7 @@ Gfx g_TcGdl1[] = {
 	gsDPSetCombineMode(G_CC_MODULATEIA, G_CC_MODULATEIA),
 	gsSPTexture(0xffff, 0xffff, 0, G_TX_RENDERTILE, G_ON),
 	gsDPSetTextureLUT(G_TT_NONE),
+	gsDPSetTextureInfoEXT(G_TEXTYPE_GENERAL, 0, 0x002a, 0),
 	gsDPSetTextureImage(G_IM_FMT_IA, G_IM_SIZ_16b, 1, 0xabcd002a),
 	gsDPLoadSync(),
 	gsDPLoadBlock(G_TX_LOADTILE, 0, 0, 1567, 0),
@@ -30,9 +32,9 @@ Gfx g_TcGdl2[] = {
 	gsDPSetTextureLUT(G_TT_NONE),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 0, 0x0188, 5, 0, G_TX_NOMIRROR | G_TX_WRAP, G_TX_NOMASK, G_TX_NOLOD, G_TX_NOMIRROR | G_TX_WRAP, G_TX_NOMASK, G_TX_NOLOD),
 	gsDPSetTile(G_IM_FMT_IA, G_IM_SIZ_8b, 7, 0x0000, G_TX_RENDERTILE, 0, G_TX_NOMIRROR | G_TX_CLAMP, 6, G_TX_NOLOD, G_TX_NOMIRROR | G_TX_CLAMP, 6, G_TX_NOLOD),
-	gsDPSetTileSize(G_TX_RENDERTILE, 0, 0, 0x00dc, 0x00dc),
+	gsDPSetTileSize(G_TX_RENDERTILE, 0, 0, 220, 220),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 4, 0x0188, 1, 0, G_TX_NOMIRROR | G_TX_CLAMP, 4, 2, G_TX_NOMIRROR | G_TX_CLAMP, 4, 2),
-	gsDPSetTileSize(1, 0, 0, 0x00dc, 0x00dc),
+	gsDPSetTileSize(1, 0, 0, 55, 55),
 	gsSPEndDisplayList(),
 };
 
@@ -43,6 +45,7 @@ Gfx g_TcGdl3[] = {
 	gsDPSetTextureLOD(G_TL_TILE),
 	gsDPSetCombineMode(G_CC_MODULATEIA, G_CC_MODULATEIA),
 	gsSPTexture(0xffff, 0xffff, 0, G_TX_RENDERTILE, G_ON),
+	gsDPSetTextureInfoEXT(G_TEXTYPE_GENERAL, 0, 0x0002, 0),
 	gsDPSetTextureImage(G_IM_FMT_IA, G_IM_SIZ_16b, 1, 0xabcd0002),
 	gsDPLoadSync(),
 	gsDPLoadBlock(G_TX_LOADTILE, 0, 0, 511, 0),

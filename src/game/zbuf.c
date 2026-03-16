@@ -232,6 +232,7 @@ Gfx *zbufSaveArtifactDepths(Gfx *gdl)
 			zbufrow = &zbuf[artifacts[i].screeny * viGetWidth()];
 
 			gDPPipeSync(gdl++);
+			gDPSetTextureInfoEXT(gdl++, G_TEXTYPE_NONE, 0, 0, 0);
 			gDPSetTextureImage(gdl++, G_IM_FMT_RGBA, G_IM_SIZ_16b, SCREEN_320, zbufrow);
 			gDPLoadSync(gdl++);
 			gDPLoadBlock(gdl++, 5, 0, 0, viGetWidth() - 1, 0);

@@ -14,6 +14,7 @@
 #include "data.h"
 #include "types.h"
 #include "platform.h"
+#include "ext_tex.h"
 
 #define SPACE_WIDTH 5
 
@@ -1412,7 +1413,6 @@ Gfx *text0f154f38(Gfx *gdl, s32 *arg1, struct fontchar *curchar, struct fontchar
 	}
 #endif
 
-	gDPSetTextureImage(gdl++, G_IM_FMT_CI, G_IM_SIZ_16b, 1, curchar->pixeldata);
 	gDPLoadSync(gdl++);
 	gDPLoadBlock(gdl++, G_TX_LOADTILE, 0, 0, ((curchar->height * 8 + 17) >> 1) - 1, 2048);
 	gDPPipeSync(gdl++);
@@ -1578,6 +1578,8 @@ Gfx *text0f1552d4(Gfx *gdl, f32 x, f32 y, f32 widthscale, f32 heightscale,
 					relx = 0;
 				}
 			} else if (*text < 0x80) {
+				u8 fontID = extTexFontID(font);
+				gDPSetTextureInfoEXT(gdl++, G_TEXTYPE_FONT, fontID, *text - 0x21, 0);
 				gdl = text0f154f38(gdl, &relx, &chars[*text - 0x21], &chars[prevchar - 0x21], font,
 						widthscale, heightscale, fx, fy);
 				prevchar = *text;
@@ -2079,6 +2081,8 @@ Gfx *textRenderProjected(Gfx *gdl, s32 *x, s32 *y, char *text, struct fontchar *
 
 				*x = savedx;
 			} else if (*text < 0x80) {
+				u8 fontID = extTexFontID(font);
+				gDPSetTextureInfoEXT(gdl++, G_TEXTYPE_FONT, fontID, *text - 0x21, 0);
 				gdl = text0f15568c(gdl, x, y, &chars[*text - 0x21], &chars[prevchar - 0x21], font, savedx, savedy, width, height, arg9);
 				prevchar = *text;
 				text++;
@@ -2337,6 +2341,8 @@ Gfx *textRender(Gfx *gdl, s32 *x, s32 *y, char *text,
 			prevchar = 'H';
 			text++;
 		} else if (*text < 0x80) {
+			u8 fontID = extTexFontID(font);
+			gDPSetTextureInfoEXT(gdl++, G_TEXTYPE_FONT, fontID, *text - 0x21, MASK_FONT_OUTLINE);
 			gdl = textRenderChar(gdl, x, y, &chars[*text - 0x21], &chars[prevchar - 0x21],
 					font, savedx, savedy, width * var8007fad0, height, arg10);
 			prevchar = *text;
@@ -2357,6 +2363,8 @@ Gfx *textRender(Gfx *gdl, s32 *x, s32 *y, char *text,
 			sp74.index = codepoint + 0x80;
 			sp74.pixeldata = (void *)langGetJpnCharPixels(codepoint);
 
+			u8 fontID = extTexFontID(font);
+			gDPSetTextureInfoEXT(gdl++, G_TEXTYPE_FONT, fontID, *text - 0x21, MASK_FONT_OUTLINE);
 			gdl = textRenderChar(gdl, x, y, &sp74, &sp74, font, savedx, savedy, width * var8007fad0, height, arg10);
 
 			text += 2;

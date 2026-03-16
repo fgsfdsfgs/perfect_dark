@@ -36,6 +36,7 @@ enum virtkey {
 	VK_COMMA = 54,
 	VK_PERIOD = 55,
 	VK_F1 = 58,
+	VK_F2 = 59,
 	VK_F9 = 66,
 	VK_DELETE = 76,
 	VK_LCTRL = 224,

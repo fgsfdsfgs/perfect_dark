@@ -266,13 +266,6 @@ static struct ShaderProgram* gfx_opengl_create_and_load_new_shader(uint64_t shad
             vs_len += sprintf(vs_buf + vs_len, "INPUT vec2 aTexCoord%d;\n", i);
             vs_len += sprintf(vs_buf + vs_len, "OUTPUT vec2 vTexCoord%d;\n", i);
             num_floats += 2;
-            for (int j = 0; j < 2; j++) {
-                if (cc_features.clamp[i][j]) {
-                    vs_len += sprintf(vs_buf + vs_len, "INPUT float aTexClamp%s%d;\n", j == 0 ? "S" : "T", i);
-                    vs_len += sprintf(vs_buf + vs_len, "OUTPUT float vTexClamp%s%d;\n", j == 0 ? "S" : "T", i);
-                    num_floats += 1;
-                }
-            }
         }
     }
     if (cc_features.opt_fog) {
@@ -297,12 +290,6 @@ static struct ShaderProgram* gfx_opengl_create_and_load_new_shader(uint64_t shad
     for (int i = 0; i < 2; i++) {
         if (cc_features.used_textures[i]) {
             vs_len += sprintf(vs_buf + vs_len, "    vTexCoord%d = aTexCoord%d;\n", i, i);
-            for (int j = 0; j < 2; j++) {
-                if (cc_features.clamp[i][j]) {
-                    vs_len += sprintf(vs_buf + vs_len, "    vTexClamp%s%d = aTexClamp%s%d;\n", j == 0 ? "S" : "T", i,
-                                      j == 0 ? "S" : "T", i);
-                }
-            }
         }
     }
     if (cc_features.opt_fog) {
@@ -350,11 +337,6 @@ static struct ShaderProgram* gfx_opengl_create_and_load_new_shader(uint64_t shad
     for (int i = 0; i < 2; i++) {
         if (cc_features.used_textures[i]) {
             fs_len += sprintf(fs_buf + fs_len, "INPUT vec2 vTexCoord%d;\n", i);
-            for (int j = 0; j < 2; j++) {
-                if (cc_features.clamp[i][j]) {
-                    fs_len += sprintf(fs_buf + fs_len, "INPUT float vTexClamp%s%d;\n", j == 0 ? "S" : "T", i);
-                }
-            }
         }
     }
     if (cc_features.opt_fog) {
@@ -446,31 +428,10 @@ static struct ShaderProgram* gfx_opengl_create_and_load_new_shader(uint64_t shad
 
             fs_len += sprintf(fs_buf + fs_len, "    vec2 texSize%d = vec2(textureSize(uTex%d, 0));\n", i, i);
 
-            if (!s && !t) {
-                fs_len += sprintf(fs_buf + fs_len, "    vec2 vTexCoordAdj%d = vTexCoord%d;\n", i, i);
-            } else {
-                if (s && t) {
-                    fs_len += sprintf(fs_buf + fs_len,
-                                      "    vec2 vTexCoordAdj%d = clamp(vTexCoord%d, 0.5 / texSize%d, "
-                                      "vec2(vTexClampS%d, vTexClampT%d));\n",
-                                      i, i, i, i, i);
-                } else if (s) {
-                    fs_len += sprintf(fs_buf + fs_len,
-                                      "    vec2 vTexCoordAdj%d = vec2(clamp(vTexCoord%d.s, 0.5 / "
-                                      "texSize%d.s, vTexClampS%d), vTexCoord%d.t);\n",
-                                      i, i, i, i, i);
-                } else {
-                    fs_len += sprintf(fs_buf + fs_len,
-                                      "    vec2 vTexCoordAdj%d = vec2(vTexCoord%d.s, clamp(vTexCoord%d.t, "
-                                      "0.5 / texSize%d.t, vTexClampT%d));\n",
-                                      i, i, i, i, i);
-                }
-            }
-
             if (current_filter_mode == FILTER_THREE_POINT)
-                fs_len += sprintf(fs_buf + fs_len, "    vec4 texVal%d = hookTexture2D(uTex%d, vTexCoordAdj%d, texSize%d, three_point_filter%d);\n", i, i, i, i, i);
+                fs_len += sprintf(fs_buf + fs_len, "    vec4 texVal%d = hookTexture2D(uTex%d, vTexCoord%d, texSize%d, three_point_filter%d);\n", i, i, i, i, i);
             else
-                fs_len += sprintf(fs_buf + fs_len, "    vec4 texVal%d = hookTexture2D(uTex%d, vTexCoordAdj%d, texSize%d);\n", i, i, i, i);
+                fs_len += sprintf(fs_buf + fs_len, "    vec4 texVal%d = hookTexture2D(uTex%d, vTexCoord%d, texSize%d);\n", i, i, i, i);
         }
     }
 
@@ -596,15 +557,6 @@ static struct ShaderProgram* gfx_opengl_create_and_load_new_shader(uint64_t shad
             prg->attrib_locations[cnt] = glGetAttribLocation(shader_program, name);
             prg->attrib_sizes[cnt] = 2;
             ++cnt;
-
-            for (int j = 0; j < 2; j++) {
-                if (cc_features.clamp[i][j]) {
-                    sprintf(name, "aTexClamp%s%d", j == 0 ? "S" : "T", i);
-                    prg->attrib_locations[cnt] = glGetAttribLocation(shader_program, name);
-                    prg->attrib_sizes[cnt] = 1;
-                    ++cnt;
-                }
-            }
         }
     }
 

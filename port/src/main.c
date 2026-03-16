@@ -17,6 +17,7 @@
 #include "mod.h"
 #include "system.h"
 #include "utils.h"
+#include "ext_tex.h"
 
 u32 g_OsMemSize = 0;
 s32 g_OsMemSizeMb = 16;
@@ -108,6 +109,7 @@ int main(int argc, const char **argv)
 	inputInit();
 	audioInit();
 	romdataInit();
+	extTexInit();
 
 	g_ValidGbcRomFound = romdataCheckGbcRom();
 

@@ -36,6 +36,7 @@ extern struct XYWidthHeight gfx_current_native_viewport; // The internal/native 
 extern float gfx_current_native_aspect; // The aspect ratio of the above mode
 extern bool gfx_framebuffers_enabled;
 extern bool gfx_detail_textures_enabled;
+extern bool gfx_external_textures_enabled;
 
 void gfx_init(const struct GfxInitSettings *settings);
 void gfx_destroy(void);
