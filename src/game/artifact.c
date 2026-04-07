@@ -838,7 +838,8 @@ void artifactsUpdateGlaresForPlayer(struct model *gunmodel, struct model *handmo
 	 * position on the screen. This must be called before weapon
 	 * matrices are wiped at the end of bgunRender().
 	 */
-	if (g_Vars.currentplayer->prop->chr->cloakfadefrac > 0) return;
+	if ((g_Vars.currentplayer->devicesactive & (DEVICE_CLOAKRCP120 | DEVICE_CLOAKDEVICE)) ||
+		(g_Vars.currentplayer->prop->chr->cloakfadefrac > 0)) return;
 
 	s32 i, j;
 	struct coord gundir2d;
