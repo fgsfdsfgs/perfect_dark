@@ -15,6 +15,7 @@ Gfx *artifactsUnconfigureForGlares(Gfx *gdl);
 Gfx *artifactsRenderGlaresForRoom(Gfx *gdl, s32 roomnum);
 #ifndef PLATFORM_N64
 bool artifactTestLos(struct coord *spec, struct coord *roompos, s32 xi, s32 yi);
+void artifactsUpdateGlaresForPlayer(struct model *gunmodel, struct model *handmodel, bool hand);
 #endif
 
 #endif

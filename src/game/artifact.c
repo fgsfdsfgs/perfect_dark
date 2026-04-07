@@ -744,3 +744,127 @@ Gfx *artifactsRenderGlaresForRoom(Gfx *gdl, s32 roomnum)
 
 	return gdl;
 }
+
+#ifndef PLATFORM_N64
+
+bool artifactTestDir(struct model *model, struct coord *dir, struct coord *bounds, bool *init)
+{
+	/**
+	 * Test whether a line-of-sight direction originating from the player camera
+	 * intersects the weapon model.
+	 *
+	 * Arguments:
+	 *     model (model): The model object to test
+	 *     dir (coord): The line-of-sight direction to test
+	 *     bounds (coord *): Array of {min, max} coordinates defining the model bounding box
+	 *     init (bool *): Flag denoting whether the bounds array has been initialized with
+	 *         model information. When true, a cheap bbox test is applied to skip directions
+	 *         that can't intersect the model geometry. When false, the bounds array is
+	 *         initialized using the model vertices and init is set to true at the end.
+	 *         This is needed because weapon models do not contain bbox nodes by default.
+	 */
+	s32 i;
+	const struct coord origin = {{0., 0., 0.}}; // Camera origin
+	struct coord end = {{dir->x * 32767.0f, dir->y * 32767.0f, dir->z * 32767.0f}}; // Extrapolate direction to the farthest possible end point
+
+	struct modelnode *node = model->definition->rootnode;
+	struct modelnode *endnode = model->definition->rootnode;
+
+	Gfx *opagdl = NULL;
+	Vtx *vertices = NULL;
+
+	bool hit = false;
+
+	/**
+	 * Test bbox for hit if bounds are initialized
+	 */
+	if (*init && (bgTestLineIntersectsBbox(&origin, dir, bounds, bounds + 1) == false))
+		return hit;
+
+	/**
+	 * Loop through model nodes to retrieve graphics display list commands
+	 * for the opaque parts of weapons that should block light. This
+	 * seems like the easiest way to account for animation information.
+	 */
+	while (node) {
+		u32 type = node->type & 0xff;
+
+		if (type == MODELNODETYPE_GUNDL) {
+			struct modelrodata_gundl *rodata = &node->rodata->gundl;
+			if (rodata->opagdl != NULL) {
+				opagdl = (Gfx *)((uintptr_t)rodata->baseaddr + ((uintptr_t)UNSEGADDR(rodata->opagdl) & 0xffffff));
+				vertices = (void *)(uintptr_t)rodata->baseaddr;
+				/**
+				 * Test for intersection with the weapon model
+				 */
+				if (bgTestHitOnWeapon(model, &origin, &end, dir, opagdl, NULL, vertices, *init ? NULL : bounds))
+					if (*init == false) {
+						hit = true; // Store hit and continue when initializing bounds
+					} else {
+						return true; // Otherwise end on first hit for quicker execution
+					}
+			}
+		}
+
+		if (node->child) {
+			node = node->child;
+		} else {
+			while (node) {
+				if (node == endnode) {
+					node = NULL;
+					break;
+				}
+
+				if (node->next) {
+					node = node->next;
+					break;
+				}
+
+				node = node->parent;
+			}
+		}
+	}
+
+	// Update init status if we filled bounds during the loop
+	if (*init == false) *init = true;
+
+	return hit;
+}
+
+void artifactsUpdateGlaresForPlayer(struct model *gunmodel, struct model *handmodel, bool hand)
+{
+	/**
+	 * Update light artifacts to account for the player weapon
+	 * position on the screen. This must be called before weapon
+	 * matrices are wiped at the end of bgunRender().
+	 */
+	if (g_Vars.currentplayer->prop->chr->cloakfadefrac > 0) return;
+
+	s32 i, j;
+	struct coord gundir2d;
+	struct artifact *artifacts = schedGetWriteArtifacts();
+
+	const float max = 1e6;
+
+	bool guninit = false; // Set to true after initializing gunbounds with model
+	struct coord gunbounds[2] = {{max, max, max}, {-max, -max, -max}};
+
+	bool handinit = false; // Set to true after initializing handbounds with model
+	struct coord handbounds[2] = {{max, max, max}, {-max, -max, -max}};
+
+	for (i = 0; i < MAX_ARTIFACTS; i++) {
+		struct artifact *artifact = &artifacts[i];
+
+		if (artifact->type != ARTIFACTTYPE_FREE && artifact->visiblelos) {
+			// Get the direction of this light artifact from the player's perspective
+			f32 crosspos[2] = { (f32)artifact->screenx, (f32)artifact->screeny };
+			cam0f0b4c3c(crosspos, &gundir2d, 1.0f);
+			// Test whether this direction intersects the gun or hand model
+			if (artifactTestDir(gunmodel, &gundir2d, gunbounds, &guninit) || (hand && artifactTestDir(handmodel, &gundir2d, handbounds, &handinit)))
+				artifact->visiblelos = 0;
+		}
+
+	}
+}
+
+#endif
