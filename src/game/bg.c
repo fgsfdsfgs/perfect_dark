@@ -4351,6 +4351,15 @@ bool bgTestHitOnChr(struct model *model, struct coord *arg1, struct coord *arg2,
 			min.z = ptr[2];
 			max.z = ptr[2];
 
+			/**
+			 * @bug: Advancing the pointer before the next loop
+			 * results in overflow into empty memory on the last
+			 * iteration. This produces incorrect min/max values
+			 * for the box intersection test, but luckily it usually
+			 * gets corrected by the detailed triangle test so the
+			 * net impact on N64 is extra CPU usage. We could skip
+			 * this on PC to obtain the correct min/max values.
+			 */
 			ptr += 3;
 
 			for (i = spdc; i < spd8; i++) {
