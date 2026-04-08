@@ -747,7 +747,7 @@ Gfx *artifactsRenderGlaresForRoom(Gfx *gdl, s32 roomnum)
 
 #ifndef PLATFORM_N64
 
-bool artifactTestDir(struct model *model, struct coord *dir, struct coord *bounds, bool *init)
+bool artifactTestDir(struct model *model, struct coord *dir, struct coord *bounds, bool *init, f32 *lowest_dist)
 {
 	/**
 	 * Test whether a line-of-sight direction originating from the player camera
@@ -762,6 +762,7 @@ bool artifactTestDir(struct model *model, struct coord *dir, struct coord *bound
 	 *         that can't intersect the model geometry. When false, the bounds array is
 	 *         initialized using the model vertices and init is set to true at the end.
 	 *         This is needed because weapon models do not contain bbox nodes by default.
+	 *     lowest_dist (f32 *): Pointer to lowest hit distance
 	 */
 	s32 i;
 	const struct coord origin = {{0., 0., 0.}}; // Camera origin
@@ -797,12 +798,8 @@ bool artifactTestDir(struct model *model, struct coord *dir, struct coord *bound
 				/**
 				 * Test for intersection with the weapon model
 				 */
-				if (bgTestHitOnWeapon(model, &origin, &end, dir, opagdl, NULL, vertices, *init ? NULL : bounds))
-					if (*init == false) {
-						hit = true; // Store hit and continue when initializing bounds
-					} else {
-						return true; // Otherwise end on first hit for quicker execution
-					}
+				if (bgTestHitOnWeapon(model, &origin, &end, dir, opagdl, NULL, vertices, *init ? NULL : bounds, lowest_dist))
+					hit = true;
 			}
 		}
 
@@ -831,7 +828,7 @@ bool artifactTestDir(struct model *model, struct coord *dir, struct coord *bound
 	return hit;
 }
 
-void artifactsUpdateGlaresForPlayer(struct model *gunmodel, struct model *handmodel, bool hand)
+void artifactsUpdateGlaresForPlayer(struct model *gunmodel, struct model *handmodel, bool hand, f32 znear, f32 zfar)
 {
 	/**
 	 * Update light artifacts to account for the player weapon
@@ -845,7 +842,9 @@ void artifactsUpdateGlaresForPlayer(struct model *gunmodel, struct model *handmo
 	struct coord gundir2d;
 	struct artifact *artifacts = schedGetWriteArtifacts();
 
-	const float max = 1e6;
+	const f32 max = 1e6;
+
+	f32 lowest_dist = max;
 
 	bool guninit = false; // Set to true after initializing gunbounds with model
 	struct coord gunbounds[2] = {{max, max, max}, {-max, -max, -max}};
@@ -860,9 +859,25 @@ void artifactsUpdateGlaresForPlayer(struct model *gunmodel, struct model *handmo
 			// Get the direction of this light artifact from the player's perspective
 			f32 crosspos[2] = { (f32)artifact->screenx, (f32)artifact->screeny };
 			cam0f0b4c3c(crosspos, &gundir2d, 1.0f);
-			// Test whether this direction intersects the gun or hand model
-			if (artifactTestDir(gunmodel, &gundir2d, gunbounds, &guninit) || (hand && artifactTestDir(handmodel, &gundir2d, handbounds, &handinit)))
-				artifact->visiblelos = 0;
+			/**
+			 * Test whether this direction intersects the gun or hand model
+			 *
+			 * Note: We use an OR for speed, but it would be more accurate to
+			 * always test both the gun and hand models to check for a closer
+			 * lowest_dist. It's probably fine in most cases.
+			 */
+			if (artifactTestDir(gunmodel, &gundir2d, gunbounds, &guninit, &lowest_dist) || (hand && artifactTestDir(handmodel, &gundir2d, handbounds, &handinit, &lowest_dist))) {
+				/**
+				 * Compute N64 depth value for comparison with the artifact's expected depth.
+				 * This is needed to account for the fact that the weapon draw uses different
+				 * znear/zfar settings compared to the global settings from vi.
+				 */
+				f32 z = -gundir2d.z * lowest_dist;
+				f32 znorm = (1/z - 1/znear) / (1/zfar - 1/znear);
+				u16 actualdepth = floatToN64Depth(32704.0f * znorm) >> 2;
+
+				artifact->visiblelos = actualdepth > artifact->expecteddepth;
+			}
 		}
 
 	}

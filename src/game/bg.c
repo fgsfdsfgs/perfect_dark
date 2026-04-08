@@ -3635,7 +3635,7 @@ bool bgTestLineIntersectsBbox(struct coord *arg0, struct coord *arg1, struct coo
 
 #ifndef PLATFORM_N64
 
-bool bgTestLineIntersectsTriangle(struct coord *origin, struct coord *dir, struct coord *point1, struct coord *point2, struct coord *point3)
+bool bgTestLineIntersectsTriangle(struct coord *origin, struct coord *dir, struct coord *point1, struct coord *point2, struct coord *point3, f32 *dist)
 {
 	/**
 	 * Implementation of Moller-Trumbore triangle intersection test
@@ -3643,7 +3643,7 @@ bool bgTestLineIntersectsTriangle(struct coord *origin, struct coord *dir, struc
 	 *
 	 * See: https://en.wikipedia.org/wiki/M%C3%B6ller%E2%80%93Trumbore_intersection_algorithm
 	 */
-	const float epsilon = 1.19e-7;
+	const f32 epsilon = 1.19e-7;
 
 	struct coord edge1 = {
 	    point2->x - point1->x,
@@ -3660,21 +3660,21 @@ bool bgTestLineIntersectsTriangle(struct coord *origin, struct coord *dir, struc
 		dir->z * edge2.x - dir->x * edge2.z,
 		dir->x * edge2.y - dir->y * edge2.x};
 
-	float det =
+	f32 det =
 		edge1.x * dir_cross_e2.x +
 		edge1.y * dir_cross_e2.y +
 		edge1.z * dir_cross_e2.z;
 
 	if (fabsf(det) < epsilon) return false; // Direction is parallel to triangle
 
-	float inv_det = 1.0 / det;
+	f32 inv_det = 1.0 / det;
 
 	struct coord s = {
 		origin->x - point1->x,
 		origin->y - point1->y,
 		origin->z - point1->z};
 
-	float u = inv_det * (
+	f32 u = inv_det * (
 		s.x * dir_cross_e2.x +
 		s.y * dir_cross_e2.y +
 		s.z * dir_cross_e2.z);
@@ -3686,17 +3686,27 @@ bool bgTestLineIntersectsTriangle(struct coord *origin, struct coord *dir, struc
 		s.z * edge1.x - s.x * edge1.z,
 		s.x * edge1.y - s.y * edge1.x};
 
-	float v = inv_det * (
+	f32 v = inv_det * (
 		dir->x * s_cross_e1.x +
 		dir->y * s_cross_e1.y +
 		dir->z * s_cross_e1.z);
 
 	if (v < -epsilon || u + v - 1 > epsilon) return false; // Direction passes outside edge1's bounds
 
-	return true;
+	f32 t = inv_det * (
+		edge2.x * s_cross_e1.x +
+		edge2.y * s_cross_e1.y +
+		edge2.z * s_cross_e1.z);
+
+	// Direction intersects triangle
+	if (t > epsilon) {
+		*dist = t;
+		return true;
+	}
+	return false;
 }
 
-bool bgTestHitOnWeapon(struct model *model, struct coord *origin, struct coord *end, struct coord *dir, Gfx *gdl, Gfx *gdl2, Vtx *vertices, struct coord *bounds)
+bool bgTestHitOnWeapon(struct model *model, struct coord *origin, struct coord *end, struct coord *dir, Gfx *gdl, Gfx *gdl2, Vtx *vertices, struct coord *bounds, f32 *lowest_dist)
 {
 	s16 triref;
 	s32 i;
@@ -3716,6 +3726,7 @@ bool bgTestHitOnWeapon(struct model *model, struct coord *origin, struct coord *
 	struct coord min;
 	struct coord max;
 	bool hit;
+	f32 dist;
 	s32 points[3];
 
 	istart = 16;
@@ -3915,11 +3926,10 @@ bool bgTestHitOnWeapon(struct model *model, struct coord *origin, struct coord *
 
 						if (!(origin->y < min.y && end->y < min.y) && !(origin->y > max.y && end->y > max.y)) {
 							if (bgTestLineIntersectsBbox(origin, dir, &min, &max)
-									&& bgTestLineIntersectsTriangle(origin, dir, point1, point2, point3)) {
-								if (bounds != NULL) {
-									hit = true; // Store hit and continue when filling bounds
-								} else {
-									return true; // Otherwise end on first hit for quicker execution
+									&& bgTestLineIntersectsTriangle(origin, dir, point1, point2, point3, &dist)) {
+								hit = true;
+								if (dist < *lowest_dist) {
+									*lowest_dist = dist;
 								}
 							}
 						}
