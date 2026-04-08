@@ -747,7 +747,7 @@ Gfx *artifactsRenderGlaresForRoom(Gfx *gdl, s32 roomnum)
 
 #ifndef PLATFORM_N64
 
-bool artifactTestDir(struct model *model, struct coord *dir, struct coord *bounds, bool *init, f32 *lowest_dist)
+bool artifactTestDir(struct model *model, struct coord *dir, struct coord *bounds, f32 *lowest_dist)
 {
 	/**
 	 * Test whether a line-of-sight direction originating from the player camera
@@ -757,11 +757,6 @@ bool artifactTestDir(struct model *model, struct coord *dir, struct coord *bound
 	 *     model (model): The model object to test
 	 *     dir (coord): The line-of-sight direction to test
 	 *     bounds (coord *): Array of {min, max} coordinates defining the model bounding box
-	 *     init (bool *): Flag denoting whether the bounds array has been initialized with
-	 *         model information. When true, a cheap bbox test is applied to skip directions
-	 *         that can't intersect the model geometry. When false, the bounds array is
-	 *         initialized using the model vertices and init is set to true at the end.
-	 *         This is needed because weapon models do not contain bbox nodes by default.
 	 *     lowest_dist (f32 *): Pointer to lowest hit distance
 	 */
 	s32 i;
@@ -776,10 +771,8 @@ bool artifactTestDir(struct model *model, struct coord *dir, struct coord *bound
 
 	bool hit = false;
 
-	/**
-	 * Test bbox for hit if bounds are initialized
-	 */
-	if (*init && (bgTestLineIntersectsBbox(&origin, dir, bounds, bounds + 1) == false))
+	// Start by testing bounding box
+	if (bgTestLineIntersectsBbox(&origin, dir, bounds, bounds + 1) == false)
 		return hit;
 
 	/**
@@ -798,7 +791,7 @@ bool artifactTestDir(struct model *model, struct coord *dir, struct coord *bound
 				/**
 				 * Test for intersection with the weapon model
 				 */
-				if (bgTestHitOnWeapon(model, &origin, &end, dir, opagdl, NULL, vertices, *init ? NULL : bounds, lowest_dist))
+				if (bgTestHitOnWeapon(model, &origin, &end, dir, opagdl, NULL, vertices, bounds, lowest_dist))
 					hit = true;
 			}
 		}
@@ -822,9 +815,6 @@ bool artifactTestDir(struct model *model, struct coord *dir, struct coord *bound
 		}
 	}
 
-	// Update init status if we filled bounds during the loop
-	if (*init == false) *init = true;
-
 	return hit;
 }
 
@@ -846,10 +836,7 @@ void artifactsUpdateGlaresForPlayer(struct model *gunmodel, struct model *handmo
 
 	f32 lowest_dist = max;
 
-	bool guninit = false; // Set to true after initializing gunbounds with model
 	struct coord gunbounds[2] = {{max, max, max}, {-max, -max, -max}};
-
-	bool handinit = false; // Set to true after initializing handbounds with model
 	struct coord handbounds[2] = {{max, max, max}, {-max, -max, -max}};
 
 	for (i = 0; i < MAX_ARTIFACTS; i++) {
@@ -866,7 +853,7 @@ void artifactsUpdateGlaresForPlayer(struct model *gunmodel, struct model *handmo
 			 * always test both the gun and hand models to check for a closer
 			 * lowest_dist. It's probably fine in most cases.
 			 */
-			if (artifactTestDir(gunmodel, &gundir2d, gunbounds, &guninit, &lowest_dist) || (hand && artifactTestDir(handmodel, &gundir2d, handbounds, &handinit, &lowest_dist))) {
+			if (artifactTestDir(gunmodel, &gundir2d, gunbounds, &lowest_dist) || (hand && artifactTestDir(handmodel, &gundir2d, handbounds, &lowest_dist))) {
 				/**
 				 * Compute N64 depth value for comparison with the artifact's expected depth.
 				 * This is needed to account for the fact that the weapon draw uses different
