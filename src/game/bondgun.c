@@ -11170,7 +11170,7 @@ void bgunRender(Gfx **gdlptr)
 			}
 #ifndef PLATFORM_N64
 			// Update light artifacts to account for gun and hand models
-			artifactsUpdateGlaresForPlayer(&hand->gunmodel, &hand->handmodel, player->gunctrl.handmodeldef && renderhand);
+			artifactsUpdateGlaresForPlayer(&hand->gunmodel, &hand->handmodel, player->gunctrl.handmodeldef && renderhand, 1.5, 1000);
 #endif
 			// Clean up
 			gdl = renderdata.gdl;
