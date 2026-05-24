@@ -79,7 +79,27 @@ s32 patchDeflate1173(u8 *src, u32 srclen, u8 *dst, u32 dstlen)
 	return len;
 }
 
-void patchLight(u8 *src, s16 lightnum, s16 dx, s16 dy, s16 dz)
+void patchLightDir(u8 *src, s16 lightnum, s16 dx, s16 dy, s16 dz)
+{
+	/**
+	 * Method to patch background light direction in place
+	 *
+	 * Args:
+	 * 	src (u8 *): Pointer to primary background data
+	 * 	lightnum (s16): Light number in the background light array
+	 * 	dx (s16): Offset to apply along x-axis
+	 * 	dy (s16): Offset to apply along y-axis
+	 * 	dz (s16): Offset to apply along z-axis
+	 */
+	// lights are stored in 34 byte (0x22) blocks with direction at offset 0x7
+	s8 *light_dir = (s8 *)&src[lightnum * 0x22 + 0x7];
+
+	light_dir[0] += dx; // x
+	light_dir[1] += dy; // y
+	light_dir[2] += dz; // z
+}
+
+void patchLightBbox(u8 *src, s16 lightnum, s16 dx, s16 dy, s16 dz, s16 index)
 {
 	/**
 	 * Method to patch background light locations in place
@@ -90,11 +110,15 @@ void patchLight(u8 *src, s16 lightnum, s16 dx, s16 dy, s16 dz)
 	 * 	dx (s16): Offset to apply along x-axis
 	 * 	dy (s16): Offset to apply along y-axis
 	 * 	dz (s16): Offset to apply along z-axis
+	 * 	index (s16): Bbox index to patch, 4 will patch all bboxes
 	 */
 	// lights are stored in 34 byte (0x22) blocks with bbox at offset 0xa
 	s16 *light_bbox = (s16 *)&src[lightnum * 0x22 + 0xa];
 
-	for (s16 i = 0;  i < 4; i++) {
+	s16 istart = index == 4 ? 0 : index;
+	s16 istop = index == 4 ? 4 : index + 1;
+
+	for (s16 i = istart;  i < istop; i++) {
 		light_bbox[3 * i + 0] = PD_BE16(PD_BE16(light_bbox[3 * i + 0]) + dx); // x
 		light_bbox[3 * i + 1] = PD_BE16(PD_BE16(light_bbox[3 * i + 1]) + dy); // y
 		light_bbox[3 * i + 2] = PD_BE16(PD_BE16(light_bbox[3 * i + 2]) + dz); // z
@@ -242,7 +266,6 @@ void patchBE32(u8 *src, u32 pos, u32 val)
 	}
 }
 
-
 void patchSetupFile(const char * name, u32 numpatches, struct patchbytes *patches)
 {
 	/**
@@ -343,7 +366,10 @@ void patchBgFile(const char * name, u32 numpatches, struct patchlights *patches,
 	u32 light_offset = PD_BE32(*(u32 *)&primary[0x10]) - 0x0f000000;
 	for (u32 i = 0; i < numpatches; ++i) {
 		const struct patchlights *p = &patches[i];
-		patchLight(primary + light_offset, p->lightnum, p->dx, p->dy, p->dz);
+		if (p->type == 0)
+			patchLightBbox(primary + light_offset, p->lightnum, p->dx, p->dy, p->dz, p->index);
+		else if (p->type == 1)
+			patchLightDir(primary + light_offset, p->lightnum, p->dx, p->dy, p->dz);
 	}
 
 	// patch room to avoid line-of-sight conflicts
@@ -464,6 +490,7 @@ void patchInit(void)
 	 *
 	 * Current patches include:
 	 *     1. Adjusting lights in Defection level helipad to obtain correct brightness
+	 *        and fixing a broken light by the DataDyne statue on the bottom floor
 	 *     2. Adjusting lights in Investigation level to restore missing lights
 	 *     3. Adjusting lights in Villa level to restore missing lights
 	 *     4. Removing repeated dialog in Infiltration outro
@@ -501,32 +528,34 @@ void patchInit(void)
 
 	// create patched background files
 	struct patchlights ame[] = {
-		{  7,  1,  0, -1 }, // helipad light near top of stairs
-		{  8, -1,  0,  1 }, // helipad light left of datadyne sign
+		{ 0,  7,  1,   0, -1, 4 }, // helipad light near top of stairs
+		{ 0,  8, -1,   0,  1, 4 }, // helipad light left of datadyne sign
+		{ 0, 18, 16,   0, 15, 1 }, // light to left of datadyne statue on bottom floor (position patch)
+		{ 1, 18,  0, 254,  0, 1 }, // light to left of datadyne statue on bottom floor (direction patch)
 	};
-	patchBgFile("bgdata/bg_ame.seg", 2, ame, NULL);
+	patchBgFile("bgdata/bg_ame.seg", 4, ame, NULL);
 	struct patchlights eld[] = {
-		{ 20, -1,  0,  0 }, // last pair of lights in tunnel near villa
-		{ 21, -1,  0,  0 }, // last pair of lights in tunnel near villa
-		{ 22, -1,  0,  0 }, // third to last light in tunnel near villa
-		{ 30,  0,  0, -1 }, // first tunnel light near observatory
+		{ 0, 20, -1,  0,  0, 4 }, // last pair of lights in tunnel near villa
+		{ 0, 21, -1,  0,  0, 4 }, // last pair of lights in tunnel near villa
+		{ 0, 22, -1,  0,  0, 4 }, // third to last light in tunnel near villa
+		{ 0, 30,  0,  0, -1, 4 }, // first tunnel light near observatory
 	};
 	patchBgFile("bgdata/bg_eld.seg", 4, eld, NULL);
 	struct patchlights ear[] = {
-		{ 11,  0, -1,  0 }, // light on left side of isotope chamber
-		{ 24,  0, -1,  0 }, // pair of lights in first lab hallway
-		{ 25,  0, -1,  0 }, // pair of lights in first lab hallway
-		{ 32,  0, -1,  0 }, // corner light in lab with elevator platform
-		{ 33,  0, -1,  0 }, // light over the elevator platform
-		{ 38,  0, -1,  0 }, // corner light in lab with nightvision goggles
-		{ 55,  0, -1,  0 }, // light at end of lab hallway just before final door
-		{ 57,  0, -1,  0 }, // light between double doors before lasers
-		{ 58,  0, -1,  0 }, // first light in laser hall
-		{ 59,  0, -1,  0 }, // second light in laser hall
-		{ 60,  0, -1,  0 }, // third light in laser hall
-		{ 61,  0, -1,  0 }, // last light in laser hall
-		{ 65,  0,  0,  1 }, // light in glass container with plants
-		{ 95,  0, -1,  0 }, // light by second minigun in final hallway
+		{ 0, 11,  0, -1,  0, 4 }, // light on left side of isotope chamber
+		{ 0, 24,  0, -1,  0, 4 }, // pair of lights in first lab hallway
+		{ 0, 25,  0, -1,  0, 4 }, // pair of lights in first lab hallway
+		{ 0, 32,  0, -1,  0, 4 }, // corner light in lab with elevator platform
+		{ 0, 33,  0, -1,  0, 4 }, // light over the elevator platform
+		{ 0, 38,  0, -1,  0, 4 }, // corner light in lab with nightvision goggles
+		{ 0, 55,  0, -1,  0, 4 }, // light at end of lab hallway just before final door
+		{ 0, 57,  0, -1,  0, 4 }, // light between double doors before lasers
+		{ 0, 58,  0, -1,  0, 4 }, // first light in laser hall
+		{ 0, 59,  0, -1,  0, 4 }, // second light in laser hall
+		{ 0, 60,  0, -1,  0, 4 }, // third light in laser hall
+		{ 0, 61,  0, -1,  0, 4 }, // last light in laser hall
+		{ 0, 65,  0,  0,  1, 4 }, // light in glass container with plants
+		{ 0, 95,  0, -1,  0, 4 }, // light by second minigun in final hallway
 	};
 	struct patchroom drcaroll = {100, 77, 0xbb}; // render half of room as transparent layer
 	                                             // to avoid blocking lights on PC when camera

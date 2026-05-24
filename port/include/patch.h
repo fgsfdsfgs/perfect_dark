@@ -11,10 +11,12 @@ struct patchbytes {
 };
 
 struct patchlights {
+	s16 type; // 0 = patch bbox, 1 = patch direction
 	s16 lightnum;
 	s16 dx;
 	s16 dy;
 	s16 dz;
+	s16 index;
 };
 
 struct patchroom {
@@ -24,7 +26,8 @@ struct patchroom {
 };
 
 s32 patchDeflate1173(u8 *src, u32 srclen, u8 *dst, u32 dstlen);
-void patchLight(u8 *src, s16 lightnum, s16 dx, s16 dy, s16 dz);
+void patchLightDir(u8 *src, s16 lightnum, s16 dx, s16 dy, s16 dz);
+void patchLightBbox(u8 *src, s16 lightnum, s16 dx, s16 dy, s16 dz, s16 index);
 void patchSetupFile(const char * name, u32 numpatches, struct patchbytes *patches);
 void patchBgFile(const char * name, u32 numpatches, struct patchlights *patches, struct patchroom *patchroom);
 void patchInit(void);
