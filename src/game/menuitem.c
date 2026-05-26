@@ -3229,6 +3229,9 @@ bool menuitemScrollableTick(struct menuitem *item, struct menudialog *dialog, st
 #else
 		intval += inputs->updownheld * 2 * g_Vars.diffframe60;
 #endif
+#ifndef PLATFORM_N64
+		intval += inputs->mousescroll * (LINEHEIGHT - 2) * 3;
+#endif
 		data->scrollable.scrolloffset += intval;
 
 		if (data->scrollable.scrolloffset < -10) {
@@ -3752,6 +3755,9 @@ bool menuitemRankingTick(struct menuinputs *inputs, u32 tickflags, union menuite
 #else
 		intval += inputs->updownheld * 2 * g_Vars.diffframe60;
 #endif
+#ifndef PLATFORM_N64
+		intval += inputs->mousescroll * (LINEHEIGHT - 1);
+#endif
 		data->ranking.scrolloffset += intval;
 
 		if (data->ranking.scrolloffset < 0) {
@@ -4046,6 +4052,9 @@ bool menuitemPlayerStatsTick(struct menuitem *item, struct menudialog *dialog, s
 		intval = intval + (s32)(((f32)inputs->updownheld + (f32)inputs->updownheld) * g_Vars.diffframe60freal);
 #else
 		intval += inputs->updownheld * 2 * g_Vars.diffframe60;
+#endif
+#ifndef PLATFORM_N64
+		intval += inputs->mousescroll * (LINEHEIGHT - 1);
 #endif
 		data->dropdown.scrolloffset += intval;
 

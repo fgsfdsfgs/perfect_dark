@@ -4615,6 +4615,9 @@ void dialogTick(struct menudialog *dialog, struct menuinputs *inputs, u32 tickfl
 #else
 		s32 adjustment = inputs->yaxis * g_Vars.diffframe60 / 20 - inputs->updownheld * g_Vars.diffframe60;
 #endif
+#ifndef PLATFORM_N64
+		adjustment -= inputs->mousescroll * (LINEHEIGHT + 1);
+#endif
 		dialog->dstscroll += adjustment;
 
 		if (dialog->dstscroll > 0) {
