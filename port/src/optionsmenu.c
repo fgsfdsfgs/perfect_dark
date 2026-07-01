@@ -1949,6 +1949,19 @@ static MenuItemHandlerResult menuhandlerAllowAllGunsTwoHanded(s32 operation, str
 	return 0;
 }
 
+static MenuItemHandlerResult menuhandlerAllGunsSlayer(s32 operation, struct menuitem *item, union handlerdata *data)
+{
+	switch (operation) {
+	case MENUOP_GET:
+		return g_AllGunsSlayer;
+	case MENUOP_SET:
+		g_AllGunsSlayer = data->checkbox.value;
+		break;
+	}
+
+	return 0;
+}
+
 struct menuitem g_ExtendedExperimentalMenuItems[] = {
 	{
 		MENUITEMTYPE_CHECKBOX,
@@ -1957,6 +1970,14 @@ struct menuitem g_ExtendedExperimentalMenuItems[] = {
 		(uintptr_t)"Allow all guns two handed",
 		0,
 		menuhandlerAllowAllGunsTwoHanded,
+	},
+	{
+		MENUITEMTYPE_CHECKBOX,
+		0,
+		MENUITEMFLAG_LITERAL_TEXT,
+		(uintptr_t)"Add Slayer to \"All Guns\" cheat",
+		0,
+		menuhandlerAllGunsSlayer,
 	},
 	{
 		MENUITEMTYPE_SEPARATOR,

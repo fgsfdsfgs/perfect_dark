@@ -38,6 +38,7 @@ u8 g_VmShowStats = 0;
 s32 g_TickRateDiv = 1;
 s32 g_TickExtraSleep = true;
 s32 g_AllowAllGunsTwoHanded = false;
+s32 g_AllGunsSlayer = false;
 
 s32 g_SkipIntro = false;
 
@@ -171,6 +172,7 @@ PD_CONSTRUCTOR static void gameConfigInit(void)
 	configRegisterInt("Game.DisableMpDeathMusic", &g_MusicDisableMpDeath, 0, 1);
 	configRegisterInt("Game.GEMuzzleFlashes", &g_BgunGeMuzzleFlashes, 0, 1);
 	configRegisterInt("Game.AllowAllGunsTwoHanded", &g_AllowAllGunsTwoHanded, 0, 1);
+	configRegisterInt("Game.AllGunsSlayer", &g_AllGunsSlayer, 0, 1);
 	configRegisterInt("Game.MaxExplosions", &g_MaxExplosions, 6, 96);
 	for (s32 j = 0; j < MAX_PLAYERS; ++j) {
 		const s32 i = j + 1;
