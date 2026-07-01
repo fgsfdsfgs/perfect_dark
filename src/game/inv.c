@@ -512,8 +512,7 @@ s32 invGiveWeaponsByProp(struct prop *prop)
 			otherweaponnum;
 
 #ifndef PLATFORM_N64
-			// always allow picking up a second gun if dual wield cheat is on
-			if (!g_Vars.normmplayerisrunning && cheatIsActive(CHEAT_DUALWIELDALLGUNS)) {
+			if (!g_Vars.normmplayerisrunning && g_AllowAllGunsTwoHanded) {
 				if (invHasSingleWeaponExcAllGuns(weaponnum) && !invHasDoubleWeaponExcAllGuns(weaponnum, weaponnum)) {
 					if (invGiveDoubleWeapon(weaponnum, weaponnum)) {
 						return 2;

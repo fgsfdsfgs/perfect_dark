@@ -450,7 +450,6 @@
 #define CHEAT_DMC                    39
 #define CHEAT_AR53                   40
 #define CHEAT_RCP45                  41
-#define CHEAT_DUALWIELDALLGUNS       42
 
 #define CHEATFLAG_TIMED       0
 #define CHEATFLAG_ALWAYSON    1

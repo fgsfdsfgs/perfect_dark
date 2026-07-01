@@ -1936,7 +1936,36 @@ static MenuItemHandlerResult menuhandlerOpenGameMenu(s32 operation, struct menui
 	return 0;
 }
 
+static MenuItemHandlerResult menuhandlerAllowAllGunsTwoHanded(s32 operation, struct menuitem *item, union handlerdata *data)
+{
+	switch (operation) {
+	case MENUOP_GET:
+		return g_AllowAllGunsTwoHanded;
+	case MENUOP_SET:
+		g_AllowAllGunsTwoHanded = data->checkbox.value;
+		break;
+	}
+
+	return 0;
+}
+
 struct menuitem g_ExtendedExperimentalMenuItems[] = {
+	{
+		MENUITEMTYPE_CHECKBOX,
+		0,
+		MENUITEMFLAG_LITERAL_TEXT,
+		(uintptr_t)"Allow all guns two handed",
+		0,
+		menuhandlerAllowAllGunsTwoHanded,
+	},
+	{
+		MENUITEMTYPE_SEPARATOR,
+		0,
+		0,
+		0,
+		0,
+		NULL,
+	},
 	{
 		MENUITEMTYPE_SELECTABLE,
 		0,
