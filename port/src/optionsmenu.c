@@ -1975,6 +1975,23 @@ static MenuItemHandlerResult menuhandlerRemovePsychosisGunAmmoLimit(s32 operatio
 	return 0;
 }
 
+static MenuItemHandlerResult menuhandlerMaxLaptopSentriesPerCharacter(s32 operation, struct menuitem *item, union handlerdata *data)
+{
+	switch (operation) {
+	case MENUOP_GETSLIDER:
+		data->slider.value = g_MaxLaptopSentriesPerCharacter - 1;
+		break;
+	case MENUOP_SET:
+		g_MaxLaptopSentriesPerCharacter = data->slider.value + 1;
+		break;
+	case MENUOP_GETSLIDERLABEL:
+		sprintf(data->slider.label, "%d", data->slider.value + 1);
+		break;
+	}
+
+	return 0;
+}
+
 struct menuitem g_ExtendedExperimentalMenuItems[] = {
 	{
 		MENUITEMTYPE_CHECKBOX,
@@ -1999,6 +2016,14 @@ struct menuitem g_ExtendedExperimentalMenuItems[] = {
 		(uintptr_t)"Remove Psychosis Gun ammo limit",
 		0,
 		menuhandlerRemovePsychosisGunAmmoLimit,
+	},
+	{
+		MENUITEMTYPE_SLIDER,
+		0,
+		MENUITEMFLAG_LITERAL_TEXT | MENUITEMFLAG_SLIDER_WIDE | MENUITEMFLAG_SLIDER_SLOW,
+		(uintptr_t)"Max Sentries",
+		99,
+		menuhandlerMaxLaptopSentriesPerCharacter,
 	},
 	{
 		MENUITEMTYPE_SEPARATOR,
