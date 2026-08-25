@@ -330,10 +330,6 @@ void inputSetGyroVHMixer(s32 cidx, f32 value);
 f32 inputGetGyroSmoothing(s32 cidx);
 void inputSetGyroSmoothing(s32 cidx, f32 value);
 
-// Gyro Deadzone Management
-f32 inputGyroGetDeadzone(s32 cidx);
-void inputGyroSetDeadzone(s32 cidx, f32 value);
-
 // Gyro Tightening Management
 f32 inputGyroGetTightening(s32 cidx);
 void inputGyroSetTightening(s32 cidx, f32 value);

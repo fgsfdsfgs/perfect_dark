@@ -16,6 +16,7 @@
 #define GMH_STILLNESS_EASE_TIME       1.5f
 #define MANUAL_CALIB_HOLD_MS 500
 #define GMH_DEG2RAD 0.01745329252f
+#define GYRO_TIGHTENING_DEGPS 10.0f
 
 typedef struct {
 	// Manual calibration
@@ -53,7 +54,6 @@ static void applyGyroAxisMapping(s32 cidx, float calibratedGyro[3], f32 *deltaX,
 static void applyGyroModifier(f32 *deltaX, f32 *deltaY, f32 *deltaZ, s32 activationMode, s32 idx);
 
 static void applyGyroTightening(f32 *dx, f32 *dy, f32 *dz, f32 tightening);
-static void applyGyroDeadzone(f32 *dx, f32 *dy, f32 *dz, f32 deadzone);
 static void applyGyroSmoothing(f32 *deltaX, f32 *deltaY, f32 *deltaZ, f32 smoothing, s32 cidx);
 static void inputConfigureGamepadMotionSettings(GamepadMotionHandle handle);
 static void inputUpdateGyroCalibrationHandle(void);
@@ -238,9 +238,10 @@ static void applyGyroTightening(f32 *dx, f32 *dy, f32 *dz, f32 tightening)
 {
 	if (tightening <= 0.0f) return;
 
+	const f32 threshold = tightening * GYRO_TIGHTENING_DEGPS;
 	const f32 mag = sqrtf((*dx) * (*dx) + (*dy) * (*dy) + (*dz) * (*dz));
-	if (mag > 0.0f && mag < tightening) {
-		const f32 scale = mag / tightening;
+	if (mag > 0.0f && mag < threshold) {
+		const f32 scale = mag / threshold;
 		*dx *= scale;
 		*dy *= scale;
 		*dz *= scale;
@@ -276,19 +277,6 @@ static void inputApplyGyroProcessing(s32 cidx, f32 *deltaX, f32 *deltaY, f32 *de
 	applyGyroModifier(deltaX, deltaY, deltaZ, inputGetGyroModifier(cidx), cidx);
 	applyGyroSmoothing(deltaX, deltaY, deltaZ, inputGetGyroSmoothing(cidx), cidx);
 	applyGyroTightening(deltaX, deltaY, deltaZ, inputGyroGetTightening(cidx));
-	applyGyroDeadzone(deltaX, deltaY, deltaZ, inputGyroGetDeadzone(cidx));
-}
-
-static void applyGyroDeadzone(f32 *dx, f32 *dy, f32 *dz, f32 deadzone)
-{
-	if (deadzone <= 0.f) return;
-
-	f32 mag = sqrtf((*dx) * (*dx) + (*dy) * (*dy) + (*dz) * (*dz));
-	if (mag > 0.f && mag <= deadzone) {
-		*dx = 0.f;
-		*dy = 0.f;
-		*dz = 0.f;
-	}
 }
 
 void inputUpdateGyro(s32 cidx)

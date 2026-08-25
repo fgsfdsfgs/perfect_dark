@@ -70,8 +70,7 @@ static SDL_GameController *pads[INPUT_MAX_CONTROLLERS];
 	.gyroAimInvertX = 0, \
 	.gyroAimInvertY = 0, \
 	.gyroSmoothing = 0.18f, \
-	.gyroTightening = 0.07f, \
-	.gyroDeadzone = 0.03f, \
+	.gyroTightening = 0.5f, \
 	.gyroAutoCalibration = 1, \
 }
 
@@ -102,7 +101,6 @@ static struct controllercfg {
 	s32 gyroAimInvertY;
 	f32 gyroSmoothing;
 	f32 gyroTightening;
-	f32 gyroDeadzone;
 	s32 gyroAutoCalibration;
 } padsCfg[INPUT_MAX_CONTROLLERS] = {
 	CONTROLLERCFG_DEFAULT,
@@ -1665,19 +1663,6 @@ void inputGyroSetTightening(s32 cidx, f32 tightening)
 	padsCfg[cidx].gyroTightening = tightening;
 }
 
-f32 inputGyroGetDeadzone(s32 cidx)
-{
-    return padsCfg[cidx].gyroDeadzone;
-}
-
-void inputGyroSetDeadzone(s32 cidx, f32 deadzone)
-{
-    if (deadzone < 0.f) deadzone = 0.f;
-    if (deadzone > 1.f) deadzone = 1.f;
-    padsCfg[cidx].gyroDeadzone = deadzone;
-}
-
-
 s32 inputGyroGetAutoCalibration(s32 cidx)
 {
 	return (cidx >= 0 && cidx < INPUT_MAX_CONTROLLERS) ? padsCfg[cidx].gyroAutoCalibration : 0;
@@ -1919,8 +1904,7 @@ PD_CONSTRUCTOR static void inputConfigInit(void)
 		configRegisterInt(strFmt("%s.GyroAimInvertY", secname), &padsCfg[c].gyroAimInvertY, 0, 1);
 		configRegisterFloat(strFmt("%s.GyroVHMixer", secname), &padsCfg[c].gyroVHMixer, -1.0f, 1.0f);
 		configRegisterFloat(strFmt("%s.GyroSmoothing", secname), &padsCfg[c].gyroSmoothing, 0.f, 1.f);
-		configRegisterFloat(strFmt("%s.GyroTightening", secname), &padsCfg[c].gyroTightening, 0.f, 10.f);
-		configRegisterFloat(strFmt("%s.GyroDeadzone", secname), &padsCfg[c].gyroDeadzone, 0.f, 1.f);
+		configRegisterFloat(strFmt("%s.GyroTightening", secname), &padsCfg[c].gyroTightening, 0.f, 1.f);
 		configRegisterInt(strFmt("%s.StickCButtons", secname), &padsCfg[c].stickCButtons, 0, 1);
 		configRegisterInt(strFmt("%s.CancelCButtons", secname), &padsCfg[c].cancelCButtons, 0, 1);
 		configRegisterInt(strFmt("%s.SwapSticks", secname), &padsCfg[c].swapSticks, 0, 1);

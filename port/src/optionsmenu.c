@@ -911,22 +911,6 @@ static MenuItemHandlerResult menuhandlerGyroTightening(s32 operation, struct men
     return 0;
 }
 
-static MenuItemHandlerResult menuhandlerGyroDeadzone(s32 operation, struct menuitem* item, union handlerdata *data)
-{
-    switch (operation) {
-    case MENUOP_GETSLIDER:
-        data->slider.value = inputGyroGetDeadzone(g_ExtMenuPlayer) * 100.0f;
-        break;
-    case MENUOP_SET:
-        inputGyroSetDeadzone(g_ExtMenuPlayer, (f32)data->slider.value / 100.0f);
-        break;
-    case MENUOP_GETSLIDERLABEL:
-        sprintf(data->slider.label, "%.0f%%", inputGyroGetDeadzone(g_ExtMenuPlayer) * 100.0f);
-        break;
-    }
-    return 0;
-}
-
 static MenuItemHandlerResult menuhandlerGyroAutoCalibration(s32 operation, struct menuitem* item, union handlerdata *data)
 {
 	static const char* opts[] = {
@@ -1205,14 +1189,6 @@ struct menuitem g_ExtendedGyroMenuItems[] = {
 		(uintptr_t)"Tightening Threshold",
 		100,
 		menuhandlerGyroTightening,
-	},
-	{
-		MENUITEMTYPE_SLIDER,
-		0,
-		MENUITEMFLAG_LITERAL_TEXT | MENUITEMFLAG_SLIDER_WIDE,
-		(uintptr_t)"Deadzone Threshold",
-		100,
-		menuhandlerGyroDeadzone,
 	},
 	{
 		MENUITEMTYPE_SEPARATOR,
