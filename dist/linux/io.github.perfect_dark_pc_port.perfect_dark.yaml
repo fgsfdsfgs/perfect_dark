@@ -1,8 +1,8 @@
-app-id: io.github.fgsfdsfgs.perfect_dark
+app-id: io.github.perfect_dark_pc_port.perfect_dark
 runtime: org.freedesktop.Platform
-runtime-version: "23.08"
+runtime-version: "25.08"
 sdk: org.freedesktop.Sdk
-command: io.github.fgsfdsfgs.perfect_dark.sh
+command: io.github.perfect_dark_pc_port.perfect_dark.sh
 
 finish-args:
   - --device=all
@@ -24,13 +24,13 @@ modules:
       - type: file
         path: bin/pd.pal.x86_64
       - type: file
-        path: io.github.fgsfdsfgs.perfect_dark.sh
+        path: io.github.perfect_dark_pc_port.perfect_dark.sh
       - type: file
-        path: io.github.fgsfdsfgs.perfect_dark.png
+        path: io.github.perfect_dark_pc_port.perfect_dark.png
       - type: file
-        path: io.github.fgsfdsfgs.perfect_dark.metainfo.xml
+        path: io.github.perfect_dark_pc_port.perfect_dark.metainfo.xml
       - type: file
-        path: io.github.fgsfdsfgs.perfect_dark.desktop
+        path: io.github.perfect_dark_pc_port.perfect_dark.desktop
     build-commands: []
     post-install:
       # Install the binaries

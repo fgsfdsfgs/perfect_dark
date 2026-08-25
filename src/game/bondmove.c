@@ -2519,14 +2519,6 @@ void bmoveTick(bool allowc1x, bool allowc1y, bool allowc1buttons, bool ignorec2)
 
 void bmoveUpdateVerta(void)
 {
-	while (g_Vars.currentplayer->vv_verta < -180) {
-		g_Vars.currentplayer->vv_verta += 360;
-	}
-
-	while (g_Vars.currentplayer->vv_verta >= 180) {
-		g_Vars.currentplayer->vv_verta -= 360;
-	}
-
 	if (g_Vars.currentplayer->vv_verta > 90) {
 		g_Vars.currentplayer->vv_verta = 90;
 	} else if (g_Vars.currentplayer->vv_verta < -90) {

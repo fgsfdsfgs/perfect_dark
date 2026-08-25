@@ -852,6 +852,9 @@ s32 inputInit(void)
 	}
 
 	inputLoadBinds();
+  
+  	// Explicitly stop text input to prevent key events being swallowed on certain Wayland systems
+	inputStopTextInput();
 
 	// if GyroAdvanced is disabled: GyroSpeed/GyroAimSpeed will sync to whatever is higher between X and Y
 	for (s32 i = 0; i < INPUT_MAX_CONTROLLERS; ++i) {

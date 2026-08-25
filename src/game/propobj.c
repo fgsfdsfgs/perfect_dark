@@ -17201,6 +17201,12 @@ void currentPlayerQueuePickupWeaponHudmsg(u32 weaponnum, bool dual)
 {
 	char buffer[100] = "";
 
+	// Suppress pickup HUD during cutscenes
+	if (g_Vars.in_cutscene)
+	{
+		return;
+	}
+
 	weaponGetPickupText(buffer, weaponnum, dual);
 	hudmsgCreateWithFlags(buffer, HUDMSGTYPE_DEFAULT, HUDMSGFLAG_ONLYIFALIVE | HUDMSGFLAG_ALLOWDUPES);
 }
@@ -17215,6 +17221,13 @@ s32 propPickupByPlayer(struct prop *prop, bool showhudmsg)
 
 	if (g_Vars.currentplayer->isdead || g_Vars.lvupdate240 == 0) {
 		return TICKOP_NONE;
+	}
+
+	// Suppress HUD pickup messages during cutscenes (e.g. items given at
+	// mission start via aiGiveObjectToChr)
+	if (g_Vars.in_cutscene)
+	{
+		showhudmsg = false;
 	}
 
 	switch (obj->type) {

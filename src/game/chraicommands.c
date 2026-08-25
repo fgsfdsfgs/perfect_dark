@@ -2330,7 +2330,7 @@ bool aiGiveObjectToChr(void)
 			}
 #endif
 
-			something = propPickupByPlayer(obj->prop, 0);
+			something = propPickupByPlayer(obj->prop, 1);
 			propExecuteTickOperation(obj->prop, something);
 			playernum = playermgrGetPlayerNumByProp(chr->prop);
 			obj2->hidden = (playernum << 28) | (obj2->hidden & 0x0fffffff);

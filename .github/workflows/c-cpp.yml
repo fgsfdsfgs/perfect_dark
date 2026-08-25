@@ -268,7 +268,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: [build-x86_64-linux]
     container:
-      image: bilelmoussaoui/flatpak-github-actions:freedesktop-23.08
+      image: ghcr.io/flathub-infra/flatpak-github-actions:freedesktop-25.08
       options: --privileged
     steps:
     - uses: actions/checkout@v4
@@ -279,23 +279,16 @@ jobs:
 
     - uses: flatpak/flatpak-github-actions/flatpak-builder@v6
       with:
-        bundle: io.github.fgsfdsfgs.perfect_dark.flatpak
-        manifest-path: dist/linux/io.github.fgsfdsfgs.perfect_dark.yaml
+        bundle: io.github.perfect_dark_pc_port.perfect_dark.flatpak
+        manifest-path: dist/linux/io.github.perfect_dark_pc_port.perfect_dark.yaml
         cache-key: flatpak-builder-${{ github.sha }}
         upload-artifact: false
-
-    # - name: Build Flatpak bundle
-    #   run: |
-    #     cd dist/linux/
-    #     flatpak-builder build --force-clean io.github.fgsfdsfgs.perfect_dark.yaml
-    #     flatpak build-export export build
-    #     flatpak build-bundle export io.github.fgsfdsfgs.perfect_dark.flatpak io.github.fgsfdsfgs.perfect_dark
 
     - name: Upload artifact
       uses: actions/upload-artifact@v4
       with:
-        name: io.github.fgsfdsfgs.perfect_dark.flatpak
-        path: io.github.fgsfdsfgs.perfect_dark.flatpak
+        name: io.github.perfect_dark_pc_port.perfect_dark.flatpak
+        path: io.github.perfect_dark_pc_port.perfect_dark.flatpak
         retention-days: 0
 
 
@@ -323,7 +316,7 @@ jobs:
           zip -r ../ci-release/pd-i686-windows.zip pd-i686-windows
           zip -r ../ci-release/pd-x86_64-windows.zip pd-x86_64-windows
           zip -r ../ci-release/pd-arm64-nswitch.zip pd-arm64-nswitch
-          mv io.github.fgsfdsfgs.perfect_dark.flatpak/io.github.fgsfdsfgs.perfect_dark.flatpak ../ci-release/
+          mv io.github.perfect_dark_pc_port.perfect_dark.flatpak/io.github.perfect_dark_pc_port.perfect_dark.flatpak ../ci-release/
           popd
           git tag --force ci-dev-build port
           git push --force origin ci-dev-build

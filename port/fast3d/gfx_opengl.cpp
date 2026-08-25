@@ -54,7 +54,9 @@ static uint32_t frame_count;
 static std::vector<Framebuffer> framebuffers;
 static size_t current_framebuffer;
 static float current_noise_scale;
+static int current_anisotropy_level;
 static FilteringMode current_filter_mode = FILTER_LINEAR;
+static MipmapFilteringMode current_mipmap_filter_mode = MIPMAP_LINEAR;
 static bool current_textures_linear_filter[2] = {false, false};
 
 static int gl_glsl_version = 130;
@@ -692,8 +694,11 @@ static void gfx_opengl_select_texture(int tile, GLuint texture_id, bool linear_f
     current_textures_linear_filter[tile] = linear_filter;
 }
 
-static void gfx_opengl_upload_texture(const uint8_t* rgba32_buf, uint32_t width, uint32_t height) {
+static void gfx_opengl_upload_texture(const uint8_t* rgba32_buf, uint32_t width, uint32_t height, bool gen_mipmaps) {
     glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, rgba32_buf);
+	if (gen_mipmaps || current_filter_mode == FILTER_THREE_POINT) {
+		glGenerateMipmap(GL_TEXTURE_2D);
+	}
 }
 
 static uint32_t gfx_cm_to_opengl(uint32_t val) {
@@ -710,11 +715,27 @@ static uint32_t gfx_cm_to_opengl(uint32_t val) {
     return 0;
 }
 
-static void gfx_opengl_set_sampler_parameters(int tile, bool linear_filter, uint32_t cms, uint32_t cmt) {
-    const GLint filter = linear_filter && (current_filter_mode == FILTER_LINEAR) ? GL_LINEAR : GL_NEAREST;
+static void gfx_opengl_set_sampler_parameters(int tile, bool linear_filter, uint32_t cms, uint32_t cmt, bool mipmaps) {
+    const GLint min_filters[3][3] = {
+        // MIPMAP_DISABLED   MIPMAP_NEAREST               MIPMAP_LINEAR
+        {  GL_NEAREST,       GL_NEAREST_MIPMAP_NEAREST,   GL_NEAREST_MIPMAP_LINEAR  }, // FILTER_NONE
+        {  GL_LINEAR,        GL_LINEAR_MIPMAP_NEAREST,    GL_LINEAR_MIPMAP_LINEAR   }, // FILTER_BILINEAR
+        {  GL_NEAREST,       GL_NEAREST,                  GL_NEAREST                }, // FILTER_THREE_POINT
+    };
+
+    mipmaps = mipmaps && (current_mipmap_filter_mode != MIPMAP_DISABLED);
+    const int mip_idx = mipmaps ? current_mipmap_filter_mode : 0;
+    const GLint min_filter = linear_filter ? min_filters[current_filter_mode][mip_idx] : GL_NEAREST;
+    const GLint max_filter = linear_filter && (current_filter_mode == FILTER_LINEAR) ? GL_LINEAR : GL_NEAREST;
+
     glActiveTexture(GL_TEXTURE0 + tile);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, filter);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, filter);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, min_filter);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, max_filter);
+
+    if (mipmaps) {
+        glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAX_ANISOTROPY, current_anisotropy_level);
+    }
+
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, gfx_cm_to_opengl(cms));
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, gfx_cm_to_opengl(cmt));
 }
@@ -1244,7 +1265,21 @@ FilteringMode gfx_opengl_get_texture_filter(void) {
     return current_filter_mode;
 }
 
-struct GfxRenderingAPI gfx_opengl_api = { 
+void gfx_opengl_set_mipmap_filter(MipmapFilteringMode mode) {
+    current_mipmap_filter_mode = mode;
+}
+
+static int gfx_opengl_get_max_anisotropy_level() {
+	GLfloat max_aniso_level;
+	glGetFloatv(GL_MAX_TEXTURE_MAX_ANISOTROPY, &max_aniso_level);
+	return (int)max_aniso_level;
+}
+
+static void gfx_opengl_set_anisotropy_level(int level) {
+	current_anisotropy_level = level;
+}
+
+struct GfxRenderingAPI gfx_opengl_api = {
     gfx_opengl_get_name,
     gfx_opengl_get_max_texture_size,
     gfx_opengl_get_clip_parameters,
@@ -1279,5 +1314,8 @@ struct GfxRenderingAPI gfx_opengl_api = {
     gfx_opengl_select_texture_fb,
     gfx_opengl_delete_texture,
     gfx_opengl_set_texture_filter,
-    gfx_opengl_get_texture_filter
+    gfx_opengl_get_texture_filter,
+    gfx_opengl_set_mipmap_filter,
+    gfx_opengl_set_anisotropy_level,
+    gfx_opengl_get_max_anisotropy_level
 };

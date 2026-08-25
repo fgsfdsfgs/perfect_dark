@@ -1636,6 +1636,20 @@ static MenuItemHandlerResult menuhandlerTexFilter2D(s32 operation, struct menuit
 	return 0;
 }
 
+static MenuItemHandlerResult menuhandlerAnisotropicFiltering(s32 operation, struct menuitem *item, union handlerdata *data)
+{
+	switch (operation) {
+	case MENUOP_GETSLIDER:
+		data->slider.value = videoGetAnisotropicFilter();
+		break;
+	case MENUOP_SET:
+		videoSetAnisotropicFilter(data->slider.value);
+		break;
+	}
+
+	return 0;
+}
+
 static MenuItemHandlerResult menuhandlerDisplayFPS(s32 operation, struct menuitem *item, union handlerdata *data)
 {
 	switch (operation) {
@@ -1716,6 +1730,34 @@ static MenuItemHandlerResult menuhandlerScreenShake(s32 operation, struct menuit
 		break;
 	case MENUOP_SET:
 		g_ViShakeIntensityMult = (f32)data->slider.value / 10.f;
+		break;
+	}
+
+	return 0;
+}
+
+static MenuItemHandlerResult menuhandlerGlareBrightness(s32 operation, struct menuitem *item, union handlerdata *data)
+{
+	switch (operation) {
+	case MENUOP_GETSLIDER:
+		data->slider.value = videoGetGlareBrightness() * 10.f + 0.5f;
+		break;
+	case MENUOP_SET:
+		videoSetGlareBrightness((f32)data->slider.value / 10.f);
+		break;
+	}
+
+	return 0;
+}
+
+static MenuItemHandlerResult menuhandlerOverexposureScale(s32 operation, struct menuitem *item, union handlerdata *data)
+{
+	switch (operation) {
+	case MENUOP_GETSLIDER:
+		data->slider.value = videoGetOverexposureScale() * 10.f + 0.5f;
+		break;
+	case MENUOP_SET:
+		videoSetOverexposureScale((f32)data->slider.value / 10.f);
 		break;
 	}
 
@@ -1828,6 +1870,14 @@ struct menuitem g_ExtendedVideoMenuItems[] = {
 		menuhandlerTexFilter2D,
 	},
 	{
+		MENUITEMTYPE_SLIDER,
+		0,
+		MENUITEMFLAG_LITERAL_TEXT | MENUITEMFLAG_SLIDER_WIDE,
+		(uintptr_t)"Anisotropic Filtering",
+		8,
+		menuhandlerAnisotropicFiltering,
+	},
+	{
 		MENUITEMTYPE_CHECKBOX,
 		0,
 		MENUITEMFLAG_LITERAL_TEXT,
@@ -1866,6 +1916,30 @@ struct menuitem g_ExtendedVideoMenuItems[] = {
 		(uintptr_t)"Explosion Shake",
 		20,
 		menuhandlerScreenShake,
+	},
+	{
+		MENUITEMTYPE_SEPARATOR,
+		0,
+		0,
+		0,
+		0,
+		NULL,
+	},
+	{
+		MENUITEMTYPE_SLIDER,
+		0,
+		MENUITEMFLAG_LITERAL_TEXT | MENUITEMFLAG_SLIDER_WIDE,
+		(uintptr_t)"Glare Brightness",
+		10,
+		menuhandlerGlareBrightness,
+	},
+	{
+		MENUITEMTYPE_SLIDER,
+		0,
+		MENUITEMFLAG_LITERAL_TEXT | MENUITEMFLAG_SLIDER_WIDE,
+		(uintptr_t)"Overexposure Scale",
+		10,
+		menuhandlerOverexposureScale,
 	},
 	{
 		MENUITEMTYPE_SEPARATOR,
@@ -2679,3 +2753,22 @@ struct menudialogdef g_ExtendedMenuDialog = {
 	MENUDIALOGFLAG_LITERAL_TEXT,
 	NULL,
 };
+
+void updateMaxAnisotropyLevel()
+{
+	for (int i = 0; i < ARRAYCOUNT(g_ExtendedVideoMenuItems); ++i) {
+		struct menuitem *item = &g_ExtendedVideoMenuItems[i];
+		const char *text = menuResolveParam2Text(item);
+		
+		if (text && strstr(text, "Anisotropic Filtering") != NULL) {
+			item->param3 = videoGetMaxAnisotropyLevel();
+			break;
+		}
+	}
+
+}
+
+void optionsMenuInit()
+{
+	updateMaxAnisotropyLevel();
+}

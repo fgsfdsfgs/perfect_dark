@@ -1928,6 +1928,10 @@ Gfx *menuRenderModel(Gfx *gdl, struct menumodel *menumodel, s32 modeltype)
 					totalfilelen += 0x4000;
 #endif
 
+#ifndef PLATFORM_N64
+					videoFreeCachedTextures(menumodel->allocstart, menumodel->allocstart + menumodel->alloclen);
+#endif
+
 					texInitPool(&texpool, menumodel->allocstart + totalfilelen, menumodel->alloclen - totalfilelen);
 
 					menumodel->headnum = headnum;
@@ -1959,6 +1963,10 @@ Gfx *menuRenderModel(Gfx *gdl, struct menumodel *menumodel, s32 modeltype)
 				} else {
 					totalfilelen = ALIGN64(fileGetInflatedSize(menumodel->newparams, LOADTYPE_MODEL)) + 0x4000;
 					if (1);
+
+#ifndef PLATFORM_N64
+					videoFreeCachedTextures(menumodel->allocstart, menumodel->allocstart + menumodel->alloclen);
+#endif
 
 					texInitPool(&texpool, &menumodel->allocstart[(u32)totalfilelen], menumodel->alloclen - totalfilelen);
 
@@ -4606,6 +4614,9 @@ void dialogTick(struct menudialog *dialog, struct menuinputs *inputs, u32 tickfl
 		s32 adjustment = (s32)(inputs->yaxis * g_Vars.diffframe60freal / 20) - (s32)(inputs->updownheld * g_Vars.diffframe60freal);
 #else
 		s32 adjustment = inputs->yaxis * g_Vars.diffframe60 / 20 - inputs->updownheld * g_Vars.diffframe60;
+#endif
+#ifndef PLATFORM_N64
+		adjustment -= inputs->mousescroll * (LINEHEIGHT + 1);
 #endif
 		dialog->dstscroll += adjustment;
 

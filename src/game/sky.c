@@ -3074,6 +3074,13 @@ Gfx *skyRenderArtifacts(Gfx *gdl)
 
 void skySetOverexposure(s32 r, s32 g, s32 b)
 {
+#ifndef PLATFORM_N64
+	const f32 scale = videoGetOverexposureScale();
+	r *= scale;
+	g *= scale;
+	b *= scale;
+#endif
+
 	g_Vars.currentplayer->overexposurered = sqrtf(g_Vars.currentplayer->overexposurered * g_Vars.currentplayer->overexposurered + r * r);
 	g_Vars.currentplayer->overexposuregreen = sqrtf(g_Vars.currentplayer->overexposuregreen * g_Vars.currentplayer->overexposuregreen + g * g);
 	g_Vars.currentplayer->overexposureblue = sqrtf(g_Vars.currentplayer->overexposureblue * g_Vars.currentplayer->overexposureblue + b * b);

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
-  <id>io.github.fgsfdsfgs.perfect_dark</id>
+  <id>io.github.perfect_dark_pc_port.perfect_dark</id>
   <name>Perfect Dark</name>
-  <developer id="io.github.fgsfdsfgs.perfect_dark">
+  <developer id="io.github.perfect_dark_pc_port.perfect_dark">
     <name>Perfect Dark Contributors</name>
     <url>https://github.com/fgsfdsfgs/perfect_dark/graphs/contributors</url>
   </developer>
-  <launchable type="desktop-id">io.github.fgsfdsfgs.perfect_dark.desktop</launchable>
+  <launchable type="desktop-id">io.github.perfect_dark_pc_port.perfect_dark.desktop</launchable>
   <summary>Modern cross-platform port of Perfect Dark</summary>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>MIT</project_license>
@@ -17,8 +17,9 @@
   <!--
   <screenshots>
     <screenshot type="default">
-      <image type="source">https://gitlab.com/fpiesche/dxx-rebirth-assets/-/raw/c6e7e79eebe92905f84f07a635ffab5122a94bd1/d1x/screenshots/retromode.png</image>
-      <caption>"Retro mode": the default graphics setup, like the original game but in high resolution</caption>
+      <image type="source"></image>
+      <caption>Screenshot</caption>
+    </screenshot>
   <screenshots>
   -->
   <categories>

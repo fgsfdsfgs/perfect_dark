@@ -50,9 +50,14 @@ static s32 vidNumModes = 1;
 static displaymode vidModeDefault;
 static displaymode *vidModes = &vidModeDefault;
 
+static f32 vidGlareBrightness = 1.f;
+static f32 vidOverexposureScale = 1.f;
+
 static s32 texFilter = FILTER_LINEAR;
 static s32 texFilter2D = true;
 static s32 texDetail = false;
+static s32 texMipmapFilter = MIPMAP_LINEAR;
+static u32 texAnisotropicFilter = 4;
 
 static u32 dlcount = 0;
 static u32 frames = 0;
@@ -62,6 +67,7 @@ static f64 fpsTime = 0.0;
 static s32 fpsNumFrames = 0;
 
 static s32 videoInitDisplayModes(void);
+void optionsMenuInit();
 
 s32 videoInit(void)
 {
@@ -99,6 +105,9 @@ s32 videoInit(void)
 	videoSetFramerateLimit(vidFramerateLimit);
 
 	gfx_set_texture_filter((enum FilteringMode)texFilter);
+	gfx_set_mipmap_filter((enum MipmapFilteringMode)texMipmapFilter);
+	videoSetAnisotropicFilter(texAnisotropicFilter);
+	optionsMenuInit();
 
 	initDone = true;
 	return 0;
@@ -362,9 +371,29 @@ u32 videoGetTextureFilter(void)
 	return texFilter;
 }
 
+u32 videoGetAnisotropicFilter()
+{
+	return texAnisotropicFilter;
+}
+
+u32 videoGetMaxAnisotropyLevel()
+{
+	return renderingAPI->get_max_anisotropy_level();
+}
+
 s32 videoGetDetailTextures(void)
 {
 	return texDetail;
+}
+
+f32 videoGetGlareBrightness(void)
+{
+	return vidGlareBrightness;
+}
+
+f32 videoGetOverexposureScale(void)
+{
+	return vidOverexposureScale;
 }
 
 void videoSetWindowOffset(s32 x, s32 y)
@@ -434,10 +463,26 @@ void videoSetTextureFilter2D(s32 filter)
 	texFilter2D = !!filter;
 }
 
+void videoSetAnisotropicFilter(u32 level)
+{
+	texAnisotropicFilter = level;
+	renderingAPI->set_anisotropy_level(level);
+}
+
 void videoSetDetailTextures(s32 detail)
 {
 	texDetail = !!detail;
 	gfx_detail_textures_enabled = (bool)texDetail;
+}
+
+void videoSetGlareBrightness(f32 bright)
+{
+	vidGlareBrightness = (bright < 0.f ? 0.f : (bright > 1.f ? 1.f : bright));
+}
+
+void videoSetOverexposureScale(f32 scale)
+{
+	vidOverexposureScale = (scale < 0.f ? 0.f : (scale > 1.f ? 1.f : scale));
 }
 
 s32 videoCreateFramebuffer(u32 w, u32 h, s32 upscale, s32 autoresize)
@@ -508,6 +553,11 @@ void videoFreeCachedTexture(const void *texptr)
 	gfx_texture_cache_delete(texptr);
 }
 
+void videoFreeCachedTextures(const void *start, const void *end)
+{
+	gfx_texture_cache_delete_range(start, end);
+}
+
 void videoShutdown(void)
 {
 	free(vidModes);
@@ -531,4 +581,8 @@ PD_CONSTRUCTOR static void videoConfigInit(void)
 	configRegisterInt("Video.TextureFilter", &texFilter, 0, 2);
 	configRegisterInt("Video.TextureFilter2D", &texFilter2D, 0, 1);
 	configRegisterInt("Video.DetailTextures", &texDetail, 0, 1);
+	configRegisterInt("Video.MipmapFilter", &texMipmapFilter, 0, 2);
+	configRegisterInt("Video.AnisotropicFilter", &texAnisotropicFilter, 0, 16);
+	configRegisterFloat("Video.GlareBrightness", &vidGlareBrightness, 0.f, 1.f);
+	configRegisterFloat("Video.OverexposureScale", &vidOverexposureScale, 0.f, 1.f);
 }

@@ -1064,7 +1064,8 @@ bool shotTestLos(struct coord *gunpos2d, struct coord *gundir2d, struct coord *g
 		prop = *propptr;
 		if (prop) {
 			if (prop->type == PROPTYPE_CHR
-					|| (prop->type == PROPTYPE_PLAYER && prop->chr && (g_Vars.in_cutscene || playermgrGetPlayerNumByProp(prop) != g_Vars.currentplayernum))) {
+					|| (prop->type == PROPTYPE_PLAYER && prop->chr && (g_Vars.in_cutscene || playermgrGetPlayerNumByProp(prop) != g_Vars.currentplayernum
+						|| g_Vars.currentplayer->eyespy && g_Vars.currentplayer->eyespy->mode == EYESPYMODE_CAMSPY))) {
 				chrTestHit(prop, &shotdata, false, true);
 			} else if (prop->type == PROPTYPE_WEAPON || (prop->type == PROPTYPE_DOOR && ((struct doorobj *)prop->obj)->doortype != DOORTYPE_LASER)
 					|| (prop->type == PROPTYPE_OBJ && prop->obj->type != OBJTYPE_GLASS && prop->obj->type != OBJTYPE_TINTEDGLASS)) {
@@ -1078,6 +1079,7 @@ bool shotTestLos(struct coord *gunpos2d, struct coord *gundir2d, struct coord *g
 				    surfacetype != SURFACETYPE_GLASS && surfacetype != SURFACETYPE_GLASSXLU) {
 					return false;
 				}
+				shotdata.hits[0].prop = NULL;
 			}
 		}
 		propptr--;

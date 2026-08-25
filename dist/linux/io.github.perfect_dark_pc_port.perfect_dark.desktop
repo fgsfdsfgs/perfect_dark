@@ -1,8 +1,8 @@
 [Desktop Entry]
 Name=Perfect Dark
 Comment=Modern source port of Perfect Dark
-Exec=io.github.fgsfdsfgs.perfect_dark.sh
-Icon=io.github.fgsfdsfgs.perfect_dark
+Exec=io.github.perfect_dark_pc_port.perfect_dark.sh
+Icon=io.github.perfect_dark_pc_port.perfect_dark
 Terminal=false
 Type=Application
 Categories=Game;ActionGame;

@@ -420,7 +420,7 @@ s32 modTextureLoad(u16 num, void *dst, u32 dstSize)
 {
 	static s32 dirExists = -1;
 	if (dirExists < 0) {
-		dirExists = (fsFileSize(MOD_TEXTURES_DIR "/") >= 0);
+		dirExists = (fsFileSize(MOD_TEXTURES_DIR) >= 0);
 	}
 
 	if (!dirExists) {
@@ -442,7 +442,7 @@ void *modSequenceLoad(u16 num, u32 *outSize)
 {
 	static s32 dirExists = -1;
 	if (dirExists < 0) {
-		dirExists = (fsFileSize(MOD_SEQUENCES_DIR "/") >= 0);
+		dirExists = (fsFileSize(MOD_SEQUENCES_DIR) >= 0);
 	}
 
 	if (!dirExists) {
@@ -478,7 +478,7 @@ s32 modAnimationLoadDescriptor(u16 num, struct animtableentry *anim)
 {
 	static s32 dirExists = -1;
 	if (dirExists < 0) {
-		dirExists = (fsFileSize(MOD_ANIMATIONS_DIR "/") >= 0);
+		dirExists = (fsFileSize(MOD_ANIMATIONS_DIR) >= 0);
 	}
 
 	if (!dirExists) {

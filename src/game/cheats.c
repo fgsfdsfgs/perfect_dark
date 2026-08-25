@@ -165,6 +165,17 @@ void cheatActivate(s32 cheat_id)
 		setCurrentPlayerNum(prevplayernum);
 		break;
 	case CHEAT_ALLGUNS:
+#ifndef PLATFORM_N64
+		// Give all guns to all players
+		prevplayernum = g_Vars.currentplayernum;
+
+		for (playernum = 0; playernum < PLAYERCOUNT(); playernum++) {
+			setCurrentPlayerNum(playernum);
+			invSetAllGuns(true);
+		}
+
+		setCurrentPlayerNum(prevplayernum);
+#else
 		// Give all guns if only one player playing
 		if (PLAYERCOUNT() == 1 && g_Vars.normmplayerisrunning == false) {
 			prevplayernum = g_Vars.currentplayernum;
@@ -176,6 +187,7 @@ void cheatActivate(s32 cheat_id)
 
 			setCurrentPlayerNum(prevplayernum);
 		}
+#endif
 		break;
 	}
 
@@ -203,6 +215,16 @@ void cheatDeactivate(s32 cheat_id)
 		setCurrentPlayerNum(prevplayernum);
 		break;
 	case CHEAT_ALLGUNS:
+#ifndef PLATFORM_N64
+		prevplayernum = g_Vars.currentplayernum;
+
+		for (playernum = 0; playernum < PLAYERCOUNT(); playernum++) {
+			setCurrentPlayerNum(playernum);
+			invSetAllGuns(false);
+		}
+
+		setCurrentPlayerNum(prevplayernum);
+#else
 		if (PLAYERCOUNT() == 1 && g_Vars.normmplayerisrunning == false) {
 			prevplayernum = g_Vars.currentplayernum;
 
@@ -213,6 +235,7 @@ void cheatDeactivate(s32 cheat_id)
 
 			setCurrentPlayerNum(prevplayernum);
 		}
+#endif
 		break;
 	}
 
@@ -309,7 +332,7 @@ MenuItemHandlerResult cheatCheckboxMenuHandler(s32 operation, struct menuitem *i
 			return false;
 		}
 
-		if (g_CheatsEnabledBank1 & (1 << item->param)) {
+		if (g_CheatsEnabledBank1 & (1 << (item->param - 32))) {
 			return true;
 		}
 
@@ -334,11 +357,12 @@ MenuItemHandlerResult cheatCheckboxMenuHandler(s32 operation, struct menuitem *i
 				}
 			} else {
 				// Bank 1
-				if (g_CheatsEnabledBank1 & (1 << item->param)) {
+				if (g_CheatsEnabledBank1 & (1 << (item->param - 32))) {
+				// We need to subtract 32 on lines like these to avoid undefined behavior, namely ensuring that all cheats are toggled correctly and regardless of build optimiaztion
 					if (1);
-					g_CheatsEnabledBank1 = g_CheatsEnabledBank1 & ~(1 << item->param);
+					g_CheatsEnabledBank1 = g_CheatsEnabledBank1 & ~(1 << (item->param - 32));
 				} else {
-					g_CheatsEnabledBank1 = g_CheatsEnabledBank1 | 1 << item->param;
+					g_CheatsEnabledBank1 = g_CheatsEnabledBank1 | (1 << (item->param - 32));
 				}
 			}
 		}

@@ -21,6 +21,7 @@
 #include "lib/lib_17ce0.h"
 #include "game/player.h"
 #include "game/prop.h"
+#include "video.h"
 #endif
 
 /**
@@ -245,6 +246,12 @@ void artifactsCalculateGlaresForRoom(s32 roomnum)
 	struct artifact *artifacts = schedGetWriteArtifacts();
 	struct coord *campos = &g_Vars.currentplayer->cam_pos;
 	struct artifact *artifact;
+
+#ifndef PLATFORM_N64
+	if (videoGetGlareBrightness() <= 0.f) {
+		return;
+	}
+#endif
 
 	if (g_Rooms[roomnum].gfxdata != NULL && g_Rooms[roomnum].loaded240) {
 		numlights = g_Rooms[roomnum].gfxdata->numlights;
@@ -532,6 +539,13 @@ Gfx *artifactsRenderGlaresForRoom(Gfx *gdl, s32 roomnum)
 	f32 f24;
 	bool extra;
 	f32 f26;
+#ifndef PLATFORM_N64
+	const f32 pfov = g_Vars.currentplayerstats ? PLAYER_DEFAULT_FOV : 60.f;
+	const f32 brightscale = videoGetGlareBrightness();
+	if (brightscale <= 0.f) {
+		return gdl;
+	}
+#endif
 
 	artifacts = schedGetFrontArtifacts();
 	lightop_cur_frac = roomGetLightOpCurFrac(roomnum);
@@ -619,7 +633,11 @@ Gfx *artifactsRenderGlaresForRoom(Gfx *gdl, s32 roomnum)
 				s3[0] = artifactsClamp(s3[0], numgood * 2);
 
 				if (numgood > 0) {
+#ifndef PLATFORM_N64
+					brightness = viGetFovY() / pfov;
+#else
 					brightness = viGetFovY() * 0.017453292f;
+#endif
 					add = cosf(brightness) / sinf(brightness) * 14.6f;
 
 					if (lightIsHealthy(roomnum, lightindex - g_Rooms[roomnum].gfxdata->lightsindex)) {
@@ -649,6 +667,9 @@ Gfx *artifactsRenderGlaresForRoom(Gfx *gdl, s32 roomnum)
 					}
 
 					f0 = s3[2] * (1.0f / 255.0f);
+#ifndef PLATFORM_N64
+					f0 *= (60.f / pfov);
+#endif
 
 					skySetOverexposure((s32) ((f32)f0 * r), (s32) ((f32)f0 * g), (s32) ((f32)f0 * b));
 
@@ -697,6 +718,10 @@ Gfx *artifactsRenderGlaresForRoom(Gfx *gdl, s32 roomnum)
 						alpha *= stageGetCurrent()->light_alpha / 255.0f;
 						alpha *= (s3[1] / 255.0f);
 						alpha *= (s3[0] / 8.0f);
+
+#ifndef PLATFORM_N64
+						alpha *= brightscale;
+#endif
 
 						if (USINGDEVICE(DEVICE_NIGHTVISION)) {
 							alpha *= lightop_cur_frac * 7.0f;
