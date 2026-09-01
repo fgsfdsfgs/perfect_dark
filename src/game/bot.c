@@ -817,6 +817,10 @@ bool botIsAboutToAttack(struct chrdata *chr, bool arg1)
 		mpindex = mpPlayerGetIndex(target->chr);
 		result = false;
 
+		if (chr->aibot->chrrooms[mpindex] == -1) {
+			return false;
+		}
+
 		if (chr->aibot->chrsinsight[mpindex]) {
 			result = true;
 		}

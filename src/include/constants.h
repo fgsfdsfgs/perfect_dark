@@ -1579,12 +1579,8 @@
 #define MEMBANK_ONBOARD   0
 #define MEMBANK_EXPANSION 1
 
-#define MEMPOOL_0         0
-#define MEMPOOL_STAGE     4 // Cleared on stage load
-#define MEMPOOL_5         5
-#define MEMPOOL_PERMANENT 6 // Never cleared
-#define MEMPOOL_7         7
-#define MEMPOOL_8         8
+#define MEMPOOL_STAGE     0 // Cleared on stage load
+#define MEMPOOL_PERMANENT 1 // Never cleared
 
 #define MENUBANNER_SEARCHINGFORCAMERA 0
 #define MENUBANNER_CALIBRATINGCAMERA  1

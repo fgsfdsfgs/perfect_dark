@@ -599,8 +599,6 @@ void func0f001c0c(void)
 	sp68 = align16(g_Vars.roomcount * 8);
 #endif
 
-	mempGetStageFree();
-
 	/**
 	 * This lighting initialisation needs to build temporary tables in memory.
 	 * The memp system allows freeing of the most recent allocation *only*,

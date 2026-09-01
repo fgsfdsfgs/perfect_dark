@@ -14,7 +14,6 @@ const char var7f1b7d2c[] = "";
 const char var7f1b7d30[] = "";
 const char var7f1b7d34[] = "Utils -> Attempt to normalise zeo length vector\n";
 
-void *var800ac0d0;
 u32 var800ac0d4;
 u32 var800ac0d8;
 u32 var800ac0dc;
@@ -85,10 +84,8 @@ void utilsInit(void)
 	u32 slotssize = 0x1900;
 	u32 allocsize;
 
-	var800ac0d0 = mempAlloc(10000, MEMPOOL_8);
-
 	allocsize = align16(0x3900);
-	var800ac0e8[0] = mempAlloc(allocsize, MEMPOOL_8);
+	var800ac0e8[0] = mempAlloc(allocsize, MEMPOOL_PERMANENT);
 
 	if (var800ac0e8[0] != NULL) {
 		for (i = 0; i < ARRAYCOUNT(var800ac0e8); i++) {

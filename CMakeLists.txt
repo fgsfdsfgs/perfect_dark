@@ -292,6 +292,7 @@ set(SRC_LIB
   src/lib/lib_15850.c
   src/lib/mema.c
   src/lib/memp.c
+  src/lib/memshared.c
   src/lib/model.c
   src/lib/modelasm_c.c
   src/lib/mp3.c
